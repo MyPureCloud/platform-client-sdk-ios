@@ -17,6 +17,7 @@ public class ExternalContactsContactChangedTopicContact: Codable {
         case curated = "Curated"
     }
     public var _id: String?
+    public var division: ExternalContactsContactChangedTopicDivision?
     public var externalOrganization: ExternalContactsContactChangedTopicExternalOrganization?
     public var type: ModelType?
     public var firstName: String?
@@ -44,8 +45,9 @@ public class ExternalContactsContactChangedTopicContact: Codable {
     public var createDate: Date?
     public var modifyDate: Date?
 
-    public init(_id: String?, externalOrganization: ExternalContactsContactChangedTopicExternalOrganization?, type: ModelType?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: ExternalContactsContactChangedTopicPhoneNumber?, cellPhone: ExternalContactsContactChangedTopicPhoneNumber?, homePhone: ExternalContactsContactChangedTopicPhoneNumber?, otherPhone: ExternalContactsContactChangedTopicPhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ExternalContactsContactChangedTopicContactAddress?, surveyOptOut: Bool?, externalSystemUrl: String?, twitterId: ExternalContactsContactChangedTopicTwitterId?, lineId: ExternalContactsContactChangedTopicLineId?, whatsAppId: ExternalContactsContactChangedTopicWhatsAppId?, facebookId: ExternalContactsContactChangedTopicFacebookId?, instagramId: ExternalContactsContactChangedTopicInstagramId?, schema: ExternalContactsContactChangedTopicDataSchema?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
+    public init(_id: String?, division: ExternalContactsContactChangedTopicDivision?, externalOrganization: ExternalContactsContactChangedTopicExternalOrganization?, type: ModelType?, firstName: String?, middleName: String?, lastName: String?, salutation: String?, title: String?, workPhone: ExternalContactsContactChangedTopicPhoneNumber?, cellPhone: ExternalContactsContactChangedTopicPhoneNumber?, homePhone: ExternalContactsContactChangedTopicPhoneNumber?, otherPhone: ExternalContactsContactChangedTopicPhoneNumber?, workEmail: String?, personalEmail: String?, otherEmail: String?, address: ExternalContactsContactChangedTopicContactAddress?, surveyOptOut: Bool?, externalSystemUrl: String?, twitterId: ExternalContactsContactChangedTopicTwitterId?, lineId: ExternalContactsContactChangedTopicLineId?, whatsAppId: ExternalContactsContactChangedTopicWhatsAppId?, facebookId: ExternalContactsContactChangedTopicFacebookId?, instagramId: ExternalContactsContactChangedTopicInstagramId?, schema: ExternalContactsContactChangedTopicDataSchema?, customFields: [String:JSON]?, createDate: Date?, modifyDate: Date?) {
         self._id = _id
+        self.division = division
         self.externalOrganization = externalOrganization
         self.type = type
         self.firstName = firstName
@@ -76,6 +78,7 @@ public class ExternalContactsContactChangedTopicContact: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+        case division
         case externalOrganization
         case type
         case firstName

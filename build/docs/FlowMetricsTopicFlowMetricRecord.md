@@ -78,7 +78,6 @@ title: FlowMetricsTopicFlowMetricRecord
 | **recognitionFailureReason** | **String** | The recognition failure reason causing to exit/disconnect | [optional] |
 | **remote** | **String** | Name, phone number, or email address of the remote party. | [optional] |
 | **removedSkillIds** | **[String]** | ID(s) of Skill(s) that have been removed by bullseye routing | [optional] |
-| **reoffered** | **Bool** | Marker for an interaction that got reoffered to the same queue by an in-queue flow | [optional] |
 | **requestedLanguageId** | **String** | Unique identifier for the language requested for an interaction | [optional] |
 | **requestedRoutingSkillIds** | **[String]** | Unique identifier(s) for skill(s) requested for an interaction | [optional] |
 | **requestedRoutings** | **[String]** | Routing type(s) for requested/attempted routing methods. | [optional] |
