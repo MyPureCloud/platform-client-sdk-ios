@@ -96,6 +96,7 @@ Wraps DELETE /api/v2/externalcontacts/contacts/{contactId}
 
 Requires ANY permissions: 
 
+* relate:contact:delete
 * externalContacts:contact:delete
 
 ### Example
@@ -148,6 +149,7 @@ Wraps DELETE /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -306,6 +308,7 @@ Wraps DELETE /api/v2/externalcontacts/organizations/{externalOrganizationId}/not
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -411,6 +414,7 @@ Wraps DELETE /api/v2/externalcontacts/relationships/{relationshipId}
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -463,6 +467,7 @@ Wraps GET /api/v2/externalcontacts/contacts/{contactId}
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -627,6 +632,7 @@ Wraps GET /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -683,6 +689,7 @@ Wraps GET /api/v2/externalcontacts/contacts/{contactId}/notes
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -797,6 +804,7 @@ Wraps GET /api/v2/externalcontacts/contacts
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1120,6 +1128,7 @@ Wraps GET /api/v2/externalcontacts/organizations/{externalOrganizationId}/contac
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1182,6 +1191,7 @@ Wraps GET /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -1631,6 +1641,7 @@ Wraps GET /api/v2/externalcontacts/relationships/{relationshipId}
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -1739,6 +1750,7 @@ Wraps GET /api/v2/externalcontacts/scan/contacts
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1749,7 +1761,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100)
+let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
 
 // Code example
@@ -1768,7 +1780,7 @@ ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **limit** | **Int**| The number of contacts per page; must be between 10 and 200, default is 100) | [optional] |
+| **limit** | **Int**| The number of contacts per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 {: class="table-striped"}
 
@@ -1793,6 +1805,7 @@ Wraps GET /api/v2/externalcontacts/scan/notes
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1803,7 +1816,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100)
+let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
 
 // Code example
@@ -1822,7 +1835,7 @@ ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor) {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **limit** | **Int**| The number of notes per page; must be between 10 and 200, default is 100) | [optional] |
+| **limit** | **Int**| The number of notes per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 {: class="table-striped"}
 
@@ -1847,6 +1860,7 @@ Wraps GET /api/v2/externalcontacts/scan/organizations
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:view
 * externalContacts:externalOrganization:view
 
 ### Example
@@ -1857,7 +1871,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100)
+let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
 
 // Code example
@@ -1876,7 +1890,7 @@ ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: c
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **limit** | **Int**| The number of organizations per page; must be between 10 and 200, default is 100) | [optional] |
+| **limit** | **Int**| The number of organizations per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 {: class="table-striped"}
 
@@ -1901,6 +1915,7 @@ Wraps GET /api/v2/externalcontacts/scan/relationships
 
 Requires ANY permissions: 
 
+* relate:contact:view
 * externalContacts:contact:view
 
 ### Example
@@ -1911,7 +1926,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100)
+let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
 
 // Code example
@@ -1930,7 +1945,7 @@ ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: c
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **limit** | **Int**| The number of relationships per page; must be between 10 and 200, default is 100) | [optional] |
+| **limit** | **Int**| The number of relationships per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
 {: class="table-striped"}
 
@@ -2901,6 +2916,7 @@ Wraps POST /api/v2/externalcontacts/contacts/{contactId}/notes
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -3007,6 +3023,7 @@ Wraps POST /api/v2/externalcontacts/contacts
 
 Requires ANY permissions: 
 
+* relate:contact:add
 * externalContacts:contact:add
 
 ### Example
@@ -3380,6 +3397,7 @@ Wraps POST /api/v2/externalcontacts/relationships
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -3432,6 +3450,7 @@ Wraps PUT /api/v2/externalcontacts/contacts/{contactId}
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -3486,6 +3505,7 @@ Wraps PUT /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}
 
 Requires ANY permissions: 
 
+* relate:contact:edit
 * externalContacts:contact:edit
 
 ### Example
@@ -3707,6 +3727,7 @@ Wraps PUT /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example
@@ -3871,6 +3892,7 @@ Wraps PUT /api/v2/externalcontacts/relationships/{relationshipId}
 
 Requires ANY permissions: 
 
+* relate:externalOrganization:edit
 * externalContacts:externalOrganization:edit
 
 ### Example

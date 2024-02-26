@@ -22,6 +22,7 @@ public class MediaParticipantRequest: Codable {
         case converting = "converting"
         case uploading = "uploading"
         case transmitting = "transmitting"
+        case parked = "parked"
         case _none = "none"
     }
     /** Wrap-up to assign to this participant. */

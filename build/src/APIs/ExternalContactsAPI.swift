@@ -4068,7 +4068,7 @@ open class ExternalContactsAPI {
     /**
      Scan for external contacts using paging
      
-     - parameter limit: (query) The number of contacts per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of contacts per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4468,7 +4468,7 @@ open class ExternalContactsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
-     - parameter limit: (query) The number of contacts per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of contacts per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
 
      - returns: RequestBuilder<CursorContactListing> 
@@ -4494,7 +4494,7 @@ open class ExternalContactsAPI {
     /**
      Scan for notes using paging
      
-     - parameter limit: (query) The number of notes per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of notes per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4562,7 +4562,7 @@ open class ExternalContactsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
-     - parameter limit: (query) The number of notes per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of notes per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
 
      - returns: RequestBuilder<CursorNoteListing> 
@@ -4588,7 +4588,7 @@ open class ExternalContactsAPI {
     /**
      Scan for external organizations using paging
      
-     - parameter limit: (query) The number of organizations per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of organizations per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4772,7 +4772,7 @@ open class ExternalContactsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
-     - parameter limit: (query) The number of organizations per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of organizations per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
 
      - returns: RequestBuilder<CursorOrganizationListing> 
@@ -4798,7 +4798,7 @@ open class ExternalContactsAPI {
     /**
      Scan for relationships
      
-     - parameter limit: (query) The number of relationships per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of relationships per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -4860,7 +4860,7 @@ open class ExternalContactsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
-     - parameter limit: (query) The number of relationships per page; must be between 10 and 200, default is 100) (optional)
+     - parameter limit: (query) The number of relationships per page; must be between 10 and 200, default is 100 (optional)
      - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
 
      - returns: RequestBuilder<CursorRelationshipListing> 

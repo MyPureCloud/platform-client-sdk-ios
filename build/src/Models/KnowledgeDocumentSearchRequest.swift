@@ -55,8 +55,10 @@ public class KnowledgeDocumentSearchRequest: Codable {
     public var application: KnowledgeSearchClientApplication?
     /** Conversation context information if the search is initiated in the context of a conversation. */
     public var conversationContext: KnowledgeConversationContext?
+    /** The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. The value should be between 0 to 1. */
+    public var confidenceThreshold: Float?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, includeDraftDocuments: Bool?, interval: DocumentQueryInterval?, filter: DocumentQuery?, sortOrder: SortOrder?, sortBy: SortBy?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContext?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, includeDraftDocuments: Bool?, interval: DocumentQueryInterval?, filter: DocumentQuery?, sortOrder: SortOrder?, sortBy: SortBy?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContext?, confidenceThreshold: Float?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -71,6 +73,7 @@ public class KnowledgeDocumentSearchRequest: Codable {
         self.sortBy = sortBy
         self.application = application
         self.conversationContext = conversationContext
+        self.confidenceThreshold = confidenceThreshold
     }
 
 

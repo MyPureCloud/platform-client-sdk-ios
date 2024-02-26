@@ -6079,6 +6079,56 @@ open class KnowledgeAPI {
     
     
     /**
+     Indicate that the document was copied by the user.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessionDocumentCopies(sessionId: String, documentId: String, body: KnowledgeGuestDocumentCopy? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionDocumentCopiesWithRequestBuilder(sessionId: sessionId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Indicate that the document was copied by the user.
+     - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postKnowledgeGuestSessionDocumentCopiesWithRequestBuilder(sessionId: String, documentId: String, body: KnowledgeGuestDocumentCopy? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
      Give feedback on a document
      
      - parameter sessionId: (path) Knowledge guest session ID. 
@@ -6142,6 +6192,100 @@ open class KnowledgeAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocumentFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Create view event for a document.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessionDocumentViews(sessionId: String, documentId: String, body: KnowledgeGuestDocumentView? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionDocumentViewsWithRequestBuilder(sessionId: sessionId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create view event for a document.
+     - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter documentId: (path) Document ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postKnowledgeGuestSessionDocumentViewsWithRequestBuilder(sessionId: String, documentId: String, body: KnowledgeGuestDocumentView? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    /**
+     Indicate that documents were presented to the user.
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeGuestSessionDocumentsPresentations(sessionId: String, body: KnowledgeGuestDocumentPresentation? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeGuestSessionDocumentsPresentationsWithRequestBuilder(sessionId: sessionId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Indicate that documents were presented to the user.
+     - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/presentations
+     
+     - parameter sessionId: (path) Knowledge guest session ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postKnowledgeGuestSessionDocumentsPresentationsWithRequestBuilder(sessionId: String, body: KnowledgeGuestDocumentPresentation? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/presentations"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -6409,6 +6553,59 @@ open class KnowledgeAPI {
         let url = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
+    
+    /**
+     Indicate that the document was copied by the user.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentCopies(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentCopy? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentCopiesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Indicate that the document was copied by the user.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter documentId: (path) Document ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentCopiesWithRequestBuilder(knowledgeBaseId: String, documentId: String, body: KnowledgeDocumentCopy? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: url!, body: body)
     }
@@ -6855,6 +7052,53 @@ open class KnowledgeAPI {
 
     
     
+    /**
+     Indicate that documents were presented to the user.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsPresentations(knowledgeBaseId: String, body: KnowledgeDocumentPresentation? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsPresentationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Indicate that documents were presented to the user.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsPresentationsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentPresentation? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: url!, body: body)
+    }
+
+    
+    
     
     /**
      Search the documents in a knowledge base.
@@ -6895,6 +7139,7 @@ open class KnowledgeAPI {
   "pageNumber" : 6,
   "searchId" : "searchId",
   "application" : "{}",
+  "confidenceThreshold" : 2.302136,
   "query" : "query",
   "pageSize" : 0,
   "results" : [ {

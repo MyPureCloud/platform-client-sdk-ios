@@ -14,6 +14,7 @@ public class CobrowseWebMessagingSession: Codable {
     public enum CommunicationType: String, Codable { 
         case call = "Call"
         case message = "Message"
+        case unknown = "Unknown"
     }
     /** The globally unique identifier for the object. */
     public var _id: String?

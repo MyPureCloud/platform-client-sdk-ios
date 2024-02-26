@@ -1622,6 +1622,7 @@ open class WorkforceManagementAPI {
         case timeOffRequests = "TimeOffRequests"
         case timeOffLimits = "TimeOffLimits"
         case workPlanBids = "WorkPlanBids"
+        case workPlanBidGroups = "WorkPlanBidGroups"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -3844,6 +3845,7 @@ open class WorkforceManagementAPI {
         case timeOffRequests = "TimeOffRequests"
         case timeOffLimits = "TimeOffLimits"
         case workPlanBids = "WorkPlanBids"
+        case workPlanBidGroups = "WorkPlanBidGroups"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }
@@ -7747,6 +7749,7 @@ open class WorkforceManagementAPI {
         case timeOffRequests = "TimeOffRequests"
         case timeOffLimits = "TimeOffLimits"
         case workPlanBids = "WorkPlanBids"
+        case workPlanBidGroups = "WorkPlanBidGroups"
         case workPlanRotations = "WorkPlanRotations"
         case workPlans = "WorkPlans"
     }

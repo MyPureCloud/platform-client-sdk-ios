@@ -22,6 +22,7 @@ public class MessageMediaParticipant: Codable {
         case converting = "converting"
         case uploading = "uploading"
         case transmitting = "transmitting"
+        case parked = "parked"
         case _none = "none"
     }
     public enum Direction: String, Codable { 

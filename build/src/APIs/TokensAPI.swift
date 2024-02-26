@@ -169,6 +169,54 @@ open class TokensAPI {
     }
 
     /**
+     Get the current Idle Token Timeout Value
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTokensTimeout(completion: @escaping ((_ data: IdleTokenTimeout?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTokensTimeoutWithRequestBuilder()
+        requestBuilder.execute { (response: Response<IdleTokenTimeout>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the current Idle Token Timeout Value
+     - GET /api/v2/tokens/timeout
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "idleTokenTimeoutSeconds" : 300,
+  "enableIdleTokenTimeout" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<IdleTokenTimeout> 
+     */
+    open class func getTokensTimeoutWithRequestBuilder() -> RequestBuilder<IdleTokenTimeout> {        
+        let path = "/api/v2/tokens/timeout"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdleTokenTimeout>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: url!, body: body)
+    }
+
+    /**
      Verify user token
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -203,6 +251,58 @@ open class TokensAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "HEAD", url: url!, body: body)
+    }
+
+    
+    /**
+     Update or Enable/Disable the Idle Token Timeout
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putTokensTimeout(body: IdleTokenTimeout? = nil, completion: @escaping ((_ data: IdleTokenTimeout?,_ error: Error?) -> Void)) {
+        let requestBuilder = putTokensTimeoutWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<IdleTokenTimeout>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update or Enable/Disable the Idle Token Timeout
+     - PUT /api/v2/tokens/timeout
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "idleTokenTimeoutSeconds" : 300,
+  "enableIdleTokenTimeout" : true
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<IdleTokenTimeout> 
+     */
+    open class func putTokensTimeoutWithRequestBuilder(body: IdleTokenTimeout? = nil) -> RequestBuilder<IdleTokenTimeout> {        
+        let path = "/api/v2/tokens/timeout"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let url = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<IdleTokenTimeout>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: url!, body: body)
     }
 
 }

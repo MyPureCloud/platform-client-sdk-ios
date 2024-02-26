@@ -17,11 +17,14 @@ public class BuSchedulingSettingsResponse: Codable {
     public var syncTimeOffProperties: [String]?
     /** Configures the max percent increase and decrease of service goals for this business unit */
     public var serviceGoalImpact: WfmServiceGoalImpactSettings?
+    /** Indicates whether or not per minute granularity for scheduling will be enabled for this business unit */
+    public var allowWorkPlanPerMinuteGranularity: Bool?
 
-    public init(messageSeverities: [SchedulerMessageTypeSeverity]?, syncTimeOffProperties: [SyncTimeOffProperties]?, serviceGoalImpact: WfmServiceGoalImpactSettings?) {
+    public init(messageSeverities: [SchedulerMessageTypeSeverity]?, syncTimeOffProperties: [SyncTimeOffProperties]?, serviceGoalImpact: WfmServiceGoalImpactSettings?, allowWorkPlanPerMinuteGranularity: Bool?) {
         self.messageSeverities = messageSeverities
         self.syncTimeOffProperties = syncTimeOffProperties
         self.serviceGoalImpact = serviceGoalImpact
+        self.allowWorkPlanPerMinuteGranularity = allowWorkPlanPerMinuteGranularity
     }
 
 

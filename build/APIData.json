@@ -986,6 +986,20 @@
     "return": "JourneyAggregateQueryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: JourneyAggregationQuery = new JourneyAggregationQuery(...) // query\n\n// Query for journey aggregates\nPostAnalyticsJourneysAggregatesQueryRequest.postAnalyticsJourneysAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsJourneysAggregatesQueryRequest.postAnalyticsJourneysAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
   },
+  "postanalyticsknowledgeaggregatesquery": {
+    "operationId": "postanalyticsknowledgeaggregatesquery",
+    "functionName": "postAnalyticsKnowledgeAggregatesQuery",
+    "signature": "postAnalyticsKnowledgeAggregatesQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "KnowledgeAggregationQuery",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeAggregateQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: KnowledgeAggregationQuery = new KnowledgeAggregationQuery(...) // query\n\n// Query for knowledge aggregates\nPostAnalyticsKnowledgeAggregatesQueryRequest.postAnalyticsKnowledgeAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsKnowledgeAggregatesQueryRequest.postAnalyticsKnowledgeAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "postanalyticsqueuesobservationsquery": {
     "operationId": "postanalyticsqueuesobservationsquery",
     "functionName": "postAnalyticsQueuesObservationsQuery",
@@ -11439,7 +11453,7 @@
       }
     ],
     "return": "CursorContactListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100)\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for external contacts using paging\nGetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for external contacts using paging\nGetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanContactsRequest.getExternalcontactsScanContacts was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsscannotes": {
     "operationId": "getexternalcontactsscannotes",
@@ -11458,7 +11472,7 @@
       }
     ],
     "return": "CursorNoteListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100)\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for notes using paging\nGetExternalcontactsScanNotesRequest.getExternalcontactsScanNotes(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanNotesRequest.getExternalcontactsScanNotes was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for notes using paging\nGetExternalcontactsScanNotesRequest.getExternalcontactsScanNotes(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanNotesRequest.getExternalcontactsScanNotes was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsscanorganizations": {
     "operationId": "getexternalcontactsscanorganizations",
@@ -11477,7 +11491,7 @@
       }
     ],
     "return": "CursorOrganizationListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100)\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for external organizations using paging\nGetExternalcontactsScanOrganizationsRequest.getExternalcontactsScanOrganizations(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanOrganizationsRequest.getExternalcontactsScanOrganizations was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for external organizations using paging\nGetExternalcontactsScanOrganizationsRequest.getExternalcontactsScanOrganizations(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanOrganizationsRequest.getExternalcontactsScanOrganizations was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsscanrelationships": {
     "operationId": "getexternalcontactsscanrelationships",
@@ -11496,7 +11510,7 @@
       }
     ],
     "return": "CursorRelationshipListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100)\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for relationships\nGetExternalcontactsScanRelationshipsRequest.getExternalcontactsScanRelationships(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanRelationshipsRequest.getExternalcontactsScanRelationships was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL\n\n// Scan for relationships\nGetExternalcontactsScanRelationshipsRequest.getExternalcontactsScanRelationships(limit: limit, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsScanRelationshipsRequest.getExternalcontactsScanRelationships was successful\")\n        dump(response)\n    }\n}"
   },
   "patchexternalcontactscontactidentifiers": {
     "operationId": "patchexternalcontactscontactidentifiers",
@@ -18485,6 +18499,29 @@
     "return": "UploadUrlResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: UploadUrlRequest = new UploadUrlRequest(...) // query\n\n// Creates a presigned URL for uploading a knowledge import file with a set of documents\nPostKnowledgeDocumentuploadsRequest.postKnowledgeDocumentuploads(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeDocumentuploadsRequest.postKnowledgeDocumentuploads was successful\")\n        dump(response)\n    }\n}"
   },
+  "postknowledgeguestsessiondocumentcopies": {
+    "operationId": "postknowledgeguestsessiondocumentcopies",
+    "functionName": "postKnowledgeGuestSessionDocumentCopies",
+    "signature": "postKnowledgeGuestSessionDocumentCopies(sessionId, documentId, body)",
+    "parameters": [
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeGuestDocumentCopy",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet documentId: String = \"\" // Document ID\nlet body: KnowledgeGuestDocumentCopy = new KnowledgeGuestDocumentCopy(...) // \n\n// Indicate that the document was copied by the user.\nPostKnowledgeGuestSessionDocumentCopiesRequest.postKnowledgeGuestSessionDocumentCopies(sessionId: sessionId, documentId: documentId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostKnowledgeGuestSessionDocumentCopiesRequest.postKnowledgeGuestSessionDocumentCopies was successful\")\n    }\n}"
+  },
   "postknowledgeguestsessiondocumentfeedback": {
     "operationId": "postknowledgeguestsessiondocumentfeedback",
     "functionName": "postKnowledgeGuestSessionDocumentFeedback",
@@ -18508,6 +18545,47 @@
     ],
     "return": "KnowledgeGuestDocumentFeedback",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet documentId: String = \"\" // Document ID.\nlet body: KnowledgeGuestDocumentFeedback = new KnowledgeGuestDocumentFeedback(...) // \n\n// Give feedback on a document\nPostKnowledgeGuestSessionDocumentFeedbackRequest.postKnowledgeGuestSessionDocumentFeedback(sessionId: sessionId, documentId: documentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeGuestSessionDocumentFeedbackRequest.postKnowledgeGuestSessionDocumentFeedback was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgeguestsessiondocumentviews": {
+    "operationId": "postknowledgeguestsessiondocumentviews",
+    "functionName": "postKnowledgeGuestSessionDocumentViews",
+    "signature": "postKnowledgeGuestSessionDocumentViews(sessionId, documentId, body)",
+    "parameters": [
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeGuestDocumentView",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet documentId: String = \"\" // Document ID\nlet body: KnowledgeGuestDocumentView = new KnowledgeGuestDocumentView(...) // \n\n// Create view event for a document.\nPostKnowledgeGuestSessionDocumentViewsRequest.postKnowledgeGuestSessionDocumentViews(sessionId: sessionId, documentId: documentId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostKnowledgeGuestSessionDocumentViewsRequest.postKnowledgeGuestSessionDocumentViews was successful\")\n    }\n}"
+  },
+  "postknowledgeguestsessiondocumentspresentations": {
+    "operationId": "postknowledgeguestsessiondocumentspresentations",
+    "functionName": "postKnowledgeGuestSessionDocumentsPresentations",
+    "signature": "postKnowledgeGuestSessionDocumentsPresentations(sessionId, body)",
+    "parameters": [
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeGuestDocumentPresentation",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet body: KnowledgeGuestDocumentPresentation = new KnowledgeGuestDocumentPresentation(...) // \n\n// Indicate that documents were presented to the user.\nPostKnowledgeGuestSessionDocumentsPresentationsRequest.postKnowledgeGuestSessionDocumentsPresentations(sessionId: sessionId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostKnowledgeGuestSessionDocumentsPresentationsRequest.postKnowledgeGuestSessionDocumentsPresentations was successful\")\n    }\n}"
   },
   "postknowledgeguestsessiondocumentssearch": {
     "operationId": "postknowledgeguestsessiondocumentssearch",
@@ -18584,6 +18662,29 @@
     ],
     "return": "CategoryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: CategoryCreateRequest = new CategoryCreateRequest(...) // \n\n// Create new category\nPostKnowledgeKnowledgebaseCategoriesRequest.postKnowledgeKnowledgebaseCategories(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseCategoriesRequest.postKnowledgeKnowledgebaseCategories was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgeknowledgebasedocumentcopies": {
+    "operationId": "postknowledgeknowledgebasedocumentcopies",
+    "functionName": "postKnowledgeKnowledgebaseDocumentCopies",
+    "signature": "postKnowledgeKnowledgebaseDocumentCopies(knowledgeBaseId, documentId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentCopy",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID.\nlet documentId: String = \"\" // Document ID.\nlet body: KnowledgeDocumentCopy = new KnowledgeDocumentCopy(...) // \n\n// Indicate that the document was copied by the user.\nPostKnowledgeKnowledgebaseDocumentCopiesRequest.postKnowledgeKnowledgebaseDocumentCopies(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostKnowledgeKnowledgebaseDocumentCopiesRequest.postKnowledgeKnowledgebaseDocumentCopies was successful\")\n    }\n}"
   },
   "postknowledgeknowledgebasedocumentfeedback": {
     "operationId": "postknowledgeknowledgebasedocumentfeedback",
@@ -18698,6 +18799,24 @@
     ],
     "return": "KnowledgeDocumentResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // \n\n// Create document.\nPostKnowledgeKnowledgebaseDocumentsRequest.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsRequest.postKnowledgeKnowledgebaseDocuments was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgeknowledgebasedocumentspresentations": {
+    "operationId": "postknowledgeknowledgebasedocumentspresentations",
+    "functionName": "postKnowledgeKnowledgebaseDocumentsPresentations",
+    "signature": "postKnowledgeKnowledgebaseDocumentsPresentations(knowledgeBaseId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentPresentation",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID.\nlet body: KnowledgeDocumentPresentation = new KnowledgeDocumentPresentation(...) // \n\n// Indicate that documents were presented to the user.\nPostKnowledgeKnowledgebaseDocumentsPresentationsRequest.postKnowledgeKnowledgebaseDocumentsPresentations(knowledgeBaseId: knowledgeBaseId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostKnowledgeKnowledgebaseDocumentsPresentationsRequest.postKnowledgeKnowledgebaseDocumentsPresentations was successful\")\n    }\n}"
   },
   "postknowledgeknowledgebasedocumentssearch": {
     "operationId": "postknowledgeknowledgebasedocumentssearch",
@@ -36474,11 +36593,32 @@
     "return": "TokenInfo",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet preserveIdleTTL: Bool = true // preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset.\n\n// Fetch information about the current token\nGetTokensMeRequest.getTokensMe(preserveIdleTTL: preserveIdleTTL) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTokensMeRequest.getTokensMe was successful\")\n        dump(response)\n    }\n}"
   },
+  "gettokenstimeout": {
+    "operationId": "gettokenstimeout",
+    "functionName": "getTokensTimeout",
+    "signature": "getTokensTimeout()",
+    "return": "IdleTokenTimeout",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the current Idle Token Timeout Value\nGetTokensTimeoutRequest.getTokensTimeout() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTokensTimeoutRequest.getTokensTimeout was successful\")\n        dump(response)\n    }\n}"
+  },
   "headtokensme": {
     "operationId": "headtokensme",
     "functionName": "headTokensMe",
     "signature": "headTokensMe()",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Verify user token\nHeadTokensMeRequest.headTokensMe() { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"HeadTokensMeRequest.headTokensMe was successful\")\n    }\n}"
+  },
+  "puttokenstimeout": {
+    "operationId": "puttokenstimeout",
+    "functionName": "putTokensTimeout",
+    "signature": "putTokensTimeout(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "IdleTokenTimeout",
+        "required": "false"
+      }
+    ],
+    "return": "IdleTokenTimeout",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: IdleTokenTimeout = new IdleTokenTimeout(...) // \n\n// Update or Enable/Disable the Idle Token Timeout\nPutTokensTimeoutRequest.putTokensTimeout(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTokensTimeoutRequest.putTokensTimeout was successful\")\n        dump(response)\n    }\n}"
   },
   "postlanguageunderstandingmineruploads": {
     "operationId": "postlanguageunderstandingmineruploads",

@@ -34,10 +34,12 @@ public class RecordingJobsQuery: Codable {
     public var includeScreenRecordings: Bool?
     /** For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value = false */
     public var clearExport: Bool?
-    /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is required only when querying for conversations lesser than 5 years. */
+    /** Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability.This is supported only when querying for conversations up to and including 5 years old. */
     public var conversationQuery: AsyncConversationQuery?
+    /** As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    public var agedConversationInterval: String?
 
-    public init(action: Action?, actionDate: Date?, actionAge: Int?, screenRecordingActionDate: Date?, screenRecordingActionAge: Int?, integrationId: String?, includeRecordingsWithSensitiveData: Bool?, includeScreenRecordings: Bool?, clearExport: Bool?, conversationQuery: AsyncConversationQuery?) {
+    public init(action: Action?, actionDate: Date?, actionAge: Int?, screenRecordingActionDate: Date?, screenRecordingActionAge: Int?, integrationId: String?, includeRecordingsWithSensitiveData: Bool?, includeScreenRecordings: Bool?, clearExport: Bool?, conversationQuery: AsyncConversationQuery?, agedConversationInterval: String?) {
         self.action = action
         self.actionDate = actionDate
         self.actionAge = actionAge
@@ -48,6 +50,7 @@ public class RecordingJobsQuery: Codable {
         self.includeScreenRecordings = includeScreenRecordings
         self.clearExport = clearExport
         self.conversationQuery = conversationQuery
+        self.agedConversationInterval = agedConversationInterval
     }
 
 

@@ -27,6 +27,7 @@ public class Conversation: Codable {
         case converting = "converting"
         case uploading = "uploading"
         case transmitting = "transmitting"
+        case parked = "parked"
         case _none = "none"
     }
     /** The globally unique identifier for the object. */

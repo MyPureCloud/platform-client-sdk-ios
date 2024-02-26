@@ -10,7 +10,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteToken**](TokensAPI.html#deleteToken) | Delete all auth tokens for the specified user. |
 | [**deleteTokensMe**](TokensAPI.html#deleteTokensMe) | Delete auth token used to make the request. |
 | [**getTokensMe**](TokensAPI.html#getTokensMe) | Fetch information about the current token |
+| [**getTokensTimeout**](TokensAPI.html#getTokensTimeout) | Get the current Idle Token Timeout Value |
 | [**headTokensMe**](TokensAPI.html#headTokensMe) | Verify user token |
+| [**putTokensTimeout**](TokensAPI.html#putTokensTimeout) | Update or Enable/Disable the Idle Token Timeout |
 {: class="table-striped"}
 
 <a name="deleteToken"></a>
@@ -161,6 +163,54 @@ TokensAPI.getTokensMe(preserveIdleTTL: preserveIdleTTL) { (response, error) in
 
 [**TokenInfo**](TokenInfo.html)
 
+<a name="getTokensTimeout"></a>
+
+# **getTokensTimeout**
+
+
+
+> [IdleTokenTimeout](IdleTokenTimeout.html) getTokensTimeout()
+
+Get the current Idle Token Timeout Value
+
+
+
+Wraps GET /api/v2/tokens/timeout  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TokensAPI.getTokensTimeout() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TokensAPI.getTokensTimeout was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**IdleTokenTimeout**](IdleTokenTimeout.html)
+
 <a name="headTokensMe"></a>
 
 # **headTokensMe**
@@ -206,4 +256,56 @@ This endpoint does not require any parameters.
 ### Return type
 
 `nil` (empty response body)
+
+<a name="putTokensTimeout"></a>
+
+# **putTokensTimeout**
+
+
+
+> [IdleTokenTimeout](IdleTokenTimeout.html) putTokensTimeout(body)
+
+Update or Enable/Disable the Idle Token Timeout
+
+
+
+Wraps PUT /api/v2/tokens/timeout  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: IdleTokenTimeout = new IdleTokenTimeout(...) // 
+
+// Code example
+TokensAPI.putTokensTimeout(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TokensAPI.putTokensTimeout was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**IdleTokenTimeout**](IdleTokenTimeout.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**IdleTokenTimeout**](IdleTokenTimeout.html)
 

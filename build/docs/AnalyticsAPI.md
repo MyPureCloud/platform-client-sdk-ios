@@ -46,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsFlowsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
 | [**postAnalyticsFlowsObservationsQuery**](AnalyticsAPI.html#postAnalyticsFlowsObservationsQuery) | Query for flow observations |
 | [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
+| [**postAnalyticsKnowledgeAggregatesQuery**](AnalyticsAPI.html#postAnalyticsKnowledgeAggregatesQuery) | Query for knowledge aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
 | [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
@@ -2121,6 +2122,58 @@ AnalyticsAPI.postAnalyticsJourneysAggregatesQuery(body: body) { (response, error
 ### Return type
 
 [**JourneyAggregateQueryResponse**](JourneyAggregateQueryResponse.html)
+
+<a name="postAnalyticsKnowledgeAggregatesQuery"></a>
+
+# **postAnalyticsKnowledgeAggregatesQuery**
+
+
+
+> [KnowledgeAggregateQueryResponse](KnowledgeAggregateQueryResponse.html) postAnalyticsKnowledgeAggregatesQuery(body)
+
+Query for knowledge aggregates
+
+
+
+Wraps POST /api/v2/analytics/knowledge/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:knowledgeAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: KnowledgeAggregationQuery = new KnowledgeAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsKnowledgeAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsKnowledgeAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**KnowledgeAggregationQuery**](KnowledgeAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeAggregateQueryResponse**](KnowledgeAggregateQueryResponse.html)
 
 <a name="postAnalyticsQueuesObservationsQuery"></a>
 

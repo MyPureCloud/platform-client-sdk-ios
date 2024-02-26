@@ -950,6 +950,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "jobId" : "jobId",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queues" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -1045,6 +1046,7 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "jobId" : "jobId",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queues" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -1079,6 +1081,7 @@ open class RoutingAPI {
       "kpi" : "kpi"
     } ]
   }, {
+    "jobId" : "jobId",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queues" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -11973,6 +11976,7 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "jobId" : "jobId",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queues" : [ {
     "selfUri" : "https://openapi-generator.tech",

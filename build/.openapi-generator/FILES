@@ -517,6 +517,7 @@ docs/CampaignSequenceEntityListing.md
 docs/CampaignSkillStatistics.md
 docs/CampaignStats.md
 docs/CampaignTimeSlot.md
+docs/CannedResponseLibraries.md
 docs/Card.md
 docs/CardAction.md
 docs/CarrierServicesAPI.json
@@ -1726,6 +1727,7 @@ docs/IdentityProviderAPI.json
 docs/IdentityProviderAPI.md
 docs/IdentityProviderEntityListing.md
 docs/IdleEventTrigger.md
+docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
 docs/ImportError.md
 docs/ImportForecastResponse.md
@@ -1939,6 +1941,13 @@ docs/KlaxonInteractionStatsRulesTopicNotificationUser.md
 docs/Knowledge.md
 docs/KnowledgeAPI.json
 docs/KnowledgeAPI.md
+docs/KnowledgeAggregateDataContainer.md
+docs/KnowledgeAggregateQueryClause.md
+docs/KnowledgeAggregateQueryFilter.md
+docs/KnowledgeAggregateQueryPredicate.md
+docs/KnowledgeAggregateQueryResponse.md
+docs/KnowledgeAggregationQuery.md
+docs/KnowledgeAggregationView.md
 docs/KnowledgeBase.md
 docs/KnowledgeBaseCreateRequest.md
 docs/KnowledgeBaseListing.md
@@ -1953,12 +1962,14 @@ docs/KnowledgeConversationContextResponse.md
 docs/KnowledgeDocument.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRequest.md
+docs/KnowledgeDocumentCopy.md
 docs/KnowledgeDocumentFeedback.md
 docs/KnowledgeDocumentFeedbackResponse.md
 docs/KnowledgeDocumentFeedbackResponseListing.md
 docs/KnowledgeDocumentGuestSearch.md
 docs/KnowledgeDocumentGuestSearchRequest.md
 docs/KnowledgeDocumentGuestSearchResult.md
+docs/KnowledgeDocumentPresentation.md
 docs/KnowledgeDocumentReference.md
 docs/KnowledgeDocumentReq.md
 docs/KnowledgeDocumentRequest.md
@@ -1976,6 +1987,7 @@ docs/KnowledgeDocumentVersionListing.md
 docs/KnowledgeDocumentVersionReference.md
 docs/KnowledgeDocumentVersionVariation.md
 docs/KnowledgeDocumentVersionVariationListing.md
+docs/KnowledgeDocumentVersionVariationReference.md
 docs/KnowledgeDocumentView.md
 docs/KnowledgeExportJobDocumentsFilter.md
 docs/KnowledgeExportJobFilter.md
@@ -1984,7 +1996,9 @@ docs/KnowledgeExportJobResponse.md
 docs/KnowledgeExtendedCategory.md
 docs/KnowledgeGroupStatistics.md
 docs/KnowledgeGuestDocument.md
+docs/KnowledgeGuestDocumentCopy.md
 docs/KnowledgeGuestDocumentFeedback.md
+docs/KnowledgeGuestDocumentPresentation.md
 docs/KnowledgeGuestDocumentResponseListing.md
 docs/KnowledgeGuestDocumentSuggestion.md
 docs/KnowledgeGuestDocumentSuggestionRequest.md
@@ -1992,6 +2006,7 @@ docs/KnowledgeGuestDocumentSuggestionResult.md
 docs/KnowledgeGuestDocumentVariation.md
 docs/KnowledgeGuestDocumentVariationContext.md
 docs/KnowledgeGuestDocumentVersionReference.md
+docs/KnowledgeGuestDocumentView.md
 docs/KnowledgeGuestSearchClientApplication.md
 docs/KnowledgeGuestSession.md
 docs/KnowledgeGuestSessionApp.md
@@ -5230,6 +5245,7 @@ docs/getTelephonySiptracesDownloadDownloadId-example.txt
 docs/getTextbotsBotsSearch-example.txt
 docs/getTimezones-example.txt
 docs/getTokensMe-example.txt
+docs/getTokensTimeout-example.txt
 docs/getUsageEventsDefinition-example.txt
 docs/getUsageEventsDefinitions-example.txt
 docs/getUsageQueryExecutionIdResults-example.txt
@@ -5565,6 +5581,7 @@ docs/postAnalyticsFlowsObservationsQuery-example.txt
 docs/postAnalyticsFlowsObservationsQuery-example.txt
 docs/postAnalyticsJourneysAggregatesQuery-example.txt
 docs/postAnalyticsJourneysAggregatesQuery-example.txt
+docs/postAnalyticsKnowledgeAggregatesQuery-example.txt
 docs/postAnalyticsQueuesObservationsQuery-example.txt
 docs/postAnalyticsQueuesObservationsQuery-example.txt
 docs/postAnalyticsRatelimitsAggregatesQuery-example.txt
@@ -5790,16 +5807,21 @@ docs/postJourneyOutcomesPredictors-example.txt
 docs/postJourneySegments-example.txt
 docs/postKnowledgeDocumentuploads-example.txt
 docs/postKnowledgeDocumentuploads-example.txt
+docs/postKnowledgeGuestSessionDocumentCopies-example.txt
 docs/postKnowledgeGuestSessionDocumentFeedback-example.txt
+docs/postKnowledgeGuestSessionDocumentViews-example.txt
+docs/postKnowledgeGuestSessionDocumentsPresentations-example.txt
 docs/postKnowledgeGuestSessionDocumentsSearch-example.txt
 docs/postKnowledgeGuestSessionDocumentsSearchSuggestions-example.txt
 docs/postKnowledgeGuestSessions-example.txt
 docs/postKnowledgeKnowledgebaseCategories-example.txt
+docs/postKnowledgeKnowledgebaseDocumentCopies-example.txt
 docs/postKnowledgeKnowledgebaseDocumentFeedback-example.txt
 docs/postKnowledgeKnowledgebaseDocumentVariations-example.txt
 docs/postKnowledgeKnowledgebaseDocumentVersions-example.txt
 docs/postKnowledgeKnowledgebaseDocumentViews-example.txt
 docs/postKnowledgeKnowledgebaseDocuments-example.txt
+docs/postKnowledgeKnowledgebaseDocumentsPresentations-example.txt
 docs/postKnowledgeKnowledgebaseDocumentsSearch-example.txt
 docs/postKnowledgeKnowledgebaseDocumentsSearchSuggestions-example.txt
 docs/postKnowledgeKnowledgebaseExportJobs-example.txt
@@ -6283,6 +6305,7 @@ docs/putTelephonyProvidersEdgesSiteNumberplans-example.txt
 docs/putTelephonyProvidersEdgesSiteOutboundroute-example.txt
 docs/putTelephonyProvidersEdgesSiteSiteconnections-example.txt
 docs/putTelephonyProvidersEdgesTrunkbasesetting-example.txt
+docs/putTokensTimeout-example.txt
 docs/putUserCallforwarding-example.txt
 docs/putUserGreetingsDefaults-example.txt
 docs/putUserOutofoffice-example.txt
@@ -6890,6 +6913,7 @@ src/Models/CampaignSequenceEntityListing.swift
 src/Models/CampaignSkillStatistics.swift
 src/Models/CampaignStats.swift
 src/Models/CampaignTimeSlot.swift
+src/Models/CannedResponseLibraries.swift
 src/Models/Card.swift
 src/Models/CardAction.swift
 src/Models/Category.swift
@@ -8063,6 +8087,7 @@ src/Models/IdentityNow.swift
 src/Models/IdentityProvider.swift
 src/Models/IdentityProviderEntityListing.swift
 src/Models/IdleEventTrigger.swift
+src/Models/IdleTokenTimeout.swift
 src/Models/IgnoredActivityCategories.swift
 src/Models/ImportError.swift
 src/Models/ImportForecastResponse.swift
@@ -8268,6 +8293,13 @@ src/Models/KlaxonInteractionStatsAlertsTopicNotificationUser.swift
 src/Models/KlaxonInteractionStatsRulesTopicInteractionStatRule.swift
 src/Models/KlaxonInteractionStatsRulesTopicNotificationUser.swift
 src/Models/Knowledge.swift
+src/Models/KnowledgeAggregateDataContainer.swift
+src/Models/KnowledgeAggregateQueryClause.swift
+src/Models/KnowledgeAggregateQueryFilter.swift
+src/Models/KnowledgeAggregateQueryPredicate.swift
+src/Models/KnowledgeAggregateQueryResponse.swift
+src/Models/KnowledgeAggregationQuery.swift
+src/Models/KnowledgeAggregationView.swift
 src/Models/KnowledgeBase.swift
 src/Models/KnowledgeBaseCreateRequest.swift
 src/Models/KnowledgeBaseListing.swift
@@ -8282,12 +8314,14 @@ src/Models/KnowledgeConversationContextResponse.swift
 src/Models/KnowledgeDocument.swift
 src/Models/KnowledgeDocumentAlternative.swift
 src/Models/KnowledgeDocumentBulkRequest.swift
+src/Models/KnowledgeDocumentCopy.swift
 src/Models/KnowledgeDocumentFeedback.swift
 src/Models/KnowledgeDocumentFeedbackResponse.swift
 src/Models/KnowledgeDocumentFeedbackResponseListing.swift
 src/Models/KnowledgeDocumentGuestSearch.swift
 src/Models/KnowledgeDocumentGuestSearchRequest.swift
 src/Models/KnowledgeDocumentGuestSearchResult.swift
+src/Models/KnowledgeDocumentPresentation.swift
 src/Models/KnowledgeDocumentReference.swift
 src/Models/KnowledgeDocumentReq.swift
 src/Models/KnowledgeDocumentRequest.swift
@@ -8305,6 +8339,7 @@ src/Models/KnowledgeDocumentVersionListing.swift
 src/Models/KnowledgeDocumentVersionReference.swift
 src/Models/KnowledgeDocumentVersionVariation.swift
 src/Models/KnowledgeDocumentVersionVariationListing.swift
+src/Models/KnowledgeDocumentVersionVariationReference.swift
 src/Models/KnowledgeDocumentView.swift
 src/Models/KnowledgeExportJobDocumentsFilter.swift
 src/Models/KnowledgeExportJobFilter.swift
@@ -8313,7 +8348,9 @@ src/Models/KnowledgeExportJobResponse.swift
 src/Models/KnowledgeExtendedCategory.swift
 src/Models/KnowledgeGroupStatistics.swift
 src/Models/KnowledgeGuestDocument.swift
+src/Models/KnowledgeGuestDocumentCopy.swift
 src/Models/KnowledgeGuestDocumentFeedback.swift
+src/Models/KnowledgeGuestDocumentPresentation.swift
 src/Models/KnowledgeGuestDocumentResponseListing.swift
 src/Models/KnowledgeGuestDocumentSuggestion.swift
 src/Models/KnowledgeGuestDocumentSuggestionRequest.swift
@@ -8321,6 +8358,7 @@ src/Models/KnowledgeGuestDocumentSuggestionResult.swift
 src/Models/KnowledgeGuestDocumentVariation.swift
 src/Models/KnowledgeGuestDocumentVariationContext.swift
 src/Models/KnowledgeGuestDocumentVersionReference.swift
+src/Models/KnowledgeGuestDocumentView.swift
 src/Models/KnowledgeGuestSearchClientApplication.swift
 src/Models/KnowledgeGuestSession.swift
 src/Models/KnowledgeGuestSessionApp.swift

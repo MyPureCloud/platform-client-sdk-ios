@@ -24,6 +24,8 @@ public class BenefitAssessment: Codable {
     public var kpiAssessments: [KeyPerformanceIndicatorAssessment]?
     /** State of the benefit assessment. */
     public var state: State?
+    /** The unique identifier of job that created this benefit assessment. */
+    public var jobId: String?
     /** Creation Date of the benefit assessment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
     /** Modified Date of the benefit assessment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -31,11 +33,12 @@ public class BenefitAssessment: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, queues: [AddressableEntityRef]?, kpiAssessments: [KeyPerformanceIndicatorAssessment]?, state: State?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
+    public init(_id: String?, queues: [AddressableEntityRef]?, kpiAssessments: [KeyPerformanceIndicatorAssessment]?, state: State?, jobId: String?, dateCreated: Date?, dateModified: Date?, selfUri: String?) {
         self._id = _id
         self.queues = queues
         self.kpiAssessments = kpiAssessments
         self.state = state
+        self.jobId = jobId
         self.dateCreated = dateCreated
         self.dateModified = dateModified
         self.selfUri = selfUri
@@ -46,6 +49,7 @@ public class BenefitAssessment: Codable {
         case queues
         case kpiAssessments
         case state
+        case jobId
         case dateCreated
         case dateModified
         case selfUri
