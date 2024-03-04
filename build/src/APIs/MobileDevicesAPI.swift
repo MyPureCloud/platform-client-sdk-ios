@@ -11,6 +11,7 @@ import Foundation
 
 open class MobileDevicesAPI {
     
+    
     /**
      Delete device
      
@@ -47,13 +48,14 @@ open class MobileDevicesAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get device
@@ -110,13 +112,15 @@ open class MobileDevicesAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserDevice>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -124,7 +128,7 @@ open class MobileDevicesAPI {
         case ascending = "ascending"
         case descending = "descending"
     }
-
+    
     
     /**
      Get a list of all devices.
@@ -204,8 +208,8 @@ open class MobileDevicesAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortOrder": sortOrder?.rawValue
@@ -213,9 +217,10 @@ open class MobileDevicesAPI {
 
         let requestBuilder: RequestBuilder<DirectoryUserDevicesListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create User device
@@ -269,13 +274,15 @@ open class MobileDevicesAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserDevice>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -335,11 +342,11 @@ open class MobileDevicesAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserDevice>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

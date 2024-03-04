@@ -11,6 +11,7 @@ import Foundation
 
 open class GeneralDataProtectionRegulationAPI {
     
+    
     /**
      Get an existing GDPR request
      
@@ -66,13 +67,15 @@ open class GeneralDataProtectionRegulationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GDPRRequest>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -151,15 +154,15 @@ open class GeneralDataProtectionRegulationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<GDPRRequestEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -170,7 +173,8 @@ open class GeneralDataProtectionRegulationAPI {
         case email = "EMAIL"
         case twitter = "TWITTER"
     }
-
+    
+    
     
     
     /**
@@ -267,17 +271,19 @@ open class GeneralDataProtectionRegulationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "searchType": searchType.rawValue, 
             "searchValue": searchValue
         ])
 
         let requestBuilder: RequestBuilder<GDPRSubjectEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -334,14 +340,14 @@ open class GeneralDataProtectionRegulationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "deleteConfirmed": deleteConfirmed
         ])
 
         let requestBuilder: RequestBuilder<GDPRRequest>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

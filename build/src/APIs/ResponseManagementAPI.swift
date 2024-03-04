@@ -11,6 +11,7 @@ import Foundation
 
 open class ResponseManagementAPI {
     
+    
     /**
      Delete an existing response library.
      
@@ -48,13 +49,14 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an existing response.
@@ -93,13 +95,14 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete response asset
@@ -137,20 +140,23 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
     public enum MessagingTemplateFilter_getResponsemanagementLibraries: String { 
         case whatsapp = "whatsapp"
     }
-
+    
+    
     
     
     /**
@@ -227,8 +233,8 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "messagingTemplateFilter": messagingTemplateFilter?.rawValue, 
@@ -237,9 +243,10 @@ open class ResponseManagementAPI {
 
         let requestBuilder: RequestBuilder<LibraryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get details about an existing response library.
@@ -293,19 +300,20 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Library>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum Expand_getResponsemanagementResponse: String { 
         case substitutionsschema = "substitutionsSchema"
     }
-
+    
     
     /**
      Get details about an existing response.
@@ -397,16 +405,17 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ModelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get response asset information
@@ -473,13 +482,14 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ResponseAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get response asset upload status
@@ -530,13 +540,16 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ResponseAssetStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -544,7 +557,7 @@ open class ResponseManagementAPI {
     public enum Expand_getResponsemanagementResponses: String { 
         case substitutionsschema = "substitutionsSchema"
     }
-
+    
     
     /**
      Gets a list of existing responses.
@@ -692,8 +705,8 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "libraryId": libraryId, 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
@@ -702,9 +715,10 @@ open class ResponseManagementAPI {
 
         let requestBuilder: RequestBuilder<ResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a response library.
@@ -755,14 +769,21 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Library>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_postResponsemanagementResponseassetsSearch: String { 
+        case user = "user"
+        case division = "division"
+    }
     
     /**
      Search response assets
@@ -855,16 +876,17 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<ResponseAssetSearchResults>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates pre-signed url for uploading response asset
@@ -913,19 +935,20 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CreateResponseAssetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum Expand_postResponsemanagementResponses: String { 
         case substitutionsschema = "substitutionsSchema"
     }
-
+    
     
     /**
      Create a response.
@@ -1014,16 +1037,17 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ModelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Query responses
@@ -1068,13 +1092,15 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ResponseQueryResults>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1132,20 +1158,22 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Library>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
     public enum Expand_putResponsemanagementResponse: String { 
         case substitutionsschema = "substitutionsSchema"
     }
-
+    
     
     /**
      Update an existing response.
@@ -1240,16 +1268,18 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ModelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1319,11 +1349,11 @@ open class ResponseManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ResponseAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

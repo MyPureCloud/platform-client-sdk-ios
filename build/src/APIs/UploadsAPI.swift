@@ -11,6 +11,7 @@ import Foundation
 
 open class UploadsAPI {
     
+    
     /**
      Creates a presigned URL for uploading a knowledge import file with a set of documents
      
@@ -58,13 +59,15 @@ open class UploadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -119,13 +122,14 @@ open class UploadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Generates pre-signed URL to upload cover art for learning modules
@@ -174,13 +178,14 @@ open class UploadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates presigned url for uploading a public asset image
@@ -229,13 +234,14 @@ open class UploadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates presigned url for uploading a recording file
@@ -284,13 +290,14 @@ open class UploadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates presigned url for uploading WFM historical data file. Requires data in csv format.
@@ -339,11 +346,11 @@ open class UploadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

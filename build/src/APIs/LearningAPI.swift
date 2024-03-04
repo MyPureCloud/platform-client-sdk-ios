@@ -11,6 +11,7 @@ import Foundation
 
 open class LearningAPI {
     
+    
     /**
      Delete a learning assignment
      
@@ -47,13 +48,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a learning module
@@ -92,14 +94,25 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_getLearningAssignment: String { 
+        case module = "module"
+        case assessment = "assessment"
+        case assessmentform = "assessmentForm"
+        case moduleCoverart = "module.coverArt"
+        case step = "step"
+        case stepModulestep = "step.moduleStep"
+    }
     
     /**
      Get Learning Assignment
@@ -169,16 +182,19 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -188,7 +204,9 @@ open class LearningAPI {
         case _false = "False"
         case any = "Any"
     }
-
+    
+    
+    
     
     
     
@@ -198,7 +216,9 @@ open class LearningAPI {
         case _false = "False"
         case any = "Any"
     }
-
+    
+    
+    
     
     
     
@@ -207,18 +227,40 @@ open class LearningAPI {
         case asc = "Asc"
         case desc = "Desc"
     }
-
+    
     
     
     public enum SortBy_getLearningAssignments: String { 
         case recommendedCompletionDate = "RecommendedCompletionDate"
         case dateModified = "DateModified"
     }
-
     
     
     
     
+    
+    
+    public enum Types_getLearningAssignments: String { 
+        case informational = "Informational"
+        case assessedContent = "AssessedContent"
+        case assessment = "Assessment"
+    }
+    
+    
+    
+    public enum States_getLearningAssignments: String { 
+        case assigned = "Assigned"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case notCompleted = "NotCompleted"
+        case invalidSchedule = "InvalidSchedule"
+    }
+    
+    
+    
+    public enum Expand_getLearningAssignments: String { 
+        case moduleSummary = "ModuleSummary"
+    }
     
     /**
      List of Learning module Assignments
@@ -266,9 +308,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
   "entities" : [ {
     "isPassed" : true,
     "isManual" : true,
@@ -315,7 +357,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -343,8 +385,8 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "moduleId": moduleId, 
             "interval": interval, 
             "completionInterval": completionInterval, 
@@ -364,9 +406,12 @@ open class LearningAPI {
 
         let requestBuilder: RequestBuilder<LearningAssignmentsDomainEntity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -376,7 +421,9 @@ open class LearningAPI {
         case _false = "False"
         case any = "Any"
     }
-
+    
+    
+    
     
     
     
@@ -386,7 +433,9 @@ open class LearningAPI {
         case _false = "False"
         case any = "Any"
     }
-
+    
+    
+    
     
     
     
@@ -395,17 +444,38 @@ open class LearningAPI {
         case asc = "Asc"
         case desc = "Desc"
     }
-
+    
     
     
     public enum SortBy_getLearningAssignmentsMe: String { 
         case recommendedCompletionDate = "RecommendedCompletionDate"
         case dateModified = "DateModified"
     }
-
     
     
     
+    
+    public enum Types_getLearningAssignmentsMe: String { 
+        case informational = "Informational"
+        case assessedContent = "AssessedContent"
+        case assessment = "Assessment"
+    }
+    
+    
+    
+    public enum States_getLearningAssignmentsMe: String { 
+        case assigned = "Assigned"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case notCompleted = "NotCompleted"
+        case invalidSchedule = "InvalidSchedule"
+    }
+    
+    
+    
+    public enum Expand_getLearningAssignmentsMe: String { 
+        case moduleSummary = "ModuleSummary"
+    }
     
     /**
      List of Learning Assignments assigned to current user
@@ -451,9 +521,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 2,
+  "pageCount" : 7,
+  "pageNumber" : 5,
   "entities" : [ {
     "isPassed" : true,
     "isManual" : true,
@@ -500,7 +570,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -527,8 +597,8 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "moduleId": moduleId, 
             "interval": interval, 
             "completionInterval": completionInterval, 
@@ -547,10 +617,17 @@ open class LearningAPI {
 
         let requestBuilder: RequestBuilder<LearningAssignmentsDomainEntity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_getLearningModule: String { 
+        case assessmentform = "assessmentForm"
+        case coverart = "coverArt"
+    }
     
     /**
      Get a learning module
@@ -641,16 +718,18 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<LearningModule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -706,13 +785,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a learning module rule
@@ -773,15 +853,23 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     
+    
+    
+    
+    
+    public enum Expand_getLearningModuleVersion: String { 
+        case assessmentform = "assessmentForm"
+        case coverart = "coverArt"
+    }
     
     /**
      Get specific version of a published module
@@ -877,16 +965,26 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<LearningModule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Types_getLearningModules: String { 
+        case informational = "Informational"
+        case assessedContent = "AssessedContent"
+        case assessment = "Assessment"
+    }
+    
     
     
     
@@ -896,7 +994,7 @@ open class LearningAPI {
         case ascending = "ascending"
         case descending = "descending"
     }
-
+    
     
     
     public enum SortBy_getLearningModules: String { 
@@ -905,9 +1003,16 @@ open class LearningAPI {
         case percentpassed = "percentpassed"
         case averagescore = "averagescore"
     }
-
     
     
+    
+    
+    
+    
+    public enum Expand_getLearningModules: String { 
+        case rule = "rule"
+        case summarydata = "summaryData"
+    }
     
     
     public enum IsPublished_getLearningModules: String { 
@@ -915,7 +1020,15 @@ open class LearningAPI {
         case _false = "False"
         case any = "Any"
     }
-
+    
+    
+    
+    
+    public enum Statuses_getLearningModules: String { 
+        case unpublished = "Unpublished"
+        case published = "Published"
+        case archived = "Archived"
+    }
     
     
     
@@ -1077,8 +1190,8 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "isArchived": isArchived, 
             "types": types, 
             "pageSize": pageSize?.encodeToJSON(), 
@@ -1094,9 +1207,13 @@ open class LearningAPI {
 
         let requestBuilder: RequestBuilder<LearningModulesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -1107,9 +1224,23 @@ open class LearningAPI {
         case _false = "False"
         case any = "Any"
     }
-
     
     
+    
+    
+    public enum AssignmentStates_getLearningModulesAssignments: String { 
+        case notAssigned = "NotAssigned"
+        case assigned = "Assigned"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case invalidSchedule = "InvalidSchedule"
+    }
+    
+    
+    
+    public enum Expand_getLearningModulesAssignments: String { 
+        case coverart = "coverArt"
+    }
     
     /**
      Get all learning modules of an organization including assignments for a specific user
@@ -1347,8 +1478,8 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "userIds": userIds, 
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
@@ -1360,9 +1491,10 @@ open class LearningAPI {
 
         let requestBuilder: RequestBuilder<AssignedLearningModuleDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a specific Learning Module cover art using ID
@@ -1419,13 +1551,15 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleCoverArtResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1495,13 +1629,15 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1571,13 +1707,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Score learning assessment for preview
@@ -1699,13 +1836,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AssessmentScoringSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Reassign Learning Assignment
@@ -1773,13 +1911,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Reset Learning Assignment
@@ -1847,13 +1986,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create Learning Assignment
@@ -1917,13 +2057,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Retrieve aggregated assignment data
@@ -2014,13 +2155,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignmentAggregateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Add multiple learning assignments
@@ -2114,13 +2256,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignmentBulkAddResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Remove multiple Learning Assignments
@@ -2176,13 +2319,15 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignmentBulkRemoveResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2236,13 +2381,15 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2295,13 +2442,14 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModulePublishResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new learning module
@@ -2388,13 +2536,16 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2464,17 +2615,18 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize.encodeToJSON(), 
             "pageNumber": pageNumber.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<LearningAssignmentUserListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get list of possible slots where a learning activity can be scheduled.
@@ -2602,13 +2754,15 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningScheduleSlotsQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2701,13 +2855,15 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2772,11 +2928,11 @@ open class LearningAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

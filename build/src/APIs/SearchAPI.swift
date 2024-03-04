@@ -11,6 +11,7 @@ import Foundation
 
 open class SearchAPI {
     
+    
     /**
      Search gkn documentation using the q64 value returned from a previous search
      
@@ -69,16 +70,17 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64
         ])
 
         let requestBuilder: RequestBuilder<GKNDocumentationSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search documentation using the q64 value returned from a previous search
@@ -170,16 +172,18 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64
         ])
 
         let requestBuilder: RequestBuilder<DocumentationSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -303,18 +307,25 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64, 
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<GroupsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_getLocationsSearch: String { 
+        case images = "images"
+        case addressverificationdetails = "addressVerificationDetails"
+    }
     
     /**
      Search locations using the q64 value returned from a previous search
@@ -443,17 +454,52 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64, 
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<LocationsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_getSearch: String { 
+        case routingstatus = "routingStatus"
+        case presence = "presence"
+        case integrationpresence = "integrationPresence"
+        case conversationsummary = "conversationSummary"
+        case outofoffice = "outOfOffice"
+        case geolocation = "geolocation"
+        case station = "station"
+        case authorization = "authorization"
+        case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
+        case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
+        case workplanbidranks = "workPlanBidRanks"
+        case profileskills = "profileSkills"
+        case certifications = "certifications"
+        case locations = "locations"
+        case groups = "groups"
+        case skills = "skills"
+        case languages = "languages"
+        case languagepreference = "languagePreference"
+        case employerinfo = "employerInfo"
+        case biography = "biography"
+        case calleruserRoutingstatus = "callerUser.routingStatus"
+        case calleruserPrimarypresence = "callerUser.primaryPresence"
+        case calleruserConversationsummary = "callerUser.conversationSummary"
+        case calleruserOutofoffice = "callerUser.outOfOffice"
+        case calleruserGeolocation = "callerUser.geolocation"
+        case images = "images"
+        case addressverificationdetails = "addressVerificationDetails"
+    }
     
     
     
@@ -513,8 +559,8 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64, 
             "expand": expand, 
             "profile": profile
@@ -522,9 +568,44 @@ open class SearchAPI {
 
         let requestBuilder: RequestBuilder<JsonNodeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_getSearchSuggest: String { 
+        case routingstatus = "routingStatus"
+        case presence = "presence"
+        case integrationpresence = "integrationPresence"
+        case conversationsummary = "conversationSummary"
+        case outofoffice = "outOfOffice"
+        case geolocation = "geolocation"
+        case station = "station"
+        case authorization = "authorization"
+        case lasttokenissued = "lasttokenissued"
+        case datelastlogin = "dateLastLogin"
+        case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
+        case workplanbidranks = "workPlanBidRanks"
+        case profileskills = "profileSkills"
+        case certifications = "certifications"
+        case locations = "locations"
+        case groups = "groups"
+        case skills = "skills"
+        case languages = "languages"
+        case languagepreference = "languagePreference"
+        case employerinfo = "employerInfo"
+        case biography = "biography"
+        case calleruserRoutingstatus = "callerUser.routingStatus"
+        case calleruserPrimarypresence = "callerUser.primaryPresence"
+        case calleruserConversationsummary = "callerUser.conversationSummary"
+        case calleruserOutofoffice = "callerUser.outOfOffice"
+        case calleruserGeolocation = "callerUser.geolocation"
+        case images = "images"
+        case addressverificationdetails = "addressVerificationDetails"
+    }
     
     
     
@@ -584,8 +665,8 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64, 
             "expand": expand, 
             "profile": profile
@@ -593,9 +674,11 @@ open class SearchAPI {
 
         let requestBuilder: RequestBuilder<JsonNodeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -604,7 +687,7 @@ open class SearchAPI {
         case zoomPhone = "ZoomPhone"
         case eightByEight = "EightByEight"
     }
-
+    
     
     /**
      Search users using the q64 value returned from a previous search
@@ -1237,8 +1320,8 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64, 
             "expand": expand, 
             "integrationPresenceSource": integrationPresenceSource?.rawValue
@@ -1246,9 +1329,11 @@ open class SearchAPI {
 
         let requestBuilder: RequestBuilder<UsersSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1362,17 +1447,18 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "q64": q64, 
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<VoicemailsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search resources.
@@ -3281,13 +3367,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsConversationWithoutAttributesMultiGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search conversations
@@ -3335,13 +3422,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JsonCursorSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search gkn documentation
@@ -3401,13 +3489,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GKNDocumentationSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search documentation
@@ -3499,13 +3588,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DocumentationSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search groups
@@ -3626,13 +3716,15 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GroupsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3752,13 +3844,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search locations
@@ -3885,13 +3978,15 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LocationsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3948,16 +4043,18 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "profile": profile
         ])
 
         let requestBuilder: RequestBuilder<JsonNodeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4014,16 +4111,17 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "profile": profile
         ])
 
         let requestBuilder: RequestBuilder<JsonNodeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search resources.
@@ -4074,13 +4172,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JsonSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search resources.
@@ -4151,13 +4250,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TeamsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search users
@@ -4786,13 +4886,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UsersSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search users assigned to teams
@@ -5421,13 +5522,14 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UsersSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Search voicemails
@@ -5538,11 +5640,11 @@ open class SearchAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<VoicemailsSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

@@ -11,6 +11,7 @@ import Foundation
 
 open class AlertingAPI {
     
+    
     /**
      Delete an alert
      
@@ -47,13 +48,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an interaction stats alert
@@ -92,13 +94,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an interaction stats rule
@@ -137,13 +140,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a rule.
@@ -181,13 +185,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get an alert
@@ -261,11 +266,11 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -309,14 +314,20 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ActiveAlertCount>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_getAlertingInteractionstatsAlert: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Get an interaction stats alert
@@ -959,16 +970,21 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    public enum Expand_getAlertingInteractionstatsAlerts: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Get interaction stats alert list
@@ -2211,14 +2227,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsAlertContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -2262,14 +2278,20 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UnreadMetric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_getAlertingInteractionstatsRule: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Get an interaction stats rule
@@ -2909,16 +2931,21 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    public enum Expand_getAlertingInteractionstatsRules: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Get an interaction stats rule list
@@ -4155,16 +4182,17 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRuleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a rule.
@@ -4234,13 +4262,15 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4318,13 +4348,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Bulk alert updates
@@ -4377,13 +4408,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Bulk update of notification lists
@@ -4436,13 +4468,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Gets a paged list of alerts. The max page size is 50
@@ -4552,14 +4585,20 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AlertListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_postAlertingInteractionstatsRules: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Create an interaction stats rule
@@ -5196,16 +5235,17 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a Rule.
@@ -5272,13 +5312,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Bulk remove rules
@@ -5331,13 +5372,14 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a paged list of rules.  The max size of the page is 50 items.
@@ -5439,13 +5481,15 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonRuleContainer>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -5496,15 +5540,22 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UnreadStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     
     
+    
+    
+    
+    
+    public enum Expand_putAlertingInteractionstatsAlert: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Update an interaction stats alert read status
@@ -5557,18 +5608,25 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<UnreadStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
     
     
+    
+    
+    
+    
+    public enum Expand_putAlertingInteractionstatsRule: String { 
+        case notificationusers = "notificationUsers"
+    }
     
     /**
      Update an interaction stats rule
@@ -6210,16 +6268,18 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<InteractionStatsRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -6292,11 +6352,11 @@ open class AlertingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

@@ -11,6 +11,7 @@ import Foundation
 
 open class IntegrationsAPI {
     
+    
     /**
      Delete integration.
      
@@ -67,13 +68,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an Action
@@ -111,13 +113,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a Draft
@@ -155,13 +158,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a set of credentials
@@ -199,13 +203,20 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -281,8 +292,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -293,9 +304,10 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get integration configuration.
@@ -359,13 +371,19 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IntegrationConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -458,8 +476,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -470,15 +488,17 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<IntegrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum Expand_getIntegrationsAction: String { 
         case contract = "contract"
     }
-
+    
+    
     
     
     /**
@@ -539,23 +559,25 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue, 
             "includeConfig": includeConfig
         ])
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum Expand_getIntegrationsActionDraft: String { 
         case contract = "contract"
     }
-
+    
+    
     
     
     /**
@@ -616,17 +638,19 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue, 
             "includeConfig": includeConfig
         ])
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -689,13 +713,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JsonSchemaDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -746,13 +772,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Validate current Draft configuration.
@@ -857,13 +884,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DraftValidationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -926,13 +955,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JsonSchemaDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -983,13 +1014,18 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -1000,7 +1036,10 @@ open class IntegrationsAPI {
         case asc = "ASC"
         case desc = "DESC"
     }
-
+    
+    
+    
+    
     
     
     
@@ -1010,14 +1049,14 @@ open class IntegrationsAPI {
         case _true = "true"
         case _false = "false"
     }
-
+    
     
     
     public enum IncludeAuthActions_getIntegrationsActions: String { 
         case _true = "true"
         case _false = "false"
     }
-
+    
     
     /**
      Retrieves all actions associated with filters passed in via query param.
@@ -1111,8 +1150,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "nextPage": nextPage, 
@@ -1128,9 +1167,14 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -1141,14 +1185,14 @@ open class IntegrationsAPI {
         case asc = "ASC"
         case desc = "DESC"
     }
-
+    
     
     
     public enum Secure_getIntegrationsActionsCategories: String { 
         case _true = "true"
         case _false = "false"
     }
-
+    
     
     /**
      Retrieves all categories of available Actions
@@ -1213,8 +1257,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "nextPage": nextPage, 
@@ -1226,7 +1270,7 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<CategoryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -1234,13 +1278,13 @@ open class IntegrationsAPI {
         case current = "Current"
         case upcoming = "Upcoming"
     }
-
+    
     
     
     public enum ModelType_getIntegrationsActionsCertificates: String { 
         case client = "Client"
     }
-
+    
     
     /**
      Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.
@@ -1306,17 +1350,22 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "status": status?.rawValue, 
             "type": type?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<ActionCertificateListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -1327,7 +1376,10 @@ open class IntegrationsAPI {
         case asc = "ASC"
         case desc = "DESC"
     }
-
+    
+    
+    
+    
     
     
     
@@ -1337,14 +1389,14 @@ open class IntegrationsAPI {
         case _true = "true"
         case _false = "false"
     }
-
+    
     
     
     public enum IncludeAuthActions_getIntegrationsActionsDrafts: String { 
         case _true = "true"
         case _false = "false"
     }
-
+    
     
     /**
      Retrieves all action drafts associated with the filters passed in via query param.
@@ -1438,8 +1490,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "nextPage": nextPage, 
@@ -1455,9 +1507,12 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1559,16 +1614,20 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "version": version
         ])
 
         let requestBuilder: RequestBuilder<BotConnectorBot>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -1649,17 +1708,18 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<BotConnectorBotVersionSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a list of botConnector bots for this integration
@@ -1801,13 +1861,16 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BotList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1880,17 +1943,23 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<BotConnectorBotSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1983,8 +2052,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -1995,9 +2064,15 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<ClientAppEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2107,8 +2182,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -2119,9 +2194,10 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<UCIntegrationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a single credential with sensitive fields redacted
@@ -2175,13 +2251,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Credential>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2252,15 +2330,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<CredentialInfoListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -2324,13 +2402,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialTypeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get details about a Dialogflow agent
@@ -2401,13 +2480,16 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DialogflowAgent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2481,8 +2563,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "name": name
@@ -2490,9 +2572,167 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<DialogflowAgentSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Get details about a Dialogflow CX agent
+     
+     - parameter agentId: (path) The agent ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechDialogflowcxAgent(agentId: String, completion: @escaping ((_ data: DialogflowCXAgent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechDialogflowcxAgentWithRequestBuilder(agentId: agentId)
+        requestBuilder.execute { (response: Response<DialogflowCXAgent>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about a Dialogflow CX agent
+     - GET /api/v2/integrations/speech/dialogflowcx/agents/{agentId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languages" : [ "languages", "languages" ],
+  "environments" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "project" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The agent ID 
+
+     - returns: RequestBuilder<DialogflowCXAgent> 
+     */
+    open class func getIntegrationsSpeechDialogflowcxAgentWithRequestBuilder(agentId: String) -> RequestBuilder<DialogflowCXAgent> {        
+        var path = "/api/v2/integrations/speech/dialogflowcx/agents/{agentId}"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DialogflowCXAgent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a list of Dialogflow CX agents in the customers' Google accounts
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Filter on agent name (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechDialogflowcxAgents(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil, completion: @escaping ((_ data: DialogflowCXAgentSummaryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechDialogflowcxAgentsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name)
+        requestBuilder.execute { (response: Response<DialogflowCXAgentSummaryEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Dialogflow CX agents in the customers' Google accounts
+     - GET /api/v2/integrations/speech/dialogflowcx/agents
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integration" : "{}",
+    "project" : "{}",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "integration" : "{}",
+    "project" : "{}",
+    "description" : "description",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Filter on agent name (optional)
+
+     - returns: RequestBuilder<DialogflowCXAgentSummaryEntityListing> 
+     */
+    open class func getIntegrationsSpeechDialogflowcxAgentsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<DialogflowCXAgentSummaryEntityListing> {        
+        let path = "/api/v2/integrations/speech/dialogflowcx/agents"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<DialogflowCXAgentSummaryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
     
     /**
      Get details about a Lex bot alias
@@ -2572,13 +2812,16 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LexBotAlias>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2589,7 +2832,8 @@ open class IntegrationsAPI {
         case building = "BUILDING"
         case notBuilt = "NOT_BUILT"
     }
-
+    
+    
     
     
     /**
@@ -2723,8 +2967,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "status": status?.rawValue, 
@@ -2733,9 +2977,12 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<LexBotAliasEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2805,8 +3052,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "name": name
@@ -2814,9 +3061,1465 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<LexBotEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Get details about a Lex V2 bot alias
+     
+     - parameter aliasId: (path) The Alias ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechLexv2BotAlias(aliasId: String, completion: @escaping ((_ data: LexV2BotAlias?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechLexv2BotAliasWithRequestBuilder(aliasId: aliasId)
+        requestBuilder.execute { (response: Response<LexV2BotAlias>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about a Lex V2 bot alias
+     - GET /api/v2/integrations/speech/lexv2/bot/alias/{aliasId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "intents" : [ {
+    "slots" : {
+      "key" : {
+        "slotName" : "slotName",
+        "slotTypeId" : "slotTypeId",
+        "description" : "description",
+        "slotId" : "slotId",
+        "type" : "type"
+      }
+    },
+    "intentName" : "intentName",
+    "description" : "description",
+    "intentId" : "intentId"
+  }, {
+    "slots" : {
+      "key" : {
+        "slotName" : "slotName",
+        "slotTypeId" : "slotTypeId",
+        "description" : "description",
+        "slotId" : "slotId",
+        "type" : "type"
+      }
+    },
+    "intentName" : "intentName",
+    "description" : "description",
+    "intentId" : "intentId"
+  } ],
+  "aliasId" : "aliasId",
+  "bot" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "language" : "language",
+  "id" : "id",
+  "region" : "region",
+  "botVersion" : "botVersion",
+  "status" : "Creating"
+}, statusCode=200}]
+     
+     - parameter aliasId: (path) The Alias ID 
+
+     - returns: RequestBuilder<LexV2BotAlias> 
+     */
+    open class func getIntegrationsSpeechLexv2BotAliasWithRequestBuilder(aliasId: String) -> RequestBuilder<LexV2BotAlias> {        
+        var path = "/api/v2/integrations/speech/lexv2/bot/alias/{aliasId}"
+        let aliasIdPreEscape = "\(aliasId)"
+        let aliasIdPostEscape = aliasIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{aliasId}", with: aliasIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LexV2BotAlias>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum Status_getIntegrationsSpeechLexv2BotBotIdAliases: String { 
+        case creating = "Creating"
+        case available = "Available"
+        case deleting = "Deleting"
+        case failed = "Failed"
+    }
+    
+    
+    
+    
+    /**
+     Get a list of aliases for a Lex V2 bot
+     
+     - parameter botId: (path) The Bot ID 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter status: (query) Filter on alias status (optional)
+     - parameter name: (query) Filter on alias name (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechLexv2BotBotIdAliases(botId: String, pageNumber: Int? = nil, pageSize: Int? = nil, status: Status_getIntegrationsSpeechLexv2BotBotIdAliases? = nil, name: String? = nil, completion: @escaping ((_ data: LexV2BotAliasEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechLexv2BotBotIdAliasesWithRequestBuilder(botId: botId, pageNumber: pageNumber, pageSize: pageSize, status: status, name: name)
+        requestBuilder.execute { (response: Response<LexV2BotAliasEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of aliases for a Lex V2 bot
+     - GET /api/v2/integrations/speech/lexv2/bot/{botId}/aliases
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "intents" : [ {
+      "slots" : {
+        "key" : {
+          "slotName" : "slotName",
+          "slotTypeId" : "slotTypeId",
+          "description" : "description",
+          "slotId" : "slotId",
+          "type" : "type"
+        }
+      },
+      "intentName" : "intentName",
+      "description" : "description",
+      "intentId" : "intentId"
+    }, {
+      "slots" : {
+        "key" : {
+          "slotName" : "slotName",
+          "slotTypeId" : "slotTypeId",
+          "description" : "description",
+          "slotId" : "slotId",
+          "type" : "type"
+        }
+      },
+      "intentName" : "intentName",
+      "description" : "description",
+      "intentId" : "intentId"
+    } ],
+    "aliasId" : "aliasId",
+    "bot" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "id" : "id",
+    "region" : "region",
+    "botVersion" : "botVersion",
+    "status" : "Creating"
+  }, {
+    "intents" : [ {
+      "slots" : {
+        "key" : {
+          "slotName" : "slotName",
+          "slotTypeId" : "slotTypeId",
+          "description" : "description",
+          "slotId" : "slotId",
+          "type" : "type"
+        }
+      },
+      "intentName" : "intentName",
+      "description" : "description",
+      "intentId" : "intentId"
+    }, {
+      "slots" : {
+        "key" : {
+          "slotName" : "slotName",
+          "slotTypeId" : "slotTypeId",
+          "description" : "description",
+          "slotId" : "slotId",
+          "type" : "type"
+        }
+      },
+      "intentName" : "intentName",
+      "description" : "description",
+      "intentId" : "intentId"
+    } ],
+    "aliasId" : "aliasId",
+    "bot" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "language" : "language",
+    "id" : "id",
+    "region" : "region",
+    "botVersion" : "botVersion",
+    "status" : "Creating"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter botId: (path) The Bot ID 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter status: (query) Filter on alias status (optional)
+     - parameter name: (query) Filter on alias name (optional)
+
+     - returns: RequestBuilder<LexV2BotAliasEntityListing> 
+     */
+    open class func getIntegrationsSpeechLexv2BotBotIdAliasesWithRequestBuilder(botId: String, pageNumber: Int? = nil, pageSize: Int? = nil, status: Status_getIntegrationsSpeechLexv2BotBotIdAliases? = nil, name: String? = nil) -> RequestBuilder<LexV2BotAliasEntityListing> {        
+        var path = "/api/v2/integrations/speech/lexv2/bot/{botId}/aliases"
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "status": status?.rawValue, 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<LexV2BotAliasEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a list of Lex V2 bots
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Filter on bot name (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechLexv2Bots(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil, completion: @escaping ((_ data: LexV2BotEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechLexv2BotsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name)
+        requestBuilder.execute { (response: Response<LexV2BotEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Lex V2 bots
+     - GET /api/v2/integrations/speech/lexv2/bots
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "botId" : "botId",
+    "region" : "region"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "botId" : "botId",
+    "region" : "region"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Filter on bot name (optional)
+
+     - returns: RequestBuilder<LexV2BotEntityListing> 
+     */
+    open class func getIntegrationsSpeechLexv2BotsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<LexV2BotEntityListing> {        
+        let path = "/api/v2/integrations/speech/lexv2/bots"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<LexV2BotEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Expand_getIntegrationsSpeechNuanceNuanceIntegrationIdBot: String { 
+        case variables = "variables"
+        case transfernodes = "transferNodes"
+        case channels = "channels"
+        case locales = "locales"
+    }
+    
+    
+    public enum TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot: String { 
+        case digital = "digital"
+        case voice = "voice"
+    }
+    
+    
+    /**
+     Get a Nuance bot in the specified Integration
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID to get 
+     - parameter expand: (query) expand (optional)
+     - parameter targetChannel: (query) targetChannel (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBot(nuanceIntegrationId: String, botId: String, expand: [String]? = nil, targetChannel: TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot? = nil, completion: @escaping ((_ data: NuanceBot?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechNuanceNuanceIntegrationIdBotWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, botId: botId, expand: expand, targetChannel: targetChannel)
+        requestBuilder.execute { (response: Response<NuanceBot>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Nuance bot in the specified Integration
+     - GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "variables" : [ {
+    "simpleVariableInfo" : "simpleVariableInfo",
+    "reserved" : true,
+    "name" : "name",
+    "description" : "description",
+    "complexGenericVariableInfo" : "{}",
+    "id" : "id"
+  }, {
+    "simpleVariableInfo" : "simpleVariableInfo",
+    "reserved" : true,
+    "name" : "name",
+    "description" : "description",
+    "complexGenericVariableInfo" : "{}",
+    "id" : "id"
+  } ],
+  "credentials" : [ {
+    "clientId" : "clientId",
+    "appId" : "appId",
+    "clientSecretProvided" : true,
+    "clientSecret" : "clientSecret"
+  }, {
+    "clientId" : "clientId",
+    "appId" : "appId",
+    "clientSecretProvided" : true,
+    "clientSecret" : "clientSecret"
+  } ],
+  "transferNodes" : [ {
+    "requestVariables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "type" : "End"
+  }, {
+    "requestVariables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "type" : "End"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "integrationId" : "integrationId",
+  "nuanceOrganization" : "{}",
+  "locales" : [ "locales", "locales" ],
+  "application" : "{}",
+  "channels" : [ {
+    "modes" : [ "modes", "modes" ],
+    "color" : "color",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "modes" : [ "modes", "modes" ],
+    "color" : "color",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "geography" : "{}",
+  "name" : "name",
+  "nuanceEnvironment" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID to get 
+     - parameter expand: (query) expand (optional)
+     - parameter targetChannel: (query) targetChannel (optional)
+
+     - returns: RequestBuilder<NuanceBot> 
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotWithRequestBuilder(nuanceIntegrationId: String, botId: String, expand: [String]? = nil, targetChannel: TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot? = nil) -> RequestBuilder<NuanceBot> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand, 
+            "targetChannel": targetChannel?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<NuanceBot>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the status of an asynchronous Nuance bot GET job
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID 
+     - parameter jobId: (path) The asynchronous job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob(nuanceIntegrationId: String, botId: String, jobId: String, completion: @escaping ((_ data: AsyncJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, botId: botId, jobId: jobId)
+        requestBuilder.execute { (response: Response<AsyncJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of an asynchronous Nuance bot GET job
+     - GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID 
+     - parameter jobId: (path) The asynchronous job ID 
+
+     - returns: RequestBuilder<AsyncJob> 
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobWithRequestBuilder(nuanceIntegrationId: String, botId: String, jobId: String) -> RequestBuilder<AsyncJob> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the result of an asynchronous Nuance bot GET job
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID 
+     - parameter jobId: (path) The asynchronous job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults(nuanceIntegrationId: String, botId: String, jobId: String, completion: @escaping ((_ data: NuanceBot?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, botId: botId, jobId: jobId)
+        requestBuilder.execute { (response: Response<NuanceBot>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the result of an asynchronous Nuance bot GET job
+     - GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "variables" : [ {
+    "simpleVariableInfo" : "simpleVariableInfo",
+    "reserved" : true,
+    "name" : "name",
+    "description" : "description",
+    "complexGenericVariableInfo" : "{}",
+    "id" : "id"
+  }, {
+    "simpleVariableInfo" : "simpleVariableInfo",
+    "reserved" : true,
+    "name" : "name",
+    "description" : "description",
+    "complexGenericVariableInfo" : "{}",
+    "id" : "id"
+  } ],
+  "credentials" : [ {
+    "clientId" : "clientId",
+    "appId" : "appId",
+    "clientSecretProvided" : true,
+    "clientSecret" : "clientSecret"
+  }, {
+    "clientId" : "clientId",
+    "appId" : "appId",
+    "clientSecretProvided" : true,
+    "clientSecret" : "clientSecret"
+  } ],
+  "transferNodes" : [ {
+    "requestVariables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "type" : "End"
+  }, {
+    "requestVariables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "type" : "End"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "integrationId" : "integrationId",
+  "nuanceOrganization" : "{}",
+  "locales" : [ "locales", "locales" ],
+  "application" : "{}",
+  "channels" : [ {
+    "modes" : [ "modes", "modes" ],
+    "color" : "color",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "modes" : [ "modes", "modes" ],
+    "color" : "color",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "geography" : "{}",
+  "name" : "name",
+  "nuanceEnvironment" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID 
+     - parameter jobId: (path) The asynchronous job ID 
+
+     - returns: RequestBuilder<NuanceBot> 
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsWithRequestBuilder(nuanceIntegrationId: String, botId: String, jobId: String) -> RequestBuilder<NuanceBot> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<NuanceBot>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a list of Nuance bots available in the specified Integration
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter onlyRegisteredBots: (query) Limit bots to the ones configured for Genesys Cloud usage (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBots(nuanceIntegrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil, onlyRegisteredBots: Bool? = nil, completion: @escaping ((_ data: NuanceBotEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechNuanceNuanceIntegrationIdBotsWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, pageNumber: pageNumber, pageSize: pageSize, onlyRegisteredBots: onlyRegisteredBots)
+        requestBuilder.execute { (response: Response<NuanceBotEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Nuance bots available in the specified Integration
+     - GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots
+     - If the 'onlyRegisteredBots' param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration's configured discovery credentials are returned.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "variables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "credentials" : [ {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    }, {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    } ],
+    "transferNodes" : [ {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    }, {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "integrationId" : "integrationId",
+    "nuanceOrganization" : "{}",
+    "locales" : [ "locales", "locales" ],
+    "application" : "{}",
+    "channels" : [ {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "geography" : "{}",
+    "name" : "name",
+    "nuanceEnvironment" : "{}",
+    "id" : "id"
+  }, {
+    "variables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "credentials" : [ {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    }, {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    } ],
+    "transferNodes" : [ {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    }, {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "integrationId" : "integrationId",
+    "nuanceOrganization" : "{}",
+    "locales" : [ "locales", "locales" ],
+    "application" : "{}",
+    "channels" : [ {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "geography" : "{}",
+    "name" : "name",
+    "nuanceEnvironment" : "{}",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter onlyRegisteredBots: (query) Limit bots to the ones configured for Genesys Cloud usage (optional)
+
+     - returns: RequestBuilder<NuanceBotEntityListing> 
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotsWithRequestBuilder(nuanceIntegrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil, onlyRegisteredBots: Bool? = nil) -> RequestBuilder<NuanceBotEntityListing> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "onlyRegisteredBots": onlyRegisteredBots
+        ])
+
+        let requestBuilder: RequestBuilder<NuanceBotEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the status of an asynchronous Nuance bots GET job
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter jobId: (path) The asynchronous job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob(nuanceIntegrationId: String, jobId: String, completion: @escaping ((_ data: AsyncJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, jobId: jobId)
+        requestBuilder.execute { (response: Response<AsyncJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status of an asynchronous Nuance bots GET job
+     - GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter jobId: (path) The asynchronous job ID 
+
+     - returns: RequestBuilder<AsyncJob> 
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobWithRequestBuilder(nuanceIntegrationId: String, jobId: String) -> RequestBuilder<AsyncJob> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AsyncJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the result of an asynchronous Nuance bots GET job
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter jobId: (path) The asynchronous job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults(nuanceIntegrationId: String, jobId: String, completion: @escaping ((_ data: NuanceBotEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, jobId: jobId)
+        requestBuilder.execute { (response: Response<NuanceBotEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the result of an asynchronous Nuance bots GET job
+     - GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "variables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "credentials" : [ {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    }, {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    } ],
+    "transferNodes" : [ {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    }, {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "integrationId" : "integrationId",
+    "nuanceOrganization" : "{}",
+    "locales" : [ "locales", "locales" ],
+    "application" : "{}",
+    "channels" : [ {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "geography" : "{}",
+    "name" : "name",
+    "nuanceEnvironment" : "{}",
+    "id" : "id"
+  }, {
+    "variables" : [ {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    }, {
+      "simpleVariableInfo" : "simpleVariableInfo",
+      "reserved" : true,
+      "name" : "name",
+      "description" : "description",
+      "complexGenericVariableInfo" : "{}",
+      "id" : "id"
+    } ],
+    "credentials" : [ {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    }, {
+      "clientId" : "clientId",
+      "appId" : "appId",
+      "clientSecretProvided" : true,
+      "clientSecret" : "clientSecret"
+    } ],
+    "transferNodes" : [ {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    }, {
+      "requestVariables" : [ {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      }, {
+        "simpleVariableInfo" : "simpleVariableInfo",
+        "reserved" : true,
+        "name" : "name",
+        "description" : "description",
+        "complexGenericVariableInfo" : "{}",
+        "id" : "id"
+      } ],
+      "name" : "name",
+      "description" : "description",
+      "id" : "id",
+      "type" : "End"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "integrationId" : "integrationId",
+    "nuanceOrganization" : "{}",
+    "locales" : [ "locales", "locales" ],
+    "application" : "{}",
+    "channels" : [ {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "modes" : [ "modes", "modes" ],
+      "color" : "color",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "geography" : "{}",
+    "name" : "name",
+    "nuanceEnvironment" : "{}",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter jobId: (path) The asynchronous job ID 
+
+     - returns: RequestBuilder<NuanceBotEntityListing> 
+     */
+    open class func getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsWithRequestBuilder(nuanceIntegrationId: String, jobId: String) -> RequestBuilder<NuanceBotEntityListing> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<NuanceBotEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get details about a STT engine
+     
+     - parameter engineId: (path) The engine ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechSttEngine(engineId: String, completion: @escaping ((_ data: SttEngineEntity?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechSttEngineWithRequestBuilder(engineId: engineId)
+        requestBuilder.execute { (response: Response<SttEngineEntity>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about a STT engine
+     - GET /api/v2/integrations/speech/stt/engines/{engineId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "grammarBased" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter engineId: (path) The engine ID 
+
+     - returns: RequestBuilder<SttEngineEntity> 
+     */
+    open class func getIntegrationsSpeechSttEngineWithRequestBuilder(engineId: String) -> RequestBuilder<SttEngineEntity> {        
+        var path = "/api/v2/integrations/speech/stt/engines/{engineId}"
+        let engineIdPreEscape = "\(engineId)"
+        let engineIdPostEscape = engineIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{engineId}", with: engineIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SttEngineEntity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a list of STT engines enabled for org
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Filter on engine name (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechSttEngines(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil, completion: @escaping ((_ data: SttEngineEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechSttEnginesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, name: name)
+        requestBuilder.execute { (response: Response<SttEngineEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of STT engines enabled for org
+     - GET /api/v2/integrations/speech/stt/engines
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "grammarBased" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "grammarBased" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter name: (query) Filter on engine name (optional)
+
+     - returns: RequestBuilder<SttEngineEntityListing> 
+     */
+    open class func getIntegrationsSpeechSttEnginesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, name: String? = nil) -> RequestBuilder<SttEngineEntityListing> {        
+        let path = "/api/v2/integrations/speech/stt/engines"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<SttEngineEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -2890,16 +4593,18 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "includeVoices": includeVoices
         ])
 
         let requestBuilder: RequestBuilder<TtsEngineEntity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2959,13 +4664,16 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TtsVoiceEntity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -3044,17 +4752,22 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<TtsVoiceEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -3170,8 +4883,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "includeVoices": includeVoices, 
@@ -3181,7 +4894,7 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<TtsEngineEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -3233,13 +4946,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TtsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get integration type.
@@ -3330,20 +5044,21 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IntegrationType>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum ConfigType_getIntegrationsTypeConfigschema: String { 
         case properties = "properties"
         case advanced = "advanced"
     }
-
+    
     
     /**
      Get properties config schema for an integration type.
@@ -3405,13 +5120,19 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JsonSchemaDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3570,8 +5291,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -3582,9 +5303,226 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<IntegrationTypeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     UC integration client application configuration.
+     
+     - parameter ucIntegrationId: (path) 3rd Party Service Type 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsUnifiedcommunicationsClientapp(ucIntegrationId: String, completion: @escaping ((_ data: UnifiedCommunicationsIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsUnifiedcommunicationsClientappWithRequestBuilder(ucIntegrationId: ucIntegrationId)
+        requestBuilder.execute { (response: Response<UnifiedCommunicationsIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     UC integration client application configuration.
+     - GET /api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}
+     - This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "integrationPresenceSource" : "MicrosoftTeams",
+  "polledPresence" : true,
+  "pollIntervalSec" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "icon" : "{}",
+  "ucIntegrationKey" : "{}",
+  "pbxPermission" : "pbxPermission",
+  "userPermissions" : [ "userPermissions", "userPermissions" ],
+  "oauthScopes" : [ "oauthScopes", "oauthScopes" ],
+  "i10n" : {
+    "key" : {
+      "name" : "name"
+    }
+  },
+  "name" : "name",
+  "badgeIcons" : {
+    "key" : {
+      "vector" : "vector"
+    }
+  },
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter ucIntegrationId: (path) 3rd Party Service Type 
+
+     - returns: RequestBuilder<UnifiedCommunicationsIntegration> 
+     */
+    open class func getIntegrationsUnifiedcommunicationsClientappWithRequestBuilder(ucIntegrationId: String) -> RequestBuilder<UnifiedCommunicationsIntegration> {        
+        var path = "/api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}"
+        let ucIntegrationIdPreEscape = "\(ucIntegrationId)"
+        let ucIntegrationIdPostEscape = ucIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ucIntegrationId}", with: ucIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UnifiedCommunicationsIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     List UC integration client application configurations.
+     
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
+     - parameter sortBy: (query) variable name requested to sort by (optional)
+     - parameter expand: (query) variable name requested by expand list (optional)
+     - parameter nextPage: (query) next page token (optional)
+     - parameter previousPage: (query) Previous page token (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsUnifiedcommunicationsClientapps(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, completion: @escaping ((_ data: UnifiedCommunicationsIntegrationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsUnifiedcommunicationsClientappsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage)
+        requestBuilder.execute { (response: Response<UnifiedCommunicationsIntegrationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List UC integration client application configurations.
+     - GET /api/v2/integrations/unifiedcommunications/clientapps
+     - This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "integrationPresenceSource" : "MicrosoftTeams",
+    "polledPresence" : true,
+    "pollIntervalSec" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "icon" : "{}",
+    "ucIntegrationKey" : "{}",
+    "pbxPermission" : "pbxPermission",
+    "userPermissions" : [ "userPermissions", "userPermissions" ],
+    "oauthScopes" : [ "oauthScopes", "oauthScopes" ],
+    "i10n" : {
+      "key" : {
+        "name" : "name"
+      }
+    },
+    "name" : "name",
+    "badgeIcons" : {
+      "key" : {
+        "vector" : "vector"
+      }
+    },
+    "id" : "id"
+  }, {
+    "integrationPresenceSource" : "MicrosoftTeams",
+    "polledPresence" : true,
+    "pollIntervalSec" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "icon" : "{}",
+    "ucIntegrationKey" : "{}",
+    "pbxPermission" : "pbxPermission",
+    "userPermissions" : [ "userPermissions", "userPermissions" ],
+    "oauthScopes" : [ "oauthScopes", "oauthScopes" ],
+    "i10n" : {
+      "key" : {
+        "name" : "name"
+      }
+    },
+    "name" : "name",
+    "badgeIcons" : {
+      "key" : {
+        "vector" : "vector"
+      }
+    },
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) The total page size requested (optional)
+     - parameter pageNumber: (query) The page number requested (optional)
+     - parameter sortBy: (query) variable name requested to sort by (optional)
+     - parameter expand: (query) variable name requested by expand list (optional)
+     - parameter nextPage: (query) next page token (optional)
+     - parameter previousPage: (query) Previous page token (optional)
+
+     - returns: RequestBuilder<UnifiedCommunicationsIntegrationListing> 
+     */
+    open class func getIntegrationsUnifiedcommunicationsClientappsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil) -> RequestBuilder<UnifiedCommunicationsIntegrationListing> {        
+        let path = "/api/v2/integrations/unifiedcommunications/clientapps"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "sortBy": sortBy, 
+            "expand": expand, 
+            "nextPage": nextPage, 
+            "previousPage": previousPage
+        ])
+
+        let requestBuilder: RequestBuilder<UnifiedCommunicationsIntegrationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3674,8 +5612,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -3687,9 +5625,17 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<UserAppEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3768,8 +5714,8 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -3780,9 +5726,11 @@ open class IntegrationsAPI {
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3841,13 +5789,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3906,13 +5856,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create an integration.
@@ -3967,13 +5918,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Integration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new Draft from existing Action
@@ -4029,13 +5981,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4094,13 +6048,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4166,13 +6122,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TestExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4220,13 +6178,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4292,13 +6252,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TestExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new Action. Not supported for 'Function Integration' actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action.
@@ -4351,13 +6312,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new Draft
@@ -4410,13 +6372,14 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Action>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a set of credentials
@@ -4466,13 +6429,220 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    public enum Expand_postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs: String { 
+        case variables = "variables"
+        case transfernodes = "transferNodes"
+        case channels = "channels"
+        case locales = "locales"
+    }
+    
+    
+    
+    /**
+     Get a Nuance bot in the specified Integration asynchronously
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID 
+     - parameter expand: (query) expand (optional)
+     - parameter body: (body) targetChannel (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs(nuanceIntegrationId: String, botId: String, expand: [String]? = nil, body: String? = nil, completion: @escaping ((_ data: AsyncJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, botId: botId, expand: expand, body: body)
+        requestBuilder.execute { (response: Response<AsyncJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Nuance bot in the specified Integration asynchronously
+     - POST /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter botId: (path) The Nuance bot ID 
+     - parameter expand: (query) expand (optional)
+     - parameter body: (body) targetChannel (optional)
+
+     - returns: RequestBuilder<AsyncJob> 
+     */
+    open class func postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsWithRequestBuilder(nuanceIntegrationId: String, botId: String, expand: [String]? = nil, body: String? = nil) -> RequestBuilder<AsyncJob> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let botIdPreEscape = "\(botId)"
+        let botIdPostEscape = botIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botId}", with: botIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<AsyncJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a list of Nuance bots in the specified Integration asynchronously
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter onlyRegisteredBots: (query) Limit bots to the ones configured for Genesys Cloud usage (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs(nuanceIntegrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil, onlyRegisteredBots: Bool? = nil, completion: @escaping ((_ data: AsyncJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, pageNumber: pageNumber, pageSize: pageSize, onlyRegisteredBots: onlyRegisteredBots)
+        requestBuilder.execute { (response: Response<AsyncJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Nuance bots in the specified Integration asynchronously
+     - POST /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "state" : "Running"
+}, statusCode=200}]
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter onlyRegisteredBots: (query) Limit bots to the ones configured for Genesys Cloud usage (optional)
+
+     - returns: RequestBuilder<AsyncJob> 
+     */
+    open class func postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsWithRequestBuilder(nuanceIntegrationId: String, pageNumber: Int? = nil, pageSize: Int? = nil, onlyRegisteredBots: Bool? = nil) -> RequestBuilder<AsyncJob> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "onlyRegisteredBots": onlyRegisteredBots
+        ])
+
+        let requestBuilder: RequestBuilder<AsyncJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Try out a single credential for a Nuance bot to know if the secret is correct
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter settings: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate(nuanceIntegrationId: String, settings: BotExecutionConfiguration, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, settings: settings)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Try out a single credential for a Nuance bot to know if the secret is correct
+     - POST /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter settings: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateWithRequestBuilder(nuanceIntegrationId: String, settings: BotExecutionConfiguration) -> RequestBuilder<Void> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: settings)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -4539,13 +6709,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IntegrationConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4586,13 +6758,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: botList)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4648,13 +6822,63 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CredentialInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    /**
+     Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter settings: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings(nuanceIntegrationId: String, settings: NuanceBotLaunchSettings, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsWithRequestBuilder(nuanceIntegrationId: nuanceIntegrationId, settings: settings)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
+     - PUT /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
+     - parameter settings: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsWithRequestBuilder(nuanceIntegrationId: String, settings: NuanceBotLaunchSettings) -> RequestBuilder<Void> {        
+        var path = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings"
+        let nuanceIntegrationIdPreEscape = "\(nuanceIntegrationId)"
+        let nuanceIntegrationIdPostEscape = nuanceIntegrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{nuanceIntegrationId}", with: nuanceIntegrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: settings)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
     
     /**
      Update TTS settings for an org
@@ -4708,13 +6932,15 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TtsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4763,11 +6989,11 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<String>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

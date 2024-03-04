@@ -25,7 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalBulkJob) | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | Get status of the modeling job |
+| [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | To get status of the modeling job. |
 | [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
 | [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
 | [**getWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentsMeManagementunit) | Get the management unit to which the currently logged in agent belongs |
@@ -1145,7 +1145,9 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalJob(jobId: jobId
 
 > [ModelingStatusResponse](ModelingStatusResponse.html) getWorkforcemanagementAdhocmodelingjob(jobId)
 
-Get status of the modeling job
+To get status of the modeling job.
+
+This Endpoint is Deprecated, and not recommended to be used.
 
 
 

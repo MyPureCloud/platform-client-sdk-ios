@@ -11,6 +11,7 @@ import Foundation
 
 open class KnowledgeAPI {
     
+    
     /**
      Delete knowledge base
      
@@ -67,13 +68,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -136,13 +139,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -186,13 +191,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -242,13 +250,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -292,13 +302,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -342,13 +354,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -409,13 +423,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -457,7 +473,7 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
     
     /**
      Delete category
@@ -522,13 +538,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -570,7 +588,7 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
     
     /**
      Delete document
@@ -657,13 +675,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_deleteKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
@@ -704,7 +723,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -753,13 +773,20 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -772,7 +799,9 @@ open class KnowledgeAPI {
         case name = "Name"
         case hierarchy = "Hierarchy"
     }
-
+    
+    
+    
     
     
     
@@ -859,8 +888,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -874,9 +903,11 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<GuestCategoryResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1003,13 +1034,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1219,17 +1253,18 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "categoryId": categoryId, 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get knowledge base
@@ -1287,13 +1322,20 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1306,7 +1348,9 @@ open class KnowledgeAPI {
         case name = "Name"
         case hierarchy = "Hierarchy"
     }
-
+    
+    
+    
     
     
     
@@ -1399,8 +1443,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -1414,9 +1458,11 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<CategoryResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1479,22 +1525,31 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseDocument: String { 
+        case category = "category"
+        case labels = "labels"
+        case variations = "variations"
+    }
     
     
     public enum State_getKnowledgeKnowledgebaseDocument: String { 
         case draft = "Draft"
         case published = "Published"
     }
-
+    
     
     /**
      Get document.
@@ -1647,17 +1702,25 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand, 
             "state": state?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -1674,7 +1737,7 @@ open class KnowledgeAPI {
         case smartAdvisor = "SmartAdvisor"
         case supportCenter = "SupportCenter"
     }
-
+    
     
     
     public enum QueryType_getKnowledgeKnowledgebaseDocumentFeedback: String { 
@@ -1686,7 +1749,9 @@ open class KnowledgeAPI {
         case recommendation = "Recommendation"
         case suggestion = "Suggestion"
     }
-
+    
+    
+    
     
     
     
@@ -1696,7 +1761,7 @@ open class KnowledgeAPI {
         case draft = "Draft"
         case _final = "Final"
     }
-
+    
     
     /**
      Get a list of feedback records given on a document
@@ -1806,8 +1871,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -1823,9 +1888,12 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1899,13 +1967,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1914,7 +1985,7 @@ open class KnowledgeAPI {
         case draft = "Draft"
         case published = "Published"
     }
-
+    
     
     /**
      Get a variation for a document.
@@ -1999,16 +2070,21 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "documentState": documentState?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<DocumentVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -2019,7 +2095,7 @@ open class KnowledgeAPI {
         case draft = "Draft"
         case published = "Published"
     }
-
+    
     
     /**
      Get variations for a document.
@@ -2137,8 +2213,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -2147,12 +2223,21 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<DocumentVariationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     
     
+    
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseDocumentVersion: String { 
+        case category = "category"
+        case labels = "labels"
+    }
     
     /**
      Get document version.
@@ -2218,16 +2303,20 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -2317,13 +2406,19 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentVersionVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2447,8 +2542,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize
@@ -2456,7 +2551,7 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentVersionVariationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -2464,6 +2559,17 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseDocumentVersions: String { 
+        case category = "category"
+        case labels = "labels"
+    }
     
     /**
      Get document versions.
@@ -2543,8 +2649,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -2553,7 +2659,7 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentVersionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -2565,6 +2671,24 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseDocuments: String { 
+        case category = "category"
+        case labels = "labels"
+        case variations = "variations"
+    }
     
     
     
@@ -2835,8 +2959,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -2852,9 +2976,11 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2920,15 +3046,22 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseImportJob: String { 
+        case urls = "urls"
+    }
     
     /**
      Get import job report
@@ -2996,16 +3129,18 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3066,13 +3201,19 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3156,8 +3297,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
@@ -3167,9 +3308,10 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<LabelListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageCategories: String { 
@@ -3210,7 +3352,12 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3299,8 +3446,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "limit": limit, 
@@ -3310,9 +3457,11 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<CategoryListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -3354,7 +3503,7 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
     
     /**
      Get category
@@ -3439,13 +3588,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExtendedCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -3487,7 +3638,7 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
     
     /**
      Get document
@@ -3574,13 +3725,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -3621,7 +3773,13 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3634,7 +3792,7 @@ open class KnowledgeAPI {
         case title = "Title"
         case date = "Date"
     }
-
+    
     
     
     public enum SortOrder_getKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -3643,7 +3801,8 @@ open class KnowledgeAPI {
         case desc = "DESC"
         case descending = "descending"
     }
-
+    
+    
     
     
     /**
@@ -3780,8 +3939,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "limit": limit, 
@@ -3795,9 +3954,10 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<DocumentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
@@ -3838,7 +3998,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -3908,13 +4069,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTraining: String { 
@@ -3955,7 +4117,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -4023,13 +4186,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeTraining>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageTrainings: String { 
@@ -4070,7 +4234,11 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -4083,7 +4251,7 @@ open class KnowledgeAPI {
         case discarded = "Discarded"
         case archived = "Archived"
     }
-
+    
     
     /**
      Get all trainings information for a knowledgebase
@@ -4171,8 +4339,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "limit": limit, 
@@ -4182,9 +4350,11 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<TrainingListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -4195,7 +4365,9 @@ open class KnowledgeAPI {
         case assistant = "Assistant"
         case smartAdvisor = "SmartAdvisor"
     }
-
+    
+    
+    
     
     
     
@@ -4297,8 +4469,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "app": app?.rawValue, 
             "dateStart": dateStart?.encodeToJSON(), 
             "dateEnd": dateEnd?.encodeToJSON()
@@ -4306,9 +4478,12 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<UnansweredGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -4320,7 +4495,9 @@ open class KnowledgeAPI {
         case assistant = "Assistant"
         case smartAdvisor = "SmartAdvisor"
     }
-
+    
+    
+    
     
     
     
@@ -4399,8 +4576,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "app": app?.rawValue, 
             "dateStart": dateStart?.encodeToJSON(), 
             "dateEnd": dateEnd?.encodeToJSON()
@@ -4408,9 +4585,10 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<UnansweredPhraseGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum App_getKnowledgeKnowledgebaseUnansweredGroups: String { 
@@ -4420,7 +4598,9 @@ open class KnowledgeAPI {
         case assistant = "Assistant"
         case smartAdvisor = "SmartAdvisor"
     }
-
+    
+    
+    
     
     
     
@@ -4562,8 +4742,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "app": app?.rawValue, 
             "dateStart": dateStart?.encodeToJSON(), 
             "dateEnd": dateEnd?.encodeToJSON()
@@ -4571,9 +4751,14 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<UnansweredGroups>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -4618,7 +4803,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     
@@ -4626,7 +4812,7 @@ open class KnowledgeAPI {
         case name = "Name"
         case date = "Date"
     }
-
+    
     
     
     public enum SortOrder_getKnowledgeKnowledgebases: String { 
@@ -4635,7 +4821,7 @@ open class KnowledgeAPI {
         case desc = "DESC"
         case descending = "descending"
     }
-
+    
     
     /**
      Get knowledge bases
@@ -4723,8 +4909,8 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "before": before, 
             "after": after, 
             "limit": limit, 
@@ -4738,9 +4924,12 @@ open class KnowledgeAPI {
 
         let requestBuilder: RequestBuilder<KnowledgeBaseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -4784,13 +4973,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4851,13 +5042,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -4923,13 +5117,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -5082,13 +5279,17 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -5176,13 +5377,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DocumentVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -5229,13 +5433,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -5305,13 +5512,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -5375,13 +5585,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -5423,7 +5635,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -5511,13 +5724,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExtendedCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -5559,7 +5774,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -5649,13 +5865,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -5696,7 +5913,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -5817,13 +6035,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DocumentListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_patchKnowledgeKnowledgebaseLanguageDocumentsImport: String { 
@@ -5864,7 +6083,9 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
+    
     
     
     
@@ -5937,13 +6158,17 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -6013,13 +6238,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UnansweredPhraseGroupUpdateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates a presigned URL for uploading a knowledge import file with a set of documents
@@ -6068,13 +6294,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6118,13 +6347,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6189,13 +6421,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocumentFeedback>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6239,13 +6474,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -6283,13 +6520,21 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_postKnowledgeGuestSessionDocumentsSearch: String { 
+        case documentvariations = "documentVariations"
+        case documentalternatives = "documentAlternatives"
+    }
     
     
     
@@ -6354,16 +6599,18 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentGuestSearch>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -6418,13 +6665,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocumentSuggestion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create guest session
@@ -6484,13 +6732,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeGuestSession>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -6550,13 +6800,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CategoryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6603,13 +6856,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6680,13 +6936,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentFeedbackResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6768,13 +7027,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DocumentVariation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6837,13 +7099,16 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -6890,13 +7155,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7043,13 +7310,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7090,13 +7359,21 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_postKnowledgeKnowledgebaseDocumentsSearch: String { 
+        case documentvariations = "documentVariations"
+        case documentalternatives = "documentAlternatives"
+    }
     
     
     
@@ -7166,16 +7443,18 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentSearch>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7244,13 +7523,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocumentSuggestion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7313,13 +7594,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7383,13 +7666,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7447,13 +7732,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LabelResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageCategories: String { 
@@ -7494,7 +7780,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -7577,13 +7864,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExtendedCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocuments: String { 
@@ -7624,7 +7912,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -7709,13 +7998,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentsImports: String { 
@@ -7756,7 +8046,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -7823,13 +8114,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainingPromote: String { 
@@ -7870,7 +8162,8 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
+    
     
     
     /**
@@ -7938,13 +8231,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeTraining>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum LanguageCode_postKnowledgeKnowledgebaseLanguageTrainings: String { 
@@ -7985,7 +8279,7 @@ open class KnowledgeAPI {
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
     }
-
+    
     
     /**
      Trigger training
@@ -8047,13 +8341,15 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeTraining>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -8173,13 +8469,14 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create new knowledge base
@@ -8234,11 +8531,11 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

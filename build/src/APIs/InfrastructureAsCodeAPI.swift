@@ -12,6 +12,7 @@ import Foundation
 open class InfrastructureAsCodeAPI {
     
     
+    
     public enum PreferredLanguage_getInfrastructureascodeAccelerator: String { 
         case ar = "ar"
         case cs = "cs"
@@ -36,7 +37,7 @@ open class InfrastructureAsCodeAPI {
         case zhCn = "zh-CN"
         case zhTw = "zh-TW"
     }
-
+    
     
     /**
      Get information about an accelerator
@@ -111,16 +112,19 @@ open class InfrastructureAsCodeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "preferredLanguage": preferredLanguage?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<AcceleratorSpecification>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -129,7 +133,9 @@ open class InfrastructureAsCodeAPI {
         case asc = "asc"
         case desc = "desc"
     }
-
+    
+    
+    
     
     
     
@@ -139,7 +145,7 @@ open class InfrastructureAsCodeAPI {
         case partner = "partner"
         case genesys = "genesys"
     }
-
+    
     
     
     public enum ModelType_getInfrastructureascodeAccelerators: String { 
@@ -147,7 +153,9 @@ open class InfrastructureAsCodeAPI {
         case accelerator = "accelerator"
         case blueprint = "blueprint"
     }
-
+    
+    
+    
     
     
     
@@ -240,8 +248,8 @@ open class InfrastructureAsCodeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -256,9 +264,11 @@ open class InfrastructureAsCodeAPI {
 
         let requestBuilder: RequestBuilder<AcceleratorList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -318,16 +328,18 @@ open class InfrastructureAsCodeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "details": details
         ])
 
         let requestBuilder: RequestBuilder<InfrastructureascodeJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -338,14 +350,16 @@ open class InfrastructureAsCodeAPI {
         case acceleratorid = "acceleratorId"
         case status = "status"
     }
-
+    
     
     
     public enum SortOrder_getInfrastructureascodeJobs: String { 
         case asc = "asc"
         case desc = "desc"
     }
-
+    
+    
+    
     
     
     
@@ -358,7 +372,7 @@ open class InfrastructureAsCodeAPI {
         case failed = "Failed"
         case incomplete = "Incomplete"
     }
-
+    
     
     /**
      Get job history
@@ -424,8 +438,8 @@ open class InfrastructureAsCodeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "maxResults": maxResults?.encodeToJSON(), 
             "includeErrors": includeErrors, 
             "sortBy": sortBy?.rawValue, 
@@ -437,9 +451,10 @@ open class InfrastructureAsCodeAPI {
 
         let requestBuilder: RequestBuilder<InfrastructureascodeJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a Job
@@ -493,11 +508,11 @@ open class InfrastructureAsCodeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<InfrastructureascodeJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

@@ -23,14 +23,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getQualityEvaluatorsActivity**](QualityAPI.html#getQualityEvaluatorsActivity) | Get an evaluator activity |
 | [**getQualityForm**](QualityAPI.html#getQualityForm) | Get an evaluation form |
 | [**getQualityFormVersions**](QualityAPI.html#getQualityFormVersions) | Gets all the revisions for a specific evaluation. |
-| [**getQualityForms**](QualityAPI.html#getQualityForms) | Get the list of evaluation forms |
+| [**getQualityForms**](QualityAPI.html#getQualityForms) | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
 | [**getQualityFormsEvaluation**](QualityAPI.html#getQualityFormsEvaluation) | Get an evaluation form |
 | [**getQualityFormsEvaluationVersions**](QualityAPI.html#getQualityFormsEvaluationVersions) | Gets all the revisions for a specific evaluation. |
 | [**getQualityFormsEvaluations**](QualityAPI.html#getQualityFormsEvaluations) | Get the list of evaluation forms |
 | [**getQualityFormsEvaluationsBulkContexts**](QualityAPI.html#getQualityFormsEvaluationsBulkContexts) | Retrieve a list of the latest published evaluation form versions by context ids |
 | [**getQualityFormsSurvey**](QualityAPI.html#getQualityFormsSurvey) | Get a survey form |
 | [**getQualityFormsSurveyVersions**](QualityAPI.html#getQualityFormsSurveyVersions) | Gets all the revisions for a specific survey. |
-| [**getQualityFormsSurveys**](QualityAPI.html#getQualityFormsSurveys) | Get the list of survey forms |
+| [**getQualityFormsSurveys**](QualityAPI.html#getQualityFormsSurveys) | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
 | [**getQualityFormsSurveysBulk**](QualityAPI.html#getQualityFormsSurveysBulk) | Retrieve a list of survey forms by their ids |
 | [**getQualityFormsSurveysBulkContexts**](QualityAPI.html#getQualityFormsSurveysBulkContexts) | Retrieve a list of the latest form versions by context ids |
 | [**getQualityPublishedform**](QualityAPI.html#getQualityPublishedform) | Get the published evaluation forms. |
@@ -1037,7 +1037,7 @@ QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber
 
 > [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
-Get the list of evaluation forms
+Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form.
 
 
 
@@ -1215,7 +1215,7 @@ QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize,
 
 Get the list of evaluation forms
 
-By default, \&quot;published\&quot; field is always returned as false for all evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. In addition, \&quot;questionGroups\&quot;, the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+By default, \&quot;published\&quot; field is always returned as false for all evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. In addition, \&quot;questionGroups\&quot;, the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
 
 
 
@@ -1441,7 +1441,7 @@ QualityAPI.getQualityFormsSurveyVersions(formId: formId, pageSize: pageSize, pag
 
 > [SurveyFormEntityListing](SurveyFormEntityListing.html) getQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
-Get the list of survey forms
+Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form.
 
 
 
@@ -2277,7 +2277,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let conversationId: String = "" // conversationId
-let body: Evaluation = new Evaluation(...) // evaluation
+let body: EvaluationCreateBody = new EvaluationCreateBody(...) // evaluation
 let expand: String = "" // evaluatorId
 
 // Code example
@@ -2297,7 +2297,7 @@ QualityAPI.postQualityConversationEvaluations(conversationId: conversationId, bo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-| **body** | [**Evaluation**](Evaluation.html)| evaluation | |
+| **body** | [**EvaluationCreateBody**](EvaluationCreateBody.html)| evaluation | |
 | **expand** | **String**| evaluatorId | [optional] |
 {: class="table-striped"}
 

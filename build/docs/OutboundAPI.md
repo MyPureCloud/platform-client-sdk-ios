@@ -6360,7 +6360,7 @@ OutboundAPI.postOutboundContactlistContactsBulk(contactListId: contactListId, bo
 
 
 
-> [DomainEntityRef](DomainEntityRef.html) postOutboundContactlistExport(contactListId)
+> [DomainEntityRef](DomainEntityRef.html) postOutboundContactlistExport(contactListId, body)
 
 Initiate the export of a contact list.
 
@@ -6384,9 +6384,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactListId: String = "" // ContactList ID
+let body: ContactsExportRequest = new ContactsExportRequest(...) // Export information to get
 
 // Code example
-OutboundAPI.postOutboundContactlistExport(contactListId: contactListId) { (response, error) in
+OutboundAPI.postOutboundContactlistExport(contactListId: contactListId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -6402,6 +6403,7 @@ OutboundAPI.postOutboundContactlistExport(contactListId: contactListId) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactListId** | **String**| ContactList ID | |
+| **body** | [**ContactsExportRequest**](ContactsExportRequest.html)| Export information to get | [optional] |
 {: class="table-striped"}
 
 

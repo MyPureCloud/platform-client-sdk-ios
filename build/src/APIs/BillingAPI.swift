@@ -12,6 +12,8 @@ import Foundation
 open class BillingAPI {
     
     
+    
+    
     /**
      Get a report of the billable license usages
      
@@ -84,17 +86,19 @@ open class BillingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startDate": startDate.encodeToJSON(), 
             "endDate": endDate.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<BillingUsageReport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -188,14 +192,14 @@ open class BillingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "billingPeriodIndex": billingPeriodIndex?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<TrusteeBillingOverview>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
 }

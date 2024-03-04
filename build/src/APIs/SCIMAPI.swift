@@ -12,6 +12,8 @@ import Foundation
 open class SCIMAPI {
     
     
+    
+    
     /**
      Delete a user
      
@@ -57,7 +59,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -65,9 +67,11 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
     
     
     /**
@@ -115,7 +119,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -123,10 +127,48 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
+    
+    
+    
+    public enum Attributes_getScimGroup: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimGroup: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
     
     
     
@@ -195,8 +237,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "attributes": attributes, 
             "excludedAttributes": excludedAttributes
         ])
@@ -207,11 +249,50 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
     
+    
+    
+    
+    
+    public enum Attributes_getScimGroups: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimGroups: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
     
     
     
@@ -300,8 +381,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startIndex": startIndex?.encodeToJSON(), 
             "count": count?.encodeToJSON(), 
             "attributes": attributes, 
@@ -311,7 +392,7 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimGroupListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -322,7 +403,7 @@ open class SCIMAPI {
         case resourceType = "ResourceType"
         case schema = "Schema"
     }
-
+    
     
     /**
      Get a resource type
@@ -383,11 +464,11 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimConfigResourceType>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -464,11 +545,11 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimConfigResourceTypesListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -481,7 +562,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
     }
-
+    
     
     /**
      Get a SCIM schema
@@ -559,13 +640,14 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2SchemaDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a list of SCIM schemas
@@ -678,16 +760,17 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filter": filter
         ])
 
         let requestBuilder: RequestBuilder<ScimV2SchemaListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a service provider's configuration
@@ -755,7 +838,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
         ]
@@ -763,10 +846,92 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimServiceProviderConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
+    
+    
+    
+    public enum Attributes_getScimUser: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimUser: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
     
     
     
@@ -864,8 +1029,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "attributes": attributes, 
             "excludedAttributes": excludedAttributes
         ])
@@ -876,11 +1041,94 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
     
+    
+    
+    
+    
+    public enum Attributes_getScimUsers: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimUsers: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
     
     
     
@@ -1028,8 +1276,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startIndex": startIndex?.encodeToJSON(), 
             "count": count?.encodeToJSON(), 
             "attributes": attributes, 
@@ -1039,10 +1287,48 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimUserListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Attributes_getScimV2Group: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimV2Group: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
     
     
     
@@ -1111,8 +1397,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "attributes": attributes, 
             "excludedAttributes": excludedAttributes
         ])
@@ -1123,13 +1409,52 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
     
     
     
+    
+    
+    
+    
+    public enum Attributes_getScimV2Groups: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimV2Groups: String { 
+        case _id = "id"
+        case displayname = "displayName"
+        case members = "members"
+        case externalid = "externalId"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupId = "urn:ietf:params:scim:schemas:core:2.0:Group:id"
+        case urnIetfParamsScimSchemasCore20GroupMeta = "urn:ietf:params:scim:schemas:core:2.0:Group:meta"
+        case urnIetfParamsScimSchemasCore20GroupMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"
+        case urnIetfParamsScimSchemasCore20GroupMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"
+        case urnIetfParamsScimSchemasCore20GroupDisplayname = "urn:ietf:params:scim:schemas:core:2.0:Group:displayName"
+        case urnIetfParamsScimSchemasCore20GroupMembers = "urn:ietf:params:scim:schemas:core:2.0:Group:members"
+        case urnIetfParamsScimSchemasCore20GroupExternalid = "urn:ietf:params:scim:schemas:core:2.0:Group:externalId"
+    }
     
     /**
      Get a list of groups
@@ -1216,8 +1541,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startIndex": startIndex?.encodeToJSON(), 
             "count": count?.encodeToJSON(), 
             "attributes": attributes, 
@@ -1227,7 +1552,7 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimGroupListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -1238,7 +1563,7 @@ open class SCIMAPI {
         case resourceType = "ResourceType"
         case schema = "Schema"
     }
-
+    
     
     /**
      Get a resource type
@@ -1299,11 +1624,11 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimConfigResourceType>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -1380,11 +1705,11 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimConfigResourceTypesListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -1397,7 +1722,7 @@ open class SCIMAPI {
         case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
         case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
     }
-
+    
     
     /**
      Get a SCIM schema
@@ -1475,13 +1800,14 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2SchemaDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a list of SCIM schemas
@@ -1594,16 +1920,17 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filter": filter
         ])
 
         let requestBuilder: RequestBuilder<ScimV2SchemaListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a service provider's configuration
@@ -1671,7 +1998,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-None-Match": ifNoneMatch
         ]
@@ -1679,10 +2006,92 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimServiceProviderConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
+    
+    
+    
+    public enum Attributes_getScimV2User: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimV2User: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
     
     
     
@@ -1780,8 +2189,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "attributes": attributes, 
             "excludedAttributes": excludedAttributes
         ])
@@ -1792,11 +2201,94 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body, headers: headerParameters)
     }
 
     
     
+    
+    
+    
+    
+    public enum Attributes_getScimV2Users: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
+    
+    
+    
+    public enum ExcludedAttributes_getScimV2Users: String { 
+        case _id = "id"
+        case username = "userName"
+        case displayname = "displayName"
+        case title = "title"
+        case active = "active"
+        case externalid = "externalId"
+        case phonenumbers = "phoneNumbers"
+        case emails = "emails"
+        case groups = "groups"
+        case roles = "roles"
+        case meta = "meta"
+        case metaVersion = "meta.version"
+        case metaLastmodified = "meta.lastModified"
+        case urnIetfParamsScimSchemasCore20UserId = "urn:ietf:params:scim:schemas:core:2.0:User:id"
+        case urnIetfParamsScimSchemasCore20UserUsername = "urn:ietf:params:scim:schemas:core:2.0:User:userName"
+        case urnIetfParamsScimSchemasCore20UserDisplayname = "urn:ietf:params:scim:schemas:core:2.0:User:displayName"
+        case urnIetfParamsScimSchemasCore20UserTitle = "urn:ietf:params:scim:schemas:core:2.0:User:title"
+        case urnIetfParamsScimSchemasCore20UserActive = "urn:ietf:params:scim:schemas:core:2.0:User:active"
+        case urnIetfParamsScimSchemasCore20UserExternalid = "urn:ietf:params:scim:schemas:core:2.0:User:externalId"
+        case urnIetfParamsScimSchemasCore20UserPhonenumbers = "urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"
+        case urnIetfParamsScimSchemasCore20UserEmails = "urn:ietf:params:scim:schemas:core:2.0:User:emails"
+        case urnIetfParamsScimSchemasCore20UserGroups = "urn:ietf:params:scim:schemas:core:2.0:User:groups"
+        case urnIetfParamsScimSchemasCore20UserRoles = "urn:ietf:params:scim:schemas:core:2.0:User:roles"
+        case urnIetfParamsScimSchemasCore20UserMeta = "urn:ietf:params:scim:schemas:core:2.0:User:meta"
+        case urnIetfParamsScimSchemasCore20UserMetaVersion = "urn:ietf:params:scim:schemas:core:2.0:User:meta.version"
+        case urnIetfParamsScimSchemasCore20UserMetaLastmodified = "urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"
+        case urnIetfParamsScimSchemasExtensionEnterprise20User = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDivision = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManager = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"
+        case urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber = "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20User = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"
+        case urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids = "urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds"
+    }
     
     
     
@@ -1944,8 +2436,8 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startIndex": startIndex?.encodeToJSON(), 
             "count": count?.encodeToJSON(), 
             "attributes": attributes, 
@@ -1955,9 +2447,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimUserListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2024,7 +2519,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2032,9 +2527,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
+    
     
     
     
@@ -2130,7 +2628,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2138,9 +2636,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
+    
     
     
     
@@ -2207,7 +2708,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2215,9 +2716,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
+    
     
     
     
@@ -2313,7 +2817,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2321,9 +2825,10 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
     
     /**
      Create a user
@@ -2410,13 +2915,14 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a user
@@ -2503,13 +3009,16 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2576,7 +3085,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2584,9 +3093,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
+    
     
     
     
@@ -2682,7 +3194,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2690,9 +3202,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
+    
     
     
     
@@ -2759,7 +3274,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2767,9 +3282,12 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2Group>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body, headers: headerParameters)
     }
 
+    
+    
+    
     
     
     
@@ -2865,7 +3383,7 @@ open class SCIMAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
         let nillableHeaders: [String: Any?] = [
             "If-Match": ifMatch
         ]
@@ -2873,7 +3391,7 @@ open class SCIMAPI {
 
         let requestBuilder: RequestBuilder<ScimV2User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body, headers: headerParameters)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body, headers: headerParameters)
     }
 
 }

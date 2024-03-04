@@ -12,6 +12,20 @@ import Foundation
 open class TextbotsAPI {
     
     
+    public enum BotType_getTextbotsBotsSearch: String { 
+        case genesysBotConnector = "GenesysBotConnector"
+        case genesysDialogEngine = "GenesysDialogEngine"
+        case amazonLex = "AmazonLex"
+        case googleDialogFlowES = "GoogleDialogFlowES"
+        case googleDialogFlowCX = "GoogleDialogFlowCX"
+        case nuanceDlg = "NuanceDlg"
+        case genesysBotFlow = "GenesysBotFlow"
+    }
+    
+    
+    
+    
+    
     
     
     /**
@@ -76,8 +90,8 @@ open class TextbotsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "botType": botType, 
             "botName": botName, 
             "botId": botId, 
@@ -86,9 +100,11 @@ open class TextbotsAPI {
 
         let requestBuilder: RequestBuilder<BotSearchResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -146,13 +162,14 @@ open class TextbotsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: turnRequest)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TextBotFlowTurnResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create an execution instance of a bot flow definition.
@@ -198,13 +215,14 @@ open class TextbotsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: launchRequest)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TextBotFlowLaunchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Send an intent to a bot to start a dialog/interact with it via text
@@ -327,11 +345,11 @@ open class TextbotsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: postTextRequest)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PostTextResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
 }

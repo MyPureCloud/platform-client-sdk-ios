@@ -3138,6 +3138,53 @@
     "return": "FlowRuntimeExecution",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowExecutionId: String = \"\" // flow execution ID\n\n// Get a flow execution's details. Flow execution details are available for several days after the flow is started.\nGetFlowsExecutionRequest.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsExecutionRequest.getFlowsExecution was successful\")\n        dump(response)\n    }\n}"
   },
+  "getflowsinstance": {
+    "operationId": "getflowsinstance",
+    "functionName": "getFlowsInstance",
+    "signature": "getFlowsInstance(instanceId, expand)",
+    "parameters": [
+      {
+        "name": "instanceId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "GetFlowExecutionDataJobResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet instanceId: String = \"\" // Instance ID\nlet expand: GetFlowsInstanceRequest.Expand_getFlowsInstance = GetFlowsInstanceRequest.Expand_getFlowsInstance.enummember // Expand various details.\n\n// Start a process (job) to prepare a download of a singular flow execution data instance by Id\nGetFlowsInstanceRequest.getFlowsInstance(instanceId: instanceId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsInstanceRequest.getFlowsInstance was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getflowsinstancesjob": {
+    "operationId": "getflowsinstancesjob",
+    "functionName": "getFlowsInstancesJob",
+    "signature": "getFlowsInstancesJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GetFlowExecutionDataJobResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The asynchronous job ID\n\n// Get the status and/or results of an asynchronous flow execution data retrieval job\nGetFlowsInstancesJobRequest.getFlowsInstancesJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsInstancesJobRequest.getFlowsInstancesJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getflowsinstancesquerycapabilities": {
+    "operationId": "getflowsinstancesquerycapabilities",
+    "functionName": "getFlowsInstancesQuerycapabilities",
+    "signature": "getFlowsInstancesQuerycapabilities(expand)",
+    "parameters": [
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "FlowsQueryCriteriaResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: GetFlowsInstancesQuerycapabilitiesRequest.Expand_getFlowsInstancesQuerycapabilities = GetFlowsInstancesQuerycapabilitiesRequest.Expand_getFlowsInstancesQuerycapabilities.enummember // Expand various query types.\n\n// Retrieve a list of capabilities that the org can use to query for execution data\nGetFlowsInstancesQuerycapabilitiesRequest.getFlowsInstancesQuerycapabilities(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsInstancesQuerycapabilitiesRequest.getFlowsInstancesQuerycapabilities was successful\")\n        dump(response)\n    }\n}"
+  },
   "getflowsjob": {
     "operationId": "getflowsjob",
     "functionName": "getFlowsJob",
@@ -3743,6 +3790,49 @@
     ],
     "return": "FlowExecutionLaunchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet flowLaunchRequest: FlowExecutionLaunchRequest = new FlowExecutionLaunchRequest(...) // \n\n// Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.\nPostFlowsExecutionsRequest.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostFlowsExecutionsRequest.postFlowsExecutions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postflowsinstancesjobs": {
+    "operationId": "postflowsinstancesjobs",
+    "functionName": "postFlowsInstancesJobs",
+    "signature": "postFlowsInstancesJobs(body, expand)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExecutionDataRequest",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "GetFlowExecutionDataJobResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExecutionDataRequest = new ExecutionDataRequest(...) // Requested Flow Ids\nlet expand: PostFlowsInstancesJobsRequest.Expand_postFlowsInstancesJobs = PostFlowsInstancesJobsRequest.Expand_postFlowsInstancesJobs.enummember // Expand various query types.\n\n// Start a process (job) that will prepare a list of execution data IDs for download.\nPostFlowsInstancesJobsRequest.postFlowsInstancesJobs(body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostFlowsInstancesJobsRequest.postFlowsInstancesJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postflowsinstancesquery": {
+    "operationId": "postflowsinstancesquery",
+    "functionName": "postFlowsInstancesQuery",
+    "signature": "postFlowsInstancesQuery(body, indexOnly, pageSize)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CriteriaQuery",
+        "required": "true"
+      },
+      {
+        "name": "indexOnly",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "FlowResultEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CriteriaQuery = new CriteriaQuery(...) // query\nlet indexOnly: Bool = true // indexes only\nlet pageSize: Int = 0 // number of results to return\n\n// Query the database of existing flow histories to look for particular flow criteria\nPostFlowsInstancesQueryRequest.postFlowsInstancesQuery(body: body, indexOnly: indexOnly, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostFlowsInstancesQueryRequest.postFlowsInstancesQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "postflowsjobs": {
     "operationId": "postflowsjobs",
@@ -6458,7 +6548,7 @@
         "required": "true"
       }
     ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Delete a LINE messenger integration\nDeleteConversationsMessagingIntegrationsLineIntegrationIdRequest.deleteConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationsMessagingIntegrationsLineIntegrationIdRequest.deleteConversationsMessagingIntegrationsLineIntegrationId was successful\")\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Delete a LINE messenger integration (Deprecated)\nDeleteConversationsMessagingIntegrationsLineIntegrationIdRequest.deleteConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationsMessagingIntegrationsLineIntegrationIdRequest.deleteConversationsMessagingIntegrationsLineIntegrationId was successful\")\n    }\n}"
   },
   "deleteconversationsmessagingintegrationsopenintegrationid": {
     "operationId": "deleteconversationsmessagingintegrationsopenintegrationid",
@@ -7673,7 +7763,7 @@
       }
     ],
     "return": "LineIntegrationEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet expand: GetConversationsMessagingIntegrationsLineRequest.Expand_getConversationsMessagingIntegrationsLine = GetConversationsMessagingIntegrationsLineRequest.Expand_getConversationsMessagingIntegrationsLine.enummember // Expand instructions for the return value.\nlet supportedContentId: String = \"\" // Filter integrations returned based on the supported content ID\nlet messagingSettingId: String = \"\" // Filter integrations returned based on the setting ID\n\n// Get a list of LINE messenger Integrations\nGetConversationsMessagingIntegrationsLineRequest.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsLineRequest.getConversationsMessagingIntegrationsLine was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet expand: GetConversationsMessagingIntegrationsLineRequest.Expand_getConversationsMessagingIntegrationsLine = GetConversationsMessagingIntegrationsLineRequest.Expand_getConversationsMessagingIntegrationsLine.enummember // Expand instructions for the return value.\nlet supportedContentId: String = \"\" // Filter integrations returned based on the supported content ID\nlet messagingSettingId: String = \"\" // Filter integrations returned based on the setting ID\n\n// Get a list of LINE messenger Integrations (Deprecated)\nGetConversationsMessagingIntegrationsLineRequest.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsLineRequest.getConversationsMessagingIntegrationsLine was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingintegrationslineintegrationid": {
     "operationId": "getconversationsmessagingintegrationslineintegrationid",
@@ -7692,7 +7782,7 @@
       }
     ],
     "return": "LineIntegration",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet expand: GetConversationsMessagingIntegrationsLineIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsLineIntegrationId = GetConversationsMessagingIntegrationsLineIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsLineIntegrationId.enummember // Expand instructions for the return value.\n\n// Get a LINE messenger integration\nGetConversationsMessagingIntegrationsLineIntegrationIdRequest.getConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsLineIntegrationIdRequest.getConversationsMessagingIntegrationsLineIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet expand: GetConversationsMessagingIntegrationsLineIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsLineIntegrationId = GetConversationsMessagingIntegrationsLineIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsLineIntegrationId.enummember // Expand instructions for the return value.\n\n// Get a LINE messenger integration (Deprecated)\nGetConversationsMessagingIntegrationsLineIntegrationIdRequest.getConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsLineIntegrationIdRequest.getConversationsMessagingIntegrationsLineIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingintegrationsopen": {
     "operationId": "getconversationsmessagingintegrationsopen",
@@ -10591,7 +10681,7 @@
       }
     ],
     "return": "LineIntegration",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: LineIntegrationRequest = new LineIntegrationRequest(...) // LineIntegrationRequest\n\n// Update a LINE messenger integration\nPutConversationsMessagingIntegrationsLineIntegrationIdRequest.putConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIntegrationsLineIntegrationIdRequest.putConversationsMessagingIntegrationsLineIntegrationId was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: LineIntegrationRequest = new LineIntegrationRequest(...) // LineIntegrationRequest\n\n// Update a LINE messenger integration (Deprecated)\nPutConversationsMessagingIntegrationsLineIntegrationIdRequest.putConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutConversationsMessagingIntegrationsLineIntegrationIdRequest.putConversationsMessagingIntegrationsLineIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "putconversationsmessagingsettingsdefault": {
     "operationId": "putconversationsmessagingsettingsdefault",
@@ -15571,6 +15661,44 @@
     "return": "DialogflowAgentSummaryEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet name: String = \"\" // Filter on agent name\n\n// Get a list of Dialogflow agents in the customers' Google accounts\nGetIntegrationsSpeechDialogflowAgentsRequest.getIntegrationsSpeechDialogflowAgents(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechDialogflowAgentsRequest.getIntegrationsSpeechDialogflowAgents was successful\")\n        dump(response)\n    }\n}"
   },
+  "getintegrationsspeechdialogflowcxagent": {
+    "operationId": "getintegrationsspeechdialogflowcxagent",
+    "functionName": "getIntegrationsSpeechDialogflowcxAgent",
+    "signature": "getIntegrationsSpeechDialogflowcxAgent(agentId)",
+    "parameters": [
+      {
+        "name": "agentId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DialogflowCXAgent",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet agentId: String = \"\" // The agent ID\n\n// Get details about a Dialogflow CX agent\nGetIntegrationsSpeechDialogflowcxAgentRequest.getIntegrationsSpeechDialogflowcxAgent(agentId: agentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechDialogflowcxAgentRequest.getIntegrationsSpeechDialogflowcxAgent was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechdialogflowcxagents": {
+    "operationId": "getintegrationsspeechdialogflowcxagents",
+    "functionName": "getIntegrationsSpeechDialogflowcxAgents",
+    "signature": "getIntegrationsSpeechDialogflowcxAgents(pageNumber, pageSize, name)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DialogflowCXAgentSummaryEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet name: String = \"\" // Filter on agent name\n\n// Get a list of Dialogflow CX agents in the customers' Google accounts\nGetIntegrationsSpeechDialogflowcxAgentsRequest.getIntegrationsSpeechDialogflowcxAgents(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechDialogflowcxAgentsRequest.getIntegrationsSpeechDialogflowcxAgents was successful\")\n        dump(response)\n    }\n}"
+  },
   "getintegrationsspeechlexbotalias": {
     "operationId": "getintegrationsspeechlexbotalias",
     "functionName": "getIntegrationsSpeechLexBotAlias",
@@ -15642,6 +15770,260 @@
     ],
     "return": "LexBotEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet name: String = \"\" // Filter on bot name\n\n// Get a list of Lex bots in the customers' AWS accounts\nGetIntegrationsSpeechLexBotsRequest.getIntegrationsSpeechLexBots(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechLexBotsRequest.getIntegrationsSpeechLexBots was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechlexv2botalias": {
+    "operationId": "getintegrationsspeechlexv2botalias",
+    "functionName": "getIntegrationsSpeechLexv2BotAlias",
+    "signature": "getIntegrationsSpeechLexv2BotAlias(aliasId)",
+    "parameters": [
+      {
+        "name": "aliasId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "LexV2BotAlias",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet aliasId: String = \"\" // The Alias ID\n\n// Get details about a Lex V2 bot alias\nGetIntegrationsSpeechLexv2BotAliasRequest.getIntegrationsSpeechLexv2BotAlias(aliasId: aliasId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechLexv2BotAliasRequest.getIntegrationsSpeechLexv2BotAlias was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechlexv2botbotidaliases": {
+    "operationId": "getintegrationsspeechlexv2botbotidaliases",
+    "functionName": "getIntegrationsSpeechLexv2BotBotIdAliases",
+    "signature": "getIntegrationsSpeechLexv2BotBotIdAliases(botId, pageNumber, pageSize, status, name)",
+    "parameters": [
+      {
+        "name": "botId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "status",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "LexV2BotAliasEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet botId: String = \"\" // The Bot ID\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet status: GetIntegrationsSpeechLexv2BotBotIdAliasesRequest.Status_getIntegrationsSpeechLexv2BotBotIdAliases = GetIntegrationsSpeechLexv2BotBotIdAliasesRequest.Status_getIntegrationsSpeechLexv2BotBotIdAliases.enummember // Filter on alias status\nlet name: String = \"\" // Filter on alias name\n\n// Get a list of aliases for a Lex V2 bot\nGetIntegrationsSpeechLexv2BotBotIdAliasesRequest.getIntegrationsSpeechLexv2BotBotIdAliases(botId: botId, pageNumber: pageNumber, pageSize: pageSize, status: status, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechLexv2BotBotIdAliasesRequest.getIntegrationsSpeechLexv2BotBotIdAliases was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechlexv2bots": {
+    "operationId": "getintegrationsspeechlexv2bots",
+    "functionName": "getIntegrationsSpeechLexv2Bots",
+    "signature": "getIntegrationsSpeechLexv2Bots(pageNumber, pageSize, name)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "LexV2BotEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet name: String = \"\" // Filter on bot name\n\n// Get a list of Lex V2 bots\nGetIntegrationsSpeechLexv2BotsRequest.getIntegrationsSpeechLexv2Bots(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechLexv2BotsRequest.getIntegrationsSpeechLexv2Bots was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechnuancenuanceintegrationidbot": {
+    "operationId": "getintegrationsspeechnuancenuanceintegrationidbot",
+    "functionName": "getIntegrationsSpeechNuanceNuanceIntegrationIdBot",
+    "signature": "getIntegrationsSpeechNuanceNuanceIntegrationIdBot(nuanceIntegrationId, botId, expand, targetChannel)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "botId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "targetChannel",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "NuanceBot",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet botId: String = \"\" // The Nuance bot ID to get\nlet expand: [String] = [\"\"] // expand\nlet targetChannel: GetIntegrationsSpeechNuanceNuanceIntegrationIdBotRequest.TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot = GetIntegrationsSpeechNuanceNuanceIntegrationIdBotRequest.TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot.enummember // targetChannel\n\n// Get a Nuance bot in the specified Integration\nGetIntegrationsSpeechNuanceNuanceIntegrationIdBotRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBot(nuanceIntegrationId: nuanceIntegrationId, botId: botId, expand: expand, targetChannel: targetChannel) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechNuanceNuanceIntegrationIdBotRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBot was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechnuancenuanceintegrationidbotjob": {
+    "operationId": "getintegrationsspeechnuancenuanceintegrationidbotjob",
+    "functionName": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob",
+    "signature": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob(nuanceIntegrationId, botId, jobId)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "botId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AsyncJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet botId: String = \"\" // The Nuance bot ID\nlet jobId: String = \"\" // The asynchronous job ID\n\n// Get the status of an asynchronous Nuance bot GET job\nGetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob(nuanceIntegrationId: nuanceIntegrationId, botId: botId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechnuancenuanceintegrationidbotjobresults": {
+    "operationId": "getintegrationsspeechnuancenuanceintegrationidbotjobresults",
+    "functionName": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults",
+    "signature": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults(nuanceIntegrationId, botId, jobId)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "botId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "NuanceBot",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet botId: String = \"\" // The Nuance bot ID\nlet jobId: String = \"\" // The asynchronous job ID\n\n// Get the result of an asynchronous Nuance bot GET job\nGetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults(nuanceIntegrationId: nuanceIntegrationId, botId: botId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResultsRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechnuancenuanceintegrationidbots": {
+    "operationId": "getintegrationsspeechnuancenuanceintegrationidbots",
+    "functionName": "getIntegrationsSpeechNuanceNuanceIntegrationIdBots",
+    "signature": "getIntegrationsSpeechNuanceNuanceIntegrationIdBots(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "onlyRegisteredBots",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "NuanceBotEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet onlyRegisteredBots: Bool = true // Limit bots to the ones configured for Genesys Cloud usage\n\n// Get a list of Nuance bots available in the specified Integration\nGetIntegrationsSpeechNuanceNuanceIntegrationIdBotsRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBots(nuanceIntegrationId: nuanceIntegrationId, pageNumber: pageNumber, pageSize: pageSize, onlyRegisteredBots: onlyRegisteredBots) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBots was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechnuancenuanceintegrationidbotsjob": {
+    "operationId": "getintegrationsspeechnuancenuanceintegrationidbotsjob",
+    "functionName": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob",
+    "signature": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob(nuanceIntegrationId, jobId)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AsyncJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet jobId: String = \"\" // The asynchronous job ID\n\n// Get the status of an asynchronous Nuance bots GET job\nGetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob(nuanceIntegrationId: nuanceIntegrationId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechnuancenuanceintegrationidbotsjobresults": {
+    "operationId": "getintegrationsspeechnuancenuanceintegrationidbotsjobresults",
+    "functionName": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults",
+    "signature": "getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults(nuanceIntegrationId, jobId)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "NuanceBotEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet jobId: String = \"\" // The asynchronous job ID\n\n// Get the result of an asynchronous Nuance bots GET job\nGetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults(nuanceIntegrationId: nuanceIntegrationId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResultsRequest.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechsttengine": {
+    "operationId": "getintegrationsspeechsttengine",
+    "functionName": "getIntegrationsSpeechSttEngine",
+    "signature": "getIntegrationsSpeechSttEngine(engineId)",
+    "parameters": [
+      {
+        "name": "engineId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "SttEngineEntity",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet engineId: String = \"\" // The engine ID\n\n// Get details about a STT engine\nGetIntegrationsSpeechSttEngineRequest.getIntegrationsSpeechSttEngine(engineId: engineId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechSttEngineRequest.getIntegrationsSpeechSttEngine was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechsttengines": {
+    "operationId": "getintegrationsspeechsttengines",
+    "functionName": "getIntegrationsSpeechSttEngines",
+    "signature": "getIntegrationsSpeechSttEngines(pageNumber, pageSize, name)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "SttEngineEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet name: String = \"\" // Filter on engine name\n\n// Get a list of STT engines enabled for org\nGetIntegrationsSpeechSttEnginesRequest.getIntegrationsSpeechSttEngines(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechSttEnginesRequest.getIntegrationsSpeechSttEngines was successful\")\n        dump(response)\n    }\n}"
   },
   "getintegrationsspeechttsengine": {
     "operationId": "getintegrationsspeechttsengine",
@@ -15817,6 +16199,59 @@
     ],
     "return": "IntegrationTypeEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet expand: [String] = [\"\"] // variable name requested by expand list\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\n\n// List integration types\nGetIntegrationsTypesRequest.getIntegrationsTypes(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsTypesRequest.getIntegrationsTypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsunifiedcommunicationsclientapp": {
+    "operationId": "getintegrationsunifiedcommunicationsclientapp",
+    "functionName": "getIntegrationsUnifiedcommunicationsClientapp",
+    "signature": "getIntegrationsUnifiedcommunicationsClientapp(ucIntegrationId)",
+    "parameters": [
+      {
+        "name": "ucIntegrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "UnifiedCommunicationsIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ucIntegrationId: String = \"\" // 3rd Party Service Type\n\n// UC integration client application configuration.\nGetIntegrationsUnifiedcommunicationsClientappRequest.getIntegrationsUnifiedcommunicationsClientapp(ucIntegrationId: ucIntegrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsUnifiedcommunicationsClientappRequest.getIntegrationsUnifiedcommunicationsClientapp was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsunifiedcommunicationsclientapps": {
+    "operationId": "getintegrationsunifiedcommunicationsclientapps",
+    "functionName": "getIntegrationsUnifiedcommunicationsClientapps",
+    "signature": "getIntegrationsUnifiedcommunicationsClientapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "nextPage",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "previousPage",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "UnifiedCommunicationsIntegrationListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet expand: [String] = [\"\"] // variable name requested by expand list\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\n\n// List UC integration client application configurations.\nGetIntegrationsUnifiedcommunicationsClientappsRequest.getIntegrationsUnifiedcommunicationsClientapps(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsUnifiedcommunicationsClientappsRequest.getIntegrationsUnifiedcommunicationsClientapps was successful\")\n        dump(response)\n    }\n}"
   },
   "getintegrationsuserapps": {
     "operationId": "getintegrationsuserapps",
@@ -16095,6 +16530,82 @@
     "return": "CredentialInfo",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Credential = new Credential(...) // Credential\n\n// Create a set of credentials\nPostIntegrationsCredentialsRequest.postIntegrationsCredentials(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostIntegrationsCredentialsRequest.postIntegrationsCredentials was successful\")\n        dump(response)\n    }\n}"
   },
+  "postintegrationsspeechnuancenuanceintegrationidbotjobs": {
+    "operationId": "postintegrationsspeechnuancenuanceintegrationidbotjobs",
+    "functionName": "postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs",
+    "signature": "postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs(nuanceIntegrationId, botId, expand, body)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "botId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "body",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AsyncJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet botId: String = \"\" // The Nuance bot ID\nlet expand: [String] = [\"\"] // expand\nlet body: String = \"\" // targetChannel\n\n// Get a Nuance bot in the specified Integration asynchronously\nPostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsRequest.postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs(nuanceIntegrationId: nuanceIntegrationId, botId: botId, expand: expand, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobsRequest.postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postintegrationsspeechnuancenuanceintegrationidbotsjobs": {
+    "operationId": "postintegrationsspeechnuancenuanceintegrationidbotsjobs",
+    "functionName": "postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs",
+    "signature": "postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "onlyRegisteredBots",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "AsyncJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet onlyRegisteredBots: Bool = true // Limit bots to the ones configured for Genesys Cloud usage\n\n// Get a list of Nuance bots in the specified Integration asynchronously\nPostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsRequest.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs(nuanceIntegrationId: nuanceIntegrationId, pageNumber: pageNumber, pageSize: pageSize, onlyRegisteredBots: onlyRegisteredBots) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobsRequest.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate": {
+    "operationId": "postintegrationsspeechnuancenuanceintegrationidbotslaunchvalidate",
+    "functionName": "postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate",
+    "signature": "postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate(nuanceIntegrationId, settings)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "settings",
+        "type": "BotExecutionConfiguration",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet settings: BotExecutionConfiguration = new BotExecutionConfiguration(...) // \n\n// Try out a single credential for a Nuance bot to know if the secret is correct\nPostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateRequest.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate(nuanceIntegrationId: nuanceIntegrationId, settings: settings) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidateRequest.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate was successful\")\n    }\n}"
+  },
   "putintegrationconfigcurrent": {
     "operationId": "putintegrationconfigcurrent",
     "functionName": "putIntegrationConfigCurrent",
@@ -16150,6 +16661,24 @@
     ],
     "return": "CredentialInfo",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet credentialId: String = \"\" // Credential ID\nlet body: Credential = new Credential(...) // Credential\n\n// Update a set of credentials\nPutIntegrationsCredentialRequest.putIntegrationsCredential(credentialId: credentialId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutIntegrationsCredentialRequest.putIntegrationsCredential was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings": {
+    "operationId": "putintegrationsspeechnuancenuanceintegrationidbotslaunchsettings",
+    "functionName": "putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings",
+    "signature": "putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings(nuanceIntegrationId, settings)",
+    "parameters": [
+      {
+        "name": "nuanceIntegrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "settings",
+        "type": "NuanceBotLaunchSettings",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nuanceIntegrationId: String = \"\" // The integration ID for this group of bots\nlet settings: NuanceBotLaunchSettings = new NuanceBotLaunchSettings(...) // \n\n// Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration\nPutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsRequest.putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings(nuanceIntegrationId: nuanceIntegrationId, settings: settings) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettingsRequest.putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings was successful\")\n    }\n}"
   },
   "putintegrationsspeechttssettings": {
     "operationId": "putintegrationsspeechttssettings",
@@ -25057,16 +25586,21 @@
   "postoutboundcontactlistexport": {
     "operationId": "postoutboundcontactlistexport",
     "functionName": "postOutboundContactlistExport",
-    "signature": "postOutboundContactlistExport(contactListId)",
+    "signature": "postOutboundContactlistExport(contactListId, body)",
     "parameters": [
       {
         "name": "contactListId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ContactsExportRequest",
+        "required": "false"
       }
     ],
     "return": "DomainEntityRef",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListId: String = \"\" // ContactList ID\n\n// Initiate the export of a contact list.\nPostOutboundContactlistExportRequest.postOutboundContactlistExport(contactListId: contactListId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundContactlistExportRequest.postOutboundContactlistExport was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListId: String = \"\" // ContactList ID\nlet body: ContactsExportRequest = new ContactsExportRequest(...) // Export information to get\n\n// Initiate the export of a contact list.\nPostOutboundContactlistExportRequest.postOutboundContactlistExport(contactListId: contactListId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundContactlistExportRequest.postOutboundContactlistExport was successful\")\n        dump(response)\n    }\n}"
   },
   "postoutboundcontactlistfilters": {
     "operationId": "postoutboundcontactlistfilters",
@@ -26978,7 +27512,7 @@
       }
     ],
     "return": "EvaluationFormResponseEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsRequest.Expand_getQualityForms = GetQualityFormsRequest.Expand_getQualityForms.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms\nGetQualityFormsRequest.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsRequest.getQualityForms was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsRequest.Expand_getQualityForms = GetQualityFormsRequest.Expand_getQualityForms.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of evaluation forms. If you set \\\"expand=publishHistory\\\", then you will be able to get published versions for each corresponding evaluation form.\nGetQualityFormsRequest.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsRequest.getQualityForms was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformsevaluation": {
     "operationId": "getqualityformsevaluation",
@@ -27171,7 +27705,7 @@
       }
     ],
     "return": "SurveyFormEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsSurveysRequest.Expand_getQualityFormsSurveys = GetQualityFormsSurveysRequest.Expand_getQualityFormsSurveys.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of survey forms\nGetQualityFormsSurveysRequest.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsSurveysRequest.getQualityFormsSurveys was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // variable name requested to sort by\nlet nextPage: String = \"\" // next page token\nlet previousPage: String = \"\" // Previous page token\nlet expand: GetQualityFormsSurveysRequest.Expand_getQualityFormsSurveys = GetQualityFormsSurveysRequest.Expand_getQualityFormsSurveys.enummember // If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions\nlet name: String = \"\" // Name\nlet sortOrder: String = \"\" // Order to sort results, either asc or desc\n\n// Get the list of survey forms. If you set \\\"expand=publishHistory\\\", then you will be able to get published versions for each corresponding survey form.\nGetQualityFormsSurveysRequest.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, nextPage: nextPage, previousPage: previousPage, expand: expand, name: name, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityFormsSurveysRequest.getQualityFormsSurveys was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityformssurveysbulk": {
     "operationId": "getqualityformssurveysbulk",
@@ -27413,7 +27947,7 @@
       },
       {
         "name": "body",
-        "type": "Evaluation",
+        "type": "EvaluationCreateBody",
         "required": "true"
       },
       {
@@ -27423,7 +27957,7 @@
       }
     ],
     "return": "Evaluation",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: Evaluation = new Evaluation(...) // evaluation\nlet expand: String = \"\" // evaluatorId\n\n// Create an evaluation\nPostQualityConversationEvaluationsRequest.postQualityConversationEvaluations(conversationId: conversationId, body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityConversationEvaluationsRequest.postQualityConversationEvaluations was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: EvaluationCreateBody = new EvaluationCreateBody(...) // evaluation\nlet expand: String = \"\" // evaluatorId\n\n// Create an evaluation\nPostQualityConversationEvaluationsRequest.postQualityConversationEvaluations(conversationId: conversationId, body: body, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostQualityConversationEvaluationsRequest.postQualityConversationEvaluations was successful\")\n        dump(response)\n    }\n}"
   },
   "postqualityconversationsauditsquery": {
     "operationId": "postqualityconversationsauditsquery",
@@ -39176,7 +39710,7 @@
       }
     ],
     "return": "ModelingStatusResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The id of the modeling job\n\n// Get status of the modeling job\nGetWorkforcemanagementAdhocmodelingjobRequest.getWorkforcemanagementAdhocmodelingjob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAdhocmodelingjobRequest.getWorkforcemanagementAdhocmodelingjob was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The id of the modeling job\n\n// To get status of the modeling job.\nGetWorkforcemanagementAdhocmodelingjobRequest.getWorkforcemanagementAdhocmodelingjob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAdhocmodelingjobRequest.getWorkforcemanagementAdhocmodelingjob was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementagentadherenceexplanation": {
     "operationId": "getworkforcemanagementagentadherenceexplanation",

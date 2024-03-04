@@ -14,6 +14,10 @@ open class DownloadsAPI {
     
     
     
+    
+    
+    
+    
     /**
      Issues a redirect to a signed secure download URL for specified download
      
@@ -67,8 +71,8 @@ open class DownloadsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "contentDisposition": contentDisposition, 
             "issueRedirect": issueRedirect, 
             "redirectToAuth": redirectToAuth
@@ -76,7 +80,7 @@ open class DownloadsAPI {
 
         let requestBuilder: RequestBuilder<UrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
 }

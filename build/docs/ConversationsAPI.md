@@ -15,7 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI.html#deleteConversationsMessagesCachedmediaCachedMediaItemId) | Remove a cached media item asychronously |
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
 | [**deleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsInstagramIntegrationId) | Delete Instagram messaging integration |
-| [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration |
+| [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration (Deprecated) |
 | [**deleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsOpenIntegrationId) | Delete an Open messaging integration |
 | [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
 | [**deleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsWhatsappIntegrationId) | Delete a WhatsApp messaging integration |
@@ -85,8 +85,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebookIntegrationId) | Get a Facebook messaging integration |
 | [**getConversationsMessagingIntegrationsInstagram**](ConversationsAPI.html#getConversationsMessagingIntegrationsInstagram) | Get a list of Instagram Integrations |
 | [**getConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsInstagramIntegrationId) | Get Instagram messaging integration |
-| [**getConversationsMessagingIntegrationsLine**](ConversationsAPI.html#getConversationsMessagingIntegrationsLine) | Get a list of LINE messenger Integrations |
-| [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration |
+| [**getConversationsMessagingIntegrationsLine**](ConversationsAPI.html#getConversationsMessagingIntegrationsLine) | Get a list of LINE messenger Integrations (Deprecated) |
+| [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration (Deprecated) |
 | [**getConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpen) | Get a list of Open messaging integrations |
 | [**getConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpenIntegrationId) | Get an Open messaging integration |
 | [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations |
@@ -231,7 +231,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsEmailRecordingstate**](ConversationsAPI.html#putConversationsEmailRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsKeyconfiguration**](ConversationsAPI.html#putConversationsKeyconfiguration) | Update the encryption key configurations |
 | [**putConversationsMessageRecordingstate**](ConversationsAPI.html#putConversationsMessageRecordingstate) | Update a conversation by setting its recording state |
-| [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration |
+| [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration (Deprecated) |
 | [**putConversationsMessagingSettingsDefault**](ConversationsAPI.html#putConversationsMessagingSettingsDefault) | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**putConversationsMessagingThreadingtimeline**](ConversationsAPI.html#putConversationsMessagingThreadingtimeline) | Update conversation threading window timeline for each messaging type |
@@ -663,7 +663,9 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsInstagramIntegrationId(
 
 > Void deleteConversationsMessagingIntegrationsLineIntegrationId(integrationId)
 
-Delete a LINE messenger integration
+Delete a LINE messenger integration (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 
 
@@ -4375,7 +4377,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsInstagramIntegrationId(int
 
 > [LineIntegrationEntityListing](LineIntegrationEntityListing.html) getConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
-Get a list of LINE messenger Integrations
+Get a list of LINE messenger Integrations (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 
 
@@ -4435,7 +4439,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, p
 
 > [LineIntegration](LineIntegration.html) getConversationsMessagingIntegrationsLineIntegrationId(integrationId, expand)
 
-Get a LINE messenger integration
+Get a LINE messenger integration (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 
 
@@ -12358,7 +12364,9 @@ ConversationsAPI.putConversationsMessageRecordingstate(conversationId: conversat
 
 > [LineIntegration](LineIntegration.html) putConversationsMessagingIntegrationsLineIntegrationId(integrationId, body)
 
-Update a LINE messenger integration
+Update a LINE messenger integration (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 
 

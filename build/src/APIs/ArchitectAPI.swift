@@ -11,6 +11,7 @@ import Foundation
 
 open class ArchitectAPI {
     
+    
     /**
      Deletes a emergency group by ID
      
@@ -47,13 +48,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an IVR Config.
@@ -91,13 +93,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -138,16 +142,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "allResources": allResources
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -191,13 +197,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -241,13 +249,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Batch-delete a list of prompts
@@ -606,16 +615,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "id": _id
         ])
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a schedule by id
@@ -653,13 +663,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Deletes a schedule group by ID
@@ -697,13 +708,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -747,13 +760,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete flow
@@ -791,13 +805,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Batch-delete a list of flows
@@ -1156,16 +1171,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "id": _id
         ])
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1207,16 +1224,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "force": force
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1261,13 +1280,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a flow milestone.
@@ -1312,11 +1332,11 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
     
@@ -1326,6 +1346,230 @@ open class ArchitectAPI {
     
     
     
+    
+    public enum ObjectType_getArchitectDependencytracking: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
+    
+    
+    
+    
+    
+    
+    
+    public enum ConsumedResourceType_getArchitectDependencytracking: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
+    
+    
+    
+    public enum ConsumingResourceType_getArchitectDependencytracking: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
     
     /**
      Get Dependency Tracking objects that have a given display name
@@ -1487,8 +1731,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "name": name, 
@@ -1501,7 +1745,7 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DependencyObjectEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -1563,13 +1807,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DependencyStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -1629,6 +1875,7 @@ open class ArchitectAPI {
         case secureaction = "SECUREACTION"
         case securecallflow = "SECURECALLFLOW"
         case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -1643,7 +1890,82 @@ open class ArchitectAPI {
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
     }
-
+    
+    
+    
+    
+    public enum ResourceType_getArchitectDependencytrackingConsumedresources: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
+    
     
     
     
@@ -1728,8 +2050,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "id": _id, 
             "version": version, 
             "objectType": objectType.rawValue, 
@@ -1740,9 +2062,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<ConsumedResourcesEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum ObjectType_getArchitectDependencytrackingConsumingresources: String { 
@@ -1801,6 +2124,7 @@ open class ArchitectAPI {
         case secureaction = "SECUREACTION"
         case securecallflow = "SECURECALLFLOW"
         case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -1815,7 +2139,83 @@ open class ArchitectAPI {
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
     }
-
+    
+    
+    
+    
+    public enum ResourceType_getArchitectDependencytrackingConsumingresources: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
+    
+    
     
     
     
@@ -1826,7 +2226,7 @@ open class ArchitectAPI {
         case checkedin = "checkedIn"
         case published = "published"
     }
-
+    
     
     /**
      Get resources that consume a given Dependency Tracking object
@@ -1910,8 +2310,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "id": _id, 
             "objectType": objectType.rawValue, 
             "resourceType": resourceType, 
@@ -1923,17 +2323,167 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<ConsumingResourcesEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum ObjectType_getArchitectDependencytrackingDeletedresourceconsumers: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
     
     
     public enum FlowFilter_getArchitectDependencytrackingDeletedresourceconsumers: String { 
         case checkedin = "checkedIn"
         case published = "published"
     }
-
+    
+    
+    
+    
+    
+    
+    public enum ConsumedResourceType_getArchitectDependencytrackingDeletedresourceconsumers: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
     
     
     
@@ -2097,8 +2647,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "name": name, 
             "objectType": objectType, 
             "flowFilter": flowFilter?.rawValue, 
@@ -2110,9 +2660,11 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DependencyObjectEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -2172,6 +2724,7 @@ open class ArchitectAPI {
         case secureaction = "SECUREACTION"
         case securecallflow = "SECURECALLFLOW"
         case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
         case surveyinviteflow = "SURVEYINVITEFLOW"
         case systemprompt = "SYSTEMPROMPT"
         case ttsengine = "TTSENGINE"
@@ -2186,10 +2739,159 @@ open class ArchitectAPI {
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
     }
-
     
     
     
+    
+    
+    
+    
+    
+    public enum ConsumedResourceType_getArchitectDependencytrackingObject: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
+    
+    
+    
+    public enum ConsumingResourceType_getArchitectDependencytrackingObject: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
     
     
     
@@ -2295,8 +2997,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "id": _id, 
             "version": version, 
             "objectType": objectType?.rawValue, 
@@ -2309,9 +3011,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DependencyObject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a Dependency Tracking type.
@@ -2362,13 +3065,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DependencyType>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2435,18 +3140,168 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<DependencyTypeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum ObjectType_getArchitectDependencytrackingUpdatedresourceconsumers: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
+    
+    
+    
+    
+    
+    public enum ConsumedResourceType_getArchitectDependencytrackingUpdatedresourceconsumers: String { 
+        case acdlanguage = "ACDLANGUAGE"
+        case acdskill = "ACDSKILL"
+        case acdwrapupcode = "ACDWRAPUPCODE"
+        case audioconnectorbot = "AUDIOCONNECTORBOT"
+        case botconnectorbot = "BOTCONNECTORBOT"
+        case botconnectorintegration = "BOTCONNECTORINTEGRATION"
+        case botflow = "BOTFLOW"
+        case bridgeaction = "BRIDGEACTION"
+        case commonmoduleflow = "COMMONMODULEFLOW"
+        case composerscript = "COMPOSERSCRIPT"
+        case contactlist = "CONTACTLIST"
+        case dataaction = "DATAACTION"
+        case datatable = "DATATABLE"
+        case dialogenginebot = "DIALOGENGINEBOT"
+        case dialogenginebotversion = "DIALOGENGINEBOTVERSION"
+        case dialogflowagent = "DIALOGFLOWAGENT"
+        case dialogflowcxagent = "DIALOGFLOWCXAGENT"
+        case digitalbotflow = "DIGITALBOTFLOW"
+        case emailroute = "EMAILROUTE"
+        case emergencygroup = "EMERGENCYGROUP"
+        case flowaction = "FLOWACTION"
+        case flowdatatype = "FLOWDATATYPE"
+        case flowmilestone = "FLOWMILESTONE"
+        case flowoutcome = "FLOWOUTCOME"
+        case grammar = "GRAMMAR"
+        case group = "GROUP"
+        case image = "IMAGE"
+        case inboundcallflow = "INBOUNDCALLFLOW"
+        case inboundchatflow = "INBOUNDCHATFLOW"
+        case inboundemailflow = "INBOUNDEMAILFLOW"
+        case inboundshortmessageflow = "INBOUNDSHORTMESSAGEFLOW"
+        case inqueuecallflow = "INQUEUECALLFLOW"
+        case inqueueemailflow = "INQUEUEEMAILFLOW"
+        case inqueueshortmessageflow = "INQUEUESHORTMESSAGEFLOW"
+        case ivrconfiguration = "IVRCONFIGURATION"
+        case knowledgebase = "KNOWLEDGEBASE"
+        case knowledgebasedocument = "KNOWLEDGEBASEDOCUMENT"
+        case language = "LANGUAGE"
+        case lexbot = "LEXBOT"
+        case lexbotalias = "LEXBOTALIAS"
+        case lexv2bot = "LEXV2BOT"
+        case lexv2botalias = "LEXV2BOTALIAS"
+        case nludomain = "NLUDOMAIN"
+        case nuancemixbot = "NUANCEMIXBOT"
+        case nuancemixintegration = "NUANCEMIXINTEGRATION"
+        case oauthclient = "OAUTHCLIENT"
+        case outboundcallflow = "OUTBOUNDCALLFLOW"
+        case queue = "QUEUE"
+        case recordingpolicy = "RECORDINGPOLICY"
+        case response = "RESPONSE"
+        case schedule = "SCHEDULE"
+        case schedulegroup = "SCHEDULEGROUP"
+        case secureaction = "SECUREACTION"
+        case securecallflow = "SECURECALLFLOW"
+        case sttengine = "STTENGINE"
+        case surveyform = "SURVEYFORM"
+        case surveyinviteflow = "SURVEYINVITEFLOW"
+        case systemprompt = "SYSTEMPROMPT"
+        case ttsengine = "TTSENGINE"
+        case ttsvoice = "TTSVOICE"
+        case user = "USER"
+        case userprompt = "USERPROMPT"
+        case utilizationlabel = "UTILIZATIONLABEL"
+        case voiceflow = "VOICEFLOW"
+        case voicemailflow = "VOICEMAILFLOW"
+        case voicesurveyflow = "VOICESURVEYFLOW"
+        case widget = "WIDGET"
+        case workflow = "WORKFLOW"
+        case workitemflow = "WORKITEMFLOW"
+    }
     
     
     
@@ -2608,8 +3463,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "name": name, 
             "objectType": objectType, 
             "consumedResources": consumedResources, 
@@ -2620,9 +3475,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DependencyObjectEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Gets a emergency group by ID
@@ -2706,13 +3562,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmergencyGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -2854,8 +3715,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -2865,9 +3726,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<EmergencyGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2950,8 +3818,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -2963,9 +3831,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<EmergencyGroupDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get an IVR config.
@@ -3030,13 +3899,20 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IVR>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3146,8 +4022,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -3159,9 +4035,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<IVREntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -3243,8 +4126,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -3256,9 +4139,13 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<IVRDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -3352,8 +4239,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "includeMediaUris": includeMediaUris, 
             "includeResources": includeResources, 
             "language": language
@@ -3361,9 +4248,14 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<Prompt>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -3375,8 +4267,21 @@ open class ArchitectAPI {
         case timestamp = "timestamp"
         case user = "user"
     }
-
     
+    
+    
+    
+    public enum Action_getArchitectPromptHistoryHistoryId: String { 
+        case checkin = "checkin"
+        case checkout = "checkout"
+        case create = "create"
+        case deactivate = "deactivate"
+        case debug = "debug"
+        case delete = "delete"
+        case publish = "publish"
+        case revert = "revert"
+        case save = "save"
+    }
     
     /**
      Get generated prompt history
@@ -3778,8 +4683,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortOrder": sortOrder, 
@@ -3789,9 +4694,11 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<HistoryListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3859,13 +4766,16 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PromptAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -3961,17 +4871,27 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<PromptAssetEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -4131,8 +5051,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "name": name, 
@@ -4147,9 +5067,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<PromptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a schedule by ID
@@ -4212,13 +5133,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Schedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Gets a schedule group by ID
@@ -4306,13 +5228,20 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScheduleGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -4468,8 +5397,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -4481,9 +5410,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<ScheduleGroupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -4565,8 +5501,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -4578,9 +5514,15 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<ScheduleGroupDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
     
     
     
@@ -4683,8 +5625,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -4695,9 +5637,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<ScheduleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -4779,8 +5728,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -4792,9 +5741,13 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<ScheduleDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -4889,8 +5842,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "includeMediaUris": includeMediaUris, 
             "includeResources": includeResources, 
             "language": language
@@ -4898,9 +5851,14 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<SystemPrompt>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -4912,8 +5870,21 @@ open class ArchitectAPI {
         case timestamp = "timestamp"
         case user = "user"
     }
-
     
+    
+    
+    
+    public enum Action_getArchitectSystempromptHistoryHistoryId: String { 
+        case checkin = "checkin"
+        case checkout = "checkout"
+        case create = "create"
+        case deactivate = "deactivate"
+        case debug = "debug"
+        case delete = "delete"
+        case publish = "publish"
+        case revert = "revert"
+        case save = "save"
+    }
     
     /**
      Get generated prompt history
@@ -5315,8 +6286,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortOrder": sortOrder, 
@@ -5326,9 +6297,11 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<HistoryListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -5397,13 +6370,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SystemPromptAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -5506,8 +6484,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -5516,9 +6494,19 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<SystemPromptAssetEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -5679,8 +6667,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -5695,9 +6683,11 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<SystemPromptEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -7754,16 +8744,21 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "deleted": deleted
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -7775,8 +8770,21 @@ open class ArchitectAPI {
         case timestamp = "timestamp"
         case user = "user"
     }
-
     
+    
+    
+    
+    public enum Action_getFlowHistoryHistoryId: String { 
+        case checkin = "checkin"
+        case checkout = "checkout"
+        case create = "create"
+        case deactivate = "deactivate"
+        case debug = "debug"
+        case delete = "delete"
+        case publish = "publish"
+        case revert = "revert"
+        case save = "save"
+    }
     
     /**
      Get generated flow history
@@ -8178,8 +9186,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortOrder": sortOrder, 
@@ -8189,9 +9197,11 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<HistoryListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -8239,16 +9249,19 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "deleted": deleted
         ])
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -8647,16 +9660,19 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "deleted": deleted
         ])
 
         let requestBuilder: RequestBuilder<FlowVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -8710,16 +9726,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "deleted": deleted
         ])
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -8741,7 +9759,7 @@ open class ArchitectAPI {
         case ptPt = "pt-pt"
         case nlNl = "nl-nl"
     }
-
+    
     
     /**
      Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
@@ -8827,16 +9845,19 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "language": language?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<FlowHealth>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -8859,7 +9880,7 @@ open class ArchitectAPI {
         case ptPt = "pt-pt"
         case nlNl = "nl-nl"
     }
-
+    
     
     /**
      Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
@@ -8924,16 +9945,20 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "language": language.rawValue
         ])
 
         let requestBuilder: RequestBuilder<FlowHealthIntent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -8957,7 +9982,7 @@ open class ArchitectAPI {
         case ptPt = "pt-pt"
         case nlNl = "nl-nl"
     }
-
+    
     
     /**
      Get health metrics associated with a specific utterance of an intent.
@@ -9029,16 +10054,20 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "language": language.rawValue
         ])
 
         let requestBuilder: RequestBuilder<FlowHealthUtterance>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -9792,8 +10821,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "deleted": deleted
@@ -9801,9 +10830,44 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowVersionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    public enum ModelType_getFlows: String { 
+        case bot = "bot"
+        case commonmodule = "commonmodule"
+        case digitalbot = "digitalbot"
+        case inboundcall = "inboundcall"
+        case inboundchat = "inboundchat"
+        case inboundemail = "inboundemail"
+        case inboundshortmessage = "inboundshortmessage"
+        case outboundcall = "outboundcall"
+        case inqueuecall = "inqueuecall"
+        case inqueueemail = "inqueueemail"
+        case inqueueshortmessage = "inqueueshortmessage"
+        case speech = "speech"
+        case securecall = "securecall"
+        case surveyinvite = "surveyinvite"
+        case voice = "voice"
+        case voicemail = "voicemail"
+        case voicesurvey = "voicesurvey"
+        case workflow = "workflow"
+        case workitem = "workitem"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -9823,7 +10887,12 @@ open class ArchitectAPI {
         case checkedin = "checkedin"
         case published = "published"
     }
-
+    
+    
+    
+    
+    
+    
     
     
     
@@ -13935,8 +15004,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "type": type, 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
@@ -13960,15 +15029,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum Expand_getFlowsDatatable: String { 
         case schema = "schema"
     }
-
+    
     
     /**
      Returns a specific datatable by id
@@ -14024,16 +15094,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<DataTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -14097,13 +15169,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataTableExportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -14170,13 +15244,16 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -14263,17 +15340,20 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<DataTableImportEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -14328,16 +15408,20 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "showbrief": showbrief
         ])
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -14347,7 +15431,7 @@ open class ArchitectAPI {
         case ascending = "ascending"
         case descending = "descending"
     }
-
+    
     
     /**
      Returns the rows for the datatable with the given id
@@ -14417,8 +15501,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "showbrief": showbrief, 
@@ -14427,14 +15511,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DataTableRowEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     public enum Expand_getFlowsDatatables: String { 
         case schema = "schema"
     }
-
+    
+    
+    
     
     
     
@@ -14443,7 +15529,10 @@ open class ArchitectAPI {
         case _id = "id"
         case name = "name"
     }
-
+    
+    
+    
+    
     
     
     
@@ -14527,8 +15616,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue, 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
@@ -14540,15 +15629,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DataTablesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum Expand_getFlowsDatatablesDivisionview: String { 
         case schema = "schema"
     }
-
+    
     
     /**
      Returns a specific datatable by id
@@ -14604,21 +15694,23 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<DataTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     public enum Expand_getFlowsDatatablesDivisionviews: String { 
         case schema = "schema"
     }
-
+    
+    
+    
     
     
     
@@ -14627,7 +15719,10 @@ open class ArchitectAPI {
         case _id = "id"
         case name = "name"
     }
-
+    
+    
+    
+    
     
     
     
@@ -14711,8 +15806,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue, 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
@@ -14724,9 +15819,43 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<DataTablesDomainEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    public enum ModelType_getFlowsDivisionviews: String { 
+        case bot = "bot"
+        case commonmodule = "commonmodule"
+        case digitalbot = "digitalbot"
+        case inboundcall = "inboundcall"
+        case inboundchat = "inboundchat"
+        case inboundemail = "inboundemail"
+        case inboundshortmessage = "inboundshortmessage"
+        case outboundcall = "outboundcall"
+        case inqueuecall = "inqueuecall"
+        case inqueueemail = "inqueueemail"
+        case inqueueshortmessage = "inqueueshortmessage"
+        case speech = "speech"
+        case securecall = "securecall"
+        case surveyinvite = "surveyinvite"
+        case voice = "voice"
+        case voicemail = "voicemail"
+        case voicesurvey = "voicesurvey"
+        case workflow = "workflow"
+        case workitem = "workitem"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -14850,8 +15979,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "type": type, 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
@@ -14868,9 +15997,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a flow execution's details. Flow execution details are available for several days after the flow is started.
@@ -14930,14 +16060,250 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowRuntimeExecution>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    public enum Expand_getFlowsInstance: String { 
+        case bots = "bots"
+        case dataactions = "dataActions"
+    }
+    
+    
+    /**
+     Start a process (job) to prepare a download of a singular flow execution data instance by Id
+     
+     - parameter instanceId: (path) Instance ID 
+     - parameter expand: (query) Expand various details. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstance(instanceId: String, expand: Expand_getFlowsInstance? = nil, completion: @escaping ((_ data: GetFlowExecutionDataJobResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstanceWithRequestBuilder(instanceId: instanceId, expand: expand)
+        requestBuilder.execute { (response: Response<GetFlowExecutionDataJobResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start a process (job) to prepare a download of a singular flow execution data instance by Id
+     - GET /api/v2/flows/instances/{instanceId}
+     - Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "id" : "id",
+    "downloadUri" : "downloadUri",
+    "failed" : true,
+    "statusCode" : "statusCode"
+  }, {
+    "id" : "id",
+    "downloadUri" : "downloadUri",
+    "failed" : true,
+    "statusCode" : "statusCode"
+  } ],
+  "jobState" : "Registered",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter instanceId: (path) Instance ID 
+     - parameter expand: (query) Expand various details. (optional)
+
+     - returns: RequestBuilder<GetFlowExecutionDataJobResult> 
+     */
+    open class func getFlowsInstanceWithRequestBuilder(instanceId: String, expand: Expand_getFlowsInstance? = nil) -> RequestBuilder<GetFlowExecutionDataJobResult> {        
+        var path = "/api/v2/flows/instances/{instanceId}"
+        let instanceIdPreEscape = "\(instanceId)"
+        let instanceIdPostEscape = instanceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{instanceId}", with: instanceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GetFlowExecutionDataJobResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the status and/or results of an asynchronous flow execution data retrieval job
+     
+     - parameter jobId: (path) The asynchronous job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstancesJob(jobId: String, completion: @escaping ((_ data: GetFlowExecutionDataJobResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstancesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<GetFlowExecutionDataJobResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the status and/or results of an asynchronous flow execution data retrieval job
+     - GET /api/v2/flows/instances/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "id" : "id",
+    "downloadUri" : "downloadUri",
+    "failed" : true,
+    "statusCode" : "statusCode"
+  }, {
+    "id" : "id",
+    "downloadUri" : "downloadUri",
+    "failed" : true,
+    "statusCode" : "statusCode"
+  } ],
+  "jobState" : "Registered",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The asynchronous job ID 
+
+     - returns: RequestBuilder<GetFlowExecutionDataJobResult> 
+     */
+    open class func getFlowsInstancesJobWithRequestBuilder(jobId: String) -> RequestBuilder<GetFlowExecutionDataJobResult> {        
+        var path = "/api/v2/flows/instances/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GetFlowExecutionDataJobResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    public enum Expand_getFlowsInstancesQuerycapabilities: String { 
+        case flow = "flow"
+        case action = "action"
+    }
+    
+    
+    /**
+     Retrieve a list of capabilities that the org can use to query for execution data
+     
+     - parameter expand: (query) Expand various query types. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstancesQuerycapabilities(expand: Expand_getFlowsInstancesQuerycapabilities? = nil, completion: @escaping ((_ data: FlowsQueryCriteriaResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstancesQuerycapabilitiesWithRequestBuilder(expand: expand)
+        requestBuilder.execute { (response: Response<FlowsQueryCriteriaResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a list of capabilities that the org can use to query for execution data
+     - GET /api/v2/flows/instances/querycapabilities
+     - Returns the queryable parameters that can be used to build a query for execution data.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "flowTypes" : [ "bot", "bot" ],
+  "criteria" : [ {
+    "criteriaKey" : "FlowStartDateTime",
+    "operators" : [ "operators", "operators" ],
+    "dataType" : "string",
+    "description" : "description",
+    "criteriaGroups" : [ "flow", "flow" ],
+    "categoryInfo" : "{}"
+  }, {
+    "criteriaKey" : "FlowStartDateTime",
+    "operators" : [ "operators", "operators" ],
+    "dataType" : "string",
+    "description" : "description",
+    "criteriaGroups" : [ "flow", "flow" ],
+    "categoryInfo" : "{}"
+  } ],
+  "errorCodes" : [ "errorCodes", "errorCodes" ],
+  "warningCodes" : [ "warningCodes", "warningCodes" ],
+  "actionTypes" : [ "actionAbortSurveyInvite", "actionAbortSurveyInvite" ]
+}, statusCode=200}]
+     
+     - parameter expand: (query) Expand various query types. (optional)
+
+     - returns: RequestBuilder<FlowsQueryCriteriaResponse> 
+     */
+    open class func getFlowsInstancesQuerycapabilitiesWithRequestBuilder(expand: Expand_getFlowsInstancesQuerycapabilities? = nil) -> RequestBuilder<FlowsQueryCriteriaResponse> {        
+        let path = "/api/v2/flows/instances/querycapabilities"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<FlowsQueryCriteriaResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_getFlowsJob: String { 
+        case messages = "messages"
+    }
     
     /**
      Fetch Architect Job Status
@@ -15000,16 +16366,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<ArchitectJobStateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a flow milestone
@@ -15062,13 +16429,22 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowMilestone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -15159,8 +16535,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -15174,9 +16550,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowMilestoneListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -15259,8 +16642,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -15272,9 +16655,10 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowMilestoneDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a flow outcome
@@ -15643,13 +17027,22 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowOutcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -16372,8 +17765,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -16387,9 +17780,16 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowOutcomeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -16472,8 +17872,8 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -16485,7 +17885,7 @@ open class ArchitectAPI {
 
         let requestBuilder: RequestBuilder<FlowOutcomeDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -16519,13 +17919,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates a new emergency group
@@ -16606,13 +18007,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmergencyGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create IVR config.
@@ -16674,13 +18076,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IVR>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Generate prompt history
@@ -17042,13 +18445,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -17113,13 +18518,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PromptAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new user prompt
@@ -17201,13 +18607,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Prompt>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates a new schedule group
@@ -17292,13 +18699,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScheduleGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new schedule.
@@ -17358,13 +18766,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Schedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Generate system prompt history
@@ -17726,13 +19135,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -17798,13 +19209,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SystemPromptAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Generate flow history
@@ -18166,13 +19578,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -18565,13 +19979,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowVersion>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -20625,16 +22041,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "language": language
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Check-in flow
@@ -20993,16 +22410,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "flow": flow
         ])
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Check-out flow
@@ -23053,16 +24471,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "flow": flow
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Deactivate flow
@@ -25113,16 +26532,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "flow": flow
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -25484,17 +26905,18 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "flow": flow, 
             "version": version
         ])
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Revert flow
@@ -27545,16 +28967,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "flow": flow
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Unlock flow
@@ -29606,16 +31029,17 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "flow": flow
         ])
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Begin an export process for exporting all rows from a datatable
@@ -29673,13 +31097,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataTableExportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -29743,13 +31169,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataTableImportJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -29798,13 +31226,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: dataTableRow)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a new datatable with the specified json-schema definition
@@ -29855,13 +31284,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Launch an instance of a flow definition, for flow types that support it such as the 'workflow' type.
@@ -29910,11 +31340,188 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: flowLaunchRequest)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowExecutionLaunchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum Expand_postFlowsInstancesJobs: String { 
+        case bots = "bots"
+        case dataactions = "dataActions"
+    }
+    
+    
+    /**
+     Start a process (job) that will prepare a list of execution data IDs for download.
+     
+     - parameter body: (body) Requested Flow Ids 
+     - parameter expand: (query) Expand various query types. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsInstancesJobs(body: ExecutionDataRequest, expand: Expand_postFlowsInstancesJobs? = nil, completion: @escaping ((_ data: GetFlowExecutionDataJobResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsInstancesJobsWithRequestBuilder(body: body, expand: expand)
+        requestBuilder.execute { (response: Response<GetFlowExecutionDataJobResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start a process (job) that will prepare a list of execution data IDs for download.
+     - POST /api/v2/flows/instances/jobs
+     - Returns a JobResult object that contains an ID that can be used to check status and/or download links when the process (job) is complete.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "id" : "id",
+    "downloadUri" : "downloadUri",
+    "failed" : true,
+    "statusCode" : "statusCode"
+  }, {
+    "id" : "id",
+    "downloadUri" : "downloadUri",
+    "failed" : true,
+    "statusCode" : "statusCode"
+  } ],
+  "jobState" : "Registered",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) Requested Flow Ids 
+     - parameter expand: (query) Expand various query types. (optional)
+
+     - returns: RequestBuilder<GetFlowExecutionDataJobResult> 
+     */
+    open class func postFlowsInstancesJobsWithRequestBuilder(body: ExecutionDataRequest, expand: Expand_postFlowsInstancesJobs? = nil) -> RequestBuilder<GetFlowExecutionDataJobResult> {        
+        let path = "/api/v2/flows/instances/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<GetFlowExecutionDataJobResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query the database of existing flow histories to look for particular flow criteria
+     
+     - parameter body: (body) query 
+     - parameter indexOnly: (query) indexes only (optional)
+     - parameter pageSize: (query) number of results to return (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowsInstancesQuery(body: CriteriaQuery, indexOnly: Bool? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: FlowResultEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowsInstancesQueryWithRequestBuilder(body: body, indexOnly: indexOnly, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<FlowResultEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the database of existing flow histories to look for particular flow criteria
+     - POST /api/v2/flows/instances/query
+     - Returns a list of matching flow histories up to 200 max.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "startDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "conversationId" : "conversationId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "flowErrorReason" : "flowErrorReason",
+    "flowVersion" : "flowVersion",
+    "id" : "id",
+    "endDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "flowId" : "flowId",
+    "flowName" : "flowName",
+    "flowType" : "bot"
+  }, {
+    "startDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "conversationId" : "conversationId",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "flowErrorReason" : "flowErrorReason",
+    "flowVersion" : "flowVersion",
+    "id" : "id",
+    "endDateTime" : "2000-01-23T04:56:07.000+00:00",
+    "flowId" : "flowId",
+    "flowName" : "flowName",
+    "flowType" : "bot"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter indexOnly: (query) indexes only (optional)
+     - parameter pageSize: (query) number of results to return (optional)
+
+     - returns: RequestBuilder<FlowResultEntityListing> 
+     */
+    open class func postFlowsInstancesQueryWithRequestBuilder(body: CriteriaQuery, indexOnly: Bool? = nil, pageSize: Int? = nil) -> RequestBuilder<FlowResultEntityListing> {        
+        let path = "/api/v2/flows/instances/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "indexOnly": indexOnly, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<FlowResultEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     /**
@@ -29962,13 +31569,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RegisterArchitectJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a flow milestone
@@ -30017,13 +31625,14 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowMilestone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a flow outcome
@@ -30389,13 +31998,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowOutcome>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -30482,13 +32093,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmergencyGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -30556,13 +32169,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IVR>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -30650,13 +32265,16 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Prompt>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -30727,13 +32345,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PromptAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -30799,13 +32419,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Schedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -30896,13 +32518,16 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ScheduleGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -30974,13 +32599,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SystemPromptAsset>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -33037,20 +34664,22 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Flow>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
     public enum Expand_putFlowsDatatable: String { 
         case schema = "schema"
     }
-
+    
     
     /**
      Updates a specific datatable by id
@@ -33108,16 +34737,19 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<DataTable>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -33172,13 +34804,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -33233,13 +34867,15 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FlowMilestone>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -33604,11 +35240,11 @@ open class ArchitectAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

@@ -12,6 +12,8 @@ import Foundation
 open class QualityAPI {
     
     
+    
+    
     /**
      Delete a calibration by id.
      
@@ -913,7 +915,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 4,
+  "averageScore" : 1,
   "calibrator" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -1203,7 +1205,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 5,
+  "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "addresses" : [ {
@@ -1496,24 +1498,13 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 9,
+  "lowScore" : 7,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
   "evaluationForm" : {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1709,16 +1700,19 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "calibratorId": calibratorId
         ])
 
         let requestBuilder: RequestBuilder<Calibration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2050,23 +2044,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 8.762042,
+    "totalNonCriticalScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 6.6835623,
+    "totalCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2075,7 +2069,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2083,25 +2077,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     }, {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2110,7 +2104,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -2118,40 +2112,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 9.36931,
+    "totalScore" : 1.1730742,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -3030,7 +3024,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 4,
+    "averageScore" : 1,
     "calibrator" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -3320,7 +3314,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 5,
+    "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "addresses" : [ {
@@ -3613,24 +3607,13 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 9,
+    "lowScore" : 7,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
     "evaluationForm" : {
-      "publishedVersions" : {
-        "total" : 7,
-        "pageCount" : 1,
-        "pageNumber" : 6,
-        "entities" : [ null, null ],
-        "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
-        "pageSize" : 1,
-        "nextUri" : "https://openapi-generator.tech",
-        "previousUri" : "https://openapi-generator.tech"
-      },
+      "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -4571,16 +4554,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<EvaluationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an evaluation form.
@@ -4618,13 +4602,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete an evaluation form.
@@ -4662,13 +4647,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a survey form.
@@ -4706,13 +4692,27 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -7752,8 +7752,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -7772,9 +7772,12 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<AgentActivityEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -8680,7 +8683,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 4,
+  "averageScore" : 1,
   "calibrator" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -8970,7 +8973,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 5,
+  "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "addresses" : [ {
@@ -9263,24 +9266,13 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 9,
+  "lowScore" : 7,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
   "evaluationForm" : {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -9477,17 +9469,27 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "calibratorId": calibratorId, 
             "conversationId": conversationId
         ])
 
         let requestBuilder: RequestBuilder<Calibration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -10411,7 +10413,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 4,
+    "averageScore" : 1,
     "calibrator" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -10701,7 +10703,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 5,
+    "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "addresses" : [ {
@@ -10994,24 +10996,13 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 9,
+    "lowScore" : 7,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
     "evaluationForm" : {
-      "publishedVersions" : {
-        "total" : 7,
-        "pageCount" : 1,
-        "pageNumber" : 6,
-        "entities" : [ null, null ],
-        "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
-        "pageSize" : 1,
-        "nextUri" : "https://openapi-generator.tech",
-        "previousUri" : "https://openapi-generator.tech"
-      },
+      "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -12062,7 +12053,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 4,
+    "averageScore" : 1,
     "calibrator" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -12352,7 +12343,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 5,
+    "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "addresses" : [ {
@@ -12645,24 +12636,13 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 9,
+    "lowScore" : 7,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
     "evaluationForm" : {
-      "publishedVersions" : {
-        "total" : 7,
-        "pageCount" : 1,
-        "pageNumber" : 6,
-        "entities" : [ null, null ],
-        "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
-        "pageSize" : 1,
-        "nextUri" : "https://openapi-generator.tech",
-        "previousUri" : "https://openapi-generator.tech"
-      },
+      "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -12870,8 +12850,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -12886,9 +12866,12 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<CalibrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -13220,23 +13203,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 8.762042,
+    "totalNonCriticalScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 6.6835623,
+    "totalCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -13245,7 +13228,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -13253,25 +13236,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     }, {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -13280,7 +13263,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -13288,40 +13271,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 9.36931,
+    "totalScore" : 1.1730742,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -14200,7 +14183,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 4,
+    "averageScore" : 1,
     "calibrator" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -14490,7 +14473,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 5,
+    "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "addresses" : [ {
@@ -14783,24 +14766,13 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 9,
+    "lowScore" : 7,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
     "evaluationForm" : {
-      "publishedVersions" : {
-        "total" : 7,
-        "pageCount" : 1,
-        "pageNumber" : 6,
-        "entities" : [ null, null ],
-        "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
-        "pageSize" : 1,
-        "nextUri" : "https://openapi-generator.tech",
-        "previousUri" : "https://openapi-generator.tech"
-      },
+      "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -15741,16 +15713,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<EvaluationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the surveys for a conversation
@@ -15877,13 +15850,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[Survey]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get status of audit query execution
@@ -15948,16 +15922,24 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QualityAuditQueryExecutionStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     
     
+    
+    
+    
+    
+    
+    public enum Expand_getQualityConversationsAuditsQueryTransactionIdResults: String { 
+        case user = "user"
+    }
     
     /**
      Get results of audit query
@@ -16068,8 +16050,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "cursor": cursor, 
             "pageSize": pageSize?.encodeToJSON(), 
             "expand": expand
@@ -16077,9 +16059,30 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<QualityAuditQueryExecutionResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -16452,23 +16455,23 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 8.762042,
+      "totalNonCriticalScore" : 5.025005,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 6.6835623,
+      "totalCriticalScore" : 4.9652185,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 1.284659,
-        "totalCriticalScoreUnweighted" : 5.9448957,
-        "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "totalNonCriticalScore" : 9.018348,
+        "totalCriticalScoreUnweighted" : 1.284659,
+        "totalNonCriticalScoreUnweighted" : 6.778325,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 6.778325,
-        "maxTotalNonCriticalScore" : 2.8841622,
+        "totalScoreUnweighted" : 3.5571952,
+        "maxTotalNonCriticalScore" : 6.4384236,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16477,7 +16480,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16485,25 +16488,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.018348,
-        "maxTotalScore" : 6.4384236,
-        "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-        "totalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScore" : 6.965118,
-        "maxTotalCriticalScoreUnweighted" : 6.704019,
-        "maxTotalScoreUnweighted" : 6.878052
+        "totalScore" : 9.965781,
+        "maxTotalScore" : 9.36931,
+        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+        "totalCriticalScore" : 6.6835623,
+        "maxTotalCriticalScore" : 8.762042,
+        "maxTotalCriticalScoreUnweighted" : 2.8841622,
+        "maxTotalScoreUnweighted" : 6.965118
       }, {
-        "totalNonCriticalScore" : 1.284659,
-        "totalCriticalScoreUnweighted" : 5.9448957,
-        "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "totalNonCriticalScore" : 9.018348,
+        "totalCriticalScoreUnweighted" : 1.284659,
+        "totalNonCriticalScoreUnweighted" : 6.778325,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 6.778325,
-        "maxTotalNonCriticalScore" : 2.8841622,
+        "totalScoreUnweighted" : 3.5571952,
+        "maxTotalNonCriticalScore" : 6.4384236,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16512,7 +16515,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -16520,40 +16523,40 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.018348,
-        "maxTotalScore" : 6.4384236,
-        "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-        "totalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScore" : 6.965118,
-        "maxTotalCriticalScoreUnweighted" : 6.704019,
-        "maxTotalScoreUnweighted" : 6.878052
+        "totalScore" : 9.965781,
+        "maxTotalScore" : 9.36931,
+        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+        "totalCriticalScore" : 6.6835623,
+        "maxTotalCriticalScore" : 8.762042,
+        "maxTotalCriticalScoreUnweighted" : 2.8841622,
+        "maxTotalScoreUnweighted" : 6.965118
       } ],
       "transcriptTopics" : [ {
         "duration" : {
-          "totalMilliseconds" : 6
+          "totalMilliseconds" : 3
         },
         "offset" : "{}",
-        "recordingLocation" : 0,
-        "startTimeMilliseconds" : 7,
-        "confidence" : 0,
+        "recordingLocation" : 7,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 6,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       }, {
         "duration" : {
-          "totalMilliseconds" : 6
+          "totalMilliseconds" : 3
         },
         "offset" : "{}",
-        "recordingLocation" : 0,
-        "startTimeMilliseconds" : 7,
-        "confidence" : 0,
+        "recordingLocation" : 7,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 6,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 9.36931,
+      "totalScore" : 1.1730742,
       "anyFailedKillQuestions" : true
     },
     "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -17433,7 +17436,7 @@ open class QualityAPI {
         "geolocation" : "{}"
       } ],
       "contextId" : "contextId",
-      "averageScore" : 4,
+      "averageScore" : 1,
       "calibrator" : {
         "addresses" : [ {
           "extension" : "extension",
@@ -17723,7 +17726,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       },
-      "highScore" : 5,
+      "highScore" : 6,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
         "addresses" : [ {
@@ -18016,24 +18019,13 @@ open class QualityAPI {
       },
       "name" : "name",
       "id" : "id",
-      "lowScore" : 9,
+      "lowScore" : 7,
       "conversation" : {
         "selfUri" : "https://openapi-generator.tech",
         "id" : "id"
       },
       "evaluationForm" : {
-        "publishedVersions" : {
-          "total" : 7,
-          "pageCount" : 1,
-          "pageNumber" : 6,
-          "entities" : [ null, null ],
-          "firstUri" : "https://openapi-generator.tech",
-          "lastUri" : "https://openapi-generator.tech",
-          "selfUri" : "https://openapi-generator.tech",
-          "pageSize" : 1,
-          "nextUri" : "https://openapi-generator.tech",
-          "previousUri" : "https://openapi-generator.tech"
-        },
+        "publishedVersions" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -19252,23 +19244,23 @@ open class QualityAPI {
     "evaluationSource" : "{}",
     "redacted" : true,
     "answers" : {
-      "totalNonCriticalScore" : 8.762042,
+      "totalNonCriticalScore" : 5.025005,
       "comments" : "comments",
       "privateComments" : "privateComments",
       "agentComments" : "agentComments",
-      "totalCriticalScore" : 6.6835623,
+      "totalCriticalScore" : 4.9652185,
       "questionGroupScores" : [ {
-        "totalNonCriticalScore" : 1.284659,
-        "totalCriticalScoreUnweighted" : 5.9448957,
-        "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "totalNonCriticalScore" : 9.018348,
+        "totalCriticalScoreUnweighted" : 1.284659,
+        "totalNonCriticalScoreUnweighted" : 6.778325,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 6.778325,
-        "maxTotalNonCriticalScore" : 2.8841622,
+        "totalScoreUnweighted" : 3.5571952,
+        "maxTotalNonCriticalScore" : 6.4384236,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -19277,7 +19269,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -19285,25 +19277,25 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.018348,
-        "maxTotalScore" : 6.4384236,
-        "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-        "totalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScore" : 6.965118,
-        "maxTotalCriticalScoreUnweighted" : 6.704019,
-        "maxTotalScoreUnweighted" : 6.878052
+        "totalScore" : 9.965781,
+        "maxTotalScore" : 9.36931,
+        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+        "totalCriticalScore" : 6.6835623,
+        "maxTotalCriticalScore" : 8.762042,
+        "maxTotalCriticalScoreUnweighted" : 2.8841622,
+        "maxTotalScoreUnweighted" : 6.965118
       }, {
-        "totalNonCriticalScore" : 1.284659,
-        "totalCriticalScoreUnweighted" : 5.9448957,
-        "totalNonCriticalScoreUnweighted" : 3.3531933,
+        "totalNonCriticalScore" : 9.018348,
+        "totalCriticalScoreUnweighted" : 1.284659,
+        "totalNonCriticalScoreUnweighted" : 6.778325,
         "systemMarkedNA" : true,
         "markedNA" : true,
-        "totalScoreUnweighted" : 6.778325,
-        "maxTotalNonCriticalScore" : 2.8841622,
+        "totalScoreUnweighted" : 3.5571952,
+        "maxTotalNonCriticalScore" : 6.4384236,
         "questionScores" : [ {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -19312,7 +19304,7 @@ open class QualityAPI {
         }, {
           "answerId" : "answerId",
           "failedKillQuestion" : true,
-          "score" : 7,
+          "score" : 5,
           "questionId" : "questionId",
           "systemMarkedNA" : true,
           "comments" : "comments",
@@ -19320,40 +19312,40 @@ open class QualityAPI {
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
-        "totalScore" : 9.018348,
-        "maxTotalScore" : 6.4384236,
-        "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-        "totalCriticalScore" : 3.5571952,
-        "maxTotalCriticalScore" : 6.965118,
-        "maxTotalCriticalScoreUnweighted" : 6.704019,
-        "maxTotalScoreUnweighted" : 6.878052
+        "totalScore" : 9.965781,
+        "maxTotalScore" : 9.36931,
+        "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+        "totalCriticalScore" : 6.6835623,
+        "maxTotalCriticalScore" : 8.762042,
+        "maxTotalCriticalScoreUnweighted" : 2.8841622,
+        "maxTotalScoreUnweighted" : 6.965118
       } ],
       "transcriptTopics" : [ {
         "duration" : {
-          "totalMilliseconds" : 6
+          "totalMilliseconds" : 3
         },
         "offset" : "{}",
-        "recordingLocation" : 0,
-        "startTimeMilliseconds" : 7,
-        "confidence" : 0,
+        "recordingLocation" : 7,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 6,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       }, {
         "duration" : {
-          "totalMilliseconds" : 6
+          "totalMilliseconds" : 3
         },
         "offset" : "{}",
-        "recordingLocation" : 0,
-        "startTimeMilliseconds" : 7,
-        "confidence" : 0,
+        "recordingLocation" : 7,
+        "startTimeMilliseconds" : 3,
+        "confidence" : 6,
         "name" : "name",
         "topicPhrase" : "topicPhrase",
         "id" : "id",
         "transcriptPhrase" : "transcriptPhrase"
       } ],
-      "totalScore" : 9.36931,
+      "totalScore" : 1.1730742,
       "anyFailedKillQuestions" : true
     },
     "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -20233,7 +20225,7 @@ open class QualityAPI {
         "geolocation" : "{}"
       } ],
       "contextId" : "contextId",
-      "averageScore" : 4,
+      "averageScore" : 1,
       "calibrator" : {
         "addresses" : [ {
           "extension" : "extension",
@@ -20523,7 +20515,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       },
-      "highScore" : 5,
+      "highScore" : 6,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
         "addresses" : [ {
@@ -20816,24 +20808,13 @@ open class QualityAPI {
       },
       "name" : "name",
       "id" : "id",
-      "lowScore" : 9,
+      "lowScore" : 7,
       "conversation" : {
         "selfUri" : "https://openapi-generator.tech",
         "id" : "id"
       },
       "evaluationForm" : {
-        "publishedVersions" : {
-          "total" : 7,
-          "pageCount" : 1,
-          "pageNumber" : 6,
-          "entities" : [ null, null ],
-          "firstUri" : "https://openapi-generator.tech",
-          "lastUri" : "https://openapi-generator.tech",
-          "selfUri" : "https://openapi-generator.tech",
-          "pageSize" : 1,
-          "nextUri" : "https://openapi-generator.tech",
-          "previousUri" : "https://openapi-generator.tech"
-        },
+        "publishedVersions" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -21794,8 +21775,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -21821,9 +21802,21 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -22510,8 +22503,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -22528,9 +22521,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluatorActivityEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get an evaluation form
@@ -22564,6 +22558,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -22757,13 +22752,16 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -22805,6 +22803,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -22986,6 +22985,7 @@ open class QualityAPI {
     } ]
   }, {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23188,17 +23188,22 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -23208,12 +23213,14 @@ open class QualityAPI {
     public enum Expand_getQualityForms: String { 
         case publishhistory = "publishHistory"
     }
-
+    
+    
+    
     
     
     
     /**
-     Get the list of evaluation forms
+     Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
@@ -23244,7 +23251,7 @@ open class QualityAPI {
     }
 
     /**
-     Get the list of evaluation forms
+     Get the list of evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form.
      - GET /api/v2/quality/forms
      - OAuth:
        - type: oauth2
@@ -23255,6 +23262,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23436,6 +23444,7 @@ open class QualityAPI {
     } ]
   }, {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23640,8 +23649,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -23654,9 +23663,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get an evaluation form
@@ -23690,6 +23700,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23883,13 +23894,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -23933,6 +23948,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24114,6 +24130,7 @@ open class QualityAPI {
     } ]
   }, {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24317,8 +24334,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortOrder": sortOrder
@@ -24326,9 +24343,14 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -24338,7 +24360,9 @@ open class QualityAPI {
     public enum Expand_getQualityFormsEvaluations: String { 
         case publishhistory = "publishHistory"
     }
-
+    
+    
+    
     
     
     
@@ -24376,7 +24400,7 @@ open class QualityAPI {
     /**
      Get the list of evaluation forms
      - GET /api/v2/quality/forms/evaluations
-     - By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned by default. We will enhance this field in the future release.
+     - By default, \"published\" field is always returned as false for all evaluation forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding evaluation form. In addition, \"questionGroups\", the detailed information about evaluation form, is not returned. We will enhance this field in a future release.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -24386,6 +24410,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24567,6 +24592,7 @@ open class QualityAPI {
     } ]
   }, {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24771,8 +24797,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -24785,9 +24811,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Retrieve a list of the latest published evaluation form versions by context ids
@@ -24821,6 +24848,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -25011,16 +25039,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "contextId": contextId
         ])
 
         let requestBuilder: RequestBuilder<[EvaluationFormResponse]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a survey form
@@ -25239,13 +25268,16 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -25654,17 +25686,22 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<SurveyFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -25674,12 +25711,14 @@ open class QualityAPI {
     public enum Expand_getQualityFormsSurveys: String { 
         case publishhistory = "publishHistory"
     }
-
+    
+    
+    
     
     
     
     /**
-     Get the list of survey forms
+     Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
@@ -25710,7 +25749,7 @@ open class QualityAPI {
     }
 
     /**
-     Get the list of survey forms
+     Get the list of survey forms. If you set \"expand=publishHistory\", then you will be able to get published versions for each corresponding survey form.
      - GET /api/v2/quality/forms/surveys
      - OAuth:
        - type: oauth2
@@ -26090,8 +26129,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -26104,9 +26143,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<SurveyFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Retrieve a list of survey forms by their ids
@@ -26506,16 +26546,18 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "id": _id
         ])
 
         let requestBuilder: RequestBuilder<SurveyFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -26734,17 +26776,18 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "contextId": contextId, 
             "published": published
         ])
 
         let requestBuilder: RequestBuilder<[SurveyForm]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the published evaluation forms.
@@ -26778,6 +26821,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -26971,13 +27015,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -27021,6 +27069,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27202,6 +27251,7 @@ open class QualityAPI {
     } ]
   }, {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27402,8 +27452,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "name": name, 
@@ -27412,9 +27462,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the most recent published version of an evaluation form.
@@ -27448,6 +27499,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27641,13 +27693,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -27691,6 +27747,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27872,6 +27929,7 @@ open class QualityAPI {
     } ]
   }, {
     "weightMode" : "SCALED",
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -28072,8 +28130,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "name": name, 
@@ -28082,9 +28140,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<EvaluationFormResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the most recent published version of a survey form.
@@ -28303,13 +28362,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -28718,8 +28781,8 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "name": name, 
@@ -28728,9 +28791,10 @@ open class QualityAPI {
 
         let requestBuilder: RequestBuilder<SurveyFormEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a survey for a conversation
@@ -28857,13 +28921,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Survey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a survey as an end-customer, for the purposes of scoring it.
@@ -28968,16 +29033,18 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "customerSurveyUrl": customerSurveyUrl
         ])
 
         let requestBuilder: RequestBuilder<ScorableSurvey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -29199,13 +29266,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Query for evaluation aggregates
@@ -29556,13 +29624,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Query for survey aggregates
@@ -29913,13 +29982,15 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -30823,7 +30894,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 4,
+  "averageScore" : 1,
   "calibrator" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -31113,7 +31184,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 5,
+  "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "addresses" : [ {
@@ -31406,24 +31477,13 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 9,
+  "lowScore" : 7,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
   "evaluationForm" : {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -31616,16 +31676,19 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<Calibration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -31637,7 +31700,7 @@ open class QualityAPI {
      - parameter expand: (query) evaluatorId (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postQualityConversationEvaluations(conversationId: String, body: Evaluation, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
+    open class func postQualityConversationEvaluations(conversationId: String, body: EvaluationCreateBody, expand: String? = nil, completion: @escaping ((_ data: Evaluation?,_ error: Error?) -> Void)) {
         let requestBuilder = postQualityConversationEvaluationsWithRequestBuilder(conversationId: conversationId, body: body, expand: expand)
         requestBuilder.execute { (response: Response<Evaluation>?, error) -> Void in
             do {
@@ -31957,23 +32020,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 8.762042,
+    "totalNonCriticalScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 6.6835623,
+    "totalCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -31982,7 +32045,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -31990,25 +32053,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     }, {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -32017,7 +32080,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -32025,40 +32088,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 9.36931,
+    "totalScore" : 1.1730742,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -32938,7 +33001,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 4,
+    "averageScore" : 1,
     "calibrator" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -33228,7 +33291,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 5,
+    "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "addresses" : [ {
@@ -33521,24 +33584,13 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 9,
+    "lowScore" : 7,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
     "evaluationForm" : {
-      "publishedVersions" : {
-        "total" : 7,
-        "pageCount" : 1,
-        "pageNumber" : 6,
-        "entities" : [ null, null ],
-        "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
-        "pageSize" : 1,
-        "nextUri" : "https://openapi-generator.tech",
-        "previousUri" : "https://openapi-generator.tech"
-      },
+      "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -34469,7 +34521,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<Evaluation> 
      */
-    open class func postQualityConversationEvaluationsWithRequestBuilder(conversationId: String, body: Evaluation, expand: String? = nil) -> RequestBuilder<Evaluation> {        
+    open class func postQualityConversationEvaluationsWithRequestBuilder(conversationId: String, body: EvaluationCreateBody, expand: String? = nil) -> RequestBuilder<Evaluation> {        
         var path = "/api/v2/quality/conversations/{conversationId}/evaluations"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -34477,16 +34529,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<Evaluation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create audit query execution
@@ -34548,13 +34601,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<QualityAuditQueryExecutionStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Query for evaluation aggregates for the current user
@@ -34905,13 +34959,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Score evaluation
@@ -34944,23 +34999,23 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalNonCriticalScore" : 8.762042,
+  "totalNonCriticalScore" : 5.025005,
   "comments" : "comments",
   "privateComments" : "privateComments",
   "agentComments" : "agentComments",
-  "totalCriticalScore" : 6.6835623,
+  "totalCriticalScore" : 4.9652185,
   "questionGroupScores" : [ {
-    "totalNonCriticalScore" : 1.284659,
-    "totalCriticalScoreUnweighted" : 5.9448957,
-    "totalNonCriticalScoreUnweighted" : 3.3531933,
+    "totalNonCriticalScore" : 9.018348,
+    "totalCriticalScoreUnweighted" : 1.284659,
+    "totalNonCriticalScoreUnweighted" : 6.778325,
     "systemMarkedNA" : true,
     "markedNA" : true,
-    "totalScoreUnweighted" : 6.778325,
-    "maxTotalNonCriticalScore" : 2.8841622,
+    "totalScoreUnweighted" : 3.5571952,
+    "maxTotalNonCriticalScore" : 6.4384236,
     "questionScores" : [ {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 7,
+      "score" : 5,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -34969,7 +35024,7 @@ open class QualityAPI {
     }, {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 7,
+      "score" : 5,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -34977,25 +35032,25 @@ open class QualityAPI {
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
-    "totalScore" : 9.018348,
-    "maxTotalScore" : 6.4384236,
-    "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-    "totalCriticalScore" : 3.5571952,
-    "maxTotalCriticalScore" : 6.965118,
-    "maxTotalCriticalScoreUnweighted" : 6.704019,
-    "maxTotalScoreUnweighted" : 6.878052
+    "totalScore" : 9.965781,
+    "maxTotalScore" : 9.36931,
+    "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+    "totalCriticalScore" : 6.6835623,
+    "maxTotalCriticalScore" : 8.762042,
+    "maxTotalCriticalScoreUnweighted" : 2.8841622,
+    "maxTotalScoreUnweighted" : 6.965118
   }, {
-    "totalNonCriticalScore" : 1.284659,
-    "totalCriticalScoreUnweighted" : 5.9448957,
-    "totalNonCriticalScoreUnweighted" : 3.3531933,
+    "totalNonCriticalScore" : 9.018348,
+    "totalCriticalScoreUnweighted" : 1.284659,
+    "totalNonCriticalScoreUnweighted" : 6.778325,
     "systemMarkedNA" : true,
     "markedNA" : true,
-    "totalScoreUnweighted" : 6.778325,
-    "maxTotalNonCriticalScore" : 2.8841622,
+    "totalScoreUnweighted" : 3.5571952,
+    "maxTotalNonCriticalScore" : 6.4384236,
     "questionScores" : [ {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 7,
+      "score" : 5,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -35004,7 +35059,7 @@ open class QualityAPI {
     }, {
       "answerId" : "answerId",
       "failedKillQuestion" : true,
-      "score" : 7,
+      "score" : 5,
       "questionId" : "questionId",
       "systemMarkedNA" : true,
       "comments" : "comments",
@@ -35012,40 +35067,40 @@ open class QualityAPI {
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
-    "totalScore" : 9.018348,
-    "maxTotalScore" : 6.4384236,
-    "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-    "totalCriticalScore" : 3.5571952,
-    "maxTotalCriticalScore" : 6.965118,
-    "maxTotalCriticalScoreUnweighted" : 6.704019,
-    "maxTotalScoreUnweighted" : 6.878052
+    "totalScore" : 9.965781,
+    "maxTotalScore" : 9.36931,
+    "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+    "totalCriticalScore" : 6.6835623,
+    "maxTotalCriticalScore" : 8.762042,
+    "maxTotalCriticalScoreUnweighted" : 2.8841622,
+    "maxTotalScoreUnweighted" : 6.965118
   } ],
   "transcriptTopics" : [ {
     "duration" : {
-      "totalMilliseconds" : 6
+      "totalMilliseconds" : 3
     },
     "offset" : "{}",
-    "recordingLocation" : 0,
-    "startTimeMilliseconds" : 7,
-    "confidence" : 0,
+    "recordingLocation" : 7,
+    "startTimeMilliseconds" : 3,
+    "confidence" : 6,
     "name" : "name",
     "topicPhrase" : "topicPhrase",
     "id" : "id",
     "transcriptPhrase" : "transcriptPhrase"
   }, {
     "duration" : {
-      "totalMilliseconds" : 6
+      "totalMilliseconds" : 3
     },
     "offset" : "{}",
-    "recordingLocation" : 0,
-    "startTimeMilliseconds" : 7,
-    "confidence" : 0,
+    "recordingLocation" : 7,
+    "startTimeMilliseconds" : 3,
+    "confidence" : 6,
     "name" : "name",
     "topicPhrase" : "topicPhrase",
     "id" : "id",
     "transcriptPhrase" : "transcriptPhrase"
   } ],
-  "totalScore" : 9.36931,
+  "totalScore" : 1.1730742,
   "anyFailedKillQuestions" : true
 }, statusCode=200}]
      
@@ -35058,13 +35113,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationScoringSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create an evaluation form.
@@ -35098,6 +35154,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35288,13 +35345,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create an evaluation form.
@@ -35328,6 +35386,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35518,13 +35577,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a survey form.
@@ -35740,13 +35800,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Publish an evaluation form.
@@ -35780,6 +35841,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35970,13 +36032,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Publish an evaluation form.
@@ -36010,6 +36073,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36200,13 +36264,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Publish a survey form.
@@ -36422,13 +36487,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Score survey
@@ -36529,13 +36595,15 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyScoringSet>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -37439,7 +37507,7 @@ open class QualityAPI {
     "geolocation" : "{}"
   } ],
   "contextId" : "contextId",
-  "averageScore" : 4,
+  "averageScore" : 1,
   "calibrator" : {
     "addresses" : [ {
       "extension" : "extension",
@@ -37729,7 +37797,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   },
-  "highScore" : 5,
+  "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
     "addresses" : [ {
@@ -38022,24 +38090,13 @@ open class QualityAPI {
   },
   "name" : "name",
   "id" : "id",
-  "lowScore" : 9,
+  "lowScore" : 7,
   "conversation" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
   "evaluationForm" : {
-    "publishedVersions" : {
-      "total" : 7,
-      "pageCount" : 1,
-      "pageNumber" : 6,
-      "entities" : [ null, null ],
-      "firstUri" : "https://openapi-generator.tech",
-      "lastUri" : "https://openapi-generator.tech",
-      "selfUri" : "https://openapi-generator.tech",
-      "pageSize" : 1,
-      "nextUri" : "https://openapi-generator.tech",
-      "previousUri" : "https://openapi-generator.tech"
-    },
+    "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -38235,13 +38292,17 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Calibration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -38576,23 +38637,23 @@ open class QualityAPI {
   "evaluationSource" : "{}",
   "redacted" : true,
   "answers" : {
-    "totalNonCriticalScore" : 8.762042,
+    "totalNonCriticalScore" : 5.025005,
     "comments" : "comments",
     "privateComments" : "privateComments",
     "agentComments" : "agentComments",
-    "totalCriticalScore" : 6.6835623,
+    "totalCriticalScore" : 4.9652185,
     "questionGroupScores" : [ {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -38601,7 +38662,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -38609,25 +38670,25 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     }, {
-      "totalNonCriticalScore" : 1.284659,
-      "totalCriticalScoreUnweighted" : 5.9448957,
-      "totalNonCriticalScoreUnweighted" : 3.3531933,
+      "totalNonCriticalScore" : 9.018348,
+      "totalCriticalScoreUnweighted" : 1.284659,
+      "totalNonCriticalScoreUnweighted" : 6.778325,
       "systemMarkedNA" : true,
       "markedNA" : true,
-      "totalScoreUnweighted" : 6.778325,
-      "maxTotalNonCriticalScore" : 2.8841622,
+      "totalScoreUnweighted" : 3.5571952,
+      "maxTotalNonCriticalScore" : 6.4384236,
       "questionScores" : [ {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -38636,7 +38697,7 @@ open class QualityAPI {
       }, {
         "answerId" : "answerId",
         "failedKillQuestion" : true,
-        "score" : 7,
+        "score" : 5,
         "questionId" : "questionId",
         "systemMarkedNA" : true,
         "comments" : "comments",
@@ -38644,40 +38705,40 @@ open class QualityAPI {
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
-      "totalScore" : 9.018348,
-      "maxTotalScore" : 6.4384236,
-      "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-      "totalCriticalScore" : 3.5571952,
-      "maxTotalCriticalScore" : 6.965118,
-      "maxTotalCriticalScoreUnweighted" : 6.704019,
-      "maxTotalScoreUnweighted" : 6.878052
+      "totalScore" : 9.965781,
+      "maxTotalScore" : 9.36931,
+      "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+      "totalCriticalScore" : 6.6835623,
+      "maxTotalCriticalScore" : 8.762042,
+      "maxTotalCriticalScoreUnweighted" : 2.8841622,
+      "maxTotalScoreUnweighted" : 6.965118
     } ],
     "transcriptTopics" : [ {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     }, {
       "duration" : {
-        "totalMilliseconds" : 6
+        "totalMilliseconds" : 3
       },
       "offset" : "{}",
-      "recordingLocation" : 0,
-      "startTimeMilliseconds" : 7,
-      "confidence" : 0,
+      "recordingLocation" : 7,
+      "startTimeMilliseconds" : 3,
+      "confidence" : 6,
       "name" : "name",
       "topicPhrase" : "topicPhrase",
       "id" : "id",
       "transcriptPhrase" : "transcriptPhrase"
     } ],
-    "totalScore" : 9.36931,
+    "totalScore" : 1.1730742,
     "anyFailedKillQuestions" : true
   },
   "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -39556,7 +39617,7 @@ open class QualityAPI {
       "geolocation" : "{}"
     } ],
     "contextId" : "contextId",
-    "averageScore" : 4,
+    "averageScore" : 1,
     "calibrator" : {
       "addresses" : [ {
         "extension" : "extension",
@@ -39846,7 +39907,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     },
-    "highScore" : 5,
+    "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
       "addresses" : [ {
@@ -40139,24 +40200,13 @@ open class QualityAPI {
     },
     "name" : "name",
     "id" : "id",
-    "lowScore" : 9,
+    "lowScore" : 7,
     "conversation" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
     "evaluationForm" : {
-      "publishedVersions" : {
-        "total" : 7,
-        "pageCount" : 1,
-        "pageNumber" : 6,
-        "entities" : [ null, null ],
-        "firstUri" : "https://openapi-generator.tech",
-        "lastUri" : "https://openapi-generator.tech",
-        "selfUri" : "https://openapi-generator.tech",
-        "pageSize" : 1,
-        "nextUri" : "https://openapi-generator.tech",
-        "previousUri" : "https://openapi-generator.tech"
-      },
+      "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41098,16 +41148,18 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<EvaluationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -41143,6 +41195,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41337,13 +41390,15 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -41379,6 +41434,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "weightMode" : "SCALED",
+  "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41573,13 +41629,15 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -41801,13 +41859,15 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyForm>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -41915,14 +41975,14 @@ open class QualityAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "customerSurveyUrl": customerSurveyUrl
         ])
 
         let requestBuilder: RequestBuilder<ScorableSurvey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

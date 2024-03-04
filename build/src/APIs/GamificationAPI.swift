@@ -11,6 +11,7 @@ import Foundation
 
 open class GamificationAPI {
     
+    
     /**
      Delete an External Metric Definition
      
@@ -47,13 +48,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get an External Metric Definition
@@ -111,13 +113,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -198,15 +202,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinitionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -214,7 +218,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -222,7 +227,11 @@ open class GamificationAPI {
         case weekly = "Weekly"
         case monthly = "Monthly"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -237,7 +246,8 @@ open class GamificationAPI {
         case value = "value"
         case valuechange = "valueChange"
     }
-
+    
+    
     
     
     
@@ -245,7 +255,8 @@ open class GamificationAPI {
         case asc = "asc"
         case desc = "desc"
     }
-
+    
+    
     
     
     /**
@@ -354,8 +365,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -371,7 +382,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<InsightsSummary>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -379,7 +390,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -387,7 +399,9 @@ open class GamificationAPI {
         case weekly = "Weekly"
         case monthly = "Monthly"
     }
-
+    
+    
+    
     
     
     
@@ -461,8 +475,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -472,7 +486,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<InsightsDetails>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -480,7 +494,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -489,7 +504,11 @@ open class GamificationAPI {
         case weekly = "Weekly"
         case monthly = "Monthly"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -562,8 +581,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -575,7 +594,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<InsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -583,7 +602,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -592,7 +612,11 @@ open class GamificationAPI {
         case weekly = "Weekly"
         case monthly = "Monthly"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -665,8 +689,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -678,7 +702,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<InsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -686,7 +710,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -694,7 +719,8 @@ open class GamificationAPI {
         case weekly = "Weekly"
         case monthly = "Monthly"
     }
-
+    
+    
     
     
     /**
@@ -761,8 +787,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -771,7 +797,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<InsightsAgents>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -779,7 +805,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -787,7 +814,11 @@ open class GamificationAPI {
         case daily = "Daily"
         case weekly = "Weekly"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -861,8 +892,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -874,16 +905,18 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<UserInsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum FilterType_getGamificationInsightsUserDetails: String { 
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -891,7 +924,9 @@ open class GamificationAPI {
         case weekly = "Weekly"
         case monthly = "Monthly"
     }
-
+    
+    
+    
     
     
     
@@ -970,8 +1005,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -981,16 +1016,18 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<InsightsDetails>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum FilterType_getGamificationInsightsUserTrends: String { 
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     
@@ -998,7 +1035,11 @@ open class GamificationAPI {
         case daily = "Daily"
         case weekly = "Weekly"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -1077,8 +1118,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "granularity": granularity.rawValue, 
@@ -1090,9 +1131,12 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<UserInsightsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1157,8 +1201,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON(), 
             "metricId": metricId
@@ -1166,7 +1210,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<Leaderboard>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -1174,7 +1218,11 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -1245,8 +1293,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "startWorkday": startWorkday.encodeToJSON(), 
@@ -1256,7 +1304,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<Leaderboard>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -1264,7 +1312,8 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
     
     
     /**
@@ -1340,15 +1389,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId
         ])
 
         let requestBuilder: RequestBuilder<OverallBestPoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -1419,13 +1468,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OverallBestPoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Metric definition by id
@@ -1484,11 +1534,11 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -1560,13 +1610,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GetMetricDefinitionsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Performance profile by id
@@ -1630,13 +1681,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Members of a given performance profile
@@ -1690,13 +1742,16 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<MemberListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -1765,16 +1820,24 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_getGamificationProfileMetrics: String { 
+        case objective = "objective"
+    }
+    
     
     
     
@@ -1861,8 +1924,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand, 
             "workday": workday?.encodeToJSON(), 
             "metricIds": metricIds
@@ -1870,9 +1933,11 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<GetMetricResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -1965,14 +2030,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<GetMetricsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -2053,13 +2118,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GetProfilesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2126,16 +2193,17 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Performance profile of the requesting user
@@ -2196,17 +2264,23 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
+    
+    
+    
+    public enum Expand_getGamificationScorecards: String { 
+        case objective = "objective"
+    }
     
     /**
      Workday performance metrics of the requesting user
@@ -2357,17 +2431,19 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday.encodeToJSON(), 
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<WorkdayMetricListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2423,15 +2499,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<AttendanceStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -2487,13 +2563,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserBestPoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      All-time points of the requesting user
@@ -2540,16 +2617,17 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "endWorkday": endWorkday.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<AllTimePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Average points of the requesting user's division or performance profile
@@ -2597,16 +2675,18 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<SingleWorkdayAveragePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -2619,7 +2699,7 @@ open class GamificationAPI {
         case friday = "Friday"
         case saturday = "Saturday"
     }
-
+    
     
     /**
      Points trends of the requesting user
@@ -2679,8 +2759,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON(), 
             "dayOfWeek": dayOfWeek?.rawValue
@@ -2688,9 +2768,16 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<WorkdayPointsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2770,8 +2857,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON(), 
             "referenceWorkday": referenceWorkday?.encodeToJSON(), 
@@ -2780,9 +2867,11 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<MetricValueTrendAverage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -2790,7 +2879,12 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
+    
+    
+    
     
     
     
@@ -2868,8 +2962,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "startWorkday": startWorkday.encodeToJSON(), 
@@ -2880,9 +2974,13 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<MetricValueTrendAverage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -2892,7 +2990,9 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
     
     
     
@@ -2965,8 +3065,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType?.rawValue, 
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON(), 
@@ -2976,11 +3076,18 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<MetricValueTrendAverage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
     
+    
+    
+    
+    
+    public enum Expand_getGamificationScorecardsUser: String { 
+        case objective = "objective"
+    }
     
     /**
      Workday performance metrics for a user
@@ -3136,17 +3243,20 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday.encodeToJSON(), 
             "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<WorkdayMetricListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -3208,17 +3318,18 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<AttendanceStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Best points of a user
@@ -3279,13 +3390,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserBestPoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3338,16 +3451,19 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "endWorkday": endWorkday.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<AllTimePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -3361,7 +3477,7 @@ open class GamificationAPI {
         case friday = "Friday"
         case saturday = "Saturday"
     }
-
+    
     
     /**
      Points trend for a user
@@ -3426,8 +3542,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON(), 
             "dayOfWeek": dayOfWeek?.rawValue
@@ -3435,9 +3551,13 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<WorkdayPointsTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -3526,8 +3646,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "startWorkday": startWorkday.encodeToJSON(), 
             "endWorkday": endWorkday.encodeToJSON(), 
             "timeZone": timeZone
@@ -3535,7 +3655,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<WorkdayValuesTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -3543,7 +3663,9 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
     
     
     
@@ -3597,8 +3719,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "workday": workday.encodeToJSON()
@@ -3606,7 +3728,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<SingleWorkdayAveragePoints>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -3614,7 +3736,10 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
+    
     
     
     
@@ -3697,8 +3822,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "workday": workday.encodeToJSON(), 
@@ -3707,7 +3832,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<SingleWorkdayAverageValues>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -3715,7 +3840,11 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -3804,8 +3933,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType.rawValue, 
             "filterId": filterId, 
             "startWorkday": startWorkday.encodeToJSON(), 
@@ -3815,9 +3944,11 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<WorkdayValuesTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -3894,17 +4025,19 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "workday": workday.encodeToJSON(), 
             "timeZone": timeZone
         ])
 
         let requestBuilder: RequestBuilder<SingleWorkdayAverageValues>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -3912,7 +4045,9 @@ open class GamificationAPI {
         case performanceProfile = "PerformanceProfile"
         case division = "Division"
     }
-
+    
+    
+    
     
     
     
@@ -3999,8 +4134,8 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "filterType": filterType?.rawValue, 
             "referenceWorkday": referenceWorkday?.encodeToJSON(), 
             "startWorkday": startWorkday.encodeToJSON(), 
@@ -4010,7 +4145,7 @@ open class GamificationAPI {
 
         let requestBuilder: RequestBuilder<WorkdayValuesTrend>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -4056,13 +4191,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GamificationStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Objective template by id
@@ -4129,11 +4265,11 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ObjectiveTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -4220,13 +4356,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GetTemplatesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4287,13 +4425,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Write External Metric Data
@@ -4379,13 +4518,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalMetricDataWriteResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create External Metric Definition
@@ -4440,13 +4580,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalMetricDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Activate a performance profile
@@ -4510,13 +4651,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Deactivate a performance profile
@@ -4580,13 +4722,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4657,13 +4801,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Assignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4743,13 +4889,16 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AssignmentValidation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -4818,13 +4967,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4887,13 +5038,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -4957,16 +5110,18 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "copyMetrics": copyMetrics
         ])
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -5034,13 +5189,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserProfilesInDateRange>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Query performance profiles in date range for the current user
@@ -5102,13 +5258,15 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UserProfilesInDateRange>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -5175,13 +5333,16 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PerformanceProfile>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -5250,13 +5411,14 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Metric>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Update gamification activation status
@@ -5304,11 +5466,11 @@ open class GamificationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: status)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<GamificationStatus>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

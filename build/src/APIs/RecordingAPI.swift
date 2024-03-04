@@ -13,6 +13,9 @@ open class RecordingAPI {
     
     
     
+    
+    
+    
     /**
      Delete annotation
      
@@ -59,13 +62,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Deletes a single orphan recording
@@ -1074,13 +1078,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OrphanRecording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete media retention policies
@@ -1116,16 +1121,17 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "ids": ids
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a media retention policy
@@ -1163,13 +1169,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete the recording bulk job
@@ -1207,13 +1214,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete media retention policies
@@ -1249,16 +1257,17 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "ids": ids
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Delete a media retention policy
@@ -1296,13 +1305,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "DELETE", url: url!, body: body)
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -1315,28 +1326,32 @@ open class RecordingAPI {
         case mp3 = "MP3"
         case _none = "NONE"
     }
-
+    
     
     
     public enum EmailFormatId_getConversationRecording: String { 
         case eml = "EML"
         case _none = "NONE"
     }
-
+    
     
     
     public enum ChatFormatId_getConversationRecording: String { 
         case zip = "ZIP"
         case _none = "NONE"
     }
-
+    
     
     
     public enum MessageFormatId_getConversationRecording: String { 
         case zip = "ZIP"
         case _none = "NONE"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -2329,8 +2344,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "formatId": formatId?.rawValue, 
             "emailFormatId": emailFormatId?.rawValue, 
             "chatFormatId": chatFormatId?.rawValue, 
@@ -2343,9 +2358,12 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<Recording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -2419,13 +2437,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Annotation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2493,13 +2513,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[Annotation]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get recording metadata for a conversation. Does not return playable media. Annotations won't be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
@@ -2597,13 +2618,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[RecordingMetadata]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -2707,13 +2730,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingMetadata>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -2726,7 +2751,8 @@ open class RecordingAPI {
         case mp3 = "MP3"
         case _none = "NONE"
     }
-
+    
+    
     
     
     /**
@@ -3701,8 +3727,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "maxWaitMs": maxWaitMs?.encodeToJSON(), 
             "formatId": formatId?.rawValue, 
             "mediaFormats": mediaFormats
@@ -3710,9 +3736,10 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<[Recording]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Gets a single orphan recording
@@ -4721,13 +4748,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OrphanRecording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     
     public enum FormatId_getOrphanrecordingMedia: String { 
@@ -4739,28 +4767,32 @@ open class RecordingAPI {
         case mp3 = "MP3"
         case _none = "NONE"
     }
-
+    
     
     
     public enum EmailFormatId_getOrphanrecordingMedia: String { 
         case eml = "EML"
         case _none = "NONE"
     }
-
+    
     
     
     public enum ChatFormatId_getOrphanrecordingMedia: String { 
         case zip = "ZIP"
         case _none = "NONE"
     }
-
+    
     
     
     public enum MessageFormatId_getOrphanrecordingMedia: String { 
         case zip = "ZIP"
         case _none = "NONE"
     }
-
+    
+    
+    
+    
+    
     
     
     
@@ -5749,8 +5781,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "formatId": formatId?.rawValue, 
             "emailFormatId": emailFormatId?.rawValue, 
             "chatFormatId": chatFormatId?.rawValue, 
@@ -5763,9 +5795,16 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<Recording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -5778,7 +5817,7 @@ open class RecordingAPI {
         case call = "Call"
         case screen = "Screen"
     }
-
+    
     
     /**
      Gets all orphan recordings
@@ -7772,8 +7811,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -7786,9 +7825,10 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<OrphanRecordingListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the status and results for a batch request job, only the user that submitted the job may retrieve results
@@ -7860,13 +7900,24 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BatchDownloadJobStatusResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -8037,8 +8088,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -8054,9 +8105,10 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<PolicyEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a media retention policy
@@ -8145,13 +8197,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CrossPlatformPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the status of the job associated with the job id.
@@ -8212,13 +8265,18 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
     
     
     
@@ -8293,8 +8351,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "includeTotal": includeTotal, 
@@ -8303,9 +8361,11 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<FailedRecordingEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     
@@ -8313,7 +8373,7 @@ open class RecordingAPI {
         case userid = "userId"
         case datecreated = "dateCreated"
     }
-
+    
     
     
     public enum State_getRecordingJobs: String { 
@@ -8324,7 +8384,8 @@ open class RecordingAPI {
         case cancelled = "CANCELLED"
         case failed = "FAILED"
     }
-
+    
+    
     
     
     
@@ -8333,7 +8394,9 @@ open class RecordingAPI {
         case delete = "DELETE"
         case export = "EXPORT"
     }
-
+    
+    
+    
     
     
     
@@ -8433,8 +8496,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy?.rawValue, 
@@ -8447,9 +8510,10 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<RecordingJobEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the encryption key configurations
@@ -8503,11 +8567,11 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -8568,13 +8632,24 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingEncryptionConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -8745,8 +8820,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
@@ -8762,9 +8837,10 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<PolicyEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a media retention policy
@@ -8853,13 +8929,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Policy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -8936,15 +9014,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<EncryptionKeyEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     /**
@@ -8990,13 +9068,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KeyRotationSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the Recording Settings for the Organization
@@ -9043,16 +9122,17 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "createDefault": createDefault
         ])
 
         let requestBuilder: RequestBuilder<RecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get the status of a recording upload status report
@@ -9104,13 +9184,16 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingUploadReport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -9182,8 +9265,8 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "retentionThresholdDays": retentionThresholdDays.encodeToJSON(), 
             "cursor": cursor, 
             "pageSize": pageSize?.encodeToJSON()
@@ -9191,9 +9274,11 @@ open class RecordingAPI {
 
         let requestBuilder: RequestBuilder<RecordingRetentionCursorEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -9553,7 +9638,7 @@ open class RecordingAPI {
           "id" : "id"
         } ]
       } ],
-      "maxParticipants" : 4,
+      "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "securePause" : true,
       "recordingState" : "ACTIVE",
@@ -10254,23 +10339,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -10279,7 +10364,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -10287,25 +10372,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -10314,7 +10399,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -10322,40 +10407,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -11235,7 +11320,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -11525,7 +11610,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -11818,24 +11903,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -13054,23 +13128,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -13079,7 +13153,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -13087,25 +13161,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -13114,7 +13188,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -13122,40 +13196,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -14035,7 +14109,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -14325,7 +14399,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -14618,24 +14692,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -16816,23 +16879,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -16841,7 +16904,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -16849,25 +16912,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -16876,7 +16939,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -16884,40 +16947,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -17797,7 +17860,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -18087,7 +18150,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -18380,24 +18443,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -19616,23 +19668,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -19641,7 +19693,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -19649,25 +19701,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -19676,7 +19728,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -19684,40 +19736,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -20597,7 +20649,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -20887,7 +20939,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -21180,24 +21232,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23027,7 +23068,7 @@ open class RecordingAPI {
           "id" : "id"
         } ]
       } ],
-      "maxParticipants" : 4,
+      "maxParticipants" : 0,
       "conversationIds" : [ "conversationIds", "conversationIds" ],
       "securePause" : true,
       "recordingState" : "ACTIVE",
@@ -23728,23 +23769,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -23753,7 +23794,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -23761,25 +23802,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -23788,7 +23829,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -23796,40 +23837,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24709,7 +24750,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -24999,7 +25040,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -25292,24 +25333,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -26528,23 +26558,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -26553,7 +26583,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -26561,25 +26591,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -26588,7 +26618,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -26596,40 +26626,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27509,7 +27539,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -27799,7 +27829,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -28092,24 +28122,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -30290,23 +30309,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -30315,7 +30334,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -30323,25 +30342,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -30350,7 +30369,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -30358,40 +30377,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -31271,7 +31290,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -31561,7 +31580,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -31854,24 +31873,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -33090,23 +33098,23 @@ open class RecordingAPI {
           "evaluationSource" : "{}",
           "redacted" : true,
           "answers" : {
-            "totalNonCriticalScore" : 8.762042,
+            "totalNonCriticalScore" : 5.025005,
             "comments" : "comments",
             "privateComments" : "privateComments",
             "agentComments" : "agentComments",
-            "totalCriticalScore" : 6.6835623,
+            "totalCriticalScore" : 4.9652185,
             "questionGroupScores" : [ {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -33115,7 +33123,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -33123,25 +33131,25 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             }, {
-              "totalNonCriticalScore" : 1.284659,
-              "totalCriticalScoreUnweighted" : 5.9448957,
-              "totalNonCriticalScoreUnweighted" : 3.3531933,
+              "totalNonCriticalScore" : 9.018348,
+              "totalCriticalScoreUnweighted" : 1.284659,
+              "totalNonCriticalScoreUnweighted" : 6.778325,
               "systemMarkedNA" : true,
               "markedNA" : true,
-              "totalScoreUnweighted" : 6.778325,
-              "maxTotalNonCriticalScore" : 2.8841622,
+              "totalScoreUnweighted" : 3.5571952,
+              "maxTotalNonCriticalScore" : 6.4384236,
               "questionScores" : [ {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -33150,7 +33158,7 @@ open class RecordingAPI {
               }, {
                 "answerId" : "answerId",
                 "failedKillQuestion" : true,
-                "score" : 7,
+                "score" : 5,
                 "questionId" : "questionId",
                 "systemMarkedNA" : true,
                 "comments" : "comments",
@@ -33158,40 +33166,40 @@ open class RecordingAPI {
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
-              "totalScore" : 9.018348,
-              "maxTotalScore" : 6.4384236,
-              "maxTotalNonCriticalScoreUnweighted" : 3.0937452,
-              "totalCriticalScore" : 3.5571952,
-              "maxTotalCriticalScore" : 6.965118,
-              "maxTotalCriticalScoreUnweighted" : 6.704019,
-              "maxTotalScoreUnweighted" : 6.878052
+              "totalScore" : 9.965781,
+              "maxTotalScore" : 9.36931,
+              "maxTotalNonCriticalScoreUnweighted" : 6.878052,
+              "totalCriticalScore" : 6.6835623,
+              "maxTotalCriticalScore" : 8.762042,
+              "maxTotalCriticalScoreUnweighted" : 2.8841622,
+              "maxTotalScoreUnweighted" : 6.965118
             } ],
             "transcriptTopics" : [ {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             }, {
               "duration" : {
-                "totalMilliseconds" : 6
+                "totalMilliseconds" : 3
               },
               "offset" : "{}",
-              "recordingLocation" : 0,
-              "startTimeMilliseconds" : 7,
-              "confidence" : 0,
+              "recordingLocation" : 7,
+              "startTimeMilliseconds" : 3,
+              "confidence" : 6,
               "name" : "name",
               "topicPhrase" : "topicPhrase",
               "id" : "id",
               "transcriptPhrase" : "transcriptPhrase"
             } ],
-            "totalScore" : 9.36931,
+            "totalScore" : 1.1730742,
             "anyFailedKillQuestions" : true
           },
           "changedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -34071,7 +34079,7 @@ open class RecordingAPI {
               "geolocation" : "{}"
             } ],
             "contextId" : "contextId",
-            "averageScore" : 4,
+            "averageScore" : 1,
             "calibrator" : {
               "addresses" : [ {
                 "extension" : "extension",
@@ -34361,7 +34369,7 @@ open class RecordingAPI {
               "username" : "username",
               "geolocation" : "{}"
             },
-            "highScore" : 5,
+            "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
               "addresses" : [ {
@@ -34654,24 +34662,13 @@ open class RecordingAPI {
             },
             "name" : "name",
             "id" : "id",
-            "lowScore" : 9,
+            "lowScore" : 7,
             "conversation" : {
               "selfUri" : "https://openapi-generator.tech",
               "id" : "id"
             },
             "evaluationForm" : {
-              "publishedVersions" : {
-                "total" : 7,
-                "pageCount" : 1,
-                "pageNumber" : 6,
-                "entities" : [ null, null ],
-                "firstUri" : "https://openapi-generator.tech",
-                "lastUri" : "https://openapi-generator.tech",
-                "selfUri" : "https://openapi-generator.tech",
-                "pageSize" : 1,
-                "nextUri" : "https://openapi-generator.tech",
-                "previousUri" : "https://openapi-generator.tech"
-              },
+              "publishedVersions" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36198,17 +36195,19 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON()
         ])
 
         let requestBuilder: RequestBuilder<ScreenRecordingSessionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "GET", url: url!, body: body)
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -36300,13 +36299,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CrossPlatformPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -36398,13 +36399,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Policy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -36445,13 +36448,16 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PATCH", url: url!, body: body)
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
+    
+    
+    
     
     
     
@@ -36522,13 +36528,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Annotation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
@@ -36574,13 +36581,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BatchDownloadJobSubmissionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create media retention policy
@@ -36667,13 +36675,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CrossPlatformPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create a recording bulk job.
@@ -36732,13 +36741,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Setup configurations for encryption key creation
@@ -36789,13 +36799,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Validate encryption key configurations without saving it
@@ -36846,13 +36857,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      create a local key management recording key
@@ -36905,13 +36917,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EncryptionKey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Create media retention policy
@@ -36998,11 +37011,11 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Policy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     /**
@@ -37053,13 +37066,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EncryptionKey>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Creates a recording upload status report
@@ -37108,13 +37122,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingUploadReport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Get a list of conversations with protected recordings
@@ -37160,13 +37175,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[AddressableEntityRef]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Acknowledge a screen recording.
@@ -37201,13 +37217,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Provide meta-data a screen recording.
@@ -37242,13 +37259,17 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "POST", url: url!, body: body)
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -38229,16 +38250,20 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "clearExport": clearExport
         ])
 
         let requestBuilder: RequestBuilder<Recording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
     
     
     
@@ -38315,13 +38340,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Annotation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -39293,13 +39320,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Recording>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -39392,13 +39421,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CrossPlatformPolicy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -39463,13 +39494,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -39526,13 +39559,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingEncryptionConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -39625,13 +39660,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Policy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Update key rotation schedule
@@ -39679,13 +39715,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KeyRotationSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
     
     /**
      Update the Recording Settings for the Organization
@@ -39732,13 +39769,15 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let url = URLComponents(string: URLString)
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<RecordingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
+    
+    
     
     
     /**
@@ -39776,14 +39815,14 @@ open class RecordingAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        var url = URLComponents(string: URLString)
-        url?.queryItems = APIHelper.mapValuesToQueryItems([
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "protect": protect
         ])
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
-        return requestBuilder.init(method: "PUT", url: url!, body: body)
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

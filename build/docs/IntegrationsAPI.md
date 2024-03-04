@@ -36,9 +36,22 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsCredentialsTypes**](IntegrationsAPI.html#getIntegrationsCredentialsTypes) | List all credential types |
 | [**getIntegrationsSpeechDialogflowAgent**](IntegrationsAPI.html#getIntegrationsSpeechDialogflowAgent) | Get details about a Dialogflow agent |
 | [**getIntegrationsSpeechDialogflowAgents**](IntegrationsAPI.html#getIntegrationsSpeechDialogflowAgents) | Get a list of Dialogflow agents in the customers&#39; Google accounts |
+| [**getIntegrationsSpeechDialogflowcxAgent**](IntegrationsAPI.html#getIntegrationsSpeechDialogflowcxAgent) | Get details about a Dialogflow CX agent |
+| [**getIntegrationsSpeechDialogflowcxAgents**](IntegrationsAPI.html#getIntegrationsSpeechDialogflowcxAgents) | Get a list of Dialogflow CX agents in the customers&#39; Google accounts |
 | [**getIntegrationsSpeechLexBotAlias**](IntegrationsAPI.html#getIntegrationsSpeechLexBotAlias) | Get details about a Lex bot alias |
 | [**getIntegrationsSpeechLexBotBotIdAliases**](IntegrationsAPI.html#getIntegrationsSpeechLexBotBotIdAliases) | Get a list of aliases for a bot in the customer&#39;s AWS accounts |
 | [**getIntegrationsSpeechLexBots**](IntegrationsAPI.html#getIntegrationsSpeechLexBots) | Get a list of Lex bots in the customers&#39; AWS accounts |
+| [**getIntegrationsSpeechLexv2BotAlias**](IntegrationsAPI.html#getIntegrationsSpeechLexv2BotAlias) | Get details about a Lex V2 bot alias |
+| [**getIntegrationsSpeechLexv2BotBotIdAliases**](IntegrationsAPI.html#getIntegrationsSpeechLexv2BotBotIdAliases) | Get a list of aliases for a Lex V2 bot |
+| [**getIntegrationsSpeechLexv2Bots**](IntegrationsAPI.html#getIntegrationsSpeechLexv2Bots) | Get a list of Lex V2 bots |
+| [**getIntegrationsSpeechNuanceNuanceIntegrationIdBot**](IntegrationsAPI.html#getIntegrationsSpeechNuanceNuanceIntegrationIdBot) | Get a Nuance bot in the specified Integration |
+| [**getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob**](IntegrationsAPI.html#getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob) | Get the status of an asynchronous Nuance bot GET job |
+| [**getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults**](IntegrationsAPI.html#getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults) | Get the result of an asynchronous Nuance bot GET job |
+| [**getIntegrationsSpeechNuanceNuanceIntegrationIdBots**](IntegrationsAPI.html#getIntegrationsSpeechNuanceNuanceIntegrationIdBots) | Get a list of Nuance bots available in the specified Integration |
+| [**getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob**](IntegrationsAPI.html#getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob) | Get the status of an asynchronous Nuance bots GET job |
+| [**getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults**](IntegrationsAPI.html#getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults) | Get the result of an asynchronous Nuance bots GET job |
+| [**getIntegrationsSpeechSttEngine**](IntegrationsAPI.html#getIntegrationsSpeechSttEngine) | Get details about a STT engine |
+| [**getIntegrationsSpeechSttEngines**](IntegrationsAPI.html#getIntegrationsSpeechSttEngines) | Get a list of STT engines enabled for org |
 | [**getIntegrationsSpeechTtsEngine**](IntegrationsAPI.html#getIntegrationsSpeechTtsEngine) | Get details about a TTS engine |
 | [**getIntegrationsSpeechTtsEngineVoice**](IntegrationsAPI.html#getIntegrationsSpeechTtsEngineVoice) | Get details about a specific voice for a TTS engine |
 | [**getIntegrationsSpeechTtsEngineVoices**](IntegrationsAPI.html#getIntegrationsSpeechTtsEngineVoices) | Get a list of voices for a TTS engine |
@@ -47,6 +60,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsType**](IntegrationsAPI.html#getIntegrationsType) | Get integration type. |
 | [**getIntegrationsTypeConfigschema**](IntegrationsAPI.html#getIntegrationsTypeConfigschema) | Get properties config schema for an integration type. |
 | [**getIntegrationsTypes**](IntegrationsAPI.html#getIntegrationsTypes) | List integration types |
+| [**getIntegrationsUnifiedcommunicationsClientapp**](IntegrationsAPI.html#getIntegrationsUnifiedcommunicationsClientapp) | UC integration client application configuration. |
+| [**getIntegrationsUnifiedcommunicationsClientapps**](IntegrationsAPI.html#getIntegrationsUnifiedcommunicationsClientapps) | List UC integration client application configurations. |
 | [**getIntegrationsUserapps**](IntegrationsAPI.html#getIntegrationsUserapps) | List permitted user app integrations for the logged in user |
 | [**patchIntegration**](IntegrationsAPI.html#patchIntegration) | Update an integration. |
 | [**patchIntegrationsAction**](IntegrationsAPI.html#patchIntegrationsAction) | Patch an Action |
@@ -60,9 +75,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntegrationsActions**](IntegrationsAPI.html#postIntegrationsActions) | Create a new Action. Not supported for &#39;Function Integration&#39; actions. Function integrations must be created as drafts to allow managing of uploading required ZIP function package before they may be used as a published action. |
 | [**postIntegrationsActionsDrafts**](IntegrationsAPI.html#postIntegrationsActionsDrafts) | Create a new Draft |
 | [**postIntegrationsCredentials**](IntegrationsAPI.html#postIntegrationsCredentials) | Create a set of credentials |
+| [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](IntegrationsAPI.html#postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs) | Get a Nuance bot in the specified Integration asynchronously |
+| [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](IntegrationsAPI.html#postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs) | Get a list of Nuance bots in the specified Integration asynchronously |
+| [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](IntegrationsAPI.html#postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate) | Try out a single credential for a Nuance bot to know if the secret is correct |
 | [**putIntegrationConfigCurrent**](IntegrationsAPI.html#putIntegrationConfigCurrent) | Update integration configuration. |
 | [**putIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI.html#putIntegrationsBotconnectorIntegrationIdBots) | Set a list of botConnector bots plus versions for this integration |
 | [**putIntegrationsCredential**](IntegrationsAPI.html#putIntegrationsCredential) | Update a set of credentials |
+| [**putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](IntegrationsAPI.html#putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings) | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
 | [**putIntegrationsSpeechTtsSettings**](IntegrationsAPI.html#putIntegrationsSpeechTtsSettings) | Update TTS settings for an org |
 | [**putIntegrationsUnifiedcommunicationThirdpartypresences**](IntegrationsAPI.html#putIntegrationsUnifiedcommunicationThirdpartypresences) | Bulk integration presence ingestion |
 {: class="table-striped"}
@@ -1706,6 +1725,114 @@ IntegrationsAPI.getIntegrationsSpeechDialogflowAgents(pageNumber: pageNumber, pa
 
 [**DialogflowAgentSummaryEntityListing**](DialogflowAgentSummaryEntityListing.html)
 
+<a name="getIntegrationsSpeechDialogflowcxAgent"></a>
+
+# **getIntegrationsSpeechDialogflowcxAgent**
+
+
+
+> [DialogflowCXAgent](DialogflowCXAgent.html) getIntegrationsSpeechDialogflowcxAgent(agentId)
+
+Get details about a Dialogflow CX agent
+
+
+
+Wraps GET /api/v2/integrations/speech/dialogflowcx/agents/{agentId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let agentId: String = "" // The agent ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechDialogflowcxAgent(agentId: agentId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechDialogflowcxAgent was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **agentId** | **String**| The agent ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DialogflowCXAgent**](DialogflowCXAgent.html)
+
+<a name="getIntegrationsSpeechDialogflowcxAgents"></a>
+
+# **getIntegrationsSpeechDialogflowcxAgents**
+
+
+
+> [DialogflowCXAgentSummaryEntityListing](DialogflowCXAgentSummaryEntityListing.html) getIntegrationsSpeechDialogflowcxAgents(pageNumber, pageSize, name)
+
+Get a list of Dialogflow CX agents in the customers&#39; Google accounts
+
+
+
+Wraps GET /api/v2/integrations/speech/dialogflowcx/agents  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let name: String = "" // Filter on agent name
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechDialogflowcxAgents(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechDialogflowcxAgents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **name** | **String**| Filter on agent name | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DialogflowCXAgentSummaryEntityListing**](DialogflowCXAgentSummaryEntityListing.html)
+
 <a name="getIntegrationsSpeechLexBotAlias"></a>
 
 # **getIntegrationsSpeechLexBotAlias**
@@ -1873,6 +2000,620 @@ IntegrationsAPI.getIntegrationsSpeechLexBots(pageNumber: pageNumber, pageSize: p
 ### Return type
 
 [**LexBotEntityListing**](LexBotEntityListing.html)
+
+<a name="getIntegrationsSpeechLexv2BotAlias"></a>
+
+# **getIntegrationsSpeechLexv2BotAlias**
+
+
+
+> [LexV2BotAlias](LexV2BotAlias.html) getIntegrationsSpeechLexv2BotAlias(aliasId)
+
+Get details about a Lex V2 bot alias
+
+
+
+Wraps GET /api/v2/integrations/speech/lexv2/bot/alias/{aliasId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let aliasId: String = "" // The Alias ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechLexv2BotAlias(aliasId: aliasId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechLexv2BotAlias was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **aliasId** | **String**| The Alias ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LexV2BotAlias**](LexV2BotAlias.html)
+
+<a name="getIntegrationsSpeechLexv2BotBotIdAliases"></a>
+
+# **getIntegrationsSpeechLexv2BotBotIdAliases**
+
+
+
+> [LexV2BotAliasEntityListing](LexV2BotAliasEntityListing.html) getIntegrationsSpeechLexv2BotBotIdAliases(botId, pageNumber, pageSize, status, name)
+
+Get a list of aliases for a Lex V2 bot
+
+
+
+Wraps GET /api/v2/integrations/speech/lexv2/bot/{botId}/aliases  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let botId: String = "" // The Bot ID
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let status: IntegrationsAPI.Status_getIntegrationsSpeechLexv2BotBotIdAliases = IntegrationsAPI.Status_getIntegrationsSpeechLexv2BotBotIdAliases.enummember // Filter on alias status
+let name: String = "" // Filter on alias name
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechLexv2BotBotIdAliases(botId: botId, pageNumber: pageNumber, pageSize: pageSize, status: status, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechLexv2BotBotIdAliases was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **botId** | **String**| The Bot ID | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **status** | **String**| Filter on alias status | [optional]<br />**Values**: creating ("Creating"), available ("Available"), deleting ("Deleting"), failed ("Failed") |
+| **name** | **String**| Filter on alias name | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LexV2BotAliasEntityListing**](LexV2BotAliasEntityListing.html)
+
+<a name="getIntegrationsSpeechLexv2Bots"></a>
+
+# **getIntegrationsSpeechLexv2Bots**
+
+
+
+> [LexV2BotEntityListing](LexV2BotEntityListing.html) getIntegrationsSpeechLexv2Bots(pageNumber, pageSize, name)
+
+Get a list of Lex V2 bots
+
+
+
+Wraps GET /api/v2/integrations/speech/lexv2/bots  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let name: String = "" // Filter on bot name
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechLexv2Bots(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechLexv2Bots was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **name** | **String**| Filter on bot name | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LexV2BotEntityListing**](LexV2BotEntityListing.html)
+
+<a name="getIntegrationsSpeechNuanceNuanceIntegrationIdBot"></a>
+
+# **getIntegrationsSpeechNuanceNuanceIntegrationIdBot**
+
+
+
+> [NuanceBot](NuanceBot.html) getIntegrationsSpeechNuanceNuanceIntegrationIdBot(nuanceIntegrationId, botId, expand, targetChannel)
+
+Get a Nuance bot in the specified Integration
+
+
+
+Wraps GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let botId: String = "" // The Nuance bot ID to get
+let expand: [String] = [""] // expand
+let targetChannel: IntegrationsAPI.TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot = IntegrationsAPI.TargetChannel_getIntegrationsSpeechNuanceNuanceIntegrationIdBot.enummember // targetChannel
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBot(nuanceIntegrationId: nuanceIntegrationId, botId: botId, expand: expand, targetChannel: targetChannel) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBot was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **botId** | **String**| The Nuance bot ID to get | |
+| **expand** | [**[String]**](String.html)| expand | [optional]<br />**Values**: variables ("variables"), transfernodes ("transferNodes"), channels ("channels"), locales ("locales") |
+| **targetChannel** | **String**| targetChannel | [optional]<br />**Values**: digital ("digital"), voice ("voice") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**NuanceBot**](NuanceBot.html)
+
+<a name="getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob"></a>
+
+# **getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob**
+
+
+
+> [AsyncJob](AsyncJob.html) getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob(nuanceIntegrationId, botId, jobId)
+
+Get the status of an asynchronous Nuance bot GET job
+
+
+
+Wraps GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let botId: String = "" // The Nuance bot ID
+let jobId: String = "" // The asynchronous job ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob(nuanceIntegrationId: nuanceIntegrationId, botId: botId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **botId** | **String**| The Nuance bot ID | |
+| **jobId** | **String**| The asynchronous job ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults"></a>
+
+# **getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults**
+
+
+
+> [NuanceBot](NuanceBot.html) getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults(nuanceIntegrationId, botId, jobId)
+
+Get the result of an asynchronous Nuance bot GET job
+
+
+
+Wraps GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let botId: String = "" // The Nuance bot ID
+let jobId: String = "" // The asynchronous job ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults(nuanceIntegrationId: nuanceIntegrationId, botId: botId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **botId** | **String**| The Nuance bot ID | |
+| **jobId** | **String**| The asynchronous job ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**NuanceBot**](NuanceBot.html)
+
+<a name="getIntegrationsSpeechNuanceNuanceIntegrationIdBots"></a>
+
+# **getIntegrationsSpeechNuanceNuanceIntegrationIdBots**
+
+
+
+> [NuanceBotEntityListing](NuanceBotEntityListing.html) getIntegrationsSpeechNuanceNuanceIntegrationIdBots(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots)
+
+Get a list of Nuance bots available in the specified Integration
+
+If the &#39;onlyRegisteredBots&#39; param is set, the returned data will only include the Nuance bots which have configured client secrets within the Integration,  otherwise all of the Nuance bots available to the Integration&#39;s configured discovery credentials are returned.
+
+
+
+Wraps GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let onlyRegisteredBots: Bool = true // Limit bots to the ones configured for Genesys Cloud usage
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBots(nuanceIntegrationId: nuanceIntegrationId, pageNumber: pageNumber, pageSize: pageSize, onlyRegisteredBots: onlyRegisteredBots) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBots was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **onlyRegisteredBots** | **Bool**| Limit bots to the ones configured for Genesys Cloud usage | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+
+<a name="getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob"></a>
+
+# **getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob**
+
+
+
+> [AsyncJob](AsyncJob.html) getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob(nuanceIntegrationId, jobId)
+
+Get the status of an asynchronous Nuance bots GET job
+
+
+
+Wraps GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let jobId: String = "" // The asynchronous job ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob(nuanceIntegrationId: nuanceIntegrationId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **jobId** | **String**| The asynchronous job ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults"></a>
+
+# **getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults**
+
+
+
+> [NuanceBotEntityListing](NuanceBotEntityListing.html) getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults(nuanceIntegrationId, jobId)
+
+Get the result of an asynchronous Nuance bots GET job
+
+
+
+Wraps GET /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let jobId: String = "" // The asynchronous job ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults(nuanceIntegrationId: nuanceIntegrationId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **jobId** | **String**| The asynchronous job ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**NuanceBotEntityListing**](NuanceBotEntityListing.html)
+
+<a name="getIntegrationsSpeechSttEngine"></a>
+
+# **getIntegrationsSpeechSttEngine**
+
+
+
+> [SttEngineEntity](SttEngineEntity.html) getIntegrationsSpeechSttEngine(engineId)
+
+Get details about a STT engine
+
+
+
+Wraps GET /api/v2/integrations/speech/stt/engines/{engineId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let engineId: String = "" // The engine ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechSttEngine(engineId: engineId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechSttEngine was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **engineId** | **String**| The engine ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SttEngineEntity**](SttEngineEntity.html)
+
+<a name="getIntegrationsSpeechSttEngines"></a>
+
+# **getIntegrationsSpeechSttEngines**
+
+
+
+> [SttEngineEntityListing](SttEngineEntityListing.html) getIntegrationsSpeechSttEngines(pageNumber, pageSize, name)
+
+Get a list of STT engines enabled for org
+
+
+
+Wraps GET /api/v2/integrations/speech/stt/engines  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let name: String = "" // Filter on engine name
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechSttEngines(pageNumber: pageNumber, pageSize: pageSize, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechSttEngines was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **name** | **String**| Filter on engine name | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SttEngineEntityListing**](SttEngineEntityListing.html)
 
 <a name="getIntegrationsSpeechTtsEngine"></a>
 
@@ -2313,6 +3054,124 @@ IntegrationsAPI.getIntegrationsTypes(pageSize: pageSize, pageNumber: pageNumber,
 ### Return type
 
 [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+<a name="getIntegrationsUnifiedcommunicationsClientapp"></a>
+
+# **getIntegrationsUnifiedcommunicationsClientapp**
+
+
+
+> [UnifiedCommunicationsIntegration](UnifiedCommunicationsIntegration.html) getIntegrationsUnifiedcommunicationsClientapp(ucIntegrationId)
+
+UC integration client application configuration.
+
+This endpoint returns basic UI configuration data for the specified Unified Communications integration client application.
+
+
+
+Wraps GET /api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}  
+
+Requires ANY permissions: 
+
+* integration:unifiedCommunications:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let ucIntegrationId: String = "" // 3rd Party Service Type
+
+// Code example
+IntegrationsAPI.getIntegrationsUnifiedcommunicationsClientapp(ucIntegrationId: ucIntegrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsUnifiedcommunicationsClientapp was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ucIntegrationId** | **String**| 3rd Party Service Type | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UnifiedCommunicationsIntegration**](UnifiedCommunicationsIntegration.html)
+
+<a name="getIntegrationsUnifiedcommunicationsClientapps"></a>
+
+# **getIntegrationsUnifiedcommunicationsClientapps**
+
+
+
+> [UnifiedCommunicationsIntegrationListing](UnifiedCommunicationsIntegrationListing.html) getIntegrationsUnifiedcommunicationsClientapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage)
+
+List UC integration client application configurations.
+
+This endpoint returns basic UI configuration data for all Unified Communications integrations client applications enabled.
+
+
+
+Wraps GET /api/v2/integrations/unifiedcommunications/clientapps  
+
+Requires ANY permissions: 
+
+* integration:unifiedCommunications:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // The total page size requested
+let pageNumber: Int = 0 // The page number requested
+let sortBy: String = "" // variable name requested to sort by
+let expand: [String] = [""] // variable name requested by expand list
+let nextPage: String = "" // next page token
+let previousPage: String = "" // Previous page token
+
+// Code example
+IntegrationsAPI.getIntegrationsUnifiedcommunicationsClientapps(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsUnifiedcommunicationsClientapps was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The total page size requested | [optional] |
+| **pageNumber** | **Int**| The page number requested | [optional] |
+| **sortBy** | **String**| variable name requested to sort by | [optional] |
+| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **nextPage** | **String**| next page token | [optional] |
+| **previousPage** | **String**| Previous page token | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UnifiedCommunicationsIntegrationListing**](UnifiedCommunicationsIntegrationListing.html)
 
 <a name="getIntegrationsUserapps"></a>
 
@@ -3028,6 +3887,175 @@ IntegrationsAPI.postIntegrationsCredentials(body: body) { (response, error) in
 
 [**CredentialInfo**](CredentialInfo.html)
 
+<a name="postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs"></a>
+
+# **postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**
+
+
+
+> [AsyncJob](AsyncJob.html) postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs(nuanceIntegrationId, botId, expand, body)
+
+Get a Nuance bot in the specified Integration asynchronously
+
+
+
+Wraps POST /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let botId: String = "" // The Nuance bot ID
+let expand: [String] = [""] // expand
+let body: String = "" // targetChannel
+
+// Code example
+IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs(nuanceIntegrationId: nuanceIntegrationId, botId: botId, expand: expand, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **botId** | **String**| The Nuance bot ID | |
+| **expand** | [**[String]**](String.html)| expand | [optional]<br />**Values**: variables ("variables"), transfernodes ("transferNodes"), channels ("channels"), locales ("locales") |
+| **body** | **String**| targetChannel | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs"></a>
+
+# **postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**
+
+
+
+> [AsyncJob](AsyncJob.html) postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs(nuanceIntegrationId, pageNumber, pageSize, onlyRegisteredBots)
+
+Get a list of Nuance bots in the specified Integration asynchronously
+
+
+
+Wraps POST /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let onlyRegisteredBots: Bool = true // Limit bots to the ones configured for Genesys Cloud usage
+
+// Code example
+IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs(nuanceIntegrationId: nuanceIntegrationId, pageNumber: pageNumber, pageSize: pageSize, onlyRegisteredBots: onlyRegisteredBots) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **onlyRegisteredBots** | **Bool**| Limit bots to the ones configured for Genesys Cloud usage | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AsyncJob**](AsyncJob.html)
+
+<a name="postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate"></a>
+
+# **postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**
+
+
+
+> Void postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate(nuanceIntegrationId, settings)
+
+Try out a single credential for a Nuance bot to know if the secret is correct
+
+
+
+Wraps POST /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate  
+
+Requires ANY permissions: 
+
+* integrations:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let settings: BotExecutionConfiguration = new BotExecutionConfiguration(...) // 
+
+// Code example
+IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate(nuanceIntegrationId: nuanceIntegrationId, settings: settings) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **settings** | [**BotExecutionConfiguration**](BotExecutionConfiguration.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="putIntegrationConfigCurrent"></a>
 
 # **putIntegrationConfigCurrent**
@@ -3187,6 +4215,59 @@ IntegrationsAPI.putIntegrationsCredential(credentialId: credentialId, body: body
 ### Return type
 
 [**CredentialInfo**](CredentialInfo.html)
+
+<a name="putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings"></a>
+
+# **putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**
+
+
+
+> Void putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings(nuanceIntegrationId, settings)
+
+Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration
+
+
+
+Wraps PUT /api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings  
+
+Requires ANY permissions: 
+
+* integrations:integration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let nuanceIntegrationId: String = "" // The integration ID for this group of bots
+let settings: NuanceBotLaunchSettings = new NuanceBotLaunchSettings(...) // 
+
+// Code example
+IntegrationsAPI.putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings(nuanceIntegrationId: nuanceIntegrationId, settings: settings) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("IntegrationsAPI.putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **nuanceIntegrationId** | **String**| The integration ID for this group of bots | |
+| **settings** | [**NuanceBotLaunchSettings**](NuanceBotLaunchSettings.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="putIntegrationsSpeechTtsSettings"></a>
 
