@@ -5050,6 +5050,8 @@ public class ContactAddressTypeConditionSettings: Codable {
 
 public class ContactIdentifier: Codable {
 
+
+
     public enum ModelType: String, Codable { 
         case socialLine = "SocialLine"
         case socialFacebook = "SocialFacebook"
@@ -5064,17 +5066,33 @@ public class ContactIdentifier: Codable {
 
 
 
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
     /** The type of this identifier */
     public var type: ModelType?
     /** The string value of the identifier. Will vary in syntax by type. */
     public var value: String?
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var dateCreated: Date?
+    /** The URI for this object */
+    public var selfUri: String?
 
-    public init(type: ModelType?, value: String?, dateCreated: Date?) {
+    public init(_id: String?, type: ModelType?, value: String?, dateCreated: Date?, selfUri: String?) {
+        self._id = _id
         self.type = type
         self.value = value
         self.dateCreated = dateCreated
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case type
+        case value
+        case dateCreated
+        case selfUri
     }
 
 

@@ -5044,6 +5044,8 @@ open class ExternalContactsAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
   "type" : "SocialLine",
   "value" : "value"
 }, statusCode=200}]
