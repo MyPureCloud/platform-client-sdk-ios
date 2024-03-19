@@ -1620,6 +1620,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -1641,12 +1642,14 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -1668,6 +1671,7 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   } ],
@@ -2024,6 +2028,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "document" : "{}",
   "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "contexts" : [ {
@@ -2045,6 +2050,7 @@ open class KnowledgeAPI {
     } ],
     "context" : "{}"
   } ],
+  "priority" : 6,
   "body" : "{}",
   "documentVersion" : "{}"
 }, statusCode=200}]
@@ -2137,6 +2143,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -2158,12 +2165,14 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -2185,6 +2194,7 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   } ],
@@ -2357,6 +2367,7 @@ open class KnowledgeAPI {
      - examples: [{contentType=application/json, example={
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "contexts" : [ {
@@ -2378,6 +2389,7 @@ open class KnowledgeAPI {
     } ],
     "context" : "{}"
   } ],
+  "priority" : 0,
   "body" : "{}",
   "documentVersion" : "{}"
 }, statusCode=200}]
@@ -2464,6 +2476,7 @@ open class KnowledgeAPI {
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -2485,11 +2498,13 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 0,
     "body" : "{}",
     "documentVersion" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -2511,6 +2526,7 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 0,
     "body" : "{}",
     "documentVersion" : "{}"
   } ],
@@ -2770,6 +2786,7 @@ open class KnowledgeAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "contexts" : [ {
@@ -2791,12 +2808,14 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
+      "priority" : 6,
       "body" : "{}",
       "documentVersion" : "{}"
     }, {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "contexts" : [ {
@@ -2818,6 +2837,7 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
+      "priority" : 6,
       "body" : "{}",
       "documentVersion" : "{}"
     } ],
@@ -2868,6 +2888,7 @@ open class KnowledgeAPI {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "contexts" : [ {
@@ -2889,12 +2910,14 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
+      "priority" : 6,
       "body" : "{}",
       "documentVersion" : "{}"
     }, {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
       "document" : "{}",
       "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
       "id" : "id",
       "contexts" : [ {
@@ -2916,6 +2939,7 @@ open class KnowledgeAPI {
         } ],
         "context" : "{}"
       } ],
+      "priority" : 6,
       "body" : "{}",
       "documentVersion" : "{}"
     } ],
@@ -5198,6 +5222,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -5219,12 +5244,14 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -5246,6 +5273,7 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   } ],
@@ -5331,6 +5359,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "document" : "{}",
   "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "contexts" : [ {
@@ -5352,6 +5381,7 @@ open class KnowledgeAPI {
     } ],
     "context" : "{}"
   } ],
+  "priority" : 6,
   "body" : "{}",
   "documentVersion" : "{}"
 }, statusCode=200}]
@@ -6985,6 +7015,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "document" : "{}",
   "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "contexts" : [ {
@@ -7006,6 +7037,7 @@ open class KnowledgeAPI {
     } ],
     "context" : "{}"
   } ],
+  "priority" : 6,
   "body" : "{}",
   "documentVersion" : "{}"
 }, statusCode=200}]
@@ -7233,6 +7265,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -7254,12 +7287,14 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "document" : "{}",
     "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "id" : "id",
     "contexts" : [ {
@@ -7281,6 +7316,7 @@ open class KnowledgeAPI {
       } ],
       "context" : "{}"
     } ],
+    "priority" : 6,
     "body" : "{}",
     "documentVersion" : "{}"
   } ],

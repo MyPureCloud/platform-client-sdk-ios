@@ -13,7 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrganizationsIpaddressauthentication**](OrganizationAPI.html#getOrganizationsIpaddressauthentication) | Get organization IP address whitelist settings |
 | [**getOrganizationsLimitsChangerequest**](OrganizationAPI.html#getOrganizationsLimitsChangerequest) | Get a limit change request |
 | [**getOrganizationsLimitsChangerequests**](OrganizationAPI.html#getOrganizationsLimitsChangerequests) | Get the available limit change requests |
-| [**getOrganizationsLimitsDocs**](OrganizationAPI.html#getOrganizationsLimitsDocs) | Get a link to the limit documentation |
+| [**getOrganizationsLimitsDocs**](OrganizationAPI.html#getOrganizationsLimitsDocs) | Get limit documentation |
 | [**getOrganizationsLimitsNamespace**](OrganizationAPI.html#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
 | [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI.html#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
 | [**getOrganizationsLimitsNamespaces**](OrganizationAPI.html#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
@@ -345,9 +345,9 @@ OrganizationAPI.getOrganizationsLimitsChangerequests(after: after, before: befor
 
 
 
-> [UrlResponse](UrlResponse.html) getOrganizationsLimitsDocs()
+> [LimitDocumentation](LimitDocumentation.html) getOrganizationsLimitsDocs()
 
-Get a link to the limit documentation
+Get limit documentation
 
 
 
@@ -384,7 +384,7 @@ This endpoint does not require any parameters.
 
 ### Return type
 
-[**UrlResponse**](UrlResponse.html)
+[**LimitDocumentation**](LimitDocumentation.html)
 
 <a name="getOrganizationsLimitsNamespace"></a>
 

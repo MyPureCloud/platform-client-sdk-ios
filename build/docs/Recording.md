@@ -13,7 +13,7 @@ title: Recording
 | **path** | **String** |  | [optional] |
 | **startTime** | **String** | The start time of the recording. Null when there is no playable media. | [optional] |
 | **endTime** | **String** | The end time of the recording. Null when there is no playable media. | [optional] |
-| **media** | **String** | The type of media that the recording is. At the moment that could be audio, chat, or email. | [optional] |
+| **media** | **String** | The media type of the recording. This could be audio, chat, messaging, email, or screen. | [optional] |
 | **annotations** | [**[Annotation]**](Annotation.html) | Annotations that belong to the recording. | [optional] |
 | **transcript** | [**[ChatMessage]**](ChatMessage.html) | Represents a chat transcript | [optional] |
 | **emailTranscript** | [**[RecordingEmailMessage]**](RecordingEmailMessage.html) | Represents an email transcript | [optional] |

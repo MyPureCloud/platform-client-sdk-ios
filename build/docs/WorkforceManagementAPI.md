@@ -12,6 +12,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitPlanninggroup) | Deletes the planning group |
 | [**deleteWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitSchedulingRun) | Cancel a scheduling run |
 | [**deleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitServicegoaltemplate) | Delete a service goal template |
+| [**deleteWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitStaffinggroup) | Deletes a staffing group |
+| [**deleteWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitTimeofflimit) | Deletes a time-off limit object |
+| [**deleteWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitTimeoffplan) | Deletes a time-off plan |
 | [**deleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekSchedule) | Delete a schedule |
 | [**deleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekShorttermforecast) | Delete a short term forecast |
 | [**deleteWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#deleteWorkforcemanagementCalendarUrlIcs) | Disable generated calendar link for the current user |
@@ -41,6 +44,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitSchedulingRuns**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitSchedulingRuns) | Get the list of scheduling runs |
 | [**getWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitServicegoaltemplate) | Get a service goal template |
 | [**getWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitServicegoaltemplates) | Gets list of service goal templates |
+| [**getWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitStaffinggroup) | Gets a staffing group |
+| [**getWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitStaffinggroups) | Gets a list of staffing groups |
+| [**getWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeofflimit) | Gets a time-off limit object |
+| [**getWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeofflimits) | Gets a list of time-off limit objects |
+| [**getWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeoffplan) | Gets a time-off plan |
+| [**getWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeoffplans) | Gets a list of time-off plans |
 | [**getWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedule) | Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route |
 | [**getWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleGenerationresults) | Get the generation results for a generated schedule |
 | [**getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast) | Get the headcount forecast by planning group for the schedule |
@@ -101,6 +110,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
 | [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
+| [**patchWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitStaffinggroup) | Updates a staffing group |
+| [**patchWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitTimeoffplan) | Updates a time-off plan |
 | [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunit) | Update the requested management unit |
 | [**patchWorkforcemanagementManagementunitAgents**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitAgents) | Update agent configurations |
 | [**patchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeofflimit) | Updates a time off limit object. |
@@ -127,6 +138,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
 | [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
 | [**postWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitServicegoaltemplates) | Adds a new service goal template |
+| [**postWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitStaffinggroups) | Creates a new staffing group |
+| [**postWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitStaffinggroupsQuery) | Gets staffing group associations for a list of user IDs |
+| [**postWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitTimeofflimits) | Creates a new time-off limit object |
+| [**postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | Retrieves time-off limit related values based on a given set of filters. |
+| [**postWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitTimeoffplans) | Creates a new time-off plan |
 | [**postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery) | Loads agent schedule data from the schedule. Used in combination with the metadata route |
 | [**postWorkforcemanagementBusinessunitWeekScheduleCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleCopy) | Copy a schedule |
 | [**postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations) | Request a daily recalculation of the performance prediction for the associated schedule |
@@ -182,6 +198,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementTimeoffrequestsEstimate**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequestsEstimate) | Estimates available time off for current user |
 | [**postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of current user time off requests |
 | [**putWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementAPI.html#putWorkforcemanagementAgentIntegrationsHris) | Update integrations for agent |
+| [**putWorkforcemanagementBusinessunitTimeofflimitValues**](WorkforceManagementAPI.html#putWorkforcemanagementBusinessunitTimeofflimitValues) | Sets daily values for a date range of time-off limit object |
 | [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI.html#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
 {: class="table-striped"}
 
@@ -443,6 +460,165 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitServicegoaltemplate(
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **serviceGoalTemplateId** | **String**| The ID of the service goal template to delete | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteWorkforcemanagementBusinessunitStaffinggroup"></a>
+
+# **deleteWorkforcemanagementBusinessunitStaffinggroup**
+
+
+
+> Void deleteWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId)
+
+Deletes a staffing group
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let staffingGroupId: String = "" // The ID of the staffing group to delete
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitStaffinggroup was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **staffingGroupId** | **String**| The ID of the staffing group to delete | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteWorkforcemanagementBusinessunitTimeofflimit"></a>
+
+# **deleteWorkforcemanagementBusinessunitTimeofflimit**
+
+
+
+> Void deleteWorkforcemanagementBusinessunitTimeofflimit(businessUnitId, timeOffLimitId)
+
+Deletes a time-off limit object
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit object to delete
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitTimeofflimit(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitTimeofflimit was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit object to delete | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteWorkforcemanagementBusinessunitTimeoffplan"></a>
+
+# **deleteWorkforcemanagementBusinessunitTimeoffplan**
+
+
+
+> Void deleteWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId)
+
+Deletes a time-off plan
+
+
+
+Wraps DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffPlanId: String = "" // The ID of the time-off plan to delete
+
+// Code example
+WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitTimeoffplan was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffPlanId** | **String**| The ID of the time-off plan to delete | |
 {: class="table-striped"}
 
 
@@ -2198,6 +2374,335 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(bu
 ### Return type
 
 [**ServiceGoalTemplateList**](ServiceGoalTemplateList.html)
+
+<a name="getWorkforcemanagementBusinessunitStaffinggroup"></a>
+
+# **getWorkforcemanagementBusinessunitStaffinggroup**
+
+
+
+> [StaffingGroupResponse](StaffingGroupResponse.html) getWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId)
+
+Gets a staffing group
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let staffingGroupId: String = "" // The ID of the staffing group to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitStaffinggroup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **staffingGroupId** | **String**| The ID of the staffing group to fetch | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaffingGroupResponse**](StaffingGroupResponse.html)
+
+<a name="getWorkforcemanagementBusinessunitStaffinggroups"></a>
+
+# **getWorkforcemanagementBusinessunitStaffinggroups**
+
+
+
+> [StaffingGroupListing](StaffingGroupListing.html) getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, managementUnitId)
+
+Gets a list of staffing groups
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let managementUnitId: String = "" // The ID of the management unit to get management unit specific staffing groups
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: businessUnitId, managementUnitId: managementUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitStaffinggroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **managementUnitId** | **String**| The ID of the management unit to get management unit specific staffing groups | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaffingGroupListing**](StaffingGroupListing.html)
+
+<a name="getWorkforcemanagementBusinessunitTimeofflimit"></a>
+
+# **getWorkforcemanagementBusinessunitTimeofflimit**
+
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse.html) getWorkforcemanagementBusinessunitTimeofflimit(businessUnitId, timeOffLimitId)
+
+Gets a time-off limit object
+
+Returns properties of time-off limit object, but not daily values
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimit(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimit was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit to fetch | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
+
+<a name="getWorkforcemanagementBusinessunitTimeofflimits"></a>
+
+# **getWorkforcemanagementBusinessunitTimeofflimits**
+
+
+
+> [BuTimeOffLimitListing](BuTimeOffLimitListing.html) getWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, managementUnitId)
+
+Gets a list of time-off limit objects
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+* wfm:timeOffPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let managementUnitId: String = "" // The ID of the management unit to get management unit specific time-off limit objects
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimits(businessUnitId: businessUnitId, managementUnitId: managementUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **managementUnitId** | **String**| The ID of the management unit to get management unit specific time-off limit objects | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffLimitListing**](BuTimeOffLimitListing.html)
+
+<a name="getWorkforcemanagementBusinessunitTimeoffplan"></a>
+
+# **getWorkforcemanagementBusinessunitTimeoffplan**
+
+
+
+> [BuTimeOffPlanResponse](BuTimeOffPlanResponse.html) getWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId)
+
+Gets a time-off plan
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffPlanId: String = "" // The ID of the time-off plan to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffPlanId** | **String**| The ID of the time-off plan to fetch | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
+
+<a name="getWorkforcemanagementBusinessunitTimeoffplans"></a>
+
+# **getWorkforcemanagementBusinessunitTimeoffplans**
+
+
+
+> [BuTimeOffPlanListing](BuTimeOffPlanListing.html) getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, managementUnitId, forceDownloadService)
+
+Gets a list of time-off plans
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans  
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let managementUnitId: String = "" // The ID of the management unit to get management unit specific staffing groups
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **managementUnitId** | **String**| The ID of the management unit to get management unit specific staffing groups | [optional] |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffPlanListing**](BuTimeOffPlanListing.html)
 
 <a name="getWorkforcemanagementBusinessunitWeekSchedule"></a>
 
@@ -5609,6 +6114,118 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitServicegoaltemplate(b
 
 [**ServiceGoalTemplate**](ServiceGoalTemplate.html)
 
+<a name="patchWorkforcemanagementBusinessunitStaffinggroup"></a>
+
+# **patchWorkforcemanagementBusinessunitStaffinggroup**
+
+
+
+> [StaffingGroupResponse](StaffingGroupResponse.html) patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId, body)
+
+Updates a staffing group
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let staffingGroupId: String = "" // The ID of the staffing group to update
+let body: UpdateStaffingGroupRequest = new UpdateStaffingGroupRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitStaffinggroup was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **staffingGroupId** | **String**| The ID of the staffing group to update | |
+| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaffingGroupResponse**](StaffingGroupResponse.html)
+
+<a name="patchWorkforcemanagementBusinessunitTimeoffplan"></a>
+
+# **patchWorkforcemanagementBusinessunitTimeoffplan**
+
+
+
+> [BuTimeOffPlanResponse](BuTimeOffPlanResponse.html) patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId, body)
+
+Updates a time-off plan
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffPlanId: String = "" // The ID of the time-off plan to update
+let body: BuUpdateTimeOffPlanRequest = new BuUpdateTimeOffPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitTimeoffplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffPlanId** | **String**| The ID of the time-off plan to update | |
+| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
+
 <a name="patchWorkforcemanagementManagementunit"></a>
 
 # **patchWorkforcemanagementManagementunit**
@@ -7038,6 +7655,276 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitServicegoaltemplates(b
 ### Return type
 
 [**ServiceGoalTemplate**](ServiceGoalTemplate.html)
+
+<a name="postWorkforcemanagementBusinessunitStaffinggroups"></a>
+
+# **postWorkforcemanagementBusinessunitStaffinggroups**
+
+
+
+> [StaffingGroupResponse](StaffingGroupResponse.html) postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, body)
+
+Creates a new staffing group
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CreateStaffingGroupRequest = new CreateStaffingGroupRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroups was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaffingGroupResponse**](StaffingGroupResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitStaffinggroupsQuery"></a>
+
+# **postWorkforcemanagementBusinessunitStaffinggroupsQuery**
+
+
+
+> [UserStaffingGroupListing](UserStaffingGroupListing.html) postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId, body)
+
+Gets staffing group associations for a list of user IDs
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query  
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: QueryUserStaffingGroupListRequest = new QueryUserStaffingGroupListRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserStaffingGroupListing**](UserStaffingGroupListing.html)
+
+<a name="postWorkforcemanagementBusinessunitTimeofflimits"></a>
+
+# **postWorkforcemanagementBusinessunitTimeofflimits**
+
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse.html) postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, body)
+
+Creates a new time-off limit object
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BuCreateTimeOffLimitRequest = new BuCreateTimeOffLimitRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery"></a>
+
+# **postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**
+
+
+
+> [BuTimeOffLimitValuesResponse](BuTimeOffLimitValuesResponse.html) postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId, body)
+
+Retrieves time-off limit related values based on a given set of filters.
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: QueryTimeOffLimitValuesRequest = new QueryTimeOffLimitValuesRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitTimeoffplans"></a>
+
+# **postWorkforcemanagementBusinessunitTimeoffplans**
+
+
+
+> [BuTimeOffPlanResponse](BuTimeOffPlanResponse.html) postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, body)
+
+Creates a new time-off plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans  
+
+Requires ANY permissions: 
+
+* wfm:timeOffPlan:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: BuCreateTimeOffPlanRequest = new BuCreateTimeOffPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeoffplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
 
 <a name="postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery"></a>
 
@@ -10104,6 +10991,64 @@ WorkforceManagementAPI.putWorkforcemanagementAgentIntegrationsHris(agentId: agen
 ### Return type
 
 [**AgentIntegrationsResponse**](AgentIntegrationsResponse.html)
+
+<a name="putWorkforcemanagementBusinessunitTimeofflimitValues"></a>
+
+# **putWorkforcemanagementBusinessunitTimeofflimitValues**
+
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse.html) putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId, timeOffLimitId, body)
+
+Sets daily values for a date range of time-off limit object
+
+Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time-off limit API
+
+
+
+Wraps PUT /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values  
+
+Requires ANY permissions: 
+
+* wfm:timeOffLimit:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let timeOffLimitId: String = "" // The ID of the time-off limit object to set values for
+let body: BuSetTimeOffLimitValuesRequest = new BuSetTimeOffLimitValuesRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.putWorkforcemanagementBusinessunitTimeofflimitValues was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **timeOffLimitId** | **String**| The ID of the time-off limit object to set values for | |
+| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest.html)| body | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
 
 <a name="putWorkforcemanagementManagementunitTimeofflimitValues"></a>
 

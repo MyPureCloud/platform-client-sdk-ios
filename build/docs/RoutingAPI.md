@@ -2735,7 +2735,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin") |
 | **name** | **String**| Filter by queue member name (contains-style search) | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill (contains-style search) | [optional] |
 | **skills** | [**[String]**](String.html)| Filter by skill (contains-style search) | [optional] |
@@ -2811,7 +2811,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSi
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), datelastlogin ("dateLastLogin"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography") |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String.html)| Filter by profile skill | [optional] |
@@ -2888,7 +2888,7 @@ RoutingAPI.getRoutingQueueWrapupcodes(queueId: queueId, pageSize: pageSize, page
 
 
 
-> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, hasPeer)
+> [QueueEntityListing](QueueEntityListing.html) getRoutingQueues(pageNumber, pageSize, sortOrder, name, _id, divisionId, peerId, cannedResponseLibraryId, hasPeer)
 
 Get list of queues.
 
@@ -2911,14 +2911,15 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageNumber: Int = 0 // Page number
 let pageSize: Int = 0 // Page size
 let sortOrder: RoutingAPI.SortOrder_getRoutingQueues = RoutingAPI.SortOrder_getRoutingQueues.enummember // Note: results are sorted by name.
-let name: String = "" // Filter by queue name
-let _id: [String] = [""] // Filter by queue ID(s)
-let divisionId: [String] = [""] // Filter by queue division ID(s)
-let peerId: [String] = [""] // Filter by queue peer ID(s)
-let hasPeer: Bool = true // Filter by queues associated with peer
+let name: String = "" // Include only queues with the given name (leading and trailing asterisks allowed)
+let _id: [String] = [""] // Include only queues with the specified ID(s)
+let divisionId: [String] = [""] // Include only queues in the specified division ID(s)
+let peerId: [String] = [""] // Include only queues with the specified peer ID(s)
+let cannedResponseLibraryId: String = "" // Include only queues explicitly associated with the specified canned response library ID
+let hasPeer: Bool = true // Include only queues with a peer ID
 
 // Code example
-RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, hasPeer: hasPeer) { (response, error) in
+RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2936,11 +2937,12 @@ RoutingAPI.getRoutingQueues(pageNumber: pageNumber, pageSize: pageSize, sortOrde
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **name** | **String**| Filter by queue name | [optional] |
-| **_id** | [**[String]**](String.html)| Filter by queue ID(s) | [optional] |
-| **divisionId** | [**[String]**](String.html)| Filter by queue division ID(s) | [optional] |
-| **peerId** | [**[String]**](String.html)| Filter by queue peer ID(s) | [optional] |
-| **hasPeer** | **Bool**| Filter by queues associated with peer | [optional] |
+| **name** | **String**| Include only queues with the given name (leading and trailing asterisks allowed) | [optional] |
+| **_id** | [**[String]**](String.html)| Include only queues with the specified ID(s) | [optional] |
+| **divisionId** | [**[String]**](String.html)| Include only queues in the specified division ID(s) | [optional] |
+| **peerId** | [**[String]**](String.html)| Include only queues with the specified peer ID(s) | [optional] |
+| **cannedResponseLibraryId** | **String**| Include only queues explicitly associated with the specified canned response library ID | [optional] |
+| **hasPeer** | **Bool**| Include only queues with a peer ID | [optional] |
 {: class="table-striped"}
 
 

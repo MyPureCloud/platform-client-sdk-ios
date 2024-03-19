@@ -997,7 +997,6 @@ open class GroupsAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
-        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
@@ -1010,6 +1009,7 @@ open class GroupsAPI {
         case languagepreference = "languagePreference"
         case employerinfo = "employerInfo"
         case biography = "biography"
+        case datelastlogin = "dateLastLogin"
     }
     
     /**

@@ -553,13 +553,13 @@ open class OrganizationAPI {
     }
 
     /**
-     Get a link to the limit documentation
+     Get limit documentation
      
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getOrganizationsLimitsDocs(completion: @escaping ((_ data: UrlResponse?,_ error: Error?) -> Void)) {
+    open class func getOrganizationsLimitsDocs(completion: @escaping ((_ data: LimitDocumentation?,_ error: Error?) -> Void)) {
         let requestBuilder = getOrganizationsLimitsDocsWithRequestBuilder()
-        requestBuilder.execute { (response: Response<UrlResponse>?, error) -> Void in
+        requestBuilder.execute { (response: Response<LimitDocumentation>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -576,25 +576,60 @@ open class OrganizationAPI {
     }
 
     /**
-     Get a link to the limit documentation
+     Get limit documentation
      - GET /api/v2/organizations/limits/docs
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "url" : "url"
+  "url" : "url",
+  "namespaces" : [ {
+    "friendlyName" : "friendlyName",
+    "limits" : [ {
+      "trackable" : true,
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key",
+      "configurable" : true
+    }, {
+      "trackable" : true,
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key",
+      "configurable" : true
+    } ]
+  }, {
+    "friendlyName" : "friendlyName",
+    "limits" : [ {
+      "trackable" : true,
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key",
+      "configurable" : true
+    }, {
+      "trackable" : true,
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key",
+      "configurable" : true
+    } ]
+  } ]
 }, statusCode=200}]
 
-     - returns: RequestBuilder<UrlResponse> 
+     - returns: RequestBuilder<LimitDocumentation> 
      */
-    open class func getOrganizationsLimitsDocsWithRequestBuilder() -> RequestBuilder<UrlResponse> {        
+    open class func getOrganizationsLimitsDocsWithRequestBuilder() -> RequestBuilder<LimitDocumentation> {        
         let path = "/api/v2/organizations/limits/docs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<UrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<LimitDocumentation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

@@ -3508,7 +3508,6 @@ open class RoutingAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
-        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
@@ -3521,6 +3520,7 @@ open class RoutingAPI {
         case languagepreference = "languagePreference"
         case employerinfo = "employerInfo"
         case biography = "biography"
+        case datelastlogin = "dateLastLogin"
     }
     
     
@@ -4268,7 +4268,6 @@ open class RoutingAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
-        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
@@ -4281,6 +4280,7 @@ open class RoutingAPI {
         case languagepreference = "languagePreference"
         case employerinfo = "employerInfo"
         case biography = "biography"
+        case datelastlogin = "dateLastLogin"
     }
     
     
@@ -5111,21 +5111,24 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      Get list of queues.
      
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter sortOrder: (query) Note: results are sorted by name. (optional)
-     - parameter name: (query) Filter by queue name (optional)
-     - parameter _id: (query) Filter by queue ID(s) (optional)
-     - parameter divisionId: (query) Filter by queue division ID(s) (optional)
-     - parameter peerId: (query) Filter by queue peer ID(s) (optional)
-     - parameter hasPeer: (query) Filter by queues associated with peer (optional)
+     - parameter name: (query) Include only queues with the given name (leading and trailing asterisks allowed) (optional)
+     - parameter _id: (query) Include only queues with the specified ID(s) (optional)
+     - parameter divisionId: (query) Include only queues in the specified division ID(s) (optional)
+     - parameter peerId: (query) Include only queues with the specified peer ID(s) (optional)
+     - parameter cannedResponseLibraryId: (query) Include only queues explicitly associated with the specified canned response library ID (optional)
+     - parameter hasPeer: (query) Include only queues with a peer ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, hasPeer: Bool? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, hasPeer: hasPeer)
+    open class func getRoutingQueues(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, cannedResponseLibraryId: String? = nil, hasPeer: Bool? = nil, completion: @escaping ((_ data: QueueEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueuesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortOrder: sortOrder, name: name, _id: _id, divisionId: divisionId, peerId: peerId, cannedResponseLibraryId: cannedResponseLibraryId, hasPeer: hasPeer)
         requestBuilder.execute { (response: Response<QueueEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5452,15 +5455,16 @@ open class RoutingAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter sortOrder: (query) Note: results are sorted by name. (optional)
-     - parameter name: (query) Filter by queue name (optional)
-     - parameter _id: (query) Filter by queue ID(s) (optional)
-     - parameter divisionId: (query) Filter by queue division ID(s) (optional)
-     - parameter peerId: (query) Filter by queue peer ID(s) (optional)
-     - parameter hasPeer: (query) Filter by queues associated with peer (optional)
+     - parameter name: (query) Include only queues with the given name (leading and trailing asterisks allowed) (optional)
+     - parameter _id: (query) Include only queues with the specified ID(s) (optional)
+     - parameter divisionId: (query) Include only queues in the specified division ID(s) (optional)
+     - parameter peerId: (query) Include only queues with the specified peer ID(s) (optional)
+     - parameter cannedResponseLibraryId: (query) Include only queues explicitly associated with the specified canned response library ID (optional)
+     - parameter hasPeer: (query) Include only queues with a peer ID (optional)
 
      - returns: RequestBuilder<QueueEntityListing> 
      */
-    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, hasPeer: Bool? = nil) -> RequestBuilder<QueueEntityListing> {        
+    open class func getRoutingQueuesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getRoutingQueues? = nil, name: String? = nil, _id: [String]? = nil, divisionId: [String]? = nil, peerId: [String]? = nil, cannedResponseLibraryId: String? = nil, hasPeer: Bool? = nil) -> RequestBuilder<QueueEntityListing> {        
         let path = "/api/v2/routing/queues"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -5474,6 +5478,7 @@ open class RoutingAPI {
             "id": _id, 
             "divisionId": divisionId, 
             "peerId": peerId, 
+            "cannedResponseLibraryId": cannedResponseLibraryId, 
             "hasPeer": hasPeer
         ])
 

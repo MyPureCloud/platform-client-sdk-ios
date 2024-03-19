@@ -268,6 +268,162 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Deletes a staffing group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter staffingGroupId: (path) The ID of the staffing group to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: String, staffingGroupId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes a staffing group
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter staffingGroupId: (path) The ID of the staffing group to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: String, staffingGroupId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let staffingGroupIdPreEscape = "\(staffingGroupId)"
+        let staffingGroupIdPostEscape = staffingGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{staffingGroupId}", with: staffingGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Deletes a time-off limit object
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitTimeofflimit(businessUnitId: String, timeOffLimitId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitTimeofflimitWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes a time-off limit object
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitTimeofflimitWithRequestBuilder(businessUnitId: String, timeOffLimitId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Deletes a time-off plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffPlanId: (path) The ID of the time-off plan to delete 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: String, timeOffPlanId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes a time-off plan
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffPlanId: (path) The ID of the time-off plan to delete 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: String, timeOffPlanId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffPlanIdPreEscape = "\(timeOffPlanId)"
+        let timeOffPlanIdPostEscape = timeOffPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffPlanId}", with: timeOffPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -1726,8 +1882,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -1739,8 +1895,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -2423,6 +2579,496 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<ServiceGoalTemplateList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets a staffing group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter staffingGroupId: (path) The ID of the staffing group to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: String, staffingGroupId: String, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId)
+        requestBuilder.execute { (response: Response<StaffingGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a staffing group
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "managementUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "users" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter staffingGroupId: (path) The ID of the staffing group to fetch 
+
+     - returns: RequestBuilder<StaffingGroupResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: String, staffingGroupId: String) -> RequestBuilder<StaffingGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let staffingGroupIdPreEscape = "\(staffingGroupId)"
+        let staffingGroupIdPostEscape = staffingGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{staffingGroupId}", with: staffingGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<StaffingGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets a list of staffing groups
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: String, managementUnitId: String? = nil, completion: @escaping ((_ data: StaffingGroupListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId)
+        requestBuilder.execute { (response: Response<StaffingGroupListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a list of staffing groups
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "metadata" : "{}",
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "users" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
+
+     - returns: RequestBuilder<StaffingGroupListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil) -> RequestBuilder<StaffingGroupListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "managementUnitId": managementUnitId
+        ])
+
+        let requestBuilder: RequestBuilder<StaffingGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets a time-off limit object
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimit(businessUnitId: String, timeOffLimitId: String, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeofflimitWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a time-off limit object
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}
+     - Returns properties of time-off limit object, but not daily values
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "managementUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "staffingGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit to fetch 
+
+     - returns: RequestBuilder<BuTimeOffLimitResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimitWithRequestBuilder(businessUnitId: String, timeOffLimitId: String) -> RequestBuilder<BuTimeOffLimitResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets a list of time-off limit objects
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitId: (query) The ID of the management unit to get management unit specific time-off limit objects (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimits(businessUnitId: String, managementUnitId: String? = nil, completion: @escaping ((_ data: BuTimeOffLimitListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a list of time-off limit objects
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "staffingGroup" : "{}"
+  }, {
+    "metadata" : "{}",
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "staffingGroup" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitId: (query) The ID of the management unit to get management unit specific time-off limit objects (optional)
+
+     - returns: RequestBuilder<BuTimeOffLimitListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil) -> RequestBuilder<BuTimeOffLimitListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "managementUnitId": managementUnitId
+        ])
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets a time-off plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffPlanId: (path) The ID of the time-off plan to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: String, timeOffPlanId: String, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId)
+        requestBuilder.execute { (response: Response<BuTimeOffPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a time-off plan
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "timeOffLimits" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "autoApprovalRule" : "Never",
+  "enabled" : true,
+  "daysBeforeStartToExpireFromWaitlist" : 0,
+  "managementUnitAssociation" : "{}",
+  "name" : "name",
+  "countAgainstTimeOffLimits" : true,
+  "id" : "id",
+  "businessUnitAssociation" : "{}",
+  "hrisTimeOffType" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffPlanId: (path) The ID of the time-off plan to fetch 
+
+     - returns: RequestBuilder<BuTimeOffPlanResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: String, timeOffPlanId: String) -> RequestBuilder<BuTimeOffPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffPlanIdPreEscape = "\(timeOffPlanId)"
+        let timeOffPlanIdPostEscape = timeOffPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffPlanId}", with: timeOffPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Gets a list of time-off plans
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil, completion: @escaping ((_ data: BuTimeOffPlanListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: businessUnitId, managementUnitId: managementUnitId, forceDownloadService: forceDownloadService)
+        requestBuilder.execute { (response: Response<BuTimeOffPlanListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets a list of time-off plans
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "metadata" : "{}",
+    "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "timeOffLimits" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "autoApprovalRule" : "Never",
+    "enabled" : true,
+    "daysBeforeStartToExpireFromWaitlist" : 0,
+    "managementUnitAssociation" : "{}",
+    "name" : "name",
+    "countAgainstTimeOffLimits" : true,
+    "id" : "id",
+    "businessUnitAssociation" : "{}",
+    "hrisTimeOffType" : "{}"
+  }, {
+    "metadata" : "{}",
+    "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+    "selfUri" : "https://openapi-generator.tech",
+    "timeOffLimits" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "autoApprovalRule" : "Never",
+    "enabled" : true,
+    "daysBeforeStartToExpireFromWaitlist" : 0,
+    "managementUnitAssociation" : "{}",
+    "name" : "name",
+    "countAgainstTimeOffLimits" : true,
+    "id" : "id",
+    "businessUnitAssociation" : "{}",
+    "hrisTimeOffType" : "{}"
+  } ],
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter managementUnitId: (query) The ID of the management unit to get management unit specific staffing groups (optional)
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BuTimeOffPlanListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: String, managementUnitId: String? = nil, forceDownloadService: Bool? = nil) -> RequestBuilder<BuTimeOffPlanListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "managementUnitId": managementUnitId, 
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<BuTimeOffPlanListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -4512,8 +5158,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -8025,8 +8671,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -8038,8 +8684,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -8123,8 +8769,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -8136,8 +8782,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -9203,6 +9849,167 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     Updates a staffing group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter staffingGroupId: (path) The ID of the staffing group to update 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId: String, staffingGroupId: String, body: UpdateStaffingGroupRequest? = nil, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: businessUnitId, staffingGroupId: staffingGroupId, body: body)
+        requestBuilder.execute { (response: Response<StaffingGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates a staffing group
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "managementUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "users" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter staffingGroupId: (path) The ID of the staffing group to update 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<StaffingGroupResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitStaffinggroupWithRequestBuilder(businessUnitId: String, staffingGroupId: String, body: UpdateStaffingGroupRequest? = nil) -> RequestBuilder<StaffingGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let staffingGroupIdPreEscape = "\(staffingGroupId)"
+        let staffingGroupIdPostEscape = staffingGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{staffingGroupId}", with: staffingGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<StaffingGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Updates a time-off plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffPlanId: (path) The ID of the time-off plan to update 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: String, timeOffPlanId: String, body: BuUpdateTimeOffPlanRequest? = nil, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates a time-off plan
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "timeOffLimits" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "autoApprovalRule" : "Never",
+  "enabled" : true,
+  "daysBeforeStartToExpireFromWaitlist" : 0,
+  "managementUnitAssociation" : "{}",
+  "name" : "name",
+  "countAgainstTimeOffLimits" : true,
+  "id" : "id",
+  "businessUnitAssociation" : "{}",
+  "hrisTimeOffType" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffPlanId: (path) The ID of the time-off plan to update 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BuTimeOffPlanResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitTimeoffplanWithRequestBuilder(businessUnitId: String, timeOffPlanId: String, body: BuUpdateTimeOffPlanRequest? = nil) -> RequestBuilder<BuTimeOffPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffPlanIdPreEscape = "\(timeOffPlanId)"
+        let timeOffPlanIdPostEscape = timeOffPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffPlanId}", with: timeOffPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Update the requested management unit
      
@@ -9243,8 +10050,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -11394,6 +12201,362 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ServiceGoalTemplate>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates a new staffing group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId: String, body: CreateStaffingGroupRequest? = nil, completion: @escaping ((_ data: StaffingGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<StaffingGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a new staffing group
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "managementUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id",
+  "users" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<StaffingGroupResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsWithRequestBuilder(businessUnitId: String, body: CreateStaffingGroupRequest? = nil) -> RequestBuilder<StaffingGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<StaffingGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Gets staffing group associations for a list of user IDs
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId: String, body: QueryUserStaffingGroupListRequest? = nil, completion: @escaping ((_ data: UserStaffingGroupListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<UserStaffingGroupListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets staffing group associations for a list of user IDs
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "user" : "{}",
+    "staffingGroup" : "{}"
+  }, {
+    "user" : "{}",
+    "staffingGroup" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<UserStaffingGroupListing> 
+     */
+    open class func postWorkforcemanagementBusinessunitStaffinggroupsQueryWithRequestBuilder(businessUnitId: String, body: QueryUserStaffingGroupListRequest? = nil) -> RequestBuilder<UserStaffingGroupListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserStaffingGroupListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates a new time-off limit object
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId: String, body: BuCreateTimeOffLimitRequest? = nil, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a new time-off limit object
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "managementUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "staffingGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BuTimeOffLimitResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitsWithRequestBuilder(businessUnitId: String, body: BuCreateTimeOffLimitRequest? = nil) -> RequestBuilder<BuTimeOffLimitResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Retrieves time-off limit related values based on a given set of filters.
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil, completion: @escaping ((_ data: BuTimeOffLimitValuesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeofflimitsValuesQueryWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitValuesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves time-off limit related values based on a given set of filters.
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "values" : [ {
+    "allocatedMinutesPerInterval" : [ 6, 6 ],
+    "timeOffLimit" : "{}",
+    "waitlistedMinutesPerInterval" : [ 1, 1 ],
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "waitlistedRequestsPerInterval" : [ 5, 5 ],
+    "startDate" : "2000-01-23",
+    "limitMinutesPerInterval" : [ 0, 0 ]
+  }, {
+    "allocatedMinutesPerInterval" : [ 6, 6 ],
+    "timeOffLimit" : "{}",
+    "waitlistedMinutesPerInterval" : [ 1, 1 ],
+    "metadata" : "{}",
+    "granularity" : "Daily",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "waitlistedRequestsPerInterval" : [ 5, 5 ],
+    "startDate" : "2000-01-23",
+    "limitMinutesPerInterval" : [ 0, 0 ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BuTimeOffLimitValuesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeofflimitsValuesQueryWithRequestBuilder(businessUnitId: String, body: QueryTimeOffLimitValuesRequest? = nil) -> RequestBuilder<BuTimeOffLimitValuesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitValuesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates a new time-off plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId: String, body: BuCreateTimeOffPlanRequest? = nil, completion: @escaping ((_ data: BuTimeOffPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a new time-off plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "activityCodeIds" : [ "activityCodeIds", "activityCodeIds" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "timeOffLimits" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "autoApprovalRule" : "Never",
+  "enabled" : true,
+  "daysBeforeStartToExpireFromWaitlist" : 0,
+  "managementUnitAssociation" : "{}",
+  "name" : "name",
+  "countAgainstTimeOffLimits" : true,
+  "id" : "id",
+  "businessUnitAssociation" : "{}",
+  "hrisTimeOffType" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BuTimeOffPlanResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitTimeoffplansWithRequestBuilder(businessUnitId: String, body: BuCreateTimeOffPlanRequest? = nil) -> RequestBuilder<BuTimeOffPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -15119,8 +16282,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -15863,6 +17026,77 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AgentIntegrationsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Sets daily values for a date range of time-off limit object
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to set values for 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId: String, timeOffLimitId: String, body: BuSetTimeOffLimitValuesRequest? = nil, completion: @escaping ((_ data: BuTimeOffLimitResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putWorkforcemanagementBusinessunitTimeofflimitValuesWithRequestBuilder(businessUnitId: businessUnitId, timeOffLimitId: timeOffLimitId, body: body)
+        requestBuilder.execute { (response: Response<BuTimeOffLimitResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Sets daily values for a date range of time-off limit object
+     - PUT /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values
+     - Note that only limit daily values can be set through API, allocated and waitlisted values are read-only for time-off limit API
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "managementUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "staffingGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter timeOffLimitId: (path) The ID of the time-off limit object to set values for 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<BuTimeOffLimitResponse> 
+     */
+    open class func putWorkforcemanagementBusinessunitTimeofflimitValuesWithRequestBuilder(businessUnitId: String, timeOffLimitId: String, body: BuSetTimeOffLimitValuesRequest? = nil) -> RequestBuilder<BuTimeOffLimitResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let timeOffLimitIdPreEscape = "\(timeOffLimitId)"
+        let timeOffLimitIdPostEscape = timeOffLimitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{timeOffLimitId}", with: timeOffLimitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuTimeOffLimitResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

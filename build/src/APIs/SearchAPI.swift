@@ -479,7 +479,6 @@ open class SearchAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
-        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
@@ -492,6 +491,7 @@ open class SearchAPI {
         case languagepreference = "languagePreference"
         case employerinfo = "employerInfo"
         case biography = "biography"
+        case datelastlogin = "dateLastLogin"
         case calleruserRoutingstatus = "callerUser.routingStatus"
         case calleruserPrimarypresence = "callerUser.primaryPresence"
         case calleruserConversationsummary = "callerUser.conversationSummary"
@@ -585,7 +585,6 @@ open class SearchAPI {
         case station = "station"
         case authorization = "authorization"
         case lasttokenissued = "lasttokenissued"
-        case datelastlogin = "dateLastLogin"
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
@@ -598,6 +597,7 @@ open class SearchAPI {
         case languagepreference = "languagePreference"
         case employerinfo = "employerInfo"
         case biography = "biography"
+        case datelastlogin = "dateLastLogin"
         case calleruserRoutingstatus = "callerUser.routingStatus"
         case calleruserPrimarypresence = "callerUser.primaryPresence"
         case calleruserConversationsummary = "callerUser.conversationSummary"
@@ -1534,29 +1534,33 @@ open class SearchAPI {
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
+      "surveyType" : "Web",
       "queueId" : "queueId",
       "surveyStatus" : "surveyStatus",
-      "oSurveyTotalScore" : 2,
       "surveyId" : "surveyId",
       "surveyFormName" : "surveyFormName",
-      "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPartialResponse" : true,
       "surveyPromoterScore" : 5,
-      "userId" : "userId"
+      "userId" : "userId",
+      "oSurveyTotalScore" : 2,
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId"
     }, {
+      "surveyType" : "Web",
       "queueId" : "queueId",
       "surveyStatus" : "surveyStatus",
-      "oSurveyTotalScore" : 2,
       "surveyId" : "surveyId",
       "surveyFormName" : "surveyFormName",
-      "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPartialResponse" : true,
       "surveyPromoterScore" : 5,
-      "userId" : "userId"
+      "userId" : "userId",
+      "oSurveyTotalScore" : 2,
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {
@@ -2466,29 +2470,33 @@ open class SearchAPI {
     "conversationInitiator" : "acd",
     "conversationId" : "conversationId",
     "surveys" : [ {
+      "surveyType" : "Web",
       "queueId" : "queueId",
       "surveyStatus" : "surveyStatus",
-      "oSurveyTotalScore" : 2,
       "surveyId" : "surveyId",
       "surveyFormName" : "surveyFormName",
-      "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPartialResponse" : true,
       "surveyPromoterScore" : 5,
-      "userId" : "userId"
+      "userId" : "userId",
+      "oSurveyTotalScore" : 2,
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId"
     }, {
+      "surveyType" : "Web",
       "queueId" : "queueId",
       "surveyStatus" : "surveyStatus",
-      "oSurveyTotalScore" : 2,
       "surveyId" : "surveyId",
       "surveyFormName" : "surveyFormName",
-      "eventTime" : "2000-01-23T04:56:07.000+00:00",
-      "surveyFormId" : "surveyFormId",
       "surveyFormContextId" : "surveyFormContextId",
       "surveyCompletedDate" : "2000-01-23T04:56:07.000+00:00",
+      "surveyPartialResponse" : true,
       "surveyPromoterScore" : 5,
-      "userId" : "userId"
+      "userId" : "userId",
+      "oSurveyTotalScore" : 2,
+      "eventTime" : "2000-01-23T04:56:07.000+00:00",
+      "surveyFormId" : "surveyFormId"
     } ],
     "externalTag" : "externalTag",
     "resolutions" : [ {

@@ -89,8 +89,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration (Deprecated) |
 | [**getConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpen) | Get a list of Open messaging integrations |
 | [**getConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpenIntegrationId) | Get an Open messaging integration |
-| [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations |
-| [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get a Twitter messaging integration |
+| [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations (Deprecated) |
+| [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get a Twitter messaging integration (Deprecated) |
 | [**getConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsapp) | Get a list of WhatsApp Integrations |
 | [**getConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsappIntegrationId) | Get a WhatsApp messaging integration |
 | [**getConversationsMessagingSetting**](ConversationsAPI.html#getConversationsMessagingSetting) | Get a messaging setting |
@@ -770,6 +770,8 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId(integ
 > Void deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId)
 
 Delete a Twitter messaging integration
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
 
 
 
@@ -4613,7 +4615,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrat
 
 > [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing.html) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
 
-Get a list of Twitter Integrations
+Get a list of Twitter Integrations (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
 
 
 
@@ -4673,7 +4677,9 @@ ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize
 
 > [TwitterIntegration](TwitterIntegration.html) getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand)
 
-Get a Twitter messaging integration
+Get a Twitter messaging integration (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
 
 
 
@@ -7356,6 +7362,8 @@ ConversationsAPI.patchConversationsMessagingIntegrationsOpenIntegrationId(integr
 > [TwitterIntegration](TwitterIntegration.html) patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, body)
 
 Update Twitter messaging integration
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
 
 
 
@@ -11230,6 +11238,8 @@ ConversationsAPI.postConversationsMessagingIntegrationsOpen(body: body) { (respo
 > [TwitterIntegration](TwitterIntegration.html) postConversationsMessagingIntegrationsTwitter(body)
 
 Create a Twitter Integration
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
 
 
 

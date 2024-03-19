@@ -14,8 +14,10 @@ title: AnalyticsSurvey
 | **surveyFormId** | **String** | ID of the survey form used | [optional] |
 | **surveyFormName** | **String** | Name of the survey form used | [optional] |
 | **surveyId** | **String** | ID of the survey | [optional] |
+| **surveyPartialResponse** | **Bool** | Whether the survey was completed with any required questions unanswered. | [optional] |
 | **surveyPromoterScore** | **Int** | Score of the survey used with NPS | [optional] |
 | **surveyStatus** | **String** | The status of the survey | [optional] |
+| **surveyType** | **String** | The type of the survey | [optional] |
 | **userId** | **String** | ID of the agent the survey was performed against | [optional] |
 | **oSurveyTotalScore** | **Int64** |  | [optional] |
 {: class="table table-striped"}
