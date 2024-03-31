@@ -12,7 +12,7 @@ title: KnowledgeSearchResponse
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **pageSize** | **Int** | Number of records according to the page size | [optional] |
 | **pageNumber** | **Int** | Current page number for the returned records | [optional] |
-| **results** | [**[KnowledgeSearchDocument]**](KnowledgeSearchDocument.html) | Results associated to the search response | [optional] |
+| **results** | [**[KnowledgeSearchDocumentV1]**](KnowledgeSearchDocumentV1.html) | Results associated to the search response | [optional] |
 {: class="table table-striped"}
 
 

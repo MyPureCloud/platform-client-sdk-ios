@@ -708,7 +708,7 @@ KnowledgeAPI.getKnowledgeGuestSessionCategories(sessionId: sessionId, before: be
 
 
 
-> [KnowledgeGuestDocument](KnowledgeGuestDocument.html) getKnowledgeGuestSessionDocument(sessionId, documentId)
+> [KnowledgeGuestDocumentResponse](KnowledgeGuestDocumentResponse.html) getKnowledgeGuestSessionDocument(sessionId, documentId)
 
 Get a knowledge document by ID.
 
@@ -753,7 +753,7 @@ KnowledgeAPI.getKnowledgeGuestSessionDocument(sessionId: sessionId, documentId: 
 
 ### Return type
 
-[**KnowledgeGuestDocument**](KnowledgeGuestDocument.html)
+[**KnowledgeGuestDocumentResponse**](KnowledgeGuestDocumentResponse.html)
 
 <a name="getKnowledgeGuestSessionDocuments"></a>
 

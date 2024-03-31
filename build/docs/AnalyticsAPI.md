@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsConversationsDetailsJobResults**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJobResults) | Fetch a page of results for an async details job |
 | [**getAnalyticsConversationsDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsConversationsDetailsJobsAvailability) | Lookup the datalake availability date and time |
 | [**getAnalyticsDataretentionSettings**](AnalyticsAPI.html#getAnalyticsDataretentionSettings) | Get analytics data retention setting |
+| [**getAnalyticsReportingDashboardsUser**](AnalyticsAPI.html#getAnalyticsReportingDashboardsUser) | Get dashboards summary for a user |
+| [**getAnalyticsReportingDashboardsUsers**](AnalyticsAPI.html#getAnalyticsReportingDashboardsUsers) | Get dashboards summary for users in a org |
 | [**getAnalyticsReportingExports**](AnalyticsAPI.html#getAnalyticsReportingExports) | Get all view export requests for a user |
 | [**getAnalyticsReportingExportsMetadata**](AnalyticsAPI.html#getAnalyticsReportingExportsMetadata) | Get all export metadata |
 | [**getAnalyticsReportingMetadata**](AnalyticsAPI.html#getAnalyticsReportingMetadata) | Get list of reporting metadata. |
@@ -29,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsReportingScheduleHistoryRunId**](AnalyticsAPI.html#getAnalyticsReportingScheduleHistoryRunId) | A completed scheduled report job |
 | [**getAnalyticsReportingSchedules**](AnalyticsAPI.html#getAnalyticsReportingSchedules) | Get a list of scheduled report jobs |
 | [**getAnalyticsReportingSettings**](AnalyticsAPI.html#getAnalyticsReportingSettings) | Get AnalyticsReportingSettings for an organization |
+| [**getAnalyticsReportingSettingsUserDashboards**](AnalyticsAPI.html#getAnalyticsReportingSettingsUserDashboards) | Get list of dashboards for an user |
 | [**getAnalyticsReportingTimeperiods**](AnalyticsAPI.html#getAnalyticsReportingTimeperiods) | Get a list of report time periods. |
 | [**getAnalyticsUsersDetailsJob**](AnalyticsAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
@@ -49,9 +52,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsKnowledgeAggregatesQuery**](AnalyticsAPI.html#postAnalyticsKnowledgeAggregatesQuery) | Query for knowledge aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
 | [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
+| [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk delete dashboards owned by other user(s) |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
 | [**postAnalyticsReportingScheduleRunreport**](AnalyticsAPI.html#postAnalyticsReportingScheduleRunreport) | Place a scheduled report immediately into the reporting queue |
 | [**postAnalyticsReportingSchedules**](AnalyticsAPI.html#postAnalyticsReportingSchedules) | Create a scheduled report job |
+| [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk remove dashboard configurations |
+| [**postAnalyticsReportingSettingsDashboardsQuery**](AnalyticsAPI.html#postAnalyticsReportingSettingsDashboardsQuery) | Query dashboard configurations |
 | [**postAnalyticsSurveysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
 | [**postAnalyticsTranscriptsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsTranscriptsAggregatesQuery) | Query for transcript aggregates |
 | [**postAnalyticsUsersAggregatesQuery**](AnalyticsAPI.html#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
@@ -659,6 +665,118 @@ This endpoint does not require any parameters.
 
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
 
+<a name="getAnalyticsReportingDashboardsUser"></a>
+
+# **getAnalyticsReportingDashboardsUser**
+
+
+
+> [DashboardUser](DashboardUser.html) getAnalyticsReportingDashboardsUser(userId)
+
+Get dashboards summary for a user
+
+
+
+Wraps GET /api/v2/analytics/reporting/dashboards/users/{userId}  
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+AnalyticsAPI.getAnalyticsReportingDashboardsUser(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsReportingDashboardsUser was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DashboardUser**](DashboardUser.html)
+
+<a name="getAnalyticsReportingDashboardsUsers"></a>
+
+# **getAnalyticsReportingDashboardsUsers**
+
+
+
+> [DashboardUserListing](DashboardUserListing.html) getAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, _id, state)
+
+Get dashboards summary for users in a org
+
+
+
+Wraps GET /api/v2/analytics/reporting/dashboards/users  
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sortBy: String = "" // 
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+let _id: [String] = [""] // A list of user IDs to fetch by bulk
+let state: AnalyticsAPI.State_getAnalyticsReportingDashboardsUsers = AnalyticsAPI.State_getAnalyticsReportingDashboardsUsers.enummember // Only list users of this state
+
+// Code example
+AnalyticsAPI.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsReportingDashboardsUsers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sortBy** | **String**|  | [optional] |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+| **_id** | [**[String]**](String.html)| A list of user IDs to fetch by bulk | [optional] |
+| **state** | **String**| Only list users of this state | [optional]<br />**Values**: active ("active"), inactive ("inactive") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DashboardUserListing**](DashboardUserListing.html)
+
 <a name="getAnalyticsReportingExports"></a>
 
 # **getAnalyticsReportingExports**
@@ -1235,6 +1353,68 @@ This endpoint does not require any parameters.
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
 
+<a name="getAnalyticsReportingSettingsUserDashboards"></a>
+
+# **getAnalyticsReportingSettingsUserDashboards**
+
+
+
+> [DashboardConfigurationListing](DashboardConfigurationListing.html) getAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly)
+
+Get list of dashboards for an user
+
+
+
+Wraps GET /api/v2/analytics/reporting/settings/users/{userId}/dashboards  
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:viewPrivate
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let sortBy: String = "" // 
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+let publicOnly: Bool = true // If true, retrieve only public dashboards
+let favoriteOnly: Bool = true // If true, retrieve only favorite dashboards
+
+// Code example
+AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **sortBy** | **String**|  | [optional] |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+| **publicOnly** | **Bool**| If true, retrieve only public dashboards | [optional] |
+| **favoriteOnly** | **Bool**| If true, retrieve only favorite dashboards | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DashboardConfigurationListing**](DashboardConfigurationListing.html)
+
 <a name="getAnalyticsReportingTimeperiods"></a>
 
 # **getAnalyticsReportingTimeperiods**
@@ -1454,11 +1634,7 @@ Wraps PATCH /api/v2/analytics/reporting/settings
 
 Requires ANY permissions: 
 
-* recording:recordingSegment:view
-* analytics:conversationDetail:view
-* analytics:conversationAggregate:view
 * analytics:reportingSettings:edit
-* analytics:dashboardConfigurations:view
 
 ### Example
 
@@ -2279,6 +2455,58 @@ AnalyticsAPI.postAnalyticsRatelimitsAggregatesQuery(body: body) { (response, err
 
 [**RateLimitAggregateQueryResponse**](RateLimitAggregateQueryResponse.html)
 
+<a name="postAnalyticsReportingDashboardsUsersBulkRemove"></a>
+
+# **postAnalyticsReportingDashboardsUsersBulkRemove**
+
+
+
+> Void postAnalyticsReportingDashboardsUsersBulkRemove(body)
+
+Bulk delete dashboards owned by other user(s)
+
+
+
+Wraps POST /api/v2/analytics/reporting/dashboards/users/bulk/remove  
+
+Requires ANY permissions: 
+
+* analytics:dashboardConfigurations:deleteActive
+* analytics:dashboardConfigurations:deleteInactive
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [String] = [""] // List of userIds
+
+// Code example
+AnalyticsAPI.postAnalyticsReportingDashboardsUsersBulkRemove(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.postAnalyticsReportingDashboardsUsersBulkRemove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**[String]**](String.html)| List of userIds | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postAnalyticsReportingExports"></a>
 
 # **postAnalyticsReportingExports**
@@ -2440,6 +2668,109 @@ AnalyticsAPI.postAnalyticsReportingSchedules(body: body) { (response, error) in
 ### Return type
 
 [**ReportSchedule**](ReportSchedule.html)
+
+<a name="postAnalyticsReportingSettingsDashboardsBulkRemove"></a>
+
+# **postAnalyticsReportingSettingsDashboardsBulkRemove**
+
+
+
+> Void postAnalyticsReportingSettingsDashboardsBulkRemove(body)
+
+Bulk remove dashboard configurations
+
+
+
+Wraps POST /api/v2/analytics/reporting/settings/dashboards/bulk/remove  
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DashboardConfigurationBulkRequest = new DashboardConfigurationBulkRequest(...) // 
+
+// Code example
+AnalyticsAPI.postAnalyticsReportingSettingsDashboardsBulkRemove(body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("AnalyticsAPI.postAnalyticsReportingSettingsDashboardsBulkRemove was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DashboardConfigurationBulkRequest**](DashboardConfigurationBulkRequest.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postAnalyticsReportingSettingsDashboardsQuery"></a>
+
+# **postAnalyticsReportingSettingsDashboardsQuery**
+
+
+
+> [DashboardConfigurationListing](DashboardConfigurationListing.html) postAnalyticsReportingSettingsDashboardsQuery(body)
+
+Query dashboard configurations
+
+
+
+Wraps POST /api/v2/analytics/reporting/settings/dashboards/query  
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: DashboardConfigurationQueryRequest = new DashboardConfigurationQueryRequest(...) // 
+
+// Code example
+AnalyticsAPI.postAnalyticsReportingSettingsDashboardsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsReportingSettingsDashboardsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**DashboardConfigurationQueryRequest**](DashboardConfigurationQueryRequest.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DashboardConfigurationListing**](DashboardConfigurationListing.html)
 
 <a name="postAnalyticsSurveysAggregatesQuery"></a>
 

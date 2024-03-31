@@ -14,6 +14,7 @@ title: WfmUserNotificationTopicWfmUserNotification
 | **shiftTrade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification.html) |  | [optional] |
 | **timeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification.html) |  | [optional] |
 | **adherenceExplanation** | [**WfmUserNotificationTopicAdherenceExplanationNotification**](WfmUserNotificationTopicAdherenceExplanationNotification.html) |  | [optional] |
+| **alternativeShift** | [**WfmUserNotificationTopicAlternativeShiftNotification**](WfmUserNotificationTopicAlternativeShiftNotification.html) |  | [optional] |
 | **agentNotification** | **Bool** |  | [optional] |
 | **otherNotificationIdsInGroup** | **[String]** |  | [optional] |
 | **markedAsRead** | **Bool** |  | [optional] |

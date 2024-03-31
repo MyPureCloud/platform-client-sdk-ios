@@ -5426,6 +5426,169 @@ open class AnalyticsAPI {
 
     
     
+    /**
+     Get dashboards summary for a user
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsReportingDashboardsUser(userId: String, completion: @escaping ((_ data: DashboardUser?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingDashboardsUserWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<DashboardUser>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get dashboards summary for a user
+     - GET /api/v2/analytics/reporting/dashboards/users/{userId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dashboardCount" : 0,
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "publicDashboardCount" : 6,
+  "id" : "id",
+  "state" : "active"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<DashboardUser> 
+     */
+    open class func getAnalyticsReportingDashboardsUserWithRequestBuilder(userId: String) -> RequestBuilder<DashboardUser> {        
+        var path = "/api/v2/analytics/reporting/dashboards/users/{userId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DashboardUser>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum State_getAnalyticsReportingDashboardsUsers: String { 
+        case active = "active"
+        case inactive = "inactive"
+    }
+    
+    
+    /**
+     Get dashboards summary for users in a org
+     
+     - parameter sortBy: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
+     - parameter state: (query) Only list users of this state (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsReportingDashboardsUsers(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil, completion: @escaping ((_ data: DashboardUserListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingDashboardsUsersWithRequestBuilder(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state)
+        requestBuilder.execute { (response: Response<DashboardUserListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get dashboards summary for users in a org
+     - GET /api/v2/analytics/reporting/dashboards/users
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dashboardCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "publicDashboardCount" : 6,
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "dashboardCount" : 0,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "publicDashboardCount" : 6,
+    "id" : "id",
+    "state" : "active"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter sortBy: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
+     - parameter state: (query) Only list users of this state (optional)
+
+     - returns: RequestBuilder<DashboardUserListing> 
+     */
+    open class func getAnalyticsReportingDashboardsUsersWithRequestBuilder(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil) -> RequestBuilder<DashboardUserListing> {        
+        let path = "/api/v2/analytics/reporting/dashboards/users"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "sortBy": sortBy, 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "id": _id, 
+            "state": state?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<DashboardUserListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -6401,6 +6564,269 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsReportingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get list of dashboards for an user
+     
+     - parameter userId: (path) User ID 
+     - parameter sortBy: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter publicOnly: (query) If true, retrieve only public dashboards (optional)
+     - parameter favoriteOnly: (query) If true, retrieve only favorite dashboards (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsReportingSettingsUserDashboards(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly)
+        requestBuilder.execute { (response: Response<DashboardConfigurationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of dashboards for an user
+     - GET /api/v2/analytics/reporting/settings/users/{userId}/dashboards
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 3,
+  "pageCount" : 2,
+  "pageNumber" : 9,
+  "entities" : [ {
+    "columns" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "rows" : 0,
+    "widgets" : [ {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    }, {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    } ],
+    "publicDashboard" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "restricted" : true,
+    "name" : "name",
+    "layoutType" : "Grid",
+    "id" : "id",
+    "favorite" : true
+  }, {
+    "columns" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "rows" : 0,
+    "widgets" : [ {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    }, {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    } ],
+    "publicDashboard" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "restricted" : true,
+    "name" : "name",
+    "layoutType" : "Grid",
+    "id" : "id",
+    "favorite" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 7,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter sortBy: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter publicOnly: (query) If true, retrieve only public dashboards (optional)
+     - parameter favoriteOnly: (query) If true, retrieve only favorite dashboards (optional)
+
+     - returns: RequestBuilder<DashboardConfigurationListing> 
+     */
+    open class func getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
+        var path = "/api/v2/analytics/reporting/settings/users/{userId}/dashboards"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "sortBy": sortBy, 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "publicOnly": publicOnly, 
+            "favoriteOnly": favoriteOnly
+        ])
+
+        let requestBuilder: RequestBuilder<DashboardConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -14654,6 +15080,48 @@ open class AnalyticsAPI {
     
     
     /**
+     Bulk delete dashboards owned by other user(s)
+     
+     - parameter body: (body) List of userIds 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsReportingDashboardsUsersBulkRemove(body: [String], completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsReportingDashboardsUsersBulkRemoveWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk delete dashboards owned by other user(s)
+     - POST /api/v2/analytics/reporting/dashboards/users/bulk/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) List of userIds 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postAnalyticsReportingDashboardsUsersBulkRemoveWithRequestBuilder(body: [String]) -> RequestBuilder<Void> {        
+        let path = "/api/v2/analytics/reporting/dashboards/users/bulk/remove"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Generate a view export request
      
      - parameter body: (body) ReportingExportJobRequest 
@@ -14881,6 +15349,281 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ReportSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk remove dashboard configurations
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsReportingSettingsDashboardsBulkRemove(body: DashboardConfigurationBulkRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsReportingSettingsDashboardsBulkRemoveWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk remove dashboard configurations
+     - POST /api/v2/analytics/reporting/settings/dashboards/bulk/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postAnalyticsReportingSettingsDashboardsBulkRemoveWithRequestBuilder(body: DashboardConfigurationBulkRequest) -> RequestBuilder<Void> {        
+        let path = "/api/v2/analytics/reporting/settings/dashboards/bulk/remove"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query dashboard configurations
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsReportingSettingsDashboardsQuery(body: DashboardConfigurationQueryRequest, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<DashboardConfigurationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query dashboard configurations
+     - POST /api/v2/analytics/reporting/settings/dashboards/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 3,
+  "pageCount" : 2,
+  "pageNumber" : 9,
+  "entities" : [ {
+    "columns" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "rows" : 0,
+    "widgets" : [ {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    }, {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    } ],
+    "publicDashboard" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "restricted" : true,
+    "name" : "name",
+    "layoutType" : "Grid",
+    "id" : "id",
+    "favorite" : true
+  }, {
+    "columns" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "rows" : 0,
+    "widgets" : [ {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    }, {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    } ],
+    "publicDashboard" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "restricted" : true,
+    "name" : "name",
+    "layoutType" : "Grid",
+    "id" : "id",
+    "favorite" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 7,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<DashboardConfigurationListing> 
+     */
+    open class func postAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(body: DashboardConfigurationQueryRequest) -> RequestBuilder<DashboardConfigurationListing> {        
+        let path = "/api/v2/analytics/reporting/settings/dashboards/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DashboardConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

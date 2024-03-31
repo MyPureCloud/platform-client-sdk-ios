@@ -7661,6 +7661,7 @@ open class RoutingAPI {
         case mobile = "mobile"
         case tollfree = "tollfree"
         case shortcode = "shortcode"
+        case alphanumeric = "alphanumeric"
     }
     
     

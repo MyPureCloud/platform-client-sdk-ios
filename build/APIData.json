@@ -574,6 +574,54 @@
     "return": "AnalyticsDataRetentionResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get analytics data retention setting\nGetAnalyticsDataretentionSettingsRequest.getAnalyticsDataretentionSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsDataretentionSettingsRequest.getAnalyticsDataretentionSettings was successful\")\n        dump(response)\n    }\n}"
   },
+  "getanalyticsreportingdashboardsuser": {
+    "operationId": "getanalyticsreportingdashboardsuser",
+    "functionName": "getAnalyticsReportingDashboardsUser",
+    "signature": "getAnalyticsReportingDashboardsUser(userId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "DashboardUser",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Get dashboards summary for a user\nGetAnalyticsReportingDashboardsUserRequest.getAnalyticsReportingDashboardsUser(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingDashboardsUserRequest.getAnalyticsReportingDashboardsUser was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getanalyticsreportingdashboardsusers": {
+    "operationId": "getanalyticsreportingdashboardsusers",
+    "functionName": "getAnalyticsReportingDashboardsUsers",
+    "signature": "getAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, _id, state)",
+    "parameters": [
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "state",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DashboardUserListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sortBy: String = \"\" // \nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \nlet _id: [String] = [\"\"] // A list of user IDs to fetch by bulk\nlet state: GetAnalyticsReportingDashboardsUsersRequest.State_getAnalyticsReportingDashboardsUsers = GetAnalyticsReportingDashboardsUsersRequest.State_getAnalyticsReportingDashboardsUsers.enummember // Only list users of this state\n\n// Get dashboards summary for users in a org\nGetAnalyticsReportingDashboardsUsersRequest.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingDashboardsUsersRequest.getAnalyticsReportingDashboardsUsers was successful\")\n        dump(response)\n    }\n}"
+  },
   "getanalyticsreportingexports": {
     "operationId": "getanalyticsreportingexports",
     "functionName": "getAnalyticsReportingExports",
@@ -746,6 +794,45 @@
     "signature": "getAnalyticsReportingSettings()",
     "return": "AnalyticsReportingSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get AnalyticsReportingSettings for an organization\nGetAnalyticsReportingSettingsRequest.getAnalyticsReportingSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingSettingsRequest.getAnalyticsReportingSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getanalyticsreportingsettingsuserdashboards": {
+    "operationId": "getanalyticsreportingsettingsuserdashboards",
+    "functionName": "getAnalyticsReportingSettingsUserDashboards",
+    "signature": "getAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "publicOnly",
+        "type": "Bool",
+        "required": "false"
+      },
+      {
+        "name": "favoriteOnly",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "DashboardConfigurationListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet sortBy: String = \"\" // \nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \nlet publicOnly: Bool = true // If true, retrieve only public dashboards\nlet favoriteOnly: Bool = true // If true, retrieve only favorite dashboards\n\n// Get list of dashboards for an user\nGetAnalyticsReportingSettingsUserDashboardsRequest.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingSettingsUserDashboardsRequest.getAnalyticsReportingSettingsUserDashboards was successful\")\n        dump(response)\n    }\n}"
   },
   "getanalyticsreportingtimeperiods": {
     "operationId": "getanalyticsreportingtimeperiods",
@@ -1028,6 +1115,19 @@
     "return": "RateLimitAggregateQueryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RateLimitAggregationQuery = new RateLimitAggregationQuery(...) // query\n\n// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded\nPostAnalyticsRatelimitsAggregatesQueryRequest.postAnalyticsRatelimitsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsRatelimitsAggregatesQueryRequest.postAnalyticsRatelimitsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
   },
+  "postanalyticsreportingdashboardsusersbulkremove": {
+    "operationId": "postanalyticsreportingdashboardsusersbulkremove",
+    "functionName": "postAnalyticsReportingDashboardsUsersBulkRemove",
+    "signature": "postAnalyticsReportingDashboardsUsersBulkRemove(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "[String]",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [String] = [\"\"] // List of userIds\n\n// Bulk delete dashboards owned by other user(s)\nPostAnalyticsReportingDashboardsUsersBulkRemoveRequest.postAnalyticsReportingDashboardsUsersBulkRemove(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostAnalyticsReportingDashboardsUsersBulkRemoveRequest.postAnalyticsReportingDashboardsUsersBulkRemove was successful\")\n    }\n}"
+  },
   "postanalyticsreportingexports": {
     "operationId": "postanalyticsreportingexports",
     "functionName": "postAnalyticsReportingExports",
@@ -1069,6 +1169,33 @@
     ],
     "return": "ReportSchedule",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ReportSchedule = new ReportSchedule(...) // ReportSchedule\n\n// Create a scheduled report job\nPostAnalyticsReportingSchedulesRequest.postAnalyticsReportingSchedules(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsReportingSchedulesRequest.postAnalyticsReportingSchedules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postanalyticsreportingsettingsdashboardsbulkremove": {
+    "operationId": "postanalyticsreportingsettingsdashboardsbulkremove",
+    "functionName": "postAnalyticsReportingSettingsDashboardsBulkRemove",
+    "signature": "postAnalyticsReportingSettingsDashboardsBulkRemove(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "DashboardConfigurationBulkRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DashboardConfigurationBulkRequest = new DashboardConfigurationBulkRequest(...) // \n\n// Bulk remove dashboard configurations\nPostAnalyticsReportingSettingsDashboardsBulkRemoveRequest.postAnalyticsReportingSettingsDashboardsBulkRemove(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostAnalyticsReportingSettingsDashboardsBulkRemoveRequest.postAnalyticsReportingSettingsDashboardsBulkRemove was successful\")\n    }\n}"
+  },
+  "postanalyticsreportingsettingsdashboardsquery": {
+    "operationId": "postanalyticsreportingsettingsdashboardsquery",
+    "functionName": "postAnalyticsReportingSettingsDashboardsQuery",
+    "signature": "postAnalyticsReportingSettingsDashboardsQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "DashboardConfigurationQueryRequest",
+        "required": "true"
+      }
+    ],
+    "return": "DashboardConfigurationListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DashboardConfigurationQueryRequest = new DashboardConfigurationQueryRequest(...) // \n\n// Query dashboard configurations\nPostAnalyticsReportingSettingsDashboardsQueryRequest.postAnalyticsReportingSettingsDashboardsQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsReportingSettingsDashboardsQueryRequest.postAnalyticsReportingSettingsDashboardsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "postanalyticssurveysaggregatesquery": {
     "operationId": "postanalyticssurveysaggregatesquery",
@@ -8020,6 +8147,13 @@
     "signature": "getConversationsMessagingFacebookApp()",
     "return": "FacebookAppCredentials",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Genesys Facebook App Id\nGetConversationsMessagingFacebookAppRequest.getConversationsMessagingFacebookApp() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingFacebookAppRequest.getConversationsMessagingFacebookApp was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagingfacebookpermissions": {
+    "operationId": "getconversationsmessagingfacebookpermissions",
+    "functionName": "getConversationsMessagingFacebookPermissions",
+    "signature": "getConversationsMessagingFacebookPermissions()",
+    "return": "FacebookPermissionEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of Facebook Permissions\nGetConversationsMessagingFacebookPermissionsRequest.getConversationsMessagingFacebookPermissions() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingFacebookPermissionsRequest.getConversationsMessagingFacebookPermissions was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingintegrations": {
     "operationId": "getconversationsmessagingintegrations",
@@ -18090,7 +18224,7 @@
         "required": "true"
       }
     ],
-    "return": "KnowledgeGuestDocument",
+    "return": "KnowledgeGuestDocumentResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet documentId: String = \"\" // Document ID\n\n// Get a knowledge document by ID.\nGetKnowledgeGuestSessionDocumentRequest.getKnowledgeGuestSessionDocument(sessionId: sessionId, documentId: documentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeGuestSessionDocumentRequest.getKnowledgeGuestSessionDocument was successful\")\n        dump(response)\n    }\n}"
   },
   "getknowledgeguestsessiondocuments": {
@@ -21284,6 +21418,30 @@
     ],
     "return": "LearningAssignment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assignmentId: String = \"\" // The ID of Learning Assignment\nlet body: LearningAssignmentReschedule = new LearningAssignmentReschedule(...) // The Learning assignment reschedule model\n\n// Reschedule Learning Assignment\nPatchLearningAssignmentRescheduleRequest.patchLearningAssignmentReschedule(assignmentId: assignmentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchLearningAssignmentRescheduleRequest.patchLearningAssignmentReschedule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchlearningmoduleuserassignments": {
+    "operationId": "patchlearningmoduleuserassignments",
+    "functionName": "patchLearningModuleUserAssignments",
+    "signature": "patchLearningModuleUserAssignments(moduleId, userId, body)",
+    "parameters": [
+      {
+        "name": "moduleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "LearningAssignmentExternalUpdate",
+        "required": "true"
+      }
+    ],
+    "return": "LearningAssignment",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Key identifier for the module\nlet userId: String = \"\" // Key identifier for the user\nlet body: LearningAssignmentExternalUpdate = new LearningAssignmentExternalUpdate(...) // The learning request for updating the assignment\n\n// Update an external assignment for a specific user\nPatchLearningModuleUserAssignmentsRequest.patchLearningModuleUserAssignments(moduleId: moduleId, userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchLearningModuleUserAssignmentsRequest.patchLearningModuleUserAssignments was successful\")\n        dump(response)\n    }\n}"
   },
   "postlearningassessmentsscoring": {
     "operationId": "postlearningassessmentsscoring",
@@ -30031,6 +30189,20 @@
     "return": "Library",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Library = new Library(...) // Library\n\n// Create a response library.\nPostResponsemanagementLibrariesRequest.postResponsemanagementLibraries(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostResponsemanagementLibrariesRequest.postResponsemanagementLibraries was successful\")\n        dump(response)\n    }\n}"
   },
+  "postresponsemanagementlibrariesbulk": {
+    "operationId": "postresponsemanagementlibrariesbulk",
+    "functionName": "postResponsemanagementLibrariesBulk",
+    "signature": "postResponsemanagementLibrariesBulk(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "LibraryBatchRequest",
+        "required": "true"
+      }
+    ],
+    "return": "LibraryEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: LibraryBatchRequest = new LibraryBatchRequest(...) // LibraryIDs (max allowed 50)\n\n// Get response libraries.\nPostResponsemanagementLibrariesBulkRequest.postResponsemanagementLibrariesBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostResponsemanagementLibrariesBulkRequest.postResponsemanagementLibrariesBulk was successful\")\n        dump(response)\n    }\n}"
+  },
   "postresponsemanagementresponseassetssearch": {
     "operationId": "postresponsemanagementresponseassetssearch",
     "functionName": "postResponsemanagementResponseassetsSearch",
@@ -37690,7 +37862,7 @@
       }
     ],
     "return": "ApiUsageQueryResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet executionId: String = \"\" // ID of the search execution\n\n// Get the results of a usage search\nGetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet executionId: String = \"\" // ID of the search execution\n\n// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.\nGetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults was successful\")\n        dump(response)\n    }\n}"
   },
   "postusagequery": {
     "operationId": "postusagequery",
@@ -37718,7 +37890,7 @@
       }
     ],
     "return": "UsageExecutionResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ApiUsageSimpleSearch = new ApiUsageSimpleSearch(...) // SimpleSearch\n\n// Search organization API Usage - \nPostUsageSimplesearchRequest.postUsageSimplesearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsageSimplesearchRequest.postUsageSimplesearch was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ApiUsageSimpleSearch = new ApiUsageSimpleSearch(...) // SimpleSearch\n\n// Search organization API Usage\nPostUsageSimplesearchRequest.postUsageSimplesearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUsageSimplesearchRequest.postUsageSimplesearch was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteuserrecording": {
     "operationId": "deleteuserrecording",

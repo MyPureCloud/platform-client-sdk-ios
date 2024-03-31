@@ -11,6 +11,7 @@ title: ConversationCallbackEventTopicCallbackConversation
 | **name** | **String** |  | [optional] |
 | **participants** | [**[ConversationCallbackEventTopicCallbackMediaParticipant]**](ConversationCallbackEventTopicCallbackMediaParticipant.html) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
+| **address** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

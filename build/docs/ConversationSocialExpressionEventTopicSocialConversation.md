@@ -11,6 +11,7 @@ title: ConversationSocialExpressionEventTopicSocialConversation
 | **name** | **String** |  | [optional] |
 | **participants** | [**[ConversationSocialExpressionEventTopicSocialMediaParticipant]**](ConversationSocialExpressionEventTopicSocialMediaParticipant.html) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
+| **address** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

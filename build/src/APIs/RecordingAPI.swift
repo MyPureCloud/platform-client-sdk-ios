@@ -1022,14 +1022,17 @@ open class RecordingAPI {
       "username" : "username",
       "geolocation" : "{}"
     } ],
+    "mediaSubtype" : "Trunk",
     "exportDate" : "2000-01-23T04:56:07.000+00:00",
     "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
     "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-    "endTime" : "endTime"
+    "endTime" : "endTime",
+    "mediaSubject" : "mediaSubject"
   },
   "mediaType" : "CALL",
   "providerType" : "EDGE",
+  "mediaSubtype" : "Trunk",
   "recoveredTime" : "2000-01-23T04:56:07.000+00:00",
   "fileState" : "ARCHIVED",
   "name" : "name",
@@ -1063,6 +1066,7 @@ open class RecordingAPI {
       "key" : "{}"
     }
   },
+  "mediaSubject" : "mediaSubject",
   "region" : "af-south-1"
 }, statusCode=200}]
      
@@ -2313,11 +2317,13 @@ open class RecordingAPI {
     "username" : "username",
     "geolocation" : "{}"
   } ],
+  "mediaSubtype" : "Trunk",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-  "endTime" : "endTime"
+  "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject"
 }, statusCode=202}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -2593,6 +2599,7 @@ open class RecordingAPI {
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
   "media" : "media",
   "sessionId" : "sessionId",
+  "mediaSubtype" : "Trunk",
   "path" : "path",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
@@ -2602,6 +2609,7 @@ open class RecordingAPI {
   "startTime" : "startTime",
   "id" : "id",
   "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject",
   "remainingRestorationsAllowedForOrg" : 6,
   "deleteDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
@@ -2701,6 +2709,7 @@ open class RecordingAPI {
   "exportedDate" : "2000-01-23T04:56:07.000+00:00",
   "media" : "media",
   "sessionId" : "sessionId",
+  "mediaSubtype" : "Trunk",
   "path" : "path",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
@@ -2710,6 +2719,7 @@ open class RecordingAPI {
   "startTime" : "startTime",
   "id" : "id",
   "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject",
   "remainingRestorationsAllowedForOrg" : 6,
   "deleteDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
@@ -3705,11 +3715,13 @@ open class RecordingAPI {
     "username" : "username",
     "geolocation" : "{}"
   } ],
+  "mediaSubtype" : "Trunk",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-  "endTime" : "endTime"
+  "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -4692,14 +4704,17 @@ open class RecordingAPI {
       "username" : "username",
       "geolocation" : "{}"
     } ],
+    "mediaSubtype" : "Trunk",
     "exportDate" : "2000-01-23T04:56:07.000+00:00",
     "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
     "name" : "name",
     "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-    "endTime" : "endTime"
+    "endTime" : "endTime",
+    "mediaSubject" : "mediaSubject"
   },
   "mediaType" : "CALL",
   "providerType" : "EDGE",
+  "mediaSubtype" : "Trunk",
   "recoveredTime" : "2000-01-23T04:56:07.000+00:00",
   "fileState" : "ARCHIVED",
   "name" : "name",
@@ -4733,6 +4748,7 @@ open class RecordingAPI {
       "key" : "{}"
     }
   },
+  "mediaSubject" : "mediaSubject",
   "region" : "af-south-1"
 }, statusCode=200}]
      
@@ -5754,11 +5770,13 @@ open class RecordingAPI {
     "username" : "username",
     "geolocation" : "{}"
   } ],
+  "mediaSubtype" : "Trunk",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-  "endTime" : "endTime"
+  "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject"
 }, statusCode=200}]
      
      - parameter orphanId: (path) Orphan ID 
@@ -6781,14 +6799,17 @@ open class RecordingAPI {
         "username" : "username",
         "geolocation" : "{}"
       } ],
+      "mediaSubtype" : "Trunk",
       "exportDate" : "2000-01-23T04:56:07.000+00:00",
       "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
       "name" : "name",
       "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-      "endTime" : "endTime"
+      "endTime" : "endTime",
+      "mediaSubject" : "mediaSubject"
     },
     "mediaType" : "CALL",
     "providerType" : "EDGE",
+    "mediaSubtype" : "Trunk",
     "recoveredTime" : "2000-01-23T04:56:07.000+00:00",
     "fileState" : "ARCHIVED",
     "name" : "name",
@@ -6822,6 +6843,7 @@ open class RecordingAPI {
         "key" : "{}"
       }
     },
+    "mediaSubject" : "mediaSubject",
     "region" : "af-south-1"
   }, {
     "sourceOrphaningId" : "sourceOrphaningId",
@@ -7744,14 +7766,17 @@ open class RecordingAPI {
         "username" : "username",
         "geolocation" : "{}"
       } ],
+      "mediaSubtype" : "Trunk",
       "exportDate" : "2000-01-23T04:56:07.000+00:00",
       "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
       "name" : "name",
       "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-      "endTime" : "endTime"
+      "endTime" : "endTime",
+      "mediaSubject" : "mediaSubject"
     },
     "mediaType" : "CALL",
     "providerType" : "EDGE",
+    "mediaSubtype" : "Trunk",
     "recoveredTime" : "2000-01-23T04:56:07.000+00:00",
     "fileState" : "ARCHIVED",
     "name" : "name",
@@ -7785,6 +7810,7 @@ open class RecordingAPI {
         "key" : "{}"
       }
     },
+    "mediaSubject" : "mediaSubject",
     "region" : "af-south-1"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -9309,6 +9335,7 @@ open class RecordingAPI {
     /**
      Retrieves a paged listing of screen recording sessions
      - GET /api/v2/recordings/screensessions
+     - Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -38233,11 +38260,13 @@ open class RecordingAPI {
     "username" : "username",
     "geolocation" : "{}"
   } ],
+  "mediaSubtype" : "Trunk",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-  "endTime" : "endTime"
+  "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject"
 }, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
@@ -39308,11 +39337,13 @@ open class RecordingAPI {
     "username" : "username",
     "geolocation" : "{}"
   } ],
+  "mediaSubtype" : "Trunk",
   "exportDate" : "2000-01-23T04:56:07.000+00:00",
   "restoreExpirationTime" : "2000-01-23T04:56:07.000+00:00",
   "name" : "name",
   "recordingFileRole" : "CUSTOMER_EXPERIENCE",
-  "endTime" : "endTime"
+  "endTime" : "endTime",
+  "mediaSubject" : "mediaSubject"
 }, statusCode=200}]
      
      - parameter orphanId: (path) Orphan ID 

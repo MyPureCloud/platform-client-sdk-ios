@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLearningModulesCoverartCoverArtId**](LearningAPI.html#getLearningModulesCoverartCoverArtId) | Get a specific Learning Module cover art using ID |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
 | [**patchLearningAssignmentReschedule**](LearningAPI.html#patchLearningAssignmentReschedule) | Reschedule Learning Assignment |
+| [**patchLearningModuleUserAssignments**](LearningAPI.html#patchLearningModuleUserAssignments) | Update an external assignment for a specific user |
 | [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
 | [**postLearningAssignmentReassign**](LearningAPI.html#postLearningAssignmentReassign) | Reassign Learning Assignment |
 | [**postLearningAssignmentReset**](LearningAPI.html#postLearningAssignmentReset) | Reset Learning Assignment |
@@ -269,7 +270,7 @@ LearningAPI.getLearningAssignments(moduleId: moduleId, interval: interval, compl
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
 | **userId** | [**[String]**](String.html)| Specifies the list of user IDs to be queried, up to 100 user IDs. | [optional] |
-| **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted"), invalidSchedule ("InvalidSchedule") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -346,7 +347,7 @@ LearningAPI.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, com
 | **maxPercentageScore** | **Float**| The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **sortBy** | **String**| Specifies which field to sort the results by, default sort is by recommendedCompletionDate | [optional]<br />**Values**: recommendedCompletionDate ("RecommendedCompletionDate"), dateModified ("DateModified") |
-| **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the module types to filter by | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External") |
 | **states** | [**[String]**](String.html)| Specifies the assignment states to filter by | [optional]<br />**Values**: assigned ("Assigned"), inProgress ("InProgress"), completed ("Completed"), notCompleted ("NotCompleted"), invalidSchedule ("InvalidSchedule") |
 | **expand** | [**[String]**](String.html)| Specifies the expand option for returning additional information | [optional]<br />**Values**: moduleSummary ("ModuleSummary") |
 {: class="table-striped"}
@@ -627,7 +628,7 @@ LearningAPI.getLearningModules(isArchived: isArchived, types: types, pageSize: p
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **isArchived** | **Bool**| Archive status | [optional] |
-| **types** | [**[String]**](String.html)| Specifies the module types. | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the module types. | [optional]<br />**Values**: informational ("Informational"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External") |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
@@ -861,6 +862,62 @@ LearningAPI.patchLearningAssignmentReschedule(assignmentId: assignmentId, body: 
 | ------------- | ------------- | ------------- | ------------- |
 | **assignmentId** | **String**| The ID of Learning Assignment | |
 | **body** | [**LearningAssignmentReschedule**](LearningAssignmentReschedule.html)| The Learning assignment reschedule model | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignment**](LearningAssignment.html)
+
+<a name="patchLearningModuleUserAssignments"></a>
+
+# **patchLearningModuleUserAssignments**
+
+
+
+> [LearningAssignment](LearningAssignment.html) patchLearningModuleUserAssignments(moduleId, userId, body)
+
+Update an external assignment for a specific user
+
+
+
+Wraps PATCH /api/v2/learning/modules/{moduleId}/users/{userId}/assignments  
+
+Requires ALL permissions: 
+
+* learning:externalAssignment:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // Key identifier for the module
+let userId: String = "" // Key identifier for the user
+let body: LearningAssignmentExternalUpdate = new LearningAssignmentExternalUpdate(...) // The learning request for updating the assignment
+
+// Code example
+LearningAPI.patchLearningModuleUserAssignments(moduleId: moduleId, userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.patchLearningModuleUserAssignments was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moduleId** | **String**| Key identifier for the module | |
+| **userId** | **String**| Key identifier for the user | |
+| **body** | [**LearningAssignmentExternalUpdate**](LearningAssignmentExternalUpdate.html)| The learning request for updating the assignment | |
 {: class="table-striped"}
 
 

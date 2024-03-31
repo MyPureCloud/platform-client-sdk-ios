@@ -1,7 +1,7 @@
 ---
-title: KnowledgeGuestDocument
+title: KnowledgeGuestDocumentResponse
 ---
-## KnowledgeGuestDocument
+## KnowledgeGuestDocumentResponse
 
 ## Properties
 
@@ -20,9 +20,9 @@ title: KnowledgeGuestDocument
 | **createdBy** | [**UserReference**](UserReference.html) | The user who created the document. | [optional] |
 | **modifiedBy** | [**UserReference**](UserReference.html) | The user who modified the document. | [optional] |
 | **documentVersion** | [**AddressableEntityRef**](AddressableEntityRef.html) | The version of the document. | [optional] |
-| **variations** | [**[KnowledgeGuestDocumentVariation]**](KnowledgeGuestDocumentVariation.html) | Variations of the document. | [optional] |
 | **sessionId** | **String** | ID of the guest session. | [optional] |
 | **category** | [**GuestCategoryReference**](GuestCategoryReference.html) | The reference to category associated with the document. | [optional] |
+| **variations** | [**[KnowledgeGuestDocumentVariation]**](KnowledgeGuestDocumentVariation.html) | Variations of the document. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

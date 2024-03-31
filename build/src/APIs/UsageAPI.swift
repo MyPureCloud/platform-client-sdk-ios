@@ -252,7 +252,7 @@ open class UsageAPI {
     
     
     /**
-     Get the results of a usage search
+     Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
      
      - parameter executionId: (path) ID of the search execution 
      - parameter completion: completion handler to receive the data and the error objects
@@ -276,7 +276,7 @@ open class UsageAPI {
     }
 
     /**
-     Get the results of a usage search
+     Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
      - GET /api/v2/usage/simplesearch/{executionId}/results
      - OAuth:
        - type: oauth2
@@ -451,7 +451,7 @@ open class UsageAPI {
     
     
     /**
-     Search organization API Usage - 
+     Search organization API Usage
      
      - parameter body: (body) SimpleSearch 
      - parameter completion: completion handler to receive the data and the error objects
@@ -475,9 +475,9 @@ open class UsageAPI {
     }
 
     /**
-     Search organization API Usage - 
+     Search organization API Usage
      - POST /api/v2/usage/simplesearch
-     - After calling this method, you will then need to poll for the query results based on the returned execution Id
+     - After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

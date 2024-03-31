@@ -11,6 +11,7 @@ title: QueueConversationCobrowseEventTopicCobrowseConversation
 | **name** | **String** |  | [optional] |
 | **participants** | [**[QueueConversationCobrowseEventTopicCobrowseMediaParticipant]**](QueueConversationCobrowseEventTopicCobrowseMediaParticipant.html) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
+| **address** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

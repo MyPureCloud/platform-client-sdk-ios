@@ -1033,6 +1033,84 @@ public class AlertSummaryEntity: Codable {
 
 
 
+public class AlternativeShiftNotification: Codable {
+
+
+
+
+
+    public enum Granularity: String, Codable { 
+        case daily = "Daily"
+        case weekly = "Weekly"
+    }
+
+    public enum NewState: String, Codable { 
+        case canceled = "Canceled"
+        case denied = "Denied"
+        case expired = "Expired"
+        case submitted = "Submitted"
+        case approved = "Approved"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The start date of the schedule with which this trade is associated. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var weekDate: Date?
+    /** The granularity of alternative shifts to be traded */
+    public var granularity: Granularity?
+    /** The new state of the alternative shift trade, null if there was no change */
+    public var newState: NewState?
+    /** The user who initiated the alternative shift trade */
+    public var initiatingUser: UserReference?
+    /** The start date and time of the initiating shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var initiatingShiftDate: Date?
+    /** The user on the receiving this alternative shift trade */
+    public var receivingUser: UserReference?
+    /** The start date and time of the receiving alternative shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var receivingShiftDate: Date?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, weekDate: Date?, granularity: Granularity?, newState: NewState?, initiatingUser: UserReference?, initiatingShiftDate: Date?, receivingUser: UserReference?, receivingShiftDate: Date?, selfUri: String?) {
+        self._id = _id
+        self.weekDate = weekDate
+        self.granularity = granularity
+        self.newState = newState
+        self.initiatingUser = initiatingUser
+        self.initiatingShiftDate = initiatingShiftDate
+        self.receivingUser = receivingUser
+        self.receivingShiftDate = receivingShiftDate
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case weekDate
+        case granularity
+        case newState
+        case initiatingUser
+        case initiatingShiftDate
+        case receivingUser
+        case receivingShiftDate
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class AmazonLexRequest: Codable {
 
 
@@ -2156,7 +2234,9 @@ public class ApprovalNamespace: Codable {
         case webMessaging = "web.messaging"
         case webchat = "webchat"
         case webhooks = "webhooks"
+        case workforceManagementForecast = "workforce.management.forecast"
         case workforceManagement = "workforce.management"
+        case system = "system"
     }
 
     public enum Status: String, Codable { 
@@ -2178,6 +2258,7 @@ public class ApprovalNamespace: Codable {
     public enum ModelType: String, Codable { 
         case primary = "Primary"
         case secondary = "Secondary"
+        case system = "System"
     }
 
     /** The namespace of the associated approvers. */
@@ -7825,6 +7906,7 @@ public class ConversationCallEventTopicCallMediaParticipant: Codable {
         case uploading = "uploading"
         case transmitting = "transmitting"
         case scheduled = "scheduled"
+        case parked = "parked"
         case _none = "none"
     }
 
@@ -7840,6 +7922,7 @@ public class ConversationCallEventTopicCallMediaParticipant: Codable {
         case uploading = "uploading"
         case transmitting = "transmitting"
         case scheduled = "scheduled"
+        case parked = "parked"
         case _none = "none"
     }
 
@@ -8676,16 +8759,20 @@ public class ConversationEmailEventTopicEmailConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var participants: [ConversationEmailEventTopicEmailMediaParticipant]?
     public var otherMediaUris: [String]?
+    public var address: String?
 
-    public init(_id: String?, name: String?, participants: [ConversationEmailEventTopicEmailMediaParticipant]?, otherMediaUris: [String]?) {
+    public init(_id: String?, name: String?, participants: [ConversationEmailEventTopicEmailMediaParticipant]?, otherMediaUris: [String]?, address: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
+        self.address = address
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -8693,6 +8780,7 @@ public class ConversationEmailEventTopicEmailConversation: Codable {
         case name
         case participants
         case otherMediaUris
+        case address
     }
 
 
@@ -10218,16 +10306,20 @@ public class ConversationVideoEventTopicVideoConversation: Codable {
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var participants: [ConversationVideoEventTopicVideoMediaParticipant]?
     public var otherMediaUris: [String]?
+    public var address: String?
 
-    public init(_id: String?, name: String?, participants: [ConversationVideoEventTopicVideoMediaParticipant]?, otherMediaUris: [String]?) {
+    public init(_id: String?, name: String?, participants: [ConversationVideoEventTopicVideoMediaParticipant]?, otherMediaUris: [String]?, address: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
+        self.address = address
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -10235,6 +10327,7 @@ public class ConversationVideoEventTopicVideoConversation: Codable {
         case name
         case participants
         case otherMediaUris
+        case address
     }
 
 
@@ -11026,6 +11119,41 @@ public class DIDPoolEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class DashboardConfigurationQueryRequest: Codable {
+
+
+
+
+
+
+
+    public enum SortBy: String, Codable { 
+        case asc = "Asc"
+        case desc = "Desc"
+    }
+
+    /** The user supplied dashboard configuration ids */
+    public var dashboardConfigurationIds: [String]?
+    /** The page number of the queried response */
+    public var pageNumber: Int?
+    /** The number of entities to return of the queried response. The max is 25 */
+    public var pageSize: Int?
+    /** The order in which response will be sorted */
+    public var sortBy: SortBy?
+
+    public init(dashboardConfigurationIds: [String]?, pageNumber: Int?, pageSize: Int?, sortBy: SortBy?) {
+        self.dashboardConfigurationIds = dashboardConfigurationIds
+        self.pageNumber = pageNumber
+        self.pageSize = pageSize
+        self.sortBy = sortBy
     }
 
 
@@ -11859,6 +11987,8 @@ public class DialerPreview: Codable {
 
 
 
+
+
     public var _id: String?
     /** The contact associated with this preview data pop */
     public var contactId: String?
@@ -11868,13 +11998,16 @@ public class DialerPreview: Codable {
     public var campaignId: String?
     /** The phone number columns associated with this campaign */
     public var phoneNumberColumns: [PhoneNumberColumn]?
+    /** Whether or not to auto answer the callback */
+    public var callbackAutoAnswer: Bool?
 
-    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [PhoneNumberColumn]?) {
+    public init(_id: String?, contactId: String?, contactListId: String?, campaignId: String?, phoneNumberColumns: [PhoneNumberColumn]?, callbackAutoAnswer: Bool?) {
         self._id = _id
         self.contactId = contactId
         self.contactListId = contactListId
         self.campaignId = campaignId
         self.phoneNumberColumns = phoneNumberColumns
+        self.callbackAutoAnswer = callbackAutoAnswer
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -11883,6 +12016,7 @@ public class DialerPreview: Codable {
         case contactListId
         case campaignId
         case phoneNumberColumns
+        case callbackAutoAnswer
     }
 
 
@@ -12954,6 +13088,45 @@ public class DocumentBodyVideoProperties: Codable {
 
 
 
+public class DocumentBodyWithHighlight: Codable {
+
+
+
+    /** The list of building blocks for the document body. */
+    public var blocks: [DocumentBodyBlockWithHighlight]?
+
+    public init(blocks: [DocumentBodyBlockWithHighlight]?) {
+        self.blocks = blocks
+    }
+
+
+}
+
+
+
+
+public class DocumentContentHighlightIndex: Codable {
+
+
+
+
+
+    /** Highlight text start index. */
+    public var startIndex: Int?
+    /** Highlight text end index. */
+    public var endIndex: Int?
+
+    public init(startIndex: Int?, endIndex: Int?) {
+        self.startIndex = startIndex
+        self.endIndex = endIndex
+    }
+
+
+}
+
+
+
+
 public class DocumentFaq: Codable {
 
 
@@ -13092,6 +13265,81 @@ public class DocumentTextProperties: Codable {
         self.fontSize = fontSize
         self.textColor = textColor
         self.backgroundColor = backgroundColor
+    }
+
+
+}
+
+
+
+
+public class DocumentVariationAnswer: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the variation. */
+    public var _id: String?
+    /** The creation date-time for the document variation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The last modification date-time for the document variation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The version of the document. */
+    public var documentVersion: AddressableEntityRef?
+    /** The context values associated with the variation. */
+    public var contexts: [DocumentVariationContext]?
+    /** The reference to document to which the variation is associated. */
+    public var document: KnowledgeDocumentReference?
+    /** The priority of the variation. */
+    public var priority: Int?
+    /** The name of the variation. */
+    public var name: String?
+    /** The content for the variation. */
+    public var body: DocumentBodyWithHighlight?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, dateCreated: Date?, dateModified: Date?, documentVersion: AddressableEntityRef?, contexts: [DocumentVariationContext]?, document: KnowledgeDocumentReference?, priority: Int?, name: String?, body: DocumentBodyWithHighlight?, selfUri: String?) {
+        self._id = _id
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.documentVersion = documentVersion
+        self.contexts = contexts
+        self.document = document
+        self.priority = priority
+        self.name = name
+        self.body = body
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case dateCreated
+        case dateModified
+        case documentVersion
+        case contexts
+        case document
+        case priority
+        case name
+        case body
+        case selfUri
     }
 
 
@@ -15209,6 +15457,22 @@ public class FacebookIntegrationUpdateRequest: Codable {
 
 
 
+public class FacebookPermissionEntityListing: Codable {
+
+
+
+    public var entities: [FacebookPermission]?
+
+    public init(entities: [FacebookPermission]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
 public class FacetTerm: Codable {
 
 
@@ -15504,18 +15768,13 @@ public class FileUploadSettings: Codable {
 
 
 
-
-
     /** whether or not attachments is enabled */
     public var enableAttachments: Bool?
-    /** whether or not supported content profile is enabled */
-    public var useSupportedContentProfile: Bool?
     /** The list of supported file upload modes */
     public var modes: [FileUploadMode]?
 
-    public init(enableAttachments: Bool?, useSupportedContentProfile: Bool?, modes: [FileUploadMode]?) {
+    public init(enableAttachments: Bool?, modes: [FileUploadMode]?) {
         self.enableAttachments = enableAttachments
-        self.useSupportedContentProfile = useSupportedContentProfile
         self.modes = modes
     }
 
@@ -15625,6 +15884,38 @@ public class FlowDivisionView: Codable {
 
 
 
+public class FlowHealth: Codable {
+
+
+
+
+
+
+
+
+
+    /** Info about given flow version. */
+    public var flowVersionInfo: FlowHealthVersionInfo?
+    /** Each language's status about its health computation. */
+    public var languageInfo: [String:LocaleInfo]?
+    /** Health metrics information for the intents. */
+    public var intents: [FlowHealthIntentInfo]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(flowVersionInfo: FlowHealthVersionInfo?, languageInfo: [String:LocaleInfo]?, intents: [FlowHealthIntentInfo]?, selfUri: String?) {
+        self.flowVersionInfo = flowVersionInfo
+        self.languageInfo = languageInfo
+        self.intents = intents
+        self.selfUri = selfUri
+    }
+
+
+}
+
+
+
+
 public class FlowExecutionAggregateQueryPredicate: Codable {
 
     public enum ModelType: String, Codable { 
@@ -15715,38 +16006,6 @@ public class FlowExecutionLaunchResponse: Codable {
         case name
         case flowVersion
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class FlowHealth: Codable {
-
-
-
-
-
-
-
-
-
-    /** Info about given flow version. */
-    public var flowVersionInfo: FlowHealthVersionInfo?
-    /** Each language's status about its health computation. */
-    public var languageInfo: [String:LocaleInfo]?
-    /** Health metrics information for the intents. */
-    public var intents: [FlowHealthIntentInfo]?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(flowVersionInfo: FlowHealthVersionInfo?, languageInfo: [String:LocaleInfo]?, intents: [FlowHealthIntentInfo]?, selfUri: String?) {
-        self.flowVersionInfo = flowVersionInfo
-        self.languageInfo = languageInfo
-        self.intents = intents
-        self.selfUri = selfUri
     }
 
 
@@ -18254,6 +18513,22 @@ public class InitiatingAction: Codable {
 
 
 
+public class Intent: Codable {
+
+
+
+    public var name: String?
+
+    public init(name: String?) {
+        self.name = name
+    }
+
+
+}
+
+
+
+
 public class InsightsAgents: Codable {
 
 
@@ -18647,22 +18922,6 @@ public class Integration: Codable {
         case reportedState
         case attributes
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class Intent: Codable {
-
-
-
-    public var name: String?
-
-    public init(name: String?) {
-        self.name = name
     }
 
 
@@ -20114,9 +20373,9 @@ public class KnowledgeDocumentGuestSearchResult: Codable {
     /** The confidence associated with a document with respect to a search query. */
     public var confidence: Double?
     /** Document that matched the query. */
-    public var document: KnowledgeGuestDocument?
+    public var document: KnowledgeGuestSearchDocumentResponse?
 
-    public init(confidence: Double?, document: KnowledgeGuestDocument?) {
+    public init(confidence: Double?, document: KnowledgeGuestSearchDocumentResponse?) {
         self.confidence = confidence
         self.document = document
     }
@@ -20203,14 +20462,14 @@ public class KnowledgeDocumentResponse: Codable {
     public var labels: [LabelResponse]?
     /** Knowledge base to which the document belongs to. */
     public var knowledgeBase: KnowledgeBaseReference?
-    /** Variations of the document. */
-    public var variations: [DocumentVariation]?
     /** The reference to external id associated with the document. */
     public var externalId: String?
+    /** Variations of the document. */
+    public var variations: [DocumentVariation]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, variations: [DocumentVariation]?, externalId: String?, selfUri: String?) {
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, externalId: String?, variations: [DocumentVariation]?, selfUri: String?) {
         self._id = _id
         self.title = title
         self.visible = visible
@@ -20227,8 +20486,8 @@ public class KnowledgeDocumentResponse: Codable {
         self.category = category
         self.labels = labels
         self.knowledgeBase = knowledgeBase
-        self.variations = variations
         self.externalId = externalId
+        self.variations = variations
         self.selfUri = selfUri
     }
 
@@ -20249,8 +20508,8 @@ public class KnowledgeDocumentResponse: Codable {
         case category
         case labels
         case knowledgeBase
-        case variations
         case externalId
+        case variations
         case selfUri
     }
 
@@ -20297,9 +20556,9 @@ public class KnowledgeDocumentSearchResult: Codable {
     /** The confidence associated with a document with respect to a search query. */
     public var confidence: Double?
     /** Document that matched the query. */
-    public var document: KnowledgeDocumentResponse?
+    public var document: KnowledgeSearchDocumentResponse?
 
-    public init(confidence: Double?, document: KnowledgeDocumentResponse?) {
+    public init(confidence: Double?, document: KnowledgeSearchDocumentResponse?) {
         self.confidence = confidence
         self.document = document
     }
@@ -20395,6 +20654,127 @@ public class KnowledgeDocumentVersionListing: Codable {
 
 
 
+public class KnowledgeGuestDocumentResponse: Codable {
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case draft = "Draft"
+        case published = "Published"
+        case archived = "Archived"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** Document title, having a limit of 500 words. */
+    public var title: String?
+    /** Indicates if the knowledge document should be included in search results. */
+    public var visible: Bool?
+    /** List of alternate phrases related to the title which improves search results. */
+    public var alternatives: [KnowledgeDocumentAlternative]?
+    /** State of the document. */
+    public var state: State?
+    /** Document creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** Document import date-time, or null if was not imported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateImported: Date?
+    /** The last published version number of the document. */
+    public var lastPublishedVersionNumber: Int?
+    /** The date on which the document was last published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var datePublished: Date?
+    /** The user who created the document. */
+    public var createdBy: UserReference?
+    /** The user who modified the document. */
+    public var modifiedBy: UserReference?
+    /** The version of the document. */
+    public var documentVersion: AddressableEntityRef?
+    /** ID of the guest session. */
+    public var sessionId: String?
+    /** The reference to category associated with the document. */
+    public var category: GuestCategoryReference?
+    /** Variations of the document. */
+    public var variations: [KnowledgeGuestDocumentVariation]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, sessionId: String?, category: GuestCategoryReference?, variations: [KnowledgeGuestDocumentVariation]?, selfUri: String?) {
+        self._id = _id
+        self.title = title
+        self.visible = visible
+        self.alternatives = alternatives
+        self.state = state
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.dateImported = dateImported
+        self.lastPublishedVersionNumber = lastPublishedVersionNumber
+        self.datePublished = datePublished
+        self.createdBy = createdBy
+        self.modifiedBy = modifiedBy
+        self.documentVersion = documentVersion
+        self.sessionId = sessionId
+        self.category = category
+        self.variations = variations
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case title
+        case visible
+        case alternatives
+        case state
+        case dateCreated
+        case dateModified
+        case dateImported
+        case lastPublishedVersionNumber
+        case datePublished
+        case createdBy
+        case modifiedBy
+        case documentVersion
+        case sessionId
+        case category
+        case variations
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class KnowledgeGuestDocumentResponseListing: Codable {
 
 
@@ -20405,12 +20785,12 @@ public class KnowledgeGuestDocumentResponseListing: Codable {
 
 
 
-    public var entities: [KnowledgeGuestDocument]?
+    public var entities: [KnowledgeGuestDocumentResponse]?
     public var nextUri: String?
     public var selfUri: String?
     public var previousUri: String?
 
-    public init(entities: [KnowledgeGuestDocument]?, nextUri: String?, selfUri: String?, previousUri: String?) {
+    public init(entities: [KnowledgeGuestDocumentResponse]?, nextUri: String?, selfUri: String?, previousUri: String?) {
         self.entities = entities
         self.nextUri = nextUri
         self.selfUri = selfUri
@@ -20972,6 +21352,40 @@ public class LearningAssignmentCreate: Codable {
         self.userId = userId
         self.recommendedCompletionDate = recommendedCompletionDate
         self.lengthInMinutes = lengthInMinutes
+    }
+
+
+}
+
+
+
+
+public class LearningAssignmentExternalUpdate: Codable {
+
+    public enum State: String, Codable { 
+        case assigned = "Assigned"
+        case inProgress = "InProgress"
+        case completed = "Completed"
+        case deleted = "Deleted"
+        case notCompleted = "NotCompleted"
+        case invalidSchedule = "InvalidSchedule"
+    }
+
+
+
+
+
+    /** The Learning Assignment state */
+    public var state: State?
+    /** The score */
+    public var percentageScore: Float?
+    /** Was the assignment marked as passed */
+    public var isPassed: Bool?
+
+    public init(state: State?, percentageScore: Float?, isPassed: Bool?) {
+        self.state = state
+        self.percentageScore = percentageScore
+        self.isPassed = isPassed
     }
 
 
@@ -21602,7 +22016,9 @@ public class Limit: Codable {
         case webMessaging = "web.messaging"
         case webchat = "webchat"
         case webhooks = "webhooks"
+        case workforceManagementForecast = "workforce.management.forecast"
         case workforceManagement = "workforce.management"
+        case system = "system"
     }
 
 
@@ -22756,6 +23172,29 @@ public class MessagingSettingPatchRequest: Codable {
 
 
 
+/** The apps embedded in the messenger */
+
+public class MessengerApps: Codable {
+
+
+
+
+
+    /** The conversation settings that handles chats within the messenger */
+    public var conversations: ConversationAppSettings?
+    /** The knowledge base config for messenger */
+    public var knowledge: Knowledge?
+
+    public init(conversations: ConversationAppSettings?, knowledge: Knowledge?) {
+        self.conversations = conversations
+        self.knowledge = knowledge
+    }
+
+
+}
+
+
+
 /** Messaging Setting for messaging platform integrations */
 
 public class MessagingSettingReference: Codable {
@@ -22933,29 +23372,6 @@ public class MessagingSticker: Codable {
         case providerVersion
         case uriLocation
         case selfUri
-    }
-
-
-}
-
-
-
-/** The apps embedded in the messenger */
-
-public class MessengerApps: Codable {
-
-
-
-
-
-    /** The conversation settings that handles chats within the messenger */
-    public var conversations: ConversationAppSettings?
-    /** The knowledge base config for messenger */
-    public var knowledge: Knowledge?
-
-    public init(conversations: ConversationAppSettings?, knowledge: Knowledge?) {
-        self.conversations = conversations
-        self.knowledge = knowledge
     }
 
 
@@ -24223,6 +24639,15 @@ public class OrphanRecording: Codable {
         case screen = "SCREEN"
     }
 
+    public enum MediaSubtype: String, Codable { 
+        case trunk = "Trunk"
+        case station = "Station"
+        case consult = "Consult"
+        case screen = "Screen"
+    }
+
+
+
     public enum FileState: String, Codable { 
         case archived = "ARCHIVED"
         case available = "AVAILABLE"
@@ -24280,6 +24705,8 @@ public class OrphanRecording: Codable {
     public var providerType: ProviderType?
     public var mediaSizeBytes: Int64?
     public var mediaType: MediaType?
+    public var mediaSubtype: MediaSubtype?
+    public var mediaSubject: String?
     public var fileState: FileState?
     public var providerEndpoint: Endpoint?
     public var recording: Recording?
@@ -24291,7 +24718,7 @@ public class OrphanRecording: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, createdTime: Date?, recoveredTime: Date?, providerType: ProviderType?, mediaSizeBytes: Int64?, mediaType: MediaType?, fileState: FileState?, providerEndpoint: Endpoint?, recording: Recording?, orphanStatus: OrphanStatus?, sourceOrphaningId: String?, region: Region?, selfUri: String?) {
+    public init(_id: String?, name: String?, createdTime: Date?, recoveredTime: Date?, providerType: ProviderType?, mediaSizeBytes: Int64?, mediaType: MediaType?, mediaSubtype: MediaSubtype?, mediaSubject: String?, fileState: FileState?, providerEndpoint: Endpoint?, recording: Recording?, orphanStatus: OrphanStatus?, sourceOrphaningId: String?, region: Region?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.createdTime = createdTime
@@ -24299,6 +24726,8 @@ public class OrphanRecording: Codable {
         self.providerType = providerType
         self.mediaSizeBytes = mediaSizeBytes
         self.mediaType = mediaType
+        self.mediaSubtype = mediaSubtype
+        self.mediaSubject = mediaSubject
         self.fileState = fileState
         self.providerEndpoint = providerEndpoint
         self.recording = recording
@@ -24316,6 +24745,8 @@ public class OrphanRecording: Codable {
         case providerType
         case mediaSizeBytes
         case mediaType
+        case mediaSubtype
+        case mediaSubject
         case fileState
         case providerEndpoint
         case recording
@@ -26438,6 +26869,7 @@ public class QueueConversationChatEventTopicChatMediaParticipant: Codable {
         case uploading = "uploading"
         case transmitting = "transmitting"
         case scheduled = "scheduled"
+        case parked = "parked"
         case _none = "none"
     }
 
@@ -26453,6 +26885,7 @@ public class QueueConversationChatEventTopicChatMediaParticipant: Codable {
         case uploading = "uploading"
         case transmitting = "transmitting"
         case scheduled = "scheduled"
+        case parked = "parked"
         case _none = "none"
     }
 
@@ -27855,6 +28288,7 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         case uploading = "uploading"
         case transmitting = "transmitting"
         case scheduled = "scheduled"
+        case parked = "parked"
         case _none = "none"
     }
 
@@ -27870,6 +28304,7 @@ public class QueueConversationMessageEventTopicMessageMediaParticipant: Codable 
         case uploading = "uploading"
         case transmitting = "transmitting"
         case scheduled = "scheduled"
+        case parked = "parked"
         case _none = "none"
     }
 
@@ -28218,16 +28653,20 @@ public class QueueConversationScreenShareEventTopicScreenShareConversation: Coda
 
 
 
+
+
     public var _id: String?
     public var name: String?
     public var participants: [QueueConversationScreenShareEventTopicScreenShareMediaParticipant]?
     public var otherMediaUris: [String]?
+    public var address: String?
 
-    public init(_id: String?, name: String?, participants: [QueueConversationScreenShareEventTopicScreenShareMediaParticipant]?, otherMediaUris: [String]?) {
+    public init(_id: String?, name: String?, participants: [QueueConversationScreenShareEventTopicScreenShareMediaParticipant]?, otherMediaUris: [String]?, address: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
+        self.address = address
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -28235,6 +28674,7 @@ public class QueueConversationScreenShareEventTopicScreenShareConversation: Coda
         case name
         case participants
         case otherMediaUris
+        case address
     }
 
 
@@ -30324,6 +30764,15 @@ public class RecordingMetadata: Codable {
 
 
 
+    public enum MediaSubtype: String, Codable { 
+        case trunk = "Trunk"
+        case station = "Station"
+        case consult = "Consult"
+        case screen = "Screen"
+    }
+
+
+
 
 
     public enum FileState: String, Codable { 
@@ -30368,6 +30817,10 @@ public class RecordingMetadata: Codable {
     public var endTime: String?
     /** The type of media that the recording is. At the moment that could be audio, chat, email, or message. */
     public var media: String?
+    /** The recording media subtype. */
+    public var mediaSubtype: MediaSubtype?
+    /** The recording media subject. */
+    public var mediaSubject: String?
     /** Annotations that belong to the recording. Populated when recording filestate is AVAILABLE. */
     public var annotations: [Annotation]?
     /** Represents the current file state for a recording. Examples: Uploading, Archived, etc */
@@ -30393,7 +30846,7 @@ public class RecordingMetadata: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, annotations: [Annotation]?, fileState: FileState?, restoreExpirationTime: Date?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, conversationId: String?, path: String?, startTime: String?, endTime: String?, media: String?, mediaSubtype: MediaSubtype?, mediaSubject: String?, annotations: [Annotation]?, fileState: FileState?, restoreExpirationTime: Date?, archiveDate: Date?, archiveMedium: ArchiveMedium?, deleteDate: Date?, exportDate: Date?, exportedDate: Date?, maxAllowedRestorationsForOrg: Int?, remainingRestorationsAllowedForOrg: Int?, sessionId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.conversationId = conversationId
@@ -30401,6 +30854,8 @@ public class RecordingMetadata: Codable {
         self.startTime = startTime
         self.endTime = endTime
         self.media = media
+        self.mediaSubtype = mediaSubtype
+        self.mediaSubject = mediaSubject
         self.annotations = annotations
         self.fileState = fileState
         self.restoreExpirationTime = restoreExpirationTime
@@ -30423,6 +30878,8 @@ public class RecordingMetadata: Codable {
         case startTime
         case endTime
         case media
+        case mediaSubtype
+        case mediaSubject
         case annotations
         case fileState
         case restoreExpirationTime
@@ -33340,7 +33797,9 @@ public class StatusChange: Codable {
         case webMessaging = "web.messaging"
         case webchat = "webchat"
         case webhooks = "webhooks"
+        case workforceManagementForecast = "workforce.management.forecast"
         case workforceManagement = "workforce.management"
+        case system = "system"
     }
 
 
@@ -35706,23 +36165,6 @@ public class TrustUserDetails: Codable {
 
 
 
-public class TrusteeAuthorization: Codable {
-
-
-
-    /** Permissions that the trustee user has in the trustor organization */
-    public var permissions: [String]?
-
-    public init(permissions: [String]?) {
-        self.permissions = permissions
-    }
-
-
-}
-
-
-
-
 public class Trustor: Codable {
 
 
@@ -35772,6 +36214,23 @@ public class Trustor: Codable {
         case organization
         case authorization
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class TrusteeAuthorization: Codable {
+
+
+
+    /** Permissions that the trustee user has in the trustor organization */
+    public var permissions: [String]?
+
+    public init(permissions: [String]?) {
+        self.permissions = permissions
     }
 
 
@@ -37501,6 +37960,32 @@ public class V2FlowExecutionDataFlowidTopicProcessAutomation: Codable {
 
 
 
+public class V2MobiusRulesTopicAlertingAddressableEntityRef: Codable {
+
+
+
+
+
+    /** The ID of the resource */
+    public var _id: String?
+    public var displayName: String?
+
+    public init(_id: String?, displayName: String?) {
+        self._id = _id
+        self.displayName = displayName
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case displayName
+    }
+
+
+}
+
+
+
+
 public class V2MobiusRulesTopicRule: Codable {
 
 
@@ -37535,6 +38020,8 @@ public class V2MobiusRulesTopicRule: Codable {
 
 
 
+
+
     public var _id: UUID?
     public var userId: UUID?
     public var name: String?
@@ -37546,8 +38033,9 @@ public class V2MobiusRulesTopicRule: Codable {
     public var action: Action?
     public var dateCreated: Date?
     public var sendExitingAlarmNotification: Bool?
+    public var waitBetweenNotificationMs: Int?
 
-    public init(_id: UUID?, userId: UUID?, name: String?, type: ModelType?, notifications: [V2MobiusRulesTopicAlertNotification]?, conditions: V2MobiusRulesTopicCondition?, enabled: Bool?, inAlarm: Bool?, action: Action?, dateCreated: Date?, sendExitingAlarmNotification: Bool?) {
+    public init(_id: UUID?, userId: UUID?, name: String?, type: ModelType?, notifications: [V2MobiusRulesTopicAlertNotification]?, conditions: V2MobiusRulesTopicCondition?, enabled: Bool?, inAlarm: Bool?, action: Action?, dateCreated: Date?, sendExitingAlarmNotification: Bool?, waitBetweenNotificationMs: Int?) {
         self._id = _id
         self.userId = userId
         self.name = name
@@ -37559,6 +38047,7 @@ public class V2MobiusRulesTopicRule: Codable {
         self.action = action
         self.dateCreated = dateCreated
         self.sendExitingAlarmNotification = sendExitingAlarmNotification
+        self.waitBetweenNotificationMs = waitBetweenNotificationMs
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -37573,6 +38062,7 @@ public class V2MobiusRulesTopicRule: Codable {
         case action
         case dateCreated
         case sendExitingAlarmNotification
+        case waitBetweenNotificationMs
     }
 
 
@@ -37843,6 +38333,37 @@ public class VoicemailsSearchResponse: Codable {
         self.nextPage = nextPage
         self.types = types
         self.results = results
+    }
+
+
+}
+
+
+
+
+public class Warning: Codable {
+
+
+
+    public enum RangeType: String, Codable { 
+        case over = "OVER"
+        case under = "UNDER"
+        case between = "BETWEEN"
+    }
+
+
+
+    /** The value for the warning configuration. */
+    public var value: Int?
+    /** The range type for the warning configuration. */
+    public var rangeType: RangeType?
+    /** The color for the warning configuration in RGB hexadecimal format (for example \"#FF0000\" represents red). */
+    public var color: String?
+
+    public init(value: Int?, rangeType: RangeType?, color: String?) {
+        self.value = value
+        self.rangeType = rangeType
+        self.color = color
     }
 
 

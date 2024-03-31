@@ -1802,6 +1802,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementBusinessunitManagementunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case agentWorkPlanBid = "AgentWorkPlanBid"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
@@ -4599,6 +4600,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementBusinessunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case agentWorkPlanBid = "AgentWorkPlanBid"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
@@ -8589,6 +8591,7 @@ open class WorkforceManagementAPI {
     public enum Feature_getWorkforcemanagementManagementunits: String { 
         case agentSchedule = "AgentSchedule"
         case agentTimeOffRequest = "AgentTimeOffRequest"
+        case agentWorkPlanBid = "AgentWorkPlanBid"
         case alternativeShift = "AlternativeShift"
         case coaching = "Coaching"
         case learning = "Learning"
@@ -8847,6 +8850,7 @@ open class WorkforceManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "adherenceExplanation" : "{}",
+    "alternativeShift" : "{}",
     "markedAsRead" : true,
     "mutableGroupId" : "mutableGroupId",
     "otherNotificationIdsInGroup" : [ "otherNotificationIdsInGroup", "otherNotificationIdsInGroup" ],
@@ -8858,6 +8862,7 @@ open class WorkforceManagementAPI {
     "agentNotification" : true
   }, {
     "adherenceExplanation" : "{}",
+    "alternativeShift" : "{}",
     "markedAsRead" : true,
     "mutableGroupId" : "mutableGroupId",
     "otherNotificationIdsInGroup" : [ "otherNotificationIdsInGroup", "otherNotificationIdsInGroup" ],

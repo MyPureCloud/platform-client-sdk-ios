@@ -11,6 +11,7 @@ title: ConversationEmailEventTopicEmailConversation
 | **name** | **String** |  | [optional] |
 | **participants** | [**[ConversationEmailEventTopicEmailMediaParticipant]**](ConversationEmailEventTopicEmailMediaParticipant.html) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
+| **address** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

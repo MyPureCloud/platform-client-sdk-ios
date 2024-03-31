@@ -9,6 +9,7 @@ title: V2MobiusRulesTopicAlertNotification
 |------------ | ------------- | ------------- | -------------|
 | **recipient** | **String** |  | [optional] |
 | **notificationTypes** | **[String]** |  | [optional] |
+| **locale** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

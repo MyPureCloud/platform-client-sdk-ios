@@ -778,6 +778,83 @@ open class ResponseManagementAPI {
 
     
     
+    /**
+     Get response libraries.
+     
+     - parameter body: (body) LibraryIDs (max allowed 50) 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postResponsemanagementLibrariesBulk(body: LibraryBatchRequest, completion: @escaping ((_ data: LibraryEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postResponsemanagementLibrariesBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<LibraryEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get response libraries.
+     - POST /api/v2/responsemanagement/libraries/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 5,
+  "pageCount" : 5,
+  "pageNumber" : 1,
+  "entities" : [ {
+    "responseType" : "MessagingTemplate",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "responseType" : "MessagingTemplate",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "version" : 0
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 6,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter body: (body) LibraryIDs (max allowed 50) 
+
+     - returns: RequestBuilder<LibraryEntityListing> 
+     */
+    open class func postResponsemanagementLibrariesBulkWithRequestBuilder(body: LibraryBatchRequest) -> RequestBuilder<LibraryEntityListing> {        
+        let path = "/api/v2/responsemanagement/libraries/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LibraryEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expand_postResponsemanagementResponseassetsSearch: String { 

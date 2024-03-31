@@ -18,6 +18,7 @@ title: V2MobiusRulesTopicRule
 | **action** | **String** |  | [optional] |
 | **dateCreated** | [**Date**](Date.html) |  | [optional] |
 | **sendExitingAlarmNotification** | **Bool** |  | [optional] |
+| **waitBetweenNotificationMs** | **Int** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -7,7 +7,7 @@ title: KnowledgeGuestDocumentResponseListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[KnowledgeGuestDocument]**](KnowledgeGuestDocument.html) |  | [optional] |
+| **entities** | [**[KnowledgeGuestDocumentResponse]**](KnowledgeGuestDocumentResponse.html) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |

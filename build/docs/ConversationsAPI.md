@@ -80,6 +80,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagesCachedmedia**](ConversationsAPI.html#getConversationsMessagesCachedmedia) | Get a list of cached media items |
 | [**getConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI.html#getConversationsMessagesCachedmediaCachedMediaItemId) | Get a cached media item |
 | [**getConversationsMessagingFacebookApp**](ConversationsAPI.html#getConversationsMessagingFacebookApp) | Get Genesys Facebook App Id |
+| [**getConversationsMessagingFacebookPermissions**](ConversationsAPI.html#getConversationsMessagingFacebookPermissions) | Get a list of Facebook Permissions |
 | [**getConversationsMessagingIntegrations**](ConversationsAPI.html#getConversationsMessagingIntegrations) | Get a list of Integrations |
 | [**getConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebook) | Get a list of Facebook Integrations |
 | [**getConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebookIntegrationId) | Get a Facebook messaging integration |
@@ -4082,6 +4083,56 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**FacebookAppCredentials**](FacebookAppCredentials.html)
+
+<a name="getConversationsMessagingFacebookPermissions"></a>
+
+# **getConversationsMessagingFacebookPermissions**
+
+
+
+> [FacebookPermissionEntityListing](FacebookPermissionEntityListing.html) getConversationsMessagingFacebookPermissions()
+
+Get a list of Facebook Permissions
+
+
+
+Wraps GET /api/v2/conversations/messaging/facebook/permissions  
+
+Requires ANY permissions: 
+
+* messaging:integration:add
+* messaging:integration:edit
+* messaging:conversationInstagramIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsMessagingFacebookPermissions() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingFacebookPermissions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**FacebookPermissionEntityListing**](FacebookPermissionEntityListing.html)
 
 <a name="getConversationsMessagingIntegrations"></a>
 

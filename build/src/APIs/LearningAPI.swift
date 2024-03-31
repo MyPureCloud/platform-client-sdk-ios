@@ -244,6 +244,7 @@ open class LearningAPI {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
     }
     
     
@@ -459,6 +460,7 @@ open class LearningAPI {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
     }
     
     
@@ -983,6 +985,7 @@ open class LearningAPI {
         case informational = "Informational"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
     }
     
     
@@ -1073,9 +1076,9 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
+  "total" : 7,
+  "pageCount" : 9,
+  "pageNumber" : 2,
   "entities" : [ {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
@@ -1166,7 +1169,7 @@ open class LearningAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
+  "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -1704,6 +1707,91 @@ open class LearningAPI {
         let assignmentIdPreEscape = "\(assignmentId)"
         let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{assignmentId}", with: assignmentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update an external assignment for a specific user
+     
+     - parameter moduleId: (path) Key identifier for the module 
+     - parameter userId: (path) Key identifier for the user 
+     - parameter body: (body) The learning request for updating the assignment 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchLearningModuleUserAssignments(moduleId: String, userId: String, body: LearningAssignmentExternalUpdate, completion: @escaping ((_ data: LearningAssignment?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchLearningModuleUserAssignmentsWithRequestBuilder(moduleId: moduleId, userId: userId, body: body)
+        requestBuilder.execute { (response: Response<LearningAssignment>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an external assignment for a specific user
+     - PATCH /api/v2/learning/modules/{moduleId}/users/{userId}/assignments
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "isPassed" : true,
+  "isManual" : true,
+  "selfUri" : "https://openapi-generator.tech",
+  "module" : "{}",
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "version" : 6,
+  "isRule" : true,
+  "assessment" : "{}",
+  "assessmentForm" : "{}",
+  "lengthInMinutes" : 1,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isOverdue" : true,
+  "isLatest" : true,
+  "createdBy" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "percentageScore" : 0.8008282,
+  "state" : "Assigned",
+  "user" : "{}"
+}, statusCode=200}]
+     
+     - parameter moduleId: (path) Key identifier for the module 
+     - parameter userId: (path) Key identifier for the user 
+     - parameter body: (body) The learning request for updating the assignment 
+
+     - returns: RequestBuilder<LearningAssignment> 
+     */
+    open class func patchLearningModuleUserAssignmentsWithRequestBuilder(moduleId: String, userId: String, body: LearningAssignmentExternalUpdate) -> RequestBuilder<LearningAssignment> {        
+        var path = "/api/v2/learning/modules/{moduleId}/users/{userId}/assignments"
+        let moduleIdPreEscape = "\(moduleId)"
+        let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{moduleId}", with: moduleIdPostEscape, options: .literal, range: nil)
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 

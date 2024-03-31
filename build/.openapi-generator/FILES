@@ -130,6 +130,7 @@ docs/AlertingAPI.md
 docs/AlertingUnreadStatus.md
 docs/AllTimePoints.md
 docs/Alteration.md
+docs/AlternativeShiftNotification.md
 docs/AmazonLexRequest.md
 docs/AnalyticsAPI.json
 docs/AnalyticsAPI.md
@@ -1076,6 +1077,12 @@ docs/DIDNumberEntityListing.md
 docs/DIDPool.md
 docs/DIDPoolEntityListing.md
 docs/DailyPossibleShift.md
+docs/DashboardConfiguration.md
+docs/DashboardConfigurationBulkRequest.md
+docs/DashboardConfigurationListing.md
+docs/DashboardConfigurationQueryRequest.md
+docs/DashboardUser.md
+docs/DashboardUserListing.md
 docs/DataActionConditionPredicate.md
 docs/DataActionConditionSettings.md
 docs/DataActionContactColumnFieldMapping.md
@@ -1147,9 +1154,13 @@ docs/DialerCampaignRuleConfigChangeCampaignRuleCondition.md
 docs/DialerCampaignRuleConfigChangeCampaignRuleEntities.md
 docs/DialerCampaignRuleConfigChangeObject.md
 docs/DialerCampaignRuleConfigChangeUriReference.md
+docs/DialerCampaignScheduleConfigChangeAlteration.md
 docs/DialerCampaignScheduleConfigChangeCampaignSchedule.md
 docs/DialerCampaignScheduleConfigChangeObject.md
+docs/DialerCampaignScheduleConfigChangeRecurrencePattern.md
+docs/DialerCampaignScheduleConfigChangeRecurrenceRange.md
 docs/DialerCampaignScheduleConfigChangeScheduleInterval.md
+docs/DialerCampaignScheduleConfigChangeScheduleRecurrence.md
 docs/DialerCampaignScheduleConfigChangeUriReference.md
 docs/DialerContact.md
 docs/DialerContactId.md
@@ -1249,6 +1260,7 @@ docs/DocumentArticle.md
 docs/DocumentAttribute.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
+docs/DocumentBodyBlockWithHighlight.md
 docs/DocumentBodyImage.md
 docs/DocumentBodyImageProperties.md
 docs/DocumentBodyList.md
@@ -1257,6 +1269,7 @@ docs/DocumentBodyListBlockProperties.md
 docs/DocumentBodyListItemProperties.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
+docs/DocumentBodyParagraphWithHighlight.md
 docs/DocumentBodyTable.md
 docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
@@ -1267,8 +1280,11 @@ docs/DocumentBodyTableRowBlock.md
 docs/DocumentBodyTableRowBlockProperties.md
 docs/DocumentBodyVideo.md
 docs/DocumentBodyVideoProperties.md
+docs/DocumentBodyWithHighlight.md
 docs/DocumentCategoryInput.md
 docs/DocumentContentBlock.md
+docs/DocumentContentBlockWithHighlight.md
+docs/DocumentContentHighlightIndex.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
 docs/DocumentListContentBlock.md
@@ -1285,6 +1301,7 @@ docs/DocumentThumbnail.md
 docs/DocumentUpdate.md
 docs/DocumentUpload.md
 docs/DocumentVariation.md
+docs/DocumentVariationAnswer.md
 docs/DocumentVariationContext.md
 docs/DocumentVariationListing.md
 docs/DocumentationResult.md
@@ -1332,6 +1349,7 @@ docs/DraftTopics.md
 docs/DraftValidationResult.md
 docs/DurationCondition.md
 docs/DynamicContactQueueingSettings.md
+docs/DynamicLineBalancingSettings.md
 docs/Edge.md
 docs/EdgeAutoUpdateConfig.md
 docs/EdgeChangeTopicEdge.md
@@ -1563,6 +1581,8 @@ docs/FacebookIntegration.md
 docs/FacebookIntegrationEntityListing.md
 docs/FacebookIntegrationRequest.md
 docs/FacebookIntegrationUpdateRequest.md
+docs/FacebookPermission.md
+docs/FacebookPermissionEntityListing.md
 docs/FacebookScopedId.md
 docs/Facet.md
 docs/FacetEntry.md
@@ -2044,19 +2064,21 @@ docs/KnowledgeExportJobRequest.md
 docs/KnowledgeExportJobResponse.md
 docs/KnowledgeExtendedCategory.md
 docs/KnowledgeGroupStatistics.md
-docs/KnowledgeGuestDocument.md
 docs/KnowledgeGuestDocumentCopy.md
 docs/KnowledgeGuestDocumentFeedback.md
 docs/KnowledgeGuestDocumentPresentation.md
+docs/KnowledgeGuestDocumentResponse.md
 docs/KnowledgeGuestDocumentResponseListing.md
 docs/KnowledgeGuestDocumentSuggestion.md
 docs/KnowledgeGuestDocumentSuggestionRequest.md
 docs/KnowledgeGuestDocumentSuggestionResult.md
 docs/KnowledgeGuestDocumentVariation.md
+docs/KnowledgeGuestDocumentVariationAnswer.md
 docs/KnowledgeGuestDocumentVariationContext.md
 docs/KnowledgeGuestDocumentVersionReference.md
 docs/KnowledgeGuestDocumentView.md
 docs/KnowledgeGuestSearchClientApplication.md
+docs/KnowledgeGuestSearchDocumentResponse.md
 docs/KnowledgeGuestSession.md
 docs/KnowledgeGuestSessionApp.md
 docs/KnowledgeGuestSessionContext.md
@@ -2068,7 +2090,8 @@ docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
 docs/KnowledgeSearchClientApplication.md
-docs/KnowledgeSearchDocument.md
+docs/KnowledgeSearchDocumentResponse.md
+docs/KnowledgeSearchDocumentV1.md
 docs/KnowledgeSearchRequest.md
 docs/KnowledgeSearchResponse.md
 docs/KnowledgeTraining.md
@@ -2112,6 +2135,7 @@ docs/LearningAssignmentBulkAddResponse.md
 docs/LearningAssignmentBulkRemoveResponse.md
 docs/LearningAssignmentCreate.md
 docs/LearningAssignmentEntity.md
+docs/LearningAssignmentExternalUpdate.md
 docs/LearningAssignmentItem.md
 docs/LearningAssignmentReassign.md
 docs/LearningAssignmentReference.md
@@ -2167,6 +2191,7 @@ docs/LexV2BotEntityListing.md
 docs/LexV2Intent.md
 docs/LexV2Slot.md
 docs/Library.md
+docs/LibraryBatchRequest.md
 docs/LibraryEntityListing.md
 docs/LicenseAPI.json
 docs/LicenseAPI.md
@@ -3872,11 +3897,12 @@ docs/V2MobiusAlertsTopicAlertNotification.md
 docs/V2MobiusAlertsTopicAlertRuleProperties.md
 docs/V2MobiusAlertsTopicAlertSummary.md
 docs/V2MobiusAlertsTopicAlertSummaryEntity.md
+docs/V2MobiusAlertsTopicAlertingAddressableEntityRef.md
 docs/V2MobiusAlertsTopicCondition.md
 docs/V2MobiusAlertsTopicConditionRulePredicate.md
 docs/V2MobiusAlertsTopicEntityProperties.md
-docs/V2MobiusRulesTopicAddressableEntityRef.md
 docs/V2MobiusRulesTopicAlertNotification.md
+docs/V2MobiusRulesTopicAlertingAddressableEntityRef.md
 docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
@@ -3924,6 +3950,7 @@ docs/VoicemailsSearchResponse.md
 docs/Void.md
 docs/WaitlistPosition.md
 docs/WaitlistPositionListing.md
+docs/Warning.md
 docs/WebChatAPI.json
 docs/WebChatAPI.md
 docs/WebChatConfig.md
@@ -4120,6 +4147,7 @@ docs/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.md
 docs/WfmUserEntityListing.md
 docs/WfmUserNotification.md
 docs/WfmUserNotificationTopicAdherenceExplanationNotification.md
+docs/WfmUserNotificationTopicAlternativeShiftNotification.md
 docs/WfmUserNotificationTopicBusinessUnit.md
 docs/WfmUserNotificationTopicManagementUnit.md
 docs/WfmUserNotificationTopicShiftTradeNotification.md
@@ -4158,6 +4186,7 @@ docs/WhatsAppIntegration.md
 docs/WhatsAppIntegrationEntityListing.md
 docs/WhatsAppIntegrationRequest.md
 docs/WhatsAppIntegrationUpdateRequest.md
+docs/Widget.md
 docs/WidgetClientConfig.md
 docs/WidgetClientConfigThirdParty.md
 docs/WidgetClientConfigV1.md
@@ -4504,6 +4533,8 @@ docs/getAnalyticsConversationsDetailsJobResults-example.txt
 docs/getAnalyticsConversationsDetailsJobsAvailability-example.txt
 docs/getAnalyticsConversationsDetailsJobsAvailability-example.txt
 docs/getAnalyticsDataretentionSettings-example.txt
+docs/getAnalyticsReportingDashboardsUser-example.txt
+docs/getAnalyticsReportingDashboardsUsers-example.txt
 docs/getAnalyticsReportingExports-example.txt
 docs/getAnalyticsReportingExportsMetadata-example.txt
 docs/getAnalyticsReportingMetadata-example.txt
@@ -4515,6 +4546,7 @@ docs/getAnalyticsReportingScheduleHistoryLatest-example.txt
 docs/getAnalyticsReportingScheduleHistoryRunId-example.txt
 docs/getAnalyticsReportingSchedules-example.txt
 docs/getAnalyticsReportingSettings-example.txt
+docs/getAnalyticsReportingSettingsUserDashboards-example.txt
 docs/getAnalyticsReportingTimeperiods-example.txt
 docs/getAnalyticsUsersDetailsJob-example.txt
 docs/getAnalyticsUsersDetailsJob-example.txt
@@ -4684,6 +4716,7 @@ docs/getConversationsMessages-example.txt
 docs/getConversationsMessagesCachedmedia-example.txt
 docs/getConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/getConversationsMessagingFacebookApp-example.txt
+docs/getConversationsMessagingFacebookPermissions-example.txt
 docs/getConversationsMessagingIntegrations-example.txt
 docs/getConversationsMessagingIntegrationsFacebook-example.txt
 docs/getConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
@@ -5639,6 +5672,7 @@ docs/patchLanguageunderstandingDomain-example.txt
 docs/patchLanguageunderstandingMinerDraft-example.txt
 docs/patchLearningAssignment-example.txt
 docs/patchLearningAssignmentReschedule-example.txt
+docs/patchLearningModuleUserAssignments-example.txt
 docs/patchLocation-example.txt
 docs/patchMessagingSetting-example.txt
 docs/patchMessagingSupportedcontentSupportedContentId-example.txt
@@ -5740,9 +5774,12 @@ docs/postAnalyticsKnowledgeAggregatesQuery-example.txt
 docs/postAnalyticsQueuesObservationsQuery-example.txt
 docs/postAnalyticsQueuesObservationsQuery-example.txt
 docs/postAnalyticsRatelimitsAggregatesQuery-example.txt
+docs/postAnalyticsReportingDashboardsUsersBulkRemove-example.txt
 docs/postAnalyticsReportingExports-example.txt
 docs/postAnalyticsReportingScheduleRunreport-example.txt
 docs/postAnalyticsReportingSchedules-example.txt
+docs/postAnalyticsReportingSettingsDashboardsBulkRemove-example.txt
+docs/postAnalyticsReportingSettingsDashboardsQuery-example.txt
 docs/postAnalyticsSurveysAggregatesQuery-example.txt
 docs/postAnalyticsSurveysAggregatesQuery-example.txt
 docs/postAnalyticsTranscriptsAggregatesQuery-example.txt
@@ -6110,6 +6147,7 @@ docs/postRecordingsDeletionprotection-example.txt
 docs/postRecordingsScreensessionsAcknowledge-example.txt
 docs/postRecordingsScreensessionsMetadata-example.txt
 docs/postResponsemanagementLibraries-example.txt
+docs/postResponsemanagementLibrariesBulk-example.txt
 docs/postResponsemanagementResponseassetsSearch-example.txt
 docs/postResponsemanagementResponseassetsUploads-example.txt
 docs/postResponsemanagementResponses-example.txt
@@ -6709,6 +6747,7 @@ src/Models/AlertSummaryEntity.swift
 src/Models/AlertingUnreadStatus.swift
 src/Models/AllTimePoints.swift
 src/Models/Alteration.swift
+src/Models/AlternativeShiftNotification.swift
 src/Models/AmazonLexRequest.swift
 src/Models/AnalyticsAgentGroup.swift
 src/Models/AnalyticsConversation.swift
@@ -7635,6 +7674,12 @@ src/Models/DIDNumberEntityListing.swift
 src/Models/DIDPool.swift
 src/Models/DIDPoolEntityListing.swift
 src/Models/DailyPossibleShift.swift
+src/Models/DashboardConfiguration.swift
+src/Models/DashboardConfigurationBulkRequest.swift
+src/Models/DashboardConfigurationListing.swift
+src/Models/DashboardConfigurationQueryRequest.swift
+src/Models/DashboardUser.swift
+src/Models/DashboardUserListing.swift
 src/Models/DataActionConditionPredicate.swift
 src/Models/DataActionConditionSettings.swift
 src/Models/DataActionContactColumnFieldMapping.swift
@@ -7704,9 +7749,13 @@ src/Models/DialerCampaignRuleConfigChangeCampaignRuleCondition.swift
 src/Models/DialerCampaignRuleConfigChangeCampaignRuleEntities.swift
 src/Models/DialerCampaignRuleConfigChangeObject.swift
 src/Models/DialerCampaignRuleConfigChangeUriReference.swift
+src/Models/DialerCampaignScheduleConfigChangeAlteration.swift
 src/Models/DialerCampaignScheduleConfigChangeCampaignSchedule.swift
 src/Models/DialerCampaignScheduleConfigChangeObject.swift
+src/Models/DialerCampaignScheduleConfigChangeRecurrencePattern.swift
+src/Models/DialerCampaignScheduleConfigChangeRecurrenceRange.swift
 src/Models/DialerCampaignScheduleConfigChangeScheduleInterval.swift
+src/Models/DialerCampaignScheduleConfigChangeScheduleRecurrence.swift
 src/Models/DialerCampaignScheduleConfigChangeUriReference.swift
 src/Models/DialerContact.swift
 src/Models/DialerContactId.swift
@@ -7806,6 +7855,7 @@ src/Models/DocumentArticle.swift
 src/Models/DocumentAttribute.swift
 src/Models/DocumentBody.swift
 src/Models/DocumentBodyBlock.swift
+src/Models/DocumentBodyBlockWithHighlight.swift
 src/Models/DocumentBodyImage.swift
 src/Models/DocumentBodyImageProperties.swift
 src/Models/DocumentBodyList.swift
@@ -7814,6 +7864,7 @@ src/Models/DocumentBodyListBlockProperties.swift
 src/Models/DocumentBodyListItemProperties.swift
 src/Models/DocumentBodyParagraph.swift
 src/Models/DocumentBodyParagraphProperties.swift
+src/Models/DocumentBodyParagraphWithHighlight.swift
 src/Models/DocumentBodyTable.swift
 src/Models/DocumentBodyTableCaptionBlock.swift
 src/Models/DocumentBodyTableCaptionItem.swift
@@ -7824,8 +7875,11 @@ src/Models/DocumentBodyTableRowBlock.swift
 src/Models/DocumentBodyTableRowBlockProperties.swift
 src/Models/DocumentBodyVideo.swift
 src/Models/DocumentBodyVideoProperties.swift
+src/Models/DocumentBodyWithHighlight.swift
 src/Models/DocumentCategoryInput.swift
 src/Models/DocumentContentBlock.swift
+src/Models/DocumentContentBlockWithHighlight.swift
+src/Models/DocumentContentHighlightIndex.swift
 src/Models/DocumentEntityListing.swift
 src/Models/DocumentFaq.swift
 src/Models/DocumentListContentBlock.swift
@@ -7842,6 +7896,7 @@ src/Models/DocumentThumbnail.swift
 src/Models/DocumentUpdate.swift
 src/Models/DocumentUpload.swift
 src/Models/DocumentVariation.swift
+src/Models/DocumentVariationAnswer.swift
 src/Models/DocumentVariationContext.swift
 src/Models/DocumentVariationListing.swift
 src/Models/DocumentationResult.swift
@@ -7887,6 +7942,7 @@ src/Models/DraftTopics.swift
 src/Models/DraftValidationResult.swift
 src/Models/DurationCondition.swift
 src/Models/DynamicContactQueueingSettings.swift
+src/Models/DynamicLineBalancingSettings.swift
 src/Models/Edge.swift
 src/Models/EdgeAutoUpdateConfig.swift
 src/Models/EdgeChangeTopicEdge.swift
@@ -8112,6 +8168,8 @@ src/Models/FacebookIntegration.swift
 src/Models/FacebookIntegrationEntityListing.swift
 src/Models/FacebookIntegrationRequest.swift
 src/Models/FacebookIntegrationUpdateRequest.swift
+src/Models/FacebookPermission.swift
+src/Models/FacebookPermissionEntityListing.swift
 src/Models/FacebookScopedId.swift
 src/Models/Facet.swift
 src/Models/FacetEntry.swift
@@ -8569,19 +8627,21 @@ src/Models/KnowledgeExportJobRequest.swift
 src/Models/KnowledgeExportJobResponse.swift
 src/Models/KnowledgeExtendedCategory.swift
 src/Models/KnowledgeGroupStatistics.swift
-src/Models/KnowledgeGuestDocument.swift
 src/Models/KnowledgeGuestDocumentCopy.swift
 src/Models/KnowledgeGuestDocumentFeedback.swift
 src/Models/KnowledgeGuestDocumentPresentation.swift
+src/Models/KnowledgeGuestDocumentResponse.swift
 src/Models/KnowledgeGuestDocumentResponseListing.swift
 src/Models/KnowledgeGuestDocumentSuggestion.swift
 src/Models/KnowledgeGuestDocumentSuggestionRequest.swift
 src/Models/KnowledgeGuestDocumentSuggestionResult.swift
 src/Models/KnowledgeGuestDocumentVariation.swift
+src/Models/KnowledgeGuestDocumentVariationAnswer.swift
 src/Models/KnowledgeGuestDocumentVariationContext.swift
 src/Models/KnowledgeGuestDocumentVersionReference.swift
 src/Models/KnowledgeGuestDocumentView.swift
 src/Models/KnowledgeGuestSearchClientApplication.swift
+src/Models/KnowledgeGuestSearchDocumentResponse.swift
 src/Models/KnowledgeGuestSession.swift
 src/Models/KnowledgeGuestSessionApp.swift
 src/Models/KnowledgeGuestSessionContext.swift
@@ -8593,7 +8653,8 @@ src/Models/KnowledgeImportJobResponse.swift
 src/Models/KnowledgeImportJobSettings.swift
 src/Models/KnowledgeImportJobStatistics.swift
 src/Models/KnowledgeSearchClientApplication.swift
-src/Models/KnowledgeSearchDocument.swift
+src/Models/KnowledgeSearchDocumentResponse.swift
+src/Models/KnowledgeSearchDocumentV1.swift
 src/Models/KnowledgeSearchRequest.swift
 src/Models/KnowledgeSearchResponse.swift
 src/Models/KnowledgeTraining.swift
@@ -8631,6 +8692,7 @@ src/Models/LearningAssignmentBulkAddResponse.swift
 src/Models/LearningAssignmentBulkRemoveResponse.swift
 src/Models/LearningAssignmentCreate.swift
 src/Models/LearningAssignmentEntity.swift
+src/Models/LearningAssignmentExternalUpdate.swift
 src/Models/LearningAssignmentItem.swift
 src/Models/LearningAssignmentReassign.swift
 src/Models/LearningAssignmentReference.swift
@@ -8686,6 +8748,7 @@ src/Models/LexV2BotEntityListing.swift
 src/Models/LexV2Intent.swift
 src/Models/LexV2Slot.swift
 src/Models/Library.swift
+src/Models/LibraryBatchRequest.swift
 src/Models/LibraryEntityListing.swift
 src/Models/LicenseAssignmentRequest.swift
 src/Models/LicenseBatchAssignmentRequest.swift
@@ -10320,11 +10383,12 @@ src/Models/V2MobiusAlertsTopicAlertNotification.swift
 src/Models/V2MobiusAlertsTopicAlertRuleProperties.swift
 src/Models/V2MobiusAlertsTopicAlertSummary.swift
 src/Models/V2MobiusAlertsTopicAlertSummaryEntity.swift
+src/Models/V2MobiusAlertsTopicAlertingAddressableEntityRef.swift
 src/Models/V2MobiusAlertsTopicCondition.swift
 src/Models/V2MobiusAlertsTopicConditionRulePredicate.swift
 src/Models/V2MobiusAlertsTopicEntityProperties.swift
-src/Models/V2MobiusRulesTopicAddressableEntityRef.swift
 src/Models/V2MobiusRulesTopicAlertNotification.swift
+src/Models/V2MobiusRulesTopicAlertingAddressableEntityRef.swift
 src/Models/V2MobiusRulesTopicCondition.swift
 src/Models/V2MobiusRulesTopicConditionRulePredicate.swift
 src/Models/V2MobiusRulesTopicEntityProperties.swift
@@ -10369,6 +10433,7 @@ src/Models/VoicemailUserPolicy.swift
 src/Models/VoicemailsSearchResponse.swift
 src/Models/WaitlistPosition.swift
 src/Models/WaitlistPositionListing.swift
+src/Models/Warning.swift
 src/Models/WebChatConfig.swift
 src/Models/WebChatConversation.swift
 src/Models/WebChatDeployment.swift
@@ -10559,6 +10624,7 @@ src/Models/WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete.swift
 src/Models/WfmUserEntityListing.swift
 src/Models/WfmUserNotification.swift
 src/Models/WfmUserNotificationTopicAdherenceExplanationNotification.swift
+src/Models/WfmUserNotificationTopicAlternativeShiftNotification.swift
 src/Models/WfmUserNotificationTopicBusinessUnit.swift
 src/Models/WfmUserNotificationTopicManagementUnit.swift
 src/Models/WfmUserNotificationTopicShiftTradeNotification.swift
@@ -10597,6 +10663,7 @@ src/Models/WhatsAppIntegration.swift
 src/Models/WhatsAppIntegrationEntityListing.swift
 src/Models/WhatsAppIntegrationRequest.swift
 src/Models/WhatsAppIntegrationUpdateRequest.swift
+src/Models/Widget.swift
 src/Models/WidgetClientConfig.swift
 src/Models/WidgetClientConfigThirdParty.swift
 src/Models/WidgetClientConfigV1.swift

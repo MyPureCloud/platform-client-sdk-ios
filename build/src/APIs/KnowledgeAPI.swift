@@ -917,9 +917,9 @@ open class KnowledgeAPI {
      - parameter documentId: (path) Document ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeGuestSessionDocument(sessionId: String, documentId: String, completion: @escaping ((_ data: KnowledgeGuestDocument?,_ error: Error?) -> Void)) {
+    open class func getKnowledgeGuestSessionDocument(sessionId: String, documentId: String, completion: @escaping ((_ data: KnowledgeGuestDocumentResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = getKnowledgeGuestSessionDocumentWithRequestBuilder(sessionId: sessionId, documentId: documentId)
-        requestBuilder.execute { (response: Response<KnowledgeGuestDocument>?, error) -> Void in
+        requestBuilder.execute { (response: Response<KnowledgeGuestDocumentResponse>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -1021,9 +1021,9 @@ open class KnowledgeAPI {
      - parameter sessionId: (path) Knowledge guest session ID. 
      - parameter documentId: (path) Document ID 
 
-     - returns: RequestBuilder<KnowledgeGuestDocument> 
+     - returns: RequestBuilder<KnowledgeGuestDocumentResponse> 
      */
-    open class func getKnowledgeGuestSessionDocumentWithRequestBuilder(sessionId: String, documentId: String) -> RequestBuilder<KnowledgeGuestDocument> {        
+    open class func getKnowledgeGuestSessionDocumentWithRequestBuilder(sessionId: String, documentId: String) -> RequestBuilder<KnowledgeGuestDocumentResponse> {        
         var path = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}"
         let sessionIdPreEscape = "\(sessionId)"
         let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1036,7 +1036,7 @@ open class KnowledgeAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<KnowledgeGuestDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<KnowledgeGuestDocumentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

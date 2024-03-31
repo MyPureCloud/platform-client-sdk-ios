@@ -15,6 +15,7 @@ title: KnowledgeDocumentGuestSearchRequest
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **queryType** | **String** | The type of the query that initiates the search. | [optional] |
 | **sessionId** | **String** | Session ID of the search. | [optional] |
+| **answerHighlightTopResults** | **Int** | The number of articles to be sent for answer-highlighting. Can range from 1-5. | [optional] |
 | **includeDraftDocuments** | **Bool** | Indicates whether the search results would also include draft documents. | [optional] |
 {: class="table table-striped"}
 

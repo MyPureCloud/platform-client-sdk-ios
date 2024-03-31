@@ -11,6 +11,7 @@ title: ConversationVideoEventTopicVideoConversation
 | **name** | **String** |  | [optional] |
 | **participants** | [**[ConversationVideoEventTopicVideoMediaParticipant]**](ConversationVideoEventTopicVideoMediaParticipant.html) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
+| **address** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

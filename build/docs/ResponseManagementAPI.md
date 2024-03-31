@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getResponsemanagementResponseassetsStatusStatusId**](ResponseManagementAPI.html#getResponsemanagementResponseassetsStatusStatusId) | Get response asset upload status |
 | [**getResponsemanagementResponses**](ResponseManagementAPI.html#getResponsemanagementResponses) | Gets a list of existing responses. |
 | [**postResponsemanagementLibraries**](ResponseManagementAPI.html#postResponsemanagementLibraries) | Create a response library. |
+| [**postResponsemanagementLibrariesBulk**](ResponseManagementAPI.html#postResponsemanagementLibrariesBulk) | Get response libraries. |
 | [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI.html#postResponsemanagementResponseassetsSearch) | Search response assets |
 | [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI.html#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
 | [**postResponsemanagementResponses**](ResponseManagementAPI.html#postResponsemanagementResponses) | Create a response. |
@@ -560,6 +561,58 @@ ResponseManagementAPI.postResponsemanagementLibraries(body: body) { (response, e
 ### Return type
 
 [**Library**](Library.html)
+
+<a name="postResponsemanagementLibrariesBulk"></a>
+
+# **postResponsemanagementLibrariesBulk**
+
+
+
+> [LibraryEntityListing](LibraryEntityListing.html) postResponsemanagementLibrariesBulk(body)
+
+Get response libraries.
+
+
+
+Wraps POST /api/v2/responsemanagement/libraries/bulk  
+
+Requires ANY permissions: 
+
+* responses:library:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LibraryBatchRequest = new LibraryBatchRequest(...) // LibraryIDs (max allowed 50)
+
+// Code example
+ResponseManagementAPI.postResponsemanagementLibrariesBulk(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ResponseManagementAPI.postResponsemanagementLibrariesBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LibraryBatchRequest**](LibraryBatchRequest.html)| LibraryIDs (max allowed 50) | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LibraryEntityListing**](LibraryEntityListing.html)
 
 <a name="postResponsemanagementResponseassetsSearch"></a>
 

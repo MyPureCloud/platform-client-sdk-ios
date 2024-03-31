@@ -1823,6 +1823,8 @@ RecordingAPI.getRecordingsRetentionQuery(retentionThresholdDays: retentionThresh
 
 Retrieves a paged listing of screen recording sessions
 
+Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
+
 
 
 Wraps GET /api/v2/recordings/screensessions  

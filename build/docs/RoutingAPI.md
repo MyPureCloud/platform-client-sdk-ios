@@ -3881,7 +3881,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **phoneNumber** | **String**| Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used. | [optional] |
-| **phoneNumberType** | [**[String]**](String.html)| Filter on phone number type | [optional]<br />**Values**: local ("local"), mobile ("mobile"), tollfree ("tollfree"), shortcode ("shortcode") |
+| **phoneNumberType** | [**[String]**](String.html)| Filter on phone number type | [optional]<br />**Values**: local ("local"), mobile ("mobile"), tollfree ("tollfree"), shortcode ("shortcode"), alphanumeric ("alphanumeric") |
 | **phoneNumberStatus** | [**[String]**](String.html)| Filter on phone number status | [optional]<br />**Values**: active ("active"), invalid ("invalid"), initiated ("initiated"), porting ("porting"), pending ("pending"), pendingCancellation ("pending-cancellation") |
 | **countryCode** | [**[String]**](String.html)| Filter on country code | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |

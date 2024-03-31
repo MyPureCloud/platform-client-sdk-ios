@@ -7,6 +7,7 @@ title: V2MobiusAlertsTopicCondition
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **_id** | [**UUID**](UUID.html) |  | [optional] |
 | **conditions** | [**[V2MobiusAlertsTopicCondition]**](V2MobiusAlertsTopicCondition.html) |  | [optional] |
 | **predicates** | [**[V2MobiusAlertsTopicConditionRulePredicate]**](V2MobiusAlertsTopicConditionRulePredicate.html) |  | [optional] |
 | **type** | **String** |  | [optional] |

@@ -10,10 +10,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOauthClientUsageQueryResult**](UsageAPI.html#getOauthClientUsageQueryResult) | Get the results of a usage query |
 | [**getOauthClientUsageSummary**](UsageAPI.html#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
 | [**getUsageQueryExecutionIdResults**](UsageAPI.html#getUsageQueryExecutionIdResults) | Get the results of a usage query |
-| [**getUsageSimplesearchExecutionIdResults**](UsageAPI.html#getUsageSimplesearchExecutionIdResults) | Get the results of a usage search |
+| [**getUsageSimplesearchExecutionIdResults**](UsageAPI.html#getUsageSimplesearchExecutionIdResults) | Get the results of a usage search. Number of records to be returned is limited to 20,000 results. |
 | [**postOauthClientUsageQuery**](UsageAPI.html#postOauthClientUsageQuery) | Query for OAuth client API usage |
 | [**postUsageQuery**](UsageAPI.html#postUsageQuery) | Query organization API Usage -  |
-| [**postUsageSimplesearch**](UsageAPI.html#postUsageSimplesearch) | Search organization API Usage -  |
+| [**postUsageSimplesearch**](UsageAPI.html#postUsageSimplesearch) | Search organization API Usage |
 {: class="table-striped"}
 
 <a name="getOauthClientUsageQueryResult"></a>
@@ -189,7 +189,7 @@ UsageAPI.getUsageQueryExecutionIdResults(executionId: executionId) { (response, 
 
 > [ApiUsageQueryResult](ApiUsageQueryResult.html) getUsageSimplesearchExecutionIdResults(executionId)
 
-Get the results of a usage search
+Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
 
 
 
@@ -354,9 +354,9 @@ UsageAPI.postUsageQuery(body: body) { (response, error) in
 
 > [UsageExecutionResult](UsageExecutionResult.html) postUsageSimplesearch(body)
 
-Search organization API Usage - 
+Search organization API Usage
 
-After calling this method, you will then need to poll for the query results based on the returned execution Id
+After calling this method, you will then need to poll for the query results based on the returned execution Id. The number of records is limited to 20,000 results
 
 
 
