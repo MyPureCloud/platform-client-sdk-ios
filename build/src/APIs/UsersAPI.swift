@@ -810,8 +810,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -907,8 +907,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -940,14 +940,17 @@ open class UsersAPI {
 
     
     
+    
+    
     /**
      Returns a listing of roles and permissions for a user.
      
      - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationSubject(subjectId: String, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationSubjectWithRequestBuilder(subjectId: subjectId)
+    open class func getAuthorizationSubject(subjectId: String, includeDuplicates: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSubjectWithRequestBuilder(subjectId: subjectId, includeDuplicates: includeDuplicates)
         requestBuilder.execute { (response: Response<AuthzSubject>?, error) -> Void in
             do {
                 if let e = error {
@@ -1041,10 +1044,11 @@ open class UsersAPI {
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
 
      - returns: RequestBuilder<AuthzSubject> 
      */
-    open class func getAuthorizationSubjectWithRequestBuilder(subjectId: String) -> RequestBuilder<AuthzSubject> {        
+    open class func getAuthorizationSubjectWithRequestBuilder(subjectId: String, includeDuplicates: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
         var path = "/api/v2/authorization/subjects/{subjectId}"
         let subjectIdPreEscape = "\(subjectId)"
         let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1052,20 +1056,26 @@ open class UsersAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDuplicates": includeDuplicates
+        ])
 
         let requestBuilder: RequestBuilder<AuthzSubject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     /**
      Returns a listing of roles and permissions for the currently authenticated user.
      
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationSubjectsMe(completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationSubjectsMeWithRequestBuilder()
+    open class func getAuthorizationSubjectsMe(includeDuplicates: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: includeDuplicates)
         requestBuilder.execute { (response: Response<AuthzSubject>?, error) -> Void in
             do {
                 if let e = error {
@@ -1157,15 +1167,20 @@ open class UsersAPI {
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
+     
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
 
      - returns: RequestBuilder<AuthzSubject> 
      */
-    open class func getAuthorizationSubjectsMeWithRequestBuilder() -> RequestBuilder<AuthzSubject> {        
+    open class func getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
         let path = "/api/v2/authorization/subjects/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDuplicates": includeDuplicates
+        ])
 
         let requestBuilder: RequestBuilder<AuthzSubject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1401,8 +1416,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -5103,8 +5118,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6121,8 +6136,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6341,8 +6356,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6441,8 +6456,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7274,8 +7289,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -8053,8 +8068,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8141,6 +8156,7 @@ open class UsersAPI {
         case inProgress = "InProgress"
         case completed = "Completed"
         case invalidSchedule = "InvalidSchedule"
+        case notCompleted = "NotCompleted"
     }
     
     
@@ -8194,9 +8210,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -8249,9 +8265,9 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -8344,6 +8360,7 @@ open class UsersAPI {
         case inProgress = "InProgress"
         case completed = "Completed"
         case invalidSchedule = "InvalidSchedule"
+        case notCompleted = "NotCompleted"
     }
     
     
@@ -8396,9 +8413,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 1,
+  "total" : 5,
   "pageCount" : 5,
-  "pageNumber" : 6,
+  "pageNumber" : 1,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -8451,9 +8468,9 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "pageSize" : 6,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -17974,8 +17991,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18131,8 +18148,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18213,8 +18230,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18854,8 +18871,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Users 
@@ -23137,8 +23154,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

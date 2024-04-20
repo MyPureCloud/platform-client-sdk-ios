@@ -1127,7 +1127,7 @@ This endpoint does not require any parameters.
 
 
 
-> [AuthzSubject](AuthzSubject.html) getAuthorizationSubject(subjectId)
+> [AuthzSubject](AuthzSubject.html) getAuthorizationSubject(subjectId, includeDuplicates)
 
 Returns a listing of roles and permissions for a user.
 
@@ -1148,9 +1148,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
+let includeDuplicates: AuthorizationAPI.IncludeDuplicates_getAuthorizationSubject = AuthorizationAPI.IncludeDuplicates_getAuthorizationSubject.enummember // Include multiple entries with the same role and division but different subjects
 
 // Code example
-AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId) { (response, error) in
+AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId, includeDuplicates: includeDuplicates) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1166,6 +1167,7 @@ AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId) { (response, erro
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
+| **includeDuplicates** | **Bool**| Include multiple entries with the same role and division but different subjects | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -1179,7 +1181,7 @@ AuthorizationAPI.getAuthorizationSubject(subjectId: subjectId) { (response, erro
 
 
 
-> [AuthzSubject](AuthzSubject.html) getAuthorizationSubjectsMe()
+> [AuthzSubject](AuthzSubject.html) getAuthorizationSubjectsMe(includeDuplicates)
 
 Returns a listing of roles and permissions for the currently authenticated user.
 
@@ -1198,9 +1200,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let includeDuplicates: AuthorizationAPI.IncludeDuplicates_getAuthorizationSubjectsMe = AuthorizationAPI.IncludeDuplicates_getAuthorizationSubjectsMe.enummember // Include multiple entries with the same role and division but different subjects
 
 // Code example
-AuthorizationAPI.getAuthorizationSubjectsMe() { (response, error) in
+AuthorizationAPI.getAuthorizationSubjectsMe(includeDuplicates: includeDuplicates) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1212,8 +1215,11 @@ AuthorizationAPI.getAuthorizationSubjectsMe() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **includeDuplicates** | **Bool**| Include multiple entries with the same role and division but different subjects | [optional]<br />**Values**: _true ("true"), _false ("false") |
+{: class="table-striped"}
 
 
 ### Return type

@@ -4792,23 +4792,35 @@
   "getauthorizationsubject": {
     "operationId": "getauthorizationsubject",
     "functionName": "getAuthorizationSubject",
-    "signature": "getAuthorizationSubject(subjectId)",
+    "signature": "getAuthorizationSubject(subjectId, includeDuplicates)",
     "parameters": [
       {
         "name": "subjectId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "includeDuplicates",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "AuthzSubject",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet subjectId: String = \"\" // Subject ID (user or group)\n\n// Returns a listing of roles and permissions for a user.\nGetAuthorizationSubjectRequest.getAuthorizationSubject(subjectId: subjectId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationSubjectRequest.getAuthorizationSubject was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet subjectId: String = \"\" // Subject ID (user or group)\nlet includeDuplicates: Bool = true // Include multiple entries with the same role and division but different subjects\n\n// Returns a listing of roles and permissions for a user.\nGetAuthorizationSubjectRequest.getAuthorizationSubject(subjectId: subjectId, includeDuplicates: includeDuplicates) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationSubjectRequest.getAuthorizationSubject was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationsubjectsme": {
     "operationId": "getauthorizationsubjectsme",
     "functionName": "getAuthorizationSubjectsMe",
-    "signature": "getAuthorizationSubjectsMe()",
+    "signature": "getAuthorizationSubjectsMe(includeDuplicates)",
+    "parameters": [
+      {
+        "name": "includeDuplicates",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
     "return": "AuthzSubject",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Returns a listing of roles and permissions for the currently authenticated user.\nGetAuthorizationSubjectsMeRequest.getAuthorizationSubjectsMe() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationSubjectsMeRequest.getAuthorizationSubjectsMe was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet includeDuplicates: Bool = true // Include multiple entries with the same role and division but different subjects\n\n// Returns a listing of roles and permissions for the currently authenticated user.\nGetAuthorizationSubjectsMeRequest.getAuthorizationSubjectsMe(includeDuplicates: includeDuplicates) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuthorizationSubjectsMeRequest.getAuthorizationSubjectsMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getauthorizationsubjectsrolecounts": {
     "operationId": "getauthorizationsubjectsrolecounts",
@@ -5287,6 +5299,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomId\nlet messageId: String = \"\" // messageId\n\n// Delete a message in a room\nDeleteChatsRoomMessageRequest.deleteChatsRoomMessage(roomJid: roomJid, messageId: messageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsRoomMessageRequest.deleteChatsRoomMessage was successful\")\n    }\n}"
   },
+  "deletechatsroommessagespin": {
+    "operationId": "deletechatsroommessagespin",
+    "functionName": "deleteChatsRoomMessagesPin",
+    "signature": "deleteChatsRoomMessagesPin(roomJid, pinnedMessageId)",
+    "parameters": [
+      {
+        "name": "roomJid",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pinnedMessageId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet pinnedMessageId: String = \"\" // pinnedMessageId\n\n// Remove a pinned message from a room\nDeleteChatsRoomMessagesPinRequest.deleteChatsRoomMessagesPin(roomJid: roomJid, pinnedMessageId: pinnedMessageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsRoomMessagesPinRequest.deleteChatsRoomMessagesPin was successful\")\n    }\n}"
+  },
   "deletechatsroomparticipant": {
     "operationId": "deletechatsroomparticipant",
     "functionName": "deleteChatsRoomParticipant",
@@ -5304,24 +5334,6 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet userId: String = \"\" // userId\n\n// Remove a user from a room.\nDeleteChatsRoomParticipantRequest.deleteChatsRoomParticipant(roomJid: roomJid, userId: userId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsRoomParticipantRequest.deleteChatsRoomParticipant was successful\")\n    }\n}"
-  },
-  "deletechatsroompinnedmessage": {
-    "operationId": "deletechatsroompinnedmessage",
-    "functionName": "deleteChatsRoomPinnedmessage",
-    "signature": "deleteChatsRoomPinnedmessage(roomJid, pinnedMessageId)",
-    "parameters": [
-      {
-        "name": "roomJid",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "pinnedMessageId",
-        "type": "String",
-        "required": "true"
-      }
-    ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet pinnedMessageId: String = \"\" // pinnedMessageId\n\n// Remove a pinned message from a room\nDeleteChatsRoomPinnedmessageRequest.deleteChatsRoomPinnedmessage(roomJid: roomJid, pinnedMessageId: pinnedMessageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsRoomPinnedmessageRequest.deleteChatsRoomPinnedmessage was successful\")\n    }\n}"
   },
   "deletechatsusermessage": {
     "operationId": "deletechatsusermessage",
@@ -5633,6 +5645,24 @@
     "return": "ChatSendMessageResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomId\nlet body: SendMessageBody = new SendMessageBody(...) // messageBody\n\n// Send a message to a room\nPostChatsRoomMessagesRequest.postChatsRoomMessages(roomJid: roomJid, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostChatsRoomMessagesRequest.postChatsRoomMessages was successful\")\n        dump(response)\n    }\n}"
   },
+  "postchatsroommessagespins": {
+    "operationId": "postchatsroommessagespins",
+    "functionName": "postChatsRoomMessagesPins",
+    "signature": "postChatsRoomMessagesPins(roomJid, body)",
+    "parameters": [
+      {
+        "name": "roomJid",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "PinnedMessageRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids\n\n// Add pinned messages for a room, up to a maximum of 5 pinned messages\nPostChatsRoomMessagesPinsRequest.postChatsRoomMessagesPins(roomJid: roomJid, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostChatsRoomMessagesPinsRequest.postChatsRoomMessagesPins was successful\")\n    }\n}"
+  },
   "postchatsroomparticipant": {
     "operationId": "postchatsroomparticipant",
     "functionName": "postChatsRoomParticipant",
@@ -5650,24 +5680,6 @@
       }
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet userId: String = \"\" // userId\n\n// Join a room\nPostChatsRoomParticipantRequest.postChatsRoomParticipant(roomJid: roomJid, userId: userId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostChatsRoomParticipantRequest.postChatsRoomParticipant was successful\")\n    }\n}"
-  },
-  "postchatsroompinnedmessages": {
-    "operationId": "postchatsroompinnedmessages",
-    "functionName": "postChatsRoomPinnedmessages",
-    "signature": "postChatsRoomPinnedmessages(roomJid, body)",
-    "parameters": [
-      {
-        "name": "roomJid",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "PinnedMessageRequest",
-        "required": "true"
-      }
-    ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet roomJid: String = \"\" // roomJid\nlet body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids\n\n// Add pinned messages for a room, up to a maximum of 5 pinned messages\nPostChatsRoomPinnedmessagesRequest.postChatsRoomPinnedmessages(roomJid: roomJid, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostChatsRoomPinnedmessagesRequest.postChatsRoomPinnedmessages was successful\")\n    }\n}"
   },
   "postchatsrooms": {
     "operationId": "postchatsrooms",
@@ -8569,7 +8581,7 @@
       }
     ],
     "return": "MessagingStickerEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet messengerType: GetConversationsMessagingStickerRequest.MessengerType_getConversationsMessagingSticker = GetConversationsMessagingStickerRequest.MessengerType_getConversationsMessagingSticker.enummember // Messenger Type\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get a list of Messaging Stickers\nGetConversationsMessagingStickerRequest.getConversationsMessagingSticker(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingStickerRequest.getConversationsMessagingSticker was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet messengerType: GetConversationsMessagingStickerRequest.MessengerType_getConversationsMessagingSticker = GetConversationsMessagingStickerRequest.MessengerType_getConversationsMessagingSticker.enummember // Messenger Type\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get a list of Messaging Stickers (Deprecated)\nGetConversationsMessagingStickerRequest.getConversationsMessagingSticker(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingStickerRequest.getConversationsMessagingSticker was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingsupportedcontent": {
     "operationId": "getconversationsmessagingsupportedcontent",
@@ -12813,6 +12825,13 @@
     "return": "FaxDocumentEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Get a list of fax documents.\nGetFaxDocumentsRequest.getFaxDocuments(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxDocumentsRequest.getFaxDocuments was successful\")\n        dump(response)\n    }\n}"
   },
+  "getfaxsettings": {
+    "operationId": "getfaxsettings",
+    "functionName": "getFaxSettings",
+    "signature": "getFaxSettings()",
+    "return": "FaxConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get organization config for given organization\nGetFaxSettingsRequest.getFaxSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFaxSettingsRequest.getFaxSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "getfaxsummary": {
     "operationId": "getfaxsummary",
     "functionName": "getFaxSummary",
@@ -12838,6 +12857,20 @@
     ],
     "return": "FaxDocument",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet body: FaxDocument = new FaxDocument(...) // Document\n\n// Update a fax document.\nPutFaxDocumentRequest.putFaxDocument(documentId: documentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutFaxDocumentRequest.putFaxDocument was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putfaxsettings": {
+    "operationId": "putfaxsettings",
+    "functionName": "putFaxSettings",
+    "signature": "putFaxSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "FaxConfig",
+        "required": "false"
+      }
+    ],
+    "return": "FaxConfig",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: FaxConfig = new FaxConfig(...) // \n\n// Update/write organization config for given organization\nPutFaxSettingsRequest.putFaxSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutFaxSettingsRequest.putFaxSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteemployeeperformanceexternalmetricsdefinition": {
     "operationId": "deleteemployeeperformanceexternalmetricsdefinition",
@@ -26000,7 +26033,7 @@
       }
     ],
     "return": "AuditSearchResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DialerAuditRequest = new DialerAuditRequest(...) // AuditSearch\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: String = \"\" // Sort order\nlet facetsOnly: Bool = true // Facets only\n\n// Retrieves audits for dialer.\nPostOutboundAuditsRequest.postOutboundAudits(body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, facetsOnly: facetsOnly) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundAuditsRequest.postOutboundAudits was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DialerAuditRequest = new DialerAuditRequest(...) // AuditSearch\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: String = \"\" // Sort order\nlet facetsOnly: Bool = true // Facets only\n\n// Retrieves audits for dialer. (Deprecated)\nPostOutboundAuditsRequest.postOutboundAudits(body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, facetsOnly: facetsOnly) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostOutboundAuditsRequest.postOutboundAudits was successful\")\n        dump(response)\n    }\n}"
   },
   "postoutboundcallabletimesets": {
     "operationId": "postoutboundcallabletimesets",
@@ -34612,7 +34645,7 @@
       }
     ],
     "return": "TopicsEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing\nlet state: GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest\nlet name: String = \"\" // Case insensitive partial name to filter by\nlet ids: [String] = [\"\"] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.\nlet dialects: [String] = [\"\"] // Comma separated dialect strings to filter by. Maximum of 15 dialects allowed.\nlet sortBy: GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics.enummember // Sort results by. Defaults to name\nlet sortOrder: GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics.enummember // Sort order. Defaults to asc\n\n// Get the list of Speech & Text Analytics topics\nGetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet nextPage: String = \"\" // The key for listing the next page\nlet pageSize: Int = 0 // The page size for the listing. The max that will be returned is 500.\nlet state: GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest\nlet name: String = \"\" // Case insensitive partial name to filter by\nlet ids: [String] = [\"\"] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.\nlet dialects: [String] = [\"\"] // Comma separated dialect strings to filter by. Maximum of 15 dialects allowed.\nlet sortBy: GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortBy_getSpeechandtextanalyticsTopics.enummember // Sort results by. Defaults to name\nlet sortOrder: GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics = GetSpeechandtextanalyticsTopicsRequest.SortOrder_getSpeechandtextanalyticsTopics.enummember // Sort order. Defaults to asc\n\n// Get the list of Speech & Text Analytics topics\nGetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageSize: pageSize, state: state, name: name, ids: ids, dialects: dialects, sortBy: sortBy, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsTopicsRequest.getSpeechandtextanalyticsTopics was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticstopicsdialects": {
     "operationId": "getspeechandtextanalyticstopicsdialects",
@@ -35716,13 +35749,6 @@
     ],
     "return": "EdgeEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet siteId: String = \"\" // Filter by site.id\nlet edgeGroupId: String = \"\" // Filter by edgeGroup.id\nlet sortBy: String = \"\" // Sort by\nlet managed: Bool = true // Filter by managed\nlet showCloudMedia: Bool = true // True to show the cloud media devices in the result.\n\n// Get the list of edges.\nGetTelephonyProvidersEdgesRequest.getTelephonyProvidersEdges(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, edgeGroupId: edgeGroupId, sortBy: sortBy, managed: managed, showCloudMedia: showCloudMedia) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesRequest.getTelephonyProvidersEdges was successful\")\n        dump(response)\n    }\n}"
-  },
-  "gettelephonyprovidersedgesavailablelanguages": {
-    "operationId": "gettelephonyprovidersedgesavailablelanguages",
-    "functionName": "getTelephonyProvidersEdgesAvailablelanguages",
-    "signature": "getTelephonyProvidersEdgesAvailablelanguages()",
-    "return": "AvailableLanguageList",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.\nGetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesAvailablelanguagesRequest.getTelephonyProvidersEdgesAvailablelanguages was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonyprovidersedgescertificateauthorities": {
     "operationId": "gettelephonyprovidersedgescertificateauthorities",
@@ -37853,16 +37879,26 @@
   "getusagesimplesearchexecutionidresults": {
     "operationId": "getusagesimplesearchexecutionidresults",
     "functionName": "getUsageSimplesearchExecutionIdResults",
-    "signature": "getUsageSimplesearchExecutionIdResults(executionId)",
+    "signature": "getUsageSimplesearchExecutionIdResults(executionId, after, pageSize)",
     "parameters": [
       {
         "name": "executionId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
       }
     ],
     "return": "ApiUsageQueryResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet executionId: String = \"\" // ID of the search execution\n\n// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.\nGetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet executionId: String = \"\" // ID of the search execution\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned\nlet pageSize: Int = 0 // The max number of entities to be returned per request. Maximum page size of 1000\n\n// Get the results of a usage search. Number of records to be returned is limited to 20,000 results.\nGetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults(executionId: executionId, after: after, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsageSimplesearchExecutionIdResultsRequest.getUsageSimplesearchExecutionIdResults was successful\")\n        dump(response)\n    }\n}"
   },
   "postusagequery": {
     "operationId": "postusagequery",

@@ -35,7 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgeSoftwareversions**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeSoftwareversions) | Gets all the available software versions for this edge. |
 | [**getTelephonyProvidersEdgeTrunks**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgeTrunks) | Get the list of available trunks for the given Edge. |
 | [**getTelephonyProvidersEdges**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdges) | Get the list of edges. |
-| [**getTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesAvailablelanguages) | Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use. |
 | [**getTelephonyProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesCertificateauthorities) | Get the list of certificate authorities. |
 | [**getTelephonyProvidersEdgesCertificateauthority**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesCertificateauthority) | Get a certificate authority. |
 | [**getTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeAPI.html#getTelephonyProvidersEdgesDid) | Get a DID by ID. |
@@ -1616,53 +1615,6 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdges(pageSize: pageSize, pageNum
 ### Return type
 
 [**EdgeEntityListing**](EdgeEntityListing.html)
-
-<a name="getTelephonyProvidersEdgesAvailablelanguages"></a>
-
-# **getTelephonyProvidersEdgesAvailablelanguages**
-
-
-
-> [AvailableLanguageList](AvailableLanguageList.html) getTelephonyProvidersEdgesAvailablelanguages()
-
-Get the list of available languages. For never released keyword spotting feature. Deprecated, do not use.
-
-
-
-Wraps GET /api/v2/telephony/providers/edges/availablelanguages  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-
-// Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesAvailablelanguages() { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesAvailablelanguages was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not require any parameters.
-
-
-
-### Return type
-
-[**AvailableLanguageList**](AvailableLanguageList.html)
 
 <a name="getTelephonyProvidersEdgesCertificateauthorities"></a>
 

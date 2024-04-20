@@ -16,6 +16,7 @@ title: DefaultObjective
 | **topics** | [**[AddressableEntityRef]**](AddressableEntityRef.html) | A list of topic ids for detected topic metrics | [optional] |
 | **topicIdsFilterType** | **String** | A filter type for topic Ids. It&#39;s only used for objectives with topicIds. Default filter behavior is \&quot;or\&quot;. | [optional] |
 | **evaluationFormContextIds** | **[String]** | The ids of associated evaluation form context, for Quality Evaluation Score metrics | [optional] |
+| **initialDirection** | **String** | The initial direction to filter on | [optional] |
 {: class="table table-striped"}
 
 

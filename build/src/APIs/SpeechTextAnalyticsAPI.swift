@@ -786,15 +786,27 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
   "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "program" : "{}",
   "transcriptionEngines" : [ {
     "engine" : "Genesys",
-    "dialects" : [ "dialects", "dialects" ]
+    "dialects" : [ "dialects", "dialects" ],
+    "engineIntegration" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
   }, {
     "engine" : "Genesys",
-    "dialects" : [ "dialects", "dialects" ]
+    "dialects" : [ "dialects", "dialects" ],
+    "engineIntegration" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
   } ]
 }, statusCode=200}]
      
@@ -1198,10 +1210,20 @@ open class SpeechTextAnalyticsAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "engine" : "Genesys",
-    "dialects" : [ "dialects", "dialects" ]
+    "dialects" : [ "dialects", "dialects" ],
+    "engineIntegration" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
   }, {
     "engine" : "Genesys",
-    "dialects" : [ "dialects", "dialects" ]
+    "dialects" : [ "dialects", "dialects" ],
+    "engineIntegration" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
   } ]
 }, statusCode=200}]
 
@@ -1645,7 +1667,7 @@ open class SpeechTextAnalyticsAPI {
      Get the list of Speech & Text Analytics topics
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 500. (optional)
      - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
@@ -1722,7 +1744,7 @@ open class SpeechTextAnalyticsAPI {
 }, statusCode=200}]
      
      - parameter nextPage: (query) The key for listing the next page (optional)
-     - parameter pageSize: (query) The page size for the listing (optional)
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 500. (optional)
      - parameter state: (query) Topic state. Defaults to latest (optional)
      - parameter name: (query) Case insensitive partial name to filter by (optional)
      - parameter ids: (query) Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
@@ -2945,15 +2967,27 @@ open class SpeechTextAnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
   "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
   "program" : "{}",
   "transcriptionEngines" : [ {
     "engine" : "Genesys",
-    "dialects" : [ "dialects", "dialects" ]
+    "dialects" : [ "dialects", "dialects" ],
+    "engineIntegration" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
   }, {
     "engine" : "Genesys",
-    "dialects" : [ "dialects", "dialects" ]
+    "dialects" : [ "dialects", "dialects" ],
+    "engineIntegration" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }
   } ]
 }, statusCode=200}]
      

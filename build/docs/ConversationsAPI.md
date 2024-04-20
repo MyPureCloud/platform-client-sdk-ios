@@ -97,7 +97,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingSetting**](ConversationsAPI.html#getConversationsMessagingSetting) | Get a messaging setting |
 | [**getConversationsMessagingSettings**](ConversationsAPI.html#getConversationsMessagingSettings) | Get a list of messaging settings |
 | [**getConversationsMessagingSettingsDefault**](ConversationsAPI.html#getConversationsMessagingSettingsDefault) | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
-| [**getConversationsMessagingSticker**](ConversationsAPI.html#getConversationsMessagingSticker) | Get a list of Messaging Stickers |
+| [**getConversationsMessagingSticker**](ConversationsAPI.html#getConversationsMessagingSticker) | Get a list of Messaging Stickers (Deprecated) |
 | [**getConversationsMessagingSupportedcontent**](ConversationsAPI.html#getConversationsMessagingSupportedcontent) | Get a list of Supported Content profiles |
 | [**getConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#getConversationsMessagingSupportedcontentDefault) | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
 | [**getConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#getConversationsMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
@@ -2723,6 +2723,8 @@ ConversationsAPI.getConversationsCobrowsesession(conversationId: conversationId)
 
 Get the wrap-up for this conversation communication. 
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+
 
 
 Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
@@ -2780,6 +2782,8 @@ ConversationsAPI.getConversationsCobrowsesessionParticipantCommunicationWrapup(c
 
 Get the wrap-up for this conversation participant. 
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+
 
 
 Wraps GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup  
@@ -2834,6 +2838,8 @@ ConversationsAPI.getConversationsCobrowsesessionParticipantWrapup(conversationId
 > [[WrapupCode]](WrapupCode.html) getConversationsCobrowsesessionParticipantWrapupcodes(conversationId, participantId)
 
 Get list of wrapup codes for this conversation participant
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 
@@ -5054,7 +5060,9 @@ This endpoint does not require any parameters.
 
 > [MessagingStickerEntityListing](MessagingStickerEntityListing.html) getConversationsMessagingSticker(messengerType, pageSize, pageNumber)
 
-Get a list of Messaging Stickers
+Get a list of Messaging Stickers (Deprecated)
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
 
 
 
@@ -5317,6 +5325,8 @@ This endpoint does not require any parameters.
 > [AssignedWrapupCode](AssignedWrapupCode.html) getConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional)
 
 Get the wrap-up for this conversation communication. 
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 
@@ -6530,6 +6540,8 @@ ConversationsAPI.patchConversationsChatParticipantCommunication(conversationId: 
 
 Update a conversation by disconnecting all of the participants
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+
 
 
 Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}  
@@ -6583,6 +6595,8 @@ ConversationsAPI.patchConversationsCobrowsesession(conversationId: conversationI
 > Void patchConversationsCobrowsesessionParticipant(conversationId, participantId, body)
 
 Update conversation participant
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 
@@ -6639,6 +6653,8 @@ ConversationsAPI.patchConversationsCobrowsesessionParticipant(conversationId: co
 
 Update the attributes on a conversation participant.
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+
 
 
 Wraps PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes  
@@ -6693,6 +6709,8 @@ ConversationsAPI.patchConversationsCobrowsesessionParticipantAttributes(conversa
 > [JSON](JSON.html) patchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 
@@ -9703,6 +9721,8 @@ ConversationsAPI.postConversationsChats(body: body) { (response, error) in
 
 Apply wrap-up for this conversation communication
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+
 
 
 Wraps POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
@@ -9759,6 +9779,8 @@ ConversationsAPI.postConversationsCobrowsesessionParticipantCommunicationWrapup(
 > Void postConversationsCobrowsesessionParticipantReplace(conversationId, participantId, body)
 
 Replace this participant with the specified user and/or address
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 
@@ -11024,7 +11046,7 @@ ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, err
 
 Send an inbound Open Message
 
-Send an inbound message to an Open Messaging integration. In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+[This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 
 
 
@@ -11607,6 +11629,8 @@ ConversationsAPI.postConversationsParticipantsAttributesSearch(body: body) { (re
 > Void postConversationsScreenshareParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
 
 Apply wrap-up for this conversation communication
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 
@@ -12644,6 +12668,8 @@ ConversationsAPI.putConversationsMessagingThreadingtimeline(body: body) { (respo
 > String putConversationsScreenshareRecordingstate(conversationId, body)
 
 Update a conversation by setting its recording state
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
 
 
 

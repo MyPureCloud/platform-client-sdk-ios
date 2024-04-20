@@ -111,6 +111,7 @@ docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
 docs/AgentTimeOffRequestPatch.md
+docs/AgentVideoSettings.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
 docs/AgentsIntegrationsListing.md
@@ -287,7 +288,6 @@ docs/AuthzGrantRole.md
 docs/AuthzSubject.md
 docs/AutoStart.md
 docs/AutomaticTimeZoneMappingSettings.md
-docs/AvailableLanguageList.md
 docs/AvailableMediaType.md
 docs/AvailableMediaTypeEntityListing.md
 docs/AvailableTime.md
@@ -297,6 +297,7 @@ docs/AvailableTimeOffResponse.md
 docs/AvailableTopic.md
 docs/AvailableTopicEntityListing.md
 docs/AvailableTranslations.md
+docs/BackgroundImageSettings.md
 docs/BaseMediaSettings.md
 docs/BaseProgramEntity.md
 docs/BaseTopicEntitiy.md
@@ -519,6 +520,7 @@ docs/CampaignDivisionViewListing.md
 docs/CampaignEntityListing.md
 docs/CampaignInteraction.md
 docs/CampaignInteractions.md
+docs/CampaignLinesUtilization.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -633,6 +635,7 @@ docs/Compliance.md
 docs/ComplianceResponse.md
 docs/Condition.md
 docs/ConditionalGroupRouting.md
+docs/ConditionalGroupRoutingCondition.md
 docs/ConditionalGroupRoutingRule.md
 docs/ConfigurationOverrides.md
 docs/ConfusionDetails.md
@@ -978,6 +981,7 @@ docs/ConversationVideoEventTopicVideoMediaParticipant.md
 docs/ConversationVideoEventTopicWrapup.md
 docs/ConversationsAPI.json
 docs/ConversationsAPI.md
+docs/CopilotScoring.md
 docs/CopyAttachmentsRequest.md
 docs/CopyBuForecastRequest.md
 docs/CopyVoicemailMessage.md
@@ -1442,6 +1446,7 @@ docs/EncryptionKeyEntityListing.md
 docs/EndConsultTransferEvent.md
 docs/EndTransferEvent.md
 docs/Endpoint.md
+docs/EngineIntegration.md
 docs/Entity.md
 docs/EntityChange.md
 docs/EntityListing.md
@@ -1545,6 +1550,7 @@ docs/ExternalContactsContactChangedTopicObject.md
 docs/ExternalContactsContactChangedTopicPhoneNumber.md
 docs/ExternalContactsContactChangedTopicTwitterId.md
 docs/ExternalContactsContactChangedTopicWhatsAppId.md
+docs/ExternalContactsEntity.md
 docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicDataSchema.md
@@ -1562,6 +1568,7 @@ docs/ExternalContactsUnresolvedContactChangedTopicTwitterId.md
 docs/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.md
 docs/ExternalDataSource.md
 docs/ExternalEstablishedEvent.md
+docs/ExternalId.md
 docs/ExternalMetricDataItem.md
 docs/ExternalMetricDataProcessedItem.md
 docs/ExternalMetricDataUnprocessedItem.md
@@ -1575,6 +1582,7 @@ docs/ExternalOrganization.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
 docs/ExternalSegment.md
+docs/ExternalSource.md
 docs/FacebookAppCredentials.md
 docs/FacebookId.md
 docs/FacebookIntegration.md
@@ -1594,6 +1602,7 @@ docs/FailedObject.md
 docs/FailedRecordingEntityListing.md
 docs/FaxAPI.json
 docs/FaxAPI.md
+docs/FaxConfig.md
 docs/FaxDocument.md
 docs/FaxDocumentEntityListing.md
 docs/FaxSendRequest.md
@@ -2217,6 +2226,7 @@ docs/LineIntegrationEntityListing.md
 docs/LineIntegrationRequest.md
 docs/LineStatus.md
 docs/LineUserId.md
+docs/LinkConfiguration.md
 docs/ListItemComponent.md
 docs/ListWrapperInterval.md
 docs/ListWrapperSecondaryPresence.md
@@ -2710,6 +2720,7 @@ docs/ProgramJobRequest.md
 docs/ProgramMappings.md
 docs/ProgramMappingsRequest.md
 docs/ProgramRequest.md
+docs/ProgramTranscriptionEngine.md
 docs/ProgramTranscriptionEngines.md
 docs/ProgramsEntityListing.md
 docs/ProgramsMappingsEntityListing.md
@@ -3434,6 +3445,7 @@ docs/SupportedContent.md
 docs/SupportedContentListing.md
 docs/SupportedContentReference.md
 docs/SupportedDialectsEntityListing.md
+docs/SupportedDialectsTranscriptionEngine.md
 docs/SupportedLanguage.md
 docs/Survey.md
 docs/SurveyAggregateDataContainer.md
@@ -3583,7 +3595,6 @@ docs/TranscriptTopic.md
 docs/TranscriptTopics.md
 docs/TranscriptUrl.md
 docs/TranscriptUrls.md
-docs/TranscriptionEngines.md
 docs/TranscriptionEnginesRequest.md
 docs/TranscriptionSettings.md
 docs/TranscriptionTopicTranscriptAlternative.md
@@ -3824,6 +3835,7 @@ docs/UserTokensTopicTokenNotification.md
 docs/UserTokensTopicUriReference.md
 docs/UserTransferEvent.md
 docs/UserTrendData.md
+docs/UserVideoSettings.md
 docs/UsersAPI.json
 docs/UsersAPI.md
 docs/UsersSearchResponse.md
@@ -3924,6 +3936,7 @@ docs/VerifierEntityListing.md
 docs/Video.md
 docs/VideoConferenceUpdateTopicParticipantInfo.md
 docs/VideoConferenceUpdateTopicVideoConference.md
+docs/VideoSettings.md
 docs/ViewFilter.md
 docs/VisibilityCondition.md
 docs/VmPairingInfo.md
@@ -4286,8 +4299,8 @@ docs/deleteAuthorizationRole-example.txt
 docs/deleteAuthorizationSubjectDivisionRole-example.txt
 docs/deleteAuthorizationSubjectDivisionRole-example.txt
 docs/deleteChatsRoomMessage-example.txt
+docs/deleteChatsRoomMessagesPin-example.txt
 docs/deleteChatsRoomParticipant-example.txt
-docs/deleteChatsRoomPinnedmessage-example.txt
 docs/deleteChatsUserMessage-example.txt
 docs/deleteCoachingAppointment-example.txt
 docs/deleteCoachingAppointmentAnnotation-example.txt
@@ -4787,6 +4800,7 @@ docs/getExternalcontactsScanRelationships-example.txt
 docs/getFaxDocument-example.txt
 docs/getFaxDocumentContent-example.txt
 docs/getFaxDocuments-example.txt
+docs/getFaxSettings-example.txt
 docs/getFaxSummary-example.txt
 docs/getFieldconfig-example.txt
 docs/getFieldconfig-example.txt
@@ -5363,7 +5377,6 @@ docs/getTelephonyProvidersEdgeSoftwareupdate-example.txt
 docs/getTelephonyProvidersEdgeSoftwareversions-example.txt
 docs/getTelephonyProvidersEdgeTrunks-example.txt
 docs/getTelephonyProvidersEdges-example.txt
-docs/getTelephonyProvidersEdgesAvailablelanguages-example.txt
 docs/getTelephonyProvidersEdgesCertificateauthorities-example.txt
 docs/getTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/getTelephonyProvidersEdgesDid-example.txt
@@ -5824,8 +5837,8 @@ docs/postAuthorizationSubjectDivisionRole-example.txt
 docs/postCarrierservicesIntegrationsEmergencylocationsMe-example.txt
 docs/postCertificateDetails-example.txt
 docs/postChatsRoomMessages-example.txt
+docs/postChatsRoomMessagesPins-example.txt
 docs/postChatsRoomParticipant-example.txt
-docs/postChatsRoomPinnedmessages-example.txt
 docs/postChatsRooms-example.txt
 docs/postChatsUserMessages-example.txt
 docs/postCoachingAppointmentAnnotations-example.txt
@@ -6386,6 +6399,7 @@ docs/putExternalcontactsOrganizationTrustorTrustorId-example.txt
 docs/putExternalcontactsOrganizationsSchema-example.txt
 docs/putExternalcontactsRelationship-example.txt
 docs/putFaxDocument-example.txt
+docs/putFaxSettings-example.txt
 docs/putFlow-example.txt
 docs/putFlowsDatatable-example.txt
 docs/putFlowsDatatableRow-example.txt
@@ -6730,6 +6744,7 @@ src/Models/AgentQueryAdherenceExplanationsRequest.swift
 src/Models/AgentQueryAdherenceExplanationsResponse.swift
 src/Models/AgentQueueTimeRequest.swift
 src/Models/AgentTimeOffRequestPatch.swift
+src/Models/AgentVideoSettings.swift
 src/Models/AgentlessEmailSendRequestDto.swift
 src/Models/AgentlessEmailSendResponseDto.swift
 src/Models/AgentsIntegrationsListing.swift
@@ -6896,7 +6911,6 @@ src/Models/AuthzGrantRole.swift
 src/Models/AuthzSubject.swift
 src/Models/AutoStart.swift
 src/Models/AutomaticTimeZoneMappingSettings.swift
-src/Models/AvailableLanguageList.swift
 src/Models/AvailableMediaType.swift
 src/Models/AvailableMediaTypeEntityListing.swift
 src/Models/AvailableTime.swift
@@ -6906,6 +6920,7 @@ src/Models/AvailableTimeOffResponse.swift
 src/Models/AvailableTopic.swift
 src/Models/AvailableTopicEntityListing.swift
 src/Models/AvailableTranslations.swift
+src/Models/BackgroundImageSettings.swift
 src/Models/BaseMediaSettings.swift
 src/Models/BaseProgramEntity.swift
 src/Models/BaseTopicEntitiy.swift
@@ -7126,6 +7141,7 @@ src/Models/CampaignDivisionViewListing.swift
 src/Models/CampaignEntityListing.swift
 src/Models/CampaignInteraction.swift
 src/Models/CampaignInteractions.swift
+src/Models/CampaignLinesUtilization.swift
 src/Models/CampaignProgress.swift
 src/Models/CampaignRule.swift
 src/Models/CampaignRuleAction.swift
@@ -7234,6 +7250,7 @@ src/Models/Compliance.swift
 src/Models/ComplianceResponse.swift
 src/Models/Condition.swift
 src/Models/ConditionalGroupRouting.swift
+src/Models/ConditionalGroupRoutingCondition.swift
 src/Models/ConditionalGroupRoutingRule.swift
 src/Models/ConfigurationOverrides.swift
 src/Models/ConfusionDetails.swift
@@ -7575,6 +7592,7 @@ src/Models/ConversationVideoEventTopicUriReference.swift
 src/Models/ConversationVideoEventTopicVideoConversation.swift
 src/Models/ConversationVideoEventTopicVideoMediaParticipant.swift
 src/Models/ConversationVideoEventTopicWrapup.swift
+src/Models/CopilotScoring.swift
 src/Models/CopyAttachmentsRequest.swift
 src/Models/CopyBuForecastRequest.swift
 src/Models/CopyVoicemailMessage.swift
@@ -8033,6 +8051,7 @@ src/Models/EncryptionKeyEntityListing.swift
 src/Models/EndConsultTransferEvent.swift
 src/Models/EndTransferEvent.swift
 src/Models/Endpoint.swift
+src/Models/EngineIntegration.swift
 src/Models/Entity.swift
 src/Models/EntityChange.swift
 src/Models/EntityListing.swift
@@ -8132,6 +8151,7 @@ src/Models/ExternalContactsContactChangedTopicObject.swift
 src/Models/ExternalContactsContactChangedTopicPhoneNumber.swift
 src/Models/ExternalContactsContactChangedTopicTwitterId.swift
 src/Models/ExternalContactsContactChangedTopicWhatsAppId.swift
+src/Models/ExternalContactsEntity.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContact.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContactAddress.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicDataSchema.swift
@@ -8149,6 +8169,7 @@ src/Models/ExternalContactsUnresolvedContactChangedTopicTwitterId.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicWhatsAppId.swift
 src/Models/ExternalDataSource.swift
 src/Models/ExternalEstablishedEvent.swift
+src/Models/ExternalId.swift
 src/Models/ExternalMetricDataItem.swift
 src/Models/ExternalMetricDataProcessedItem.swift
 src/Models/ExternalMetricDataUnprocessedItem.swift
@@ -8162,6 +8183,7 @@ src/Models/ExternalOrganization.swift
 src/Models/ExternalOrganizationListing.swift
 src/Models/ExternalOrganizationTrustorLink.swift
 src/Models/ExternalSegment.swift
+src/Models/ExternalSource.swift
 src/Models/FacebookAppCredentials.swift
 src/Models/FacebookId.swift
 src/Models/FacebookIntegration.swift
@@ -8179,6 +8201,7 @@ src/Models/FacetStatistics.swift
 src/Models/FacetTerm.swift
 src/Models/FailedObject.swift
 src/Models/FailedRecordingEntityListing.swift
+src/Models/FaxConfig.swift
 src/Models/FaxDocument.swift
 src/Models/FaxDocumentEntityListing.swift
 src/Models/FaxSendRequest.swift
@@ -8772,6 +8795,7 @@ src/Models/LineIntegrationEntityListing.swift
 src/Models/LineIntegrationRequest.swift
 src/Models/LineStatus.swift
 src/Models/LineUserId.swift
+src/Models/LinkConfiguration.swift
 src/Models/ListItemComponent.swift
 src/Models/ListWrapperInterval.swift
 src/Models/ListWrapperSecondaryPresence.swift
@@ -9242,6 +9266,7 @@ src/Models/ProgramJobRequest.swift
 src/Models/ProgramMappings.swift
 src/Models/ProgramMappingsRequest.swift
 src/Models/ProgramRequest.swift
+src/Models/ProgramTranscriptionEngine.swift
 src/Models/ProgramTranscriptionEngines.swift
 src/Models/ProgramsEntityListing.swift
 src/Models/ProgramsMappingsEntityListing.swift
@@ -9940,6 +9965,7 @@ src/Models/SupportedContent.swift
 src/Models/SupportedContentListing.swift
 src/Models/SupportedContentReference.swift
 src/Models/SupportedDialectsEntityListing.swift
+src/Models/SupportedDialectsTranscriptionEngine.swift
 src/Models/SupportedLanguage.swift
 src/Models/Survey.swift
 src/Models/SurveyAggregateDataContainer.swift
@@ -10079,7 +10105,6 @@ src/Models/TranscriptTopic.swift
 src/Models/TranscriptTopics.swift
 src/Models/TranscriptUrl.swift
 src/Models/TranscriptUrls.swift
-src/Models/TranscriptionEngines.swift
 src/Models/TranscriptionEnginesRequest.swift
 src/Models/TranscriptionSettings.swift
 src/Models/TranscriptionTopicTranscriptAlternative.swift
@@ -10314,6 +10339,7 @@ src/Models/UserTokensTopicTokenNotification.swift
 src/Models/UserTokensTopicUriReference.swift
 src/Models/UserTransferEvent.swift
 src/Models/UserTrendData.swift
+src/Models/UserVideoSettings.swift
 src/Models/UsersSearchResponse.swift
 src/Models/UtilizationLabel.swift
 src/Models/UtilizationRequest.swift
@@ -10410,6 +10436,7 @@ src/Models/VerifierEntityListing.swift
 src/Models/Video.swift
 src/Models/VideoConferenceUpdateTopicParticipantInfo.swift
 src/Models/VideoConferenceUpdateTopicVideoConference.swift
+src/Models/VideoSettings.swift
 src/Models/ViewFilter.swift
 src/Models/VisibilityCondition.swift
 src/Models/VmPairingInfo.swift

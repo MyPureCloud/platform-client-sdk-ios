@@ -431,6 +431,7 @@ open class OAuthAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
   "queryStatus" : "Complete",
   "results" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
@@ -634,8 +635,8 @@ open class OAuthAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<OAuthClientEntityListing> 

@@ -1276,7 +1276,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let nextPage: String = "" // The key for listing the next page
-let pageSize: Int = 0 // The page size for the listing
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 500.
 let state: SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics = SpeechTextAnalyticsAPI.State_getSpeechandtextanalyticsTopics.enummember // Topic state. Defaults to latest
 let name: String = "" // Case insensitive partial name to filter by
 let ids: [String] = [""] // Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
@@ -1301,7 +1301,7 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsTopics(nextPage: nextPage, pageS
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **nextPage** | **String**| The key for listing the next page | [optional] |
-| **pageSize** | **Int**| The page size for the listing | [optional] |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 500. | [optional] |
 | **state** | **String**| Topic state. Defaults to latest | [optional]<br />**Values**: latest ("latest"), published ("published") |
 | **name** | **String**| Case insensitive partial name to filter by | [optional] |
 | **ids** | [**[String]**](String.html)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |

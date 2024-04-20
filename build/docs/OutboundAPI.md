@@ -108,7 +108,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchOutboundDnclistPhonenumbers**](OutboundAPI.html#patchOutboundDnclistPhonenumbers) | Add numbers to or delete numbers from a DNC list. |
 | [**patchOutboundSettings**](OutboundAPI.html#patchOutboundSettings) | Update the outbound settings for this organization |
 | [**postOutboundAttemptlimits**](OutboundAPI.html#postOutboundAttemptlimits) | Create attempt limits |
-| [**postOutboundAudits**](OutboundAPI.html#postOutboundAudits) | Retrieves audits for dialer. |
+| [**postOutboundAudits**](OutboundAPI.html#postOutboundAudits) | Retrieves audits for dialer. (Deprecated) |
 | [**postOutboundCallabletimesets**](OutboundAPI.html#postOutboundCallabletimesets) | Create callable time set |
 | [**postOutboundCallanalysisresponsesets**](OutboundAPI.html#postOutboundCallanalysisresponsesets) | Create a dialer call analysis response set. |
 | [**postOutboundCampaignAgentownedmappingpreview**](OutboundAPI.html#postOutboundCampaignAgentownedmappingpreview) | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
@@ -5766,7 +5766,9 @@ OutboundAPI.postOutboundAttemptlimits(body: body) { (response, error) in
 
 > [AuditSearchResult](AuditSearchResult.html) postOutboundAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly)
 
-Retrieves audits for dialer.
+Retrieves audits for dialer. (Deprecated)
+
+This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \&quot;/api/v2/audits/query\&quot; instead.
 
 
 

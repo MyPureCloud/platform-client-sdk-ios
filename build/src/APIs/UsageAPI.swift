@@ -46,6 +46,7 @@ open class UsageAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
   "queryStatus" : "Complete",
   "results" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
@@ -198,6 +199,7 @@ open class UsageAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
   "queryStatus" : "Complete",
   "results" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
@@ -251,14 +253,20 @@ open class UsageAPI {
 
     
     
+    
+    
+    
+    
     /**
      Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
      
      - parameter executionId: (path) ID of the search execution 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned (optional)
+     - parameter pageSize: (query) The max number of entities to be returned per request. Maximum page size of 1000 (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getUsageSimplesearchExecutionIdResults(executionId: String, completion: @escaping ((_ data: ApiUsageQueryResult?,_ error: Error?) -> Void)) {
-        let requestBuilder = getUsageSimplesearchExecutionIdResultsWithRequestBuilder(executionId: executionId)
+    open class func getUsageSimplesearchExecutionIdResults(executionId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ApiUsageQueryResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsageSimplesearchExecutionIdResultsWithRequestBuilder(executionId: executionId, after: after, pageSize: pageSize)
         requestBuilder.execute { (response: Response<ApiUsageQueryResult>?, error) -> Void in
             do {
                 if let e = error {
@@ -282,6 +290,7 @@ open class UsageAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
   "queryStatus" : "Complete",
   "results" : [ {
     "date" : "2000-01-23T04:56:07.000+00:00",
@@ -315,10 +324,12 @@ open class UsageAPI {
 }, statusCode=200}]
      
      - parameter executionId: (path) ID of the search execution 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned (optional)
+     - parameter pageSize: (query) The max number of entities to be returned per request. Maximum page size of 1000 (optional)
 
      - returns: RequestBuilder<ApiUsageQueryResult> 
      */
-    open class func getUsageSimplesearchExecutionIdResultsWithRequestBuilder(executionId: String) -> RequestBuilder<ApiUsageQueryResult> {        
+    open class func getUsageSimplesearchExecutionIdResultsWithRequestBuilder(executionId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ApiUsageQueryResult> {        
         var path = "/api/v2/usage/simplesearch/{executionId}/results"
         let executionIdPreEscape = "\(executionId)"
         let executionIdPostEscape = executionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -326,7 +337,11 @@ open class UsageAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
 
         let requestBuilder: RequestBuilder<ApiUsageQueryResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

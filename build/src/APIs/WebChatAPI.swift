@@ -317,6 +317,7 @@ open class WebChatAPI {
     /**
      Get a media request in the conversation
      - GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}
+     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT
@@ -582,8 +583,8 @@ open class WebChatAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter conversationId: (path) conversationId 
@@ -868,6 +869,7 @@ open class WebChatAPI {
     /**
      Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
      - PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}
+     - This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
      - API Key:
        - type: apiKey Authorization 
        - name: Guest Chat JWT

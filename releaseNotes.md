@@ -1,279 +1,446 @@
-Platform API version: 7944
+Platform API version: 7992
 
 
 
 
-# Major Changes (10 changes)
+# Major Changes (32 changes)
 
-**GET /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}** (1 change)
+**/api/v2/chats/rooms/{roomJid}/pinnedmessages** (1 change)
 
-* Response 200 type was changed from KnowledgeGuestDocument to KnowledgeGuestDocumentResponse
+* Path /api/v2/chats/rooms/{roomJid}/pinnedmessages was removed
 
-**GET /api/v2/recordings/screensessions** (1 change)
+**/api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId}** (1 change)
+
+* Path /api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId} was removed
+
+**/api/v2/telephony/providers/edges/availablelanguages** (1 change)
+
+* Path /api/v2/telephony/providers/edges/availablelanguages was removed
+
+**GET /api/v2/authorization/subjects/me** (1 change)
+
+* Parameter includeDuplicates was added
+
+**GET /api/v2/authorization/subjects/{subjectId}** (1 change)
+
+* Parameter includeDuplicates was added
+
+**POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Has been deprecated
 
-**KnowledgeSearchDocument** (1 change)
+**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes** (1 change)
 
-* Model KnowledgeSearchDocument was removed
+* Has been deprecated
 
-**KnowledgeGuestDocument** (1 change)
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}** (1 change)
 
-* Model KnowledgeGuestDocument was removed
+* Has been deprecated
 
-**ContactsExportRequest** (1 change)
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes** (1 change)
 
-* Property searchCriteria was removed
+* Has been deprecated
 
-**KnowledgeSearchResponse** (1 change)
+**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup** (1 change)
 
-* Property results was changed from KnowledgeSearchDocument[] to KnowledgeSearchDocumentV1[]
+* Has been deprecated
 
-**KnowledgeDocumentSearchResult** (1 change)
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}** (1 change)
 
-* Property document was changed from KnowledgeDocumentResponse to KnowledgeSearchDocumentResponse
+* Has been deprecated
 
-**KnowledgeGuestDocumentResponseListing** (1 change)
+**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
 
-* Property entities was changed from KnowledgeGuestDocument[] to KnowledgeGuestDocumentResponse[]
+* Has been deprecated
 
-**KnowledgeDocumentGuestSearchResult** (1 change)
+**POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
 
-* Property document was changed from KnowledgeGuestDocument to KnowledgeGuestSearchDocumentResponse
+* Has been deprecated
 
-**FileUploadSettings** (1 change)
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}** (1 change)
 
-* Property useSupportedContentProfile was removed
+* Has been deprecated
+
+**POST /api/v2/conversations/messages/inbound/open** (1 change)
+
+* Has been deprecated
+
+**PUT /api/v2/conversations/screenshares/{conversationId}/recordingstate** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/messaging/stickers/{messengerType}** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/outbound/audits** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/integrations/clientapps/unifiedcommunications** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/usage/simplesearch/{executionId}/results** (2 changes)
+
+* Parameter after was added
+* Parameter pageSize was added
+
+**GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}** (1 change)
+
+* Has been deprecated
+
+**PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}** (1 change)
+
+* Has been deprecated
+
+**TranscriptionEngines** (1 change)
+
+* Model TranscriptionEngines was removed
+
+**AvailableLanguageList** (1 change)
+
+* Model AvailableLanguageList was removed
+
+**BulkIdsRequest** (1 change)
+
+* Property entities was changed from WritableEntity[] to ExternalContactsEntity[]
+
+**Email** (1 change)
+
+* Property resumeTimestamp was removed
+
+**ProgramTranscriptionEngines** (1 change)
+
+* Property transcriptionEngines was changed from TranscriptionEngines[] to ProgramTranscriptionEngine[]
+
+**TranscriptionEnginesRequest** (1 change)
+
+* Property transcriptionEngines was changed from TranscriptionEngines[] to ProgramTranscriptionEngine[]
+
+**SupportedDialectsEntityListing** (1 change)
+
+* Property entities was changed from TranscriptionEngines[] to SupportedDialectsTranscriptionEngine[]
 
 
-# Minor Changes (67 changes)
+# Minor Changes (55 changes)
 
-**/api/v2/analytics/reporting/settings/dashboards/bulk/remove** (2 changes)
+**/api/v2/chats/rooms/{roomJid}/messages/pins** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/analytics/reporting/settings/dashboards/query** (2 changes)
+**/api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}** (2 changes)
 
 * Path was added
-* Operation POST was added
+* Operation DELETE was added
 
-**/api/v2/analytics/reporting/dashboards/users/{userId}** (2 changes)
+**POST /api/v2/externalcontacts/bulk/contacts** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/contacts/unresolved** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/notes** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/organizations** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/relationships** (1 change)
+
+* Response 422 was added
+
+**/api/v2/fax/settings** (3 changes)
 
 * Path was added
 * Operation GET was added
+* Operation PUT was added
 
-**/api/v2/analytics/reporting/dashboards/users** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/analytics/reporting/dashboards/users/bulk/remove** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/analytics/reporting/settings/users/{userId}/dashboards** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/conversations/messaging/facebook/permissions** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**POST /api/v2/outbound/campaigns** (1 change)
+**PUT /api/v2/routing/utilization** (1 change)
 
 * Response 409 was added
 
-**/api/v2/responsemanagement/libraries/bulk** (2 changes)
+**DELETE /api/v2/routing/utilization** (1 change)
 
-* Path was added
-* Operation POST was added
+* Response 409 was added
 
-**/api/v2/learning/modules/{moduleId}/users/{userId}/assignments** (2 changes)
+**PUT /api/v2/routing/users/{userId}/utilization** (1 change)
 
-* Path was added
-* Operation PATCH was added
+* Response 409 was added
 
-**DashboardConfiguration** (1 change)
+**DELETE /api/v2/routing/users/{userId}/utilization** (1 change)
 
-* Model was added
+* Response 409 was added
 
-**Warning** (1 change)
+**BotAggregateQueryPredicate** (1 change)
 
-* Model was added
+* Enum value botFlowType was added to property dimension
 
-**Widget** (1 change)
+**BotAggregationQuery** (1 change)
 
-* Model was added
+* Enum value botFlowType was added to property groupBy
 
-**DashboardConfigurationBulkRequest** (1 change)
+**ReportingTurn** (1 change)
 
-* Model was added
+* Enum value SkippedCollection was added to property askActionResult
 
-**DashboardConfigurationListing** (1 change)
+**ReportingTurnAction** (8 changes)
 
-* Model was added
+* Enum value AskSurveyQuestionAction was added to property actionType
+* Enum value FindEmergencyGroupAction was added to property actionType
+* Enum value FindScheduleAction was added to property actionType
+* Enum value FindScheduleGroupAction was added to property actionType
+* Enum value EvaluateScheduleAction was added to property actionType
+* Enum value EvaluateScheduleGroupAction was added to property actionType
+* Enum value SendKnowledgeFeedbackAction was added to property actionType
+* Enum value ScreenPopAction was added to property actionType
 
-**DashboardConfigurationQueryRequest** (1 change)
+**ViewFilter** (2 changes)
 
-* Model was added
+* Optional property surveyTypes was added
+* Optional property surveyResponseStatuses was added
 
-**DashboardUser** (1 change)
+**AuditLogMessage** (1 change)
 
-* Model was added
+* Enum value GENESYS_INTERNAL was added to property level
 
-**DashboardUserListing** (1 change)
-
-* Model was added
-
-**Limit** (2 changes)
-
-* Enum value workforce.management.forecast was added to property namespace
-* Enum value system was added to property namespace
-
-**DialerPreview** (1 change)
-
-* Optional property callbackAutoAnswer was added
-
-**DynamicLineBalancingSettings** (1 change)
+**ConditionalGroupRoutingCondition** (1 change)
 
 * Model was added
 
-**FacebookPermission** (1 change)
+**CopilotScoring** (1 change)
 
 * Model was added
 
-**FacebookPermissionEntityListing** (1 change)
+**ExternalContactsEntity** (1 change)
 
 * Model was added
 
-**ContactsExportRequest** (1 change)
-
-* Optional property criteria was added
-
-**KnowledgeSearchDocumentV1** (1 change)
+**ExternalId** (1 change)
 
 * Model was added
 
-**DocumentBodyBlockWithHighlight** (1 change)
+**ExternalSource** (1 change)
 
 * Model was added
 
-**DocumentBodyParagraphWithHighlight** (1 change)
+**LinkConfiguration** (1 change)
 
 * Model was added
 
-**DocumentBodyWithHighlight** (1 change)
+**CampaignLinesUtilization** (1 change)
 
 * Model was added
 
-**DocumentContentBlockWithHighlight** (1 change)
+**FaxConfig** (1 change)
 
 * Model was added
 
-**DocumentContentHighlightIndex** (1 change)
+**DefaultObjective** (1 change)
+
+* Optional property initialDirection was added
+
+**Objective** (1 change)
+
+* Optional property initialDirection was added
+
+**CreateObjective** (1 change)
+
+* Optional property initialDirection was added
+
+**Miner** (2 changes)
+
+* Enum value nl-nl was added to property language
+* Enum value it-it was added to property language
+
+**ApiUsageQueryResult** (1 change)
+
+* Optional property cursors was added
+
+**QualityAuditLogMessage** (2 changes)
+
+* Enum value GENESYS_INTERNAL was added to property level
+* Enum value Download was added to property action
+
+**EngineIntegration** (1 change)
 
 * Model was added
 
-**DocumentVariationAnswer** (1 change)
+**ProgramTranscriptionEngine** (1 change)
 
 * Model was added
 
-**KnowledgeSearchDocumentResponse** (1 change)
+**ProgramTranscriptionEngines** (2 changes)
+
+* Optional property id was added
+* Optional property selfUri was added
+
+**SupportedDialectsTranscriptionEngine** (1 change)
 
 * Model was added
 
-**KnowledgeDocumentSearchRequest** (1 change)
-
-* Optional property answerHighlightTopResults was added
-
-**ApprovalNamespace** (3 changes)
-
-* Enum value workforce.management.forecast was added to property namespace
-* Enum value system was added to property namespace
-* Enum value System was added to property type
-
-**LimitChangeRequestDetails** (2 changes)
-
-* Enum value workforce.management.forecast was added to property namespace
-* Enum value system was added to property namespace
-
-**StatusChange** (2 changes)
-
-* Enum value workforce.management.forecast was added to property namespace
-* Enum value system was added to property namespace
-
-**KnowledgeGuestDocumentVariationAnswer** (1 change)
+**AgentVideoSettings** (1 change)
 
 * Model was added
 
-**KnowledgeGuestDocumentResponse** (1 change)
+**BackgroundImageSettings** (1 change)
 
 * Model was added
 
-**KnowledgeGuestSearchDocumentResponse** (1 change)
+**UserVideoSettings** (1 change)
 
 * Model was added
 
-**KnowledgeDocumentGuestSearchRequest** (1 change)
-
-* Optional property answerHighlightTopResults was added
-
-**Recording** (2 changes)
-
-* Optional property mediaSubtype was added
-* Optional property mediaSubject was added
-
-**OrphanRecording** (2 changes)
-
-* Optional property mediaSubtype was added
-* Optional property mediaSubject was added
-
-**RecordingMetadata** (2 changes)
-
-* Optional property mediaSubtype was added
-* Optional property mediaSubject was added
-
-**LibraryBatchRequest** (1 change)
+**VideoSettings** (1 change)
 
 * Model was added
 
-**SmsPhoneNumber** (1 change)
 
-* Enum value alphanumeric was added to property phoneNumberType
+# Point Changes (35 changes)
 
-**SmsAvailablePhoneNumber** (1 change)
+**POST /api/v2/externalcontacts/bulk/contacts/remove** (1 change)
 
-* Enum value alphanumeric was added to property phoneNumberType
+* Response 422 was added
 
-**LearningAssignmentExternalUpdate** (1 change)
+**POST /api/v2/externalcontacts/bulk/contacts/add** (1 change)
 
-* Model was added
+* Response 422 was added
 
-**AlternativeShiftNotification** (1 change)
+**POST /api/v2/externalcontacts/bulk/contacts/update** (1 change)
 
-* Model was added
+* Response 422 was added
 
-**WfmUserNotification** (2 changes)
+**POST /api/v2/externalcontacts/bulk/notes/add** (1 change)
 
-* Enum value AlternativeShift was added to property type
-* Optional property alternativeShift was added
+* Response 422 was added
 
+**POST /api/v2/externalcontacts/bulk/notes/remove** (1 change)
 
-# Point Changes (4 changes)
+* Response 422 was added
 
-**GET /api/v2/recordings/screensessions** (1 change)
+**POST /api/v2/externalcontacts/bulk/notes/update** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/organizations/add** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/organizations/remove** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/organizations/update** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/relationships/update** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/relationships/add** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/externalcontacts/bulk/relationships/remove** (1 change)
+
+* Response 422 was added
+
+**POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace** (1 change)
 
 * Description was changed
 
-**POST /api/v2/usage/simplesearch** (2 changes)
+**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/messages/inbound/open** (1 change)
+
+* Description was changed
+
+**PUT /api/v2/conversations/screenshares/{conversationId}/recordingstate** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/messaging/stickers/{messengerType}** (2 changes)
 
 * Description was changed
 * Summary was changed
 
-**GET /api/v2/usage/simplesearch/{executionId}/results** (1 change)
+**POST /api/v2/outbound/audits** (2 changes)
 
+* Description was changed
 * Summary was changed
+
+**GET /api/v2/quality/calibrations** (1 change)
+
+* Description was changed
+
+**GET /api/v2/quality/evaluations/query** (1 change)
+
+* Description was changed
+
+**GET /api/v2/speechandtextanalytics/topics** (1 change)
+
+* Description was changed for parameter pageSize
+
+**GET /api/v2/integrations/clientapps/unifiedcommunications** (1 change)
+
+* Description was changed
+
+**GET /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/webchat/guest/conversations/{conversationId}/mediarequests/{mediaRequestId}** (1 change)
+
+* Description was changed

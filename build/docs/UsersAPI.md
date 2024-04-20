@@ -897,7 +897,7 @@ UsersAPI.getAuthorizationDivisionspermittedPagedSubjectId(subjectId: subjectId, 
 
 
 
-> [AuthzSubject](AuthzSubject.html) getAuthorizationSubject(subjectId)
+> [AuthzSubject](AuthzSubject.html) getAuthorizationSubject(subjectId, includeDuplicates)
 
 Returns a listing of roles and permissions for a user.
 
@@ -918,9 +918,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let subjectId: String = "" // Subject ID (user or group)
+let includeDuplicates: UsersAPI.IncludeDuplicates_getAuthorizationSubject = UsersAPI.IncludeDuplicates_getAuthorizationSubject.enummember // Include multiple entries with the same role and division but different subjects
 
 // Code example
-UsersAPI.getAuthorizationSubject(subjectId: subjectId) { (response, error) in
+UsersAPI.getAuthorizationSubject(subjectId: subjectId, includeDuplicates: includeDuplicates) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -936,6 +937,7 @@ UsersAPI.getAuthorizationSubject(subjectId: subjectId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **subjectId** | **String**| Subject ID (user or group) | |
+| **includeDuplicates** | **Bool**| Include multiple entries with the same role and division but different subjects | [optional]<br />**Values**: _true ("true"), _false ("false") |
 {: class="table-striped"}
 
 
@@ -949,7 +951,7 @@ UsersAPI.getAuthorizationSubject(subjectId: subjectId) { (response, error) in
 
 
 
-> [AuthzSubject](AuthzSubject.html) getAuthorizationSubjectsMe()
+> [AuthzSubject](AuthzSubject.html) getAuthorizationSubjectsMe(includeDuplicates)
 
 Returns a listing of roles and permissions for the currently authenticated user.
 
@@ -968,9 +970,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let includeDuplicates: UsersAPI.IncludeDuplicates_getAuthorizationSubjectsMe = UsersAPI.IncludeDuplicates_getAuthorizationSubjectsMe.enummember // Include multiple entries with the same role and division but different subjects
 
 // Code example
-UsersAPI.getAuthorizationSubjectsMe() { (response, error) in
+UsersAPI.getAuthorizationSubjectsMe(includeDuplicates: includeDuplicates) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -982,8 +985,11 @@ UsersAPI.getAuthorizationSubjectsMe() { (response, error) in
 
 ### Parameters
 
-This endpoint does not require any parameters.
 
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **includeDuplicates** | **Bool**| Include multiple entries with the same role and division but different subjects | [optional]<br />**Values**: _true ("true"), _false ("false") |
+{: class="table-striped"}
 
 
 ### Return type
@@ -2379,7 +2385,7 @@ UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, inter
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
-| **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
+| **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule"), notCompleted ("NotCompleted") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
 
@@ -2452,7 +2458,7 @@ UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval,
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
 | **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
-| **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule") |
+| **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule"), notCompleted ("NotCompleted") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
 

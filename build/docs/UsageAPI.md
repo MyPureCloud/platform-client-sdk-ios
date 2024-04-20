@@ -187,7 +187,7 @@ UsageAPI.getUsageQueryExecutionIdResults(executionId: executionId) { (response, 
 
 
 
-> [ApiUsageQueryResult](ApiUsageQueryResult.html) getUsageSimplesearchExecutionIdResults(executionId)
+> [ApiUsageQueryResult](ApiUsageQueryResult.html) getUsageSimplesearchExecutionIdResults(executionId, after, pageSize)
 
 Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
 
@@ -209,9 +209,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let executionId: String = "" // ID of the search execution
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned
+let pageSize: Int = 0 // The max number of entities to be returned per request. Maximum page size of 1000
 
 // Code example
-UsageAPI.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (response, error) in
+UsageAPI.getUsageSimplesearchExecutionIdResults(executionId: executionId, after: after, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -227,6 +229,8 @@ UsageAPI.getUsageSimplesearchExecutionIdResults(executionId: executionId) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **executionId** | **String**| ID of the search execution | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned | [optional] |
+| **pageSize** | **Int**| The max number of entities to be returned per request. Maximum page size of 1000 | [optional] |
 {: class="table-striped"}
 
 

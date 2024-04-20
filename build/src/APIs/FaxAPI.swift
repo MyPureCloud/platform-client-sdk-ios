@@ -330,8 +330,8 @@ open class FaxAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -351,6 +351,54 @@ open class FaxAPI {
         ])
 
         let requestBuilder: RequestBuilder<FaxDocumentEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get organization config for given organization
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFaxSettings(completion: @escaping ((_ data: FaxConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFaxSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<FaxConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get organization config for given organization
+     - GET /api/v2/fax/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "disableEmailPii" : true,
+  "sendEmailNotifications" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<FaxConfig> 
+     */
+    open class func getFaxSettingsWithRequestBuilder() -> RequestBuilder<FaxConfig> {        
+        let path = "/api/v2/fax/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FaxConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -494,6 +542,59 @@ open class FaxAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<FaxDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Update/write organization config for given organization
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putFaxSettings(body: FaxConfig? = nil, completion: @escaping ((_ data: FaxConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putFaxSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<FaxConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update/write organization config for given organization
+     - PUT /api/v2/fax/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "disableEmailPii" : true,
+  "sendEmailNotifications" : true
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<FaxConfig> 
+     */
+    open class func putFaxSettingsWithRequestBuilder(body: FaxConfig? = nil) -> RequestBuilder<FaxConfig> {        
+        let path = "/api/v2/fax/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FaxConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

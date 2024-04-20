@@ -530,7 +530,7 @@ VoicemailAPI.getVoicemailMessage(messageId: messageId, expand: expand) { (respon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageId** | **String**| Message ID | |
-| **expand** | [**[String]**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional]<br />**Values**: calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation") |
+| **expand** | [**[String]**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional]<br />**Values**: calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), conversations ("conversations") |
 {: class="table-striped"}
 
 
@@ -636,7 +636,7 @@ VoicemailAPI.getVoicemailMessages(ids: ids, expand: expand) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ids** | **String**| An optional comma separated list of VoicemailMessage ids | [optional] |
-| **expand** | [**[String]**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional]<br />**Values**: calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation") |
+| **expand** | [**[String]**](String.html)| If the caller is a known user, which fields, if any, to expand | [optional]<br />**Values**: calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), conversations ("conversations") |
 {: class="table-striped"}
 
 

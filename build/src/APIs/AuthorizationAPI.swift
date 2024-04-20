@@ -453,8 +453,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -725,8 +725,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -822,8 +822,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -953,8 +953,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -11970,8 +11970,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter roleId: (path) Role ID 
@@ -12631,8 +12631,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter roleId: (path) Role ID 
@@ -16313,8 +16313,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -16410,14 +16410,17 @@ open class AuthorizationAPI {
 
     
     
+    
+    
     /**
      Returns a listing of roles and permissions for a user.
      
      - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationSubject(subjectId: String, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationSubjectWithRequestBuilder(subjectId: subjectId)
+    open class func getAuthorizationSubject(subjectId: String, includeDuplicates: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSubjectWithRequestBuilder(subjectId: subjectId, includeDuplicates: includeDuplicates)
         requestBuilder.execute { (response: Response<AuthzSubject>?, error) -> Void in
             do {
                 if let e = error {
@@ -16511,10 +16514,11 @@ open class AuthorizationAPI {
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
 
      - returns: RequestBuilder<AuthzSubject> 
      */
-    open class func getAuthorizationSubjectWithRequestBuilder(subjectId: String) -> RequestBuilder<AuthzSubject> {        
+    open class func getAuthorizationSubjectWithRequestBuilder(subjectId: String, includeDuplicates: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
         var path = "/api/v2/authorization/subjects/{subjectId}"
         let subjectIdPreEscape = "\(subjectId)"
         let subjectIdPostEscape = subjectIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -16522,20 +16526,26 @@ open class AuthorizationAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDuplicates": includeDuplicates
+        ])
 
         let requestBuilder: RequestBuilder<AuthzSubject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
     /**
      Returns a listing of roles and permissions for the currently authenticated user.
      
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuthorizationSubjectsMe(completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuthorizationSubjectsMeWithRequestBuilder()
+    open class func getAuthorizationSubjectsMe(includeDuplicates: Bool? = nil, completion: @escaping ((_ data: AuthzSubject?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: includeDuplicates)
         requestBuilder.execute { (response: Response<AuthzSubject>?, error) -> Void in
             do {
                 if let e = error {
@@ -16627,15 +16637,20 @@ open class AuthorizationAPI {
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
+     
+     - parameter includeDuplicates: (query) Include multiple entries with the same role and division but different subjects (optional)
 
      - returns: RequestBuilder<AuthzSubject> 
      */
-    open class func getAuthorizationSubjectsMeWithRequestBuilder() -> RequestBuilder<AuthzSubject> {        
+    open class func getAuthorizationSubjectsMeWithRequestBuilder(includeDuplicates: Bool? = nil) -> RequestBuilder<AuthzSubject> {        
         let path = "/api/v2/authorization/subjects/me"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeDuplicates": includeDuplicates
+        ])
 
         let requestBuilder: RequestBuilder<AuthzSubject>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -33435,8 +33450,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter force: (query) Restore default roles (optional)
@@ -39338,8 +39353,8 @@ open class AuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Organization roles list 

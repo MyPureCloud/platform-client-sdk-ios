@@ -497,6 +497,7 @@ open class SearchAPI {
         case calleruserConversationsummary = "callerUser.conversationSummary"
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
+        case conversations = "conversations"
         case images = "images"
         case addressverificationdetails = "addressVerificationDetails"
     }
@@ -603,6 +604,7 @@ open class SearchAPI {
         case calleruserConversationsummary = "callerUser.conversationSummary"
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
+        case conversations = "conversations"
         case images = "images"
         case addressverificationdetails = "addressVerificationDetails"
     }

@@ -258,8 +258,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
@@ -560,8 +560,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -646,6 +646,7 @@ open class VoicemailAPI {
         case calleruserConversationsummary = "callerUser.conversationSummary"
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
+        case conversations = "conversations"
     }
     
     /**
@@ -818,6 +819,7 @@ open class VoicemailAPI {
         case calleruserConversationsummary = "callerUser.conversationSummary"
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
+        case conversations = "conversations"
     }
     
     /**
@@ -918,8 +920,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter ids: (query) An optional comma separated list of VoicemailMessage ids (optional)
@@ -1105,8 +1107,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 

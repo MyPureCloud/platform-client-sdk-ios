@@ -8,8 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteChatsRoomMessage**](ChatAPI.html#deleteChatsRoomMessage) | Delete a message in a room |
+| [**deleteChatsRoomMessagesPin**](ChatAPI.html#deleteChatsRoomMessagesPin) | Remove a pinned message from a room |
 | [**deleteChatsRoomParticipant**](ChatAPI.html#deleteChatsRoomParticipant) | Remove a user from a room. |
-| [**deleteChatsRoomPinnedmessage**](ChatAPI.html#deleteChatsRoomPinnedmessage) | Remove a pinned message from a room |
 | [**deleteChatsUserMessage**](ChatAPI.html#deleteChatsUserMessage) | Delete a message to a user |
 | [**getChatsMessage**](ChatAPI.html#getChatsMessage) | Get a message |
 | [**getChatsRoom**](ChatAPI.html#getChatsRoom) | Get a room |
@@ -26,8 +26,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchChatsSettings**](ChatAPI.html#patchChatsSettings) | Patch Chat Settings. |
 | [**patchChatsUserMessage**](ChatAPI.html#patchChatsUserMessage) | Edit a message to a user |
 | [**postChatsRoomMessages**](ChatAPI.html#postChatsRoomMessages) | Send a message to a room |
+| [**postChatsRoomMessagesPins**](ChatAPI.html#postChatsRoomMessagesPins) | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**postChatsRoomParticipant**](ChatAPI.html#postChatsRoomParticipant) | Join a room |
-| [**postChatsRoomPinnedmessages**](ChatAPI.html#postChatsRoomPinnedmessages) | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**postChatsRooms**](ChatAPI.html#postChatsRooms) | Create an adhoc room |
 | [**postChatsUserMessages**](ChatAPI.html#postChatsUserMessages) | Send a message to a user |
 | [**putChatsMessageReactions**](ChatAPI.html#putChatsMessageReactions) | Update reactions to a message |
@@ -88,6 +88,60 @@ ChatAPI.deleteChatsRoomMessage(roomJid: roomJid, messageId: messageId) { (error)
 
 `nil` (empty response body)
 
+<a name="deleteChatsRoomMessagesPin"></a>
+
+# **deleteChatsRoomMessagesPin**
+
+
+
+> Void deleteChatsRoomMessagesPin(roomJid, pinnedMessageId)
+
+Remove a pinned message from a room
+
+
+
+Wraps DELETE /api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}  
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:room:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let roomJid: String = "" // roomJid
+let pinnedMessageId: String = "" // pinnedMessageId
+
+// Code example
+ChatAPI.deleteChatsRoomMessagesPin(roomJid: roomJid, pinnedMessageId: pinnedMessageId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ChatAPI.deleteChatsRoomMessagesPin was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **roomJid** | **String**| roomJid | |
+| **pinnedMessageId** | **String**| pinnedMessageId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="deleteChatsRoomParticipant"></a>
 
 # **deleteChatsRoomParticipant**
@@ -135,60 +189,6 @@ ChatAPI.deleteChatsRoomParticipant(roomJid: roomJid, userId: userId) { (error) i
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **userId** | **String**| userId | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteChatsRoomPinnedmessage"></a>
-
-# **deleteChatsRoomPinnedmessage**
-
-
-
-> Void deleteChatsRoomPinnedmessage(roomJid, pinnedMessageId)
-
-Remove a pinned message from a room
-
-
-
-Wraps DELETE /api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId}  
-
-Requires ANY permissions: 
-
-* chat:chat:access
-* chat:room:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let roomJid: String = "" // roomJid
-let pinnedMessageId: String = "" // pinnedMessageId
-
-// Code example
-ChatAPI.deleteChatsRoomPinnedmessage(roomJid: roomJid, pinnedMessageId: pinnedMessageId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ChatAPI.deleteChatsRoomPinnedmessage was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **roomJid** | **String**| roomJid | |
-| **pinnedMessageId** | **String**| pinnedMessageId | |
 {: class="table-striped"}
 
 
@@ -1074,6 +1074,60 @@ ChatAPI.postChatsRoomMessages(roomJid: roomJid, body: body) { (response, error) 
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse.html)
 
+<a name="postChatsRoomMessagesPins"></a>
+
+# **postChatsRoomMessagesPins**
+
+
+
+> Void postChatsRoomMessagesPins(roomJid, body)
+
+Add pinned messages for a room, up to a maximum of 5 pinned messages
+
+
+
+Wraps POST /api/v2/chats/rooms/{roomJid}/messages/pins  
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:room:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let roomJid: String = "" // roomJid
+let body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids
+
+// Code example
+ChatAPI.postChatsRoomMessagesPins(roomJid: roomJid, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ChatAPI.postChatsRoomMessagesPins was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **roomJid** | **String**| roomJid | |
+| **body** | [**PinnedMessageRequest**](PinnedMessageRequest.html)| Pinned Message Ids | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postChatsRoomParticipant"></a>
 
 # **postChatsRoomParticipant**
@@ -1121,60 +1175,6 @@ ChatAPI.postChatsRoomParticipant(roomJid: roomJid, userId: userId) { (error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **userId** | **String**| userId | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="postChatsRoomPinnedmessages"></a>
-
-# **postChatsRoomPinnedmessages**
-
-
-
-> Void postChatsRoomPinnedmessages(roomJid, body)
-
-Add pinned messages for a room, up to a maximum of 5 pinned messages
-
-
-
-Wraps POST /api/v2/chats/rooms/{roomJid}/pinnedmessages  
-
-Requires ANY permissions: 
-
-* chat:chat:access
-* chat:room:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let roomJid: String = "" // roomJid
-let body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids
-
-// Code example
-ChatAPI.postChatsRoomPinnedmessages(roomJid: roomJid, body: body) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ChatAPI.postChatsRoomPinnedmessages was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **roomJid** | **String**| roomJid | |
-| **body** | [**PinnedMessageRequest**](PinnedMessageRequest.html)| Pinned Message Ids | |
 {: class="table-striped"}
 
 

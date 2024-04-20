@@ -1,13 +1,13 @@
 ---
-title: AvailableLanguageList
+title: LinkConfiguration
 ---
-## AvailableLanguageList
+## LinkConfiguration
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **languages** | **[String]** |  | [optional] |
+| **uriTemplate** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -67,6 +67,58 @@ open class ChatAPI {
     
     
     /**
+     Remove a pinned message from a room
+     
+     - parameter roomJid: (path) roomJid 
+     - parameter pinnedMessageId: (path) pinnedMessageId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteChatsRoomMessagesPin(roomJid: String, pinnedMessageId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteChatsRoomMessagesPinWithRequestBuilder(roomJid: roomJid, pinnedMessageId: pinnedMessageId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Remove a pinned message from a room
+     - DELETE /api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter roomJid: (path) roomJid 
+     - parameter pinnedMessageId: (path) pinnedMessageId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteChatsRoomMessagesPinWithRequestBuilder(roomJid: String, pinnedMessageId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}"
+        let roomJidPreEscape = "\(roomJid)"
+        let roomJidPostEscape = roomJidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{roomJid}", with: roomJidPostEscape, options: .literal, range: nil)
+        let pinnedMessageIdPreEscape = "\(pinnedMessageId)"
+        let pinnedMessageIdPostEscape = pinnedMessageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{pinnedMessageId}", with: pinnedMessageIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Remove a user from a room.
      
      - parameter roomJid: (path) roomJid 
@@ -104,58 +156,6 @@ open class ChatAPI {
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Remove a pinned message from a room
-     
-     - parameter roomJid: (path) roomJid 
-     - parameter pinnedMessageId: (path) pinnedMessageId 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func deleteChatsRoomPinnedmessage(roomJid: String, pinnedMessageId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteChatsRoomPinnedmessageWithRequestBuilder(roomJid: roomJid, pinnedMessageId: pinnedMessageId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Remove a pinned message from a room
-     - DELETE /api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId}
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter roomJid: (path) roomJid 
-     - parameter pinnedMessageId: (path) pinnedMessageId 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func deleteChatsRoomPinnedmessageWithRequestBuilder(roomJid: String, pinnedMessageId: String) -> RequestBuilder<Void> {        
-        var path = "/api/v2/chats/rooms/{roomJid}/pinnedmessages/{pinnedMessageId}"
-        let roomJidPreEscape = "\(roomJid)"
-        let roomJidPostEscape = roomJidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{roomJid}", with: roomJidPostEscape, options: .literal, range: nil)
-        let pinnedMessageIdPreEscape = "\(pinnedMessageId)"
-        let pinnedMessageIdPostEscape = pinnedMessageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{pinnedMessageId}", with: pinnedMessageIdPostEscape, options: .literal, range: nil)
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
@@ -1512,6 +1512,55 @@ open class ChatAPI {
     
     
     /**
+     Add pinned messages for a room, up to a maximum of 5 pinned messages
+     
+     - parameter roomJid: (path) roomJid 
+     - parameter body: (body) Pinned Message Ids 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postChatsRoomMessagesPins(roomJid: String, body: PinnedMessageRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postChatsRoomMessagesPinsWithRequestBuilder(roomJid: roomJid, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add pinned messages for a room, up to a maximum of 5 pinned messages
+     - POST /api/v2/chats/rooms/{roomJid}/messages/pins
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter roomJid: (path) roomJid 
+     - parameter body: (body) Pinned Message Ids 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postChatsRoomMessagesPinsWithRequestBuilder(roomJid: String, body: PinnedMessageRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/chats/rooms/{roomJid}/messages/pins"
+        let roomJidPreEscape = "\(roomJid)"
+        let roomJidPostEscape = roomJidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{roomJid}", with: roomJidPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Join a room
      
      - parameter roomJid: (path) roomJid 
@@ -1552,55 +1601,6 @@ open class ChatAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Add pinned messages for a room, up to a maximum of 5 pinned messages
-     
-     - parameter roomJid: (path) roomJid 
-     - parameter body: (body) Pinned Message Ids 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postChatsRoomPinnedmessages(roomJid: String, body: PinnedMessageRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = postChatsRoomPinnedmessagesWithRequestBuilder(roomJid: roomJid, body: body)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Add pinned messages for a room, up to a maximum of 5 pinned messages
-     - POST /api/v2/chats/rooms/{roomJid}/pinnedmessages
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter roomJid: (path) roomJid 
-     - parameter body: (body) Pinned Message Ids 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func postChatsRoomPinnedmessagesWithRequestBuilder(roomJid: String, body: PinnedMessageRequest) -> RequestBuilder<Void> {        
-        var path = "/api/v2/chats/rooms/{roomJid}/pinnedmessages"
-        let roomJidPreEscape = "\(roomJid)"
-        let roomJidPostEscape = roomJidPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{roomJid}", with: roomJidPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

@@ -11,8 +11,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFaxDocument**](FaxAPI.html#getFaxDocument) | Get a document. |
 | [**getFaxDocumentContent**](FaxAPI.html#getFaxDocumentContent) | Download a fax document. |
 | [**getFaxDocuments**](FaxAPI.html#getFaxDocuments) | Get a list of fax documents. |
+| [**getFaxSettings**](FaxAPI.html#getFaxSettings) | Get organization config for given organization |
 | [**getFaxSummary**](FaxAPI.html#getFaxSummary) | Get fax summary |
 | [**putFaxDocument**](FaxAPI.html#putFaxDocument) | Update a fax document. |
+| [**putFaxSettings**](FaxAPI.html#putFaxSettings) | Update/write organization config for given organization |
 {: class="table-striped"}
 
 <a name="deleteFaxDocument"></a>
@@ -220,6 +222,53 @@ FaxAPI.getFaxDocuments(pageSize: pageSize, pageNumber: pageNumber) { (response, 
 
 [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html)
 
+<a name="getFaxSettings"></a>
+
+# **getFaxSettings**
+
+
+
+> [FaxConfig](FaxConfig.html) getFaxSettings()
+
+Get organization config for given organization
+
+
+
+Wraps GET /api/v2/fax/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+FaxAPI.getFaxSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("FaxAPI.getFaxSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**FaxConfig**](FaxConfig.html)
+
 <a name="getFaxSummary"></a>
 
 # **getFaxSummary**
@@ -319,4 +368,56 @@ FaxAPI.putFaxDocument(documentId: documentId, body: body) { (response, error) in
 ### Return type
 
 [**FaxDocument**](FaxDocument.html)
+
+<a name="putFaxSettings"></a>
+
+# **putFaxSettings**
+
+
+
+> [FaxConfig](FaxConfig.html) putFaxSettings(body)
+
+Update/write organization config for given organization
+
+
+
+Wraps PUT /api/v2/fax/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FaxConfig = new FaxConfig(...) // 
+
+// Code example
+FaxAPI.putFaxSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("FaxAPI.putFaxSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FaxConfig**](FaxConfig.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FaxConfig**](FaxConfig.html)
 
