@@ -7,7 +7,7 @@ title: OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampa
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventTime** | [**Date**](Date.html) |  | [optional] |
+| **eventTime** | **Int** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **outboundCampaignType** | **String** |  | [optional] |
 | **emailAttributes** | [**OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes**](OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.html) |  | [optional] |

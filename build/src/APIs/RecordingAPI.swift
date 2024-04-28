@@ -7817,8 +7817,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -8091,8 +8091,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -8357,8 +8357,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter jobId: (path) jobId 
@@ -8502,8 +8502,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8823,8 +8823,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -9026,8 +9026,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -9641,6 +9641,7 @@ open class RecordingAPI {
     "conversation" : {
       "address" : "address",
       "selfUri" : "https://openapi-generator.tech",
+      "utilizationLabelId" : "utilizationLabelId",
       "externalTag" : "externalTag",
       "divisions" : [ {
         "division" : "{}",
@@ -12834,6 +12835,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -15623,6 +15625,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -19374,6 +19377,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -22163,6 +22167,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -23071,6 +23076,7 @@ open class RecordingAPI {
     "conversation" : {
       "address" : "address",
       "selfUri" : "https://openapi-generator.tech",
+      "utilizationLabelId" : "utilizationLabelId",
       "externalTag" : "externalTag",
       "divisions" : [ {
         "division" : "{}",
@@ -26264,6 +26270,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -29053,6 +29060,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -32804,6 +32812,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -35593,6 +35602,7 @@ open class RecordingAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -36208,8 +36218,8 @@ open class RecordingAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -36229,6 +36239,53 @@ open class RecordingAPI {
         ])
 
         let requestBuilder: RequestBuilder<ScreenRecordingSessionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Retrieves an object containing the total number of concurrent active screen recordings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRecordingsScreensessionsDetails(completion: @escaping ((_ data: ScreenRecordingActiveSessions?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRecordingsScreensessionsDetailsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ScreenRecordingActiveSessions>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves an object containing the total number of concurrent active screen recordings
+     - GET /api/v2/recordings/screensessions/details
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "count" : 0
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ScreenRecordingActiveSessions> 
+     */
+    open class func getRecordingsScreensessionsDetailsWithRequestBuilder() -> RequestBuilder<ScreenRecordingActiveSessions> {        
+        let path = "/api/v2/recordings/screensessions/details"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ScreenRecordingActiveSessions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

@@ -7,7 +7,7 @@ title: OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaign
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventTime** | [**Date**](Date.html) |  | [optional] |
+| **eventTime** | **Int** |  | [optional] |
 | **outboundCampaignType** | **String** |  | [optional] |
 | **smsAttributes** | [**OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes**](OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes.html) |  | [optional] |
 | **wrapupCode** | **String** |  | [optional] |

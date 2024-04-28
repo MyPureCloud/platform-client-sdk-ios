@@ -11,6 +11,7 @@ title: KnowledgeGuestDocumentView
 | **documentVersionId** | **String** | The version of the viewed document. | |
 | **searchId** | **String** | The search that surfaced the viewed document. | [optional] |
 | **queryType** | **String** | The type of the query that surfaced the document. | [optional] |
+| **surfacingMethod** | **String** | The method how knowledge was surfaced. Article: Full article was shown. Snippet: A snippet from the article was shown. Highlight: A highlighted answer in a snippet was shown. | [optional] |
 {: class="table table-striped"}
 
 

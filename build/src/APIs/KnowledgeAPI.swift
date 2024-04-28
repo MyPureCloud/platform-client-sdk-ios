@@ -1822,6 +1822,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "documentVariation" : "{}",
     "application" : "{}",
+    "surfacingMethod" : "Unknown",
     "comment" : "comment",
     "id" : "id",
     "state" : "Draft",
@@ -1838,6 +1839,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "documentVariation" : "{}",
     "application" : "{}",
+    "surfacingMethod" : "Unknown",
     "comment" : "comment",
     "id" : "id",
     "state" : "Draft",
@@ -1945,6 +1947,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "documentVariation" : "{}",
   "application" : "{}",
+  "surfacingMethod" : "Unknown",
   "comment" : "comment",
   "id" : "id",
   "state" : "Draft",
@@ -6421,17 +6424,18 @@ open class KnowledgeAPI {
      - POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback
      - examples: [{contentType=application/json, example={
   "reason" : "DocumentContent",
+  "document" : "{}",
+  "rating" : "Negative",
+  "sessionId" : "sessionId",
+  "queryType" : "Unknown",
   "search" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "documentVariation" : "{}",
   "application" : "{}",
-  "document" : "{}",
-  "rating" : "Negative",
+  "surfacingMethod" : "Unknown",
   "comment" : "comment",
   "id" : "id",
-  "sessionId" : "sessionId",
-  "state" : "Draft",
-  "queryType" : "Unknown"
+  "state" : "Draft"
 }, statusCode=200}]
      
      - parameter sessionId: (path) Knowledge guest session ID. 
@@ -6943,6 +6947,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "documentVariation" : "{}",
   "application" : "{}",
+  "surfacingMethod" : "Unknown",
   "comment" : "comment",
   "id" : "id",
   "state" : "Draft",

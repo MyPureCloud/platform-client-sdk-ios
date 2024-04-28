@@ -21,6 +21,7 @@ title: Conversation
 | **divisions** | [**[ConversationDivisionMembership]**](ConversationDivisionMembership.html) | Identifiers of divisions associated with this conversation | [optional] |
 | **recentTransfers** | [**[TransferResponse]**](TransferResponse.html) | The list of the most recent 20 transfer commands applied to this conversation. | [optional] |
 | **securePause** | **Bool** | True when the recording of this conversation is in secure pause status. | [optional] |
+| **utilizationLabelId** | **String** | An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

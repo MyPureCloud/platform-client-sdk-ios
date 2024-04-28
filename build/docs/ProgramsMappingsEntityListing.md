@@ -9,9 +9,9 @@ title: ProgramsMappingsEntityListing
 |------------ | ------------- | ------------- | -------------|
 | **entities** | [**[ProgramMappings]**](ProgramMappings.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
-| **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
+| **selfUri** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

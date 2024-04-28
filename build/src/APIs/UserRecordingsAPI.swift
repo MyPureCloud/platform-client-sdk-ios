@@ -128,6 +128,7 @@ open class UserRecordingsAPI {
   "conversation" : {
     "address" : "address",
     "selfUri" : "https://openapi-generator.tech",
+    "utilizationLabelId" : "utilizationLabelId",
     "externalTag" : "externalTag",
     "divisions" : [ {
       "division" : "{}",
@@ -3321,6 +3322,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -6110,6 +6112,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -9861,6 +9864,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -12650,6 +12654,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -13454,6 +13459,7 @@ open class UserRecordingsAPI {
     "conversation" : {
       "address" : "address",
       "selfUri" : "https://openapi-generator.tech",
+      "utilizationLabelId" : "utilizationLabelId",
       "externalTag" : "externalTag",
       "divisions" : [ {
         "division" : "{}",
@@ -16647,6 +16653,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -19436,6 +19443,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -23187,6 +23195,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -25976,6 +25985,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -26620,6 +26630,7 @@ open class UserRecordingsAPI {
     "conversation" : {
       "address" : "address",
       "selfUri" : "https://openapi-generator.tech",
+      "utilizationLabelId" : "utilizationLabelId",
       "externalTag" : "externalTag",
       "divisions" : [ {
         "division" : "{}",
@@ -29813,6 +29824,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -32602,6 +32614,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -36353,6 +36366,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -39142,6 +39156,7 @@ open class UserRecordingsAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
+                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -39757,8 +39772,8 @@ open class UserRecordingsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -39909,6 +39924,7 @@ open class UserRecordingsAPI {
   "conversation" : {
     "address" : "address",
     "selfUri" : "https://openapi-generator.tech",
+    "utilizationLabelId" : "utilizationLabelId",
     "externalTag" : "externalTag",
     "divisions" : [ {
       "division" : "{}",
@@ -43102,6 +43118,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -45891,6 +45908,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -49642,6 +49660,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -52431,6 +52450,7 @@ open class UserRecordingsAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
+              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",

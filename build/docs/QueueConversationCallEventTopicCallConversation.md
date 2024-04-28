@@ -12,6 +12,7 @@ title: QueueConversationCallEventTopicCallConversation
 | **participants** | [**[QueueConversationCallEventTopicCallMediaParticipant]**](QueueConversationCallEventTopicCallMediaParticipant.html) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
+| **utilizationLabelId** | **String** |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |

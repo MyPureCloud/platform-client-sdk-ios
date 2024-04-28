@@ -17940,6 +17940,20 @@
     "return": "AppEventResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet deploymentId: String = \"\" // The ID of the deployment sending the app event.\nlet body: AppEventRequest = new AppEventRequest(...) // \n\n// Send a journey app event, used for tracking customer activity on an application.\nPostJourneyDeploymentAppeventsRequest.postJourneyDeploymentAppevents(deploymentId: deploymentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyDeploymentAppeventsRequest.postJourneyDeploymentAppevents was successful\")\n        dump(response)\n    }\n}"
   },
+  "postjourneyflowspathsquery": {
+    "operationId": "postjourneyflowspathsquery",
+    "functionName": "postJourneyFlowsPathsQuery",
+    "signature": "postJourneyFlowsPathsQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "FlowPathsQuery",
+        "required": "false"
+      }
+    ],
+    "return": "FlowPaths",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: FlowPathsQuery = new FlowPathsQuery(...) // \n\n// Query for flow paths.\nPostJourneyFlowsPathsQueryRequest.postJourneyFlowsPathsQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyFlowsPathsQueryRequest.postJourneyFlowsPathsQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "postjourneyoutcomes": {
     "operationId": "postjourneyoutcomes",
     "functionName": "postJourneyOutcomes",
@@ -29611,6 +29625,13 @@
     ],
     "return": "ScreenRecordingSessionListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\n\n// Retrieves a paged listing of screen recording sessions\nGetRecordingsScreensessionsRequest.getRecordingsScreensessions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingsScreensessionsRequest.getRecordingsScreensessions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getrecordingsscreensessionsdetails": {
+    "operationId": "getrecordingsscreensessionsdetails",
+    "functionName": "getRecordingsScreensessionsDetails",
+    "signature": "getRecordingsScreensessionsDetails()",
+    "return": "ScreenRecordingActiveSessions",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieves an object containing the total number of concurrent active screen recordings\nGetRecordingsScreensessionsDetailsRequest.getRecordingsScreensessionsDetails() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingsScreensessionsDetailsRequest.getRecordingsScreensessionsDetails was successful\")\n        dump(response)\n    }\n}"
   },
   "patchrecordingcrossplatformmediaretentionpolicy": {
     "operationId": "patchrecordingcrossplatformmediaretentionpolicy",

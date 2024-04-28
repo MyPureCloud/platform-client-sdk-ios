@@ -1409,6 +1409,7 @@ docs/EmailConfig.md
 docs/EmailConversation.md
 docs/EmailConversationEntityListing.md
 docs/EmailEndTransferEvent.md
+docs/EmailErrorInfo.md
 docs/EmailExternalEstablishedEvent.md
 docs/EmailFlowEstablishedEvent.md
 docs/EmailHoldUpdatedEvent.md
@@ -1675,6 +1676,11 @@ docs/FlowOutcomeDetailEventTopicFlowOutcomeEvent.md
 docs/FlowOutcomeDivisionView.md
 docs/FlowOutcomeDivisionViewEntityListing.md
 docs/FlowOutcomeListing.md
+docs/FlowPaths.md
+docs/FlowPathsElement.md
+docs/FlowPathsFlowDetails.md
+docs/FlowPathsFlowFilter.md
+docs/FlowPathsQuery.md
 docs/FlowResultEntityListing.md
 docs/FlowRuntimeExecution.md
 docs/FlowStartDetailEventTopicFlowStartEvent.md
@@ -1807,6 +1813,7 @@ docs/IdentityProviderEntityListing.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
+docs/ImapSettings.md
 docs/ImportError.md
 docs/ImportForecastResponse.md
 docs/ImportForecastUploadResponse.md
@@ -3245,6 +3252,7 @@ docs/ScorableSurvey.md
 docs/ScoredAgent.md
 docs/ScreenRecordingAPI.json
 docs/ScreenRecordingAPI.md
+docs/ScreenRecordingActiveSessions.md
 docs/ScreenRecordingMetaData.md
 docs/ScreenRecordingMetaDataRequest.md
 docs/ScreenRecordingSession.md
@@ -5235,6 +5243,7 @@ docs/getRecordingSettings-example.txt
 docs/getRecordingUploadsReport-example.txt
 docs/getRecordingsRetentionQuery-example.txt
 docs/getRecordingsScreensessions-example.txt
+docs/getRecordingsScreensessionsDetails-example.txt
 docs/getResponsemanagementLibraries-example.txt
 docs/getResponsemanagementLibrary-example.txt
 docs/getResponsemanagementResponse-example.txt
@@ -6017,6 +6026,7 @@ docs/postJourneyActionmapsEstimatesJobs-example.txt
 docs/postJourneyActiontemplates-example.txt
 docs/postJourneyDeploymentActionevent-example.txt
 docs/postJourneyDeploymentAppevents-example.txt
+docs/postJourneyFlowsPathsQuery-example.txt
 docs/postJourneyOutcomes-example.txt
 docs/postJourneyOutcomesPredictors-example.txt
 docs/postJourneySegments-example.txt
@@ -8016,6 +8026,7 @@ src/Models/EmailConfig.swift
 src/Models/EmailConversation.swift
 src/Models/EmailConversationEntityListing.swift
 src/Models/EmailEndTransferEvent.swift
+src/Models/EmailErrorInfo.swift
 src/Models/EmailExternalEstablishedEvent.swift
 src/Models/EmailFlowEstablishedEvent.swift
 src/Models/EmailHoldUpdatedEvent.swift
@@ -8274,6 +8285,11 @@ src/Models/FlowOutcomeDetailEventTopicFlowOutcomeEvent.swift
 src/Models/FlowOutcomeDivisionView.swift
 src/Models/FlowOutcomeDivisionViewEntityListing.swift
 src/Models/FlowOutcomeListing.swift
+src/Models/FlowPaths.swift
+src/Models/FlowPathsElement.swift
+src/Models/FlowPathsFlowDetails.swift
+src/Models/FlowPathsFlowFilter.swift
+src/Models/FlowPathsQuery.swift
 src/Models/FlowResultEntityListing.swift
 src/Models/FlowRuntimeExecution.swift
 src/Models/FlowStartDetailEventTopicFlowStartEvent.swift
@@ -8392,6 +8408,7 @@ src/Models/IdentityProviderEntityListing.swift
 src/Models/IdleEventTrigger.swift
 src/Models/IdleTokenTimeout.swift
 src/Models/IgnoredActivityCategories.swift
+src/Models/ImapSettings.swift
 src/Models/ImportError.swift
 src/Models/ImportForecastResponse.swift
 src/Models/ImportForecastUploadResponse.swift
@@ -9777,6 +9794,7 @@ src/Models/ScimV2SchemaListResponse.swift
 src/Models/ScimV2User.swift
 src/Models/ScorableSurvey.swift
 src/Models/ScoredAgent.swift
+src/Models/ScreenRecordingActiveSessions.swift
 src/Models/ScreenRecordingMetaData.swift
 src/Models/ScreenRecordingMetaDataRequest.swift
 src/Models/ScreenRecordingSession.swift

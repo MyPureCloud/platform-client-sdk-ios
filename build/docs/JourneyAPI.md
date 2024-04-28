@@ -41,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyActiontemplates**](JourneyAPI.html#postJourneyActiontemplates) | Create a single action template. |
 | [**postJourneyDeploymentActionevent**](JourneyAPI.html#postJourneyDeploymentActionevent) | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**postJourneyDeploymentAppevents**](JourneyAPI.html#postJourneyDeploymentAppevents) | Send a journey app event, used for tracking customer activity on an application. |
+| [**postJourneyFlowsPathsQuery**](JourneyAPI.html#postJourneyFlowsPathsQuery) | Query for flow paths. |
 | [**postJourneyOutcomes**](JourneyAPI.html#postJourneyOutcomes) | Create an outcome. |
 | [**postJourneyOutcomesPredictors**](JourneyAPI.html#postJourneyOutcomesPredictors) | Create an outcome predictor. |
 | [**postJourneySegments**](JourneyAPI.html#postJourneySegments) | Create a segment. |
@@ -1885,6 +1886,58 @@ JourneyAPI.postJourneyDeploymentAppevents(deploymentId: deploymentId, body: body
 ### Return type
 
 [**AppEventResponse**](AppEventResponse.html)
+
+<a name="postJourneyFlowsPathsQuery"></a>
+
+# **postJourneyFlowsPathsQuery**
+
+
+
+> [FlowPaths](FlowPaths.html) postJourneyFlowsPathsQuery(body)
+
+Query for flow paths.
+
+
+
+Wraps POST /api/v2/journey/flows/paths/query  
+
+Requires ALL permissions: 
+
+* journey:flowpaths:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FlowPathsQuery = new FlowPathsQuery(...) // 
+
+// Code example
+JourneyAPI.postJourneyFlowsPathsQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyFlowsPathsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FlowPathsQuery**](FlowPathsQuery.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowPaths**](FlowPaths.html)
 
 <a name="postJourneyOutcomes"></a>
 

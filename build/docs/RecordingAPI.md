@@ -39,6 +39,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingUploadsReport**](RecordingAPI.html#getRecordingUploadsReport) | Get the status of a recording upload status report |
 | [**getRecordingsRetentionQuery**](RecordingAPI.html#getRecordingsRetentionQuery) | Query for recording retention data |
 | [**getRecordingsScreensessions**](RecordingAPI.html#getRecordingsScreensessions) | Retrieves a paged listing of screen recording sessions |
+| [**getRecordingsScreensessionsDetails**](RecordingAPI.html#getRecordingsScreensessionsDetails) | Retrieves an object containing the total number of concurrent active screen recordings |
 | [**patchRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#patchRecordingCrossplatformMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingMediaretentionpolicy**](RecordingAPI.html#patchRecordingMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingsScreensession**](RecordingAPI.html#patchRecordingsScreensession) | Update a screen recording session |
@@ -1868,6 +1869,54 @@ RecordingAPI.getRecordingsScreensessions(pageSize: pageSize, pageNumber: pageNum
 ### Return type
 
 [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html)
+
+<a name="getRecordingsScreensessionsDetails"></a>
+
+# **getRecordingsScreensessionsDetails**
+
+
+
+> [ScreenRecordingActiveSessions](ScreenRecordingActiveSessions.html) getRecordingsScreensessionsDetails()
+
+Retrieves an object containing the total number of concurrent active screen recordings
+
+
+
+Wraps GET /api/v2/recordings/screensessions/details  
+
+Requires ANY permissions: 
+
+* recording:screenRecording:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RecordingAPI.getRecordingsScreensessionsDetails() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RecordingAPI.getRecordingsScreensessionsDetails was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ScreenRecordingActiveSessions**](ScreenRecordingActiveSessions.html)
 
 <a name="patchRecordingCrossplatformMediaretentionpolicy"></a>
 

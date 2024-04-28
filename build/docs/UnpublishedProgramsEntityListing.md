@@ -9,9 +9,9 @@ title: UnpublishedProgramsEntityListing
 |------------ | ------------- | ------------- | -------------|
 | **entities** | [**[Program]**](Program.html) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
-| **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
+| **selfUri** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

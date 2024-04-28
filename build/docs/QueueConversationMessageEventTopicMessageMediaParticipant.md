@@ -42,6 +42,7 @@ title: QueueConversationMessageEventTopicMessageMediaParticipant
 | **journeyContext** | [**QueueConversationMessageEventTopicJourneyContext**](QueueConversationMessageEventTopicJourneyContext.html) |  | [optional] |
 | **startAcwTime** | [**Date**](Date.html) |  | [optional] |
 | **endAcwTime** | [**Date**](Date.html) |  | [optional] |
+| **resumeTime** | [**Date**](Date.html) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
 | **queueMediaSettings** | [**QueueConversationMessageEventTopicQueueMediaSettings**](QueueConversationMessageEventTopicQueueMediaSettings.html) |  | [optional] |
 | **messages** | [**[QueueConversationMessageEventTopicMessageDetails]**](QueueConversationMessageEventTopicMessageDetails.html) |  | [optional] |

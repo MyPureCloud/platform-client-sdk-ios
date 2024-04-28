@@ -13,8 +13,8 @@ Represents the details of a parsed certificate.
 | **expirationDate** | [**Date**](Date.html) | The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **issueDate** | [**Date**](Date.html) | The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **expired** | **Bool** | True if the certificate is expired, false otherwise. | [optional] |
-| **signatureValid** | **Bool** |  | [optional] |
 | **valid** | **Bool** |  | [optional] |
+| **signatureValid** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

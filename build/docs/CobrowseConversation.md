@@ -12,6 +12,7 @@ title: CobrowseConversation
 | **participants** | [**[CobrowseMediaParticipant]**](CobrowseMediaParticipant.html) | The list of participants involved in the conversation. | [optional] |
 | **otherMediaUris** | **[String]** | The list of other media channels involved in the conversation. | [optional] |
 | **recentTransfers** | [**[TransferResponse]**](TransferResponse.html) | The list of the most recent 20 transfer commands applied to this conversation. | [optional] |
+| **utilizationLabelId** | **String** | An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 {: class="table table-striped"}
 
