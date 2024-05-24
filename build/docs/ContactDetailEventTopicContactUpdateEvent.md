@@ -27,6 +27,7 @@ title: ContactDetailEventTopicContactUpdateEvent
 | **messageType** | **String** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
+| **divisionId** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

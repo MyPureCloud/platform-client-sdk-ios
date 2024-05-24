@@ -1,0 +1,16 @@
+---
+title: WorkitemFilter
+---
+## WorkitemFilter
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **name** | **String** | Attribute name. | |
+| **type** | **String** | Attribute type. | |
+| **_operator** | **String** | Filter operator. | |
+| **values** | **[String]** | List of values to be used in the filter. | |
+{: class="table table-striped"}
+
+

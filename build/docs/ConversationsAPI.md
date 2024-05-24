@@ -147,6 +147,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#patchConversationsMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
 | [**patchConversationsSettings**](ConversationsAPI.html#patchConversationsSettings) | Update Settings |
 | [**postAnalyticsConversationDetailsProperties**](ConversationsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
+| [**postAnalyticsConversationsActivityQuery**](ConversationsAPI.html#postAnalyticsConversationsActivityQuery) | Query for conversation activity observations |
 | [**postAnalyticsConversationsAggregatesQuery**](ConversationsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](ConversationsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
@@ -7800,6 +7801,62 @@ ConversationsAPI.postAnalyticsConversationDetailsProperties(conversationId: conv
 ### Return type
 
 [**PropertyIndexRequest**](PropertyIndexRequest.html)
+
+<a name="postAnalyticsConversationsActivityQuery"></a>
+
+# **postAnalyticsConversationsActivityQuery**
+
+
+
+> [ConversationActivityResponse](ConversationActivityResponse.html) postAnalyticsConversationsActivityQuery(body, pageSize, pageNumber)
+
+Query for conversation activity observations
+
+
+
+Wraps POST /api/v2/analytics/conversations/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationActivityQuery = new ConversationActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+ConversationsAPI.postAnalyticsConversationsActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postAnalyticsConversationsActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationActivityQuery**](ConversationActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationActivityResponse**](ConversationActivityResponse.html)
 
 <a name="postAnalyticsConversationsAggregatesQuery"></a>
 

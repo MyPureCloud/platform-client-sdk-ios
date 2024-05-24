@@ -431,6 +431,141 @@ open class TeamsAPI {
     
     
     
+    
+    
+    /**
+     Query for team activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsTeamsActivityQuery(body: TeamActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: TeamActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsTeamsActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<TeamActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for team activity observations
+     - POST /api/v2/analytics/teams/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "organizationPresenceId",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    }, {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    }, {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<TeamActivityResponse> 
+     */
+    open class func postAnalyticsTeamsActivityQueryWithRequestBuilder(body: TeamActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TeamActivityResponse> {        
+        let path = "/api/v2/analytics/teams/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<TeamActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Add team members
      

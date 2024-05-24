@@ -103,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutinglanguagesBulk**](RoutingAPI.html#patchUserRoutinglanguagesBulk) | Add bulk routing language to user. Max limit 50 languages |
 | [**patchUserRoutingskillsBulk**](RoutingAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
 | [**postAnalyticsQueuesObservationsQuery**](RoutingAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
+| [**postAnalyticsRoutingActivityQuery**](RoutingAPI.html#postAnalyticsRoutingActivityQuery) | Query for user activity observations |
 | [**postRoutingAssessments**](RoutingAPI.html#postRoutingAssessments) | Create a benefit assessment. |
 | [**postRoutingAssessmentsJobs**](RoutingAPI.html#postRoutingAssessmentsJobs) | Create a benefit assessment job. |
 | [**postRoutingEmailDomainRoutes**](RoutingAPI.html#postRoutingEmailDomainRoutes) | Create a route |
@@ -5394,6 +5395,62 @@ RoutingAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error) 
 ### Return type
 
 [**QueueObservationQueryResponse**](QueueObservationQueryResponse.html)
+
+<a name="postAnalyticsRoutingActivityQuery"></a>
+
+# **postAnalyticsRoutingActivityQuery**
+
+
+
+> [RoutingActivityResponse](RoutingActivityResponse.html) postAnalyticsRoutingActivityQuery(body, pageSize, pageNumber)
+
+Query for user activity observations
+
+
+
+Wraps POST /api/v2/analytics/routing/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: RoutingActivityQuery = new RoutingActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+RoutingAPI.postAnalyticsRoutingActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postAnalyticsRoutingActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**RoutingActivityQuery**](RoutingActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RoutingActivityResponse**](RoutingActivityResponse.html)
 
 <a name="postRoutingAssessments"></a>
 

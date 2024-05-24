@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrganizationsLimitsChangerequest**](OrganizationAPI.html#getOrganizationsLimitsChangerequest) | Get a limit change request |
 | [**getOrganizationsLimitsChangerequests**](OrganizationAPI.html#getOrganizationsLimitsChangerequests) | Get the available limit change requests |
 | [**getOrganizationsLimitsDocs**](OrganizationAPI.html#getOrganizationsLimitsDocs) | Get limit documentation |
+| [**getOrganizationsLimitsDocsFreetrial**](OrganizationAPI.html#getOrganizationsLimitsDocsFreetrial) | Get free trial limit documentation |
 | [**getOrganizationsLimitsNamespace**](OrganizationAPI.html#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
 | [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI.html#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
 | [**getOrganizationsLimitsNamespaces**](OrganizationAPI.html#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
@@ -385,6 +386,53 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**LimitDocumentation**](LimitDocumentation.html)
+
+<a name="getOrganizationsLimitsDocsFreetrial"></a>
+
+# **getOrganizationsLimitsDocsFreetrial**
+
+
+
+> [FreeTrialLimitDocs](FreeTrialLimitDocs.html) getOrganizationsLimitsDocsFreetrial()
+
+Get free trial limit documentation
+
+
+
+Wraps GET /api/v2/organizations/limits/docs/freetrial  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+OrganizationAPI.getOrganizationsLimitsDocsFreetrial() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OrganizationAPI.getOrganizationsLimitsDocsFreetrial was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**FreeTrialLimitDocs**](FreeTrialLimitDocs.html)
 
 <a name="getOrganizationsLimitsNamespace"></a>
 

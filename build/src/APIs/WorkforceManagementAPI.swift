@@ -1883,8 +1883,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -1896,8 +1896,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -1905,8 +1905,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -5160,8 +5160,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -5386,16 +5386,23 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    public enum Expand_getWorkforcemanagementManagementunitAgent: String { 
+        case workplanoverrides = "workPlanOverrides"
+    }
+    
     /**
      Get data for agent in the management unit
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
      - parameter excludeCapabilities: (query) Excludes all capabilities of the agent such as queues, languages, and skills (optional)
+     - parameter expand: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitAgent(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil, completion: @escaping ((_ data: WfmAgent?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities)
+    open class func getWorkforcemanagementManagementunitAgent(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil, expand: [String]? = nil, completion: @escaping ((_ data: WfmAgent?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities, expand: expand)
         requestBuilder.execute { (response: Response<WfmAgent>?, error) -> Void in
             do {
                 if let e = error {
@@ -5445,6 +5452,15 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "workPlan" : "{}",
+  "workPlanOverrides" : [ {
+    "workPlan" : "{}",
+    "weekCount" : 0,
+    "startDate" : "2000-01-23"
+  }, {
+    "workPlan" : "{}",
+    "weekCount" : 0,
+    "startDate" : "2000-01-23"
+  } ],
   "user" : "{}",
   "workPlanRotation" : "{}",
   "acceptDirectShiftTrades" : true
@@ -5453,10 +5469,11 @@ open class WorkforceManagementAPI {
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter agentId: (path) The agent id 
      - parameter excludeCapabilities: (query) Excludes all capabilities of the agent such as queues, languages, and skills (optional)
+     - parameter expand: (query)  (optional)
 
      - returns: RequestBuilder<WfmAgent> 
      */
-    open class func getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil) -> RequestBuilder<WfmAgent> {        
+    open class func getWorkforcemanagementManagementunitAgentWithRequestBuilder(managementUnitId: String, agentId: String, excludeCapabilities: Bool? = nil, expand: [String]? = nil) -> RequestBuilder<WfmAgent> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -5469,7 +5486,8 @@ open class WorkforceManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "excludeCapabilities": excludeCapabilities
+            "excludeCapabilities": excludeCapabilities, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<WfmAgent>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8194,15 +8212,22 @@ open class WorkforceManagementAPI {
         case details = "details"
     }
     
+    
+    
+    public enum Exclude_getWorkforcemanagementManagementunitWorkplans: String { 
+        case shiftsActivities = "shifts.activities"
+    }
+    
     /**
      Get work plans
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query) Include to access additional data on the work plans (optional)
+     - parameter exclude: (query) Exclude specific data on the work plans from the response (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitWorkplans(managementUnitId: String, expand: [String]? = nil, completion: @escaping ((_ data: WorkPlanListResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, expand: expand)
+    open class func getWorkforcemanagementManagementunitWorkplans(managementUnitId: String, expand: [String]? = nil, exclude: [String]? = nil, completion: @escaping ((_ data: WorkPlanListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: managementUnitId, expand: expand, exclude: exclude)
         requestBuilder.execute { (response: Response<WorkPlanListResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -8556,10 +8581,11 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter expand: (query) Include to access additional data on the work plans (optional)
+     - parameter exclude: (query) Exclude specific data on the work plans from the response (optional)
 
      - returns: RequestBuilder<WorkPlanListResponse> 
      */
-    open class func getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, expand: [String]? = nil) -> RequestBuilder<WorkPlanListResponse> {        
+    open class func getWorkforcemanagementManagementunitWorkplansWithRequestBuilder(managementUnitId: String, expand: [String]? = nil, exclude: [String]? = nil) -> RequestBuilder<WorkPlanListResponse> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8569,7 +8595,8 @@ open class WorkforceManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "expand": expand
+            "expand": expand, 
+            "exclude": exclude
         ])
 
         let requestBuilder: RequestBuilder<WorkPlanListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -8674,8 +8701,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -8687,8 +8714,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -8696,8 +8723,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -8772,8 +8799,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   }, {
@@ -8785,8 +8812,8 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "timeZone" : "timeZone",
-    "modifiedBy" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
     "id" : "id",
     "version" : 0
   } ],
@@ -8794,8 +8821,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -10055,8 +10082,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]
@@ -16287,8 +16314,8 @@ open class WorkforceManagementAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "timeZone" : "timeZone",
-  "modifiedBy" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
   "id" : "id",
   "version" : 0
 }, statusCode=200}]

@@ -62,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchUserRoutinglanguagesBulk**](UsersAPI.html#patchUserRoutinglanguagesBulk) | Add bulk routing language to user. Max limit 50 languages |
 | [**patchUserRoutingskillsBulk**](UsersAPI.html#patchUserRoutingskillsBulk) | Bulk add routing skills to user |
 | [**patchUsersBulk**](UsersAPI.html#patchUsersBulk) | Update bulk acd autoanswer on users. Max 50 users can be updated at a time. |
+| [**postAnalyticsUsersActivityQuery**](UsersAPI.html#postAnalyticsUsersActivityQuery) | Query for user activity observations |
 | [**postAnalyticsUsersAggregatesQuery**](UsersAPI.html#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
 | [**postAnalyticsUsersDetailsJobs**](UsersAPI.html#postAnalyticsUsersDetailsJobs) | Query for user details asynchronously |
 | [**postAnalyticsUsersDetailsQuery**](UsersAPI.html#postAnalyticsUsersDetailsQuery) | Query for user details |
@@ -3133,6 +3134,62 @@ UsersAPI.patchUsersBulk(body: body) { (response, error) in
 ### Return type
 
 [**UserEntityListing**](UserEntityListing.html)
+
+<a name="postAnalyticsUsersActivityQuery"></a>
+
+# **postAnalyticsUsersActivityQuery**
+
+
+
+> [UserActivityResponse](UserActivityResponse.html) postAnalyticsUsersActivityQuery(body, pageSize, pageNumber)
+
+Query for user activity observations
+
+
+
+Wraps POST /api/v2/analytics/users/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserActivityQuery = new UserActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+UsersAPI.postAnalyticsUsersActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.postAnalyticsUsersActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserActivityQuery**](UserActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserActivityResponse**](UserActivityResponse.html)
 
 <a name="postAnalyticsUsersAggregatesQuery"></a>
 

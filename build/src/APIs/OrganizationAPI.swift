@@ -634,6 +634,79 @@ open class OrganizationAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get free trial limit documentation
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrganizationsLimitsDocsFreetrial(completion: @escaping ((_ data: FreeTrialLimitDocs?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrganizationsLimitsDocsFreetrialWithRequestBuilder()
+        requestBuilder.execute { (response: Response<FreeTrialLimitDocs>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get free trial limit documentation
+     - GET /api/v2/organizations/limits/docs/freetrial
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "namespaces" : [ {
+    "friendlyName" : "friendlyName",
+    "limits" : [ {
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key"
+    }, {
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key"
+    } ]
+  }, {
+    "friendlyName" : "friendlyName",
+    "limits" : [ {
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key"
+    }, {
+      "resource" : "resource",
+      "defaultValue" : 0,
+      "description" : "description",
+      "key" : "key"
+    } ]
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<FreeTrialLimitDocs> 
+     */
+    open class func getOrganizationsLimitsDocsFreetrialWithRequestBuilder() -> RequestBuilder<FreeTrialLimitDocs> {        
+        let path = "/api/v2/organizations/limits/docs/freetrial"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FreeTrialLimitDocs>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     /**

@@ -4195,7 +4195,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAdherence(managementU
 
 
 
-> [WfmAgent](WfmAgent.html) getWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities)
+> [WfmAgent](WfmAgent.html) getWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities, expand)
 
 Get data for agent in the management unit
 
@@ -4218,9 +4218,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let agentId: String = "" // The agent id
 let excludeCapabilities: Bool = true // Excludes all capabilities of the agent such as queues, languages, and skills
+let expand: [String] = [""] // 
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitId: managementUnitId, agentId: agentId, excludeCapabilities: excludeCapabilities, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4238,6 +4239,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitI
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
 | **excludeCapabilities** | **Bool**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional] |
+| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: workplanoverrides ("workPlanOverrides") |
 {: class="table-striped"}
 
 
@@ -5205,7 +5207,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotations(man
 
 
 
-> [WorkPlanListResponse](WorkPlanListResponse.html) getWorkforcemanagementManagementunitWorkplans(managementUnitId, expand)
+> [WorkPlanListResponse](WorkPlanListResponse.html) getWorkforcemanagementManagementunitWorkplans(managementUnitId, expand, exclude)
 
 Get work plans
 
@@ -5233,9 +5235,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let expand: [String] = [""] // Include to access additional data on the work plans
+let exclude: [String] = [""] // Exclude specific data on the work plans from the response
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementUnitId: managementUnitId, expand: expand, exclude: exclude) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5252,6 +5255,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementU
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **expand** | [**[String]**](String.html)| Include to access additional data on the work plans | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
+| **exclude** | [**[String]**](String.html)| Exclude specific data on the work plans from the response | [optional]<br />**Values**: shiftsActivities ("shifts.activities") |
 {: class="table-striped"}
 
 

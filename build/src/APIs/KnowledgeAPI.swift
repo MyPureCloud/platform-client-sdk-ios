@@ -472,6 +472,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -587,6 +592,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -722,6 +732,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -3378,6 +3393,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -3529,6 +3549,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -3664,6 +3689,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -3799,6 +3829,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -4024,6 +4059,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -4143,6 +4183,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -4260,6 +4305,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -4829,6 +4879,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -5667,6 +5722,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -5806,6 +5866,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -5945,6 +6010,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -6115,6 +6185,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -7820,6 +7895,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -7952,6 +8032,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -8086,6 +8171,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -8202,6 +8292,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     
@@ -8319,6 +8414,11 @@ open class KnowledgeAPI {
         case daDk = "da-DK"
         case jaJp = "ja-JP"
         case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
     }
     
     

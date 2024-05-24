@@ -12,6 +12,225 @@ import Foundation
 open class FlowsAPI {
     
     
+    
+    
+    
+    
+    /**
+     Query for flow activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsFlowsActivityQuery(body: FlowActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: FlowActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsFlowsActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<FlowActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for flow activity observations
+     - POST /api/v2/analytics/flows/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "activeRouting",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oFlow",
+      "count" : 0
+    }, {
+      "metric" : "oFlow",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    }, {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oFlow",
+      "count" : 0
+    }, {
+      "metric" : "oFlow",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    }, {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<FlowActivityResponse> 
+     */
+    open class func postAnalyticsFlowsActivityQueryWithRequestBuilder(body: FlowActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FlowActivityResponse> {        
+        let path = "/api/v2/analytics/flows/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<FlowActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Query for flow aggregates
      

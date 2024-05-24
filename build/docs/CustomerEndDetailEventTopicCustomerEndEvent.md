@@ -29,6 +29,7 @@ title: CustomerEndDetailEventTopicCustomerEndEvent
 | **interactingDurationMs** | **Int** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
+| **divisionId** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

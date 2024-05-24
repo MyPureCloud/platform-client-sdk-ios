@@ -810,8 +810,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -907,8 +907,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1416,8 +1416,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -5118,8 +5118,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6138,8 +6138,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6358,8 +6358,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6458,8 +6458,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7291,8 +7291,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -8070,8 +8070,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8268,8 +8268,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -8471,8 +8471,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -18004,8 +18004,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18161,8 +18161,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18243,8 +18243,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18884,8 +18884,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Users 
@@ -18902,6 +18902,141 @@ open class UsersAPI {
         let requestBuilder: RequestBuilder<UserEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query for user activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsUsersActivityQuery(body: UserActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: UserActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsUsersActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<UserActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for user activity observations
+     - POST /api/v2/analytics/users/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "organizationPresenceId",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    }, {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    }, {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<UserActivityResponse> 
+     */
+    open class func postAnalyticsUsersActivityQueryWithRequestBuilder(body: UserActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<UserActivityResponse> {        
+        let path = "/api/v2/analytics/users/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<UserActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
     
@@ -23167,8 +23302,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

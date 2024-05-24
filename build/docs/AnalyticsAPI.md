@@ -8,8 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteAnalyticsConversationsDetailsJob**](AnalyticsAPI.html#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async details job |
-| [**deleteAnalyticsReportingSchedule**](AnalyticsAPI.html#deleteAnalyticsReportingSchedule) | Delete a scheduled report job. |
 | [**deleteAnalyticsUsersDetailsJob**](AnalyticsAPI.html#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
+| [**getAnalyticsBotflowDivisionsReportingturns**](AnalyticsAPI.html#getAnalyticsBotflowDivisionsReportingturns) | Get Reporting Turns (division aware). |
 | [**getAnalyticsBotflowReportingturns**](AnalyticsAPI.html#getAnalyticsBotflowReportingturns) | Get Reporting Turns. |
 | [**getAnalyticsBotflowSessions**](AnalyticsAPI.html#getAnalyticsBotflowSessions) | Get Bot Flow Sessions. |
 | [**getAnalyticsConversationDetails**](AnalyticsAPI.html#getAnalyticsConversationDetails) | Get a conversation by id |
@@ -22,17 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsReportingDashboardsUsers**](AnalyticsAPI.html#getAnalyticsReportingDashboardsUsers) | Get dashboards summary for users in a org |
 | [**getAnalyticsReportingExports**](AnalyticsAPI.html#getAnalyticsReportingExports) | Get all view export requests for a user |
 | [**getAnalyticsReportingExportsMetadata**](AnalyticsAPI.html#getAnalyticsReportingExportsMetadata) | Get all export metadata |
-| [**getAnalyticsReportingMetadata**](AnalyticsAPI.html#getAnalyticsReportingMetadata) | Get list of reporting metadata. |
-| [**getAnalyticsReportingReportIdMetadata**](AnalyticsAPI.html#getAnalyticsReportingReportIdMetadata) | Get a reporting metadata. |
-| [**getAnalyticsReportingReportformats**](AnalyticsAPI.html#getAnalyticsReportingReportformats) | Get a list of report formats |
-| [**getAnalyticsReportingSchedule**](AnalyticsAPI.html#getAnalyticsReportingSchedule) | Get a scheduled report job. |
-| [**getAnalyticsReportingScheduleHistory**](AnalyticsAPI.html#getAnalyticsReportingScheduleHistory) | Get list of completed scheduled report jobs. |
-| [**getAnalyticsReportingScheduleHistoryLatest**](AnalyticsAPI.html#getAnalyticsReportingScheduleHistoryLatest) | Get most recently completed scheduled report job. |
-| [**getAnalyticsReportingScheduleHistoryRunId**](AnalyticsAPI.html#getAnalyticsReportingScheduleHistoryRunId) | A completed scheduled report job |
-| [**getAnalyticsReportingSchedules**](AnalyticsAPI.html#getAnalyticsReportingSchedules) | Get a list of scheduled report jobs |
 | [**getAnalyticsReportingSettings**](AnalyticsAPI.html#getAnalyticsReportingSettings) | Get AnalyticsReportingSettings for an organization |
 | [**getAnalyticsReportingSettingsUserDashboards**](AnalyticsAPI.html#getAnalyticsReportingSettingsUserDashboards) | Get list of dashboards for an user |
-| [**getAnalyticsReportingTimeperiods**](AnalyticsAPI.html#getAnalyticsReportingTimeperiods) | Get a list of report time periods. |
 | [**getAnalyticsUsersDetailsJob**](AnalyticsAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
 | [**getAnalyticsUsersDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
@@ -40,12 +31,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
+| [**postAnalyticsConversationsActivityQuery**](AnalyticsAPI.html#postAnalyticsConversationsActivityQuery) | Query for conversation activity observations |
 | [**postAnalyticsConversationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsConversationsAggregatesQuery) | Query for conversation aggregates |
 | [**postAnalyticsConversationsDetailsJobs**](AnalyticsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](AnalyticsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
 | [**postAnalyticsConversationsTranscriptsQuery**](AnalyticsAPI.html#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
 | [**postAnalyticsEvaluationsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
 | [**postAnalyticsFlowexecutionsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowexecutionsAggregatesQuery) | Query for flow execution aggregates |
+| [**postAnalyticsFlowsActivityQuery**](AnalyticsAPI.html#postAnalyticsFlowsActivityQuery) | Query for flow activity observations |
 | [**postAnalyticsFlowsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
 | [**postAnalyticsFlowsObservationsQuery**](AnalyticsAPI.html#postAnalyticsFlowsObservationsQuery) | Query for flow observations |
 | [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
@@ -54,18 +47,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
 | [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk delete dashboards owned by other user(s) |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
-| [**postAnalyticsReportingScheduleRunreport**](AnalyticsAPI.html#postAnalyticsReportingScheduleRunreport) | Place a scheduled report immediately into the reporting queue |
-| [**postAnalyticsReportingSchedules**](AnalyticsAPI.html#postAnalyticsReportingSchedules) | Create a scheduled report job |
 | [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk remove dashboard configurations |
 | [**postAnalyticsReportingSettingsDashboardsQuery**](AnalyticsAPI.html#postAnalyticsReportingSettingsDashboardsQuery) | Query dashboard configurations |
+| [**postAnalyticsRoutingActivityQuery**](AnalyticsAPI.html#postAnalyticsRoutingActivityQuery) | Query for user activity observations |
 | [**postAnalyticsSurveysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
+| [**postAnalyticsTeamsActivityQuery**](AnalyticsAPI.html#postAnalyticsTeamsActivityQuery) | Query for team activity observations |
 | [**postAnalyticsTranscriptsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsTranscriptsAggregatesQuery) | Query for transcript aggregates |
+| [**postAnalyticsUsersActivityQuery**](AnalyticsAPI.html#postAnalyticsUsersActivityQuery) | Query for user activity observations |
 | [**postAnalyticsUsersAggregatesQuery**](AnalyticsAPI.html#postAnalyticsUsersAggregatesQuery) | Query for user aggregates |
 | [**postAnalyticsUsersDetailsJobs**](AnalyticsAPI.html#postAnalyticsUsersDetailsJobs) | Query for user details asynchronously |
 | [**postAnalyticsUsersDetailsQuery**](AnalyticsAPI.html#postAnalyticsUsersDetailsQuery) | Query for user details |
 | [**postAnalyticsUsersObservationsQuery**](AnalyticsAPI.html#postAnalyticsUsersObservationsQuery) | Query for user observations |
 | [**putAnalyticsDataretentionSettings**](AnalyticsAPI.html#putAnalyticsDataretentionSettings) | Update analytics data retention setting |
-| [**putAnalyticsReportingSchedule**](AnalyticsAPI.html#putAnalyticsReportingSchedule) | Update a scheduled report job. |
 {: class="table-striped"}
 
 <a name="deleteAnalyticsConversationsDetailsJob"></a>
@@ -113,56 +106,6 @@ AnalyticsAPI.deleteAnalyticsConversationsDetailsJob(jobId: jobId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteAnalyticsReportingSchedule"></a>
-
-# **deleteAnalyticsReportingSchedule**
-
-
-
-> Void deleteAnalyticsReportingSchedule(scheduleId)
-
-Delete a scheduled report job.
-
-
-
-Wraps DELETE /api/v2/analytics/reporting/schedules/{scheduleId}  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let scheduleId: String = "" // Schedule ID
-
-// Code example
-AnalyticsAPI.deleteAnalyticsReportingSchedule(scheduleId: scheduleId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("AnalyticsAPI.deleteAnalyticsReportingSchedule was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **scheduleId** | **String**| Schedule ID | |
 {: class="table-striped"}
 
 
@@ -221,6 +164,74 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 `nil` (empty response body)
 
+<a name="getAnalyticsBotflowDivisionsReportingturns"></a>
+
+# **getAnalyticsBotflowDivisionsReportingturns**
+
+
+
+> [ReportingTurnsResponse](ReportingTurnsResponse.html) getAnalyticsBotflowDivisionsReportingturns(botFlowId, after, pageSize, interval, actionId, sessionId, language, askActionResults)
+
+Get Reporting Turns (division aware).
+
+Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+
+
+
+Wraps GET /api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns  
+
+Requires ANY permissions: 
+
+* analytics:botFlowDivisionAwareReportingTurn:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let botFlowId: String = "" // ID of the bot flow.
+let after: String = "" // The cursor that points to the ID of the last item in the list of entities that has been returned.
+let pageSize: String = "" // Max number of entities to return. Maximum of 250
+let interval: String = 2023-07-17T08:15:44.586Z/2023-07-26T09:22:33.111Z // Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
+let actionId: String = "" // Optional action ID to get the reporting turns associated to a particular flow action
+let sessionId: String = "" // Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed.
+let language: String = en-us // Optional language code to get the reporting turns for a particular language
+let askActionResults: AnalyticsAPI.AskActionResults_getAnalyticsBotflowDivisionsReportingturns = AnalyticsAPI.AskActionResults_getAnalyticsBotflowDivisionsReportingturns.enummember // Optional case-insensitive comma separated list of ask action results to filter the reporting turns.
+
+// Code example
+AnalyticsAPI.getAnalyticsBotflowDivisionsReportingturns(botFlowId: botFlowId, after: after, pageSize: pageSize, interval: interval, actionId: actionId, sessionId: sessionId, language: language, askActionResults: askActionResults) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsBotflowDivisionsReportingturns was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **botFlowId** | **String**| ID of the bot flow. | |
+| **after** | **String**| The cursor that points to the ID of the last item in the list of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Max number of entities to return. Maximum of 250 | [optional] |
+| **interval** | **String**| Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: '2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07'. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
+| **actionId** | **String**| Optional action ID to get the reporting turns associated to a particular flow action | [optional] |
+| **sessionId** | **String**| Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. | [optional] |
+| **language** | **String**| Optional language code to get the reporting turns for a particular language | [optional] |
+| **askActionResults** | **String**| Optional case-insensitive comma separated list of ask action results to filter the reporting turns. | [optional]<br />**Values**: agentRequestedByUser ("AgentRequestedByUser"), confirmationRequired ("ConfirmationRequired"), disambiguationRequired ("DisambiguationRequired"), error ("Error"), expressionError ("ExpressionError"), noInputCollection ("NoInputCollection"), noInputConfirmation ("NoInputConfirmation"), noInputDisambiguation ("NoInputDisambiguation"), noMatchCollection ("NoMatchCollection"), noMatchConfirmation ("NoMatchConfirmation"), noMatchDisambiguation ("NoMatchDisambiguation"), successCollection ("SuccessCollection"), successConfirmationNo ("SuccessConfirmationNo"), successConfirmationYes ("SuccessConfirmationYes"), successDisambiguation ("SuccessDisambiguation"), successDisambiguationNone ("SuccessDisambiguationNone") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ReportingTurnsResponse**](ReportingTurnsResponse.html)
+
 <a name="getAnalyticsBotflowReportingturns"></a>
 
 # **getAnalyticsBotflowReportingturns**
@@ -231,7 +242,7 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 
 Get Reporting Turns.
 
-Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of &#39;nextUri&#39; in the response, until it&#39;s no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
 
 
 
@@ -879,433 +890,6 @@ This endpoint does not require any parameters.
 
 [**ReportingExportMetadataJobListing**](ReportingExportMetadataJobListing.html)
 
-<a name="getAnalyticsReportingMetadata"></a>
-
-# **getAnalyticsReportingMetadata**
-
-
-
-> [ReportMetaDataEntityListing](ReportMetaDataEntityListing.html) getAnalyticsReportingMetadata(pageNumber, pageSize, locale)
-
-Get list of reporting metadata.
-
-
-
-Wraps GET /api/v2/analytics/reporting/metadata  
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageNumber: Int = 0 // Page number
-let pageSize: Int = 0 // Page size
-let locale: String = "" // Locale
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingMetadata(pageNumber: pageNumber, pageSize: pageSize, locale: locale) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingMetadata was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **pageSize** | **Int**| Page size | [optional] |
-| **locale** | **String**| Locale | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html)
-
-<a name="getAnalyticsReportingReportIdMetadata"></a>
-
-# **getAnalyticsReportingReportIdMetadata**
-
-
-
-> [ReportMetaData](ReportMetaData.html) getAnalyticsReportingReportIdMetadata(reportId, locale)
-
-Get a reporting metadata.
-
-
-
-Wraps GET /api/v2/analytics/reporting/{reportId}/metadata  
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let reportId: String = "" // Report ID
-let locale: String = "" // Locale
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingReportIdMetadata(reportId: reportId, locale: locale) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingReportIdMetadata was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **reportId** | **String**| Report ID | |
-| **locale** | **String**| Locale | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportMetaData**](ReportMetaData.html)
-
-<a name="getAnalyticsReportingReportformats"></a>
-
-# **getAnalyticsReportingReportformats**
-
-
-
-> [String] getAnalyticsReportingReportformats()
-
-Get a list of report formats
-
-Get a list of report formats.
-
-
-
-Wraps GET /api/v2/analytics/reporting/reportformats  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingReportformats() { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingReportformats was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not require any parameters.
-
-
-
-### Return type
-
-**[String]**
-
-<a name="getAnalyticsReportingSchedule"></a>
-
-# **getAnalyticsReportingSchedule**
-
-
-
-> [ReportSchedule](ReportSchedule.html) getAnalyticsReportingSchedule(scheduleId)
-
-Get a scheduled report job.
-
-
-
-Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let scheduleId: String = "" // Schedule ID
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingSchedule(scheduleId: scheduleId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingSchedule was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **scheduleId** | **String**| Schedule ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
-
-<a name="getAnalyticsReportingScheduleHistory"></a>
-
-# **getAnalyticsReportingScheduleHistory**
-
-
-
-> [ReportRunEntryEntityDomainListing](ReportRunEntryEntityDomainListing.html) getAnalyticsReportingScheduleHistory(scheduleId, pageNumber, pageSize)
-
-Get list of completed scheduled report jobs.
-
-
-
-Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let scheduleId: String = "" // Schedule ID
-let pageNumber: Int = 0 // 
-let pageSize: Int = 0 // 
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingScheduleHistory(scheduleId: scheduleId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingScheduleHistory was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **scheduleId** | **String**| Schedule ID | |
-| **pageNumber** | **Int**|  | [optional] |
-| **pageSize** | **Int**|  | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html)
-
-<a name="getAnalyticsReportingScheduleHistoryLatest"></a>
-
-# **getAnalyticsReportingScheduleHistoryLatest**
-
-
-
-> [ReportRunEntry](ReportRunEntry.html) getAnalyticsReportingScheduleHistoryLatest(scheduleId)
-
-Get most recently completed scheduled report job.
-
-
-
-Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let scheduleId: String = "" // Schedule ID
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingScheduleHistoryLatest(scheduleId: scheduleId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingScheduleHistoryLatest was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **scheduleId** | **String**| Schedule ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportRunEntry**](ReportRunEntry.html)
-
-<a name="getAnalyticsReportingScheduleHistoryRunId"></a>
-
-# **getAnalyticsReportingScheduleHistoryRunId**
-
-
-
-> [ReportRunEntry](ReportRunEntry.html) getAnalyticsReportingScheduleHistoryRunId(runId, scheduleId)
-
-A completed scheduled report job
-
-A completed scheduled report job.
-
-
-
-Wraps GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let runId: String = "" // Run ID
-let scheduleId: String = "" // Schedule ID
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingScheduleHistoryRunId(runId: runId, scheduleId: scheduleId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingScheduleHistoryRunId was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **runId** | **String**| Run ID | |
-| **scheduleId** | **String**| Schedule ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportRunEntry**](ReportRunEntry.html)
-
-<a name="getAnalyticsReportingSchedules"></a>
-
-# **getAnalyticsReportingSchedules**
-
-
-
-> [ReportScheduleEntityListing](ReportScheduleEntityListing.html) getAnalyticsReportingSchedules(pageNumber, pageSize)
-
-Get a list of scheduled report jobs
-
-Get a list of scheduled report jobs.
-
-
-
-Wraps GET /api/v2/analytics/reporting/schedules  
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageNumber: Int = 0 // Page number
-let pageSize: Int = 0 // Page size
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingSchedules(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingSchedules was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportScheduleEntityListing**](ReportScheduleEntityListing.html)
-
 <a name="getAnalyticsReportingSettings"></a>
 
 # **getAnalyticsReportingSettings**
@@ -1359,7 +943,7 @@ This endpoint does not require any parameters.
 
 
 
-> [DashboardConfigurationListing](DashboardConfigurationListing.html) getAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly)
+> [DashboardConfigurationListing](DashboardConfigurationListing.html) getAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name)
 
 Get list of dashboards for an user
 
@@ -1385,9 +969,10 @@ let pageNumber: Int = 0 //
 let pageSize: Int = 0 // 
 let publicOnly: Bool = true // If true, retrieve only public dashboards
 let favoriteOnly: Bool = true // If true, retrieve only favorite dashboards
+let name: String = "" // retrieve dashboards that match with given name
 
 // Code example
-AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly) { (response, error) in
+AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1408,59 +993,13 @@ AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy:
 | **pageSize** | **Int**|  | [optional] |
 | **publicOnly** | **Bool**| If true, retrieve only public dashboards | [optional] |
 | **favoriteOnly** | **Bool**| If true, retrieve only favorite dashboards | [optional] |
+| **name** | **String**| retrieve dashboards that match with given name | [optional] |
 {: class="table-striped"}
 
 
 ### Return type
 
 [**DashboardConfigurationListing**](DashboardConfigurationListing.html)
-
-<a name="getAnalyticsReportingTimeperiods"></a>
-
-# **getAnalyticsReportingTimeperiods**
-
-
-
-> [String] getAnalyticsReportingTimeperiods()
-
-Get a list of report time periods.
-
-
-
-Wraps GET /api/v2/analytics/reporting/timeperiods  
-
-Requires NO permissions: 
-
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-
-// Code example
-AnalyticsAPI.getAnalyticsReportingTimeperiods() { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.getAnalyticsReportingTimeperiods was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-This endpoint does not require any parameters.
-
-
-
-### Return type
-
-**[String]**
 
 <a name="getAnalyticsUsersDetailsJob"></a>
 
@@ -1829,6 +1368,62 @@ AnalyticsAPI.postAnalyticsConversationDetailsProperties(conversationId: conversa
 
 [**PropertyIndexRequest**](PropertyIndexRequest.html)
 
+<a name="postAnalyticsConversationsActivityQuery"></a>
+
+# **postAnalyticsConversationsActivityQuery**
+
+
+
+> [ConversationActivityResponse](ConversationActivityResponse.html) postAnalyticsConversationsActivityQuery(body, pageSize, pageNumber)
+
+Query for conversation activity observations
+
+
+
+Wraps POST /api/v2/analytics/conversations/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ConversationActivityQuery = new ConversationActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+AnalyticsAPI.postAnalyticsConversationsActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsConversationsActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ConversationActivityQuery**](ConversationActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationActivityResponse**](ConversationActivityResponse.html)
+
 <a name="postAnalyticsConversationsAggregatesQuery"></a>
 
 # **postAnalyticsConversationsAggregatesQuery**
@@ -2142,6 +1737,62 @@ AnalyticsAPI.postAnalyticsFlowexecutionsAggregatesQuery(body: body) { (response,
 ### Return type
 
 [**FlowExecutionAggregateQueryResponse**](FlowExecutionAggregateQueryResponse.html)
+
+<a name="postAnalyticsFlowsActivityQuery"></a>
+
+# **postAnalyticsFlowsActivityQuery**
+
+
+
+> [FlowActivityResponse](FlowActivityResponse.html) postAnalyticsFlowsActivityQuery(body, pageSize, pageNumber)
+
+Query for flow activity observations
+
+
+
+Wraps POST /api/v2/analytics/flows/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:flowObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FlowActivityQuery = new FlowActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+AnalyticsAPI.postAnalyticsFlowsActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsFlowsActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FlowActivityQuery**](FlowActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowActivityResponse**](FlowActivityResponse.html)
 
 <a name="postAnalyticsFlowsAggregatesQuery"></a>
 
@@ -2561,114 +2212,6 @@ AnalyticsAPI.postAnalyticsReportingExports(body: body) { (response, error) in
 
 [**ReportingExportJobResponse**](ReportingExportJobResponse.html)
 
-<a name="postAnalyticsReportingScheduleRunreport"></a>
-
-# **postAnalyticsReportingScheduleRunreport**
-
-
-
-> [RunNowResponse](RunNowResponse.html) postAnalyticsReportingScheduleRunreport(scheduleId)
-
-Place a scheduled report immediately into the reporting queue
-
-This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-
-
-
-Wraps POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport  
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let scheduleId: String = "" // Schedule ID
-
-// Code example
-AnalyticsAPI.postAnalyticsReportingScheduleRunreport(scheduleId: scheduleId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.postAnalyticsReportingScheduleRunreport was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **scheduleId** | **String**| Schedule ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**RunNowResponse**](RunNowResponse.html)
-
-<a name="postAnalyticsReportingSchedules"></a>
-
-# **postAnalyticsReportingSchedules**
-
-
-
-> [ReportSchedule](ReportSchedule.html) postAnalyticsReportingSchedules(body)
-
-Create a scheduled report job
-
-This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-
-
-
-Wraps POST /api/v2/analytics/reporting/schedules  
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: ReportSchedule = new ReportSchedule(...) // ReportSchedule
-
-// Code example
-AnalyticsAPI.postAnalyticsReportingSchedules(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.postAnalyticsReportingSchedules was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
-
 <a name="postAnalyticsReportingSettingsDashboardsBulkRemove"></a>
 
 # **postAnalyticsReportingSettingsDashboardsBulkRemove**
@@ -2772,6 +2315,62 @@ AnalyticsAPI.postAnalyticsReportingSettingsDashboardsQuery(body: body) { (respon
 
 [**DashboardConfigurationListing**](DashboardConfigurationListing.html)
 
+<a name="postAnalyticsRoutingActivityQuery"></a>
+
+# **postAnalyticsRoutingActivityQuery**
+
+
+
+> [RoutingActivityResponse](RoutingActivityResponse.html) postAnalyticsRoutingActivityQuery(body, pageSize, pageNumber)
+
+Query for user activity observations
+
+
+
+Wraps POST /api/v2/analytics/routing/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: RoutingActivityQuery = new RoutingActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+AnalyticsAPI.postAnalyticsRoutingActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsRoutingActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**RoutingActivityQuery**](RoutingActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RoutingActivityResponse**](RoutingActivityResponse.html)
+
 <a name="postAnalyticsSurveysAggregatesQuery"></a>
 
 # **postAnalyticsSurveysAggregatesQuery**
@@ -2824,6 +2423,62 @@ AnalyticsAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error)
 
 [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
 
+<a name="postAnalyticsTeamsActivityQuery"></a>
+
+# **postAnalyticsTeamsActivityQuery**
+
+
+
+> [TeamActivityResponse](TeamActivityResponse.html) postAnalyticsTeamsActivityQuery(body, pageSize, pageNumber)
+
+Query for team activity observations
+
+
+
+Wraps POST /api/v2/analytics/teams/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:teamObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TeamActivityQuery = new TeamActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+AnalyticsAPI.postAnalyticsTeamsActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsTeamsActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TeamActivityQuery**](TeamActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TeamActivityResponse**](TeamActivityResponse.html)
+
 <a name="postAnalyticsTranscriptsAggregatesQuery"></a>
 
 # **postAnalyticsTranscriptsAggregatesQuery**
@@ -2875,6 +2530,62 @@ AnalyticsAPI.postAnalyticsTranscriptsAggregatesQuery(body: body) { (response, er
 ### Return type
 
 [**TranscriptAggregateQueryResponse**](TranscriptAggregateQueryResponse.html)
+
+<a name="postAnalyticsUsersActivityQuery"></a>
+
+# **postAnalyticsUsersActivityQuery**
+
+
+
+> [UserActivityResponse](UserActivityResponse.html) postAnalyticsUsersActivityQuery(body, pageSize, pageNumber)
+
+Query for user activity observations
+
+
+
+Wraps POST /api/v2/analytics/users/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: UserActivityQuery = new UserActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+AnalyticsAPI.postAnalyticsUsersActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsUsersActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**UserActivityQuery**](UserActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UserActivityResponse**](UserActivityResponse.html)
 
 <a name="postAnalyticsUsersAggregatesQuery"></a>
 
@@ -3135,60 +2846,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 ### Return type
 
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse.html)
-
-<a name="putAnalyticsReportingSchedule"></a>
-
-# **putAnalyticsReportingSchedule**
-
-
-
-> [ReportSchedule](ReportSchedule.html) putAnalyticsReportingSchedule(scheduleId, body)
-
-Update a scheduled report job.
-
-This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-
-
-
-Wraps PUT /api/v2/analytics/reporting/schedules/{scheduleId}  
-
-Requires ANY permissions: 
-
-* reporting:acd:view, reporting:status:view, reporting:interactions:view, reporting:outbound:view, reporting:quality:view, employee
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let scheduleId: String = "" // Schedule ID
-let body: ReportSchedule = new ReportSchedule(...) // ReportSchedule
-
-// Code example
-AnalyticsAPI.putAnalyticsReportingSchedule(scheduleId: scheduleId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("AnalyticsAPI.putAnalyticsReportingSchedule was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **scheduleId** | **String**| Schedule ID | |
-| **body** | [**ReportSchedule**](ReportSchedule.html)| ReportSchedule | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ReportSchedule**](ReportSchedule.html)
 

@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTeamMembers**](TeamsAPI.html#getTeamMembers) | Get team membership |
 | [**getTeams**](TeamsAPI.html#getTeams) | Get Team listing |
 | [**patchTeam**](TeamsAPI.html#patchTeam) | Update team |
+| [**postAnalyticsTeamsActivityQuery**](TeamsAPI.html#postAnalyticsTeamsActivityQuery) | Query for team activity observations |
 | [**postTeamMembers**](TeamsAPI.html#postTeamMembers) | Add team members |
 | [**postTeams**](TeamsAPI.html#postTeams) | Create a team |
 | [**postTeamsSearch**](TeamsAPI.html#postTeamsSearch) | Search resources. |
@@ -347,6 +348,62 @@ TeamsAPI.patchTeam(teamId: teamId, body: body) { (response, error) in
 ### Return type
 
 [**Team**](Team.html)
+
+<a name="postAnalyticsTeamsActivityQuery"></a>
+
+# **postAnalyticsTeamsActivityQuery**
+
+
+
+> [TeamActivityResponse](TeamActivityResponse.html) postAnalyticsTeamsActivityQuery(body, pageSize, pageNumber)
+
+Query for team activity observations
+
+
+
+Wraps POST /api/v2/analytics/teams/activity/query  
+
+Requires ANY permissions: 
+
+* analytics:teamObservation:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TeamActivityQuery = new TeamActivityQuery(...) // query
+let pageSize: Int = 0 // The desired page size
+let pageNumber: Int = 0 // The desired page number
+
+// Code example
+TeamsAPI.postAnalyticsTeamsActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TeamsAPI.postAnalyticsTeamsActivityQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TeamActivityQuery**](TeamActivityQuery.html)| query | |
+| **pageSize** | **Int**| The desired page size | [optional] |
+| **pageNumber** | **Int**| The desired page number | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**TeamActivityResponse**](TeamActivityResponse.html)
 
 <a name="postTeamMembers"></a>
 

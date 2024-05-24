@@ -58,51 +58,6 @@ open class AnalyticsAPI {
     
     
     /**
-     Delete a scheduled report job.
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func deleteAnalyticsReportingSchedule(scheduleId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = deleteAnalyticsReportingScheduleWithRequestBuilder(scheduleId: scheduleId)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Delete a scheduled report job.
-     - DELETE /api/v2/analytics/reporting/schedules/{scheduleId}
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter scheduleId: (path) Schedule ID 
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func deleteAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String) -> RequestBuilder<Void> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}"
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
-    }
-
-    
-    
-    /**
      Delete/cancel an async request
      
      - parameter jobId: (path) jobId 
@@ -143,6 +98,143 @@ open class AnalyticsAPI {
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum AskActionResults_getAnalyticsBotflowDivisionsReportingturns: String { 
+        case agentRequestedByUser = "AgentRequestedByUser"
+        case confirmationRequired = "ConfirmationRequired"
+        case disambiguationRequired = "DisambiguationRequired"
+        case error = "Error"
+        case expressionError = "ExpressionError"
+        case noInputCollection = "NoInputCollection"
+        case noInputConfirmation = "NoInputConfirmation"
+        case noInputDisambiguation = "NoInputDisambiguation"
+        case noMatchCollection = "NoMatchCollection"
+        case noMatchConfirmation = "NoMatchConfirmation"
+        case noMatchDisambiguation = "NoMatchDisambiguation"
+        case successCollection = "SuccessCollection"
+        case successConfirmationNo = "SuccessConfirmationNo"
+        case successConfirmationYes = "SuccessConfirmationYes"
+        case successDisambiguation = "SuccessDisambiguation"
+        case successDisambiguationNone = "SuccessDisambiguationNone"
+    }
+    
+    
+    /**
+     Get Reporting Turns (division aware).
+     
+     - parameter botFlowId: (path) ID of the bot flow. 
+     - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
+     - parameter interval: (query) Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
+     - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)
+     - parameter language: (query) Optional language code to get the reporting turns for a particular language (optional)
+     - parameter askActionResults: (query) Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsBotflowDivisionsReportingturns(botFlowId: String, after: String? = nil, pageSize: String? = nil, interval: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil, askActionResults: AskActionResults_getAnalyticsBotflowDivisionsReportingturns? = nil, completion: @escaping ((_ data: ReportingTurnsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsBotflowDivisionsReportingturnsWithRequestBuilder(botFlowId: botFlowId, after: after, pageSize: pageSize, interval: interval, actionId: actionId, sessionId: sessionId, language: language, askActionResults: askActionResults)
+        requestBuilder.execute { (response: Response<ReportingTurnsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Reporting Turns (division aware).
+     - GET /api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns
+     - Returns the reporting turns for the specified flow, filtered by the clients divisions and grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "userInput" : "userInput",
+    "sessionId" : "sessionId",
+    "askAction" : "{}",
+    "askActionResult" : "SuccessCollection",
+    "sessionEndDetails" : "{}",
+    "intent" : "{}",
+    "conversation" : "{}",
+    "knowledge" : "{}"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "userInput" : "userInput",
+    "sessionId" : "sessionId",
+    "askAction" : "{}",
+    "askActionResult" : "SuccessCollection",
+    "sessionEndDetails" : "{}",
+    "intent" : "{}",
+    "conversation" : "{}",
+    "knowledge" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter botFlowId: (path) ID of the bot flow. 
+     - parameter after: (query) The cursor that points to the ID of the last item in the list of entities that has been returned. (optional)
+     - parameter pageSize: (query) Max number of entities to return. Maximum of 250 (optional)
+     - parameter interval: (query) Date range filter based on the date the individual resources were completed. UTC is the default if no TZ is supplied, however alternate timezones can be used e.g: &#39;2022-11-22T09:11:11.111+08:00/2022-11-30T07:17:44.586-07&#39;. . Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional)
+     - parameter actionId: (query) Optional action ID to get the reporting turns associated to a particular flow action (optional)
+     - parameter sessionId: (query) Optional session ID to get the reporting turns for a particular session. Specifying a session ID alongside an action ID or a language or any ask action results is not allowed. (optional)
+     - parameter language: (query) Optional language code to get the reporting turns for a particular language (optional)
+     - parameter askActionResults: (query) Optional case-insensitive comma separated list of ask action results to filter the reporting turns. (optional)
+
+     - returns: RequestBuilder<ReportingTurnsResponse> 
+     */
+    open class func getAnalyticsBotflowDivisionsReportingturnsWithRequestBuilder(botFlowId: String, after: String? = nil, pageSize: String? = nil, interval: String? = nil, actionId: String? = nil, sessionId: String? = nil, language: String? = nil, askActionResults: AskActionResults_getAnalyticsBotflowDivisionsReportingturns? = nil) -> RequestBuilder<ReportingTurnsResponse> {        
+        var path = "/api/v2/analytics/botflows/{botFlowId}/divisions/reportingturns"
+        let botFlowIdPreEscape = "\(botFlowId)"
+        let botFlowIdPostEscape = botFlowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{botFlowId}", with: botFlowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize, 
+            "interval": interval, 
+            "actionId": actionId, 
+            "sessionId": sessionId, 
+            "language": language, 
+            "askActionResults": askActionResults?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ReportingTurnsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
     
@@ -214,7 +306,7 @@ open class AnalyticsAPI {
     /**
      Get Reporting Turns.
      - GET /api/v2/analytics/botflows/{botFlowId}/reportingturns
-     - Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
+     - Deprecated: Please use GET /analytics/botflows/{botFlowId}/divisions/reportingturns instead. Returns the reporting turns grouped by session, in reverse chronological order from the date the session was created, with the reporting turns from the most recent session appearing at the start of the list. For pagination, clients should keep sending requests using the value of 'nextUri' in the response, until it's no longer present, only then have all items have been returned. Note: resources returned by this endpoint are not persisted indefinitely, as they are deleted after approximately, but not before, 10 days.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5556,8 +5648,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query)  (optional)
@@ -5715,8 +5807,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5804,8 +5896,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<ReportingExportMetadataJobListing> 
@@ -5818,703 +5910,6 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ReportingExportMetadataJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    
-    
-    /**
-     Get list of reporting metadata.
-     
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter pageSize: (query) Page size (optional)
-     - parameter locale: (query) Locale (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingMetadata(pageNumber: Int? = nil, pageSize: Int? = nil, locale: String? = nil, completion: @escaping ((_ data: ReportMetaDataEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingMetadataWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, locale: locale)
-        requestBuilder.execute { (response: Response<ReportMetaDataEntityListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get list of reporting metadata.
-     - GET /api/v2/analytics/reporting/metadata
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "exampleUrl" : "exampleUrl",
-    "keywords" : [ "keywords", "keywords" ],
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "description" : "description",
-    "id" : "id",
-    "title" : "title",
-    "parameters" : [ {
-      "parameterType" : "UUID",
-      "domain" : "USERID",
-      "name" : "name",
-      "required" : true
-    }, {
-      "parameterType" : "UUID",
-      "domain" : "USERID",
-      "name" : "name",
-      "required" : true
-    } ],
-    "availableLocales" : [ "availableLocales", "availableLocales" ]
-  }, {
-    "exampleUrl" : "exampleUrl",
-    "keywords" : [ "keywords", "keywords" ],
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "description" : "description",
-    "id" : "id",
-    "title" : "title",
-    "parameters" : [ {
-      "parameterType" : "UUID",
-      "domain" : "USERID",
-      "name" : "name",
-      "required" : true
-    }, {
-      "parameterType" : "UUID",
-      "domain" : "USERID",
-      "name" : "name",
-      "required" : true
-    } ],
-    "availableLocales" : [ "availableLocales", "availableLocales" ]
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter pageSize: (query) Page size (optional)
-     - parameter locale: (query) Locale (optional)
-
-     - returns: RequestBuilder<ReportMetaDataEntityListing> 
-     */
-    open class func getAnalyticsReportingMetadataWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, locale: String? = nil) -> RequestBuilder<ReportMetaDataEntityListing> {        
-        let path = "/api/v2/analytics/reporting/metadata"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "pageNumber": pageNumber?.encodeToJSON(), 
-            "pageSize": pageSize?.encodeToJSON(), 
-            "locale": locale
-        ])
-
-        let requestBuilder: RequestBuilder<ReportMetaDataEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Get a reporting metadata.
-     
-     - parameter reportId: (path) Report ID 
-     - parameter locale: (query) Locale (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingReportIdMetadata(reportId: String, locale: String? = nil, completion: @escaping ((_ data: ReportMetaData?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingReportIdMetadataWithRequestBuilder(reportId: reportId, locale: locale)
-        requestBuilder.execute { (response: Response<ReportMetaData>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a reporting metadata.
-     - GET /api/v2/analytics/reporting/{reportId}/metadata
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "exampleUrl" : "exampleUrl",
-  "keywords" : [ "keywords", "keywords" ],
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "description" : "description",
-  "id" : "id",
-  "title" : "title",
-  "parameters" : [ {
-    "parameterType" : "UUID",
-    "domain" : "USERID",
-    "name" : "name",
-    "required" : true
-  }, {
-    "parameterType" : "UUID",
-    "domain" : "USERID",
-    "name" : "name",
-    "required" : true
-  } ],
-  "availableLocales" : [ "availableLocales", "availableLocales" ]
-}, statusCode=200}]
-     
-     - parameter reportId: (path) Report ID 
-     - parameter locale: (query) Locale (optional)
-
-     - returns: RequestBuilder<ReportMetaData> 
-     */
-    open class func getAnalyticsReportingReportIdMetadataWithRequestBuilder(reportId: String, locale: String? = nil) -> RequestBuilder<ReportMetaData> {        
-        var path = "/api/v2/analytics/reporting/{reportId}/metadata"
-        let reportIdPreEscape = "\(reportId)"
-        let reportIdPostEscape = reportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{reportId}", with: reportIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "locale": locale
-        ])
-
-        let requestBuilder: RequestBuilder<ReportMetaData>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    /**
-     Get a list of report formats
-     
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingReportformats(completion: @escaping ((_ data: [String]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingReportformatsWithRequestBuilder()
-        requestBuilder.execute { (response: Response<[String]>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a list of report formats
-     - GET /api/v2/analytics/reporting/reportformats
-     - Get a list of report formats.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="", statusCode=200}]
-
-     - returns: RequestBuilder<[String]> 
-     */
-    open class func getAnalyticsReportingReportformatsWithRequestBuilder() -> RequestBuilder<[String]> {        
-        let path = "/api/v2/analytics/reporting/reportformats"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<[String]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    /**
-     Get a scheduled report job.
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingSchedule(scheduleId: String, completion: @escaping ((_ data: ReportSchedule?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingScheduleWithRequestBuilder(scheduleId: scheduleId)
-        requestBuilder.execute { (response: Response<ReportSchedule>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a scheduled report job.
-     - GET /api/v2/analytics/reporting/schedules/{scheduleId}
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "quartzCronExpression" : "quartzCronExpression",
-  "reportId" : "reportId",
-  "lastRun" : {
-    "reportId" : "reportId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "errorMessage" : "errorMessage",
-    "runDurationMsec" : 0,
-    "reportFormat" : "reportFormat",
-    "id" : "id",
-    "runTime" : "2000-01-23T04:56:07.000+00:00",
-    "reportUrl" : "reportUrl",
-    "scheduleUri" : "https://openapi-generator.tech",
-    "runStatus" : "RUNNING"
-  },
-  "selfUri" : "https://openapi-generator.tech",
-  "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
-  "description" : "description",
-  "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "reportFormat" : "reportFormat",
-  "locale" : "locale",
-  "enabled" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "timePeriod" : "timePeriod",
-  "interval" : "interval",
-  "id" : "id",
-  "parameters" : {
-    "key" : "{}"
-  }
-}, statusCode=200}]
-     
-     - parameter scheduleId: (path) Schedule ID 
-
-     - returns: RequestBuilder<ReportSchedule> 
-     */
-    open class func getAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String) -> RequestBuilder<ReportSchedule> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}"
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ReportSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    
-    
-    /**
-     Get list of completed scheduled report jobs.
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter pageNumber: (query)  (optional)
-     - parameter pageSize: (query)  (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingScheduleHistory(scheduleId: String, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ReportRunEntryEntityDomainListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingScheduleHistoryWithRequestBuilder(scheduleId: scheduleId, pageNumber: pageNumber, pageSize: pageSize)
-        requestBuilder.execute { (response: Response<ReportRunEntryEntityDomainListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get list of completed scheduled report jobs.
-     - GET /api/v2/analytics/reporting/schedules/{scheduleId}/history
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "reportId" : "reportId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "errorMessage" : "errorMessage",
-    "runDurationMsec" : 0,
-    "reportFormat" : "reportFormat",
-    "id" : "id",
-    "runTime" : "2000-01-23T04:56:07.000+00:00",
-    "reportUrl" : "reportUrl",
-    "scheduleUri" : "https://openapi-generator.tech",
-    "runStatus" : "RUNNING"
-  }, {
-    "reportId" : "reportId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "errorMessage" : "errorMessage",
-    "runDurationMsec" : 0,
-    "reportFormat" : "reportFormat",
-    "id" : "id",
-    "runTime" : "2000-01-23T04:56:07.000+00:00",
-    "reportUrl" : "reportUrl",
-    "scheduleUri" : "https://openapi-generator.tech",
-    "runStatus" : "RUNNING"
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter pageNumber: (query)  (optional)
-     - parameter pageSize: (query)  (optional)
-
-     - returns: RequestBuilder<ReportRunEntryEntityDomainListing> 
-     */
-    open class func getAnalyticsReportingScheduleHistoryWithRequestBuilder(scheduleId: String, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportRunEntryEntityDomainListing> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history"
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "pageNumber": pageNumber?.encodeToJSON(), 
-            "pageSize": pageSize?.encodeToJSON()
-        ])
-
-        let requestBuilder: RequestBuilder<ReportRunEntryEntityDomainListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    /**
-     Get most recently completed scheduled report job.
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingScheduleHistoryLatest(scheduleId: String, completion: @escaping ((_ data: ReportRunEntry?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingScheduleHistoryLatestWithRequestBuilder(scheduleId: scheduleId)
-        requestBuilder.execute { (response: Response<ReportRunEntry>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get most recently completed scheduled report job.
-     - GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/latest
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "reportId" : "reportId",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "errorMessage" : "errorMessage",
-  "runDurationMsec" : 0,
-  "reportFormat" : "reportFormat",
-  "id" : "id",
-  "runTime" : "2000-01-23T04:56:07.000+00:00",
-  "reportUrl" : "reportUrl",
-  "scheduleUri" : "https://openapi-generator.tech",
-  "runStatus" : "RUNNING"
-}, statusCode=200}]
-     
-     - parameter scheduleId: (path) Schedule ID 
-
-     - returns: RequestBuilder<ReportRunEntry> 
-     */
-    open class func getAnalyticsReportingScheduleHistoryLatestWithRequestBuilder(scheduleId: String) -> RequestBuilder<ReportRunEntry> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/latest"
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ReportRunEntry>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     A completed scheduled report job
-     
-     - parameter runId: (path) Run ID 
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingScheduleHistoryRunId(runId: String, scheduleId: String, completion: @escaping ((_ data: ReportRunEntry?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingScheduleHistoryRunIdWithRequestBuilder(runId: runId, scheduleId: scheduleId)
-        requestBuilder.execute { (response: Response<ReportRunEntry>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     A completed scheduled report job
-     - GET /api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}
-     - A completed scheduled report job.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "reportId" : "reportId",
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "errorMessage" : "errorMessage",
-  "runDurationMsec" : 0,
-  "reportFormat" : "reportFormat",
-  "id" : "id",
-  "runTime" : "2000-01-23T04:56:07.000+00:00",
-  "reportUrl" : "reportUrl",
-  "scheduleUri" : "https://openapi-generator.tech",
-  "runStatus" : "RUNNING"
-}, statusCode=200}]
-     
-     - parameter runId: (path) Run ID 
-     - parameter scheduleId: (path) Schedule ID 
-
-     - returns: RequestBuilder<ReportRunEntry> 
-     */
-    open class func getAnalyticsReportingScheduleHistoryRunIdWithRequestBuilder(runId: String, scheduleId: String) -> RequestBuilder<ReportRunEntry> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/history/{runId}"
-        let runIdPreEscape = "\(runId)"
-        let runIdPostEscape = runIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{runId}", with: runIdPostEscape, options: .literal, range: nil)
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ReportRunEntry>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Get a list of scheduled report jobs
-     
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter pageSize: (query) Page size (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingSchedules(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ReportScheduleEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingSchedulesWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize)
-        requestBuilder.execute { (response: Response<ReportScheduleEntityListing>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a list of scheduled report jobs
-     - GET /api/v2/analytics/reporting/schedules
-     - Get a list of scheduled report jobs.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "total" : 1,
-  "pageCount" : 5,
-  "pageNumber" : 6,
-  "entities" : [ {
-    "quartzCronExpression" : "quartzCronExpression",
-    "reportId" : "reportId",
-    "lastRun" : {
-      "reportId" : "reportId",
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "errorMessage" : "errorMessage",
-      "runDurationMsec" : 0,
-      "reportFormat" : "reportFormat",
-      "id" : "id",
-      "runTime" : "2000-01-23T04:56:07.000+00:00",
-      "reportUrl" : "reportUrl",
-      "scheduleUri" : "https://openapi-generator.tech",
-      "runStatus" : "RUNNING"
-    },
-    "selfUri" : "https://openapi-generator.tech",
-    "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
-    "description" : "description",
-    "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "reportFormat" : "reportFormat",
-    "locale" : "locale",
-    "enabled" : true,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "name" : "name",
-    "timePeriod" : "timePeriod",
-    "interval" : "interval",
-    "id" : "id",
-    "parameters" : {
-      "key" : "{}"
-    }
-  }, {
-    "quartzCronExpression" : "quartzCronExpression",
-    "reportId" : "reportId",
-    "lastRun" : {
-      "reportId" : "reportId",
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "errorMessage" : "errorMessage",
-      "runDurationMsec" : 0,
-      "reportFormat" : "reportFormat",
-      "id" : "id",
-      "runTime" : "2000-01-23T04:56:07.000+00:00",
-      "reportUrl" : "reportUrl",
-      "scheduleUri" : "https://openapi-generator.tech",
-      "runStatus" : "RUNNING"
-    },
-    "selfUri" : "https://openapi-generator.tech",
-    "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
-    "description" : "description",
-    "timeZone" : "timeZone",
-    "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "reportFormat" : "reportFormat",
-    "locale" : "locale",
-    "enabled" : true,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "name" : "name",
-    "timePeriod" : "timePeriod",
-    "interval" : "interval",
-    "id" : "id",
-    "parameters" : {
-      "key" : "{}"
-    }
-  } ],
-  "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
-}, statusCode=200}]
-     
-     - parameter pageNumber: (query) Page number (optional)
-     - parameter pageSize: (query) Page size (optional)
-
-     - returns: RequestBuilder<ReportScheduleEntityListing> 
-     */
-    open class func getAnalyticsReportingSchedulesWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<ReportScheduleEntityListing> {        
-        let path = "/api/v2/analytics/reporting/schedules"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "pageNumber": pageNumber?.encodeToJSON(), 
-            "pageSize": pageSize?.encodeToJSON()
-        ])
-
-        let requestBuilder: RequestBuilder<ReportScheduleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -6580,6 +5975,8 @@ open class AnalyticsAPI {
     
     
     
+    
+    
     /**
      Get list of dashboards for an user
      
@@ -6589,10 +5986,11 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter publicOnly: (query) If true, retrieve only public dashboards (optional)
      - parameter favoriteOnly: (query) If true, retrieve only favorite dashboards (optional)
+     - parameter name: (query) retrieve dashboards that match with given name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsReportingSettingsUserDashboards(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly)
+    open class func getAnalyticsReportingSettingsUserDashboards(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, name: String? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly, name: name)
         requestBuilder.execute { (response: Response<DashboardConfigurationListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6796,8 +6194,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6806,10 +6204,11 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter publicOnly: (query) If true, retrieve only public dashboards (optional)
      - parameter favoriteOnly: (query) If true, retrieve only favorite dashboards (optional)
+     - parameter name: (query) retrieve dashboards that match with given name (optional)
 
      - returns: RequestBuilder<DashboardConfigurationListing> 
      */
-    open class func getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
+    open class func getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, name: String? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
         var path = "/api/v2/analytics/reporting/settings/users/{userId}/dashboards"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6823,55 +6222,11 @@ open class AnalyticsAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "publicOnly": publicOnly, 
-            "favoriteOnly": favoriteOnly
+            "favoriteOnly": favoriteOnly, 
+            "name": name
         ])
 
         let requestBuilder: RequestBuilder<DashboardConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
-    }
-
-    /**
-     Get a list of report time periods.
-     
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func getAnalyticsReportingTimeperiods(completion: @escaping ((_ data: [String]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingTimeperiodsWithRequestBuilder()
-        requestBuilder.execute { (response: Response<[String]>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Get a list of report time periods.
-     - GET /api/v2/analytics/reporting/timeperiods
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example="", statusCode=200}]
-
-     - returns: RequestBuilder<[String]> 
-     */
-    open class func getAnalyticsReportingTimeperiodsWithRequestBuilder() -> RequestBuilder<[String]> {        
-        let path = "/api/v2/analytics/reporting/timeperiods"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<[String]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -7930,6 +7285,217 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<PropertyIndexRequest>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query for conversation activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsConversationsActivityQuery(body: ConversationActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: ConversationActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsConversationsActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<ConversationActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for conversation activity observations
+     - POST /api/v2/analytics/conversations/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "activeRouting",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oAlerting",
+      "count" : 0
+    }, {
+      "metric" : "oAlerting",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "conversationId" : "conversationId",
+      "convertedTo" : "convertedTo",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "metric" : "oAlerting",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "ani" : "ani",
+      "direction" : "inbound"
+    }, {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "conversationId" : "conversationId",
+      "convertedTo" : "convertedTo",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "metric" : "oAlerting",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "ani" : "ani",
+      "direction" : "inbound"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oAlerting",
+      "count" : 0
+    }, {
+      "metric" : "oAlerting",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "conversationId" : "conversationId",
+      "convertedTo" : "convertedTo",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "metric" : "oAlerting",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "ani" : "ani",
+      "direction" : "inbound"
+    }, {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "conversationId" : "conversationId",
+      "convertedTo" : "convertedTo",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "metric" : "oAlerting",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "ani" : "ani",
+      "direction" : "inbound"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<ConversationActivityResponse> 
+     */
+    open class func postAnalyticsConversationsActivityQueryWithRequestBuilder(body: ConversationActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<ConversationActivityResponse> {        
+        let path = "/api/v2/analytics/conversations/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<ConversationActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -12944,6 +12510,225 @@ open class AnalyticsAPI {
 
     
     
+    
+    
+    
+    
+    /**
+     Query for flow activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsFlowsActivityQuery(body: FlowActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: FlowActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsFlowsActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<FlowActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for flow activity observations
+     - POST /api/v2/analytics/flows/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "activeRouting",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oFlow",
+      "count" : 0
+    }, {
+      "metric" : "oFlow",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    }, {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oFlow",
+      "count" : 0
+    }, {
+      "metric" : "oFlow",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    }, {
+      "queueId" : "queueId",
+      "usedRouting" : "Bullseye",
+      "routingPriority" : 6,
+      "convertedTo" : "convertedTo",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutings" : [ "Bullseye", "Bullseye" ],
+      "dnis" : "dnis",
+      "scoredAgents" : [ {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      }, {
+        "scoredAgentId" : "scoredAgentId",
+        "agentScore" : 1
+      } ],
+      "addressFrom" : "addressFrom",
+      "ani" : "ani",
+      "flowId" : "flowId",
+      "direction" : "inbound",
+      "conversationId" : "conversationId",
+      "activeRouting" : "Bullseye",
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "userId" : "userId",
+      "addressTo" : "addressTo",
+      "metric" : "oFlow",
+      "teamId" : "teamId",
+      "convertedFrom" : "convertedFrom",
+      "participantName" : "participantName",
+      "requestedLanguageId" : "requestedLanguageId",
+      "flowType" : "BOT"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<FlowActivityResponse> 
+     */
+    open class func postAnalyticsFlowsActivityQueryWithRequestBuilder(body: FlowActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<FlowActivityResponse> {        
+        let path = "/api/v2/analytics/flows/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<FlowActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Query for flow aggregates
      
@@ -15215,147 +15000,6 @@ open class AnalyticsAPI {
     
     
     /**
-     Place a scheduled report immediately into the reporting queue
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postAnalyticsReportingScheduleRunreport(scheduleId: String, completion: @escaping ((_ data: RunNowResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = postAnalyticsReportingScheduleRunreportWithRequestBuilder(scheduleId: scheduleId)
-        requestBuilder.execute { (response: Response<RunNowResponse>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Place a scheduled report immediately into the reporting queue
-     - POST /api/v2/analytics/reporting/schedules/{scheduleId}/runreport
-     - This route is deprecated, please use POST:api/v2/analytics/reporting/exports/{exportId}/execute instead
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
-  "id" : "id"
-}, statusCode=202}]
-     
-     - parameter scheduleId: (path) Schedule ID 
-
-     - returns: RequestBuilder<RunNowResponse> 
-     */
-    open class func postAnalyticsReportingScheduleRunreportWithRequestBuilder(scheduleId: String) -> RequestBuilder<RunNowResponse> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}/runreport"
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body: Data? = nil
-        
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<RunNowResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
-    }
-
-    
-    
-    /**
-     Create a scheduled report job
-     
-     - parameter body: (body) ReportSchedule 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func postAnalyticsReportingSchedules(body: ReportSchedule, completion: @escaping ((_ data: ReportSchedule?,_ error: Error?) -> Void)) {
-        let requestBuilder = postAnalyticsReportingSchedulesWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<ReportSchedule>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Create a scheduled report job
-     - POST /api/v2/analytics/reporting/schedules
-     - This route is deprecated, please use POST:api/v2/analytics/reporting/exports instead
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "quartzCronExpression" : "quartzCronExpression",
-  "reportId" : "reportId",
-  "lastRun" : {
-    "reportId" : "reportId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "errorMessage" : "errorMessage",
-    "runDurationMsec" : 0,
-    "reportFormat" : "reportFormat",
-    "id" : "id",
-    "runTime" : "2000-01-23T04:56:07.000+00:00",
-    "reportUrl" : "reportUrl",
-    "scheduleUri" : "https://openapi-generator.tech",
-    "runStatus" : "RUNNING"
-  },
-  "selfUri" : "https://openapi-generator.tech",
-  "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
-  "description" : "description",
-  "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "reportFormat" : "reportFormat",
-  "locale" : "locale",
-  "enabled" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "timePeriod" : "timePeriod",
-  "interval" : "interval",
-  "id" : "id",
-  "parameters" : {
-    "key" : "{}"
-  }
-}, statusCode=200}]
-     
-     - parameter body: (body) ReportSchedule 
-
-     - returns: RequestBuilder<ReportSchedule> 
-     */
-    open class func postAnalyticsReportingSchedulesWithRequestBuilder(body: ReportSchedule) -> RequestBuilder<ReportSchedule> {        
-        let path = "/api/v2/analytics/reporting/schedules"
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ReportSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
-    }
-
-    
-    
-    /**
      Bulk remove dashboard configurations
      
      - parameter body: (body)  
@@ -15608,8 +15252,8 @@ open class AnalyticsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 7,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body)  
@@ -15624,6 +15268,141 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DashboardConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query for user activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsRoutingActivityQuery(body: RoutingActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: RoutingActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsRoutingActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<RoutingActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for user activity observations
+     - POST /api/v2/analytics/routing/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "organizationPresenceId",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oActiveUsers",
+      "count" : 0
+    }, {
+      "metric" : "oActiveUsers",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oActiveUsers",
+      "count" : 0
+    }, {
+      "metric" : "oActiveUsers",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<RoutingActivityResponse> 
+     */
+    open class func postAnalyticsRoutingActivityQueryWithRequestBuilder(body: RoutingActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<RoutingActivityResponse> {        
+        let path = "/api/v2/analytics/routing/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<RoutingActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -15988,6 +15767,141 @@ open class AnalyticsAPI {
 
     
     
+    
+    
+    
+    
+    /**
+     Query for team activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsTeamsActivityQuery(body: TeamActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: TeamActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsTeamsActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<TeamActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for team activity observations
+     - POST /api/v2/analytics/teams/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "organizationPresenceId",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    }, {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    }, {
+      "metric" : "oTeamOffQueueUsers",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<TeamActivityResponse> 
+     */
+    open class func postAnalyticsTeamsActivityQueryWithRequestBuilder(body: TeamActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<TeamActivityResponse> {        
+        let path = "/api/v2/analytics/teams/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<TeamActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Query for transcript aggregates
      
@@ -16340,6 +16254,141 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TranscriptAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Query for user activity observations
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsUsersActivityQuery(body: UserActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: UserActivityResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsUsersActivityQueryWithRequestBuilder(body: body, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<UserActivityResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for user activity observations
+     - POST /api/v2/analytics/users/activity/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entityIdDimension" : "organizationPresenceId",
+  "results" : [ {
+    "data" : [ {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    }, {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    }, {
+      "metric" : "oActiveQueues",
+      "count" : 0
+    } ],
+    "entities" : [ {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    }, {
+      "queueId" : "queueId",
+      "presenceDate" : "2000-01-23T04:56:07.000+00:00",
+      "routingStatusDate" : "2000-01-23T04:56:07.000+00:00",
+      "activityDate" : "2000-01-23T04:56:07.000+00:00",
+      "queueMembershipStatus" : "queueMembershipStatus",
+      "systemPresence" : "systemPresence",
+      "teamId" : "teamId",
+      "routingStatus" : "routingStatus",
+      "userId" : "userId",
+      "organizationPresenceId" : "organizationPresenceId"
+    } ],
+    "truncated" : true,
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter pageSize: (query) The desired page size (optional)
+     - parameter pageNumber: (query) The desired page number (optional)
+
+     - returns: RequestBuilder<UserActivityResponse> 
+     */
+    open class func postAnalyticsUsersActivityQueryWithRequestBuilder(body: UserActivityQuery, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<UserActivityResponse> {        
+        let path = "/api/v2/analytics/users/activity/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<UserActivityResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -17287,96 +17336,6 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AnalyticsDataRetentionResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Update a scheduled report job.
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter body: (body) ReportSchedule 
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func putAnalyticsReportingSchedule(scheduleId: String, body: ReportSchedule, completion: @escaping ((_ data: ReportSchedule?,_ error: Error?) -> Void)) {
-        let requestBuilder = putAnalyticsReportingScheduleWithRequestBuilder(scheduleId: scheduleId, body: body)
-        requestBuilder.execute { (response: Response<ReportSchedule>?, error) -> Void in
-            do {
-                if let e = error {
-                    completion(nil, e)
-                } else if let r = response {
-                    try requestBuilder.decode(r)
-                    completion(response?.body, error)
-                } else {
-                    completion(nil, error)
-                }
-            } catch {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Update a scheduled report job.
-     - PUT /api/v2/analytics/reporting/schedules/{scheduleId}
-     - This route is deprecated, please use PATCH:api/v2/analytics/reporting/exports/{exportId}/schedule instead
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     - examples: [{contentType=application/json, example={
-  "quartzCronExpression" : "quartzCronExpression",
-  "reportId" : "reportId",
-  "lastRun" : {
-    "reportId" : "reportId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
-    "errorMessage" : "errorMessage",
-    "runDurationMsec" : 0,
-    "reportFormat" : "reportFormat",
-    "id" : "id",
-    "runTime" : "2000-01-23T04:56:07.000+00:00",
-    "reportUrl" : "reportUrl",
-    "scheduleUri" : "https://openapi-generator.tech",
-    "runStatus" : "RUNNING"
-  },
-  "selfUri" : "https://openapi-generator.tech",
-  "nextFireTime" : "2000-01-23T04:56:07.000+00:00",
-  "description" : "description",
-  "timeZone" : "timeZone",
-  "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "reportFormat" : "reportFormat",
-  "locale" : "locale",
-  "enabled" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "name" : "name",
-  "timePeriod" : "timePeriod",
-  "interval" : "interval",
-  "id" : "id",
-  "parameters" : {
-    "key" : "{}"
-  }
-}, statusCode=200}]
-     
-     - parameter scheduleId: (path) Schedule ID 
-     - parameter body: (body) ReportSchedule 
-
-     - returns: RequestBuilder<ReportSchedule> 
-     */
-    open class func putAnalyticsReportingScheduleWithRequestBuilder(scheduleId: String, body: ReportSchedule) -> RequestBuilder<ReportSchedule> {        
-        var path = "/api/v2/analytics/reporting/schedules/{scheduleId}"
-        let scheduleIdPreEscape = "\(scheduleId)"
-        let scheduleIdPostEscape = scheduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{scheduleId}", with: scheduleIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<ReportSchedule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

@@ -126,12 +126,16 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
   "usageSizeBytes" : 0,
   "deletedCount" : 5,
+  "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "unreadCount" : 1,
-  "totalCount" : 6
+  "totalCount" : 6,
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
      - parameter groupId: (path) groupId 
@@ -258,8 +262,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter groupId: (path) Group ID 
@@ -384,12 +388,16 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
   "usageSizeBytes" : 0,
   "deletedCount" : 5,
+  "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "unreadCount" : 1,
-  "totalCount" : 6
+  "totalCount" : 6,
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
 
      - returns: RequestBuilder<VoicemailMailboxInfo> 
@@ -436,12 +444,16 @@ open class VoicemailAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
   "usageSizeBytes" : 0,
   "deletedCount" : 5,
+  "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "unreadCount" : 1,
-  "totalCount" : 6
+  "totalCount" : 6,
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
 
      - returns: RequestBuilder<VoicemailMailboxInfo> 
@@ -560,8 +572,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -920,8 +932,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter ids: (query) An optional comma separated list of VoicemailMessage ids (optional)
@@ -1107,8 +1119,8 @@ open class VoicemailAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter queueId: (path) Queue ID 
