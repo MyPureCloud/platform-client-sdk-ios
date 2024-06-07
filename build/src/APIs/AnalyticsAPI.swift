@@ -183,6 +183,7 @@ open class AnalyticsAPI {
     "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
   }, {
@@ -194,6 +195,7 @@ open class AnalyticsAPI {
     "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
   } ],
@@ -320,6 +322,7 @@ open class AnalyticsAPI {
     "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
   }, {
@@ -331,6 +334,7 @@ open class AnalyticsAPI {
     "askActionResult" : "SuccessCollection",
     "sessionEndDetails" : "{}",
     "intent" : "{}",
+    "knowledgeBaseEvents" : "{}",
     "conversation" : "{}",
     "knowledge" : "{}"
   } ],

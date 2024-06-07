@@ -599,4 +599,151 @@ open class AuditAPI {
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    public enum Expand_postAuditsQueryRealtimeRelated: String { 
+        case user = "user"
+    }
+    
+    /**
+     Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
+     
+     - parameter body: (body) query 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAuditsQueryRealtimeRelated(body: AuditRealtimeRelatedRequest, expand: [String]? = nil, completion: @escaping ((_ data: AuditRealtimeRelatedResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAuditsQueryRealtimeRelatedWithRequestBuilder(body: body, expand: expand)
+        requestBuilder.execute { (response: Response<AuditRealtimeRelatedResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
+     - POST /api/v2/audits/query/realtime/related
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "remoteIp" : [ "remoteIp", "remoteIp" ],
+    "propertyChanges" : [ {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
+    "level" : "USER",
+    "entityType" : "entityType",
+    "transactionInitiator" : true,
+    "initiatingAction" : "{}",
+    "serviceName" : "serviceName",
+    "message" : "{}",
+    "application" : "application",
+    "context" : {
+      "key" : "context"
+    },
+    "client" : "{}",
+    "action" : "action",
+    "userHomeOrgId" : "userHomeOrgId",
+    "id" : "id",
+    "entityChanges" : [ {
+      "entityName" : "entityName",
+      "entityType" : "entityType",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "entityName" : "entityName",
+      "entityType" : "entityType",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
+    "user" : "{}",
+    "entity" : "{}",
+    "eventDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "SUCCESS"
+  }, {
+    "remoteIp" : [ "remoteIp", "remoteIp" ],
+    "propertyChanges" : [ {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "property" : "property",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
+    "level" : "USER",
+    "entityType" : "entityType",
+    "transactionInitiator" : true,
+    "initiatingAction" : "{}",
+    "serviceName" : "serviceName",
+    "message" : "{}",
+    "application" : "application",
+    "context" : {
+      "key" : "context"
+    },
+    "client" : "{}",
+    "action" : "action",
+    "userHomeOrgId" : "userHomeOrgId",
+    "id" : "id",
+    "entityChanges" : [ {
+      "entityName" : "entityName",
+      "entityType" : "entityType",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    }, {
+      "entityName" : "entityName",
+      "entityType" : "entityType",
+      "entityId" : "entityId",
+      "newValues" : [ "newValues", "newValues" ],
+      "oldValues" : [ "oldValues", "oldValues" ]
+    } ],
+    "user" : "{}",
+    "entity" : "{}",
+    "eventDate" : "2000-01-23T04:56:07.000+00:00",
+    "status" : "SUCCESS"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<AuditRealtimeRelatedResultsResponse> 
+     */
+    open class func postAuditsQueryRealtimeRelatedWithRequestBuilder(body: AuditRealtimeRelatedRequest, expand: [String]? = nil) -> RequestBuilder<AuditRealtimeRelatedResultsResponse> {        
+        let path = "/api/v2/audits/query/realtime/related"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<AuditRealtimeRelatedResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
 }

@@ -15,9 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI.html#deleteConversationsMessagesCachedmediaCachedMediaItemId) | Remove a cached media item asychronously |
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
 | [**deleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsInstagramIntegrationId) | Delete Instagram messaging integration |
-| [**deleteConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsLineIntegrationId) | Delete a LINE messenger integration (Deprecated) |
 | [**deleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsOpenIntegrationId) | Delete an Open messaging integration |
-| [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete a Twitter messaging integration |
 | [**deleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#deleteConversationsMessagingIntegrationsWhatsappIntegrationId) | Delete a WhatsApp messaging integration |
 | [**deleteConversationsMessagingSetting**](ConversationsAPI.html#deleteConversationsMessagingSetting) | Delete a messaging setting |
 | [**deleteConversationsMessagingSettingsDefault**](ConversationsAPI.html#deleteConversationsMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
@@ -86,12 +84,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsFacebookIntegrationId) | Get a Facebook messaging integration |
 | [**getConversationsMessagingIntegrationsInstagram**](ConversationsAPI.html#getConversationsMessagingIntegrationsInstagram) | Get a list of Instagram Integrations |
 | [**getConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsInstagramIntegrationId) | Get Instagram messaging integration |
-| [**getConversationsMessagingIntegrationsLine**](ConversationsAPI.html#getConversationsMessagingIntegrationsLine) | Get a list of LINE messenger Integrations (Deprecated) |
-| [**getConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsLineIntegrationId) | Get a LINE messenger integration (Deprecated) |
 | [**getConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpen) | Get a list of Open messaging integrations |
 | [**getConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsOpenIntegrationId) | Get an Open messaging integration |
-| [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations (Deprecated) |
-| [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get a Twitter messaging integration (Deprecated) |
 | [**getConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsapp) | Get a list of WhatsApp Integrations |
 | [**getConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#getConversationsMessagingIntegrationsWhatsappIntegrationId) | Get a WhatsApp messaging integration |
 | [**getConversationsMessagingSetting**](ConversationsAPI.html#getConversationsMessagingSetting) | Get a messaging setting |
@@ -140,7 +134,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
 | [**patchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsInstagramIntegrationId) | Update Instagram messaging integration |
 | [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
-| [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId) | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI.html#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update a WhatsApp messaging integration |
 | [**patchConversationsMessagingSetting**](ConversationsAPI.html#patchConversationsMessagingSetting) | Update a messaging setting |
@@ -210,9 +203,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagesInboundOpen**](ConversationsAPI.html#postConversationsMessagesInboundOpen) | Send an inbound Open Message |
 | [**postConversationsMessagingIntegrationsFacebook**](ConversationsAPI.html#postConversationsMessagingIntegrationsFacebook) | Create a Facebook Integration |
 | [**postConversationsMessagingIntegrationsInstagram**](ConversationsAPI.html#postConversationsMessagingIntegrationsInstagram) | Create Instagram Integration |
-| [**postConversationsMessagingIntegrationsLine**](ConversationsAPI.html#postConversationsMessagingIntegrationsLine) | Create a LINE messenger Integration (Deprecated) |
 | [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI.html#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
-| [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI.html#postConversationsMessagingIntegrationsTwitter) | Create a Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsapp) | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
 | [**postConversationsMessagingIntegrationsWhatsappEmbeddedsignup**](ConversationsAPI.html#postConversationsMessagingIntegrationsWhatsappEmbeddedsignup) | Create a WhatsApp Integration using the WhatsApp embedded signup flow |
 | [**postConversationsMessagingSettings**](ConversationsAPI.html#postConversationsMessagingSettings) | Create a messaging setting |
@@ -233,7 +224,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putConversationsEmailRecordingstate**](ConversationsAPI.html#putConversationsEmailRecordingstate) | Update a conversation by setting its recording state |
 | [**putConversationsKeyconfiguration**](ConversationsAPI.html#putConversationsKeyconfiguration) | Update the encryption key configurations |
 | [**putConversationsMessageRecordingstate**](ConversationsAPI.html#putConversationsMessageRecordingstate) | Update a conversation by setting its recording state |
-| [**putConversationsMessagingIntegrationsLineIntegrationId**](ConversationsAPI.html#putConversationsMessagingIntegrationsLineIntegrationId) | Update a LINE messenger integration (Deprecated) |
 | [**putConversationsMessagingSettingsDefault**](ConversationsAPI.html#putConversationsMessagingSettingsDefault) | Set the organization&#39;s default setting that may be applied to to integrations without settings |
 | [**putConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#putConversationsMessagingSupportedcontentDefault) | Set the organization&#39;s default supported content profile that may be assigned to an integration when it is created. |
 | [**putConversationsMessagingThreadingtimeline**](ConversationsAPI.html#putConversationsMessagingThreadingtimeline) | Update conversation threading window timeline for each messaging type |
@@ -657,59 +647,6 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsInstagramIntegrationId(
 
 `nil` (empty response body)
 
-<a name="deleteConversationsMessagingIntegrationsLineIntegrationId"></a>
-
-# **deleteConversationsMessagingIntegrationsLineIntegrationId**
-
-
-
-> Void deleteConversationsMessagingIntegrationsLineIntegrationId(integrationId)
-
-Delete a LINE messenger integration (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-
-
-Wraps DELETE /api/v2/conversations/messaging/integrations/line/{integrationId}  
-
-Requires ALL permissions: 
-
-* messaging:integration:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let integrationId: String = "" // Integration ID
-
-// Code example
-ConversationsAPI.deleteConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ConversationsAPI.deleteConversationsMessagingIntegrationsLineIntegrationId was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **integrationId** | **String**| Integration ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
 <a name="deleteConversationsMessagingIntegrationsOpenIntegrationId"></a>
 
 # **deleteConversationsMessagingIntegrationsOpenIntegrationId**
@@ -746,59 +683,6 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId(integ
         dump(error)
     } else {
         print("ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **integrationId** | **String**| Integration ID | |
-{: class="table-striped"}
-
-
-### Return type
-
-`nil` (empty response body)
-
-<a name="deleteConversationsMessagingIntegrationsTwitterIntegrationId"></a>
-
-# **deleteConversationsMessagingIntegrationsTwitterIntegrationId**
-
-
-
-> Void deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId)
-
-Delete a Twitter messaging integration
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
-
-
-
-Wraps DELETE /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
-
-Requires ALL permissions: 
-
-* messaging:integration:delete
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let integrationId: String = "" // Integration ID
-
-// Code example
-ConversationsAPI.deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("ConversationsAPI.deleteConversationsMessagingIntegrationsTwitterIntegrationId was successful")
     }
 }
 ```
@@ -4429,124 +4313,6 @@ ConversationsAPI.getConversationsMessagingIntegrationsInstagramIntegrationId(int
 
 [**InstagramIntegration**](InstagramIntegration.html)
 
-<a name="getConversationsMessagingIntegrationsLine"></a>
-
-# **getConversationsMessagingIntegrationsLine**
-
-
-
-> [LineIntegrationEntityListing](LineIntegrationEntityListing.html) getConversationsMessagingIntegrationsLine(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
-
-Get a list of LINE messenger Integrations (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-
-
-Wraps GET /api/v2/conversations/messaging/integrations/line  
-
-Requires ALL permissions: 
-
-* messaging:integration:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine = ConversationsAPI.Expand_getConversationsMessagingIntegrationsLine.enummember // Expand instructions for the return value.
-let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
-let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
-
-// Code example
-ConversationsAPI.getConversationsMessagingIntegrationsLine(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.getConversationsMessagingIntegrationsLine was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
-| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
-| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**LineIntegrationEntityListing**](LineIntegrationEntityListing.html)
-
-<a name="getConversationsMessagingIntegrationsLineIntegrationId"></a>
-
-# **getConversationsMessagingIntegrationsLineIntegrationId**
-
-
-
-> [LineIntegration](LineIntegration.html) getConversationsMessagingIntegrationsLineIntegrationId(integrationId, expand)
-
-Get a LINE messenger integration (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-
-
-Wraps GET /api/v2/conversations/messaging/integrations/line/{integrationId}  
-
-Requires ALL permissions: 
-
-* messaging:integration:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let integrationId: String = "" // Integration ID
-let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsLineIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsLineIntegrationId.enummember // Expand instructions for the return value.
-
-// Code example
-ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.getConversationsMessagingIntegrationsLineIntegrationId was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
-{: class="table-striped"}
-
-
-### Return type
-
-[**LineIntegration**](LineIntegration.html)
-
 <a name="getConversationsMessagingIntegrationsOpen"></a>
 
 # **getConversationsMessagingIntegrationsOpen**
@@ -4664,124 +4430,6 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrat
 ### Return type
 
 [**OpenIntegration**](OpenIntegration.html)
-
-<a name="getConversationsMessagingIntegrationsTwitter"></a>
-
-# **getConversationsMessagingIntegrationsTwitter**
-
-
-
-> [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing.html) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
-
-Get a list of Twitter Integrations (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
-
-
-
-Wraps GET /api/v2/conversations/messaging/integrations/twitter  
-
-Requires ALL permissions: 
-
-* messaging:integration:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter.enummember // Expand instructions for the return value.
-let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
-let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
-
-// Code example
-ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.getConversationsMessagingIntegrationsTwitter was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
-| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
-| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing.html)
-
-<a name="getConversationsMessagingIntegrationsTwitterIntegrationId"></a>
-
-# **getConversationsMessagingIntegrationsTwitterIntegrationId**
-
-
-
-> [TwitterIntegration](TwitterIntegration.html) getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand)
-
-Get a Twitter messaging integration (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
-
-
-
-Wraps GET /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
-
-Requires ALL permissions: 
-
-* messaging:integration:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let integrationId: String = "" // Integration ID
-let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId.enummember // Expand instructions for the return value.
-
-// Code example
-ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **integrationId** | **String**| Integration ID | |
-| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
-{: class="table-striped"}
-
-
-### Return type
-
-[**TwitterIntegration**](TwitterIntegration.html)
 
 <a name="getConversationsMessagingIntegrationsWhatsapp"></a>
 
@@ -7422,62 +7070,6 @@ ConversationsAPI.patchConversationsMessagingIntegrationsOpenIntegrationId(integr
 ### Return type
 
 [**OpenIntegration**](OpenIntegration.html)
-
-<a name="patchConversationsMessagingIntegrationsTwitterIntegrationId"></a>
-
-# **patchConversationsMessagingIntegrationsTwitterIntegrationId**
-
-
-
-> [TwitterIntegration](TwitterIntegration.html) patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, body)
-
-Update Twitter messaging integration
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
-
-
-
-Wraps PATCH /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
-
-Requires ALL permissions: 
-
-* messaging:integration:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let integrationId: String = "" // Integration ID
-let body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest
-
-// Code example
-ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **integrationId** | **String**| Integration ID | |
-| **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**TwitterIntegration**](TwitterIntegration.html)
 
 <a name="patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId"></a>
 
@@ -11251,60 +10843,6 @@ ConversationsAPI.postConversationsMessagingIntegrationsInstagram(body: body) { (
 
 [**InstagramIntegration**](InstagramIntegration.html)
 
-<a name="postConversationsMessagingIntegrationsLine"></a>
-
-# **postConversationsMessagingIntegrationsLine**
-
-
-
-> [LineIntegration](LineIntegration.html) postConversationsMessagingIntegrationsLine(body)
-
-Create a LINE messenger Integration (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-
-
-Wraps POST /api/v2/conversations/messaging/integrations/line  
-
-Requires ALL permissions: 
-
-* messaging:integration:add
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: LineIntegrationRequest = new LineIntegrationRequest(...) // LineIntegrationRequest
-
-// Code example
-ConversationsAPI.postConversationsMessagingIntegrationsLine(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.postConversationsMessagingIntegrationsLine was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**LineIntegration**](LineIntegration.html)
-
 <a name="postConversationsMessagingIntegrationsOpen"></a>
 
 # **postConversationsMessagingIntegrationsOpen**
@@ -11358,60 +10896,6 @@ ConversationsAPI.postConversationsMessagingIntegrationsOpen(body: body) { (respo
 ### Return type
 
 [**OpenIntegration**](OpenIntegration.html)
-
-<a name="postConversationsMessagingIntegrationsTwitter"></a>
-
-# **postConversationsMessagingIntegrationsTwitter**
-
-
-
-> [TwitterIntegration](TwitterIntegration.html) postConversationsMessagingIntegrationsTwitter(body)
-
-Create a Twitter Integration
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-x-formerly-twitter-third-party-messaging-channel/
-
-
-
-Wraps POST /api/v2/conversations/messaging/integrations/twitter  
-
-Requires ALL permissions: 
-
-* messaging:integration:add
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest
-
-// Code example
-ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.postConversationsMessagingIntegrationsTwitter was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest.html)| TwitterIntegrationRequest | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**TwitterIntegration**](TwitterIntegration.html)
 
 <a name="postConversationsMessagingIntegrationsWhatsapp"></a>
 
@@ -12497,62 +11981,6 @@ ConversationsAPI.putConversationsMessageRecordingstate(conversationId: conversat
 ### Return type
 
 **String**
-
-<a name="putConversationsMessagingIntegrationsLineIntegrationId"></a>
-
-# **putConversationsMessagingIntegrationsLineIntegrationId**
-
-
-
-> [LineIntegration](LineIntegration.html) putConversationsMessagingIntegrationsLineIntegrationId(integrationId, body)
-
-Update a LINE messenger integration (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-
-
-Wraps PUT /api/v2/conversations/messaging/integrations/line/{integrationId}  
-
-Requires ALL permissions: 
-
-* messaging:integration:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let integrationId: String = "" // Integration ID
-let body: LineIntegrationRequest = new LineIntegrationRequest(...) // LineIntegrationRequest
-
-// Code example
-ConversationsAPI.putConversationsMessagingIntegrationsLineIntegrationId(integrationId: integrationId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.putConversationsMessagingIntegrationsLineIntegrationId was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **integrationId** | **String**| Integration ID | |
-| **body** | [**LineIntegrationRequest**](LineIntegrationRequest.html)| LineIntegrationRequest | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**LineIntegration**](LineIntegration.html)
 
 <a name="putConversationsMessagingSettingsDefault"></a>
 

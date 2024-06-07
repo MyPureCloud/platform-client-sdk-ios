@@ -120,6 +120,8 @@ docs/AggregateViewData.md
 docs/AggregationRange.md
 docs/AggregationResult.md
 docs/AggregationResultEntry.md
+docs/AiAnswer.md
+docs/AiScoring.md
 docs/AiScoringSettings.md
 docs/AlertListing.md
 docs/AlertNotification.md
@@ -269,6 +271,8 @@ docs/AuditQueryServiceMapping.md
 docs/AuditQuerySort.md
 docs/AuditRealtimeQueryRequest.md
 docs/AuditRealtimeQueryResultsResponse.md
+docs/AuditRealtimeRelatedRequest.md
+docs/AuditRealtimeRelatedResultsResponse.md
 docs/AuditSearchResult.md
 docs/AuditTopicAddressableEntityRef.md
 docs/AuditTopicAuditLogMessage.md
@@ -523,6 +527,9 @@ docs/CampaignEntityListing.md
 docs/CampaignInteraction.md
 docs/CampaignInteractions.md
 docs/CampaignLinesUtilization.md
+docs/CampaignOutboundLinesAllocation.md
+docs/CampaignOutboundLinesDistribution.md
+docs/CampaignOutboundLinesReservation.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -637,7 +644,6 @@ docs/Compliance.md
 docs/ComplianceResponse.md
 docs/Condition.md
 docs/ConditionalGroupRouting.md
-docs/ConditionalGroupRoutingCondition.md
 docs/ConditionalGroupRoutingRule.md
 docs/ConfigurationOverrides.md
 docs/ConfusionDetails.md
@@ -664,7 +670,9 @@ docs/ContactAddress.md
 docs/ContactAddressConditionSettings.md
 docs/ContactAddressTypeConditionSettings.md
 docs/ContactAddressableEntityRef.md
+docs/ContactBulkEditRequest.md
 docs/ContactBulkSearchCriteria.md
+docs/ContactBulkSearchParameters.md
 docs/ContactCallbackRequest.md
 docs/ContactCenterSettings.md
 docs/ContactColumnConditionSettings.md
@@ -686,6 +694,8 @@ docs/ContactListTemplate.md
 docs/ContactListTemplateBulkRetrieveBody.md
 docs/ContactListTemplateEntityListing.md
 docs/ContactListing.md
+docs/ContactListingRequest.md
+docs/ContactListingResponse.md
 docs/ContactPhoneNumberColumn.md
 docs/ContactSort.md
 docs/ContactableStatus.md
@@ -693,6 +703,7 @@ docs/ContactlistDownloadReadyExportUri.md
 docs/ContactlistDownloadReadyObject.md
 docs/ContactlistImportStatusImportStatus.md
 docs/ContactlistImportStatusObject.md
+docs/ContactsBulkOperationJob.md
 docs/ContactsExportRequest.md
 docs/ContentActions.md
 docs/ContentAttachment.md
@@ -2256,9 +2267,6 @@ docs/LineBase.md
 docs/LineBaseEntityListing.md
 docs/LineEntityListing.md
 docs/LineId.md
-docs/LineIntegration.md
-docs/LineIntegrationEntityListing.md
-docs/LineIntegrationRequest.md
 docs/LineStatus.md
 docs/LineUserId.md
 docs/LinkConfiguration.md
@@ -3131,8 +3139,11 @@ docs/ReportingTurnIntent.md
 docs/ReportingTurnIntentSlot.md
 docs/ReportingTurnKnowledge.md
 docs/ReportingTurnKnowledgeDocument.md
+docs/ReportingTurnKnowledgeEvents.md
 docs/ReportingTurnKnowledgeFeedback.md
+docs/ReportingTurnKnowledgeFeedbackEvent.md
 docs/ReportingTurnKnowledgeSearch.md
+docs/ReportingTurnKnowledgeSearchEvent.md
 docs/ReportingTurnsResponse.md
 docs/RequestConfig.md
 docs/RequestContext.md
@@ -3717,9 +3728,6 @@ docs/TtsSettings.md
 docs/TtsVoiceEntity.md
 docs/TtsVoiceEntityListing.md
 docs/TwitterId.md
-docs/TwitterIntegration.md
-docs/TwitterIntegrationEntityListing.md
-docs/TwitterIntegrationRequest.md
 docs/TypingSetting.md
 docs/UCI10n.md
 docs/UCIcon.md
@@ -4421,9 +4429,7 @@ docs/deleteConversationsEmailMessagesDraftAttachment-example.txt
 docs/deleteConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/deleteConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
-docs/deleteConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
-docs/deleteConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/deleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/deleteConversationsMessagingSetting-example.txt
 docs/deleteConversationsMessagingSettingsDefault-example.txt
@@ -4835,12 +4841,8 @@ docs/getConversationsMessagingIntegrationsFacebook-example.txt
 docs/getConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationsInstagram-example.txt
 docs/getConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
-docs/getConversationsMessagingIntegrationsLine-example.txt
-docs/getConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationsOpen-example.txt
 docs/getConversationsMessagingIntegrationsOpenIntegrationId-example.txt
-docs/getConversationsMessagingIntegrationsTwitter-example.txt
-docs/getConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/getConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/getConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/getConversationsMessagingSetting-example.txt
@@ -5222,6 +5224,7 @@ docs/getOutboundCampaign-example.txt
 docs/getOutboundCampaignAgentownedmappingpreviewResults-example.txt
 docs/getOutboundCampaignDiagnostics-example.txt
 docs/getOutboundCampaignInteractions-example.txt
+docs/getOutboundCampaignLinedistribution-example.txt
 docs/getOutboundCampaignProgress-example.txt
 docs/getOutboundCampaignStats-example.txt
 docs/getOutboundCampaignrule-example.txt
@@ -5764,7 +5767,6 @@ docs/patchConversationsMessageParticipantCommunication-example.txt
 docs/patchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
-docs/patchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId-example.txt
 docs/patchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/patchConversationsMessagingSetting-example.txt
@@ -5946,6 +5948,7 @@ docs/postArchitectSystempromptHistory-example.txt
 docs/postArchitectSystempromptResources-example.txt
 docs/postAuditsQuery-example.txt
 docs/postAuditsQueryRealtime-example.txt
+docs/postAuditsQueryRealtimeRelated-example.txt
 docs/postAuthorizationDivisionObject-example.txt
 docs/postAuthorizationDivisionObject-example.txt
 docs/postAuthorizationDivisionRestore-example.txt
@@ -6044,9 +6047,7 @@ docs/postConversationsMessagesAgentless-example.txt
 docs/postConversationsMessagesInboundOpen-example.txt
 docs/postConversationsMessagingIntegrationsFacebook-example.txt
 docs/postConversationsMessagingIntegrationsInstagram-example.txt
-docs/postConversationsMessagingIntegrationsLine-example.txt
 docs/postConversationsMessagingIntegrationsOpen-example.txt
-docs/postConversationsMessagingIntegrationsTwitter-example.txt
 docs/postConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/postConversationsMessagingIntegrationsWhatsappEmbeddedsignup-example.txt
 docs/postConversationsMessagingSettings-example.txt
@@ -6239,6 +6240,9 @@ docs/postOutboundCampaignsProgress-example.txt
 docs/postOutboundContactlistClear-example.txt
 docs/postOutboundContactlistContacts-example.txt
 docs/postOutboundContactlistContactsBulk-example.txt
+docs/postOutboundContactlistContactsBulkRemove-example.txt
+docs/postOutboundContactlistContactsBulkUpdate-example.txt
+docs/postOutboundContactlistContactsSearch-example.txt
 docs/postOutboundContactlistExport-example.txt
 docs/postOutboundContactlistfilters-example.txt
 docs/postOutboundContactlistfiltersBulkRetrieve-example.txt
@@ -6523,7 +6527,6 @@ docs/putConversationsEmailMessagesDraft-example.txt
 docs/putConversationsEmailRecordingstate-example.txt
 docs/putConversationsKeyconfiguration-example.txt
 docs/putConversationsMessageRecordingstate-example.txt
-docs/putConversationsMessagingIntegrationsLineIntegrationId-example.txt
 docs/putConversationsMessagingSettingsDefault-example.txt
 docs/putConversationsMessagingSupportedcontentDefault-example.txt
 docs/putConversationsMessagingThreadingtimeline-example.txt
@@ -6896,6 +6899,8 @@ src/Models/AggregateViewData.swift
 src/Models/AggregationRange.swift
 src/Models/AggregationResult.swift
 src/Models/AggregationResultEntry.swift
+src/Models/AiAnswer.swift
+src/Models/AiScoring.swift
 src/Models/AiScoringSettings.swift
 src/Models/AlertListing.swift
 src/Models/AlertNotification.swift
@@ -7037,6 +7042,8 @@ src/Models/AuditQueryServiceMapping.swift
 src/Models/AuditQuerySort.swift
 src/Models/AuditRealtimeQueryRequest.swift
 src/Models/AuditRealtimeQueryResultsResponse.swift
+src/Models/AuditRealtimeRelatedRequest.swift
+src/Models/AuditRealtimeRelatedResultsResponse.swift
 src/Models/AuditSearchResult.swift
 src/Models/AuditTopicAddressableEntityRef.swift
 src/Models/AuditTopicAuditLogMessage.swift
@@ -7287,6 +7294,9 @@ src/Models/CampaignEntityListing.swift
 src/Models/CampaignInteraction.swift
 src/Models/CampaignInteractions.swift
 src/Models/CampaignLinesUtilization.swift
+src/Models/CampaignOutboundLinesAllocation.swift
+src/Models/CampaignOutboundLinesDistribution.swift
+src/Models/CampaignOutboundLinesReservation.swift
 src/Models/CampaignProgress.swift
 src/Models/CampaignRule.swift
 src/Models/CampaignRuleAction.swift
@@ -7395,7 +7405,6 @@ src/Models/Compliance.swift
 src/Models/ComplianceResponse.swift
 src/Models/Condition.swift
 src/Models/ConditionalGroupRouting.swift
-src/Models/ConditionalGroupRoutingCondition.swift
 src/Models/ConditionalGroupRoutingRule.swift
 src/Models/ConfigurationOverrides.swift
 src/Models/ConfusionDetails.swift
@@ -7422,7 +7431,9 @@ src/Models/ContactAddress.swift
 src/Models/ContactAddressConditionSettings.swift
 src/Models/ContactAddressTypeConditionSettings.swift
 src/Models/ContactAddressableEntityRef.swift
+src/Models/ContactBulkEditRequest.swift
 src/Models/ContactBulkSearchCriteria.swift
+src/Models/ContactBulkSearchParameters.swift
 src/Models/ContactCallbackRequest.swift
 src/Models/ContactCenterSettings.swift
 src/Models/ContactColumnConditionSettings.swift
@@ -7444,6 +7455,8 @@ src/Models/ContactListTemplate.swift
 src/Models/ContactListTemplateBulkRetrieveBody.swift
 src/Models/ContactListTemplateEntityListing.swift
 src/Models/ContactListing.swift
+src/Models/ContactListingRequest.swift
+src/Models/ContactListingResponse.swift
 src/Models/ContactPhoneNumberColumn.swift
 src/Models/ContactSort.swift
 src/Models/ContactableStatus.swift
@@ -7451,6 +7464,7 @@ src/Models/ContactlistDownloadReadyExportUri.swift
 src/Models/ContactlistDownloadReadyObject.swift
 src/Models/ContactlistImportStatusImportStatus.swift
 src/Models/ContactlistImportStatusObject.swift
+src/Models/ContactsBulkOperationJob.swift
 src/Models/ContactsExportRequest.swift
 src/Models/ContentActions.swift
 src/Models/ContentAttachment.swift
@@ -8968,9 +8982,6 @@ src/Models/LineBase.swift
 src/Models/LineBaseEntityListing.swift
 src/Models/LineEntityListing.swift
 src/Models/LineId.swift
-src/Models/LineIntegration.swift
-src/Models/LineIntegrationEntityListing.swift
-src/Models/LineIntegrationRequest.swift
 src/Models/LineStatus.swift
 src/Models/LineUserId.swift
 src/Models/LinkConfiguration.swift
@@ -9815,8 +9826,11 @@ src/Models/ReportingTurnIntent.swift
 src/Models/ReportingTurnIntentSlot.swift
 src/Models/ReportingTurnKnowledge.swift
 src/Models/ReportingTurnKnowledgeDocument.swift
+src/Models/ReportingTurnKnowledgeEvents.swift
 src/Models/ReportingTurnKnowledgeFeedback.swift
+src/Models/ReportingTurnKnowledgeFeedbackEvent.swift
 src/Models/ReportingTurnKnowledgeSearch.swift
+src/Models/ReportingTurnKnowledgeSearchEvent.swift
 src/Models/ReportingTurnsResponse.swift
 src/Models/RequestConfig.swift
 src/Models/RequestContext.swift
@@ -10368,9 +10382,6 @@ src/Models/TtsSettings.swift
 src/Models/TtsVoiceEntity.swift
 src/Models/TtsVoiceEntityListing.swift
 src/Models/TwitterId.swift
-src/Models/TwitterIntegration.swift
-src/Models/TwitterIntegrationEntityListing.swift
-src/Models/TwitterIntegrationRequest.swift
 src/Models/TypingSetting.swift
 src/Models/UCI10n.swift
 src/Models/UCIcon.swift

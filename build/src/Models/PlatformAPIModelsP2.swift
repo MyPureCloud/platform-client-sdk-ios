@@ -815,9 +815,9 @@ public class Alteration: Codable {
 
     /** Range type (Exclusion: used to exclude a specific time within the recurrence. Inclusion: used to include a specific time within the recurrence which will execute in addition to the normal recurrence. If both an exclusion and inclusion are specified, the inclusion will take precedence over the exclusion.) */
     public var type: ModelType?
-    /** The start date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z */
+    /** The start date of an alteration range as an ISO-8601 string */
     public var start: String?
-    /** The end date of an alteration range as an ISO-8601 string in UTC time, e.g: 2023-12-21T18:30:25.000Z */
+    /** The end date of an alteration range as an ISO-8601 string */
     public var end: String?
 
     public init(type: ModelType?, start: String?, end: String?) {
@@ -1705,6 +1705,22 @@ public class AuditQueryService: Codable {
 
 
 
+public class AuditRealtimeRelatedResultsResponse: Codable {
+
+
+
+    public var entities: [AuditLogMessage]?
+
+    public init(entities: [AuditLogMessage]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
 public class AuditUser: Codable {
 
 
@@ -2103,9 +2119,9 @@ public class BotAggregateQueryPredicate: Codable {
         case askactionresult = "askActionResult"
         case askactiontype = "askActionType"
         case botfinalintent = "botFinalIntent"
+        case botflowtype = "botFlowType"
         case botid = "botId"
         case botintent = "botIntent"
-        case botflowtype = "botFlowType"
         case botproduct = "botProduct"
         case botprovider = "botProvider"
         case botrecognitionfailurereason = "botRecognitionFailureReason"
@@ -5418,6 +5434,62 @@ public class ContactListTemplateEntityListing: Codable {
 
 
 
+public class ContactListingResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [DialerContact]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var contactsCount: Int64?
+    public var previousUri: String?
+    public var lastUri: String?
+    public var firstUri: String?
+    public var selfUri: String?
+    public var nextUri: String?
+    public var pageCount: Int?
+
+    public init(entities: [DialerContact]?, pageSize: Int?, pageNumber: Int?, total: Int64?, contactsCount: Int64?, previousUri: String?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.contactsCount = contactsCount
+        self.previousUri = previousUri
+        self.lastUri = lastUri
+        self.firstUri = firstUri
+        self.selfUri = selfUri
+        self.nextUri = nextUri
+        self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
 public class ContactlistImportStatusImportStatus: Codable {
 
     public enum ImportState: String, Codable { 
@@ -7646,6 +7718,7 @@ public class ConversationMessageEventTopicMessageDetails: Codable {
         case deliveryFailed = "delivery-failed"
         case read = "read"
         case removed = "removed"
+        case published = "published"
     }
 
 
@@ -13484,6 +13557,8 @@ public class EventMessage: Codable {
         case dataActionNotFound = "DATA_ACTION_NOT_FOUND"
         case dataActionTooManyRequests = "DATA_ACTION_TOO_MANY_REQUESTS"
         case dataActionTooManyRequestsRemote = "DATA_ACTION_TOO_MANY_REQUESTS_REMOTE"
+        case actionExecutionFailed = "ACTION_EXECUTION_FAILED"
+        case actionExecutionFailedInvalidParameter = "ACTION_EXECUTION_FAILED_INVALID_PARAMETER"
         case digitalRuleEvaluationFailed = "DIGITAL_RULE_EVALUATION_FAILED"
         case digitalRuleInternalError = "DIGITAL_RULE_INTERNAL_ERROR"
         case digitalRuleNoDncListsConfigured = "DIGITAL_RULE_NO_DNC_LISTS_CONFIGURED"
@@ -14002,24 +14077,6 @@ public class ExternalSegment: Codable {
 
 
 
-/** Scoped ID for a Facebook user interacting with a page or app */
-
-public class FacebookScopedId: Codable {
-
-
-
-    /** The unique page/app-specific scopedId for the user */
-    public var scopedId: String?
-
-    public init(scopedId: String?) {
-        self.scopedId = scopedId
-    }
-
-
-}
-
-
-
 
 public class Facet: Codable {
 
@@ -14035,6 +14092,24 @@ public class Facet: Codable {
     public init(name: String?, type: String?) {
         self.name = name
         self.type = type
+    }
+
+
+}
+
+
+
+/** Scoped ID for a Facebook user interacting with a page or app */
+
+public class FacebookScopedId: Codable {
+
+
+
+    /** The unique page/app-specific scopedId for the user */
+    public var scopedId: String?
+
+    public init(scopedId: String?) {
+        self.scopedId = scopedId
     }
 
 
@@ -14843,6 +14918,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case transfertype = "transferType"
         case usedrouting = "usedRouting"
         case userid = "userId"
+        case videopresent = "videoPresent"
         case waitinginteractioncount = "waitingInteractionCount"
         case wrapupcode = "wrapUpCode"
     }
@@ -16040,6 +16116,9 @@ public class FlowPathsFlowDetails: Codable {
         case bot = "Bot"
         case inboundCall = "InboundCall"
         case secureCall = "SecureCall"
+        case inboundShortMessage = "InboundShortMessage"
+        case inboundEmail = "InboundEmail"
+        case outboundCall = "OutboundCall"
     }
 
 
@@ -17769,6 +17848,7 @@ public class IpAddressRange: Codable {
         case dataActions = "data-actions"
         case smtp = "smtp"
         case audiohook = "audiohook"
+        case openMessaging = "open-messaging"
         case api = "api"
     }
 
@@ -21225,189 +21305,6 @@ public class LineBaseEntityListing: Codable {
         self.selfUri = selfUri
         self.nextUri = nextUri
         self.pageCount = pageCount
-    }
-
-
-}
-
-
-
-
-public class LineIntegration: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum CreateStatus: String, Codable { 
-        case initiated = "Initiated"
-        case completed = "Completed"
-        case error = "Error"
-    }
-
-
-
-
-
-    /** A unique Integration Id */
-    public var _id: String?
-    /** The name of the LINE Integration */
-    public var name: String?
-    /** Defines the SupportedContent profile configured for an integration */
-    public var supportedContent: SupportedContentReference?
-    public var messagingSetting: MessagingSettingReference?
-    /** The Channel Id from LINE messenger */
-    public var channelId: String?
-    /** The Webhook URI to be updated in LINE platform */
-    public var webhookUri: String?
-    /** The status of the LINE Integration */
-    public var status: String?
-    /** The recipient associated to the Line Integration. This recipient is used to associate a flow to an integration */
-    public var recipient: DomainEntityRef?
-    /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** User reference that created this Integration */
-    public var createdBy: DomainEntityRef?
-    /** User reference that last modified this Integration */
-    public var modifiedBy: DomainEntityRef?
-    /** Version number required for updates. */
-    public var version: Int?
-    /** Status of asynchronous create operation */
-    public var createStatus: CreateStatus?
-    /** Error information returned, if createStatus is set to Error */
-    public var createError: ErrorBody?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, channelId: String?, webhookUri: String?, status: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.supportedContent = supportedContent
-        self.messagingSetting = messagingSetting
-        self.channelId = channelId
-        self.webhookUri = webhookUri
-        self.status = status
-        self.recipient = recipient
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.createdBy = createdBy
-        self.modifiedBy = modifiedBy
-        self.version = version
-        self.createStatus = createStatus
-        self.createError = createError
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case supportedContent
-        case messagingSetting
-        case channelId
-        case webhookUri
-        case status
-        case recipient
-        case dateCreated
-        case dateModified
-        case createdBy
-        case modifiedBy
-        case version
-        case createStatus
-        case createError
-        case selfUri
-    }
-
-
-}
-
-
-
-
-public class LineIntegrationRequest: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of the LINE Integration */
-    public var name: String?
-    /** Defines the SupportedContent profile configured for an integration */
-    public var supportedContent: SupportedContentReference?
-    /** Defines the message settings to be applied for this integration */
-    public var messagingSetting: MessagingSettingRequestReference?
-    /** The Channel Id from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id & Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Id is mandatory. (NOTE: ChannelId can only be updated if the integration is set to inactive) */
-    public var channelId: String?
-    /** The Channel Secret from LINE messenger. New Official LINE account: To create a new official account, LINE requires a Webhook URL. It can be created without specifying Channel Id & Channel Secret. Once the Official account is created by LINE, use the update LINE Integration API to update Channel Id and Channel Secret.  All other accounts: Channel Secret is mandatory. (NOTE: ChannelSecret can only be updated if the integration is set to inactive) */
-    public var channelSecret: String?
-    /** The Switcher Secret from LINE messenger. Some line official accounts are switcher functionality enabled. If the LINE account used for this integration is switcher enabled, then switcher secret is a required field. This secret can be found in your create documentation provided by LINE */
-    public var switcherSecret: String?
-    /** The Service Code from LINE messenger. Only applicable to LINE Enterprise accounts. This service code can be found in your create documentation provided by LINE */
-    public var serviceCode: String?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingRequestReference?, channelId: String?, channelSecret: String?, switcherSecret: String?, serviceCode: String?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.supportedContent = supportedContent
-        self.messagingSetting = messagingSetting
-        self.channelId = channelId
-        self.channelSecret = channelSecret
-        self.switcherSecret = switcherSecret
-        self.serviceCode = serviceCode
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case supportedContent
-        case messagingSetting
-        case channelId
-        case channelSecret
-        case switcherSecret
-        case serviceCode
-        case selfUri
     }
 
 
@@ -29738,9 +29635,9 @@ public class Reoccurrence: Codable {
 
 
     public var _id: String?
-    /** The  start date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-11-21T16:30:25.000Z */
+    /** The start date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss */
     public var start: String?
-    /** The end date time of the initial occurrence as an ISO-8601 string in UTC time, e.g: 2023-12-21T16:30:25.000Z */
+    /** The end date time of the initial occurrence as an ISO-8601 string in the format YYYY-MM-DDThh:mm:ss */
     public var end: String?
     /** The time zone of the schedule e.g.:  America/New_York */
     public var timeZone: String?
@@ -35148,58 +35045,6 @@ public class TwitterId: Codable {
 
 
 
-
-public class TwitterIntegrationEntityListing: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var entities: [TwitterIntegration]?
-    public var pageSize: Int?
-    public var pageNumber: Int?
-    public var total: Int64?
-    public var previousUri: String?
-    public var lastUri: String?
-    public var firstUri: String?
-    public var selfUri: String?
-    public var nextUri: String?
-    public var pageCount: Int?
-
-    public init(entities: [TwitterIntegration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, previousUri: String?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, pageCount: Int?) {
-        self.entities = entities
-        self.pageSize = pageSize
-        self.pageNumber = pageNumber
-        self.total = total
-        self.previousUri = previousUri
-        self.lastUri = lastUri
-        self.firstUri = firstUri
-        self.selfUri = selfUri
-        self.nextUri = nextUri
-        self.pageCount = pageCount
-    }
-
-
-}
-
-
-
 /** UC Integration UI configuration data */
 
 public class UCIntegration: Codable {
@@ -37255,6 +37100,50 @@ public class V2ConversationMessageTypingEventForUserTopicConversationButtonCompo
 
 
 
+public class Verifier: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** Indicates whether this verifier is enabled. */
+    public var enabled: Bool?
+    /** Indicates whether this is the default verifier. */
+    public var _default: Bool?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, enabled: Bool?, _default: Bool?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.enabled = enabled
+        self._default = _default
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case enabled
+        case _default = "default"
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class V2ConversationMessageTypingEventForUserTopicConversationEventCoBrowse: Codable {
 
     public enum ModelType: String, Codable { 
@@ -37276,170 +37165,6 @@ public class V2ConversationMessageTypingEventForUserTopicConversationEventCoBrow
         self.type = type
         self.sessionId = sessionId
         self.sessionJoinToken = sessionJoinToken
-    }
-
-
-}
-
-
-
-
-public class Video: Codable {
-
-    public enum State: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum DisconnectType: String, Codable { 
-        case endpoint = "endpoint"
-        case client = "client"
-        case system = "system"
-        case timeout = "timeout"
-        case transfer = "transfer"
-        case transferConference = "transfer.conference"
-        case transferConsult = "transfer.consult"
-        case transferForward = "transfer.forward"
-        case transferNoanswer = "transfer.noanswer"
-        case transferNotavailable = "transfer.notavailable"
-        case transportFailure = "transport.failure"
-        case error = "error"
-        case peer = "peer"
-        case other = "other"
-        case spam = "spam"
-        case uncallable = "uncallable"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The connection state of this communication. */
-    public var state: State?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
-    /** A globally unique identifier for this communication. */
-    public var _id: String?
-    /** The room id context (xmpp jid) for the conference session. */
-    public var context: String?
-    /** Indicates whether this participant has muted their outgoing audio. */
-    public var audioMuted: Bool?
-    /** Indicates whether this participant has muted/paused their outgoing video. */
-    public var videoMuted: Bool?
-    /** Indicates whether this participant is sharing their screen to the session. */
-    public var sharingScreen: Bool?
-    /** The number of peer participants from the perspective of the participant in the conference. */
-    public var peerCount: Int?
-    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
-    public var disconnectType: DisconnectType?
-    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var startAlertingTime: Date?
-    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var connectedTime: Date?
-    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var disconnectedTime: Date?
-    /** The source provider for the video. */
-    public var provider: String?
-    /** The id of the peer communication corresponding to a matching leg for this communication. */
-    public var peerId: String?
-    /** List of media stream ids */
-    public var msids: [String]?
-    /** Address and name data for a call endpoint. */
-    public var _self: Address?
-    /** Call wrap up or disposition data. */
-    public var wrapup: Wrapup?
-    /** After-call work for the communication. */
-    public var afterCallWork: AfterCallWork?
-    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
-    public var afterCallWorkRequired: Bool?
-
-    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        self.state = state
-        self.initialState = initialState
-        self._id = _id
-        self.context = context
-        self.audioMuted = audioMuted
-        self.videoMuted = videoMuted
-        self.sharingScreen = sharingScreen
-        self.peerCount = peerCount
-        self.disconnectType = disconnectType
-        self.startAlertingTime = startAlertingTime
-        self.connectedTime = connectedTime
-        self.disconnectedTime = disconnectedTime
-        self.provider = provider
-        self.peerId = peerId
-        self.msids = msids
-        self._self = _self
-        self.wrapup = wrapup
-        self.afterCallWork = afterCallWork
-        self.afterCallWorkRequired = afterCallWorkRequired
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case state
-        case initialState
-        case _id = "id"
-        case context
-        case audioMuted
-        case videoMuted
-        case sharingScreen
-        case peerCount
-        case disconnectType
-        case startAlertingTime
-        case connectedTime
-        case disconnectedTime
-        case provider
-        case peerId
-        case msids
-        case _self = "self"
-        case wrapup
-        case afterCallWork
-        case afterCallWorkRequired
     }
 
 
@@ -38155,7 +37880,29 @@ public class ValueWrapperDate: Codable {
 
 
 
-public class Verifier: Codable {
+public class Video: Codable {
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
 
 
 
@@ -38167,30 +37914,128 @@ public class Verifier: Codable {
 
 
 
-    /** The globally unique identifier for the object. */
+
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case client = "client"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The connection state of this communication. */
+    public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
+    /** A globally unique identifier for this communication. */
     public var _id: String?
-    public var name: String?
-    /** Indicates whether this verifier is enabled. */
-    public var enabled: Bool?
-    /** Indicates whether this is the default verifier. */
-    public var _default: Bool?
-    /** The URI for this object */
-    public var selfUri: String?
+    /** The room id context (xmpp jid) for the conference session. */
+    public var context: String?
+    /** Indicates whether this participant has muted their outgoing audio. */
+    public var audioMuted: Bool?
+    /** Indicates whether this participant has muted/paused their outgoing video. */
+    public var videoMuted: Bool?
+    /** Indicates whether this participant is sharing their screen to the session. */
+    public var sharingScreen: Bool?
+    /** The number of peer participants from the perspective of the participant in the conference. */
+    public var peerCount: Int?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
+    public var disconnectType: DisconnectType?
+    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startAlertingTime: Date?
+    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var disconnectedTime: Date?
+    /** The source provider for the video. */
+    public var provider: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
+    public var peerId: String?
+    /** List of media stream ids */
+    public var msids: [String]?
+    /** Address and name data for a call endpoint. */
+    public var _self: Address?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
+    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
+    public var afterCallWorkRequired: Bool?
 
-    public init(_id: String?, name: String?, enabled: Bool?, _default: Bool?, selfUri: String?) {
+    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+        self.state = state
+        self.initialState = initialState
         self._id = _id
-        self.name = name
-        self.enabled = enabled
-        self._default = _default
-        self.selfUri = selfUri
+        self.context = context
+        self.audioMuted = audioMuted
+        self.videoMuted = videoMuted
+        self.sharingScreen = sharingScreen
+        self.peerCount = peerCount
+        self.disconnectType = disconnectType
+        self.startAlertingTime = startAlertingTime
+        self.connectedTime = connectedTime
+        self.disconnectedTime = disconnectedTime
+        self.provider = provider
+        self.peerId = peerId
+        self.msids = msids
+        self._self = _self
+        self.wrapup = wrapup
+        self.afterCallWork = afterCallWork
+        self.afterCallWorkRequired = afterCallWorkRequired
     }
 
     public enum CodingKeys: String, CodingKey { 
+        case state
+        case initialState
         case _id = "id"
-        case name
-        case enabled
-        case _default = "default"
-        case selfUri
+        case context
+        case audioMuted
+        case videoMuted
+        case sharingScreen
+        case peerCount
+        case disconnectType
+        case startAlertingTime
+        case connectedTime
+        case disconnectedTime
+        case provider
+        case peerId
+        case msids
+        case _self = "self"
+        case wrapup
+        case afterCallWork
+        case afterCallWorkRequired
     }
 
 

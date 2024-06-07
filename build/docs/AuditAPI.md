@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuditsQueryTransactionIdResults**](AuditAPI.html#getAuditsQueryTransactionIdResults) | Get results of audit query |
 | [**postAuditsQuery**](AuditAPI.html#postAuditsQuery) | Create audit query execution |
 | [**postAuditsQueryRealtime**](AuditAPI.html#postAuditsQueryRealtime) | This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. |
+| [**postAuditsQueryRealtimeRelated**](AuditAPI.html#postAuditsQueryRealtimeRelated) | Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id. |
 {: class="table-striped"}
 
 <a name="getAuditsQueryRealtimeServicemapping"></a>
@@ -330,4 +331,58 @@ AuditAPI.postAuditsQueryRealtime(body: body, expand: expand) { (response, error)
 ### Return type
 
 [**AuditRealtimeQueryResultsResponse**](AuditRealtimeQueryResultsResponse.html)
+
+<a name="postAuditsQueryRealtimeRelated"></a>
+
+# **postAuditsQueryRealtimeRelated**
+
+
+
+> [AuditRealtimeRelatedResultsResponse](AuditRealtimeRelatedResultsResponse.html) postAuditsQueryRealtimeRelated(body, expand)
+
+Often a single action results in multiple audits. The endpoint retrieves all audits created by the same action as the given audit id.
+
+
+
+Wraps POST /api/v2/audits/query/realtime/related  
+
+Requires ALL permissions: 
+
+* audits:audit:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AuditRealtimeRelatedRequest = new AuditRealtimeRelatedRequest(...) // query
+let expand: [String] = [""] // Which fields, if any, to expand
+
+// Code example
+AuditAPI.postAuditsQueryRealtimeRelated(body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuditAPI.postAuditsQueryRealtimeRelated was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AuditRealtimeRelatedRequest**](AuditRealtimeRelatedRequest.html)| query | |
+| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AuditRealtimeRelatedResultsResponse**](AuditRealtimeRelatedResultsResponse.html)
 

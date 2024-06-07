@@ -1185,8 +1185,8 @@ public class AnalyticsConversation: Codable {
         case station = "station"
         case user = "user"
         case voicemail = "voicemail"
-        case workflow = "workflow"
         case voicesurveyflow = "voicesurveyflow"
+        case workflow = "workflow"
     }
 
 
@@ -1415,8 +1415,8 @@ public class AnalyticsParticipantWithoutAttributes: Codable {
         case station = "station"
         case user = "user"
         case voicemail = "voicemail"
-        case workflow = "workflow"
         case voicesurveyflow = "voicesurveyflow"
+        case workflow = "workflow"
     }
 
 
@@ -7427,6 +7427,28 @@ public class ContactBulkSearchCriteria: Codable {
 
 
 
+public class ContactBulkSearchParameters: Codable {
+
+
+
+
+
+    /** Contact List Filter ID. Either this property or criteria is required. */
+    public var contactListFilterId: String?
+    /** Criteria to filter the contacts by. Either this property or contactListFilterId is required. */
+    public var criteria: ContactBulkSearchCriteria?
+
+    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?) {
+        self.contactListFilterId = contactListFilterId
+        self.criteria = criteria
+    }
+
+
+}
+
+
+
+
 public class ContactListDivisionView: Codable {
 
 
@@ -7722,6 +7744,43 @@ public class ContactListing: Codable {
         self.previousUri = previousUri
         self.lastUri = lastUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class ContactListingRequest: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** Contact List Filter ID. */
+    public var contactListFilterId: String?
+    /** Criteria to filter the contacts by. */
+    public var criteria: ContactBulkSearchCriteria?
+    /** Page number. */
+    public var pageNumber: Int?
+    /** Page size. The max that will be returned is 50. */
+    public var pageSize: Int?
+    /** The order in which to sort contacts. */
+    public var contactSorts: [ContactSort]?
+
+    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?, pageNumber: Int?, pageSize: Int?, contactSorts: [ContactSort]?) {
+        self.contactListFilterId = contactListFilterId
+        self.criteria = criteria
+        self.pageNumber = pageNumber
+        self.pageSize = pageSize
+        self.contactSorts = contactSorts
     }
 
 
@@ -17787,6 +17846,75 @@ public class HelpLink: Codable {
 
 
 
+public class HistoricalImportStatus: Codable {
+
+
+
+
+
+
+
+    public enum Status: String, Codable { 
+        case initiated = "Initiated"
+        case inProgress = "InProgress"
+        case pending = "Pending"
+        case success = "Success"
+        case failed = "Failed"
+        case cancelled = "Cancelled"
+        case purged = "Purged"
+        case purgePending = "PurgePending"
+    }
+
+
+
+
+
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case csv = "Csv"
+        case json = "Json"
+    }
+
+    /** Request id of the historical import in the organization */
+    public var requestId: String?
+    /** The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateImportEnded: Date?
+    /** The first day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateImportStarted: Date?
+    /** Status of the historical import in the organization. */
+    public var status: Status?
+    /** Error occured if the status of the import is failed */
+    public var error: String?
+    /** Date in which the historical import is initiated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** Date in which the historical import is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** Whether this historical import is active or not */
+    public var active: Bool?
+    /** Whether this historical import is of type csv or json */
+    public var type: ModelType?
+
+    public init(requestId: String?, dateImportEnded: Date?, dateImportStarted: Date?, status: Status?, error: String?, dateCreated: Date?, dateModified: Date?, active: Bool?, type: ModelType?) {
+        self.requestId = requestId
+        self.dateImportEnded = dateImportEnded
+        self.dateImportStarted = dateImportStarted
+        self.status = status
+        self.error = error
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.active = active
+        self.type = type
+    }
+
+
+}
+
+
+
+
 public class HistoricalAdherenceExceptionInfo: Codable {
 
 
@@ -17888,75 +18016,6 @@ public class HistoricalAdherenceExceptionInfo: Codable {
         self.routingStatus = routingStatus
         self.impact = impact
         self.secondaryPresenceLookupId = secondaryPresenceLookupId
-    }
-
-
-}
-
-
-
-
-public class HistoricalImportStatus: Codable {
-
-
-
-
-
-
-
-    public enum Status: String, Codable { 
-        case initiated = "Initiated"
-        case inProgress = "InProgress"
-        case pending = "Pending"
-        case success = "Success"
-        case failed = "Failed"
-        case cancelled = "Cancelled"
-        case purged = "Purged"
-        case purgePending = "PurgePending"
-    }
-
-
-
-
-
-
-
-
-
-    public enum ModelType: String, Codable { 
-        case csv = "Csv"
-        case json = "Json"
-    }
-
-    /** Request id of the historical import in the organization */
-    public var requestId: String?
-    /** The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateImportEnded: Date?
-    /** The first day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateImportStarted: Date?
-    /** Status of the historical import in the organization. */
-    public var status: Status?
-    /** Error occured if the status of the import is failed */
-    public var error: String?
-    /** Date in which the historical import is initiated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** Date in which the historical import is modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** Whether this historical import is active or not */
-    public var active: Bool?
-    /** Whether this historical import is of type csv or json */
-    public var type: ModelType?
-
-    public init(requestId: String?, dateImportEnded: Date?, dateImportStarted: Date?, status: Status?, error: String?, dateCreated: Date?, dateModified: Date?, active: Bool?, type: ModelType?) {
-        self.requestId = requestId
-        self.dateImportEnded = dateImportEnded
-        self.dateImportStarted = dateImportStarted
-        self.status = status
-        self.error = error
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.active = active
-        self.type = type
     }
 
 
@@ -19751,7 +19810,7 @@ public class JourneySegment: Codable {
     public var selfUri: String?
     /** Timestamp indicating when the segment was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var createdDate: Date?
-    /** Timestamp indicating when the the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    /** Timestamp indicating when the segment was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var modifiedDate: Date?
 
     public init(_id: String?, isActive: Bool?, displayName: String?, version: Int?, _description: String?, color: String?, scope: Scope?, shouldDisplayToAgent: Bool?, context: Context?, journey: Journey?, externalSegment: ExternalSegment?, assignmentExpirationDays: Int?, selfUri: String?, createdDate: Date?, modifiedDate: Date?) {
@@ -21090,6 +21149,52 @@ public class KnowledgeGuestDocumentVariationContext: Codable {
 
 
 
+public class KpiResult: Codable {
+
+
+
+
+
+
+
+
+
+    public enum MediaType: String, Codable { 
+        case voice = "voice"
+        case email = "email"
+        case message = "message"
+    }
+
+
+
+    /** Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on) */
+    public var kpiTotalOn: Int64?
+    /** Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off) */
+    public var kpiTotalOff: Int64?
+    /** Total interactions handled by predictive routing (GPR was on) */
+    public var interactionCountOn: Int64?
+    /** Total interactions not routed by predictive routing (GPR was off) */
+    public var interactionCountOff: Int64?
+    /** Media type used for the KPI */
+    public var mediaType: MediaType?
+    /** The percentage benefit for this media type for the duration of the comparison period */
+    public var percentageBenefit: Double?
+
+    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?, percentageBenefit: Double?) {
+        self.kpiTotalOn = kpiTotalOn
+        self.kpiTotalOff = kpiTotalOff
+        self.interactionCountOn = interactionCountOn
+        self.interactionCountOff = interactionCountOff
+        self.mediaType = mediaType
+        self.percentageBenefit = percentageBenefit
+    }
+
+
+}
+
+
+
+
 public class KnowledgeImportJobRequest: Codable {
 
 
@@ -21248,52 +21353,6 @@ public class KnowledgeTraining: Codable {
         case knowledgeDocumentsState
         case datePromoted
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class KpiResult: Codable {
-
-
-
-
-
-
-
-
-
-    public enum MediaType: String, Codable { 
-        case voice = "voice"
-        case email = "email"
-        case message = "message"
-    }
-
-
-
-    /** Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on) */
-    public var kpiTotalOn: Int64?
-    /** Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off) */
-    public var kpiTotalOff: Int64?
-    /** Total interactions handled by predictive routing (GPR was on) */
-    public var interactionCountOn: Int64?
-    /** Total interactions not routed by predictive routing (GPR was off) */
-    public var interactionCountOff: Int64?
-    /** Media type used for the KPI */
-    public var mediaType: MediaType?
-    /** The percentage benefit for this media type for the duration of the comparison period */
-    public var percentageBenefit: Double?
-
-    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?, percentageBenefit: Double?) {
-        self.kpiTotalOn = kpiTotalOn
-        self.kpiTotalOff = kpiTotalOff
-        self.interactionCountOn = interactionCountOn
-        self.interactionCountOff = interactionCountOff
-        self.mediaType = mediaType
-        self.percentageBenefit = percentageBenefit
     }
 
 
@@ -27527,6 +27586,28 @@ public class QueueConversationChatEventTopicUriReference: Codable {
 
 
 
+
+public class QueueConversationCobrowseEventTopicScoredAgent: Codable {
+
+
+
+
+
+    /** A UriReference for a resource */
+    public var agent: QueueConversationCobrowseEventTopicUriReference?
+    /** Agent's score for the current conversation, from 0 - 100, higher being better */
+    public var score: Int?
+
+    public init(agent: QueueConversationCobrowseEventTopicUriReference?, score: Int?) {
+        self.agent = agent
+        self.score = score
+    }
+
+
+}
+
+
+
 /** A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) */
 
 public class QueueConversationCobrowseEventTopicJourneyCustomer: Codable {
@@ -27576,28 +27657,6 @@ public class QueueConversationCobrowseEventTopicJourneyCustomerSession: Codable 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case type
-    }
-
-
-}
-
-
-
-
-public class QueueConversationCobrowseEventTopicScoredAgent: Codable {
-
-
-
-
-
-    /** A UriReference for a resource */
-    public var agent: QueueConversationCobrowseEventTopicUriReference?
-    /** Agent's score for the current conversation, from 0 - 100, higher being better */
-    public var score: Int?
-
-    public init(agent: QueueConversationCobrowseEventTopicUriReference?, score: Int?) {
-        self.agent = agent
-        self.score = score
     }
 
 
@@ -28103,6 +28162,7 @@ public class QueueConversationEventTopicMessageDetails: Codable {
         case deliveryFailed = "delivery-failed"
         case read = "read"
         case removed = "removed"
+        case published = "published"
     }
 
 
@@ -29465,6 +29525,7 @@ public class QueueConversationSocialExpressionEventTopicMessageDetails: Codable 
         case deliveryFailed = "delivery-failed"
         case read = "read"
         case removed = "removed"
+        case published = "published"
     }
 
 
@@ -31785,6 +31846,28 @@ public class ReportingInterval: Codable {
     public init(intervalType: IntervalType?, intervalValue: Int?) {
         self.intervalType = intervalType
         self.intervalValue = intervalValue
+    }
+
+
+}
+
+
+
+
+public class ReportingTurnKnowledgeEvents: Codable {
+
+
+
+
+
+    /** The knowledge search data captured during this reporting turn. */
+    public var search: [ReportingTurnKnowledgeSearchEvent]?
+    /** The knowledge feedback data captured during this reporting turn. */
+    public var feedback: [ReportingTurnKnowledgeFeedbackEvent]?
+
+    public init(search: [ReportingTurnKnowledgeSearchEvent]?, feedback: [ReportingTurnKnowledgeFeedbackEvent]?) {
+        self.search = search
+        self.feedback = feedback
     }
 
 
@@ -36697,231 +36780,6 @@ public class Trustor: Codable {
 
 
 
-public class TwitterIntegration: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum Tier: String, Codable { 
-        case premium = "premium"
-        case enterprise = "enterprise"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum CreateStatus: String, Codable { 
-        case initiated = "Initiated"
-        case completed = "Completed"
-        case error = "Error"
-    }
-
-
-
-
-
-    /** A unique Integration Id */
-    public var _id: String?
-    /** The name of the Twitter Integration */
-    public var name: String?
-    /** Defines the SupportedContent profile configured for an integration */
-    public var supportedContent: SupportedContentReference?
-    public var messagingSetting: MessagingSettingReference?
-    /** The Access Token Key from Twitter messenger */
-    public var accessTokenKey: String?
-    /** The Consumer Key from Twitter messenger */
-    public var consumerKey: String?
-    /** The Username from Twitter */
-    public var username: String?
-    /** The UserId from Twitter */
-    public var userId: String?
-    /** The status of the Twitter Integration */
-    public var status: String?
-    /** The type of twitter account to be used for the integration */
-    public var tier: Tier?
-    /** The Twitter environment name, e.g.: env-beta (required for premium tier) */
-    public var envName: String?
-    /** The recipient associated to the Twitter Integration. This recipient is used to associate a flow to an integration */
-    public var recipient: DomainEntityRef?
-    /** Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** User reference that created this Integration */
-    public var createdBy: DomainEntityRef?
-    /** User reference that last modified this Integration */
-    public var modifiedBy: DomainEntityRef?
-    /** Version number required for updates. */
-    public var version: Int?
-    /** Status of asynchronous create operation */
-    public var createStatus: CreateStatus?
-    /** Error information returned, if createStatus is set to Error */
-    public var createError: ErrorBody?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingReference?, accessTokenKey: String?, consumerKey: String?, username: String?, userId: String?, status: String?, tier: Tier?, envName: String?, recipient: DomainEntityRef?, dateCreated: Date?, dateModified: Date?, createdBy: DomainEntityRef?, modifiedBy: DomainEntityRef?, version: Int?, createStatus: CreateStatus?, createError: ErrorBody?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.supportedContent = supportedContent
-        self.messagingSetting = messagingSetting
-        self.accessTokenKey = accessTokenKey
-        self.consumerKey = consumerKey
-        self.username = username
-        self.userId = userId
-        self.status = status
-        self.tier = tier
-        self.envName = envName
-        self.recipient = recipient
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.createdBy = createdBy
-        self.modifiedBy = modifiedBy
-        self.version = version
-        self.createStatus = createStatus
-        self.createError = createError
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case supportedContent
-        case messagingSetting
-        case accessTokenKey
-        case consumerKey
-        case username
-        case userId
-        case status
-        case tier
-        case envName
-        case recipient
-        case dateCreated
-        case dateModified
-        case createdBy
-        case modifiedBy
-        case version
-        case createStatus
-        case createError
-        case selfUri
-    }
-
-
-}
-
-
-
-
-public class TwitterIntegrationRequest: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum Tier: String, Codable { 
-        case premium = "premium"
-        case enterprise = "enterprise"
-    }
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of the Twitter Integration */
-    public var name: String?
-    /** Defines the SupportedContent profile configured for an integration */
-    public var supportedContent: SupportedContentReference?
-    /** Defines the message settings to be applied for this integration */
-    public var messagingSetting: MessagingSettingRequestReference?
-    /** The Access Token Key from Twitter messenger */
-    public var accessTokenKey: String?
-    /** The Access Token Secret from Twitter messenger */
-    public var accessTokenSecret: String?
-    /** The Consumer Key from Twitter messenger */
-    public var consumerKey: String?
-    /** The Consumer Secret from Twitter messenger */
-    public var consumerSecret: String?
-    /** The type of twitter account to be used for the integration */
-    public var tier: Tier?
-    /** The Twitter environment name, e.g.: env-beta (required for premium tier) */
-    public var envName: String?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, supportedContent: SupportedContentReference?, messagingSetting: MessagingSettingRequestReference?, accessTokenKey: String?, accessTokenSecret: String?, consumerKey: String?, consumerSecret: String?, tier: Tier?, envName: String?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.supportedContent = supportedContent
-        self.messagingSetting = messagingSetting
-        self.accessTokenKey = accessTokenKey
-        self.accessTokenSecret = accessTokenSecret
-        self.consumerKey = consumerKey
-        self.consumerSecret = consumerSecret
-        self.tier = tier
-        self.envName = envName
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case supportedContent
-        case messagingSetting
-        case accessTokenKey
-        case accessTokenSecret
-        case consumerKey
-        case consumerSecret
-        case tier
-        case envName
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class UnansweredPhraseGroupUpdateResponse: Codable {
 
 
@@ -38398,6 +38256,91 @@ public class V2ConversationMessageTypingEventForWorkflowTopicConversationNotific
 
 
 
+public class V2MobiusRulesTopicRule: Codable {
+
+
+
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case conversationMetrics = "ConversationMetrics"
+        case userPresence = "UserPresence"
+        case workforceManagement = "WorkforceManagement"
+        case unknown = "Unknown"
+    }
+
+
+
+
+
+
+
+
+
+    public enum Action: String, Codable { 
+        case unknown = "UNKNOWN"
+        case create = "CREATE"
+        case update = "UPDATE"
+        case delete = "DELETE"
+    }
+
+
+
+
+
+
+
+    public var _id: UUID?
+    public var userId: UUID?
+    public var name: String?
+    public var type: ModelType?
+    public var notifications: [V2MobiusRulesTopicAlertNotification]?
+    public var conditions: V2MobiusRulesTopicCondition?
+    public var enabled: Bool?
+    public var inAlarm: Bool?
+    public var action: Action?
+    public var dateCreated: Date?
+    public var sendExitingAlarmNotification: Bool?
+    public var waitBetweenNotificationMs: Int?
+
+    public init(_id: UUID?, userId: UUID?, name: String?, type: ModelType?, notifications: [V2MobiusRulesTopicAlertNotification]?, conditions: V2MobiusRulesTopicCondition?, enabled: Bool?, inAlarm: Bool?, action: Action?, dateCreated: Date?, sendExitingAlarmNotification: Bool?, waitBetweenNotificationMs: Int?) {
+        self._id = _id
+        self.userId = userId
+        self.name = name
+        self.type = type
+        self.notifications = notifications
+        self.conditions = conditions
+        self.enabled = enabled
+        self.inAlarm = inAlarm
+        self.action = action
+        self.dateCreated = dateCreated
+        self.sendExitingAlarmNotification = sendExitingAlarmNotification
+        self.waitBetweenNotificationMs = waitBetweenNotificationMs
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case userId
+        case name
+        case type
+        case notifications
+        case conditions
+        case enabled
+        case inAlarm
+        case action
+        case dateCreated
+        case sendExitingAlarmNotification
+        case waitBetweenNotificationMs
+    }
+
+
+}
+
+
+
+
 public class V2ConversationMessageTypingEventForWorkflowTopicMessageData: Codable {
 
 
@@ -38486,91 +38429,6 @@ public class V2MobiusRulesTopicAlertingAddressableEntityRef: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case displayName
-    }
-
-
-}
-
-
-
-
-public class V2MobiusRulesTopicRule: Codable {
-
-
-
-
-
-
-
-    public enum ModelType: String, Codable { 
-        case conversationMetrics = "ConversationMetrics"
-        case userPresence = "UserPresence"
-        case workforceManagement = "WorkforceManagement"
-        case unknown = "Unknown"
-    }
-
-
-
-
-
-
-
-
-
-    public enum Action: String, Codable { 
-        case unknown = "UNKNOWN"
-        case create = "CREATE"
-        case update = "UPDATE"
-        case delete = "DELETE"
-    }
-
-
-
-
-
-
-
-    public var _id: UUID?
-    public var userId: UUID?
-    public var name: String?
-    public var type: ModelType?
-    public var notifications: [V2MobiusRulesTopicAlertNotification]?
-    public var conditions: V2MobiusRulesTopicCondition?
-    public var enabled: Bool?
-    public var inAlarm: Bool?
-    public var action: Action?
-    public var dateCreated: Date?
-    public var sendExitingAlarmNotification: Bool?
-    public var waitBetweenNotificationMs: Int?
-
-    public init(_id: UUID?, userId: UUID?, name: String?, type: ModelType?, notifications: [V2MobiusRulesTopicAlertNotification]?, conditions: V2MobiusRulesTopicCondition?, enabled: Bool?, inAlarm: Bool?, action: Action?, dateCreated: Date?, sendExitingAlarmNotification: Bool?, waitBetweenNotificationMs: Int?) {
-        self._id = _id
-        self.userId = userId
-        self.name = name
-        self.type = type
-        self.notifications = notifications
-        self.conditions = conditions
-        self.enabled = enabled
-        self.inAlarm = inAlarm
-        self.action = action
-        self.dateCreated = dateCreated
-        self.sendExitingAlarmNotification = sendExitingAlarmNotification
-        self.waitBetweenNotificationMs = waitBetweenNotificationMs
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case userId
-        case name
-        case type
-        case notifications
-        case conditions
-        case enabled
-        case inAlarm
-        case action
-        case dateCreated
-        case sendExitingAlarmNotification
-        case waitBetweenNotificationMs
     }
 
 

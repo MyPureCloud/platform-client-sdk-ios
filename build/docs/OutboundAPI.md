@@ -47,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundCampaignAgentownedmappingpreviewResults**](OutboundAPI.html#getOutboundCampaignAgentownedmappingpreviewResults) | Get a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**getOutboundCampaignDiagnostics**](OutboundAPI.html#getOutboundCampaignDiagnostics) | Get campaign diagnostics |
 | [**getOutboundCampaignInteractions**](OutboundAPI.html#getOutboundCampaignInteractions) | Get dialer campaign interactions. |
+| [**getOutboundCampaignLinedistribution**](OutboundAPI.html#getOutboundCampaignLinedistribution) | Get line distribution information for campaigns using same Edge Group or Site as given campaign |
 | [**getOutboundCampaignProgress**](OutboundAPI.html#getOutboundCampaignProgress) | Get campaign progress |
 | [**getOutboundCampaignStats**](OutboundAPI.html#getOutboundCampaignStats) | Get statistics about a Dialer Campaign |
 | [**getOutboundCampaignrule**](OutboundAPI.html#getOutboundCampaignrule) | Get Campaign Rule |
@@ -119,6 +120,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundContactlistClear**](OutboundAPI.html#postOutboundContactlistClear) | Deletes all contacts out of a list. All outstanding recalls or rule-scheduled callbacks for non-preview campaigns configured with the contactlist will be cancelled. |
 | [**postOutboundContactlistContacts**](OutboundAPI.html#postOutboundContactlistContacts) | Add contacts to a contact list. |
 | [**postOutboundContactlistContactsBulk**](OutboundAPI.html#postOutboundContactlistContactsBulk) | Get contacts from a contact list. |
+| [**postOutboundContactlistContactsBulkRemove**](OutboundAPI.html#postOutboundContactlistContactsBulkRemove) | Start an async job to delete contacts using a filter. |
+| [**postOutboundContactlistContactsBulkUpdate**](OutboundAPI.html#postOutboundContactlistContactsBulkUpdate) | Start an async job to bulk edit contacts. |
+| [**postOutboundContactlistContactsSearch**](OutboundAPI.html#postOutboundContactlistContactsSearch) | Query contacts from a contact list. |
 | [**postOutboundContactlistExport**](OutboundAPI.html#postOutboundContactlistExport) | Initiate the export of a contact list. |
 | [**postOutboundContactlistfilters**](OutboundAPI.html#postOutboundContactlistfilters) | Create Contact List Filter |
 | [**postOutboundContactlistfiltersBulkRetrieve**](OutboundAPI.html#postOutboundContactlistfiltersBulkRetrieve) | Retrieve multiple contact list filters |
@@ -2271,6 +2275,70 @@ OutboundAPI.getOutboundCampaignInteractions(campaignId: campaignId) { (response,
 ### Return type
 
 [**CampaignInteractions**](CampaignInteractions.html)
+
+<a name="getOutboundCampaignLinedistribution"></a>
+
+# **getOutboundCampaignLinedistribution**
+
+
+
+> [CampaignOutboundLinesDistribution](CampaignOutboundLinesDistribution.html) getOutboundCampaignLinedistribution(campaignId, includeOnlyActiveCampaigns, edgeGroupId, siteId, useWeight, relativeWeight, outboundLineCount)
+
+Get line distribution information for campaigns using same Edge Group or Site as given campaign
+
+
+
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/linedistribution  
+
+Requires ANY permissions: 
+
+* outbound:lineDistribution:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+let includeOnlyActiveCampaigns: Bool = true // If true will return only active Campaigns
+let edgeGroupId: String = "" // Edge group to be used in line distribution calculations instead of current Campaign's Edge Group. Campaign's Site and Edge Group are mutually exclusive.
+let siteId: String = "" // Site to be used in line distribution calculations instead of current Campaign's Site.  Campaign's Site and Edge Group are mutually exclusive.
+let useWeight: Bool = true // Enable usage of weight, this value overrides current Campaign's setting in line distribution calculations
+let relativeWeight: Int = 0 // Relative weight to be used in line distribution calculations instead of current Campaign's relative weight
+let outboundLineCount: Int = 0 // The number of outbound lines to be used in line distribution calculations, instead of current Campaign's Outbound Lines Count
+
+// Code example
+OutboundAPI.getOutboundCampaignLinedistribution(campaignId: campaignId, includeOnlyActiveCampaigns: includeOnlyActiveCampaigns, edgeGroupId: edgeGroupId, siteId: siteId, useWeight: useWeight, relativeWeight: relativeWeight, outboundLineCount: outboundLineCount) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundCampaignLinedistribution was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+| **includeOnlyActiveCampaigns** | **Bool**| If true will return only active Campaigns | [optional] |
+| **edgeGroupId** | **String**| Edge group to be used in line distribution calculations instead of current Campaign's Edge Group. Campaign's Site and Edge Group are mutually exclusive. | [optional] |
+| **siteId** | **String**| Site to be used in line distribution calculations instead of current Campaign's Site.  Campaign's Site and Edge Group are mutually exclusive. | [optional] |
+| **useWeight** | **Bool**| Enable usage of weight, this value overrides current Campaign's setting in line distribution calculations | [optional] |
+| **relativeWeight** | **Int**| Relative weight to be used in line distribution calculations instead of current Campaign's relative weight | [optional] |
+| **outboundLineCount** | **Int**| The number of outbound lines to be used in line distribution calculations, instead of current Campaign's Outbound Lines Count | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CampaignOutboundLinesDistribution**](CampaignOutboundLinesDistribution.html)
 
 <a name="getOutboundCampaignProgress"></a>
 
@@ -6355,6 +6423,168 @@ OutboundAPI.postOutboundContactlistContactsBulk(contactListId: contactListId, bo
 ### Return type
 
 [**[DialerContact]**](DialerContact.html)
+
+<a name="postOutboundContactlistContactsBulkRemove"></a>
+
+# **postOutboundContactlistContactsBulkRemove**
+
+
+
+> [ContactsBulkOperationJob](ContactsBulkOperationJob.html) postOutboundContactlistContactsBulkRemove(contactListId, body)
+
+Start an async job to delete contacts using a filter.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/remove  
+
+Requires ANY permissions: 
+
+* outbound:contact:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+let body: ContactBulkSearchParameters = new ContactBulkSearchParameters(...) // Contact filter information.
+
+// Code example
+OutboundAPI.postOutboundContactlistContactsBulkRemove(contactListId: contactListId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlistContactsBulkRemove was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListId** | **String**| Contact List ID | |
+| **body** | [**ContactBulkSearchParameters**](ContactBulkSearchParameters.html)| Contact filter information. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactsBulkOperationJob**](ContactsBulkOperationJob.html)
+
+<a name="postOutboundContactlistContactsBulkUpdate"></a>
+
+# **postOutboundContactlistContactsBulkUpdate**
+
+
+
+> [ContactsBulkOperationJob](ContactsBulkOperationJob.html) postOutboundContactlistContactsBulkUpdate(contactListId, body)
+
+Start an async job to bulk edit contacts.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/update  
+
+Requires ANY permissions: 
+
+* outbound:contact:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+let body: ContactBulkEditRequest = new ContactBulkEditRequest(...) // Contact bulk edit request information.
+
+// Code example
+OutboundAPI.postOutboundContactlistContactsBulkUpdate(contactListId: contactListId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlistContactsBulkUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListId** | **String**| Contact List ID | |
+| **body** | [**ContactBulkEditRequest**](ContactBulkEditRequest.html)| Contact bulk edit request information. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactsBulkOperationJob**](ContactsBulkOperationJob.html)
+
+<a name="postOutboundContactlistContactsSearch"></a>
+
+# **postOutboundContactlistContactsSearch**
+
+
+
+> [ContactListingResponse](ContactListingResponse.html) postOutboundContactlistContactsSearch(contactListId, body)
+
+Query contacts from a contact list.
+
+
+
+Wraps POST /api/v2/outbound/contactlists/{contactListId}/contacts/search  
+
+Requires ANY permissions: 
+
+* outbound:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+let body: ContactListingRequest = new ContactListingRequest(...) // Contact search parameters.
+
+// Code example
+OutboundAPI.postOutboundContactlistContactsSearch(contactListId: contactListId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.postOutboundContactlistContactsSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListId** | **String**| Contact List ID | |
+| **body** | [**ContactListingRequest**](ContactListingRequest.html)| Contact search parameters. | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactListingResponse**](ContactListingResponse.html)
 
 <a name="postOutboundContactlistExport"></a>
 

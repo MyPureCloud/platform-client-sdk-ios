@@ -184,6 +184,8 @@ title: ViewFilter
 | **surveyTypes** | **[String]** | The surveyTypes is used to filter the view | [optional] |
 | **surveyResponseStatuses** | **[String]** | The list of Survey Response Status | [optional] |
 | **botFlowTypes** | **[String]** | The botFlowTypes is used to filter the view | [optional] |
+| **isScreenRecorded** | **Bool** | Filter to indicate if the screen is recorded | [optional] |
+| **screenMonitorUserIds** | **[String]** | The list of Screen Monitor User Ids | [optional] |
 {: class="table table-striped"}
 
 

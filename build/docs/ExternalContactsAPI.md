@@ -1083,7 +1083,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let externalOrganizationId: String = "" // External Organization ID
-let expand: ExternalContactsAPI.Expand_getExternalcontactsOrganization = ExternalContactsAPI.Expand_getExternalcontactsOrganization.enummember // which fields, if any, to expand (externalDataSources)
+let expand: [String] = [""] // which fields, if any, to expand (externalDataSources)
 let includeTrustors: Bool = true // (true or false) whether or not to include trustor information embedded in the externalOrganization
 
 // Code example
@@ -1103,7 +1103,7 @@ ExternalContactsAPI.getExternalcontactsOrganization(externalOrganizationId: exte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization ID | |
-| **expand** | **String**| which fields, if any, to expand (externalDataSources) | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String.html)| which fields, if any, to expand (externalDataSources) | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
 {: class="table-striped"}
 
@@ -1323,7 +1323,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let externalOrganizationId: String = "" // External Organization ID
 let pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
 let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)
-let expand: ExternalContactsAPI.Expand_getExternalcontactsOrganizationRelationships = ExternalContactsAPI.Expand_getExternalcontactsOrganizationRelationships.enummember // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 let sortOrder: String = "" // The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\"
 
 // Code example
@@ -1345,7 +1345,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationRelationships(externalOrganiz
 | **externalOrganizationId** | **String**| External Organization ID | |
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
-| **expand** | **String**| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
 | **sortOrder** | **String**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\" | [optional] |
 {: class="table-striped"}
 
@@ -1653,7 +1653,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let relationshipId: String = "" // Relationship Id
-let expand: ExternalContactsAPI.Expand_getExternalcontactsRelationship = ExternalContactsAPI.Expand_getExternalcontactsRelationship.enummember // which fields, if any, to expand
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsRelationship(relationshipId: relationshipId, expand: expand) { (response, error) in
@@ -1672,7 +1672,7 @@ ExternalContactsAPI.getExternalcontactsRelationship(relationshipId: relationship
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **relationshipId** | **String**| Relationship Id | |
-| **expand** | **String**| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String.html)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
 {: class="table-striped"}
 
 
