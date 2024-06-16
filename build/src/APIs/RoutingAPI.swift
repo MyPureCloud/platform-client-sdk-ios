@@ -796,6 +796,58 @@ open class RoutingAPI {
 
     
     
+    
+    
+    /**
+     Delete a utilization label
+     
+     - parameter labelId: (path) Utilization Label ID 
+     - parameter forceDelete: (query) Remove all label usages (if found) without warning (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingUtilizationLabel(labelId: String, forceDelete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingUtilizationLabelWithRequestBuilder(labelId: labelId, forceDelete: forceDelete)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a utilization label
+     - DELETE /api/v2/routing/utilization/labels/{labelId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter labelId: (path) Utilization Label ID 
+     - parameter forceDelete: (query) Remove all label usages (if found) without warning (optional)
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingUtilizationLabelWithRequestBuilder(labelId: String, forceDelete: Bool? = nil) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/utilization/labels/{labelId}"
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDelete": forceDelete
+        ])
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Delete wrap-up code
      
@@ -7902,6 +7954,13 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "level" : "Agent",
+  "labelUtilizations" : {
+    "key" : {
+      "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
+      "maximumCapacity" : 6,
+      "labelName" : "labelName"
+    }
+  },
   "utilization" : {
     "key" : {
       "interruptableMediaTypes" : [ "interruptableMediaTypes", "interruptableMediaTypes" ],
@@ -7960,6 +8019,13 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "labelUtilizations" : {
+    "key" : {
+      "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
+      "maximumCapacity" : 6,
+      "labelName" : "labelName"
+    }
+  },
   "utilization" : {
     "key" : {
       "interruptableMediaTypes" : [ "interruptableMediaTypes", "interruptableMediaTypes" ],
@@ -7979,6 +8045,208 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get details about this utilization label
+     
+     - parameter labelId: (path) Utilization Label ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingUtilizationLabel(labelId: String, completion: @escaping ((_ data: UtilizationLabel?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingUtilizationLabelWithRequestBuilder(labelId: labelId)
+        requestBuilder.execute { (response: Response<UtilizationLabel>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about this utilization label
+     - GET /api/v2/routing/utilization/labels/{labelId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter labelId: (path) Utilization Label ID 
+
+     - returns: RequestBuilder<UtilizationLabel> 
+     */
+    open class func getRoutingUtilizationLabelWithRequestBuilder(labelId: String) -> RequestBuilder<UtilizationLabel> {        
+        var path = "/api/v2/routing/utilization/labels/{labelId}"
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UtilizationLabel>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get list of agent ids associated with a utilization label
+     
+     - parameter labelId: (path) Utilization Label ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingUtilizationLabelAgents(labelId: String, completion: @escaping ((_ data: [JSON]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingUtilizationLabelAgentsWithRequestBuilder(labelId: labelId)
+        requestBuilder.execute { (response: Response<[JSON]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of agent ids associated with a utilization label
+     - GET /api/v2/routing/utilization/labels/{labelId}/agents
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example="{}", statusCode=200}]
+     
+     - parameter labelId: (path) Utilization Label ID 
+
+     - returns: RequestBuilder<[JSON]> 
+     */
+    open class func getRoutingUtilizationLabelAgentsWithRequestBuilder(labelId: String) -> RequestBuilder<[JSON]> {        
+        var path = "/api/v2/routing/utilization/labels/{labelId}/agents"
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum SortOrder_getRoutingUtilizationLabels: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    
+    
+    /**
+     Get list of utilization labels
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Sort order by name (optional)
+     - parameter name: (query) Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingUtilizationLabels(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getRoutingUtilizationLabels? = nil, name: String? = nil, completion: @escaping ((_ data: UtilizationLabelEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingUtilizationLabelsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name)
+        requestBuilder.execute { (response: Response<UtilizationLabelEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of utilization labels
+     - GET /api/v2/routing/utilization/labels
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter sortOrder: (query) Sort order by name (optional)
+     - parameter name: (query) Utilization label&#39;s name (Wildcard is supported, e.g., &#39;label1*&#39;, &#39;*label*&#39; (optional)
+
+     - returns: RequestBuilder<UtilizationLabelEntityListing> 
+     */
+    open class func getRoutingUtilizationLabelsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortOrder: SortOrder_getRoutingUtilizationLabels? = nil, name: String? = nil) -> RequestBuilder<UtilizationLabelEntityListing> {        
+        let path = "/api/v2/routing/utilization/labels"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue, 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<UtilizationLabelEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -13840,6 +14108,60 @@ open class RoutingAPI {
     
     
     /**
+     Create a utilization label
+     
+     - parameter body: (body) UtilizationLabel 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postRoutingUtilizationLabels(body: CreateUtilizationLabelRequest, completion: @escaping ((_ data: UtilizationLabel?,_ error: Error?) -> Void)) {
+        let requestBuilder = postRoutingUtilizationLabelsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<UtilizationLabel>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a utilization label
+     - POST /api/v2/routing/utilization/labels
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) UtilizationLabel 
+
+     - returns: RequestBuilder<UtilizationLabel> 
+     */
+    open class func postRoutingUtilizationLabelsWithRequestBuilder(body: CreateUtilizationLabelRequest) -> RequestBuilder<UtilizationLabel> {        
+        let path = "/api/v2/routing/utilization/labels"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UtilizationLabel>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Create a wrap-up code
      
      - parameter body: (body) WrapupCode 
@@ -14688,6 +15010,13 @@ open class RoutingAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "level" : "Agent",
+  "labelUtilizations" : {
+    "key" : {
+      "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
+      "maximumCapacity" : 6,
+      "labelName" : "labelName"
+    }
+  },
   "utilization" : {
     "key" : {
       "interruptableMediaTypes" : [ "interruptableMediaTypes", "interruptableMediaTypes" ],
@@ -14750,6 +15079,13 @@ open class RoutingAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "labelUtilizations" : {
+    "key" : {
+      "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
+      "maximumCapacity" : 6,
+      "labelName" : "labelName"
+    }
+  },
   "utilization" : {
     "key" : {
       "interruptableMediaTypes" : [ "interruptableMediaTypes", "interruptableMediaTypes" ],
@@ -14771,6 +15107,67 @@ open class RoutingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UtilizationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a utilization label
+     
+     - parameter labelId: (path) Utilization Label ID 
+     - parameter body: (body) UtilizationLabel 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingUtilizationLabel(labelId: String, body: UpdateUtilizationLabelRequest, completion: @escaping ((_ data: UtilizationLabel?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingUtilizationLabelWithRequestBuilder(labelId: labelId, body: body)
+        requestBuilder.execute { (response: Response<UtilizationLabel>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a utilization label
+     - PUT /api/v2/routing/utilization/labels/{labelId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter labelId: (path) Utilization Label ID 
+     - parameter body: (body) UtilizationLabel 
+
+     - returns: RequestBuilder<UtilizationLabel> 
+     */
+    open class func putRoutingUtilizationLabelWithRequestBuilder(labelId: String, body: UpdateUtilizationLabelRequest) -> RequestBuilder<UtilizationLabel> {        
+        var path = "/api/v2/routing/utilization/labels/{labelId}"
+        let labelIdPreEscape = "\(labelId)"
+        let labelIdPostEscape = labelIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{labelId}", with: labelIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UtilizationLabel>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

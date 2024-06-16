@@ -1192,7 +1192,6 @@ open class UsersAPI {
         case person = "person"
         case group = "group"
         case org = "org"
-        case externalcontact = "externalContact"
     }
     
     
@@ -1485,6 +1484,13 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "level" : "Agent",
+  "labelUtilizations" : {
+    "key" : {
+      "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
+      "maximumCapacity" : 6,
+      "labelName" : "labelName"
+    }
+  },
   "utilization" : {
     "key" : {
       "interruptableMediaTypes" : [ "interruptableMediaTypes", "interruptableMediaTypes" ],
@@ -22240,6 +22246,13 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "level" : "Agent",
+  "labelUtilizations" : {
+    "key" : {
+      "interruptingLabelIds" : [ "interruptingLabelIds", "interruptingLabelIds" ],
+      "maximumCapacity" : 6,
+      "labelName" : "labelName"
+    }
+  },
   "utilization" : {
     "key" : {
       "interruptableMediaTypes" : [ "interruptableMediaTypes", "interruptableMediaTypes" ],

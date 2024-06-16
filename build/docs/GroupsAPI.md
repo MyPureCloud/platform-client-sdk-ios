@@ -170,7 +170,7 @@ GroupsAPI.getFieldconfig(type: type) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **type** | **String**| Field type |<br />**Values**: person ("person"), group ("group"), org ("org"), externalcontact ("externalContact") |
+| **type** | **String**| Field type |<br />**Values**: person ("person"), group ("group"), org ("org") |
 {: class="table-striped"}
 
 

@@ -10,17 +10,21 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteLearningAssignment**](LearningAPI.html#deleteLearningAssignment) | Delete a learning assignment |
 | [**deleteLearningModule**](LearningAPI.html#deleteLearningModule) | Delete a learning module |
 | [**getLearningAssignment**](LearningAPI.html#getLearningAssignment) | Get Learning Assignment |
+| [**getLearningAssignmentStep**](LearningAPI.html#getLearningAssignmentStep) | Get Learning Assignment Step |
 | [**getLearningAssignments**](LearningAPI.html#getLearningAssignments) | List of Learning module Assignments |
 | [**getLearningAssignmentsMe**](LearningAPI.html#getLearningAssignmentsMe) | List of Learning Assignments assigned to current user |
 | [**getLearningModule**](LearningAPI.html#getLearningModule) | Get a learning module |
 | [**getLearningModuleJob**](LearningAPI.html#getLearningModuleJob) | Get a specific Learning Module job status |
+| [**getLearningModulePreview**](LearningAPI.html#getLearningModulePreview) | Get a learning module preview |
 | [**getLearningModuleRule**](LearningAPI.html#getLearningModuleRule) | Get a learning module rule |
 | [**getLearningModuleVersion**](LearningAPI.html#getLearningModuleVersion) | Get specific version of a published module |
 | [**getLearningModules**](LearningAPI.html#getLearningModules) | Get all learning modules of an organization |
 | [**getLearningModulesAssignments**](LearningAPI.html#getLearningModulesAssignments) | Get all learning modules of an organization including assignments for a specific user |
 | [**getLearningModulesCoverartCoverArtId**](LearningAPI.html#getLearningModulesCoverartCoverArtId) | Get a specific Learning Module cover art using ID |
+| [**getLearningScormScormId**](LearningAPI.html#getLearningScormScormId) | Get Learning SCORM Result |
 | [**patchLearningAssignment**](LearningAPI.html#patchLearningAssignment) | Update Learning Assignment |
 | [**patchLearningAssignmentReschedule**](LearningAPI.html#patchLearningAssignmentReschedule) | Reschedule Learning Assignment |
+| [**patchLearningAssignmentStep**](LearningAPI.html#patchLearningAssignmentStep) | Update Learning Assignment Step |
 | [**patchLearningModuleUserAssignments**](LearningAPI.html#patchLearningModuleUserAssignments) | Update an external assignment for a specific user |
 | [**postLearningAssessmentsScoring**](LearningAPI.html#postLearningAssessmentsScoring) | Score learning assessment for preview |
 | [**postLearningAssignmentReassign**](LearningAPI.html#postLearningAssignmentReassign) | Reassign Learning Assignment |
@@ -34,7 +38,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postLearningModules**](LearningAPI.html#postLearningModules) | Create a new learning module |
 | [**postLearningRulesQuery**](LearningAPI.html#postLearningRulesQuery) | Get users for learning module rule |
 | [**postLearningScheduleslotsQuery**](LearningAPI.html#postLearningScheduleslotsQuery) | Get list of possible slots where a learning activity can be scheduled. |
+| [**postLearningScorm**](LearningAPI.html#postLearningScorm) | Create a SCORM package upload request |
 | [**putLearningModule**](LearningAPI.html#putLearningModule) | Update a learning module |
+| [**putLearningModulePreview**](LearningAPI.html#putLearningModulePreview) | Update a learning module preview |
 | [**putLearningModuleRule**](LearningAPI.html#putLearningModuleRule) | Update a learning module rule |
 {: class="table-striped"}
 
@@ -197,6 +203,66 @@ LearningAPI.getLearningAssignment(assignmentId: assignmentId, expand: expand) { 
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="getLearningAssignmentStep"></a>
+
+# **getLearningAssignmentStep**
+
+
+
+> [LearningAssignmentStep](LearningAssignmentStep.html) getLearningAssignmentStep(assignmentId, stepId, shareableContentObjectId, expand)
+
+Get Learning Assignment Step
+
+Permission not required if you are the assigned user of the learning assignment
+
+
+
+Wraps GET /api/v2/learning/assignments/{assignmentId}/steps/{stepId}  
+
+Requires ANY permissions: 
+
+* learning:assignment:viewOwn
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assignmentId: String = "" // The ID of Learning Assignment
+let stepId: String = "" // The ID of Learning Assignment Step
+let shareableContentObjectId: String = "" // The ID of SCO to load
+let expand: [String] = [""] // Fields to expand in response
+
+// Code example
+LearningAPI.getLearningAssignmentStep(assignmentId: assignmentId, stepId: stepId, shareableContentObjectId: shareableContentObjectId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningAssignmentStep was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assignmentId** | **String**| The ID of Learning Assignment | |
+| **stepId** | **String**| The ID of Learning Assignment Step | |
+| **shareableContentObjectId** | **String**| The ID of SCO to load | [optional] |
+| **expand** | [**[String]**](String.html)| Fields to expand in response | [optional]<br />**Values**: modulestep ("moduleStep") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignmentStep**](LearningAssignmentStep.html)
 
 <a name="getLearningAssignments"></a>
 
@@ -464,6 +530,58 @@ LearningAPI.getLearningModuleJob(moduleId: moduleId, jobId: jobId) { (response, 
 ### Return type
 
 [**LearningModuleJobResponse**](LearningModuleJobResponse.html)
+
+<a name="getLearningModulePreview"></a>
+
+# **getLearningModulePreview**
+
+
+
+> [LearningModulePreviewGetResponse](LearningModulePreviewGetResponse.html) getLearningModulePreview(moduleId)
+
+Get a learning module preview
+
+
+
+Wraps GET /api/v2/learning/modules/{moduleId}/preview  
+
+Requires ANY permissions: 
+
+* learning:module:preview
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // The ID of the learning module
+
+// Code example
+LearningAPI.getLearningModulePreview(moduleId: moduleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningModulePreview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moduleId** | **String**| The ID of the learning module | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningModulePreviewGetResponse**](LearningModulePreviewGetResponse.html)
 
 <a name="getLearningModuleRule"></a>
 
@@ -762,6 +880,58 @@ LearningAPI.getLearningModulesCoverartCoverArtId(coverArtId: coverArtId) { (resp
 
 [**LearningModuleCoverArtResponse**](LearningModuleCoverArtResponse.html)
 
+<a name="getLearningScormScormId"></a>
+
+# **getLearningScormScormId**
+
+
+
+> [LearningScormResponse](LearningScormResponse.html) getLearningScormScormId(scormId)
+
+Get Learning SCORM Result
+
+
+
+Wraps GET /api/v2/learning/scorm/{scormId}  
+
+Requires ANY permissions: 
+
+* learning:scorm:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let scormId: String = "" // The ID of the SCORM package
+
+// Code example
+LearningAPI.getLearningScormScormId(scormId: scormId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.getLearningScormScormId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **scormId** | **String**| The ID of the SCORM package | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningScormResponse**](LearningScormResponse.html)
+
 <a name="patchLearningAssignment"></a>
 
 # **patchLearningAssignment**
@@ -868,6 +1038,64 @@ LearningAPI.patchLearningAssignmentReschedule(assignmentId: assignmentId, body: 
 ### Return type
 
 [**LearningAssignment**](LearningAssignment.html)
+
+<a name="patchLearningAssignmentStep"></a>
+
+# **patchLearningAssignmentStep**
+
+
+
+> [LearningAssignmentStep](LearningAssignmentStep.html) patchLearningAssignmentStep(assignmentId, stepId, body)
+
+Update Learning Assignment Step
+
+Permission not required if you are the assigned user of the learning assignment
+
+
+
+Wraps PATCH /api/v2/learning/assignments/{assignmentId}/steps/{stepId}  
+
+Requires ANY permissions: 
+
+* learning:assignment:editOwn
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let assignmentId: String = "" // The ID of Learning Assignment
+let stepId: String = "" // The ID of Learning Assignment Step
+let body: LearningAssignmentStep = new LearningAssignmentStep(...) // The Learning Assignment Step to be updated
+
+// Code example
+LearningAPI.patchLearningAssignmentStep(assignmentId: assignmentId, stepId: stepId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.patchLearningAssignmentStep was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assignmentId** | **String**| The ID of Learning Assignment | |
+| **stepId** | **String**| The ID of Learning Assignment Step | |
+| **body** | [**LearningAssignmentStep**](LearningAssignmentStep.html)| The Learning Assignment Step to be updated | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningAssignmentStep**](LearningAssignmentStep.html)
 
 <a name="patchLearningModuleUserAssignments"></a>
 
@@ -1569,6 +1797,58 @@ LearningAPI.postLearningScheduleslotsQuery(body: body) { (response, error) in
 
 [**LearningScheduleSlotsQueryResponse**](LearningScheduleSlotsQueryResponse.html)
 
+<a name="postLearningScorm"></a>
+
+# **postLearningScorm**
+
+
+
+> [LearningScormUploadResponse](LearningScormUploadResponse.html) postLearningScorm(body)
+
+Create a SCORM package upload request
+
+
+
+Wraps POST /api/v2/learning/scorm  
+
+Requires ANY permissions: 
+
+* learning:scorm:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: LearningScormUploadRequest = new LearningScormUploadRequest(...) // The SCORM package to be uploaded
+
+// Code example
+LearningAPI.postLearningScorm(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.postLearningScorm was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**LearningScormUploadRequest**](LearningScormUploadRequest.html)| The SCORM package to be uploaded | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningScormUploadResponse**](LearningScormUploadResponse.html)
+
 <a name="putLearningModule"></a>
 
 # **putLearningModule**
@@ -1624,6 +1904,62 @@ LearningAPI.putLearningModule(moduleId: moduleId, body: body) { (response, error
 ### Return type
 
 [**LearningModule**](LearningModule.html)
+
+<a name="putLearningModulePreview"></a>
+
+# **putLearningModulePreview**
+
+
+
+> [LearningModulePreviewUpdateResponse](LearningModulePreviewUpdateResponse.html) putLearningModulePreview(moduleId, body)
+
+Update a learning module preview
+
+This will update a learning module preview
+
+
+
+Wraps PUT /api/v2/learning/modules/{moduleId}/preview  
+
+Requires ANY permissions: 
+
+* learning:module:preview
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let moduleId: String = "" // The ID of the learning module
+let body: LearningModulePreviewUpdateRequest = new LearningModulePreviewUpdateRequest(...) // The learning module to be updated
+
+// Code example
+LearningAPI.putLearningModulePreview(moduleId: moduleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LearningAPI.putLearningModulePreview was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moduleId** | **String**| The ID of the learning module | |
+| **body** | [**LearningModulePreviewUpdateRequest**](LearningModulePreviewUpdateRequest.html)| The learning module to be updated | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**LearningModulePreviewUpdateResponse**](LearningModulePreviewUpdateResponse.html)
 
 <a name="putLearningModuleRule"></a>
 

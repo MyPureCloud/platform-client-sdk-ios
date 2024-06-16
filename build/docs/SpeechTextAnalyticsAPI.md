@@ -7,12 +7,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteSpeechandtextanalyticsCategory**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsCategory) | Delete a Speech &amp; Text Analytics category by ID |
 | [**deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Delete a Speech &amp; Text Analytics DictionaryFeedback by Id |
 | [**deleteSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsProgram) | Delete a Speech &amp; Text Analytics program by id |
 | [**deleteSpeechandtextanalyticsSentimentfeedback**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsSentimentfeedback) | Delete All Speech &amp; Text Analytics SentimentFeedback |
 | [**deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId) | Delete a Speech &amp; Text Analytics SentimentFeedback by Id |
 | [**deleteSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#deleteSpeechandtextanalyticsTopic) | Delete a Speech &amp; Text Analytics topic by id |
+| [**getSpeechandtextanalyticsCategories**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsCategories) | Get the list of Speech and Text Analytics categories |
+| [**getSpeechandtextanalyticsCategory**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsCategory) | Get a Speech &amp; Text Analytics Category by ID |
 | [**getSpeechandtextanalyticsConversation**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversation) | Get Speech and Text Analytics for a specific conversation |
+| [**getSpeechandtextanalyticsConversationCategories**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCategories) | Get the list of detected Speech and Text Analytics categories of conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturls**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsConversationCommunicationTranscripturls) | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsDictionaryfeedback) | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
@@ -36,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsTopicsGeneralStatus**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsGeneralStatus) | Get the list of general topics from the org and the system with their current status |
 | [**getSpeechandtextanalyticsTopicsPublishjob**](SpeechTextAnalyticsAPI.html#getSpeechandtextanalyticsTopicsPublishjob) | Get a Speech &amp; Text Analytics publish topics job by id |
 | [**patchSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#patchSpeechandtextanalyticsSettings) | Patch Speech And Text Analytics Settings |
+| [**postSpeechandtextanalyticsCategories**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsCategories) | Create new Speech &amp; Text Analytics category |
 | [**postSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsDictionaryfeedback) | Create a Speech &amp; Text Analytics DictionaryFeedback |
 | [**postSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsPrograms) | Create new Speech &amp; Text Analytics program |
 | [**postSpeechandtextanalyticsProgramsGeneralJobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsProgramsGeneralJobs) | Create new Speech &amp; Text Analytics general program job |
@@ -44,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSpeechandtextanalyticsTopics**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopics) | Create new Speech &amp; Text Analytics topic |
 | [**postSpeechandtextanalyticsTopicsPublishjobs**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTopicsPublishjobs) | Create new Speech &amp; Text Analytics publish topics job |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SpeechTextAnalyticsAPI.html#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
+| [**putSpeechandtextanalyticsCategory**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsCategory) | Update a Speech &amp; Text Analytics category by ID |
 | [**putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Update existing Speech &amp; Text Analytics dictionary feedback by id |
 | [**putSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgram) | Update existing Speech &amp; Text Analytics program |
 | [**putSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsProgramMappings) | Set Speech &amp; Text Analytics program mappings to queues and flows |
@@ -51,6 +57,57 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsSettings) | Update Speech And Text Analytics Settings |
 | [**putSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI.html#putSpeechandtextanalyticsTopic) | Update existing Speech &amp; Text Analytics topic |
 {: class="table-striped"}
+
+<a name="deleteSpeechandtextanalyticsCategory"></a>
+
+# **deleteSpeechandtextanalyticsCategory**
+
+
+
+> Void deleteSpeechandtextanalyticsCategory(categoryId)
+
+Delete a Speech &amp; Text Analytics category by ID
+
+
+
+Wraps DELETE /api/v2/speechandtextanalytics/categories/{categoryId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let categoryId: String = "" // The id of the category
+
+// Code example
+SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsCategory(categoryId: categoryId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsCategory was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **categoryId** | **String**| The id of the category | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId"></a>
 
@@ -305,6 +362,120 @@ SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsTopic(topicId: topicId) { (er
 
 `nil` (empty response body)
 
+<a name="getSpeechandtextanalyticsCategories"></a>
+
+# **getSpeechandtextanalyticsCategories**
+
+
+
+> [CategoriesEntityListing](CategoriesEntityListing.html) getSpeechandtextanalyticsCategories(pageSize, pageNumber, name, sortOrder, sortBy, ids)
+
+Get the list of Speech and Text Analytics categories
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/categories  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 50.
+let pageNumber: Int = 0 // The page number for the listing
+let name: String = "" // The category name filter applied to the listing
+let sortOrder: SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsCategories = SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsCategories.enummember // The sort order for the listing
+let sortBy: SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsCategories = SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsCategories.enummember // The field to sort by for the listing
+let ids: [String] = [""] // Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsCategories(pageSize: pageSize, pageNumber: pageNumber, name: name, sortOrder: sortOrder, sortBy: sortBy, ids: ids) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsCategories was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 50. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
+| **name** | **String**| The category name filter applied to the listing | [optional] |
+| **sortOrder** | **String**| The sort order for the listing | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **sortBy** | **String**| The field to sort by for the listing | [optional]<br />**Values**: name ("name"), _description ("description") |
+| **ids** | [**[String]**](String.html)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**CategoriesEntityListing**](CategoriesEntityListing.html)
+
+<a name="getSpeechandtextanalyticsCategory"></a>
+
+# **getSpeechandtextanalyticsCategory**
+
+
+
+> [StaCategory](StaCategory.html) getSpeechandtextanalyticsCategory(categoryId)
+
+Get a Speech &amp; Text Analytics Category by ID
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/categories/{categoryId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let categoryId: String = "" // The id of the category
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsCategory(categoryId: categoryId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsCategory was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **categoryId** | **String**| The id of the category | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaCategory**](StaCategory.html)
+
 <a name="getSpeechandtextanalyticsConversation"></a>
 
 # **getSpeechandtextanalyticsConversation**
@@ -357,6 +528,62 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversation(conversationId: con
 ### Return type
 
 [**ConversationMetrics**](ConversationMetrics.html)
+
+<a name="getSpeechandtextanalyticsConversationCategories"></a>
+
+# **getSpeechandtextanalyticsConversationCategories**
+
+
+
+> [ConversationCategoriesEntityListing](ConversationCategoriesEntityListing.html) getSpeechandtextanalyticsConversationCategories(conversationId, pageSize, pageNumber)
+
+Get the list of detected Speech and Text Analytics categories of conversation
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/conversations/{conversationId}/categories  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:data:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // The id of the conversation
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 50.
+let pageNumber: Int = 0 // The page number for the listing
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCategories(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCategories was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| The id of the conversation | |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 50. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ConversationCategoriesEntityListing**](ConversationCategoriesEntityListing.html)
 
 <a name="getSpeechandtextanalyticsConversationCommunicationTranscripturl"></a>
 
@@ -1570,6 +1797,58 @@ SpeechTextAnalyticsAPI.patchSpeechandtextanalyticsSettings(body: body) { (respon
 
 [**SpeechTextAnalyticsSettingsResponse**](SpeechTextAnalyticsSettingsResponse.html)
 
+<a name="postSpeechandtextanalyticsCategories"></a>
+
+# **postSpeechandtextanalyticsCategories**
+
+
+
+> [StaCategory](StaCategory.html) postSpeechandtextanalyticsCategories(body)
+
+Create new Speech &amp; Text Analytics category
+
+
+
+Wraps POST /api/v2/speechandtextanalytics/categories  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CategoryRequest = new CategoryRequest(...) // The category to create
+
+// Code example
+SpeechTextAnalyticsAPI.postSpeechandtextanalyticsCategories(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.postSpeechandtextanalyticsCategories was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CategoryRequest**](CategoryRequest.html)| The category to create | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaCategory**](StaCategory.html)
+
 <a name="postSpeechandtextanalyticsDictionaryfeedback"></a>
 
 # **postSpeechandtextanalyticsDictionaryfeedback**
@@ -1989,6 +2268,60 @@ SpeechTextAnalyticsAPI.postSpeechandtextanalyticsTranscriptsSearch(body: body) {
 ### Return type
 
 [**JsonSearchResponse**](JsonSearchResponse.html)
+
+<a name="putSpeechandtextanalyticsCategory"></a>
+
+# **putSpeechandtextanalyticsCategory**
+
+
+
+> [StaCategory](StaCategory.html) putSpeechandtextanalyticsCategory(categoryId, body)
+
+Update a Speech &amp; Text Analytics category by ID
+
+
+
+Wraps PUT /api/v2/speechandtextanalytics/categories/{categoryId}  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:category:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let categoryId: String = "" // The id of the category
+let body: CategoryRequest = new CategoryRequest(...) // The updated category
+
+// Code example
+SpeechTextAnalyticsAPI.putSpeechandtextanalyticsCategory(categoryId: categoryId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.putSpeechandtextanalyticsCategory was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **categoryId** | **String**| The id of the category | |
+| **body** | [**CategoryRequest**](CategoryRequest.html)| The updated category | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**StaCategory**](StaCategory.html)
 
 <a name="putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId"></a>
 

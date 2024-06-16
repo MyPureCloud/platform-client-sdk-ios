@@ -13,6 +13,51 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Delete a Speech & Text Analytics category by ID
+     
+     - parameter categoryId: (path) The id of the category 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteSpeechandtextanalyticsCategory(categoryId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteSpeechandtextanalyticsCategoryWithRequestBuilder(categoryId: categoryId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Speech & Text Analytics category by ID
+     - DELETE /api/v2/speechandtextanalytics/categories/{categoryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter categoryId: (path) The id of the category 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteSpeechandtextanalyticsCategoryWithRequestBuilder(categoryId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/speechandtextanalytics/categories/{categoryId}"
+        let categoryIdPreEscape = "\(categoryId)"
+        let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{categoryId}", with: categoryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete a Speech & Text Analytics DictionaryFeedback by Id
      
      - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
@@ -236,6 +281,191 @@ open class SpeechTextAnalyticsAPI {
 
     
     
+    
+    
+    
+    
+    
+    public enum SortOrder_getSpeechandtextanalyticsCategories: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    public enum SortBy_getSpeechandtextanalyticsCategories: String { 
+        case name = "name"
+        case _description = "description"
+    }
+    
+    
+    
+    
+    /**
+     Get the list of Speech and Text Analytics categories
+     
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 50. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter name: (query) The category name filter applied to the listing (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing (optional)
+     - parameter ids: (query) Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsCategories(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsCategories? = nil, sortBy: SortBy_getSpeechandtextanalyticsCategories? = nil, ids: [String]? = nil, completion: @escaping ((_ data: CategoriesEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsCategoriesWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, name: name, sortOrder: sortOrder, sortBy: sortBy, ids: ids)
+        requestBuilder.execute { (response: Response<CategoriesEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of Speech and Text Analytics categories
+     - GET /api/v2/speechandtextanalytics/categories
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "interactionType" : "Voice",
+    "createdBy" : "{}",
+    "criteria" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "interactionType" : "Voice",
+    "createdBy" : "{}",
+    "criteria" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 50. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter name: (query) The category name filter applied to the listing (optional)
+     - parameter sortOrder: (query) The sort order for the listing (optional)
+     - parameter sortBy: (query) The field to sort by for the listing (optional)
+     - parameter ids: (query) Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
+
+     - returns: RequestBuilder<CategoriesEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsCategoriesWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsCategories? = nil, sortBy: SortBy_getSpeechandtextanalyticsCategories? = nil, ids: [String]? = nil) -> RequestBuilder<CategoriesEntityListing> {        
+        let path = "/api/v2/speechandtextanalytics/categories"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "name": name, 
+            "sortOrder": sortOrder?.rawValue, 
+            "sortBy": sortBy?.rawValue, 
+            "ids": ids
+        ])
+
+        let requestBuilder: RequestBuilder<CategoriesEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a Speech & Text Analytics Category by ID
+     
+     - parameter categoryId: (path) The id of the category 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsCategory(categoryId: String, completion: @escaping ((_ data: StaCategory?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsCategoryWithRequestBuilder(categoryId: categoryId)
+        requestBuilder.execute { (response: Response<StaCategory>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Speech & Text Analytics Category by ID
+     - GET /api/v2/speechandtextanalytics/categories/{categoryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "interactionType" : "Voice",
+  "createdBy" : "{}",
+  "criteria" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter categoryId: (path) The id of the category 
+
+     - returns: RequestBuilder<StaCategory> 
+     */
+    open class func getSpeechandtextanalyticsCategoryWithRequestBuilder(categoryId: String) -> RequestBuilder<StaCategory> {        
+        var path = "/api/v2/speechandtextanalytics/categories/{categoryId}"
+        let categoryIdPreEscape = "\(categoryId)"
+        let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{categoryId}", with: categoryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<StaCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get Speech and Text Analytics for a specific conversation
      
@@ -296,6 +526,94 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ConversationMetrics>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the list of detected Speech and Text Analytics categories of conversation
+     
+     - parameter conversationId: (path) The id of the conversation 
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 50. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsConversationCategories(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: ConversationCategoriesEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsConversationCategoriesWithRequestBuilder(conversationId: conversationId, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<ConversationCategoriesEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of detected Speech and Text Analytics categories of conversation
+     - GET /api/v2/speechandtextanalytics/conversations/{conversationId}/categories
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "interactionType" : "Voice",
+    "criteria" : "{}",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "interactionType" : "Voice",
+    "criteria" : "{}",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) The id of the conversation 
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 50. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+
+     - returns: RequestBuilder<ConversationCategoriesEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsConversationCategoriesWithRequestBuilder(conversationId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<ConversationCategoriesEntityListing> {        
+        var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}/categories"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<ConversationCategoriesEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -796,7 +1114,6 @@ open class SpeechTextAnalyticsAPI {
     "dialects" : [ "dialects", "dialects" ],
     "engineIntegration" : {
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "id" : "id"
     }
   }, {
@@ -804,7 +1121,6 @@ open class SpeechTextAnalyticsAPI {
     "dialects" : [ "dialects", "dialects" ],
     "engineIntegration" : {
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "id" : "id"
     }
   } ]
@@ -1213,7 +1529,6 @@ open class SpeechTextAnalyticsAPI {
     "dialects" : [ "dialects", "dialects" ],
     "engineIntegration" : {
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "id" : "id"
     }
   }, {
@@ -1221,7 +1536,6 @@ open class SpeechTextAnalyticsAPI {
     "dialects" : [ "dialects", "dialects" ],
     "engineIntegration" : {
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "id" : "id"
     }
   } ]
@@ -2147,6 +2461,67 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Create new Speech & Text Analytics category
+     
+     - parameter body: (body) The category to create 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postSpeechandtextanalyticsCategories(body: CategoryRequest, completion: @escaping ((_ data: StaCategory?,_ error: Error?) -> Void)) {
+        let requestBuilder = postSpeechandtextanalyticsCategoriesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<StaCategory>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create new Speech & Text Analytics category
+     - POST /api/v2/speechandtextanalytics/categories
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "interactionType" : "Voice",
+  "createdBy" : "{}",
+  "criteria" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) The category to create 
+
+     - returns: RequestBuilder<StaCategory> 
+     */
+    open class func postSpeechandtextanalyticsCategoriesWithRequestBuilder(body: CategoryRequest) -> RequestBuilder<StaCategory> {        
+        let path = "/api/v2/speechandtextanalytics/categories"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<StaCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Create a Speech & Text Analytics DictionaryFeedback
      
      - parameter body: (body) The DictionaryFeedback to create 
@@ -2695,6 +3070,74 @@ open class SpeechTextAnalyticsAPI {
     
     
     /**
+     Update a Speech & Text Analytics category by ID
+     
+     - parameter categoryId: (path) The id of the category 
+     - parameter body: (body) The updated category 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putSpeechandtextanalyticsCategory(categoryId: String, body: CategoryRequest, completion: @escaping ((_ data: StaCategory?,_ error: Error?) -> Void)) {
+        let requestBuilder = putSpeechandtextanalyticsCategoryWithRequestBuilder(categoryId: categoryId, body: body)
+        requestBuilder.execute { (response: Response<StaCategory>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Speech & Text Analytics category by ID
+     - PUT /api/v2/speechandtextanalytics/categories/{categoryId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "interactionType" : "Voice",
+  "createdBy" : "{}",
+  "criteria" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter categoryId: (path) The id of the category 
+     - parameter body: (body) The updated category 
+
+     - returns: RequestBuilder<StaCategory> 
+     */
+    open class func putSpeechandtextanalyticsCategoryWithRequestBuilder(categoryId: String, body: CategoryRequest) -> RequestBuilder<StaCategory> {        
+        var path = "/api/v2/speechandtextanalytics/categories/{categoryId}"
+        let categoryIdPreEscape = "\(categoryId)"
+        let categoryIdPostEscape = categoryIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{categoryId}", with: categoryIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<StaCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Update existing Speech & Text Analytics dictionary feedback by id
      
      - parameter dictionaryFeedbackId: (path) The Id of the Dictionary Feedback 
@@ -2977,7 +3420,6 @@ open class SpeechTextAnalyticsAPI {
     "dialects" : [ "dialects", "dialects" ],
     "engineIntegration" : {
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "id" : "id"
     }
   }, {
@@ -2985,7 +3427,6 @@ open class SpeechTextAnalyticsAPI {
     "dialects" : [ "dialects", "dialects" ],
     "engineIntegration" : {
       "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
       "id" : "id"
     }
   } ]

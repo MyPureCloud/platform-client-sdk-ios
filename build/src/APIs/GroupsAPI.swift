@@ -119,7 +119,6 @@ open class GroupsAPI {
         case person = "person"
         case group = "group"
         case org = "org"
-        case externalcontact = "externalContact"
     }
     
     

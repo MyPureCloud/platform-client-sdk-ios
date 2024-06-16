@@ -477,6 +477,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -597,6 +602,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -737,6 +747,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -1604,6 +1619,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "{}",
   "title" : "title",
   "documentVersion" : "{}",
   "labels" : [ {
@@ -1630,6 +1646,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "knowledgeBase" : "{}",
+  "readonly" : true,
   "createdBy" : "{}",
   "variations" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2773,6 +2790,7 @@ open class KnowledgeAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "{}",
     "title" : "title",
     "documentVersion" : "{}",
     "labels" : [ {
@@ -2799,6 +2817,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "lastPublishedVersionNumber" : 0,
     "knowledgeBase" : "{}",
+    "readonly" : true,
     "createdBy" : "{}",
     "variations" : [ {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -2875,6 +2894,7 @@ open class KnowledgeAPI {
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "{}",
     "title" : "title",
     "documentVersion" : "{}",
     "labels" : [ {
@@ -2901,6 +2921,7 @@ open class KnowledgeAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "lastPublishedVersionNumber" : 0,
     "knowledgeBase" : "{}",
+    "readonly" : true,
     "createdBy" : "{}",
     "variations" : [ {
       "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -3061,6 +3082,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "{}",
   "exportFilter" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -3398,6 +3420,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -3554,6 +3581,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -3694,6 +3726,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -3834,6 +3871,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -4064,6 +4106,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -4188,6 +4235,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -4310,6 +4362,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -4884,6 +4941,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -5249,6 +5311,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "{}",
   "title" : "title",
   "documentVersion" : "{}",
   "labels" : [ {
@@ -5275,6 +5338,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "knowledgeBase" : "{}",
+  "readonly" : true,
   "createdBy" : "{}",
   "variations" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -5727,6 +5791,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -5871,6 +5940,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -6015,6 +6089,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -6190,6 +6269,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -7314,6 +7398,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "{}",
   "title" : "title",
   "documentVersion" : "{}",
   "labels" : [ {
@@ -7340,6 +7425,7 @@ open class KnowledgeAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "lastPublishedVersionNumber" : 0,
   "knowledgeBase" : "{}",
+  "readonly" : true,
   "createdBy" : "{}",
   "variations" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -7686,6 +7772,7 @@ open class KnowledgeAPI {
   "selfUri" : "https://openapi-generator.tech",
   "downloadURL" : "downloadURL",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "source" : "{}",
   "exportFilter" : "{}",
   "knowledgeBase" : "{}",
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
@@ -7900,6 +7987,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -8037,6 +8129,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -8176,6 +8273,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -8297,6 +8399,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     
@@ -8419,6 +8526,11 @@ open class KnowledgeAPI {
         case zhHk = "zh-HK"
         case koKr = "ko-KR"
         case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
     }
     
     

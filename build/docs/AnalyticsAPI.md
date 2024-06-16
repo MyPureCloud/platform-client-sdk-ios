@@ -23,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsReportingExports**](AnalyticsAPI.html#getAnalyticsReportingExports) | Get all view export requests for a user |
 | [**getAnalyticsReportingExportsMetadata**](AnalyticsAPI.html#getAnalyticsReportingExportsMetadata) | Get all export metadata |
 | [**getAnalyticsReportingSettings**](AnalyticsAPI.html#getAnalyticsReportingSettings) | Get AnalyticsReportingSettings for an organization |
+| [**getAnalyticsReportingSettingsDashboardsQuery**](AnalyticsAPI.html#getAnalyticsReportingSettingsDashboardsQuery) | Get list of dashboard configurations |
 | [**getAnalyticsReportingSettingsUserDashboards**](AnalyticsAPI.html#getAnalyticsReportingSettingsUserDashboards) | Get list of dashboards for an user |
 | [**getAnalyticsUsersDetailsJob**](AnalyticsAPI.html#getAnalyticsUsersDetailsJob) | Get status for async query for user details |
 | [**getAnalyticsUsersDetailsJobResults**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobResults) | Fetch a page of results for an async query |
@@ -44,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postAnalyticsKnowledgeAggregatesQuery**](AnalyticsAPI.html#postAnalyticsKnowledgeAggregatesQuery) | Query for knowledge aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
-| [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded |
+| [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. |
 | [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk delete dashboards owned by other user(s) |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
 | [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk remove dashboard configurations |
@@ -936,6 +937,66 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**AnalyticsReportingSettings**](AnalyticsReportingSettings.html)
+
+<a name="getAnalyticsReportingSettingsDashboardsQuery"></a>
+
+# **getAnalyticsReportingSettingsDashboardsQuery**
+
+
+
+> [DashboardConfigurationListing](DashboardConfigurationListing.html) getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize)
+
+Get list of dashboard configurations
+
+
+
+Wraps GET /api/v2/analytics/reporting/settings/dashboards/query  
+
+Requires ALL permissions: 
+
+* analytics:dashboardConfigurations:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let dashboardType: AnalyticsAPI.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type
+let dashboardAccessFilter: AnalyticsAPI.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard
+let sortBy: String = "" // 
+let pageNumber: Int = 0 // 
+let pageSize: Int = 0 // 
+
+// Code example
+AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dashboardType** | **String**| List dashboard of given type |<br />**Values**: all ("All"), _public ("Public"), _private ("Private"), shared ("Shared"), favorites ("Favorites") |
+| **dashboardAccessFilter** | **String**| Filter dashboard based on the owner of dashboard |<br />**Values**: ownedByMe ("OwnedByMe"), ownedByAnyone ("OwnedByAnyone"), notOwnedByMe ("NotOwnedByMe") |
+| **sortBy** | **String**|  | [optional] |
+| **pageNumber** | **Int**|  | [optional] |
+| **pageSize** | **Int**|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DashboardConfigurationListing**](DashboardConfigurationListing.html)
 
 <a name="getAnalyticsReportingSettingsUserDashboards"></a>
 
@@ -2062,7 +2123,9 @@ AnalyticsAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error
 
 > [RateLimitAggregateQueryResponse](RateLimitAggregateQueryResponse.html) postAnalyticsRatelimitsAggregatesQuery(body)
 
-Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
+
+The &#39;max&#39; property can be used to determine estimated rate limit value hit.
 
 
 

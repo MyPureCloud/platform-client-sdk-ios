@@ -14,6 +14,7 @@ title: CreateCallRequest
 | **callQueueId** | **String** | The queue ID to call. | [optional] |
 | **callUserId** | **String** | The user ID to call. | [optional] |
 | **priority** | **Int** | The priority to assign to this call (if calling a queue). | [optional] |
+| **attributes** | **[String:String]** | The list of attributes to associate with the customer participant. | [optional] |
 | **languageId** | **String** | The language skill ID to use for routing this call (if calling a queue). | [optional] |
 | **routingSkillsIds** | **[String]** | The skill ID&#39;s to use for routing this call (if calling a queue). | [optional] |
 | **conversationIds** | **[String]** | The list of existing call conversations to merge into a new ad-hoc conference. | [optional] |

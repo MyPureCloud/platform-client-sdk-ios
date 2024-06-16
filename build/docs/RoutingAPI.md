@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI.html#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
 | [**deleteRoutingUserUtilization**](RoutingAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteRoutingUtilization**](RoutingAPI.html#deleteRoutingUtilization) | Delete the organization-wide max utilization settings and revert to the system default. |
+| [**deleteRoutingUtilizationLabel**](RoutingAPI.html#deleteRoutingUtilizationLabel) | Delete a utilization label |
 | [**deleteRoutingWrapupcode**](RoutingAPI.html#deleteRoutingWrapupcode) | Delete wrap-up code |
 | [**deleteUserRoutinglanguage**](RoutingAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
 | [**deleteUserRoutingskill**](RoutingAPI.html#deleteUserRoutingskill) | Remove routing skill from user |
@@ -78,6 +79,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSmsPhonenumbers**](RoutingAPI.html#getRoutingSmsPhonenumbers) | Get a list of provisioned phone numbers. |
 | [**getRoutingUserUtilization**](RoutingAPI.html#getRoutingUserUtilization) | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**getRoutingUtilization**](RoutingAPI.html#getRoutingUtilization) | Get the organization-wide max utilization settings. |
+| [**getRoutingUtilizationLabel**](RoutingAPI.html#getRoutingUtilizationLabel) | Get details about this utilization label |
+| [**getRoutingUtilizationLabelAgents**](RoutingAPI.html#getRoutingUtilizationLabelAgents) | Get list of agent ids associated with a utilization label |
+| [**getRoutingUtilizationLabels**](RoutingAPI.html#getRoutingUtilizationLabels) | Get list of utilization labels |
 | [**getRoutingWrapupcode**](RoutingAPI.html#getRoutingWrapupcode) | Get details about this wrap-up code. |
 | [**getRoutingWrapupcodes**](RoutingAPI.html#getRoutingWrapupcodes) | Get list of wrapup codes. |
 | [**getRoutingWrapupcodesDivisionview**](RoutingAPI.html#getRoutingWrapupcodesDivisionview) | Get a simplified wrap-up code. |
@@ -123,6 +127,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingSmsAddresses**](RoutingAPI.html#postRoutingSmsAddresses) | Provision an Address for SMS |
 | [**postRoutingSmsPhonenumbers**](RoutingAPI.html#postRoutingSmsPhonenumbers) | Provision a phone number for SMS |
 | [**postRoutingSmsPhonenumbersImport**](RoutingAPI.html#postRoutingSmsPhonenumbersImport) | Imports a phone number for SMS |
+| [**postRoutingUtilizationLabels**](RoutingAPI.html#postRoutingUtilizationLabels) | Create a utilization label |
 | [**postRoutingWrapupcodes**](RoutingAPI.html#postRoutingWrapupcodes) | Create a wrap-up code |
 | [**postUserRoutinglanguages**](RoutingAPI.html#postUserRoutinglanguages) | Add routing language to user |
 | [**postUserRoutingskills**](RoutingAPI.html#postUserRoutingskills) | Add routing skill to user |
@@ -135,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingSmsPhonenumber**](RoutingAPI.html#putRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
 | [**putRoutingUserUtilization**](RoutingAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingUtilization**](RoutingAPI.html#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
+| [**putRoutingUtilizationLabel**](RoutingAPI.html#putRoutingUtilizationLabel) | Update a utilization label |
 | [**putRoutingWrapupcode**](RoutingAPI.html#putRoutingWrapupcode) | Update wrap-up code |
 | [**putUserRoutingskill**](RoutingAPI.html#putUserRoutingskill) | Update routing skill proficiency or state. |
 | [**putUserRoutingskillsBulk**](RoutingAPI.html#putUserRoutingskillsBulk) | Replace all routing skills assigned to a user |
@@ -1006,6 +1012,59 @@ RoutingAPI.deleteRoutingUtilization() { (error) in
 
 This endpoint does not require any parameters.
 
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingUtilizationLabel"></a>
+
+# **deleteRoutingUtilizationLabel**
+
+
+
+> Void deleteRoutingUtilizationLabel(labelId, forceDelete)
+
+Delete a utilization label
+
+
+
+Wraps DELETE /api/v2/routing/utilization/labels/{labelId}  
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let labelId: String = "" // Utilization Label ID
+let forceDelete: Bool = true // Remove all label usages (if found) without warning
+
+// Code example
+RoutingAPI.deleteRoutingUtilizationLabel(labelId: labelId, forceDelete: forceDelete) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingUtilizationLabel was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **labelId** | **String**| Utilization Label ID | |
+| **forceDelete** | **Bool**| Remove all label usages (if found) without warning | [optional] |
+{: class="table-striped"}
 
 
 ### Return type
@@ -4000,6 +4059,168 @@ This endpoint does not require any parameters.
 
 [**UtilizationResponse**](UtilizationResponse.html)
 
+<a name="getRoutingUtilizationLabel"></a>
+
+# **getRoutingUtilizationLabel**
+
+
+
+> [UtilizationLabel](UtilizationLabel.html) getRoutingUtilizationLabel(labelId)
+
+Get details about this utilization label
+
+
+
+Wraps GET /api/v2/routing/utilization/labels/{labelId}  
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let labelId: String = "" // Utilization Label ID
+
+// Code example
+RoutingAPI.getRoutingUtilizationLabel(labelId: labelId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingUtilizationLabel was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **labelId** | **String**| Utilization Label ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UtilizationLabel**](UtilizationLabel.html)
+
+<a name="getRoutingUtilizationLabelAgents"></a>
+
+# **getRoutingUtilizationLabelAgents**
+
+
+
+> [[JSON]](JSON.html) getRoutingUtilizationLabelAgents(labelId)
+
+Get list of agent ids associated with a utilization label
+
+
+
+Wraps GET /api/v2/routing/utilization/labels/{labelId}/agents  
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let labelId: String = "" // Utilization Label ID
+
+// Code example
+RoutingAPI.getRoutingUtilizationLabelAgents(labelId: labelId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingUtilizationLabelAgents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **labelId** | **String**| Utilization Label ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**[JSON]**](JSON.html)
+
+<a name="getRoutingUtilizationLabels"></a>
+
+# **getRoutingUtilizationLabels**
+
+
+
+> [UtilizationLabelEntityListing](UtilizationLabelEntityListing.html) getRoutingUtilizationLabels(pageSize, pageNumber, sortOrder, name)
+
+Get list of utilization labels
+
+
+
+Wraps GET /api/v2/routing/utilization/labels  
+
+Requires ALL permissions: 
+
+* routing:utilization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let sortOrder: RoutingAPI.SortOrder_getRoutingUtilizationLabels = RoutingAPI.SortOrder_getRoutingUtilizationLabels.enummember // Sort order by name
+let name: String = "" // Utilization label's name (Wildcard is supported, e.g., 'label1*', '*label*'
+
+// Code example
+RoutingAPI.getRoutingUtilizationLabels(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingUtilizationLabels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **sortOrder** | **String**| Sort order by name | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **name** | **String**| Utilization label's name (Wildcard is supported, e.g., 'label1*', '*label*' | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UtilizationLabelEntityListing**](UtilizationLabelEntityListing.html)
+
 <a name="getRoutingWrapupcode"></a>
 
 # **getRoutingWrapupcode**
@@ -6459,6 +6680,58 @@ RoutingAPI.postRoutingSmsPhonenumbersImport(body: body) { (response, error) in
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
 
+<a name="postRoutingUtilizationLabels"></a>
+
+# **postRoutingUtilizationLabels**
+
+
+
+> [UtilizationLabel](UtilizationLabel.html) postRoutingUtilizationLabels(body)
+
+Create a utilization label
+
+
+
+Wraps POST /api/v2/routing/utilization/labels  
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CreateUtilizationLabelRequest = new CreateUtilizationLabelRequest(...) // UtilizationLabel
+
+// Code example
+RoutingAPI.postRoutingUtilizationLabels(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.postRoutingUtilizationLabels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CreateUtilizationLabelRequest**](CreateUtilizationLabelRequest.html)| UtilizationLabel | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UtilizationLabel**](UtilizationLabel.html)
+
 <a name="postRoutingWrapupcodes"></a>
 
 # **postRoutingWrapupcodes**
@@ -7099,6 +7372,60 @@ RoutingAPI.putRoutingUtilization(body: body) { (response, error) in
 ### Return type
 
 [**UtilizationResponse**](UtilizationResponse.html)
+
+<a name="putRoutingUtilizationLabel"></a>
+
+# **putRoutingUtilizationLabel**
+
+
+
+> [UtilizationLabel](UtilizationLabel.html) putRoutingUtilizationLabel(labelId, body)
+
+Update a utilization label
+
+
+
+Wraps PUT /api/v2/routing/utilization/labels/{labelId}  
+
+Requires ALL permissions: 
+
+* routing:utilization:manage
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let labelId: String = "" // Utilization Label ID
+let body: UpdateUtilizationLabelRequest = new UpdateUtilizationLabelRequest(...) // UtilizationLabel
+
+// Code example
+RoutingAPI.putRoutingUtilizationLabel(labelId: labelId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingUtilizationLabel was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **labelId** | **String**| Utilization Label ID | |
+| **body** | [**UpdateUtilizationLabelRequest**](UpdateUtilizationLabelRequest.html)| UtilizationLabel | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**UtilizationLabel**](UtilizationLabel.html)
 
 <a name="putRoutingWrapupcode"></a>
 

@@ -687,6 +687,7 @@ open class AnalyticsAPI {
       "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
       "sharingScreen" : true,
@@ -785,6 +786,7 @@ open class AnalyticsAPI {
       "journeyCustomerIdType" : "journeyCustomerIdType",
       "journeyCustomerId" : "journeyCustomerId",
       "callbackUserName" : "callbackUserName",
+      "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
       "addressFrom" : "addressFrom",
       "flowInType" : "flowInType",
       "ani" : "ani",
@@ -893,6 +895,7 @@ open class AnalyticsAPI {
       "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
       "sharingScreen" : true,
@@ -991,6 +994,7 @@ open class AnalyticsAPI {
       "journeyCustomerIdType" : "journeyCustomerIdType",
       "journeyCustomerId" : "journeyCustomerId",
       "callbackUserName" : "callbackUserName",
+      "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
       "addressFrom" : "addressFrom",
       "flowInType" : "flowInType",
       "ani" : "ani",
@@ -1109,6 +1113,7 @@ open class AnalyticsAPI {
       "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
       "sharingScreen" : true,
@@ -1207,6 +1212,7 @@ open class AnalyticsAPI {
       "journeyCustomerIdType" : "journeyCustomerIdType",
       "journeyCustomerId" : "journeyCustomerId",
       "callbackUserName" : "callbackUserName",
+      "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
       "addressFrom" : "addressFrom",
       "flowInType" : "flowInType",
       "ani" : "ani",
@@ -1315,6 +1321,7 @@ open class AnalyticsAPI {
       "bcc" : [ "bcc", "bcc" ],
       "agentBullseyeRing" : 9,
       "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+      "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
       "recording" : true,
       "screenShareAddressSelf" : "screenShareAddressSelf",
       "sharingScreen" : true,
@@ -1413,6 +1420,7 @@ open class AnalyticsAPI {
       "journeyCustomerIdType" : "journeyCustomerIdType",
       "journeyCustomerId" : "journeyCustomerId",
       "callbackUserName" : "callbackUserName",
+      "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
       "addressFrom" : "addressFrom",
       "flowInType" : "flowInType",
       "ani" : "ani",
@@ -1677,6 +1685,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -1775,6 +1784,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -1883,6 +1893,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -1981,6 +1992,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -2099,6 +2111,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -2197,6 +2210,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -2305,6 +2319,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -2403,6 +2418,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -2613,6 +2629,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -2711,6 +2728,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -2819,6 +2837,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -2917,6 +2936,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -3035,6 +3055,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -3133,6 +3154,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -3241,6 +3263,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -3339,6 +3362,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -3671,6 +3695,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -3769,6 +3794,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -3877,6 +3903,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -3975,6 +4002,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -4096,6 +4124,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -4194,6 +4223,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -4302,6 +4332,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -4400,6 +4431,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -4613,6 +4645,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -4711,6 +4744,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -4819,6 +4853,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -4917,6 +4952,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -5038,6 +5074,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -5136,6 +5173,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -5244,6 +5282,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -5342,6 +5381,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -5968,6 +6008,280 @@ open class AnalyticsAPI {
     }
 
     
+    public enum DashboardType_getAnalyticsReportingSettingsDashboardsQuery: String { 
+        case all = "All"
+        case _public = "Public"
+        case _private = "Private"
+        case shared = "Shared"
+        case favorites = "Favorites"
+    }
+    
+    
+    
+    public enum DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery: String { 
+        case ownedByMe = "OwnedByMe"
+        case ownedByAnyone = "OwnedByAnyone"
+        case notOwnedByMe = "NotOwnedByMe"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get list of dashboard configurations
+     
+     - parameter dashboardType: (query) List dashboard of given type 
+     - parameter dashboardAccessFilter: (query) Filter dashboard based on the owner of dashboard 
+     - parameter sortBy: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsReportingSettingsDashboardsQuery(dashboardType: DashboardType_getAnalyticsReportingSettingsDashboardsQuery, dashboardAccessFilter: DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<DashboardConfigurationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of dashboard configurations
+     - GET /api/v2/analytics/reporting/settings/dashboards/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 3,
+  "pageCount" : 2,
+  "pageNumber" : 9,
+  "entities" : [ {
+    "shared" : true,
+    "columns" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "rows" : 0,
+    "widgets" : [ {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    }, {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    } ],
+    "publicDashboard" : true,
+    "dashboardsSharedWith" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "restricted" : true,
+    "name" : "name",
+    "layoutType" : "Grid",
+    "id" : "id",
+    "favorite" : true
+  }, {
+    "shared" : true,
+    "columns" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "rows" : 0,
+    "widgets" : [ {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    }, {
+      "displayAggregates" : true,
+      "showProfilePicture" : true,
+      "displayAsTable" : true,
+      "webContentUrl" : "webContentUrl",
+      "title" : "title",
+      "type" : "METRIC",
+      "entityLimit" : 5,
+      "selectedStatuses" : [ "Available", "Available" ],
+      "showDuration" : true,
+      "showOfflineAgents" : true,
+      "periods" : [ "NONE", "NONE" ],
+      "row" : 1,
+      "displayTextColor" : "displayTextColor",
+      "displayText" : "displayText",
+      "showLongest" : true,
+      "warnings" : [ {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      }, {
+        "rangeType" : "OVER",
+        "color" : "color",
+        "value" : 2
+      } ],
+      "column" : 5,
+      "splitByMediaType" : true,
+      "showTimeInStatus" : true,
+      "filter" : "{}",
+      "mediaTypes" : [ "callback", "callback" ],
+      "sortKey" : "Name",
+      "showPercentageChange" : true,
+      "sortOrder" : "ascending",
+      "metrics" : [ "AVG_TALK_TIME", "AVG_TALK_TIME" ],
+      "splitFilters" : true,
+      "isFullWidth" : true
+    } ],
+    "publicDashboard" : true,
+    "dashboardsSharedWith" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "restricted" : true,
+    "name" : "name",
+    "layoutType" : "Grid",
+    "id" : "id",
+    "favorite" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 7,
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter dashboardType: (query) List dashboard of given type 
+     - parameter dashboardAccessFilter: (query) Filter dashboard based on the owner of dashboard 
+     - parameter sortBy: (query)  (optional)
+     - parameter pageNumber: (query)  (optional)
+     - parameter pageSize: (query)  (optional)
+
+     - returns: RequestBuilder<DashboardConfigurationListing> 
+     */
+    open class func getAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(dashboardType: DashboardType_getAnalyticsReportingSettingsDashboardsQuery, dashboardAccessFilter: DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
+        let path = "/api/v2/analytics/reporting/settings/dashboards/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "dashboardType": dashboardType.rawValue, 
+            "dashboardAccessFilter": dashboardAccessFilter.rawValue, 
+            "sortBy": sortBy, 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<DashboardConfigurationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
     
     
     
@@ -6022,6 +6336,7 @@ open class AnalyticsAPI {
   "pageCount" : 2,
   "pageNumber" : 9,
   "entities" : [ {
+    "shared" : true,
     "columns" : 6,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -6100,6 +6415,7 @@ open class AnalyticsAPI {
       "isFullWidth" : true
     } ],
     "publicDashboard" : true,
+    "dashboardsSharedWith" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -6108,6 +6424,7 @@ open class AnalyticsAPI {
     "id" : "id",
     "favorite" : true
   }, {
+    "shared" : true,
     "columns" : 6,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -6186,6 +6503,7 @@ open class AnalyticsAPI {
       "isFullWidth" : true
     } ],
     "publicDashboard" : true,
+    "dashboardsSharedWith" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -8107,6 +8425,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -8205,6 +8524,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -8313,6 +8633,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -8411,6 +8732,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -8529,6 +8851,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -8627,6 +8950,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -8735,6 +9059,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -8833,6 +9158,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -9043,6 +9369,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -9141,6 +9468,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -9249,6 +9577,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -9347,6 +9676,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -9465,6 +9795,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -9563,6 +9894,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -9671,6 +10003,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -9769,6 +10102,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -10064,6 +10398,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -10162,6 +10497,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -10270,6 +10606,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -10368,6 +10705,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -10486,6 +10824,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -10584,6 +10923,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -10692,6 +11032,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -10790,6 +11131,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -11000,6 +11342,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -11098,6 +11441,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -11206,6 +11550,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -11304,6 +11649,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -11422,6 +11768,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -11520,6 +11867,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -11628,6 +11976,7 @@ open class AnalyticsAPI {
         "bcc" : [ "bcc", "bcc" ],
         "agentBullseyeRing" : 9,
         "callbackNumbers" : [ "callbackNumbers", "callbackNumbers" ],
+        "detectedSpeechStart" : "2000-01-23T04:56:07.000+00:00",
         "recording" : true,
         "screenShareAddressSelf" : "screenShareAddressSelf",
         "sharingScreen" : true,
@@ -11726,6 +12075,7 @@ open class AnalyticsAPI {
         "journeyCustomerIdType" : "journeyCustomerIdType",
         "journeyCustomerId" : "journeyCustomerId",
         "callbackUserName" : "callbackUserName",
+        "detectedSpeechEnd" : "2000-01-23T04:56:07.000+00:00",
         "addressFrom" : "addressFrom",
         "flowInType" : "flowInType",
         "ani" : "ani",
@@ -14511,7 +14861,7 @@ open class AnalyticsAPI {
     
     
     /**
-     Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+     Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
      
      - parameter body: (body) query 
      - parameter completion: completion handler to receive the data and the error objects
@@ -14535,8 +14885,9 @@ open class AnalyticsAPI {
     }
 
     /**
-     Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded
+     Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
      - POST /api/v2/analytics/ratelimits/aggregates/query
+     - The 'max' property can be used to determine estimated rate limit value hit.
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -15080,6 +15431,7 @@ open class AnalyticsAPI {
   "pageCount" : 2,
   "pageNumber" : 9,
   "entities" : [ {
+    "shared" : true,
     "columns" : 6,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15158,6 +15510,7 @@ open class AnalyticsAPI {
       "isFullWidth" : true
     } ],
     "publicDashboard" : true,
+    "dashboardsSharedWith" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -15166,6 +15519,7 @@ open class AnalyticsAPI {
     "id" : "id",
     "favorite" : true
   }, {
+    "shared" : true,
     "columns" : 6,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
@@ -15244,6 +15598,7 @@ open class AnalyticsAPI {
       "isFullWidth" : true
     } ],
     "publicDashboard" : true,
+    "dashboardsSharedWith" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,

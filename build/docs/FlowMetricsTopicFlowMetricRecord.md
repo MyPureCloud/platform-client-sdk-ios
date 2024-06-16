@@ -99,6 +99,7 @@ title: FlowMetricsTopicFlowMetricRecord
 | **transferType** | **String** | The type of transfer for flows that ended with a transfer | [optional] |
 | **usedRouting** | **String** | Complete routing method | [optional] |
 | **userId** | **String** | Unique identifier for the user | [optional] |
+| **videoPresent** | **Bool** | Flag indicating if video is present | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **wrapUpCode** | **String** | Wrap up code | [optional] |
 | **proposedAgents** | [**[FlowMetricsTopicFlowProposedAgent]**](FlowMetricsTopicFlowProposedAgent.html) | Proposed agents | [optional] |

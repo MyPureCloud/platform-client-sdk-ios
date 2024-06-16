@@ -147,25 +147,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -188,6 +239,106 @@ open class LearningAPI {
         ])
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getLearningAssignmentStep: String { 
+        case modulestep = "moduleStep"
+    }
+    
+    /**
+     Get Learning Assignment Step
+     
+     - parameter assignmentId: (path) The ID of Learning Assignment 
+     - parameter stepId: (path) The ID of Learning Assignment Step 
+     - parameter shareableContentObjectId: (query) The ID of SCO to load (optional)
+     - parameter expand: (query) Fields to expand in response (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningAssignmentStep(assignmentId: String, stepId: String, shareableContentObjectId: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentStep?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningAssignmentStepWithRequestBuilder(assignmentId: assignmentId, stepId: stepId, shareableContentObjectId: shareableContentObjectId, expand: expand)
+        requestBuilder.execute { (response: Response<LearningAssignmentStep>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Learning Assignment Step
+     - GET /api/v2/learning/assignments/{assignmentId}/steps/{stepId}
+     - Permission not required if you are the assigned user of the learning assignment
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "completionPercentage" : 5.637377,
+  "selfUri" : "https://openapi-generator.tech",
+  "signedCookie" : "{}",
+  "moduleStep" : "{}",
+  "id" : "id",
+  "completionStatus" : "Completed",
+  "percentageScore" : 2.302136,
+  "shareableContentObject" : "{}",
+  "structure" : [ {
+    "children" : [ null, null ],
+    "name" : "name",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "successStatus" : "Passed"
+  }, {
+    "children" : [ null, null ],
+    "name" : "name",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "successStatus" : "Passed"
+  } ],
+  "successStatus" : "Passed"
+}, statusCode=200}]
+     
+     - parameter assignmentId: (path) The ID of Learning Assignment 
+     - parameter stepId: (path) The ID of Learning Assignment Step 
+     - parameter shareableContentObjectId: (query) The ID of SCO to load (optional)
+     - parameter expand: (query) Fields to expand in response (optional)
+
+     - returns: RequestBuilder<LearningAssignmentStep> 
+     */
+    open class func getLearningAssignmentStepWithRequestBuilder(assignmentId: String, stepId: String, shareableContentObjectId: String? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentStep> {        
+        var path = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}"
+        let assignmentIdPreEscape = "\(assignmentId)"
+        let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assignmentId}", with: assignmentIdPostEscape, options: .literal, range: nil)
+        let stepIdPreEscape = "\(stepId)"
+        let stepIdPostEscape = stepIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{stepId}", with: stepIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "shareableContentObjectId": shareableContentObjectId, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<LearningAssignmentStep>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -313,46 +464,148 @@ open class LearningAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "assessmentCompletionPercentage" : 1.4658129,
+    "assessment" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isLatest" : true,
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Assigned",
     "isPassed" : true,
     "isManual" : true,
     "selfUri" : "https://openapi-generator.tech",
     "module" : "{}",
-    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "version" : 6,
+    "assessmentPercentageScore" : 6.0274563,
+    "steps" : [ {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    }, {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    } ],
+    "version" : 7,
     "isRule" : true,
-    "assessment" : "{}",
+    "completionPercentage" : 5.962134,
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 9,
     "isOverdue" : true,
-    "isLatest" : true,
     "createdBy" : "{}",
-    "modifiedBy" : "{}",
-    "id" : "id",
+    "nextStep" : "{}",
     "percentageScore" : 0.8008282,
-    "state" : "Assigned",
     "user" : "{}"
   }, {
+    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "assessmentCompletionPercentage" : 1.4658129,
+    "assessment" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isLatest" : true,
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Assigned",
     "isPassed" : true,
     "isManual" : true,
     "selfUri" : "https://openapi-generator.tech",
     "module" : "{}",
-    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "version" : 6,
+    "assessmentPercentageScore" : 6.0274563,
+    "steps" : [ {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    }, {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    } ],
+    "version" : 7,
     "isRule" : true,
-    "assessment" : "{}",
+    "completionPercentage" : 5.962134,
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 9,
     "isOverdue" : true,
-    "isLatest" : true,
     "createdBy" : "{}",
-    "modifiedBy" : "{}",
-    "id" : "id",
+    "nextStep" : "{}",
     "percentageScore" : 0.8008282,
-    "state" : "Assigned",
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -527,46 +780,148 @@ open class LearningAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "assessmentCompletionPercentage" : 1.4658129,
+    "assessment" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isLatest" : true,
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Assigned",
     "isPassed" : true,
     "isManual" : true,
     "selfUri" : "https://openapi-generator.tech",
     "module" : "{}",
-    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "version" : 6,
+    "assessmentPercentageScore" : 6.0274563,
+    "steps" : [ {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    }, {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    } ],
+    "version" : 7,
     "isRule" : true,
-    "assessment" : "{}",
+    "completionPercentage" : 5.962134,
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 9,
     "isOverdue" : true,
-    "isLatest" : true,
     "createdBy" : "{}",
-    "modifiedBy" : "{}",
-    "id" : "id",
+    "nextStep" : "{}",
     "percentageScore" : 0.8008282,
-    "state" : "Assigned",
     "user" : "{}"
   }, {
+    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "assessmentCompletionPercentage" : 1.4658129,
+    "assessment" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isLatest" : true,
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Assigned",
     "isPassed" : true,
     "isManual" : true,
     "selfUri" : "https://openapi-generator.tech",
     "module" : "{}",
-    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "version" : 6,
+    "assessmentPercentageScore" : 6.0274563,
+    "steps" : [ {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    }, {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    } ],
+    "version" : 7,
     "isRule" : true,
-    "assessment" : "{}",
+    "completionPercentage" : 5.962134,
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 9,
     "isOverdue" : true,
-    "isLatest" : true,
     "createdBy" : "{}",
-    "modifiedBy" : "{}",
-    "id" : "id",
+    "nextStep" : "{}",
     "percentageScore" : 0.8008282,
-    "state" : "Assigned",
     "user" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
@@ -666,15 +1021,21 @@ open class LearningAPI {
   "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
+  "rule" : "{}",
+  "description" : "description",
+  "source" : "UserCreated",
+  "type" : "Informational",
+  "reviewAssessmentResults" : "{}",
+  "excludedFromCatalog" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
   "isPublished" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
-  "rule" : "{}",
-  "description" : "description",
+  "enforceContentOrder" : true,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "source" : "UserCreated",
   "coverArt" : "{}",
-  "type" : "Informational",
   "version" : 0,
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
@@ -699,12 +1060,8 @@ open class LearningAPI {
   } ],
   "assessmentForm" : "{}",
   "lengthInMinutes" : 5,
-  "excludedFromCatalog" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "name" : "name",
-  "modifiedBy" : "{}",
-  "id" : "id"
+  "name" : "name"
 }, statusCode=200}]
      
      - parameter moduleId: (path) The ID of the learning module 
@@ -790,6 +1147,69 @@ open class LearningAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModuleJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a learning module preview
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningModulePreview(moduleId: String, completion: @escaping ((_ data: LearningModulePreviewGetResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningModulePreviewWithRequestBuilder(moduleId: moduleId)
+        requestBuilder.execute { (response: Response<LearningModulePreviewGetResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a learning module preview
+     - GET /api/v2/learning/modules/{moduleId}/preview
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "assessmentForm" : "{}",
+  "assignment" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "enforceContentOrder" : true,
+  "id" : "id",
+  "coverArt" : "{}",
+  "reviewAssessmentResults" : "{}"
+}, statusCode=200}]
+     
+     - parameter moduleId: (path) The ID of the learning module 
+
+     - returns: RequestBuilder<LearningModulePreviewGetResponse> 
+     */
+    open class func getLearningModulePreviewWithRequestBuilder(moduleId: String) -> RequestBuilder<LearningModulePreviewGetResponse> {        
+        var path = "/api/v2/learning/modules/{moduleId}/preview"
+        let moduleIdPreEscape = "\(moduleId)"
+        let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{moduleId}", with: moduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningModulePreviewGetResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -909,15 +1329,21 @@ open class LearningAPI {
   "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
+  "rule" : "{}",
+  "description" : "description",
+  "source" : "UserCreated",
+  "type" : "Informational",
+  "reviewAssessmentResults" : "{}",
+  "excludedFromCatalog" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
   "isPublished" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
-  "rule" : "{}",
-  "description" : "description",
+  "enforceContentOrder" : true,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "source" : "UserCreated",
   "coverArt" : "{}",
-  "type" : "Informational",
   "version" : 0,
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
@@ -942,12 +1368,8 @@ open class LearningAPI {
   } ],
   "assessmentForm" : "{}",
   "lengthInMinutes" : 5,
-  "excludedFromCatalog" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "name" : "name",
-  "modifiedBy" : "{}",
-  "id" : "id"
+  "name" : "name"
 }, statusCode=200}]
      
      - parameter moduleId: (path) The ID of the learning module 
@@ -1083,15 +1505,21 @@ open class LearningAPI {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
+    "rule" : "{}",
+    "description" : "description",
+    "source" : "UserCreated",
+    "type" : "Informational",
+    "reviewAssessmentResults" : "{}",
+    "excludedFromCatalog" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
     "isPublished" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
-    "rule" : "{}",
-    "description" : "description",
+    "enforceContentOrder" : true,
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "source" : "UserCreated",
     "coverArt" : "{}",
-    "type" : "Informational",
     "version" : 0,
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
@@ -1116,25 +1544,27 @@ open class LearningAPI {
     } ],
     "assessmentForm" : "{}",
     "lengthInMinutes" : 5,
-    "excludedFromCatalog" : true,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
-    "name" : "name",
-    "modifiedBy" : "{}",
-    "id" : "id"
+    "name" : "name"
   }, {
     "reassignSummaryData" : "{}",
     "archivalMode" : "Graceful",
     "isArchived" : true,
+    "rule" : "{}",
+    "description" : "description",
+    "source" : "UserCreated",
+    "type" : "Informational",
+    "reviewAssessmentResults" : "{}",
+    "excludedFromCatalog" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
     "isPublished" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
-    "rule" : "{}",
-    "description" : "description",
+    "enforceContentOrder" : true,
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "source" : "UserCreated",
     "coverArt" : "{}",
-    "type" : "Informational",
     "version" : 0,
     "completionTimeInDays" : 6,
     "summaryData" : "{}",
@@ -1159,12 +1589,8 @@ open class LearningAPI {
     } ],
     "assessmentForm" : "{}",
     "lengthInMinutes" : 5,
-    "excludedFromCatalog" : true,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
-    "name" : "name",
-    "modifiedBy" : "{}",
-    "id" : "id"
+    "name" : "name"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -1293,6 +1719,7 @@ open class LearningAPI {
     "description" : "description",
     "source" : "UserCreated",
     "type" : "Informational",
+    "reviewAssessmentResults" : "{}",
     "excludedFromCatalog" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
@@ -1300,6 +1727,7 @@ open class LearningAPI {
     "isPublished" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
+    "enforceContentOrder" : true,
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "coverArt" : "{}",
     "version" : 0,
@@ -1329,46 +1757,148 @@ open class LearningAPI {
     "createdBy" : "{}",
     "name" : "name",
     "currentAssignments" : [ {
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "assessmentCompletionPercentage" : 1.4658129,
+      "assessment" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isLatest" : true,
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Assigned",
       "isPassed" : true,
       "isManual" : true,
       "selfUri" : "https://openapi-generator.tech",
       "module" : "{}",
-      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
-      "version" : 6,
+      "assessmentPercentageScore" : 6.0274563,
+      "steps" : [ {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      }, {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      } ],
+      "version" : 7,
       "isRule" : true,
-      "assessment" : "{}",
+      "completionPercentage" : 5.962134,
       "assessmentForm" : "{}",
-      "lengthInMinutes" : 1,
-      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "lengthInMinutes" : 9,
       "isOverdue" : true,
-      "isLatest" : true,
       "createdBy" : "{}",
-      "modifiedBy" : "{}",
-      "id" : "id",
+      "nextStep" : "{}",
       "percentageScore" : 0.8008282,
-      "state" : "Assigned",
       "user" : "{}"
     }, {
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "assessmentCompletionPercentage" : 1.4658129,
+      "assessment" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isLatest" : true,
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Assigned",
       "isPassed" : true,
       "isManual" : true,
       "selfUri" : "https://openapi-generator.tech",
       "module" : "{}",
-      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
-      "version" : 6,
+      "assessmentPercentageScore" : 6.0274563,
+      "steps" : [ {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      }, {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      } ],
+      "version" : 7,
       "isRule" : true,
-      "assessment" : "{}",
+      "completionPercentage" : 5.962134,
       "assessmentForm" : "{}",
-      "lengthInMinutes" : 1,
-      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "lengthInMinutes" : 9,
       "isOverdue" : true,
-      "isLatest" : true,
       "createdBy" : "{}",
-      "modifiedBy" : "{}",
-      "id" : "id",
+      "nextStep" : "{}",
       "percentageScore" : 0.8008282,
-      "state" : "Assigned",
       "user" : "{}"
     } ]
   }, {
@@ -1379,6 +1909,7 @@ open class LearningAPI {
     "description" : "description",
     "source" : "UserCreated",
     "type" : "Informational",
+    "reviewAssessmentResults" : "{}",
     "excludedFromCatalog" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : "{}",
@@ -1386,6 +1917,7 @@ open class LearningAPI {
     "isPublished" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
+    "enforceContentOrder" : true,
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "coverArt" : "{}",
     "version" : 0,
@@ -1415,46 +1947,148 @@ open class LearningAPI {
     "createdBy" : "{}",
     "name" : "name",
     "currentAssignments" : [ {
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "assessmentCompletionPercentage" : 1.4658129,
+      "assessment" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isLatest" : true,
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Assigned",
       "isPassed" : true,
       "isManual" : true,
       "selfUri" : "https://openapi-generator.tech",
       "module" : "{}",
-      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
-      "version" : 6,
+      "assessmentPercentageScore" : 6.0274563,
+      "steps" : [ {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      }, {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      } ],
+      "version" : 7,
       "isRule" : true,
-      "assessment" : "{}",
+      "completionPercentage" : 5.962134,
       "assessmentForm" : "{}",
-      "lengthInMinutes" : 1,
-      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "lengthInMinutes" : 9,
       "isOverdue" : true,
-      "isLatest" : true,
       "createdBy" : "{}",
-      "modifiedBy" : "{}",
-      "id" : "id",
+      "nextStep" : "{}",
       "percentageScore" : 0.8008282,
-      "state" : "Assigned",
       "user" : "{}"
     }, {
+      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+      "assessmentCompletionPercentage" : 1.4658129,
+      "assessment" : "{}",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "isLatest" : true,
+      "modifiedBy" : "{}",
+      "id" : "id",
+      "state" : "Assigned",
       "isPassed" : true,
       "isManual" : true,
       "selfUri" : "https://openapi-generator.tech",
       "module" : "{}",
-      "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
       "dateModified" : "2000-01-23T04:56:07.000+00:00",
-      "version" : 6,
+      "assessmentPercentageScore" : 6.0274563,
+      "steps" : [ {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      }, {
+        "completionPercentage" : 5.637377,
+        "selfUri" : "https://openapi-generator.tech",
+        "signedCookie" : "{}",
+        "moduleStep" : "{}",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "percentageScore" : 2.302136,
+        "shareableContentObject" : "{}",
+        "structure" : [ {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        }, {
+          "children" : [ null, null ],
+          "name" : "name",
+          "id" : "id",
+          "completionStatus" : "Completed",
+          "successStatus" : "Passed"
+        } ],
+        "successStatus" : "Passed"
+      } ],
+      "version" : 7,
       "isRule" : true,
-      "assessment" : "{}",
+      "completionPercentage" : 5.962134,
       "assessmentForm" : "{}",
-      "lengthInMinutes" : 1,
-      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "lengthInMinutes" : 9,
       "isOverdue" : true,
-      "isLatest" : true,
       "createdBy" : "{}",
-      "modifiedBy" : "{}",
-      "id" : "id",
+      "nextStep" : "{}",
       "percentageScore" : 0.8008282,
-      "state" : "Assigned",
       "user" : "{}"
     } ]
   } ],
@@ -1563,6 +2197,66 @@ open class LearningAPI {
 
     
     
+    /**
+     Get Learning SCORM Result
+     
+     - parameter scormId: (path) The ID of the SCORM package 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLearningScormScormId(scormId: String, completion: @escaping ((_ data: LearningScormResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningScormScormIdWithRequestBuilder(scormId: scormId)
+        requestBuilder.execute { (response: Response<LearningScormResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Learning SCORM Result
+     - GET /api/v2/learning/scorm/{scormId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "percentageUnpacked" : 0.8008282,
+  "selfUri" : "https://openapi-generator.tech",
+  "errorMessage" : "errorMessage",
+  "errorCode" : "errorCode",
+  "id" : "id",
+  "status" : "UploadPending"
+}, statusCode=200}]
+     
+     - parameter scormId: (path) The ID of the SCORM package 
+
+     - returns: RequestBuilder<LearningScormResponse> 
+     */
+    open class func getLearningScormScormIdWithRequestBuilder(scormId: String) -> RequestBuilder<LearningScormResponse> {        
+        var path = "/api/v2/learning/scorm/{scormId}"
+        let scormIdPreEscape = "\(scormId)"
+        let scormIdPostEscape = scormIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{scormId}", with: scormIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningScormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -1597,25 +2291,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -1675,25 +2420,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -1713,6 +2509,94 @@ open class LearningAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningAssignment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update Learning Assignment Step
+     
+     - parameter assignmentId: (path) The ID of Learning Assignment 
+     - parameter stepId: (path) The ID of Learning Assignment Step 
+     - parameter body: (body) The Learning Assignment Step to be updated (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchLearningAssignmentStep(assignmentId: String, stepId: String, body: LearningAssignmentStep? = nil, completion: @escaping ((_ data: LearningAssignmentStep?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchLearningAssignmentStepWithRequestBuilder(assignmentId: assignmentId, stepId: stepId, body: body)
+        requestBuilder.execute { (response: Response<LearningAssignmentStep>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Learning Assignment Step
+     - PATCH /api/v2/learning/assignments/{assignmentId}/steps/{stepId}
+     - Permission not required if you are the assigned user of the learning assignment
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "completionPercentage" : 5.637377,
+  "selfUri" : "https://openapi-generator.tech",
+  "signedCookie" : "{}",
+  "moduleStep" : "{}",
+  "id" : "id",
+  "completionStatus" : "Completed",
+  "percentageScore" : 2.302136,
+  "shareableContentObject" : "{}",
+  "structure" : [ {
+    "children" : [ null, null ],
+    "name" : "name",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "successStatus" : "Passed"
+  }, {
+    "children" : [ null, null ],
+    "name" : "name",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "successStatus" : "Passed"
+  } ],
+  "successStatus" : "Passed"
+}, statusCode=200}]
+     
+     - parameter assignmentId: (path) The ID of Learning Assignment 
+     - parameter stepId: (path) The ID of Learning Assignment Step 
+     - parameter body: (body) The Learning Assignment Step to be updated (optional)
+
+     - returns: RequestBuilder<LearningAssignmentStep> 
+     */
+    open class func patchLearningAssignmentStepWithRequestBuilder(assignmentId: String, stepId: String, body: LearningAssignmentStep? = nil) -> RequestBuilder<LearningAssignmentStep> {        
+        var path = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}"
+        let assignmentIdPreEscape = "\(assignmentId)"
+        let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{assignmentId}", with: assignmentIdPostEscape, options: .literal, range: nil)
+        let stepIdPreEscape = "\(stepId)"
+        let stepIdPostEscape = stepIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{stepId}", with: stepIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningAssignmentStep>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -1756,25 +2640,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -1965,25 +2900,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -2040,25 +3026,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -2114,25 +3151,76 @@ open class LearningAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+  "assessmentCompletionPercentage" : 1.4658129,
+  "assessment" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isLatest" : true,
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Assigned",
   "isPassed" : true,
   "isManual" : true,
   "selfUri" : "https://openapi-generator.tech",
   "module" : "{}",
-  "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "version" : 6,
+  "assessmentPercentageScore" : 6.0274563,
+  "steps" : [ {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  }, {
+    "completionPercentage" : 5.637377,
+    "selfUri" : "https://openapi-generator.tech",
+    "signedCookie" : "{}",
+    "moduleStep" : "{}",
+    "id" : "id",
+    "completionStatus" : "Completed",
+    "percentageScore" : 2.302136,
+    "shareableContentObject" : "{}",
+    "structure" : [ {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    }, {
+      "children" : [ null, null ],
+      "name" : "name",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "successStatus" : "Passed"
+    } ],
+    "successStatus" : "Passed"
+  } ],
+  "version" : 7,
   "isRule" : true,
-  "assessment" : "{}",
+  "completionPercentage" : 5.962134,
   "assessmentForm" : "{}",
-  "lengthInMinutes" : 1,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lengthInMinutes" : 9,
   "isOverdue" : true,
-  "isLatest" : true,
   "createdBy" : "{}",
-  "modifiedBy" : "{}",
-  "id" : "id",
+  "nextStep" : "{}",
   "percentageScore" : 0.8008282,
-  "state" : "Assigned",
   "user" : "{}"
 }, statusCode=200}]
      
@@ -2284,46 +3372,148 @@ open class LearningAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "assessmentCompletionPercentage" : 1.4658129,
+    "assessment" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isLatest" : true,
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Assigned",
     "isPassed" : true,
     "isManual" : true,
     "selfUri" : "https://openapi-generator.tech",
     "module" : "{}",
-    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "version" : 6,
+    "assessmentPercentageScore" : 6.0274563,
+    "steps" : [ {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    }, {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    } ],
+    "version" : 7,
     "isRule" : true,
-    "assessment" : "{}",
+    "completionPercentage" : 5.962134,
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 9,
     "isOverdue" : true,
-    "isLatest" : true,
     "createdBy" : "{}",
-    "modifiedBy" : "{}",
-    "id" : "id",
+    "nextStep" : "{}",
     "percentageScore" : 0.8008282,
-    "state" : "Assigned",
     "user" : "{}"
   }, {
+    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
+    "assessmentCompletionPercentage" : 1.4658129,
+    "assessment" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isLatest" : true,
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Assigned",
     "isPassed" : true,
     "isManual" : true,
     "selfUri" : "https://openapi-generator.tech",
     "module" : "{}",
-    "dateRecommendedForCompletion" : "2000-01-23T04:56:07.000+00:00",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "version" : 6,
+    "assessmentPercentageScore" : 6.0274563,
+    "steps" : [ {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    }, {
+      "completionPercentage" : 5.637377,
+      "selfUri" : "https://openapi-generator.tech",
+      "signedCookie" : "{}",
+      "moduleStep" : "{}",
+      "id" : "id",
+      "completionStatus" : "Completed",
+      "percentageScore" : 2.302136,
+      "shareableContentObject" : "{}",
+      "structure" : [ {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      }, {
+        "children" : [ null, null ],
+        "name" : "name",
+        "id" : "id",
+        "completionStatus" : "Completed",
+        "successStatus" : "Passed"
+      } ],
+      "successStatus" : "Passed"
+    } ],
+    "version" : 7,
     "isRule" : true,
-    "assessment" : "{}",
+    "completionPercentage" : 5.962134,
     "assessmentForm" : "{}",
-    "lengthInMinutes" : 1,
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lengthInMinutes" : 9,
     "isOverdue" : true,
-    "isLatest" : true,
     "createdBy" : "{}",
-    "modifiedBy" : "{}",
-    "id" : "id",
+    "nextStep" : "{}",
     "percentageScore" : 0.8008282,
-    "state" : "Assigned",
     "user" : "{}"
   } ],
   "disallowedEntities" : [ {
@@ -2574,15 +3764,21 @@ open class LearningAPI {
   "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
+  "rule" : "{}",
+  "description" : "description",
+  "source" : "UserCreated",
+  "type" : "Informational",
+  "reviewAssessmentResults" : "{}",
+  "excludedFromCatalog" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
   "isPublished" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
-  "rule" : "{}",
-  "description" : "description",
+  "enforceContentOrder" : true,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "source" : "UserCreated",
   "coverArt" : "{}",
-  "type" : "Informational",
   "version" : 0,
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
@@ -2607,12 +3803,8 @@ open class LearningAPI {
   } ],
   "assessmentForm" : "{}",
   "lengthInMinutes" : 5,
-  "excludedFromCatalog" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "name" : "name",
-  "modifiedBy" : "{}",
-  "id" : "id"
+  "name" : "name"
 }, statusCode=200}]
      
      - parameter body: (body) The learning module to be created 
@@ -2851,6 +4043,64 @@ open class LearningAPI {
 
     
     
+    /**
+     Create a SCORM package upload request
+     
+     - parameter body: (body) The SCORM package to be uploaded (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postLearningScorm(body: LearningScormUploadRequest? = nil, completion: @escaping ((_ data: LearningScormUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postLearningScormWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<LearningScormUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a SCORM package upload request
+     - POST /api/v2/learning/scorm
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadUrl" : "uploadUrl",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "status" : "UploadPending"
+}, statusCode=201}]
+     
+     - parameter body: (body) The SCORM package to be uploaded (optional)
+
+     - returns: RequestBuilder<LearningScormUploadResponse> 
+     */
+    open class func postLearningScormWithRequestBuilder(body: LearningScormUploadRequest? = nil) -> RequestBuilder<LearningScormUploadResponse> {        
+        let path = "/api/v2/learning/scorm"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningScormUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -2889,15 +4139,21 @@ open class LearningAPI {
   "reassignSummaryData" : "{}",
   "archivalMode" : "Graceful",
   "isArchived" : true,
+  "rule" : "{}",
+  "description" : "description",
+  "source" : "UserCreated",
+  "type" : "Informational",
+  "reviewAssessmentResults" : "{}",
+  "excludedFromCatalog" : true,
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedBy" : "{}",
+  "id" : "id",
   "isPublished" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
-  "rule" : "{}",
-  "description" : "description",
+  "enforceContentOrder" : true,
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "source" : "UserCreated",
   "coverArt" : "{}",
-  "type" : "Informational",
   "version" : 0,
   "completionTimeInDays" : 6,
   "summaryData" : "{}",
@@ -2922,12 +4178,8 @@ open class LearningAPI {
   } ],
   "assessmentForm" : "{}",
   "lengthInMinutes" : 5,
-  "excludedFromCatalog" : true,
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : "{}",
-  "name" : "name",
-  "modifiedBy" : "{}",
-  "id" : "id"
+  "name" : "name"
 }, statusCode=200}]
      
      - parameter moduleId: (path) The ID of the learning module 
@@ -2946,6 +4198,67 @@ open class LearningAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<LearningModule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a learning module preview
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter body: (body) The learning module to be updated 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putLearningModulePreview(moduleId: String, body: LearningModulePreviewUpdateRequest, completion: @escaping ((_ data: LearningModulePreviewUpdateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putLearningModulePreviewWithRequestBuilder(moduleId: moduleId, body: body)
+        requestBuilder.execute { (response: Response<LearningModulePreviewUpdateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a learning module preview
+     - PUT /api/v2/learning/modules/{moduleId}/preview
+     - This will update a learning module preview
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "assignment" : "{}",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter moduleId: (path) The ID of the learning module 
+     - parameter body: (body) The learning module to be updated 
+
+     - returns: RequestBuilder<LearningModulePreviewUpdateResponse> 
+     */
+    open class func putLearningModulePreviewWithRequestBuilder(moduleId: String, body: LearningModulePreviewUpdateRequest) -> RequestBuilder<LearningModulePreviewUpdateResponse> {        
+        var path = "/api/v2/learning/modules/{moduleId}/preview"
+        let moduleIdPreEscape = "\(moduleId)"
+        let moduleIdPostEscape = moduleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{moduleId}", with: moduleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<LearningModulePreviewUpdateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

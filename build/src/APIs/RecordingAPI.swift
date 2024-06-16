@@ -250,9 +250,12 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
+      "workflow" : "{}",
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
+      "purpose" : "purpose",
       "buttonResponse" : "{}",
+      "participantId" : "participantId",
       "from" : "from",
       "to" : "to",
       "id" : "id",
@@ -270,6 +273,7 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
+      "queue" : "{}",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -331,9 +335,12 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
+      "workflow" : "{}",
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
+      "purpose" : "purpose",
       "buttonResponse" : "{}",
+      "participantId" : "participantId",
       "from" : "from",
       "to" : "to",
       "id" : "id",
@@ -351,6 +358,7 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
+      "queue" : "{}",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -1545,9 +1553,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -1565,6 +1576,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -1626,9 +1638,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -1646,6 +1661,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -2943,9 +2959,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -2963,6 +2982,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -3024,9 +3044,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -3044,6 +3067,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -3932,9 +3956,12 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
+      "workflow" : "{}",
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
+      "purpose" : "purpose",
       "buttonResponse" : "{}",
+      "participantId" : "participantId",
       "from" : "from",
       "to" : "to",
       "id" : "id",
@@ -3952,6 +3979,7 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
+      "queue" : "{}",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -4013,9 +4041,12 @@ open class RecordingAPI {
         } ],
         "url" : "url"
       } ],
+      "workflow" : "{}",
       "fromUser" : "{}",
       "fromExternalContact" : "{}",
+      "purpose" : "purpose",
       "buttonResponse" : "{}",
+      "participantId" : "participantId",
       "from" : "from",
       "to" : "to",
       "id" : "id",
@@ -4033,6 +4064,7 @@ open class RecordingAPI {
         "url" : "url"
       } ],
       "contentType" : "QuickReply",
+      "queue" : "{}",
       "messageStickerAttachments" : [ {
         "id" : "id",
         "url" : "url"
@@ -4998,9 +5030,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -5018,6 +5053,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -5079,9 +5115,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -5099,6 +5138,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -6027,9 +6067,12 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
+        "workflow" : "{}",
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
+        "purpose" : "purpose",
         "buttonResponse" : "{}",
+        "participantId" : "participantId",
         "from" : "from",
         "to" : "to",
         "id" : "id",
@@ -6047,6 +6090,7 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
+        "queue" : "{}",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -6108,9 +6152,12 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
+        "workflow" : "{}",
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
+        "purpose" : "purpose",
         "buttonResponse" : "{}",
+        "participantId" : "participantId",
         "from" : "from",
         "to" : "to",
         "id" : "id",
@@ -6128,6 +6175,7 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
+        "queue" : "{}",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -6994,9 +7042,12 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
+        "workflow" : "{}",
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
+        "purpose" : "purpose",
         "buttonResponse" : "{}",
+        "participantId" : "participantId",
         "from" : "from",
         "to" : "to",
         "id" : "id",
@@ -7014,6 +7065,7 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
+        "queue" : "{}",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -7075,9 +7127,12 @@ open class RecordingAPI {
           } ],
           "url" : "url"
         } ],
+        "workflow" : "{}",
         "fromUser" : "{}",
         "fromExternalContact" : "{}",
+        "purpose" : "purpose",
         "buttonResponse" : "{}",
+        "participantId" : "participantId",
         "from" : "from",
         "to" : "to",
         "id" : "id",
@@ -7095,6 +7150,7 @@ open class RecordingAPI {
           "url" : "url"
         } ],
         "contentType" : "QuickReply",
+        "queue" : "{}",
         "messageStickerAttachments" : [ {
           "id" : "id",
           "url" : "url"
@@ -37537,9 +37593,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -37557,6 +37616,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -37618,9 +37678,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -37638,6 +37701,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -38614,9 +38678,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -38634,6 +38701,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"
@@ -38695,9 +38763,12 @@ open class RecordingAPI {
       } ],
       "url" : "url"
     } ],
+    "workflow" : "{}",
     "fromUser" : "{}",
     "fromExternalContact" : "{}",
+    "purpose" : "purpose",
     "buttonResponse" : "{}",
+    "participantId" : "participantId",
     "from" : "from",
     "to" : "to",
     "id" : "id",
@@ -38715,6 +38786,7 @@ open class RecordingAPI {
       "url" : "url"
     } ],
     "contentType" : "QuickReply",
+    "queue" : "{}",
     "messageStickerAttachments" : [ {
       "id" : "id",
       "url" : "url"

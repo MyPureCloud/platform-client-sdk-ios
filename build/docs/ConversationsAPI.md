@@ -91,7 +91,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingSetting**](ConversationsAPI.html#getConversationsMessagingSetting) | Get a messaging setting |
 | [**getConversationsMessagingSettings**](ConversationsAPI.html#getConversationsMessagingSettings) | Get a list of messaging settings |
 | [**getConversationsMessagingSettingsDefault**](ConversationsAPI.html#getConversationsMessagingSettingsDefault) | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
-| [**getConversationsMessagingSticker**](ConversationsAPI.html#getConversationsMessagingSticker) | Get a list of Messaging Stickers (Deprecated) |
 | [**getConversationsMessagingSupportedcontent**](ConversationsAPI.html#getConversationsMessagingSupportedcontent) | Get a list of Supported Content profiles |
 | [**getConversationsMessagingSupportedcontentDefault**](ConversationsAPI.html#getConversationsMessagingSupportedcontentDefault) | Get the organization&#39;s default supported content profile that will be used as the default when creating an integration. |
 | [**getConversationsMessagingSupportedcontentSupportedContentId**](ConversationsAPI.html#getConversationsMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
@@ -183,6 +182,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsEmailMessagesDraftAttachmentsCopy**](ConversationsAPI.html#postConversationsEmailMessagesDraftAttachmentsCopy) | Copy attachments from an email message to the current draft. |
 | [**postConversationsEmailParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsEmailParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsEmailParticipantReplace**](ConversationsAPI.html#postConversationsEmailParticipantReplace) | Replace this participant with the specified user and/or address |
+| [**postConversationsEmailReconnect**](ConversationsAPI.html#postConversationsEmailReconnect) | Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation |
 | [**postConversationsEmails**](ConversationsAPI.html#postConversationsEmails) | Create an email conversation |
 | [**postConversationsEmailsAgentless**](ConversationsAPI.html#postConversationsEmailsAgentless) | Create an email conversation, per API |
 | [**postConversationsFaxes**](ConversationsAPI.html#postConversationsFaxes) | Create Fax Conversation |
@@ -4700,64 +4700,6 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**MessagingSetting**](MessagingSetting.html)
-
-<a name="getConversationsMessagingSticker"></a>
-
-# **getConversationsMessagingSticker**
-
-
-
-> [MessagingStickerEntityListing](MessagingStickerEntityListing.html) getConversationsMessagingSticker(messengerType, pageSize, pageNumber)
-
-Get a list of Messaging Stickers (Deprecated)
-
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-native-line-third-party-messaging-channel/
-
-
-
-Wraps GET /api/v2/conversations/messaging/stickers/{messengerType}  
-
-Requires ALL permissions: 
-
-* conversation:message:create
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let messengerType: ConversationsAPI.MessengerType_getConversationsMessagingSticker = ConversationsAPI.MessengerType_getConversationsMessagingSticker.enummember // Messenger Type
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-
-// Code example
-ConversationsAPI.getConversationsMessagingSticker(messengerType: messengerType, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("ConversationsAPI.getConversationsMessagingSticker was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type |<br />**Values**: line ("line") |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**MessagingStickerEntityListing**](MessagingStickerEntityListing.html)
 
 <a name="getConversationsMessagingSupportedcontent"></a>
 
@@ -9740,6 +9682,57 @@ ConversationsAPI.postConversationsEmailParticipantReplace(conversationId: conver
 | **conversationId** | **String**| conversationId | |
 | **participantId** | **String**| participantId | |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="postConversationsEmailReconnect"></a>
+
+# **postConversationsEmailReconnect**
+
+
+
+> Void postConversationsEmailReconnect(conversationId)
+
+Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+
+
+
+Wraps POST /api/v2/conversations/emails/{conversationId}/reconnect  
+
+Requires ANY permissions: 
+
+* conversation:communication:reconnect
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+
+// Code example
+ConversationsAPI.postConversationsEmailReconnect(conversationId: conversationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsEmailReconnect was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
 {: class="table-striped"}
 
 
