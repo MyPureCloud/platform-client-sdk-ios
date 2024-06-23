@@ -27915,7 +27915,7 @@
   "getqualityevaluationsquery": {
     "operationId": "getqualityevaluationsquery",
     "functionName": "getQualityEvaluationsQuery",
-    "signature": "getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)",
+    "signature": "getQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)",
     "parameters": [
       {
         "name": "pageSize",
@@ -27928,18 +27928,8 @@
         "required": "false"
       },
       {
-        "name": "sortBy",
-        "type": "String",
-        "required": "false"
-      },
-      {
         "name": "expand",
         "type": "[String]",
-        "required": "false"
-      },
-      {
-        "name": "nextPage",
-        "type": "String",
         "required": "false"
       },
       {
@@ -28024,7 +28014,7 @@
       }
     ],
     "return": "EvaluationEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet sortBy: String = \"\" // NOTE: Does not work when querying evaluations\nlet expand: [String] = [\"\"] // variable name requested by expand list\nlet nextPage: String = \"\" // NOTE: Does not work when querying evaluations\nlet previousPage: String = \"\" // Previous page token\nlet conversationId: String = \"\" // conversationId specified\nlet agentUserId: String = \"\" // user id of the agent\nlet agentTeamId: String = \"\" // team id of the agent\nlet evaluatorUserId: String = \"\" // evaluator user id\nlet assigneeUserId: String = \"\" // assignee user id\nlet queueId: String = \"\" // queue id\nlet startTime: String = \"\" // start time of the evaluation query\nlet endTime: String = \"\" // end time of the evaluation query\nlet formContextId: String = \"\" // shared id between form versions\nlet evaluationState: [String] = [\"\"] // \nlet isReleased: Bool = true // the evaluation has been released\nlet agentHasRead: Bool = true // agent has the evaluation\nlet expandAnswerTotalScores: Bool = true // get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request.\nlet maximum: Int = 0 // the maximum number of results to return\nlet sortOrder: String = \"\" // NOTE: Does not work when conversationId is supplied.\n\n// Queries Evaluations and returns a paged list\nGetQualityEvaluationsQueryRequest.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityEvaluationsQueryRequest.getQualityEvaluationsQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The total page size requested\nlet pageNumber: Int = 0 // The page number requested\nlet expand: [String] = [\"\"] // variable name requested by expand list\nlet previousPage: String = \"\" // Previous page token\nlet conversationId: String = \"\" // conversationId specified\nlet agentUserId: String = \"\" // user id of the agent\nlet agentTeamId: String = \"\" // team id of the agent\nlet evaluatorUserId: String = \"\" // evaluator user id\nlet assigneeUserId: String = \"\" // assignee user id\nlet queueId: String = \"\" // queue id\nlet startTime: String = \"\" // start time of the evaluation query\nlet endTime: String = \"\" // end time of the evaluation query\nlet formContextId: String = \"\" // shared id between form versions\nlet evaluationState: [String] = [\"\"] // \nlet isReleased: Bool = true // the evaluation has been released\nlet agentHasRead: Bool = true // agent has the evaluation\nlet expandAnswerTotalScores: Bool = true // get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request.\nlet maximum: Int = 0 // the maximum number of results to return\nlet sortOrder: String = \"\" // NOTE: Does not work when conversationId is supplied.\n\n// Queries Evaluations and returns a paged list\nGetQualityEvaluationsQueryRequest.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetQualityEvaluationsQueryRequest.getQualityEvaluationsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "getqualityevaluatorsactivity": {
     "operationId": "getqualityevaluatorsactivity",

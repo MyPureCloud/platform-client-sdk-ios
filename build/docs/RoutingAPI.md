@@ -2180,7 +2180,7 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, name: name,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), line ("line"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram") |
+| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram") |
 | **name** | **String**| Recipient Name | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |

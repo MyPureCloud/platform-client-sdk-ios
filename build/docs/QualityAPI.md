@@ -761,7 +761,7 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 
 
 
-> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
+> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
 
 Queries Evaluations and returns a paged list
 
@@ -785,9 +785,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let pageSize: Int = 0 // The total page size requested
 let pageNumber: Int = 0 // The page number requested
-let sortBy: String = "" // NOTE: Does not work when querying evaluations
 let expand: [String] = [""] // variable name requested by expand list
-let nextPage: String = "" // NOTE: Does not work when querying evaluations
 let previousPage: String = "" // Previous page token
 let conversationId: String = "" // conversationId specified
 let agentUserId: String = "" // user id of the agent
@@ -806,7 +804,7 @@ let maximum: Int = 0 // the maximum number of results to return
 let sortOrder: String = "" // NOTE: Does not work when conversationId is supplied.
 
 // Code example
-QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
+QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -823,9 +821,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
-| **sortBy** | **String**| NOTE: Does not work when querying evaluations | [optional] |
 | **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
-| **nextPage** | **String**| NOTE: Does not work when querying evaluations | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversationId specified | [optional] |
 | **agentUserId** | **String**| user id of the agent | [optional] |

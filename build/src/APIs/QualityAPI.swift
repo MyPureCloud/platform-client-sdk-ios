@@ -4092,6 +4092,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -7727,8 +7728,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -12830,8 +12831,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter calibratorId: (query) user id of calibrator 
@@ -15253,6 +15254,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,
@@ -16103,18 +16105,12 @@ open class QualityAPI {
     
     
     
-    
-    
-    
-    
     /**
      Queries Evaluations and returns a paged list
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
-     - parameter sortBy: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
-     - parameter nextPage: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversationId specified (optional)
      - parameter agentUserId: (query) user id of the agent (optional)
@@ -16133,8 +16129,8 @@ open class QualityAPI {
      - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
+    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, expand: [String]? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
         requestBuilder.execute { (response: Response<EvaluationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -21747,15 +21743,13 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
      - parameter pageNumber: (query) The page number requested (optional)
-     - parameter sortBy: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter expand: (query) variable name requested by expand list (optional)
-     - parameter nextPage: (query) NOTE: Does not work when querying evaluations (optional)
      - parameter previousPage: (query) Previous page token (optional)
      - parameter conversationId: (query) conversationId specified (optional)
      - parameter agentUserId: (query) user id of the agent (optional)
@@ -21775,7 +21769,7 @@ open class QualityAPI {
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */
-    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
+    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: [String]? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
         let path = "/api/v2/quality/evaluations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -21784,9 +21778,7 @@ open class QualityAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
-            "sortBy": sortBy, 
             "expand": expand, 
-            "nextPage": nextPage, 
             "previousPage": previousPage, 
             "conversationId": conversationId, 
             "agentUserId": agentUserId, 
@@ -22484,8 +22476,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -23175,8 +23167,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -23634,8 +23626,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -24320,8 +24312,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -24782,8 +24774,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -25673,8 +25665,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -26114,8 +26106,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -26538,8 +26530,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter _id: (query) A comma-delimited list of valid survey form ids 
@@ -27441,8 +27433,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -28119,8 +28111,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -28770,8 +28762,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -40691,6 +40683,7 @@ open class QualityAPI {
   "releaseDate" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "mediaType" : [ "CALL", "CALL" ],
+  "revisionCreatedDate" : "2000-01-23T04:56:07.000+00:00",
   "assigneeApplicable" : true,
   "neverRelease" : true,
   "agentHasRead" : true,

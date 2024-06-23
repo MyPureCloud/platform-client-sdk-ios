@@ -12,11 +12,11 @@ title: PhoneMetaBaseEntityListing
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **totalNumberOfEntities** | **Int64** | The total organization-wide number of entities. | [optional] |
-| **previousUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
+| **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 {: class="table table-striped"}
 

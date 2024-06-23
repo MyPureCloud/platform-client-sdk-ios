@@ -3556,7 +3556,7 @@ KnowledgeAPI.postKnowledgeGuestSessionDocumentsSearch(sessionId: sessionId, expa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sessionId** | **String**| Knowledge guest session ID. | |
-| **expand** | [**[String]**](String.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives") |
+| **expand** | [**[String]**](String.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode") |
 | **body** | [**KnowledgeDocumentGuestSearchRequest**](KnowledgeDocumentGuestSearchRequest.html)|  | [optional] |
 {: class="table-striped"}
 
@@ -4156,7 +4156,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsSearch(knowledgeBaseId: knowledg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| The ID of knowledge base containing the documents to query. | |
-| **expand** | [**[String]**](String.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives") |
+| **expand** | [**[String]**](String.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode") |
 | **body** | [**KnowledgeDocumentSearchRequest**](KnowledgeDocumentSearchRequest.html)|  | [optional] |
 {: class="table-striped"}
 

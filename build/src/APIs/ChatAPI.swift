@@ -348,6 +348,7 @@ open class ChatAPI {
     "id" : "id"
   } ],
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "jid" : "jid",
   "subject" : "subject",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",

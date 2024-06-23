@@ -3340,7 +3340,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesPhones(pageNumber: pageNumbe
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-| **sortBy** | **String**| The field to sort by | [optional]<br />**Values**: name ("name"), statusOperationalstatus ("status.operationalStatus"), secondarystatusOperationalstatus ("secondaryStatus.operationalStatus") |
+| **sortBy** | **String**| The field to sort by | [optional]<br />**Values**: _id ("id"), name ("name"), statusOperationalstatus ("status.operationalStatus"), secondarystatusOperationalstatus ("secondaryStatus.operationalStatus") |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **siteId** | **String**| Filter by site.id | [optional] |
 | **webRtcUserId** | **String**| Filter by webRtcUser.id | [optional] |

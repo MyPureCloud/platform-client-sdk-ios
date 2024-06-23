@@ -520,6 +520,7 @@ docs/CallbackMediaSettings.md
 docs/Callheader.md
 docs/Callmessage.md
 docs/Campaign.md
+docs/CampaignBusinessCategoryMetrics.md
 docs/CampaignDiagnostics.md
 docs/CampaignDivisionView.md
 docs/CampaignDivisionViewListing.md
@@ -7300,6 +7301,7 @@ src/Models/CallbackMediaSettings.swift
 src/Models/Callheader.swift
 src/Models/Callmessage.swift
 src/Models/Campaign.swift
+src/Models/CampaignBusinessCategoryMetrics.swift
 src/Models/CampaignDiagnostics.swift
 src/Models/CampaignDivisionView.swift
 src/Models/CampaignDivisionViewListing.swift

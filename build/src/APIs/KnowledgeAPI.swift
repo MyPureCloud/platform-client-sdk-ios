@@ -6727,6 +6727,7 @@ open class KnowledgeAPI {
     public enum Expand_postKnowledgeGuestSessionDocumentsSearch: String { 
         case documentvariations = "documentVariations"
         case documentalternatives = "documentAlternatives"
+        case knowledgebaselanguagecode = "knowledgeBaseLanguageCode"
     }
     
     
@@ -7575,6 +7576,7 @@ open class KnowledgeAPI {
     public enum Expand_postKnowledgeKnowledgebaseDocumentsSearch: String { 
         case documentvariations = "documentVariations"
         case documentalternatives = "documentAlternatives"
+        case knowledgebaselanguagecode = "knowledgeBaseLanguageCode"
     }
     
     

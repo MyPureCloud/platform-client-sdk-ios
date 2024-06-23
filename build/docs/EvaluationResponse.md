@@ -22,6 +22,7 @@ title: EvaluationResponse
 | **releaseDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **assignedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **changedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **revisionCreatedDate** | [**Date**](Date.html) | Date of when evaluation revision is created. Null if there is no revision. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **queue** | [**Queue**](Queue.html) |  | [optional] |
 | **mediaType** | **[String]** | List of different communication types used in conversation. | [optional] |
 | **rescore** | **Bool** | Is only true when evaluation is re-scored. | [optional] |
