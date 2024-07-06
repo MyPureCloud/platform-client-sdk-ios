@@ -104,12 +104,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundSequences**](OutboundAPI.html#getOutboundSequences) | Query a list of dialer campaign sequences. |
 | [**getOutboundSettings**](OutboundAPI.html#getOutboundSettings) | Get the outbound settings for this organization |
 | [**getOutboundWrapupcodemappings**](OutboundAPI.html#getOutboundWrapupcodemappings) | Get the Dialer wrap up code mapping. |
+| [**patchOutboundCampaign**](OutboundAPI.html#patchOutboundCampaign) | Update a campaign. |
 | [**patchOutboundDnclistCustomexclusioncolumns**](OutboundAPI.html#patchOutboundDnclistCustomexclusioncolumns) | Add entries to or delete entries from a DNC list. |
 | [**patchOutboundDnclistEmailaddresses**](OutboundAPI.html#patchOutboundDnclistEmailaddresses) | Add emails to or Delete emails from a DNC list. |
 | [**patchOutboundDnclistPhonenumbers**](OutboundAPI.html#patchOutboundDnclistPhonenumbers) | Add numbers to or delete numbers from a DNC list. |
 | [**patchOutboundSettings**](OutboundAPI.html#patchOutboundSettings) | Update the outbound settings for this organization |
 | [**postOutboundAttemptlimits**](OutboundAPI.html#postOutboundAttemptlimits) | Create attempt limits |
-| [**postOutboundAudits**](OutboundAPI.html#postOutboundAudits) | Retrieves audits for dialer. (Deprecated) |
 | [**postOutboundCallabletimesets**](OutboundAPI.html#postOutboundCallabletimesets) | Create callable time set |
 | [**postOutboundCallanalysisresponsesets**](OutboundAPI.html#postOutboundCallanalysisresponsesets) | Create a dialer call analysis response set. |
 | [**postOutboundCampaignAgentownedmappingpreview**](OutboundAPI.html#postOutboundCampaignAgentownedmappingpreview) | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
@@ -5558,6 +5558,59 @@ This endpoint does not require any parameters.
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping.html)
 
+<a name="patchOutboundCampaign"></a>
+
+# **patchOutboundCampaign**
+
+
+
+> Void patchOutboundCampaign(campaignId, body)
+
+Update a campaign.
+
+
+
+Wraps PATCH /api/v2/outbound/campaigns/{campaignId}  
+
+Requires ALL permissions: 
+
+* outbound:campaign:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+let body: CampaignPatchRequest = new CampaignPatchRequest(...) // CampaignPatchRequest
+
+// Code example
+OutboundAPI.patchOutboundCampaign(campaignId: campaignId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.patchOutboundCampaign was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+| **body** | [**CampaignPatchRequest**](CampaignPatchRequest.html)| CampaignPatchRequest | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="patchOutboundDnclistCustomexclusioncolumns"></a>
 
 # **patchOutboundDnclistCustomexclusioncolumns**
@@ -5825,70 +5878,6 @@ OutboundAPI.postOutboundAttemptlimits(body: body) { (response, error) in
 ### Return type
 
 [**AttemptLimits**](AttemptLimits.html)
-
-<a name="postOutboundAudits"></a>
-
-# **postOutboundAudits**
-
-
-
-> [AuditSearchResult](AuditSearchResult.html) postOutboundAudits(body, pageSize, pageNumber, sortBy, sortOrder, facetsOnly)
-
-Retrieves audits for dialer. (Deprecated)
-
-This endpoint is deprecated as a result of this functionality being moved to the Audit Service. Please use \&quot;/api/v2/audits/query\&quot; instead.
-
-
-
-Wraps POST /api/v2/outbound/audits  
-
-Requires ANY permissions: 
-
-* outbound:audit:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let body: DialerAuditRequest = new DialerAuditRequest(...) // AuditSearch
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-let sortBy: String = "" // Sort by
-let sortOrder: String = "" // Sort order
-let facetsOnly: Bool = true // Facets only
-
-// Code example
-OutboundAPI.postOutboundAudits(body: body, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, facetsOnly: facetsOnly) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("OutboundAPI.postOutboundAudits was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **body** | [**DialerAuditRequest**](DialerAuditRequest.html)| AuditSearch | |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-| **sortBy** | **String**| Sort by | [optional] |
-| **sortOrder** | **String**| Sort order | [optional] |
-| **facetsOnly** | **Bool**| Facets only | [optional] |
-{: class="table-striped"}
-
-
-### Return type
-
-[**AuditSearchResult**](AuditSearchResult.html)
 
 <a name="postOutboundCallabletimesets"></a>
 

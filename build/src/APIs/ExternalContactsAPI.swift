@@ -381,13 +381,14 @@ open class ExternalContactsAPI {
     public enum Expand_getExternalcontactsContact: String { 
         case externalorganization = "externalOrganization"
         case externaldatasources = "externalDataSources"
+        case identifiers = "identifiers"
     }
     
     /**
      Fetch an external contact
      
      - parameter contactId: (path) ExternalContact ID 
-     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources) (optional)
+     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getExternalcontactsContact(contactId: String, expand: [String]? = nil, completion: @escaping ((_ data: ExternalContact?,_ error: Error?) -> Void)) {
@@ -599,7 +600,7 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter contactId: (path) ExternalContact ID 
-     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources) (optional)
+     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)
 
      - returns: RequestBuilder<ExternalContact> 
      */
@@ -10520,14 +10521,22 @@ open class ExternalContactsAPI {
 
     
     
+    
+    
+    public enum Expand_postExternalcontactsIdentifierlookup: String { 
+        case externalorganization = "externalOrganization"
+        case identifiers = "identifiers"
+    }
+    
     /**
      Fetch a contact using an identifier type and value.
      
      - parameter identifier: (body)  
+     - parameter expand: (query) which field, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postExternalcontactsIdentifierlookup(identifier: ContactIdentifier, completion: @escaping ((_ data: ExternalContact?,_ error: Error?) -> Void)) {
-        let requestBuilder = postExternalcontactsIdentifierlookupWithRequestBuilder(identifier: identifier)
+    open class func postExternalcontactsIdentifierlookup(identifier: ContactIdentifier, expand: [String]? = nil, completion: @escaping ((_ data: ExternalContact?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsIdentifierlookupWithRequestBuilder(identifier: identifier, expand: expand)
         requestBuilder.execute { (response: Response<ExternalContact>?, error) -> Void in
             do {
                 if let e = error {
@@ -10736,15 +10745,19 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter identifier: (body)  
+     - parameter expand: (query) which field, if any, to expand (optional)
 
      - returns: RequestBuilder<ExternalContact> 
      */
-    open class func postExternalcontactsIdentifierlookupWithRequestBuilder(identifier: ContactIdentifier) -> RequestBuilder<ExternalContact> {        
+    open class func postExternalcontactsIdentifierlookupWithRequestBuilder(identifier: ContactIdentifier, expand: [String]? = nil) -> RequestBuilder<ExternalContact> {        
         let path = "/api/v2/externalcontacts/identifierlookup"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: identifier)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<ExternalContact>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

@@ -1615,6 +1615,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "externalUrl" : "externalUrl",
   "visible" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
@@ -2786,6 +2787,7 @@ open class KnowledgeAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "externalUrl" : "externalUrl",
     "visible" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
@@ -2890,6 +2892,7 @@ open class KnowledgeAPI {
     "state" : "Draft",
     "category" : "{}"
   }, {
+    "externalUrl" : "externalUrl",
     "visible" : true,
     "selfUri" : "https://openapi-generator.tech",
     "externalId" : "externalId",
@@ -5307,6 +5310,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "externalUrl" : "externalUrl",
   "visible" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",
@@ -7395,6 +7399,7 @@ open class KnowledgeAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "externalUrl" : "externalUrl",
   "visible" : true,
   "selfUri" : "https://openapi-generator.tech",
   "externalId" : "externalId",

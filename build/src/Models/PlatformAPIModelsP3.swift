@@ -4149,6 +4149,22 @@ public class CardAction: Codable {
 
 
 
+public class Chat: Codable {
+
+
+
+    public var jabberId: String?
+
+    public init(jabberId: String?) {
+        self.jabberId = jabberId
+    }
+
+
+}
+
+
+
+
 public class CertificateAuthorityEntityListing: Codable {
 
 
@@ -4209,22 +4225,6 @@ public class ChannelEntityListing: Codable {
 
     public init(entities: [Channel]?) {
         self.entities = entities
-    }
-
-
-}
-
-
-
-
-public class Chat: Codable {
-
-
-
-    public var jabberId: String?
-
-    public init(jabberId: String?) {
-        self.jabberId = jabberId
     }
 
 
@@ -4841,6 +4841,8 @@ public class ContactBulkEditRequest: Codable {
 
 
 
+
+
     /** Contact List Filter ID. */
     public var contactListFilterId: String?
     /** Criteria to filter the contacts by. */
@@ -4849,12 +4851,14 @@ public class ContactBulkEditRequest: Codable {
     public var contactIds: [String]?
     /** Contact object with details of fields used for patching. */
     public var contact: DialerContact?
+    public var generateDownloadUri: Bool?
 
-    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?, contactIds: [String]?, contact: DialerContact?) {
+    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?, contactIds: [String]?, contact: DialerContact?, generateDownloadUri: Bool?) {
         self.contactListFilterId = contactListFilterId
         self.criteria = criteria
         self.contactIds = contactIds
         self.contact = contact
+        self.generateDownloadUri = generateDownloadUri
     }
 
 
@@ -5002,6 +5006,8 @@ public class ContentAttachment: Codable {
 
 
 
+
+
     /** Provider specific ID for attachment. For example, a LINE sticker ID. */
     public var _id: String?
     /** The type of attachment this instance represents. */
@@ -5016,8 +5022,10 @@ public class ContentAttachment: Codable {
     public var sha256: String?
     /** Suggested file name for attachment. */
     public var filename: String?
+    /** Size in bytes of the attachment content. */
+    public var contentSizeBytes: Int64?
 
-    public init(_id: String?, mediaType: MediaType?, url: String?, mime: String?, text: String?, sha256: String?, filename: String?) {
+    public init(_id: String?, mediaType: MediaType?, url: String?, mime: String?, text: String?, sha256: String?, filename: String?, contentSizeBytes: Int64?) {
         self._id = _id
         self.mediaType = mediaType
         self.url = url
@@ -5025,6 +5033,7 @@ public class ContentAttachment: Codable {
         self.text = text
         self.sha256 = sha256
         self.filename = filename
+        self.contentSizeBytes = contentSizeBytes
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -5035,6 +5044,7 @@ public class ContentAttachment: Codable {
         case text
         case sha256
         case filename
+        case contentSizeBytes
     }
 
 
@@ -9392,6 +9402,58 @@ public class CreatePlanningGroupRequest: Codable {
         self.name = name
         self.routePaths = routePaths
         self.serviceGoalTemplateId = serviceGoalTemplateId
+    }
+
+
+}
+
+
+
+
+public class CreateRecognition: Codable {
+
+
+
+    public enum ModelType: String, Codable { 
+        case thankYou = "ThankYou"
+        case congratulations = "Congratulations"
+        case highPerformance = "HighPerformance"
+        case companyValues = "CompanyValues"
+    }
+
+
+
+
+
+    public enum ContextType: String, Codable { 
+        case interaction = "Interaction"
+        case insights = "Insights"
+        case development = "Development"
+        case scorecard = "Scorecard"
+    }
+
+
+
+    /** The recipient of the recognition */
+    public var recipientId: String?
+    /** The type of the recognition */
+    public var type: ModelType?
+    /** The title of the recognition. Max length of 100 characters (optional) */
+    public var title: String?
+    /** The note of the recognition. Max length of 800 characters (optional) */
+    public var note: String?
+    /** The context type (optional) */
+    public var contextType: ContextType?
+    /** The context id (optional) */
+    public var contextId: String?
+
+    public init(recipientId: String?, type: ModelType?, title: String?, note: String?, contextType: ContextType?, contextId: String?) {
+        self.recipientId = recipientId
+        self.type = type
+        self.title = title
+        self.note = note
+        self.contextType = contextType
+        self.contextId = contextId
     }
 
 
@@ -15081,28 +15143,6 @@ public class FacebookPermission: Codable {
 
 
 
-public class FacetInfo: Codable {
-
-
-
-
-
-    /** The name of the field that was faceted on. */
-    public var name: String?
-    /** The entries resulting from this facet. */
-    public var entries: [Entry]?
-
-    public init(name: String?, entries: [Entry]?) {
-        self.name = name
-        self.entries = entries
-    }
-
-
-}
-
-
-
-
 public class FaxTopicFaxDataV2: Codable {
 
 
@@ -19393,6 +19433,8 @@ public class KnowledgeSearchDocumentResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** Document title, having a limit of 500 words. */
@@ -19427,6 +19469,8 @@ public class KnowledgeSearchDocumentResponse: Codable {
     public var knowledgeBase: KnowledgeBaseReference?
     /** The reference to external id associated with the document. */
     public var externalId: String?
+    /** The URL to external document. */
+    public var externalUrl: String?
     /** The reference to source associated with the document. */
     public var source: AddressableEntityRef?
     /** Whether the document is read-only. */
@@ -19438,7 +19482,7 @@ public class KnowledgeSearchDocumentResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, externalId: String?, source: AddressableEntityRef?, readonly: Bool?, variations: [DocumentVariationAnswer]?, answer: String?, selfUri: String?) {
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, externalId: String?, externalUrl: String?, source: AddressableEntityRef?, readonly: Bool?, variations: [DocumentVariationAnswer]?, answer: String?, selfUri: String?) {
         self._id = _id
         self.title = title
         self.visible = visible
@@ -19456,6 +19500,7 @@ public class KnowledgeSearchDocumentResponse: Codable {
         self.labels = labels
         self.knowledgeBase = knowledgeBase
         self.externalId = externalId
+        self.externalUrl = externalUrl
         self.source = source
         self.readonly = readonly
         self.variations = variations
@@ -19481,6 +19526,7 @@ public class KnowledgeSearchDocumentResponse: Codable {
         case labels
         case knowledgeBase
         case externalId
+        case externalUrl
         case source
         case readonly
         case variations
@@ -19694,42 +19740,6 @@ public class LearningCoverArtThumbnail: Codable {
     public init(resolution: String?, url: String?) {
         self.resolution = resolution
         self.url = url
-    }
-
-
-}
-
-
-
-
-public class LearningSlot: Codable {
-
-
-
-
-
-
-
-    public enum DifferenceRating: String, Codable { 
-        case poor = "Poor"
-        case neutral = "Neutral"
-        case good = "Good"
-    }
-
-    /** Start date and time of scheduled Learning activity slot. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateStart: Date?
-    /** Length of Learning activity slot in minutes */
-    public var lengthInMinutes: Int?
-    /** Difference between scheduled and forecast headcount for this slot after scheduling the Learning activity */
-    public var staffingDifference: Double?
-    /** Rating based on the staffing difference for scheduled slot */
-    public var differenceRating: DifferenceRating?
-
-    public init(dateStart: Date?, lengthInMinutes: Int?, staffingDifference: Double?, differenceRating: DifferenceRating?) {
-        self.dateStart = dateStart
-        self.lengthInMinutes = lengthInMinutes
-        self.staffingDifference = staffingDifference
-        self.differenceRating = differenceRating
     }
 
 
@@ -20062,6 +20072,42 @@ public class LearningShareableContentObject: Codable {
         case href
         case parameters
         case launchData
+    }
+
+
+}
+
+
+
+
+public class LearningSlot: Codable {
+
+
+
+
+
+
+
+    public enum DifferenceRating: String, Codable { 
+        case poor = "Poor"
+        case neutral = "Neutral"
+        case good = "Good"
+    }
+
+    /** Start date and time of scheduled Learning activity slot. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateStart: Date?
+    /** Length of Learning activity slot in minutes */
+    public var lengthInMinutes: Int?
+    /** Difference between scheduled and forecast headcount for this slot after scheduling the Learning activity */
+    public var staffingDifference: Double?
+    /** Rating based on the staffing difference for scheduled slot */
+    public var differenceRating: DifferenceRating?
+
+    public init(dateStart: Date?, lengthInMinutes: Int?, staffingDifference: Double?, differenceRating: DifferenceRating?) {
+        self.dateStart = dateStart
+        self.lengthInMinutes = lengthInMinutes
+        self.staffingDifference = staffingDifference
+        self.differenceRating = differenceRating
     }
 
 
@@ -21459,6 +21505,23 @@ public class MetaData: Codable {
         case pairingToken = "pairing-token"
         case pairingTrust = "pairing-trust"
         case pairingUrl = "pairing-url"
+    }
+
+
+}
+
+
+
+
+public class MetadataAttribute: Codable {
+
+
+
+    /** The value of the metadata attribute. */
+    public var value: String?
+
+    public init(value: String?) {
+        self.value = value
     }
 
 
@@ -23560,6 +23623,38 @@ public class PerformancePredictionRecalculationCompleteEventTopicErrorBody: Coda
 
 
 
+public class PerformancePredictionRecalculationUploadResponse: Codable {
+
+
+
+
+
+
+
+
+
+    /** The key to pass to the secondary request to start processing of the upload */
+    public var uploadKey: String?
+    /** The url to which to PUT the upload body */
+    public var url: String?
+    /** Required headers for the PUT request to the url */
+    public var headers: [String:String]?
+    /** Always null. Defines the schema of the json body to be PUT to the url. The json body should be gzip encoded before uploading */
+    public var uploadBodySchema: PerformancePredictionUploadSchema?
+
+    public init(uploadKey: String?, url: String?, headers: [String:String]?, uploadBodySchema: PerformancePredictionUploadSchema?) {
+        self.uploadKey = uploadKey
+        self.url = url
+        self.headers = headers
+        self.uploadBodySchema = uploadBodySchema
+    }
+
+
+}
+
+
+
+
 public class PerformanceProfile: Codable {
 
 
@@ -23633,38 +23728,6 @@ public class PerformanceProfile: Codable {
         case memberCount
         case maxLeaderboardRankSize
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class PerformancePredictionRecalculationUploadResponse: Codable {
-
-
-
-
-
-
-
-
-
-    /** The key to pass to the secondary request to start processing of the upload */
-    public var uploadKey: String?
-    /** The url to which to PUT the upload body */
-    public var url: String?
-    /** Required headers for the PUT request to the url */
-    public var headers: [String:String]?
-    /** Always null. Defines the schema of the json body to be PUT to the url. The json body should be gzip encoded before uploading */
-    public var uploadBodySchema: PerformancePredictionUploadSchema?
-
-    public init(uploadKey: String?, url: String?, headers: [String:String]?, uploadBodySchema: PerformancePredictionUploadSchema?) {
-        self.uploadKey = uploadKey
-        self.url = url
-        self.headers = headers
-        self.uploadBodySchema = uploadBodySchema
     }
 
 
@@ -28560,6 +28623,103 @@ public class ScimV2SchemaListResponse: Codable {
 
 
 
+public class Script: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    public var versionId: String?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var createdDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var modifiedDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var publishedDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var versionDate: Date?
+    public var startPageId: String?
+    public var startPageName: String?
+    public var features: JSON?
+    public var variables: JSON?
+    public var customActions: JSON?
+    public var pages: [Page]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, versionId: String?, createdDate: Date?, modifiedDate: Date?, publishedDate: Date?, versionDate: Date?, startPageId: String?, startPageName: String?, features: JSON?, variables: JSON?, customActions: JSON?, pages: [Page]?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self.versionId = versionId
+        self.createdDate = createdDate
+        self.modifiedDate = modifiedDate
+        self.publishedDate = publishedDate
+        self.versionDate = versionDate
+        self.startPageId = startPageId
+        self.startPageName = startPageName
+        self.features = features
+        self.variables = variables
+        self.customActions = customActions
+        self.pages = pages
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case versionId
+        case createdDate
+        case modifiedDate
+        case publishedDate
+        case versionDate
+        case startPageId
+        case startPageName
+        case features
+        case variables
+        case customActions
+        case pages
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class Screenshare: Codable {
 
     public enum State: String, Codable { 
@@ -28698,103 +28858,6 @@ public class Screenshare: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
-    }
-
-
-}
-
-
-
-
-public class Script: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    public var versionId: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var createdDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var modifiedDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var publishedDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var versionDate: Date?
-    public var startPageId: String?
-    public var startPageName: String?
-    public var features: JSON?
-    public var variables: JSON?
-    public var customActions: JSON?
-    public var pages: [Page]?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, versionId: String?, createdDate: Date?, modifiedDate: Date?, publishedDate: Date?, versionDate: Date?, startPageId: String?, startPageName: String?, features: JSON?, variables: JSON?, customActions: JSON?, pages: [Page]?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self.versionId = versionId
-        self.createdDate = createdDate
-        self.modifiedDate = modifiedDate
-        self.publishedDate = publishedDate
-        self.versionDate = versionDate
-        self.startPageId = startPageId
-        self.startPageName = startPageName
-        self.features = features
-        self.variables = variables
-        self.customActions = customActions
-        self.pages = pages
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case versionId
-        case createdDate
-        case modifiedDate
-        case publishedDate
-        case versionDate
-        case startPageId
-        case startPageName
-        case features
-        case variables
-        case customActions
-        case pages
-        case selfUri
     }
 
 
@@ -29534,6 +29597,164 @@ public class StorySetting: Codable {
     public init(mention: InboundOnlySetting?, reply: InboundOnlySetting?) {
         self.mention = mention
         self.reply = reply
+    }
+
+
+}
+
+
+
+
+public class Suggestion: Codable {
+
+
+
+    public enum ModelType: String, Codable { 
+        case faq = "Faq"
+        case article = "Article"
+        case knowledgeArticle = "KnowledgeArticle"
+        case knowledgeSearch = "KnowledgeSearch"
+        case cannedResponse = "CannedResponse"
+        case script = "Script"
+    }
+
+
+
+
+
+
+
+
+
+    public enum TriggerType: String, Codable { 
+        case unknown = "Unknown"
+        case fallback = "Fallback"
+        case conversationStart = "ConversationStart"
+        case conversationTransfer = "ConversationTransfer"
+        case conversationEnd = "ConversationEnd"
+        case intent = "Intent"
+    }
+
+
+
+    public enum State: String, Codable { 
+        case suggested = "Suggested"
+        case accepted = "Accepted"
+        case dismissed = "Dismissed"
+        case failed = "Failed"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The type of the documents for which the suggestion is. */
+    public var type: ModelType?
+    /** The Faq from the knowledgebase that was provided as the suggestion. */
+    public var faq: Faq?
+    /** The article from the knowledgebase that was provided as the suggestion. */
+    public var article: Article?
+    /** Date when the suggestion was created. For example: yyyy-MM-ddTHH:mm:ss.SSZ. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The ID of the knowledge search that provided the suggestion. */
+    public var answerRecordId: String?
+    /** The trigger type of the suggestion. */
+    public var triggerType: TriggerType?
+    /** The conversation context in which the suggestion was raised. */
+    public var context: SuggestionContext?
+    /** The state of the suggestion. */
+    public var state: State?
+    /** The suggested knowledge search result that was provided as the suggestion. */
+    public var knowledgeSearch: SuggestionKnowledgeSearch?
+    /** The suggested knowledge article that was provided as the suggestion. */
+    public var knowledgeArticle: SuggestionKnowledgeArticle?
+    /** The suggested canned response that was provided as the suggestion. */
+    public var cannedResponse: SuggestionCannedResponse?
+    /** The suggested script that was provided as the suggestion. */
+    public var script: SuggestionScript?
+    /** The URI for this object */
+    public var selfUri: String?
+    /** The conversation that the suggestions correspond to. */
+    public var conversation: AddressableEntityRef?
+    /** The assistant that was used to provide the suggestions. */
+    public var assistant: AddressableEntityRef?
+
+    public init(_id: String?, type: ModelType?, faq: Faq?, article: Article?, dateCreated: Date?, answerRecordId: String?, triggerType: TriggerType?, context: SuggestionContext?, state: State?, knowledgeSearch: SuggestionKnowledgeSearch?, knowledgeArticle: SuggestionKnowledgeArticle?, cannedResponse: SuggestionCannedResponse?, script: SuggestionScript?, selfUri: String?, conversation: AddressableEntityRef?, assistant: AddressableEntityRef?) {
+        self._id = _id
+        self.type = type
+        self.faq = faq
+        self.article = article
+        self.dateCreated = dateCreated
+        self.answerRecordId = answerRecordId
+        self.triggerType = triggerType
+        self.context = context
+        self.state = state
+        self.knowledgeSearch = knowledgeSearch
+        self.knowledgeArticle = knowledgeArticle
+        self.cannedResponse = cannedResponse
+        self.script = script
+        self.selfUri = selfUri
+        self.conversation = conversation
+        self.assistant = assistant
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case type
+        case faq
+        case article
+        case dateCreated
+        case answerRecordId
+        case triggerType
+        case context
+        case state
+        case knowledgeSearch
+        case knowledgeArticle
+        case cannedResponse
+        case script
+        case selfUri
+        case conversation
+        case assistant
+    }
+
+
+}
+
+
+
+
+public class SuggestionListing: Codable {
+
+
+
+
+
+
+
+
+
+    public var entities: [Suggestion]?
+    public var nextUri: String?
+    public var selfUri: String?
+    public var previousUri: String?
+
+    public init(entities: [Suggestion]?, nextUri: String?, selfUri: String?, previousUri: String?) {
+        self.entities = entities
+        self.nextUri = nextUri
+        self.selfUri = selfUri
+        self.previousUri = previousUri
     }
 
 
@@ -35110,6 +35331,26 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUriReference: Codable {
 
 
 
+public class WfmUserScheduleAdherenceUpdatedTopicUserReference: Codable {
+
+
+
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+    }
+
+
+}
+
+
+
+
 public class WfmVersionedEntityMetadata: Codable {
 
 
@@ -35139,26 +35380,6 @@ public class WfmVersionedEntityMetadata: Codable {
         self.dateModified = dateModified
         self.createdBy = createdBy
         self.dateCreated = dateCreated
-    }
-
-
-}
-
-
-
-
-public class WfmUserScheduleAdherenceUpdatedTopicUserReference: Codable {
-
-
-
-    public var _id: String?
-
-    public init(_id: String?) {
-        self._id = _id
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
     }
 
 

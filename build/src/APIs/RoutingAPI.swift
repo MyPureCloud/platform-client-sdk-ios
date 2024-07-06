@@ -7631,6 +7631,7 @@ open class RoutingAPI {
     
     public enum Expand_getRoutingSmsPhonenumber: String { 
         case compliance = "compliance"
+        case supportedcontent = "supportedContent"
     }
     
     
@@ -7774,6 +7775,8 @@ open class RoutingAPI {
     
     
     
+    
+    
     /**
      Get a list of provisioned phone numbers.
      
@@ -7787,10 +7790,11 @@ open class RoutingAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional)
      - parameter integrationId: (query) Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)
+     - parameter supportedContentId: (query) Filter based on the supported content ID (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getRoutingSmsPhonenumbers(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, completion: @escaping ((_ data: SmsPhoneNumberEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId)
+    open class func getRoutingSmsPhonenumbers(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, supportedContentId: String? = nil, completion: @escaping ((_ data: SmsPhoneNumberEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId)
         requestBuilder.execute { (response: Response<SmsPhoneNumberEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7892,10 +7896,11 @@ open class RoutingAPI {
      - parameter sortOrder: (query) Sort order (optional)
      - parameter language: (query) A language tag (which is sometimes referred to as a \&quot;locale identifier\&quot;) to use to localize country field and sort operations (optional)
      - parameter integrationId: (query) Filter on the Genesys Cloud integration id to which the phone number belongs to (optional)
+     - parameter supportedContentId: (query) Filter based on the supported content ID (optional)
 
      - returns: RequestBuilder<SmsPhoneNumberEntityListing> 
      */
-    open class func getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil) -> RequestBuilder<SmsPhoneNumberEntityListing> {        
+    open class func getRoutingSmsPhonenumbersWithRequestBuilder(phoneNumber: String? = nil, phoneNumberType: [String]? = nil, phoneNumberStatus: [String]? = nil, countryCode: [String]? = nil, pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: SortBy_getRoutingSmsPhonenumbers? = nil, sortOrder: SortOrder_getRoutingSmsPhonenumbers? = nil, language: String? = nil, integrationId: String? = nil, supportedContentId: String? = nil) -> RequestBuilder<SmsPhoneNumberEntityListing> {        
         let path = "/api/v2/routing/sms/phonenumbers"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7911,7 +7916,8 @@ open class RoutingAPI {
             "sortBy": sortBy?.rawValue, 
             "sortOrder": sortOrder?.rawValue, 
             "language": language, 
-            "integration.id": integrationId
+            "integration.id": integrationId, 
+            "supportedContent.id": supportedContentId
         ])
 
         let requestBuilder: RequestBuilder<SmsPhoneNumberEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

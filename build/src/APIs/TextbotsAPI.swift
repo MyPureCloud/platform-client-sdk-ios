@@ -20,6 +20,8 @@ open class TextbotsAPI {
         case googleDialogFlowCX = "GoogleDialogFlowCX"
         case nuanceDlg = "NuanceDlg"
         case genesysBotFlow = "GenesysBotFlow"
+        case genesysDigitalBotFlow = "GenesysDigitalBotFlow"
+        case genesysVoiceSurveyFlow = "GenesysVoiceSurveyFlow"
     }
     
     

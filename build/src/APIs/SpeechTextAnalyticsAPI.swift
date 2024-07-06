@@ -111,12 +111,19 @@ open class SpeechTextAnalyticsAPI {
      - parameter forceDelete: (query) Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func deleteSpeechandtextanalyticsProgram(programId: String, forceDelete: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func deleteSpeechandtextanalyticsProgram(programId: String, forceDelete: Bool? = nil, completion: @escaping ((_ data: DeleteProgramResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = deleteSpeechandtextanalyticsProgramWithRequestBuilder(programId: programId, forceDelete: forceDelete)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<DeleteProgramResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -128,13 +135,21 @@ open class SpeechTextAnalyticsAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "topicLinksJob" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter programId: (path) The id of the program 
      - parameter forceDelete: (query) Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program. (optional)
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<DeleteProgramResponse> 
      */
-    open class func deleteSpeechandtextanalyticsProgramWithRequestBuilder(programId: String, forceDelete: Bool? = nil) -> RequestBuilder<Void> {        
+    open class func deleteSpeechandtextanalyticsProgramWithRequestBuilder(programId: String, forceDelete: Bool? = nil) -> RequestBuilder<DeleteProgramResponse> {        
         var path = "/api/v2/speechandtextanalytics/programs/{programId}"
         let programIdPreEscape = "\(programId)"
         let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -147,7 +162,7 @@ open class SpeechTextAnalyticsAPI {
             "forceDelete": forceDelete
         ])
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<DeleteProgramResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
@@ -952,6 +967,10 @@ open class SpeechTextAnalyticsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
+  "topicLinksJob" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
   "topics" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -1598,6 +1617,10 @@ open class SpeechTextAnalyticsAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
+    "topicLinksJob" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
     "topics" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -1621,6 +1644,10 @@ open class SpeechTextAnalyticsAPI {
   }, {
     "datePublished" : "2000-01-23T04:56:07.000+00:00",
     "publishedBy" : {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    },
+    "topicLinksJob" : {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     },
@@ -2626,6 +2653,10 @@ open class SpeechTextAnalyticsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
+  "topicLinksJob" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
   "topics" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -3247,6 +3278,10 @@ open class SpeechTextAnalyticsAPI {
      - examples: [{contentType=application/json, example={
   "datePublished" : "2000-01-23T04:56:07.000+00:00",
   "publishedBy" : {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  },
+  "topicLinksJob" : {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },

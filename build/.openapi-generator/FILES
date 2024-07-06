@@ -111,6 +111,8 @@ docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
 docs/AgentTimeOffRequestPatch.md
+docs/AgentUIAPI.json
+docs/AgentUIAPI.md
 docs/AgentVideoSettings.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
@@ -213,6 +215,7 @@ docs/ArchitectPromptResourceNotificationPromptResourceNotification.md
 docs/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.md
 docs/ArchiveRetention.md
 docs/ArrayNode.md
+docs/Article.md
 docs/ArticleContent.md
 docs/ArticleContentBody.md
 docs/AssessmentForm.md
@@ -255,11 +258,7 @@ docs/AudioState.md
 docs/AudioUpdatedEvent.md
 docs/AuditAPI.json
 docs/AuditAPI.md
-docs/AuditEntity.md
-docs/AuditFacet.md
-docs/AuditFilter.md
 docs/AuditLogMessage.md
-docs/AuditMessage.md
 docs/AuditQueryEntity.md
 docs/AuditQueryExecutionResultsResponse.md
 docs/AuditQueryExecutionStatusResponse.md
@@ -273,13 +272,11 @@ docs/AuditRealtimeQueryRequest.md
 docs/AuditRealtimeQueryResultsResponse.md
 docs/AuditRealtimeRelatedRequest.md
 docs/AuditRealtimeRelatedResultsResponse.md
-docs/AuditSearchResult.md
 docs/AuditTopicAddressableEntityRef.md
 docs/AuditTopicAuditLogMessage.md
 docs/AuditTopicDomainEntityRef.md
 docs/AuditTopicMessageInfo.md
 docs/AuditTopicPropertyChange.md
-docs/AuditUser.md
 docs/AuthenticationSettings.md
 docs/AuthorizationAPI.json
 docs/AuthorizationAPI.md
@@ -291,6 +288,8 @@ docs/AuthzGrant.md
 docs/AuthzGrantPolicy.md
 docs/AuthzGrantRole.md
 docs/AuthzSubject.md
+docs/AutoAnswerSetting.md
+docs/AutoAnswerSettings.md
 docs/AutoStart.md
 docs/AutoStatusTransitionDetail.md
 docs/AutomaticTimeZoneMappingSettings.md
@@ -531,6 +530,7 @@ docs/CampaignLinesUtilization.md
 docs/CampaignOutboundLinesAllocation.md
 docs/CampaignOutboundLinesDistribution.md
 docs/CampaignOutboundLinesReservation.md
+docs/CampaignPatchRequest.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -560,10 +560,11 @@ docs/CategoryRequest.md
 docs/CategoryResponse.md
 docs/CategoryResponseListing.md
 docs/CategoryUpdateRequest.md
+docs/Celebration.md
+docs/CelebrationStateParam.md
 docs/Certificate.md
 docs/CertificateAuthorityEntityListing.md
 docs/CertificateDetails.md
-docs/Change.md
 docs/ChangeMyPasswordRequest.md
 docs/ChangePasswordRequest.md
 docs/Channel.md
@@ -1043,6 +1044,7 @@ docs/CreatePerformanceProfile.md
 docs/CreatePlanningGroupRequest.md
 docs/CreatePredictorRequest.md
 docs/CreateQueueRequest.md
+docs/CreateRecognition.md
 docs/CreateResponseAssetRequest.md
 docs/CreateResponseAssetResponse.md
 docs/CreateRoomRequest.md
@@ -1136,6 +1138,7 @@ docs/DateRangeWithOptionalEnd.md
 docs/DefaultGreetingList.md
 docs/DefaultObjective.md
 docs/DeletableUserReference.md
+docs/DeleteProgramResponse.md
 docs/DeleteRetention.md
 docs/Dependency.md
 docs/DependencyObject.md
@@ -1167,7 +1170,6 @@ docs/DialerAction.md
 docs/DialerAttemptLimitsConfigChangeAttemptLimits.md
 docs/DialerAttemptLimitsConfigChangeObject.md
 docs/DialerAttemptLimitsConfigChangeRecallEntry.md
-docs/DialerAuditRequest.md
 docs/DialerCallabletimesetConfigChangeCallableTime.md
 docs/DialerCallabletimesetConfigChangeCallableTimeSet.md
 docs/DialerCallabletimesetConfigChangeObject.md
@@ -1384,6 +1386,7 @@ docs/DraftValidationResult.md
 docs/DurationCondition.md
 docs/DynamicContactQueueingSettings.md
 docs/DynamicLineBalancingSettings.md
+docs/DynamicLineBalancingSettingsPatchRequest.md
 docs/Edge.md
 docs/EdgeAutoUpdateConfig.md
 docs/EdgeChangeTopicEdge.md
@@ -1470,6 +1473,8 @@ docs/EmergencyGroupDivisionViewEntityListing.md
 docs/EmergencyGroupListing.md
 docs/EmergencyLocation.md
 docs/EmpathyScore.md
+docs/EmployeeEngagementAPI.json
+docs/EmployeeEngagementAPI.md
 docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
@@ -1483,7 +1488,6 @@ docs/EntityChange.md
 docs/EntityListing.md
 docs/EntityReference.md
 docs/EntityTypeCriteria.md
-docs/Entry.md
 docs/ErrorBody.md
 docs/ErrorDetails.md
 docs/ErrorInfo.md
@@ -1630,12 +1634,12 @@ docs/FacebookPermissionEntityListing.md
 docs/FacebookScopedId.md
 docs/Facet.md
 docs/FacetEntry.md
-docs/FacetInfo.md
 docs/FacetKeyAttribute.md
 docs/FacetStatistics.md
 docs/FacetTerm.md
 docs/FailedObject.md
 docs/FailedRecordingEntityListing.md
+docs/Faq.md
 docs/FaxAPI.json
 docs/FaxAPI.md
 docs/FaxConfig.md
@@ -1650,6 +1654,7 @@ docs/FaxTopicLockData.md
 docs/FaxTopicUserData.md
 docs/FaxTopicWorkspaceData.md
 docs/FeatureState.md
+docs/Feedback.md
 docs/FeedbackAddRequest.md
 docs/FieldConfig.md
 docs/FieldConfigs.md
@@ -1784,6 +1789,7 @@ docs/GeolocationAPI.md
 docs/GeolocationEventGeolocation.md
 docs/GeolocationSettings.md
 docs/GetAlertQuery.md
+docs/GetCelebrationListing.md
 docs/GetFlowExecutionDataJobResult.md
 docs/GetMetricDefinitionsResponse.md
 docs/GetMetricResponse.md
@@ -2427,6 +2433,7 @@ docs/MessengerSettings.md
 docs/MessengerStyles.md
 docs/MetaData.md
 docs/Metabase.md
+docs/MetadataAttribute.md
 docs/MetadataDocumentation.md
 docs/MetadataItem.md
 docs/MetadataPresentation.md
@@ -3114,6 +3121,8 @@ docs/RecipientAdditionalIdentifier.md
 docs/RecipientFlow.md
 docs/RecipientListing.md
 docs/RecipientRequest.md
+docs/Recognition.md
+docs/RecognitionBase.md
 docs/Record.md
 docs/Recording.md
 docs/RecordingAPI.json
@@ -3365,7 +3374,6 @@ docs/SentimentFeedback.md
 docs/SentimentFeedbackEntityListing.md
 docs/SequenceSchedule.md
 docs/ServerDate.md
-docs/ServiceContext.md
 docs/ServiceGoalTemplate.md
 docs/ServiceGoalTemplateImpactOverride.md
 docs/ServiceGoalTemplateList.md
@@ -3450,6 +3458,7 @@ docs/SocialHandle.md
 docs/SortItem.md
 docs/Source.md
 docs/SourceConfiguration.md
+docs/SourceEntity.md
 docs/SourceEntityListing.md
 docs/SourcePlanningGroupRequest.md
 docs/SpeechTextAnalyticsAPI.json
@@ -3503,6 +3512,16 @@ docs/SuggestAPI.json
 docs/SuggestAPI.md
 docs/SuggestSearchCriteria.md
 docs/SuggestSearchRequest.md
+docs/Suggestion.md
+docs/SuggestionCannedResponse.md
+docs/SuggestionContext.md
+docs/SuggestionEngagement.md
+docs/SuggestionFeedback.md
+docs/SuggestionKnowledgeAnswer.md
+docs/SuggestionKnowledgeArticle.md
+docs/SuggestionKnowledgeSearch.md
+docs/SuggestionListing.md
+docs/SuggestionScript.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
 docs/SupportCenterCustomMessage.md
@@ -4430,6 +4449,7 @@ docs/deleteConversationsMessagingSetting-example.txt
 docs/deleteConversationsMessagingSettingsDefault-example.txt
 docs/deleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/deleteDiagnosticsLogcaptureBrowserUser-example.txt
+docs/deleteEmployeeengagementCelebration-example.txt
 docs/deleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/deleteExternalcontactsContact-example.txt
 docs/deleteExternalcontactsContactNote-example.txt
@@ -4610,6 +4630,8 @@ docs/deleteUserStationAssociatedstation-example.txt
 docs/deleteUserStationDefaultstation-example.txt
 docs/deleteUserVerifier-example.txt
 docs/deleteUserrecording-example.txt
+docs/deleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/deleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/deleteVoicemailMessage-example.txt
 docs/deleteVoicemailMessages-example.txt
 docs/deleteWebchatDeployment-example.txt
@@ -4786,6 +4808,8 @@ docs/getConversationRecordingmetadata-example.txt
 docs/getConversationRecordingmetadataRecordingId-example.txt
 docs/getConversationRecordings-example.txt
 docs/getConversationSecureattributes-example.txt
+docs/getConversationSuggestion-example.txt
+docs/getConversationSuggestions-example.txt
 docs/getConversations-example.txt
 docs/getConversationsCall-example.txt
 docs/getConversationsCallParticipantCommunicationWrapup-example.txt
@@ -4866,6 +4890,8 @@ docs/getDocumentationSearch-example.txt
 docs/getDownload-example.txt
 docs/getEmailsSettings-example.txt
 docs/getEmailsSettings-example.txt
+docs/getEmployeeengagementCelebrations-example.txt
+docs/getEmployeeengagementRecognition-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/getExternalcontactsContact-example.txt
@@ -5599,6 +5625,8 @@ docs/getUserrecordingMedia-example.txt
 docs/getUserrecordings-example.txt
 docs/getUserrecordingsSummary-example.txt
 docs/getUsers-example.txt
+docs/getUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/getUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/getUsersDevelopmentActivities-example.txt
 docs/getUsersDevelopmentActivitiesMe-example.txt
 docs/getUsersDevelopmentActivity-example.txt
@@ -5780,6 +5808,7 @@ docs/patchConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/patchConversationsSettings-example.txt
 docs/patchEmailsSettings-example.txt
 docs/patchEmailsSettings-example.txt
+docs/patchEmployeeengagementCelebration-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchExternalcontactsContactIdentifiers-example.txt
 docs/patchGeolocationsSettings-example.txt
@@ -5815,6 +5844,7 @@ docs/patchMessagingSetting-example.txt
 docs/patchMessagingSupportedcontentSupportedContentId-example.txt
 docs/patchOrganizationsAuthenticationSettings-example.txt
 docs/patchOrganizationsFeature-example.txt
+docs/patchOutboundCampaign-example.txt
 docs/patchOutboundDnclistCustomexclusioncolumns-example.txt
 docs/patchOutboundDnclistEmailaddresses-example.txt
 docs/patchOutboundDnclistPhonenumbers-example.txt
@@ -5864,6 +5894,8 @@ docs/patchUserRoutinglanguagesBulk-example.txt
 docs/patchUserRoutinglanguagesBulk-example.txt
 docs/patchUserRoutingskillsBulk-example.txt
 docs/patchUserRoutingskillsBulk-example.txt
+docs/patchUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/patchUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/patchUsersBulk-example.txt
 docs/patchVoicemailGroupPolicy-example.txt
 docs/patchVoicemailMePolicy-example.txt
@@ -6005,6 +6037,8 @@ docs/postConversationParticipantReplaceExternal-example.txt
 docs/postConversationParticipantReplaceQueue-example.txt
 docs/postConversationParticipantSecureivrsessions-example.txt
 docs/postConversationRecordingAnnotations-example.txt
+docs/postConversationSuggestionEngagement-example.txt
+docs/postConversationSuggestionsFeedback-example.txt
 docs/postConversationSummaryFeedback-example.txt
 docs/postConversationsCall-example.txt
 docs/postConversationsCallParticipantCoach-example.txt
@@ -6070,6 +6104,7 @@ docs/postDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
 docs/postDiagnosticsLogcaptureBrowserUser-example.txt
 docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
+docs/postEmployeeengagementRecognitions-example.txt
 docs/postEmployeeperformanceExternalmetricsData-example.txt
 docs/postEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/postEventsConversations-example.txt
@@ -6238,7 +6273,6 @@ docs/postOrgauthorizationTrusteesAudits-example.txt
 docs/postOrgauthorizationTrusteesDefault-example.txt
 docs/postOrgauthorizationTrustorAudits-example.txt
 docs/postOutboundAttemptlimits-example.txt
-docs/postOutboundAudits-example.txt
 docs/postOutboundCallabletimesets-example.txt
 docs/postOutboundCallanalysisresponsesets-example.txt
 docs/postOutboundCampaignAgentownedmappingpreview-example.txt
@@ -6705,6 +6739,8 @@ docs/putUserStationAssociatedstationStationId-example.txt
 docs/putUserStationDefaultstationStationId-example.txt
 docs/putUserVerifier-example.txt
 docs/putUserrecording-example.txt
+docs/putUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/putUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/putUsersPresencesBulk-example.txt
 docs/putVoicemailMessage-example.txt
 docs/putVoicemailPolicy-example.txt
@@ -6719,6 +6755,7 @@ docs/putWorkforcemanagementBusinessunitTimeofflimitValues-example.txt
 docs/putWorkforcemanagementManagementunitTimeofflimitValues-example.txt
 src/APIHelper.swift
 src/APIs.swift
+src/APIs/AgentUIAPI.swift
 src/APIs/AlertingAPI.swift
 src/APIs/AnalyticsAPI.swift
 src/APIs/ArchitectAPI.swift
@@ -6733,6 +6770,7 @@ src/APIs/ConversationsAPI.swift
 src/APIs/DataExtensionsAPI.swift
 src/APIs/DownloadsAPI.swift
 src/APIs/EmailsAPI.swift
+src/APIs/EmployeeEngagementAPI.swift
 src/APIs/EventsAPI.swift
 src/APIs/ExternalContactsAPI.swift
 src/APIs/FaxAPI.swift
@@ -7000,6 +7038,7 @@ src/Models/ArchitectPromptResourceNotificationPromptResourceNotification.swift
 src/Models/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.swift
 src/Models/ArchiveRetention.swift
 src/Models/ArrayNode.swift
+src/Models/Article.swift
 src/Models/ArticleContent.swift
 src/Models/ArticleContentBody.swift
 src/Models/AssessmentForm.swift
@@ -7040,11 +7079,7 @@ src/Models/AtzmTimeSlot.swift
 src/Models/AtzmTimeSlotWithTimeZone.swift
 src/Models/AudioState.swift
 src/Models/AudioUpdatedEvent.swift
-src/Models/AuditEntity.swift
-src/Models/AuditFacet.swift
-src/Models/AuditFilter.swift
 src/Models/AuditLogMessage.swift
-src/Models/AuditMessage.swift
 src/Models/AuditQueryEntity.swift
 src/Models/AuditQueryExecutionResultsResponse.swift
 src/Models/AuditQueryExecutionStatusResponse.swift
@@ -7058,13 +7093,11 @@ src/Models/AuditRealtimeQueryRequest.swift
 src/Models/AuditRealtimeQueryResultsResponse.swift
 src/Models/AuditRealtimeRelatedRequest.swift
 src/Models/AuditRealtimeRelatedResultsResponse.swift
-src/Models/AuditSearchResult.swift
 src/Models/AuditTopicAddressableEntityRef.swift
 src/Models/AuditTopicAuditLogMessage.swift
 src/Models/AuditTopicDomainEntityRef.swift
 src/Models/AuditTopicMessageInfo.swift
 src/Models/AuditTopicPropertyChange.swift
-src/Models/AuditUser.swift
 src/Models/AuthenticationSettings.swift
 src/Models/AuthorizationSettings.swift
 src/Models/AuthzDivision.swift
@@ -7074,6 +7107,8 @@ src/Models/AuthzGrant.swift
 src/Models/AuthzGrantPolicy.swift
 src/Models/AuthzGrantRole.swift
 src/Models/AuthzSubject.swift
+src/Models/AutoAnswerSetting.swift
+src/Models/AutoAnswerSettings.swift
 src/Models/AutoStart.swift
 src/Models/AutoStatusTransitionDetail.swift
 src/Models/AutomaticTimeZoneMappingSettings.swift
@@ -7312,6 +7347,7 @@ src/Models/CampaignLinesUtilization.swift
 src/Models/CampaignOutboundLinesAllocation.swift
 src/Models/CampaignOutboundLinesDistribution.swift
 src/Models/CampaignOutboundLinesReservation.swift
+src/Models/CampaignPatchRequest.swift
 src/Models/CampaignProgress.swift
 src/Models/CampaignRule.swift
 src/Models/CampaignRuleAction.swift
@@ -7339,10 +7375,11 @@ src/Models/CategoryRequest.swift
 src/Models/CategoryResponse.swift
 src/Models/CategoryResponseListing.swift
 src/Models/CategoryUpdateRequest.swift
+src/Models/Celebration.swift
+src/Models/CelebrationStateParam.swift
 src/Models/Certificate.swift
 src/Models/CertificateAuthorityEntityListing.swift
 src/Models/CertificateDetails.swift
-src/Models/Change.swift
 src/Models/ChangeMyPasswordRequest.swift
 src/Models/ChangePasswordRequest.swift
 src/Models/Channel.swift
@@ -7814,6 +7851,7 @@ src/Models/CreatePerformanceProfile.swift
 src/Models/CreatePlanningGroupRequest.swift
 src/Models/CreatePredictorRequest.swift
 src/Models/CreateQueueRequest.swift
+src/Models/CreateRecognition.swift
 src/Models/CreateResponseAssetRequest.swift
 src/Models/CreateResponseAssetResponse.swift
 src/Models/CreateRoomRequest.swift
@@ -7905,6 +7943,7 @@ src/Models/DateRangeWithOptionalEnd.swift
 src/Models/DefaultGreetingList.swift
 src/Models/DefaultObjective.swift
 src/Models/DeletableUserReference.swift
+src/Models/DeleteProgramResponse.swift
 src/Models/DeleteRetention.swift
 src/Models/Dependency.swift
 src/Models/DependencyObject.swift
@@ -7936,7 +7975,6 @@ src/Models/DialerAction.swift
 src/Models/DialerAttemptLimitsConfigChangeAttemptLimits.swift
 src/Models/DialerAttemptLimitsConfigChangeObject.swift
 src/Models/DialerAttemptLimitsConfigChangeRecallEntry.swift
-src/Models/DialerAuditRequest.swift
 src/Models/DialerCallabletimesetConfigChangeCallableTime.swift
 src/Models/DialerCallabletimesetConfigChangeCallableTimeSet.swift
 src/Models/DialerCallabletimesetConfigChangeObject.swift
@@ -8151,6 +8189,7 @@ src/Models/DraftValidationResult.swift
 src/Models/DurationCondition.swift
 src/Models/DynamicContactQueueingSettings.swift
 src/Models/DynamicLineBalancingSettings.swift
+src/Models/DynamicLineBalancingSettingsPatchRequest.swift
 src/Models/Edge.swift
 src/Models/EdgeAutoUpdateConfig.swift
 src/Models/EdgeChangeTopicEdge.swift
@@ -8248,7 +8287,6 @@ src/Models/EntityChange.swift
 src/Models/EntityListing.swift
 src/Models/EntityReference.swift
 src/Models/EntityTypeCriteria.swift
-src/Models/Entry.swift
 src/Models/ErrorBody.swift
 src/Models/ErrorDetails.swift
 src/Models/ErrorInfo.swift
@@ -8391,12 +8429,12 @@ src/Models/FacebookPermissionEntityListing.swift
 src/Models/FacebookScopedId.swift
 src/Models/Facet.swift
 src/Models/FacetEntry.swift
-src/Models/FacetInfo.swift
 src/Models/FacetKeyAttribute.swift
 src/Models/FacetStatistics.swift
 src/Models/FacetTerm.swift
 src/Models/FailedObject.swift
 src/Models/FailedRecordingEntityListing.swift
+src/Models/Faq.swift
 src/Models/FaxConfig.swift
 src/Models/FaxDocument.swift
 src/Models/FaxDocumentEntityListing.swift
@@ -8409,6 +8447,7 @@ src/Models/FaxTopicLockData.swift
 src/Models/FaxTopicUserData.swift
 src/Models/FaxTopicWorkspaceData.swift
 src/Models/FeatureState.swift
+src/Models/Feedback.swift
 src/Models/FeedbackAddRequest.swift
 src/Models/FieldConfig.swift
 src/Models/FieldConfigs.swift
@@ -8535,6 +8574,7 @@ src/Models/Geolocation.swift
 src/Models/GeolocationEventGeolocation.swift
 src/Models/GeolocationSettings.swift
 src/Models/GetAlertQuery.swift
+src/Models/GetCelebrationListing.swift
 src/Models/GetFlowExecutionDataJobResult.swift
 src/Models/GetMetricDefinitionsResponse.swift
 src/Models/GetMetricResponse.swift
@@ -9150,6 +9190,7 @@ src/Models/MessengerSettings.swift
 src/Models/MessengerStyles.swift
 src/Models/MetaData.swift
 src/Models/Metabase.swift
+src/Models/MetadataAttribute.swift
 src/Models/MetadataDocumentation.swift
 src/Models/MetadataItem.swift
 src/Models/MetadataPresentation.swift
@@ -9817,6 +9858,8 @@ src/Models/RecipientAdditionalIdentifier.swift
 src/Models/RecipientFlow.swift
 src/Models/RecipientListing.swift
 src/Models/RecipientRequest.swift
+src/Models/Recognition.swift
+src/Models/RecognitionBase.swift
 src/Models/Record.swift
 src/Models/Recording.swift
 src/Models/RecordingAnnotationFlow.swift
@@ -10053,7 +10096,6 @@ src/Models/SentimentFeedback.swift
 src/Models/SentimentFeedbackEntityListing.swift
 src/Models/SequenceSchedule.swift
 src/Models/ServerDate.swift
-src/Models/ServiceContext.swift
 src/Models/ServiceGoalTemplate.swift
 src/Models/ServiceGoalTemplateImpactOverride.swift
 src/Models/ServiceGoalTemplateList.swift
@@ -10136,6 +10178,7 @@ src/Models/SocialHandle.swift
 src/Models/SortItem.swift
 src/Models/Source.swift
 src/Models/SourceConfiguration.swift
+src/Models/SourceEntity.swift
 src/Models/SourceEntityListing.swift
 src/Models/SourcePlanningGroupRequest.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
@@ -10183,6 +10226,16 @@ src/Models/Subscription.swift
 src/Models/SubscriptionOverviewUsage.swift
 src/Models/SuggestSearchCriteria.swift
 src/Models/SuggestSearchRequest.swift
+src/Models/Suggestion.swift
+src/Models/SuggestionCannedResponse.swift
+src/Models/SuggestionContext.swift
+src/Models/SuggestionEngagement.swift
+src/Models/SuggestionFeedback.swift
+src/Models/SuggestionKnowledgeAnswer.swift
+src/Models/SuggestionKnowledgeArticle.swift
+src/Models/SuggestionKnowledgeSearch.swift
+src/Models/SuggestionListing.swift
+src/Models/SuggestionScript.swift
 src/Models/SupportCenterCategory.swift
 src/Models/SupportCenterCompactCategoryModuleTemplate.swift
 src/Models/SupportCenterCustomMessage.swift

@@ -3044,28 +3044,6 @@ public class AudioState: Codable {
 
 
 
-public class AuditFacet: Codable {
-
-
-
-
-
-    /** The name of the field on which to facet. */
-    public var name: String?
-    /** The type of the facet, DATE or STRING. */
-    public var type: String?
-
-    public init(name: String?, type: String?) {
-        self.name = name
-        self.type = type
-    }
-
-
-}
-
-
-
-
 public class AuditQueryExecutionResultsResponse: Codable {
 
 
@@ -6357,6 +6335,44 @@ public class CampaignBusinessCategoryMetrics: Codable {
 
 
 
+/** Campaign patch request */
+
+public class CampaignPatchRequest: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The number of outbound lines to be concurrently dialed. */
+    public var outboundLineCount: Int?
+    /** The targeted compliance abandon rate percentage */
+    public var abandonRate: Double?
+    /** The maximum number of calls that can be placed per agent on this campaign */
+    public var maxCallsPerAgent: Double?
+    /** Dynamic line balancing settings */
+    public var dynamicLineBalancingSettings: DynamicLineBalancingSettingsPatchRequest?
+    /** The Queue for this Campaign to route calls to. */
+    public var queue: AddressableEntityRef?
+
+    public init(outboundLineCount: Int?, abandonRate: Double?, maxCallsPerAgent: Double?, dynamicLineBalancingSettings: DynamicLineBalancingSettingsPatchRequest?, queue: AddressableEntityRef?) {
+        self.outboundLineCount = outboundLineCount
+        self.abandonRate = abandonRate
+        self.maxCallsPerAgent = maxCallsPerAgent
+        self.dynamicLineBalancingSettings = dynamicLineBalancingSettings
+        self.queue = queue
+    }
+
+
+}
+
+
+
 
 public class CampaignRuleActionEntities: Codable {
 
@@ -7480,14 +7496,18 @@ public class ContactBulkSearchParameters: Codable {
 
 
 
+
+
     /** Contact List Filter ID. Either this property or criteria is required. */
     public var contactListFilterId: String?
     /** Criteria to filter the contacts by. Either this property or contactListFilterId is required. */
     public var criteria: ContactBulkSearchCriteria?
+    public var generateDownloadUri: Bool?
 
-    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?) {
+    public init(contactListFilterId: String?, criteria: ContactBulkSearchCriteria?, generateDownloadUri: Bool?) {
         self.contactListFilterId = contactListFilterId
         self.criteria = criteria
+        self.generateDownloadUri = generateDownloadUri
     }
 
 
@@ -11767,38 +11787,6 @@ public class DevelopmentActivityAggregateQueryResponseStatistics: Codable {
 
 
 
-public class DialerAuditRequest: Codable {
-
-
-
-
-
-
-
-
-
-    /** The word or words to search for. */
-    public var queryPhrase: String?
-    /** The fields in which to search for the queryPhrase. */
-    public var queryFields: [String]?
-    /** The fields to facet on. */
-    public var facets: [AuditFacet]?
-    /** The fields to filter on. */
-    public var filters: [AuditFilter]?
-
-    public init(queryPhrase: String?, queryFields: [String]?, facets: [AuditFacet]?, filters: [AuditFilter]?) {
-        self.queryPhrase = queryPhrase
-        self.queryFields = queryFields
-        self.facets = facets
-        self.filters = filters
-    }
-
-
-}
-
-
-
-
 public class DialerCampaignConfigChangePhoneColumn: Codable {
 
 
@@ -13921,6 +13909,28 @@ public class DraftValidationResult: Codable {
     public init(valid: Bool?, errors: [ErrorBody]?) {
         self.valid = valid
         self.errors = errors
+    }
+
+
+}
+
+
+
+
+public class DynamicLineBalancingSettingsPatchRequest: Codable {
+
+
+
+
+
+    /** Indicates that this campaign is subject of dynamic line balancing */
+    public var enabled: Bool?
+    /** Relative weight of this campaign in dynamic line balancing */
+    public var relativeWeight: Int?
+
+    public init(enabled: Bool?, relativeWeight: Int?) {
+        self.enabled = enabled
+        self.relativeWeight = relativeWeight
     }
 
 
@@ -17193,6 +17203,58 @@ public class GetAlertQuery: Codable {
         self.pageSize = pageSize
         self.sortBy = sortBy
         self.sortOrder = sortOrder
+    }
+
+
+}
+
+
+
+
+public class GetCelebrationListing: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [Celebration]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var lastUri: String?
+    public var firstUri: String?
+    public var selfUri: String?
+    public var nextUri: String?
+    public var previousUri: String?
+    public var pageCount: Int?
+
+    public init(entities: [Celebration]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.lastUri = lastUri
+        self.firstUri = firstUri
+        self.selfUri = selfUri
+        self.nextUri = nextUri
+        self.previousUri = previousUri
+        self.pageCount = pageCount
     }
 
 
@@ -20827,6 +20889,8 @@ public class KnowledgeDocumentResponse: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** Document title, having a limit of 500 words. */
@@ -20861,6 +20925,8 @@ public class KnowledgeDocumentResponse: Codable {
     public var knowledgeBase: KnowledgeBaseReference?
     /** The reference to external id associated with the document. */
     public var externalId: String?
+    /** The URL to external document. */
+    public var externalUrl: String?
     /** The reference to source associated with the document. */
     public var source: AddressableEntityRef?
     /** Whether the document is read-only. */
@@ -20870,7 +20936,7 @@ public class KnowledgeDocumentResponse: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, externalId: String?, source: AddressableEntityRef?, readonly: Bool?, variations: [DocumentVariation]?, selfUri: String?) {
+    public init(_id: String?, title: String?, visible: Bool?, alternatives: [KnowledgeDocumentAlternative]?, state: State?, dateCreated: Date?, dateModified: Date?, dateImported: Date?, lastPublishedVersionNumber: Int?, datePublished: Date?, createdBy: UserReference?, modifiedBy: UserReference?, documentVersion: AddressableEntityRef?, category: CategoryResponse?, labels: [LabelResponse]?, knowledgeBase: KnowledgeBaseReference?, externalId: String?, externalUrl: String?, source: AddressableEntityRef?, readonly: Bool?, variations: [DocumentVariation]?, selfUri: String?) {
         self._id = _id
         self.title = title
         self.visible = visible
@@ -20888,6 +20954,7 @@ public class KnowledgeDocumentResponse: Codable {
         self.labels = labels
         self.knowledgeBase = knowledgeBase
         self.externalId = externalId
+        self.externalUrl = externalUrl
         self.source = source
         self.readonly = readonly
         self.variations = variations
@@ -20912,6 +20979,7 @@ public class KnowledgeDocumentResponse: Codable {
         case labels
         case knowledgeBase
         case externalId
+        case externalUrl
         case source
         case readonly
         case variations
@@ -21959,6 +22027,99 @@ public class LearningAssignmentUpdate: Codable {
 
 
 
+public class Limit: Codable {
+
+
+
+    public enum Namespace: String, Codable { 
+        case agentAssistant = "agent.assistant"
+        case analyticsAlerting = "analytics.alerting"
+        case analytics = "analytics"
+        case analyticsRealtime = "analytics.realtime"
+        case analyticsReportingSettings = "analytics.reporting.settings"
+        case architect = "architect"
+        case audiohook = "audiohook"
+        case audit = "audit"
+        case authApi = "auth.api"
+        case authorization = "authorization"
+        case automationTesting = "automation.testing"
+        case bots = "bots"
+        case botsVoice = "bots.voice"
+        case callback = "callback"
+        case cobrowse = "cobrowse"
+        case contentManagement = "content.management"
+        case conversation = "conversation"
+        case dataactions = "dataactions"
+        case datatables = "datatables"
+        case directory = "directory"
+        case email = "email"
+        case employeeEngagement = "employee.engagement"
+        case eventOrchestration = "event.orchestration"
+        case externalContacts = "external.contacts"
+        case gcv = "gcv"
+        case gdpr = "gdpr"
+        case groups = "groups"
+        case historicalAdherence = "historical.adherence"
+        case infrastructureascode = "infrastructureascode"
+        case integrations = "integrations"
+        case intentMiner = "intent.miner"
+        case journey = "journey"
+        case knowledge = "knowledge"
+        case languageUnderstanding = "language.understanding"
+        case learning = "learning"
+        case limitRegistry = "limit.registry"
+        case marketplace = "marketplace"
+        case mediaCommunications = "media.communications"
+        case messaging = "messaging"
+        case notifications = "notifications"
+        case onboarding = "onboarding"
+        case outbound = "outbound"
+        case platformApi = "platform.api"
+        case predictiveRouting = "predictive.routing"
+        case presence = "presence"
+        case quality = "quality"
+        case recording = "recording"
+        case responseManagement = "response.management"
+        case routing = "routing"
+        case scim = "scim"
+        case search = "search"
+        case secondaryAutomationTesting = "secondary.automation.testing"
+        case skills = "skills"
+        case socialMedia = "social.media"
+        case speechAndTextAnalytics = "speech.and.text.analytics"
+        case speechIntegration = "speech.integration"
+        case supportability = "supportability"
+        case taskManagement = "task.management"
+        case telephonyConfiguration = "telephony.configuration"
+        case usage = "usage"
+        case users = "users"
+        case webDeployments = "web.deployments"
+        case webMessaging = "web.messaging"
+        case webchat = "webchat"
+        case webhooks = "webhooks"
+        case workforceManagementForecast = "workforce.management.forecast"
+        case workforceManagement = "workforce.management"
+        case system = "system"
+    }
+
+
+
+    public var key: String?
+    public var namespace: Namespace?
+    public var value: Int64?
+
+    public init(key: String?, namespace: Namespace?, value: Int64?) {
+        self.key = key
+        self.namespace = namespace
+        self.value = value
+    }
+
+
+}
+
+
+
+
 public class LearningModuleCoverArtRequest: Codable {
 
 
@@ -22500,99 +22661,6 @@ public class LicenseAssignmentRequest: Codable {
         self.licenseId = licenseId
         self.userIdsAdd = userIdsAdd
         self.userIdsRemove = userIdsRemove
-    }
-
-
-}
-
-
-
-
-public class Limit: Codable {
-
-
-
-    public enum Namespace: String, Codable { 
-        case agentAssistant = "agent.assistant"
-        case analyticsAlerting = "analytics.alerting"
-        case analytics = "analytics"
-        case analyticsRealtime = "analytics.realtime"
-        case analyticsReportingSettings = "analytics.reporting.settings"
-        case architect = "architect"
-        case audiohook = "audiohook"
-        case audit = "audit"
-        case authApi = "auth.api"
-        case authorization = "authorization"
-        case automationTesting = "automation.testing"
-        case bots = "bots"
-        case botsVoice = "bots.voice"
-        case callback = "callback"
-        case cobrowse = "cobrowse"
-        case contentManagement = "content.management"
-        case conversation = "conversation"
-        case dataactions = "dataactions"
-        case datatables = "datatables"
-        case directory = "directory"
-        case email = "email"
-        case employeeEngagement = "employee.engagement"
-        case eventOrchestration = "event.orchestration"
-        case externalContacts = "external.contacts"
-        case gcv = "gcv"
-        case gdpr = "gdpr"
-        case groups = "groups"
-        case historicalAdherence = "historical.adherence"
-        case infrastructureascode = "infrastructureascode"
-        case integrations = "integrations"
-        case intentMiner = "intent.miner"
-        case journey = "journey"
-        case knowledge = "knowledge"
-        case languageUnderstanding = "language.understanding"
-        case learning = "learning"
-        case limitRegistry = "limit.registry"
-        case marketplace = "marketplace"
-        case mediaCommunications = "media.communications"
-        case messaging = "messaging"
-        case notifications = "notifications"
-        case onboarding = "onboarding"
-        case outbound = "outbound"
-        case platformApi = "platform.api"
-        case predictiveRouting = "predictive.routing"
-        case presence = "presence"
-        case quality = "quality"
-        case recording = "recording"
-        case responseManagement = "response.management"
-        case routing = "routing"
-        case scim = "scim"
-        case search = "search"
-        case secondaryAutomationTesting = "secondary.automation.testing"
-        case skills = "skills"
-        case socialMedia = "social.media"
-        case speechAndTextAnalytics = "speech.and.text.analytics"
-        case speechIntegration = "speech.integration"
-        case supportability = "supportability"
-        case taskManagement = "task.management"
-        case telephonyConfiguration = "telephony.configuration"
-        case usage = "usage"
-        case users = "users"
-        case webDeployments = "web.deployments"
-        case webMessaging = "web.messaging"
-        case webchat = "webchat"
-        case webhooks = "webhooks"
-        case workforceManagementForecast = "workforce.management.forecast"
-        case workforceManagement = "workforce.management"
-        case system = "system"
-    }
-
-
-
-    public var key: String?
-    public var namespace: Namespace?
-    public var value: Int64?
-
-    public init(key: String?, namespace: Namespace?, value: Int64?) {
-        self.key = key
-        self.namespace = namespace
-        self.value = value
     }
 
 
@@ -34771,6 +34839,55 @@ public class SuggestSearchRequest: Codable {
 
 
 
+public class SuggestionCannedResponse: Codable {
+
+
+
+
+
+    /** The suggested response. */
+    public var response: AddressableEntityRef?
+    /** The library from which the canned response is suggested */
+    public var library: AddressableEntityRef?
+
+    public init(response: AddressableEntityRef?, library: AddressableEntityRef?) {
+        self.response = response
+        self.library = library
+    }
+
+
+}
+
+
+
+
+public class SuggestionKnowledgeAnswer: Codable {
+
+
+
+
+
+
+
+    /** The most relevant answer */
+    public var answer: String?
+    /** The start index of the answer */
+    public var startIndex: Int?
+    /** The end index of the answer */
+    public var endIndex: Int?
+
+    public init(answer: String?, startIndex: Int?, endIndex: Int?) {
+        self.answer = answer
+        self.startIndex = startIndex
+        self.endIndex = endIndex
+    }
+
+
+}
+
+
+
+
 public class SupportCenterFeedbackSettings: Codable {
 
 
@@ -36410,34 +36527,6 @@ public class TrunkInstanceTopicTrunk: Codable {
 
 
 
-public class TrunkInstanceTopicTrunkMetricsOptions: Codable {
-
-
-
-
-
-
-
-
-
-    public var proxyAddress: String?
-    public var optionState: Bool?
-    public var optionStateTime: Date?
-    public var errorInfo: TrunkInstanceTopicTrunkErrorInfo?
-
-    public init(proxyAddress: String?, optionState: Bool?, optionStateTime: Date?, errorInfo: TrunkInstanceTopicTrunkErrorInfo?) {
-        self.proxyAddress = proxyAddress
-        self.optionState = optionState
-        self.optionStateTime = optionStateTime
-        self.errorInfo = errorInfo
-    }
-
-
-}
-
-
-
-
 public class TrunkMetabaseEntityListing: Codable {
 
 
@@ -36487,6 +36576,34 @@ public class TrunkMetabaseEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class TrunkInstanceTopicTrunkMetricsOptions: Codable {
+
+
+
+
+
+
+
+
+
+    public var proxyAddress: String?
+    public var optionState: Bool?
+    public var optionStateTime: Date?
+    public var errorInfo: TrunkInstanceTopicTrunkErrorInfo?
+
+    public init(proxyAddress: String?, optionState: Bool?, optionStateTime: Date?, errorInfo: TrunkInstanceTopicTrunkErrorInfo?) {
+        self.proxyAddress = proxyAddress
+        self.optionState = optionState
+        self.optionStateTime = optionStateTime
+        self.errorInfo = errorInfo
     }
 
 
@@ -38505,6 +38622,33 @@ public class V2MobiusRulesTopicRule: Codable {
 
 
 
+public class ValidateWorkPlanResponse: Codable {
+
+
+
+
+
+
+
+    /** The work plan reference associated with this response */
+    public var workPlan: WorkPlanReference?
+    /** Whether the work plan is valid or not */
+    public var valid: Bool?
+    /** Validation messages for this work plan */
+    public var messages: ValidateWorkPlanMessages?
+
+    public init(workPlan: WorkPlanReference?, valid: Bool?, messages: ValidateWorkPlanMessages?) {
+        self.workPlan = workPlan
+        self.valid = valid
+        self.messages = messages
+    }
+
+
+}
+
+
+
+
 public class ValidationLimits: Codable {
 
 
@@ -38533,33 +38677,6 @@ public class ValidationLimits: Codable {
         self.maxItems = maxItems
         self.minimum = minimum
         self.maximum = maximum
-    }
-
-
-}
-
-
-
-
-public class ValidateWorkPlanResponse: Codable {
-
-
-
-
-
-
-
-    /** The work plan reference associated with this response */
-    public var workPlan: WorkPlanReference?
-    /** Whether the work plan is valid or not */
-    public var valid: Bool?
-    /** Validation messages for this work plan */
-    public var messages: ValidateWorkPlanMessages?
-
-    public init(workPlan: WorkPlanReference?, valid: Bool?, messages: ValidateWorkPlanMessages?) {
-        self.workPlan = workPlan
-        self.valid = valid
-        self.messages = messages
     }
 
 

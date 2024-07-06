@@ -479,7 +479,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactId: String = "" // ExternalContact ID
-let expand: [String] = [""] // which fields, if any, to expand (externalOrganization,externalDataSources)
+let expand: [String] = [""] // which fields, if any, to expand (externalOrganization,externalDataSources,identifiers)
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContact(contactId: contactId, expand: expand) { (response, error) in
@@ -498,7 +498,7 @@ ExternalContactsAPI.getExternalcontactsContact(contactId: contactId, expand: exp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactId** | **String**| ExternalContact ID | |
-| **expand** | [**[String]**](String.html)| which fields, if any, to expand (externalOrganization,externalDataSources) | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String.html)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers") |
 {: class="table-striped"}
 
 
@@ -3118,7 +3118,7 @@ ExternalContactsAPI.postExternalcontactsContactsSchemas(body: body) { (response,
 
 
 
-> [ExternalContact](ExternalContact.html) postExternalcontactsIdentifierlookup(identifier)
+> [ExternalContact](ExternalContact.html) postExternalcontactsIdentifierlookup(identifier, expand)
 
 Fetch a contact using an identifier type and value.
 
@@ -3142,9 +3142,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let identifier: ContactIdentifier = new ContactIdentifier(...) // 
+let expand: [String] = [""] // which field, if any, to expand
 
 // Code example
-ExternalContactsAPI.postExternalcontactsIdentifierlookup(identifier: identifier) { (response, error) in
+ExternalContactsAPI.postExternalcontactsIdentifierlookup(identifier: identifier, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3160,6 +3161,7 @@ ExternalContactsAPI.postExternalcontactsIdentifierlookup(identifier: identifier)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **identifier** | [**ContactIdentifier**](ContactIdentifier.html)|  | |
+| **expand** | [**[String]**](String.html)| which field, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), identifiers ("identifiers") |
 {: class="table-striped"}
 
 

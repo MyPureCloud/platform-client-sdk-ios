@@ -3879,7 +3879,7 @@ RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId, expand: expand) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **addressId** | **String**| Address ID | |
-| **expand** | **String**| Expand response with additional information | [optional]<br />**Values**: compliance ("compliance") |
+| **expand** | **String**| Expand response with additional information | [optional]<br />**Values**: compliance ("compliance"), supportedcontent ("supportedContent") |
 {: class="table-striped"}
 
 
@@ -3893,7 +3893,7 @@ RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId, expand: expand) { (res
 
 
 
-> [SmsPhoneNumberEntityListing](SmsPhoneNumberEntityListing.html) getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId)
+> [SmsPhoneNumberEntityListing](SmsPhoneNumberEntityListing.html) getRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId)
 
 Get a list of provisioned phone numbers.
 
@@ -3923,9 +3923,10 @@ let sortBy: RoutingAPI.SortBy_getRoutingSmsPhonenumbers = RoutingAPI.SortBy_getR
 let sortOrder: RoutingAPI.SortOrder_getRoutingSmsPhonenumbers = RoutingAPI.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order
 let language: String = en-US // A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations
 let integrationId: String = "" // Filter on the Genesys Cloud integration id to which the phone number belongs to
+let supportedContentId: String = "" // Filter based on the supported content ID
 
 // Code example
-RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId) { (response, error) in
+RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3950,6 +3951,7 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **language** | **String**| A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations | [optional] |
 | **integrationId** | **String**| Filter on the Genesys Cloud integration id to which the phone number belongs to | [optional] |
+| **supportedContentId** | **String**| Filter based on the supported content ID | [optional] |
 {: class="table-striped"}
 
 

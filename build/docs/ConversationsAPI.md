@@ -31,6 +31,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationParticipantWrapup**](ConversationsAPI.html#getConversationParticipantWrapup) | Get the wrap-up for this conversation participant.  |
 | [**getConversationParticipantWrapupcodes**](ConversationsAPI.html#getConversationParticipantWrapupcodes) | Get list of wrapup codes for this conversation participant |
 | [**getConversationSecureattributes**](ConversationsAPI.html#getConversationSecureattributes) | Get the secure attributes on a conversation. |
+| [**getConversationSuggestion**](ConversationsAPI.html#getConversationSuggestion) | Get Suggestion. |
+| [**getConversationSuggestions**](ConversationsAPI.html#getConversationSuggestions) | Get all suggestions for a conversation. |
 | [**getConversations**](ConversationsAPI.html#getConversations) | Get active conversations for the logged in user |
 | [**getConversationsCall**](ConversationsAPI.html#getConversationsCall) | Get call conversation |
 | [**getConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#getConversationsCallParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
@@ -153,6 +155,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationParticipantReplaceExternal**](ConversationsAPI.html#postConversationParticipantReplaceExternal) | Replace this participant with the an external contact |
 | [**postConversationParticipantReplaceQueue**](ConversationsAPI.html#postConversationParticipantReplaceQueue) | Replace this participant with the specified queue |
 | [**postConversationParticipantSecureivrsessions**](ConversationsAPI.html#postConversationParticipantSecureivrsessions) | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
+| [**postConversationSuggestionEngagement**](ConversationsAPI.html#postConversationSuggestionEngagement) | Save an engagement on the suggestion. |
+| [**postConversationSuggestionsFeedback**](ConversationsAPI.html#postConversationSuggestionsFeedback) | Suggestion feedback. |
 | [**postConversationSummaryFeedback**](ConversationsAPI.html#postConversationSummaryFeedback) | Submit feedback for the summary. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
@@ -1486,6 +1490,122 @@ ConversationsAPI.getConversationSecureattributes(conversationId: conversationId)
 ### Return type
 
 [**ConversationSecureAttributes**](ConversationSecureAttributes.html)
+
+<a name="getConversationSuggestion"></a>
+
+# **getConversationSuggestion**
+
+
+
+> [Suggestion](Suggestion.html) getConversationSuggestion(conversationId, suggestionId)
+
+Get Suggestion.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/suggestions/{suggestionId}  
+
+Requires ALL permissions: 
+
+* conversation:suggestion:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let suggestionId: String = "" // Suggestion ID
+
+// Code example
+ConversationsAPI.getConversationSuggestion(conversationId: conversationId, suggestionId: suggestionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationSuggestion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **suggestionId** | **String**| Suggestion ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**Suggestion**](Suggestion.html)
+
+<a name="getConversationSuggestions"></a>
+
+# **getConversationSuggestions**
+
+
+
+> [SuggestionListing](SuggestionListing.html) getConversationSuggestions(conversationId, before, after, pageSize, type, state)
+
+Get all suggestions for a conversation.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/suggestions  
+
+Requires ALL permissions: 
+
+* conversation:suggestion:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let type: ConversationsAPI.ModelType_getConversationSuggestions = ConversationsAPI.ModelType_getConversationSuggestions.enummember // Suggestion type to filter by.
+let state: ConversationsAPI.State_getConversationSuggestions = ConversationsAPI.State_getConversationSuggestions.enummember // Suggestion state to filter Copilot suggestions.
+
+// Code example
+ConversationsAPI.getConversationSuggestions(conversationId: conversationId, before: before, after: after, pageSize: pageSize, type: type, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationSuggestions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **type** | **String**| Suggestion type to filter by. | [optional]<br />**Values**: faq ("Faq"), article ("Article"), knowledgeArticle ("KnowledgeArticle"), knowledgeSearch ("KnowledgeSearch"), cannedResponse ("CannedResponse"), script ("Script") |
+| **state** | **String**| Suggestion state to filter Copilot suggestions. | [optional]<br />**Values**: suggested ("Suggested"), accepted ("Accepted"), dismissed ("Dismissed"), failed ("Failed") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SuggestionListing**](SuggestionListing.html)
 
 <a name="getConversations"></a>
 
@@ -8104,6 +8224,115 @@ ConversationsAPI.postConversationParticipantSecureivrsessions(conversationId: co
 ### Return type
 
 [**SecureSession**](SecureSession.html)
+
+<a name="postConversationSuggestionEngagement"></a>
+
+# **postConversationSuggestionEngagement**
+
+
+
+> [SuggestionEngagement](SuggestionEngagement.html) postConversationSuggestionEngagement(conversationId, suggestionId, body)
+
+Save an engagement on the suggestion.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement  
+
+Requires ALL permissions: 
+
+* conversation:suggestionEngagement:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let suggestionId: String = "" // Suggestion ID
+let body: SuggestionEngagement = new SuggestionEngagement(...) // 
+
+// Code example
+ConversationsAPI.postConversationSuggestionEngagement(conversationId: conversationId, suggestionId: suggestionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationSuggestionEngagement was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **suggestionId** | **String**| Suggestion ID | |
+| **body** | [**SuggestionEngagement**](SuggestionEngagement.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**SuggestionEngagement**](SuggestionEngagement.html)
+
+<a name="postConversationSuggestionsFeedback"></a>
+
+# **postConversationSuggestionsFeedback**
+
+
+
+> Void postConversationSuggestionsFeedback(conversationId, body)
+
+Suggestion feedback.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/suggestions/feedback  
+
+Requires ANY permissions: 
+
+* conversation:suggestionFeedback:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+let body: Feedback = new Feedback(...) // SuggestionFeedback
+
+// Code example
+ConversationsAPI.postConversationSuggestionsFeedback(conversationId: conversationId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationSuggestionsFeedback was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+| **body** | [**Feedback**](Feedback.html)| SuggestionFeedback | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationSummaryFeedback"></a>
 

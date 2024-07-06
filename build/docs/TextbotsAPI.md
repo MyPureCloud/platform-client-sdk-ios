@@ -62,7 +62,7 @@ TextbotsAPI.getTextbotsBotsSearch(botType: botType, botName: botName, botId: bot
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **botType** | [**[String]**](String.html)| Bot types | [optional]<br />**Values**: genesysBotConnector ("GenesysBotConnector"), genesysDialogEngine ("GenesysDialogEngine"), amazonLex ("AmazonLex"), googleDialogFlowES ("GoogleDialogFlowES"), googleDialogFlowCX ("GoogleDialogFlowCX"), nuanceDlg ("NuanceDlg"), genesysBotFlow ("GenesysBotFlow") |
+| **botType** | [**[String]**](String.html)| Bot types | [optional]<br />**Values**: genesysBotConnector ("GenesysBotConnector"), genesysDialogEngine ("GenesysDialogEngine"), amazonLex ("AmazonLex"), googleDialogFlowES ("GoogleDialogFlowES"), googleDialogFlowCX ("GoogleDialogFlowCX"), nuanceDlg ("NuanceDlg"), genesysBotFlow ("GenesysBotFlow"), genesysDigitalBotFlow ("GenesysDigitalBotFlow"), genesysVoiceSurveyFlow ("GenesysVoiceSurveyFlow") |
 | **botName** | **String**| Bot name | [optional] |
 | **botId** | [**[String]**](String.html)| Bot IDs | [optional] |
 | **pageSize** | **Int**| The maximum results to return | [optional] |

@@ -10,6 +10,51 @@ import Foundation
 
 
 open class SettingsAPI {
+    
+    
+    /**
+     Delete agent auto answer settings
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: agentId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete agent auto answer settings
+     - DELETE /api/v2/users/agentui/agents/autoanswer/{agentId}/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     /**
      Get email Contact Center settings
      
@@ -53,6 +98,65 @@ open class SettingsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmailSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get agent auto answer settings
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: String, completion: @escaping ((_ data: AutoAnswerSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: agentId)
+        requestBuilder.execute { (response: Response<AutoAnswerSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get agent auto answer settings
+     - GET /api/v2/users/agentui/agents/autoanswer/{agentId}/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : {
+    "key" : {
+      "enabled" : true
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+
+     - returns: RequestBuilder<AutoAnswerSettings> 
+     */
+    open class func getUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: String) -> RequestBuilder<AutoAnswerSettings> {        
+        var path = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AutoAnswerSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -107,6 +211,132 @@ open class SettingsAPI {
         let requestBuilder: RequestBuilder<EmailSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update agent auto answer settings
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+     - parameter body: (body) AutoAnswerSettings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: String, body: AutoAnswerSettings, completion: @escaping ((_ data: AutoAnswerSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<AutoAnswerSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update agent auto answer settings
+     - PATCH /api/v2/users/agentui/agents/autoanswer/{agentId}/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : {
+    "key" : {
+      "enabled" : true
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+     - parameter body: (body) AutoAnswerSettings 
+
+     - returns: RequestBuilder<AutoAnswerSettings> 
+     */
+    open class func patchUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: String, body: AutoAnswerSettings) -> RequestBuilder<AutoAnswerSettings> {        
+        var path = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AutoAnswerSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Set agent auto answer settings
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+     - parameter body: (body) AutoAnswerSettings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: String, body: AutoAnswerSettings, completion: @escaping ((_ data: AutoAnswerSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: agentId, body: body)
+        requestBuilder.execute { (response: Response<AutoAnswerSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set agent auto answer settings
+     - PUT /api/v2/users/agentui/agents/autoanswer/{agentId}/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : {
+    "key" : {
+      "enabled" : true
+    }
+  }
+}, statusCode=200}]
+     
+     - parameter agentId: (path) The agent to apply the auto answer settings to 
+     - parameter body: (body) AutoAnswerSettings 
+
+     - returns: RequestBuilder<AutoAnswerSettings> 
+     */
+    open class func putUsersAgentuiAgentsAutoanswerAgentIdSettingsWithRequestBuilder(agentId: String, body: AutoAnswerSettings) -> RequestBuilder<AutoAnswerSettings> {        
+        var path = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings"
+        let agentIdPreEscape = "\(agentId)"
+        let agentIdPostEscape = agentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{agentId}", with: agentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AutoAnswerSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

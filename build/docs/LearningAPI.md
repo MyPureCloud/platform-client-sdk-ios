@@ -210,7 +210,7 @@ LearningAPI.getLearningAssignment(assignmentId: assignmentId, expand: expand) { 
 
 
 
-> [LearningAssignmentStep](LearningAssignmentStep.html) getLearningAssignmentStep(assignmentId, stepId, shareableContentObjectId, expand)
+> [LearningAssignmentStep](LearningAssignmentStep.html) getLearningAssignmentStep(assignmentId, stepId, shareableContentObjectId, defaultShareableContentObject, expand)
 
 Get Learning Assignment Step
 
@@ -235,10 +235,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let assignmentId: String = "" // The ID of Learning Assignment
 let stepId: String = "" // The ID of Learning Assignment Step
 let shareableContentObjectId: String = "" // The ID of SCO to load
+let defaultShareableContentObject: LearningAPI.DefaultShareableContentObject_getLearningAssignmentStep = LearningAPI.DefaultShareableContentObject_getLearningAssignmentStep.enummember // The default SCO to retrieve
 let expand: [String] = [""] // Fields to expand in response
 
 // Code example
-LearningAPI.getLearningAssignmentStep(assignmentId: assignmentId, stepId: stepId, shareableContentObjectId: shareableContentObjectId, expand: expand) { (response, error) in
+LearningAPI.getLearningAssignmentStep(assignmentId: assignmentId, stepId: stepId, shareableContentObjectId: shareableContentObjectId, defaultShareableContentObject: defaultShareableContentObject, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -256,6 +257,7 @@ LearningAPI.getLearningAssignmentStep(assignmentId: assignmentId, stepId: stepId
 | **assignmentId** | **String**| The ID of Learning Assignment | |
 | **stepId** | **String**| The ID of Learning Assignment Step | |
 | **shareableContentObjectId** | **String**| The ID of SCO to load | [optional] |
+| **defaultShareableContentObject** | **String**| The default SCO to retrieve | [optional]<br />**Values**: first ("First"), last ("Last"), next ("Next") |
 | **expand** | [**[String]**](String.html)| Fields to expand in response | [optional]<br />**Values**: modulestep ("moduleStep") |
 {: class="table-striped"}
 

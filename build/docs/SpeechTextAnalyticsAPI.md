@@ -166,7 +166,7 @@ SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsDictionaryfeedbackDictionaryF
 
 
 
-> Void deleteSpeechandtextanalyticsProgram(programId, forceDelete)
+> [DeleteProgramResponse](DeleteProgramResponse.html) deleteSpeechandtextanalyticsProgram(programId, forceDelete)
 
 Delete a Speech &amp; Text Analytics program by id
 
@@ -190,11 +190,12 @@ let programId: String = "" // The id of the program
 let forceDelete: SpeechTextAnalyticsAPI.ForceDelete_deleteSpeechandtextanalyticsProgram = SpeechTextAnalyticsAPI.ForceDelete_deleteSpeechandtextanalyticsProgram.enummember // Indicates whether the program is forced to be deleted or not. Required when the program to delete is the default program.
 
 // Code example
-SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram(programId: programId, forceDelete: forceDelete) { (error) in
+SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram(programId: programId, forceDelete: forceDelete) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram was successful")
+        dump(response)
     }
 }
 ```
@@ -211,7 +212,7 @@ SpeechTextAnalyticsAPI.deleteSpeechandtextanalyticsProgram(programId: programId,
 
 ### Return type
 
-`nil` (empty response body)
+[**DeleteProgramResponse**](DeleteProgramResponse.html)
 
 <a name="deleteSpeechandtextanalyticsSentimentfeedback"></a>
 

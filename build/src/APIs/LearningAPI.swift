@@ -250,6 +250,14 @@ open class LearningAPI {
     
     
     
+    public enum DefaultShareableContentObject_getLearningAssignmentStep: String { 
+        case first = "First"
+        case last = "Last"
+        case next = "Next"
+    }
+    
+    
+    
     
     public enum Expand_getLearningAssignmentStep: String { 
         case modulestep = "moduleStep"
@@ -261,11 +269,12 @@ open class LearningAPI {
      - parameter assignmentId: (path) The ID of Learning Assignment 
      - parameter stepId: (path) The ID of Learning Assignment Step 
      - parameter shareableContentObjectId: (query) The ID of SCO to load (optional)
+     - parameter defaultShareableContentObject: (query) The default SCO to retrieve (optional)
      - parameter expand: (query) Fields to expand in response (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getLearningAssignmentStep(assignmentId: String, stepId: String, shareableContentObjectId: String? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentStep?,_ error: Error?) -> Void)) {
-        let requestBuilder = getLearningAssignmentStepWithRequestBuilder(assignmentId: assignmentId, stepId: stepId, shareableContentObjectId: shareableContentObjectId, expand: expand)
+    open class func getLearningAssignmentStep(assignmentId: String, stepId: String, shareableContentObjectId: String? = nil, defaultShareableContentObject: DefaultShareableContentObject_getLearningAssignmentStep? = nil, expand: [String]? = nil, completion: @escaping ((_ data: LearningAssignmentStep?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLearningAssignmentStepWithRequestBuilder(assignmentId: assignmentId, stepId: stepId, shareableContentObjectId: shareableContentObjectId, defaultShareableContentObject: defaultShareableContentObject, expand: expand)
         requestBuilder.execute { (response: Response<LearningAssignmentStep>?, error) -> Void in
             do {
                 if let e = error {
@@ -317,11 +326,12 @@ open class LearningAPI {
      - parameter assignmentId: (path) The ID of Learning Assignment 
      - parameter stepId: (path) The ID of Learning Assignment Step 
      - parameter shareableContentObjectId: (query) The ID of SCO to load (optional)
+     - parameter defaultShareableContentObject: (query) The default SCO to retrieve (optional)
      - parameter expand: (query) Fields to expand in response (optional)
 
      - returns: RequestBuilder<LearningAssignmentStep> 
      */
-    open class func getLearningAssignmentStepWithRequestBuilder(assignmentId: String, stepId: String, shareableContentObjectId: String? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentStep> {        
+    open class func getLearningAssignmentStepWithRequestBuilder(assignmentId: String, stepId: String, shareableContentObjectId: String? = nil, defaultShareableContentObject: DefaultShareableContentObject_getLearningAssignmentStep? = nil, expand: [String]? = nil) -> RequestBuilder<LearningAssignmentStep> {        
         var path = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}"
         let assignmentIdPreEscape = "\(assignmentId)"
         let assignmentIdPostEscape = assignmentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -335,6 +345,7 @@ open class LearningAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "shareableContentObjectId": shareableContentObjectId, 
+            "defaultShareableContentObject": defaultShareableContentObject?.rawValue, 
             "expand": expand
         ])
 
