@@ -1,7 +1,7 @@
 ---
-title: ActivityCodeReference
+title: ActivityCodeSummary
 ---
-## ActivityCodeReference
+## ActivityCodeSummary
 
 ## Properties
 

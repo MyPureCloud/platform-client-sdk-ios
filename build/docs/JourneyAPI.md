@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneySegment**](JourneyAPI.html#getJourneySegment) | Retrieve a single segment. |
 | [**getJourneySegments**](JourneyAPI.html#getJourneySegments) | Retrieve all segments. |
 | [**getJourneySession**](JourneyAPI.html#getJourneySession) | Retrieve a single session. |
+| [**getJourneySessionEvents**](JourneyAPI.html#getJourneySessionEvents) | Retrieve all events for a given session. |
 | [**getJourneySessionOutcomescores**](JourneyAPI.html#getJourneySessionOutcomescores) | Retrieve latest outcome score associated with a session for all outcomes. |
 | [**patchJourneyActionmap**](JourneyAPI.html#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI.html#patchJourneyActiontarget) | Update a single action target. |
@@ -41,6 +42,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyActiontemplates**](JourneyAPI.html#postJourneyActiontemplates) | Create a single action template. |
 | [**postJourneyDeploymentActionevent**](JourneyAPI.html#postJourneyDeploymentActionevent) | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**postJourneyDeploymentAppevents**](JourneyAPI.html#postJourneyDeploymentAppevents) | Send a journey app event, used for tracking customer activity on an application. |
+| [**postJourneyDeploymentWebevents**](JourneyAPI.html#postJourneyDeploymentWebevents) | Send a journey web event, used for tracking customer activity on a website. |
 | [**postJourneyFlowsPathsQuery**](JourneyAPI.html#postJourneyFlowsPathsQuery) | Query for flow paths. |
 | [**postJourneyOutcomes**](JourneyAPI.html#postJourneyOutcomes) | Create an outcome. |
 | [**postJourneyOutcomesPredictors**](JourneyAPI.html#postJourneyOutcomesPredictors) | Create an outcome predictor. |
@@ -1252,6 +1254,64 @@ JourneyAPI.getJourneySession(sessionId: sessionId) { (response, error) in
 
 [**Session**](Session.html)
 
+<a name="getJourneySessionEvents"></a>
+
+# **getJourneySessionEvents**
+
+
+
+> [EventListing](EventListing.html) getJourneySessionEvents(sessionId, pageSize, after, eventType)
+
+Retrieve all events for a given session.
+
+
+
+Wraps GET /api/v2/journey/sessions/{sessionId}/events  
+
+Requires ANY permissions: 
+
+* journey:event:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sessionId: String = "" // System-generated UUID that represents the session the event is a part of.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let eventType: JourneyAPI.EventType_getJourneySessionEvents = JourneyAPI.EventType_getJourneySessionEvents.enummember // A comma separated list of journey event types to include in the results.
+
+// Code example
+JourneyAPI.getJourneySessionEvents(sessionId: sessionId, pageSize: pageSize, after: after, eventType: eventType) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneySessionEvents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionId** | **String**| System-generated UUID that represents the session the event is a part of. | |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **eventType** | **String**| A comma separated list of journey event types to include in the results. | [optional]<br />**Values**: comGenesysJourneyOutcomeachievedevent ("com.genesys.journey.OutcomeAchievedEvent"), comGenesysJourneySegmentassignmentevent ("com.genesys.journey.SegmentAssignmentEvent"), comGenesysJourneyWebactionevent ("com.genesys.journey.WebActionEvent"), comGenesysJourneyWebevent ("com.genesys.journey.WebEvent"), comGenesysJourneyAppevent ("com.genesys.journey.AppEvent") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**EventListing**](EventListing.html)
+
 <a name="getJourneySessionOutcomescores"></a>
 
 # **getJourneySessionOutcomescores**
@@ -1886,6 +1946,59 @@ JourneyAPI.postJourneyDeploymentAppevents(deploymentId: deploymentId, body: body
 ### Return type
 
 [**AppEventResponse**](AppEventResponse.html)
+
+<a name="postJourneyDeploymentWebevents"></a>
+
+# **postJourneyDeploymentWebevents**
+
+
+
+> [WebEventResponse](WebEventResponse.html) postJourneyDeploymentWebevents(deploymentId, body)
+
+Send a journey web event, used for tracking customer activity on a website.
+
+
+
+Wraps POST /api/v2/journey/deployments/{deploymentId}/webevents  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let deploymentId: String = "" // The ID of the deployment sending the web event.
+let body: WebEventRequest = new WebEventRequest(...) // 
+
+// Code example
+JourneyAPI.postJourneyDeploymentWebevents(deploymentId: deploymentId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyDeploymentWebevents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **deploymentId** | **String**| The ID of the deployment sending the web event. | |
+| **body** | [**WebEventRequest**](WebEventRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**WebEventResponse**](WebEventResponse.html)
 
 <a name="postJourneyFlowsPathsQuery"></a>
 

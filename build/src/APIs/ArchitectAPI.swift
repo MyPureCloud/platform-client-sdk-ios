@@ -1417,6 +1417,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -1495,6 +1496,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -1569,6 +1571,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     /**
@@ -1889,6 +1892,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -1964,6 +1968,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2138,6 +2143,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2213,6 +2219,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2400,6 +2407,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2483,6 +2491,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2738,6 +2747,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2817,6 +2827,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -2891,6 +2902,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -3225,6 +3237,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     
@@ -3301,6 +3314,7 @@ open class ArchitectAPI {
         case widget = "WIDGET"
         case workflow = "WORKFLOW"
         case workitemflow = "WORKITEMFLOW"
+        case worktype = "WORKTYPE"
     }
     
     

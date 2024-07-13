@@ -9954,6 +9954,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -10035,6 +10036,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -16496,6 +16498,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -16577,6 +16580,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -23389,6 +23393,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -23470,6 +23475,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -29931,6 +29937,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,
@@ -30012,6 +30019,7 @@ open class RecordingAPI {
           "startAlertingTime" : "2000-01-23T04:56:07.000+00:00",
           "peerId" : "peerId",
           "initialState" : "alerting",
+          "parkTime" : "2000-01-23T04:56:07.000+00:00",
           "held" : true,
           "draftAttachments" : [ {
             "inlineImage" : true,

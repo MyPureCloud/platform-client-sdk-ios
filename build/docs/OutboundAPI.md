@@ -390,6 +390,7 @@ Wraps DELETE /api/v2/outbound/campaigns/{campaignId}/progress
 Requires ANY permissions: 
 
 * outbound:campaign:edit
+* outbound:campaign:recycle
 
 ### Example
 
@@ -1370,6 +1371,8 @@ OutboundAPI.deleteOutboundMessagingcampaign(messagingCampaignId: messagingCampai
 
 Reset messaging campaign progress and recycle the messaging campaign
 
+Documented permissions are applicable based on campaign type.
+
 
 
 Wraps DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress  
@@ -1378,6 +1381,8 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:edit
 * outbound:emailCampaign:edit
+* outbound:messagingCampaign:recycle
+* outbound:emailCampaign:recycle
 
 ### Example
 

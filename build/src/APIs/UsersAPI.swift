@@ -1567,7 +1567,7 @@ open class UsersAPI {
      Get user.
      
      - parameter userId: (path) User ID 
-     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
      - parameter state: (query) Search for a user with this state (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -1887,7 +1887,7 @@ open class UsersAPI {
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
-     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for a user instead of their default. (optional)
      - parameter state: (query) Search for a user with this state (optional)
 
@@ -7462,7 +7462,7 @@ open class UsersAPI {
      - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
      - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
-     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)
      - parameter state: (query) Only list users of this state (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -8085,7 +8085,7 @@ open class UsersAPI {
      - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
      - parameter jabberId: (query) A list of jabberIds to fetch by bulk (cannot be used with the \&quot;id\&quot; parameter) (optional)
      - parameter sortOrder: (query) Ascending or descending sort order (optional)
-     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter expand: (query) Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)
      - parameter integrationPresenceSource: (query) Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)
      - parameter state: (query) Only list users of this state (optional)
 

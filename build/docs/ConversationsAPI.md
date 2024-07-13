@@ -10312,6 +10312,7 @@ Requires ANY permissions:
 
 * conversation:message:create
 * conversation:webmessaging:create
+* conversation:socialmedia:create
 
 ### Example
 
@@ -10805,7 +10806,7 @@ ConversationsAPI.postConversationsMessageParticipantReplace(conversationId: conv
 
 
 
-> [MessageConversation](MessageConversation.html) postConversationsMessages(body)
+> [CreateOutboundMessagingConversationResponse](CreateOutboundMessagingConversationResponse.html) postConversationsMessages(body)
 
 Create an outbound messaging conversation.
 
@@ -10851,7 +10852,7 @@ ConversationsAPI.postConversationsMessages(body: body) { (response, error) in
 
 ### Return type
 
-[**MessageConversation**](MessageConversation.html)
+[**CreateOutboundMessagingConversationResponse**](CreateOutboundMessagingConversationResponse.html)
 
 <a name="postConversationsMessagesAgentless"></a>
 

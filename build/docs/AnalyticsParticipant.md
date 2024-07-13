@@ -13,6 +13,7 @@ title: AnalyticsParticipant
 | **participantId** | **String** | Unique identifier for the participant | [optional] |
 | **participantName** | **String** | A human readable name identifying the participant | [optional] |
 | **purpose** | **String** | The participant&#39;s purpose | [optional] |
+| **screenRecording** | **Bool** | Flag determining if a screen recording was started or not | [optional] |
 | **teamId** | **String** | The team ID the user is a member of | [optional] |
 | **userId** | **String** | Unique identifier for the user | [optional] |
 | **sessions** | [**[AnalyticsSession]**](AnalyticsSession.html) | List of sessions associated to this participant | [optional] |

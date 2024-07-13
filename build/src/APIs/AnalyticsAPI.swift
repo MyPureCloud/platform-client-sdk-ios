@@ -177,6 +177,7 @@ open class AnalyticsAPI {
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "userInput" : "userInput",
     "sessionId" : "sessionId",
     "askAction" : "{}",
@@ -189,6 +190,7 @@ open class AnalyticsAPI {
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "userInput" : "userInput",
     "sessionId" : "sessionId",
     "askAction" : "{}",
@@ -316,6 +318,7 @@ open class AnalyticsAPI {
   "entities" : [ {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "userInput" : "userInput",
     "sessionId" : "sessionId",
     "askAction" : "{}",
@@ -328,6 +331,7 @@ open class AnalyticsAPI {
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "botPrompts" : [ "botPrompts", "botPrompts" ],
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "userInput" : "userInput",
     "sessionId" : "sessionId",
     "askAction" : "{}",
@@ -442,6 +446,7 @@ open class AnalyticsAPI {
   "entities" : [ {
     "endLanguage" : "endLanguage",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "channel" : "{}",
     "language" : "language",
     "id" : "id",
@@ -452,6 +457,7 @@ open class AnalyticsAPI {
   }, {
     "endLanguage" : "endLanguage",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "channel" : "{}",
     "language" : "language",
     "id" : "id",
@@ -1044,6 +1050,7 @@ open class AnalyticsAPI {
     "externalOrganizationId" : "externalOrganizationId",
     "participantName" : "participantName",
     "flaggedReason" : "general",
+    "screenRecording" : true,
     "userId" : "userId"
   }, {
     "participantId" : "participantId",
@@ -1470,6 +1477,7 @@ open class AnalyticsAPI {
     "externalOrganizationId" : "externalOrganizationId",
     "participantName" : "participantName",
     "flaggedReason" : "general",
+    "screenRecording" : true,
     "userId" : "userId"
   } ]
 }, statusCode=200}]
@@ -2042,6 +2050,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -2468,6 +2477,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   }, {
@@ -2986,6 +2996,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -3412,6 +3423,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   } ]
@@ -4055,6 +4067,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -4484,6 +4497,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   }, {
@@ -5005,6 +5019,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -5434,6 +5449,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   } ]
@@ -8782,6 +8798,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -9208,6 +9225,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   }, {
@@ -9726,6 +9744,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -10152,6 +10171,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   } ],
@@ -10755,6 +10775,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -11181,6 +11202,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   }, {
@@ -11699,6 +11721,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -12125,6 +12148,7 @@ open class AnalyticsAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   } ]

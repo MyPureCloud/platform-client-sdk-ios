@@ -2031,6 +2031,115 @@ open class JourneyAPI {
 
     
     
+    
+    
+    
+    
+    
+    public enum EventType_getJourneySessionEvents: String { 
+        case comGenesysJourneyOutcomeachievedevent = "com.genesys.journey.OutcomeAchievedEvent"
+        case comGenesysJourneySegmentassignmentevent = "com.genesys.journey.SegmentAssignmentEvent"
+        case comGenesysJourneyWebactionevent = "com.genesys.journey.WebActionEvent"
+        case comGenesysJourneyWebevent = "com.genesys.journey.WebEvent"
+        case comGenesysJourneyAppevent = "com.genesys.journey.AppEvent"
+    }
+    
+    
+    /**
+     Retrieve all events for a given session.
+     
+     - parameter sessionId: (path) System-generated UUID that represents the session the event is a part of. 
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter eventType: (query) A comma separated list of journey event types to include in the results. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneySessionEvents(sessionId: String, pageSize: String? = nil, after: String? = nil, eventType: EventType_getJourneySessionEvents? = nil, completion: @escaping ((_ data: EventListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneySessionEventsWithRequestBuilder(sessionId: sessionId, pageSize: pageSize, after: after, eventType: eventType)
+        requestBuilder.execute { (response: Response<EventListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve all events for a given session.
+     - GET /api/v2/journey/sessions/{sessionId}/events
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "segmentAssignmentEvent" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "session" : "{}",
+    "appEvent" : "{}",
+    "customerId" : "customerId",
+    "webEvent" : "{}",
+    "correlationId" : "correlationId",
+    "id" : "id",
+    "customerIdType" : "customerIdType",
+    "eventType" : "eventType",
+    "outcomeAchievedEvent" : "{}",
+    "webActionEvent" : "{}"
+  }, {
+    "segmentAssignmentEvent" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "session" : "{}",
+    "appEvent" : "{}",
+    "customerId" : "customerId",
+    "webEvent" : "{}",
+    "correlationId" : "correlationId",
+    "id" : "id",
+    "customerIdType" : "customerIdType",
+    "eventType" : "eventType",
+    "outcomeAchievedEvent" : "{}",
+    "webActionEvent" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter sessionId: (path) System-generated UUID that represents the session the event is a part of. 
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter eventType: (query) A comma separated list of journey event types to include in the results. (optional)
+
+     - returns: RequestBuilder<EventListing> 
+     */
+    open class func getJourneySessionEventsWithRequestBuilder(sessionId: String, pageSize: String? = nil, after: String? = nil, eventType: EventType_getJourneySessionEvents? = nil) -> RequestBuilder<EventListing> {        
+        var path = "/api/v2/journey/sessions/{sessionId}/events"
+        let sessionIdPreEscape = "\(sessionId)"
+        let sessionIdPostEscape = sessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sessionId}", with: sessionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize, 
+            "after": after, 
+            "eventType": eventType?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<EventListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Retrieve latest outcome score associated with a session for all outcomes.
      
@@ -3220,6 +3329,88 @@ open class JourneyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AppEventResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Send a journey web event, used for tracking customer activity on a website.
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the web event. 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyDeploymentWebevents(deploymentId: String, body: WebEventRequest? = nil, completion: @escaping ((_ data: WebEventResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyDeploymentWebeventsWithRequestBuilder(deploymentId: deploymentId, body: body)
+        requestBuilder.execute { (response: Response<WebEventResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Send a journey web event, used for tracking customer activity on a website.
+     - POST /api/v2/journey/deployments/{deploymentId}/webevents
+     - examples: [{contentType=application/json, example={
+  "ipOrganization" : "ipOrganization",
+  "authenticated" : true,
+  "traits" : {
+    "key" : {
+      "dataType" : "dataType",
+      "value" : "value"
+    }
+  },
+  "session" : "{}",
+  "userAgentString" : "userAgentString",
+  "referrer" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "browser" : "{}",
+  "searchQuery" : "searchQuery",
+  "customerId" : "customerId",
+  "eventName" : "eventName",
+  "attributes" : {
+    "key" : {
+      "dataType" : "dataType",
+      "value" : "value"
+    }
+  },
+  "customerIdType" : "customerIdType",
+  "page" : "{}",
+  "device" : "{}",
+  "mktCampaign" : "{}",
+  "geolocation" : "{}"
+}, statusCode=200}]
+     
+     - parameter deploymentId: (path) The ID of the deployment sending the web event. 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<WebEventResponse> 
+     */
+    open class func postJourneyDeploymentWebeventsWithRequestBuilder(deploymentId: String, body: WebEventRequest? = nil) -> RequestBuilder<WebEventResponse> {        
+        var path = "/api/v2/journey/deployments/{deploymentId}/webevents"
+        let deploymentIdPreEscape = "\(deploymentId)"
+        let deploymentIdPostEscape = deploymentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{deploymentId}", with: deploymentIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WebEventResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -2009,6 +2009,7 @@ open class SearchAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -2435,6 +2436,7 @@ open class SearchAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   }, {
@@ -2953,6 +2955,7 @@ open class SearchAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     }, {
       "participantId" : "participantId",
@@ -3379,6 +3382,7 @@ open class SearchAPI {
       "externalOrganizationId" : "externalOrganizationId",
       "participantName" : "participantName",
       "flaggedReason" : "general",
+      "screenRecording" : true,
       "userId" : "userId"
     } ]
   } ]

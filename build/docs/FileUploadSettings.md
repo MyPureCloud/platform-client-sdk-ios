@@ -8,7 +8,7 @@ File upload settings for messenger
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **enableAttachments** | **Bool** | whether or not attachments is enabled | [optional] |
+| **enableAttachments** | **Bool** | whether or not attachments are enabled | [optional] |
 | **modes** | [**[FileUploadMode]**](FileUploadMode.html) | The list of supported file upload modes | [optional] |
 {: class="table table-striped"}
 

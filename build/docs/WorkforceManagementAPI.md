@@ -28,7 +28,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalBulkJob) | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
 | [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAdhocmodelingjob**](WorkforceManagementAPI.html#getWorkforcemanagementAdhocmodelingjob) | To get status of the modeling job. |
 | [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
 | [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
 | [**getWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentsMeManagementunit) | Get the management unit to which the currently logged in agent belongs |
@@ -1312,60 +1311,6 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalJob(jobId: jobId
 ### Return type
 
 [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
-
-<a name="getWorkforcemanagementAdhocmodelingjob"></a>
-
-# **getWorkforcemanagementAdhocmodelingjob**
-
-
-
-> [ModelingStatusResponse](ModelingStatusResponse.html) getWorkforcemanagementAdhocmodelingjob(jobId)
-
-To get status of the modeling job.
-
-This Endpoint is Deprecated, and not recommended to be used.
-
-
-
-Wraps GET /api/v2/workforcemanagement/adhocmodelingjobs/{jobId}  
-
-Requires ANY permissions: 
-
-* wfm:adhocModel:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let jobId: String = "" // The id of the modeling job
-
-// Code example
-WorkforceManagementAPI.getWorkforcemanagementAdhocmodelingjob(jobId: jobId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("WorkforceManagementAPI.getWorkforcemanagementAdhocmodelingjob was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **jobId** | **String**| The id of the modeling job | |
-{: class="table-striped"}
-
-
-### Return type
-
-[**ModelingStatusResponse**](ModelingStatusResponse.html)
 
 <a name="getWorkforcemanagementAgentAdherenceExplanation"></a>
 
