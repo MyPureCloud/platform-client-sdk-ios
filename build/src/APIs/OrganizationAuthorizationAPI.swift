@@ -3022,7 +3022,9 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "hasFullAccess" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isTrustedUser" : true,
   "createdBy" : "{}",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "organization" : "{}",
@@ -5184,8 +5186,8 @@ open class OrganizationAuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -7185,8 +7187,8 @@ open class OrganizationAuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter trusteeOrgId: (path) Trustee Organization Id 
@@ -7254,7 +7256,9 @@ open class OrganizationAuthorizationAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "hasFullAccess" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isTrustedUser" : true,
     "createdBy" : "{}",
     "dateExpired" : "2000-01-23T04:56:07.000+00:00",
     "organization" : "{}",
@@ -7263,7 +7267,9 @@ open class OrganizationAuthorizationAPI {
     "enabled" : true,
     "usesDefaultRole" : true
   }, {
+    "hasFullAccess" : true,
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isTrustedUser" : true,
     "createdBy" : "{}",
     "dateExpired" : "2000-01-23T04:56:07.000+00:00",
     "organization" : "{}",
@@ -7276,8 +7282,8 @@ open class OrganizationAuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -7331,7 +7337,9 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "hasFullAccess" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isTrustedUser" : true,
   "createdBy" : "{}",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "organization" : "{}",
@@ -9488,8 +9496,8 @@ open class OrganizationAuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter trustorOrgId: (path) Trustee Organization Id 
@@ -11364,8 +11372,8 @@ open class OrganizationAuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter trustorOrgId: (path) Trustee Organization Id 
@@ -11453,8 +11461,8 @@ open class OrganizationAuthorizationAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -15286,7 +15294,9 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "hasFullAccess" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isTrustedUser" : true,
   "createdBy" : "{}",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "organization" : "{}",
@@ -15419,7 +15429,9 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "hasFullAccess" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isTrustedUser" : true,
   "createdBy" : "{}",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "organization" : "{}",
@@ -15557,7 +15569,9 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "hasFullAccess" : true,
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "isTrustedUser" : true,
   "createdBy" : "{}",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "organization" : "{}",

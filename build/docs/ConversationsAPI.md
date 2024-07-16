@@ -146,6 +146,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsConversationsDetailsJobs**](ConversationsAPI.html#postAnalyticsConversationsDetailsJobs) | Query for conversation details asynchronously |
 | [**postAnalyticsConversationsDetailsQuery**](ConversationsAPI.html#postAnalyticsConversationsDetailsQuery) | Query for conversation details |
 | [**postConversationAssign**](ConversationsAPI.html#postConversationAssign) | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
+| [**postConversationBarge**](ConversationsAPI.html#postConversationBarge) | Barge a conversation creating a barged in conference of connected participants. |
 | [**postConversationCobrowse**](ConversationsAPI.html#postConversationCobrowse) | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
 | [**postConversationDisconnect**](ConversationsAPI.html#postConversationDisconnect) | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**postConversationParticipantCallbacks**](ConversationsAPI.html#postConversationParticipantCallbacks) | Create a new callback for the specified participant on the conversation. |
@@ -159,6 +160,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationSuggestionsFeedback**](ConversationsAPI.html#postConversationSuggestionsFeedback) | Suggestion feedback. |
 | [**postConversationSummaryFeedback**](ConversationsAPI.html#postConversationSummaryFeedback) | Submit feedback for the summary. |
 | [**postConversationsCall**](ConversationsAPI.html#postConversationsCall) | Place a new call as part of a callback conversation. |
+| [**postConversationsCallParticipantBarge**](ConversationsAPI.html#postConversationsCallParticipantBarge) | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
 | [**postConversationsCallParticipantCoach**](ConversationsAPI.html#postConversationsCallParticipantCoach) | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**postConversationsCallParticipantCommunicationWrapup**](ConversationsAPI.html#postConversationsCallParticipantCommunicationWrapup) | Apply wrap-up for this conversation communication |
 | [**postConversationsCallParticipantConsult**](ConversationsAPI.html#postConversationsCallParticipantConsult) | Initiate and update consult transfer |
@@ -7733,6 +7735,57 @@ ConversationsAPI.postConversationAssign(conversationId: conversationId, body: bo
 
 **String**
 
+<a name="postConversationBarge"></a>
+
+# **postConversationBarge**
+
+
+
+> Void postConversationBarge(conversationId)
+
+Barge a conversation creating a barged in conference of connected participants.
+
+
+
+Wraps POST /api/v2/conversations/{conversationId}/barge  
+
+Requires ANY permissions: 
+
+* conversation:call:barge
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+
+// Code example
+ConversationsAPI.postConversationBarge(conversationId: conversationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationBarge was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="postConversationCobrowse"></a>
 
 # **postConversationCobrowse**
@@ -8441,6 +8494,59 @@ ConversationsAPI.postConversationsCall(conversationId: conversationId, body: bod
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+<a name="postConversationsCallParticipantBarge"></a>
+
+# **postConversationsCallParticipantBarge**
+
+
+
+> Void postConversationsCallParticipantBarge(conversationId, participantId)
+
+Barge a given participant&#39;s call creating a barged in conference of connected participants.
+
+
+
+Wraps POST /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge  
+
+Requires ANY permissions: 
+
+* conversation:call:barge
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+
+// Code example
+ConversationsAPI.postConversationsCallParticipantBarge(conversationId: conversationId, participantId: participantId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.postConversationsCallParticipantBarge was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
 
 <a name="postConversationsCallParticipantCoach"></a>
 

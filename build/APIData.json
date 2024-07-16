@@ -9607,6 +9607,19 @@
     "return": "String",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: ConversationUser = new ConversationUser(...) // Targeted user\n\n// Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages.\nPostConversationAssignRequest.postConversationAssign(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationAssignRequest.postConversationAssign was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationbarge": {
+    "operationId": "postconversationbarge",
+    "functionName": "postConversationBarge",
+    "signature": "postConversationBarge(conversationId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\n\n// Barge a conversation creating a barged in conference of connected participants.\nPostConversationBargeRequest.postConversationBarge(conversationId: conversationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationBargeRequest.postConversationBarge was successful\")\n    }\n}"
+  },
   "postconversationcobrowse": {
     "operationId": "postconversationcobrowse",
     "functionName": "postConversationCobrowse",
@@ -9880,6 +9893,24 @@
     ],
     "return": "Conversation",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet body: CallCommand = new CallCommand(...) // Conversation\n\n// Place a new call as part of a callback conversation.\nPostConversationsCallRequest.postConversationsCall(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsCallRequest.postConversationsCall was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postconversationscallparticipantbarge": {
+    "operationId": "postconversationscallparticipantbarge",
+    "functionName": "postConversationsCallParticipantBarge",
+    "signature": "postConversationsCallParticipantBarge(conversationId, participantId)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "participantId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversationId\nlet participantId: String = \"\" // participantId\n\n// Barge a given participant's call creating a barged in conference of connected participants.\nPostConversationsCallParticipantBargeRequest.postConversationsCallParticipantBarge(conversationId: conversationId, participantId: participantId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostConversationsCallParticipantBargeRequest.postConversationsCallParticipantBarge was successful\")\n    }\n}"
   },
   "postconversationscallparticipantcoach": {
     "operationId": "postconversationscallparticipantcoach",

@@ -254,8 +254,9 @@ Delete a set of credentials
 
 Wraps DELETE /api/v2/integrations/credentials/{credentialId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:delete
 
 ### Example
 
@@ -1480,8 +1481,9 @@ Get a single credential with sensitive fields redacted
 
 Wraps GET /api/v2/integrations/credentials/{credentialId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 
@@ -1531,8 +1533,9 @@ List multiple sets of credentials
 
 Wraps GET /api/v2/integrations/credentials  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 
@@ -1584,8 +1587,9 @@ List all credential types
 
 Wraps GET /api/v2/integrations/credentials/types  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:view
 
 ### Example
 
@@ -3850,8 +3854,9 @@ Create a set of credentials
 
 Wraps POST /api/v2/integrations/credentials  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:add
 
 ### Example
 
@@ -4177,8 +4182,9 @@ Update a set of credentials
 
 Wraps PUT /api/v2/integrations/credentials/{credentialId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* integrations:integration:edit
 
 ### Example
 

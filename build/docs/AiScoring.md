@@ -1,7 +1,7 @@
 ---
-title: PredictedScoring
+title: AiScoring
 ---
-## PredictedScoring
+## AiScoring
 
 ## Properties
 
