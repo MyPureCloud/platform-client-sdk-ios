@@ -4341,7 +4341,7 @@
   "getauditsquerytransactionidresults": {
     "operationId": "getauditsquerytransactionidresults",
     "functionName": "getAuditsQueryTransactionIdResults",
-    "signature": "getAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand)",
+    "signature": "getAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand, allowRedirect)",
     "parameters": [
       {
         "name": "transactionId",
@@ -4362,10 +4362,15 @@
         "name": "expand",
         "type": "[String]",
         "required": "false"
+      },
+      {
+        "name": "allowRedirect",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "AuditQueryExecutionResultsResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet transactionId: String = \"\" // Transaction ID\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\nlet pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500.\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\n\n// Get results of audit query\nGetAuditsQueryTransactionIdResultsRequest.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuditsQueryTransactionIdResultsRequest.getAuditsQueryTransactionIdResults was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet transactionId: String = \"\" // Transaction ID\nlet cursor: String = \"\" // Indicates where to resume query results (not required for first page)\nlet pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500.\nlet expand: [String] = [\"\"] // Which fields, if any, to expand\nlet allowRedirect: Bool = true // Result sets with large amounts of data will respond with a download url\n\n// Get results of audit query\nGetAuditsQueryTransactionIdResultsRequest.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand, allowRedirect: allowRedirect) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAuditsQueryTransactionIdResultsRequest.getAuditsQueryTransactionIdResults was successful\")\n        dump(response)\n    }\n}"
   },
   "postauditsquery": {
     "operationId": "postauditsquery",
@@ -30732,6 +30737,12 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assessmentId: String = \"\" // Benefit Assessment ID\n\n// Delete single benefit assessment.\nDeleteRoutingAssessmentRequest.deleteRoutingAssessment(assessmentId: assessmentId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingAssessmentRequest.deleteRoutingAssessment was successful\")\n    }\n}"
   },
+  "deleteroutingdirectroutingbackupsettingsme": {
+    "operationId": "deleteroutingdirectroutingbackupsettingsme",
+    "functionName": "deleteRoutingDirectroutingbackupSettingsMe",
+    "signature": "deleteRoutingDirectroutingbackupSettingsMe()",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.\nDeleteRoutingDirectroutingbackupSettingsMeRequest.deleteRoutingDirectroutingbackupSettingsMe() { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingDirectroutingbackupSettingsMeRequest.deleteRoutingDirectroutingbackupSettingsMe was successful\")\n    }\n}"
+  },
   "deleteroutingemaildomain": {
     "operationId": "deleteroutingemaildomain",
     "functionName": "deleteRoutingEmailDomain",
@@ -30932,6 +30943,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\n\n// Delete a phone number provisioned for SMS.\nDeleteRoutingSmsPhonenumberRequest.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingSmsPhonenumberRequest.deleteRoutingSmsPhonenumber was successful\")\n    }\n}"
   },
+  "deleteroutinguserdirectroutingbackupsettings": {
+    "operationId": "deleteroutinguserdirectroutingbackupsettings",
+    "functionName": "deleteRoutingUserDirectroutingbackupSettings",
+    "signature": "deleteRoutingUserDirectroutingbackupSettings(userId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.\nDeleteRoutingUserDirectroutingbackupSettingsRequest.deleteRoutingUserDirectroutingbackupSettings(userId: userId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteRoutingUserDirectroutingbackupSettingsRequest.deleteRoutingUserDirectroutingbackupSettings was successful\")\n    }\n}"
+  },
   "deleteroutinguserutilization": {
     "operationId": "deleteroutinguserutilization",
     "functionName": "deleteRoutingUserUtilization",
@@ -31100,6 +31124,13 @@
     "signature": "getRoutingAvailablemediatypes()",
     "return": "AvailableMediaTypeEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get available media types\nGetRoutingAvailablemediatypesRequest.getRoutingAvailablemediatypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingAvailablemediatypesRequest.getRoutingAvailablemediatypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getroutingdirectroutingbackupsettingsme": {
+    "operationId": "getroutingdirectroutingbackupsettingsme",
+    "functionName": "getRoutingDirectroutingbackupSettingsMe",
+    "signature": "getRoutingDirectroutingbackupSettingsMe()",
+    "return": "AgentDirectRoutingBackupSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the user's Direct Routing Backup settings.\nGetRoutingDirectroutingbackupSettingsMeRequest.getRoutingDirectroutingbackupSettingsMe() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingDirectroutingbackupSettingsMeRequest.getRoutingDirectroutingbackupSettingsMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getroutingemaildomain": {
     "operationId": "getroutingemaildomain",
@@ -32169,6 +32200,20 @@
     "return": "SmsPhoneNumberEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet phoneNumber: String = \"\" // Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used.\nlet phoneNumberType: [String] = [\"\"] // Filter on phone number type\nlet phoneNumberStatus: [String] = [\"\"] // Filter on phone number status\nlet countryCode: [String] = [\"\"] // Filter on country code\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortBy_getRoutingSmsPhonenumbers.enummember // Optional field to sort results\nlet sortOrder: GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers = GetRoutingSmsPhonenumbersRequest.SortOrder_getRoutingSmsPhonenumbers.enummember // Sort order\nlet language: String = en-US // A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize country field and sort operations\nlet integrationId: String = \"\" // Filter on the Genesys Cloud integration id to which the phone number belongs to\nlet supportedContentId: String = \"\" // Filter based on the supported content ID\n\n// Get a list of provisioned phone numbers.\nGetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: phoneNumberType, phoneNumberStatus: phoneNumberStatus, countryCode: countryCode, pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, language: language, integrationId: integrationId, supportedContentId: supportedContentId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingSmsPhonenumbersRequest.getRoutingSmsPhonenumbers was successful\")\n        dump(response)\n    }\n}"
   },
+  "getroutinguserdirectroutingbackupsettings": {
+    "operationId": "getroutinguserdirectroutingbackupsettings",
+    "functionName": "getRoutingUserDirectroutingbackupSettings",
+    "signature": "getRoutingUserDirectroutingbackupSettings(userId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AgentDirectRoutingBackupSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\n\n// Get the user's Direct Routing Backup settings.\nGetRoutingUserDirectroutingbackupSettingsRequest.getRoutingUserDirectroutingbackupSettings(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingUserDirectroutingbackupSettingsRequest.getRoutingUserDirectroutingbackupSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "getroutinguserutilization": {
     "operationId": "getroutinguserutilization",
     "functionName": "getRoutingUserUtilization",
@@ -33164,6 +33209,20 @@
     "return": "UserRoutingSkill",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: UserRoutingSkillPost = new UserRoutingSkillPost(...) // Skill\n\n// Add routing skill to user\nPostUserRoutingskillsRequest.postUserRoutingskills(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostUserRoutingskillsRequest.postUserRoutingskills was successful\")\n        dump(response)\n    }\n}"
   },
+  "putroutingdirectroutingbackupsettingsme": {
+    "operationId": "putroutingdirectroutingbackupsettingsme",
+    "functionName": "putRoutingDirectroutingbackupSettingsMe",
+    "signature": "putRoutingDirectroutingbackupSettingsMe(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AgentDirectRoutingBackupSettings",
+        "required": "true"
+      }
+    ],
+    "return": "AgentDirectRoutingBackupSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: AgentDirectRoutingBackupSettings = new AgentDirectRoutingBackupSettings(...) // directRoutingBackup\n\n// Update the user's Direct Routing Backup settings.\nPutRoutingDirectroutingbackupSettingsMeRequest.putRoutingDirectroutingbackupSettingsMe(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingDirectroutingbackupSettingsMeRequest.putRoutingDirectroutingbackupSettingsMe was successful\")\n        dump(response)\n    }\n}"
+  },
   "putroutingemaildomainroute": {
     "operationId": "putroutingemaildomainroute",
     "functionName": "putRoutingEmailDomainRoute",
@@ -33286,6 +33345,25 @@
     ],
     "return": "SmsPhoneNumber",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet addressId: String = \"\" // Address ID\nlet body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber\n\n// Update a phone number provisioned for SMS.\nPutRoutingSmsPhonenumberRequest.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingSmsPhonenumberRequest.putRoutingSmsPhonenumber was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putroutinguserdirectroutingbackupsettings": {
+    "operationId": "putroutinguserdirectroutingbackupsettings",
+    "functionName": "putRoutingUserDirectroutingbackupSettings",
+    "signature": "putRoutingUserDirectroutingbackupSettings(userId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AgentDirectRoutingBackupSettings",
+        "required": "true"
+      }
+    ],
+    "return": "AgentDirectRoutingBackupSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // User ID\nlet body: AgentDirectRoutingBackupSettings = new AgentDirectRoutingBackupSettings(...) // directRoutingBackup\n\n// Update the user's Direct Routing Backup settings.\nPutRoutingUserDirectroutingbackupSettingsRequest.putRoutingUserDirectroutingbackupSettings(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutRoutingUserDirectroutingbackupSettingsRequest.putRoutingUserDirectroutingbackupSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "putroutinguserutilization": {
     "operationId": "putroutinguserutilization",

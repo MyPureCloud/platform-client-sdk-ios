@@ -225,6 +225,8 @@ open class AuditAPI {
         case user = "user"
     }
     
+    
+    
     /**
      Get results of audit query
      
@@ -232,10 +234,11 @@ open class AuditAPI {
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter pageSize: (query) Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional)
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter allowRedirect: (query) Result sets with large amounts of data will respond with a download url (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAuditsQueryTransactionIdResults(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil, completion: @escaping ((_ data: AuditQueryExecutionResultsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand)
+    open class func getAuditsQueryTransactionIdResults(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil, allowRedirect: Bool? = nil, completion: @escaping ((_ data: AuditQueryExecutionResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand, allowRedirect: allowRedirect)
         requestBuilder.execute { (response: Response<AuditQueryExecutionResultsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -353,10 +356,11 @@ open class AuditAPI {
      - parameter cursor: (query) Indicates where to resume query results (not required for first page) (optional)
      - parameter pageSize: (query) Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. (optional)
      - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter allowRedirect: (query) Result sets with large amounts of data will respond with a download url (optional)
 
      - returns: RequestBuilder<AuditQueryExecutionResultsResponse> 
      */
-    open class func getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil) -> RequestBuilder<AuditQueryExecutionResultsResponse> {        
+    open class func getAuditsQueryTransactionIdResultsWithRequestBuilder(transactionId: String, cursor: String? = nil, pageSize: Int? = nil, expand: [String]? = nil, allowRedirect: Bool? = nil) -> RequestBuilder<AuditQueryExecutionResultsResponse> {        
         var path = "/api/v2/audits/query/{transactionId}/results"
         let transactionIdPreEscape = "\(transactionId)"
         let transactionIdPostEscape = transactionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -368,7 +372,8 @@ open class AuditAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "cursor": cursor, 
             "pageSize": pageSize?.encodeToJSON(), 
-            "expand": expand
+            "expand": expand, 
+            "allowRedirect": allowRedirect
         ])
 
         let requestBuilder: RequestBuilder<AuditQueryExecutionResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

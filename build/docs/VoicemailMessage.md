@@ -12,6 +12,7 @@ title: VoicemailMessage
 | **read** | **Bool** | Whether the voicemail message is marked as read | [optional] |
 | **audioRecordingDurationSeconds** | **Int** | The voicemail message&#39;s audio recording duration in seconds | [optional] |
 | **audioRecordingSizeBytes** | **Int64** | The voicemail message&#39;s audio recording size in bytes | [optional] |
+| **transcription** | **String** | The transcription of the voicemail&#39;s audio | [optional] |
 | **createdDate** | [**Date**](Date.html) | The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **modifiedDate** | [**Date**](Date.html) | The date the voicemail message was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **deletedDate** | [**Date**](Date.html) | The date the voicemail message deleted property was set to true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |

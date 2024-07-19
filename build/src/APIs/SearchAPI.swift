@@ -498,6 +498,7 @@ open class SearchAPI {
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
         case conversations = "conversations"
+        case transcription = "transcription"
         case images = "images"
         case addressverificationdetails = "addressVerificationDetails"
     }
@@ -605,6 +606,7 @@ open class SearchAPI {
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
         case conversations = "conversations"
+        case transcription = "transcription"
         case images = "images"
         case addressverificationdetails = "addressVerificationDetails"
     }
@@ -1392,6 +1394,7 @@ open class SearchAPI {
       "group" : "{}"
     } ],
     "read" : true,
+    "transcription" : "transcription",
     "selfUri" : "https://openapi-generator.tech",
     "callerUser" : "{}",
     "deleteRetentionPolicy" : "{}",
@@ -1421,6 +1424,7 @@ open class SearchAPI {
       "group" : "{}"
     } ],
     "read" : true,
+    "transcription" : "transcription",
     "selfUri" : "https://openapi-generator.tech",
     "callerUser" : "{}",
     "deleteRetentionPolicy" : "{}",
@@ -5614,6 +5618,7 @@ open class SearchAPI {
       "group" : "{}"
     } ],
     "read" : true,
+    "transcription" : "transcription",
     "selfUri" : "https://openapi-generator.tech",
     "callerUser" : "{}",
     "deleteRetentionPolicy" : "{}",
@@ -5643,6 +5648,7 @@ open class SearchAPI {
       "group" : "{}"
     } ],
     "read" : true,
+    "transcription" : "transcription",
     "selfUri" : "https://openapi-generator.tech",
     "callerUser" : "{}",
     "deleteRetentionPolicy" : "{}",

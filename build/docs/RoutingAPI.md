@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteRoutingAssessment**](RoutingAPI.html#deleteRoutingAssessment) | Delete single benefit assessment. |
+| [**deleteRoutingDirectroutingbackupSettingsMe**](RoutingAPI.html#deleteRoutingDirectroutingbackupSettingsMe) | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
 | [**deleteRoutingEmailDomain**](RoutingAPI.html#deleteRoutingEmailDomain) | Delete a domain |
 | [**deleteRoutingEmailDomainRoute**](RoutingAPI.html#deleteRoutingEmailDomainRoute) | Delete a route |
 | [**deleteRoutingEmailOutboundDomain**](RoutingAPI.html#deleteRoutingEmailOutboundDomain) | Delete an outbound domain |
@@ -22,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteRoutingSkillgroup**](RoutingAPI.html#deleteRoutingSkillgroup) | Remove skill group definition |
 | [**deleteRoutingSmsAddress**](RoutingAPI.html#deleteRoutingSmsAddress) | Delete an Address by Id for SMS |
 | [**deleteRoutingSmsPhonenumber**](RoutingAPI.html#deleteRoutingSmsPhonenumber) | Delete a phone number provisioned for SMS. |
+| [**deleteRoutingUserDirectroutingbackupSettings**](RoutingAPI.html#deleteRoutingUserDirectroutingbackupSettings) | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
 | [**deleteRoutingUserUtilization**](RoutingAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteRoutingUtilization**](RoutingAPI.html#deleteRoutingUtilization) | Delete the organization-wide max utilization settings and revert to the system default. |
 | [**deleteRoutingUtilizationLabel**](RoutingAPI.html#deleteRoutingUtilizationLabel) | Delete a utilization label |
@@ -33,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingAssessmentsJob**](RoutingAPI.html#getRoutingAssessmentsJob) | Retrieve a single benefit assessments job. |
 | [**getRoutingAssessmentsJobs**](RoutingAPI.html#getRoutingAssessmentsJobs) | Retrieve all benefit assessment jobs. |
 | [**getRoutingAvailablemediatypes**](RoutingAPI.html#getRoutingAvailablemediatypes) | Get available media types |
+| [**getRoutingDirectroutingbackupSettingsMe**](RoutingAPI.html#getRoutingDirectroutingbackupSettingsMe) | Get the user&#39;s Direct Routing Backup settings. |
 | [**getRoutingEmailDomain**](RoutingAPI.html#getRoutingEmailDomain) | Get domain |
 | [**getRoutingEmailDomainRoute**](RoutingAPI.html#getRoutingEmailDomainRoute) | Get a route |
 | [**getRoutingEmailDomainRoutes**](RoutingAPI.html#getRoutingEmailDomainRoutes) | Get routes |
@@ -77,6 +80,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingSmsAvailablephonenumbers**](RoutingAPI.html#getRoutingSmsAvailablephonenumbers) | Get a list of available phone numbers for SMS provisioning. |
 | [**getRoutingSmsPhonenumber**](RoutingAPI.html#getRoutingSmsPhonenumber) | Get a phone number provisioned for SMS. |
 | [**getRoutingSmsPhonenumbers**](RoutingAPI.html#getRoutingSmsPhonenumbers) | Get a list of provisioned phone numbers. |
+| [**getRoutingUserDirectroutingbackupSettings**](RoutingAPI.html#getRoutingUserDirectroutingbackupSettings) | Get the user&#39;s Direct Routing Backup settings. |
 | [**getRoutingUserUtilization**](RoutingAPI.html#getRoutingUserUtilization) | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**getRoutingUtilization**](RoutingAPI.html#getRoutingUtilization) | Get the organization-wide max utilization settings. |
 | [**getRoutingUtilizationLabel**](RoutingAPI.html#getRoutingUtilizationLabel) | Get details about this utilization label |
@@ -131,6 +135,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postRoutingWrapupcodes**](RoutingAPI.html#postRoutingWrapupcodes) | Create a wrap-up code |
 | [**postUserRoutinglanguages**](RoutingAPI.html#postUserRoutinglanguages) | Add routing language to user |
 | [**postUserRoutingskills**](RoutingAPI.html#postUserRoutingskills) | Add routing skill to user |
+| [**putRoutingDirectroutingbackupSettingsMe**](RoutingAPI.html#putRoutingDirectroutingbackupSettingsMe) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingEmailDomainRoute**](RoutingAPI.html#putRoutingEmailDomainRoute) | Update a route |
 | [**putRoutingEmailOutboundDomainActivation**](RoutingAPI.html#putRoutingEmailOutboundDomainActivation) | Request an activation status (cname + dkim) update of an outbound domain |
 | [**putRoutingMessageRecipient**](RoutingAPI.html#putRoutingMessageRecipient) | Update a recipient |
@@ -138,6 +143,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingSettings**](RoutingAPI.html#putRoutingSettings) | Update an organization&#39;s routing settings |
 | [**putRoutingSettingsTranscription**](RoutingAPI.html#putRoutingSettingsTranscription) | Update Transcription Settings |
 | [**putRoutingSmsPhonenumber**](RoutingAPI.html#putRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
+| [**putRoutingUserDirectroutingbackupSettings**](RoutingAPI.html#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingUserUtilization**](RoutingAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingUtilization**](RoutingAPI.html#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingUtilizationLabel**](RoutingAPI.html#putRoutingUtilizationLabel) | Update a utilization label |
@@ -191,6 +197,53 @@ RoutingAPI.deleteRoutingAssessment(assessmentId: assessmentId) { (error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **assessmentId** | **String**| Benefit Assessment ID | |
 {: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingDirectroutingbackupSettingsMe"></a>
+
+# **deleteRoutingDirectroutingbackupSettingsMe**
+
+
+
+> Void deleteRoutingDirectroutingbackupSettingsMe()
+
+Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
+
+
+
+Wraps DELETE /api/v2/routing/directroutingbackup/settings/me  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfDelete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.deleteRoutingDirectroutingbackupSettingsMe() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingDirectroutingbackupSettingsMe was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
 
 
 ### Return type
@@ -920,6 +973,57 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
 
 `nil` (empty response body)
 
+<a name="deleteRoutingUserDirectroutingbackupSettings"></a>
+
+# **deleteRoutingUserDirectroutingbackupSettings**
+
+
+
+> Void deleteRoutingUserDirectroutingbackupSettings(userId)
+
+Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
+
+
+
+Wraps DELETE /api/v2/routing/users/{userId}/directroutingbackup/settings  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+RoutingAPI.deleteRoutingUserDirectroutingbackupSettings(userId: userId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("RoutingAPI.deleteRoutingUserDirectroutingbackupSettings was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="deleteRoutingUserUtilization"></a>
 
 # **deleteRoutingUserUtilization**
@@ -1492,6 +1596,54 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**AvailableMediaTypeEntityListing**](AvailableMediaTypeEntityListing.html)
+
+<a name="getRoutingDirectroutingbackupSettingsMe"></a>
+
+# **getRoutingDirectroutingbackupSettingsMe**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) getRoutingDirectroutingbackupSettingsMe()
+
+Get the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps GET /api/v2/routing/directroutingbackup/settings/me  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+RoutingAPI.getRoutingDirectroutingbackupSettingsMe() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingDirectroutingbackupSettingsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="getRoutingEmailDomain"></a>
 
@@ -3958,6 +4110,58 @@ RoutingAPI.getRoutingSmsPhonenumbers(phoneNumber: phoneNumber, phoneNumberType: 
 ### Return type
 
 [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html)
+
+<a name="getRoutingUserDirectroutingbackupSettings"></a>
+
+# **getRoutingUserDirectroutingbackupSettings**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) getRoutingUserDirectroutingbackupSettings(userId)
+
+Get the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps GET /api/v2/routing/users/{userId}/directroutingbackup/settings  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+RoutingAPI.getRoutingUserDirectroutingbackupSettings(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingUserDirectroutingbackupSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="getRoutingUserUtilization"></a>
 
@@ -6895,6 +7099,58 @@ RoutingAPI.postUserRoutingskills(userId: userId, body: body) { (response, error)
 
 [**UserRoutingSkill**](UserRoutingSkill.html)
 
+<a name="putRoutingDirectroutingbackupSettingsMe"></a>
+
+# **putRoutingDirectroutingbackupSettingsMe**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) putRoutingDirectroutingbackupSettingsMe(body)
+
+Update the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps PUT /api/v2/routing/directroutingbackup/settings/me  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfEdit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentDirectRoutingBackupSettings = new AgentDirectRoutingBackupSettings(...) // directRoutingBackup
+
+// Code example
+RoutingAPI.putRoutingDirectroutingbackupSettingsMe(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingDirectroutingbackupSettingsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)| directRoutingBackup | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
+
 <a name="putRoutingEmailDomainRoute"></a>
 
 # **putRoutingEmailDomainRoute**
@@ -7268,6 +7524,60 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 ### Return type
 
 [**SmsPhoneNumber**](SmsPhoneNumber.html)
+
+<a name="putRoutingUserDirectroutingbackupSettings"></a>
+
+# **putRoutingUserDirectroutingbackupSettings**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) putRoutingUserDirectroutingbackupSettings(userId, body)
+
+Update the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps PUT /api/v2/routing/users/{userId}/directroutingbackup/settings  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: AgentDirectRoutingBackupSettings = new AgentDirectRoutingBackupSettings(...) // directRoutingBackup
+
+// Code example
+RoutingAPI.putRoutingUserDirectroutingbackupSettings(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.putRoutingUserDirectroutingbackupSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)| directRoutingBackup | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="putRoutingUserUtilization"></a>
 

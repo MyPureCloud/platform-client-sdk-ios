@@ -43,6 +43,7 @@ open class SuggestAPI {
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
         case conversations = "conversations"
+        case transcription = "transcription"
         case images = "images"
         case addressverificationdetails = "addressVerificationDetails"
     }
@@ -150,6 +151,7 @@ open class SuggestAPI {
         case calleruserOutofoffice = "callerUser.outOfOffice"
         case calleruserGeolocation = "callerUser.geolocation"
         case conversations = "conversations"
+        case transcription = "transcription"
         case images = "images"
         case addressverificationdetails = "addressVerificationDetails"
     }

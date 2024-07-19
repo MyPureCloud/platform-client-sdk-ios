@@ -2036,6 +2036,8 @@ RecordingAPI.patchRecordingMediaretentionpolicy(policyId: policyId, body: body) 
 
 Update a screen recording session
 
+This API is deprecated and the functionality to stop screen recording will be no longer supported.
+
 
 
 Wraps PATCH /api/v2/recordings/screensessions/{recordingSessionId}  

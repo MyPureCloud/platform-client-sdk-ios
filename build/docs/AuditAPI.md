@@ -170,7 +170,7 @@ AuditAPI.getAuditsQueryTransactionId(transactionId: transactionId) { (response, 
 
 
 
-> [AuditQueryExecutionResultsResponse](AuditQueryExecutionResultsResponse.html) getAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand)
+> [AuditQueryExecutionResultsResponse](AuditQueryExecutionResultsResponse.html) getAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand, allowRedirect)
 
 Get results of audit query
 
@@ -194,9 +194,10 @@ let transactionId: String = "" // Transaction ID
 let cursor: String = "" // Indicates where to resume query results (not required for first page)
 let pageSize: Int = 0 // Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500.
 let expand: [String] = [""] // Which fields, if any, to expand
+let allowRedirect: Bool = true // Result sets with large amounts of data will respond with a download url
 
 // Code example
-AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand) { (response, error) in
+AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor: cursor, pageSize: pageSize, expand: expand, allowRedirect: allowRedirect) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -215,6 +216,7 @@ AuditAPI.getAuditsQueryTransactionIdResults(transactionId: transactionId, cursor
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 | **pageSize** | **Int**| Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 500. | [optional] |
 | **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
+| **allowRedirect** | **Bool**| Result sets with large amounts of data will respond with a download url | [optional] |
 {: class="table-striped"}
 
 

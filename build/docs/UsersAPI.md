@@ -9,6 +9,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAnalyticsUsersDetailsJob**](UsersAPI.html#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
 | [**deleteAuthorizationSubjectDivisionRole**](UsersAPI.html#deleteAuthorizationSubjectDivisionRole) | Delete a grant of a role in a division |
+| [**deleteRoutingDirectroutingbackupSettingsMe**](UsersAPI.html#deleteRoutingDirectroutingbackupSettingsMe) | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
+| [**deleteRoutingUserDirectroutingbackupSettings**](UsersAPI.html#deleteRoutingUserDirectroutingbackupSettings) | Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default. |
 | [**deleteRoutingUserUtilization**](UsersAPI.html#deleteRoutingUserUtilization) | Delete the user&#39;s max utilization settings and revert to the organization-wide default. |
 | [**deleteUser**](UsersAPI.html#deleteUser) | Delete user |
 | [**deleteUserRoutinglanguage**](UsersAPI.html#deleteUserRoutinglanguage) | Remove routing language from user |
@@ -26,6 +28,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuthorizationSubjectsMe**](UsersAPI.html#getAuthorizationSubjectsMe) | Returns a listing of roles and permissions for the currently authenticated user. |
 | [**getFieldconfig**](UsersAPI.html#getFieldconfig) | Fetch field config for an entity type |
 | [**getProfilesUsers**](UsersAPI.html#getProfilesUsers) | Get a user profile listing |
+| [**getRoutingDirectroutingbackupSettingsMe**](UsersAPI.html#getRoutingDirectroutingbackupSettingsMe) | Get the user&#39;s Direct Routing Backup settings. |
+| [**getRoutingUserDirectroutingbackupSettings**](UsersAPI.html#getRoutingUserDirectroutingbackupSettings) | Get the user&#39;s Direct Routing Backup settings. |
 | [**getRoutingUserUtilization**](UsersAPI.html#getRoutingUserUtilization) | Get the user&#39;s max utilization settings.  If not configured, the organization-wide default is returned. |
 | [**getUser**](UsersAPI.html#getUser) | Get user. |
 | [**getUserAdjacents**](UsersAPI.html#getUserAdjacents) | Get adjacents |
@@ -81,6 +85,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUsersMePassword**](UsersAPI.html#postUsersMePassword) | Change your password |
 | [**postUsersSearch**](UsersAPI.html#postUsersSearch) | Search users |
 | [**postUsersSearchTeamsAssign**](UsersAPI.html#postUsersSearchTeamsAssign) | Search users assigned to teams |
+| [**putRoutingDirectroutingbackupSettingsMe**](UsersAPI.html#putRoutingDirectroutingbackupSettingsMe) | Update the user&#39;s Direct Routing Backup settings. |
+| [**putRoutingUserDirectroutingbackupSettings**](UsersAPI.html#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingUserUtilization**](UsersAPI.html#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putUserCallforwarding**](UsersAPI.html#putUserCallforwarding) | Update a user&#39;s CallForwarding |
 | [**putUserOutofoffice**](UsersAPI.html#putUserOutofoffice) | Update an OutOfOffice |
@@ -194,6 +200,104 @@ UsersAPI.deleteAuthorizationSubjectDivisionRole(subjectId: subjectId, divisionId
 | **subjectId** | **String**| Subject ID (user or group) | |
 | **divisionId** | **String**| the id of the division of the grant | |
 | **roleId** | **String**| the id of the role of the grant | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingDirectroutingbackupSettingsMe"></a>
+
+# **deleteRoutingDirectroutingbackupSettingsMe**
+
+
+
+> Void deleteRoutingDirectroutingbackupSettingsMe()
+
+Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
+
+
+
+Wraps DELETE /api/v2/routing/directroutingbackup/settings/me  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfDelete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.deleteRoutingDirectroutingbackupSettingsMe() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteRoutingDirectroutingbackupSettingsMe was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteRoutingUserDirectroutingbackupSettings"></a>
+
+# **deleteRoutingUserDirectroutingbackupSettings**
+
+
+
+> Void deleteRoutingUserDirectroutingbackupSettings(userId)
+
+Delete the user&#39;s Direct Routing Backup settings and revert to the Direct Routing Queue default.
+
+
+
+Wraps DELETE /api/v2/routing/users/{userId}/directroutingbackup/settings  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+UsersAPI.deleteRoutingUserDirectroutingbackupSettings(userId: userId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("UsersAPI.deleteRoutingUserDirectroutingbackupSettings was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
 {: class="table-striped"}
 
 
@@ -1112,6 +1216,106 @@ UsersAPI.getProfilesUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 ### Return type
 
 [**UserProfileEntityListing**](UserProfileEntityListing.html)
+
+<a name="getRoutingDirectroutingbackupSettingsMe"></a>
+
+# **getRoutingDirectroutingbackupSettingsMe**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) getRoutingDirectroutingbackupSettingsMe()
+
+Get the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps GET /api/v2/routing/directroutingbackup/settings/me  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfView
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+UsersAPI.getRoutingDirectroutingbackupSettingsMe() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getRoutingDirectroutingbackupSettingsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
+
+<a name="getRoutingUserDirectroutingbackupSettings"></a>
+
+# **getRoutingUserDirectroutingbackupSettings**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) getRoutingUserDirectroutingbackupSettings(userId)
+
+Get the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps GET /api/v2/routing/users/{userId}/directroutingbackup/settings  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+UsersAPI.getRoutingUserDirectroutingbackupSettings(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getRoutingUserDirectroutingbackupSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="getRoutingUserUtilization"></a>
 
@@ -4156,6 +4360,112 @@ UsersAPI.postUsersSearchTeamsAssign(body: body) { (response, error) in
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse.html)
+
+<a name="putRoutingDirectroutingbackupSettingsMe"></a>
+
+# **putRoutingDirectroutingbackupSettingsMe**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) putRoutingDirectroutingbackupSettingsMe(body)
+
+Update the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps PUT /api/v2/routing/directroutingbackup/settings/me  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:selfEdit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentDirectRoutingBackupSettings = new AgentDirectRoutingBackupSettings(...) // directRoutingBackup
+
+// Code example
+UsersAPI.putRoutingDirectroutingbackupSettingsMe(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putRoutingDirectroutingbackupSettingsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)| directRoutingBackup | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
+
+<a name="putRoutingUserDirectroutingbackupSettings"></a>
+
+# **putRoutingUserDirectroutingbackupSettings**
+
+
+
+> [AgentDirectRoutingBackupSettings](AgentDirectRoutingBackupSettings.html) putRoutingUserDirectroutingbackupSettings(userId, body)
+
+Update the user&#39;s Direct Routing Backup settings.
+
+
+
+Wraps PUT /api/v2/routing/users/{userId}/directroutingbackup/settings  
+
+Requires ANY permissions: 
+
+* routing:directRoutingBackup:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: AgentDirectRoutingBackupSettings = new AgentDirectRoutingBackupSettings(...) // directRoutingBackup
+
+// Code example
+UsersAPI.putRoutingUserDirectroutingbackupSettings(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.putRoutingUserDirectroutingbackupSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)| directRoutingBackup | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentDirectRoutingBackupSettings**](AgentDirectRoutingBackupSettings.html)
 
 <a name="putRoutingUserUtilization"></a>
 

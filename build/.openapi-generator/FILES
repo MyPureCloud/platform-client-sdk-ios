@@ -53,6 +53,7 @@ docs/ActiveAlertCount.md
 docs/ActivityCode.md
 docs/ActivityCodeContainer.md
 docs/ActivityCodeSummary.md
+docs/ActivityCodesReference.md
 docs/AcwDetailEventTopicAfterCallWorkEvent.md
 docs/AcwSettings.md
 docs/AddAdherenceExplanationAdminRequest.md
@@ -96,6 +97,7 @@ docs/AgentActivityChangedTopicOutOfOffice.md
 docs/AgentActivityChangedTopicPresence.md
 docs/AgentActivityChangedTopicRoutingStatus.md
 docs/AgentActivityEntityListing.md
+docs/AgentDirectRoutingBackupSettings.md
 docs/AgentEvaluatorActivity.md
 docs/AgentIntegrationAssociationRequest.md
 docs/AgentIntegrationAssociationResponse.md
@@ -263,6 +265,7 @@ docs/AuditAPI.json
 docs/AuditAPI.md
 docs/AuditLogMessage.md
 docs/AuditQueryEntity.md
+docs/AuditQueryExecutionLargeResultsResponse.md
 docs/AuditQueryExecutionResultsResponse.md
 docs/AuditQueryExecutionStatusResponse.md
 docs/AuditQueryFilter.md
@@ -1878,6 +1881,7 @@ docs/IdentityProvider.md
 docs/IdentityProviderAPI.json
 docs/IdentityProviderAPI.md
 docs/IdentityProviderEntityListing.md
+docs/IdentityResolutionConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
@@ -4616,6 +4620,8 @@ docs/deleteResponsemanagementLibrary-example.txt
 docs/deleteResponsemanagementResponse-example.txt
 docs/deleteResponsemanagementResponseasset-example.txt
 docs/deleteRoutingAssessment-example.txt
+docs/deleteRoutingDirectroutingbackupSettingsMe-example.txt
+docs/deleteRoutingDirectroutingbackupSettingsMe-example.txt
 docs/deleteRoutingEmailDomain-example.txt
 docs/deleteRoutingEmailDomainRoute-example.txt
 docs/deleteRoutingEmailOutboundDomain-example.txt
@@ -4630,6 +4636,8 @@ docs/deleteRoutingSkill-example.txt
 docs/deleteRoutingSkillgroup-example.txt
 docs/deleteRoutingSmsAddress-example.txt
 docs/deleteRoutingSmsPhonenumber-example.txt
+docs/deleteRoutingUserDirectroutingbackupSettings-example.txt
+docs/deleteRoutingUserDirectroutingbackupSettings-example.txt
 docs/deleteRoutingUserUtilization-example.txt
 docs/deleteRoutingUserUtilization-example.txt
 docs/deleteRoutingUtilization-example.txt
@@ -5422,6 +5430,8 @@ docs/getRoutingAssessments-example.txt
 docs/getRoutingAssessmentsJob-example.txt
 docs/getRoutingAssessmentsJobs-example.txt
 docs/getRoutingAvailablemediatypes-example.txt
+docs/getRoutingDirectroutingbackupSettingsMe-example.txt
+docs/getRoutingDirectroutingbackupSettingsMe-example.txt
 docs/getRoutingEmailDomain-example.txt
 docs/getRoutingEmailDomainRoute-example.txt
 docs/getRoutingEmailDomainRoutes-example.txt
@@ -5466,6 +5476,8 @@ docs/getRoutingSmsAddresses-example.txt
 docs/getRoutingSmsAvailablephonenumbers-example.txt
 docs/getRoutingSmsPhonenumber-example.txt
 docs/getRoutingSmsPhonenumbers-example.txt
+docs/getRoutingUserDirectroutingbackupSettings-example.txt
+docs/getRoutingUserDirectroutingbackupSettings-example.txt
 docs/getRoutingUserUtilization-example.txt
 docs/getRoutingUserUtilization-example.txt
 docs/getRoutingUtilization-example.txt
@@ -6731,6 +6743,8 @@ docs/putRecordingsDeletionprotection-example.txt
 docs/putResponsemanagementLibrary-example.txt
 docs/putResponsemanagementResponse-example.txt
 docs/putResponsemanagementResponseasset-example.txt
+docs/putRoutingDirectroutingbackupSettingsMe-example.txt
+docs/putRoutingDirectroutingbackupSettingsMe-example.txt
 docs/putRoutingEmailDomainRoute-example.txt
 docs/putRoutingEmailOutboundDomainActivation-example.txt
 docs/putRoutingMessageRecipient-example.txt
@@ -6738,6 +6752,8 @@ docs/putRoutingQueue-example.txt
 docs/putRoutingSettings-example.txt
 docs/putRoutingSettingsTranscription-example.txt
 docs/putRoutingSmsPhonenumber-example.txt
+docs/putRoutingUserDirectroutingbackupSettings-example.txt
+docs/putRoutingUserDirectroutingbackupSettings-example.txt
 docs/putRoutingUserUtilization-example.txt
 docs/putRoutingUserUtilization-example.txt
 docs/putRoutingUtilization-example.txt
@@ -6931,6 +6947,7 @@ src/Models/ActiveAlertCount.swift
 src/Models/ActivityCode.swift
 src/Models/ActivityCodeContainer.swift
 src/Models/ActivityCodeSummary.swift
+src/Models/ActivityCodesReference.swift
 src/Models/AcwDetailEventTopicAfterCallWorkEvent.swift
 src/Models/AcwSettings.swift
 src/Models/AddAdherenceExplanationAdminRequest.swift
@@ -6974,6 +6991,7 @@ src/Models/AgentActivityChangedTopicOutOfOffice.swift
 src/Models/AgentActivityChangedTopicPresence.swift
 src/Models/AgentActivityChangedTopicRoutingStatus.swift
 src/Models/AgentActivityEntityListing.swift
+src/Models/AgentDirectRoutingBackupSettings.swift
 src/Models/AgentEvaluatorActivity.swift
 src/Models/AgentIntegrationAssociationRequest.swift
 src/Models/AgentIntegrationAssociationResponse.swift
@@ -7131,6 +7149,7 @@ src/Models/AudioState.swift
 src/Models/AudioUpdatedEvent.swift
 src/Models/AuditLogMessage.swift
 src/Models/AuditQueryEntity.swift
+src/Models/AuditQueryExecutionLargeResultsResponse.swift
 src/Models/AuditQueryExecutionResultsResponse.swift
 src/Models/AuditQueryExecutionStatusResponse.swift
 src/Models/AuditQueryFilter.swift
@@ -8704,6 +8723,7 @@ src/Models/IdentifierClaimRequest.swift
 src/Models/IdentityNow.swift
 src/Models/IdentityProvider.swift
 src/Models/IdentityProviderEntityListing.swift
+src/Models/IdentityResolutionConfig.swift
 src/Models/IdleEventTrigger.swift
 src/Models/IdleTokenTimeout.swift
 src/Models/IgnoredActivityCategories.swift

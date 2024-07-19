@@ -114,6 +114,88 @@ open class UsersAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    /**
+     Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingDirectroutingbackupSettingsMe(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingDirectroutingbackupSettingsMeWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+     - DELETE /api/v2/routing/directroutingbackup/settings/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingDirectroutingbackupSettingsMeWithRequestBuilder() -> RequestBuilder<Void> {        
+        let path = "/api/v2/routing/directroutingbackup/settings/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteRoutingUserDirectroutingbackupSettings(userId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteRoutingUserDirectroutingbackupSettingsWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete the user's Direct Routing Backup settings and revert to the Direct Routing Queue default.
+     - DELETE /api/v2/routing/users/{userId}/directroutingbackup/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteRoutingUserDirectroutingbackupSettingsWithRequestBuilder(userId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/routing/users/{userId}/directroutingbackup/settings"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -810,8 +892,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -907,8 +989,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1415,8 +1497,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -1446,6 +1528,116 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<UserProfileEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get the user's Direct Routing Backup settings.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingDirectroutingbackupSettingsMe(completion: @escaping ((_ data: AgentDirectRoutingBackupSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingDirectroutingbackupSettingsMeWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AgentDirectRoutingBackupSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the user's Direct Routing Backup settings.
+     - GET /api/v2/routing/directroutingbackup/settings/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWaitSeconds" : 0,
+  "queueId" : "queueId",
+  "waitForAgent" : true,
+  "backedUpUsers" : [ "backedUpUsers", "backedUpUsers" ],
+  "userId" : "userId"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<AgentDirectRoutingBackupSettings> 
+     */
+    open class func getRoutingDirectroutingbackupSettingsMeWithRequestBuilder() -> RequestBuilder<AgentDirectRoutingBackupSettings> {        
+        let path = "/api/v2/routing/directroutingbackup/settings/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentDirectRoutingBackupSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the user's Direct Routing Backup settings.
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingUserDirectroutingbackupSettings(userId: String, completion: @escaping ((_ data: AgentDirectRoutingBackupSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingUserDirectroutingbackupSettingsWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<AgentDirectRoutingBackupSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the user's Direct Routing Backup settings.
+     - GET /api/v2/routing/users/{userId}/directroutingbackup/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWaitSeconds" : 0,
+  "queueId" : "queueId",
+  "waitForAgent" : true,
+  "backedUpUsers" : [ "backedUpUsers", "backedUpUsers" ],
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<AgentDirectRoutingBackupSettings> 
+     */
+    open class func getRoutingUserDirectroutingbackupSettingsWithRequestBuilder(userId: String) -> RequestBuilder<AgentDirectRoutingBackupSettings> {        
+        var path = "/api/v2/routing/users/{userId}/directroutingbackup/settings"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentDirectRoutingBackupSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -5124,8 +5316,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6144,8 +6336,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6364,8 +6556,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6464,8 +6656,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7297,8 +7489,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -8076,8 +8268,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8274,8 +8466,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -8477,8 +8669,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -18010,8 +18202,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18167,8 +18359,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18249,8 +18441,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18890,8 +19082,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Users 
@@ -22211,6 +22403,125 @@ open class UsersAPI {
 
     
     
+    /**
+     Update the user's Direct Routing Backup settings.
+     
+     - parameter body: (body) directRoutingBackup 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingDirectroutingbackupSettingsMe(body: AgentDirectRoutingBackupSettings, completion: @escaping ((_ data: AgentDirectRoutingBackupSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingDirectroutingbackupSettingsMeWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AgentDirectRoutingBackupSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the user's Direct Routing Backup settings.
+     - PUT /api/v2/routing/directroutingbackup/settings/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWaitSeconds" : 0,
+  "queueId" : "queueId",
+  "waitForAgent" : true,
+  "backedUpUsers" : [ "backedUpUsers", "backedUpUsers" ],
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter body: (body) directRoutingBackup 
+
+     - returns: RequestBuilder<AgentDirectRoutingBackupSettings> 
+     */
+    open class func putRoutingDirectroutingbackupSettingsMeWithRequestBuilder(body: AgentDirectRoutingBackupSettings) -> RequestBuilder<AgentDirectRoutingBackupSettings> {        
+        let path = "/api/v2/routing/directroutingbackup/settings/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentDirectRoutingBackupSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update the user's Direct Routing Backup settings.
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) directRoutingBackup 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putRoutingUserDirectroutingbackupSettings(userId: String, body: AgentDirectRoutingBackupSettings, completion: @escaping ((_ data: AgentDirectRoutingBackupSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putRoutingUserDirectroutingbackupSettingsWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<AgentDirectRoutingBackupSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the user's Direct Routing Backup settings.
+     - PUT /api/v2/routing/users/{userId}/directroutingbackup/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWaitSeconds" : 0,
+  "queueId" : "queueId",
+  "waitForAgent" : true,
+  "backedUpUsers" : [ "backedUpUsers", "backedUpUsers" ],
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body) directRoutingBackup 
+
+     - returns: RequestBuilder<AgentDirectRoutingBackupSettings> 
+     */
+    open class func putRoutingUserDirectroutingbackupSettingsWithRequestBuilder(userId: String, body: AgentDirectRoutingBackupSettings) -> RequestBuilder<AgentDirectRoutingBackupSettings> {        
+        var path = "/api/v2/routing/users/{userId}/directroutingbackup/settings"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentDirectRoutingBackupSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -23315,8 +23626,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
