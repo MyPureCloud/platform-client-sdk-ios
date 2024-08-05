@@ -24,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsActions**](IntegrationsAPI.html#getIntegrationsActions) | Retrieves all actions associated with filters passed in via query param. |
 | [**getIntegrationsActionsCategories**](IntegrationsAPI.html#getIntegrationsActionsCategories) | Retrieves all categories of available Actions |
 | [**getIntegrationsActionsCertificates**](IntegrationsAPI.html#getIntegrationsActionsCertificates) | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
+| [**getIntegrationsActionsCertificatesTruststore**](IntegrationsAPI.html#getIntegrationsActionsCertificatesTruststore) | Retrieves basic info about trusted root CA certificates |
 | [**getIntegrationsActionsDrafts**](IntegrationsAPI.html#getIntegrationsActionsDrafts) | Retrieves all action drafts associated with the filters passed in via query param. |
 | [**getIntegrationsBotconnectorIntegrationIdBot**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBot) | Get a specific botConnector bot, plus versions, for this integration |
 | [**getIntegrationsBotconnectorIntegrationIdBotVersions**](IntegrationsAPI.html#getIntegrationsBotconnectorIntegrationIdBotVersions) | Get a list of bot versions for a bot |
@@ -1046,6 +1047,54 @@ IntegrationsAPI.getIntegrationsActionsCertificates(status: status, type: type) {
 ### Return type
 
 [**ActionCertificateListing**](ActionCertificateListing.html)
+
+<a name="getIntegrationsActionsCertificatesTruststore"></a>
+
+# **getIntegrationsActionsCertificatesTruststore**
+
+
+
+> [TrustedCertificates](TrustedCertificates.html) getIntegrationsActionsCertificatesTruststore()
+
+Retrieves basic info about trusted root CA certificates
+
+
+
+Wraps GET /api/v2/integrations/actions/certificates/truststore  
+
+Requires ANY permissions: 
+
+* integrations:actionCertificate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+IntegrationsAPI.getIntegrationsActionsCertificatesTruststore() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsActionsCertificatesTruststore was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**TrustedCertificates**](TrustedCertificates.html)
 
 <a name="getIntegrationsActionsDrafts"></a>
 

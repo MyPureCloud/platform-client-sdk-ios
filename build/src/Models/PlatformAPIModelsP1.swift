@@ -205,7 +205,7 @@ public class ActionMap: Codable {
     public var triggerWithSegments: [String]?
     /** List of event conditions that must be satisfied to trigger the action map. */
     public var triggerWithEventConditions: [EventCondition]?
-    /** Probability conditions for outcomes that must be satisfied to trigger the action map. */
+    /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?
     /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomePercentileConditions: [OutcomePercentileCondition]?
@@ -756,6 +756,38 @@ public class AgentActivityEntityListing: Codable {
 
 
 
+public class AgentBidWorkPlanOverrideRequest: Codable {
+
+
+
+
+
+    public enum OverrideReason: String, Codable { 
+        case unableToBid = "UnableToBid"
+        case changeOfCircumstance = "ChangeOfCircumstance"
+        case newHire = "NewHire"
+        case employeeMove = "EmployeeMove"
+    }
+
+    /** The ID of agent */
+    public var agentId: String?
+    /** The ID of the work plan that overrides the assigned work plan for the agent */
+    public var overrideWorkPlanId: String?
+    /** The reason for overriding the assigned work plan. This must be null if overrideWorkPlanId is not specified */
+    public var overrideReason: OverrideReason?
+
+    public init(agentId: String?, overrideWorkPlanId: String?, overrideReason: OverrideReason?) {
+        self.agentId = agentId
+        self.overrideWorkPlanId = overrideWorkPlanId
+        self.overrideReason = overrideReason
+    }
+
+
+}
+
+
+
+
 public class AgentEvaluatorActivity: Codable {
 
 
@@ -1006,6 +1038,54 @@ public class AllTimePoints: Codable {
         self.user = user
         self.dateEndWorkday = dateEndWorkday
         self.allTimePoints = allTimePoints
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftSearchOffersRequest: Codable {
+
+
+
+
+
+
+
+
+
+    /** The existing schedule being used to find alternative shift offers */
+    public var schedule: AlternativeShiftScheduleLookup?
+    /** The start date for the week in this schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var queryWeekDate: Date?
+    /** The shift a user puts up for alternative shift offers */
+    public var initiatingShift: InitiatingAlternativeShift?
+    /** The acceptable intervals in offers. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss */
+    public var acceptableIntervals: [String]?
+
+    public init(schedule: AlternativeShiftScheduleLookup?, queryWeekDate: Date?, initiatingShift: InitiatingAlternativeShift?, acceptableIntervals: [String]?) {
+        self.schedule = schedule
+        self.queryWeekDate = queryWeekDate
+        self.initiatingShift = initiatingShift
+        self.acceptableIntervals = acceptableIntervals
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftTradeListing: Codable {
+
+
+
+    public var entities: [AlternativeShiftTradeResponse]?
+
+    public init(entities: [AlternativeShiftTradeResponse]?) {
+        self.entities = entities
     }
 
 
@@ -2431,6 +2511,57 @@ public class BatchUserPresenceEventRequest: Codable {
 
     public init(userPresenceEvents: [UserPresenceEvent]?) {
         self.userPresenceEvents = userPresenceEvents
+    }
+
+
+}
+
+
+
+
+public class BidGroupWorkPlanResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The management unit to which this work plan belongs.  Nullable in some routes */
+    public var managementUnit: ManagementUnitReference?
+    /** The modified agent count for this work plan */
+    public var overrideAgentCount: Int?
+    /** The number of agents needed for this work plan to produce the optimal schedule */
+    public var suggestedAgentCount: Int?
+    /** The range of agent slot count per work plan. The suggested slot count must be in agent count range */
+    public var agentCountRange: AgentCountRange?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, managementUnit: ManagementUnitReference?, overrideAgentCount: Int?, suggestedAgentCount: Int?, agentCountRange: AgentCountRange?, selfUri: String?) {
+        self._id = _id
+        self.managementUnit = managementUnit
+        self.overrideAgentCount = overrideAgentCount
+        self.suggestedAgentCount = suggestedAgentCount
+        self.agentCountRange = agentCountRange
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case managementUnit
+        case overrideAgentCount
+        case suggestedAgentCount
+        case agentCountRange
+        case selfUri
     }
 
 
@@ -5768,6 +5899,38 @@ public class CoachingAnnotation: Codable {
 
 
 
+public class Column: Codable {
+
+
+
+
+
+
+
+
+
+    /** Column name. Mandatory for Fixed position/length file format. */
+    public var columnName: String?
+    /** 0 based column number in delimited file format */
+    public var columnNumber: Int?
+    /** Zero-based position of the first column's character. Mandatory for Fixed position/length file format. */
+    public var startPosition: Int?
+    /** Column width. Mandatory for Fixed position/length file format. */
+    public var length: Int?
+
+    public init(columnName: String?, columnNumber: Int?, startPosition: Int?, length: Int?) {
+        self.columnName = columnName
+        self.columnNumber = columnNumber
+        self.startPosition = startPosition
+        self.length = length
+    }
+
+
+}
+
+
+
+
 public class CoachingAppointmentResponseList: Codable {
 
 
@@ -6123,38 +6286,6 @@ public class CobrowseMediaParticipant: Codable {
         case controlling
         case viewerUrl
         case providerEventTime
-    }
-
-
-}
-
-
-
-
-public class Column: Codable {
-
-
-
-
-
-
-
-
-
-    /** Column name. Mandatory for Fixed position/length file format. */
-    public var columnName: String?
-    /** 0 based column number in delimited file format */
-    public var columnNumber: Int?
-    /** Zero-based position of the first column's character. Mandatory for Fixed position/length file format. */
-    public var startPosition: Int?
-    /** Column width. Mandatory for Fixed position/length file format. */
-    public var length: Int?
-
-    public init(columnName: String?, columnNumber: Int?, startPosition: Int?, length: Int?) {
-        self.columnName = columnName
-        self.columnNumber = columnNumber
-        self.startPosition = startPosition
-        self.length = length
     }
 
 
@@ -8281,6 +8412,39 @@ public class ConversationDeletionProtectionQuery: Codable {
 
 
 
+/** A Video event. */
+
+public class ConversationEventVideo: Codable {
+
+    public enum ModelType: String, Codable { 
+        case offering = "Offering"
+        case offeringExpired = "OfferingExpired"
+        case offeringAccepted = "OfferingAccepted"
+        case offeringRejected = "OfferingRejected"
+    }
+
+
+
+
+
+    /** Describes the type of Video event. */
+    public var type: ModelType?
+    /** The Video offering ID. */
+    public var offeringId: String?
+    /** The Video offering JWT token. */
+    public var jwt: String?
+
+    public init(type: ModelType?, offeringId: String?, jwt: String?) {
+        self.type = type
+        self.offeringId = offeringId
+        self.jwt = jwt
+    }
+
+
+}
+
+
+
 
 public class ConversationDetailQueryPredicate: Codable {
 
@@ -8871,39 +9035,6 @@ public class ConversationEventTopicAfterCallWork: Codable {
         self.state = state
         self.startTime = startTime
         self.endTime = endTime
-    }
-
-
-}
-
-
-
-/** A Video event. */
-
-public class ConversationEventVideo: Codable {
-
-    public enum ModelType: String, Codable { 
-        case offering = "Offering"
-        case offeringExpired = "OfferingExpired"
-        case offeringAccepted = "OfferingAccepted"
-        case offeringRejected = "OfferingRejected"
-    }
-
-
-
-
-
-    /** Describes the type of Video event. */
-    public var type: ModelType?
-    /** The Video offering ID. */
-    public var offeringId: String?
-    /** The Video offering JWT token. */
-    public var jwt: String?
-
-    public init(type: ModelType?, offeringId: String?, jwt: String?) {
-        self.type = type
-        self.offeringId = offeringId
-        self.jwt = jwt
     }
 
 
@@ -12248,6 +12379,23 @@ public class DialerContactlistfilterConfigChangeRange: Codable {
 
 
 
+
+public class Digits: Codable {
+
+
+
+    /** A string representing the digits pressed on phone. */
+    public var digits: String?
+
+    public init(digits: String?) {
+        self.digits = digits
+    }
+
+
+}
+
+
+
 /** The time interval to place outbound calls */
 
 public class DialerOutboundSettingsConfigChangeAtzmTimeSlotWithTimeZone: Codable {
@@ -12659,23 +12807,6 @@ public class DialogflowCXAgentSummary: Codable {
         case _description = "description"
         case integration
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class Digits: Codable {
-
-
-
-    /** A string representing the digits pressed on phone. */
-    public var digits: String?
-
-    public init(digits: String?) {
-        self.digits = digits
     }
 
 
@@ -13504,38 +13635,6 @@ public class DocumentVariationListing: Codable {
 
 
 
-public class DomainEntity: Codable {
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class DocumentationSearchCriteria: Codable {
 
 
@@ -13806,6 +13905,38 @@ public class DomainEdgeSoftwareUpdateDto: Codable {
         self.edgeUri = edgeUri
         self.callDrainingWaitTimeSeconds = callDrainingWaitTimeSeconds
         self.current = current
+    }
+
+
+}
+
+
+
+
+public class DomainEntity: Codable {
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case selfUri
     }
 
 
@@ -20137,6 +20268,8 @@ public class KnowledgeDocumentSearch: Codable {
 
 
 
+
+
     /** Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. */
     public var query: String?
     /** Page size of the returned results. */
@@ -20159,8 +20292,10 @@ public class KnowledgeDocumentSearch: Codable {
     public var conversationContext: KnowledgeConversationContextResponse?
     /** The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. */
     public var confidenceThreshold: Float?
+    /** The results with AI-generated answer if the answerMode request property contains \"AnswerGeneration\". */
+    public var answerGeneration: KnowledgeAnswerGenerationResponse?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, results: [KnowledgeDocumentSearchResult]?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContextResponse?, confidenceThreshold: Float?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, results: [KnowledgeDocumentSearchResult]?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContextResponse?, confidenceThreshold: Float?, answerGeneration: KnowledgeAnswerGenerationResponse?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -20172,6 +20307,7 @@ public class KnowledgeDocumentSearch: Codable {
         self.application = application
         self.conversationContext = conversationContext
         self.confidenceThreshold = confidenceThreshold
+        self.answerGeneration = answerGeneration
     }
 
 
@@ -20227,6 +20363,11 @@ public class KnowledgeDocumentSearchRequest: Codable {
 
 
 
+    public enum AnswerMode: String, Codable { 
+        case answerHighlight = "AnswerHighlight"
+        case answerGeneration = "AnswerGeneration"
+    }
+
     /** Query to search content in the knowledge base. Maximum of 30 records per query can be fetched. */
     public var query: String?
     /** Page size of the returned results. */
@@ -20259,8 +20400,10 @@ public class KnowledgeDocumentSearchRequest: Codable {
     public var confidenceThreshold: Float?
     /** The number of articles to be sent for answer-highlighting. Can range from 1-5. */
     public var answerHighlightTopResults: Int?
+    /** Allows extracted answers from an article (AnswerHighlight) and/or AI-generated answers (AnswerGeneration). Default mode: AnswerHighlight. Use this property with answerHighlightTopResults. */
+    public var answerMode: [AnswerMode]?
 
-    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, includeDraftDocuments: Bool?, interval: DocumentQueryInterval?, filter: DocumentQuery?, sortOrder: SortOrder?, sortBy: SortBy?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContext?, confidenceThreshold: Float?, answerHighlightTopResults: Int?) {
+    public init(query: String?, pageSize: Int?, pageNumber: Int?, searchId: String?, total: Int?, pageCount: Int?, queryType: QueryType?, includeDraftDocuments: Bool?, interval: DocumentQueryInterval?, filter: DocumentQuery?, sortOrder: SortOrder?, sortBy: SortBy?, application: KnowledgeSearchClientApplication?, conversationContext: KnowledgeConversationContext?, confidenceThreshold: Float?, answerHighlightTopResults: Int?, answerMode: [AnswerMode]?) {
         self.query = query
         self.pageSize = pageSize
         self.pageNumber = pageNumber
@@ -20277,6 +20420,7 @@ public class KnowledgeDocumentSearchRequest: Codable {
         self.conversationContext = conversationContext
         self.confidenceThreshold = confidenceThreshold
         self.answerHighlightTopResults = answerHighlightTopResults
+        self.answerMode = answerMode
     }
 
 
@@ -21824,6 +21968,69 @@ public class LicenseUser: Codable {
 
 
 
+public class LimitCount: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The name of the limit. */
+    public var name: String?
+    /** The total used count of the limit. */
+    public var estimatedCount: Int64?
+    /** The maximum value of the limit. */
+    public var max: Int64?
+    /** The entity which makes this count unique. The context of what the entity is would be dependant on the limit. May not be applicable for all limits. */
+    public var entityId: String?
+    /** The user which makes this count unique. May not be applicable for all limits. */
+    public var userId: String?
+
+    public init(name: String?, estimatedCount: Int64?, max: Int64?, entityId: String?, userId: String?) {
+        self.name = name
+        self.estimatedCount = estimatedCount
+        self.max = max
+        self.entityId = entityId
+        self.userId = userId
+    }
+
+
+}
+
+
+
+
+public class LimitCountListing: Codable {
+
+
+
+
+
+
+
+    public var entities: [LimitCount]?
+    /** A URI to the next page in the listing. */
+    public var nextUri: String?
+    /** A URI to the current page in the listing. */
+    public var selfUri: String?
+
+    public init(entities: [LimitCount]?, nextUri: String?, selfUri: String?) {
+        self.entities = entities
+        self.nextUri = nextUri
+        self.selfUri = selfUri
+    }
+
+
+}
+
+
+
+
 public class Line: Codable {
 
 
@@ -21961,6 +22168,67 @@ public class Line: Codable {
         case loggedInUser
         case defaultForUser
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class ListWrapperAgentWorkPlanField: Codable {
+
+    public enum Values: String, Codable { 
+        case name = "Name"
+        case paidHours = "PaidHours"
+    }
+
+    public var values: [Values]?
+
+    public init(values: [Values]?) {
+        self.values = values
+    }
+
+
+}
+
+
+
+
+public class ListWrapperAlternativeShiftBuSettingsActivityCategory: Codable {
+
+    public enum Values: String, Codable { 
+        case _break = "Break"
+        case meal = "Meal"
+        case meeting = "Meeting"
+        case offQueueWork = "OffQueueWork"
+        case timeOff = "TimeOff"
+        case training = "Training"
+        case unavailable = "Unavailable"
+    }
+
+    public var values: [Values]?
+
+    public init(values: [Values]?) {
+        self.values = values
+    }
+
+
+}
+
+
+
+
+public class ListWrapperAlternativeShiftBuSettingsGranularity: Codable {
+
+    public enum Values: String, Codable { 
+        case daily = "Daily"
+    }
+
+    public var values: [Values]?
+
+    public init(values: [Values]?) {
+        self.values = values
     }
 
 
@@ -24254,26 +24522,6 @@ public class NluUtterance: Codable {
 
 
 
-
-public class Number: Codable {
-
-
-
-
-
-    public var start: String?
-    public var end: String?
-
-    public init(start: String?, end: String?) {
-        self.start = start
-        self.end = end
-    }
-
-
-}
-
-
-
 /** Template parameters for placeholders in template. */
 
 public class NotificationTemplateParameter: Codable {
@@ -24482,6 +24730,26 @@ public class NuanceMixDlgSettings: Codable {
     public init(channelId: String?, inputParameters: [String:JSON]?) {
         self.channelId = channelId
         self.inputParameters = inputParameters
+    }
+
+
+}
+
+
+
+
+public class Number: Codable {
+
+
+
+
+
+    public var start: String?
+    public var end: String?
+
+    public init(start: String?, end: String?) {
+        self.start = start
+        self.end = end
     }
 
 
@@ -27431,63 +27699,6 @@ public class QueueConversationEventTopicAddress: Codable {
 
 
 
-public class QueueMember: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The queue member's id. */
-    public var _id: String?
-    public var name: String?
-    public var user: User?
-    public var ringNumber: Int?
-    public var joined: Bool?
-    public var memberBy: String?
-    public var routingStatus: RoutingStatus?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.user = user
-        self.ringNumber = ringNumber
-        self.joined = joined
-        self.memberBy = memberBy
-        self.routingStatus = routingStatus
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case user
-        case ringNumber
-        case joined
-        case memberBy
-        case routingStatus
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class QueueConversationEventTopicCall: Codable {
 
 
@@ -27836,6 +28047,33 @@ public class QueueConversationEventTopicJourneyActionMap: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case version
+    }
+
+
+}
+
+
+
+
+public class Record: Codable {
+
+
+
+
+
+
+
+    /** The name of the record. */
+    public var name: String?
+    /** The type of the record. (Example values:  MX, TXT, CNAME) */
+    public var type: String?
+    /** The value of the record. */
+    public var value: String?
+
+    public init(name: String?, type: String?, value: String?) {
+        self.name = name
+        self.type = type
+        self.value = value
     }
 
 
@@ -29263,6 +29501,63 @@ public class QueueConversationVideoEventTopicInitiator: Codable {
 
 
 
+public class QueueMember: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The queue member's id. */
+    public var _id: String?
+    public var name: String?
+    public var user: User?
+    public var ringNumber: Int?
+    public var joined: Bool?
+    public var memberBy: String?
+    public var routingStatus: RoutingStatus?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, user: User?, ringNumber: Int?, joined: Bool?, memberBy: String?, routingStatus: RoutingStatus?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.user = user
+        self.ringNumber = ringNumber
+        self.joined = joined
+        self.memberBy = memberBy
+        self.routingStatus = routingStatus
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case user
+        case ringNumber
+        case joined
+        case memberBy
+        case routingStatus
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class QueueObservationQueryResponse: Codable {
 
 
@@ -29720,33 +30015,6 @@ public class RecognitionBase: Codable {
         case contextType
         case contextId
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class Record: Codable {
-
-
-
-
-
-
-
-    /** The name of the record. */
-    public var name: String?
-    /** The type of the record. (Example values:  MX, TXT, CNAME) */
-    public var type: String?
-    /** The value of the record. */
-    public var value: String?
-
-    public init(name: String?, type: String?, value: String?) {
-        self.name = name
-        self.type = type
-        self.value = value
     }
 
 
@@ -30665,6 +30933,58 @@ public class RoutingActivityData: Codable {
 
 
 
+public class RoutingData: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The identifier of the routing queue */
+    public var queueId: String?
+    /** The identifier of a language to be considered in routing */
+    public var languageId: String?
+    /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
+    public var label: String?
+    /** The priority for routing */
+    public var priority: Int?
+    /** A list of skill identifiers to be considered in routing */
+    public var skillIds: [String]?
+    /** A list of agents to be preferred in routing */
+    public var preferredAgentIds: [String]?
+    /** A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100. */
+    public var scoredAgents: [ScoredAgent]?
+    /** An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback. */
+    public var routingFlags: [String]?
+
+    public init(queueId: String?, languageId: String?, label: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
+        self.queueId = queueId
+        self.languageId = languageId
+        self.label = label
+        self.priority = priority
+        self.skillIds = skillIds
+        self.preferredAgentIds = preferredAgentIds
+        self.scoredAgents = scoredAgents
+        self.routingFlags = routingFlags
+    }
+
+
+}
+
+
+
+
 public class RoutingActivityQueryFilter: Codable {
 
     public enum ModelType: String, Codable { 
@@ -30718,58 +31038,6 @@ public class RoutingConversationAttributesRequest: Codable {
         self.skillIds = skillIds
         self.languageId = languageId
         self.requestScoredAgents = requestScoredAgents
-    }
-
-
-}
-
-
-
-
-public class RoutingData: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The identifier of the routing queue */
-    public var queueId: String?
-    /** The identifier of a language to be considered in routing */
-    public var languageId: String?
-    /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
-    public var label: String?
-    /** The priority for routing */
-    public var priority: Int?
-    /** A list of skill identifiers to be considered in routing */
-    public var skillIds: [String]?
-    /** A list of agents to be preferred in routing */
-    public var preferredAgentIds: [String]?
-    /** A list of scored agents for routing decisions. For Agent Owned Callbacks use one scored agent with a score of 100. */
-    public var scoredAgents: [ScoredAgent]?
-    /** An array of flags indicating how the conversation should be routed. Use \"AGENT_OWNED_CALLBACK\" when creating an Agent Owned Callback. */
-    public var routingFlags: [String]?
-
-    public init(queueId: String?, languageId: String?, label: String?, priority: Int?, skillIds: [String]?, preferredAgentIds: [String]?, scoredAgents: [ScoredAgent]?, routingFlags: [String]?) {
-        self.queueId = queueId
-        self.languageId = languageId
-        self.label = label
-        self.priority = priority
-        self.skillIds = skillIds
-        self.preferredAgentIds = preferredAgentIds
-        self.scoredAgents = scoredAgents
-        self.routingFlags = routingFlags
     }
 
 
@@ -33824,6 +34092,175 @@ public class TranscriptTopics: Codable {
 
 
 
+public class TransferRequest: Codable {
+
+    public enum TransferType: String, Codable { 
+        case attended = "Attended"
+        case unattended = "Unattended"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /** The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. */
+    public var transferType: TransferType?
+    /** The user ID of the transfer target. */
+    public var userId: String?
+    /** The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication. */
+    public var address: String?
+    /** The user name of the transfer target. */
+    public var userName: String?
+    /** The queue ID of the transfer target. */
+    public var queueId: String?
+    /** If true, transfer to the voicemail inbox of the participant that is being replaced. */
+    public var voicemail: Bool?
+
+    public init(transferType: TransferType?, userId: String?, address: String?, userName: String?, queueId: String?, voicemail: Bool?) {
+        self.transferType = transferType
+        self.userId = userId
+        self.address = address
+        self.userName = userName
+        self.queueId = queueId
+        self.voicemail = voicemail
+    }
+
+
+}
+
+
+
+
+public class TransferResponseModifiedBy: Codable {
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, selfUri: String?) {
+        self._id = _id
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class TransferToAgentRequest: Codable {
+
+    public enum TransferType: String, Codable { 
+        case attended = "Attended"
+        case unattended = "Unattended"
+    }
+
+
+
+
+
+
+
+
+
+    /** The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. */
+    public var transferType: TransferType?
+    /** The id of the internal user. */
+    public var userId: String?
+    /** The userName (like user’s email) of the internal user. */
+    public var userName: String?
+    /** The name of the internal user. */
+    public var userDisplayName: String?
+    /** If true, transfer to the voicemail inbox of the participant that is being replaced. */
+    public var voicemail: Bool?
+
+    public init(transferType: TransferType?, userId: String?, userName: String?, userDisplayName: String?, voicemail: Bool?) {
+        self.transferType = transferType
+        self.userId = userId
+        self.userName = userName
+        self.userDisplayName = userDisplayName
+        self.voicemail = voicemail
+    }
+
+
+}
+
+
+
+
+public class TransferToExternalRequest: Codable {
+
+    public enum TransferType: String, Codable { 
+        case attended = "Attended"
+        case unattended = "Unattended"
+    }
+
+
+
+    /** The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. */
+    public var transferType: TransferType?
+    /** The address (like phone number) of the external contact. */
+    public var address: String?
+
+    public init(transferType: TransferType?, address: String?) {
+        self.transferType = transferType
+        self.address = address
+    }
+
+
+}
+
+
+
+
+public class TrendData: Codable {
+
+
+
+
+
+
+
+
+
+    /** Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateStartWorkday: Date?
+    /** End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var dateEndWorkday: Date?
+    /** Percent of goal */
+    public var percentOfGoal: Double?
+    /** Average metric value */
+    public var averageValue: Double?
+
+    public init(dateStartWorkday: Date?, dateEndWorkday: Date?, percentOfGoal: Double?, averageValue: Double?) {
+        self.dateStartWorkday = dateStartWorkday
+        self.dateEndWorkday = dateEndWorkday
+        self.percentOfGoal = percentOfGoal
+        self.averageValue = averageValue
+    }
+
+
+}
+
+
+
+
 public class Trunk: Codable {
 
 
@@ -34021,175 +34458,6 @@ public class Trunk: Codable {
         case family
         case proxyAddressList
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class TransferRequest: Codable {
-
-    public enum TransferType: String, Codable { 
-        case attended = "Attended"
-        case unattended = "Unattended"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    /** The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. */
-    public var transferType: TransferType?
-    /** The user ID of the transfer target. */
-    public var userId: String?
-    /** The user ID or queue ID of the transfer target. Address like a phone number can not be used for callbacks, but they can be used for other forms of communication. */
-    public var address: String?
-    /** The user name of the transfer target. */
-    public var userName: String?
-    /** The queue ID of the transfer target. */
-    public var queueId: String?
-    /** If true, transfer to the voicemail inbox of the participant that is being replaced. */
-    public var voicemail: Bool?
-
-    public init(transferType: TransferType?, userId: String?, address: String?, userName: String?, queueId: String?, voicemail: Bool?) {
-        self.transferType = transferType
-        self.userId = userId
-        self.address = address
-        self.userName = userName
-        self.queueId = queueId
-        self.voicemail = voicemail
-    }
-
-
-}
-
-
-
-
-public class TransferResponseModifiedBy: Codable {
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, selfUri: String?) {
-        self._id = _id
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case selfUri
-    }
-
-
-}
-
-
-
-
-public class TransferToAgentRequest: Codable {
-
-    public enum TransferType: String, Codable { 
-        case attended = "Attended"
-        case unattended = "Unattended"
-    }
-
-
-
-
-
-
-
-
-
-    /** The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. */
-    public var transferType: TransferType?
-    /** The id of the internal user. */
-    public var userId: String?
-    /** The userName (like user’s email) of the internal user. */
-    public var userName: String?
-    /** The name of the internal user. */
-    public var userDisplayName: String?
-    /** If true, transfer to the voicemail inbox of the participant that is being replaced. */
-    public var voicemail: Bool?
-
-    public init(transferType: TransferType?, userId: String?, userName: String?, userDisplayName: String?, voicemail: Bool?) {
-        self.transferType = transferType
-        self.userId = userId
-        self.userName = userName
-        self.userDisplayName = userDisplayName
-        self.voicemail = voicemail
-    }
-
-
-}
-
-
-
-
-public class TransferToExternalRequest: Codable {
-
-    public enum TransferType: String, Codable { 
-        case attended = "Attended"
-        case unattended = "Unattended"
-    }
-
-
-
-    /** The type of transfer to perform. Attended, where the initiating agent maintains ownership of the conversation until the intended recipient accepts the transfer, or Unattended, where the initiating agent immediately disconnects. Default is Unattended. */
-    public var transferType: TransferType?
-    /** The address (like phone number) of the external contact. */
-    public var address: String?
-
-    public init(transferType: TransferType?, address: String?) {
-        self.transferType = transferType
-        self.address = address
-    }
-
-
-}
-
-
-
-
-public class TrendData: Codable {
-
-
-
-
-
-
-
-
-
-    /** Start workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
-    public var dateStartWorkday: Date?
-    /** End workday used as the date range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
-    public var dateEndWorkday: Date?
-    /** Percent of goal */
-    public var percentOfGoal: Double?
-    /** Average metric value */
-    public var averageValue: Double?
-
-    public init(dateStartWorkday: Date?, dateEndWorkday: Date?, percentOfGoal: Double?, averageValue: Double?) {
-        self.dateStartWorkday = dateStartWorkday
-        self.dateEndWorkday = dateEndWorkday
-        self.percentOfGoal = percentOfGoal
-        self.averageValue = averageValue
     }
 
 
@@ -34491,6 +34759,28 @@ public class UnansweredPhraseGroupPatchRequestBody: Codable {
         self.phraseAssociations = phraseAssociations
         self.dateStart = dateStart
         self.dateEnd = dateEnd
+    }
+
+
+}
+
+
+
+
+public class UpdateAgentWorkPlanBiddingPreference: Codable {
+
+
+
+
+
+    /** Whether the preference is submitted */
+    public var submitted: Bool?
+    /** The list of work plan bidding preferences */
+    public var agentWorkPlanBidPreferences: [AgentWorkPlanBiddingPreferenceRequest]?
+
+    public init(submitted: Bool?, agentWorkPlanBidPreferences: [AgentWorkPlanBiddingPreferenceRequest]?) {
+        self.submitted = submitted
+        self.agentWorkPlanBidPreferences = agentWorkPlanBidPreferences
     }
 
 
@@ -35078,6 +35368,8 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
 
 
 
+
+
     public var eventTime: Int?
     public var conversationId: String?
     public var participantId: String?
@@ -35103,10 +35395,11 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
     public var alertingDurationMs: Int?
     public var contactingDurationMs: Int?
     public var dialingDurationMs: Int?
+    public var callbackDurationMs: Int?
     public var conversationExternalContactIds: [String]?
     public var conversationExternalOrganizationIds: [String]?
 
-    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, interactingDurationMs: Int?, heldDurationMs: Int?, alertingDurationMs: Int?, contactingDurationMs: Int?, dialingDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
+    public init(eventTime: Int?, conversationId: String?, participantId: String?, sessionId: String?, disconnectType: DisconnectType?, mediaType: MediaType?, provider: String?, direction: Direction?, ani: String?, dnis: String?, addressTo: String?, addressFrom: String?, callbackUserName: String?, callbackNumbers: [String]?, callbackScheduledTime: Int?, subject: String?, messageType: MessageType?, userId: String?, divisionId: String?, queueId: String?, interactingDurationMs: Int?, heldDurationMs: Int?, alertingDurationMs: Int?, contactingDurationMs: Int?, dialingDurationMs: Int?, callbackDurationMs: Int?, conversationExternalContactIds: [String]?, conversationExternalOrganizationIds: [String]?) {
         self.eventTime = eventTime
         self.conversationId = conversationId
         self.participantId = participantId
@@ -35132,6 +35425,7 @@ public class UserEndDetailEventTopicUserEndEvent: Codable {
         self.alertingDurationMs = alertingDurationMs
         self.contactingDurationMs = contactingDurationMs
         self.dialingDurationMs = dialingDurationMs
+        self.callbackDurationMs = callbackDurationMs
         self.conversationExternalContactIds = conversationExternalContactIds
         self.conversationExternalOrganizationIds = conversationExternalOrganizationIds
     }
@@ -37550,6 +37844,438 @@ public class WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuSh
 
 
 
+public class Widget: Codable {
+
+
+
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case metric = "METRIC"
+        case chart = "CHART"
+        case pie = "PIE"
+        case heatMap = "HEAT_MAP"
+        case freeText = "FREE_TEXT"
+        case agentStatus = "AGENT_STATUS"
+        case realtimeAdherence = "REALTIME_ADHERENCE"
+        case webContentUrl = "WEB_CONTENT_URL"
+    }
+
+    public enum Metrics: String, Codable { 
+        case avgTalkTime = "AVG_TALK_TIME"
+        case avgHoldTime = "AVG_HOLD_TIME"
+        case avgAcwTime = "AVG_ACW_TIME"
+        case avgWaitTime = "AVG_WAIT_TIME"
+        case avgHandleTime = "AVG_HANDLE_TIME"
+        case avgAlertTime = "AVG_ALERT_TIME"
+        case avgAnswerTime = "AVG_ANSWER_TIME"
+        case avgAbandonTime = "AVG_ABANDON_TIME"
+        case totalTalkTime = "TOTAL_TALK_TIME"
+        case totalHandleTime = "TOTAL_HANDLE_TIME"
+        case totalHoldTime = "TOTAL_HOLD_TIME"
+        case totalAcwTime = "TOTAL_ACW_TIME"
+        case totalAlertTime = "TOTAL_ALERT_TIME"
+        case maxAbandonTime = "MAX_ABANDON_TIME"
+        case maxWaitTime = "MAX_WAIT_TIME"
+        case maxTalkTime = "MAX_TALK_TIME"
+        case maxHoldTime = "MAX_HOLD_TIME"
+        case maxAcwTime = "MAX_ACW_TIME"
+        case minAbandonTime = "MIN_ABANDON_TIME"
+        case minWaitTime = "MIN_WAIT_TIME"
+        case minTalkTime = "MIN_TALK_TIME"
+        case minHoldTime = "MIN_HOLD_TIME"
+        case minAcwTime = "MIN_ACW_TIME"
+        case alertCount = "ALERT_COUNT"
+        case offeredCount = "OFFERED_COUNT"
+        case abandonedCount = "ABANDONED_COUNT"
+        case abandonedPercent = "ABANDONED_PERCENT"
+        case shortAbandonedCount = "SHORT_ABANDONED_COUNT"
+        case shortAbandonedPercent = "SHORT_ABANDONED_PERCENT"
+        case abandonedNoShortCount = "ABANDONED_NO_SHORT_COUNT"
+        case abandonedNoShortPercent = "ABANDONED_NO_SHORT_PERCENT"
+        case answeredCount = "ANSWERED_COUNT"
+        case answeredPercent = "ANSWERED_PERCENT"
+        case flowoutCount = "FLOWOUT_COUNT"
+        case flowoutPercent = "FLOWOUT_PERCENT"
+        case outboundCount = "OUTBOUND_COUNT"
+        case outboundAttemptedCount = "OUTBOUND_ATTEMPTED_COUNT"
+        case voicemailCount = "VOICEMAIL_COUNT"
+        case handledCount = "HANDLED_COUNT"
+        case heldCount = "HELD_COUNT"
+        case transferredCount = "TRANSFERRED_COUNT"
+        case transferredPercent = "TRANSFERRED_PERCENT"
+        case waitingCurrent = "WAITING_CURRENT"
+        case interactingCurrent = "INTERACTING_CURRENT"
+        case heldCurrent = "HELD_CURRENT"
+        case alertingCurrent = "ALERTING_CURRENT"
+        case serviceLevel = "SERVICE_LEVEL"
+        case overServiceLevel = "OVER_SERVICE_LEVEL"
+        case onlineAgents = "ONLINE_AGENTS"
+        case availableAgents = "AVAILABLE_AGENTS"
+        case awayAgents = "AWAY_AGENTS"
+        case breakAgents = "BREAK_AGENTS"
+        case mealAgents = "MEAL_AGENTS"
+        case trainingAgents = "TRAINING_AGENTS"
+        case busyAgents = "BUSY_AGENTS"
+        case meetingAgents = "MEETING_AGENTS"
+        case systemAwayAgents = "SYSTEM_AWAY_AGENTS"
+        case offlineAgents = "OFFLINE_AGENTS"
+        case onQueueAgents = "ON_QUEUE_AGENTS"
+        case offQueueAgents = "OFF_QUEUE_AGENTS"
+        case interactingAgents = "INTERACTING_AGENTS"
+        case acwAgents = "ACW_AGENTS"
+        case communicatingAgents = "COMMUNICATING_AGENTS"
+        case idleAgents = "IDLE_AGENTS"
+        case notRespondingAgents = "NOT_RESPONDING_AGENTS"
+        case longestWaiting = "LONGEST_WAITING"
+        case longestInteracting = "LONGEST_INTERACTING"
+        case flowActiveLongest = "FLOW_ACTIVE_LONGEST"
+        case flowActiveCurrent = "FLOW_ACTIVE_CURRENT"
+        case flowEntriesCount = "FLOW_ENTRIES_COUNT"
+        case flowTotalDuration = "FLOW_TOTAL_DURATION"
+        case flowMaxDuration = "FLOW_MAX_DURATION"
+        case flowAvgDuration = "FLOW_AVG_DURATION"
+        case flowDisconnectCount = "FLOW_DISCONNECT_COUNT"
+        case flowDisconnectPercent = "FLOW_DISCONNECT_PERCENT"
+        case flowTotalDisconnectDuration = "FLOW_TOTAL_DISCONNECT_DURATION"
+        case flowAvgDisconnectDuration = "FLOW_AVG_DISCONNECT_DURATION"
+        case flowMaxDisconnectDuration = "FLOW_MAX_DISCONNECT_DURATION"
+        case flowFlowDisconnect = "FLOW_FLOW_DISCONNECT"
+        case flowFlowDisconnectPercent = "FLOW_FLOW_DISCONNECT_PERCENT"
+        case flowSystemErrorDisconnect = "FLOW_SYSTEM_ERROR_DISCONNECT"
+        case flowSystemErrorDisconnectPercent = "FLOW_SYSTEM_ERROR_DISCONNECT_PERCENT"
+        case flowCustomerDisconnect = "FLOW_CUSTOMER_DISCONNECT"
+        case flowCustomerDisconnectPercent = "FLOW_CUSTOMER_DISCONNECT_PERCENT"
+        case flowShortDisconnect = "FLOW_SHORT_DISCONNECT"
+        case flowShortDisconnectPercent = "FLOW_SHORT_DISCONNECT_PERCENT"
+        case flowExitCount = "FLOW_EXIT_COUNT"
+        case flowExitPercent = "FLOW_EXIT_PERCENT"
+        case flowTotalExitDuration = "FLOW_TOTAL_EXIT_DURATION"
+        case flowMaxExitDuration = "FLOW_MAX_EXIT_DURATION"
+        case flowAvgExitDuration = "FLOW_AVG_EXIT_DURATION"
+        case flowAcdExitCount = "FLOW_ACD_EXIT_COUNT"
+        case flowAcdExitPercent = "FLOW_ACD_EXIT_PERCENT"
+        case flowGroupExitCount = "FLOW_GROUP_EXIT_COUNT"
+        case flowGroupExitPercent = "FLOW_GROUP_EXIT_PERCENT"
+        case flowNumberExitCount = "FLOW_NUMBER_EXIT_COUNT"
+        case flowNumberExitPercent = "FLOW_NUMBER_EXIT_PERCENT"
+        case flowUserExitCount = "FLOW_USER_EXIT_COUNT"
+        case flowUserExitPercent = "FLOW_USER_EXIT_PERCENT"
+        case flowFlowExitCount = "FLOW_FLOW_EXIT_COUNT"
+        case flowFlowExitPercent = "FLOW_FLOW_EXIT_PERCENT"
+        case flowSecureFlowExitCount = "FLOW_SECURE_FLOW_EXIT_COUNT"
+        case flowSecureFlowExitPercent = "FLOW_SECURE_FLOW_EXIT_PERCENT"
+        case flowAcdVoicemailExitCount = "FLOW_ACD_VOICEMAIL_EXIT_COUNT"
+        case flowAcdVoicemailExitPercent = "FLOW_ACD_VOICEMAIL_EXIT_PERCENT"
+        case flowUserVoicemailExitCount = "FLOW_USER_VOICEMAIL_EXIT_COUNT"
+        case flowUserVoicemailExitPercent = "FLOW_USER_VOICEMAIL_EXIT_PERCENT"
+        case flowOutcomeCount = "FLOW_OUTCOME_COUNT"
+        case flowAvgOutcomeDecimal = "FLOW_AVG_OUTCOME_DECIMAL"
+        case flowOutcomeFailureCount = "FLOW_OUTCOME_FAILURE_COUNT"
+        case flowOutcomeFailurePercent = "FLOW_OUTCOME_FAILURE_PERCENT"
+        case flowOutcomeSuccessCount = "FLOW_OUTCOME_SUCCESS_COUNT"
+        case flowOutcomeSuccessPercent = "FLOW_OUTCOME_SUCCESS_PERCENT"
+        case flowOutcomeTotalDuration = "FLOW_OUTCOME_TOTAL_DURATION"
+        case flowOutcomeMaxDuration = "FLOW_OUTCOME_MAX_DURATION"
+        case flowOutcomeAvgDuration = "FLOW_OUTCOME_AVG_DURATION"
+        case flowOutcomeMinDuration = "FLOW_OUTCOME_MIN_DURATION"
+        case offQueueTime = "OFF_QUEUE_TIME"
+        case offQueuePercent = "OFF_QUEUE_PERCENT"
+        case availableTime = "AVAILABLE_TIME"
+        case availablePercent = "AVAILABLE_PERCENT"
+        case busyTime = "BUSY_TIME"
+        case busyPercent = "BUSY_PERCENT"
+        case awayTime = "AWAY_TIME"
+        case awayPercent = "AWAY_PERCENT"
+        case breakTime = "BREAK_TIME"
+        case breakPercent = "BREAK_PERCENT"
+        case mealTime = "MEAL_TIME"
+        case mealPercent = "MEAL_PERCENT"
+        case meetingTime = "MEETING_TIME"
+        case meetingPercent = "MEETING_PERCENT"
+        case trainingTime = "TRAINING_TIME"
+        case trainingPercent = "TRAINING_PERCENT"
+        case interactingTime = "INTERACTING_TIME"
+        case interactingPercent = "INTERACTING_PERCENT"
+        case communicatingTime = "COMMUNICATING_TIME"
+        case communicatingPercent = "COMMUNICATING_PERCENT"
+        case systemAwayTime = "SYSTEM_AWAY_TIME"
+        case systemAwayPercent = "SYSTEM_AWAY_PERCENT"
+        case onQueueTime = "ON_QUEUE_TIME"
+        case onQueuePercent = "ON_QUEUE_PERCENT"
+        case idleTime = "IDLE_TIME"
+        case idlePercent = "IDLE_PERCENT"
+        case notRespondingTime = "NOT_RESPONDING_TIME"
+        case notRespondingPercent = "NOT_RESPONDING_PERCENT"
+        case loggedInTime = "LOGGED_IN_TIME"
+        case occupancyPercent = "OCCUPANCY_PERCENT"
+        case minAlertTime = "MIN_ALERT_TIME"
+        case maxAlertTime = "MAX_ALERT_TIME"
+        case minHandleTime = "MIN_HANDLE_TIME"
+        case maxHandleTime = "MAX_HANDLE_TIME"
+        case minAnsweredTime = "MIN_ANSWERED_TIME"
+        case maxAnsweredTime = "MAX_ANSWERED_TIME"
+        case minNotRespondingTime = "MIN_NOT_RESPONDING_TIME"
+        case maxNotRespondingTime = "MAX_NOT_RESPONDING_TIME"
+        case metServiceLevel = "MET_SERVICE_LEVEL"
+        case wfmAdherenceStatus = "WFM_ADHERENCE_STATUS"
+        case wfmScheduledActivity = "WFM_SCHEDULED_ACTIVITY"
+        case wfmAdherenceDuration = "WFM_ADHERENCE_DURATION"
+        case agentTitle = "AGENT_TITLE"
+        case agentDepartment = "AGENT_DEPARTMENT"
+        case agentExtension = "AGENT_EXTENSION"
+        case agentSkills = "AGENT_SKILLS"
+        case agentLocation = "AGENT_LOCATION"
+        case agentReportsTo = "AGENT_REPORTS_TO"
+        case agentEmail = "AGENT_EMAIL"
+        case agentRole = "AGENT_ROLE"
+        case agentGroup = "AGENT_GROUP"
+        case agentTimeInStatus = "AGENT_TIME_IN_STATUS"
+        case agentTimeInRoutingStatus = "AGENT_TIME_IN_ROUTING_STATUS"
+        case agentStatus = "AGENT_STATUS"
+        case agentSecondaryStatus = "AGENT_SECONDARY_STATUS"
+        case agentRoutingStatus = "AGENT_ROUTING_STATUS"
+        case agentMediaTypes = "AGENT_MEDIA_TYPES"
+        case acwCount = "ACW_COUNT"
+        case answerTransferredPercent = "ANSWER_TRANSFERRED_PERCENT"
+        case flowAvgMilestoneDecimal = "FLOW_AVG_MILESTONE_DECIMAL"
+        case notRespondingCount = "NOT_RESPONDING_COUNT"
+        case avgAcwHandled = "AVG_ACW_HANDLED"
+        case avgContactingTime = "AVG_CONTACTING_TIME"
+        case avgDialingTime = "AVG_DIALING_TIME"
+        case avgFlowoutTime = "AVG_FLOWOUT_TIME"
+        case avgHoldHandled = "AVG_HOLD_HANDLED"
+        case avgMonitor = "AVG_MONITOR"
+        case blindTransferCount = "BLIND_TRANSFER_COUNT"
+        case blindTransferPercent = "BLIND_TRANSFER_PERCENT"
+        case connectedCount = "CONNECTED_COUNT"
+        case consultCount = "CONSULT_COUNT"
+        case consultTransferCount = "CONSULT_TRANSFER_COUNT"
+        case consultTransferPercent = "CONSULT_TRANSFER_PERCENT"
+        case contactingCount = "CONTACTING_COUNT"
+        case dialingCount = "DIALING_COUNT"
+        case errorCount = "ERROR_COUNT"
+        case externalMediaCount = "EXTERNAL_MEDIA_COUNT"
+        case maxContactingTime = "MAX_CONTACTING_TIME"
+        case maxDialingTime = "MAX_DIALING_TIME"
+        case maxFlowoutTime = "MAX_FLOWOUT_TIME"
+        case flowMilestoneCount = "FLOW_MILESTONE_COUNT"
+        case minFlowoutTime = "MIN_FLOWOUT_TIME"
+        case maxMonitor = "MAX_MONITOR"
+        case minContactingTime = "MIN_CONTACTING_TIME"
+        case minDialingTime = "MIN_DIALING_TIME"
+        case minMonitor = "MIN_MONITOR"
+        case monitorCount = "MONITOR_COUNT"
+        case mediaCount = "MEDIA_COUNT"
+        case serviceLevelTarget = "SERVICE_LEVEL_TARGET"
+        case serviceLevelTargetCurrent = "SERVICE_LEVEL_TARGET_CURRENT"
+        case talkCount = "TALK_COUNT"
+        case totalAbandonTime = "TOTAL_ABANDON_TIME"
+        case totalNotRespondingTime = "TOTAL_NOT_RESPONDING_TIME"
+        case totalContacting = "TOTAL_CONTACTING"
+        case totalDialing = "TOTAL_DIALING"
+        case totalMonitor = "TOTAL_MONITOR"
+        case totalWaitTime = "TOTAL_WAIT_TIME"
+        case waitCount = "WAIT_COUNT"
+        case parkCount = "PARK_COUNT"
+        case avgParkTime = "AVG_PARK_TIME"
+        case totalParkTime = "TOTAL_PARK_TIME"
+        case minParkTime = "MIN_PARK_TIME"
+        case maxParkTime = "MAX_PARK_TIME"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum SortOrder: String, Codable { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    public enum SortKey: String, Codable { 
+        case name = "Name"
+        case duration = "Duration"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum Periods: String, Codable { 
+        case _none = "NONE"
+        case currentHalfHour = "CURRENT_HALF_HOUR"
+        case today = "TODAY"
+        case yesterday = "YESTERDAY"
+        case thisWeek = "THIS_WEEK"
+        case lastWeek = "LAST_WEEK"
+        case thisMonth = "THIS_MONTH"
+        case lastMonth = "LAST_MONTH"
+        case prior7Days = "PRIOR_7_DAYS"
+        case past7DaysToDate = "PAST_7_DAYS_TO_DATE"
+        case prior30Days = "PRIOR_30_DAYS"
+        case past30DaysToDate = "PAST_30_DAYS_TO_DATE"
+        case prior3Months = "PRIOR_3_MONTHS"
+    }
+
+    public enum MediaTypes: String, Codable { 
+        case callback = "callback"
+        case chat = "chat"
+        case cobrowse = "cobrowse"
+        case email = "email"
+        case message = "message"
+        case screenshare = "screenshare"
+        case unknown = "unknown"
+        case video = "video"
+        case voice = "voice"
+    }
+
+
+
+
+
+
+
+    public enum SelectedStatuses: String, Codable { 
+        case available = "Available"
+        case away = "Away"
+        case busy = "Busy"
+        case _break = "Break"
+        case meeting = "Meeting"
+        case training = "Training"
+        case meal = "Meal"
+        case systemAway = "SystemAway"
+        case onQueue = "OnQueue"
+        case interacting = "Interacting"
+        case notResponding = "NotResponding"
+        case idle = "Idle"
+        case communicating = "Communicating"
+        case offQueue = "OffQueue"
+        case online = "Online"
+        case offline = "Offline"
+    }
+
+    public enum AgentInteractionSortOrder: String, Codable { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+
+    /** The row number for the specific dashboard widget configuration. */
+    public var row: Int?
+    /** The column number for the specific dashboard widget configuration. */
+    public var column: Int?
+    /** The title for the dashboard widget configuration. */
+    public var title: String?
+    /** The type of dashboard widget configuration. */
+    public var type: ModelType?
+    /** The list of metrics for the dashboard widget configuration. */
+    public var metrics: [Metrics]?
+    /** The display text for the dashboard widget configuration. */
+    public var displayText: String?
+    /** The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \"#FF0000\" represents red). */
+    public var displayTextColor: String?
+    /** The external web URL for the dashboard widget configuration. */
+    public var webContentUrl: String?
+    /** Indicates each filter to be displayed individually. */
+    public var splitFilters: Bool?
+    /** Indicates that data for each media type should be shown individually. */
+    public var splitByMediaType: Bool?
+    /** Indicates the display be the longest time. */
+    public var showLongest: Bool?
+    /** Indicates the widget to be displayed as table. */
+    public var displayAsTable: Bool?
+    /** Indicates the display to include duration. */
+    public var showDuration: Bool?
+    /** The sort order of the table. */
+    public var sortOrder: SortOrder?
+    /** The sort key of the table. */
+    public var sortKey: SortKey?
+    /** Indicates the limit of displayed entities. */
+    public var entityLimit: Int?
+    /** Indicates whether to display aggregate across all entity and media type combination. */
+    public var displayAggregates: Bool?
+    /** Indicates whether a widget should take the full width of a dashboard or be shown only in a single slot. */
+    public var isFullWidth: Bool?
+    /** Indicates whether a widget should show the percentage diff between two values. */
+    public var showPercentageChange: Bool?
+    /** Indicates whether a widget should show the profile picture of an agent. */
+    public var showProfilePicture: Bool?
+    /** The filters to be applied for dashboard widget configuration */
+    public var filter: ViewFilter?
+    /** The list of periods for the dashboard widget configuration */
+    public var periods: [Periods]?
+    /** The list of media types for the dashboard widget configuration */
+    public var mediaTypes: [MediaTypes]?
+    /** List of warnings for dashboard widget configuration */
+    public var warnings: [Warning]?
+    /** Indicates the show time in status of a widget configuration. */
+    public var showTimeInStatus: Bool?
+    /** Indicates to show offline agent widget. */
+    public var showOfflineAgents: Bool?
+    /** Indicates the selected statuses used to filter the agent widget in the dashboard. */
+    public var selectedStatuses: [SelectedStatuses]?
+    /** The sort order of the interactions in the agent status widget. */
+    public var agentInteractionSortOrder: AgentInteractionSortOrder?
+
+    public init(row: Int?, column: Int?, title: String?, type: ModelType?, metrics: [Metrics]?, displayText: String?, displayTextColor: String?, webContentUrl: String?, splitFilters: Bool?, splitByMediaType: Bool?, showLongest: Bool?, displayAsTable: Bool?, showDuration: Bool?, sortOrder: SortOrder?, sortKey: SortKey?, entityLimit: Int?, displayAggregates: Bool?, isFullWidth: Bool?, showPercentageChange: Bool?, showProfilePicture: Bool?, filter: ViewFilter?, periods: [Periods]?, mediaTypes: [MediaTypes]?, warnings: [Warning]?, showTimeInStatus: Bool?, showOfflineAgents: Bool?, selectedStatuses: [SelectedStatuses]?, agentInteractionSortOrder: AgentInteractionSortOrder?) {
+        self.row = row
+        self.column = column
+        self.title = title
+        self.type = type
+        self.metrics = metrics
+        self.displayText = displayText
+        self.displayTextColor = displayTextColor
+        self.webContentUrl = webContentUrl
+        self.splitFilters = splitFilters
+        self.splitByMediaType = splitByMediaType
+        self.showLongest = showLongest
+        self.displayAsTable = displayAsTable
+        self.showDuration = showDuration
+        self.sortOrder = sortOrder
+        self.sortKey = sortKey
+        self.entityLimit = entityLimit
+        self.displayAggregates = displayAggregates
+        self.isFullWidth = isFullWidth
+        self.showPercentageChange = showPercentageChange
+        self.showProfilePicture = showProfilePicture
+        self.filter = filter
+        self.periods = periods
+        self.mediaTypes = mediaTypes
+        self.warnings = warnings
+        self.showTimeInStatus = showTimeInStatus
+        self.showOfflineAgents = showOfflineAgents
+        self.selectedStatuses = selectedStatuses
+        self.agentInteractionSortOrder = agentInteractionSortOrder
+    }
+
+
+}
+
+
+
+
 public class WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification: Codable {
 
 
@@ -38353,438 +39079,6 @@ public class WhatsAppEmbeddedSignupIntegrationRequest: Codable {
 
 
 
-public class Widget: Codable {
-
-
-
-
-
-
-
-    public enum ModelType: String, Codable { 
-        case metric = "METRIC"
-        case chart = "CHART"
-        case pie = "PIE"
-        case heatMap = "HEAT_MAP"
-        case freeText = "FREE_TEXT"
-        case agentStatus = "AGENT_STATUS"
-        case realtimeAdherence = "REALTIME_ADHERENCE"
-        case webContentUrl = "WEB_CONTENT_URL"
-    }
-
-    public enum Metrics: String, Codable { 
-        case avgTalkTime = "AVG_TALK_TIME"
-        case avgHoldTime = "AVG_HOLD_TIME"
-        case avgAcwTime = "AVG_ACW_TIME"
-        case avgWaitTime = "AVG_WAIT_TIME"
-        case avgHandleTime = "AVG_HANDLE_TIME"
-        case avgAlertTime = "AVG_ALERT_TIME"
-        case avgAnswerTime = "AVG_ANSWER_TIME"
-        case avgAbandonTime = "AVG_ABANDON_TIME"
-        case totalTalkTime = "TOTAL_TALK_TIME"
-        case totalHandleTime = "TOTAL_HANDLE_TIME"
-        case totalHoldTime = "TOTAL_HOLD_TIME"
-        case totalAcwTime = "TOTAL_ACW_TIME"
-        case totalAlertTime = "TOTAL_ALERT_TIME"
-        case maxAbandonTime = "MAX_ABANDON_TIME"
-        case maxWaitTime = "MAX_WAIT_TIME"
-        case maxTalkTime = "MAX_TALK_TIME"
-        case maxHoldTime = "MAX_HOLD_TIME"
-        case maxAcwTime = "MAX_ACW_TIME"
-        case minAbandonTime = "MIN_ABANDON_TIME"
-        case minWaitTime = "MIN_WAIT_TIME"
-        case minTalkTime = "MIN_TALK_TIME"
-        case minHoldTime = "MIN_HOLD_TIME"
-        case minAcwTime = "MIN_ACW_TIME"
-        case alertCount = "ALERT_COUNT"
-        case offeredCount = "OFFERED_COUNT"
-        case abandonedCount = "ABANDONED_COUNT"
-        case abandonedPercent = "ABANDONED_PERCENT"
-        case shortAbandonedCount = "SHORT_ABANDONED_COUNT"
-        case shortAbandonedPercent = "SHORT_ABANDONED_PERCENT"
-        case abandonedNoShortCount = "ABANDONED_NO_SHORT_COUNT"
-        case abandonedNoShortPercent = "ABANDONED_NO_SHORT_PERCENT"
-        case answeredCount = "ANSWERED_COUNT"
-        case answeredPercent = "ANSWERED_PERCENT"
-        case flowoutCount = "FLOWOUT_COUNT"
-        case flowoutPercent = "FLOWOUT_PERCENT"
-        case outboundCount = "OUTBOUND_COUNT"
-        case outboundAttemptedCount = "OUTBOUND_ATTEMPTED_COUNT"
-        case voicemailCount = "VOICEMAIL_COUNT"
-        case handledCount = "HANDLED_COUNT"
-        case heldCount = "HELD_COUNT"
-        case transferredCount = "TRANSFERRED_COUNT"
-        case transferredPercent = "TRANSFERRED_PERCENT"
-        case waitingCurrent = "WAITING_CURRENT"
-        case interactingCurrent = "INTERACTING_CURRENT"
-        case heldCurrent = "HELD_CURRENT"
-        case alertingCurrent = "ALERTING_CURRENT"
-        case serviceLevel = "SERVICE_LEVEL"
-        case overServiceLevel = "OVER_SERVICE_LEVEL"
-        case onlineAgents = "ONLINE_AGENTS"
-        case availableAgents = "AVAILABLE_AGENTS"
-        case awayAgents = "AWAY_AGENTS"
-        case breakAgents = "BREAK_AGENTS"
-        case mealAgents = "MEAL_AGENTS"
-        case trainingAgents = "TRAINING_AGENTS"
-        case busyAgents = "BUSY_AGENTS"
-        case meetingAgents = "MEETING_AGENTS"
-        case systemAwayAgents = "SYSTEM_AWAY_AGENTS"
-        case offlineAgents = "OFFLINE_AGENTS"
-        case onQueueAgents = "ON_QUEUE_AGENTS"
-        case offQueueAgents = "OFF_QUEUE_AGENTS"
-        case interactingAgents = "INTERACTING_AGENTS"
-        case acwAgents = "ACW_AGENTS"
-        case communicatingAgents = "COMMUNICATING_AGENTS"
-        case idleAgents = "IDLE_AGENTS"
-        case notRespondingAgents = "NOT_RESPONDING_AGENTS"
-        case longestWaiting = "LONGEST_WAITING"
-        case longestInteracting = "LONGEST_INTERACTING"
-        case flowActiveLongest = "FLOW_ACTIVE_LONGEST"
-        case flowActiveCurrent = "FLOW_ACTIVE_CURRENT"
-        case flowEntriesCount = "FLOW_ENTRIES_COUNT"
-        case flowTotalDuration = "FLOW_TOTAL_DURATION"
-        case flowMaxDuration = "FLOW_MAX_DURATION"
-        case flowAvgDuration = "FLOW_AVG_DURATION"
-        case flowDisconnectCount = "FLOW_DISCONNECT_COUNT"
-        case flowDisconnectPercent = "FLOW_DISCONNECT_PERCENT"
-        case flowTotalDisconnectDuration = "FLOW_TOTAL_DISCONNECT_DURATION"
-        case flowAvgDisconnectDuration = "FLOW_AVG_DISCONNECT_DURATION"
-        case flowMaxDisconnectDuration = "FLOW_MAX_DISCONNECT_DURATION"
-        case flowFlowDisconnect = "FLOW_FLOW_DISCONNECT"
-        case flowFlowDisconnectPercent = "FLOW_FLOW_DISCONNECT_PERCENT"
-        case flowSystemErrorDisconnect = "FLOW_SYSTEM_ERROR_DISCONNECT"
-        case flowSystemErrorDisconnectPercent = "FLOW_SYSTEM_ERROR_DISCONNECT_PERCENT"
-        case flowCustomerDisconnect = "FLOW_CUSTOMER_DISCONNECT"
-        case flowCustomerDisconnectPercent = "FLOW_CUSTOMER_DISCONNECT_PERCENT"
-        case flowShortDisconnect = "FLOW_SHORT_DISCONNECT"
-        case flowShortDisconnectPercent = "FLOW_SHORT_DISCONNECT_PERCENT"
-        case flowExitCount = "FLOW_EXIT_COUNT"
-        case flowExitPercent = "FLOW_EXIT_PERCENT"
-        case flowTotalExitDuration = "FLOW_TOTAL_EXIT_DURATION"
-        case flowMaxExitDuration = "FLOW_MAX_EXIT_DURATION"
-        case flowAvgExitDuration = "FLOW_AVG_EXIT_DURATION"
-        case flowAcdExitCount = "FLOW_ACD_EXIT_COUNT"
-        case flowAcdExitPercent = "FLOW_ACD_EXIT_PERCENT"
-        case flowGroupExitCount = "FLOW_GROUP_EXIT_COUNT"
-        case flowGroupExitPercent = "FLOW_GROUP_EXIT_PERCENT"
-        case flowNumberExitCount = "FLOW_NUMBER_EXIT_COUNT"
-        case flowNumberExitPercent = "FLOW_NUMBER_EXIT_PERCENT"
-        case flowUserExitCount = "FLOW_USER_EXIT_COUNT"
-        case flowUserExitPercent = "FLOW_USER_EXIT_PERCENT"
-        case flowFlowExitCount = "FLOW_FLOW_EXIT_COUNT"
-        case flowFlowExitPercent = "FLOW_FLOW_EXIT_PERCENT"
-        case flowSecureFlowExitCount = "FLOW_SECURE_FLOW_EXIT_COUNT"
-        case flowSecureFlowExitPercent = "FLOW_SECURE_FLOW_EXIT_PERCENT"
-        case flowAcdVoicemailExitCount = "FLOW_ACD_VOICEMAIL_EXIT_COUNT"
-        case flowAcdVoicemailExitPercent = "FLOW_ACD_VOICEMAIL_EXIT_PERCENT"
-        case flowUserVoicemailExitCount = "FLOW_USER_VOICEMAIL_EXIT_COUNT"
-        case flowUserVoicemailExitPercent = "FLOW_USER_VOICEMAIL_EXIT_PERCENT"
-        case flowOutcomeCount = "FLOW_OUTCOME_COUNT"
-        case flowAvgOutcomeDecimal = "FLOW_AVG_OUTCOME_DECIMAL"
-        case flowOutcomeFailureCount = "FLOW_OUTCOME_FAILURE_COUNT"
-        case flowOutcomeFailurePercent = "FLOW_OUTCOME_FAILURE_PERCENT"
-        case flowOutcomeSuccessCount = "FLOW_OUTCOME_SUCCESS_COUNT"
-        case flowOutcomeSuccessPercent = "FLOW_OUTCOME_SUCCESS_PERCENT"
-        case flowOutcomeTotalDuration = "FLOW_OUTCOME_TOTAL_DURATION"
-        case flowOutcomeMaxDuration = "FLOW_OUTCOME_MAX_DURATION"
-        case flowOutcomeAvgDuration = "FLOW_OUTCOME_AVG_DURATION"
-        case flowOutcomeMinDuration = "FLOW_OUTCOME_MIN_DURATION"
-        case offQueueTime = "OFF_QUEUE_TIME"
-        case offQueuePercent = "OFF_QUEUE_PERCENT"
-        case availableTime = "AVAILABLE_TIME"
-        case availablePercent = "AVAILABLE_PERCENT"
-        case busyTime = "BUSY_TIME"
-        case busyPercent = "BUSY_PERCENT"
-        case awayTime = "AWAY_TIME"
-        case awayPercent = "AWAY_PERCENT"
-        case breakTime = "BREAK_TIME"
-        case breakPercent = "BREAK_PERCENT"
-        case mealTime = "MEAL_TIME"
-        case mealPercent = "MEAL_PERCENT"
-        case meetingTime = "MEETING_TIME"
-        case meetingPercent = "MEETING_PERCENT"
-        case trainingTime = "TRAINING_TIME"
-        case trainingPercent = "TRAINING_PERCENT"
-        case interactingTime = "INTERACTING_TIME"
-        case interactingPercent = "INTERACTING_PERCENT"
-        case communicatingTime = "COMMUNICATING_TIME"
-        case communicatingPercent = "COMMUNICATING_PERCENT"
-        case systemAwayTime = "SYSTEM_AWAY_TIME"
-        case systemAwayPercent = "SYSTEM_AWAY_PERCENT"
-        case onQueueTime = "ON_QUEUE_TIME"
-        case onQueuePercent = "ON_QUEUE_PERCENT"
-        case idleTime = "IDLE_TIME"
-        case idlePercent = "IDLE_PERCENT"
-        case notRespondingTime = "NOT_RESPONDING_TIME"
-        case notRespondingPercent = "NOT_RESPONDING_PERCENT"
-        case loggedInTime = "LOGGED_IN_TIME"
-        case occupancyPercent = "OCCUPANCY_PERCENT"
-        case minAlertTime = "MIN_ALERT_TIME"
-        case maxAlertTime = "MAX_ALERT_TIME"
-        case minHandleTime = "MIN_HANDLE_TIME"
-        case maxHandleTime = "MAX_HANDLE_TIME"
-        case minAnsweredTime = "MIN_ANSWERED_TIME"
-        case maxAnsweredTime = "MAX_ANSWERED_TIME"
-        case minNotRespondingTime = "MIN_NOT_RESPONDING_TIME"
-        case maxNotRespondingTime = "MAX_NOT_RESPONDING_TIME"
-        case metServiceLevel = "MET_SERVICE_LEVEL"
-        case wfmAdherenceStatus = "WFM_ADHERENCE_STATUS"
-        case wfmScheduledActivity = "WFM_SCHEDULED_ACTIVITY"
-        case wfmAdherenceDuration = "WFM_ADHERENCE_DURATION"
-        case agentTitle = "AGENT_TITLE"
-        case agentDepartment = "AGENT_DEPARTMENT"
-        case agentExtension = "AGENT_EXTENSION"
-        case agentSkills = "AGENT_SKILLS"
-        case agentLocation = "AGENT_LOCATION"
-        case agentReportsTo = "AGENT_REPORTS_TO"
-        case agentEmail = "AGENT_EMAIL"
-        case agentRole = "AGENT_ROLE"
-        case agentGroup = "AGENT_GROUP"
-        case agentTimeInStatus = "AGENT_TIME_IN_STATUS"
-        case agentTimeInRoutingStatus = "AGENT_TIME_IN_ROUTING_STATUS"
-        case agentStatus = "AGENT_STATUS"
-        case agentSecondaryStatus = "AGENT_SECONDARY_STATUS"
-        case agentRoutingStatus = "AGENT_ROUTING_STATUS"
-        case agentMediaTypes = "AGENT_MEDIA_TYPES"
-        case acwCount = "ACW_COUNT"
-        case answerTransferredPercent = "ANSWER_TRANSFERRED_PERCENT"
-        case flowAvgMilestoneDecimal = "FLOW_AVG_MILESTONE_DECIMAL"
-        case notRespondingCount = "NOT_RESPONDING_COUNT"
-        case avgAcwHandled = "AVG_ACW_HANDLED"
-        case avgContactingTime = "AVG_CONTACTING_TIME"
-        case avgDialingTime = "AVG_DIALING_TIME"
-        case avgFlowoutTime = "AVG_FLOWOUT_TIME"
-        case avgHoldHandled = "AVG_HOLD_HANDLED"
-        case avgMonitor = "AVG_MONITOR"
-        case blindTransferCount = "BLIND_TRANSFER_COUNT"
-        case blindTransferPercent = "BLIND_TRANSFER_PERCENT"
-        case connectedCount = "CONNECTED_COUNT"
-        case consultCount = "CONSULT_COUNT"
-        case consultTransferCount = "CONSULT_TRANSFER_COUNT"
-        case consultTransferPercent = "CONSULT_TRANSFER_PERCENT"
-        case contactingCount = "CONTACTING_COUNT"
-        case dialingCount = "DIALING_COUNT"
-        case errorCount = "ERROR_COUNT"
-        case externalMediaCount = "EXTERNAL_MEDIA_COUNT"
-        case maxContactingTime = "MAX_CONTACTING_TIME"
-        case maxDialingTime = "MAX_DIALING_TIME"
-        case maxFlowoutTime = "MAX_FLOWOUT_TIME"
-        case flowMilestoneCount = "FLOW_MILESTONE_COUNT"
-        case minFlowoutTime = "MIN_FLOWOUT_TIME"
-        case maxMonitor = "MAX_MONITOR"
-        case minContactingTime = "MIN_CONTACTING_TIME"
-        case minDialingTime = "MIN_DIALING_TIME"
-        case minMonitor = "MIN_MONITOR"
-        case monitorCount = "MONITOR_COUNT"
-        case mediaCount = "MEDIA_COUNT"
-        case serviceLevelTarget = "SERVICE_LEVEL_TARGET"
-        case serviceLevelTargetCurrent = "SERVICE_LEVEL_TARGET_CURRENT"
-        case talkCount = "TALK_COUNT"
-        case totalAbandonTime = "TOTAL_ABANDON_TIME"
-        case totalNotRespondingTime = "TOTAL_NOT_RESPONDING_TIME"
-        case totalContacting = "TOTAL_CONTACTING"
-        case totalDialing = "TOTAL_DIALING"
-        case totalMonitor = "TOTAL_MONITOR"
-        case totalWaitTime = "TOTAL_WAIT_TIME"
-        case waitCount = "WAIT_COUNT"
-        case parkCount = "PARK_COUNT"
-        case avgParkTime = "AVG_PARK_TIME"
-        case totalParkTime = "TOTAL_PARK_TIME"
-        case minParkTime = "MIN_PARK_TIME"
-        case maxParkTime = "MAX_PARK_TIME"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum SortOrder: String, Codable { 
-        case ascending = "ascending"
-        case descending = "descending"
-    }
-
-    public enum SortKey: String, Codable { 
-        case name = "Name"
-        case duration = "Duration"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum Periods: String, Codable { 
-        case _none = "NONE"
-        case currentHalfHour = "CURRENT_HALF_HOUR"
-        case today = "TODAY"
-        case yesterday = "YESTERDAY"
-        case thisWeek = "THIS_WEEK"
-        case lastWeek = "LAST_WEEK"
-        case thisMonth = "THIS_MONTH"
-        case lastMonth = "LAST_MONTH"
-        case prior7Days = "PRIOR_7_DAYS"
-        case past7DaysToDate = "PAST_7_DAYS_TO_DATE"
-        case prior30Days = "PRIOR_30_DAYS"
-        case past30DaysToDate = "PAST_30_DAYS_TO_DATE"
-        case prior3Months = "PRIOR_3_MONTHS"
-    }
-
-    public enum MediaTypes: String, Codable { 
-        case callback = "callback"
-        case chat = "chat"
-        case cobrowse = "cobrowse"
-        case email = "email"
-        case message = "message"
-        case screenshare = "screenshare"
-        case unknown = "unknown"
-        case video = "video"
-        case voice = "voice"
-    }
-
-
-
-
-
-
-
-    public enum SelectedStatuses: String, Codable { 
-        case available = "Available"
-        case away = "Away"
-        case busy = "Busy"
-        case _break = "Break"
-        case meeting = "Meeting"
-        case training = "Training"
-        case meal = "Meal"
-        case systemAway = "SystemAway"
-        case onQueue = "OnQueue"
-        case interacting = "Interacting"
-        case notResponding = "NotResponding"
-        case idle = "Idle"
-        case communicating = "Communicating"
-        case offQueue = "OffQueue"
-        case online = "Online"
-        case offline = "Offline"
-    }
-
-    public enum AgentInteractionSortOrder: String, Codable { 
-        case ascending = "ascending"
-        case descending = "descending"
-    }
-
-    /** The row number for the specific dashboard widget configuration. */
-    public var row: Int?
-    /** The column number for the specific dashboard widget configuration. */
-    public var column: Int?
-    /** The title for the dashboard widget configuration. */
-    public var title: String?
-    /** The type of dashboard widget configuration. */
-    public var type: ModelType?
-    /** The list of metrics for the dashboard widget configuration. */
-    public var metrics: [Metrics]?
-    /** The display text for the dashboard widget configuration. */
-    public var displayText: String?
-    /** The color of the display text for the dashboard widget configuration in RGB hexadecimal format (for example \"#FF0000\" represents red). */
-    public var displayTextColor: String?
-    /** The external web URL for the dashboard widget configuration. */
-    public var webContentUrl: String?
-    /** Indicates each filter to be displayed individually. */
-    public var splitFilters: Bool?
-    /** Indicates that data for each media type should be shown individually. */
-    public var splitByMediaType: Bool?
-    /** Indicates the display be the longest time. */
-    public var showLongest: Bool?
-    /** Indicates the widget to be displayed as table. */
-    public var displayAsTable: Bool?
-    /** Indicates the display to include duration. */
-    public var showDuration: Bool?
-    /** The sort order of the table. */
-    public var sortOrder: SortOrder?
-    /** The sort key of the table. */
-    public var sortKey: SortKey?
-    /** Indicates the limit of displayed entities. */
-    public var entityLimit: Int?
-    /** Indicates whether to display aggregate across all entity and media type combination. */
-    public var displayAggregates: Bool?
-    /** Indicates whether a widget should take the full width of a dashboard or be shown only in a single slot. */
-    public var isFullWidth: Bool?
-    /** Indicates whether a widget should show the percentage diff between two values. */
-    public var showPercentageChange: Bool?
-    /** Indicates whether a widget should show the profile picture of an agent. */
-    public var showProfilePicture: Bool?
-    /** The filters to be applied for dashboard widget configuration */
-    public var filter: ViewFilter?
-    /** The list of periods for the dashboard widget configuration */
-    public var periods: [Periods]?
-    /** The list of media types for the dashboard widget configuration */
-    public var mediaTypes: [MediaTypes]?
-    /** List of warnings for dashboard widget configuration */
-    public var warnings: [Warning]?
-    /** Indicates the show time in status of a widget configuration. */
-    public var showTimeInStatus: Bool?
-    /** Indicates to show offline agent widget. */
-    public var showOfflineAgents: Bool?
-    /** Indicates the selected statuses used to filter the agent widget in the dashboard. */
-    public var selectedStatuses: [SelectedStatuses]?
-    /** The sort order of the interactions in the agent status widget. */
-    public var agentInteractionSortOrder: AgentInteractionSortOrder?
-
-    public init(row: Int?, column: Int?, title: String?, type: ModelType?, metrics: [Metrics]?, displayText: String?, displayTextColor: String?, webContentUrl: String?, splitFilters: Bool?, splitByMediaType: Bool?, showLongest: Bool?, displayAsTable: Bool?, showDuration: Bool?, sortOrder: SortOrder?, sortKey: SortKey?, entityLimit: Int?, displayAggregates: Bool?, isFullWidth: Bool?, showPercentageChange: Bool?, showProfilePicture: Bool?, filter: ViewFilter?, periods: [Periods]?, mediaTypes: [MediaTypes]?, warnings: [Warning]?, showTimeInStatus: Bool?, showOfflineAgents: Bool?, selectedStatuses: [SelectedStatuses]?, agentInteractionSortOrder: AgentInteractionSortOrder?) {
-        self.row = row
-        self.column = column
-        self.title = title
-        self.type = type
-        self.metrics = metrics
-        self.displayText = displayText
-        self.displayTextColor = displayTextColor
-        self.webContentUrl = webContentUrl
-        self.splitFilters = splitFilters
-        self.splitByMediaType = splitByMediaType
-        self.showLongest = showLongest
-        self.displayAsTable = displayAsTable
-        self.showDuration = showDuration
-        self.sortOrder = sortOrder
-        self.sortKey = sortKey
-        self.entityLimit = entityLimit
-        self.displayAggregates = displayAggregates
-        self.isFullWidth = isFullWidth
-        self.showPercentageChange = showPercentageChange
-        self.showProfilePicture = showProfilePicture
-        self.filter = filter
-        self.periods = periods
-        self.mediaTypes = mediaTypes
-        self.warnings = warnings
-        self.showTimeInStatus = showTimeInStatus
-        self.showOfflineAgents = showOfflineAgents
-        self.selectedStatuses = selectedStatuses
-        self.agentInteractionSortOrder = agentInteractionSortOrder
-    }
-
-
-}
-
-
-
-
 public class WidgetClientConfig: Codable {
 
 
@@ -38835,6 +39129,62 @@ public class WidgetClientConfigV1: Codable {
     public init(webChatSkin: WebChatSkin?, authenticationUrl: String?) {
         self.webChatSkin = webChatSkin
         self.authenticationUrl = authenticationUrl
+    }
+
+
+}
+
+
+
+
+public class WorkPlanBidGroupResponse: Codable {
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The work plan bid group */
+    public var workPlanBidGroup: WorkPlanBidGroup?
+    /** The meta data of the bid group */
+    public var metadata: WorkPlanBidMetadata?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, workPlanBidGroup: WorkPlanBidGroup?, metadata: WorkPlanBidMetadata?, selfUri: String?) {
+        self._id = _id
+        self.workPlanBidGroup = workPlanBidGroup
+        self.metadata = metadata
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case workPlanBidGroup
+        case metadata
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class WorkPlanBidGroupSummaryList: Codable {
+
+
+
+    /** List of work plan bid group summary */
+    public var workPlanBidGroupSummaryList: [WorkPlanBidGroupSummary]?
+
+    public init(workPlanBidGroupSummaryList: [WorkPlanBidGroupSummary]?) {
+        self.workPlanBidGroupSummaryList = workPlanBidGroupSummaryList
     }
 
 

@@ -859,6 +859,50 @@ public class AgentQueueTimeRequest: Codable {
 
 
 
+public class AgentWorkPlanBiddingPreference: Codable {
+
+
+
+
+
+    /** The work plan that belongs to the agent's bid group */
+    public var workPlan: WorkPlanReference?
+    /** The agent's priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan */
+    public var priority: Int?
+
+    public init(workPlan: WorkPlanReference?, priority: Int?) {
+        self.workPlan = workPlan
+        self.priority = priority
+    }
+
+
+}
+
+
+
+
+public class AgentWorkPlanBiddingPreferenceRequest: Codable {
+
+
+
+
+
+    /** The ID of the work plan that belongs to agent's bid group */
+    public var workPlanId: String?
+    /** The agent's priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan */
+    public var priority: Int?
+
+    public init(workPlanId: String?, priority: Int?) {
+        self.workPlanId = workPlanId
+        self.priority = priority
+    }
+
+
+}
+
+
+
+
 public class AgentlessEmailSendRequestDto: Codable {
 
     public enum SenderType: String, Codable { 
@@ -907,6 +951,23 @@ public class AgentlessEmailSendRequestDto: Codable {
         self.subject = subject
         self.textBody = textBody
         self.htmlBody = htmlBody
+    }
+
+
+}
+
+
+
+
+public class AgentsBidAssignedWorkPlanOverrideRequest: Codable {
+
+
+
+    /** The list of agent work plan overrides */
+    public var agentWorkPlanOverrides: [AgentBidWorkPlanOverrideRequest]?
+
+    public init(agentWorkPlanOverrides: [AgentBidWorkPlanOverrideRequest]?) {
+        self.agentWorkPlanOverrides = agentWorkPlanOverrides
     }
 
 
@@ -1031,6 +1092,101 @@ public class AlertSummaryEntity: Codable {
         self.queue = queue
         self.team = team
         self.alerting = alerting
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftBulkUpdateTradesResponseTemplate: Codable {
+
+
+
+    public var entities: [AlternativeShiftTradeBulkUpdateTemplateItem]?
+
+    public init(entities: [AlternativeShiftTradeBulkUpdateTemplateItem]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftJobResponse: Codable {
+
+
+
+    public enum Status: String, Codable { 
+        case processing = "Processing"
+        case complete = "Complete"
+        case error = "Error"
+    }
+
+    public enum ModelType: String, Codable { 
+        case listOffers = "ListOffers"
+        case searchOffers = "SearchOffers"
+        case listUserTrades = "ListUserTrades"
+        case searchTrades = "SearchTrades"
+        case bulkUpdateTrades = "BulkUpdateTrades"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The status of the alternative shift job */
+    public var status: Status?
+    /** The type of job */
+    public var type: ModelType?
+    /** The URL where completed results are available, only set if status == 'Complete' */
+    public var downloadUrl: String?
+    /** Any error information, only set if the status == 'Error' */
+    public var error: ErrorBody?
+    /** Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListOffers' or 'SearchOffers' */
+    public var viewOffersResults: AlternativeShiftOffersViewResponseTemplate?
+    /** Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListUserTrades' or 'SearchTrades' */
+    public var viewTradesResults: AlternativeShiftTradesViewResponseTemplate?
+    /** Schema template for deserializing data returned from the downloadUrl. Use if type == 'BulkUpdateTrades' */
+    public var bulkUpdateTradesResults: AlternativeShiftBulkUpdateTradesResponseTemplate?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, status: Status?, type: ModelType?, downloadUrl: String?, error: ErrorBody?, viewOffersResults: AlternativeShiftOffersViewResponseTemplate?, viewTradesResults: AlternativeShiftTradesViewResponseTemplate?, bulkUpdateTradesResults: AlternativeShiftBulkUpdateTradesResponseTemplate?, selfUri: String?) {
+        self._id = _id
+        self.status = status
+        self.type = type
+        self.downloadUrl = downloadUrl
+        self.error = error
+        self.viewOffersResults = viewOffersResults
+        self.viewTradesResults = viewTradesResults
+        self.bulkUpdateTradesResults = bulkUpdateTradesResults
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case status
+        case type
+        case downloadUrl
+        case error
+        case viewOffersResults
+        case viewTradesResults
+        case bulkUpdateTradesResults
+        case selfUri
     }
 
 
@@ -2104,6 +2260,39 @@ public class Annotation: Codable {
         case reason
         case annotations
         case realtimeLocation
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class AnswerGenerationDocument: Codable {
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The document title. */
+    public var title: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, title: String?, selfUri: String?) {
+        self._id = _id
+        self.title = title
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case title
         case selfUri
     }
 
@@ -3313,6 +3502,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case journeyAnalytics = "JourneyAnalytics"
         case nerService = "NerService"
         case onboarding = "Onboarding"
+        case socialListening = "SocialListening"
     }
 
 
@@ -10634,6 +10824,23 @@ public class CopyVoicemailMessage: Codable {
 
 
 
+public class CopyWorkPlanBid: Codable {
+
+
+
+    /** The name of the new work plan bid */
+    public var name: String?
+
+    public init(name: String?) {
+        self.name = name
+    }
+
+
+}
+
+
+
+
 public class CoverSheet: Codable {
 
 
@@ -11020,6 +11227,70 @@ public class CreateWebChatRequest: Codable {
 
 
 
+/** Create work plan bid model */
+
+public class CreateWorkPlanBid: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public enum AgentRankingType: String, Codable { 
+        case hireDate = "HireDate"
+        case performance = "Performance"
+    }
+
+    public enum RankingTiebreakerType: String, Codable { 
+        case hireDate = "HireDate"
+        case performance = "Performance"
+        case custom = "Custom"
+        case randomlyAssign = "RandomlyAssign"
+    }
+
+    public enum WorkPlanFieldsVisibleToAgents: String, Codable { 
+        case name = "Name"
+        case paidHours = "PaidHours"
+    }
+
+    /** The name of the work plan bid */
+    public var name: String?
+    /** The selected forecast in this work plan bid */
+    public var forecast: BuShortTermForecastWeekReference?
+    /** The bid start date where agents start participate in work plan bidding in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var bidWindowStartDate: Date?
+    /** The bid end date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var bidWindowEndDate: Date?
+    /** The date when agents will be assigned to the new work plan in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var effectiveDate: Date?
+    /** The type of agent ranking selected for this bid */
+    public var agentRankingType: AgentRankingType?
+    /** Ranking tiebreaker to be used */
+    public var rankingTiebreakerType: RankingTiebreakerType?
+    /** The work plan fields visible to agents whenever work plan preferences are made */
+    public var workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?
+
+    public init(name: String?, forecast: BuShortTermForecastWeekReference?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, workPlanFieldsVisibleToAgents: [WorkPlanFieldsVisibleToAgents]?) {
+        self.name = name
+        self.forecast = forecast
+        self.bidWindowStartDate = bidWindowStartDate
+        self.bidWindowEndDate = bidWindowEndDate
+        self.effectiveDate = effectiveDate
+        self.agentRankingType = agentRankingType
+        self.rankingTiebreakerType = rankingTiebreakerType
+        self.workPlanFieldsVisibleToAgents = workPlanFieldsVisibleToAgents
+    }
+
+
+}
+
+
+
 
 public class CrossPlatformEmailMediaPolicy: Codable {
 
@@ -11052,74 +11323,6 @@ public class CurrentUserTimeOffIntegrationStatusRequest: Codable {
 
     public init(timeOffRequestIds: [String]?) {
         self.timeOffRequestIds = timeOffRequestIds
-    }
-
-
-}
-
-
-
-/** Represents an unassigned or assigned DID in a DID Pool. */
-
-public class DIDNumber: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum OwnerType: String, Codable { 
-        case user = "USER"
-        case phone = "PHONE"
-        case ivrConfig = "IVR_CONFIG"
-        case group = "GROUP"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The number of the DID formatted as E164. */
-    public var number: String?
-    /** True if this DID is assigned to an entity.  False otherwise. */
-    public var assigned: Bool?
-    /** A Uri reference to the DID Pool this DID is a part of. */
-    public var didPool: AddressableEntityRef?
-    /** A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL. */
-    public var owner: DomainEntityRef?
-    /** The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL. */
-    public var ownerType: OwnerType?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, number: String?, assigned: Bool?, didPool: AddressableEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.number = number
-        self.assigned = assigned
-        self.didPool = didPool
-        self.owner = owner
-        self.ownerType = ownerType
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case number
-        case assigned
-        case didPool
-        case owner
-        case ownerType
-        case selfUri
     }
 
 
@@ -11368,6 +11571,74 @@ public class DIDEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+/** Represents an unassigned or assigned DID in a DID Pool. */
+
+public class DIDNumber: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum OwnerType: String, Codable { 
+        case user = "USER"
+        case phone = "PHONE"
+        case ivrConfig = "IVR_CONFIG"
+        case group = "GROUP"
+    }
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The number of the DID formatted as E164. */
+    public var number: String?
+    /** True if this DID is assigned to an entity.  False otherwise. */
+    public var assigned: Bool?
+    /** A Uri reference to the DID Pool this DID is a part of. */
+    public var didPool: AddressableEntityRef?
+    /** A Uri reference to the owner of this DID.  The owner's type can be found in ownerType.  If the DID is unassigned, this will be NULL. */
+    public var owner: DomainEntityRef?
+    /** The type of the entity that owns this DID.  If the DID is unassigned, this will be NULL. */
+    public var ownerType: OwnerType?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, number: String?, assigned: Bool?, didPool: AddressableEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.number = number
+        self.assigned = assigned
+        self.didPool = didPool
+        self.owner = owner
+        self.ownerType = ownerType
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case number
+        case assigned
+        case didPool
+        case owner
+        case ownerType
+        case selfUri
     }
 
 
@@ -15561,46 +15832,6 @@ public class ExternalContactsUnresolvedContactChangedTopicInstagramScopedId: Cod
 
 
 
-public class ExternalContactsUnresolvedContactChangedTopicTwitterId: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    public var _id: String?
-    public var name: String?
-    public var screenName: String?
-    public var verified: Bool?
-    public var profileUrl: String?
-
-    public init(_id: String?, name: String?, screenName: String?, verified: Bool?, profileUrl: String?) {
-        self._id = _id
-        self.name = name
-        self.screenName = screenName
-        self.verified = verified
-        self.profileUrl = profileUrl
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case screenName
-        case verified
-        case profileUrl
-    }
-
-
-}
-
-
-
-
 public class ExternalContactsUnresolvedContactChangedTopicPhoneNumber: Codable {
 
 
@@ -15643,6 +15874,46 @@ public class ExternalContactsUnresolvedContactChangedTopicPhoneNumber: Codable {
         case e164
         case countryCode
         case normalizationCountryCode
+    }
+
+
+}
+
+
+
+
+public class ExternalContactsUnresolvedContactChangedTopicTwitterId: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public var _id: String?
+    public var name: String?
+    public var screenName: String?
+    public var verified: Bool?
+    public var profileUrl: String?
+
+    public init(_id: String?, name: String?, screenName: String?, verified: Bool?, profileUrl: String?) {
+        self._id = _id
+        self.name = name
+        self.screenName = screenName
+        self.verified = verified
+        self.profileUrl = profileUrl
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case screenName
+        case verified
+        case profileUrl
     }
 
 
@@ -19032,6 +19303,33 @@ public class InitiatingAction: Codable {
 
 
 
+public class InitiatingAlternativeShift: Codable {
+
+
+
+
+
+    /** The ID of the shift from a user's schedule */
+    public var _id: String?
+    /** The start date for the shift in the user's schedule in ISO-8601 format. For example: YYYY-MM-DDThh:mm:ss.SSSZ */
+    public var startDate: Date?
+
+    public init(_id: String?, startDate: Date?) {
+        self._id = _id
+        self.startDate = startDate
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case startDate
+    }
+
+
+}
+
+
+
+
 public class InsightsAgents: Codable {
 
 
@@ -21196,52 +21494,6 @@ public class KnowledgeDocumentVersionListing: Codable {
 
 
 
-public class KpiResult: Codable {
-
-
-
-
-
-
-
-
-
-    public enum MediaType: String, Codable { 
-        case voice = "voice"
-        case email = "email"
-        case message = "message"
-    }
-
-
-
-    /** Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on) */
-    public var kpiTotalOn: Int64?
-    /** Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off) */
-    public var kpiTotalOff: Int64?
-    /** Total interactions handled by predictive routing (GPR was on) */
-    public var interactionCountOn: Int64?
-    /** Total interactions not routed by predictive routing (GPR was off) */
-    public var interactionCountOff: Int64?
-    /** Media type used for the KPI */
-    public var mediaType: MediaType?
-    /** The percentage benefit for this media type for the duration of the comparison period */
-    public var percentageBenefit: Double?
-
-    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?, percentageBenefit: Double?) {
-        self.kpiTotalOn = kpiTotalOn
-        self.kpiTotalOff = kpiTotalOff
-        self.interactionCountOn = interactionCountOn
-        self.interactionCountOff = interactionCountOff
-        self.mediaType = mediaType
-        self.percentageBenefit = percentageBenefit
-    }
-
-
-}
-
-
-
-
 public class KnowledgeGuestDocumentResponse: Codable {
 
 
@@ -21571,6 +21823,52 @@ public class KnowledgeTraining: Codable {
         case knowledgeDocumentsState
         case datePromoted
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class KpiResult: Codable {
+
+
+
+
+
+
+
+
+
+    public enum MediaType: String, Codable { 
+        case voice = "voice"
+        case email = "email"
+        case message = "message"
+    }
+
+
+
+    /** Absolute metric (in which the KPI is based) total for the interactions handled by predictive routing (GPR was on) */
+    public var kpiTotalOn: Int64?
+    /** Absolute metric (in which the KPI is based) total for the interactions not routed by predictive routing (GPR was off) */
+    public var kpiTotalOff: Int64?
+    /** Total interactions handled by predictive routing (GPR was on) */
+    public var interactionCountOn: Int64?
+    /** Total interactions not routed by predictive routing (GPR was off) */
+    public var interactionCountOff: Int64?
+    /** Media type used for the KPI */
+    public var mediaType: MediaType?
+    /** The percentage benefit for this media type for the duration of the comparison period */
+    public var percentageBenefit: Double?
+
+    public init(kpiTotalOn: Int64?, kpiTotalOff: Int64?, interactionCountOn: Int64?, interactionCountOff: Int64?, mediaType: MediaType?, percentageBenefit: Double?) {
+        self.kpiTotalOn = kpiTotalOn
+        self.kpiTotalOff = kpiTotalOff
+        self.interactionCountOn = interactionCountOn
+        self.interactionCountOff = interactionCountOff
+        self.mediaType = mediaType
+        self.percentageBenefit = percentageBenefit
     }
 
 
@@ -22018,6 +22316,16 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
 
 
 
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case unknown = "Unknown"
+        case native = "Native"
+        case external = "External"
+    }
+
     public var _id: String?
     public var user: LearningAssignmentTopicUserReference?
     public var module: LearningAssignmentTopicLearningModuleReference?
@@ -22030,8 +22338,11 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
     public var dateModified: Date?
     public var isOverdue: Bool?
     public var lengthInMinutes: Int?
+    public var percentageScore: Double?
+    public var isPassed: Bool?
+    public var type: ModelType?
 
-    public init(_id: String?, user: LearningAssignmentTopicUserReference?, module: LearningAssignmentTopicLearningModuleReference?, version: Int?, state: State?, dateRecommendedForCompletion: Date?, createdBy: LearningAssignmentTopicUserReference?, dateCreated: Date?, modifiedBy: LearningAssignmentTopicUserReference?, dateModified: Date?, isOverdue: Bool?, lengthInMinutes: Int?) {
+    public init(_id: String?, user: LearningAssignmentTopicUserReference?, module: LearningAssignmentTopicLearningModuleReference?, version: Int?, state: State?, dateRecommendedForCompletion: Date?, createdBy: LearningAssignmentTopicUserReference?, dateCreated: Date?, modifiedBy: LearningAssignmentTopicUserReference?, dateModified: Date?, isOverdue: Bool?, lengthInMinutes: Int?, percentageScore: Double?, isPassed: Bool?, type: ModelType?) {
         self._id = _id
         self.user = user
         self.module = module
@@ -22044,6 +22355,9 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
         self.dateModified = dateModified
         self.isOverdue = isOverdue
         self.lengthInMinutes = lengthInMinutes
+        self.percentageScore = percentageScore
+        self.isPassed = isPassed
+        self.type = type
     }
 
     public enum CodingKeys: String, CodingKey { 
@@ -22059,6 +22373,9 @@ public class LearningAssignmentTopicLearningAssignmentNotification: Codable {
         case dateModified
         case isOverdue
         case lengthInMinutes
+        case percentageScore
+        case isPassed
+        case type
     }
 
 
@@ -22918,6 +23235,28 @@ public class LinkConfiguration: Codable {
 
     public init(uriTemplate: String?) {
         self.uriTemplate = uriTemplate
+    }
+
+
+}
+
+
+
+
+public class ListAlternativeShiftTradesResponse: Codable {
+
+
+
+
+
+    /** The asynchronous job handling the request. Null if result returns synchronously */
+    public var job: AlternativeShiftJobResponse?
+    /** The result of the request. May come via notification. Null if job is populated */
+    public var result: AlternativeShiftTradeListing?
+
+    public init(job: AlternativeShiftJobResponse?, result: AlternativeShiftTradeListing?) {
+        self.job = job
+        self.result = result
     }
 
 
@@ -24025,6 +24364,11 @@ public class MessengerSettings: Codable {
 
 
 
+    public enum SessionPersistenceType: String, Codable { 
+        case acrossSubdomains = "AcrossSubdomains"
+        case domainOrSubdomainOnly = "DomainOrSubdomainOnly"
+    }
+
     /** Whether or not messenger is enabled */
     public var enabled: Bool?
     /** The style settings for messenger */
@@ -24037,14 +24381,17 @@ public class MessengerSettings: Codable {
     public var apps: MessengerApps?
     /** The homescreen settings for messenger */
     public var homeScreen: MessengerHomeScreen?
+    /** The session persistence type for messenger */
+    public var sessionPersistenceType: SessionPersistenceType?
 
-    public init(enabled: Bool?, styles: MessengerStyles?, launcherButton: LauncherButtonSettings?, fileUpload: FileUploadSettings?, apps: MessengerApps?, homeScreen: MessengerHomeScreen?) {
+    public init(enabled: Bool?, styles: MessengerStyles?, launcherButton: LauncherButtonSettings?, fileUpload: FileUploadSettings?, apps: MessengerApps?, homeScreen: MessengerHomeScreen?, sessionPersistenceType: SessionPersistenceType?) {
         self.enabled = enabled
         self.styles = styles
         self.launcherButton = launcherButton
         self.fileUpload = fileUpload
         self.apps = apps
         self.homeScreen = homeScreen
+        self.sessionPersistenceType = sessionPersistenceType
     }
 
 
@@ -25086,6 +25433,8 @@ public class OrgUser: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -25135,6 +25484,8 @@ public class OrgUser: Codable {
     public var groups: [Group]?
     /** The team the user is a member of */
     public var team: Team?
+    /** The WFM work plan bid rank settings for the user */
+    public var workPlanBidRanks: WorkPlanBidRanks?
     /** Routing (ACD) skills possessed by the user */
     public var skills: [UserRoutingSkill]?
     /** Routing (ACD) languages possessed by the user */
@@ -25148,7 +25499,7 @@ public class OrgUser: Codable {
     public var dateLastLogin: Date?
     public var organization: Organization?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, preferredName: String?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, organization: Organization?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, preferredName: String?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, workPlanBidRanks: WorkPlanBidRanks?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, organization: Organization?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -25179,6 +25530,7 @@ public class OrgUser: Codable {
         self.locations = locations
         self.groups = groups
         self.team = team
+        self.workPlanBidRanks = workPlanBidRanks
         self.skills = skills
         self.languages = languages
         self.acdAutoAnswer = acdAutoAnswer
@@ -25219,6 +25571,7 @@ public class OrgUser: Codable {
         case locations
         case groups
         case team
+        case workPlanBidRanks
         case skills
         case languages
         case acdAutoAnswer
@@ -25559,65 +25912,6 @@ public class OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes:
 
 
 
-
-public class Page: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    public var versionId: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var createdDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var modifiedDate: Date?
-    public var rootContainer: [String:JSON]?
-    public var properties: [String:JSON]?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, versionId: String?, createdDate: Date?, modifiedDate: Date?, rootContainer: [String:JSON]?, properties: [String:JSON]?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.versionId = versionId
-        self.createdDate = createdDate
-        self.modifiedDate = modifiedDate
-        self.rootContainer = rootContainer
-        self.properties = properties
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case versionId
-        case createdDate
-        case modifiedDate
-        case rootContainer
-        case properties
-        case selfUri
-    }
-
-
-}
-
-
-
 /** An outbound-messaging messaging campaign email Config */
 
 public class OutboundMessagingMessagingCampaignConfigChangeEmailConfig: Codable {
@@ -25900,6 +26194,65 @@ public class OutlierInfo: Codable {
     public init(outlier: Bool?, score: Float?) {
         self.outlier = outlier
         self.score = score
+    }
+
+
+}
+
+
+
+
+public class Page: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    public var versionId: String?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var createdDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var modifiedDate: Date?
+    public var rootContainer: [String:JSON]?
+    public var properties: [String:JSON]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, versionId: String?, createdDate: Date?, modifiedDate: Date?, rootContainer: [String:JSON]?, properties: [String:JSON]?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.versionId = versionId
+        self.createdDate = createdDate
+        self.modifiedDate = modifiedDate
+        self.rootContainer = rootContainer
+        self.properties = properties
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case versionId
+        case createdDate
+        case modifiedDate
+        case rootContainer
+        case properties
+        case selfUri
     }
 
 
@@ -27421,34 +27774,6 @@ public class QueueConversationCallEventTopicWrapup: Codable {
 
 
 
-
-public class QueueConversationChatEventTopicDetail: Codable {
-
-
-
-
-
-
-
-
-
-    public var errorCode: String?
-    public var fieldName: String?
-    public var entityId: String?
-    public var entityName: String?
-
-    public init(errorCode: String?, fieldName: String?, entityId: String?, entityName: String?) {
-        self.errorCode = errorCode
-        self.fieldName = fieldName
-        self.entityId = entityId
-        self.entityName = entityName
-    }
-
-
-}
-
-
-
 /** A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) */
 
 public class QueueConversationCallbackEventTopicJourneyCustomer: Codable {
@@ -27792,6 +28117,34 @@ public class QueueConversationChatEventTopicChatMediaParticipant: Codable {
         case queueMediaSettings
         case roomId
         case avatarImageUrl
+    }
+
+
+}
+
+
+
+
+public class QueueConversationChatEventTopicDetail: Codable {
+
+
+
+
+
+
+
+
+
+    public var errorCode: String?
+    public var fieldName: String?
+    public var entityId: String?
+    public var entityName: String?
+
+    public init(errorCode: String?, fieldName: String?, entityId: String?, entityName: String?) {
+        self.errorCode = errorCode
+        self.fieldName = fieldName
+        self.entityId = entityId
+        self.entityName = entityName
     }
 
 
@@ -31169,38 +31522,6 @@ public class QueueUtilizationDiagnostic: Codable {
 
 
 
-public class Reaction: Codable {
-
-
-
-
-
-    public enum ReactionType: String, Codable { 
-        case hangup = "hangup"
-        case transfer = "transfer"
-        case transferFlow = "transfer_flow"
-        case playFile = "play_file"
-    }
-
-    /** Parameter for this reaction. For transfer_flow, this would be the outbound flow id. */
-    public var data: String?
-    /** Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name. */
-    public var name: String?
-    /** The reaction to take for a given call analysis result. */
-    public var reactionType: ReactionType?
-
-    public init(data: String?, name: String?, reactionType: ReactionType?) {
-        self.data = data
-        self.name = name
-        self.reactionType = reactionType
-    }
-
-
-}
-
-
-
-
 public class RateLimitAggregateQueryResponse: Codable {
 
 
@@ -31245,6 +31566,38 @@ public class RateLimitAggregationView: Codable {
         self.name = name
         self.function = function
         self.range = range
+    }
+
+
+}
+
+
+
+
+public class Reaction: Codable {
+
+
+
+
+
+    public enum ReactionType: String, Codable { 
+        case hangup = "hangup"
+        case transfer = "transfer"
+        case transferFlow = "transfer_flow"
+        case playFile = "play_file"
+    }
+
+    /** Parameter for this reaction. For transfer_flow, this would be the outbound flow id. */
+    public var data: String?
+    /** Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name. */
+    public var name: String?
+    /** The reaction to take for a given call analysis result. */
+    public var reactionType: ReactionType?
+
+    public init(data: String?, name: String?, reactionType: ReactionType?) {
+        self.data = data
+        self.name = name
+        self.reactionType = reactionType
     }
 
 
@@ -37033,6 +37386,8 @@ public class TrustUser: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -37082,6 +37437,8 @@ public class TrustUser: Codable {
     public var groups: [Group]?
     /** The team the user is a member of */
     public var team: Team?
+    /** The WFM work plan bid rank settings for the user */
+    public var workPlanBidRanks: WorkPlanBidRanks?
     /** Routing (ACD) skills possessed by the user */
     public var skills: [UserRoutingSkill]?
     /** Routing (ACD) languages possessed by the user */
@@ -37095,7 +37452,7 @@ public class TrustUser: Codable {
     public var dateLastLogin: Date?
     public var trustUserDetails: TrustUserDetails?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, preferredName: String?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, trustUserDetails: TrustUserDetails?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, preferredName: String?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, workPlanBidRanks: WorkPlanBidRanks?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, trustUserDetails: TrustUserDetails?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -37126,6 +37483,7 @@ public class TrustUser: Codable {
         self.locations = locations
         self.groups = groups
         self.team = team
+        self.workPlanBidRanks = workPlanBidRanks
         self.skills = skills
         self.languages = languages
         self.acdAutoAnswer = acdAutoAnswer
@@ -37166,6 +37524,7 @@ public class TrustUser: Codable {
         case locations
         case groups
         case team
+        case workPlanBidRanks
         case skills
         case languages
         case acdAutoAnswer
@@ -37195,6 +37554,39 @@ public class TrustUserDetails: Codable {
     public init(dateCreated: Date?, createdBy: OrgUser?) {
         self.dateCreated = dateCreated
         self.createdBy = createdBy
+    }
+
+
+}
+
+
+
+
+public class TrustedCertificateInfo: Codable {
+
+
+
+
+
+
+
+    /** The description of the certificate */
+    public var _description: String?
+    /** The serial number of the certificate */
+    public var serialNumber: String?
+    /** The signature of the certificate */
+    public var signature: String?
+
+    public init(_description: String?, serialNumber: String?, signature: String?) {
+        self._description = _description
+        self.serialNumber = serialNumber
+        self.signature = signature
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _description = "description"
+        case serialNumber
+        case signature
     }
 
 
@@ -37359,6 +37751,33 @@ public class UnreadStatus: Codable {
 
 
 
+
+public class UpdateBusinessUnitRequest: Codable {
+
+
+
+
+
+
+
+    /** The name of the business unit */
+    public var name: String?
+    /** The ID of the division to which the business unit should be moved */
+    public var divisionId: String?
+    /** Configuration for the business unit */
+    public var settings: UpdateBusinessUnitSettingsRequest?
+
+    public init(name: String?, divisionId: String?, settings: UpdateBusinessUnitSettingsRequest?) {
+        self.name = name
+        self.divisionId = divisionId
+        self.settings = settings
+    }
+
+
+}
+
+
+
 /** Definition of an Action Draft to be created or updated. */
 
 public class UpdateDraftInput: Codable {
@@ -37395,33 +37814,6 @@ public class UpdateDraftInput: Codable {
         self.contract = contract
         self.secure = secure
         self.version = version
-    }
-
-
-}
-
-
-
-
-public class UpdateBusinessUnitRequest: Codable {
-
-
-
-
-
-
-
-    /** The name of the business unit */
-    public var name: String?
-    /** The ID of the division to which the business unit should be moved */
-    public var divisionId: String?
-    /** Configuration for the business unit */
-    public var settings: UpdateBusinessUnitSettingsRequest?
-
-    public init(name: String?, divisionId: String?, settings: UpdateBusinessUnitSettingsRequest?) {
-        self.name = name
-        self.divisionId = divisionId
-        self.settings = settings
     }
 
 
@@ -37596,6 +37988,81 @@ public class UpdateUtilizationLabelRequest: Codable {
 
     public init(name: String?) {
         self.name = name
+    }
+
+
+}
+
+
+
+/** Update work plan bid model */
+
+public class UpdateWorkPlanBid: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public enum AgentRankingType: String, Codable { 
+        case hireDate = "HireDate"
+        case performance = "Performance"
+    }
+
+    public enum RankingTiebreakerType: String, Codable { 
+        case hireDate = "HireDate"
+        case performance = "Performance"
+        case custom = "Custom"
+        case randomlyAssign = "RandomlyAssign"
+    }
+
+
+
+    public enum Status: String, Codable { 
+        case draft = "Draft"
+        case locked = "Locked"
+        case optimized = "Optimized"
+        case scheduled = "Scheduled"
+        case _open = "Open"
+        case closed = "Closed"
+        case processed = "Processed"
+        case published = "Published"
+    }
+
+    /** The name of the work plan bid */
+    public var name: String?
+    /** The selected forecast in this work plan bid */
+    public var forecast: BuShortTermForecastWeekReference?
+    /** The bid start date where agents start participate in work plan bidding in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var bidWindowStartDate: Date?
+    /** The bid end date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var bidWindowEndDate: Date?
+    /** The date when agents will be assigned to the new work plan in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var effectiveDate: Date?
+    /** The type of agent ranking selected for this bid */
+    public var agentRankingType: AgentRankingType?
+    /** Ranking tiebreaker */
+    public var rankingTiebreakerType: RankingTiebreakerType?
+    /** The work plan fields visible to agents whenever work plan preferences are made */
+    public var workPlanFieldsVisibleToAgents: ListWrapperAgentWorkPlanField?
+    /** The state of the bid */
+    public var status: Status?
+
+    public init(name: String?, forecast: BuShortTermForecastWeekReference?, bidWindowStartDate: Date?, bidWindowEndDate: Date?, effectiveDate: Date?, agentRankingType: AgentRankingType?, rankingTiebreakerType: RankingTiebreakerType?, workPlanFieldsVisibleToAgents: ListWrapperAgentWorkPlanField?, status: Status?) {
+        self.name = name
+        self.forecast = forecast
+        self.bidWindowStartDate = bidWindowStartDate
+        self.bidWindowEndDate = bidWindowEndDate
+        self.effectiveDate = effectiveDate
+        self.agentRankingType = agentRankingType
+        self.rankingTiebreakerType = rankingTiebreakerType
+        self.workPlanFieldsVisibleToAgents = workPlanFieldsVisibleToAgents
+        self.status = status
     }
 
 
@@ -40410,33 +40877,6 @@ public class WfmIntradayDataUpdateTopicIntradayHistoricalQueueData: Codable {
 
 
 
-public class WfmScheduleActivity: Codable {
-
-
-
-
-
-
-
-    /** ID of user that the schedule is for */
-    public var userReference: UserReference?
-    /** List of user's scheduled activities */
-    public var activities: [ScheduleActivity]?
-    /** List of user's days off */
-    public var fullDayTimeOffMarkers: [FullDayTimeOffMarker]?
-
-    public init(userReference: UserReference?, activities: [ScheduleActivity]?, fullDayTimeOffMarkers: [FullDayTimeOffMarker]?) {
-        self.userReference = userReference
-        self.activities = activities
-        self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
-    }
-
-
-}
-
-
-
-
 public class WfmIntradayDataUpdateTopicIntradayMetric: Codable {
 
     public enum Category: String, Codable { 
@@ -40513,6 +40953,33 @@ public class WfmProcessUploadRequest: Codable {
 
     public init(uploadKey: String?) {
         self.uploadKey = uploadKey
+    }
+
+
+}
+
+
+
+
+public class WfmScheduleActivity: Codable {
+
+
+
+
+
+
+
+    /** ID of user that the schedule is for */
+    public var userReference: UserReference?
+    /** List of user's scheduled activities */
+    public var activities: [ScheduleActivity]?
+    /** List of user's days off */
+    public var fullDayTimeOffMarkers: [FullDayTimeOffMarker]?
+
+    public init(userReference: UserReference?, activities: [ScheduleActivity]?, fullDayTimeOffMarkers: [FullDayTimeOffMarker]?) {
+        self.userReference = userReference
+        self.activities = activities
+        self.fullDayTimeOffMarkers = fullDayTimeOffMarkers
     }
 
 
@@ -40906,6 +41373,112 @@ public class WidgetDeploymentEntityListing: Codable {
         self.total = total
         self.entities = entities
         self.selfUri = selfUri
+    }
+
+
+}
+
+
+
+
+public class WorkPlanBidGroupCreate: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The name of the work plan bid group */
+    public var name: String?
+    /** The management unit ID this bid group belongs to */
+    public var managementUnitId: String?
+    /** Agent IDs who participate in this bid group */
+    public var agentIds: [String]?
+    /** The list of work plans used in this bid group */
+    public var workPlans: [BidGroupWorkPlanRequest]?
+    /** The planning group IDs selected in this bid group */
+    public var planningGroupIds: [String]?
+
+    public init(name: String?, managementUnitId: String?, agentIds: [String]?, workPlans: [BidGroupWorkPlanRequest]?, planningGroupIds: [String]?) {
+        self.name = name
+        self.managementUnitId = managementUnitId
+        self.agentIds = agentIds
+        self.workPlans = workPlans
+        self.planningGroupIds = planningGroupIds
+    }
+
+
+}
+
+
+
+
+public class WorkPlanBidGroupUpdate: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The name of the work plan bid group */
+    public var name: String?
+    /** The management unit ID used for this work plan bid group */
+    public var managementUnitId: String?
+    /** Agent IDs who participate in this bid group */
+    public var agentIds: ListWrapperString?
+    /** The list of work plans used in this bid group */
+    public var workPlans: ListWrapperBidGroupWorkPlanRequest?
+    /** The planning group IDs selected in this bid group */
+    public var planningGroupIds: ListWrapperString?
+
+    public init(name: String?, managementUnitId: String?, agentIds: ListWrapperString?, workPlans: ListWrapperBidGroupWorkPlanRequest?, planningGroupIds: ListWrapperString?) {
+        self.name = name
+        self.managementUnitId = managementUnitId
+        self.agentIds = agentIds
+        self.workPlans = workPlans
+        self.planningGroupIds = planningGroupIds
+    }
+
+
+}
+
+
+
+
+public class WorkPlanBidMetadata: Codable {
+
+
+
+
+
+
+
+
+
+    /** The user who created the associated entity */
+    public var createdBy: UserReference?
+    /** The date the entity created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var createdDate: Date?
+    /** The user who modified the entity */
+    public var modifiedBy: UserReference?
+    /** The entity last modified date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var modifiedDate: Date?
+
+    public init(createdBy: UserReference?, createdDate: Date?, modifiedBy: UserReference?, modifiedDate: Date?) {
+        self.createdBy = createdBy
+        self.createdDate = createdDate
+        self.modifiedBy = modifiedBy
+        self.modifiedDate = modifiedDate
     }
 
 
@@ -41605,6 +42178,7 @@ public class WorkitemsQueueEventsNotificationSession: Codable {
         case agent = "Agent"
         case queueAssignment = "QueueAssignment"
         case directAssignment = "DirectAssignment"
+        case agentComplete = "AgentComplete"
     }
 
 

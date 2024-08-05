@@ -407,6 +407,7 @@ open class LearningAPI {
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
         case external = "External"
+        case native = "Native"
     }
     
     
@@ -440,7 +441,7 @@ open class LearningAPI {
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)
-     - parameter types: (query) Specifies the module types to filter by (optional)
+     - parameter types: (query) Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter states: (query) Specifies the assignment states to filter by (optional)
      - parameter expand: (query) Specifies the expand option for returning additional information (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -639,7 +640,7 @@ open class LearningAPI {
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. (optional)
-     - parameter types: (query) Specifies the module types to filter by (optional)
+     - parameter types: (query) Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter states: (query) Specifies the assignment states to filter by (optional)
      - parameter expand: (query) Specifies the expand option for returning additional information (optional)
 
@@ -725,6 +726,7 @@ open class LearningAPI {
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
         case external = "External"
+        case native = "Native"
     }
     
     
@@ -757,7 +759,7 @@ open class LearningAPI {
      - parameter maxPercentageScore: (query) The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
-     - parameter types: (query) Specifies the module types to filter by (optional)
+     - parameter types: (query) Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter states: (query) Specifies the assignment states to filter by (optional)
      - parameter expand: (query) Specifies the expand option for returning additional information (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -954,7 +956,7 @@ open class LearningAPI {
      - parameter maxPercentageScore: (query) The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive) (optional)
      - parameter sortOrder: (query) Specifies result set sort order; if not specified, default sort order is descending (Desc) (optional)
      - parameter sortBy: (query) Specifies which field to sort the results by, default sort is by recommendedCompletionDate (optional)
-     - parameter types: (query) Specifies the module types to filter by (optional)
+     - parameter types: (query) Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter states: (query) Specifies the assignment states to filter by (optional)
      - parameter expand: (query) Specifies the expand option for returning additional information (optional)
 
@@ -1419,6 +1421,7 @@ open class LearningAPI {
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
         case external = "External"
+        case native = "Native"
     }
     
     
@@ -1472,7 +1475,7 @@ open class LearningAPI {
      Get all learning modules of an organization
      
      - parameter isArchived: (query) Archive status (optional)
-     - parameter types: (query) Specifies the module types. (optional)
+     - parameter types: (query) Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Sort order (optional)
@@ -1612,7 +1615,7 @@ open class LearningAPI {
 }, statusCode=200}]
      
      - parameter isArchived: (query) Archive status (optional)
-     - parameter types: (query) Specifies the module types. (optional)
+     - parameter types: (query) Specifies the module types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Sort order (optional)

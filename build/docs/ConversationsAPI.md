@@ -1601,7 +1601,7 @@ ConversationsAPI.getConversationSuggestions(conversationId: conversationId, befo
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **type** | **String**| Suggestion type to filter by. | [optional]<br />**Values**: faq ("Faq"), article ("Article"), knowledgeArticle ("KnowledgeArticle"), knowledgeSearch ("KnowledgeSearch"), cannedResponse ("CannedResponse"), script ("Script") |
-| **state** | **String**| Suggestion state to filter Copilot suggestions. | [optional]<br />**Values**: suggested ("Suggested"), accepted ("Accepted"), dismissed ("Dismissed"), failed ("Failed") |
+| **state** | **String**| Suggestion state to filter Copilot suggestions. | [optional]<br />**Values**: suggested ("Suggested"), accepted ("Accepted"), dismissed ("Dismissed"), failed ("Failed"), rated ("Rated") |
 {: class="table-striped"}
 
 

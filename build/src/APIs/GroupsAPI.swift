@@ -368,6 +368,7 @@ open class GroupsAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -656,6 +657,7 @@ open class GroupsAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1050,6 +1052,7 @@ open class GroupsAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1338,6 +1341,7 @@ open class GroupsAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

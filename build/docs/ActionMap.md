@@ -13,7 +13,7 @@ title: ActionMap
 | **displayName** | **String** | Display name of the action map. | |
 | **triggerWithSegments** | **[String]** | Trigger action map if any segment in the list is assigned to a given customer. | |
 | **triggerWithEventConditions** | [**[EventCondition]**](EventCondition.html) | List of event conditions that must be satisfied to trigger the action map. | [optional] |
-| **triggerWithOutcomeProbabilityConditions** | [**[OutcomeProbabilityCondition]**](OutcomeProbabilityCondition.html) | Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **triggerWithOutcomeProbabilityConditions** | [**[OutcomeProbabilityCondition]**](OutcomeProbabilityCondition.html) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
 | **triggerWithOutcomePercentileConditions** | [**[OutcomePercentileCondition]**](OutcomePercentileCondition.html) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
 | **triggerWithOutcomeQuantileConditions** | [**[OutcomeQuantileCondition]**](OutcomeQuantileCondition.html) | Quantile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
 | **pageUrlConditions** | [**[UrlCondition]**](UrlCondition.html) | URL conditions that a page must match for web actions to be displayable. | |

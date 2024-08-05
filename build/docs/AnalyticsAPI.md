@@ -45,7 +45,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsJourneysAggregatesQuery**](AnalyticsAPI.html#postAnalyticsJourneysAggregatesQuery) | Query for journey aggregates |
 | [**postAnalyticsKnowledgeAggregatesQuery**](AnalyticsAPI.html#postAnalyticsKnowledgeAggregatesQuery) | Query for knowledge aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI.html#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
-| [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate. |
+| [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate. |
 | [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk delete dashboards owned by other user(s) |
 | [**postAnalyticsReportingExports**](AnalyticsAPI.html#postAnalyticsReportingExports) | Generate a view export request |
 | [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI.html#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk remove dashboard configurations |
@@ -2123,9 +2123,9 @@ AnalyticsAPI.postAnalyticsQueuesObservationsQuery(body: body) { (response, error
 
 > [RateLimitAggregateQueryResponse](RateLimitAggregateQueryResponse.html) postAnalyticsRatelimitsAggregatesQuery(body)
 
-Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.
+Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate.
 
-The &#39;max&#39; property can be used to determine estimated rate limit value hit.
+The &#39;max&#39; property can be used to determine estimated rate limit value hit. See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
 
 
 

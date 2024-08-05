@@ -3791,6 +3791,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4092,6 +4093,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4545,6 +4547,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4846,6 +4849,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9999,6 +10003,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10300,6 +10305,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10724,6 +10730,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11025,6 +11032,7 @@ open class RoutingAPI {
       "status" : "OFF_QUEUE"
     },
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",

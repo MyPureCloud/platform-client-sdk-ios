@@ -2560,7 +2560,7 @@ let pass: UsersAPI.Pass_getUsersDevelopmentActivities = UsersAPI.Pass_getUsersDe
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let sortOrder: UsersAPI.SortOrder_getUsersDevelopmentActivities = UsersAPI.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
-let types: [String] = [""] // Specifies the activity types.
+let types: [String] = [""] // Specifies the activity types. Informational, AssessedContent and Assessment are deprecated
 let statuses: [String] = [""] // Specifies the activity statuses to filter by
 let relationship: [String] = [""] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
 
@@ -2589,7 +2589,7 @@ UsersAPI.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, inter
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
-| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. Informational, AssessedContent and Assessment are deprecated | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External"), native ("Native") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule"), notCompleted ("NotCompleted") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
@@ -2634,7 +2634,7 @@ let pass: UsersAPI.Pass_getUsersDevelopmentActivitiesMe = UsersAPI.Pass_getUsers
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let sortOrder: UsersAPI.SortOrder_getUsersDevelopmentActivitiesMe = UsersAPI.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)
-let types: [String] = [""] // Specifies the activity types.
+let types: [String] = [""] // Specifies the activity types. Informational, AssessedContent and Assessment are deprecated
 let statuses: [String] = [""] // Specifies the activity statuses to filter by
 let relationship: [String] = [""] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.
 
@@ -2662,7 +2662,7 @@ UsersAPI.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval,
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) | [optional]<br />**Values**: asc ("Asc"), desc ("Desc") |
-| **types** | [**[String]**](String.html)| Specifies the activity types. | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment") |
+| **types** | [**[String]**](String.html)| Specifies the activity types. Informational, AssessedContent and Assessment are deprecated | [optional]<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External"), native ("Native") |
 | **statuses** | [**[String]**](String.html)| Specifies the activity statuses to filter by | [optional]<br />**Values**: planned ("Planned"), inProgress ("InProgress"), completed ("Completed"), invalidSchedule ("InvalidSchedule"), notCompleted ("NotCompleted") |
 | **relationship** | [**[String]**](String.html)| Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. | [optional]<br />**Values**: creator ("Creator"), facilitator ("Facilitator"), attendee ("Attendee") |
 {: class="table-striped"}
@@ -2702,7 +2702,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let activityId: String = "" // Specifies the activity ID, maps to either assignment or appointment ID
-let type: UsersAPI.ModelType_getUsersDevelopmentActivity = UsersAPI.ModelType_getUsersDevelopmentActivity.enummember // Specifies the activity type.
+let type: UsersAPI.ModelType_getUsersDevelopmentActivity = UsersAPI.ModelType_getUsersDevelopmentActivity.enummember // Specifies the activity type. Informational, AssessedContent and Assessment are deprecated
 
 // Code example
 UsersAPI.getUsersDevelopmentActivity(activityId: activityId, type: type) { (response, error) in
@@ -2721,7 +2721,7 @@ UsersAPI.getUsersDevelopmentActivity(activityId: activityId, type: type) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **activityId** | **String**| Specifies the activity ID, maps to either assignment or appointment ID | |
-| **type** | **String**| Specifies the activity type. |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External") |
+| **type** | **String**| Specifies the activity type. Informational, AssessedContent and Assessment are deprecated |<br />**Values**: informational ("Informational"), coaching ("Coaching"), assessedContent ("AssessedContent"), assessment ("Assessment"), external ("External"), native ("Native") |
 {: class="table-striped"}
 
 

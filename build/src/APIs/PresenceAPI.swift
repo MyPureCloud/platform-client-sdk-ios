@@ -639,6 +639,7 @@ open class PresenceAPI {
      - examples: [{contentType=application/json, example={
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -935,6 +936,7 @@ open class PresenceAPI {
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1299,6 +1301,7 @@ open class PresenceAPI {
   "entities" : [ {
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1595,6 +1598,7 @@ open class PresenceAPI {
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1889,6 +1893,7 @@ open class PresenceAPI {
   }, {
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2185,6 +2190,7 @@ open class PresenceAPI {
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3147,6 +3153,7 @@ open class PresenceAPI {
      - examples: [{contentType=application/json, example={
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3443,6 +3450,7 @@ open class PresenceAPI {
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4040,6 +4048,7 @@ open class PresenceAPI {
      - examples: [{contentType=application/json, example={
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "createdBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4336,6 +4345,7 @@ open class PresenceAPI {
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "modifiedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

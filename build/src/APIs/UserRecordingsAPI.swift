@@ -564,6 +564,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -969,6 +970,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -1260,6 +1262,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -1548,6 +1551,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -1839,6 +1843,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -2130,6 +2135,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -2614,6 +2620,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -2913,6 +2920,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -3354,6 +3362,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -3759,6 +3768,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -4050,6 +4060,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -4338,6 +4349,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -4629,6 +4641,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -4920,6 +4933,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -5404,6 +5418,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -5703,6 +5718,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -7108,6 +7124,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -7513,6 +7530,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -7804,6 +7822,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -8092,6 +8111,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -8383,6 +8403,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -8674,6 +8695,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -9158,6 +9180,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -9457,6 +9480,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -9898,6 +9922,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -10303,6 +10328,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -10594,6 +10620,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -10882,6 +10909,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -11173,6 +11201,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -11464,6 +11493,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -11948,6 +11978,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -12247,6 +12278,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -13899,6 +13931,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -14304,6 +14337,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -14595,6 +14629,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -14883,6 +14918,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -15174,6 +15210,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -15465,6 +15502,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -15949,6 +15987,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -16248,6 +16287,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -16689,6 +16729,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -17094,6 +17135,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -17385,6 +17427,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -17673,6 +17716,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -17964,6 +18008,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -18255,6 +18300,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -18739,6 +18785,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -19038,6 +19085,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -20443,6 +20491,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -20848,6 +20897,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -21139,6 +21189,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -21427,6 +21478,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -21718,6 +21770,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -22009,6 +22062,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -22493,6 +22547,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -22792,6 +22847,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -23233,6 +23289,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -23638,6 +23695,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -23929,6 +23987,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -24217,6 +24276,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -24508,6 +24568,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -24799,6 +24860,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -25283,6 +25345,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -25582,6 +25645,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -27074,6 +27138,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -27479,6 +27544,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -27770,6 +27836,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -28058,6 +28125,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -28349,6 +28417,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -28640,6 +28709,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -29124,6 +29194,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -29423,6 +29494,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -29864,6 +29936,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -30269,6 +30342,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -30560,6 +30634,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -30848,6 +30923,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -31139,6 +31215,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -31430,6 +31507,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -31914,6 +31992,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -32213,6 +32292,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -33618,6 +33698,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -34023,6 +34104,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -34314,6 +34396,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -34602,6 +34685,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -34893,6 +34977,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -35184,6 +35269,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -35668,6 +35754,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -35967,6 +36054,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -36408,6 +36496,7 @@ open class UserRecordingsAPI {
           "assignedDate" : "2000-01-23T04:56:07.000+00:00",
           "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -36813,6 +36902,7 @@ open class UserRecordingsAPI {
           "rescore" : true,
           "calibration" : {
             "agent" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -37104,6 +37194,7 @@ open class UserRecordingsAPI {
             "evaluations" : [ null, null ],
             "selfUri" : "https://openapi-generator.tech",
             "evaluators" : [ {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -37392,6 +37483,7 @@ open class UserRecordingsAPI {
               "username" : "username",
               "geolocation" : "{}"
             }, {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -37683,6 +37775,7 @@ open class UserRecordingsAPI {
             "contextId" : "contextId",
             "averageScore" : 1,
             "calibrator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -37974,6 +38067,7 @@ open class UserRecordingsAPI {
             "highScore" : 6,
             "createdDate" : "2000-01-23T04:56:07.000+00:00",
             "expertEvaluator" : {
+              "workPlanBidRanks" : "{}",
               "addresses" : [ {
                 "extension" : "extension",
                 "address" : "address",
@@ -38458,6 +38552,7 @@ open class UserRecordingsAPI {
           },
           "evaluationForm" : "{}",
           "evaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -38757,6 +38852,7 @@ open class UserRecordingsAPI {
           "name" : "name",
           "assigned" : true,
           "assignee" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -40372,6 +40468,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -40777,6 +40874,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -41068,6 +41166,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -41356,6 +41455,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -41647,6 +41747,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -41938,6 +42039,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -42422,6 +42524,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -42721,6 +42824,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -43162,6 +43266,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -43567,6 +43672,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -43858,6 +43964,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -44146,6 +44253,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -44437,6 +44545,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -44728,6 +44837,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -45212,6 +45322,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -45511,6 +45622,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -46916,6 +47028,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -47321,6 +47434,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -47612,6 +47726,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -47900,6 +48015,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -48191,6 +48307,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -48482,6 +48599,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -48966,6 +49084,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -49265,6 +49384,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -49706,6 +49826,7 @@ open class UserRecordingsAPI {
         "assignedDate" : "2000-01-23T04:56:07.000+00:00",
         "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
         "agent" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -50111,6 +50232,7 @@ open class UserRecordingsAPI {
         "rescore" : true,
         "calibration" : {
           "agent" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -50402,6 +50524,7 @@ open class UserRecordingsAPI {
           "evaluations" : [ null, null ],
           "selfUri" : "https://openapi-generator.tech",
           "evaluators" : [ {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -50690,6 +50813,7 @@ open class UserRecordingsAPI {
             "username" : "username",
             "geolocation" : "{}"
           }, {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -50981,6 +51105,7 @@ open class UserRecordingsAPI {
           "contextId" : "contextId",
           "averageScore" : 1,
           "calibrator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -51272,6 +51397,7 @@ open class UserRecordingsAPI {
           "highScore" : 6,
           "createdDate" : "2000-01-23T04:56:07.000+00:00",
           "expertEvaluator" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -51756,6 +51882,7 @@ open class UserRecordingsAPI {
         },
         "evaluationForm" : "{}",
         "evaluator" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",
@@ -52055,6 +52182,7 @@ open class UserRecordingsAPI {
         "name" : "name",
         "assigned" : true,
         "assignee" : {
+          "workPlanBidRanks" : "{}",
           "addresses" : [ {
             "extension" : "extension",
             "address" : "address",

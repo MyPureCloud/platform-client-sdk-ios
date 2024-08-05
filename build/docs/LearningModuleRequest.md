@@ -12,7 +12,7 @@ Learning module request
 | **_description** | **String** | The description of learning module | [optional] |
 | **completionTimeInDays** | **Int** | The completion time of learning module in days | |
 | **informSteps** | [**[LearningModuleInformStepRequest]**](LearningModuleInformStepRequest.html) | The list of inform steps in a learning module | [optional] |
-| **type** | **String** | The type for the learning module | [optional] |
+| **type** | **String** | The type for the learning module. Informational, AssessedContent and Assessment are deprecated | [optional] |
 | **assessmentForm** | [**AssessmentForm**](AssessmentForm.html) | The assessment form for learning module | [optional] |
 | **coverArt** | [**LearningModuleCoverArtRequest**](LearningModuleCoverArtRequest.html) | The cover art for the learning module | [optional] |
 | **lengthInMinutes** | **Int** | The recommended time in minutes to complete the module | [optional] |

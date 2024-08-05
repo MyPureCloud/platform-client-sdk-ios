@@ -428,6 +428,96 @@ public class AdhocRecordingTopicUserData: Codable {
 
 
 
+public class AdminAgentWorkPlanPreferenceResponse: Codable {
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The list of work plans that belong to this bid group */
+    public var workPlans: [WorkPlanReference]?
+    /** The list of agents work plan bidding preferences */
+    public var agentWorkPlanBidPreferences: [AdminAgentWorkPlanBiddingPreference]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, workPlans: [WorkPlanReference]?, agentWorkPlanBidPreferences: [AdminAgentWorkPlanBiddingPreference]?, selfUri: String?) {
+        self._id = _id
+        self.workPlans = workPlans
+        self.agentWorkPlanBidPreferences = agentWorkPlanBidPreferences
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case workPlans
+        case agentWorkPlanBidPreferences
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class AdminBulkUpdateAlternativeShiftTradeState: Codable {
+
+
+
+    public enum State: String, Codable { 
+        case approved = "Approved"
+        case denied = "Denied"
+    }
+
+
+
+    /** The ID of the trade for this alternative shift trade */
+    public var tradeId: String?
+    /** The new alternative shift trade state */
+    public var state: State?
+    /** Version metadata for this alternative shift trade */
+    public var metadata: WfmVersionedEntityMetadata?
+
+    public init(tradeId: String?, state: State?, metadata: WfmVersionedEntityMetadata?) {
+        self.tradeId = tradeId
+        self.state = state
+        self.metadata = metadata
+    }
+
+
+}
+
+
+
+
+public class AdminBulkUpdateAlternativeShiftTradeStateRequest: Codable {
+
+
+
+
+
+    public var entities: [AdminBulkUpdateAlternativeShiftTradeState]?
+    /** The ID of the management unit for this alternative shift bulk trade update */
+    public var managementUnitId: String?
+
+    public init(entities: [AdminBulkUpdateAlternativeShiftTradeState]?, managementUnitId: String?) {
+        self.entities = entities
+        self.managementUnitId = managementUnitId
+    }
+
+
+}
+
+
+
+
 public class AfterCallWorkUpdate: Codable {
 
 
@@ -688,6 +778,113 @@ public class AgentTimeOffRequestPatch: Codable {
 
 
 
+public class AgentUpdateAlternativeShiftTradeRequest: Codable {
+
+    public enum State: String, Codable { 
+        case canceled = "Canceled"
+    }
+
+
+
+    /** The new state of this alternative shift trade */
+    public var state: State?
+    /** Version metadata for this alternative shift trade */
+    public var metadata: WfmVersionedEntityMetadata?
+
+    public init(state: State?, metadata: WfmVersionedEntityMetadata?) {
+        self.state = state
+        self.metadata = metadata
+    }
+
+
+}
+
+
+
+
+public class AgentWorkPlanBiddingPreferenceResponse: Codable {
+
+
+
+
+
+
+
+
+
+    public enum OverrideReason: String, Codable { 
+        case unableToBid = "UnableToBid"
+        case changeOfCircumstance = "ChangeOfCircumstance"
+        case newHire = "NewHire"
+        case employeeMove = "EmployeeMove"
+    }
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** Whether the preference is submitted */
+    public var submitted: Bool?
+    /** The work plan assigned to the agent by the bid process */
+    public var assignedWorkPlan: WorkPlanReference?
+    /** The work plan that overrides the assigned work plan for the agent */
+    public var overriddenWorkPlan: WorkPlanReference?
+    /** The reason why the assigned work plan has been overridden. This must be null without an override work plan */
+    public var overrideReason: OverrideReason?
+    /** The list of work plan bidding preferences */
+    public var agentWorkPlanBidPreferences: [AgentWorkPlanBiddingPreference]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, submitted: Bool?, assignedWorkPlan: WorkPlanReference?, overriddenWorkPlan: WorkPlanReference?, overrideReason: OverrideReason?, agentWorkPlanBidPreferences: [AgentWorkPlanBiddingPreference]?, selfUri: String?) {
+        self._id = _id
+        self.submitted = submitted
+        self.assignedWorkPlan = assignedWorkPlan
+        self.overriddenWorkPlan = overriddenWorkPlan
+        self.overrideReason = overrideReason
+        self.agentWorkPlanBidPreferences = agentWorkPlanBidPreferences
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case submitted
+        case assignedWorkPlan
+        case overriddenWorkPlan
+        case overrideReason
+        case agentWorkPlanBidPreferences
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class AgentWorkPlanListResponse: Codable {
+
+
+
+
+
+    public var entities: [AgentWorkPlan]?
+    /** The management unit of the work plans */
+    public var managementUnit: ManagementUnitReference?
+
+    public init(entities: [AgentWorkPlan]?, managementUnit: ManagementUnitReference?) {
+        self.entities = entities
+        self.managementUnit = managementUnit
+    }
+
+
+}
+
+
+
+
 public class AgentlessEmailSendResponseDto: Codable {
 
 
@@ -824,6 +1021,117 @@ public class Alteration: Codable {
         self.type = type
         self.start = start
         self.end = end
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftAsyncResponse: Codable {
+
+
+
+    /** The job related to the async request */
+    public var job: AlternativeShiftJobReference?
+
+    public init(job: AlternativeShiftJobReference?) {
+        self.job = job
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftScheduleLookup: Codable {
+
+
+
+
+
+    /** The unique identifier of the schedule */
+    public var _id: String?
+    /** The start date for this schedule in yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var weekDate: Date?
+
+    public init(_id: String?, weekDate: Date?) {
+        self._id = _id
+        self.weekDate = weekDate
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case weekDate
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftTradeBulkUpdateTemplateItem: Codable {
+
+
+
+    public enum State: String, Codable { 
+        case canceled = "Canceled"
+        case denied = "Denied"
+        case expired = "Expired"
+        case submitted = "Submitted"
+        case approved = "Approved"
+    }
+
+    public enum FailureReason: String, Codable { 
+        case transitionNotAllowed = "TransitionNotAllowed"
+        case notAuthorized = "NotAuthorized"
+    }
+
+
+
+
+
+
+
+    /** The ID of this alternative shift trade */
+    public var tradeId: String?
+    /** The current state of this alternative shift trade request */
+    public var state: State?
+    /** The reason the update failed, if applicable */
+    public var failureReason: FailureReason?
+    /** The timestamp of when the trade request was manually reviewed by an admin in ISO-8601 format */
+    public var adminDateReviewed: Date?
+    /** The admin who manually reviewed this alternative shift trade after system denial */
+    public var adminReviewedBy: UserReference?
+    /** Version metadata for this alternative shift trade */
+    public var metadata: WfmVersionedEntityMetadata?
+
+    public init(tradeId: String?, state: State?, failureReason: FailureReason?, adminDateReviewed: Date?, adminReviewedBy: UserReference?, metadata: WfmVersionedEntityMetadata?) {
+        self.tradeId = tradeId
+        self.state = state
+        self.failureReason = failureReason
+        self.adminDateReviewed = adminDateReviewed
+        self.adminReviewedBy = adminReviewedBy
+        self.metadata = metadata
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftTradesViewResponseTemplate: Codable {
+
+
+
+    public var entities: [AlternativeShiftTradeResponse]?
+
+    public init(entities: [AlternativeShiftTradeResponse]?) {
+        self.entities = entities
     }
 
 
@@ -3114,6 +3422,7 @@ public class ButtonResponse: Codable {
 
     public enum ModelType: String, Codable { 
         case button = "Button"
+        case datePicker = "DatePicker"
         case quickReply = "QuickReply"
     }
 
@@ -3978,6 +4287,12 @@ public class CampaignRuleCondition: Codable {
     public enum ConditionType: String, Codable { 
         case campaignprogress = "campaignProgress"
         case campaignagents = "campaignAgents"
+        case campaignrecordsattempted = "campaignRecordsAttempted"
+        case campaignbusinesssuccess = "campaignBusinessSuccess"
+        case campaignbusinessfailure = "campaignBusinessFailure"
+        case campaignbusinessneutral = "campaignBusinessNeutral"
+        case campaignvalidattempts = "campaignValidAttempts"
+        case campaignrightpartycontacts = "campaignRightPartyContacts"
     }
 
     public var _id: String?
@@ -8793,6 +9108,45 @@ public class CreateAgentTimeOffRequest: Codable {
 
 
 
+public class CreateAlternativeShiftTradeRequest: Codable {
+
+
+
+
+
+
+
+    public enum AlternativeShiftTradeGranularity: String, Codable { 
+        case daily = "Daily"
+    }
+
+
+
+    /** The ID of this alternative shift job */
+    public var jobId: String?
+    /** A list of offered shift reference keys an agent wants to drop */
+    public var dropShiftReferenceKeys: [String]?
+    /** A list of offered shift reference keys an agent wants to pick up */
+    public var pickupShiftReferenceKeys: [String]?
+    /** The granularity of alternative shifts to be traded */
+    public var alternativeShiftTradeGranularity: AlternativeShiftTradeGranularity?
+    /** The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration */
+    public var expirationDate: Date?
+
+    public init(jobId: String?, dropShiftReferenceKeys: [String]?, pickupShiftReferenceKeys: [String]?, alternativeShiftTradeGranularity: AlternativeShiftTradeGranularity?, expirationDate: Date?) {
+        self.jobId = jobId
+        self.dropShiftReferenceKeys = dropShiftReferenceKeys
+        self.pickupShiftReferenceKeys = pickupShiftReferenceKeys
+        self.alternativeShiftTradeGranularity = alternativeShiftTradeGranularity
+        self.expirationDate = expirationDate
+    }
+
+
+}
+
+
+
+
 public class CreateCallResponse: Codable {
 
 
@@ -12711,6 +13065,38 @@ public class EmailCampaignScheduleEntityListing: Codable {
 
 
 
+public class EmailCommunicationAnsweredEvent: Codable {
+
+
+
+
+
+
+
+
+
+    /** A unique (V4 UUID) eventId for this event */
+    public var eventId: String?
+    /** A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var eventDateTime: Date?
+    /** A unique Id (V4 UUID) identifying this conversation */
+    public var conversationId: String?
+    /** A unique Id (V4 UUID) identifying this communication */
+    public var communicationId: String?
+
+    public init(eventId: String?, eventDateTime: Date?, conversationId: String?, communicationId: String?) {
+        self.eventId = eventId
+        self.eventDateTime = eventDateTime
+        self.conversationId = conversationId
+        self.communicationId = communicationId
+    }
+
+
+}
+
+
+
+
 public class EmailCommunicationEndedEvent: Codable {
 
 
@@ -12750,38 +13136,6 @@ public class EmailCommunicationEndedEvent: Codable {
         self.conversationId = conversationId
         self.communicationId = communicationId
         self.disconnectType = disconnectType
-    }
-
-
-}
-
-
-
-
-public class EmailCommunicationAnsweredEvent: Codable {
-
-
-
-
-
-
-
-
-
-    /** A unique (V4 UUID) eventId for this event */
-    public var eventId: String?
-    /** A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var eventDateTime: Date?
-    /** A unique Id (V4 UUID) identifying this conversation */
-    public var conversationId: String?
-    /** A unique Id (V4 UUID) identifying this communication */
-    public var communicationId: String?
-
-    public init(eventId: String?, eventDateTime: Date?, conversationId: String?, communicationId: String?) {
-        self.eventId = eventId
-        self.eventDateTime = eventDateTime
-        self.conversationId = conversationId
-        self.communicationId = communicationId
     }
 
 
@@ -14819,6 +15173,8 @@ public class Flow: Codable {
 
 
 
+
+
     /** The flow identifier */
     public var _id: String?
     /** The flow name */
@@ -14850,10 +15206,11 @@ public class Flow: Codable {
     public var supportedLanguages: [SupportedLanguage]?
     /** Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action. */
     public var compatibleFlowTypes: [CompatibleFlowTypes]?
+    public var worktypeId: String?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, type: ModelType?, lockedUser: User?, lockedClient: DomainEntityRef?, active: Bool?, system: Bool?, deleted: Bool?, publishedVersion: FlowVersion?, savedVersion: FlowVersion?, inputSchema: JSON?, outputSchema: JSON?, checkedInVersion: FlowVersion?, debugVersion: FlowVersion?, publishedBy: User?, currentOperation: Operation?, nluInfo: NluInfo?, supportedLanguages: [SupportedLanguage]?, compatibleFlowTypes: [CompatibleFlowTypes]?, worktypeId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -14875,6 +15232,7 @@ public class Flow: Codable {
         self.nluInfo = nluInfo
         self.supportedLanguages = supportedLanguages
         self.compatibleFlowTypes = compatibleFlowTypes
+        self.worktypeId = worktypeId
         self.selfUri = selfUri
     }
 
@@ -14900,6 +15258,7 @@ public class Flow: Codable {
         case nluInfo
         case supportedLanguages
         case compatibleFlowTypes
+        case worktypeId
         case selfUri
     }
 
@@ -15166,6 +15525,7 @@ public class FlowAggregateQueryPredicate: Codable {
         case flowoutcome = "flowOutcome"
         case flowoutcomeid = "flowOutcomeId"
         case flowoutcomevalue = "flowOutcomeValue"
+        case flowsubtype = "flowSubType"
         case flowtype = "flowType"
         case flowversion = "flowVersion"
         case groupid = "groupId"
@@ -18744,6 +19104,56 @@ public class JourneySessionEventsNotificationExternalContact: Codable {
 
 
 
+public class JourneySurveyQuestion: Codable {
+
+    public enum ModelType: String, Codable { 
+        case text = "text"
+        case hidden = "hidden"
+        case select = "select"
+        case checkbox = "checkbox"
+        case textarea = "textarea"
+    }
+
+
+
+    public enum CustomerProperty: String, Codable { 
+        case givenname = "givenName"
+        case familyname = "familyName"
+        case email = "email"
+        case phone = "phone"
+        case gender = "gender"
+        case companyname = "companyName"
+    }
+
+
+
+
+
+    /** Type of survey question. */
+    public var type: ModelType?
+    /** Label of question. */
+    public var label: String?
+    /** The customer property that the answer maps to. */
+    public var customerProperty: CustomerProperty?
+    /** Choices available to user. */
+    public var choices: [String]?
+    /** Whether answering this question is mandatory. */
+    public var isMandatory: Bool?
+
+    public init(type: ModelType?, label: String?, customerProperty: CustomerProperty?, choices: [String]?, isMandatory: Bool?) {
+        self.type = type
+        self.label = label
+        self.customerProperty = customerProperty
+        self.choices = choices
+        self.isMandatory = isMandatory
+    }
+
+
+}
+
+
+
+
 public class JourneySessionEventsNotificationOutcomeAchievement: Codable {
 
 
@@ -18808,56 +19218,6 @@ public class JourneySessionEventsNotificationPage: Codable {
         self.pathname = pathname
         self.queryString = queryString
         self.breadcrumb = breadcrumb
-    }
-
-
-}
-
-
-
-
-public class JourneySurveyQuestion: Codable {
-
-    public enum ModelType: String, Codable { 
-        case text = "text"
-        case hidden = "hidden"
-        case select = "select"
-        case checkbox = "checkbox"
-        case textarea = "textarea"
-    }
-
-
-
-    public enum CustomerProperty: String, Codable { 
-        case givenname = "givenName"
-        case familyname = "familyName"
-        case email = "email"
-        case phone = "phone"
-        case gender = "gender"
-        case companyname = "companyName"
-    }
-
-
-
-
-
-    /** Type of survey question. */
-    public var type: ModelType?
-    /** Label of question. */
-    public var label: String?
-    /** The customer property that the answer maps to. */
-    public var customerProperty: CustomerProperty?
-    /** Choices available to user. */
-    public var choices: [String]?
-    /** Whether answering this question is mandatory. */
-    public var isMandatory: Bool?
-
-    public init(type: ModelType?, label: String?, customerProperty: CustomerProperty?, choices: [String]?, isMandatory: Bool?) {
-        self.type = type
-        self.label = label
-        self.customerProperty = customerProperty
-        self.choices = choices
-        self.isMandatory = isMandatory
     }
 
 
@@ -19025,37 +19385,6 @@ public class JourneyWebEventsNotificationEventAction: Codable {
         case state
         case mediaType
         case prompt
-    }
-
-
-}
-
-
-
-
-public class JsonCursorSearchResponse: Codable {
-
-
-
-
-
-
-
-
-
-    /** Resource types the search was performed against */
-    public var types: [String]?
-    /** Search results */
-    public var results: JSON?
-    public var aggregations: JSON?
-    /** The page cursor */
-    public var cursor: String?
-
-    public init(types: [String]?, results: JSON?, aggregations: JSON?, cursor: String?) {
-        self.types = types
-        self.results = results
-        self.aggregations = aggregations
-        self.cursor = cursor
     }
 
 
@@ -19282,6 +19611,37 @@ public class JourneyWebEventsNotificationWebMessage: Codable {
         self.referrer = referrer
         self.attributes = attributes
         self.traits = traits
+    }
+
+
+}
+
+
+
+
+public class JsonCursorSearchResponse: Codable {
+
+
+
+
+
+
+
+
+
+    /** Resource types the search was performed against */
+    public var types: [String]?
+    /** Search results */
+    public var results: JSON?
+    public var aggregations: JSON?
+    /** The page cursor */
+    public var cursor: String?
+
+    public init(types: [String]?, results: JSON?, aggregations: JSON?, cursor: String?) {
+        self.types = types
+        self.results = results
+        self.aggregations = aggregations
+        self.cursor = cursor
     }
 
 
@@ -24744,7 +25104,7 @@ public class PatchActionMap: Codable {
     public var triggerWithSegments: [String]?
     /** List of event conditions that must be satisfied to trigger the action map. */
     public var triggerWithEventConditions: [EventCondition]?
-    /** Probability conditions for outcomes that must be satisfied to trigger the action map. */
+    /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomeProbabilityConditions: [OutcomeProbabilityCondition]?
     /** (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. */
     public var triggerWithOutcomePercentileConditions: [OutcomePercentileCondition]?
@@ -25734,85 +26094,6 @@ public class PreprocessingRule: Codable {
 
 
 
-public class Program: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    public var _description: String?
-    public var published: Bool?
-    public var topics: [BaseTopicEntitiy]?
-    public var tags: [String]?
-    public var modifiedBy: AddressableEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    public var publishedBy: AddressableEntityRef?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var datePublished: Date?
-    public var topicLinksJob: AddressableEntityRef?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, _description: String?, published: Bool?, topics: [BaseTopicEntitiy]?, tags: [String]?, modifiedBy: AddressableEntityRef?, dateModified: Date?, publishedBy: AddressableEntityRef?, datePublished: Date?, topicLinksJob: AddressableEntityRef?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self._description = _description
-        self.published = published
-        self.topics = topics
-        self.tags = tags
-        self.modifiedBy = modifiedBy
-        self.dateModified = dateModified
-        self.publishedBy = publishedBy
-        self.datePublished = datePublished
-        self.topicLinksJob = topicLinksJob
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case _description = "description"
-        case published
-        case topics
-        case tags
-        case modifiedBy
-        case dateModified
-        case publishedBy
-        case datePublished
-        case topicLinksJob
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class PresenceDetailQueryPredicate: Codable {
 
     public enum ModelType: String, Codable { 
@@ -25910,6 +26191,85 @@ public class ProfileWithDateRange: Codable {
         case division
         case dateStartWorkday
         case dateEndWorkday
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class Program: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    public var _description: String?
+    public var published: Bool?
+    public var topics: [BaseTopicEntitiy]?
+    public var tags: [String]?
+    public var modifiedBy: AddressableEntityRef?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    public var publishedBy: AddressableEntityRef?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var datePublished: Date?
+    public var topicLinksJob: AddressableEntityRef?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, _description: String?, published: Bool?, topics: [BaseTopicEntitiy]?, tags: [String]?, modifiedBy: AddressableEntityRef?, dateModified: Date?, publishedBy: AddressableEntityRef?, datePublished: Date?, topicLinksJob: AddressableEntityRef?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self._description = _description
+        self.published = published
+        self.topics = topics
+        self.tags = tags
+        self.modifiedBy = modifiedBy
+        self.dateModified = dateModified
+        self.publishedBy = publishedBy
+        self.datePublished = datePublished
+        self.topicLinksJob = topicLinksJob
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case _description = "description"
+        case published
+        case topics
+        case tags
+        case modifiedBy
+        case dateModified
+        case publishedBy
+        case datePublished
+        case topicLinksJob
         case selfUri
     }
 
@@ -35173,24 +35533,32 @@ public class TranscriptionTopicTranscriptResult: Codable {
 
 
 
+
+
+
+
     public var utteranceId: String?
     public var isFinal: Bool?
     public var channel: Channel?
     public var alternatives: [TranscriptionTopicTranscriptAlternative]?
     public var agentAssistantId: String?
+    public var engineProvider: String?
     public var engineId: String?
+    public var engineName: String?
     public var dialect: String?
     public var speechTextAnalyticsProgramId: String?
     public var agentAssistEnabled: Bool?
     public var voiceTranscriptionEnabled: Bool?
 
-    public init(utteranceId: String?, isFinal: Bool?, channel: Channel?, alternatives: [TranscriptionTopicTranscriptAlternative]?, agentAssistantId: String?, engineId: String?, dialect: String?, speechTextAnalyticsProgramId: String?, agentAssistEnabled: Bool?, voiceTranscriptionEnabled: Bool?) {
+    public init(utteranceId: String?, isFinal: Bool?, channel: Channel?, alternatives: [TranscriptionTopicTranscriptAlternative]?, agentAssistantId: String?, engineProvider: String?, engineId: String?, engineName: String?, dialect: String?, speechTextAnalyticsProgramId: String?, agentAssistEnabled: Bool?, voiceTranscriptionEnabled: Bool?) {
         self.utteranceId = utteranceId
         self.isFinal = isFinal
         self.channel = channel
         self.alternatives = alternatives
         self.agentAssistantId = agentAssistantId
+        self.engineProvider = engineProvider
         self.engineId = engineId
+        self.engineName = engineName
         self.dialect = dialect
         self.speechTextAnalyticsProgramId = speechTextAnalyticsProgramId
         self.agentAssistEnabled = agentAssistEnabled
@@ -36688,6 +37056,8 @@ public class UserMe: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -36737,6 +37107,8 @@ public class UserMe: Codable {
     public var groups: [Group]?
     /** The team the user is a member of */
     public var team: Team?
+    /** The WFM work plan bid rank settings for the user */
+    public var workPlanBidRanks: WorkPlanBidRanks?
     /** Routing (ACD) skills possessed by the user */
     public var skills: [UserRoutingSkill]?
     /** Routing (ACD) languages possessed by the user */
@@ -36783,7 +37155,7 @@ public class UserMe: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, preferredName: String?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, date: ServerDate?, geolocationSettings: GeolocationSettings?, organization: Organization?, presenceDefinitions: [OrganizationPresence]?, divisionedPresenceDefinitions: [OrganizationPresenceDefinition]?, locationDefinitions: [LocationDefinition]?, orgAuthorization: [DomainOrganizationRole]?, favorites: [User]?, superiors: [User]?, directReports: [User]?, adjacents: Adjacents?, routingSkills: [RoutingSkill]?, fieldConfigs: FieldConfigs?, token: TokenInfo?, trustors: [Trustor]?, orgProducts: [DomainOrganizationProduct]?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: Division?, chat: Chat?, department: String?, email: String?, primaryContactInfo: [Contact]?, addresses: [Contact]?, state: State?, title: String?, username: String?, manager: User?, images: [UserImage]?, version: Int?, certifications: [String]?, biography: Biography?, employerInfo: EmployerInfo?, preferredName: String?, routingStatus: RoutingStatus?, presence: UserPresence?, integrationPresence: UserPresence?, conversationSummary: UserConversationSummary?, outOfOffice: OutOfOffice?, geolocation: Geolocation?, station: UserStations?, authorization: UserAuthorization?, profileSkills: [String]?, locations: [Location]?, groups: [Group]?, team: Team?, workPlanBidRanks: WorkPlanBidRanks?, skills: [UserRoutingSkill]?, languages: [UserRoutingLanguage]?, acdAutoAnswer: Bool?, languagePreference: String?, lastTokenIssued: OAuthLastTokenIssued?, dateLastLogin: Date?, date: ServerDate?, geolocationSettings: GeolocationSettings?, organization: Organization?, presenceDefinitions: [OrganizationPresence]?, divisionedPresenceDefinitions: [OrganizationPresenceDefinition]?, locationDefinitions: [LocationDefinition]?, orgAuthorization: [DomainOrganizationRole]?, favorites: [User]?, superiors: [User]?, directReports: [User]?, adjacents: Adjacents?, routingSkills: [RoutingSkill]?, fieldConfigs: FieldConfigs?, token: TokenInfo?, trustors: [Trustor]?, orgProducts: [DomainOrganizationProduct]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -36814,6 +37186,7 @@ public class UserMe: Codable {
         self.locations = locations
         self.groups = groups
         self.team = team
+        self.workPlanBidRanks = workPlanBidRanks
         self.skills = skills
         self.languages = languages
         self.acdAutoAnswer = acdAutoAnswer
@@ -36870,6 +37243,7 @@ public class UserMe: Codable {
         case locations
         case groups
         case team
+        case workPlanBidRanks
         case skills
         case languages
         case acdAutoAnswer
@@ -38116,170 +38490,6 @@ public class V2MobiusAlertsTopicAlertSummary: Codable {
 
 
 
-public class V2MobiusRulesTopicAlertNotificationRecipient: Codable {
-
-
-
-
-
-
-
-    public var userId: String?
-    public var displayName: String?
-    public var contactAddress: String?
-
-    public init(userId: String?, displayName: String?, contactAddress: String?) {
-        self.userId = userId
-        self.displayName = displayName
-        self.contactAddress = contactAddress
-    }
-
-
-}
-
-
-
-
-public class V2MobiusRulesTopicCondition: Codable {
-
-
-
-
-
-
-
-    public enum ModelType: String, Codable { 
-        case and = "And"
-        case or = "Or"
-        case not = "Not"
-        case unknown = "Unknown"
-    }
-
-    public var _id: UUID?
-    public var conditions: [V2MobiusRulesTopicCondition]?
-    public var predicates: [V2MobiusRulesTopicConditionRulePredicate]?
-    public var type: ModelType?
-
-    public init(_id: UUID?, conditions: [V2MobiusRulesTopicCondition]?, predicates: [V2MobiusRulesTopicConditionRulePredicate]?, type: ModelType?) {
-        self._id = _id
-        self.conditions = conditions
-        self.predicates = predicates
-        self.type = type
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case conditions
-        case predicates
-        case type
-    }
-
-
-}
-
-
-
-
-public class ValidateAssignUsers: Codable {
-
-
-
-    /** List of user ids to assign to a performance profile */
-    public var membersToAssign: [String]?
-
-    public init(membersToAssign: [String]?) {
-        self.membersToAssign = membersToAssign
-    }
-
-
-}
-
-
-
-
-public class ValidateWorkPlanMessages: Codable {
-
-
-
-
-
-    /** Messages for work plan violating some rules such as no shifts in a work plan */
-    public var violationMessages: [WorkPlanConfigurationViolationMessage]?
-    /** This field is not null when there is a set of work plan constraints that conflict thus agent schedules cannot be generated */
-    public var constraintConflictMessage: ConstraintConflictMessage?
-
-    public init(violationMessages: [WorkPlanConfigurationViolationMessage]?, constraintConflictMessage: ConstraintConflictMessage?) {
-        self.violationMessages = violationMessages
-        self.constraintConflictMessage = constraintConflictMessage
-    }
-
-
-}
-
-
-
-
-public class ValueWrapperDate: Codable {
-
-
-
-    /** The value for the associated field. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var value: Date?
-
-    public init(value: Date?) {
-        self.value = value
-    }
-
-
-}
-
-
-
-
-public class Verifier: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** Indicates whether this verifier is enabled. */
-    public var enabled: Bool?
-    /** Indicates whether this is the default verifier. */
-    public var _default: Bool?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, enabled: Bool?, _default: Bool?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.enabled = enabled
-        self._default = _default
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case enabled
-        case _default = "default"
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class Video: Codable {
 
     public enum State: String, Codable { 
@@ -38436,6 +38646,170 @@ public class Video: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+    }
+
+
+}
+
+
+
+
+public class V2MobiusRulesTopicAlertNotificationRecipient: Codable {
+
+
+
+
+
+
+
+    public var userId: String?
+    public var displayName: String?
+    public var contactAddress: String?
+
+    public init(userId: String?, displayName: String?, contactAddress: String?) {
+        self.userId = userId
+        self.displayName = displayName
+        self.contactAddress = contactAddress
+    }
+
+
+}
+
+
+
+
+public class V2MobiusRulesTopicCondition: Codable {
+
+
+
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case and = "And"
+        case or = "Or"
+        case not = "Not"
+        case unknown = "Unknown"
+    }
+
+    public var _id: UUID?
+    public var conditions: [V2MobiusRulesTopicCondition]?
+    public var predicates: [V2MobiusRulesTopicConditionRulePredicate]?
+    public var type: ModelType?
+
+    public init(_id: UUID?, conditions: [V2MobiusRulesTopicCondition]?, predicates: [V2MobiusRulesTopicConditionRulePredicate]?, type: ModelType?) {
+        self._id = _id
+        self.conditions = conditions
+        self.predicates = predicates
+        self.type = type
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case conditions
+        case predicates
+        case type
+    }
+
+
+}
+
+
+
+
+public class ValidateAssignUsers: Codable {
+
+
+
+    /** List of user ids to assign to a performance profile */
+    public var membersToAssign: [String]?
+
+    public init(membersToAssign: [String]?) {
+        self.membersToAssign = membersToAssign
+    }
+
+
+}
+
+
+
+
+public class ValidateWorkPlanMessages: Codable {
+
+
+
+
+
+    /** Messages for work plan violating some rules such as no shifts in a work plan */
+    public var violationMessages: [WorkPlanConfigurationViolationMessage]?
+    /** This field is not null when there is a set of work plan constraints that conflict thus agent schedules cannot be generated */
+    public var constraintConflictMessage: ConstraintConflictMessage?
+
+    public init(violationMessages: [WorkPlanConfigurationViolationMessage]?, constraintConflictMessage: ConstraintConflictMessage?) {
+        self.violationMessages = violationMessages
+        self.constraintConflictMessage = constraintConflictMessage
+    }
+
+
+}
+
+
+
+
+public class ValueWrapperDate: Codable {
+
+
+
+    /** The value for the associated field. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var value: Date?
+
+    public init(value: Date?) {
+        self.value = value
+    }
+
+
+}
+
+
+
+
+public class Verifier: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** Indicates whether this verifier is enabled. */
+    public var enabled: Bool?
+    /** Indicates whether this is the default verifier. */
+    public var _default: Bool?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, enabled: Bool?, _default: Bool?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.enabled = enabled
+        self._default = _default
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case enabled
+        case _default = "default"
+        case selfUri
     }
 
 
@@ -41260,6 +41634,42 @@ public class WorkitemsQueueEventsNotificationAssignmentSegment: Codable {
 
 
 
+public class WorkitemsUserEventsNotificationWrapup: Codable {
+
+
+
+
+
+    public enum Op: String, Codable { 
+        case unknown = "Unknown"
+        case add = "Add"
+        case remove = "Remove"
+    }
+
+    public enum Action: String, Codable { 
+        case unknown = "Unknown"
+        case add = "Add"
+        case remove = "Remove"
+    }
+
+    public var code: String?
+    public var userId: String?
+    public var op: Op?
+    public var action: Action?
+
+    public init(code: String?, userId: String?, op: Op?, action: Action?) {
+        self.code = code
+        self.userId = userId
+        self.op = op
+        self.action = action
+    }
+
+
+}
+
+
+
+
 public class Workspace: Codable {
 
 
@@ -41335,42 +41745,6 @@ public class Workspace: Codable {
         case acl
         case _description = "description"
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class WorkitemsUserEventsNotificationWrapup: Codable {
-
-
-
-
-
-    public enum Op: String, Codable { 
-        case unknown = "Unknown"
-        case add = "Add"
-        case remove = "Remove"
-    }
-
-    public enum Action: String, Codable { 
-        case unknown = "Unknown"
-        case add = "Add"
-        case remove = "Remove"
-    }
-
-    public var code: String?
-    public var userId: String?
-    public var op: Op?
-    public var action: Action?
-
-    public init(code: String?, userId: String?, op: Op?, action: Action?) {
-        self.code = code
-        self.userId = userId
-        self.op = op
-        self.action = action
     }
 
 

@@ -7627,6 +7627,7 @@ open class KnowledgeAPI {
   "application" : "{}",
   "confidenceThreshold" : 2.302136,
   "query" : "query",
+  "answerGeneration" : "{}",
   "pageSize" : 0,
   "results" : [ {
     "confidence" : 5.637376656633329,

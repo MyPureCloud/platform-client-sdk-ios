@@ -551,6 +551,117 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    
+    
+    
+    
+    /**
+     Delete a work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the work plan bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitWorkplanbid(businessUnitId: String, bidId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitWorkplanbidWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a work plan bid
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the work plan bid 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitWorkplanbidWithRequestBuilder(businessUnitId: String, bidId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Delete a bid group by bid group Id
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) Work Plan Bid Group id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: String, bidId: String, bidGroupId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a bid group by bid group Id
+     - DELETE /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) Work Plan Bid Group id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     /**
      Disable generated calendar link for the current user
      
@@ -1352,6 +1463,551 @@ open class WorkforceManagementAPI {
 
     
     
+    /**
+     Query the status of an alternative shift offers operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsOffersJob(jobId: String, completion: @escaping ((_ data: AlternativeShiftJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsOffersJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AlternativeShiftJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an alternative shift offers operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/alternativeshifts/offers/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "viewOffersResults" : "{}",
+  "viewTradesResults" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "bulkUpdateTradesResults" : "{}",
+  "id" : "id",
+  "type" : "ListOffers",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<AlternativeShiftJobResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsOffersJobWithRequestBuilder(jobId: String) -> RequestBuilder<AlternativeShiftJobResponse> {        
+        var path = "/api/v2/workforcemanagement/alternativeshifts/offers/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsOffersSearchJob(jobId: String, completion: @escaping ((_ data: AlternativeShiftJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsOffersSearchJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AlternativeShiftJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "viewOffersResults" : "{}",
+  "viewTradesResults" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "bulkUpdateTradesResults" : "{}",
+  "id" : "id",
+  "type" : "ListOffers",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<AlternativeShiftJobResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsOffersSearchJobWithRequestBuilder(jobId: String) -> RequestBuilder<AlternativeShiftJobResponse> {        
+        var path = "/api/v2/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get alternative shifts settings from the current logged in agent’s business unit
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsSettings(completion: @escaping ((_ data: AlternativeShiftBuSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AlternativeShiftBuSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get alternative shifts settings from the current logged in agent’s business unit
+     - GET /api/v2/workforcemanagement/alternativeshifts/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "enabledGranularities" : [ "Daily", "Daily" ],
+  "metadata" : "{}",
+  "retainedActivityCategories" : [ "Break", "Break" ],
+  "minMinutesBeforeStartTime" : 0
+}, statusCode=200}]
+
+     - returns: RequestBuilder<AlternativeShiftBuSettingsResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsSettingsWithRequestBuilder() -> RequestBuilder<AlternativeShiftBuSettingsResponse> {        
+        let path = "/api/v2/workforcemanagement/alternativeshifts/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftBuSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get my alternative shift trade by trade ID
+     
+     - parameter tradeId: (path) The ID of the alternative shift trade 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTrade(tradeId: String, completion: @escaping ((_ data: AlternativeShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: tradeId)
+        requestBuilder.execute { (response: Response<AlternativeShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get my alternative shift trade by trade ID
+     - GET /api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "systemDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "adminDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "shiftOfferJobId" : "shiftOfferJobId",
+  "violations" : [ "ServiceGoalsNotMet", "ServiceGoalsNotMet" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "offeredShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "existingShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "schedule" : "{}",
+  "processingStatus" : "Error",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "state" : "Canceled",
+  "adminReviewedBy" : "{}",
+  "weekDate" : "2000-01-23",
+  "user" : "{}",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the alternative shift trade 
+
+     - returns: RequestBuilder<AlternativeShiftTradeResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: String) -> RequestBuilder<AlternativeShiftTradeResponse> {        
+        var path = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get a list of my alternative shifts trades
+     
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTrades(forceAsync: Bool? = nil, completion: @escaping ((_ data: ListAlternativeShiftTradesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsTradesWithRequestBuilder(forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<ListAlternativeShiftTradesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of my alternative shifts trades
+     - GET /api/v2/workforcemanagement/alternativeshifts/trades
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<ListAlternativeShiftTradesResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTradesWithRequestBuilder(forceAsync: Bool? = nil) -> RequestBuilder<ListAlternativeShiftTradesResponse> {        
+        let path = "/api/v2/workforcemanagement/alternativeshifts/trades"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<ListAlternativeShiftTradesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query the status of an alternative shift trades operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTradesJob(jobId: String, completion: @escaping ((_ data: AlternativeShiftJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsTradesJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AlternativeShiftJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an alternative shift trades operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/alternativeshifts/trades/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "viewOffersResults" : "{}",
+  "viewTradesResults" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "bulkUpdateTradesResults" : "{}",
+  "id" : "id",
+  "type" : "ListOffers",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<AlternativeShiftJobResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTradesJobWithRequestBuilder(jobId: String) -> RequestBuilder<AlternativeShiftJobResponse> {        
+        var path = "/api/v2/workforcemanagement/alternativeshifts/trades/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status
+     
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTradesStateJob(jobId: String, completion: @escaping ((_ data: AlternativeShiftJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementAlternativeshiftsTradesStateJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<AlternativeShiftJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "viewOffersResults" : "{}",
+  "viewTradesResults" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "bulkUpdateTradesResults" : "{}",
+  "id" : "id",
+  "type" : "ListOffers",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<AlternativeShiftJobResponse> 
+     */
+    open class func getWorkforcemanagementAlternativeshiftsTradesStateJobWithRequestBuilder(jobId: String) -> RequestBuilder<AlternativeShiftJobResponse> {        
+        var path = "/api/v2/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expand_getWorkforcemanagementBusinessunit: String { 
@@ -1610,6 +2266,325 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCodeListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get alternative shifts settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId: String, completion: @escaping ((_ data: AlternativeShiftBuSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<AlternativeShiftBuSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get alternative shifts settings for a business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "enabledGranularities" : [ "Daily", "Daily" ],
+  "metadata" : "{}",
+  "retainedActivityCategories" : [ "Break", "Break" ],
+  "minMinutesBeforeStartTime" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<AlternativeShiftBuSettingsResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<AlternativeShiftBuSettingsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftBuSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get an alternative shifts trade in a business unit for a given trade ID
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter tradeId: (path) The ID of the alternative shift trade 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAlternativeshiftsTrade(businessUnitId: String, tradeId: String, completion: @escaping ((_ data: AlternativeShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAlternativeshiftsTradeWithRequestBuilder(businessUnitId: businessUnitId, tradeId: tradeId)
+        requestBuilder.execute { (response: Response<AlternativeShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an alternative shifts trade in a business unit for a given trade ID
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "systemDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "adminDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "shiftOfferJobId" : "shiftOfferJobId",
+  "violations" : [ "ServiceGoalsNotMet", "ServiceGoalsNotMet" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "offeredShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "existingShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "schedule" : "{}",
+  "processingStatus" : "Error",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "state" : "Canceled",
+  "adminReviewedBy" : "{}",
+  "weekDate" : "2000-01-23",
+  "user" : "{}",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter tradeId: (path) The ID of the alternative shift trade 
+
+     - returns: RequestBuilder<AlternativeShiftTradeResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitAlternativeshiftsTradeWithRequestBuilder(businessUnitId: String, tradeId: String) -> RequestBuilder<AlternativeShiftTradeResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob(businessUnitId: String, jobId: String, completion: @escaping ((_ data: BuAlternativeShiftJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJobWithRequestBuilder(businessUnitId: businessUnitId, jobId: jobId)
+        requestBuilder.execute { (response: Response<BuAlternativeShiftJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId}
+     - Job details are only retained if the initial request returned a 202 ACCEPTED response
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "viewOffersResults" : "{}",
+  "viewTradesResults" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "bulkUpdateTradesResults" : "{}",
+  "id" : "id",
+  "type" : "ListOffers",
+  "error" : "{}",
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter jobId: (path) The ID of the job 
+
+     - returns: RequestBuilder<BuAlternativeShiftJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJobWithRequestBuilder(businessUnitId: String, jobId: String) -> RequestBuilder<BuAlternativeShiftJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BuAlternativeShiftJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3363,21 +4338,21 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     } ],
     "metadata" : "{}",
     "deletes" : "{}",
@@ -3389,22 +4364,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -3418,22 +4393,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -3444,21 +4419,21 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     } ],
     "metadata" : "{}",
     "deletes" : "{}",
@@ -3470,22 +4445,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -3499,22 +4474,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -4527,6 +5502,407 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuShortTermForecastListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The id of the workplanbid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbid(businessUnitId: String, bidId: String, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWorkplanbidWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId)
+        requestBuilder.execute { (response: Response<WorkPlanBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a work plan bid
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidWindowEndDate" : "2000-01-23",
+  "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The id of the workplanbid 
+
+     - returns: RequestBuilder<WorkPlanBid> 
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidWithRequestBuilder(businessUnitId: String, bidId: String) -> RequestBuilder<WorkPlanBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get a bid group by bid group Id
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) Work Plan Bid Group id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: String, bidId: String, bidGroupId: String, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId)
+        requestBuilder.execute { (response: Response<WorkPlanBidGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a bid group by bid group Id
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "workPlanBidGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) Work Plan Bid Group id 
+
+     - returns: RequestBuilder<WorkPlanBidGroupResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String) -> RequestBuilder<WorkPlanBidGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Gets the work plan preferences of all the agents in the work plan bid group
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) The ID of the work plan bid group 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId: String, bidId: String, bidGroupId: String, completion: @escaping ((_ data: AdminAgentWorkPlanPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId)
+        requestBuilder.execute { (response: Response<AdminAgentWorkPlanPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the work plan preferences of all the agents in the work plan bid group
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWorkPlanBidPreferences" : [ {
+    "agent" : "{}",
+    "priorities" : [ 0, 0 ],
+    "submitted" : true,
+    "overriddenWorkPlan" : "{}",
+    "overrideReason" : "UnableToBid",
+    "assignedWorkPlan" : "{}"
+  }, {
+    "agent" : "{}",
+    "priorities" : [ 0, 0 ],
+    "submitted" : true,
+    "overriddenWorkPlan" : "{}",
+    "overrideReason" : "UnableToBid",
+    "assignedWorkPlan" : "{}"
+  } ],
+  "workPlans" : [ {
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) The ID of the work plan bid group 
+
+     - returns: RequestBuilder<AdminAgentWorkPlanPreferenceResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String) -> RequestBuilder<AdminAgentWorkPlanPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdminAgentWorkPlanPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get summary of bid groups that belong to a work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary(businessUnitId: String, bidId: String, completion: @escaping ((_ data: WorkPlanBidGroupSummaryList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWorkplanbidGroupsSummaryWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId)
+        requestBuilder.execute { (response: Response<WorkPlanBidGroupSummaryList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get summary of bid groups that belong to a work plan bid
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "workPlanBidGroupSummaryList" : [ {
+    "managementUnit" : "{}",
+    "workPlanCount" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "agentCount" : 0,
+    "planningGroupCount" : 1
+  }, {
+    "managementUnit" : "{}",
+    "workPlanCount" : 6,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "agentCount" : 0,
+    "planningGroupCount" : 1
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+
+     - returns: RequestBuilder<WorkPlanBidGroupSummaryList> 
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidGroupsSummaryWithRequestBuilder(businessUnitId: String, bidId: String) -> RequestBuilder<WorkPlanBidGroupSummaryList> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidGroupSummaryList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get list of work plan bids
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbids(businessUnitId: String, completion: @escaping ((_ data: WorkPlanBidListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<WorkPlanBidListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get list of work plan bids
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "agentRankingType" : "HireDate",
+    "metadata" : "{}",
+    "rankingTiebreakerType" : "HireDate",
+    "bidWindowStartDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "forecast" : "{}",
+    "bidWindowEndDate" : "2000-01-23",
+    "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+    "name" : "name",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft"
+  }, {
+    "agentRankingType" : "HireDate",
+    "metadata" : "{}",
+    "rankingTiebreakerType" : "HireDate",
+    "bidWindowStartDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "forecast" : "{}",
+    "bidWindowEndDate" : "2000-01-23",
+    "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+    "name" : "name",
+    "id" : "id",
+    "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<WorkPlanBidListResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<WorkPlanBidListResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -8237,6 +9613,357 @@ open class WorkforceManagementAPI {
 
     
     
+    /**
+     Get work plan bid ranks for a user
+     
+     - parameter userId: (path) The userId to whom the work plan bid ranks apply. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementUserWorkplanbidranks(userId: String, completion: @escaping ((_ data: WorkPlanBidRanks?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<WorkPlanBidRanks>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get work plan bid ranks for a user
+     - GET /api/v2/workforcemanagement/users/{userId}/workplanbidranks
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "biddingTieBreaker" : "biddingTieBreaker",
+  "workPlanBiddingPerformance" : 0
+}, statusCode=200}]
+     
+     - parameter userId: (path) The userId to whom the work plan bid ranks apply. 
+
+     - returns: RequestBuilder<WorkPlanBidRanks> 
+     */
+    open class func getWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: String) -> RequestBuilder<WorkPlanBidRanks> {        
+        var path = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidRanks>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Gets an agent's work plan bidding preference
+     
+     - parameter bidId: (path) The ID of the work plan bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementWorkplanbidPreferences(bidId: String, completion: @escaping ((_ data: AgentWorkPlanBiddingPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: bidId)
+        requestBuilder.execute { (response: Response<AgentWorkPlanBiddingPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an agent's work plan bidding preference
+     - GET /api/v2/workforcemanagement/workplanbids/{bidId}/preferences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWorkPlanBidPreferences" : [ {
+    "workPlan" : "{}",
+    "priority" : 0
+  }, {
+    "workPlan" : "{}",
+    "priority" : 0
+  } ],
+  "submitted" : true,
+  "overriddenWorkPlan" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "overrideReason" : "UnableToBid",
+  "id" : "id",
+  "assignedWorkPlan" : "{}"
+}, statusCode=200}]
+     
+     - parameter bidId: (path) The ID of the work plan bid 
+
+     - returns: RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> 
+     */
+    open class func getWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: String) -> RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences"
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentWorkPlanBiddingPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Gets an agent's work plans for a bid
+     
+     - parameter bidId: (path) The ID of the work plan bid 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementWorkplanbidWorkplans(bidId: String, completion: @escaping ((_ data: AgentWorkPlanListResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementWorkplanbidWorkplansWithRequestBuilder(bidId: bidId)
+        requestBuilder.execute { (response: Response<AgentWorkPlanListResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an agent's work plans for a bid
+     - GET /api/v2/workforcemanagement/workplanbids/{bidId}/workplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "optionalDays" : "{}",
+    "flexibleWeeklyPaidTime" : true,
+    "weeklyMaximumPaidMinutes" : 1,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "shifts" : [ {
+      "exactStartTimeMinutesFromMidnight" : 5,
+      "flexiblePaidTime" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 2,
+      "earliestStopTimeMinutesFromMidnight" : 7,
+      "latestStopTimeMinutesFromMidnight" : 9,
+      "activities" : [ {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      }, {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 4,
+      "days" : "{}",
+      "exactPaidTimeMinutes" : 3,
+      "earliestStartTimeMinutesFromMidnight" : 5,
+      "flexibleStartTime" : true,
+      "minimumPaidTimeMinutes" : 2
+    }, {
+      "exactStartTimeMinutesFromMidnight" : 5,
+      "flexiblePaidTime" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 2,
+      "earliestStopTimeMinutesFromMidnight" : 7,
+      "latestStopTimeMinutesFromMidnight" : 9,
+      "activities" : [ {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      }, {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 4,
+      "days" : "{}",
+      "exactPaidTimeMinutes" : 3,
+      "earliestStartTimeMinutesFromMidnight" : 5,
+      "flexibleStartTime" : true,
+      "minimumPaidTimeMinutes" : 2
+    } ],
+    "weeklyMinimumPaidMinutes" : 6,
+    "id" : "id",
+    "constrainWeeklyPaidTime" : true,
+    "weeklyExactPaidMinutes" : 0
+  }, {
+    "optionalDays" : "{}",
+    "flexibleWeeklyPaidTime" : true,
+    "weeklyMaximumPaidMinutes" : 1,
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "shifts" : [ {
+      "exactStartTimeMinutesFromMidnight" : 5,
+      "flexiblePaidTime" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 2,
+      "earliestStopTimeMinutesFromMidnight" : 7,
+      "latestStopTimeMinutesFromMidnight" : 9,
+      "activities" : [ {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      }, {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 4,
+      "days" : "{}",
+      "exactPaidTimeMinutes" : 3,
+      "earliestStartTimeMinutesFromMidnight" : 5,
+      "flexibleStartTime" : true,
+      "minimumPaidTimeMinutes" : 2
+    }, {
+      "exactStartTimeMinutesFromMidnight" : 5,
+      "flexiblePaidTime" : true,
+      "constrainLatestStopTime" : true,
+      "latestStartTimeMinutesFromMidnight" : 2,
+      "earliestStopTimeMinutesFromMidnight" : 7,
+      "latestStopTimeMinutesFromMidnight" : 9,
+      "activities" : [ {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      }, {
+        "lengthMinutes" : 7,
+        "countsAsPaidTime" : true
+      } ],
+      "maximumPaidTimeMinutes" : 4,
+      "days" : "{}",
+      "exactPaidTimeMinutes" : 3,
+      "earliestStartTimeMinutesFromMidnight" : 5,
+      "flexibleStartTime" : true,
+      "minimumPaidTimeMinutes" : 2
+    } ],
+    "weeklyMinimumPaidMinutes" : 6,
+    "id" : "id",
+    "constrainWeeklyPaidTime" : true,
+    "weeklyExactPaidMinutes" : 0
+  } ],
+  "managementUnit" : "{}"
+}, statusCode=200}]
+     
+     - parameter bidId: (path) The ID of the work plan bid 
+
+     - returns: RequestBuilder<AgentWorkPlanListResponse> 
+     */
+    open class func getWorkforcemanagementWorkplanbidWorkplansWithRequestBuilder(bidId: String) -> RequestBuilder<AgentWorkPlanListResponse> {        
+        var path = "/api/v2/workforcemanagement/workplanbids/{bidId}/workplans"
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentWorkPlanListResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Gets the list of work plan bids that belong to an agent
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementWorkplanbids(completion: @escaping ((_ data: AgentWorkPlanBids?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementWorkplanbidsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<AgentWorkPlanBids>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the list of work plan bids that belong to an agent
+     - GET /api/v2/workforcemanagement/workplanbids
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWorkPlanBids" : [ {
+    "bidWindowEndDate" : "2000-01-23",
+    "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+    "bidWindowStartDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft"
+  }, {
+    "bidWindowEndDate" : "2000-01-23",
+    "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+    "bidWindowStartDate" : "2000-01-23",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "effectiveDate" : "2000-01-23",
+    "status" : "Draft"
+  } ],
+  "businessUnit" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<AgentWorkPlanBids> 
+     */
+    open class func getWorkforcemanagementWorkplanbidsWithRequestBuilder() -> RequestBuilder<AgentWorkPlanBids> {        
+        let path = "/api/v2/workforcemanagement/workplanbids"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentWorkPlanBids>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -8297,6 +10024,245 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AdherenceExplanationAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update my alternative shifts trade by trade ID
+     
+     - parameter tradeId: (path) The ID of the alternative shift trade 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementAlternativeshiftsTrade(tradeId: String, body: AgentUpdateAlternativeShiftTradeRequest? = nil, completion: @escaping ((_ data: AlternativeShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: tradeId, body: body)
+        requestBuilder.execute { (response: Response<AlternativeShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update my alternative shifts trade by trade ID
+     - PATCH /api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "systemDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "adminDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "shiftOfferJobId" : "shiftOfferJobId",
+  "violations" : [ "ServiceGoalsNotMet", "ServiceGoalsNotMet" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "offeredShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "existingShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "schedule" : "{}",
+  "processingStatus" : "Error",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "state" : "Canceled",
+  "adminReviewedBy" : "{}",
+  "weekDate" : "2000-01-23",
+  "user" : "{}",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter tradeId: (path) The ID of the alternative shift trade 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AlternativeShiftTradeResponse> 
+     */
+    open class func patchWorkforcemanagementAlternativeshiftsTradeWithRequestBuilder(tradeId: String, body: AgentUpdateAlternativeShiftTradeRequest? = nil) -> RequestBuilder<AlternativeShiftTradeResponse> {        
+        var path = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}"
+        let tradeIdPreEscape = "\(tradeId)"
+        let tradeIdPostEscape = tradeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tradeId}", with: tradeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Bulk update alternative shift trade states
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementAlternativeshiftsTradesStateJobs(body: AdminBulkUpdateAlternativeShiftTradeStateRequest, completion: @escaping ((_ data: AlternativeShiftAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementAlternativeshiftsTradesStateJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AlternativeShiftAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update alternative shift trade states
+     - PATCH /api/v2/workforcemanagement/alternativeshifts/trades/state/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AlternativeShiftAsyncResponse> 
+     */
+    open class func patchWorkforcemanagementAlternativeshiftsTradesStateJobsWithRequestBuilder(body: AdminBulkUpdateAlternativeShiftTradeStateRequest) -> RequestBuilder<AlternativeShiftAsyncResponse> {        
+        let path = "/api/v2/workforcemanagement/alternativeshifts/trades/state/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -8446,6 +10412,68 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update alternative shifts settings for a business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId: String, body: UpdateAlternativeShiftBuSettingsRequest? = nil, completion: @escaping ((_ data: AlternativeShiftBuSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<AlternativeShiftBuSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update alternative shifts settings for a business unit
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "enabledGranularities" : [ "Daily", "Daily" ],
+  "metadata" : "{}",
+  "retainedActivityCategories" : [ "Break", "Break" ],
+  "minMinutesBeforeStartTime" : 0
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AlternativeShiftBuSettingsResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitAlternativeshiftsSettingsWithRequestBuilder(businessUnitId: String, body: UpdateAlternativeShiftBuSettingsRequest? = nil) -> RequestBuilder<AlternativeShiftBuSettingsResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftBuSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -8829,6 +10857,258 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuTimeOffPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The id of the workplanbid 
+     - parameter body: (body) The work plan bid to be updated 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitWorkplanbid(businessUnitId: String, bidId: String, body: UpdateWorkPlanBid, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitWorkplanbidWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update work plan bid
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidWindowEndDate" : "2000-01-23",
+  "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The id of the workplanbid 
+     - parameter body: (body) The work plan bid to be updated 
+
+     - returns: RequestBuilder<WorkPlanBid> 
+     */
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidWithRequestBuilder(businessUnitId: String, bidId: String, body: UpdateWorkPlanBid) -> RequestBuilder<WorkPlanBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Update a bid group by bid group Id
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) Work Plan Bid Group id 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: String, bidId: String, bidGroupId: String, body: WorkPlanBidGroupUpdate? = nil, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanBidGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a bid group by bid group Id
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "workPlanBidGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) Work Plan Bid Group id 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanBidGroupResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: WorkPlanBidGroupUpdate? = nil) -> RequestBuilder<WorkPlanBidGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Overrides the assigned work plan for the specified agents
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) The ID of the work plan bid group 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedWorkPlanOverrideRequest? = nil, completion: @escaping ((_ data: AdminAgentWorkPlanPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body)
+        requestBuilder.execute { (response: Response<AdminAgentWorkPlanPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Overrides the assigned work plan for the specified agents
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWorkPlanBidPreferences" : [ {
+    "agent" : "{}",
+    "priorities" : [ 0, 0 ],
+    "submitted" : true,
+    "overriddenWorkPlan" : "{}",
+    "overrideReason" : "UnableToBid",
+    "assignedWorkPlan" : "{}"
+  }, {
+    "agent" : "{}",
+    "priorities" : [ 0, 0 ],
+    "submitted" : true,
+    "overriddenWorkPlan" : "{}",
+    "overrideReason" : "UnableToBid",
+    "assignedWorkPlan" : "{}"
+  } ],
+  "workPlans" : [ {
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "managementUnit" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter bidGroupId: (path) The ID of the work plan bid group 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AdminAgentWorkPlanPreferenceResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesWithRequestBuilder(businessUnitId: String, bidId: String, bidGroupId: String, body: AgentsBidAssignedWorkPlanOverrideRequest? = nil) -> RequestBuilder<AdminAgentWorkPlanPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let bidGroupIdPreEscape = "\(bidGroupId)"
+        let bidGroupIdPostEscape = bidGroupIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidGroupId}", with: bidGroupIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AdminAgentWorkPlanPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -9766,6 +12046,191 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    
+    /**
+     Update work plan bid ranks for a user
+     
+     - parameter userId: (path) The userId to whom the work plan bid ranks apply. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementUserWorkplanbidranks(userId: String, body: WorkPlanBidRanks? = nil, completion: @escaping ((_ data: WorkPlanBidRanks?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanBidRanks>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update work plan bid ranks for a user
+     - PATCH /api/v2/workforcemanagement/users/{userId}/workplanbidranks
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "biddingTieBreaker" : "biddingTieBreaker",
+  "workPlanBiddingPerformance" : 0
+}, statusCode=200}]
+     
+     - parameter userId: (path) The userId to whom the work plan bid ranks apply. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanBidRanks> 
+     */
+    open class func patchWorkforcemanagementUserWorkplanbidranksWithRequestBuilder(userId: String, body: WorkPlanBidRanks? = nil) -> RequestBuilder<WorkPlanBidRanks> {        
+        var path = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidRanks>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Update bulk work plan bid ranks on users. Max 50 users can be updated at a time.
+     
+     - parameter body: (body) Users 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementUsersWorkplanbidranksBulk(body: [WorkPlanBidRanks], completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementUsersWorkplanbidranksBulkWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update bulk work plan bid ranks on users. Max 50 users can be updated at a time.
+     - PATCH /api/v2/workforcemanagement/users/workplanbidranks/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ "{}", "{}" ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Users 
+
+     - returns: RequestBuilder<EntityListing> 
+     */
+    open class func patchWorkforcemanagementUsersWorkplanbidranksBulkWithRequestBuilder(body: [WorkPlanBidRanks]) -> RequestBuilder<EntityListing> {        
+        let path = "/api/v2/workforcemanagement/users/workplanbidranks/bulk"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an agent's work plan bidding preference
+     
+     - parameter bidId: (path) The ID of the work plan bid 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementWorkplanbidPreferences(bidId: String, body: UpdateAgentWorkPlanBiddingPreference? = nil, completion: @escaping ((_ data: AgentWorkPlanBiddingPreferenceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<AgentWorkPlanBiddingPreferenceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an agent's work plan bidding preference
+     - PATCH /api/v2/workforcemanagement/workplanbids/{bidId}/preferences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentWorkPlanBidPreferences" : [ {
+    "workPlan" : "{}",
+    "priority" : 0
+  }, {
+    "workPlan" : "{}",
+    "priority" : 0
+  } ],
+  "submitted" : true,
+  "overriddenWorkPlan" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "overrideReason" : "UnableToBid",
+  "id" : "id",
+  "assignedWorkPlan" : "{}"
+}, statusCode=200}]
+     
+     - parameter bidId: (path) The ID of the work plan bid 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> 
+     */
+    open class func patchWorkforcemanagementWorkplanbidPreferencesWithRequestBuilder(bidId: String, body: UpdateAgentWorkPlanBiddingPreference? = nil) -> RequestBuilder<AgentWorkPlanBiddingPreferenceResponse> {        
+        var path = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences"
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AgentWorkPlanBiddingPreferenceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Submit an adherence explanation for the current user
      
@@ -10390,21 +12855,21 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     } ],
     "shifts" : [ {
       "schedule" : "{}",
@@ -10414,22 +12879,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -10443,22 +12908,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -10470,21 +12935,21 @@ open class WorkforceManagementAPI {
     "fullDayTimeOffMarkers" : [ {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
-      "timeOffRequestSyncVersion" : 7,
-      "lengthMinutes" : 5,
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 6,
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 2
+      "payableMinutes" : 1
     } ],
     "shifts" : [ {
       "schedule" : "{}",
@@ -10494,22 +12959,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -10523,22 +12988,22 @@ open class WorkforceManagementAPI {
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       }, {
         "activityCodeId" : "activityCodeId",
         "externalActivityType" : "ActivityPlan",
         "timeOffRequestId" : "timeOffRequestId",
         "timeOffRequestSyncVersion" : 5,
-        "lengthMinutes" : 6,
+        "lengthMinutes" : 1,
         "externalActivityId" : "externalActivityId",
         "paid" : true,
         "description" : "description",
-        "payableMinutes" : 1,
+        "payableMinutes" : 5,
         "startDate" : "2000-01-23T04:56:07.000+00:00"
       } ],
       "id" : "id",
@@ -10551,12 +13016,12 @@ open class WorkforceManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "weekDate" : "2000-01-23",
-    "weekCount" : 9
+    "weekCount" : 5
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "weekDate" : "2000-01-23",
-    "weekCount" : 9
+    "weekCount" : 5
   } ],
   "updates" : [ {
     "type" : "Added",
@@ -10581,6 +13046,290 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BuCurrentAgentScheduleSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Request a list of alternative shift offers for a given schedule
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAlternativeshiftsOffersJobs(body: AlternativeShiftOffersRequest, completion: @escaping ((_ data: AlternativeShiftAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAlternativeshiftsOffersJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AlternativeShiftAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a list of alternative shift offers for a given schedule
+     - POST /api/v2/workforcemanagement/alternativeshifts/offers/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AlternativeShiftAsyncResponse> 
+     */
+    open class func postWorkforcemanagementAlternativeshiftsOffersJobsWithRequestBuilder(body: AlternativeShiftOffersRequest) -> RequestBuilder<AlternativeShiftAsyncResponse> {        
+        let path = "/api/v2/workforcemanagement/alternativeshifts/offers/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Request a search of alternative shift offers for a given shift
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAlternativeshiftsOffersSearchJobs(body: AlternativeShiftSearchOffersRequest, completion: @escaping ((_ data: AlternativeShiftAsyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAlternativeshiftsOffersSearchJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AlternativeShiftAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Request a search of alternative shift offers for a given shift
+     - POST /api/v2/workforcemanagement/alternativeshifts/offers/search/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AlternativeShiftAsyncResponse> 
+     */
+    open class func postWorkforcemanagementAlternativeshiftsOffersSearchJobsWithRequestBuilder(body: AlternativeShiftSearchOffersRequest) -> RequestBuilder<AlternativeShiftAsyncResponse> {        
+        let path = "/api/v2/workforcemanagement/alternativeshifts/offers/search/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create my alternative shift trade using an existing offer's jobId
+     
+     - parameter body: (body) The request body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementAlternativeshiftsTrades(body: CreateAlternativeShiftTradeRequest, completion: @escaping ((_ data: AlternativeShiftTradeResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementAlternativeshiftsTradesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AlternativeShiftTradeResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create my alternative shift trade using an existing offer's jobId
+     - POST /api/v2/workforcemanagement/alternativeshifts/trades
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "systemDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "adminDateReviewed" : "2000-01-23T04:56:07.000+00:00",
+  "shiftOfferJobId" : "shiftOfferJobId",
+  "violations" : [ "ServiceGoalsNotMet", "ServiceGoalsNotMet" ],
+  "selfUri" : "https://openapi-generator.tech",
+  "offeredShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "existingShifts" : [ {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  }, {
+    "dayIndex" : 0,
+    "lengthMinutes" : 6,
+    "activities" : [ {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCodeId" : "activityCodeId",
+      "externalActivityType" : "ActivityPlan",
+      "timeOffRequestId" : "timeOffRequestId",
+      "timeOffRequestSyncVersion" : 5,
+      "lengthMinutes" : 1,
+      "externalActivityId" : "externalActivityId",
+      "paid" : true,
+      "description" : "description",
+      "payableMinutes" : 5,
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
+    "startDate" : "2000-01-23T04:56:07.000+00:00",
+    "referenceKey" : "referenceKey"
+  } ],
+  "schedule" : "{}",
+  "processingStatus" : "Error",
+  "managementUnit" : "{}",
+  "id" : "id",
+  "state" : "Canceled",
+  "adminReviewedBy" : "{}",
+  "weekDate" : "2000-01-23",
+  "user" : "{}",
+  "expirationDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter body: (body) The request body 
+
+     - returns: RequestBuilder<AlternativeShiftTradeResponse> 
+     */
+    open class func postWorkforcemanagementAlternativeshiftsTradesWithRequestBuilder(body: CreateAlternativeShiftTradeRequest) -> RequestBuilder<AlternativeShiftTradeResponse> {        
+        let path = "/api/v2/workforcemanagement/alternativeshifts/trades"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AlternativeShiftTradeResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -10808,6 +13557,73 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<BuAsyncAgentSchedulesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List alternative shifts trades for a given management unit or agent
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch(businessUnitId: String, body: SearchAlternativeShiftTradesRequest, forceAsync: Bool? = nil, completion: @escaping ((_ data: BuListAlternativeShiftTradesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchWithRequestBuilder(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync)
+        requestBuilder.execute { (response: Response<BuListAlternativeShiftTradesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List alternative shifts trades for a given management unit or agent
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "job" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The request body 
+     - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
+
+     - returns: RequestBuilder<BuListAlternativeShiftTradesResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchWithRequestBuilder(businessUnitId: String, body: SearchAlternativeShiftTradesRequest, forceAsync: Bool? = nil) -> RequestBuilder<BuListAlternativeShiftTradesResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceAsync": forceAsync
+        ])
+
+        let requestBuilder: RequestBuilder<BuListAlternativeShiftTradesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -12540,6 +15356,224 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ImportForecastUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Copy a work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the work plan bid to copy 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId: String, bidId: String, body: CopyWorkPlanBid? = nil, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWorkplanbidCopyWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Copy a work plan bid
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidWindowEndDate" : "2000-01-23",
+  "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The ID of the work plan bid to copy 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanBid> 
+     */
+    open class func postWorkforcemanagementBusinessunitWorkplanbidCopyWithRequestBuilder(businessUnitId: String, bidId: String, body: CopyWorkPlanBid? = nil) -> RequestBuilder<WorkPlanBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Add a bid group in a given work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId: String, bidId: String, body: WorkPlanBidGroupCreate? = nil, completion: @escaping ((_ data: WorkPlanBidGroupResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWorkplanbidGroupsWithRequestBuilder(businessUnitId: businessUnitId, bidId: bidId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanBidGroupResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a bid group in a given work plan bid
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "metadata" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "workPlanBidGroup" : "{}"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter bidId: (path) The work plan bid id of the bid groups 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<WorkPlanBidGroupResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitWorkplanbidGroupsWithRequestBuilder(businessUnitId: String, bidId: String, body: WorkPlanBidGroupCreate? = nil) -> RequestBuilder<WorkPlanBidGroupResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let bidIdPreEscape = "\(bidId)"
+        let bidIdPostEscape = bidIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bidId}", with: bidIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBidGroupResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a new work plan bid
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The work plan bid to be created (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId: String, body: CreateWorkPlanBid? = nil, completion: @escaping ((_ data: WorkPlanBid?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<WorkPlanBid>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new work plan bid
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "agentRankingType" : "HireDate",
+  "metadata" : "{}",
+  "rankingTiebreakerType" : "HireDate",
+  "bidWindowStartDate" : "2000-01-23",
+  "selfUri" : "https://openapi-generator.tech",
+  "forecast" : "{}",
+  "bidWindowEndDate" : "2000-01-23",
+  "workPlanFieldsVisibleToAgents" : [ "Name", "Name" ],
+  "name" : "name",
+  "id" : "id",
+  "publishedDate" : "2000-01-23T04:56:07.000+00:00",
+  "effectiveDate" : "2000-01-23",
+  "status" : "Draft"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) The work plan bid to be created (optional)
+
+     - returns: RequestBuilder<WorkPlanBid> 
+     */
+    open class func postWorkforcemanagementBusinessunitWorkplanbidsWithRequestBuilder(businessUnitId: String, body: CreateWorkPlanBid? = nil) -> RequestBuilder<WorkPlanBid> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkPlanBid>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

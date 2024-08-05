@@ -1106,6 +1106,28 @@ public class AgentActivityChangedTopicPresence: Codable {
 
 
 
+public class AgentCountRange: Codable {
+
+
+
+
+
+    /** The minimum value of agent count per work plan */
+    public var minimum: Int?
+    /** The maximum value of agent count per work plan */
+    public var maximum: Int?
+
+    public init(minimum: Int?, maximum: Int?) {
+        self.minimum = minimum
+        self.maximum = maximum
+    }
+
+
+}
+
+
+
+
 public class AgentDirectRoutingBackupSettings: Codable {
 
 
@@ -1194,6 +1216,179 @@ public class AgentQueryAdherenceExplanationsRequest: Codable {
     public init(startDate: Date?, endDate: Date?) {
         self.startDate = startDate
         self.endDate = endDate
+    }
+
+
+}
+
+
+
+
+public class AgentWorkPlan: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** Whether the weekly paid time constraint is enabled for this work plan */
+    public var constrainWeeklyPaidTime: Bool?
+    /** Whether the weekly paid time constraint is flexible for this work plan */
+    public var flexibleWeeklyPaidTime: Bool?
+    /** Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == false */
+    public var weeklyExactPaidMinutes: Int?
+    /** Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true */
+    public var weeklyMinimumPaidMinutes: Int?
+    /** Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime == true */
+    public var weeklyMaximumPaidMinutes: Int?
+    /** Optional days to schedule for this work plan */
+    public var optionalDays: SetWrapperDayOfWeek?
+    /** Shifts in this work plan */
+    public var shifts: [AgentWorkPlanShift]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, constrainWeeklyPaidTime: Bool?, flexibleWeeklyPaidTime: Bool?, weeklyExactPaidMinutes: Int?, weeklyMinimumPaidMinutes: Int?, weeklyMaximumPaidMinutes: Int?, optionalDays: SetWrapperDayOfWeek?, shifts: [AgentWorkPlanShift]?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.constrainWeeklyPaidTime = constrainWeeklyPaidTime
+        self.flexibleWeeklyPaidTime = flexibleWeeklyPaidTime
+        self.weeklyExactPaidMinutes = weeklyExactPaidMinutes
+        self.weeklyMinimumPaidMinutes = weeklyMinimumPaidMinutes
+        self.weeklyMaximumPaidMinutes = weeklyMaximumPaidMinutes
+        self.optionalDays = optionalDays
+        self.shifts = shifts
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case constrainWeeklyPaidTime
+        case flexibleWeeklyPaidTime
+        case weeklyExactPaidMinutes
+        case weeklyMinimumPaidMinutes
+        case weeklyMaximumPaidMinutes
+        case optionalDays
+        case shifts
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class AgentWorkPlanActivity: Codable {
+
+
+
+
+
+    /** Length of the activity in minutes */
+    public var lengthMinutes: Int?
+    /** Whether the activity is paid */
+    public var countsAsPaidTime: Bool?
+
+    public init(lengthMinutes: Int?, countsAsPaidTime: Bool?) {
+        self.lengthMinutes = lengthMinutes
+        self.countsAsPaidTime = countsAsPaidTime
+    }
+
+
+}
+
+
+
+
+public class AgentWorkPlanShift: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** Days of the week applicable for this shift */
+    public var days: SetWrapperDayOfWeek?
+    /** Whether the start time of the shift is flexible */
+    public var flexibleStartTime: Bool?
+    /** Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == false */
+    public var exactStartTimeMinutesFromMidnight: Int?
+    /** Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true */
+    public var earliestStartTimeMinutesFromMidnight: Int?
+    /** Latest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime == true */
+    public var latestStartTimeMinutesFromMidnight: Int?
+    /** This is the earliest time a shift can end */
+    public var earliestStopTimeMinutesFromMidnight: Int?
+    /** Whether the latest stop time constraint for the shift is enabled */
+    public var constrainLatestStopTime: Bool?
+    /** Latest stop time of the shift defined as offset minutes from midnight. Used if constrainStopTime == true */
+    public var latestStopTimeMinutesFromMidnight: Int?
+    /** Whether the paid time setting for the shift is flexible */
+    public var flexiblePaidTime: Bool?
+    /** Exact paid time in minutes configured for the shift. Used if flexiblePaidTime == false */
+    public var exactPaidTimeMinutes: Int?
+    /** Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime == true */
+    public var minimumPaidTimeMinutes: Int?
+    /** Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime == true */
+    public var maximumPaidTimeMinutes: Int?
+    /** Activities configured for this shift */
+    public var activities: [AgentWorkPlanActivity]?
+
+    public init(days: SetWrapperDayOfWeek?, flexibleStartTime: Bool?, exactStartTimeMinutesFromMidnight: Int?, earliestStartTimeMinutesFromMidnight: Int?, latestStartTimeMinutesFromMidnight: Int?, earliestStopTimeMinutesFromMidnight: Int?, constrainLatestStopTime: Bool?, latestStopTimeMinutesFromMidnight: Int?, flexiblePaidTime: Bool?, exactPaidTimeMinutes: Int?, minimumPaidTimeMinutes: Int?, maximumPaidTimeMinutes: Int?, activities: [AgentWorkPlanActivity]?) {
+        self.days = days
+        self.flexibleStartTime = flexibleStartTime
+        self.exactStartTimeMinutesFromMidnight = exactStartTimeMinutesFromMidnight
+        self.earliestStartTimeMinutesFromMidnight = earliestStartTimeMinutesFromMidnight
+        self.latestStartTimeMinutesFromMidnight = latestStartTimeMinutesFromMidnight
+        self.earliestStopTimeMinutesFromMidnight = earliestStopTimeMinutesFromMidnight
+        self.constrainLatestStopTime = constrainLatestStopTime
+        self.latestStopTimeMinutesFromMidnight = latestStopTimeMinutesFromMidnight
+        self.flexiblePaidTime = flexiblePaidTime
+        self.exactPaidTimeMinutes = exactPaidTimeMinutes
+        self.minimumPaidTimeMinutes = minimumPaidTimeMinutes
+        self.maximumPaidTimeMinutes = maximumPaidTimeMinutes
+        self.activities = activities
     }
 
 
@@ -1433,6 +1628,197 @@ public class AlertSummary: Codable {
         self.conversation = conversation
         self.metricType = metricType
         self.entitiesAreTeamMembers = entitiesAreTeamMembers
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftAgentScheduledShift: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The number of days since start of schedule */
+    public var dayIndex: Int?
+    /** A key generated for an offer to help facilitate alternative shift trading */
+    public var referenceKey: String?
+    /** The start date of this shift in ISO-8601 format */
+    public var startDate: Date?
+    /** The length of this shift in minutes */
+    public var lengthMinutes: Int?
+    /** A list of activities in this shift */
+    public var activities: [BuAgentScheduleActivity]?
+
+    public init(dayIndex: Int?, referenceKey: String?, startDate: Date?, lengthMinutes: Int?, activities: [BuAgentScheduleActivity]?) {
+        self.dayIndex = dayIndex
+        self.referenceKey = referenceKey
+        self.startDate = startDate
+        self.lengthMinutes = lengthMinutes
+        self.activities = activities
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftOffersRequest: Codable {
+
+
+
+
+
+    /** The existing schedule being used to find alternative shift offers */
+    public var schedule: AlternativeShiftScheduleLookup?
+    /** The start date for the week in this schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var queryWeekDate: Date?
+
+    public init(schedule: AlternativeShiftScheduleLookup?, queryWeekDate: Date?) {
+        self.schedule = schedule
+        self.queryWeekDate = queryWeekDate
+    }
+
+
+}
+
+
+
+
+public class AlternativeShiftTradeResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case canceled = "Canceled"
+        case denied = "Denied"
+        case expired = "Expired"
+        case submitted = "Submitted"
+        case approved = "Approved"
+    }
+
+    public enum ProcessingStatus: String, Codable { 
+        case error = "Error"
+        case waitingForScheduleUpdate = "WaitingForScheduleUpdate"
+        case scheduleUpdating = "ScheduleUpdating"
+        case scheduleUpdated = "ScheduleUpdated"
+        case waitingForReview = "WaitingForReview"
+        case reviewing = "Reviewing"
+    }
+
+
+
+
+
+
+
+    public enum Violations: String, Codable { 
+        case serviceGoalsNotMet = "ServiceGoalsNotMet"
+    }
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The job ID of the alternative shift offer listing, from which the trade was chosen */
+    public var shiftOfferJobId: String?
+    /** The existing shifts from the offer, may be empty */
+    public var existingShifts: [AlternativeShiftAgentScheduledShift]?
+    /** The offered shifts from the offer, may be empty */
+    public var offeredShifts: [AlternativeShiftAgentScheduledShift]?
+    /** The existing schedule information associated with the trade */
+    public var schedule: AlternativeShiftScheduleLookup?
+    /** The management unit of this alternative shift trade request */
+    public var managementUnit: ManagementUnitReference?
+    /** The user who submitted the trade request */
+    public var user: UserReference?
+    /** The start week date of the associated schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var weekDate: Date?
+    /** The date when the trade will expire in ISO-8601 format. The trade cannot be approved after expiration */
+    public var expirationDate: Date?
+    /** The state of this alternative shift trade */
+    public var state: State?
+    /** The processing status of this alternative shift trade */
+    public var processingStatus: ProcessingStatus?
+    /** The timestamp of when the trade request was reviewed by the system in ISO-8601 format */
+    public var systemDateReviewed: Date?
+    /** The timestamp of when the trade request was reviewed by an admin in ISO-8601 format */
+    public var adminDateReviewed: Date?
+    /** The admin who reviewed this alternative shift trade after system denial */
+    public var adminReviewedBy: UserReference?
+    /** A list of trade match violations */
+    public var violations: [Violations]?
+    /** Version metadata for this alternative shift trade */
+    public var metadata: WfmVersionedEntityMetadata?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, shiftOfferJobId: String?, existingShifts: [AlternativeShiftAgentScheduledShift]?, offeredShifts: [AlternativeShiftAgentScheduledShift]?, schedule: AlternativeShiftScheduleLookup?, managementUnit: ManagementUnitReference?, user: UserReference?, weekDate: Date?, expirationDate: Date?, state: State?, processingStatus: ProcessingStatus?, systemDateReviewed: Date?, adminDateReviewed: Date?, adminReviewedBy: UserReference?, violations: [Violations]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+        self._id = _id
+        self.shiftOfferJobId = shiftOfferJobId
+        self.existingShifts = existingShifts
+        self.offeredShifts = offeredShifts
+        self.schedule = schedule
+        self.managementUnit = managementUnit
+        self.user = user
+        self.weekDate = weekDate
+        self.expirationDate = expirationDate
+        self.state = state
+        self.processingStatus = processingStatus
+        self.systemDateReviewed = systemDateReviewed
+        self.adminDateReviewed = adminDateReviewed
+        self.adminReviewedBy = adminReviewedBy
+        self.violations = violations
+        self.metadata = metadata
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case shiftOfferJobId
+        case existingShifts
+        case offeredShifts
+        case schedule
+        case managementUnit
+        case user
+        case weekDate
+        case expirationDate
+        case state
+        case processingStatus
+        case systemDateReviewed
+        case adminDateReviewed
+        case adminReviewedBy
+        case violations
+        case metadata
+        case selfUri
     }
 
 
@@ -2328,6 +2714,7 @@ public class AssignedLearningModule: Codable {
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
         case external = "External"
+        case native = "Native"
     }
 
 
@@ -3134,6 +3521,85 @@ public class BotIntent: Codable {
 
 
 
+public class BuAlternativeShiftJobResponse: Codable {
+
+
+
+    public enum Status: String, Codable { 
+        case processing = "Processing"
+        case complete = "Complete"
+        case error = "Error"
+    }
+
+    public enum ModelType: String, Codable { 
+        case listOffers = "ListOffers"
+        case searchOffers = "SearchOffers"
+        case listUserTrades = "ListUserTrades"
+        case searchTrades = "SearchTrades"
+        case bulkUpdateTrades = "BulkUpdateTrades"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The status of the alternative shift job */
+    public var status: Status?
+    /** The type of job */
+    public var type: ModelType?
+    /** The URL where completed results are available, only set if status == 'Complete' */
+    public var downloadUrl: String?
+    /** Any error information, only set if the status == 'Error' */
+    public var error: ErrorBody?
+    /** Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListOffers' or 'SearchOffers' */
+    public var viewOffersResults: AlternativeShiftOffersViewResponseTemplate?
+    /** Schema template for deserializing data returned from the downloadUrl. Use if type == 'ListUserTrades' or 'SearchTrades' */
+    public var viewTradesResults: AlternativeShiftTradesViewResponseTemplate?
+    /** Schema template for deserializing data returned from the downloadUrl. Use if type == 'BulkUpdateTrades' */
+    public var bulkUpdateTradesResults: AlternativeShiftBulkUpdateTradesResponseTemplate?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, status: Status?, type: ModelType?, downloadUrl: String?, error: ErrorBody?, viewOffersResults: AlternativeShiftOffersViewResponseTemplate?, viewTradesResults: AlternativeShiftTradesViewResponseTemplate?, bulkUpdateTradesResults: AlternativeShiftBulkUpdateTradesResponseTemplate?, selfUri: String?) {
+        self._id = _id
+        self.status = status
+        self.type = type
+        self.downloadUrl = downloadUrl
+        self.error = error
+        self.viewOffersResults = viewOffersResults
+        self.viewTradesResults = viewTradesResults
+        self.bulkUpdateTradesResults = bulkUpdateTradesResults
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case status
+        case type
+        case downloadUrl
+        case error
+        case viewOffersResults
+        case viewTradesResults
+        case bulkUpdateTradesResults
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class BuAverageSpeedOfAnswer: Codable {
 
 
@@ -3366,6 +3832,28 @@ public class BuIntradayDataGroup: Codable {
 
 
 
+public class BuListAlternativeShiftTradesResponse: Codable {
+
+
+
+
+
+    /** The asynchronous job handling the request. Null if result returns synchronously */
+    public var job: BuAlternativeShiftJobResponse?
+    /** The result of the request. May come via notification. Null if job is populated */
+    public var result: AlternativeShiftTradeListing?
+
+    public init(job: BuAlternativeShiftJobResponse?, result: AlternativeShiftTradeListing?) {
+        self.job = job
+        self.result = result
+    }
+
+
+}
+
+
+
+
 public class BuQueryAdherenceExplanationsResponse: Codable {
 
 
@@ -3446,6 +3934,51 @@ public class BuSearchAgentSchedulesRequest: Codable {
         self.startDate = startDate
         self.endDate = endDate
         self.userIds = userIds
+    }
+
+
+}
+
+
+
+
+public class BuShortTermForecastWeekReference: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** Forecast id used in this work plan bid */
+    public var _id: String?
+    /** The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var weekDate: Date?
+    /** The description of the short term forecast */
+    public var _description: String?
+    /** The week number used for this bid. First week starts with number 1 */
+    public var weekNumber: Int?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, weekDate: Date?, _description: String?, weekNumber: Int?, selfUri: String?) {
+        self._id = _id
+        self.weekDate = weekDate
+        self._description = _description
+        self.weekNumber = weekNumber
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case weekDate
+        case _description = "description"
+        case weekNumber
+        case selfUri
     }
 
 
@@ -5162,6 +5695,7 @@ public class ContentButtonResponse: Codable {
 
     public enum ModelType: String, Codable { 
         case button = "Button"
+        case datePicker = "DatePicker"
         case quickReply = "QuickReply"
     }
 
@@ -5569,129 +6103,6 @@ public class ContentQuickReply: Codable {
         case payload
         case image
         case action
-    }
-
-
-}
-
-
-
-
-public class DID: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case active = "active"
-        case inactive = "inactive"
-        case deleted = "deleted"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    public enum OwnerType: String, Codable { 
-        case user = "USER"
-        case phone = "PHONE"
-        case ivrConfig = "IVR_CONFIG"
-        case group = "GROUP"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of the entity. */
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    /** The resource's description. */
-    public var _description: String?
-    /** The current version of the resource. */
-    public var version: Int?
-    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The ID of the user that last modified the resource. */
-    public var modifiedBy: String?
-    /** The ID of the user that created the resource. */
-    public var createdBy: String?
-    /** Indicates if the resource is active, inactive, or deleted. */
-    public var state: State?
-    /** The application that last modified the resource. */
-    public var modifiedByApp: String?
-    /** The application that created the resource. */
-    public var createdByApp: String?
-    public var phoneNumber: String?
-    public var didPool: DomainEntityRef?
-    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
-    public var owner: DomainEntityRef?
-    public var ownerType: OwnerType?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self._description = _description
-        self.version = version
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.modifiedBy = modifiedBy
-        self.createdBy = createdBy
-        self.state = state
-        self.modifiedByApp = modifiedByApp
-        self.createdByApp = createdByApp
-        self.phoneNumber = phoneNumber
-        self.didPool = didPool
-        self.owner = owner
-        self.ownerType = ownerType
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case _description = "description"
-        case version
-        case dateCreated
-        case dateModified
-        case modifiedBy
-        case createdBy
-        case state
-        case modifiedByApp
-        case createdByApp
-        case phoneNumber
-        case didPool
-        case owner
-        case ownerType
-        case selfUri
     }
 
 
@@ -7892,6 +8303,129 @@ public class ConversationEventTyping: Codable {
 
 
 
+public class DID: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case active = "active"
+        case inactive = "inactive"
+        case deleted = "deleted"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public enum OwnerType: String, Codable { 
+        case user = "USER"
+        case phone = "PHONE"
+        case ivrConfig = "IVR_CONFIG"
+        case group = "GROUP"
+    }
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of the entity. */
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    /** The resource's description. */
+    public var _description: String?
+    /** The current version of the resource. */
+    public var version: Int?
+    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The ID of the user that last modified the resource. */
+    public var modifiedBy: String?
+    /** The ID of the user that created the resource. */
+    public var createdBy: String?
+    /** Indicates if the resource is active, inactive, or deleted. */
+    public var state: State?
+    /** The application that last modified the resource. */
+    public var modifiedByApp: String?
+    /** The application that created the resource. */
+    public var createdByApp: String?
+    public var phoneNumber: String?
+    public var didPool: DomainEntityRef?
+    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
+    public var owner: DomainEntityRef?
+    public var ownerType: OwnerType?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self._description = _description
+        self.version = version
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.modifiedBy = modifiedBy
+        self.createdBy = createdBy
+        self.state = state
+        self.modifiedByApp = modifiedByApp
+        self.createdByApp = createdByApp
+        self.phoneNumber = phoneNumber
+        self.didPool = didPool
+        self.owner = owner
+        self.ownerType = ownerType
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case _description = "description"
+        case version
+        case dateCreated
+        case dateModified
+        case modifiedBy
+        case createdBy
+        case state
+        case modifiedByApp
+        case createdByApp
+        case phoneNumber
+        case didPool
+        case owner
+        case ownerType
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class ConversationMessageEventTopicDetail: Codable {
 
 
@@ -8781,6 +9315,43 @@ public class ConversationScreenShareEventTopicScreenShareConversation: Codable {
 
 
 
+
+public class ConversationSocialExpressionEventTopicWrapup: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The user configured wrap up code name. */
+    public var code: String?
+    /** Text entered by the agent to describe the call or disposition. */
+    public var notes: String?
+    /** List of tags selected by the agent to describe the call or disposition. */
+    public var tags: [String]?
+    /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
+    public var durationSeconds: Int?
+    /** The timestamp when the wrapup was finished. */
+    public var endTime: Date?
+
+    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
+        self.code = code
+        self.notes = notes
+        self.tags = tags
+        self.durationSeconds = durationSeconds
+        self.endTime = endTime
+    }
+
+
+}
+
+
+
 /** A subset of the Journey System's action data relevant to a part of a conversation (for external linkage and internal usage/context) */
 
 public class ConversationSocialExpressionEventTopicJourneyAction: Codable {
@@ -9107,43 +9678,6 @@ public class ConversationSocialExpressionEventTopicSocialMediaParticipant: Codab
         case socialMediaHub
         case socialUserName
         case previewText
-    }
-
-
-}
-
-
-
-
-public class ConversationSocialExpressionEventTopicWrapup: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The user configured wrap up code name. */
-    public var code: String?
-    /** Text entered by the agent to describe the call or disposition. */
-    public var notes: String?
-    /** List of tags selected by the agent to describe the call or disposition. */
-    public var tags: [String]?
-    /** The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally */
-    public var durationSeconds: Int?
-    /** The timestamp when the wrapup was finished. */
-    public var endTime: Date?
-
-    public init(code: String?, notes: String?, tags: [String]?, durationSeconds: Int?, endTime: Date?) {
-        self.code = code
-        self.notes = notes
-        self.tags = tags
-        self.durationSeconds = durationSeconds
-        self.endTime = endTime
     }
 
 
@@ -15439,6 +15973,45 @@ public class FacebookPermission: Codable {
 
 
 
+public class Filter: Codable {
+
+
+
+
+
+
+
+
+
+    /** The name of the field by which to filter. */
+    public var name: String?
+    /** The type of the filter, DATE or STRING. */
+    public var type: String?
+    /** The operation that the filter performs. */
+    public var _operator: String?
+    /** The values to make the filter comparison against. */
+    public var values: [String]?
+
+    public init(name: String?, type: String?, _operator: String?, values: [String]?) {
+        self.name = name
+        self.type = type
+        self._operator = _operator
+        self.values = values
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case name
+        case type
+        case _operator = "operator"
+        case values
+    }
+
+
+}
+
+
+
+
 public class FaxTopicFaxDataV2: Codable {
 
 
@@ -15643,45 +16216,6 @@ public class FileSpecificationTemplateEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
-    }
-
-
-}
-
-
-
-
-public class Filter: Codable {
-
-
-
-
-
-
-
-
-
-    /** The name of the field by which to filter. */
-    public var name: String?
-    /** The type of the filter, DATE or STRING. */
-    public var type: String?
-    /** The operation that the filter performs. */
-    public var _operator: String?
-    /** The values to make the filter comparison against. */
-    public var values: [String]?
-
-    public init(name: String?, type: String?, _operator: String?, values: [String]?) {
-        self.name = name
-        self.type = type
-        self._operator = _operator
-        self.values = values
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case name
-        case type
-        case _operator = "operator"
-        case values
     }
 
 
@@ -20585,6 +21119,22 @@ public class LineEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class ListWrapperBidGroupWorkPlanRequest: Codable {
+
+
+
+    public var values: [BidGroupWorkPlanRequest]?
+
+    public init(values: [BidGroupWorkPlanRequest]?) {
+        self.values = values
     }
 
 
@@ -26177,58 +26727,6 @@ public class QueueConversationSocialExpressionEventTopicInitiator: Codable {
 
 
 
-public class QueueEntityListing: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var entities: [Queue]?
-    public var pageSize: Int?
-    public var pageNumber: Int?
-    public var total: Int64?
-    public var lastUri: String?
-    public var firstUri: String?
-    public var selfUri: String?
-    public var nextUri: String?
-    public var previousUri: String?
-    public var pageCount: Int?
-
-    public init(entities: [Queue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
-        self.entities = entities
-        self.pageSize = pageSize
-        self.pageNumber = pageNumber
-        self.total = total
-        self.lastUri = lastUri
-        self.firstUri = firstUri
-        self.selfUri = selfUri
-        self.nextUri = nextUri
-        self.previousUri = previousUri
-        self.pageCount = pageCount
-    }
-
-
-}
-
-
-
-
 public class QueueConversationVideoEventTopicChat: Codable {
 
     public enum State: String, Codable { 
@@ -27042,6 +27540,58 @@ public class QueueConversationVideoEventTopicWrapup: Codable {
 
 
 
+public class QueueEntityListing: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [Queue]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var lastUri: String?
+    public var firstUri: String?
+    public var selfUri: String?
+    public var nextUri: String?
+    public var previousUri: String?
+    public var pageCount: Int?
+
+    public init(entities: [Queue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, lastUri: String?, firstUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.lastUri = lastUri
+        self.firstUri = firstUri
+        self.selfUri = selfUri
+        self.nextUri = nextUri
+        self.previousUri = previousUri
+        self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
 public class QueueMemberEntityListing: Codable {
 
 
@@ -27458,6 +28008,70 @@ public class RecordingJobFailedRecording: Codable {
 
 
 
+public class Referrer: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum Medium: String, Codable { 
+        case _internal = "internal"
+        case search = "search"
+        case social = "social"
+        case email = "email"
+        case unknown = "unknown"
+        case paid = "paid"
+    }
+
+    /** Referrer URL. */
+    public var url: String?
+    /** Referrer URL domain. */
+    public var domain: String?
+    /** Referrer URL hostname. */
+    public var hostname: String?
+    /** Referrer keywords. */
+    public var keywords: String?
+    /** Referrer URL pathname. */
+    public var pathname: String?
+    /** Referrer URL querystring. */
+    public var queryString: String?
+    /** Referrer URL fragment. */
+    public var fragment: String?
+    /** Name of referrer (e.g. Yahoo!, Google, InfoSpace). */
+    public var name: String?
+    /** Type of referrer (e.g. search, social). */
+    public var medium: Medium?
+
+    public init(url: String?, domain: String?, hostname: String?, keywords: String?, pathname: String?, queryString: String?, fragment: String?, name: String?, medium: Medium?) {
+        self.url = url
+        self.domain = domain
+        self.hostname = hostname
+        self.keywords = keywords
+        self.pathname = pathname
+        self.queryString = queryString
+        self.fragment = fragment
+        self.name = name
+        self.medium = medium
+    }
+
+
+}
+
+
+
+
 public class RecordingSettings: Codable {
 
 
@@ -27552,70 +28166,6 @@ public class RecordingUploadReportRequest: Codable {
     public init(dateSince: Date?, uploadStatus: UploadStatus?) {
         self.dateSince = dateSince
         self.uploadStatus = uploadStatus
-    }
-
-
-}
-
-
-
-
-public class Referrer: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum Medium: String, Codable { 
-        case _internal = "internal"
-        case search = "search"
-        case social = "social"
-        case email = "email"
-        case unknown = "unknown"
-        case paid = "paid"
-    }
-
-    /** Referrer URL. */
-    public var url: String?
-    /** Referrer URL domain. */
-    public var domain: String?
-    /** Referrer URL hostname. */
-    public var hostname: String?
-    /** Referrer keywords. */
-    public var keywords: String?
-    /** Referrer URL pathname. */
-    public var pathname: String?
-    /** Referrer URL querystring. */
-    public var queryString: String?
-    /** Referrer URL fragment. */
-    public var fragment: String?
-    /** Name of referrer (e.g. Yahoo!, Google, InfoSpace). */
-    public var name: String?
-    /** Type of referrer (e.g. search, social). */
-    public var medium: Medium?
-
-    public init(url: String?, domain: String?, hostname: String?, keywords: String?, pathname: String?, queryString: String?, fragment: String?, name: String?, medium: Medium?) {
-        self.url = url
-        self.domain = domain
-        self.hostname = hostname
-        self.keywords = keywords
-        self.pathname = pathname
-        self.queryString = queryString
-        self.fragment = fragment
-        self.name = name
-        self.medium = medium
     }
 
 
@@ -28975,103 +29525,6 @@ public class ScimPhoneNumber: Codable {
 
 
 
-
-public class Script: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    public var versionId: String?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var createdDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var modifiedDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var publishedDate: Date?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var versionDate: Date?
-    public var startPageId: String?
-    public var startPageName: String?
-    public var features: JSON?
-    public var variables: JSON?
-    public var customActions: JSON?
-    public var pages: [Page]?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, versionId: String?, createdDate: Date?, modifiedDate: Date?, publishedDate: Date?, versionDate: Date?, startPageId: String?, startPageName: String?, features: JSON?, variables: JSON?, customActions: JSON?, pages: [Page]?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self.versionId = versionId
-        self.createdDate = createdDate
-        self.modifiedDate = modifiedDate
-        self.publishedDate = publishedDate
-        self.versionDate = versionDate
-        self.startPageId = startPageId
-        self.startPageName = startPageName
-        self.features = features
-        self.variables = variables
-        self.customActions = customActions
-        self.pages = pages
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case versionId
-        case createdDate
-        case modifiedDate
-        case publishedDate
-        case versionDate
-        case startPageId
-        case startPageName
-        case features
-        case variables
-        case customActions
-        case pages
-        case selfUri
-    }
-
-
-}
-
-
-
 /** The routing language assigned to a user. */
 
 public class ScimUserRoutingLanguage: Codable {
@@ -29313,6 +29766,103 @@ public class Screenshare: Codable {
         case wrapup
         case afterCallWork
         case afterCallWorkRequired
+    }
+
+
+}
+
+
+
+
+public class Script: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    public var versionId: String?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var createdDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var modifiedDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var publishedDate: Date?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var versionDate: Date?
+    public var startPageId: String?
+    public var startPageName: String?
+    public var features: JSON?
+    public var variables: JSON?
+    public var customActions: JSON?
+    public var pages: [Page]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, versionId: String?, createdDate: Date?, modifiedDate: Date?, publishedDate: Date?, versionDate: Date?, startPageId: String?, startPageName: String?, features: JSON?, variables: JSON?, customActions: JSON?, pages: [Page]?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self.versionId = versionId
+        self.createdDate = createdDate
+        self.modifiedDate = modifiedDate
+        self.publishedDate = publishedDate
+        self.versionDate = versionDate
+        self.startPageId = startPageId
+        self.startPageName = startPageName
+        self.features = features
+        self.variables = variables
+        self.customActions = customActions
+        self.pages = pages
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case versionId
+        case createdDate
+        case modifiedDate
+        case publishedDate
+        case versionDate
+        case startPageId
+        case startPageName
+        case features
+        case variables
+        case customActions
+        case pages
+        case selfUri
     }
 
 
@@ -30060,95 +30610,6 @@ public class StorySetting: Codable {
 
 
 
-public class Survey: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    public enum Status: String, Codable { 
-        case pending = "Pending"
-        case sent = "Sent"
-        case inProgress = "InProgress"
-        case finished = "Finished"
-        case optOut = "OptOut"
-        case error = "Error"
-        case expired = "Expired"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    public var conversation: ConversationReference?
-    /** Survey form used for this survey. */
-    public var surveyForm: SurveyForm?
-    public var agent: DomainEntityRef?
-    public var status: Status?
-    public var queue: QueueReference?
-    public var answers: SurveyScoringSet?
-    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var completedDate: Date?
-    /** Additional information about what happened when the survey is in Error status. */
-    public var surveyErrorDetails: SurveyErrorDetails?
-    /** The team that the agent belongs to */
-    public var agentTeam: Team?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, agentTeam: Team?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.conversation = conversation
-        self.surveyForm = surveyForm
-        self.agent = agent
-        self.status = status
-        self.queue = queue
-        self.answers = answers
-        self.completedDate = completedDate
-        self.surveyErrorDetails = surveyErrorDetails
-        self.agentTeam = agentTeam
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case conversation
-        case surveyForm
-        case agent
-        case status
-        case queue
-        case answers
-        case completedDate
-        case surveyErrorDetails
-        case agentTeam
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class Suggestion: Codable {
 
 
@@ -30186,6 +30647,7 @@ public class Suggestion: Codable {
         case accepted = "Accepted"
         case dismissed = "Dismissed"
         case failed = "Failed"
+        case rated = "Rated"
     }
 
 
@@ -30330,6 +30792,95 @@ public class SupportCenterCategory: Codable {
         case _id = "id"
         case selfUri
         case image
+    }
+
+
+}
+
+
+
+
+public class Survey: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public enum Status: String, Codable { 
+        case pending = "Pending"
+        case sent = "Sent"
+        case inProgress = "InProgress"
+        case finished = "Finished"
+        case optOut = "OptOut"
+        case error = "Error"
+        case expired = "Expired"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    public var conversation: ConversationReference?
+    /** Survey form used for this survey. */
+    public var surveyForm: SurveyForm?
+    public var agent: DomainEntityRef?
+    public var status: Status?
+    public var queue: QueueReference?
+    public var answers: SurveyScoringSet?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var completedDate: Date?
+    /** Additional information about what happened when the survey is in Error status. */
+    public var surveyErrorDetails: SurveyErrorDetails?
+    /** The team that the agent belongs to */
+    public var agentTeam: Team?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, conversation: ConversationReference?, surveyForm: SurveyForm?, agent: DomainEntityRef?, status: Status?, queue: QueueReference?, answers: SurveyScoringSet?, completedDate: Date?, surveyErrorDetails: SurveyErrorDetails?, agentTeam: Team?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.conversation = conversation
+        self.surveyForm = surveyForm
+        self.agent = agent
+        self.status = status
+        self.queue = queue
+        self.answers = answers
+        self.completedDate = completedDate
+        self.surveyErrorDetails = surveyErrorDetails
+        self.agentTeam = agentTeam
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case conversation
+        case surveyForm
+        case agent
+        case status
+        case queue
+        case answers
+        case completedDate
+        case surveyErrorDetails
+        case agentTeam
+        case selfUri
     }
 
 
@@ -32408,6 +32959,38 @@ public class UnreadMetric: Codable {
 
     public init(count: Int?) {
         self.count = count
+    }
+
+
+}
+
+
+
+
+public class UpdateAlternativeShiftBuSettingsRequest: Codable {
+
+
+
+
+
+
+
+
+
+    /** The granularity at which alternative shifts is allowed. An empty list as the wrapped value will indicate alternative shifts is disabled */
+    public var enabledGranularities: ListWrapperAlternativeShiftBuSettingsGranularity?
+    /** The minimum number of minutes before the start of a shift that an alternative shift can be automatically approved */
+    public var minMinutesBeforeStartTime: Int?
+    /** Categories of activities that are required to remain at the same time slot for the alternative shifts offered. An empty list indicates no retained activities */
+    public var retainedActivityCategories: ListWrapperAlternativeShiftBuSettingsActivityCategory?
+    /** Version metadata for this business unit's alternative shift settings */
+    public var metadata: WfmVersionedEntityMetadata?
+
+    public init(enabledGranularities: ListWrapperAlternativeShiftBuSettingsGranularity?, minMinutesBeforeStartTime: Int?, retainedActivityCategories: ListWrapperAlternativeShiftBuSettingsActivityCategory?, metadata: WfmVersionedEntityMetadata?) {
+        self.enabledGranularities = enabledGranularities
+        self.minMinutesBeforeStartTime = minMinutesBeforeStartTime
+        self.retainedActivityCategories = retainedActivityCategories
+        self.metadata = metadata
     }
 
 
@@ -36582,150 +37165,14 @@ public class WorkPlanActivity: Codable {
 
 
 
-public class WorkPlanConstraintMessage: Codable {
-
-    public enum ModelType: String, Codable { 
-        case activityEarliestStartTimeMinutesFromMidnight = "ActivityEarliestStartTimeMinutesFromMidnight"
-        case activityEarliestStartTimeMinutesFromShiftStart = "ActivityEarliestStartTimeMinutesFromShiftStart"
-        case activityLatestStartTimeMinutesFromMidnight = "ActivityLatestStartTimeMinutesFromMidnight"
-        case activityLatestStartTimeMinutesFromShiftStart = "ActivityLatestStartTimeMinutesFromShiftStart"
-        case activityMinimumLengthFromShiftEndMinutes = "ActivityMinimumLengthFromShiftEndMinutes"
-        case activityMinimumLengthFromShiftStartMinutes = "ActivityMinimumLengthFromShiftStartMinutes"
-        case activityStartTimeIncrementInMinutes = "ActivityStartTimeIncrementInMinutes"
-        case planningPeriodMaximumDaysOff = "PlanningPeriodMaximumDaysOff"
-        case planningPeriodMaximumPaidTimeMinutes = "PlanningPeriodMaximumPaidTimeMinutes"
-        case planningPeriodMinimumDaysOff = "PlanningPeriodMinimumDaysOff"
-        case planningPeriodMinimumPaidTimeMinutes = "PlanningPeriodMinimumPaidTimeMinutes"
-        case shiftDayOffRule = "ShiftDayOffRule"
-        case shiftEarliestStartTimeMinutesFromMidnight = "ShiftEarliestStartTimeMinutesFromMidnight"
-        case shiftEarliestStopTimeMinutesFromMidnight = "ShiftEarliestStopTimeMinutesFromMidnight"
-        case shiftLatestStartTimeMinutesFromMidnight = "ShiftLatestStartTimeMinutesFromMidnight"
-        case shiftLatestStopTimeMinutesFromMidnight = "ShiftLatestStopTimeMinutesFromMidnight"
-        case shiftMaximumContiguousTimeMinutes = "ShiftMaximumContiguousTimeMinutes"
-        case shiftMaximumPaidTimeMinutes = "ShiftMaximumPaidTimeMinutes"
-        case shiftMinimumContiguousTimeMinutes = "ShiftMinimumContiguousTimeMinutes"
-        case shiftMinimumPaidTimeMinutes = "ShiftMinimumPaidTimeMinutes"
-        case shiftStartTimeIncrementInMinutes = "ShiftStartTimeIncrementInMinutes"
-        case shiftStartVarianceMaximumVarianceMinutes = "ShiftStartVarianceMaximumVarianceMinutes"
-        case shiftStartVariancePaidDuration = "ShiftStartVariancePaidDuration"
-        case workPlanMaximumConsecutiveWorkingDays = "WorkPlanMaximumConsecutiveWorkingDays"
-        case workPlanMaximumConsecutiveWorkingWeekends = "WorkPlanMaximumConsecutiveWorkingWeekends"
-        case workPlanMaximumWeeklyPaidTimeMinutes = "WorkPlanMaximumWeeklyPaidTimeMinutes"
-        case workPlanMaximumWorkingDaysPerWeek = "WorkPlanMaximumWorkingDaysPerWeek"
-        case workPlanMinimumConsecutiveNonWorkingTimePerWeekMinutes = "WorkPlanMinimumConsecutiveNonWorkingTimePerWeekMinutes"
-        case workPlanMinimumInterShiftTimeMinutes = "WorkPlanMinimumInterShiftTimeMinutes"
-        case workPlanMinimumShiftStartDistanceMinutes = "WorkPlanMinimumShiftStartDistanceMinutes"
-        case workPlanMinimumWeeklyPaidTimeMinutes = "WorkPlanMinimumWeeklyPaidTimeMinutes"
-        case workPlanMinimumWorkingDaysPerWeek = "WorkPlanMinimumWorkingDaysPerWeek"
-        case workPlanOptionalDays = "WorkPlanOptionalDays"
-        case workPlanPaidTimeGranularityMinutes = "WorkPlanPaidTimeGranularityMinutes"
-    }
+public class WorkPlanBidListResponse: Codable {
 
 
 
-    /** Type of the work plan constraint in this message */
-    public var type: ModelType?
-    /** Arguments of the message that provide information about the constraint that is being conflicted with, such as the value of the constraint */
-    public var arguments: [WorkPlanValidationMessageArgument]?
+    public var entities: [WorkPlanBid]?
 
-    public init(type: ModelType?, arguments: [WorkPlanValidationMessageArgument]?) {
-        self.type = type
-        self.arguments = arguments
-    }
-
-
-}
-
-
-
-
-public class WorkPlanRotationAgentResponse: Codable {
-
-
-
-
-
-
-
-    /** The user associated with this work plan rotation */
-    public var user: UserReference?
-    /** The date range to which this agent is effective in the work plan rotation */
-    public var dateRange: DateRangeWithOptionalEnd?
-    /** Start position of the work plan in the pattern for this agent in the work plan rotation. Position value starts from 0 */
-    public var position: Int?
-
-    public init(user: UserReference?, dateRange: DateRangeWithOptionalEnd?, position: Int?) {
-        self.user = user
-        self.dateRange = dateRange
-        self.position = position
-    }
-
-
-}
-
-
-
-
-public class WorkPlanRotationResponse: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** Whether the work plan rotation is enabled for scheduling */
-    public var enabled: Bool?
-    /** The date range to which this work plan rotation applies */
-    public var dateRange: DateRangeWithOptionalEnd?
-    /** Pattern with ordered list of work plans that rotate on a weekly basis */
-    public var pattern: WorkPlanPatternResponse?
-    /** Number of agents in this work plan rotation */
-    public var agentCount: Int?
-    /** Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list) */
-    public var agents: [WorkPlanRotationAgentResponse]?
-    /** Version metadata for this work plan rotation */
-    public var metadata: WfmVersionedEntityMetadata?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, enabled: Bool?, dateRange: DateRangeWithOptionalEnd?, pattern: WorkPlanPatternResponse?, agentCount: Int?, agents: [WorkPlanRotationAgentResponse]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.enabled = enabled
-        self.dateRange = dateRange
-        self.pattern = pattern
-        self.agentCount = agentCount
-        self.agents = agents
-        self.metadata = metadata
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case enabled
-        case dateRange
-        case pattern
-        case agentCount
-        case agents
-        case metadata
-        case selfUri
+    public init(entities: [WorkPlanBid]?) {
+        self.entities = entities
     }
 
 
@@ -36894,6 +37341,158 @@ public class WorkPlanShift: Codable {
         case _id = "id"
         case delete
         case validationId
+    }
+
+
+}
+
+
+
+
+public class WorkPlanConstraintMessage: Codable {
+
+    public enum ModelType: String, Codable { 
+        case activityEarliestStartTimeMinutesFromMidnight = "ActivityEarliestStartTimeMinutesFromMidnight"
+        case activityEarliestStartTimeMinutesFromShiftStart = "ActivityEarliestStartTimeMinutesFromShiftStart"
+        case activityLatestStartTimeMinutesFromMidnight = "ActivityLatestStartTimeMinutesFromMidnight"
+        case activityLatestStartTimeMinutesFromShiftStart = "ActivityLatestStartTimeMinutesFromShiftStart"
+        case activityMinimumLengthFromShiftEndMinutes = "ActivityMinimumLengthFromShiftEndMinutes"
+        case activityMinimumLengthFromShiftStartMinutes = "ActivityMinimumLengthFromShiftStartMinutes"
+        case activityStartTimeIncrementInMinutes = "ActivityStartTimeIncrementInMinutes"
+        case planningPeriodMaximumDaysOff = "PlanningPeriodMaximumDaysOff"
+        case planningPeriodMaximumPaidTimeMinutes = "PlanningPeriodMaximumPaidTimeMinutes"
+        case planningPeriodMinimumDaysOff = "PlanningPeriodMinimumDaysOff"
+        case planningPeriodMinimumPaidTimeMinutes = "PlanningPeriodMinimumPaidTimeMinutes"
+        case shiftDayOffRule = "ShiftDayOffRule"
+        case shiftEarliestStartTimeMinutesFromMidnight = "ShiftEarliestStartTimeMinutesFromMidnight"
+        case shiftEarliestStopTimeMinutesFromMidnight = "ShiftEarliestStopTimeMinutesFromMidnight"
+        case shiftLatestStartTimeMinutesFromMidnight = "ShiftLatestStartTimeMinutesFromMidnight"
+        case shiftLatestStopTimeMinutesFromMidnight = "ShiftLatestStopTimeMinutesFromMidnight"
+        case shiftMaximumContiguousTimeMinutes = "ShiftMaximumContiguousTimeMinutes"
+        case shiftMaximumPaidTimeMinutes = "ShiftMaximumPaidTimeMinutes"
+        case shiftMinimumContiguousTimeMinutes = "ShiftMinimumContiguousTimeMinutes"
+        case shiftMinimumPaidTimeMinutes = "ShiftMinimumPaidTimeMinutes"
+        case shiftStartTimeIncrementInMinutes = "ShiftStartTimeIncrementInMinutes"
+        case shiftStartVarianceMaximumVarianceMinutes = "ShiftStartVarianceMaximumVarianceMinutes"
+        case shiftStartVariancePaidDuration = "ShiftStartVariancePaidDuration"
+        case workPlanMaximumConsecutiveWorkingDays = "WorkPlanMaximumConsecutiveWorkingDays"
+        case workPlanMaximumConsecutiveWorkingWeekends = "WorkPlanMaximumConsecutiveWorkingWeekends"
+        case workPlanMaximumWeeklyPaidTimeMinutes = "WorkPlanMaximumWeeklyPaidTimeMinutes"
+        case workPlanMaximumWorkingDaysPerWeek = "WorkPlanMaximumWorkingDaysPerWeek"
+        case workPlanMinimumConsecutiveNonWorkingTimePerWeekMinutes = "WorkPlanMinimumConsecutiveNonWorkingTimePerWeekMinutes"
+        case workPlanMinimumInterShiftTimeMinutes = "WorkPlanMinimumInterShiftTimeMinutes"
+        case workPlanMinimumShiftStartDistanceMinutes = "WorkPlanMinimumShiftStartDistanceMinutes"
+        case workPlanMinimumWeeklyPaidTimeMinutes = "WorkPlanMinimumWeeklyPaidTimeMinutes"
+        case workPlanMinimumWorkingDaysPerWeek = "WorkPlanMinimumWorkingDaysPerWeek"
+        case workPlanOptionalDays = "WorkPlanOptionalDays"
+        case workPlanPaidTimeGranularityMinutes = "WorkPlanPaidTimeGranularityMinutes"
+    }
+
+
+
+    /** Type of the work plan constraint in this message */
+    public var type: ModelType?
+    /** Arguments of the message that provide information about the constraint that is being conflicted with, such as the value of the constraint */
+    public var arguments: [WorkPlanValidationMessageArgument]?
+
+    public init(type: ModelType?, arguments: [WorkPlanValidationMessageArgument]?) {
+        self.type = type
+        self.arguments = arguments
+    }
+
+
+}
+
+
+
+
+public class WorkPlanRotationAgentResponse: Codable {
+
+
+
+
+
+
+
+    /** The user associated with this work plan rotation */
+    public var user: UserReference?
+    /** The date range to which this agent is effective in the work plan rotation */
+    public var dateRange: DateRangeWithOptionalEnd?
+    /** Start position of the work plan in the pattern for this agent in the work plan rotation. Position value starts from 0 */
+    public var position: Int?
+
+    public init(user: UserReference?, dateRange: DateRangeWithOptionalEnd?, position: Int?) {
+        self.user = user
+        self.dateRange = dateRange
+        self.position = position
+    }
+
+
+}
+
+
+
+
+public class WorkPlanRotationResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** Whether the work plan rotation is enabled for scheduling */
+    public var enabled: Bool?
+    /** The date range to which this work plan rotation applies */
+    public var dateRange: DateRangeWithOptionalEnd?
+    /** Pattern with ordered list of work plans that rotate on a weekly basis */
+    public var pattern: WorkPlanPatternResponse?
+    /** Number of agents in this work plan rotation */
+    public var agentCount: Int?
+    /** Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list) */
+    public var agents: [WorkPlanRotationAgentResponse]?
+    /** Version metadata for this work plan rotation */
+    public var metadata: WfmVersionedEntityMetadata?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, enabled: Bool?, dateRange: DateRangeWithOptionalEnd?, pattern: WorkPlanPatternResponse?, agentCount: Int?, agents: [WorkPlanRotationAgentResponse]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.enabled = enabled
+        self.dateRange = dateRange
+        self.pattern = pattern
+        self.agentCount = agentCount
+        self.agents = agents
+        self.metadata = metadata
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case enabled
+        case dateRange
+        case pattern
+        case agentCount
+        case agents
+        case metadata
+        case selfUri
     }
 
 
@@ -37529,6 +38128,7 @@ public class WorkitemsEventsNotificationSession: Codable {
         case agent = "Agent"
         case queueAssignment = "QueueAssignment"
         case directAssignment = "DirectAssignment"
+        case agentComplete = "AgentComplete"
     }
 
 
@@ -37863,6 +38463,7 @@ public class WorkitemsUserEventsNotificationSession: Codable {
         case agent = "Agent"
         case queueAssignment = "QueueAssignment"
         case directAssignment = "DirectAssignment"
+        case agentComplete = "AgentComplete"
     }
 
 

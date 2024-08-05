@@ -1308,6 +1308,7 @@ open class ContentManagementAPI {
   "id" : "id",
   "memberType" : "USER",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1862,6 +1863,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2296,6 +2298,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2646,6 +2649,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4057,6 +4061,7 @@ open class ContentManagementAPI {
   "id" : "id",
   "memberType" : "USER",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4480,6 +4485,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4825,6 +4831,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -6229,6 +6236,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -6579,6 +6587,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -6930,6 +6939,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -7280,6 +7290,7 @@ open class ContentManagementAPI {
     "id" : "id",
     "memberType" : "USER",
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -7983,6 +7994,7 @@ open class ContentManagementAPI {
   "id" : "id",
   "memberType" : "USER",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

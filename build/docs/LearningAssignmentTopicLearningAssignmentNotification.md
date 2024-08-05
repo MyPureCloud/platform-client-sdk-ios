@@ -19,6 +19,9 @@ title: LearningAssignmentTopicLearningAssignmentNotification
 | **dateModified** | [**Date**](Date.html) |  | [optional] |
 | **isOverdue** | **Bool** |  | [optional] |
 | **lengthInMinutes** | **Int** |  | [optional] |
+| **percentageScore** | **Double** |  | [optional] |
+| **isPassed** | **Bool** |  | [optional] |
+| **type** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

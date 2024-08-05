@@ -578,6 +578,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -866,6 +867,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1189,6 +1191,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1477,6 +1480,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1778,6 +1782,7 @@ open class OrganizationAuthorizationAPI {
   "trustee" : "{}",
   "id" : "id",
   "users" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1834,6 +1839,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2373,6 +2379,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -2429,6 +2436,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3182,6 +3190,7 @@ open class OrganizationAuthorizationAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "owners" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3470,6 +3479,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3985,6 +3995,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4273,6 +4284,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4596,6 +4608,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4884,6 +4897,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -5251,6 +5265,7 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -5307,6 +5322,7 @@ open class OrganizationAuthorizationAPI {
     "resolution" : "resolution"
   } ],
   "manager" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -6023,6 +6039,7 @@ open class OrganizationAuthorizationAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -6079,6 +6096,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -6603,6 +6621,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -6659,6 +6678,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -7617,6 +7637,7 @@ open class OrganizationAuthorizationAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "owners" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -7905,6 +7926,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -8295,6 +8317,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -8583,6 +8606,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -8906,6 +8930,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9194,6 +9219,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9561,6 +9587,7 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -9617,6 +9644,7 @@ open class OrganizationAuthorizationAPI {
     "resolution" : "resolution"
   } ],
   "manager" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -10208,6 +10236,7 @@ open class OrganizationAuthorizationAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -10264,6 +10293,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10788,6 +10818,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -10844,6 +10875,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11548,6 +11580,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11836,6 +11869,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -12159,6 +12193,7 @@ open class OrganizationAuthorizationAPI {
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "owners" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -12447,6 +12482,7 @@ open class OrganizationAuthorizationAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -12748,6 +12784,7 @@ open class OrganizationAuthorizationAPI {
   "trustee" : "{}",
   "id" : "id",
   "users" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -12804,6 +12841,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -13343,6 +13381,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -13399,6 +13438,7 @@ open class OrganizationAuthorizationAPI {
       "resolution" : "resolution"
     } ],
     "manager" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -14017,6 +14057,7 @@ open class OrganizationAuthorizationAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "owners" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -14305,6 +14346,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -14660,6 +14702,7 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -14716,6 +14759,7 @@ open class OrganizationAuthorizationAPI {
     "resolution" : "resolution"
   } ],
   "manager" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16243,6 +16287,7 @@ open class OrganizationAuthorizationAPI {
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "owners" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16531,6 +16576,7 @@ open class OrganizationAuthorizationAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16889,6 +16935,7 @@ open class OrganizationAuthorizationAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -16945,6 +16992,7 @@ open class OrganizationAuthorizationAPI {
     "resolution" : "resolution"
   } ],
   "manager" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

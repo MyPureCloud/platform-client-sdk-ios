@@ -1154,7 +1154,7 @@
       }
     ],
     "return": "RateLimitAggregateQueryResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RateLimitAggregationQuery = new RateLimitAggregationQuery(...) // query\n\n// Query for limits rate limit aggregates. Data populated when limits are exceeded or are close to being exceeded. Not a source of truth for limits hit but a best effort estimate.\nPostAnalyticsRatelimitsAggregatesQueryRequest.postAnalyticsRatelimitsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsRatelimitsAggregatesQueryRequest.postAnalyticsRatelimitsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RateLimitAggregationQuery = new RateLimitAggregationQuery(...) // query\n\n// Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate.\nPostAnalyticsRatelimitsAggregatesQueryRequest.postAnalyticsRatelimitsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsRatelimitsAggregatesQueryRequest.postAnalyticsRatelimitsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "postanalyticsreportingdashboardsusersbulkremove": {
     "operationId": "postanalyticsreportingdashboardsusersbulkremove",
@@ -16042,6 +16042,13 @@
     "return": "ActionCertificateListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet status: GetIntegrationsActionsCertificatesRequest.Status_getIntegrationsActionsCertificates = GetIntegrationsActionsCertificatesRequest.Status_getIntegrationsActionsCertificates.enummember // Indicates the validity of the certificate in question.\nlet type: GetIntegrationsActionsCertificatesRequest.ModelType_getIntegrationsActionsCertificates = GetIntegrationsActionsCertificatesRequest.ModelType_getIntegrationsActionsCertificates.enummember // Indicates the type of the certificate.\n\n// Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress.\nGetIntegrationsActionsCertificatesRequest.getIntegrationsActionsCertificates(status: status, type: type) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsActionsCertificatesRequest.getIntegrationsActionsCertificates was successful\")\n        dump(response)\n    }\n}"
   },
+  "getintegrationsactionscertificatestruststore": {
+    "operationId": "getintegrationsactionscertificatestruststore",
+    "functionName": "getIntegrationsActionsCertificatesTruststore",
+    "signature": "getIntegrationsActionsCertificatesTruststore()",
+    "return": "TrustedCertificates",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieves basic info about trusted root CA certificates\nGetIntegrationsActionsCertificatesTruststoreRequest.getIntegrationsActionsCertificatesTruststore() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsActionsCertificatesTruststoreRequest.getIntegrationsActionsCertificatesTruststore was successful\")\n        dump(response)\n    }\n}"
+  },
   "getintegrationsactionsdrafts": {
     "operationId": "getintegrationsactionsdrafts",
     "functionName": "getIntegrationsActionsDrafts",
@@ -21326,7 +21333,7 @@
       }
     ],
     "return": "LearningAssignmentsDomainEntity",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsRequest.Overdue_getLearningAssignments = GetLearningAssignmentsRequest.Overdue_getLearningAssignments.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsRequest.Pass_getLearningAssignments = GetLearningAssignmentsRequest.Pass_getLearningAssignments.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsRequest.SortOrder_getLearningAssignments = GetLearningAssignmentsRequest.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsRequest.SortBy_getLearningAssignments = GetLearningAssignmentsRequest.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs.\nlet types: [String] = [\"\"] // Specifies the module types to filter by\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning module Assignments\nGetLearningAssignmentsRequest.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsRequest.getLearningAssignments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsRequest.Overdue_getLearningAssignments = GetLearningAssignmentsRequest.Overdue_getLearningAssignments.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsRequest.Pass_getLearningAssignments = GetLearningAssignmentsRequest.Pass_getLearningAssignments.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsRequest.SortOrder_getLearningAssignments = GetLearningAssignmentsRequest.SortOrder_getLearningAssignments.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsRequest.SortBy_getLearningAssignments = GetLearningAssignmentsRequest.SortBy_getLearningAssignments.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs.\nlet types: [String] = [\"\"] // Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning module Assignments\nGetLearningAssignmentsRequest.getLearningAssignments(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, userId: userId, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsRequest.getLearningAssignments was successful\")\n        dump(response)\n    }\n}"
   },
   "getlearningassignmentsme": {
     "operationId": "getlearningassignmentsme",
@@ -21405,7 +21412,7 @@
       }
     ],
     "return": "LearningAssignmentsDomainEntity",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet types: [String] = [\"\"] // Specifies the module types to filter by\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning Assignments assigned to current user\nGetLearningAssignmentsMeRequest.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsMeRequest.getLearningAssignmentsMe was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module. Fetch assignments for learning module ID\nlet interval: String = \"\" // Specifies the range of dueDates to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Overdue_getLearningAssignmentsMe.enummember // Specifies if only the non-overdue (overdue is \\\"False\\\") or overdue (overdue is \\\"True\\\") assignments are returned. If overdue is \\\"Any\\\" or if the overdue parameter is not supplied, all assignments are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet pass: GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.Pass_getLearningAssignmentsMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") assignments (completed with assessment)are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all assignments are returned\nlet minPercentageScore: Float = 0 // The minimum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet maxPercentageScore: Float = 0 // The maximum assessment score for an assignment (completed with assessment) to be included in the results (inclusive)\nlet sortOrder: GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortOrder_getLearningAssignmentsMe.enummember // Specifies result set sort order; if not specified, default sort order is descending (Desc)\nlet sortBy: GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe = GetLearningAssignmentsMeRequest.SortBy_getLearningAssignmentsMe.enummember // Specifies which field to sort the results by, default sort is by recommendedCompletionDate\nlet types: [String] = [\"\"] // Specifies the module types to filter by. Informational, AssessedContent and Assessment are deprecated\nlet states: [String] = [\"\"] // Specifies the assignment states to filter by\nlet expand: [String] = [\"\"] // Specifies the expand option for returning additional information\n\n// List of Learning Assignments assigned to current user\nGetLearningAssignmentsMeRequest.getLearningAssignmentsMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pageSize: pageSize, pageNumber: pageNumber, pass: pass, minPercentageScore: minPercentageScore, maxPercentageScore: maxPercentageScore, sortOrder: sortOrder, sortBy: sortBy, types: types, states: states, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningAssignmentsMeRequest.getLearningAssignmentsMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getlearningmodule": {
     "operationId": "getlearningmodule",
@@ -21559,7 +21566,7 @@
       }
     ],
     "return": "LearningModulesDomainEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet isArchived: Bool = true // Archive status\nlet types: [String] = [\"\"] // Specifies the module types.\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetLearningModulesRequest.SortOrder_getLearningModules = GetLearningModulesRequest.SortOrder_getLearningModules.enummember // Sort order\nlet sortBy: GetLearningModulesRequest.SortBy_getLearningModules = GetLearningModulesRequest.SortBy_getLearningModules.enummember // Sort by\nlet searchTerm: String = \"\" // Search Term (searchable by name)\nlet expand: [String] = [\"\"] // Fields to expand in response(case insensitive)\nlet isPublished: GetLearningModulesRequest.IsPublished_getLearningModules = GetLearningModulesRequest.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \\\"False\\\") or Published (isPublished is \\\"True\\\") modules are returned. If isPublished is \\\"Any\\\" or omitted, both types are returned\nlet statuses: [String] = [\"\"] // Specifies the module statuses to filter by\nlet externalIds: [String] = [\"\"] // Specifies the module external IDs to filter by. Only one ID is allowed\n\n// Get all learning modules of an organization\nGetLearningModulesRequest.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningModulesRequest.getLearningModules was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet isArchived: Bool = true // Archive status\nlet types: [String] = [\"\"] // Specifies the module types. Informational, AssessedContent and Assessment are deprecated\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetLearningModulesRequest.SortOrder_getLearningModules = GetLearningModulesRequest.SortOrder_getLearningModules.enummember // Sort order\nlet sortBy: GetLearningModulesRequest.SortBy_getLearningModules = GetLearningModulesRequest.SortBy_getLearningModules.enummember // Sort by\nlet searchTerm: String = \"\" // Search Term (searchable by name)\nlet expand: [String] = [\"\"] // Fields to expand in response(case insensitive)\nlet isPublished: GetLearningModulesRequest.IsPublished_getLearningModules = GetLearningModulesRequest.IsPublished_getLearningModules.enummember // Specifies if only the Unpublished (isPublished is \\\"False\\\") or Published (isPublished is \\\"True\\\") modules are returned. If isPublished is \\\"Any\\\" or omitted, both types are returned\nlet statuses: [String] = [\"\"] // Specifies the module statuses to filter by\nlet externalIds: [String] = [\"\"] // Specifies the module external IDs to filter by. Only one ID is allowed\n\n// Get all learning modules of an organization\nGetLearningModulesRequest.getLearningModules(isArchived: isArchived, types: types, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, sortBy: sortBy, searchTerm: searchTerm, expand: expand, isPublished: isPublished, statuses: statuses, externalIds: externalIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLearningModulesRequest.getLearningModules was successful\")\n        dump(response)\n    }\n}"
   },
   "getlearningmodulesassignments": {
     "operationId": "getlearningmodulesassignments",
@@ -23079,6 +23086,35 @@
     "return": "LimitsEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to fetch limits for\n\n// Get the effective limits in a namespace for an organization\nGetOrganizationsLimitsNamespaceRequest.getOrganizationsLimitsNamespace(namespaceName: namespaceName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceRequest.getOrganizationsLimitsNamespace was successful\")\n        dump(response)\n    }\n}"
   },
+  "getorganizationslimitsnamespacecounts": {
+    "operationId": "getorganizationslimitsnamespacecounts",
+    "functionName": "getOrganizationsLimitsNamespaceCounts",
+    "signature": "getOrganizationsLimitsNamespaceCounts(namespaceName, cursor, entityId, userId)",
+    "parameters": [
+      {
+        "name": "namespaceName",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "entityId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "LimitCountListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to get\nlet cursor: String = \"\" // Cursor provided when retrieving the last page\nlet entityId: String = \"\" // entity id of the count\nlet userId: String = \"\" // userid of the count\n\n// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.\nGetOrganizationsLimitsNamespaceCountsRequest.getOrganizationsLimitsNamespaceCounts(namespaceName: namespaceName, cursor: cursor, entityId: entityId, userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceCountsRequest.getOrganizationsLimitsNamespaceCounts was successful\")\n        dump(response)\n    }\n}"
+  },
   "getorganizationslimitsnamespacedefaults": {
     "operationId": "getorganizationslimitsnamespacedefaults",
     "functionName": "getOrganizationsLimitsNamespaceDefaults",
@@ -23092,6 +23128,40 @@
     ],
     "return": "LimitsEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to fetch defaults limits for\n\n// Get the default limits in a namespace for an organization\nGetOrganizationsLimitsNamespaceDefaultsRequest.getOrganizationsLimitsNamespaceDefaults(namespaceName: namespaceName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceDefaultsRequest.getOrganizationsLimitsNamespaceDefaults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getorganizationslimitsnamespacelimitcounts": {
+    "operationId": "getorganizationslimitsnamespacelimitcounts",
+    "functionName": "getOrganizationsLimitsNamespaceLimitCounts",
+    "signature": "getOrganizationsLimitsNamespaceLimitCounts(namespaceName, limitName, entityId, userId, cursor)",
+    "parameters": [
+      {
+        "name": "namespaceName",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "limitName",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "entityId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "LimitCountListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to get\nlet limitName: String = \"\" // The limit to get\nlet entityId: String = \"\" // entity id of the count\nlet userId: String = \"\" // userid of the count\nlet cursor: String = \"\" // Cursor provided when retrieving the last page\n\n// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.\nGetOrganizationsLimitsNamespaceLimitCountsRequest.getOrganizationsLimitsNamespaceLimitCounts(namespaceName: namespaceName, limitName: limitName, entityId: entityId, userId: userId, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceLimitCountsRequest.getOrganizationsLimitsNamespaceLimitCounts was successful\")\n        dump(response)\n    }\n}"
   },
   "getorganizationslimitsnamespaces": {
     "operationId": "getorganizationslimitsnamespaces",
@@ -36085,11 +36155,11 @@
       {
         "name": "body",
         "type": "WorktypeUpdate",
-        "required": "false"
+        "required": "true"
       }
     ],
     "return": "Worktype",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet body: WorktypeUpdate = new WorktypeUpdate(...) // body\n\n// Update the attributes of a worktype\nPatchTaskmanagementWorktypeRequest.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorktypeRequest.patchTaskmanagementWorktype was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet body: WorktypeUpdate = new WorktypeUpdate(...) // Worktype\n\n// Update the attributes of a worktype\nPatchTaskmanagementWorktypeRequest.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorktypeRequest.patchTaskmanagementWorktype was successful\")\n        dump(response)\n    }\n}"
   },
   "patchtaskmanagementworktypestatus": {
     "operationId": "patchtaskmanagementworktypestatus",
@@ -36109,11 +36179,11 @@
       {
         "name": "body",
         "type": "WorkitemStatusUpdate",
-        "required": "false"
+        "required": "true"
       }
     ],
     "return": "WorkitemStatus",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet statusId: String = \"\" // Status id\nlet body: WorkitemStatusUpdate = new WorkitemStatusUpdate(...) // body\n\n// Update the attributes of a status\nPatchTaskmanagementWorktypeStatusRequest.patchTaskmanagementWorktypeStatus(worktypeId: worktypeId, statusId: statusId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorktypeStatusRequest.patchTaskmanagementWorktypeStatus was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet statusId: String = \"\" // Status id\nlet body: WorkitemStatusUpdate = new WorkitemStatusUpdate(...) // Status\n\n// Update the attributes of a status\nPatchTaskmanagementWorktypeStatusRequest.patchTaskmanagementWorktypeStatus(worktypeId: worktypeId, statusId: statusId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorktypeStatusRequest.patchTaskmanagementWorktypeStatus was successful\")\n        dump(response)\n    }\n}"
   },
   "posttaskmanagementworkbins": {
     "operationId": "posttaskmanagementworkbins",
@@ -36123,11 +36193,11 @@
       {
         "name": "body",
         "type": "WorkbinCreate",
-        "required": "false"
+        "required": "true"
       }
     ],
     "return": "Workbin",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WorkbinCreate = new WorkbinCreate(...) // body\n\n// Create a workbin\nPostTaskmanagementWorkbinsRequest.postTaskmanagementWorkbins(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorkbinsRequest.postTaskmanagementWorkbins was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WorkbinCreate = new WorkbinCreate(...) // Workbin\n\n// Create a workbin\nPostTaskmanagementWorkbinsRequest.postTaskmanagementWorkbins(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorkbinsRequest.postTaskmanagementWorkbins was successful\")\n        dump(response)\n    }\n}"
   },
   "posttaskmanagementworkbinsquery": {
     "operationId": "posttaskmanagementworkbinsquery",
@@ -36245,11 +36315,11 @@
       {
         "name": "body",
         "type": "WorkitemStatusCreate",
-        "required": "false"
+        "required": "true"
       }
     ],
     "return": "WorkitemStatus",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet body: WorkitemStatusCreate = new WorkitemStatusCreate(...) // body\n\n// Add a status to a worktype\nPostTaskmanagementWorktypeStatusesRequest.postTaskmanagementWorktypeStatuses(worktypeId: worktypeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorktypeStatusesRequest.postTaskmanagementWorktypeStatuses was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet body: WorkitemStatusCreate = new WorkitemStatusCreate(...) // Status\n\n// Add a status to a worktype\nPostTaskmanagementWorktypeStatusesRequest.postTaskmanagementWorktypeStatuses(worktypeId: worktypeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorktypeStatusesRequest.postTaskmanagementWorktypeStatuses was successful\")\n        dump(response)\n    }\n}"
   },
   "posttaskmanagementworktypes": {
     "operationId": "posttaskmanagementworktypes",
@@ -36259,11 +36329,11 @@
       {
         "name": "body",
         "type": "WorktypeCreate",
-        "required": "false"
+        "required": "true"
       }
     ],
     "return": "Worktype",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WorktypeCreate = new WorktypeCreate(...) // body\n\n// Create a worktype\nPostTaskmanagementWorktypesRequest.postTaskmanagementWorktypes(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorktypesRequest.postTaskmanagementWorktypes was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WorktypeCreate = new WorktypeCreate(...) // Worktype\n\n// Create a worktype\nPostTaskmanagementWorktypesRequest.postTaskmanagementWorktypes(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorktypesRequest.postTaskmanagementWorktypes was successful\")\n        dump(response)\n    }\n}"
   },
   "posttaskmanagementworktypesquery": {
     "operationId": "posttaskmanagementworktypesquery",
@@ -39828,7 +39898,7 @@
       }
     ],
     "return": "DevelopmentActivityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId.\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pass: GetUsersDevelopmentActivitiesRequest.Pass_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Pass_getUsersDevelopmentActivities.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") activities are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types.\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities\nGetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: [String] = [\"\"] // Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId.\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Overdue_getUsersDevelopmentActivities.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pass: GetUsersDevelopmentActivitiesRequest.Pass_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.Pass_getUsersDevelopmentActivities.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") activities are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities = GetUsersDevelopmentActivitiesRequest.SortOrder_getUsersDevelopmentActivities.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types. Informational, AssessedContent and Assessment are deprecated\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities\nGetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities(userId: userId, moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesRequest.getUsersDevelopmentActivities was successful\")\n        dump(response)\n    }\n}"
   },
   "getusersdevelopmentactivitiesme": {
     "operationId": "getusersdevelopmentactivitiesme",
@@ -39892,7 +39962,7 @@
       }
     ],
     "return": "DevelopmentActivityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pass: GetUsersDevelopmentActivitiesMeRequest.Pass_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Pass_getUsersDevelopmentActivitiesMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") activities are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types.\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities for current user\nGetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet moduleId: String = \"\" // Specifies the ID of the learning module.\nlet interval: String = \"\" // Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet completionInterval: String = \"\" // Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss\nlet overdue: GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Overdue_getUsersDevelopmentActivitiesMe.enummember // Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned\nlet pass: GetUsersDevelopmentActivitiesMeRequest.Pass_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.Pass_getUsersDevelopmentActivitiesMe.enummember // Specifies if only the failed (pass is \\\"False\\\") or passed (pass is \\\"True\\\") activities are returned. If pass is \\\"Any\\\" or if the pass parameter is not supplied, all activities are returned\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe = GetUsersDevelopmentActivitiesMeRequest.SortOrder_getUsersDevelopmentActivitiesMe.enummember // Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc)\nlet types: [String] = [\"\"] // Specifies the activity types. Informational, AssessedContent and Assessment are deprecated\nlet statuses: [String] = [\"\"] // Specifies the activity statuses to filter by\nlet relationship: [String] = [\"\"] // Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied.\n\n// Get list of Development Activities for current user\nGetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe(moduleId: moduleId, interval: interval, completionInterval: completionInterval, overdue: overdue, pass: pass, pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, types: types, statuses: statuses, relationship: relationship) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivitiesMeRequest.getUsersDevelopmentActivitiesMe was successful\")\n        dump(response)\n    }\n}"
   },
   "getusersdevelopmentactivity": {
     "operationId": "getusersdevelopmentactivity",
@@ -39911,7 +39981,7 @@
       }
     ],
     "return": "DevelopmentActivity",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet activityId: String = \"\" // Specifies the activity ID, maps to either assignment or appointment ID\nlet type: GetUsersDevelopmentActivityRequest.ModelType_getUsersDevelopmentActivity = GetUsersDevelopmentActivityRequest.ModelType_getUsersDevelopmentActivity.enummember // Specifies the activity type.\n\n// Get a Development Activity\nGetUsersDevelopmentActivityRequest.getUsersDevelopmentActivity(activityId: activityId, type: type) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivityRequest.getUsersDevelopmentActivity was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet activityId: String = \"\" // Specifies the activity ID, maps to either assignment or appointment ID\nlet type: GetUsersDevelopmentActivityRequest.ModelType_getUsersDevelopmentActivity = GetUsersDevelopmentActivityRequest.ModelType_getUsersDevelopmentActivity.enummember // Specifies the activity type. Informational, AssessedContent and Assessment are deprecated\n\n// Get a Development Activity\nGetUsersDevelopmentActivityRequest.getUsersDevelopmentActivity(activityId: activityId, type: type) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUsersDevelopmentActivityRequest.getUsersDevelopmentActivity was successful\")\n        dump(response)\n    }\n}"
   },
   "getusersme": {
     "operationId": "getusersme",
@@ -41539,6 +41609,47 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet forecastId: String = \"\" // The ID of the forecast\n\n// Delete a short term forecast\nDeleteWorkforcemanagementBusinessunitWeekShorttermforecastRequest.deleteWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId: businessUnitId, weekDateId: weekDateId, forecastId: forecastId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWorkforcemanagementBusinessunitWeekShorttermforecastRequest.deleteWorkforcemanagementBusinessunitWeekShorttermforecast was successful\")\n    }\n}"
   },
+  "deleteworkforcemanagementbusinessunitworkplanbid": {
+    "operationId": "deleteworkforcemanagementbusinessunitworkplanbid",
+    "functionName": "deleteWorkforcemanagementBusinessunitWorkplanbid",
+    "signature": "deleteWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The ID of the work plan bid\n\n// Delete a work plan bid\nDeleteWorkforcemanagementBusinessunitWorkplanbidRequest.deleteWorkforcemanagementBusinessunitWorkplanbid(businessUnitId: businessUnitId, bidId: bidId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWorkforcemanagementBusinessunitWorkplanbidRequest.deleteWorkforcemanagementBusinessunitWorkplanbid was successful\")\n    }\n}"
+  },
+  "deleteworkforcemanagementbusinessunitworkplanbidgroup": {
+    "operationId": "deleteworkforcemanagementbusinessunitworkplanbidgroup",
+    "functionName": "deleteWorkforcemanagementBusinessunitWorkplanbidGroup",
+    "signature": "deleteWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\nlet bidGroupId: String = \"\" // Work Plan Bid Group id\n\n// Delete a bid group by bid group Id\nDeleteWorkforcemanagementBusinessunitWorkplanbidGroupRequest.deleteWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteWorkforcemanagementBusinessunitWorkplanbidGroupRequest.deleteWorkforcemanagementBusinessunitWorkplanbidGroup was successful\")\n    }\n}"
+  },
   "deleteworkforcemanagementcalendarurlics": {
     "operationId": "deleteworkforcemanagementcalendarurlics",
     "functionName": "deleteWorkforcemanagementCalendarUrlIcs",
@@ -41740,6 +41851,97 @@
     "return": "AgentManagementUnitReference",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the management unit to which the currently logged in agent belongs\nGetWorkforcemanagementAgentsMeManagementunitRequest.getWorkforcemanagementAgentsMeManagementunit() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAgentsMeManagementunitRequest.getWorkforcemanagementAgentsMeManagementunit was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementalternativeshiftsoffersjob": {
+    "operationId": "getworkforcemanagementalternativeshiftsoffersjob",
+    "functionName": "getWorkforcemanagementAlternativeshiftsOffersJob",
+    "signature": "getWorkforcemanagementAlternativeshiftsOffersJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of the job\n\n// Query the status of an alternative shift offers operation. Only the user who started the operation can query the status\nGetWorkforcemanagementAlternativeshiftsOffersJobRequest.getWorkforcemanagementAlternativeshiftsOffersJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsOffersJobRequest.getWorkforcemanagementAlternativeshiftsOffersJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementalternativeshiftsofferssearchjob": {
+    "operationId": "getworkforcemanagementalternativeshiftsofferssearchjob",
+    "functionName": "getWorkforcemanagementAlternativeshiftsOffersSearchJob",
+    "signature": "getWorkforcemanagementAlternativeshiftsOffersSearchJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of the job\n\n// Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status\nGetWorkforcemanagementAlternativeshiftsOffersSearchJobRequest.getWorkforcemanagementAlternativeshiftsOffersSearchJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsOffersSearchJobRequest.getWorkforcemanagementAlternativeshiftsOffersSearchJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementalternativeshiftssettings": {
+    "operationId": "getworkforcemanagementalternativeshiftssettings",
+    "functionName": "getWorkforcemanagementAlternativeshiftsSettings",
+    "signature": "getWorkforcemanagementAlternativeshiftsSettings()",
+    "return": "AlternativeShiftBuSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get alternative shifts settings from the current logged in agent’s business unit\nGetWorkforcemanagementAlternativeshiftsSettingsRequest.getWorkforcemanagementAlternativeshiftsSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsSettingsRequest.getWorkforcemanagementAlternativeshiftsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementalternativeshiftstrade": {
+    "operationId": "getworkforcemanagementalternativeshiftstrade",
+    "functionName": "getWorkforcemanagementAlternativeshiftsTrade",
+    "signature": "getWorkforcemanagementAlternativeshiftsTrade(tradeId)",
+    "parameters": [
+      {
+        "name": "tradeId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftTradeResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tradeId: String = \"\" // The ID of the alternative shift trade\n\n// Get my alternative shift trade by trade ID\nGetWorkforcemanagementAlternativeshiftsTradeRequest.getWorkforcemanagementAlternativeshiftsTrade(tradeId: tradeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsTradeRequest.getWorkforcemanagementAlternativeshiftsTrade was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementalternativeshiftstrades": {
+    "operationId": "getworkforcemanagementalternativeshiftstrades",
+    "functionName": "getWorkforcemanagementAlternativeshiftsTrades",
+    "signature": "getWorkforcemanagementAlternativeshiftsTrades(forceAsync)",
+    "parameters": [
+      {
+        "name": "forceAsync",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "ListAlternativeShiftTradesResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes\n\n// Get a list of my alternative shifts trades\nGetWorkforcemanagementAlternativeshiftsTradesRequest.getWorkforcemanagementAlternativeshiftsTrades(forceAsync: forceAsync) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsTradesRequest.getWorkforcemanagementAlternativeshiftsTrades was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementalternativeshiftstradesjob": {
+    "operationId": "getworkforcemanagementalternativeshiftstradesjob",
+    "functionName": "getWorkforcemanagementAlternativeshiftsTradesJob",
+    "signature": "getWorkforcemanagementAlternativeshiftsTradesJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of the job\n\n// Query the status of an alternative shift trades operation. Only the user who started the operation can query the status\nGetWorkforcemanagementAlternativeshiftsTradesJobRequest.getWorkforcemanagementAlternativeshiftsTradesJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsTradesJobRequest.getWorkforcemanagementAlternativeshiftsTradesJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementalternativeshiftstradesstatejob": {
+    "operationId": "getworkforcemanagementalternativeshiftstradesstatejob",
+    "functionName": "getWorkforcemanagementAlternativeshiftsTradesStateJob",
+    "signature": "getWorkforcemanagementAlternativeshiftsTradesStateJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The ID of the job\n\n// Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status\nGetWorkforcemanagementAlternativeshiftsTradesStateJobRequest.getWorkforcemanagementAlternativeshiftsTradesStateJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementAlternativeshiftsTradesStateJobRequest.getWorkforcemanagementAlternativeshiftsTradesStateJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "getworkforcemanagementbusinessunit": {
     "operationId": "getworkforcemanagementbusinessunit",
     "functionName": "getWorkforcemanagementBusinessunit",
@@ -41796,6 +41998,58 @@
     ],
     "return": "BusinessUnitActivityCodeListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\n\n// Get activity codes\nGetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId, forceDownloadService: forceDownloadService) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitalternativeshiftssettings": {
+    "operationId": "getworkforcemanagementbusinessunitalternativeshiftssettings",
+    "functionName": "getWorkforcemanagementBusinessunitAlternativeshiftsSettings",
+    "signature": "getWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftBuSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\n\n// Get alternative shifts settings for a business unit\nGetWorkforcemanagementBusinessunitAlternativeshiftsSettingsRequest.getWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId: businessUnitId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitAlternativeshiftsSettingsRequest.getWorkforcemanagementBusinessunitAlternativeshiftsSettings was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitalternativeshiftstrade": {
+    "operationId": "getworkforcemanagementbusinessunitalternativeshiftstrade",
+    "functionName": "getWorkforcemanagementBusinessunitAlternativeshiftsTrade",
+    "signature": "getWorkforcemanagementBusinessunitAlternativeshiftsTrade(businessUnitId, tradeId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "tradeId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftTradeResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet tradeId: String = \"\" // The ID of the alternative shift trade\n\n// Get an alternative shifts trade in a business unit for a given trade ID\nGetWorkforcemanagementBusinessunitAlternativeshiftsTradeRequest.getWorkforcemanagementBusinessunitAlternativeshiftsTrade(businessUnitId: businessUnitId, tradeId: tradeId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitAlternativeshiftsTradeRequest.getWorkforcemanagementBusinessunitAlternativeshiftsTrade was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitalternativeshiftstradessearchjob": {
+    "operationId": "getworkforcemanagementbusinessunitalternativeshiftstradessearchjob",
+    "functionName": "getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob",
+    "signature": "getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob(businessUnitId, jobId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "BuAlternativeShiftJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet jobId: String = \"\" // The ID of the job\n\n// Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status\nGetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJobRequest.getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob(businessUnitId: businessUnitId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJobRequest.getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunitintradayplanninggroups": {
     "operationId": "getworkforcemanagementbusinessunitintradayplanninggroups",
@@ -42477,6 +42731,106 @@
     ],
     "return": "BuShortTermForecastListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: String = \"\" // The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts\n\n// Get short term forecasts\nGetWorkforcemanagementBusinessunitWeekShorttermforecastsRequest.getWorkforcemanagementBusinessunitWeekShorttermforecasts(businessUnitId: businessUnitId, weekDateId: weekDateId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWeekShorttermforecastsRequest.getWorkforcemanagementBusinessunitWeekShorttermforecasts was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitworkplanbid": {
+    "operationId": "getworkforcemanagementbusinessunitworkplanbid",
+    "functionName": "getWorkforcemanagementBusinessunitWorkplanbid",
+    "signature": "getWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WorkPlanBid",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The id of the workplanbid\n\n// Get a work plan bid\nGetWorkforcemanagementBusinessunitWorkplanbidRequest.getWorkforcemanagementBusinessunitWorkplanbid(businessUnitId: businessUnitId, bidId: bidId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWorkplanbidRequest.getWorkforcemanagementBusinessunitWorkplanbid was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitworkplanbidgroup": {
+    "operationId": "getworkforcemanagementbusinessunitworkplanbidgroup",
+    "functionName": "getWorkforcemanagementBusinessunitWorkplanbidGroup",
+    "signature": "getWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WorkPlanBidGroupResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\nlet bidGroupId: String = \"\" // Work Plan Bid Group id\n\n// Get a bid group by bid group Id\nGetWorkforcemanagementBusinessunitWorkplanbidGroupRequest.getWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWorkplanbidGroupRequest.getWorkforcemanagementBusinessunitWorkplanbidGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitworkplanbidgrouppreferences": {
+    "operationId": "getworkforcemanagementbusinessunitworkplanbidgrouppreferences",
+    "functionName": "getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences",
+    "signature": "getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidGroupId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AdminAgentWorkPlanPreferenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\nlet bidGroupId: String = \"\" // The ID of the work plan bid group\n\n// Gets the work plan preferences of all the agents in the work plan bid group\nGetWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesRequest.getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesRequest.getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitworkplanbidgroupssummary": {
+    "operationId": "getworkforcemanagementbusinessunitworkplanbidgroupssummary",
+    "functionName": "getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary",
+    "signature": "getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary(businessUnitId, bidId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WorkPlanBidGroupSummaryList",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\n\n// Get summary of bid groups that belong to a work plan bid\nGetWorkforcemanagementBusinessunitWorkplanbidGroupsSummaryRequest.getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary(businessUnitId: businessUnitId, bidId: bidId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummaryRequest.getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitworkplanbids": {
+    "operationId": "getworkforcemanagementbusinessunitworkplanbids",
+    "functionName": "getWorkforcemanagementBusinessunitWorkplanbids",
+    "signature": "getWorkforcemanagementBusinessunitWorkplanbids(businessUnitId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WorkPlanBidListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\n\n// Get list of work plan bids\nGetWorkforcemanagementBusinessunitWorkplanbidsRequest.getWorkforcemanagementBusinessunitWorkplanbids(businessUnitId: businessUnitId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitWorkplanbidsRequest.getWorkforcemanagementBusinessunitWorkplanbids was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementbusinessunits": {
     "operationId": "getworkforcemanagementbusinessunits",
@@ -43176,6 +43530,55 @@
     "return": "TimeOffRequestList",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days\n\n// Get a list of time off requests for the current user\nGetWorkforcemanagementTimeoffrequestsRequest.getWorkforcemanagementTimeoffrequests(recentlyReviewed: recentlyReviewed) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementTimeoffrequestsRequest.getWorkforcemanagementTimeoffrequests was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementuserworkplanbidranks": {
+    "operationId": "getworkforcemanagementuserworkplanbidranks",
+    "functionName": "getWorkforcemanagementUserWorkplanbidranks",
+    "signature": "getWorkforcemanagementUserWorkplanbidranks(userId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WorkPlanBidRanks",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The userId to whom the work plan bid ranks apply.\n\n// Get work plan bid ranks for a user\nGetWorkforcemanagementUserWorkplanbidranksRequest.getWorkforcemanagementUserWorkplanbidranks(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementUserWorkplanbidranksRequest.getWorkforcemanagementUserWorkplanbidranks was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementworkplanbidpreferences": {
+    "operationId": "getworkforcemanagementworkplanbidpreferences",
+    "functionName": "getWorkforcemanagementWorkplanbidPreferences",
+    "signature": "getWorkforcemanagementWorkplanbidPreferences(bidId)",
+    "parameters": [
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AgentWorkPlanBiddingPreferenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bidId: String = \"\" // The ID of the work plan bid\n\n// Gets an agent's work plan bidding preference\nGetWorkforcemanagementWorkplanbidPreferencesRequest.getWorkforcemanagementWorkplanbidPreferences(bidId: bidId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementWorkplanbidPreferencesRequest.getWorkforcemanagementWorkplanbidPreferences was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementworkplanbidworkplans": {
+    "operationId": "getworkforcemanagementworkplanbidworkplans",
+    "functionName": "getWorkforcemanagementWorkplanbidWorkplans",
+    "signature": "getWorkforcemanagementWorkplanbidWorkplans(bidId)",
+    "parameters": [
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AgentWorkPlanListResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bidId: String = \"\" // The ID of the work plan bid\n\n// Gets an agent's work plans for a bid\nGetWorkforcemanagementWorkplanbidWorkplansRequest.getWorkforcemanagementWorkplanbidWorkplans(bidId: bidId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementWorkplanbidWorkplansRequest.getWorkforcemanagementWorkplanbidWorkplans was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementworkplanbids": {
+    "operationId": "getworkforcemanagementworkplanbids",
+    "functionName": "getWorkforcemanagementWorkplanbids",
+    "signature": "getWorkforcemanagementWorkplanbids()",
+    "return": "AgentWorkPlanBids",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Gets the list of work plan bids that belong to an agent\nGetWorkforcemanagementWorkplanbidsRequest.getWorkforcemanagementWorkplanbids() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementWorkplanbidsRequest.getWorkforcemanagementWorkplanbids was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchworkforcemanagementagentadherenceexplanation": {
     "operationId": "patchworkforcemanagementagentadherenceexplanation",
     "functionName": "patchWorkforcemanagementAgentAdherenceExplanation",
@@ -43199,6 +43602,39 @@
     ],
     "return": "AdherenceExplanationAsyncResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet agentId: String = \"\" // The ID of the agent to query\nlet explanationId: String = \"\" // The ID of the explanation to update\nlet body: UpdateAdherenceExplanationStatusRequest = new UpdateAdherenceExplanationStatusRequest(...) // The request body\n\n// Update an adherence explanation\nPatchWorkforcemanagementAgentAdherenceExplanationRequest.patchWorkforcemanagementAgentAdherenceExplanation(agentId: agentId, explanationId: explanationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementAgentAdherenceExplanationRequest.patchWorkforcemanagementAgentAdherenceExplanation was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementalternativeshiftstrade": {
+    "operationId": "patchworkforcemanagementalternativeshiftstrade",
+    "functionName": "patchWorkforcemanagementAlternativeshiftsTrade",
+    "signature": "patchWorkforcemanagementAlternativeshiftsTrade(tradeId, body)",
+    "parameters": [
+      {
+        "name": "tradeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AgentUpdateAlternativeShiftTradeRequest",
+        "required": "false"
+      }
+    ],
+    "return": "AlternativeShiftTradeResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet tradeId: String = \"\" // The ID of the alternative shift trade\nlet body: AgentUpdateAlternativeShiftTradeRequest = new AgentUpdateAlternativeShiftTradeRequest(...) // body\n\n// Update my alternative shifts trade by trade ID\nPatchWorkforcemanagementAlternativeshiftsTradeRequest.patchWorkforcemanagementAlternativeshiftsTrade(tradeId: tradeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementAlternativeshiftsTradeRequest.patchWorkforcemanagementAlternativeshiftsTrade was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementalternativeshiftstradesstatejobs": {
+    "operationId": "patchworkforcemanagementalternativeshiftstradesstatejobs",
+    "functionName": "patchWorkforcemanagementAlternativeshiftsTradesStateJobs",
+    "signature": "patchWorkforcemanagementAlternativeshiftsTradesStateJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AdminBulkUpdateAlternativeShiftTradeStateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftAsyncResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: AdminBulkUpdateAlternativeShiftTradeStateRequest = new AdminBulkUpdateAlternativeShiftTradeStateRequest(...) // The request body\n\n// Bulk update alternative shift trade states\nPatchWorkforcemanagementAlternativeshiftsTradesStateJobsRequest.patchWorkforcemanagementAlternativeshiftsTradesStateJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementAlternativeshiftsTradesStateJobsRequest.patchWorkforcemanagementAlternativeshiftsTradesStateJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "patchworkforcemanagementbusinessunit": {
     "operationId": "patchworkforcemanagementbusinessunit",
@@ -43242,6 +43678,25 @@
     ],
     "return": "BusinessUnitActivityCode",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet activityCodeId: String = \"\" // The ID of the activity code to update\nlet body: UpdateActivityCodeRequest = new UpdateActivityCodeRequest(...) // body\n\n// Update an activity code\nPatchWorkforcemanagementBusinessunitActivitycodeRequest.patchWorkforcemanagementBusinessunitActivitycode(businessUnitId: businessUnitId, activityCodeId: activityCodeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitActivitycodeRequest.patchWorkforcemanagementBusinessunitActivitycode was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementbusinessunitalternativeshiftssettings": {
+    "operationId": "patchworkforcemanagementbusinessunitalternativeshiftssettings",
+    "functionName": "patchWorkforcemanagementBusinessunitAlternativeshiftsSettings",
+    "signature": "patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateAlternativeShiftBuSettingsRequest",
+        "required": "false"
+      }
+    ],
+    "return": "AlternativeShiftBuSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet body: UpdateAlternativeShiftBuSettingsRequest = new UpdateAlternativeShiftBuSettingsRequest(...) // body\n\n// Update alternative shifts settings for a business unit\nPatchWorkforcemanagementBusinessunitAlternativeshiftsSettingsRequest.patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId: businessUnitId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitAlternativeshiftsSettingsRequest.patchWorkforcemanagementBusinessunitAlternativeshiftsSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "patchworkforcemanagementbusinessunitplanninggroup": {
     "operationId": "patchworkforcemanagementbusinessunitplanninggroup",
@@ -43361,6 +43816,88 @@
     ],
     "return": "BuTimeOffPlanResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet timeOffPlanId: String = \"\" // The ID of the time-off plan to update\nlet body: BuUpdateTimeOffPlanRequest = new BuUpdateTimeOffPlanRequest(...) // body\n\n// Updates a time-off plan\nPatchWorkforcemanagementBusinessunitTimeoffplanRequest.patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId: businessUnitId, timeOffPlanId: timeOffPlanId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitTimeoffplanRequest.patchWorkforcemanagementBusinessunitTimeoffplan was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementbusinessunitworkplanbid": {
+    "operationId": "patchworkforcemanagementbusinessunitworkplanbid",
+    "functionName": "patchWorkforcemanagementBusinessunitWorkplanbid",
+    "signature": "patchWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateWorkPlanBid",
+        "required": "true"
+      }
+    ],
+    "return": "WorkPlanBid",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The id of the workplanbid\nlet body: UpdateWorkPlanBid = new UpdateWorkPlanBid(...) // The work plan bid to be updated\n\n// Update work plan bid\nPatchWorkforcemanagementBusinessunitWorkplanbidRequest.patchWorkforcemanagementBusinessunitWorkplanbid(businessUnitId: businessUnitId, bidId: bidId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitWorkplanbidRequest.patchWorkforcemanagementBusinessunitWorkplanbid was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementbusinessunitworkplanbidgroup": {
+    "operationId": "patchworkforcemanagementbusinessunitworkplanbidgroup",
+    "functionName": "patchWorkforcemanagementBusinessunitWorkplanbidGroup",
+    "signature": "patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidGroupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WorkPlanBidGroupUpdate",
+        "required": "false"
+      }
+    ],
+    "return": "WorkPlanBidGroupResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\nlet bidGroupId: String = \"\" // Work Plan Bid Group id\nlet body: WorkPlanBidGroupUpdate = new WorkPlanBidGroupUpdate(...) // body\n\n// Update a bid group by bid group Id\nPatchWorkforcemanagementBusinessunitWorkplanbidGroupRequest.patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitWorkplanbidGroupRequest.patchWorkforcemanagementBusinessunitWorkplanbidGroup was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementbusinessunitworkplanbidgrouppreferences": {
+    "operationId": "patchworkforcemanagementbusinessunitworkplanbidgrouppreferences",
+    "functionName": "patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences",
+    "signature": "patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidGroupId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AgentsBidAssignedWorkPlanOverrideRequest",
+        "required": "false"
+      }
+    ],
+    "return": "AdminAgentWorkPlanPreferenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\nlet bidGroupId: String = \"\" // The ID of the work plan bid group\nlet body: AgentsBidAssignedWorkPlanOverrideRequest = new AgentsBidAssignedWorkPlanOverrideRequest(...) // body\n\n// Overrides the assigned work plan for the specified agents\nPatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesRequest.patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId: businessUnitId, bidId: bidId, bidGroupId: bidGroupId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferencesRequest.patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences was successful\")\n        dump(response)\n    }\n}"
   },
   "patchworkforcemanagementmanagementunit": {
     "operationId": "patchworkforcemanagementmanagementunit",
@@ -43606,6 +44143,58 @@
     "return": "TimeOffRequestResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet timeOffRequestId: String = \"\" // The ID of the time off request\nlet body: AgentTimeOffRequestPatch = new AgentTimeOffRequestPatch(...) // body\n\n// Update a time off request for the current user\nPatchWorkforcemanagementTimeoffrequestRequest.patchWorkforcemanagementTimeoffrequest(timeOffRequestId: timeOffRequestId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementTimeoffrequestRequest.patchWorkforcemanagementTimeoffrequest was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchworkforcemanagementuserworkplanbidranks": {
+    "operationId": "patchworkforcemanagementuserworkplanbidranks",
+    "functionName": "patchWorkforcemanagementUserWorkplanbidranks",
+    "signature": "patchWorkforcemanagementUserWorkplanbidranks(userId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WorkPlanBidRanks",
+        "required": "false"
+      }
+    ],
+    "return": "WorkPlanBidRanks",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // The userId to whom the work plan bid ranks apply.\nlet body: WorkPlanBidRanks = new WorkPlanBidRanks(...) // body\n\n// Update work plan bid ranks for a user\nPatchWorkforcemanagementUserWorkplanbidranksRequest.patchWorkforcemanagementUserWorkplanbidranks(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementUserWorkplanbidranksRequest.patchWorkforcemanagementUserWorkplanbidranks was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementusersworkplanbidranksbulk": {
+    "operationId": "patchworkforcemanagementusersworkplanbidranksbulk",
+    "functionName": "patchWorkforcemanagementUsersWorkplanbidranksBulk",
+    "signature": "patchWorkforcemanagementUsersWorkplanbidranksBulk(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "[WorkPlanBidRanks]",
+        "required": "true"
+      }
+    ],
+    "return": "EntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: [WorkPlanBidRanks] = [new WorkPlanBidRanks(...)] // Users\n\n// Update bulk work plan bid ranks on users. Max 50 users can be updated at a time.\nPatchWorkforcemanagementUsersWorkplanbidranksBulkRequest.patchWorkforcemanagementUsersWorkplanbidranksBulk(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementUsersWorkplanbidranksBulkRequest.patchWorkforcemanagementUsersWorkplanbidranksBulk was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchworkforcemanagementworkplanbidpreferences": {
+    "operationId": "patchworkforcemanagementworkplanbidpreferences",
+    "functionName": "patchWorkforcemanagementWorkplanbidPreferences",
+    "signature": "patchWorkforcemanagementWorkplanbidPreferences(bidId, body)",
+    "parameters": [
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateAgentWorkPlanBiddingPreference",
+        "required": "false"
+      }
+    ],
+    "return": "AgentWorkPlanBiddingPreferenceResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bidId: String = \"\" // The ID of the work plan bid\nlet body: UpdateAgentWorkPlanBiddingPreference = new UpdateAgentWorkPlanBiddingPreference(...) // body\n\n// Update an agent's work plan bidding preference\nPatchWorkforcemanagementWorkplanbidPreferencesRequest.patchWorkforcemanagementWorkplanbidPreferences(bidId: bidId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementWorkplanbidPreferencesRequest.patchWorkforcemanagementWorkplanbidPreferences was successful\")\n        dump(response)\n    }\n}"
+  },
   "postworkforcemanagementadherenceexplanations": {
     "operationId": "postworkforcemanagementadherenceexplanations",
     "functionName": "postWorkforcemanagementAdherenceExplanations",
@@ -43776,6 +44365,48 @@
     "return": "BuCurrentAgentScheduleSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BuGetCurrentAgentScheduleRequest = new BuGetCurrentAgentScheduleRequest(...) // body\n\n// Get published schedule for the current user\nPostWorkforcemanagementAgentschedulesMineRequest.postWorkforcemanagementAgentschedulesMine(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAgentschedulesMineRequest.postWorkforcemanagementAgentschedulesMine was successful\")\n        dump(response)\n    }\n}"
   },
+  "postworkforcemanagementalternativeshiftsoffersjobs": {
+    "operationId": "postworkforcemanagementalternativeshiftsoffersjobs",
+    "functionName": "postWorkforcemanagementAlternativeshiftsOffersJobs",
+    "signature": "postWorkforcemanagementAlternativeshiftsOffersJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AlternativeShiftOffersRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftAsyncResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: AlternativeShiftOffersRequest = new AlternativeShiftOffersRequest(...) // The request body\n\n// Request a list of alternative shift offers for a given schedule\nPostWorkforcemanagementAlternativeshiftsOffersJobsRequest.postWorkforcemanagementAlternativeshiftsOffersJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAlternativeshiftsOffersJobsRequest.postWorkforcemanagementAlternativeshiftsOffersJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementalternativeshiftsofferssearchjobs": {
+    "operationId": "postworkforcemanagementalternativeshiftsofferssearchjobs",
+    "functionName": "postWorkforcemanagementAlternativeshiftsOffersSearchJobs",
+    "signature": "postWorkforcemanagementAlternativeshiftsOffersSearchJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AlternativeShiftSearchOffersRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftAsyncResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: AlternativeShiftSearchOffersRequest = new AlternativeShiftSearchOffersRequest(...) // The request body\n\n// Request a search of alternative shift offers for a given shift\nPostWorkforcemanagementAlternativeshiftsOffersSearchJobsRequest.postWorkforcemanagementAlternativeshiftsOffersSearchJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAlternativeshiftsOffersSearchJobsRequest.postWorkforcemanagementAlternativeshiftsOffersSearchJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementalternativeshiftstrades": {
+    "operationId": "postworkforcemanagementalternativeshiftstrades",
+    "functionName": "postWorkforcemanagementAlternativeshiftsTrades",
+    "signature": "postWorkforcemanagementAlternativeshiftsTrades(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "CreateAlternativeShiftTradeRequest",
+        "required": "true"
+      }
+    ],
+    "return": "AlternativeShiftTradeResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CreateAlternativeShiftTradeRequest = new CreateAlternativeShiftTradeRequest(...) // The request body\n\n// Create my alternative shift trade using an existing offer's jobId\nPostWorkforcemanagementAlternativeshiftsTradesRequest.postWorkforcemanagementAlternativeshiftsTrades(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementAlternativeshiftsTradesRequest.postWorkforcemanagementAlternativeshiftsTrades was successful\")\n        dump(response)\n    }\n}"
+  },
   "postworkforcemanagementbusinessunitactivitycodes": {
     "operationId": "postworkforcemanagementbusinessunitactivitycodes",
     "functionName": "postWorkforcemanagementBusinessunitActivitycodes",
@@ -43852,6 +44483,30 @@
     ],
     "return": "BuAsyncAgentSchedulesSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\nlet body: BuSearchAgentSchedulesRequest = new BuSearchAgentSchedulesRequest(...) // body\n\n// Search published schedules\nPostWorkforcemanagementBusinessunitAgentschedulesSearchRequest.postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId: businessUnitId, forceAsync: forceAsync, forceDownloadService: forceDownloadService, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitAgentschedulesSearchRequest.postWorkforcemanagementBusinessunitAgentschedulesSearch was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitalternativeshiftstradessearch": {
+    "operationId": "postworkforcemanagementbusinessunitalternativeshiftstradessearch",
+    "functionName": "postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch",
+    "signature": "postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch(businessUnitId, body, forceAsync)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "SearchAlternativeShiftTradesRequest",
+        "required": "true"
+      },
+      {
+        "name": "forceAsync",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "BuListAlternativeShiftTradesResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet body: SearchAlternativeShiftTradesRequest = new SearchAlternativeShiftTradesRequest(...) // The request body\nlet forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes\n\n// List alternative shifts trades for a given management unit or agent\nPostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchRequest.postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch(businessUnitId: businessUnitId, body: body, forceAsync: forceAsync) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchRequest.postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunitintraday": {
     "operationId": "postworkforcemanagementbusinessunitintraday",
@@ -44429,6 +45084,73 @@
     ],
     "return": "ImportForecastUploadResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit to which the forecast belongs\nlet weekDateId: Date = new Date(...) // First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet body: UploadUrlRequestBody = new UploadUrlRequestBody(...) // body\n\n// Creates a signed upload URL for importing a short term forecast\nPostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId: businessUnitId, weekDateId: weekDateId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurlRequest.postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitworkplanbidcopy": {
+    "operationId": "postworkforcemanagementbusinessunitworkplanbidcopy",
+    "functionName": "postWorkforcemanagementBusinessunitWorkplanbidCopy",
+    "signature": "postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId, bidId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CopyWorkPlanBid",
+        "required": "false"
+      }
+    ],
+    "return": "WorkPlanBid",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The ID of the work plan bid to copy\nlet body: CopyWorkPlanBid = new CopyWorkPlanBid(...) // body\n\n// Copy a work plan bid\nPostWorkforcemanagementBusinessunitWorkplanbidCopyRequest.postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId: businessUnitId, bidId: bidId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWorkplanbidCopyRequest.postWorkforcemanagementBusinessunitWorkplanbidCopy was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitworkplanbidgroups": {
+    "operationId": "postworkforcemanagementbusinessunitworkplanbidgroups",
+    "functionName": "postWorkforcemanagementBusinessunitWorkplanbidGroups",
+    "signature": "postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId, bidId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "bidId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WorkPlanBidGroupCreate",
+        "required": "false"
+      }
+    ],
+    "return": "WorkPlanBidGroupResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet bidId: String = \"\" // The work plan bid id of the bid groups\nlet body: WorkPlanBidGroupCreate = new WorkPlanBidGroupCreate(...) // body\n\n// Add a bid group in a given work plan bid\nPostWorkforcemanagementBusinessunitWorkplanbidGroupsRequest.postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId: businessUnitId, bidId: bidId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWorkplanbidGroupsRequest.postWorkforcemanagementBusinessunitWorkplanbidGroups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitworkplanbids": {
+    "operationId": "postworkforcemanagementbusinessunitworkplanbids",
+    "functionName": "postWorkforcemanagementBusinessunitWorkplanbids",
+    "signature": "postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CreateWorkPlanBid",
+        "required": "false"
+      }
+    ],
+    "return": "WorkPlanBid",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet body: CreateWorkPlanBid = new CreateWorkPlanBid(...) // The work plan bid to be created\n\n// Create a new work plan bid\nPostWorkforcemanagementBusinessunitWorkplanbidsRequest.postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId: businessUnitId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitWorkplanbidsRequest.postWorkforcemanagementBusinessunitWorkplanbids was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunits": {
     "operationId": "postworkforcemanagementbusinessunits",

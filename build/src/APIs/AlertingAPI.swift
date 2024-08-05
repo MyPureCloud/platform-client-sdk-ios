@@ -377,6 +377,7 @@ open class AlertingAPI {
   "dimension" : "queueId",
   "value" : 0.8008281904610115,
   "notificationUsers" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -665,6 +666,7 @@ open class AlertingAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1037,6 +1039,7 @@ open class AlertingAPI {
     "dimension" : "queueId",
     "value" : 0.8008281904610115,
     "notificationUsers" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1325,6 +1328,7 @@ open class AlertingAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1631,6 +1635,7 @@ open class AlertingAPI {
     "dimension" : "queueId",
     "value" : 0.8008281904610115,
     "notificationUsers" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -1919,6 +1924,7 @@ open class AlertingAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2340,6 +2346,7 @@ open class AlertingAPI {
   "dimension" : "queueId",
   "value" : 0.8008281904610115,
   "notificationUsers" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -2628,6 +2635,7 @@ open class AlertingAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -2997,6 +3005,7 @@ open class AlertingAPI {
     "dimension" : "queueId",
     "value" : 0.8008281904610115,
     "notificationUsers" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3285,6 +3294,7 @@ open class AlertingAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3588,6 +3598,7 @@ open class AlertingAPI {
     "dimension" : "queueId",
     "value" : 0.8008281904610115,
     "notificationUsers" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3876,6 +3887,7 @@ open class AlertingAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -4647,6 +4659,7 @@ open class AlertingAPI {
   "dimension" : "queueId",
   "value" : 0.8008281904610115,
   "notificationUsers" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4935,6 +4948,7 @@ open class AlertingAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -5676,6 +5690,7 @@ open class AlertingAPI {
   "dimension" : "queueId",
   "value" : 0.8008281904610115,
   "notificationUsers" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -5964,6 +5979,7 @@ open class AlertingAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

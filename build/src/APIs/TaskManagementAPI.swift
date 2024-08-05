@@ -1801,10 +1801,10 @@ open class TaskManagementAPI {
      Update the attributes of a worktype
      
      - parameter worktypeId: (path) Worktype id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Worktype 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchTaskmanagementWorktype(worktypeId: String, body: WorktypeUpdate? = nil, completion: @escaping ((_ data: Worktype?,_ error: Error?) -> Void)) {
+    open class func patchTaskmanagementWorktype(worktypeId: String, body: WorktypeUpdate, completion: @escaping ((_ data: Worktype?,_ error: Error?) -> Void)) {
         let requestBuilder = patchTaskmanagementWorktypeWithRequestBuilder(worktypeId: worktypeId, body: body)
         requestBuilder.execute { (response: Response<Worktype>?, error) -> Void in
             do {
@@ -1898,11 +1898,11 @@ open class TaskManagementAPI {
 }, statusCode=200}]
      
      - parameter worktypeId: (path) Worktype id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Worktype 
 
      - returns: RequestBuilder<Worktype> 
      */
-    open class func patchTaskmanagementWorktypeWithRequestBuilder(worktypeId: String, body: WorktypeUpdate? = nil) -> RequestBuilder<Worktype> {        
+    open class func patchTaskmanagementWorktypeWithRequestBuilder(worktypeId: String, body: WorktypeUpdate) -> RequestBuilder<Worktype> {        
         var path = "/api/v2/taskmanagement/worktypes/{worktypeId}"
         let worktypeIdPreEscape = "\(worktypeId)"
         let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1928,10 +1928,10 @@ open class TaskManagementAPI {
      
      - parameter worktypeId: (path) Worktype id 
      - parameter statusId: (path) Status id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Status 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func patchTaskmanagementWorktypeStatus(worktypeId: String, statusId: String, body: WorkitemStatusUpdate? = nil, completion: @escaping ((_ data: WorkitemStatus?,_ error: Error?) -> Void)) {
+    open class func patchTaskmanagementWorktypeStatus(worktypeId: String, statusId: String, body: WorkitemStatusUpdate, completion: @escaping ((_ data: WorkitemStatus?,_ error: Error?) -> Void)) {
         let requestBuilder = patchTaskmanagementWorktypeStatusWithRequestBuilder(worktypeId: worktypeId, statusId: statusId, body: body)
         requestBuilder.execute { (response: Response<WorkitemStatus>?, error) -> Void in
             do {
@@ -1978,11 +1978,11 @@ open class TaskManagementAPI {
      
      - parameter worktypeId: (path) Worktype id 
      - parameter statusId: (path) Status id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Status 
 
      - returns: RequestBuilder<WorkitemStatus> 
      */
-    open class func patchTaskmanagementWorktypeStatusWithRequestBuilder(worktypeId: String, statusId: String, body: WorkitemStatusUpdate? = nil) -> RequestBuilder<WorkitemStatus> {        
+    open class func patchTaskmanagementWorktypeStatusWithRequestBuilder(worktypeId: String, statusId: String, body: WorkitemStatusUpdate) -> RequestBuilder<WorkitemStatus> {        
         var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses/{statusId}"
         let worktypeIdPreEscape = "\(worktypeId)"
         let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2005,10 +2005,10 @@ open class TaskManagementAPI {
     /**
      Create a workbin
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Workbin 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postTaskmanagementWorkbins(body: WorkbinCreate? = nil, completion: @escaping ((_ data: Workbin?,_ error: Error?) -> Void)) {
+    open class func postTaskmanagementWorkbins(body: WorkbinCreate, completion: @escaping ((_ data: Workbin?,_ error: Error?) -> Void)) {
         let requestBuilder = postTaskmanagementWorkbinsWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<Workbin>?, error) -> Void in
             do {
@@ -2043,11 +2043,11 @@ open class TaskManagementAPI {
   "id" : "id"
 }, statusCode=201}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Workbin 
 
      - returns: RequestBuilder<Workbin> 
      */
-    open class func postTaskmanagementWorkbinsWithRequestBuilder(body: WorkbinCreate? = nil) -> RequestBuilder<Workbin> {        
+    open class func postTaskmanagementWorkbinsWithRequestBuilder(body: WorkbinCreate) -> RequestBuilder<Workbin> {        
         let path = "/api/v2/taskmanagement/workbins"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
@@ -2700,10 +2700,10 @@ open class TaskManagementAPI {
      Add a status to a worktype
      
      - parameter worktypeId: (path) Worktype id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Status 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postTaskmanagementWorktypeStatuses(worktypeId: String, body: WorkitemStatusCreate? = nil, completion: @escaping ((_ data: WorkitemStatus?,_ error: Error?) -> Void)) {
+    open class func postTaskmanagementWorktypeStatuses(worktypeId: String, body: WorkitemStatusCreate, completion: @escaping ((_ data: WorkitemStatus?,_ error: Error?) -> Void)) {
         let requestBuilder = postTaskmanagementWorktypeStatusesWithRequestBuilder(worktypeId: worktypeId, body: body)
         requestBuilder.execute { (response: Response<WorkitemStatus>?, error) -> Void in
             do {
@@ -2749,11 +2749,11 @@ open class TaskManagementAPI {
 }, statusCode=200}]
      
      - parameter worktypeId: (path) Worktype id 
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Status 
 
      - returns: RequestBuilder<WorkitemStatus> 
      */
-    open class func postTaskmanagementWorktypeStatusesWithRequestBuilder(worktypeId: String, body: WorkitemStatusCreate? = nil) -> RequestBuilder<WorkitemStatus> {        
+    open class func postTaskmanagementWorktypeStatusesWithRequestBuilder(worktypeId: String, body: WorkitemStatusCreate) -> RequestBuilder<WorkitemStatus> {        
         var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/statuses"
         let worktypeIdPreEscape = "\(worktypeId)"
         let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2773,10 +2773,10 @@ open class TaskManagementAPI {
     /**
      Create a worktype
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Worktype 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postTaskmanagementWorktypes(body: WorktypeCreate? = nil, completion: @escaping ((_ data: Worktype?,_ error: Error?) -> Void)) {
+    open class func postTaskmanagementWorktypes(body: WorktypeCreate, completion: @escaping ((_ data: Worktype?,_ error: Error?) -> Void)) {
         let requestBuilder = postTaskmanagementWorktypesWithRequestBuilder(body: body)
         requestBuilder.execute { (response: Response<Worktype>?, error) -> Void in
             do {
@@ -2869,11 +2869,11 @@ open class TaskManagementAPI {
   "assignmentEnabled" : true
 }, statusCode=200}]
      
-     - parameter body: (body) body (optional)
+     - parameter body: (body) Worktype 
 
      - returns: RequestBuilder<Worktype> 
      */
-    open class func postTaskmanagementWorktypesWithRequestBuilder(body: WorktypeCreate? = nil) -> RequestBuilder<Worktype> {        
+    open class func postTaskmanagementWorktypesWithRequestBuilder(body: WorktypeCreate) -> RequestBuilder<Worktype> {        
         let path = "/api/v2/taskmanagement/worktypes"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)

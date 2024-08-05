@@ -47,6 +47,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -338,6 +339,7 @@ open class QualityAPI {
   "evaluations" : [ null, null ],
   "selfUri" : "https://openapi-generator.tech",
   "evaluators" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -626,6 +628,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -917,6 +920,7 @@ open class QualityAPI {
   "contextId" : "contextId",
   "averageScore" : 1,
   "calibrator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1208,6 +1212,7 @@ open class QualityAPI {
   "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1752,6 +1757,7 @@ open class QualityAPI {
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
   "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -2156,6 +2162,7 @@ open class QualityAPI {
   "rescore" : true,
   "calibration" : {
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2447,6 +2454,7 @@ open class QualityAPI {
     "evaluations" : [ null, null ],
     "selfUri" : "https://openapi-generator.tech",
     "evaluators" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -2735,6 +2743,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3026,6 +3035,7 @@ open class QualityAPI {
     "contextId" : "contextId",
     "averageScore" : 1,
     "calibrator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3317,6 +3327,7 @@ open class QualityAPI {
     "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -3801,6 +3812,7 @@ open class QualityAPI {
   },
   "evaluationForm" : "{}",
   "evaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4100,6 +4112,7 @@ open class QualityAPI {
   "name" : "name",
   "assigned" : true,
   "assignee" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4781,6 +4794,7 @@ open class QualityAPI {
     "numCriticalEvaluations" : 1,
     "numEvaluations" : 0,
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -5079,6 +5093,7 @@ open class QualityAPI {
     "agentEvaluatorActivityList" : [ {
       "numEvaluations" : 3,
       "agent" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -5373,6 +5388,7 @@ open class QualityAPI {
       "id" : "id",
       "averageEvaluationScore" : 2,
       "evaluator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -5664,6 +5680,7 @@ open class QualityAPI {
     }, {
       "numEvaluations" : 3,
       "agent" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -5958,6 +5975,7 @@ open class QualityAPI {
       "id" : "id",
       "averageEvaluationScore" : 2,
       "evaluator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -6254,6 +6272,7 @@ open class QualityAPI {
     "numCriticalEvaluations" : 1,
     "numEvaluations" : 0,
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -6552,6 +6571,7 @@ open class QualityAPI {
     "agentEvaluatorActivityList" : [ {
       "numEvaluations" : 3,
       "agent" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -6846,6 +6866,7 @@ open class QualityAPI {
       "id" : "id",
       "averageEvaluationScore" : 2,
       "evaluator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -7137,6 +7158,7 @@ open class QualityAPI {
     }, {
       "numEvaluations" : 3,
       "agent" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -7431,6 +7453,7 @@ open class QualityAPI {
       "id" : "id",
       "averageEvaluationScore" : 2,
       "evaluator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -7817,6 +7840,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -8108,6 +8132,7 @@ open class QualityAPI {
   "evaluations" : [ null, null ],
   "selfUri" : "https://openapi-generator.tech",
   "evaluators" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -8396,6 +8421,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -8687,6 +8713,7 @@ open class QualityAPI {
   "contextId" : "contextId",
   "averageScore" : 1,
   "calibrator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -8978,6 +9005,7 @@ open class QualityAPI {
   "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -9548,6 +9576,7 @@ open class QualityAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9839,6 +9868,7 @@ open class QualityAPI {
     "evaluations" : [ null, null ],
     "selfUri" : "https://openapi-generator.tech",
     "evaluators" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10127,6 +10157,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10418,6 +10449,7 @@ open class QualityAPI {
     "contextId" : "contextId",
     "averageScore" : 1,
     "calibrator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10709,6 +10741,7 @@ open class QualityAPI {
     "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11188,6 +11221,7 @@ open class QualityAPI {
     }
   }, {
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11479,6 +11513,7 @@ open class QualityAPI {
     "evaluations" : [ null, null ],
     "selfUri" : "https://openapi-generator.tech",
     "evaluators" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11767,6 +11802,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -12058,6 +12094,7 @@ open class QualityAPI {
     "contextId" : "contextId",
     "averageScore" : 1,
     "calibrator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -12349,6 +12386,7 @@ open class QualityAPI {
     "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -12914,6 +12952,7 @@ open class QualityAPI {
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
   "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -13318,6 +13357,7 @@ open class QualityAPI {
   "rescore" : true,
   "calibration" : {
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -13609,6 +13649,7 @@ open class QualityAPI {
     "evaluations" : [ null, null ],
     "selfUri" : "https://openapi-generator.tech",
     "evaluators" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -13897,6 +13938,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -14188,6 +14230,7 @@ open class QualityAPI {
     "contextId" : "contextId",
     "averageScore" : 1,
     "calibrator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -14479,6 +14522,7 @@ open class QualityAPI {
     "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -14963,6 +15007,7 @@ open class QualityAPI {
   },
   "evaluationForm" : "{}",
   "evaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -15262,6 +15307,7 @@ open class QualityAPI {
   "name" : "name",
   "assigned" : true,
   "assignee" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16162,6 +16208,7 @@ open class QualityAPI {
     "assignedDate" : "2000-01-23T04:56:07.000+00:00",
     "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -16567,6 +16614,7 @@ open class QualityAPI {
     "rescore" : true,
     "calibration" : {
       "agent" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -16858,6 +16906,7 @@ open class QualityAPI {
       "evaluations" : [ null, null ],
       "selfUri" : "https://openapi-generator.tech",
       "evaluators" : [ {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -17146,6 +17195,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       }, {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -17437,6 +17487,7 @@ open class QualityAPI {
       "contextId" : "contextId",
       "averageScore" : 1,
       "calibrator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -17728,6 +17779,7 @@ open class QualityAPI {
       "highScore" : 6,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -18212,6 +18264,7 @@ open class QualityAPI {
     },
     "evaluationForm" : "{}",
     "evaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -18511,6 +18564,7 @@ open class QualityAPI {
     "name" : "name",
     "assigned" : true,
     "assignee" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -18952,6 +19006,7 @@ open class QualityAPI {
     "assignedDate" : "2000-01-23T04:56:07.000+00:00",
     "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -19357,6 +19412,7 @@ open class QualityAPI {
     "rescore" : true,
     "calibration" : {
       "agent" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -19648,6 +19704,7 @@ open class QualityAPI {
       "evaluations" : [ null, null ],
       "selfUri" : "https://openapi-generator.tech",
       "evaluators" : [ {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -19936,6 +19993,7 @@ open class QualityAPI {
         "username" : "username",
         "geolocation" : "{}"
       }, {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -20227,6 +20285,7 @@ open class QualityAPI {
       "contextId" : "contextId",
       "averageScore" : 1,
       "calibrator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -20518,6 +20577,7 @@ open class QualityAPI {
       "highScore" : 6,
       "createdDate" : "2000-01-23T04:56:07.000+00:00",
       "expertEvaluator" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -21002,6 +21062,7 @@ open class QualityAPI {
     },
     "evaluationForm" : "{}",
     "evaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -21301,6 +21362,7 @@ open class QualityAPI {
     "name" : "name",
     "assigned" : true,
     "assignee" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -21883,6 +21945,7 @@ open class QualityAPI {
     "numCalibrationsAssigned" : 5,
     "numCalibrationsCompleted" : 2,
     "evaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -22183,6 +22246,7 @@ open class QualityAPI {
     "numCalibrationsAssigned" : 5,
     "numCalibrationsCompleted" : 2,
     "evaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -30023,6 +30087,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -30314,6 +30379,7 @@ open class QualityAPI {
   "evaluations" : [ null, null ],
   "selfUri" : "https://openapi-generator.tech",
   "evaluators" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -30602,6 +30668,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -30893,6 +30960,7 @@ open class QualityAPI {
   "contextId" : "contextId",
   "averageScore" : 1,
   "calibrator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -31184,6 +31252,7 @@ open class QualityAPI {
   "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -31725,6 +31794,7 @@ open class QualityAPI {
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
   "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -32130,6 +32200,7 @@ open class QualityAPI {
   "rescore" : true,
   "calibration" : {
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -32421,6 +32492,7 @@ open class QualityAPI {
     "evaluations" : [ null, null ],
     "selfUri" : "https://openapi-generator.tech",
     "evaluators" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -32709,6 +32781,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -33000,6 +33073,7 @@ open class QualityAPI {
     "contextId" : "contextId",
     "averageScore" : 1,
     "calibrator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -33291,6 +33365,7 @@ open class QualityAPI {
     "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -33775,6 +33850,7 @@ open class QualityAPI {
   },
   "evaluationForm" : "{}",
   "evaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -34074,6 +34150,7 @@ open class QualityAPI {
   "name" : "name",
   "assigned" : true,
   "assignee" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -36637,6 +36714,7 @@ open class QualityAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -36928,6 +37006,7 @@ open class QualityAPI {
   "evaluations" : [ null, null ],
   "selfUri" : "https://openapi-generator.tech",
   "evaluators" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -37216,6 +37295,7 @@ open class QualityAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -37507,6 +37587,7 @@ open class QualityAPI {
   "contextId" : "contextId",
   "averageScore" : 1,
   "calibrator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -37798,6 +37879,7 @@ open class QualityAPI {
   "highScore" : 6,
   "createdDate" : "2000-01-23T04:56:07.000+00:00",
   "expertEvaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -38343,6 +38425,7 @@ open class QualityAPI {
   "assignedDate" : "2000-01-23T04:56:07.000+00:00",
   "dateAssigneeChanged" : "2000-01-23T04:56:07.000+00:00",
   "agent" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -38747,6 +38830,7 @@ open class QualityAPI {
   "rescore" : true,
   "calibration" : {
     "agent" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -39038,6 +39122,7 @@ open class QualityAPI {
     "evaluations" : [ null, null ],
     "selfUri" : "https://openapi-generator.tech",
     "evaluators" : [ {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -39326,6 +39411,7 @@ open class QualityAPI {
       "username" : "username",
       "geolocation" : "{}"
     }, {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -39617,6 +39703,7 @@ open class QualityAPI {
     "contextId" : "contextId",
     "averageScore" : 1,
     "calibrator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -39908,6 +39995,7 @@ open class QualityAPI {
     "highScore" : 6,
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "expertEvaluator" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -40392,6 +40480,7 @@ open class QualityAPI {
   },
   "evaluationForm" : "{}",
   "evaluator" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -40691,6 +40780,7 @@ open class QualityAPI {
   "name" : "name",
   "assigned" : true,
   "assignee" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

@@ -37,6 +37,7 @@ title: UserMe
 | **locations** | [**[Location]**](Location.html) | The user placement at each site location. | [optional] |
 | **groups** | [**[Group]**](Group.html) | The groups the user is a member of | [optional] |
 | **team** | [**Team**](Team.html) | The team the user is a member of | [optional] |
+| **workPlanBidRanks** | [**WorkPlanBidRanks**](WorkPlanBidRanks.html) | The WFM work plan bid rank settings for the user | [optional] |
 | **skills** | [**[UserRoutingSkill]**](UserRoutingSkill.html) | Routing (ACD) skills possessed by the user | [optional] |
 | **languages** | [**[UserRoutingLanguage]**](UserRoutingLanguage.html) | Routing (ACD) languages possessed by the user | [optional] |
 | **acdAutoAnswer** | **Bool** | acd auto answer | [optional] |

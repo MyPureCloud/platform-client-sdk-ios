@@ -1361,6 +1361,62 @@ open class IntegrationsAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Retrieves basic info about trusted root CA certificates
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsActionsCertificatesTruststore(completion: @escaping ((_ data: TrustedCertificates?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsCertificatesTruststoreWithRequestBuilder()
+        requestBuilder.execute { (response: Response<TrustedCertificates>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves basic info about trusted root CA certificates
+     - GET /api/v2/integrations/actions/certificates/truststore
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "serialNumber" : "serialNumber",
+    "signature" : "signature",
+    "description" : "description"
+  }, {
+    "serialNumber" : "serialNumber",
+    "signature" : "signature",
+    "description" : "description"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<TrustedCertificates> 
+     */
+    open class func getIntegrationsActionsCertificatesTruststoreWithRequestBuilder() -> RequestBuilder<TrustedCertificates> {        
+        let path = "/api/v2/integrations/actions/certificates/truststore"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TrustedCertificates>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     

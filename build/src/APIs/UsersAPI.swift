@@ -1789,6 +1789,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -2167,6 +2168,7 @@ open class UsersAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "superiors" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -2455,6 +2457,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -2744,6 +2747,7 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "siblings" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3032,6 +3036,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3321,6 +3326,7 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "directReports" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3609,6 +3615,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -3979,6 +3986,7 @@ open class UsersAPI {
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4350,6 +4358,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -4736,6 +4745,7 @@ open class UsersAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -5024,6 +5034,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -5534,6 +5545,7 @@ open class UsersAPI {
   "active" : true,
   "id" : "id",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -7114,6 +7126,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -7688,6 +7701,7 @@ open class UsersAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -7976,6 +7990,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -8347,6 +8362,8 @@ open class UsersAPI {
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
+        case native = "Native"
     }
     
     
@@ -8379,7 +8396,7 @@ open class UsersAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
-     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter types: (query) Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
      - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -8479,7 +8496,7 @@ open class UsersAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
-     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter types: (query) Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
      - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
 
@@ -8551,6 +8568,8 @@ open class UsersAPI {
         case coaching = "Coaching"
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
+        case external = "External"
+        case native = "Native"
     }
     
     
@@ -8582,7 +8601,7 @@ open class UsersAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
-     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter types: (query) Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
      - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -8681,7 +8700,7 @@ open class UsersAPI {
      - parameter pageSize: (query) Page size (optional)
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortOrder: (query) Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)
-     - parameter types: (query) Specifies the activity types. (optional)
+     - parameter types: (query) Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional)
      - parameter statuses: (query) Specifies the activity statuses to filter by (optional)
      - parameter relationship: (query) Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional)
 
@@ -8721,6 +8740,7 @@ open class UsersAPI {
         case assessedContent = "AssessedContent"
         case assessment = "Assessment"
         case external = "External"
+        case native = "Native"
     }
     
     
@@ -8728,7 +8748,7 @@ open class UsersAPI {
      Get a Development Activity
      
      - parameter activityId: (path) Specifies the activity ID, maps to either assignment or appointment ID 
-     - parameter type: (query) Specifies the activity type. 
+     - parameter type: (query) Specifies the activity type. Informational, AssessedContent and Assessment are deprecated 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getUsersDevelopmentActivity(activityId: String, type: ModelType_getUsersDevelopmentActivity, completion: @escaping ((_ data: DevelopmentActivity?,_ error: Error?) -> Void)) {
@@ -8783,7 +8803,7 @@ open class UsersAPI {
 }, statusCode=200}]
      
      - parameter activityId: (path) Specifies the activity ID, maps to either assignment or appointment ID 
-     - parameter type: (query) Specifies the activity type. 
+     - parameter type: (query) Specifies the activity type. Informational, AssessedContent and Assessment are deprecated 
 
      - returns: RequestBuilder<DevelopmentActivity> 
      */
@@ -9034,6 +9054,7 @@ open class UsersAPI {
   "presenceDefinitions" : [ {
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9330,6 +9351,7 @@ open class UsersAPI {
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9624,6 +9646,7 @@ open class UsersAPI {
   }, {
     "createdDate" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -9920,6 +9943,7 @@ open class UsersAPI {
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
     "modifiedBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10214,6 +10238,7 @@ open class UsersAPI {
   } ],
   "name" : "name",
   "favorites" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -10502,6 +10527,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -10790,7 +10816,9 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   } ],
+  "workPlanBidRanks" : "{}",
   "directReports" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -11079,6 +11107,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -11380,6 +11409,7 @@ open class UsersAPI {
         "operands" : [ {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -11818,6 +11848,7 @@ open class UsersAPI {
         }, {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -12271,6 +12302,7 @@ open class UsersAPI {
         "operands" : [ {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -12709,6 +12741,7 @@ open class UsersAPI {
         }, {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -13175,6 +13208,7 @@ open class UsersAPI {
         "operands" : [ {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -13613,6 +13647,7 @@ open class UsersAPI {
         }, {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -14066,6 +14101,7 @@ open class UsersAPI {
         "operands" : [ {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -14504,6 +14540,7 @@ open class UsersAPI {
         }, {
           "type" : "SCALAR",
           "user" : {
+            "workPlanBidRanks" : "{}",
             "addresses" : [ {
               "extension" : "extension",
               "address" : "address",
@@ -14961,6 +14998,7 @@ open class UsersAPI {
     "base" : true
   } ],
   "superiors" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -15249,6 +15287,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -15562,6 +15601,7 @@ open class UsersAPI {
   },
   "email" : "email",
   "manager" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16188,6 +16228,7 @@ open class UsersAPI {
   "pageSize" : 1,
   "currentPage" : "currentPage",
   "results" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16476,6 +16517,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -16825,6 +16867,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -17194,6 +17237,7 @@ open class UsersAPI {
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -18502,6 +18546,7 @@ open class UsersAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -18790,6 +18835,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -20683,6 +20729,7 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
   "addresses" : [ {
     "extension" : "extension",
     "address" : "address",
@@ -21171,6 +21218,7 @@ open class UsersAPI {
   "pageSize" : 1,
   "currentPage" : "currentPage",
   "results" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -21459,6 +21507,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -21807,6 +21856,7 @@ open class UsersAPI {
   "pageSize" : 1,
   "currentPage" : "currentPage",
   "results" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -22095,6 +22145,7 @@ open class UsersAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -22653,6 +22704,7 @@ open class UsersAPI {
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
   "id" : "id",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -23006,6 +23058,7 @@ open class UsersAPI {
   "active" : true,
   "id" : "id",
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

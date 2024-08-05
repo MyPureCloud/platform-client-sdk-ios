@@ -1301,7 +1301,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let worktypeId: String = "" // Worktype id
-let body: WorktypeUpdate = new WorktypeUpdate(...) // body
+let body: WorktypeUpdate = new WorktypeUpdate(...) // Worktype
 
 // Code example
 TaskManagementAPI.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body) { (response, error) in
@@ -1320,7 +1320,7 @@ TaskManagementAPI.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **worktypeId** | **String**| Worktype id | |
-| **body** | [**WorktypeUpdate**](WorktypeUpdate.html)| body | [optional] |
+| **body** | [**WorktypeUpdate**](WorktypeUpdate.html)| Worktype | |
 {: class="table-striped"}
 
 
@@ -1356,7 +1356,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let worktypeId: String = "" // Worktype id
 let statusId: String = "" // Status id
-let body: WorkitemStatusUpdate = new WorkitemStatusUpdate(...) // body
+let body: WorkitemStatusUpdate = new WorkitemStatusUpdate(...) // Status
 
 // Code example
 TaskManagementAPI.patchTaskmanagementWorktypeStatus(worktypeId: worktypeId, statusId: statusId, body: body) { (response, error) in
@@ -1376,7 +1376,7 @@ TaskManagementAPI.patchTaskmanagementWorktypeStatus(worktypeId: worktypeId, stat
 | ------------- | ------------- | ------------- | ------------- |
 | **worktypeId** | **String**| Worktype id | |
 | **statusId** | **String**| Status id | |
-| **body** | [**WorkitemStatusUpdate**](WorkitemStatusUpdate.html)| body | [optional] |
+| **body** | [**WorkitemStatusUpdate**](WorkitemStatusUpdate.html)| Status | |
 {: class="table-striped"}
 
 
@@ -1410,7 +1410,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: WorkbinCreate = new WorkbinCreate(...) // body
+let body: WorkbinCreate = new WorkbinCreate(...) // Workbin
 
 // Code example
 TaskManagementAPI.postTaskmanagementWorkbins(body: body) { (response, error) in
@@ -1428,7 +1428,7 @@ TaskManagementAPI.postTaskmanagementWorkbins(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WorkbinCreate**](WorkbinCreate.html)| body | [optional] |
+| **body** | [**WorkbinCreate**](WorkbinCreate.html)| Workbin | |
 {: class="table-striped"}
 
 
@@ -1829,7 +1829,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let worktypeId: String = "" // Worktype id
-let body: WorkitemStatusCreate = new WorkitemStatusCreate(...) // body
+let body: WorkitemStatusCreate = new WorkitemStatusCreate(...) // Status
 
 // Code example
 TaskManagementAPI.postTaskmanagementWorktypeStatuses(worktypeId: worktypeId, body: body) { (response, error) in
@@ -1848,7 +1848,7 @@ TaskManagementAPI.postTaskmanagementWorktypeStatuses(worktypeId: worktypeId, bod
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **worktypeId** | **String**| Worktype id | |
-| **body** | [**WorkitemStatusCreate**](WorkitemStatusCreate.html)| body | [optional] |
+| **body** | [**WorkitemStatusCreate**](WorkitemStatusCreate.html)| Status | |
 {: class="table-striped"}
 
 
@@ -1882,7 +1882,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let body: WorktypeCreate = new WorktypeCreate(...) // body
+let body: WorktypeCreate = new WorktypeCreate(...) // Worktype
 
 // Code example
 TaskManagementAPI.postTaskmanagementWorktypes(body: body) { (response, error) in
@@ -1900,7 +1900,7 @@ TaskManagementAPI.postTaskmanagementWorktypes(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WorktypeCreate**](WorktypeCreate.html)| body | [optional] |
+| **body** | [**WorktypeCreate**](WorktypeCreate.html)| Worktype | |
 {: class="table-striped"}
 
 

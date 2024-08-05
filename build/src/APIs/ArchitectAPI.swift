@@ -304,6 +304,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -860,6 +861,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4374,6 +4376,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -5977,6 +5980,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -6737,6 +6741,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -7078,6 +7083,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -7373,6 +7379,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -7432,6 +7439,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -7779,6 +7787,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -8086,6 +8095,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -8450,6 +8460,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -8877,6 +8888,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -9364,6 +9376,7 @@ open class ArchitectAPI {
     "language" : "language"
   } ],
   "createdBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -10176,6 +10189,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10520,6 +10534,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -10968,6 +10983,7 @@ open class ArchitectAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "publishedBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -11309,6 +11325,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -11604,6 +11621,7 @@ open class ArchitectAPI {
     "outputSchema" : "{}",
     "inputSchema" : "{}",
     "compatibleFlowTypes" : [ "BOT", "BOT" ],
+    "worktypeId" : "worktypeId",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "active" : true,
@@ -11663,6 +11681,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -12010,6 +12029,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -12317,6 +12337,7 @@ open class ArchitectAPI {
       "id" : "id",
       "complete" : true,
       "user" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -12681,6 +12702,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -12976,6 +12998,7 @@ open class ArchitectAPI {
     "id" : "id"
   }, {
     "publishedBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -13317,6 +13340,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -13612,6 +13636,7 @@ open class ArchitectAPI {
     "outputSchema" : "{}",
     "inputSchema" : "{}",
     "compatibleFlowTypes" : [ "BOT", "BOT" ],
+    "worktypeId" : "worktypeId",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "active" : true,
@@ -13671,6 +13696,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -14018,6 +14044,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -14325,6 +14352,7 @@ open class ArchitectAPI {
       "id" : "id",
       "complete" : true,
       "user" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -14689,6 +14717,7 @@ open class ArchitectAPI {
         "language" : "language"
       } ],
       "createdBy" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -16722,6 +16751,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -17126,6 +17156,7 @@ open class ArchitectAPI {
       "id" : "id",
       "complete" : true,
       "user" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -17448,6 +17479,7 @@ open class ArchitectAPI {
       "id" : "id",
       "complete" : true,
       "user" : {
+        "workPlanBidRanks" : "{}",
         "addresses" : [ {
           "extension" : "extension",
           "address" : "address",
@@ -18145,6 +18177,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -18835,6 +18868,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -19278,6 +19312,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -19687,6 +19722,7 @@ open class ArchitectAPI {
     "language" : "language"
   } ],
   "createdBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -20037,6 +20073,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -20378,6 +20415,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -20673,6 +20711,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -20732,6 +20771,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -21079,6 +21119,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -21386,6 +21427,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -21750,6 +21792,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -22113,6 +22156,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -22468,6 +22512,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -22809,6 +22854,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -23104,6 +23150,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -23163,6 +23210,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -23510,6 +23558,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -23817,6 +23866,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -24181,6 +24231,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -24529,6 +24580,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -24870,6 +24922,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -25165,6 +25218,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -25224,6 +25278,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -25571,6 +25626,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -25878,6 +25934,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -26242,6 +26299,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -26607,6 +26665,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -26964,6 +27023,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -27305,6 +27365,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -27600,6 +27661,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -27659,6 +27721,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -28006,6 +28069,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -28313,6 +28377,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -28677,6 +28742,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -29026,6 +29092,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -29367,6 +29434,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -29662,6 +29730,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -29721,6 +29790,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -30068,6 +30138,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -30375,6 +30446,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -30739,6 +30811,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -31698,6 +31771,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -32659,6 +32733,7 @@ open class ArchitectAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "publishedBy" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -33000,6 +33075,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -33295,6 +33371,7 @@ open class ArchitectAPI {
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
+  "worktypeId" : "worktypeId",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "active" : true,
@@ -33354,6 +33431,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -33701,6 +33779,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -34008,6 +34087,7 @@ open class ArchitectAPI {
     "id" : "id",
     "complete" : true,
     "user" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -34372,6 +34452,7 @@ open class ArchitectAPI {
       "language" : "language"
     } ],
     "createdBy" : {
+      "workPlanBidRanks" : "{}",
       "addresses" : [ {
         "extension" : "extension",
         "address" : "address",
@@ -34941,6 +35022,7 @@ open class ArchitectAPI {
   "id" : "id",
   "complete" : true,
   "user" : {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

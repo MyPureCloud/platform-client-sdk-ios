@@ -735,6 +735,7 @@ open class SearchAPI {
   "pageSize" : 1,
   "currentPage" : "currentPage",
   "results" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -1023,6 +1024,7 @@ open class SearchAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4333,6 +4335,7 @@ open class SearchAPI {
   "pageSize" : 1,
   "currentPage" : "currentPage",
   "results" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4621,6 +4624,7 @@ open class SearchAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -4969,6 +4973,7 @@ open class SearchAPI {
   "pageSize" : 1,
   "currentPage" : "currentPage",
   "results" : [ {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",
@@ -5257,6 +5262,7 @@ open class SearchAPI {
     "username" : "username",
     "geolocation" : "{}"
   }, {
+    "workPlanBidRanks" : "{}",
     "addresses" : [ {
       "extension" : "extension",
       "address" : "address",

@@ -201,6 +201,8 @@ title: ViewFilter
 | **overtalkInstances** | [**NumericRange**](NumericRange.html) | The overtalk instance range used to filter the view | [optional] |
 | **isScreenRecorded** | **Bool** | Filter to indicate if the screen is recorded | [optional] |
 | **screenMonitorUserIds** | **[String]** | The list of Screen Monitor User Ids | [optional] |
+| **dashboardType** | **String** | The type of dashboard being filtered | [optional] |
+| **dashboardAccessFilter** | **String** | The type of dashboard access being filtered | [optional] |
 {: class="table table-striped"}
 
 
