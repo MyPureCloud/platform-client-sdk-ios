@@ -2272,6 +2272,421 @@ open class WorkforceManagementAPI {
 
     
     
+    
+    
+    /**
+     Get an activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to fetch 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplan(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId)
+        requestBuilder.execute { (response: Response<ActivityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an activity plan
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "optimizationObjective" : "FavorServiceGoals",
+  "lengthMinutes" : 0,
+  "lastRunBy" : "{}",
+  "attendeesSearchRule" : "{}",
+  "description" : "description",
+  "fixedAvailability" : [ {
+    "dateRange" : "{}",
+    "daysOfWeek" : [ "Sunday", "Sunday" ],
+    "availabilityRange" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "daysOfWeek" : [ "Sunday", "Sunday" ],
+    "availabilityRange" : "{}"
+  } ],
+  "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
+  "facilitated" : true,
+  "type" : "Individual",
+  "initialSchedulePeriod" : "{}",
+  "activityCode" : "{}",
+  "recurrenceSettings" : "{}",
+  "groupSettings" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Active",
+  "transitionTimeMinutes" : 6,
+  "serviceGoalImpactOverrides" : "{}",
+  "managementUnits" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "countsAsPaidTime" : true,
+  "facilitatorsSearchRule" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to fetch 
+
+     - returns: RequestBuilder<ActivityPlanResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Gets an activity plan run job
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan associated with the run job 
+     - parameter jobId: (path) The ID of the activity plan run job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId: String, activityPlanId: String, jobId: String, completion: @escaping ((_ data: ActivityPlanRunJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplanRunsJobWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId)
+        requestBuilder.execute { (response: Response<ActivityPlanRunJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets an activity plan run job
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "error" : "{}",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan associated with the run job 
+     - parameter jobId: (path) The ID of the activity plan run job 
+
+     - returns: RequestBuilder<ActivityPlanRunJobResponse> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplanRunsJobWithRequestBuilder(businessUnitId: String, activityPlanId: String, jobId: String) -> RequestBuilder<ActivityPlanRunJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanRunJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum State_getWorkforcemanagementBusinessunitActivityplans: String { 
+        case active = "Active"
+        case inactive = "Inactive"
+    }
+    
+    
+    /**
+     Get activity plans
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter state: (query) Optionally filter by activity plan state (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplans(businessUnitId: String, state: State_getWorkforcemanagementBusinessunitActivityplans? = nil, completion: @escaping ((_ data: ActivityPlanListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplansWithRequestBuilder(businessUnitId: businessUnitId, state: state)
+        requestBuilder.execute { (response: Response<ActivityPlanListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get activity plans
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "optimizationObjective" : "FavorServiceGoals",
+    "lastRunBy" : "{}",
+    "managementUnits" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Individual",
+    "activityCode" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "recurrenceSettings" : "{}",
+    "createdBy" : "{}",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Active"
+  }, {
+    "optimizationObjective" : "FavorServiceGoals",
+    "lastRunBy" : "{}",
+    "managementUnits" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "description" : "description",
+    "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
+    "type" : "Individual",
+    "activityCode" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "recurrenceSettings" : "{}",
+    "createdBy" : "{}",
+    "name" : "name",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Active"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter state: (query) Optionally filter by activity plan state (optional)
+
+     - returns: RequestBuilder<ActivityPlanListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplansWithRequestBuilder(businessUnitId: String, state: State_getWorkforcemanagementBusinessunitActivityplans? = nil) -> RequestBuilder<ActivityPlanListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "state": state?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ActivityPlanListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Gets the latest job for all activity plans in the business unit
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId: String, completion: @escaping ((_ data: ActivityPlanJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementBusinessunitActivityplansJobsWithRequestBuilder(businessUnitId: businessUnitId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the latest job for all activity plans in the business unit
+     - GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "activityPlan" : "{}",
+    "occurrence" : "{}",
+    "error" : "{}",
+    "type" : "RunPlan",
+    "exceptions" : [ {
+      "exceptionType" : "UnscheduledAttendees",
+      "occurrences" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ]
+    }, {
+      "exceptionType" : "UnscheduledAttendees",
+      "occurrences" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ]
+    } ],
+    "status" : "Processing"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "activityPlan" : "{}",
+    "occurrence" : "{}",
+    "error" : "{}",
+    "type" : "RunPlan",
+    "exceptions" : [ {
+      "exceptionType" : "UnscheduledAttendees",
+      "occurrences" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ]
+    }, {
+      "exceptionType" : "UnscheduledAttendees",
+      "occurrences" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "id" : "id"
+      } ]
+    } ],
+    "status" : "Processing"
+  } ]
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+
+     - returns: RequestBuilder<ActivityPlanJobListing> 
+     */
+    open class func getWorkforcemanagementBusinessunitActivityplansJobsWithRequestBuilder(businessUnitId: String) -> RequestBuilder<ActivityPlanJobListing> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get alternative shifts settings for a business unit
      
@@ -10420,6 +10835,112 @@ open class WorkforceManagementAPI {
     
     
     
+    
+    
+    /**
+     Update an activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to update 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementBusinessunitActivityplan(businessUnitId: String, activityPlanId: String, body: UpdateActivityPlanRequest, completion: @escaping ((_ data: ActivityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementBusinessunitActivityplanWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId, body: body)
+        requestBuilder.execute { (response: Response<ActivityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an activity plan
+     - PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}
+     - If a job associated with the activity plan is in 'Processing' state the activity plan cannot be updated
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "optimizationObjective" : "FavorServiceGoals",
+  "lengthMinutes" : 0,
+  "lastRunBy" : "{}",
+  "attendeesSearchRule" : "{}",
+  "description" : "description",
+  "fixedAvailability" : [ {
+    "dateRange" : "{}",
+    "daysOfWeek" : [ "Sunday", "Sunday" ],
+    "availabilityRange" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "daysOfWeek" : [ "Sunday", "Sunday" ],
+    "availabilityRange" : "{}"
+  } ],
+  "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
+  "facilitated" : true,
+  "type" : "Individual",
+  "initialSchedulePeriod" : "{}",
+  "activityCode" : "{}",
+  "recurrenceSettings" : "{}",
+  "groupSettings" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Active",
+  "transitionTimeMinutes" : 6,
+  "serviceGoalImpactOverrides" : "{}",
+  "managementUnits" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "countsAsPaidTime" : true,
+  "facilitatorsSearchRule" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to update 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ActivityPlanResponse> 
+     */
+    open class func patchWorkforcemanagementBusinessunitActivityplanWithRequestBuilder(businessUnitId: String, activityPlanId: String, body: UpdateActivityPlanRequest) -> RequestBuilder<ActivityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Update alternative shifts settings for a business unit
      
@@ -13409,6 +13930,192 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<BusinessUnitActivityCode>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Run an activity plan manually
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to run 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId: String, activityPlanId: String, completion: @escaping ((_ data: ActivityPlanJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplanRunsJobsWithRequestBuilder(businessUnitId: businessUnitId, activityPlanId: activityPlanId)
+        requestBuilder.execute { (response: Response<ActivityPlanJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Run an activity plan manually
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs
+     - Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "activityPlan" : "{}",
+  "occurrence" : "{}",
+  "error" : "{}",
+  "type" : "RunPlan",
+  "exceptions" : [ {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  }, {
+    "exceptionType" : "UnscheduledAttendees",
+    "occurrences" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ]
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter activityPlanId: (path) The ID of the activity plan to run 
+
+     - returns: RequestBuilder<ActivityPlanJobResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplanRunsJobsWithRequestBuilder(businessUnitId: String, activityPlanId: String) -> RequestBuilder<ActivityPlanJobResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let activityPlanIdPreEscape = "\(activityPlanId)"
+        let activityPlanIdPostEscape = activityPlanIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{activityPlanId}", with: activityPlanIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create an activity plan
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplans(businessUnitId: String, body: CreateActivityPlanRequest, completion: @escaping ((_ data: ActivityPlanResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementBusinessunitActivityplansWithRequestBuilder(businessUnitId: businessUnitId, body: body)
+        requestBuilder.execute { (response: Response<ActivityPlanResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an activity plan
+     - POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "optimizationObjective" : "FavorServiceGoals",
+  "lengthMinutes" : 0,
+  "lastRunBy" : "{}",
+  "attendeesSearchRule" : "{}",
+  "description" : "description",
+  "fixedAvailability" : [ {
+    "dateRange" : "{}",
+    "daysOfWeek" : [ "Sunday", "Sunday" ],
+    "availabilityRange" : "{}"
+  }, {
+    "dateRange" : "{}",
+    "daysOfWeek" : [ "Sunday", "Sunday" ],
+    "availabilityRange" : "{}"
+  } ],
+  "lastRunDate" : "2000-01-23T04:56:07.000+00:00",
+  "facilitated" : true,
+  "type" : "Individual",
+  "initialSchedulePeriod" : "{}",
+  "activityCode" : "{}",
+  "recurrenceSettings" : "{}",
+  "groupSettings" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "state" : "Active",
+  "transitionTimeMinutes" : 6,
+  "serviceGoalImpactOverrides" : "{}",
+  "managementUnits" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "countsAsPaidTime" : true,
+  "facilitatorsSearchRule" : "{}",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "name" : "name",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter businessUnitId: (path) The ID of the business unit 
+     - parameter body: (body) body 
+
+     - returns: RequestBuilder<ActivityPlanResponse> 
+     */
+    open class func postWorkforcemanagementBusinessunitActivityplansWithRequestBuilder(businessUnitId: String, body: CreateActivityPlanRequest) -> RequestBuilder<ActivityPlanResponse> {        
+        var path = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans"
+        let businessUnitIdPreEscape = "\(businessUnitId)"
+        let businessUnitIdPostEscape = businessUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{businessUnitId}", with: businessUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ActivityPlanResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

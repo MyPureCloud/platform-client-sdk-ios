@@ -59,6 +59,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundCampaignsDivisionviews**](OutboundAPI.html#getOutboundCampaignsDivisionviews) | Query a list of basic Campaign information objects |
 | [**getOutboundContactlist**](OutboundAPI.html#getOutboundContactlist) | Get a dialer contact list. |
 | [**getOutboundContactlistContact**](OutboundAPI.html#getOutboundContactlistContact) | Get a contact. |
+| [**getOutboundContactlistContactsBulkJob**](OutboundAPI.html#getOutboundContactlistContactsBulkJob) | Get bulk operation job. |
+| [**getOutboundContactlistContactsBulkJobs**](OutboundAPI.html#getOutboundContactlistContactsBulkJobs) | Get 10 most recent bulk operation jobs associated with contact list. |
 | [**getOutboundContactlistExport**](OutboundAPI.html#getOutboundContactlistExport) | Get the URI of a contact list export. |
 | [**getOutboundContactlistImportstatus**](OutboundAPI.html#getOutboundContactlistImportstatus) | Get dialer contactList import status. |
 | [**getOutboundContactlistTimezonemappingpreview**](OutboundAPI.html#getOutboundContactlistTimezonemappingpreview) | Preview the result of applying Automatic Time Zone Mapping to a contact list |
@@ -3002,6 +3004,112 @@ OutboundAPI.getOutboundContactlistContact(contactListId: contactListId, contactI
 ### Return type
 
 [**DialerContact**](DialerContact.html)
+
+<a name="getOutboundContactlistContactsBulkJob"></a>
+
+# **getOutboundContactlistContactsBulkJob**
+
+
+
+> [ContactsBulkOperationJob](ContactsBulkOperationJob.html) getOutboundContactlistContactsBulkJob(contactListId, jobId)
+
+Get bulk operation job.
+
+
+
+Wraps GET /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+let jobId: String = "" // Job ID
+
+// Code example
+OutboundAPI.getOutboundContactlistContactsBulkJob(contactListId: contactListId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundContactlistContactsBulkJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListId** | **String**| Contact List ID | |
+| **jobId** | **String**| Job ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactsBulkOperationJob**](ContactsBulkOperationJob.html)
+
+<a name="getOutboundContactlistContactsBulkJobs"></a>
+
+# **getOutboundContactlistContactsBulkJobs**
+
+
+
+> [ContactsBulkOperationJobListing](ContactsBulkOperationJobListing.html) getOutboundContactlistContactsBulkJobs(contactListId)
+
+Get 10 most recent bulk operation jobs associated with contact list.
+
+
+
+Wraps GET /api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs  
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let contactListId: String = "" // Contact List ID
+
+// Code example
+OutboundAPI.getOutboundContactlistContactsBulkJobs(contactListId: contactListId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundContactlistContactsBulkJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactListId** | **String**| Contact List ID | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ContactsBulkOperationJobListing**](ContactsBulkOperationJobListing.html)
 
 <a name="getOutboundContactlistExport"></a>
 

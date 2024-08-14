@@ -25164,6 +25164,39 @@
     "return": "DialerContact",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListId: String = \"\" // Contact List ID\nlet contactId: String = \"\" // Contact ID\n\n// Get a contact.\nGetOutboundContactlistContactRequest.getOutboundContactlistContact(contactListId: contactListId, contactId: contactId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlistContactRequest.getOutboundContactlistContact was successful\")\n        dump(response)\n    }\n}"
   },
+  "getoutboundcontactlistcontactsbulkjob": {
+    "operationId": "getoutboundcontactlistcontactsbulkjob",
+    "functionName": "getOutboundContactlistContactsBulkJob",
+    "signature": "getOutboundContactlistContactsBulkJob(contactListId, jobId)",
+    "parameters": [
+      {
+        "name": "contactListId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContactsBulkOperationJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListId: String = \"\" // Contact List ID\nlet jobId: String = \"\" // Job ID\n\n// Get bulk operation job.\nGetOutboundContactlistContactsBulkJobRequest.getOutboundContactlistContactsBulkJob(contactListId: contactListId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlistContactsBulkJobRequest.getOutboundContactlistContactsBulkJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getoutboundcontactlistcontactsbulkjobs": {
+    "operationId": "getoutboundcontactlistcontactsbulkjobs",
+    "functionName": "getOutboundContactlistContactsBulkJobs",
+    "signature": "getOutboundContactlistContactsBulkJobs(contactListId)",
+    "parameters": [
+      {
+        "name": "contactListId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContactsBulkOperationJobListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactListId: String = \"\" // Contact List ID\n\n// Get 10 most recent bulk operation jobs associated with contact list.\nGetOutboundContactlistContactsBulkJobsRequest.getOutboundContactlistContactsBulkJobs(contactListId: contactListId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundContactlistContactsBulkJobsRequest.getOutboundContactlistContactsBulkJobs was successful\")\n        dump(response)\n    }\n}"
+  },
   "getoutboundcontactlistexport": {
     "operationId": "getoutboundcontactlistexport",
     "functionName": "getOutboundContactlistExport",
@@ -29662,7 +29695,7 @@
       }
     ],
     "return": "BatchDownloadJobStatusResult",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Get the status and results for a batch request job, only the user that submitted the job may retrieve results\nGetRecordingBatchrequestRequest.getRecordingBatchrequest(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingBatchrequestRequest.getRecordingBatchrequest was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.\nGetRecordingBatchrequestRequest.getRecordingBatchrequest(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRecordingBatchrequestRequest.getRecordingBatchrequest was successful\")\n        dump(response)\n    }\n}"
   },
   "getrecordingcrossplatformmediaretentionpolicies": {
     "operationId": "getrecordingcrossplatformmediaretentionpolicies",
@@ -39359,6 +39392,25 @@
     "return": "DownloadResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet recordingId: String = \"\" // User Recording ID\nlet formatId: GetUserrecordingMediaRequest.FormatId_getUserrecordingMedia = GetUserrecordingMediaRequest.FormatId_getUserrecordingMedia.enummember // The desired media format.\nlet async: Bool = true // When set to true, api will return 202 response until the recording is ready for download\n\n// Download a user recording.\nGetUserrecordingMediaRequest.getUserrecordingMedia(recordingId: recordingId, formatId: formatId, async: async) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUserrecordingMediaRequest.getUserrecordingMedia was successful\")\n        dump(response)\n    }\n}"
   },
+  "getuserrecordingtranscoding": {
+    "operationId": "getuserrecordingtranscoding",
+    "functionName": "getUserrecordingTranscoding",
+    "signature": "getUserrecordingTranscoding(recordingId, formatId)",
+    "parameters": [
+      {
+        "name": "recordingId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "formatId",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "DownloadResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet recordingId: String = \"\" // User Recording ID\nlet formatId: GetUserrecordingTranscodingRequest.FormatId_getUserrecordingTranscoding = GetUserrecordingTranscodingRequest.FormatId_getUserrecordingTranscoding.enummember // The desired media format.\n\n// Download a user recording.\nGetUserrecordingTranscodingRequest.getUserrecordingTranscoding(recordingId: recordingId, formatId: formatId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetUserrecordingTranscodingRequest.getUserrecordingTranscoding was successful\")\n        dump(response)\n    }\n}"
+  },
   "getuserrecordings": {
     "operationId": "getuserrecordings",
     "functionName": "getUserrecordings",
@@ -41999,6 +42051,82 @@
     "return": "BusinessUnitActivityCodeListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes\n\n// Get activity codes\nGetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId, forceDownloadService: forceDownloadService) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivitycodesRequest.getWorkforcemanagementBusinessunitActivitycodes was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementbusinessunitactivityplan": {
+    "operationId": "getworkforcemanagementbusinessunitactivityplan",
+    "functionName": "getWorkforcemanagementBusinessunitActivityplan",
+    "signature": "getWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "activityPlanId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ActivityPlanResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet activityPlanId: String = \"\" // The ID of the activity plan to fetch\n\n// Get an activity plan\nGetWorkforcemanagementBusinessunitActivityplanRequest.getWorkforcemanagementBusinessunitActivityplan(businessUnitId: businessUnitId, activityPlanId: activityPlanId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivityplanRequest.getWorkforcemanagementBusinessunitActivityplan was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitactivityplanrunsjob": {
+    "operationId": "getworkforcemanagementbusinessunitactivityplanrunsjob",
+    "functionName": "getWorkforcemanagementBusinessunitActivityplanRunsJob",
+    "signature": "getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId, activityPlanId, jobId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "activityPlanId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ActivityPlanRunJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet activityPlanId: String = \"\" // The ID of the activity plan associated with the run job\nlet jobId: String = \"\" // The ID of the activity plan run job\n\n// Gets an activity plan run job\nGetWorkforcemanagementBusinessunitActivityplanRunsJobRequest.getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivityplanRunsJobRequest.getWorkforcemanagementBusinessunitActivityplanRunsJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitactivityplans": {
+    "operationId": "getworkforcemanagementbusinessunitactivityplans",
+    "functionName": "getWorkforcemanagementBusinessunitActivityplans",
+    "signature": "getWorkforcemanagementBusinessunitActivityplans(businessUnitId, state)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "state",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ActivityPlanListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet state: GetWorkforcemanagementBusinessunitActivityplansRequest.State_getWorkforcemanagementBusinessunitActivityplans = GetWorkforcemanagementBusinessunitActivityplansRequest.State_getWorkforcemanagementBusinessunitActivityplans.enummember // Optionally filter by activity plan state\n\n// Get activity plans\nGetWorkforcemanagementBusinessunitActivityplansRequest.getWorkforcemanagementBusinessunitActivityplans(businessUnitId: businessUnitId, state: state) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivityplansRequest.getWorkforcemanagementBusinessunitActivityplans was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementbusinessunitactivityplansjobs": {
+    "operationId": "getworkforcemanagementbusinessunitactivityplansjobs",
+    "functionName": "getWorkforcemanagementBusinessunitActivityplansJobs",
+    "signature": "getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ActivityPlanJobListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\n\n// Gets the latest job for all activity plans in the business unit\nGetWorkforcemanagementBusinessunitActivityplansJobsRequest.getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId: businessUnitId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementBusinessunitActivityplansJobsRequest.getWorkforcemanagementBusinessunitActivityplansJobs was successful\")\n        dump(response)\n    }\n}"
+  },
   "getworkforcemanagementbusinessunitalternativeshiftssettings": {
     "operationId": "getworkforcemanagementbusinessunitalternativeshiftssettings",
     "functionName": "getWorkforcemanagementBusinessunitAlternativeshiftsSettings",
@@ -43679,6 +43807,30 @@
     "return": "BusinessUnitActivityCode",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet activityCodeId: String = \"\" // The ID of the activity code to update\nlet body: UpdateActivityCodeRequest = new UpdateActivityCodeRequest(...) // body\n\n// Update an activity code\nPatchWorkforcemanagementBusinessunitActivitycodeRequest.patchWorkforcemanagementBusinessunitActivitycode(businessUnitId: businessUnitId, activityCodeId: activityCodeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitActivitycodeRequest.patchWorkforcemanagementBusinessunitActivitycode was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchworkforcemanagementbusinessunitactivityplan": {
+    "operationId": "patchworkforcemanagementbusinessunitactivityplan",
+    "functionName": "patchWorkforcemanagementBusinessunitActivityplan",
+    "signature": "patchWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "activityPlanId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "UpdateActivityPlanRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ActivityPlanResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet activityPlanId: String = \"\" // The ID of the activity plan to update\nlet body: UpdateActivityPlanRequest = new UpdateActivityPlanRequest(...) // body\n\n// Update an activity plan\nPatchWorkforcemanagementBusinessunitActivityplanRequest.patchWorkforcemanagementBusinessunitActivityplan(businessUnitId: businessUnitId, activityPlanId: activityPlanId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchWorkforcemanagementBusinessunitActivityplanRequest.patchWorkforcemanagementBusinessunitActivityplan was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchworkforcemanagementbusinessunitalternativeshiftssettings": {
     "operationId": "patchworkforcemanagementbusinessunitalternativeshiftssettings",
     "functionName": "patchWorkforcemanagementBusinessunitAlternativeshiftsSettings",
@@ -44425,6 +44577,44 @@
     ],
     "return": "BusinessUnitActivityCode",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit, or 'mine' for the business unit of the logged-in user.\nlet body: CreateActivityCodeRequest = new CreateActivityCodeRequest(...) // body\n\n// Create a new activity code\nPostWorkforcemanagementBusinessunitActivitycodesRequest.postWorkforcemanagementBusinessunitActivitycodes(businessUnitId: businessUnitId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitActivitycodesRequest.postWorkforcemanagementBusinessunitActivitycodes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitactivityplanrunsjobs": {
+    "operationId": "postworkforcemanagementbusinessunitactivityplanrunsjobs",
+    "functionName": "postWorkforcemanagementBusinessunitActivityplanRunsJobs",
+    "signature": "postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId, activityPlanId)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "activityPlanId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ActivityPlanJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet activityPlanId: String = \"\" // The ID of the activity plan to run\n\n// Run an activity plan manually\nPostWorkforcemanagementBusinessunitActivityplanRunsJobsRequest.postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitActivityplanRunsJobsRequest.postWorkforcemanagementBusinessunitActivityplanRunsJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementbusinessunitactivityplans": {
+    "operationId": "postworkforcemanagementbusinessunitactivityplans",
+    "functionName": "postWorkforcemanagementBusinessunitActivityplans",
+    "signature": "postWorkforcemanagementBusinessunitActivityplans(businessUnitId, body)",
+    "parameters": [
+      {
+        "name": "businessUnitId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "CreateActivityPlanRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ActivityPlanResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet businessUnitId: String = \"\" // The ID of the business unit\nlet body: CreateActivityPlanRequest = new CreateActivityPlanRequest(...) // body\n\n// Create an activity plan\nPostWorkforcemanagementBusinessunitActivityplansRequest.postWorkforcemanagementBusinessunitActivityplans(businessUnitId: businessUnitId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementBusinessunitActivityplansRequest.postWorkforcemanagementBusinessunitActivityplans was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementbusinessunitadherenceexplanationsquery": {
     "operationId": "postworkforcemanagementbusinessunitadherenceexplanationsquery",

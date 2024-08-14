@@ -23,7 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrphanrecording**](RecordingAPI.html#getOrphanrecording) | Gets a single orphan recording |
 | [**getOrphanrecordingMedia**](RecordingAPI.html#getOrphanrecordingMedia) | Gets the media of a single orphan recording |
 | [**getOrphanrecordings**](RecordingAPI.html#getOrphanrecordings) | Gets all orphan recordings |
-| [**getRecordingBatchrequest**](RecordingAPI.html#getRecordingBatchrequest) | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
+| [**getRecordingBatchrequest**](RecordingAPI.html#getRecordingBatchrequest) | Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results. |
 | [**getRecordingCrossplatformMediaretentionpolicies**](RecordingAPI.html#getRecordingCrossplatformMediaretentionpolicies) | Gets media retention policy list with query options to filter on name and enabled. |
 | [**getRecordingCrossplatformMediaretentionpolicy**](RecordingAPI.html#getRecordingCrossplatformMediaretentionpolicy) | Get a media retention policy |
 | [**getRecordingJob**](RecordingAPI.html#getRecordingJob) | Get the status of the job associated with the job id. |
@@ -978,7 +978,7 @@ RecordingAPI.getOrphanrecordings(pageSize: pageSize, pageNumber: pageNumber, sor
 
 > [BatchDownloadJobStatusResult](BatchDownloadJobStatusResult.html) getRecordingBatchrequest(jobId)
 
-Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+Get the status and results for a batch request job, only the user that submitted the job may retrieve results. Each result may contain either a URL to a recording or an error; additionally, a recording could be associated with multiple results.
 
 
 

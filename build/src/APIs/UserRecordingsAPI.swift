@@ -13371,12 +13371,17 @@ open class UserRecordingsAPI {
     /**
      Download a user recording.
      - GET /api/v2/userrecordings/{recordingId}/media
+     - API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "contentLocationUri" : "contentLocationUri",
   "imageUri" : "imageUri",
+  "resultUri" : "resultUri",
+  "selfUri" : "selfUri",
+  "id" : "id",
+  "state" : "Running",
   "thumbnails" : [ {
     "imageUri" : "imageUri",
     "width" : 6,
@@ -13408,6 +13413,94 @@ open class UserRecordingsAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "formatId": formatId?.rawValue, 
             "async": async
+        ])
+
+        let requestBuilder: RequestBuilder<DownloadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum FormatId_getUserrecordingTranscoding: String { 
+        case wav = "WAV"
+        case webm = "WEBM"
+        case wavUlaw = "WAV_ULAW"
+        case oggVorbis = "OGG_VORBIS"
+        case oggOpus = "OGG_OPUS"
+        case mp3 = "MP3"
+        case _none = "NONE"
+    }
+    
+    
+    /**
+     Download a user recording.
+     
+     - parameter recordingId: (path) User Recording ID 
+     - parameter formatId: (query) The desired media format. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserrecordingTranscoding(recordingId: String, formatId: FormatId_getUserrecordingTranscoding? = nil, completion: @escaping ((_ data: DownloadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserrecordingTranscodingWithRequestBuilder(recordingId: recordingId, formatId: formatId)
+        requestBuilder.execute { (response: Response<DownloadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Download a user recording.
+     - GET /api/v2/userrecordings/{recordingId}/transcoding
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "contentLocationUri" : "contentLocationUri",
+  "imageUri" : "imageUri",
+  "resultUri" : "resultUri",
+  "selfUri" : "selfUri",
+  "id" : "id",
+  "state" : "Running",
+  "thumbnails" : [ {
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
+  }, {
+    "imageUri" : "imageUri",
+    "width" : 6,
+    "resolution" : "resolution",
+    "height" : 0
+  } ]
+}, statusCode=200}]
+     
+     - parameter recordingId: (path) User Recording ID 
+     - parameter formatId: (query) The desired media format. (optional)
+
+     - returns: RequestBuilder<DownloadResponse> 
+     */
+    open class func getUserrecordingTranscodingWithRequestBuilder(recordingId: String, formatId: FormatId_getUserrecordingTranscoding? = nil) -> RequestBuilder<DownloadResponse> {        
+        var path = "/api/v2/userrecordings/{recordingId}/transcoding"
+        let recordingIdPreEscape = "\(recordingId)"
+        let recordingIdPostEscape = recordingIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{recordingId}", with: recordingIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "formatId": formatId?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<DownloadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -39877,8 +39970,8 @@ open class UserRecordingsAPI {
     }
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

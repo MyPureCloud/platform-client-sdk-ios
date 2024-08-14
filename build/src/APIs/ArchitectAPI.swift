@@ -1713,8 +1713,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2036,8 +2036,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2297,8 +2297,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2636,8 +2636,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3137,8 +3137,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3458,8 +3458,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3711,8 +3711,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3812,11 +3812,12 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4016,11 +4017,12 @@ open class ArchitectAPI {
     "closedHoursFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4120,11 +4122,12 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4351,6 +4354,7 @@ open class ArchitectAPI {
   "system" : true,
   "actionStatus" : "LOCKED",
   "entities" : [ {
+    "virtualAgentEnabled" : true,
     "resource" : "resource",
     "action" : "CHECKIN",
     "client" : "{}",
@@ -4359,6 +4363,7 @@ open class ArchitectAPI {
     "version" : "version",
     "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
+    "virtualAgentEnabled" : true,
     "resource" : "resource",
     "action" : "CHECKIN",
     "client" : "{}",
@@ -4867,8 +4872,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5043,8 +5048,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5392,11 +5397,12 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5496,11 +5502,12 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5621,11 +5628,12 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5723,11 +5731,12 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5955,6 +5964,7 @@ open class ArchitectAPI {
   "system" : true,
   "actionStatus" : "LOCKED",
   "entities" : [ {
+    "virtualAgentEnabled" : true,
     "resource" : "resource",
     "action" : "CHECKIN",
     "client" : "{}",
@@ -5963,6 +5973,7 @@ open class ArchitectAPI {
     "version" : "version",
     "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
+    "virtualAgentEnabled" : true,
     "resource" : "resource",
     "action" : "CHECKIN",
     "client" : "{}",
@@ -6479,8 +6490,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6660,8 +6671,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7034,6 +7045,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -7376,6 +7388,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -7390,6 +7403,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -7738,6 +7752,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -8411,6 +8426,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -8863,6 +8879,7 @@ open class ArchitectAPI {
   "system" : true,
   "actionStatus" : "LOCKED",
   "entities" : [ {
+    "virtualAgentEnabled" : true,
     "resource" : "resource",
     "action" : "CHECKIN",
     "client" : "{}",
@@ -8871,6 +8888,7 @@ open class ArchitectAPI {
     "version" : "version",
     "timestamp" : "2000-01-23T04:56:07.000+00:00"
   }, {
+    "virtualAgentEnabled" : true,
     "resource" : "resource",
     "action" : "CHECKIN",
     "client" : "{}",
@@ -9327,6 +9345,7 @@ open class ArchitectAPI {
   "dateSaved" : 1,
   "generationId" : "generationId",
   "debug" : true,
+  "virtualAgentEnabled" : true,
   "outputSchema" : {
     "$schema" : "$schema",
     "description" : "description",
@@ -10140,6 +10159,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -10485,6 +10505,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -10828,8 +10849,8 @@ open class ArchitectAPI {
     "commitVersion" : "commitVersion"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11276,6 +11297,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -11618,6 +11640,7 @@ open class ArchitectAPI {
       "id" : "id",
       "commitVersion" : "commitVersion"
     },
+    "virtualAgentEnabled" : true,
     "outputSchema" : "{}",
     "inputSchema" : "{}",
     "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -11632,6 +11655,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -11980,6 +12004,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -12653,6 +12678,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -13291,6 +13317,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -13633,6 +13660,7 @@ open class ArchitectAPI {
       "id" : "id",
       "commitVersion" : "commitVersion"
     },
+    "virtualAgentEnabled" : true,
     "outputSchema" : "{}",
     "inputSchema" : "{}",
     "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -13647,6 +13675,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -13995,6 +14024,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -14668,6 +14698,7 @@ open class ArchitectAPI {
       "dateSaved" : 1,
       "generationId" : "generationId",
       "debug" : true,
+      "virtualAgentEnabled" : true,
       "outputSchema" : {
         "$schema" : "$schema",
         "description" : "description",
@@ -15013,8 +15044,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15521,8 +15552,8 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15637,8 +15668,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15827,8 +15858,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15995,8 +16026,8 @@ open class ArchitectAPI {
     "debugVersion" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16554,8 +16585,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16663,8 +16694,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17787,8 +17818,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17896,8 +17927,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -19673,6 +19704,7 @@ open class ArchitectAPI {
   "dateSaved" : 1,
   "generationId" : "generationId",
   "debug" : true,
+  "virtualAgentEnabled" : true,
   "outputSchema" : {
     "$schema" : "$schema",
     "description" : "description",
@@ -20366,6 +20398,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -20708,6 +20741,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -20722,6 +20756,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -21070,6 +21105,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -21743,6 +21779,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -22805,6 +22842,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -23147,6 +23185,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -23161,6 +23200,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -23509,6 +23549,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -24182,6 +24223,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -24873,6 +24915,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -25215,6 +25258,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -25229,6 +25273,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -25577,6 +25622,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -26250,6 +26296,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -27316,6 +27363,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -27658,6 +27706,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -27672,6 +27721,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -28020,6 +28070,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -28693,6 +28744,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -29385,6 +29437,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -29727,6 +29780,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -29741,6 +29795,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -30089,6 +30144,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -30762,6 +30818,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -31584,8 +31641,8 @@ open class ArchitectAPI {
     "flowType" : "bot"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -33026,6 +33083,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -33368,6 +33426,7 @@ open class ArchitectAPI {
     "id" : "id",
     "commitVersion" : "commitVersion"
   },
+  "virtualAgentEnabled" : true,
   "outputSchema" : "{}",
   "inputSchema" : "{}",
   "compatibleFlowTypes" : [ "BOT", "BOT" ],
@@ -33382,6 +33441,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -33730,6 +33790,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",
@@ -34403,6 +34464,7 @@ open class ArchitectAPI {
     "dateSaved" : 1,
     "generationId" : "generationId",
     "debug" : true,
+    "virtualAgentEnabled" : true,
     "outputSchema" : {
       "$schema" : "$schema",
       "description" : "description",

@@ -43,6 +43,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunit) | Get business unit |
 | [**getWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivitycode) | Get an activity code |
 | [**getWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivitycodes) | Get activity codes |
+| [**getWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplan) | Get an activity plan |
+| [**getWorkforcemanagementBusinessunitActivityplanRunsJob**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplanRunsJob) | Gets an activity plan run job |
+| [**getWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplans) | Get activity plans |
+| [**getWorkforcemanagementBusinessunitActivityplansJobs**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplansJobs) | Gets the latest job for all activity plans in the business unit |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Get alternative shifts settings for a business unit |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitAlternativeshiftsTrade) | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
@@ -129,6 +133,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementAlternativeshiftsTradesStateJobs**](WorkforceManagementAPI.html#patchWorkforcemanagementAlternativeshiftsTradesStateJobs) | Bulk update alternative shift trade states |
 | [**patchWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunit) | Update business unit |
 | [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
+| [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
 | [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
 | [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
 | [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
@@ -165,6 +170,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementAlternativeshiftsOffersSearchJobs**](WorkforceManagementAPI.html#postWorkforcemanagementAlternativeshiftsOffersSearchJobs) | Request a search of alternative shift offers for a given shift |
 | [**postWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementAPI.html#postWorkforcemanagementAlternativeshiftsTrades) | Create my alternative shift trade using an existing offer&#39;s jobId |
 | [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
+| [**postWorkforcemanagementBusinessunitActivityplanRunsJobs**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivityplanRunsJobs) | Run an activity plan manually |
+| [**postWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivityplans) | Create an activity plan |
 | [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
 | [**postWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAgentschedulesSearch) | Search published schedules |
 | [**postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | List alternative shifts trades for a given management unit or agent |
@@ -2333,6 +2340,222 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessU
 ### Return type
 
 [**BusinessUnitActivityCodeListing**](BusinessUnitActivityCodeListing.html)
+
+<a name="getWorkforcemanagementBusinessunitActivityplan"></a>
+
+# **getWorkforcemanagementBusinessunitActivityplan**
+
+
+
+> [ActivityPlanResponse](ActivityPlanResponse.html) getWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId)
+
+Get an activity plan
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan to fetch
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplan(businessUnitId: businessUnitId, activityPlanId: activityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan to fetch | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanResponse**](ActivityPlanResponse.html)
+
+<a name="getWorkforcemanagementBusinessunitActivityplanRunsJob"></a>
+
+# **getWorkforcemanagementBusinessunitActivityplanRunsJob**
+
+
+
+> [ActivityPlanRunJobResponse](ActivityPlanRunJobResponse.html) getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId, activityPlanId, jobId)
+
+Gets an activity plan run job
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanRunJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan associated with the run job
+let jobId: String = "" // The ID of the activity plan run job
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId: businessUnitId, activityPlanId: activityPlanId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanRunsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan associated with the run job | |
+| **jobId** | **String**| The ID of the activity plan run job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanRunJobResponse**](ActivityPlanRunJobResponse.html)
+
+<a name="getWorkforcemanagementBusinessunitActivityplans"></a>
+
+# **getWorkforcemanagementBusinessunitActivityplans**
+
+
+
+> [ActivityPlanListing](ActivityPlanListing.html) getWorkforcemanagementBusinessunitActivityplans(businessUnitId, state)
+
+Get activity plans
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans  
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let state: WorkforceManagementAPI.State_getWorkforcemanagementBusinessunitActivityplans = WorkforceManagementAPI.State_getWorkforcemanagementBusinessunitActivityplans.enummember // Optionally filter by activity plan state
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplans(businessUnitId: businessUnitId, state: state) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **state** | **String**| Optionally filter by activity plan state | [optional]<br />**Values**: active ("Active"), inactive ("Inactive") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanListing**](ActivityPlanListing.html)
+
+<a name="getWorkforcemanagementBusinessunitActivityplansJobs"></a>
+
+# **getWorkforcemanagementBusinessunitActivityplansJobs**
+
+
+
+> [ActivityPlanJobListing](ActivityPlanJobListing.html) getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId)
+
+Gets the latest job for all activity plans in the business unit
+
+
+
+Wraps GET /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId: businessUnitId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplansJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanJobListing**](ActivityPlanJobListing.html)
 
 <a name="getWorkforcemanagementBusinessunitAlternativeshiftsSettings"></a>
 
@@ -7153,6 +7376,64 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(business
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
 
+<a name="patchWorkforcemanagementBusinessunitActivityplan"></a>
+
+# **patchWorkforcemanagementBusinessunitActivityplan**
+
+
+
+> [ActivityPlanResponse](ActivityPlanResponse.html) patchWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId, body)
+
+Update an activity plan
+
+If a job associated with the activity plan is in &#39;Processing&#39; state the activity plan cannot be updated
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}  
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan to update
+let body: UpdateActivityPlanRequest = new UpdateActivityPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivityplan(businessUnitId: businessUnitId, activityPlanId: activityPlanId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivityplan was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan to update | |
+| **body** | [**UpdateActivityPlanRequest**](UpdateActivityPlanRequest.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanResponse**](ActivityPlanResponse.html)
+
 <a name="patchWorkforcemanagementBusinessunitAlternativeshiftsSettings"></a>
 
 # **patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**
@@ -9122,6 +9403,116 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 ### Return type
 
 [**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
+
+<a name="postWorkforcemanagementBusinessunitActivityplanRunsJobs"></a>
+
+# **postWorkforcemanagementBusinessunitActivityplanRunsJobs**
+
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse.html) postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId, activityPlanId)
+
+Run an activity plan manually
+
+Triggers a job running the activity plan. The activity plan cannot be updated until the job completes
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs  
+
+Requires ANY permissions: 
+
+* wfm:activityPlanRunJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let activityPlanId: String = "" // The ID of the activity plan to run
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId: businessUnitId, activityPlanId: activityPlanId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanRunsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **activityPlanId** | **String**| The ID of the activity plan to run | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse.html)
+
+<a name="postWorkforcemanagementBusinessunitActivityplans"></a>
+
+# **postWorkforcemanagementBusinessunitActivityplans**
+
+
+
+> [ActivityPlanResponse](ActivityPlanResponse.html) postWorkforcemanagementBusinessunitActivityplans(businessUnitId, body)
+
+Create an activity plan
+
+
+
+Wraps POST /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans  
+
+Requires ANY permissions: 
+
+* wfm:activityPlan:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let businessUnitId: String = "" // The ID of the business unit
+let body: CreateActivityPlanRequest = new CreateActivityPlanRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplans(businessUnitId: businessUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplans was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **businessUnitId** | **String**| The ID of the business unit | |
+| **body** | [**CreateActivityPlanRequest**](CreateActivityPlanRequest.html)| body | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ActivityPlanResponse**](ActivityPlanResponse.html)
 
 <a name="postWorkforcemanagementBusinessunitAdherenceExplanationsQuery"></a>
 

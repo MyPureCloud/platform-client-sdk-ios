@@ -14,6 +14,7 @@ title: CampaignStats
 | **outstandingCalls** | **Int** | Number of campaign calls currently ongoing | [optional] |
 | **scheduledCalls** | **Int** | Number of campaign calls currently scheduled | [optional] |
 | **timeZoneRescheduledCalls** | **Int** | Number of campaign calls currently timezone rescheduled | [optional] |
+| **filteredOutContactsCount** | **Int** | Number of contacts that don&#39;t match filter. This is currently supported only for Campaigns with dynamic filter on. | [optional] |
 | **linesUtilization** | [**CampaignLinesUtilization**](CampaignLinesUtilization.html) | Information on the campaign&#39;s lines utilization | [optional] |
 {: class="table table-striped"}
 

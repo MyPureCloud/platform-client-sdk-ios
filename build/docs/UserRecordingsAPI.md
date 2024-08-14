@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteUserrecording**](UserRecordingsAPI.html#deleteUserrecording) | Delete a user recording. |
 | [**getUserrecording**](UserRecordingsAPI.html#getUserrecording) | Get a user recording. |
 | [**getUserrecordingMedia**](UserRecordingsAPI.html#getUserrecordingMedia) | Download a user recording. |
+| [**getUserrecordingTranscoding**](UserRecordingsAPI.html#getUserrecordingTranscoding) | Download a user recording. |
 | [**getUserrecordings**](UserRecordingsAPI.html#getUserrecordings) | Get a list of user recordings. |
 | [**getUserrecordingsSummary**](UserRecordingsAPI.html#getUserrecordingsSummary) | Get user recording summary |
 | [**putUserrecording**](UserRecordingsAPI.html#putUserrecording) | Update a user recording. |
@@ -128,6 +129,8 @@ UserRecordingsAPI.getUserrecording(recordingId: recordingId, expand: expand) { (
 
 Download a user recording.
 
+API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
+
 
 
 Wraps GET /api/v2/userrecordings/{recordingId}/media  
@@ -166,6 +169,60 @@ UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: form
 | **recordingId** | **String**| User Recording ID | |
 | **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **async** | **Bool**| When set to true, api will return 202 response until the recording is ready for download | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**DownloadResponse**](DownloadResponse.html)
+
+<a name="getUserrecordingTranscoding"></a>
+
+# **getUserrecordingTranscoding**
+
+
+
+> [DownloadResponse](DownloadResponse.html) getUserrecordingTranscoding(recordingId, formatId)
+
+Download a user recording.
+
+
+
+Wraps GET /api/v2/userrecordings/{recordingId}/transcoding  
+
+Requires ANY permissions: 
+
+* They are enforced by the backend
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let recordingId: String = "" // User Recording ID
+let formatId: UserRecordingsAPI.FormatId_getUserrecordingTranscoding = UserRecordingsAPI.FormatId_getUserrecordingTranscoding.enummember // The desired media format.
+
+// Code example
+UserRecordingsAPI.getUserrecordingTranscoding(recordingId: recordingId, formatId: formatId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UserRecordingsAPI.getUserrecordingTranscoding was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **recordingId** | **String**| User Recording ID | |
+| **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 {: class="table-striped"}
 
 

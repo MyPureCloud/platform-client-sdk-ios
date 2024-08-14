@@ -180,6 +180,10 @@ open class FaxAPI {
      - examples: [{contentType=application/json, example={
   "contentLocationUri" : "contentLocationUri",
   "imageUri" : "imageUri",
+  "resultUri" : "resultUri",
+  "selfUri" : "selfUri",
+  "id" : "id",
+  "state" : "Running",
   "thumbnails" : [ {
     "imageUri" : "imageUri",
     "width" : 6,
@@ -327,8 +331,8 @@ open class FaxAPI {
     "sharingUri" : "https://openapi-generator.tech"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

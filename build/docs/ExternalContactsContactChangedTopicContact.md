@@ -32,8 +32,13 @@ title: ExternalContactsContactChangedTopicContact
 | **facebookId** | [**ExternalContactsContactChangedTopicFacebookId**](ExternalContactsContactChangedTopicFacebookId.html) |  | [optional] |
 | **instagramId** | [**ExternalContactsContactChangedTopicInstagramId**](ExternalContactsContactChangedTopicInstagramId.html) |  | [optional] |
 | **externalIds** | [**[ExternalContactsContactChangedTopicExternalId]**](ExternalContactsContactChangedTopicExternalId.html) |  | [optional] |
+| **canonicalContactId** | **String** |  | [optional] |
 | **schema** | [**ExternalContactsContactChangedTopicDataSchema**](ExternalContactsContactChangedTopicDataSchema.html) |  | [optional] |
 | **customFields** | [**[String:JSON]**](JSON.html) |  | [optional] |
+| **mergeSet** | **[String]** |  | [optional] |
+| **mergedFrom** | **[String]** |  | [optional] |
+| **mergedTo** | **String** |  | [optional] |
+| **mergeOperation** | [**ExternalContactsContactChangedTopicMergeOperation**](ExternalContactsContactChangedTopicMergeOperation.html) |  | [optional] |
 | **createDate** | [**Date**](Date.html) |  | [optional] |
 | **modifyDate** | [**Date**](Date.html) |  | [optional] |
 {: class="table table-striped"}
