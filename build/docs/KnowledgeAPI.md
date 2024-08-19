@@ -77,6 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseDocumentViews**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentViews) | Create view for a document. |
 | [**postKnowledgeKnowledgebaseDocuments**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocuments) | Create document. |
 | [**postKnowledgeKnowledgebaseDocumentsPresentations**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsPresentations) | Indicate that documents were presented to the user. |
+| [**postKnowledgeKnowledgebaseDocumentsQuery**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsQuery) | Query for knowledge documents. |
 | [**postKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsSearch) | Search the documents in a knowledge base. |
 | [**postKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsSearchSuggestions) | Query the knowledge documents to provide suggestions for auto completion. |
 | [**postKnowledgeKnowledgebaseExportJobs**](KnowledgeAPI.html#postKnowledgeKnowledgebaseExportJobs) | Create export job |
@@ -4108,6 +4109,62 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsPresentations(knowledgeBaseId: k
 ### Return type
 
 `nil` (empty response body)
+
+<a name="postKnowledgeKnowledgebaseDocumentsQuery"></a>
+
+# **postKnowledgeKnowledgebaseDocumentsQuery**
+
+
+
+> [KnowledgeDocumentQueryResponse](KnowledgeDocumentQueryResponse.html) postKnowledgeKnowledgebaseDocumentsQuery(knowledgeBaseId, expand, body)
+
+Query for knowledge documents.
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/query  
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge Base ID
+let expand: [String] = [""] // Fields, if any, to expand for each document in the search result matching the query.
+let body: KnowledgeDocumentQuery = new KnowledgeDocumentQuery(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsQuery(knowledgeBaseId: knowledgeBaseId, expand: expand, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge Base ID | |
+| **expand** | [**[String]**](String.html)| Fields, if any, to expand for each document in the search result matching the query. | [optional]<br />**Values**: documentvariations ("documentVariations"), documentalternatives ("documentAlternatives"), knowledgebaselanguagecode ("knowledgeBaseLanguageCode") |
+| **body** | [**KnowledgeDocumentQuery**](KnowledgeDocumentQuery.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeDocumentQueryResponse**](KnowledgeDocumentQueryResponse.html)
 
 <a name="postKnowledgeKnowledgebaseDocumentsSearch"></a>
 

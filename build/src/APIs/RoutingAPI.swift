@@ -1584,7 +1584,6 @@ open class RoutingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
-  "imapSettings" : "{}",
   "id" : "id"
 }, statusCode=200}]
      
@@ -1666,7 +1665,6 @@ open class RoutingAPI {
     "name" : "name",
     "id" : "id"
   } ],
-  "imapFolder" : "imapFolder",
   "allowMultipleActions" : true,
   "name" : "name",
   "fromName" : "fromName",
@@ -1769,7 +1767,6 @@ open class RoutingAPI {
       "name" : "name",
       "id" : "id"
     } ],
-    "imapFolder" : "imapFolder",
     "allowMultipleActions" : true,
     "name" : "name",
     "fromName" : "fromName",
@@ -1802,7 +1799,6 @@ open class RoutingAPI {
       "name" : "name",
       "id" : "id"
     } ],
-    "imapFolder" : "imapFolder",
     "allowMultipleActions" : true,
     "name" : "name",
     "fromName" : "fromName",
@@ -1813,8 +1809,8 @@ open class RoutingAPI {
     "spamFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1899,7 +1895,6 @@ open class RoutingAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "mxRecordStatus" : "VALID",
-    "imapSettings" : "{}",
     "id" : "id"
   }, {
     "customSMTPServer" : "{}",
@@ -1908,12 +1903,11 @@ open class RoutingAPI {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "mxRecordStatus" : "VALID",
-    "imapSettings" : "{}",
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2183,8 +2177,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2385,8 +2379,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2558,8 +2552,8 @@ open class RoutingAPI {
     "flow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3308,7 +3302,6 @@ open class RoutingAPI {
         "name" : "name",
         "id" : "id"
       } ],
-      "imapFolder" : "imapFolder",
       "allowMultipleActions" : true,
       "name" : "name",
       "fromName" : "fromName",
@@ -5141,8 +5134,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5253,8 +5246,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5473,7 +5466,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -5618,7 +5610,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -5642,8 +5633,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5872,7 +5863,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6017,7 +6007,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6041,8 +6030,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6249,7 +6238,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6394,7 +6382,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6418,8 +6405,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6621,7 +6608,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6766,7 +6752,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6790,8 +6775,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7458,8 +7443,8 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7614,8 +7599,8 @@ open class RoutingAPI {
     "region" : "region"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8016,8 +8001,8 @@ open class RoutingAPI {
     "integration" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8420,8 +8405,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8598,8 +8583,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8776,8 +8761,8 @@ open class RoutingAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8983,7 +8968,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -9128,7 +9112,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -9152,8 +9135,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9254,8 +9237,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9354,8 +9337,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9706,7 +9689,6 @@ open class RoutingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
-  "imapSettings" : "{}",
   "id" : "id"
 }, statusCode=200}]
      
@@ -9772,7 +9754,6 @@ open class RoutingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
-  "imapSettings" : "{}",
   "id" : "id"
 }, statusCode=200}]
      
@@ -11324,8 +11305,8 @@ open class RoutingAPI {
     "ringNumber" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11727,7 +11708,6 @@ open class RoutingAPI {
         "name" : "name",
         "id" : "id"
       } ],
-      "imapFolder" : "imapFolder",
       "allowMultipleActions" : true,
       "name" : "name",
       "fromName" : "fromName",
@@ -11940,7 +11920,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -12085,7 +12064,6 @@ open class RoutingAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -12109,8 +12087,8 @@ open class RoutingAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12266,8 +12244,8 @@ open class RoutingAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12348,8 +12326,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13063,7 +13041,6 @@ open class RoutingAPI {
     "name" : "name",
     "id" : "id"
   } ],
-  "imapFolder" : "imapFolder",
   "allowMultipleActions" : true,
   "name" : "name",
   "fromName" : "fromName",
@@ -13205,7 +13182,6 @@ open class RoutingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "mxRecordStatus" : "VALID",
-  "imapSettings" : "{}",
   "id" : "id"
 }, statusCode=200}]
      
@@ -13838,7 +13814,6 @@ open class RoutingAPI {
         "name" : "name",
         "id" : "id"
       } ],
-      "imapFolder" : "imapFolder",
       "allowMultipleActions" : true,
       "name" : "name",
       "fromName" : "fromName",
@@ -14669,7 +14644,6 @@ open class RoutingAPI {
     "name" : "name",
     "id" : "id"
   } ],
-  "imapFolder" : "imapFolder",
   "allowMultipleActions" : true,
   "name" : "name",
   "fromName" : "fromName",
@@ -14996,7 +14970,6 @@ open class RoutingAPI {
         "name" : "name",
         "id" : "id"
       } ],
-      "imapFolder" : "imapFolder",
       "allowMultipleActions" : true,
       "name" : "name",
       "fromName" : "fromName",
@@ -15688,8 +15661,8 @@ open class RoutingAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

@@ -816,6 +816,52 @@ open class ArchitectAPI {
     
     
     /**
+     Deletes a log level for a flow by flow id.
+     
+     - parameter flowId: (path) The flow id to delete the loglevel for 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteFlowInstancesSettingsLoglevels(flowId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: flowId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes a log level for a flow by flow id.
+     - DELETE /api/v2/flows/{flowId}/instances/settings/loglevels
+     - Deletes the associated log level for a flow by flow id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter flowId: (path) The flow id to delete the loglevel for 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/flows/{flowId}/instances/settings/loglevels"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Batch-delete a list of flows
      
      - parameter _id: (query) List of Flow IDs 
@@ -1289,6 +1335,44 @@ open class ArchitectAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    /**
+     Resets the org log level to default, base
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteFlowsInstancesSettingsLoglevelsDefault(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteFlowsInstancesSettingsLoglevelsDefaultWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Resets the org log level to default, base
+     - DELETE /api/v2/flows/instances/settings/loglevels/default
+     - Resets the org log level to default, base
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteFlowsInstancesSettingsLoglevelsDefaultWithRequestBuilder() -> RequestBuilder<Void> {        
+        let path = "/api/v2/flows/instances/settings/loglevels/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -1713,8 +1797,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2036,8 +2120,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2297,8 +2381,8 @@ open class ArchitectAPI {
     "updated" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -2636,8 +2720,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3137,8 +3221,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3458,8 +3542,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3711,8 +3795,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -3812,8 +3896,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -4017,8 +4101,8 @@ open class ArchitectAPI {
     "closedHoursFlow" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -4122,8 +4206,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -4872,8 +4956,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5048,8 +5132,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5397,8 +5481,8 @@ open class ArchitectAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -5502,8 +5586,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -5628,8 +5712,8 @@ open class ArchitectAPI {
     "state" : "active"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -5731,8 +5815,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
@@ -6490,8 +6574,8 @@ open class ArchitectAPI {
     "text" : "text"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6671,8 +6755,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -9248,6 +9332,82 @@ open class ArchitectAPI {
     
     
     
+    public enum Expand_getFlowInstancesSettingsLoglevels: String { 
+        case name = "name"
+        case type = "type"
+        case loglevelcharacteristicsCharacteristics = "logLevelCharacteristics.characteristics"
+    }
+    
+    /**
+     Retrieves the log level for a flow by flow id.
+     
+     - parameter flowId: (path) The flow id to get the loglevel for 
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowInstancesSettingsLoglevels(flowId: String, expand: [String]? = nil, completion: @escaping ((_ data: FlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: flowId, expand: expand)
+        requestBuilder.execute { (response: Response<FlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves the log level for a flow by flow id.
+     - GET /api/v2/flows/{flowId}/instances/settings/loglevels
+     - Retrieves the log level for a flow by flow id.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "logLevelCharacteristics" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "type" : "bot"
+}, statusCode=200}]
+     
+     - parameter flowId: (path) The flow id to get the loglevel for 
+     - parameter expand: (query) Expand instructions for the result (optional)
+
+     - returns: RequestBuilder<FlowSettingsResponse> 
+     */
+    open class func getFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: String, expand: [String]? = nil) -> RequestBuilder<FlowSettingsResponse> {        
+        var path = "/api/v2/flows/{flowId}/instances/settings/loglevels"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<FlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Get the latest configuration for flow
      
@@ -10849,8 +11009,8 @@ open class ArchitectAPI {
     "commitVersion" : "commitVersion"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15044,8 +15204,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15552,8 +15712,8 @@ open class ArchitectAPI {
     "key" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15668,8 +15828,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -15858,8 +16018,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16026,8 +16186,8 @@ open class ArchitectAPI {
     "debugVersion" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16371,6 +16531,289 @@ open class ArchitectAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get the execution history enabled setting.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstancesSettingsExecutiondata(completion: @escaping ((_ data: ExecutionDataFlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstancesSettingsExecutiondataWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ExecutionDataFlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the execution history enabled setting.
+     - GET /api/v2/flows/instances/settings/executiondata
+     - Get the execution history enabled setting.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "enabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ExecutionDataFlowSettingsResponse> 
+     */
+    open class func getFlowsInstancesSettingsExecutiondataWithRequestBuilder() -> RequestBuilder<ExecutionDataFlowSettingsResponse> {        
+        let path = "/api/v2/flows/instances/settings/executiondata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExecutionDataFlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    public enum Expand_getFlowsInstancesSettingsLoglevels: String { 
+        case name = "name"
+        case type = "type"
+        case loglevelcharacteristicsCharacteristics = "logLevelCharacteristics.characteristics"
+    }
+    
+    
+    
+    
+    
+    /**
+     Retrieve a list of LogLevels for the organization.
+     
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstancesSettingsLoglevels(expand: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: FlowSettingsResponseEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstancesSettingsLoglevelsWithRequestBuilder(expand: expand, pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<FlowSettingsResponseEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve a list of LogLevels for the organization.
+     - GET /api/v2/flows/instances/settings/loglevels
+     - Returns a paged set of LogLevels per flow id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "logLevelCharacteristics" : "{}",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "modifiedByClient" : "{}",
+    "type" : "bot"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "logLevelCharacteristics" : "{}",
+    "modifiedBy" : "{}",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "modifiedByClient" : "{}",
+    "type" : "bot"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<FlowSettingsResponseEntityListing> 
+     */
+    open class func getFlowsInstancesSettingsLoglevelsWithRequestBuilder(expand: [String]? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<FlowSettingsResponseEntityListing> {        
+        let path = "/api/v2/flows/instances/settings/loglevels"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand, 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<FlowSettingsResponseEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Gets the available flow log level characteristics for this organization.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstancesSettingsLoglevelsCharacteristics(completion: @escaping ((_ data: FlowLogLevelCharacteristicsDefinitions?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstancesSettingsLoglevelsCharacteristicsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<FlowLogLevelCharacteristicsDefinitions>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Gets the available flow log level characteristics for this organization.
+     - GET /api/v2/flows/instances/settings/loglevels/characteristics
+     - Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "characteristics" : [ {
+    "dependsOn" : "{}",
+    "id" : "id",
+    "minimumLevel" : "Unknown"
+  }, {
+    "dependsOn" : "{}",
+    "id" : "id",
+    "minimumLevel" : "Unknown"
+  } ],
+  "logLevels" : [ {
+    "characteristics" : "{}",
+    "level" : "Unknown"
+  }, {
+    "characteristics" : "{}",
+    "level" : "Unknown"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<FlowLogLevelCharacteristicsDefinitions> 
+     */
+    open class func getFlowsInstancesSettingsLoglevelsCharacteristicsWithRequestBuilder() -> RequestBuilder<FlowLogLevelCharacteristicsDefinitions> {        
+        let path = "/api/v2/flows/instances/settings/loglevels/characteristics"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FlowLogLevelCharacteristicsDefinitions>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    public enum Expand_getFlowsInstancesSettingsLoglevelsDefault: String { 
+        case loglevelcharacteristicsCharacteristics = "logLevelCharacteristics.characteristics"
+    }
+    
+    /**
+     Returns the flow default log level.
+     
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getFlowsInstancesSettingsLoglevelsDefault(expand: [String]? = nil, completion: @escaping ((_ data: FlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getFlowsInstancesSettingsLoglevelsDefaultWithRequestBuilder(expand: expand)
+        requestBuilder.execute { (response: Response<FlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Returns the flow default log level.
+     - GET /api/v2/flows/instances/settings/loglevels/default
+     - Returns the flow default log level which will be used if no specific flow id log level is found.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "logLevelCharacteristics" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "type" : "bot"
+}, statusCode=200}]
+     
+     - parameter expand: (query) Expand instructions for the result (optional)
+
+     - returns: RequestBuilder<FlowSettingsResponse> 
+     */
+    open class func getFlowsInstancesSettingsLoglevelsDefaultWithRequestBuilder(expand: [String]? = nil) -> RequestBuilder<FlowSettingsResponse> {        
+        let path = "/api/v2/flows/instances/settings/loglevels/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<FlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     
@@ -16585,8 +17028,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16694,8 +17137,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17818,8 +18261,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17927,8 +18370,8 @@ open class ArchitectAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -17963,6 +18406,65 @@ open class ArchitectAPI {
         let requestBuilder: RequestBuilder<FlowOutcomeDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Edit the execution history enabled setting.
+     
+     - parameter body: (body) New Execution Data Setting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchFlowsInstancesSettingsExecutiondata(body: ExecutionDataSettingsRequest, completion: @escaping ((_ data: ExecutionDataFlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchFlowsInstancesSettingsExecutiondataWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ExecutionDataFlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Edit the execution history enabled setting.
+     - PATCH /api/v2/flows/instances/settings/executiondata
+     - Edit the execution history enabled setting.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) New Execution Data Setting 
+
+     - returns: RequestBuilder<ExecutionDataFlowSettingsResponse> 
+     */
+    open class func patchFlowsInstancesSettingsExecutiondataWithRequestBuilder(body: ExecutionDataSettingsRequest) -> RequestBuilder<ExecutionDataFlowSettingsResponse> {        
+        let path = "/api/v2/flows/instances/settings/executiondata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExecutionDataFlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
 
     /**
@@ -19661,6 +20163,86 @@ open class ArchitectAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Expand_postFlowInstancesSettingsLoglevels: String { 
+        case name = "name"
+        case type = "type"
+        case loglevelcharacteristicsCharacteristics = "logLevelCharacteristics.characteristics"
+    }
+    
+    /**
+     Set the logLevel for a particular flow id
+     
+     - parameter flowId: (path) The flow id to set the loglevel for 
+     - parameter body: (body) New LogLevel settings 
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postFlowInstancesSettingsLoglevels(flowId: String, body: FlowLogLevelRequest, expand: [String]? = nil, completion: @escaping ((_ data: FlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: flowId, body: body, expand: expand)
+        requestBuilder.execute { (response: Response<FlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Set the logLevel for a particular flow id
+     - POST /api/v2/flows/{flowId}/instances/settings/loglevels
+     - Assigns a new loglevel to a flow id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "logLevelCharacteristics" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "type" : "bot"
+}, statusCode=200}]
+     
+     - parameter flowId: (path) The flow id to set the loglevel for 
+     - parameter body: (body) New LogLevel settings 
+     - parameter expand: (query) Expand instructions for the result (optional)
+
+     - returns: RequestBuilder<FlowSettingsResponse> 
+     */
+    open class func postFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: String, body: FlowLogLevelRequest, expand: [String]? = nil) -> RequestBuilder<FlowSettingsResponse> {        
+        var path = "/api/v2/flows/{flowId}/instances/settings/loglevels"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<FlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -31641,8 +32223,8 @@ open class ArchitectAPI {
     "flowType" : "bot"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -34835,6 +35417,86 @@ open class ArchitectAPI {
     
     
     
+    
+    public enum Expand_putFlowInstancesSettingsLoglevels: String { 
+        case name = "name"
+        case type = "type"
+        case loglevelcharacteristicsCharacteristics = "logLevelCharacteristics.characteristics"
+    }
+    
+    /**
+     Edit the logLevel for a particular flow id
+     
+     - parameter flowId: (path) The flow id to edit the loglevel for 
+     - parameter body: (body) New LogLevel settings 
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putFlowInstancesSettingsLoglevels(flowId: String, body: FlowLogLevelRequest, expand: [String]? = nil, completion: @escaping ((_ data: FlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: flowId, body: body, expand: expand)
+        requestBuilder.execute { (response: Response<FlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Edit the logLevel for a particular flow id
+     - PUT /api/v2/flows/{flowId}/instances/settings/loglevels
+     - Updates the loglevel for a flow id
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "logLevelCharacteristics" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "type" : "bot"
+}, statusCode=200}]
+     
+     - parameter flowId: (path) The flow id to edit the loglevel for 
+     - parameter body: (body) New LogLevel settings 
+     - parameter expand: (query) Expand instructions for the result (optional)
+
+     - returns: RequestBuilder<FlowSettingsResponse> 
+     */
+    open class func putFlowInstancesSettingsLoglevelsWithRequestBuilder(flowId: String, body: FlowLogLevelRequest, expand: [String]? = nil) -> RequestBuilder<FlowSettingsResponse> {        
+        var path = "/api/v2/flows/{flowId}/instances/settings/loglevels"
+        let flowIdPreEscape = "\(flowId)"
+        let flowIdPostEscape = flowIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{flowId}", with: flowIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<FlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
     public enum Expand_putFlowsDatatable: String { 
         case schema = "schema"
     }
@@ -34966,6 +35628,77 @@ open class ArchitectAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<[String:JSON]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    public enum Expand_putFlowsInstancesSettingsLoglevelsDefault: String { 
+        case loglevelcharacteristicsCharacteristics = "logLevelCharacteristics.characteristics"
+    }
+    
+    /**
+     Edit the flow default log level.
+     
+     - parameter body: (body) New LogLevel settings 
+     - parameter expand: (query) Expand instructions for the result (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putFlowsInstancesSettingsLoglevelsDefault(body: FlowLogLevelRequest, expand: [String]? = nil, completion: @escaping ((_ data: FlowSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putFlowsInstancesSettingsLoglevelsDefaultWithRequestBuilder(body: body, expand: expand)
+        requestBuilder.execute { (response: Response<FlowSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Edit the flow default log level.
+     - PUT /api/v2/flows/instances/settings/loglevels/default
+     - Edit the flow default log level.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "logLevelCharacteristics" : "{}",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "type" : "bot"
+}, statusCode=200}]
+     
+     - parameter body: (body) New LogLevel settings 
+     - parameter expand: (query) Expand instructions for the result (optional)
+
+     - returns: RequestBuilder<FlowSettingsResponse> 
+     */
+    open class func putFlowsInstancesSettingsLoglevelsDefaultWithRequestBuilder(body: FlowLogLevelRequest, expand: [String]? = nil) -> RequestBuilder<FlowSettingsResponse> {        
+        let path = "/api/v2/flows/instances/settings/loglevels/default"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<FlowSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

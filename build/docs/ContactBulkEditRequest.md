@@ -11,7 +11,6 @@ title: ContactBulkEditRequest
 | **criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria.html) | Criteria to filter the contacts by. | [optional] |
 | **contactIds** | **[String]** | Contact IDs to be bulk edited. | [optional] |
 | **contact** | [**DialerContact**](DialerContact.html) | Contact object with details of fields used for patching. | [optional] |
-| **generateDownloadUri** | **Bool** |  | [optional] |
 {: class="table table-striped"}
 
 

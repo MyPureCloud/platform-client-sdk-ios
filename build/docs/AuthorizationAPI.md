@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAuthorizationRoleSubjectgrants**](AuthorizationAPI.html#getAuthorizationRoleSubjectgrants) | Get the subjects&#39; granted divisions in the specified role. |
 | [**getAuthorizationRoleUsers**](AuthorizationAPI.html#getAuthorizationRoleUsers) | Get a list of the users in a specified role. |
 | [**getAuthorizationRoles**](AuthorizationAPI.html#getAuthorizationRoles) | Retrieve a list of all roles defined for the organization |
+| [**getAuthorizationRolesSettings**](AuthorizationAPI.html#getAuthorizationRolesSettings) | Get authorization role settings |
 | [**getAuthorizationSettings**](AuthorizationAPI.html#getAuthorizationSettings) | Get authorization settings |
 | [**getAuthorizationSubject**](AuthorizationAPI.html#getAuthorizationSubject) | Returns a listing of roles and permissions for a user. |
 | [**getAuthorizationSubjectsMe**](AuthorizationAPI.html#getAuthorizationSubjectsMe) | Returns a listing of roles and permissions for the currently authenticated user. |
@@ -48,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putAuthorizationRoleUsersAdd**](AuthorizationAPI.html#putAuthorizationRoleUsersAdd) | Sets the users for the role |
 | [**putAuthorizationRoleUsersRemove**](AuthorizationAPI.html#putAuthorizationRoleUsersRemove) | Removes the users from the role |
 | [**putAuthorizationRolesDefault**](AuthorizationAPI.html#putAuthorizationRolesDefault) | Restore specified default roles |
+| [**putAuthorizationRolesSettings**](AuthorizationAPI.html#putAuthorizationRolesSettings) | Change authorization role settings |
 | [**putUserRoles**](AuthorizationAPI.html#putUserRoles) | Sets the user&#39;s roles |
 {: class="table-striped"}
 
@@ -1071,6 +1073,55 @@ AuthorizationAPI.getAuthorizationRoles(pageSize: pageSize, pageNumber: pageNumbe
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+<a name="getAuthorizationRolesSettings"></a>
+
+# **getAuthorizationRolesSettings**
+
+
+
+> [RoleSettings](RoleSettings.html) getAuthorizationRolesSettings()
+
+Get authorization role settings
+
+
+
+Wraps GET /api/v2/authorization/roles/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AuthorizationAPI.getAuthorizationRolesSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.getAuthorizationRolesSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**RoleSettings**](RoleSettings.html)
 
 <a name="getAuthorizationSettings"></a>
 
@@ -2315,6 +2366,61 @@ AuthorizationAPI.putAuthorizationRolesDefault(body: body) { (response, error) in
 ### Return type
 
 [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html)
+
+<a name="putAuthorizationRolesSettings"></a>
+
+# **putAuthorizationRolesSettings**
+
+
+
+> [RoleSettings](RoleSettings.html) putAuthorizationRolesSettings(body)
+
+Change authorization role settings
+
+Change role settings
+
+
+
+Wraps PUT /api/v2/authorization/roles/settings  
+
+Requires ANY permissions: 
+
+* directory:organization:admin
+* authorization:settings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: RoleSettings = new RoleSettings(...) // Authorization Role Settings
+
+// Code example
+AuthorizationAPI.putAuthorizationRolesSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AuthorizationAPI.putAuthorizationRolesSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**RoleSettings**](RoleSettings.html)| Authorization Role Settings | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**RoleSettings**](RoleSettings.html)
 
 <a name="putUserRoles"></a>
 

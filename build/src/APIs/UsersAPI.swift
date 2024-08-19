@@ -889,8 +889,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -986,8 +986,8 @@ open class UsersAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1494,8 +1494,8 @@ open class UsersAPI {
     "version" : 0
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -5324,8 +5324,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6176,7 +6176,6 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6321,7 +6320,6 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -6345,8 +6343,8 @@ open class UsersAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6565,8 +6563,8 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -6665,8 +6663,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -7499,8 +7497,8 @@ open class UsersAPI {
     "enabled" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8280,8 +8278,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8480,8 +8478,8 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -8685,8 +8683,8 @@ open class UsersAPI {
     "status" : "Planned"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -11822,7 +11820,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -12261,7 +12258,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -12715,7 +12711,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -13154,7 +13149,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -13621,7 +13615,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -14060,7 +14053,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -14514,7 +14506,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -14953,7 +14944,6 @@ open class UsersAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -17861,7 +17851,6 @@ open class UsersAPI {
         "name" : "name",
         "id" : "id"
       } ],
-      "imapFolder" : "imapFolder",
       "allowMultipleActions" : true,
       "name" : "name",
       "fromName" : "fromName",
@@ -18074,7 +18063,6 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -18219,7 +18207,6 @@ open class UsersAPI {
           "name" : "name",
           "id" : "id"
         } ],
-        "imapFolder" : "imapFolder",
         "allowMultipleActions" : true,
         "name" : "name",
         "fromName" : "fromName",
@@ -18243,8 +18230,8 @@ open class UsersAPI {
     "agentOwnedRouting" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -18400,8 +18387,8 @@ open class UsersAPI {
     "proficiency" : 9.301444243932576
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -18482,8 +18469,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -19125,8 +19112,8 @@ open class UsersAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -19777,34 +19764,34 @@ open class UsersAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 2,
+    "count" : 0,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 2,
+    "count" : 0,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.944895607614016,
-      "gte" : 6.878052220127876,
+      "lt" : 5.962133916683182,
+      "gte" : 1.4658129805029452,
       "value" : "value"
     } ]
   } ]
@@ -23676,8 +23663,8 @@ open class UsersAPI {
     "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"

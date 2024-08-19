@@ -1627,7 +1627,9 @@ docs/EventsAPI.json
 docs/EventsAPI.md
 docs/ExecuteRecordingJobsQuery.md
 docs/ExecutionDataEntity.md
+docs/ExecutionDataFlowSettingsResponse.md
 docs/ExecutionDataRequest.md
+docs/ExecutionDataSettingsRequest.md
 docs/ExpandableWebDeployment.md
 docs/ExpandableWebDeploymentEntityListing.md
 docs/ExpansionCriterium.md
@@ -1784,6 +1786,7 @@ docs/FlowAggregateQueryPredicate.md
 docs/FlowAggregateQueryResponse.md
 docs/FlowAggregationQuery.md
 docs/FlowAggregationView.md
+docs/FlowCharacteristics.md
 docs/FlowDiagnosticInfo.md
 docs/FlowDivisionView.md
 docs/FlowDivisionViewEntityListing.md
@@ -1807,6 +1810,10 @@ docs/FlowHealthIntentUtterance.md
 docs/FlowHealthIntentVersionInfo.md
 docs/FlowHealthUtterance.md
 docs/FlowHealthVersionInfo.md
+docs/FlowLogLevel.md
+docs/FlowLogLevelCharacteristicsDefinition.md
+docs/FlowLogLevelCharacteristicsDefinitions.md
+docs/FlowLogLevelRequest.md
 docs/FlowMetricsTopicFlowMetricRecord.md
 docs/FlowMetricsTopicFlowOutcome.md
 docs/FlowMetricsTopicFlowProposedAgent.md
@@ -1834,6 +1841,8 @@ docs/FlowPathsFlowFilter.md
 docs/FlowPathsQuery.md
 docs/FlowResultEntityListing.md
 docs/FlowRuntimeExecution.md
+docs/FlowSettingsResponse.md
+docs/FlowSettingsResponseEntityListing.md
 docs/FlowStartDetailEventTopicFlowStartEvent.md
 docs/FlowVersion.md
 docs/FlowVersionEntityListing.md
@@ -2215,6 +2224,8 @@ docs/KnowledgeDocumentGuestSearch.md
 docs/KnowledgeDocumentGuestSearchRequest.md
 docs/KnowledgeDocumentGuestSearchResult.md
 docs/KnowledgeDocumentPresentation.md
+docs/KnowledgeDocumentQuery.md
+docs/KnowledgeDocumentQueryResponse.md
 docs/KnowledgeDocumentReference.md
 docs/KnowledgeDocumentReq.md
 docs/KnowledgeDocumentRequest.md
@@ -3353,6 +3364,7 @@ docs/Ring.md
 docs/RoleDivision.md
 docs/RoleDivisionGrants.md
 docs/RoleDivisionPair.md
+docs/RoleSettings.md
 docs/Room.md
 docs/RoomParticipant.md
 docs/RoomParticipantResponse.md
@@ -4632,9 +4644,11 @@ docs/deleteExternalcontactsOrganizationTrustor-example.txt
 docs/deleteExternalcontactsRelationship-example.txt
 docs/deleteFaxDocument-example.txt
 docs/deleteFlow-example.txt
+docs/deleteFlowInstancesSettingsLoglevels-example.txt
 docs/deleteFlows-example.txt
 docs/deleteFlowsDatatable-example.txt
 docs/deleteFlowsDatatableRow-example.txt
+docs/deleteFlowsInstancesSettingsLoglevelsDefault-example.txt
 docs/deleteFlowsMilestone-example.txt
 docs/deleteGreeting-example.txt
 docs/deleteGroup-example.txt
@@ -4928,6 +4942,7 @@ docs/getAuthorizationRoleComparedefaultRightRoleId-example.txt
 docs/getAuthorizationRoleSubjectgrants-example.txt
 docs/getAuthorizationRoleUsers-example.txt
 docs/getAuthorizationRoles-example.txt
+docs/getAuthorizationRolesSettings-example.txt
 docs/getAuthorizationSettings-example.txt
 docs/getAuthorizationSubject-example.txt
 docs/getAuthorizationSubject-example.txt
@@ -5110,6 +5125,7 @@ docs/getFieldconfig-example.txt
 docs/getFieldconfig-example.txt
 docs/getFlow-example.txt
 docs/getFlowHistoryHistoryId-example.txt
+docs/getFlowInstancesSettingsLoglevels-example.txt
 docs/getFlowLatestconfiguration-example.txt
 docs/getFlowVersion-example.txt
 docs/getFlowVersionConfiguration-example.txt
@@ -5132,6 +5148,10 @@ docs/getFlowsExecution-example.txt
 docs/getFlowsInstance-example.txt
 docs/getFlowsInstancesJob-example.txt
 docs/getFlowsInstancesQuerycapabilities-example.txt
+docs/getFlowsInstancesSettingsExecutiondata-example.txt
+docs/getFlowsInstancesSettingsLoglevels-example.txt
+docs/getFlowsInstancesSettingsLoglevelsCharacteristics-example.txt
+docs/getFlowsInstancesSettingsLoglevelsDefault-example.txt
 docs/getFlowsJob-example.txt
 docs/getFlowsMilestone-example.txt
 docs/getFlowsMilestones-example.txt
@@ -6022,6 +6042,7 @@ docs/patchEmailsSettings-example.txt
 docs/patchEmployeeengagementCelebration-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchExternalcontactsContactIdentifiers-example.txt
+docs/patchFlowsInstancesSettingsExecutiondata-example.txt
 docs/patchGeolocationsSettings-example.txt
 docs/patchIntegration-example.txt
 docs/patchIntegrationsAction-example.txt
@@ -6361,6 +6382,7 @@ docs/postExternalcontactsOrganizations-example.txt
 docs/postExternalcontactsOrganizationsSchemas-example.txt
 docs/postExternalcontactsRelationships-example.txt
 docs/postFlowHistory-example.txt
+docs/postFlowInstancesSettingsLoglevels-example.txt
 docs/postFlowVersions-example.txt
 docs/postFlows-example.txt
 docs/postFlowsActionsCheckin-example.txt
@@ -6436,6 +6458,7 @@ docs/postKnowledgeKnowledgebaseDocumentVersions-example.txt
 docs/postKnowledgeKnowledgebaseDocumentViews-example.txt
 docs/postKnowledgeKnowledgebaseDocuments-example.txt
 docs/postKnowledgeKnowledgebaseDocumentsPresentations-example.txt
+docs/postKnowledgeKnowledgebaseDocumentsQuery-example.txt
 docs/postKnowledgeKnowledgebaseDocumentsSearch-example.txt
 docs/postKnowledgeKnowledgebaseDocumentsSearchSuggestions-example.txt
 docs/postKnowledgeKnowledgebaseExportJobs-example.txt
@@ -6786,6 +6809,7 @@ docs/putAuthorizationRole-example.txt
 docs/putAuthorizationRoleUsersAdd-example.txt
 docs/putAuthorizationRoleUsersRemove-example.txt
 docs/putAuthorizationRolesDefault-example.txt
+docs/putAuthorizationRolesSettings-example.txt
 docs/putChatsMessageReactions-example.txt
 docs/putChatsSettings-example.txt
 docs/putContentmanagementWorkspace-example.txt
@@ -6823,8 +6847,10 @@ docs/putExternalcontactsRelationship-example.txt
 docs/putFaxDocument-example.txt
 docs/putFaxSettings-example.txt
 docs/putFlow-example.txt
+docs/putFlowInstancesSettingsLoglevels-example.txt
 docs/putFlowsDatatable-example.txt
 docs/putFlowsDatatableRow-example.txt
+docs/putFlowsInstancesSettingsLoglevelsDefault-example.txt
 docs/putFlowsMilestone-example.txt
 docs/putFlowsOutcome-example.txt
 docs/putGamificationProfile-example.txt
@@ -8661,7 +8687,9 @@ src/Models/EventSession.swift
 src/Models/EventSetting.swift
 src/Models/ExecuteRecordingJobsQuery.swift
 src/Models/ExecutionDataEntity.swift
+src/Models/ExecutionDataFlowSettingsResponse.swift
 src/Models/ExecutionDataRequest.swift
+src/Models/ExecutionDataSettingsRequest.swift
 src/Models/ExpandableWebDeployment.swift
 src/Models/ExpandableWebDeploymentEntityListing.swift
 src/Models/ExpansionCriterium.swift
@@ -8814,6 +8842,7 @@ src/Models/FlowAggregateQueryPredicate.swift
 src/Models/FlowAggregateQueryResponse.swift
 src/Models/FlowAggregationQuery.swift
 src/Models/FlowAggregationView.swift
+src/Models/FlowCharacteristics.swift
 src/Models/FlowDiagnosticInfo.swift
 src/Models/FlowDivisionView.swift
 src/Models/FlowDivisionViewEntityListing.swift
@@ -8837,6 +8866,10 @@ src/Models/FlowHealthIntentUtterance.swift
 src/Models/FlowHealthIntentVersionInfo.swift
 src/Models/FlowHealthUtterance.swift
 src/Models/FlowHealthVersionInfo.swift
+src/Models/FlowLogLevel.swift
+src/Models/FlowLogLevelCharacteristicsDefinition.swift
+src/Models/FlowLogLevelCharacteristicsDefinitions.swift
+src/Models/FlowLogLevelRequest.swift
 src/Models/FlowMetricsTopicFlowMetricRecord.swift
 src/Models/FlowMetricsTopicFlowOutcome.swift
 src/Models/FlowMetricsTopicFlowProposedAgent.swift
@@ -8864,6 +8897,8 @@ src/Models/FlowPathsFlowFilter.swift
 src/Models/FlowPathsQuery.swift
 src/Models/FlowResultEntityListing.swift
 src/Models/FlowRuntimeExecution.swift
+src/Models/FlowSettingsResponse.swift
+src/Models/FlowSettingsResponseEntityListing.swift
 src/Models/FlowStartDetailEventTopicFlowStartEvent.swift
 src/Models/FlowVersion.swift
 src/Models/FlowVersionEntityListing.swift
@@ -9223,6 +9258,8 @@ src/Models/KnowledgeDocumentGuestSearch.swift
 src/Models/KnowledgeDocumentGuestSearchRequest.swift
 src/Models/KnowledgeDocumentGuestSearchResult.swift
 src/Models/KnowledgeDocumentPresentation.swift
+src/Models/KnowledgeDocumentQuery.swift
+src/Models/KnowledgeDocumentQueryResponse.swift
 src/Models/KnowledgeDocumentReference.swift
 src/Models/KnowledgeDocumentReq.swift
 src/Models/KnowledgeDocumentRequest.swift
@@ -10322,6 +10359,7 @@ src/Models/Ring.swift
 src/Models/RoleDivision.swift
 src/Models/RoleDivisionGrants.swift
 src/Models/RoleDivisionPair.swift
+src/Models/RoleSettings.swift
 src/Models/Room.swift
 src/Models/RoomParticipant.swift
 src/Models/RoomParticipantResponse.swift

@@ -17,9 +17,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteArchitectSchedulegroup**](ArchitectAPI.html#deleteArchitectSchedulegroup) | Deletes a schedule group by ID |
 | [**deleteArchitectSystempromptResource**](ArchitectAPI.html#deleteArchitectSystempromptResource) | Delete a system prompt resource override. |
 | [**deleteFlow**](ArchitectAPI.html#deleteFlow) | Delete flow |
+| [**deleteFlowInstancesSettingsLoglevels**](ArchitectAPI.html#deleteFlowInstancesSettingsLoglevels) | Deletes a log level for a flow by flow id. |
 | [**deleteFlows**](ArchitectAPI.html#deleteFlows) | Batch-delete a list of flows |
 | [**deleteFlowsDatatable**](ArchitectAPI.html#deleteFlowsDatatable) | deletes a specific datatable by id |
 | [**deleteFlowsDatatableRow**](ArchitectAPI.html#deleteFlowsDatatableRow) | Delete a row entry |
+| [**deleteFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI.html#deleteFlowsInstancesSettingsLoglevelsDefault) | Resets the org log level to default, base |
 | [**deleteFlowsMilestone**](ArchitectAPI.html#deleteFlowsMilestone) | Delete a flow milestone. |
 | [**getArchitectDependencytracking**](ArchitectAPI.html#getArchitectDependencytracking) | Get Dependency Tracking objects that have a given display name |
 | [**getArchitectDependencytrackingBuild**](ArchitectAPI.html#getArchitectDependencytrackingBuild) | Get Dependency Tracking build status for an organization |
@@ -54,6 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getArchitectSystemprompts**](ArchitectAPI.html#getArchitectSystemprompts) | Get System Prompts |
 | [**getFlow**](ArchitectAPI.html#getFlow) | Get flow |
 | [**getFlowHistoryHistoryId**](ArchitectAPI.html#getFlowHistoryHistoryId) | Get generated flow history |
+| [**getFlowInstancesSettingsLoglevels**](ArchitectAPI.html#getFlowInstancesSettingsLoglevels) | Retrieves the log level for a flow by flow id. |
 | [**getFlowLatestconfiguration**](ArchitectAPI.html#getFlowLatestconfiguration) | Get the latest configuration for flow |
 | [**getFlowVersion**](ArchitectAPI.html#getFlowVersion) | Get flow version |
 | [**getFlowVersionConfiguration**](ArchitectAPI.html#getFlowVersionConfiguration) | Create flow version configuration |
@@ -76,6 +79,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsInstance**](ArchitectAPI.html#getFlowsInstance) | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
 | [**getFlowsInstancesJob**](ArchitectAPI.html#getFlowsInstancesJob) | Get the status and/or results of an asynchronous flow execution data retrieval job |
 | [**getFlowsInstancesQuerycapabilities**](ArchitectAPI.html#getFlowsInstancesQuerycapabilities) | Retrieve a list of capabilities that the org can use to query for execution data |
+| [**getFlowsInstancesSettingsExecutiondata**](ArchitectAPI.html#getFlowsInstancesSettingsExecutiondata) | Get the execution history enabled setting. |
+| [**getFlowsInstancesSettingsLoglevels**](ArchitectAPI.html#getFlowsInstancesSettingsLoglevels) | Retrieve a list of LogLevels for the organization. |
+| [**getFlowsInstancesSettingsLoglevelsCharacteristics**](ArchitectAPI.html#getFlowsInstancesSettingsLoglevelsCharacteristics) | Gets the available flow log level characteristics for this organization. |
+| [**getFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI.html#getFlowsInstancesSettingsLoglevelsDefault) | Returns the flow default log level. |
 | [**getFlowsJob**](ArchitectAPI.html#getFlowsJob) | Fetch Architect Job Status |
 | [**getFlowsMilestone**](ArchitectAPI.html#getFlowsMilestone) | Get a flow milestone |
 | [**getFlowsMilestones**](ArchitectAPI.html#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
@@ -83,6 +90,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsOutcome**](ArchitectAPI.html#getFlowsOutcome) | Get a flow outcome |
 | [**getFlowsOutcomes**](ArchitectAPI.html#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**getFlowsOutcomesDivisionviews**](ArchitectAPI.html#getFlowsOutcomesDivisionviews) | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
+| [**patchFlowsInstancesSettingsExecutiondata**](ArchitectAPI.html#patchFlowsInstancesSettingsExecutiondata) | Edit the execution history enabled setting. |
 | [**postArchitectDependencytrackingBuild**](ArchitectAPI.html#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
 | [**postArchitectEmergencygroups**](ArchitectAPI.html#postArchitectEmergencygroups) | Creates a new emergency group |
 | [**postArchitectIvrs**](ArchitectAPI.html#postArchitectIvrs) | Create IVR config. |
@@ -94,6 +102,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postArchitectSystempromptHistory**](ArchitectAPI.html#postArchitectSystempromptHistory) | Generate system prompt history |
 | [**postArchitectSystempromptResources**](ArchitectAPI.html#postArchitectSystempromptResources) | Create system prompt resource override. |
 | [**postFlowHistory**](ArchitectAPI.html#postFlowHistory) | Generate flow history |
+| [**postFlowInstancesSettingsLoglevels**](ArchitectAPI.html#postFlowInstancesSettingsLoglevels) | Set the logLevel for a particular flow id |
 | [**postFlowVersions**](ArchitectAPI.html#postFlowVersions) | Create flow version |
 | [**postFlows**](ArchitectAPI.html#postFlows) | Create flow |
 | [**postFlowsActionsCheckin**](ArchitectAPI.html#postFlowsActionsCheckin) | Check-in flow |
@@ -120,8 +129,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putArchitectSchedulegroup**](ArchitectAPI.html#putArchitectSchedulegroup) | Updates a schedule group by ID |
 | [**putArchitectSystempromptResource**](ArchitectAPI.html#putArchitectSystempromptResource) | Updates a system prompt resource override. |
 | [**putFlow**](ArchitectAPI.html#putFlow) | Update flow |
+| [**putFlowInstancesSettingsLoglevels**](ArchitectAPI.html#putFlowInstancesSettingsLoglevels) | Edit the logLevel for a particular flow id |
 | [**putFlowsDatatable**](ArchitectAPI.html#putFlowsDatatable) | Updates a specific datatable by id |
 | [**putFlowsDatatableRow**](ArchitectAPI.html#putFlowsDatatableRow) | Update a row entry |
+| [**putFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI.html#putFlowsInstancesSettingsLoglevelsDefault) | Edit the flow default log level. |
 | [**putFlowsMilestone**](ArchitectAPI.html#putFlowsMilestone) | Updates a flow milestone |
 | [**putFlowsOutcome**](ArchitectAPI.html#putFlowsOutcome) | Updates a flow outcome |
 {: class="table-striped"}
@@ -647,6 +658,59 @@ ArchitectAPI.deleteFlow(flowId: flowId) { (error) in
 
 `nil` (empty response body)
 
+<a name="deleteFlowInstancesSettingsLoglevels"></a>
+
+# **deleteFlowInstancesSettingsLoglevels**
+
+
+
+> Void deleteFlowInstancesSettingsLoglevels(flowId)
+
+Deletes a log level for a flow by flow id.
+
+Deletes the associated log level for a flow by flow id
+
+
+
+Wraps DELETE /api/v2/flows/{flowId}/instances/settings/loglevels  
+
+Requires ALL permissions: 
+
+* architect:flowLogLevel:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // The flow id to delete the loglevel for
+
+// Code example
+ArchitectAPI.deleteFlowInstancesSettingsLoglevels(flowId: flowId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteFlowInstancesSettingsLoglevels was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| The flow id to delete the loglevel for | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
 <a name="deleteFlows"></a>
 
 # **deleteFlows**
@@ -806,6 +870,55 @@ ArchitectAPI.deleteFlowsDatatableRow(datatableId: datatableId, rowId: rowId) { (
 | **datatableId** | **String**| id of datatable | |
 | **rowId** | **String**| the key for the row | |
 {: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteFlowsInstancesSettingsLoglevelsDefault"></a>
+
+# **deleteFlowsInstancesSettingsLoglevelsDefault**
+
+
+
+> Void deleteFlowsInstancesSettingsLoglevelsDefault()
+
+Resets the org log level to default, base
+
+Resets the org log level to default, base
+
+
+
+Wraps DELETE /api/v2/flows/instances/settings/loglevels/default  
+
+Requires ANY permissions: 
+
+* architect:flowLogLevelDefault:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ArchitectAPI.deleteFlowsInstancesSettingsLoglevelsDefault() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteFlowsInstancesSettingsLoglevelsDefault was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
 
 
 ### Return type
@@ -2848,6 +2961,62 @@ ArchitectAPI.getFlowHistoryHistoryId(flowId: flowId, historyId: historyId, pageN
 
 [**HistoryListing**](HistoryListing.html)
 
+<a name="getFlowInstancesSettingsLoglevels"></a>
+
+# **getFlowInstancesSettingsLoglevels**
+
+
+
+> [FlowSettingsResponse](FlowSettingsResponse.html) getFlowInstancesSettingsLoglevels(flowId, expand)
+
+Retrieves the log level for a flow by flow id.
+
+Retrieves the log level for a flow by flow id.
+
+
+
+Wraps GET /api/v2/flows/{flowId}/instances/settings/loglevels  
+
+Requires ALL permissions: 
+
+* architect:flowLogLevel:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // The flow id to get the loglevel for
+let expand: [String] = [""] // Expand instructions for the result
+
+// Code example
+ArchitectAPI.getFlowInstancesSettingsLoglevels(flowId: flowId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowInstancesSettingsLoglevels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| The flow id to get the loglevel for | |
+| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowSettingsResponse**](FlowSettingsResponse.html)
+
 <a name="getFlowLatestconfiguration"></a>
 
 # **getFlowLatestconfiguration**
@@ -4165,6 +4334,220 @@ ArchitectAPI.getFlowsInstancesQuerycapabilities(expand: expand) { (response, err
 
 [**FlowsQueryCriteriaResponse**](FlowsQueryCriteriaResponse.html)
 
+<a name="getFlowsInstancesSettingsExecutiondata"></a>
+
+# **getFlowsInstancesSettingsExecutiondata**
+
+
+
+> [ExecutionDataFlowSettingsResponse](ExecutionDataFlowSettingsResponse.html) getFlowsInstancesSettingsExecutiondata()
+
+Get the execution history enabled setting.
+
+Get the execution history enabled setting.
+
+
+
+Wraps GET /api/v2/flows/instances/settings/executiondata  
+
+Requires ANY permissions: 
+
+* architect:flowinstanceexecutiondata:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ArchitectAPI.getFlowsInstancesSettingsExecutiondata() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsInstancesSettingsExecutiondata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse.html)
+
+<a name="getFlowsInstancesSettingsLoglevels"></a>
+
+# **getFlowsInstancesSettingsLoglevels**
+
+
+
+> [FlowSettingsResponseEntityListing](FlowSettingsResponseEntityListing.html) getFlowsInstancesSettingsLoglevels(expand, pageNumber, pageSize)
+
+Retrieve a list of LogLevels for the organization.
+
+Returns a paged set of LogLevels per flow id
+
+
+
+Wraps GET /api/v2/flows/instances/settings/loglevels  
+
+Requires ALL permissions: 
+
+* architect:flowLogLevel:view
+* architect:flow:search
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let expand: [String] = [""] // Expand instructions for the result
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Number of entities to return. Maximum of 200.
+
+// Code example
+ArchitectAPI.getFlowsInstancesSettingsLoglevels(expand: expand, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsInstancesSettingsLoglevels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Number of entities to return. Maximum of 200. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowSettingsResponseEntityListing**](FlowSettingsResponseEntityListing.html)
+
+<a name="getFlowsInstancesSettingsLoglevelsCharacteristics"></a>
+
+# **getFlowsInstancesSettingsLoglevelsCharacteristics**
+
+
+
+> [FlowLogLevelCharacteristicsDefinitions](FlowLogLevelCharacteristicsDefinitions.html) getFlowsInstancesSettingsLoglevelsCharacteristics()
+
+Gets the available flow log level characteristics for this organization.
+
+Log levels can be customized and this returns the set of available characteristics that can be enabled/disabled.
+
+
+
+Wraps GET /api/v2/flows/instances/settings/loglevels/characteristics  
+
+Requires ANY permissions: 
+
+* architect:flowLogLevel:view
+* architect:flowLogLevelDefault:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ArchitectAPI.getFlowsInstancesSettingsLoglevelsCharacteristics() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsInstancesSettingsLoglevelsCharacteristics was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**FlowLogLevelCharacteristicsDefinitions**](FlowLogLevelCharacteristicsDefinitions.html)
+
+<a name="getFlowsInstancesSettingsLoglevelsDefault"></a>
+
+# **getFlowsInstancesSettingsLoglevelsDefault**
+
+
+
+> [FlowSettingsResponse](FlowSettingsResponse.html) getFlowsInstancesSettingsLoglevelsDefault(expand)
+
+Returns the flow default log level.
+
+Returns the flow default log level which will be used if no specific flow id log level is found.
+
+
+
+Wraps GET /api/v2/flows/instances/settings/loglevels/default  
+
+Requires ANY permissions: 
+
+* architect:flowLogLevelDefault:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let expand: [String] = [""] // Expand instructions for the result
+
+// Code example
+ArchitectAPI.getFlowsInstancesSettingsLoglevelsDefault(expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsInstancesSettingsLoglevelsDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowSettingsResponse**](FlowSettingsResponse.html)
+
 <a name="getFlowsJob"></a>
 
 # **getFlowsJob**
@@ -4598,6 +4981,60 @@ ArchitectAPI.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pag
 ### Return type
 
 [**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing.html)
+
+<a name="patchFlowsInstancesSettingsExecutiondata"></a>
+
+# **patchFlowsInstancesSettingsExecutiondata**
+
+
+
+> [ExecutionDataFlowSettingsResponse](ExecutionDataFlowSettingsResponse.html) patchFlowsInstancesSettingsExecutiondata(body)
+
+Edit the execution history enabled setting.
+
+Edit the execution history enabled setting.
+
+
+
+Wraps PATCH /api/v2/flows/instances/settings/executiondata  
+
+Requires ANY permissions: 
+
+* architect:flowinstanceexecutiondata:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExecutionDataSettingsRequest = new ExecutionDataSettingsRequest(...) // New Execution Data Setting
+
+// Code example
+ArchitectAPI.patchFlowsInstancesSettingsExecutiondata(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.patchFlowsInstancesSettingsExecutiondata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest.html)| New Execution Data Setting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse.html)
 
 <a name="postArchitectDependencytrackingBuild"></a>
 
@@ -5177,6 +5614,64 @@ ArchitectAPI.postFlowHistory(flowId: flowId) { (response, error) in
 ### Return type
 
 [**Operation**](Operation.html)
+
+<a name="postFlowInstancesSettingsLoglevels"></a>
+
+# **postFlowInstancesSettingsLoglevels**
+
+
+
+> [FlowSettingsResponse](FlowSettingsResponse.html) postFlowInstancesSettingsLoglevels(flowId, body, expand)
+
+Set the logLevel for a particular flow id
+
+Assigns a new loglevel to a flow id
+
+
+
+Wraps POST /api/v2/flows/{flowId}/instances/settings/loglevels  
+
+Requires ALL permissions: 
+
+* architect:flowLogLevel:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // The flow id to set the loglevel for
+let body: FlowLogLevelRequest = new FlowLogLevelRequest(...) // New LogLevel settings
+let expand: [String] = [""] // Expand instructions for the result
+
+// Code example
+ArchitectAPI.postFlowInstancesSettingsLoglevels(flowId: flowId, body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowInstancesSettingsLoglevels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| The flow id to set the loglevel for | |
+| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest.html)| New LogLevel settings | |
+| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowSettingsResponse**](FlowSettingsResponse.html)
 
 <a name="postFlowVersions"></a>
 
@@ -6589,6 +7084,64 @@ ArchitectAPI.putFlow(flowId: flowId, body: body) { (response, error) in
 
 [**Flow**](Flow.html)
 
+<a name="putFlowInstancesSettingsLoglevels"></a>
+
+# **putFlowInstancesSettingsLoglevels**
+
+
+
+> [FlowSettingsResponse](FlowSettingsResponse.html) putFlowInstancesSettingsLoglevels(flowId, body, expand)
+
+Edit the logLevel for a particular flow id
+
+Updates the loglevel for a flow id
+
+
+
+Wraps PUT /api/v2/flows/{flowId}/instances/settings/loglevels  
+
+Requires ALL permissions: 
+
+* architect:flowLogLevel:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let flowId: String = "" // The flow id to edit the loglevel for
+let body: FlowLogLevelRequest = new FlowLogLevelRequest(...) // New LogLevel settings
+let expand: [String] = [""] // Expand instructions for the result
+
+// Code example
+ArchitectAPI.putFlowInstancesSettingsLoglevels(flowId: flowId, body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.putFlowInstancesSettingsLoglevels was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **flowId** | **String**| The flow id to edit the loglevel for | |
+| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest.html)| New LogLevel settings | |
+| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowSettingsResponse**](FlowSettingsResponse.html)
+
 <a name="putFlowsDatatable"></a>
 
 # **putFlowsDatatable**
@@ -6705,6 +7258,62 @@ ArchitectAPI.putFlowsDatatableRow(datatableId: datatableId, rowId: rowId, body: 
 ### Return type
 
 [**[String:JSON]**](JSON.html)
+
+<a name="putFlowsInstancesSettingsLoglevelsDefault"></a>
+
+# **putFlowsInstancesSettingsLoglevelsDefault**
+
+
+
+> [FlowSettingsResponse](FlowSettingsResponse.html) putFlowsInstancesSettingsLoglevelsDefault(body, expand)
+
+Edit the flow default log level.
+
+Edit the flow default log level.
+
+
+
+Wraps PUT /api/v2/flows/instances/settings/loglevels/default  
+
+Requires ANY permissions: 
+
+* architect:flowLogLevelDefault:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: FlowLogLevelRequest = new FlowLogLevelRequest(...) // New LogLevel settings
+let expand: [String] = [""] // Expand instructions for the result
+
+// Code example
+ArchitectAPI.putFlowsInstancesSettingsLoglevelsDefault(body: body, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.putFlowsInstancesSettingsLoglevelsDefault was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest.html)| New LogLevel settings | |
+| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**FlowSettingsResponse**](FlowSettingsResponse.html)
 
 <a name="putFlowsMilestone"></a>
 

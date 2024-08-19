@@ -450,8 +450,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -722,8 +722,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -819,8 +819,8 @@ open class AuthorizationAPI {
     "homeDivision" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -950,8 +950,8 @@ open class AuthorizationAPI {
     "id" : "id"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -1505,7 +1505,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -1944,7 +1943,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -2398,7 +2396,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -2837,7 +2834,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -3363,7 +3359,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -3802,7 +3797,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -4256,7 +4250,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -4695,7 +4688,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -5150,7 +5142,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -5589,7 +5580,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -6043,7 +6033,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -6482,7 +6471,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -6942,7 +6930,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -7381,7 +7368,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -7835,7 +7821,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -8274,7 +8259,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -8737,7 +8721,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -9176,7 +9159,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -9630,7 +9612,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -10069,7 +10050,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -10529,7 +10509,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -10968,7 +10947,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -11422,7 +11400,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -11861,7 +11838,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -12015,8 +11991,8 @@ open class AuthorizationAPI {
     } ]
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -12678,8 +12654,8 @@ open class AuthorizationAPI {
     "geolocation" : "{}"
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -13200,7 +13176,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -13639,7 +13614,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -14093,7 +14067,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -14532,7 +14505,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -14999,7 +14971,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -15438,7 +15409,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -15892,7 +15862,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -16331,7 +16300,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -16376,8 +16344,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -16418,6 +16386,56 @@ open class AuthorizationAPI {
         ])
 
         let requestBuilder: RequestBuilder<OrganizationRoleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get authorization role settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAuthorizationRolesSettings(completion: @escaping ((_ data: RoleSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAuthorizationRolesSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<RoleSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get authorization role settings
+     - GET /api/v2/authorization/roles/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "authorizationGrantDivisionAware" : true,
+  "backfillEnabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<RoleSettings> 
+     */
+    open class func getAuthorizationRolesSettingsWithRequestBuilder() -> RequestBuilder<RoleSettings> {        
+        let path = "/api/v2/authorization/roles/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RoleSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -17353,7 +17371,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -17792,7 +17809,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -18246,7 +18262,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -18685,7 +18700,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -19531,7 +19545,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -19970,7 +19983,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -20424,7 +20436,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -20863,7 +20874,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -21318,7 +21328,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -21757,7 +21766,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -22211,7 +22219,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -22650,7 +22657,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -23110,7 +23116,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -23549,7 +23554,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -24003,7 +24007,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -24442,7 +24445,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -24905,7 +24907,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -25344,7 +25345,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -25798,7 +25798,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -26237,7 +26236,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -26697,7 +26695,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -27136,7 +27133,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -27590,7 +27586,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -28029,7 +28024,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -28555,7 +28549,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -28994,7 +28987,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -29448,7 +29440,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -29887,7 +29878,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -30409,7 +30399,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -30848,7 +30837,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -31302,7 +31290,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -31741,7 +31728,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -32208,7 +32194,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -32647,7 +32632,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -33101,7 +33085,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -33540,7 +33523,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -33585,8 +33567,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -34365,7 +34347,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -34804,7 +34785,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -35258,7 +35238,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -35697,7 +35676,6 @@ open class AuthorizationAPI {
                 "name" : "name",
                 "id" : "id"
               } ],
-              "imapFolder" : "imapFolder",
               "allowMultipleActions" : true,
               "name" : "name",
               "fromName" : "fromName",
@@ -36336,7 +36314,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -36775,7 +36752,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -37229,7 +37205,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -37668,7 +37643,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -38135,7 +38109,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -38574,7 +38547,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -39028,7 +39000,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -39467,7 +39438,6 @@ open class AuthorizationAPI {
                   "name" : "name",
                   "id" : "id"
                 } ],
-                "imapFolder" : "imapFolder",
                 "allowMultipleActions" : true,
                 "name" : "name",
                 "fromName" : "fromName",
@@ -39512,8 +39482,8 @@ open class AuthorizationAPI {
     "base" : true
   } ],
   "firstUri" : "https://openapi-generator.tech",
-  "selfUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
@@ -39531,6 +39501,62 @@ open class AuthorizationAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<OrganizationRoleEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Change authorization role settings
+     
+     - parameter body: (body) Authorization Role Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putAuthorizationRolesSettings(body: RoleSettings, completion: @escaping ((_ data: RoleSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putAuthorizationRolesSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<RoleSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Change authorization role settings
+     - PUT /api/v2/authorization/roles/settings
+     - Change role settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "authorizationGrantDivisionAware" : true,
+  "backfillEnabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) Authorization Role Settings 
+
+     - returns: RequestBuilder<RoleSettings> 
+     */
+    open class func putAuthorizationRolesSettingsWithRequestBuilder(body: RoleSettings) -> RequestBuilder<RoleSettings> {        
+        let path = "/api/v2/authorization/roles/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<RoleSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

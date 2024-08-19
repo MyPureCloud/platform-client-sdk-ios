@@ -7578,6 +7578,292 @@ open class KnowledgeAPI {
     
     
     
+    public enum Expand_postKnowledgeKnowledgebaseDocumentsQuery: String { 
+        case documentvariations = "documentVariations"
+        case documentalternatives = "documentAlternatives"
+        case knowledgebaselanguagecode = "knowledgeBaseLanguageCode"
+    }
+    
+    
+    
+    /**
+     Query for knowledge documents.
+     
+     - parameter knowledgeBaseId: (path) Knowledge Base ID 
+     - parameter expand: (query) Fields, if any, to expand for each document in the search result matching the query. (optional)
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsQuery(knowledgeBaseId: String, expand: [String]? = nil, body: KnowledgeDocumentQuery? = nil, completion: @escaping ((_ data: KnowledgeDocumentQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsQueryWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, expand: expand, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for knowledge documents.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "pageSize" : 0,
+  "results" : [ {
+    "externalUrl" : "externalUrl",
+    "visible" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "externalId" : "externalId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "{}",
+    "title" : "title",
+    "documentVersion" : "{}",
+    "labels" : [ {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "externalId" : "externalId",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    }, {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "externalId" : "externalId",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    } ],
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateImported" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastPublishedVersionNumber" : 0,
+    "knowledgeBase" : "{}",
+    "readonly" : true,
+    "createdBy" : "{}",
+    "variations" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "priority" : 6,
+      "body" : "{}",
+      "documentVersion" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "priority" : 6,
+      "body" : "{}",
+      "documentVersion" : "{}"
+    } ],
+    "alternatives" : [ {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    }, {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    } ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Draft",
+    "category" : "{}"
+  }, {
+    "externalUrl" : "externalUrl",
+    "visible" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "externalId" : "externalId",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "source" : "{}",
+    "title" : "title",
+    "documentVersion" : "{}",
+    "labels" : [ {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "externalId" : "externalId",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    }, {
+      "documentCount" : 0,
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "color" : "color",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "externalId" : "externalId",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id"
+    } ],
+    "datePublished" : "2000-01-23T04:56:07.000+00:00",
+    "dateImported" : "2000-01-23T04:56:07.000+00:00",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "lastPublishedVersionNumber" : 0,
+    "knowledgeBase" : "{}",
+    "readonly" : true,
+    "createdBy" : "{}",
+    "variations" : [ {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "priority" : 6,
+      "body" : "{}",
+      "documentVersion" : "{}"
+    }, {
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "document" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "id" : "id",
+      "contexts" : [ {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      }, {
+        "values" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "id" : "id"
+        } ],
+        "context" : "{}"
+      } ],
+      "priority" : 6,
+      "body" : "{}",
+      "documentVersion" : "{}"
+    } ],
+    "alternatives" : [ {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    }, {
+      "phrase" : "phrase",
+      "autocomplete" : true
+    } ],
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "state" : "Draft",
+    "category" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge Base ID 
+     - parameter expand: (query) Fields, if any, to expand for each document in the search result matching the query. (optional)
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<KnowledgeDocumentQueryResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsQueryWithRequestBuilder(knowledgeBaseId: String, expand: [String]? = nil, body: KnowledgeDocumentQuery? = nil) -> RequestBuilder<KnowledgeDocumentQueryResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/query"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     public enum Expand_postKnowledgeKnowledgebaseDocumentsSearch: String { 
         case documentvariations = "documentVariations"
         case documentalternatives = "documentAlternatives"
