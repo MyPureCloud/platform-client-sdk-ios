@@ -2167,7 +2167,7 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)| Include to access additional data on the business unit | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling") |
+| **expand** | [**[String]**](String.html)| Include to access additional data on the business unit | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling"), settingsNotificationsScheduling ("settings.notifications.scheduling"), settingsLearning ("settings.learning"), settingsCoaching ("settings.coaching") |
 {: class="table-striped"}
 
 

@@ -52,6 +52,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI.html#patchKnowledgeKnowledgebase) | Update knowledge base |
 | [**patchKnowledgeKnowledgebaseCategory**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseCategory) | Update category |
 | [**patchKnowledgeKnowledgebaseDocument**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseDocument) | Update document. |
+| [**patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId) | Update feedback on a document |
 | [**patchKnowledgeKnowledgebaseDocumentVariation**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseDocumentVariation) | Update a variation for a document. |
 | [**patchKnowledgeKnowledgebaseDocumentsSearchSearchId**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseDocumentsSearchSearchId) | Update search result. |
 | [**patchKnowledgeKnowledgebaseImportJob**](KnowledgeAPI.html#patchKnowledgeKnowledgebaseImportJob) | Start import job |
@@ -65,6 +66,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeGuestSessionDocumentCopies**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentCopies) | Indicate that the document was copied by the user. |
 | [**postKnowledgeGuestSessionDocumentFeedback**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentFeedback) | Give feedback on a document |
 | [**postKnowledgeGuestSessionDocumentViews**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentViews) | Create view event for a document. |
+| [**postKnowledgeGuestSessionDocumentsAnswers**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentsAnswers) | Answer documents. |
 | [**postKnowledgeGuestSessionDocumentsPresentations**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentsPresentations) | Indicate that documents were presented to the user. |
 | [**postKnowledgeGuestSessionDocumentsSearch**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentsSearch) | Search the documents in a guest session. |
 | [**postKnowledgeGuestSessionDocumentsSearchSuggestions**](KnowledgeAPI.html#postKnowledgeGuestSessionDocumentsSearchSuggestions) | Query the knowledge documents to provide suggestions for auto completion. |
@@ -76,6 +78,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseDocumentVersions**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentVersions) | Creates or restores a document version. |
 | [**postKnowledgeKnowledgebaseDocumentViews**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentViews) | Create view for a document. |
 | [**postKnowledgeKnowledgebaseDocuments**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocuments) | Create document. |
+| [**postKnowledgeKnowledgebaseDocumentsAnswers**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsAnswers) | Answer documents. |
 | [**postKnowledgeKnowledgebaseDocumentsPresentations**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsPresentations) | Indicate that documents were presented to the user. |
 | [**postKnowledgeKnowledgebaseDocumentsQuery**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsQuery) | Query for knowledge documents. |
 | [**postKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeAPI.html#postKnowledgeKnowledgebaseDocumentsSearch) | Search the documents in a knowledge base. |
@@ -2729,6 +2732,64 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseDocument(knowledgeBaseId: knowledgeBaseI
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
 
+<a name="patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId"></a>
+
+# **patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**
+
+
+
+> [KnowledgeDocumentFeedbackResponse](KnowledgeDocumentFeedbackResponse.html) patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId, documentId, feedbackId, body)
+
+Update feedback on a document
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}  
+
+Requires ANY permissions: 
+
+* knowledge:feedback:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID.
+let documentId: String = "" // Document ID.
+let feedbackId: String = "" // Feedback ID.
+let body: KnowledgeDocumentFeedbackUpdateRequest = new KnowledgeDocumentFeedbackUpdateRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId: knowledgeBaseId, documentId: documentId, feedbackId: feedbackId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID. | |
+| **documentId** | **String**| Document ID. | |
+| **feedbackId** | **String**| Feedback ID. | |
+| **body** | [**KnowledgeDocumentFeedbackUpdateRequest**](KnowledgeDocumentFeedbackUpdateRequest.html)|  | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeDocumentFeedbackResponse**](KnowledgeDocumentFeedbackResponse.html)
+
 <a name="patchKnowledgeKnowledgebaseDocumentVariation"></a>
 
 # **patchKnowledgeKnowledgebaseDocumentVariation**
@@ -3459,6 +3520,59 @@ KnowledgeAPI.postKnowledgeGuestSessionDocumentViews(sessionId: sessionId, docume
 
 `nil` (empty response body)
 
+<a name="postKnowledgeGuestSessionDocumentsAnswers"></a>
+
+# **postKnowledgeGuestSessionDocumentsAnswers**
+
+
+
+> [KnowledgeGuestAnswerDocumentsResponse](KnowledgeGuestAnswerDocumentsResponse.html) postKnowledgeGuestSessionDocumentsAnswers(sessionId, body)
+
+Answer documents.
+
+
+
+Wraps POST /api/v2/knowledge/guest/sessions/{sessionId}/documents/answers  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let sessionId: String = "" // Knowledge guest session ID.
+let body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeGuestSessionDocumentsAnswers(sessionId: sessionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeGuestSessionDocumentsAnswers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sessionId** | **String**| Knowledge guest session ID. | |
+| **body** | [**KnowledgeDocumentsAnswerFilter**](KnowledgeDocumentsAnswerFilter.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeGuestAnswerDocumentsResponse**](KnowledgeGuestAnswerDocumentsResponse.html)
+
 <a name="postKnowledgeGuestSessionDocumentsPresentations"></a>
 
 # **postKnowledgeGuestSessionDocumentsPresentations**
@@ -4056,6 +4170,61 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseI
 ### Return type
 
 [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse.html)
+
+<a name="postKnowledgeKnowledgebaseDocumentsAnswers"></a>
+
+# **postKnowledgeKnowledgebaseDocumentsAnswers**
+
+
+
+> [KnowledgeAnswerDocumentsResponse](KnowledgeAnswerDocumentsResponse.html) postKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId, body)
+
+Answer documents.
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers  
+
+Requires ALL permissions: 
+
+* knowledge:document:view
+* knowledge:documentAnswer:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsAnswers was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeDocumentsAnswerFilter**](KnowledgeDocumentsAnswerFilter.html)|  | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**KnowledgeAnswerDocumentsResponse**](KnowledgeAnswerDocumentsResponse.html)
 
 <a name="postKnowledgeKnowledgebaseDocumentsPresentations"></a>
 

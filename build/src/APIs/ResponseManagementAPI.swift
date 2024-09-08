@@ -370,9 +370,11 @@ open class ResponseManagementAPI {
     "id" : "id"
   } ],
   "texts" : [ {
+    "type" : "body",
     "contentType" : "text/plain",
     "content" : "content"
   }, {
+    "type" : "body",
     "contentType" : "text/plain",
     "content" : "content"
   } ],
@@ -620,9 +622,11 @@ open class ResponseManagementAPI {
       "id" : "id"
     } ],
     "texts" : [ {
+      "type" : "body",
       "contentType" : "text/plain",
       "content" : "content"
     }, {
+      "type" : "body",
       "contentType" : "text/plain",
       "content" : "content"
     } ],
@@ -664,9 +668,11 @@ open class ResponseManagementAPI {
       "id" : "id"
     } ],
     "texts" : [ {
+      "type" : "body",
       "contentType" : "text/plain",
       "content" : "content"
     }, {
+      "type" : "body",
       "contentType" : "text/plain",
       "content" : "content"
     } ],
@@ -1082,9 +1088,11 @@ open class ResponseManagementAPI {
     "id" : "id"
   } ],
   "texts" : [ {
+    "type" : "body",
     "contentType" : "text/plain",
     "content" : "content"
   }, {
+    "type" : "body",
     "contentType" : "text/plain",
     "content" : "content"
   } ],
@@ -1309,9 +1317,11 @@ open class ResponseManagementAPI {
     "id" : "id"
   } ],
   "texts" : [ {
+    "type" : "body",
     "contentType" : "text/plain",
     "content" : "content"
   }, {
+    "type" : "body",
     "contentType" : "text/plain",
     "content" : "content"
   } ],

@@ -102,6 +102,60 @@ open class SettingsAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get the execution history enabled setting.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSettingsExecutiondata(completion: @escaping ((_ data: ExecutionDataGlobalSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSettingsExecutiondataWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ExecutionDataGlobalSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the execution history enabled setting.
+     - GET /api/v2/settings/executiondata
+     - Get the execution history enabled setting.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "enabled" : true
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ExecutionDataGlobalSettingsResponse> 
+     */
+    open class func getSettingsExecutiondataWithRequestBuilder() -> RequestBuilder<ExecutionDataGlobalSettingsResponse> {        
+        let path = "/api/v2/settings/executiondata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExecutionDataGlobalSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -209,6 +263,65 @@ open class SettingsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmailSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Edit the execution history on off setting.
+     
+     - parameter body: (body) New Execution Data Setting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchSettingsExecutiondata(body: ExecutionDataSettingsRequest, completion: @escaping ((_ data: ExecutionDataGlobalSettingsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchSettingsExecutiondataWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ExecutionDataGlobalSettingsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Edit the execution history on off setting.
+     - PATCH /api/v2/settings/executiondata
+     - Edit the execution history on off setting.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "modifiedBy" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "modifiedByClient" : "{}",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter body: (body) New Execution Data Setting 
+
+     - returns: RequestBuilder<ExecutionDataGlobalSettingsResponse> 
+     */
+    open class func patchSettingsExecutiondataWithRequestBuilder(body: ExecutionDataSettingsRequest) -> RequestBuilder<ExecutionDataGlobalSettingsResponse> {        
+        let path = "/api/v2/settings/executiondata"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExecutionDataGlobalSettingsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

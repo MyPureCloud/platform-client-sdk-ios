@@ -887,7 +887,7 @@ TaskManagementAPI.getTaskmanagementWorktype(worktypeId: worktypeId, expands: exp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **worktypeId** | **String**| Worktype id | |
-| **expands** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: defaultqueue ("defaultQueue"), defaultskills ("defaultSkills"), defaultlanguage ("defaultLanguage"), schema ("schema") |
+| **expands** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: defaultqueue ("defaultQueue"), defaultskills ("defaultSkills"), defaultlanguage ("defaultLanguage"), schema ("schema"), flow ("flow") |
 {: class="table-striped"}
 
 

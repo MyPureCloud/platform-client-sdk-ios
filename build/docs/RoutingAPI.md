@@ -55,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRoutingPredictors**](RoutingAPI.html#getRoutingPredictors) | Retrieve all predictors. |
 | [**getRoutingPredictorsKeyperformanceindicators**](RoutingAPI.html#getRoutingPredictorsKeyperformanceindicators) | Get a list of Key Performance Indicators |
 | [**getRoutingQueue**](RoutingAPI.html#getRoutingQueue) | Get details about this queue. |
+| [**getRoutingQueueAssistant**](RoutingAPI.html#getRoutingQueueAssistant) | Get an assistant associated with a queue. |
 | [**getRoutingQueueComparisonperiod**](RoutingAPI.html#getRoutingQueueComparisonperiod) | Get a Comparison Period. |
 | [**getRoutingQueueComparisonperiods**](RoutingAPI.html#getRoutingQueueComparisonperiods) | Get list of comparison periods |
 | [**getRoutingQueueEstimatedwaittime**](RoutingAPI.html#getRoutingQueueEstimatedwaittime) | Get Estimated Wait Time |
@@ -2667,6 +2668,60 @@ RoutingAPI.getRoutingQueue(queueId: queueId) { (response, error) in
 ### Return type
 
 [**Queue**](Queue.html)
+
+<a name="getRoutingQueueAssistant"></a>
+
+# **getRoutingQueueAssistant**
+
+
+
+> [AssistantQueue](AssistantQueue.html) getRoutingQueueAssistant(queueId, expand)
+
+Get an assistant associated with a queue.
+
+
+
+Wraps GET /api/v2/routing/queues/{queueId}/assistant  
+
+Requires ALL permissions: 
+
+* assistants:queue:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let queueId: String = "" // Queue ID
+let expand: RoutingAPI.Expand_getRoutingQueueAssistant = RoutingAPI.Expand_getRoutingQueueAssistant.enummember // Which fields, if any, to expand.
+
+// Code example
+RoutingAPI.getRoutingQueueAssistant(queueId: queueId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("RoutingAPI.getRoutingQueueAssistant was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **queueId** | **String**| Queue ID | |
+| **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant") |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AssistantQueue**](AssistantQueue.html)
 
 <a name="getRoutingQueueComparisonperiod"></a>
 

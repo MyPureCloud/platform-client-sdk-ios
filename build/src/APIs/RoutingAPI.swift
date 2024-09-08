@@ -3347,6 +3347,77 @@ open class RoutingAPI {
     
     
     
+    public enum Expand_getRoutingQueueAssistant: String { 
+        case assistant = "assistant"
+    }
+    
+    
+    /**
+     Get an assistant associated with a queue.
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getRoutingQueueAssistant(queueId: String, expand: Expand_getRoutingQueueAssistant? = nil, completion: @escaping ((_ data: AssistantQueue?,_ error: Error?) -> Void)) {
+        let requestBuilder = getRoutingQueueAssistantWithRequestBuilder(queueId: queueId, expand: expand)
+        requestBuilder.execute { (response: Response<AssistantQueue>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an assistant associated with a queue.
+     - GET /api/v2/routing/queues/{queueId}/assistant
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mediaTypes" : [ "Call", "Call" ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "assistant" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter queueId: (path) Queue ID 
+     - parameter expand: (query) Which fields, if any, to expand. (optional)
+
+     - returns: RequestBuilder<AssistantQueue> 
+     */
+    open class func getRoutingQueueAssistantWithRequestBuilder(queueId: String, expand: Expand_getRoutingQueueAssistant? = nil) -> RequestBuilder<AssistantQueue> {        
+        var path = "/api/v2/routing/queues/{queueId}/assistant"
+        let queueIdPreEscape = "\(queueId)"
+        let queueIdPostEscape = queueIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{queueId}", with: queueIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<AssistantQueue>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
     
     /**
      Get a Comparison Period.
@@ -9617,6 +9688,7 @@ open class RoutingAPI {
     "version" : "version"
   } ],
   "language" : "{}",
+  "label" : "{}",
   "scoredAgents" : [ {
     "score" : 6,
     "agent" : "{}"

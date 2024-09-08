@@ -9,8 +9,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI.html#deleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | Delete agent auto answer settings |
 | [**getEmailsSettings**](SettingsAPI.html#getEmailsSettings) | Get email Contact Center settings |
+| [**getSettingsExecutiondata**](SettingsAPI.html#getSettingsExecutiondata) | Get the execution history enabled setting. |
 | [**getUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI.html#getUsersAgentuiAgentsAutoanswerAgentIdSettings) | Get agent auto answer settings |
 | [**patchEmailsSettings**](SettingsAPI.html#patchEmailsSettings) | Patch email Contact Center settings |
+| [**patchSettingsExecutiondata**](SettingsAPI.html#patchSettingsExecutiondata) | Edit the execution history on off setting. |
 | [**patchUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI.html#patchUsersAgentuiAgentsAutoanswerAgentIdSettings) | Update agent auto answer settings |
 | [**putUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI.html#putUsersAgentuiAgentsAutoanswerAgentIdSettings) | Set agent auto answer settings |
 {: class="table-striped"}
@@ -113,6 +115,56 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EmailSettings**](EmailSettings.html)
+
+<a name="getSettingsExecutiondata"></a>
+
+# **getSettingsExecutiondata**
+
+
+
+> [ExecutionDataGlobalSettingsResponse](ExecutionDataGlobalSettingsResponse.html) getSettingsExecutiondata()
+
+Get the execution history enabled setting.
+
+Get the execution history enabled setting.
+
+
+
+Wraps GET /api/v2/settings/executiondata  
+
+Requires ANY permissions: 
+
+* settings:executiondata:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SettingsAPI.getSettingsExecutiondata() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.getSettingsExecutiondata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+
+### Return type
+
+[**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse.html)
 
 <a name="getUsersAgentuiAgentsAutoanswerAgentIdSettings"></a>
 
@@ -217,6 +269,60 @@ SettingsAPI.patchEmailsSettings(body: body) { (response, error) in
 ### Return type
 
 [**EmailSettings**](EmailSettings.html)
+
+<a name="patchSettingsExecutiondata"></a>
+
+# **patchSettingsExecutiondata**
+
+
+
+> [ExecutionDataGlobalSettingsResponse](ExecutionDataGlobalSettingsResponse.html) patchSettingsExecutiondata(body)
+
+Edit the execution history on off setting.
+
+Edit the execution history on off setting.
+
+
+
+Wraps PATCH /api/v2/settings/executiondata  
+
+Requires ANY permissions: 
+
+* settings:executiondata:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExecutionDataSettingsRequest = new ExecutionDataSettingsRequest(...) // New Execution Data Setting
+
+// Code example
+SettingsAPI.patchSettingsExecutiondata(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.patchSettingsExecutiondata was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest.html)| New Execution Data Setting | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**ExecutionDataGlobalSettingsResponse**](ExecutionDataGlobalSettingsResponse.html)
 
 <a name="patchUsersAgentuiAgentsAutoanswerAgentIdSettings"></a>
 

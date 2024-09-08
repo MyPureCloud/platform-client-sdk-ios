@@ -244,6 +244,52 @@ open class JourneyAPI {
 
     
     
+    /**
+     Delete a Journey View by ID
+     
+     - parameter viewId: (path) viewId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteJourneyView(viewId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteJourneyViewWithRequestBuilder(viewId: viewId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Journey View by ID
+     - DELETE /api/v2/journey/views/{viewId}
+     - deletes all versions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter viewId: (path) viewId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteJourneyViewWithRequestBuilder(viewId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/journey/views/{viewId}"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -2212,6 +2258,736 @@ open class JourneyAPI {
 
     
     
+    /**
+     Get a Journey View by ID
+     
+     - parameter viewId: (path) viewId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyView(viewId: String, completion: @escaping ((_ data: JourneyView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewWithRequestBuilder(viewId: viewId)
+        requestBuilder.execute { (response: Response<JourneyView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Journey View by ID
+     - GET /api/v2/journey/views/{viewId}
+     - returns the latest version
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "duration" : "duration",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "elements" : [ {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  }, {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "interval" : "interval",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
+     
+     - parameter viewId: (path) viewId 
+
+     - returns: RequestBuilder<JourneyView> 
+     */
+    open class func getJourneyViewWithRequestBuilder(viewId: String) -> RequestBuilder<JourneyView> {        
+        var path = "/api/v2/journey/views/{viewId}"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a Journey View by ID and version
+     
+     - parameter viewId: (path) viewId 
+     - parameter versionId: (path) versionId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewVersion(viewId: String, versionId: String, completion: @escaping ((_ data: JourneyView?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewVersionWithRequestBuilder(viewId: viewId, versionId: versionId)
+        requestBuilder.execute { (response: Response<JourneyView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a Journey View by ID and version
+     - GET /api/v2/journey/views/{viewId}/versions/{versionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "duration" : "duration",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "elements" : [ {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  }, {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "interval" : "interval",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
+     
+     - parameter viewId: (path) viewId 
+     - parameter versionId: (path) versionId 
+
+     - returns: RequestBuilder<JourneyView> 
+     */
+    open class func getJourneyViewVersionWithRequestBuilder(viewId: String, versionId: String) -> RequestBuilder<JourneyView> {        
+        var path = "/api/v2/journey/views/{viewId}/versions/{versionId}"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let versionIdPreEscape = "\(versionId)"
+        let versionIdPostEscape = versionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{versionId}", with: versionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the job for a journey view version.
+     
+     - parameter viewId: (path) Journey View Id 
+     - parameter journeyVersionId: (path) Journey View Version 
+     - parameter jobId: (path) JobId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewVersionJob(viewId: String, journeyVersionId: String, jobId: String, completion: @escaping ((_ data: JourneyViewJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewVersionJobWithRequestBuilder(viewId: viewId, journeyVersionId: journeyVersionId, jobId: jobId)
+        requestBuilder.execute { (response: Response<JourneyViewJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the job for a journey view version.
+     - GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}
+     - used for long descriptions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "journeyView" : "{}",
+  "id" : "id",
+  "status" : "Accepted"
+}, statusCode=200}]
+     
+     - parameter viewId: (path) Journey View Id 
+     - parameter journeyVersionId: (path) Journey View Version 
+     - parameter jobId: (path) JobId 
+
+     - returns: RequestBuilder<JourneyViewJob> 
+     */
+    open class func getJourneyViewVersionJobWithRequestBuilder(viewId: String, journeyVersionId: String, jobId: String) -> RequestBuilder<JourneyViewJob> {        
+        var path = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let journeyVersionIdPreEscape = "\(journeyVersionId)"
+        let journeyVersionIdPostEscape = journeyVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{journeyVersionId}", with: journeyVersionIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyViewJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the result of a job for a journey view version.
+     
+     - parameter viewId: (path) JourneyViewResult id 
+     - parameter journeyViewVersion: (path) Journey View Version 
+     - parameter jobId: (path) Id of the executing job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewVersionJobResults(viewId: String, journeyViewVersion: String, jobId: String, completion: @escaping ((_ data: JourneyViewResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewVersionJobResultsWithRequestBuilder(viewId: viewId, journeyViewVersion: journeyViewVersion, jobId: jobId)
+        requestBuilder.execute { (response: Response<JourneyViewResult>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the result of a job for a journey view version.
+     - GET /api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results
+     - used for long descriptions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "elements" : [ {
+    "followedBy" : [ {
+      "connectionCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "connectionCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "metrics" : "{}"
+  }, {
+    "followedBy" : [ {
+      "connectionCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    }, {
+      "connectionCount" : 0,
+      "selfUri" : "https://openapi-generator.tech",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "metrics" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter viewId: (path) JourneyViewResult id 
+     - parameter journeyViewVersion: (path) Journey View Version 
+     - parameter jobId: (path) Id of the executing job 
+
+     - returns: RequestBuilder<JourneyViewResult> 
+     */
+    open class func getJourneyViewVersionJobResultsWithRequestBuilder(viewId: String, journeyViewVersion: String, jobId: String) -> RequestBuilder<JourneyViewResult> {        
+        var path = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let journeyViewVersionPreEscape = "\(journeyViewVersion)"
+        let journeyViewVersionPostEscape = journeyViewVersionPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{journeyViewVersion}", with: journeyViewVersionPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyViewResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the latest job of a journey view version.
+     
+     - parameter viewId: (path) Journey View Id 
+     - parameter journeyVersionId: (path) Journey View Version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewVersionJobsLatest(viewId: String, journeyVersionId: String, completion: @escaping ((_ data: JourneyViewJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewVersionJobsLatestWithRequestBuilder(viewId: viewId, journeyVersionId: journeyVersionId)
+        requestBuilder.execute { (response: Response<JourneyViewJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the latest job of a journey view version.
+     - GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest
+     - used for long descriptions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "journeyView" : "{}",
+  "id" : "id",
+  "status" : "Accepted"
+}, statusCode=200}]
+     
+     - parameter viewId: (path) Journey View Id 
+     - parameter journeyVersionId: (path) Journey View Version 
+
+     - returns: RequestBuilder<JourneyViewJob> 
+     */
+    open class func getJourneyViewVersionJobsLatestWithRequestBuilder(viewId: String, journeyVersionId: String) -> RequestBuilder<JourneyViewJob> {        
+        var path = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let journeyVersionIdPreEscape = "\(journeyVersionId)"
+        let journeyVersionIdPostEscape = journeyVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{journeyVersionId}", with: journeyVersionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyViewJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    public enum Expand_getJourneyViews: String { 
+        case charts = "charts"
+    }
+    
+    
+    
+    
+    /**
+     Get a list of Journey Views
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter nameOrCreatedBy: (query) Journey View Name or Created By (optional)
+     - parameter expand: (query) Parameter to request additional data to return in Journey payload (optional)
+     - parameter _id: (query) Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViews(pageNumber: Int? = nil, pageSize: Int? = nil, nameOrCreatedBy: String? = nil, expand: Expand_getJourneyViews? = nil, _id: String? = nil, completion: @escaping ((_ data: JourneyViewListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, nameOrCreatedBy: nameOrCreatedBy, expand: expand, _id: _id)
+        requestBuilder.execute { (response: Response<JourneyViewListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Journey Views
+     - GET /api/v2/journey/views
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "duration" : "duration",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "elements" : [ {
+      "filter" : "{}",
+      "followedBy" : [ {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      }, {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      } ],
+      "name" : "name",
+      "attributes" : "{}",
+      "id" : "id"
+    }, {
+      "filter" : "{}",
+      "followedBy" : [ {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      }, {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      } ],
+      "name" : "name",
+      "attributes" : "{}",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : "{}",
+    "interval" : "interval",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "version" : 0
+  }, {
+    "duration" : "duration",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "elements" : [ {
+      "filter" : "{}",
+      "followedBy" : [ {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      }, {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      } ],
+      "name" : "name",
+      "attributes" : "{}",
+      "id" : "id"
+    }, {
+      "filter" : "{}",
+      "followedBy" : [ {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      }, {
+        "constraintWithin" : "{}",
+        "eventCountType" : "All",
+        "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+        "id" : "id",
+        "constraintAfter" : "{}"
+      } ],
+      "name" : "name",
+      "attributes" : "{}",
+      "id" : "id"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "modifiedBy" : "{}",
+    "interval" : "interval",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "version" : 0
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter nameOrCreatedBy: (query) Journey View Name or Created By (optional)
+     - parameter expand: (query) Parameter to request additional data to return in Journey payload (optional)
+     - parameter _id: (query) Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. (optional)
+
+     - returns: RequestBuilder<JourneyViewListing> 
+     */
+    open class func getJourneyViewsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, nameOrCreatedBy: String? = nil, expand: Expand_getJourneyViews? = nil, _id: String? = nil) -> RequestBuilder<JourneyViewListing> {        
+        let path = "/api/v2/journey/views"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "nameOrCreatedBy": nameOrCreatedBy, 
+            "expand": expand?.rawValue, 
+            "id": _id
+        ])
+
+        let requestBuilder: RequestBuilder<JourneyViewListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get the jobs for an organization.
+     
+     - parameter pageNumber: (query) The number of the page to return (optional)
+     - parameter pageSize: (query) Max number of entities to return (optional)
+     - parameter interval: (query) An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional)
+     - parameter statuses: (query) Job statuses to filter for (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsJobs(pageNumber: Int? = nil, pageSize: Int? = nil, interval: String? = nil, statuses: String? = nil, completion: @escaping ((_ data: JourneyViewJobListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsJobsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, interval: interval, statuses: statuses)
+        requestBuilder.execute { (response: Response<JourneyViewJobListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the jobs for an organization.
+     - GET /api/v2/journey/views/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "journeyView" : "{}",
+    "id" : "id",
+    "status" : "Accepted"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "journeyView" : "{}",
+    "id" : "id",
+    "status" : "Accepted"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) The number of the page to return (optional)
+     - parameter pageSize: (query) Max number of entities to return (optional)
+     - parameter interval: (query) An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional)
+     - parameter statuses: (query) Job statuses to filter for (optional)
+
+     - returns: RequestBuilder<JourneyViewJobListing> 
+     */
+    open class func getJourneyViewsJobsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, interval: String? = nil, statuses: String? = nil) -> RequestBuilder<JourneyViewJobListing> {        
+        let path = "/api/v2/journey/views/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "interval": interval, 
+            "statuses": statuses
+        ])
+
+        let requestBuilder: RequestBuilder<JourneyViewJobListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -3667,6 +4443,280 @@ open class JourneyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneySegment>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Submit a job request for a journey view version.
+     
+     - parameter viewId: (path) Journey View Id 
+     - parameter journeyVersionId: (path) Journey View Version 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyViewVersionJobs(viewId: String, journeyVersionId: String, completion: @escaping ((_ data: JourneyViewJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyViewVersionJobsWithRequestBuilder(viewId: viewId, journeyVersionId: journeyVersionId)
+        requestBuilder.execute { (response: Response<JourneyViewJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Submit a job request for a journey view version.
+     - POST /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs
+     - used for long descriptions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "journeyView" : "{}",
+  "id" : "id",
+  "status" : "Accepted"
+}, statusCode=202}]
+     
+     - parameter viewId: (path) Journey View Id 
+     - parameter journeyVersionId: (path) Journey View Version 
+
+     - returns: RequestBuilder<JourneyViewJob> 
+     */
+    open class func postJourneyViewVersionJobsWithRequestBuilder(viewId: String, journeyVersionId: String) -> RequestBuilder<JourneyViewJob> {        
+        var path = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let journeyVersionIdPreEscape = "\(journeyVersionId)"
+        let journeyVersionIdPostEscape = journeyVersionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{journeyVersionId}", with: journeyVersionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyViewJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a Journey View by ID
+     
+     - parameter viewId: (path) viewId 
+     - parameter body: (body) JourneyView 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyViewVersions(viewId: String, body: JourneyView, completion: @escaping ((_ data: JourneyView?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyViewVersionsWithRequestBuilder(viewId: viewId, body: body)
+        requestBuilder.execute { (response: Response<JourneyView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a Journey View by ID
+     - POST /api/v2/journey/views/{viewId}/versions
+     - creates a new version
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "duration" : "duration",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "elements" : [ {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  }, {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "interval" : "interval",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
+     
+     - parameter viewId: (path) viewId 
+     - parameter body: (body) JourneyView 
+
+     - returns: RequestBuilder<JourneyView> 
+     */
+    open class func postJourneyViewVersionsWithRequestBuilder(viewId: String, body: JourneyView) -> RequestBuilder<JourneyView> {        
+        var path = "/api/v2/journey/views/{viewId}/versions"
+        let viewIdPreEscape = "\(viewId)"
+        let viewIdPostEscape = viewIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{viewId}", with: viewIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a new Journey View
+     
+     - parameter body: (body) JourneyView 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyViews(body: JourneyView, completion: @escaping ((_ data: JourneyView?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyViewsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JourneyView>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new Journey View
+     - POST /api/v2/journey/views
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "duration" : "duration",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "elements" : [ {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  }, {
+    "filter" : "{}",
+    "followedBy" : [ {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    }, {
+      "constraintWithin" : "{}",
+      "eventCountType" : "All",
+      "joinAttributes" : [ "joinAttributes", "joinAttributes" ],
+      "id" : "id",
+      "constraintAfter" : "{}"
+    } ],
+    "name" : "name",
+    "attributes" : "{}",
+    "id" : "id"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "modifiedBy" : "{}",
+  "interval" : "interval",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "version" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) JourneyView 
+
+     - returns: RequestBuilder<JourneyView> 
+     */
+    open class func postJourneyViewsWithRequestBuilder(body: JourneyView) -> RequestBuilder<JourneyView> {        
+        let path = "/api/v2/journey/views"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

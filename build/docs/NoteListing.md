@@ -12,8 +12,8 @@ title: NoteListing
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **partialResults** | **Bool** |  | [optional] |
-| **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
+| **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |

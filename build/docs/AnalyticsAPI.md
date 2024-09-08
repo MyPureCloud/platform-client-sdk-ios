@@ -30,6 +30,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAnalyticsUsersDetailsJobsAvailability**](AnalyticsAPI.html#getAnalyticsUsersDetailsJobsAvailability) | Lookup the datalake availability date and time |
 | [**patchAnalyticsReportingSettings**](AnalyticsAPI.html#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
 | [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
+| [**postAnalyticsAgentcopilotsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsAgentcopilotsAggregatesQuery) | Query for agent copilot aggregates |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI.html#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI.html#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsActivityQuery**](AnalyticsAPI.html#postAnalyticsConversationsActivityQuery) | Query for conversation activity observations |
@@ -944,7 +945,7 @@ This endpoint does not require any parameters.
 
 
 
-> [DashboardConfigurationListing](DashboardConfigurationListing.html) getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize)
+> [DashboardConfigurationListing](DashboardConfigurationListing.html) getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize)
 
 Get list of dashboard configurations
 
@@ -966,12 +967,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let dashboardType: AnalyticsAPI.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type
 let dashboardAccessFilter: AnalyticsAPI.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard
+let name: String = "" // name of the dashboard
 let sortBy: String = "" // 
 let pageNumber: Int = 0 // 
 let pageSize: Int = 0 // 
 
 // Code example
-AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -988,6 +990,7 @@ AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboa
 | ------------- | ------------- | ------------- | ------------- |
 | **dashboardType** | **String**| List dashboard of given type |<br />**Values**: all ("All"), _public ("Public"), _private ("Private"), shared ("Shared"), favorites ("Favorites") |
 | **dashboardAccessFilter** | **String**| Filter dashboard based on the owner of dashboard |<br />**Values**: ownedByMe ("OwnedByMe"), ownedByAnyone ("OwnedByAnyone"), notOwnedByMe ("NotOwnedByMe") |
+| **name** | **String**| name of the dashboard | [optional] |
 | **sortBy** | **String**|  | [optional] |
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**|  | [optional] |
@@ -1322,6 +1325,58 @@ AnalyticsAPI.postAnalyticsActionsAggregatesQuery(body: body) { (response, error)
 ### Return type
 
 [**ActionAggregateQueryResponse**](ActionAggregateQueryResponse.html)
+
+<a name="postAnalyticsAgentcopilotsAggregatesQuery"></a>
+
+# **postAnalyticsAgentcopilotsAggregatesQuery**
+
+
+
+> [AgentCopilotAggregateQueryResponse](AgentCopilotAggregateQueryResponse.html) postAnalyticsAgentcopilotsAggregatesQuery(body)
+
+Query for agent copilot aggregates
+
+
+
+Wraps POST /api/v2/analytics/agentcopilots/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:agentCopilotAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentCopilotAggregationQuery = new AgentCopilotAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentCopilotAggregationQuery**](AgentCopilotAggregationQuery.html)| query | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse.html)
 
 <a name="postAnalyticsBotsAggregatesQuery"></a>
 

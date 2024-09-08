@@ -382,13 +382,14 @@ open class ExternalContactsAPI {
         case externalorganization = "externalOrganization"
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
+        case externalsources = "externalSources"
     }
     
     /**
      Fetch an external contact
      
      - parameter contactId: (path) ExternalContact ID 
-     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getExternalcontactsContact(contactId: String, expand: [String]? = nil, completion: @escaping ((_ data: ExternalContact?,_ error: Error?) -> Void)) {
@@ -600,7 +601,7 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter contactId: (path) ExternalContact ID 
-     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<ExternalContact> 
      */
@@ -1378,6 +1379,7 @@ open class ExternalContactsAPI {
         case externalorganization = "externalOrganization"
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
+        case externalsources = "externalSources"
     }
     
     /**
@@ -2243,6 +2245,7 @@ open class ExternalContactsAPI {
         case externalorganization = "externalOrganization"
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
+        case externalsources = "externalSources"
     }
     
     /**
@@ -10529,6 +10532,7 @@ open class ExternalContactsAPI {
     public enum Expand_postExternalcontactsIdentifierlookup: String { 
         case externalorganization = "externalOrganization"
         case identifiers = "identifiers"
+        case externalsources = "externalSources"
     }
     
     /**

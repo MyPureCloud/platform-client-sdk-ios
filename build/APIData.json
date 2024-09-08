@@ -1,4 +1,307 @@
 {
+  "deleteassistant": {
+    "operationId": "deleteassistant",
+    "functionName": "deleteAssistant",
+    "signature": "deleteAssistant(assistantId)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\n\n// Delete an assistant.\nDeleteAssistantRequest.deleteAssistant(assistantId: assistantId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteAssistantRequest.deleteAssistant was successful\")\n    }\n}"
+  },
+  "deleteassistantqueue": {
+    "operationId": "deleteassistantqueue",
+    "functionName": "deleteAssistantQueue",
+    "signature": "deleteAssistantQueue(assistantId, queueId)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueId: String = \"\" // Queue ID\n\n// Disassociate a queue from an assistant.\nDeleteAssistantQueueRequest.deleteAssistantQueue(assistantId: assistantId, queueId: queueId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteAssistantQueueRequest.deleteAssistantQueue was successful\")\n    }\n}"
+  },
+  "deleteassistantqueues": {
+    "operationId": "deleteassistantqueues",
+    "functionName": "deleteAssistantQueues",
+    "signature": "deleteAssistantQueues(assistantId, queueIds)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueIds",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueIds: String = \"\" // Comma-separated identifiers of the queues that need to be deleted.\n\n// Disassociate the queues from an assistant for the given assistant ID and queue IDs.\nDeleteAssistantQueuesRequest.deleteAssistantQueues(assistantId: assistantId, queueIds: queueIds) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteAssistantQueuesRequest.deleteAssistantQueues was successful\")\n    }\n}"
+  },
+  "getassistant": {
+    "operationId": "getassistant",
+    "functionName": "getAssistant",
+    "signature": "getAssistant(assistantId, expand)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "Assistant",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet expand: GetAssistantRequest.Expand_getAssistant = GetAssistantRequest.Expand_getAssistant.enummember // Which fields, if any, to expand.\n\n// Get an assistant.\nGetAssistantRequest.getAssistant(assistantId: assistantId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAssistantRequest.getAssistant was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getassistantqueue": {
+    "operationId": "getassistantqueue",
+    "functionName": "getAssistantQueue",
+    "signature": "getAssistantQueue(assistantId, queueId, expand)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AssistantQueue",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueId: String = \"\" // Queue ID\nlet expand: GetAssistantQueueRequest.Expand_getAssistantQueue = GetAssistantQueueRequest.Expand_getAssistantQueue.enummember // Which fields, if any, to expand.\n\n// Get queue Information for an assistant.\nGetAssistantQueueRequest.getAssistantQueue(assistantId: assistantId, queueId: queueId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAssistantQueueRequest.getAssistantQueue was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getassistantqueues": {
+    "operationId": "getassistantqueues",
+    "functionName": "getAssistantQueues",
+    "signature": "getAssistantQueues(assistantId, before, after, pageSize, expand)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AssistantQueueListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet expand: GetAssistantQueuesRequest.Expand_getAssistantQueues = GetAssistantQueuesRequest.Expand_getAssistantQueues.enummember // Which fields, if any, to expand.\n\n// Get all the queues associated with an assistant.\nGetAssistantQueuesRequest.getAssistantQueues(assistantId: assistantId, before: before, after: after, pageSize: pageSize, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAssistantQueuesRequest.getAssistantQueues was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getassistants": {
+    "operationId": "getassistants",
+    "functionName": "getAssistants",
+    "signature": "getAssistants(before, after, limit, pageSize, name)",
+    "parameters": [
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "limit",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AssistantListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet limit: String = \"\" // Number of entities to return. Maximum of 200. Deprecated in favour of pageSize\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet name: String = \"\" // Return the assistant by the given name.\n\n// Get all assistants.\nGetAssistantsRequest.getAssistants(before: before, after: after, limit: limit, pageSize: pageSize, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAssistantsRequest.getAssistants was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getassistantsqueues": {
+    "operationId": "getassistantsqueues",
+    "functionName": "getAssistantsQueues",
+    "signature": "getAssistantsQueues(before, after, pageSize, queueIds, expand)",
+    "parameters": [
+      {
+        "name": "before",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "queueIds",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AssistantQueueListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet before: String = \"\" // The cursor that points to the start of the set of entities that has been returned.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 200.\nlet queueIds: String = \"\" // Comma-separated identifiers of the queues that need to be retrieved.\nlet expand: GetAssistantsQueuesRequest.Expand_getAssistantsQueues = GetAssistantsQueuesRequest.Expand_getAssistantsQueues.enummember // Which fields, if any, to expand.\n\n// Get all queues assigned to any assistant.\nGetAssistantsQueuesRequest.getAssistantsQueues(before: before, after: after, pageSize: pageSize, queueIds: queueIds, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAssistantsQueuesRequest.getAssistantsQueues was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchassistant": {
+    "operationId": "patchassistant",
+    "functionName": "patchAssistant",
+    "signature": "patchAssistant(assistantId, body)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "Assistant",
+        "required": "true"
+      }
+    ],
+    "return": "Assistant",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet body: Assistant = new Assistant(...) // \n\n// Update an assistant.\nPatchAssistantRequest.patchAssistant(assistantId: assistantId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchAssistantRequest.patchAssistant was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchassistantqueues": {
+    "operationId": "patchassistantqueues",
+    "functionName": "patchAssistantQueues",
+    "signature": "patchAssistantQueues(assistantId, body)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "[AssistantQueue]",
+        "required": "true"
+      }
+    ],
+    "return": "AssistantQueueListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet body: [AssistantQueue] = [new AssistantQueue(...)] // \n\n// Update Queues for an Assistant.\nPatchAssistantQueuesRequest.patchAssistantQueues(assistantId: assistantId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchAssistantQueuesRequest.patchAssistantQueues was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postassistants": {
+    "operationId": "postassistants",
+    "functionName": "postAssistants",
+    "signature": "postAssistants(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "Assistant",
+        "required": "true"
+      }
+    ],
+    "return": "Assistant",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Assistant = new Assistant(...) // \n\n// Create an Assistant.\nPostAssistantsRequest.postAssistants(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAssistantsRequest.postAssistants was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putassistantqueue": {
+    "operationId": "putassistantqueue",
+    "functionName": "putAssistantQueue",
+    "signature": "putAssistantQueue(assistantId, queueId, body)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AssistantQueue",
+        "required": "true"
+      }
+    ],
+    "return": "AssistantQueue",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet queueId: String = \"\" // Queue ID\nlet body: AssistantQueue = new AssistantQueue(...) // \n\n// Create a queue assistant association.\nPutAssistantQueueRequest.putAssistantQueue(assistantId: assistantId, queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutAssistantQueueRequest.putAssistantQueue was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getassistantcopilot": {
+    "operationId": "getassistantcopilot",
+    "functionName": "getAssistantCopilot",
+    "signature": "getAssistantCopilot(assistantId)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "Copilot",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\n\n// Get copilot configuration of an assistant.\nGetAssistantCopilotRequest.getAssistantCopilot(assistantId: assistantId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAssistantCopilotRequest.getAssistantCopilot was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putassistantcopilot": {
+    "operationId": "putassistantcopilot",
+    "functionName": "putAssistantCopilot",
+    "signature": "putAssistantCopilot(assistantId, body)",
+    "parameters": [
+      {
+        "name": "assistantId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "Copilot",
+        "required": "true"
+      }
+    ],
+    "return": "Copilot",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet assistantId: String = \"\" // Assistant ID\nlet body: Copilot = new Copilot(...) // \n\n// Update agent copilot configuration\nPutAssistantCopilotRequest.putAssistantCopilot(assistantId: assistantId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutAssistantCopilotRequest.putAssistantCopilot was successful\")\n        dump(response)\n    }\n}"
+  },
   "deleteusersagentuiagentsautoansweragentidsettings": {
     "operationId": "deleteusersagentuiagentsautoansweragentidsettings",
     "functionName": "deleteUsersAgentuiAgentsAutoanswerAgentIdSettings",
@@ -759,7 +1062,7 @@
   "getanalyticsreportingsettingsdashboardsquery": {
     "operationId": "getanalyticsreportingsettingsdashboardsquery",
     "functionName": "getAnalyticsReportingSettingsDashboardsQuery",
-    "signature": "getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, sortBy, pageNumber, pageSize)",
+    "signature": "getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize)",
     "parameters": [
       {
         "name": "dashboardType",
@@ -770,6 +1073,11 @@
         "name": "dashboardAccessFilter",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
       },
       {
         "name": "sortBy",
@@ -788,7 +1096,7 @@
       }
     ],
     "return": "DashboardConfigurationListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dashboardType: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type\nlet dashboardAccessFilter: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard\nlet sortBy: String = \"\" // \nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \n\n// Get list of dashboard configurations\nGetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dashboardType: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type\nlet dashboardAccessFilter: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard\nlet name: String = \"\" // name of the dashboard\nlet sortBy: String = \"\" // \nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \n\n// Get list of dashboard configurations\nGetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "getanalyticsreportingsettingsuserdashboards": {
     "operationId": "getanalyticsreportingsettingsuserdashboards",
@@ -906,6 +1214,20 @@
     ],
     "return": "ActionAggregateQueryResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ActionAggregationQuery = new ActionAggregationQuery(...) // query\n\n// Query for action aggregates\nPostAnalyticsActionsAggregatesQueryRequest.postAnalyticsActionsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsActionsAggregatesQueryRequest.postAnalyticsActionsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postanalyticsagentcopilotsaggregatesquery": {
+    "operationId": "postanalyticsagentcopilotsaggregatesquery",
+    "functionName": "postAnalyticsAgentcopilotsAggregatesQuery",
+    "signature": "postAnalyticsAgentcopilotsAggregatesQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AgentCopilotAggregationQuery",
+        "required": "true"
+      }
+    ],
+    "return": "AgentCopilotAggregateQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: AgentCopilotAggregationQuery = new AgentCopilotAggregationQuery(...) // query\n\n// Query for agent copilot aggregates\nPostAnalyticsAgentcopilotsAggregatesQueryRequest.postAnalyticsAgentcopilotsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsAgentcopilotsAggregatesQueryRequest.postAnalyticsAgentcopilotsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "postanalyticsbotsaggregatesquery": {
     "operationId": "postanalyticsbotsaggregatesquery",
@@ -11883,7 +12205,7 @@
       }
     ],
     "return": "ExternalContact",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact ID\nlet expand: [String] = [\"\"] // which fields, if any, to expand (externalOrganization,externalDataSources,identifiers)\n\n// Fetch an external contact\nGetExternalcontactsContactRequest.getExternalcontactsContact(contactId: contactId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactRequest.getExternalcontactsContact was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact ID\nlet expand: [String] = [\"\"] // which fields, if any, to expand\n\n// Fetch an external contact\nGetExternalcontactsContactRequest.getExternalcontactsContact(contactId: contactId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactRequest.getExternalcontactsContact was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactscontactidentifiers": {
     "operationId": "getexternalcontactscontactidentifiers",
@@ -17674,6 +17996,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet segmentId: String = \"\" // ID of the segment.\n\n// Delete a segment.\nDeleteJourneySegmentRequest.deleteJourneySegment(segmentId: segmentId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteJourneySegmentRequest.deleteJourneySegment was successful\")\n    }\n}"
   },
+  "deletejourneyview": {
+    "operationId": "deletejourneyview",
+    "functionName": "deleteJourneyView",
+    "signature": "deleteJourneyView(viewId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // viewId\n\n// Delete a Journey View by ID\nDeleteJourneyViewRequest.deleteJourneyView(viewId: viewId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteJourneyViewRequest.deleteJourneyView was successful\")\n    }\n}"
+  },
   "getjourneyactionmap": {
     "operationId": "getjourneyactionmap",
     "functionName": "getJourneyActionmap",
@@ -18089,6 +18424,169 @@
     "return": "OutcomeScoresResult",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // ID of the session.\n\n// Retrieve latest outcome score associated with a session for all outcomes.\nGetJourneySessionOutcomescoresRequest.getJourneySessionOutcomescores(sessionId: sessionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneySessionOutcomescoresRequest.getJourneySessionOutcomescores was successful\")\n        dump(response)\n    }\n}"
   },
+  "getjourneyview": {
+    "operationId": "getjourneyview",
+    "functionName": "getJourneyView",
+    "signature": "getJourneyView(viewId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyView",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // viewId\n\n// Get a Journey View by ID\nGetJourneyViewRequest.getJourneyView(viewId: viewId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewRequest.getJourneyView was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviewversion": {
+    "operationId": "getjourneyviewversion",
+    "functionName": "getJourneyViewVersion",
+    "signature": "getJourneyViewVersion(viewId, versionId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "versionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyView",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // viewId\nlet versionId: String = \"\" // versionId\n\n// Get a Journey View by ID and version\nGetJourneyViewVersionRequest.getJourneyViewVersion(viewId: viewId, versionId: versionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewVersionRequest.getJourneyViewVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviewversionjob": {
+    "operationId": "getjourneyviewversionjob",
+    "functionName": "getJourneyViewVersionJob",
+    "signature": "getJourneyViewVersionJob(viewId, journeyVersionId, jobId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "journeyVersionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyViewJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // Journey View Id\nlet journeyVersionId: String = \"\" // Journey View Version\nlet jobId: String = \"\" // JobId\n\n// Get the job for a journey view version.\nGetJourneyViewVersionJobRequest.getJourneyViewVersionJob(viewId: viewId, journeyVersionId: journeyVersionId, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewVersionJobRequest.getJourneyViewVersionJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviewversionjobresults": {
+    "operationId": "getjourneyviewversionjobresults",
+    "functionName": "getJourneyViewVersionJobResults",
+    "signature": "getJourneyViewVersionJobResults(viewId, journeyViewVersion, jobId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "journeyViewVersion",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyViewResult",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // JourneyViewResult id\nlet journeyViewVersion: String = \"\" // Journey View Version\nlet jobId: String = \"\" // Id of the executing job\n\n// Get the result of a job for a journey view version.\nGetJourneyViewVersionJobResultsRequest.getJourneyViewVersionJobResults(viewId: viewId, journeyViewVersion: journeyViewVersion, jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewVersionJobResultsRequest.getJourneyViewVersionJobResults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviewversionjobslatest": {
+    "operationId": "getjourneyviewversionjobslatest",
+    "functionName": "getJourneyViewVersionJobsLatest",
+    "signature": "getJourneyViewVersionJobsLatest(viewId, journeyVersionId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "journeyVersionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyViewJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // Journey View Id\nlet journeyVersionId: String = \"\" // Journey View Version\n\n// Get the latest job of a journey view version.\nGetJourneyViewVersionJobsLatestRequest.getJourneyViewVersionJobsLatest(viewId: viewId, journeyVersionId: journeyVersionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewVersionJobsLatestRequest.getJourneyViewVersionJobsLatest was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviews": {
+    "operationId": "getjourneyviews",
+    "functionName": "getJourneyViews",
+    "signature": "getJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand, _id)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "nameOrCreatedBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "_id",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "JourneyViewListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet nameOrCreatedBy: String = \"\" // Journey View Name or Created By\nlet expand: GetJourneyViewsRequest.Expand_getJourneyViews = GetJourneyViewsRequest.Expand_getJourneyViews.enummember // Parameter to request additional data to return in Journey payload\nlet _id: String = \"\" // Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items.\n\n// Get a list of Journey Views\nGetJourneyViewsRequest.getJourneyViews(pageNumber: pageNumber, pageSize: pageSize, nameOrCreatedBy: nameOrCreatedBy, expand: expand, _id: _id) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewsRequest.getJourneyViews was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviewsjobs": {
+    "operationId": "getjourneyviewsjobs",
+    "functionName": "getJourneyViewsJobs",
+    "signature": "getJourneyViewsJobs(pageNumber, pageSize, interval, statuses)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "interval",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "statuses",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "JourneyViewJobListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // The number of the page to return\nlet pageSize: Int = 0 // Max number of entities to return\nlet interval: String = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z // An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval.\nlet statuses: String = statuses=Accepted,Executing,Complete,Failed // Job statuses to filter for\n\n// Get the jobs for an organization.\nGetJourneyViewsJobsRequest.getJourneyViewsJobs(pageNumber: pageNumber, pageSize: pageSize, interval: interval, statuses: statuses) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewsJobsRequest.getJourneyViewsJobs was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchjourneyactionmap": {
     "operationId": "patchjourneyactionmap",
     "functionName": "patchJourneyActionmap",
@@ -18337,6 +18835,58 @@
     ],
     "return": "JourneySegment",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: JourneySegmentRequest = new JourneySegmentRequest(...) // \n\n// Create a segment.\nPostJourneySegmentsRequest.postJourneySegments(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneySegmentsRequest.postJourneySegments was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postjourneyviewversionjobs": {
+    "operationId": "postjourneyviewversionjobs",
+    "functionName": "postJourneyViewVersionJobs",
+    "signature": "postJourneyViewVersionJobs(viewId, journeyVersionId)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "journeyVersionId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyViewJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // Journey View Id\nlet journeyVersionId: String = \"\" // Journey View Version\n\n// Submit a job request for a journey view version.\nPostJourneyViewVersionJobsRequest.postJourneyViewVersionJobs(viewId: viewId, journeyVersionId: journeyVersionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyViewVersionJobsRequest.postJourneyViewVersionJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postjourneyviewversions": {
+    "operationId": "postjourneyviewversions",
+    "functionName": "postJourneyViewVersions",
+    "signature": "postJourneyViewVersions(viewId, body)",
+    "parameters": [
+      {
+        "name": "viewId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "JourneyView",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyView",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet viewId: String = \"\" // viewId\nlet body: JourneyView = new JourneyView(...) // JourneyView\n\n// Update a Journey View by ID\nPostJourneyViewVersionsRequest.postJourneyViewVersions(viewId: viewId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyViewVersionsRequest.postJourneyViewVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postjourneyviews": {
+    "operationId": "postjourneyviews",
+    "functionName": "postJourneyViews",
+    "signature": "postJourneyViews(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "JourneyView",
+        "required": "true"
+      }
+    ],
+    "return": "JourneyView",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: JourneyView = new JourneyView(...) // JourneyView\n\n// Create a new Journey View\nPostJourneyViewsRequest.postJourneyViews(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostJourneyViewsRequest.postJourneyViews was successful\")\n        dump(response)\n    }\n}"
   },
   "deleteknowledgeknowledgebase": {
     "operationId": "deleteknowledgeknowledgebase",
@@ -19727,6 +20277,35 @@
     "return": "KnowledgeDocumentResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID.\nlet documentId: String = \"\" // Document ID.\nlet body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // \n\n// Update document.\nPatchKnowledgeKnowledgebaseDocumentRequest.patchKnowledgeKnowledgebaseDocument(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseDocumentRequest.patchKnowledgeKnowledgebaseDocument was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchknowledgeknowledgebasedocumentfeedbackfeedbackid": {
+    "operationId": "patchknowledgeknowledgebasedocumentfeedbackfeedbackid",
+    "functionName": "patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId",
+    "signature": "patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId, documentId, feedbackId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "feedbackId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentFeedbackUpdateRequest",
+        "required": "false"
+      }
+    ],
+    "return": "KnowledgeDocumentFeedbackResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID.\nlet documentId: String = \"\" // Document ID.\nlet feedbackId: String = \"\" // Feedback ID.\nlet body: KnowledgeDocumentFeedbackUpdateRequest = new KnowledgeDocumentFeedbackUpdateRequest(...) // \n\n// Update feedback on a document\nPatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdRequest.patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId: knowledgeBaseId, documentId: documentId, feedbackId: feedbackId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackIdRequest.patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchknowledgeknowledgebasedocumentvariation": {
     "operationId": "patchknowledgeknowledgebasedocumentvariation",
     "functionName": "patchKnowledgeKnowledgebaseDocumentVariation",
@@ -20051,6 +20630,25 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet documentId: String = \"\" // Document ID\nlet body: KnowledgeGuestDocumentView = new KnowledgeGuestDocumentView(...) // \n\n// Create view event for a document.\nPostKnowledgeGuestSessionDocumentViewsRequest.postKnowledgeGuestSessionDocumentViews(sessionId: sessionId, documentId: documentId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostKnowledgeGuestSessionDocumentViewsRequest.postKnowledgeGuestSessionDocumentViews was successful\")\n    }\n}"
   },
+  "postknowledgeguestsessiondocumentsanswers": {
+    "operationId": "postknowledgeguestsessiondocumentsanswers",
+    "functionName": "postKnowledgeGuestSessionDocumentsAnswers",
+    "signature": "postKnowledgeGuestSessionDocumentsAnswers(sessionId, body)",
+    "parameters": [
+      {
+        "name": "sessionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentsAnswerFilter",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeGuestAnswerDocumentsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet sessionId: String = \"\" // Knowledge guest session ID.\nlet body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // \n\n// Answer documents.\nPostKnowledgeGuestSessionDocumentsAnswersRequest.postKnowledgeGuestSessionDocumentsAnswers(sessionId: sessionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeGuestSessionDocumentsAnswersRequest.postKnowledgeGuestSessionDocumentsAnswers was successful\")\n        dump(response)\n    }\n}"
+  },
   "postknowledgeguestsessiondocumentspresentations": {
     "operationId": "postknowledgeguestsessiondocumentspresentations",
     "functionName": "postKnowledgeGuestSessionDocumentsPresentations",
@@ -20281,6 +20879,25 @@
     ],
     "return": "KnowledgeDocumentResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // \n\n// Create document.\nPostKnowledgeKnowledgebaseDocumentsRequest.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsRequest.postKnowledgeKnowledgebaseDocuments was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgeknowledgebasedocumentsanswers": {
+    "operationId": "postknowledgeknowledgebasedocumentsanswers",
+    "functionName": "postKnowledgeKnowledgebaseDocumentsAnswers",
+    "signature": "postKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentsAnswerFilter",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeAnswerDocumentsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // \n\n// Answer documents.\nPostKnowledgeKnowledgebaseDocumentsAnswersRequest.postKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsAnswersRequest.postKnowledgeKnowledgebaseDocumentsAnswers was successful\")\n        dump(response)\n    }\n}"
   },
   "postknowledgeknowledgebasedocumentspresentations": {
     "operationId": "postknowledgeknowledgebasedocumentspresentations",
@@ -31810,6 +32427,25 @@
     "return": "Queue",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\n\n// Get details about this queue.\nGetRoutingQueueRequest.getRoutingQueue(queueId: queueId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueueRequest.getRoutingQueue was successful\")\n        dump(response)\n    }\n}"
   },
+  "getroutingqueueassistant": {
+    "operationId": "getroutingqueueassistant",
+    "functionName": "getRoutingQueueAssistant",
+    "signature": "getRoutingQueueAssistant(queueId, expand)",
+    "parameters": [
+      {
+        "name": "queueId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AssistantQueue",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\nlet expand: GetRoutingQueueAssistantRequest.Expand_getRoutingQueueAssistant = GetRoutingQueueAssistantRequest.Expand_getRoutingQueueAssistant.enummember // Which fields, if any, to expand.\n\n// Get an assistant associated with a queue.\nGetRoutingQueueAssistantRequest.getRoutingQueueAssistant(queueId: queueId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetRoutingQueueAssistantRequest.getRoutingQueueAssistant was successful\")\n        dump(response)\n    }\n}"
+  },
   "getroutingqueuecomparisonperiod": {
     "operationId": "getroutingqueuecomparisonperiod",
     "functionName": "getRoutingQueueComparisonperiod",
@@ -35128,6 +35764,27 @@
     ],
     "return": "VoicemailsSearchResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: VoicemailSearchRequest = new VoicemailSearchRequest(...) // Search request options\n\n// Search voicemails\nPostVoicemailSearchRequest.postVoicemailSearch(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostVoicemailSearchRequest.postVoicemailSearch was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsettingsexecutiondata": {
+    "operationId": "getsettingsexecutiondata",
+    "functionName": "getSettingsExecutiondata",
+    "signature": "getSettingsExecutiondata()",
+    "return": "ExecutionDataGlobalSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get the execution history enabled setting.\nGetSettingsExecutiondataRequest.getSettingsExecutiondata() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSettingsExecutiondataRequest.getSettingsExecutiondata was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchsettingsexecutiondata": {
+    "operationId": "patchsettingsexecutiondata",
+    "functionName": "patchSettingsExecutiondata",
+    "signature": "patchSettingsExecutiondata(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ExecutionDataSettingsRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ExecutionDataGlobalSettingsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExecutionDataSettingsRequest = new ExecutionDataSettingsRequest(...) // New Execution Data Setting\n\n// Edit the execution history on off setting.\nPatchSettingsExecutiondataRequest.patchSettingsExecutiondata(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSettingsExecutiondataRequest.patchSettingsExecutiondata was successful\")\n        dump(response)\n    }\n}"
   },
   "deletespeechandtextanalyticscategory": {
     "operationId": "deletespeechandtextanalyticscategory",

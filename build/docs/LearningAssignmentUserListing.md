@@ -13,8 +13,8 @@ List of users matching the learning module rule
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** | The number of users matching search term | [optional] |
 | **unfilteredTotal** | **Int** | The total number of users | [optional] |
-| **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
+| **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |

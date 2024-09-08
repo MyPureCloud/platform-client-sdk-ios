@@ -10,6 +10,7 @@ Contains information about the text associated with a response.
 |------------ | ------------- | ------------- | -------------|
 | **content** | **String** | Response text content. | |
 | **contentType** | **String** | Response text content type. | [optional] |
+| **type** | **String** | Response text type. | [optional] |
 {: class="table table-striped"}
 
 

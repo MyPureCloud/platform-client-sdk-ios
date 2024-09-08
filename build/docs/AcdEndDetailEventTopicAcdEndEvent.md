@@ -37,6 +37,8 @@ title: AcdEndDetailEventTopicAcdEndEvent
 | **connectedDurationMs** | **Int** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
+| **utilizationLabel** | **String** |  | [optional] |
+| **flowType** | **String** |  | [optional] |
 {: class="table table-striped"}
 
 

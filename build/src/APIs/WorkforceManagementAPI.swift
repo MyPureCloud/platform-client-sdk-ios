@@ -2016,6 +2016,9 @@ open class WorkforceManagementAPI {
         case settingsStartdayofweek = "settings.startDayOfWeek"
         case settingsShorttermforecasting = "settings.shortTermForecasting"
         case settingsScheduling = "settings.scheduling"
+        case settingsNotificationsScheduling = "settings.notifications.scheduling"
+        case settingsLearning = "settings.learning"
+        case settingsCoaching = "settings.coaching"
     }
     
     /**

@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneyOutcome**](JourneyAPI.html#deleteJourneyOutcome) | Delete an outcome. |
 | [**deleteJourneyOutcomesPredictor**](JourneyAPI.html#deleteJourneyOutcomesPredictor) | Delete an outcome predictor. |
 | [**deleteJourneySegment**](JourneyAPI.html#deleteJourneySegment) | Delete a segment. |
+| [**deleteJourneyView**](JourneyAPI.html#deleteJourneyView) | Delete a Journey View by ID |
 | [**getExternalcontactsContactJourneySessions**](JourneyAPI.html#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getJourneyActionmap**](JourneyAPI.html#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI.html#getJourneyActionmaps) | Retrieve all action maps. |
@@ -31,6 +32,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneySession**](JourneyAPI.html#getJourneySession) | Retrieve a single session. |
 | [**getJourneySessionEvents**](JourneyAPI.html#getJourneySessionEvents) | Retrieve all events for a given session. |
 | [**getJourneySessionOutcomescores**](JourneyAPI.html#getJourneySessionOutcomescores) | Retrieve latest outcome score associated with a session for all outcomes. |
+| [**getJourneyView**](JourneyAPI.html#getJourneyView) | Get a Journey View by ID |
+| [**getJourneyViewVersion**](JourneyAPI.html#getJourneyViewVersion) | Get a Journey View by ID and version |
+| [**getJourneyViewVersionJob**](JourneyAPI.html#getJourneyViewVersionJob) | Get the job for a journey view version. |
+| [**getJourneyViewVersionJobResults**](JourneyAPI.html#getJourneyViewVersionJobResults) | Get the result of a job for a journey view version. |
+| [**getJourneyViewVersionJobsLatest**](JourneyAPI.html#getJourneyViewVersionJobsLatest) | Get the latest job of a journey view version. |
+| [**getJourneyViews**](JourneyAPI.html#getJourneyViews) | Get a list of Journey Views |
+| [**getJourneyViewsJobs**](JourneyAPI.html#getJourneyViewsJobs) | Get the jobs for an organization. |
 | [**patchJourneyActionmap**](JourneyAPI.html#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI.html#patchJourneyActiontarget) | Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI.html#patchJourneyActiontemplate) | Update a single action template. |
@@ -47,6 +55,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyOutcomes**](JourneyAPI.html#postJourneyOutcomes) | Create an outcome. |
 | [**postJourneyOutcomesPredictors**](JourneyAPI.html#postJourneyOutcomesPredictors) | Create an outcome predictor. |
 | [**postJourneySegments**](JourneyAPI.html#postJourneySegments) | Create a segment. |
+| [**postJourneyViewVersionJobs**](JourneyAPI.html#postJourneyViewVersionJobs) | Submit a job request for a journey view version. |
+| [**postJourneyViewVersions**](JourneyAPI.html#postJourneyViewVersions) | Update a Journey View by ID |
+| [**postJourneyViews**](JourneyAPI.html#postJourneyViews) | Create a new Journey View |
 {: class="table-striped"}
 
 <a name="deleteJourneyActionmap"></a>
@@ -299,6 +310,59 @@ JourneyAPI.deleteJourneySegment(segmentId: segmentId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **segmentId** | **String**| ID of the segment. | |
+{: class="table-striped"}
+
+
+### Return type
+
+`nil` (empty response body)
+
+<a name="deleteJourneyView"></a>
+
+# **deleteJourneyView**
+
+
+
+> Void deleteJourneyView(viewId)
+
+Delete a Journey View by ID
+
+deletes all versions
+
+
+
+Wraps DELETE /api/v2/journey/views/{viewId}  
+
+Requires ALL permissions: 
+
+* journey:views:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // viewId
+
+// Code example
+JourneyAPI.deleteJourneyView(viewId: viewId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("JourneyAPI.deleteJourneyView was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| viewId | |
 {: class="table-striped"}
 
 
@@ -1364,6 +1428,404 @@ JourneyAPI.getJourneySessionOutcomescores(sessionId: sessionId) { (response, err
 
 [**OutcomeScoresResult**](OutcomeScoresResult.html)
 
+<a name="getJourneyView"></a>
+
+# **getJourneyView**
+
+
+
+> [JourneyView](JourneyView.html) getJourneyView(viewId)
+
+Get a Journey View by ID
+
+returns the latest version
+
+
+
+Wraps GET /api/v2/journey/views/{viewId}  
+
+Requires ALL permissions: 
+
+* journey:views:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // viewId
+
+// Code example
+JourneyAPI.getJourneyView(viewId: viewId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyView was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| viewId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
+
+<a name="getJourneyViewVersion"></a>
+
+# **getJourneyViewVersion**
+
+
+
+> [JourneyView](JourneyView.html) getJourneyViewVersion(viewId, versionId)
+
+Get a Journey View by ID and version
+
+
+
+Wraps GET /api/v2/journey/views/{viewId}/versions/{versionId}  
+
+Requires ALL permissions: 
+
+* journey:views:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // viewId
+let versionId: String = "" // versionId
+
+// Code example
+JourneyAPI.getJourneyViewVersion(viewId: viewId, versionId: versionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewVersion was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| viewId | |
+| **versionId** | **String**| versionId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
+
+<a name="getJourneyViewVersionJob"></a>
+
+# **getJourneyViewVersionJob**
+
+
+
+> [JourneyViewJob](JourneyViewJob.html) getJourneyViewVersionJob(viewId, journeyVersionId, jobId)
+
+Get the job for a journey view version.
+
+used for long descriptions
+
+
+
+Wraps GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+let journeyVersionId: String = "" // Journey View Version
+let jobId: String = "" // JobId
+
+// Code example
+JourneyAPI.getJourneyViewVersionJob(viewId: viewId, journeyVersionId: journeyVersionId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewVersionJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+| **journeyVersionId** | **String**| Journey View Version | |
+| **jobId** | **String**| JobId | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyViewJob**](JourneyViewJob.html)
+
+<a name="getJourneyViewVersionJobResults"></a>
+
+# **getJourneyViewVersionJobResults**
+
+
+
+> [JourneyViewResult](JourneyViewResult.html) getJourneyViewVersionJobResults(viewId, journeyViewVersion, jobId)
+
+Get the result of a job for a journey view version.
+
+used for long descriptions
+
+
+
+Wraps GET /api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results  
+
+Requires ALL permissions: 
+
+* journey:viewsResults:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // JourneyViewResult id
+let journeyViewVersion: String = "" // Journey View Version
+let jobId: String = "" // Id of the executing job
+
+// Code example
+JourneyAPI.getJourneyViewVersionJobResults(viewId: viewId, journeyViewVersion: journeyViewVersion, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewVersionJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| JourneyViewResult id | |
+| **journeyViewVersion** | **String**| Journey View Version | |
+| **jobId** | **String**| Id of the executing job | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyViewResult**](JourneyViewResult.html)
+
+<a name="getJourneyViewVersionJobsLatest"></a>
+
+# **getJourneyViewVersionJobsLatest**
+
+
+
+> [JourneyViewJob](JourneyViewJob.html) getJourneyViewVersionJobsLatest(viewId, journeyVersionId)
+
+Get the latest job of a journey view version.
+
+used for long descriptions
+
+
+
+Wraps GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest  
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+let journeyVersionId: String = "" // Journey View Version
+
+// Code example
+JourneyAPI.getJourneyViewVersionJobsLatest(viewId: viewId, journeyVersionId: journeyVersionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewVersionJobsLatest was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+| **journeyVersionId** | **String**| Journey View Version | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyViewJob**](JourneyViewJob.html)
+
+<a name="getJourneyViews"></a>
+
+# **getJourneyViews**
+
+
+
+> [JourneyViewListing](JourneyViewListing.html) getJourneyViews(pageNumber, pageSize, nameOrCreatedBy, expand, _id)
+
+Get a list of Journey Views
+
+
+
+Wraps GET /api/v2/journey/views  
+
+Requires ALL permissions: 
+
+* journey:views:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let nameOrCreatedBy: String = "" // Journey View Name or Created By
+let expand: JourneyAPI.Expand_getJourneyViews = JourneyAPI.Expand_getJourneyViews.enummember // Parameter to request additional data to return in Journey payload
+let _id: String = "" // Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items.
+
+// Code example
+JourneyAPI.getJourneyViews(pageNumber: pageNumber, pageSize: pageSize, nameOrCreatedBy: nameOrCreatedBy, expand: expand, _id: _id) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **nameOrCreatedBy** | **String**| Journey View Name or Created By | [optional] |
+| **expand** | **String**| Parameter to request additional data to return in Journey payload | [optional]<br />**Values**: charts ("charts") |
+| **_id** | **String**| Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items. | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyViewListing**](JourneyViewListing.html)
+
+<a name="getJourneyViewsJobs"></a>
+
+# **getJourneyViewsJobs**
+
+
+
+> [JourneyViewJobListing](JourneyViewJobListing.html) getJourneyViewsJobs(pageNumber, pageSize, interval, statuses)
+
+Get the jobs for an organization.
+
+
+
+Wraps GET /api/v2/journey/views/jobs  
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // The number of the page to return
+let pageSize: Int = 0 // Max number of entities to return
+let interval: String = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z // An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval.
+let statuses: String = statuses=Accepted,Executing,Complete,Failed // Job statuses to filter for
+
+// Code example
+JourneyAPI.getJourneyViewsJobs(pageNumber: pageNumber, pageSize: pageSize, interval: interval, statuses: statuses) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| The number of the page to return | [optional] |
+| **pageSize** | **Int**| Max number of entities to return | [optional] |
+| **interval** | **String**| An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. | [optional] |
+| **statuses** | **String**| Job statuses to filter for | [optional] |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyViewJobListing**](JourneyViewJobListing.html)
+
 <a name="patchJourneyActionmap"></a>
 
 # **patchJourneyActionmap**
@@ -2207,4 +2669,168 @@ JourneyAPI.postJourneySegments(body: body) { (response, error) in
 ### Return type
 
 [**JourneySegment**](JourneySegment.html)
+
+<a name="postJourneyViewVersionJobs"></a>
+
+# **postJourneyViewVersionJobs**
+
+
+
+> [JourneyViewJob](JourneyViewJob.html) postJourneyViewVersionJobs(viewId, journeyVersionId)
+
+Submit a job request for a journey view version.
+
+used for long descriptions
+
+
+
+Wraps POST /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs  
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+let journeyVersionId: String = "" // Journey View Version
+
+// Code example
+JourneyAPI.postJourneyViewVersionJobs(viewId: viewId, journeyVersionId: journeyVersionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyViewVersionJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+| **journeyVersionId** | **String**| Journey View Version | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyViewJob**](JourneyViewJob.html)
+
+<a name="postJourneyViewVersions"></a>
+
+# **postJourneyViewVersions**
+
+
+
+> [JourneyView](JourneyView.html) postJourneyViewVersions(viewId, body)
+
+Update a Journey View by ID
+
+creates a new version
+
+
+
+Wraps POST /api/v2/journey/views/{viewId}/versions  
+
+Requires ALL permissions: 
+
+* journey:views:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // viewId
+let body: JourneyView = new JourneyView(...) // JourneyView
+
+// Code example
+JourneyAPI.postJourneyViewVersions(viewId: viewId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyViewVersions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| viewId | |
+| **body** | [**JourneyView**](JourneyView.html)| JourneyView | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
+
+<a name="postJourneyViews"></a>
+
+# **postJourneyViews**
+
+
+
+> [JourneyView](JourneyView.html) postJourneyViews(body)
+
+Create a new Journey View
+
+
+
+Wraps POST /api/v2/journey/views  
+
+Requires ALL permissions: 
+
+* journey:views:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: JourneyView = new JourneyView(...) // JourneyView
+
+// Code example
+JourneyAPI.postJourneyViews(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyViews was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**JourneyView**](JourneyView.html)| JourneyView | |
+{: class="table-striped"}
+
+
+### Return type
+
+[**JourneyView**](JourneyView.html)
 
