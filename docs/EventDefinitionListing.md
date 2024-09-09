@@ -1,0 +1,13 @@
+# EventDefinitionListing
+
+## EventDefinitionListing
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **entities** | [**[EventDefinition]**](EventDefinition) |  | [optional] |
+
+
+
+_PureCloudPlatformClientV2@151.0.0_

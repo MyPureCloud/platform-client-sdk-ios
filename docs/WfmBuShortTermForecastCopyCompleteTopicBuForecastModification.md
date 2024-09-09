@@ -1,0 +1,25 @@
+# WfmBuShortTermForecastCopyCompleteTopicBuForecastModification
+
+## WfmBuShortTermForecastCopyCompleteTopicBuForecastModification
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **type** | **String** |  | [optional] |
+| **startIntervalIndex** | **Int** |  | [optional] |
+| **endIntervalIndex** | **Int** |  | [optional] |
+| **metric** | **String** |  | [optional] |
+| **legacyMetric** | **String** |  | [optional] |
+| **value** | **Double** |  | [optional] |
+| **values** | [**[WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
+| **secondaryValues** | [**[WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastCopyCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
+| **enabled** | **Bool** |  | [optional] |
+| **granularity** | **String** |  | [optional] |
+| **secondaryGranularity** | **String** |  | [optional] |
+| **displayGranularity** | **String** |  | [optional] |
+| **planningGroupIds** | **[String]** |  | [optional] |
+
+
+
+_PureCloudPlatformClientV2@151.0.0_

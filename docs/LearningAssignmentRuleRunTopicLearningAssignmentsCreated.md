@@ -1,0 +1,13 @@
+# LearningAssignmentRuleRunTopicLearningAssignmentsCreated
+
+## LearningAssignmentRuleRunTopicLearningAssignmentsCreated
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **module** | [**LearningAssignmentRuleRunTopicLearningModuleReference**](LearningAssignmentRuleRunTopicLearningModuleReference) |  | [optional] |
+
+
+
+_PureCloudPlatformClientV2@151.0.0_
