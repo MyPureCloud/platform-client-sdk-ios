@@ -671,7 +671,7 @@ Wraps GET /api/v2/scripts/uploads/{uploadId}/status
 
 Requires ANY permissions: 
 
-* scripter:script:search
+* scripter:script:view
 
 ### Example
 
@@ -813,4 +813,4 @@ ScriptsAPI.postScriptsPublished(scriptDataVersion: scriptDataVersion, body: body
 [**Script**](Script)
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

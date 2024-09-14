@@ -22,4 +22,4 @@ This is the metadata of an executionData entry for a flow.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

@@ -12,4 +12,4 @@ Information about the results being matched by the expressions
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

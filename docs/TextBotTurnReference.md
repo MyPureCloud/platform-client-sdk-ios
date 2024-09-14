@@ -11,4 +11,4 @@ A reference to a bot flow turn.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

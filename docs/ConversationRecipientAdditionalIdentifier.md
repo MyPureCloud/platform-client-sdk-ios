@@ -12,4 +12,4 @@ Additional identifiers for describing messaging recipient.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

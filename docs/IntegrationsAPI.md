@@ -32,6 +32,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsCredential**](IntegrationsAPI#getIntegrationsCredential) | Get a single credential with sensitive fields redacted |
 | [**getIntegrationsCredentials**](IntegrationsAPI#getIntegrationsCredentials) | List multiple sets of credentials |
 | [**getIntegrationsCredentialsTypes**](IntegrationsAPI#getIntegrationsCredentialsTypes) | List all credential types |
+| [**getIntegrationsSpeechAudioconnector**](IntegrationsAPI#getIntegrationsSpeechAudioconnector) | Get a list of Audio Connector integrations |
+| [**getIntegrationsSpeechAudioconnectorIntegrationId**](IntegrationsAPI#getIntegrationsSpeechAudioconnectorIntegrationId) | Get an Audio Connector integration |
 | [**getIntegrationsSpeechDialogflowAgent**](IntegrationsAPI#getIntegrationsSpeechDialogflowAgent) | Get details about a Dialogflow agent |
 | [**getIntegrationsSpeechDialogflowAgents**](IntegrationsAPI#getIntegrationsSpeechDialogflowAgents) | Get a list of Dialogflow agents in the customers&#39; Google accounts |
 | [**getIntegrationsSpeechDialogflowcxAgent**](IntegrationsAPI#getIntegrationsSpeechDialogflowcxAgent) | Get details about a Dialogflow CX agent |
@@ -1610,6 +1612,108 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**CredentialTypeListing**](CredentialTypeListing)
+
+
+## getIntegrationsSpeechAudioconnector
+
+
+
+> [AudioConnectorIntegrationEntityListing](AudioConnectorIntegrationEntityListing) getIntegrationsSpeechAudioconnector(pageNumber, pageSize)
+
+Get a list of Audio Connector integrations
+
+
+
+Wraps GET /api/v2/integrations/speech/audioconnector  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechAudioconnector(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechAudioconnector was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+
+
+### Return type
+
+[**AudioConnectorIntegrationEntityListing**](AudioConnectorIntegrationEntityListing)
+
+
+## getIntegrationsSpeechAudioconnectorIntegrationId
+
+
+
+> [AudioConnectorIntegration](AudioConnectorIntegration) getIntegrationsSpeechAudioconnectorIntegrationId(integrationId)
+
+Get an Audio Connector integration
+
+
+
+Wraps GET /api/v2/integrations/speech/audioconnector/{integrationId}  
+
+Requires ANY permissions: 
+
+* integrations:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // The integration ID
+
+// Code example
+IntegrationsAPI.getIntegrationsSpeechAudioconnectorIntegrationId(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsSpeechAudioconnectorIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| The integration ID | |
+
+
+### Return type
+
+[**AudioConnectorIntegration**](AudioConnectorIntegration)
 
 
 ## getIntegrationsSpeechDialogflowAgent
@@ -4274,4 +4378,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

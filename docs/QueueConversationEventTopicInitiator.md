@@ -11,4 +11,4 @@ Fields identifying the initiator of a given conversation command.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

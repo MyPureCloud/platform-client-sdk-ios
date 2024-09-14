@@ -16,4 +16,4 @@ Learning module preview update SCO structure
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

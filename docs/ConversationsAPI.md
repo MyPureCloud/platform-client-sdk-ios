@@ -101,6 +101,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationParticipant**](ConversationsAPI#patchConversationParticipant) | Update a participant. |
 | [**patchConversationParticipantAttributes**](ConversationsAPI#patchConversationParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationSecureattributes**](ConversationsAPI#patchConversationSecureattributes) | Update the secure attributes on a conversation. |
+| [**patchConversationUtilizationlabel**](ConversationsAPI#patchConversationUtilizationlabel) | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**patchConversationsAftercallworkConversationIdParticipantCommunication**](ConversationsAPI#patchConversationsAftercallworkConversationIdParticipantCommunication) | Update after-call work for this conversation communication. |
 | [**patchConversationsCall**](ConversationsAPI#patchConversationsCall) | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
 | [**patchConversationsCallParticipant**](ConversationsAPI#patchConversationsCallParticipant) | Update conversation participant |
@@ -5212,6 +5213,58 @@ ConversationsAPI.patchConversationSecureattributes(conversationId: conversationI
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversation ID | |
 | **body** | [**ConversationSecureAttributes**](ConversationSecureAttributes)| Conversation Secure Attributes | |
+
+
+### Return type
+
+**String**
+
+
+## patchConversationUtilizationlabel
+
+
+
+> String patchConversationUtilizationlabel(conversationId, body)
+
+Update the utilization label on a conversation. When there is no value provided, the system default label is applied
+
+
+
+Wraps PATCH /api/v2/conversations/{conversationId}/utilizationlabel  
+
+Requires ANY permissions: 
+
+* conversation:utilizationLabel:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversation ID
+let body: ConversationUtilizationLabelUpdate = new ConversationUtilizationLabelUpdate(...) // Conversation Utilization Label
+
+// Code example
+ConversationsAPI.patchConversationUtilizationlabel(conversationId: conversationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationUtilizationlabel was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversation ID | |
+| **body** | [**ConversationUtilizationLabelUpdate**](ConversationUtilizationLabelUpdate)| Conversation Utilization Label | |
 
 
 ### Return type
@@ -12177,4 +12230,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

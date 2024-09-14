@@ -1645,4 +1645,4 @@ SCIMAPI.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response,
 [**ScimV2User**](ScimV2User)
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

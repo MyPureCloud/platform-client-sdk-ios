@@ -15,4 +15,4 @@ Flow Outcome data related to a bot flow which is exiting gracefully.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

@@ -12,4 +12,4 @@ Contains localized labels used in messenger apps
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

@@ -15,4 +15,4 @@ Defines a response for a list of SCIM groups.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

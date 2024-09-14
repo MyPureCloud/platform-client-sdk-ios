@@ -15,4 +15,4 @@ A link between elements in a journey view
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

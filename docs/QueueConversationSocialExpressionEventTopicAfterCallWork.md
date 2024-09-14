@@ -13,4 +13,4 @@ A communication&#39;s after-call work data.
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

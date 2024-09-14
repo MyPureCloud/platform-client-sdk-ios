@@ -371,4 +371,4 @@ LogCaptureAPI.postDiagnosticsLogcaptureBrowserUser(userId: userId, body: body) {
 [**LogCaptureUserConfiguration**](LogCaptureUserConfiguration)
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

@@ -15,4 +15,4 @@ The response for QueryCapabilities which contains the allowed criteria, flow typ
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

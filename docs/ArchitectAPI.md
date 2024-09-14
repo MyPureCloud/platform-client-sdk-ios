@@ -5,6 +5,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteArchitectEmergencygroup**](ArchitectAPI#deleteArchitectEmergencygroup) | Deletes a emergency group by ID |
+| [**deleteArchitectGrammar**](ArchitectAPI#deleteArchitectGrammar) | Delete a grammar. |
+| [**deleteArchitectGrammarLanguage**](ArchitectAPI#deleteArchitectGrammarLanguage) | Delete specified grammar language |
+| [**deleteArchitectGrammarLanguageFilesDtmf**](ArchitectAPI#deleteArchitectGrammarLanguageFilesDtmf) | Clear the DTMF mode file for the grammar language if there is one |
+| [**deleteArchitectGrammarLanguageFilesVoice**](ArchitectAPI#deleteArchitectGrammarLanguageFilesVoice) | Clear the voice mode file for the grammar language if there is one |
 | [**deleteArchitectIvr**](ArchitectAPI#deleteArchitectIvr) | Delete an IVR Config. |
 | [**deleteArchitectPrompt**](ArchitectAPI#deleteArchitectPrompt) | Delete specified user prompt |
 | [**deleteArchitectPromptResource**](ArchitectAPI#deleteArchitectPromptResource) | Delete specified user prompt resource |
@@ -32,6 +36,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getArchitectEmergencygroup**](ArchitectAPI#getArchitectEmergencygroup) | Gets a emergency group by ID |
 | [**getArchitectEmergencygroups**](ArchitectAPI#getArchitectEmergencygroups) | Get a list of emergency groups. |
 | [**getArchitectEmergencygroupsDivisionviews**](ArchitectAPI#getArchitectEmergencygroupsDivisionviews) | Get a pageable list of basic emergency group objects filterable by query parameters. |
+| [**getArchitectGrammar**](ArchitectAPI#getArchitectGrammar) | Get a grammar |
+| [**getArchitectGrammarLanguage**](ArchitectAPI#getArchitectGrammarLanguage) | Get a grammar language. |
+| [**getArchitectGrammars**](ArchitectAPI#getArchitectGrammars) | Get a pageable list of grammars, filtered by query parameters |
 | [**getArchitectIvr**](ArchitectAPI#getArchitectIvr) | Get an IVR config. |
 | [**getArchitectIvrs**](ArchitectAPI#getArchitectIvrs) | Get IVR configs. |
 | [**getArchitectIvrsDivisionviews**](ArchitectAPI#getArchitectIvrsDivisionviews) | Get a pageable list of basic ivr configuration information objects filterable by query parameters. |
@@ -87,9 +94,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsOutcome**](ArchitectAPI#getFlowsOutcome) | Get a flow outcome |
 | [**getFlowsOutcomes**](ArchitectAPI#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
 | [**getFlowsOutcomesDivisionviews**](ArchitectAPI#getFlowsOutcomesDivisionviews) | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
+| [**patchArchitectGrammar**](ArchitectAPI#patchArchitectGrammar) | Updates a grammar |
+| [**patchArchitectGrammarLanguage**](ArchitectAPI#patchArchitectGrammarLanguage) | Updates a grammar language |
 | [**patchFlowsInstancesSettingsExecutiondata**](ArchitectAPI#patchFlowsInstancesSettingsExecutiondata) | Edit the execution history enabled setting. |
 | [**postArchitectDependencytrackingBuild**](ArchitectAPI#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
 | [**postArchitectEmergencygroups**](ArchitectAPI#postArchitectEmergencygroups) | Creates a new emergency group |
+| [**postArchitectGrammarLanguageFilesDtmf**](ArchitectAPI#postArchitectGrammarLanguageFilesDtmf) | Creates a presigned URL for uploading a grammar DTMF mode file |
+| [**postArchitectGrammarLanguageFilesVoice**](ArchitectAPI#postArchitectGrammarLanguageFilesVoice) | Creates a presigned URL for uploading a grammar voice mode file |
+| [**postArchitectGrammarLanguages**](ArchitectAPI#postArchitectGrammarLanguages) | Create a new language for a given grammar |
+| [**postArchitectGrammars**](ArchitectAPI#postArchitectGrammars) | Create a new grammar |
 | [**postArchitectIvrs**](ArchitectAPI#postArchitectIvrs) | Create IVR config. |
 | [**postArchitectPromptHistory**](ArchitectAPI#postArchitectPromptHistory) | Generate prompt history |
 | [**postArchitectPromptResources**](ArchitectAPI#postArchitectPromptResources) | Create a new user prompt resource |
@@ -177,6 +190,209 @@ ArchitectAPI.deleteArchitectEmergencygroup(emergencyGroupId: emergencyGroupId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **emergencyGroupId** | **String**| Emergency group ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteArchitectGrammar
+
+
+
+> [JSON](JSON) deleteArchitectGrammar(grammarId)
+
+Delete a grammar.
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}  
+
+Requires ALL permissions: 
+
+* architect:grammar:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // grammar ID
+
+// Code example
+ArchitectAPI.deleteArchitectGrammar(grammarId: grammarId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.deleteArchitectGrammar was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| grammar ID | |
+
+
+### Return type
+
+[**JSON**](JSON)
+
+
+## deleteArchitectGrammarLanguage
+
+
+
+> Void deleteArchitectGrammarLanguage(grammarId, languageCode)
+
+Delete specified grammar language
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.deleteArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteArchitectGrammarLanguage was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteArchitectGrammarLanguageFilesDtmf
+
+
+
+> Void deleteArchitectGrammarLanguageFilesDtmf(grammarId, languageCode)
+
+Clear the DTMF mode file for the grammar language if there is one
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.deleteArchitectGrammarLanguageFilesDtmf(grammarId: grammarId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteArchitectGrammarLanguageFilesDtmf was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteArchitectGrammarLanguageFilesVoice
+
+
+
+> Void deleteArchitectGrammarLanguageFilesVoice(grammarId, languageCode)
+
+Clear the voice mode file for the grammar language if there is one
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.deleteArchitectGrammarLanguageFilesVoice(grammarId: grammarId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteArchitectGrammarLanguageFilesVoice was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
 
 
 ### Return type
@@ -1633,6 +1849,180 @@ ArchitectAPI.getArchitectEmergencygroupsDivisionviews(pageNumber: pageNumber, pa
 ### Return type
 
 [**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing)
+
+
+## getArchitectGrammar
+
+
+
+> [Grammar](Grammar) getArchitectGrammar(grammarId, includeFileUrls)
+
+Get a grammar
+
+Returns a specified grammar
+
+
+
+Wraps GET /api/v2/architect/grammars/{grammarId}  
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // grammar ID
+let includeFileUrls: Bool = true // Include grammar language file URLs
+
+// Code example
+ArchitectAPI.getArchitectGrammar(grammarId: grammarId, includeFileUrls: includeFileUrls) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectGrammar was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| grammar ID | |
+| **includeFileUrls** | **Bool**| Include grammar language file URLs | [optional] |
+
+
+### Return type
+
+[**Grammar**](Grammar)
+
+
+## getArchitectGrammarLanguage
+
+
+
+> [GrammarLanguage](GrammarLanguage) getArchitectGrammarLanguage(grammarId, languageCode)
+
+Get a grammar language.
+
+
+
+Wraps GET /api/v2/architect/grammars/{grammarId}/languages/{languageCode}  
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.getArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectGrammarLanguage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage)
+
+
+## getArchitectGrammars
+
+
+
+> [GrammarListing](GrammarListing) getArchitectGrammars(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, includeFileUrls)
+
+Get a pageable list of grammars, filtered by query parameters
+
+Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
+
+
+
+Wraps GET /api/v2/architect/grammars  
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: ArchitectAPI.SortBy_getArchitectGrammars = ArchitectAPI.SortBy_getArchitectGrammars.enummember // Sort by
+let sortOrder: ArchitectAPI.SortOrder_getArchitectGrammars = ArchitectAPI.SortOrder_getArchitectGrammars.enummember // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+let includeFileUrls: Bool = true // Include grammar language file URLs
+
+// Code example
+ArchitectAPI.getArchitectGrammars(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, includeFileUrls: includeFileUrls) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectGrammars was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: _description ("description"), _id ("id"), name ("name") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **_id** | [**[String]**](String)| ID | [optional] |
+| **name** | **String**| Name | [optional] |
+| **_description** | **String**| Description | [optional] |
+| **nameOrDescription** | **String**| Name or description | [optional] |
+| **includeFileUrls** | **Bool**| Include grammar language file URLs | [optional] |
+
+
+### Return type
+
+[**GrammarListing**](GrammarListing)
 
 
 ## getArchitectIvr
@@ -4814,6 +5204,112 @@ ArchitectAPI.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pag
 [**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing)
 
 
+## patchArchitectGrammar
+
+
+
+> [Grammar](Grammar) patchArchitectGrammar(grammarId, body)
+
+Updates a grammar
+
+
+
+Wraps PATCH /api/v2/architect/grammars/{grammarId}  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // grammar ID
+let body: Grammar = new Grammar(...) // 
+
+// Code example
+ArchitectAPI.patchArchitectGrammar(grammarId: grammarId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.patchArchitectGrammar was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| grammar ID | |
+| **body** | [**Grammar**](Grammar)|  | [optional] |
+
+
+### Return type
+
+[**Grammar**](Grammar)
+
+
+## patchArchitectGrammarLanguage
+
+
+
+> [GrammarLanguage](GrammarLanguage) patchArchitectGrammarLanguage(grammarId, languageCode, body)
+
+Updates a grammar language
+
+
+
+Wraps PATCH /api/v2/architect/grammars/{grammarId}/languages/{languageCode}  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+let body: GrammarLanguageUpdate = new GrammarLanguageUpdate(...) // 
+
+// Code example
+ArchitectAPI.patchArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.patchArchitectGrammarLanguage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+| **body** | [**GrammarLanguageUpdate**](GrammarLanguageUpdate)|  | [optional] |
+
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage)
+
+
 ## patchFlowsInstancesSettingsExecutiondata
 
 
@@ -4961,6 +5457,216 @@ ArchitectAPI.postArchitectEmergencygroups(body: body) { (response, error) in
 ### Return type
 
 [**EmergencyGroup**](EmergencyGroup)
+
+
+## postArchitectGrammarLanguageFilesDtmf
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postArchitectGrammarLanguageFilesDtmf(grammarId, languageCode, body)
+
+Creates a presigned URL for uploading a grammar DTMF mode file
+
+
+
+Wraps POST /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+let body: GrammarFileUploadRequest = new GrammarFileUploadRequest(...) // query
+
+// Code example
+ArchitectAPI.postArchitectGrammarLanguageFilesDtmf(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammarLanguageFilesDtmf was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+| **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
+## postArchitectGrammarLanguageFilesVoice
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postArchitectGrammarLanguageFilesVoice(grammarId, languageCode, body)
+
+Creates a presigned URL for uploading a grammar voice mode file
+
+
+
+Wraps POST /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+let body: GrammarFileUploadRequest = new GrammarFileUploadRequest(...) // query
+
+// Code example
+ArchitectAPI.postArchitectGrammarLanguageFilesVoice(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammarLanguageFilesVoice was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+| **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
+## postArchitectGrammarLanguages
+
+
+
+> [GrammarLanguage](GrammarLanguage) postArchitectGrammarLanguages(grammarId, body)
+
+Create a new language for a given grammar
+
+
+
+Wraps POST /api/v2/architect/grammars/{grammarId}/languages  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let body: GrammarLanguage = new GrammarLanguage(...) // 
+
+// Code example
+ArchitectAPI.postArchitectGrammarLanguages(grammarId: grammarId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammarLanguages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **body** | [**GrammarLanguage**](GrammarLanguage)|  | |
+
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage)
+
+
+## postArchitectGrammars
+
+
+
+> [Grammar](Grammar) postArchitectGrammars(body)
+
+Create a new grammar
+
+
+
+Wraps POST /api/v2/architect/grammars  
+
+Requires ALL permissions: 
+
+* architect:grammar:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: Grammar = new Grammar(...) // 
+
+// Code example
+ArchitectAPI.postArchitectGrammars(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammars was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**Grammar**](Grammar)|  | |
+
+
+### Return type
+
+[**Grammar**](Grammar)
 
 
 ## postArchitectIvrs
@@ -7167,4 +7873,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_

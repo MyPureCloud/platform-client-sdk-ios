@@ -18,4 +18,4 @@ This is a set of enabled characteristics for the loglevel
 
 
 
-_PureCloudPlatformClientV2@151.0.0_
+_PureCloudPlatformClientV2@151.1.0_
