@@ -1,6 +1,5 @@
----
-title: RecurrencePeriod
----
+# RecurrencePeriod
+
 ## RecurrencePeriod
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecurrencePeriod
 |------------ | ------------- | ------------- | -------------|
 | **magnitude** | **Int** | The period of the activity plan in granularity units | |
 | **granularity** | **String** | The granularity unit to interpret the period of this activity plan | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

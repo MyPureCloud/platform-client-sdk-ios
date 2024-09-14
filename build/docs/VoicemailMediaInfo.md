@@ -1,6 +1,5 @@
----
-title: VoicemailMediaInfo
----
+# VoicemailMediaInfo
+
 ## VoicemailMediaInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: VoicemailMediaInfo
 | **mediaFileUri** | **String** |  | [optional] |
 | **mediaImageUri** | **String** |  | [optional] |
 | **waveformData** | **[Float]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

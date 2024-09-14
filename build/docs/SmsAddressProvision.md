@@ -1,6 +1,5 @@
----
-title: SmsAddressProvision
----
+# SmsAddressProvision
+
 ## SmsAddressProvision
 
 ## Properties
@@ -16,6 +15,7 @@ title: SmsAddressProvision
 | **countryCode** | **String** | The ISO country code of this address | |
 | **autoCorrectAddress** | **Bool** | This is used when the address is created. If the value is not set or true, then the system will, if necessary, auto-correct the address you provide. Set this value to false if the system should not auto-correct the address. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

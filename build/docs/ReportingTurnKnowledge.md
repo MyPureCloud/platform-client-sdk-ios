@@ -1,6 +1,5 @@
----
-title: ReportingTurnKnowledge
----
+# ReportingTurnKnowledge
+
 ## ReportingTurnKnowledge
 
 ## Properties
@@ -8,8 +7,9 @@ title: ReportingTurnKnowledge
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **String** | The Knowledge Base ID that the captured knowledge data relates to. | [optional] |
-| **feedback** | [**ReportingTurnKnowledgeFeedback**](ReportingTurnKnowledgeFeedback.html) | The knowledge feedback data that was captured during this reporting turn. | [optional] |
-| **search** | [**ReportingTurnKnowledgeSearch**](ReportingTurnKnowledgeSearch.html) | The knowledge search data that was captured during this reporting turn. | [optional] |
-{: class="table table-striped"}
+| **feedback** | [**ReportingTurnKnowledgeFeedback**](ReportingTurnKnowledgeFeedback) | The knowledge feedback data that was captured during this reporting turn. | [optional] |
+| **search** | [**ReportingTurnKnowledgeSearch**](ReportingTurnKnowledgeSearch) | The knowledge search data that was captured during this reporting turn. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

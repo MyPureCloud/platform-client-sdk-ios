@@ -1,6 +1,5 @@
----
-title: Certificate
----
+# Certificate
+
 ## Certificate
 Represents a certificate to parse.
 
@@ -9,6 +8,7 @@ Represents a certificate to parse.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **certificate** | **String** | The certificate to parse. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

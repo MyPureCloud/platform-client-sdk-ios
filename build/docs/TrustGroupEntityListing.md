@@ -1,13 +1,12 @@
----
-title: TrustGroupEntityListing
----
+# TrustGroupEntityListing
+
 ## TrustGroupEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TrustGroup]**](TrustGroup.html) |  | [optional] |
+| **entities** | [**[TrustGroup]**](TrustGroup) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: TrustGroupEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

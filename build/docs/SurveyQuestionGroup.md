@@ -1,6 +1,5 @@
----
-title: SurveyQuestionGroup
----
+# SurveyQuestionGroup
+
 ## SurveyQuestionGroup
 
 ## Properties
@@ -11,8 +10,9 @@ title: SurveyQuestionGroup
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **naEnabled** | **Bool** |  | [optional] |
-| **questions** | [**[SurveyQuestion]**](SurveyQuestion.html) |  | [optional] |
-| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-{: class="table table-striped"}
+| **questions** | [**[SurveyQuestion]**](SurveyQuestion) |  | [optional] |
+| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

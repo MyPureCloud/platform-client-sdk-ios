@@ -1,6 +1,5 @@
----
-title: WorkitemStatusListing
----
+# WorkitemStatusListing
+
 ## WorkitemStatusListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: WorkitemStatusListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[WorkitemStatus]**](WorkitemStatus.html) |  | [optional] |
+| **entities** | [**[WorkitemStatus]**](WorkitemStatus) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

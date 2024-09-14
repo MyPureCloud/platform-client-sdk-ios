@@ -1,6 +1,5 @@
----
-title: ContactCenterSettings
----
+# ContactCenterSettings
+
 ## ContactCenterSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContactCenterSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **removeSkillsFromBlindTransfer** | **Bool** | Strip skills from transfer | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

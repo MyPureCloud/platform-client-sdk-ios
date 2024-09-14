@@ -1,6 +1,5 @@
----
-title: TranscriptUrl
----
+# TranscriptUrl
+
 ## TranscriptUrl
 
 ## Properties
@@ -8,6 +7,7 @@ title: TranscriptUrl
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** | The pre-signed S3 URL of the transcript | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

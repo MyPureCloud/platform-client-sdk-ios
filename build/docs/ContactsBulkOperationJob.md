@@ -1,6 +1,5 @@
----
-title: ContactsBulkOperationJob
----
+# ContactsBulkOperationJob
+
 ## ContactsBulkOperationJob
 
 ## Properties
@@ -13,9 +12,10 @@ title: ContactsBulkOperationJob
 | **totalRecords** | **Int64** | Total records that will be impacted by the bulk operation. | [optional] |
 | **completedRecords** | **Int64** | Amount of records that have been impacted by the bulk operation. | [optional] |
 | **percentComplete** | **Int** | Percentage of records that have been impacted by the bulk operation. | [optional] |
-| **failureReason** | [**ErrorInfo**](ErrorInfo.html) | Information on failure reason. | [optional] |
+| **failureReason** | [**ErrorInfo**](ErrorInfo) | Information on failure reason. | [optional] |
 | **downloadURI** | **String** | URI to download the original backup contacts. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

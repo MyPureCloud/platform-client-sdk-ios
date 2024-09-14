@@ -1,6 +1,5 @@
----
-title: LearningCoverArtThumbnail
----
+# LearningCoverArtThumbnail
+
 ## LearningCoverArtThumbnail
 
 ## Properties
@@ -9,6 +8,7 @@ title: LearningCoverArtThumbnail
 |------------ | ------------- | ------------- | -------------|
 | **resolution** | **String** | Resolution of thumbnail | [optional] |
 | **url** | **String** | The URL for the thumbnail | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

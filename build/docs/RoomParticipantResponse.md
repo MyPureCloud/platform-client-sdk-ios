@@ -1,6 +1,5 @@
----
-title: RoomParticipantResponse
----
+# RoomParticipantResponse
+
 ## RoomParticipantResponse
 
 ## Properties
@@ -8,7 +7,8 @@ title: RoomParticipantResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **jid** | **String** | jid of the participant | [optional] |
-| **user** | [**AddressableEntityRef**](AddressableEntityRef.html) | User id of the participant | [optional] |
-{: class="table table-striped"}
+| **user** | [**AddressableEntityRef**](AddressableEntityRef) | User id of the participant | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

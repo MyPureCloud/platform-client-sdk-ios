@@ -1,15 +1,15 @@
----
-title: BulkNotesResponse
----
+# BulkNotesResponse
+
 ## BulkNotesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[BulkResponseResultNoteNote]**](BulkResponseResultNoteNote.html) |  | [optional] |
+| **results** | [**[BulkResponseResultNoteNote]**](BulkResponseResultNoteNote) |  | [optional] |
 | **errorCount** | **Int** |  | [optional] |
 | **errorIndexes** | **[Int]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

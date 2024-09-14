@@ -1,6 +1,5 @@
----
-title: ReportingTurnKnowledgeDocument
----
+# ReportingTurnKnowledgeDocument
+
 ## ReportingTurnKnowledgeDocument
 
 ## Properties
@@ -11,6 +10,7 @@ title: ReportingTurnKnowledgeDocument
 | **question** | **String** | The the question that was used to match against the search query. | [optional] |
 | **answer** | **String** | The corresponding answer to the question. | [optional] |
 | **confidence** | **Double** | The confidence score of how well the question matched the search query. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

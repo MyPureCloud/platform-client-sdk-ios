@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification
----
+# WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification
+
 ## WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherence
 | **_id** | **String** |  | [optional] |
 | **downloadUrls** | **[String]** |  | [optional] |
 | **queryState** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

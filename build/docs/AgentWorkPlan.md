@@ -1,6 +1,5 @@
----
-title: AgentWorkPlan
----
+# AgentWorkPlan
+
 ## AgentWorkPlan
 
 ## Properties
@@ -14,9 +13,10 @@ title: AgentWorkPlan
 | **weeklyExactPaidMinutes** | **Int** | Exact weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; false | |
 | **weeklyMinimumPaidMinutes** | **Int** | Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | |
 | **weeklyMaximumPaidMinutes** | **Int** | Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | |
-| **optionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Optional days to schedule for this work plan | [optional] |
-| **shifts** | [**[AgentWorkPlanShift]**](AgentWorkPlanShift.html) | Shifts in this work plan | |
+| **optionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Optional days to schedule for this work plan | [optional] |
+| **shifts** | [**[AgentWorkPlanShift]**](AgentWorkPlanShift) | Shifts in this work plan | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

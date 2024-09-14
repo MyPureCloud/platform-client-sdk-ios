@@ -1,6 +1,5 @@
----
-title: PredictorWorkloadBalancing
----
+# PredictorWorkloadBalancing
+
 ## PredictorWorkloadBalancing
 
 ## Properties
@@ -10,6 +9,7 @@ title: PredictorWorkloadBalancing
 | **enabled** | **Bool** | Flag to activate and deactivate workload balancing. | |
 | **minimumOccupancy** | **Int** | Desired minimum occupancy threshold of agents. Must be between 0 and 100. | [optional] |
 | **maximumOccupancy** | **Int** | Desired maximum occupancy threshold of agents. Must be between 0 and 100. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

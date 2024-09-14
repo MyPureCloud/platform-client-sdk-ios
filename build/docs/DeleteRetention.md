@@ -1,6 +1,5 @@
----
-title: DeleteRetention
----
+# DeleteRetention
+
 ## DeleteRetention
 
 ## Properties
@@ -8,6 +7,7 @@ title: DeleteRetention
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **days** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

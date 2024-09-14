@@ -1,6 +1,5 @@
----
-title: DocumentCategoryInput
----
+# DocumentCategoryInput
+
 ## DocumentCategoryInput
 
 ## Properties
@@ -8,6 +7,7 @@ title: DocumentCategoryInput
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | KnowledgeBase Category ID | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

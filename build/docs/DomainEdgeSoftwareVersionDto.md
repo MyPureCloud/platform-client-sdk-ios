@@ -1,6 +1,5 @@
----
-title: DomainEdgeSoftwareVersionDto
----
+# DomainEdgeSoftwareVersionDto
+
 ## DomainEdgeSoftwareVersionDto
 
 ## Properties
@@ -10,11 +9,12 @@ title: DomainEdgeSoftwareVersionDto
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **edgeVersion** | **String** |  | [optional] |
-| **publishDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **publishDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **edgeUri** | **String** |  | [optional] |
-| **latestRelease** | **Bool** |  | [optional] |
 | **current** | **Bool** |  | [optional] |
+| **latestRelease** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

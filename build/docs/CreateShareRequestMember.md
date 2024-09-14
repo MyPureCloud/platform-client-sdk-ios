@@ -1,6 +1,5 @@
----
-title: CreateShareRequestMember
----
+# CreateShareRequestMember
+
 ## CreateShareRequestMember
 
 ## Properties
@@ -8,7 +7,8 @@ title: CreateShareRequestMember
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **memberType** | **String** |  | [optional] |
-| **member** | [**MemberEntity**](MemberEntity.html) |  | [optional] |
-{: class="table table-striped"}
+| **member** | [**MemberEntity**](MemberEntity) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

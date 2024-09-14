@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleRunTopicBuScheduleRun
----
+# WfmBuScheduleRunTopicBuScheduleRun
+
 ## WfmBuScheduleRunTopicBuScheduleRun
 
 ## Properties
@@ -12,11 +11,12 @@ title: WfmBuScheduleRunTopicBuScheduleRun
 | **intradayRescheduling** | **Bool** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **weekCount** | **Int** |  | [optional] |
-| **schedule** | [**WfmBuScheduleRunTopicBuScheduleReference**](WfmBuScheduleRunTopicBuScheduleReference.html) |  | [optional] |
-| **schedulingCanceledBy** | [**WfmBuScheduleRunTopicUserReference**](WfmBuScheduleRunTopicUserReference.html) |  | [optional] |
+| **schedule** | [**WfmBuScheduleRunTopicBuScheduleReference**](WfmBuScheduleRunTopicBuScheduleReference) |  | [optional] |
+| **schedulingCanceledBy** | [**WfmBuScheduleRunTopicUserReference**](WfmBuScheduleRunTopicUserReference) |  | [optional] |
 | **schedulingCompletedTime** | **String** |  | [optional] |
 | **messageCount** | **Int** |  | [optional] |
-| **messageSeverityCounts** | [**[WfmBuScheduleRunTopicSchedulerMessageSeverityCount]**](WfmBuScheduleRunTopicSchedulerMessageSeverityCount.html) |  | [optional] |
-{: class="table table-striped"}
+| **messageSeverityCounts** | [**[WfmBuScheduleRunTopicSchedulerMessageSeverityCount]**](WfmBuScheduleRunTopicSchedulerMessageSeverityCount) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

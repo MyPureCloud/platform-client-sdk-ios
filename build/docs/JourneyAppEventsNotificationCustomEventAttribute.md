@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationCustomEventAttribute
----
+# JourneyAppEventsNotificationCustomEventAttribute
+
 ## JourneyAppEventsNotificationCustomEventAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyAppEventsNotificationCustomEventAttribute
 |------------ | ------------- | ------------- | -------------|
 | **value** | **String** |  | [optional] |
 | **dataType** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

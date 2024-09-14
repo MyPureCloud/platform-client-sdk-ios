@@ -1,6 +1,5 @@
----
-title: Action
----
+# Action
+
 ## Action
 
 ## Properties
@@ -11,11 +10,12 @@ title: Action
 | **name** | **String** |  | [optional] |
 | **integrationId** | **String** | The ID of the integration for which this action is associated | [optional] |
 | **category** | **String** | Category of Action | [optional] |
-| **contract** | [**ActionContract**](ActionContract.html) | Action contract | [optional] |
+| **contract** | [**ActionContract**](ActionContract) | Action contract | [optional] |
 | **version** | **Int** | Version of this action | [optional] |
 | **secure** | **Bool** | Indication of whether or not the action is designed to accept sensitive data | [optional] |
-| **config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | [optional] |
+| **config** | [**ActionConfig**](ActionConfig) | Configuration to support request and response processing | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

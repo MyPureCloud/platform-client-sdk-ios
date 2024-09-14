@@ -1,6 +1,5 @@
----
-title: GroupMembersUpdate
----
+# GroupMembersUpdate
+
 ## GroupMembersUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: GroupMembersUpdate
 |------------ | ------------- | ------------- | -------------|
 | **memberIds** | **[String]** | A list of the ids of the members to add. | |
 | **version** | **Int** | The current group version. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

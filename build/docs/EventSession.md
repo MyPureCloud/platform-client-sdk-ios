@@ -1,6 +1,5 @@
----
-title: EventSession
----
+# EventSession
+
 ## EventSession
 
 ## Properties
@@ -10,6 +9,7 @@ title: EventSession
 | **_id** | **String** | The ID of the session. | |
 | **selfUri** | **String** |  | [optional] |
 | **type** | **String** | Session types indicate the type or category of sessions (e.g. web, app). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

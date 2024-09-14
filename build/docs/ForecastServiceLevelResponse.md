@@ -1,6 +1,5 @@
----
-title: ForecastServiceLevelResponse
----
+# ForecastServiceLevelResponse
+
 ## ForecastServiceLevelResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: ForecastServiceLevelResponse
 |------------ | ------------- | ------------- | -------------|
 | **percent** | **Int** | The percent of calls to answer in the number of seconds defined | [optional] |
 | **seconds** | **Int** | The number of seconds to define for the percent of calls to be answered | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

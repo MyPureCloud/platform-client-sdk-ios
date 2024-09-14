@@ -1,6 +1,5 @@
----
-title: NluQualityReportSummaryMetric
----
+# NluQualityReportSummaryMetric
+
 ## NluQualityReportSummaryMetric
 
 ## Properties
@@ -9,6 +8,7 @@ title: NluQualityReportSummaryMetric
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the metric. e.g. recall, f1_score | |
 | **value** | **Float** | The value of the metric | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

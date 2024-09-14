@@ -1,6 +1,5 @@
----
-title: TemplateParameter
----
+# TemplateParameter
+
 ## TemplateParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: TemplateParameter
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | Response substitution identifier | [optional] |
 | **value** | **String** | Response substitution value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

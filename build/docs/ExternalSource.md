@@ -1,6 +1,5 @@
----
-title: ExternalSource
----
+# ExternalSource
+
 ## ExternalSource
 
 ## Properties
@@ -10,8 +9,9 @@ title: ExternalSource
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of the external source. | |
 | **active** | **Bool** |  | [optional] |
-| **linkConfiguration** | [**LinkConfiguration**](LinkConfiguration.html) |  | [optional] |
+| **linkConfiguration** | [**LinkConfiguration**](LinkConfiguration) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

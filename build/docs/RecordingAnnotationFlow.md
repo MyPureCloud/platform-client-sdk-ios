@@ -1,6 +1,5 @@
----
-title: RecordingAnnotationFlow
----
+# RecordingAnnotationFlow
+
 ## RecordingAnnotationFlow
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecordingAnnotationFlow
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The flow name | |
 | **_id** | **String** | The flow Id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

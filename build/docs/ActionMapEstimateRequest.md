@@ -1,6 +1,5 @@
----
-title: ActionMapEstimateRequest
----
+# ActionMapEstimateRequest
+
 ## ActionMapEstimateRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: ActionMapEstimateRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **segmentIds** | **[String]** | List of Segment IDs. | [optional] |
-| **outcomeCriteria** | [**ActionMapEstimateOutcomeCriteria**](ActionMapEstimateOutcomeCriteria.html) | Outcome Criteria containing outcomeId and probability thresholds. | [optional] |
-{: class="table table-striped"}
+| **outcomeCriteria** | [**ActionMapEstimateOutcomeCriteria**](ActionMapEstimateOutcomeCriteria) | Outcome Criteria containing outcomeId and probability thresholds. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

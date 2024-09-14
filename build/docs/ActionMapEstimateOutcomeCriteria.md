@@ -1,6 +1,5 @@
----
-title: ActionMapEstimateOutcomeCriteria
----
+# ActionMapEstimateOutcomeCriteria
+
 ## ActionMapEstimateOutcomeCriteria
 
 ## Properties
@@ -12,6 +11,7 @@ title: ActionMapEstimateOutcomeCriteria
 | **probability** | **Float** | Additional probability condition, where if set, the action map will trigger if the current outcome probability is lower or equal to the value. | [optional] |
 | **quantile** | **Float** | Represents the quantity of sessions that have a maximum probability less than the predicted probability. | [optional] |
 | **maxQuantile** | **Float** | Represents the quantity of sessions that have a maximum probability less than the predicted session max probability. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FilterPreviewResponse
----
+# FilterPreviewResponse
+
 ## FilterPreviewResponse
 
 ## Properties
@@ -9,7 +8,8 @@ title: FilterPreviewResponse
 |------------ | ------------- | ------------- | -------------|
 | **filteredContacts** | **Int64** |  | [optional] |
 | **totalContacts** | **Int64** |  | [optional] |
-| **preview** | [**[DialerContact]**](DialerContact.html) |  | [optional] |
-{: class="table table-striped"}
+| **preview** | [**[DialerContact]**](DialerContact) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

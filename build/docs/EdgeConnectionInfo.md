@@ -1,6 +1,5 @@
----
-title: EdgeConnectionInfo
----
+# EdgeConnectionInfo
+
 ## EdgeConnectionInfo
 
 ## Properties
@@ -12,8 +11,9 @@ title: EdgeConnectionInfo
 | **interfaceName** | **String** | Interface used for the connection on the edge | [optional] |
 | **interfaceIpAddress** | **String** | IP address of the interface | [optional] |
 | **connectionErrors** | **[String]** | Connection errors | [optional] |
-| **site** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
+| **site** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: RequestDevice
----
+# RequestDevice
+
 ## RequestDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: RequestDevice
 | **osFamily** | **String** | Operating system family. | |
 | **osVersion** | **String** | Operating system version. | |
 | **manufacturer** | **String** | Manufacturer of the device. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

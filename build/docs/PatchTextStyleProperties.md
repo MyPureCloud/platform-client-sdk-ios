@@ -1,6 +1,5 @@
----
-title: PatchTextStyleProperties
----
+# PatchTextStyleProperties
+
 ## PatchTextStyleProperties
 
 ## Properties
@@ -11,6 +10,7 @@ title: PatchTextStyleProperties
 | **font** | **String** | Font of the text. (eg. Helvetica) | [optional] |
 | **fontSize** | **String** | Font size of the text. (eg. &#39;12&#39;) | [optional] |
 | **textAlign** | **String** | Text alignment. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

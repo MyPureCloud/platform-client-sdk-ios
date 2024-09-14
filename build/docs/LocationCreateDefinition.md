@@ -1,6 +1,5 @@
----
-title: LocationCreateDefinition
----
+# LocationCreateDefinition
+
 ## LocationCreateDefinition
 
 ## Properties
@@ -13,8 +12,9 @@ title: LocationCreateDefinition
 | **path** | **[String]** | A list of ancestor ids | [optional] |
 | **notes** | **String** | Notes for the location | [optional] |
 | **contactUser** | **String** | The user id of the location contact | [optional] |
-| **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber.html) | Emergency number for the location | [optional] |
-| **address** | [**LocationAddress**](LocationAddress.html) | Address of the location | [optional] |
-{: class="table table-striped"}
+| **emergencyNumber** | [**LocationEmergencyNumber**](LocationEmergencyNumber) | Emergency number for the location | [optional] |
+| **address** | [**LocationAddress**](LocationAddress) | Address of the location | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

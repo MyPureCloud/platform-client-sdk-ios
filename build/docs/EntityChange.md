@@ -1,6 +1,5 @@
----
-title: EntityChange
----
+# EntityChange
+
 ## EntityChange
 
 ## Properties
@@ -12,6 +11,7 @@ title: EntityChange
 | **entityType** | **String** | Type of the entity that was changed | [optional] |
 | **oldValues** | **[String]** | Previous values for the entity. | [optional] |
 | **newValues** | **[String]** | New values for the entity. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

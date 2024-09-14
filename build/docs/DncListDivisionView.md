@@ -1,6 +1,5 @@
----
-title: DncListDivisionView
----
+# DncListDivisionView
+
 ## DncListDivisionView
 
 ## Properties
@@ -9,12 +8,13 @@ title: DncListDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
-| **importStatus** | [**ImportStatus**](ImportStatus.html) | The status of the import process. | [optional] |
+| **division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
+| **importStatus** | [**ImportStatus**](ImportStatus) | The status of the import process. | [optional] |
 | **size** | **Int64** | The number of contacts in the DncList. | [optional] |
 | **dncSourceType** | **String** | The type of the DncList. | [optional] |
 | **contactMethod** | **String** | The contact method. Required if dncSourceType is rds. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

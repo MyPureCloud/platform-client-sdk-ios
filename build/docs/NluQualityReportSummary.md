@@ -1,13 +1,13 @@
----
-title: NluQualityReportSummary
----
+# NluQualityReportSummary
+
 ## NluQualityReportSummary
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **metrics** | [**[NluQualityReportSummaryMetric]**](NluQualityReportSummaryMetric.html) | The list of metrics in the summary | |
-{: class="table table-striped"}
+| **metrics** | [**[NluQualityReportSummaryMetric]**](NluQualityReportSummaryMetric) | The list of metrics in the summary | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

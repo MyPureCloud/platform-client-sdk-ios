@@ -1,6 +1,5 @@
----
-title: EvaluationQualityV2TopicEvaluationScoringSet
----
+# EvaluationQualityV2TopicEvaluationScoringSet
+
 ## EvaluationQualityV2TopicEvaluationScoringSet
 
 ## Properties
@@ -9,6 +8,7 @@ title: EvaluationQualityV2TopicEvaluationScoringSet
 |------------ | ------------- | ------------- | -------------|
 | **totalScore** | **Int** |  | [optional] |
 | **totalCriticalScore** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

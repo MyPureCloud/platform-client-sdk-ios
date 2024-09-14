@@ -1,6 +1,5 @@
----
-title: HrisTimeOffTypesJobReference
----
+# HrisTimeOffTypesJobReference
+
 ## HrisTimeOffTypesJobReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: HrisTimeOffTypesJobReference
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **status** | **String** | The status of the job | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

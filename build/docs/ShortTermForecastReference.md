@@ -1,6 +1,5 @@
----
-title: ShortTermForecastReference
----
+# ShortTermForecastReference
+
 ## ShortTermForecastReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: ShortTermForecastReference
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **weekDate** | **String** | The weekDate of the short term forecast in yyyy-MM-dd format | |
 | **_description** | **String** | The description of the short term forecast | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

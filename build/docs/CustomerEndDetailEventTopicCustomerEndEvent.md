@@ -1,6 +1,5 @@
----
-title: CustomerEndDetailEventTopicCustomerEndEvent
----
+# CustomerEndDetailEventTopicCustomerEndEvent
+
 ## CustomerEndDetailEventTopicCustomerEndEvent
 
 ## Properties
@@ -30,6 +29,7 @@ title: CustomerEndDetailEventTopicCustomerEndEvent
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LocalEncryptionConfiguration
----
+# LocalEncryptionConfiguration
+
 ## LocalEncryptionConfiguration
 
 ## Properties
@@ -13,6 +12,7 @@ title: LocalEncryptionConfiguration
 | **apiId** | **String** | The api id for Hawk Authentication. | |
 | **apiKey** | **String** | The api shared symmetric key used for hawk authentication | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

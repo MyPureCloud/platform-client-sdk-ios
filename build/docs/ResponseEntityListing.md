@@ -1,13 +1,12 @@
----
-title: ResponseEntityListing
----
+# ResponseEntityListing
+
 ## ResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ModelResponse]**](Response.html) |  | [optional] |
+| **entities** | [**[ModelResponse]**](Response) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: ResponseEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

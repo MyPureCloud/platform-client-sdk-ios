@@ -1,13 +1,13 @@
----
-title: BulkUpdateShiftTradeStateResult
----
+# BulkUpdateShiftTradeStateResult
+
 ## BulkUpdateShiftTradeStateResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BulkUpdateShiftTradeStateResultItem]**](BulkUpdateShiftTradeStateResultItem.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[BulkUpdateShiftTradeStateResultItem]**](BulkUpdateShiftTradeStateResultItem) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

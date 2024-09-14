@@ -1,6 +1,5 @@
----
-title: IdentityProvider
----
+# IdentityProvider
+
 ## IdentityProvider
 
 ## Properties
@@ -11,6 +10,7 @@ title: IdentityProvider
 | **name** | **String** |  | [optional] |
 | **disabled** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

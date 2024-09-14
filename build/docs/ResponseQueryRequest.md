@@ -1,6 +1,5 @@
----
-title: ResponseQueryRequest
----
+# ResponseQueryRequest
+
 ## ResponseQueryRequest
 Used to query for responses
 
@@ -11,7 +10,8 @@ Used to query for responses
 | **queryPhrase** | **String** | Query phrase to search response text and name. If not set will match all. | [optional] |
 | **pageSize** | **Int** | The maximum number of hits to return. Default: 25, Maximum: 500. | [optional] |
 | **pageNumber** | **Int** | Page Number | [optional] |
-| **filters** | [**[ResponseFilter]**](ResponseFilter.html) | Filter the query results. | [optional] |
-{: class="table table-striped"}
+| **filters** | [**[ResponseFilter]**](ResponseFilter) | Filter the query results. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Agent
----
+# Agent
+
 ## Agent
 
 ## Properties
@@ -8,6 +7,7 @@ title: Agent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **stage** | **String** | The current stage for this agent | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CredentialSpecification
----
+# CredentialSpecification
+
 ## CredentialSpecification
 Specifies the requirements for a credential that can be provided for configuring an integration
 
@@ -11,6 +10,7 @@ Specifies the requirements for a credential that can be provided for configuring
 | **_required** | **Bool** | Indicates if the credential must be provided in order for the integration configuration to be valid. | [optional] |
 | **title** | **String** | Title describing the usage for this credential. | [optional] |
 | **credentialTypes** | **[String]** | List of acceptable credential types that can be provided for this credential. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

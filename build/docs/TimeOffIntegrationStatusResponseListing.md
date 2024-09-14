@@ -1,13 +1,13 @@
----
-title: TimeOffIntegrationStatusResponseListing
----
+# TimeOffIntegrationStatusResponseListing
+
 ## TimeOffIntegrationStatusResponseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TimeOffIntegrationStatusResponse]**](TimeOffIntegrationStatusResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[TimeOffIntegrationStatusResponse]**](TimeOffIntegrationStatusResponse) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

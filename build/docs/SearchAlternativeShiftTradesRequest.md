@@ -1,6 +1,5 @@
----
-title: SearchAlternativeShiftTradesRequest
----
+# SearchAlternativeShiftTradesRequest
+
 ## SearchAlternativeShiftTradesRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: SearchAlternativeShiftTradesRequest
 |------------ | ------------- | ------------- | -------------|
 | **managementUnitIds** | **[String]** | The list of management unit IDs for this alternative shift trade search. Either managementUnitIds or agentIds is required | [optional] |
 | **agentIds** | **[String]** | The list of agent IDs for this alternative shift trade search. Either managementUnitIds or agentIds is required | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

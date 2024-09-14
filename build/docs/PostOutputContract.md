@@ -1,6 +1,5 @@
----
-title: PostOutputContract
----
+# PostOutputContract
+
 ## PostOutputContract
 The schemas defining all of the expected responses/outputs.
 
@@ -8,7 +7,8 @@ The schemas defining all of the expected responses/outputs.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **successSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | JSON schema that defines the transformed, successful result that will be sent back to the caller. | |
-{: class="table table-striped"}
+| **successSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) | JSON schema that defines the transformed, successful result that will be sent back to the caller. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

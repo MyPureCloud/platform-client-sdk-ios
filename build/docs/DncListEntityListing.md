@@ -1,13 +1,12 @@
----
-title: DncListEntityListing
----
+# DncListEntityListing
+
 ## DncListEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DncList]**](DncList.html) |  | [optional] |
+| **entities** | [**[DncList]**](DncList) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DncListEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

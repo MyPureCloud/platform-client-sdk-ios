@@ -1,13 +1,12 @@
----
-title: LineBaseEntityListing
----
+# LineBaseEntityListing
+
 ## LineBaseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[LineBase]**](LineBase.html) |  | [optional] |
+| **entities** | [**[LineBase]**](LineBase) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ title: LineBaseEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

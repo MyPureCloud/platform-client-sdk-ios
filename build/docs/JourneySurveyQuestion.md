@@ -1,6 +1,5 @@
----
-title: JourneySurveyQuestion
----
+# JourneySurveyQuestion
+
 ## JourneySurveyQuestion
 
 ## Properties
@@ -12,6 +11,7 @@ title: JourneySurveyQuestion
 | **customerProperty** | **String** | The customer property that the answer maps to. | [optional] |
 | **choices** | **[String]** | Choices available to user. | [optional] |
 | **isMandatory** | **Bool** | Whether answering this question is mandatory. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

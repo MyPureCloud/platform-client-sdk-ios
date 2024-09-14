@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationErrorMessageParams
----
+# ArchitectPromptNotificationErrorMessageParams
+
 ## ArchitectPromptNotificationErrorMessageParams
 The error message params, if the action failed
 
@@ -9,6 +8,7 @@ The error message params, if the action failed
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **additionalProperties** | **[String:String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

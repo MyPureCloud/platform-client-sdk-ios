@@ -1,6 +1,5 @@
----
-title: SkillsToRemove
----
+# SkillsToRemove
+
 ## SkillsToRemove
 
 ## Properties
@@ -10,6 +9,7 @@ title: SkillsToRemove
 | **name** | **String** |  | [optional] |
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

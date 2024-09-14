@@ -1,16 +1,16 @@
----
-title: SessionListing
----
+# SessionListing
+
 ## SessionListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Session]**](Session.html) |  | [optional] |
+| **entities** | [**[Session]**](Session) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

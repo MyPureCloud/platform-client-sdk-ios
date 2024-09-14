@@ -321,6 +321,8 @@ docs/AttributeDetailEventTopicCommunication.md
 docs/AttributeFilterItem.md
 docs/AtzmTimeSlot.md
 docs/AtzmTimeSlotWithTimeZone.md
+docs/AudioConnectorIntegration.md
+docs/AudioConnectorIntegrationEntityListing.md
 docs/AudioState.md
 docs/AudioUpdatedEvent.md
 docs/AuditAPI.json
@@ -924,6 +926,7 @@ docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
 docs/ConversationContentQuickReplyV2.md
+docs/ConversationContentReaction.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
 docs/ConversationDeletionProtectionQuery.md
@@ -950,6 +953,9 @@ docs/ConversationEmailEventTopicUriReference.md
 docs/ConversationEmailEventTopicWrapup.md
 docs/ConversationEncryptionConfiguration.md
 docs/ConversationEncryptionConfigurationListing.md
+docs/ConversationEnrichment.md
+docs/ConversationEnrichmentLanguage.md
+docs/ConversationEnrichmentSentimentV2.md
 docs/ConversationEntityListing.md
 docs/ConversationEventCoBrowse.md
 docs/ConversationEventPresence.md
@@ -1080,6 +1086,7 @@ docs/ConversationThreadingWindow.md
 docs/ConversationThreadingWindowSetting.md
 docs/ConversationUser.md
 docs/ConversationUserDisposition.md
+docs/ConversationUtilizationLabelUpdate.md
 docs/ConversationVideoEventTopicConversationRoutingData.md
 docs/ConversationVideoEventTopicDetail.md
 docs/ConversationVideoEventTopicErrorBody.md
@@ -1944,6 +1951,12 @@ docs/GetRulesQuery.md
 docs/GetTemplatesResponse.md
 docs/GoogleDialogflowConfig.md
 docs/GoogleDialogflowCustomSettings.md
+docs/Grammar.md
+docs/GrammarFileUploadRequest.md
+docs/GrammarLanguage.md
+docs/GrammarLanguageFileMetadata.md
+docs/GrammarLanguageUpdate.md
+docs/GrammarListing.md
 docs/Greeting.md
 docs/GreetingAudioFile.md
 docs/GreetingListing.md
@@ -4672,6 +4685,10 @@ docs/deleteAnalyticsConversationsDetailsJob-example.txt
 docs/deleteAnalyticsUsersDetailsJob-example.txt
 docs/deleteAnalyticsUsersDetailsJob-example.txt
 docs/deleteArchitectEmergencygroup-example.txt
+docs/deleteArchitectGrammar-example.txt
+docs/deleteArchitectGrammarLanguage-example.txt
+docs/deleteArchitectGrammarLanguageFilesDtmf-example.txt
+docs/deleteArchitectGrammarLanguageFilesVoice-example.txt
 docs/deleteArchitectIvr-example.txt
 docs/deleteArchitectPrompt-example.txt
 docs/deleteArchitectPromptResource-example.txt
@@ -4979,6 +4996,9 @@ docs/getArchitectDependencytrackingUpdatedresourceconsumers-example.txt
 docs/getArchitectEmergencygroup-example.txt
 docs/getArchitectEmergencygroups-example.txt
 docs/getArchitectEmergencygroupsDivisionviews-example.txt
+docs/getArchitectGrammar-example.txt
+docs/getArchitectGrammarLanguage-example.txt
+docs/getArchitectGrammars-example.txt
 docs/getArchitectIvr-example.txt
 docs/getArchitectIvrs-example.txt
 docs/getArchitectIvrsDivisionviews-example.txt
@@ -5350,6 +5370,8 @@ docs/getIntegrationsClientappsUnifiedcommunications-example.txt
 docs/getIntegrationsCredential-example.txt
 docs/getIntegrationsCredentials-example.txt
 docs/getIntegrationsCredentialsTypes-example.txt
+docs/getIntegrationsSpeechAudioconnector-example.txt
+docs/getIntegrationsSpeechAudioconnectorIntegrationId-example.txt
 docs/getIntegrationsSpeechDialogflowAgent-example.txt
 docs/getIntegrationsSpeechDialogflowAgents-example.txt
 docs/getIntegrationsSpeechDialogflowcxAgent-example.txt
@@ -6085,6 +6107,8 @@ docs/patchAlertingAlert-example.txt
 docs/patchAlertingAlertsBulk-example.txt
 docs/patchAlertingRulesBulk-example.txt
 docs/patchAnalyticsReportingSettings-example.txt
+docs/patchArchitectGrammar-example.txt
+docs/patchArchitectGrammarLanguage-example.txt
 docs/patchAssistant-example.txt
 docs/patchAssistantQueues-example.txt
 docs/patchAuthorizationRole-example.txt
@@ -6100,6 +6124,7 @@ docs/patchCoachingNotification-example.txt
 docs/patchConversationParticipant-example.txt
 docs/patchConversationParticipantAttributes-example.txt
 docs/patchConversationSecureattributes-example.txt
+docs/patchConversationUtilizationlabel-example.txt
 docs/patchConversationsAftercallworkConversationIdParticipantCommunication-example.txt
 docs/patchConversationsCall-example.txt
 docs/patchConversationsCallParticipant-example.txt
@@ -6321,6 +6346,10 @@ docs/postAnalyticsUsersObservationsQuery-example.txt
 docs/postAnalyticsUsersObservationsQuery-example.txt
 docs/postArchitectDependencytrackingBuild-example.txt
 docs/postArchitectEmergencygroups-example.txt
+docs/postArchitectGrammarLanguageFilesDtmf-example.txt
+docs/postArchitectGrammarLanguageFilesVoice-example.txt
+docs/postArchitectGrammarLanguages-example.txt
+docs/postArchitectGrammars-example.txt
 docs/postArchitectIvrs-example.txt
 docs/postArchitectPromptHistory-example.txt
 docs/postArchitectPromptResources-example.txt
@@ -7515,6 +7544,8 @@ src/Models/AttributeDetailEventTopicCommunication.swift
 src/Models/AttributeFilterItem.swift
 src/Models/AtzmTimeSlot.swift
 src/Models/AtzmTimeSlotWithTimeZone.swift
+src/Models/AudioConnectorIntegration.swift
+src/Models/AudioConnectorIntegrationEntityListing.swift
 src/Models/AudioState.swift
 src/Models/AudioUpdatedEvent.swift
 src/Models/AuditLogMessage.swift
@@ -8104,6 +8135,7 @@ src/Models/ConversationContentLocation.swift
 src/Models/ConversationContentNotificationTemplate.swift
 src/Models/ConversationContentQuickReply.swift
 src/Models/ConversationContentQuickReplyV2.swift
+src/Models/ConversationContentReaction.swift
 src/Models/ConversationContentStory.swift
 src/Models/ConversationContentText.swift
 src/Models/ConversationDeletionProtectionQuery.swift
@@ -8130,6 +8162,9 @@ src/Models/ConversationEmailEventTopicUriReference.swift
 src/Models/ConversationEmailEventTopicWrapup.swift
 src/Models/ConversationEncryptionConfiguration.swift
 src/Models/ConversationEncryptionConfigurationListing.swift
+src/Models/ConversationEnrichment.swift
+src/Models/ConversationEnrichmentLanguage.swift
+src/Models/ConversationEnrichmentSentimentV2.swift
 src/Models/ConversationEntityListing.swift
 src/Models/ConversationEventCoBrowse.swift
 src/Models/ConversationEventPresence.swift
@@ -8260,6 +8295,7 @@ src/Models/ConversationThreadingWindow.swift
 src/Models/ConversationThreadingWindowSetting.swift
 src/Models/ConversationUser.swift
 src/Models/ConversationUserDisposition.swift
+src/Models/ConversationUtilizationLabelUpdate.swift
 src/Models/ConversationVideoEventTopicConversationRoutingData.swift
 src/Models/ConversationVideoEventTopicDetail.swift
 src/Models/ConversationVideoEventTopicErrorBody.swift
@@ -9100,6 +9136,12 @@ src/Models/GetRulesQuery.swift
 src/Models/GetTemplatesResponse.swift
 src/Models/GoogleDialogflowConfig.swift
 src/Models/GoogleDialogflowCustomSettings.swift
+src/Models/Grammar.swift
+src/Models/GrammarFileUploadRequest.swift
+src/Models/GrammarLanguage.swift
+src/Models/GrammarLanguageFileMetadata.swift
+src/Models/GrammarLanguageUpdate.swift
+src/Models/GrammarListing.swift
 src/Models/Greeting.swift
 src/Models/GreetingAudioFile.swift
 src/Models/GreetingListing.swift

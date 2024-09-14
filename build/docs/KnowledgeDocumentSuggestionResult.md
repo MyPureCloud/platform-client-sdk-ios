@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentSuggestionResult
----
+# KnowledgeDocumentSuggestionResult
+
 ## KnowledgeDocumentSuggestionResult
 
 ## Properties
@@ -8,7 +7,8 @@ title: KnowledgeDocumentSuggestionResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **matchedPhrase** | **String** | Matched phrase to the autocomplete suggestions query. | [optional] |
-| **document** | [**KnowledgeDocumentSuggestionResultDocument**](KnowledgeDocumentSuggestionResultDocument.html) |  | [optional] |
-{: class="table table-striped"}
+| **document** | [**KnowledgeDocumentSuggestionResultDocument**](KnowledgeDocumentSuggestionResultDocument) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

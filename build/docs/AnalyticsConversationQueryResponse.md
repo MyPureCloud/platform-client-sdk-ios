@@ -1,15 +1,15 @@
----
-title: AnalyticsConversationQueryResponse
----
+# AnalyticsConversationQueryResponse
+
 ## AnalyticsConversationQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conversations** | [**[AnalyticsConversationWithoutAttributes]**](AnalyticsConversationWithoutAttributes.html) |  | [optional] |
-| **aggregations** | [**[AggregationResult]**](AggregationResult.html) |  | [optional] |
+| **conversations** | [**[AnalyticsConversationWithoutAttributes]**](AnalyticsConversationWithoutAttributes) |  | [optional] |
+| **aggregations** | [**[AggregationResult]**](AggregationResult) |  | [optional] |
 | **totalHits** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

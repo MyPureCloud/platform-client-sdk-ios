@@ -1,6 +1,5 @@
----
-title: ParticipantMetrics
----
+# ParticipantMetrics
+
 ## ParticipantMetrics
 
 ## Properties
@@ -15,6 +14,7 @@ title: ParticipantMetrics
 | **overtalkDurationPercentage** | **Double** | Percentage of Overtalk duration in the conversation | [optional] |
 | **otherDurationPercentage** | **Double** | Percentage of Other events duration in the conversation | [optional] |
 | **overtalkCount** | **Int** | Number of Overtalks in the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

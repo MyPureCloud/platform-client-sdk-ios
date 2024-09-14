@@ -1,6 +1,5 @@
----
-title: ActivityPlanJobException
----
+# ActivityPlanJobException
+
 ## ActivityPlanJobException
 
 ## Properties
@@ -8,7 +7,8 @@ title: ActivityPlanJobException
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **exceptionType** | **String** | The type of error | |
-| **occurrences** | [**[ActivityPlanOccurrenceReference]**](ActivityPlanOccurrenceReference.html) | The occurrences in which this error occurred | |
-{: class="table table-striped"}
+| **occurrences** | [**[ActivityPlanOccurrenceReference]**](ActivityPlanOccurrenceReference) | The occurrences in which this error occurred | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

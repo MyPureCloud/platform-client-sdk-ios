@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentSuggestion
----
+# KnowledgeDocumentSuggestion
+
 ## KnowledgeDocumentSuggestion
 
 ## Properties
@@ -9,7 +8,8 @@ title: KnowledgeDocumentSuggestion
 |------------ | ------------- | ------------- | -------------|
 | **query** | **String** | Query to get autocomplete suggestions for the matching knowledge documents. | |
 | **pageSize** | **Int** | Page size of the returned results. | [optional] |
-| **results** | [**[KnowledgeDocumentSuggestionResult]**](KnowledgeDocumentSuggestionResult.html) | Documents matching to the autocomplete suggestions query. | [optional] |
-{: class="table table-striped"}
+| **results** | [**[KnowledgeDocumentSuggestionResult]**](KnowledgeDocumentSuggestionResult) | Documents matching to the autocomplete suggestions query. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

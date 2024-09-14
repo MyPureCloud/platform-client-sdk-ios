@@ -1,6 +1,5 @@
----
-title: AnalyticsUserDetail
----
+# AnalyticsUserDetail
+
 ## AnalyticsUserDetail
 
 ## Properties
@@ -8,8 +7,9 @@ title: AnalyticsUserDetail
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **userId** | **String** | The identifier for the user | [optional] |
-| **primaryPresence** | [**[AnalyticsUserPresenceRecord]**](AnalyticsUserPresenceRecord.html) | The presence records for the user | [optional] |
-| **routingStatus** | [**[AnalyticsRoutingStatusRecord]**](AnalyticsRoutingStatusRecord.html) | The ACD routing status records for the user | [optional] |
-{: class="table table-striped"}
+| **primaryPresence** | [**[AnalyticsUserPresenceRecord]**](AnalyticsUserPresenceRecord) | The presence records for the user | [optional] |
+| **routingStatus** | [**[AnalyticsRoutingStatusRecord]**](AnalyticsRoutingStatusRecord) | The ACD routing status records for the user | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

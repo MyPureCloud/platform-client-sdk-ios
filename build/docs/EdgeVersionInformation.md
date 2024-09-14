@@ -1,6 +1,5 @@
----
-title: EdgeVersionInformation
----
+# EdgeVersionInformation
+
 ## EdgeVersionInformation
 
 ## Properties
@@ -8,6 +7,7 @@ title: EdgeVersionInformation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **softwareVersion** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

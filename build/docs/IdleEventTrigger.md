@@ -1,6 +1,5 @@
----
-title: IdleEventTrigger
----
+# IdleEventTrigger
+
 ## IdleEventTrigger
 Details about an idle event trigger
 
@@ -10,6 +9,7 @@ Details about an idle event trigger
 |------------ | ------------- | ------------- | -------------|
 | **eventName** | **String** | Name of event triggered after period of inactivity. | |
 | **idleAfterSeconds** | **Int64** | Number of seconds of inactivity before an event is triggered. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowExecutionAggregateQueryClause
----
+# FlowExecutionAggregateQueryClause
+
 ## FlowExecutionAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: FlowExecutionAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates | |
-| **predicates** | [**[FlowExecutionAggregateQueryPredicate]**](FlowExecutionAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **predicates** | [**[FlowExecutionAggregateQueryPredicate]**](FlowExecutionAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

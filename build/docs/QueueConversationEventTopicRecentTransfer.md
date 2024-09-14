@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicRecentTransfer
----
+# QueueConversationEventTopicRecentTransfer
+
 ## QueueConversationEventTopicRecentTransfer
 
 ## Properties
@@ -9,11 +8,12 @@ title: QueueConversationEventTopicRecentTransfer
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The id of the command. | [optional] |
 | **state** | **String** |  | [optional] |
-| **dateIssued** | [**Date**](Date.html) | The date/time that this command was issued. | [optional] |
-| **initiator** | [**QueueConversationEventTopicInitiator**](QueueConversationEventTopicInitiator.html) |  | [optional] |
-| **modifiedBy** | [**QueueConversationEventTopicModifiedBy**](QueueConversationEventTopicModifiedBy.html) |  | [optional] |
-| **destination** | [**QueueConversationEventTopicDestination**](QueueConversationEventTopicDestination.html) |  | [optional] |
+| **dateIssued** | [**Date**](Date) | The date/time that this command was issued. | [optional] |
+| **initiator** | [**QueueConversationEventTopicInitiator**](QueueConversationEventTopicInitiator) |  | [optional] |
+| **modifiedBy** | [**QueueConversationEventTopicModifiedBy**](QueueConversationEventTopicModifiedBy) |  | [optional] |
+| **destination** | [**QueueConversationEventTopicDestination**](QueueConversationEventTopicDestination) |  | [optional] |
 | **transferType** | **String** | The type of transfer to perform. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

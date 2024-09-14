@@ -1,13 +1,12 @@
----
-title: UserProfileEntityListing
----
+# UserProfileEntityListing
+
 ## UserProfileEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserProfile]**](UserProfile.html) |  | [optional] |
+| **entities** | [**[UserProfile]**](UserProfile) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: UserProfileEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

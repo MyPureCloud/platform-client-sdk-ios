@@ -1,6 +1,5 @@
----
-title: GetMetricResponse
----
+# GetMetricResponse
+
 ## GetMetricResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: GetMetricResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[Metric]**](Metric.html) |  | [optional] |
+| **entities** | [**[Metric]**](Metric) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

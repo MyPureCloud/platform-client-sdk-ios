@@ -1,6 +1,5 @@
----
-title: ConversationAssociation
----
+# ConversationAssociation
+
 ## ConversationAssociation
 
 ## Properties
@@ -11,6 +10,7 @@ title: ConversationAssociation
 | **conversationId** | **String** | Conversation ID | |
 | **communicationId** | **String** | Communication ID | |
 | **mediaType** | **String** | Media type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

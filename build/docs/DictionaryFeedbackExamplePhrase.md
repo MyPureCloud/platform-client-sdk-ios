@@ -1,6 +1,5 @@
----
-title: DictionaryFeedbackExamplePhrase
----
+# DictionaryFeedbackExamplePhrase
+
 ## DictionaryFeedbackExamplePhrase
 
 ## Properties
@@ -9,6 +8,7 @@ title: DictionaryFeedbackExamplePhrase
 |------------ | ------------- | ------------- | -------------|
 | **phrase** | **String** | The Example Phrase text. At least 3 words and up to 20 words | |
 | **source** | **String** | The source of the given Example Phrase | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

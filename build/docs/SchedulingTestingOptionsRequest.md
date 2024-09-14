@@ -1,6 +1,5 @@
----
-title: SchedulingTestingOptionsRequest
----
+# SchedulingTestingOptionsRequest
+
 ## SchedulingTestingOptionsRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: SchedulingTestingOptionsRequest
 | **failScheduling** | **Bool** | Whether to force scheduling to fail | [optional] |
 | **populateWarnings** | **Bool** | Whether to populate warnings in the generated schedule | [optional] |
 | **populateDeprecatedWarnings** | **Bool** | Whether to populate deprecated warnings in the generated schedule | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: UserConversationsEventUserConversationSummary
----
+# UserConversationsEventUserConversationSummary
+
 ## UserConversationsEventUserConversationSummary
 
 ## Properties
@@ -8,13 +7,14 @@ title: UserConversationsEventUserConversationSummary
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **userId** | **String** |  | [optional] |
-| **call** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **callback** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **email** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **message** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **chat** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **socialExpression** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-| **video** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary.html) |  | [optional] |
-{: class="table table-striped"}
+| **call** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **callback** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **email** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **message** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **chat** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **socialExpression** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
+| **video** | [**UserConversationsEventMediaSummary**](UserConversationsEventMediaSummary) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

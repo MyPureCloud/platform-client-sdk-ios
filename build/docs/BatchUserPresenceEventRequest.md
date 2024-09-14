@@ -1,6 +1,5 @@
----
-title: BatchUserPresenceEventRequest
----
+# BatchUserPresenceEventRequest
+
 ## BatchUserPresenceEventRequest
 A maximum of 100 events are allowed per request
 
@@ -8,7 +7,8 @@ A maximum of 100 events are allowed per request
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **userPresenceEvents** | [**[UserPresenceEvent]**](UserPresenceEvent.html) | UserPresence events for this batch | [optional] |
-{: class="table table-striped"}
+| **userPresenceEvents** | [**[UserPresenceEvent]**](UserPresenceEvent) | UserPresence events for this batch | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

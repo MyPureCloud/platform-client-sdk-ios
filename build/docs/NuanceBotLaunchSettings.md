@@ -1,6 +1,5 @@
----
-title: NuanceBotLaunchSettings
----
+# NuanceBotLaunchSettings
+
 ## NuanceBotLaunchSettings
 Model for setting the launch configuration for Nuance bots available to Genesys Cloud
 
@@ -8,7 +7,8 @@ Model for setting the launch configuration for Nuance bots available to Genesys 
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **botExecutionConfigurations** | [**[BotExecutionConfiguration]**](BotExecutionConfiguration.html) | The list of Nuance bots that are configured as available to the Genesys Cloud system | |
-{: class="table table-striped"}
+| **botExecutionConfigurations** | [**[BotExecutionConfiguration]**](BotExecutionConfiguration) | The list of Nuance bots that are configured as available to the Genesys Cloud system | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

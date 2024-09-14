@@ -1,6 +1,5 @@
----
-title: JourneySegmentRequest
----
+# JourneySegmentRequest
+
 ## JourneySegmentRequest
 
 ## Properties
@@ -14,10 +13,11 @@ title: JourneySegmentRequest
 | **color** | **String** | The hexadecimal color value of the segment. | |
 | **scope** | **String** | The target entity that a segment applies to. | [optional] |
 | **shouldDisplayToAgent** | **Bool** | Whether or not the segment should be displayed to agent/supervisor users. | [optional] |
-| **context** | [**RequestContext**](RequestContext.html) | The context of the segment. | |
-| **journey** | [**RequestJourney**](RequestJourney.html) | The pattern of rules defining the segment. | |
-| **externalSegment** | [**RequestExternalSegment**](RequestExternalSegment.html) | Details of an entity corresponding to this segment in an external system. | [optional] |
+| **context** | [**RequestContext**](RequestContext) | The context of the segment. | |
+| **journey** | [**RequestJourney**](RequestJourney) | The pattern of rules defining the segment. | |
+| **externalSegment** | [**RequestExternalSegment**](RequestExternalSegment) | Details of an entity corresponding to this segment in an external system. | [optional] |
 | **assignmentExpirationDays** | **Int** | Time, in days, from when the segment is assigned until it is automatically unassigned. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkspaceCreate
----
+# WorkspaceCreate
+
 ## WorkspaceCreate
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkspaceCreate
 | **name** | **String** | The workspace name | |
 | **bucket** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

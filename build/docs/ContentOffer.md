@@ -1,6 +1,5 @@
----
-title: ContentOffer
----
+# ContentOffer
+
 ## ContentOffer
 
 ## Properties
@@ -13,8 +12,9 @@ title: ContentOffer
 | **title** | **String** | Title used in the header of the content offer. | [optional] |
 | **headline** | **String** | Headline displayed above the body text of the content offer. | [optional] |
 | **body** | **String** | Body text of the content offer. | [optional] |
-| **callToAction** | [**CallToAction**](CallToAction.html) | Properties customizing the call to action button on the content offer. | [optional] |
-| **style** | [**ContentOfferStylingConfiguration**](ContentOfferStylingConfiguration.html) | Properties customizing the styling of the content offer. | [optional] |
-{: class="table table-striped"}
+| **callToAction** | [**CallToAction**](CallToAction) | Properties customizing the call to action button on the content offer. | [optional] |
+| **style** | [**ContentOfferStylingConfiguration**](ContentOfferStylingConfiguration) | Properties customizing the styling of the content offer. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

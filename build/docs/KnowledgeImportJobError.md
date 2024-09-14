@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobError
----
+# KnowledgeImportJobError
+
 ## KnowledgeImportJobError
 
 ## Properties
@@ -15,10 +14,11 @@ title: KnowledgeImportJobError
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[Detail]**](Detail.html) |  | [optional] |
-| **errors** | [**[ErrorBody]**](ErrorBody.html) |  | [optional] |
-| **limit** | [**Limit**](Limit.html) |  | [optional] |
+| **details** | [**[Detail]**](Detail) |  | [optional] |
+| **errors** | [**[ErrorBody]**](ErrorBody) |  | [optional] |
+| **limit** | [**Limit**](Limit) |  | [optional] |
 | **documentIndex** | **Int** | Index of the faulty document. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicJourneyContext
----
+# QueueConversationSocialExpressionEventTopicJourneyContext
+
 ## QueueConversationSocialExpressionEventTopicJourneyContext
 A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context).
 
@@ -8,9 +7,10 @@ A subset of the Journey System&#39;s data relevant to a part of a conversation (
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **customer** | [**QueueConversationSocialExpressionEventTopicJourneyCustomer**](QueueConversationSocialExpressionEventTopicJourneyCustomer.html) |  | [optional] |
-| **customerSession** | [**QueueConversationSocialExpressionEventTopicJourneyCustomerSession**](QueueConversationSocialExpressionEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **triggeringAction** | [**QueueConversationSocialExpressionEventTopicJourneyAction**](QueueConversationSocialExpressionEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **customer** | [**QueueConversationSocialExpressionEventTopicJourneyCustomer**](QueueConversationSocialExpressionEventTopicJourneyCustomer) |  | [optional] |
+| **customerSession** | [**QueueConversationSocialExpressionEventTopicJourneyCustomerSession**](QueueConversationSocialExpressionEventTopicJourneyCustomerSession) |  | [optional] |
+| **triggeringAction** | [**QueueConversationSocialExpressionEventTopicJourneyAction**](QueueConversationSocialExpressionEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

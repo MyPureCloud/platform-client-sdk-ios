@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentGuestSearchRequest
----
+# KnowledgeDocumentGuestSearchRequest
+
 ## KnowledgeDocumentGuestSearchRequest
 
 ## Properties
@@ -17,6 +16,7 @@ title: KnowledgeDocumentGuestSearchRequest
 | **sessionId** | **String** | Session ID of the search. | [optional] |
 | **answerHighlightTopResults** | **Int** | The number of articles to be sent for answer-highlighting. Can range from 1-5. | [optional] |
 | **includeDraftDocuments** | **Bool** | Indicates whether the search results would also include draft documents. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

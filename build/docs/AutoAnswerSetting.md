@@ -1,6 +1,5 @@
----
-title: AutoAnswerSetting
----
+# AutoAnswerSetting
+
 ## AutoAnswerSetting
 
 ## Properties
@@ -8,6 +7,7 @@ title: AutoAnswerSetting
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | The media type status. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,12 @@
----
-title: CommonRuleContainer
----
+# CommonRuleContainer
+
 ## CommonRuleContainer
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CommonRule]**](CommonRule.html) |  | [optional] |
+| **entities** | [**[CommonRule]**](CommonRule) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CommonRuleContainer
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

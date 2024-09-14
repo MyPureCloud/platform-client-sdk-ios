@@ -1,6 +1,5 @@
----
-title: EvaluationAggregationQueryMe
----
+# EvaluationAggregationQueryMe
+
 ## EvaluationAggregationQueryMe
 
 ## Properties
@@ -13,6 +12,7 @@ title: EvaluationAggregationQueryMe
 | **metrics** | **[String]** | Behaves like a SQL SELECT clause. Only named metrics will be retrieved. | |
 | **alternateTimeDimension** | **String** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. | [optional] |
 | **contextId** | **String** | Evaluation context Id | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

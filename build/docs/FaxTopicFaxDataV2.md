@@ -1,6 +1,5 @@
----
-title: FaxTopicFaxDataV2
----
+# FaxTopicFaxDataV2
+
 ## FaxTopicFaxDataV2
 
 ## Properties
@@ -9,21 +8,22 @@ title: FaxTopicFaxDataV2
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-| **workspace** | [**FaxTopicWorkspaceData**](FaxTopicWorkspaceData.html) |  | [optional] |
-| **createdBy** | [**FaxTopicUserData**](FaxTopicUserData.html) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
+| **workspace** | [**FaxTopicWorkspaceData**](FaxTopicWorkspaceData) |  | [optional] |
+| **createdBy** | [**FaxTopicUserData**](FaxTopicUserData) |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int** |  | [optional] |
 | **filename** | **String** |  | [optional] |
 | **changeNumber** | **Int** |  | [optional] |
-| **dateUploaded** | [**Date**](Date.html) |  | [optional] |
-| **uploadedBy** | [**FaxTopicUserData**](FaxTopicUserData.html) |  | [optional] |
-| **lockInfo** | [**FaxTopicLockData**](FaxTopicLockData.html) |  | [optional] |
+| **dateUploaded** | [**Date**](Date) |  | [optional] |
+| **uploadedBy** | [**FaxTopicUserData**](FaxTopicUserData) |  | [optional] |
+| **lockInfo** | [**FaxTopicLockData**](FaxTopicLockData) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **callerAddress** | **String** |  | [optional] |
 | **receiverAddress** | **String** |  | [optional] |
 | **read** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

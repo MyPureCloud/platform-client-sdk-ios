@@ -1,6 +1,5 @@
----
-title: LogCaptureQueryRequest
----
+# LogCaptureQueryRequest
+
 ## LogCaptureQueryRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: LogCaptureQueryRequest
 | **interval** | **String** | Date and time range to query. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | |
 | **userId** | **String** | Id of the user to query. | |
 | **sortOrder** | **String** | Order of results. Default order is ASC. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

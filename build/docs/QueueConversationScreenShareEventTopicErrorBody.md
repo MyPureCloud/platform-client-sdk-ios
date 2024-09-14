@@ -1,6 +1,5 @@
----
-title: QueueConversationScreenShareEventTopicErrorBody
----
+# QueueConversationScreenShareEventTopicErrorBody
+
 ## QueueConversationScreenShareEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationScreenShareEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[QueueConversationScreenShareEventTopicDetail]**](QueueConversationScreenShareEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[QueueConversationScreenShareEventTopicErrorBody]**](QueueConversationScreenShareEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[QueueConversationScreenShareEventTopicDetail]**](QueueConversationScreenShareEventTopicDetail) |  | [optional] |
+| **errors** | [**[QueueConversationScreenShareEventTopicErrorBody]**](QueueConversationScreenShareEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

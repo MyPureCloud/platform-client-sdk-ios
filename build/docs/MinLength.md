@@ -1,6 +1,5 @@
----
-title: MinLength
----
+# MinLength
+
 ## MinLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: MinLength
 |------------ | ------------- | ------------- | -------------|
 | **min** | **Int64** | A non-negative integer for a text-based schema field denoting the minimum smallest length a string field can contain for a schema instance. | |
 | **max** | **Int64** | A non-negative integer for a text-based schema field denoting the maximum smallest length string the field can contain for a schema instance. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

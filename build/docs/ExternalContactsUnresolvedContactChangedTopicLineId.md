@@ -1,14 +1,14 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicLineId
----
+# ExternalContactsUnresolvedContactChangedTopicLineId
+
 ## ExternalContactsUnresolvedContactChangedTopicLineId
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ids** | [**[ExternalContactsUnresolvedContactChangedTopicLineUserId]**](ExternalContactsUnresolvedContactChangedTopicLineUserId.html) |  | [optional] |
+| **ids** | [**[ExternalContactsUnresolvedContactChangedTopicLineUserId]**](ExternalContactsUnresolvedContactChangedTopicLineUserId) |  | [optional] |
 | **displayName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

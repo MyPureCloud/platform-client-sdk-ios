@@ -1,6 +1,5 @@
----
-title: ScimV2GroupReference
----
+# ScimV2GroupReference
+
 ## ScimV2GroupReference
 Defines a reference to SCIM groups.
 
@@ -11,6 +10,7 @@ Defines a reference to SCIM groups.
 | **type** | **String** | The type of SCIM resource. | [optional] |
 | **value** | **String** | The ID of the group member. Can be \&quot;userId\&quot; or \&quot;groupId\&quot;. | [optional] |
 | **ref** | **String** | The reference URI of the SCIM resource. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

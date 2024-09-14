@@ -1,6 +1,5 @@
----
-title: UserVideoSettings
----
+# UserVideoSettings
+
 ## UserVideoSettings
 The settings for User Video
 
@@ -10,6 +9,7 @@ The settings for User Video
 |------------ | ------------- | ------------- | -------------|
 | **allowCamera** | **Bool** | whether or not user camera is allowed | [optional] |
 | **allowScreenShare** | **Bool** | whether or not user screen share is allowed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

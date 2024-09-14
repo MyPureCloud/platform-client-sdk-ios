@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicUriReference
----
+# ConversationEventTopicUriReference
+
 ## ConversationEventTopicUriReference
 A UriReference for a resource
 
@@ -10,6 +9,7 @@ A UriReference for a resource
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the resource | [optional] |
 | **name** | **String** | The name of the resource | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

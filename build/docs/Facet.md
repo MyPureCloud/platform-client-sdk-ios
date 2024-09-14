@@ -1,6 +1,5 @@
----
-title: Facet
----
+# Facet
+
 ## Facet
 
 ## Properties
@@ -9,6 +8,7 @@ title: Facet
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the field on which to facet. | |
 | **type** | **String** | The type of the facet, DATE or STRING. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ResponseQueryResults
----
+# ResponseQueryResults
+
 ## ResponseQueryResults
 Used to return response query results
 
@@ -8,7 +7,8 @@ Used to return response query results
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**ResponseEntityList**](ResponseEntityList.html) | Contains the query results | |
-{: class="table table-striped"}
+| **results** | [**ResponseEntityList**](ResponseEntityList) | Contains the query results | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

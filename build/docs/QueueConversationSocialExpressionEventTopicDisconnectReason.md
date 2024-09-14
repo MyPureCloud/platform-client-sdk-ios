@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicDisconnectReason
----
+# QueueConversationSocialExpressionEventTopicDisconnectReason
+
 ## QueueConversationSocialExpressionEventTopicDisconnectReason
 
 ## Properties
@@ -10,6 +9,7 @@ title: QueueConversationSocialExpressionEventTopicDisconnectReason
 | **type** | **String** | Disconnect reason protocol type. | [optional] |
 | **code** | **Int** | Protocol specific reason code. See the Q.850 and SIP specs. | [optional] |
 | **phrase** | **String** | Human readable English description of the disconnect reason. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,15 +1,15 @@
----
-title: SuggestionScript
----
+# SuggestionScript
+
 ## SuggestionScript
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **script** | [**AddressableEntityRef**](AddressableEntityRef.html) | The suggested script. | [optional] |
-| **page** | [**AddressableEntityRef**](AddressableEntityRef.html) | The page of the script. | [optional] |
+| **script** | [**AddressableEntityRef**](AddressableEntityRef) | The suggested script. | [optional] |
+| **page** | [**AddressableEntityRef**](AddressableEntityRef) | The page of the script. | [optional] |
 | **data** | **[String:String]** | The payload for the script. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

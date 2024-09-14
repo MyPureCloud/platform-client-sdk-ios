@@ -1,6 +1,5 @@
----
-title: Manager
----
+# Manager
+
 ## Manager
 Defines a SCIM manager.
 
@@ -10,6 +9,7 @@ Defines a SCIM manager.
 |------------ | ------------- | ------------- | -------------|
 | **value** | **String** | The ID of the manager. | [optional] |
 | **ref** | **String** | The reference URI of the manager&#39;s user record. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

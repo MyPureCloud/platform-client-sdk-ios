@@ -1,6 +1,5 @@
----
-title: FacebookAppCredentials
----
+# FacebookAppCredentials
+
 ## FacebookAppCredentials
 
 ## Properties
@@ -8,6 +7,7 @@ title: FacebookAppCredentials
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | Genesys Cloud Facebook App Id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

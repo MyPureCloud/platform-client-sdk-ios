@@ -1,6 +1,5 @@
----
-title: AiScoringSetting
----
+# AiScoringSetting
+
 ## AiScoringSetting
 
 ## Properties
@@ -8,6 +7,7 @@ title: AiScoringSetting
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | True if AI Scoring feature is configured. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

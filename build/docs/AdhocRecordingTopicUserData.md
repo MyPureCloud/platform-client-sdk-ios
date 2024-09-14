@@ -1,6 +1,5 @@
----
-title: AdhocRecordingTopicUserData
----
+# AdhocRecordingTopicUserData
+
 ## AdhocRecordingTopicUserData
 
 ## Properties
@@ -9,6 +8,7 @@ title: AdhocRecordingTopicUserData
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

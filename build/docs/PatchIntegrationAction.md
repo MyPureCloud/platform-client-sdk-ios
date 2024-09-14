@@ -1,6 +1,5 @@
----
-title: PatchIntegrationAction
----
+# PatchIntegrationAction
+
 ## PatchIntegrationAction
 
 ## Properties
@@ -8,6 +7,7 @@ title: PatchIntegrationAction
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | ID of the integration action to be invoked. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ComparisonPeriodListing
----
+# ComparisonPeriodListing
+
 ## ComparisonPeriodListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ComparisonPeriodListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[ComparisonPeriod]**](ComparisonPeriod.html) |  | [optional] |
+| **entities** | [**[ComparisonPeriod]**](ComparisonPeriod) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

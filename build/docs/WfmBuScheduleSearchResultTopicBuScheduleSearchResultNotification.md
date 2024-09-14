@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
----
+# WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
+
 ## WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuScheduleSearchResultTopicBuScheduleSearchResultNotification
 | **operationId** | **String** |  | [optional] |
 | **businessUnitId** | **String** |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

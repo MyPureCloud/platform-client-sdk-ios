@@ -1,6 +1,5 @@
----
-title: WebMessagingEventPresence
----
+# WebMessagingEventPresence
+
 ## WebMessagingEventPresence
 A Presence event.
 
@@ -9,6 +8,7 @@ A Presence event.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Describes the type of Presence event. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

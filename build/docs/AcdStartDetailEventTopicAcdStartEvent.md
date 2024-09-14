@@ -1,6 +1,5 @@
----
-title: AcdStartDetailEventTopicAcdStartEvent
----
+# AcdStartDetailEventTopicAcdStartEvent
+
 ## AcdStartDetailEventTopicAcdStartEvent
 
 ## Properties
@@ -30,6 +29,7 @@ title: AcdStartDetailEventTopicAcdStartEvent
 | **utilizationLabel** | **String** |  | [optional] |
 | **routingPriority** | **Int** |  | [optional] |
 | **requestedRoutingSkillIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CredentialType
----
+# CredentialType
+
 ## CredentialType
 
 ## Properties
@@ -9,9 +8,10 @@ title: CredentialType
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **properties** | [**JSON**](.html) | Properties describing credentials of this type. | [optional] |
+| **properties** | [**JSON**]() | Properties describing credentials of this type. | [optional] |
 | **displayOrder** | **[String]** | Order in which properties should be displayed in the UI. | [optional] |
 | **_required** | **[String]** | Properties that are required fields. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

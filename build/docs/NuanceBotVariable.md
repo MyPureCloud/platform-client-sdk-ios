@@ -1,6 +1,5 @@
----
-title: NuanceBotVariable
----
+# NuanceBotVariable
+
 ## NuanceBotVariable
 Model for a Nuance bot variable
 
@@ -13,7 +12,8 @@ Model for a Nuance bot variable
 | **_description** | **String** | The variable description | [optional] |
 | **reserved** | **Bool** | True if the variable is a reserved variable | [optional] |
 | **simpleVariableInfo** | **String** | The type information for this variable | [optional] |
-| **complexGenericVariableInfo** | [**ComplexVariableInfo**](ComplexVariableInfo.html) | The type information for this variable | [optional] |
-{: class="table table-striped"}
+| **complexGenericVariableInfo** | [**ComplexVariableInfo**](ComplexVariableInfo) | The type information for this variable | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

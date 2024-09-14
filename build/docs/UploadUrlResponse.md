@@ -1,6 +1,5 @@
----
-title: UploadUrlResponse
----
+# UploadUrlResponse
+
 ## UploadUrlResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: UploadUrlResponse
 | **url** | **String** | Presigned URL to PUT the file to | [optional] |
 | **uploadKey** | **String** | Key that identifies the file in the storage including the file name | [optional] |
 | **headers** | **[String:String]** | Required headers when uploading a file through PUT request to the URL | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemsEventsNotificationDelta
----
+# WorkitemsEventsNotificationDelta
+
 ## WorkitemsEventsNotificationDelta
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemsEventsNotificationDelta
 | **field** | **String** |  | [optional] |
 | **oldValue** | **String** |  | [optional] |
 | **newValue** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

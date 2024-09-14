@@ -1,6 +1,5 @@
----
-title: ExternalMetricDefinitionUpdateRequest
----
+# ExternalMetricDefinitionUpdateRequest
+
 ## ExternalMetricDefinitionUpdateRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: ExternalMetricDefinitionUpdateRequest
 | **precision** | **Int** | The decimal precision of the External Metric Definition. Must be at least 0 and at most 5 | [optional] |
 | **defaultObjectiveType** | **String** | The default objective type of the External Metric Definition | [optional] |
 | **enabled** | **Bool** | True if the External Metric Definition is enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

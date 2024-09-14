@@ -1,20 +1,20 @@
----
-title: EdgeMetrics
----
+# EdgeMetrics
+
 ## EdgeMetrics
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **edge** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **eventTime** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **edge** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **eventTime** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **upTimeMsec** | **Int64** |  | [optional] |
-| **processors** | [**[EdgeMetricsProcessor]**](EdgeMetricsProcessor.html) |  | [optional] |
-| **memory** | [**[EdgeMetricsMemory]**](EdgeMetricsMemory.html) |  | [optional] |
-| **disks** | [**[EdgeMetricsDisk]**](EdgeMetricsDisk.html) |  | [optional] |
-| **subsystems** | [**[EdgeMetricsSubsystem]**](EdgeMetricsSubsystem.html) |  | [optional] |
-| **networks** | [**[EdgeMetricsNetwork]**](EdgeMetricsNetwork.html) |  | [optional] |
-{: class="table table-striped"}
+| **processors** | [**[EdgeMetricsProcessor]**](EdgeMetricsProcessor) |  | [optional] |
+| **memory** | [**[EdgeMetricsMemory]**](EdgeMetricsMemory) |  | [optional] |
+| **disks** | [**[EdgeMetricsDisk]**](EdgeMetricsDisk) |  | [optional] |
+| **subsystems** | [**[EdgeMetricsSubsystem]**](EdgeMetricsSubsystem) |  | [optional] |
+| **networks** | [**[EdgeMetricsNetwork]**](EdgeMetricsNetwork) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

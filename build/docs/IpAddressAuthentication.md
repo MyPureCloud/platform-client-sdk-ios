@@ -1,6 +1,5 @@
----
-title: IpAddressAuthentication
----
+# IpAddressAuthentication
+
 ## IpAddressAuthentication
 
 ## Properties
@@ -8,6 +7,7 @@ title: IpAddressAuthentication
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **networkWhitelist** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricDisk
----
+# EdgeMetricsTopicEdgeMetricDisk
+
 ## EdgeMetricsTopicEdgeMetricDisk
 
 ## Properties
@@ -10,6 +9,7 @@ title: EdgeMetricsTopicEdgeMetricDisk
 | **partitionName** | **String** |  | [optional] |
 | **availableBytes** | **Int** |  | [optional] |
 | **totalBytes** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

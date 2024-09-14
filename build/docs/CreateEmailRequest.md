@@ -1,6 +1,5 @@
----
-title: CreateEmailRequest
----
+# CreateEmailRequest
+
 ## CreateEmailRequest
 
 ## Properties
@@ -23,6 +22,7 @@ title: CreateEmailRequest
 | **htmlBody** | **String** | An HTML body content of the email. | [optional] |
 | **textBody** | **String** | A text body content of the email. | [optional] |
 | **externalContactId** | **String** | The external contact with which the email should be associated. This field is only valid for OUTBOUND email. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

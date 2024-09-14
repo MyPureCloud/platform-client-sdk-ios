@@ -1,6 +1,5 @@
----
-title: CreateResponseAssetResponse
----
+# CreateResponseAssetResponse
+
 ## CreateResponseAssetResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: CreateResponseAssetResponse
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **url** | **String** | Pre-signed URL to PUT the file to | [optional] |
 | **headers** | **[String:String]** | Required headers when uploading a file through PUT request to the URL | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

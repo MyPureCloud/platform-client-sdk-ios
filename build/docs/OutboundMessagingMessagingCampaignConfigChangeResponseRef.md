@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeResponseRef
----
+# OutboundMessagingMessagingCampaignConfigChangeResponseRef
+
 ## OutboundMessagingMessagingCampaignConfigChangeResponseRef
 A reference for a Response
 
@@ -9,6 +8,7 @@ A reference for a Response
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The unique response id | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

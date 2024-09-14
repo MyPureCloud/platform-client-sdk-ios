@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationWebEventsNotification
----
+# JourneyWebEventsNotificationWebEventsNotification
+
 ## JourneyWebEventsNotificationWebEventsNotification
 
 ## Properties
@@ -9,16 +8,17 @@ title: JourneyWebEventsNotificationWebEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **correlationId** | **String** |  | [optional] |
-| **externalContact** | [**JourneyWebEventsNotificationExternalContact**](JourneyWebEventsNotificationExternalContact.html) |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
+| **externalContact** | [**JourneyWebEventsNotificationExternalContact**](JourneyWebEventsNotificationExternalContact) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
-| **session** | [**JourneyWebEventsNotificationSession**](JourneyWebEventsNotificationSession.html) |  | [optional] |
+| **session** | [**JourneyWebEventsNotificationSession**](JourneyWebEventsNotificationSession) |  | [optional] |
 | **eventType** | **String** |  | [optional] |
-| **webEvent** | [**JourneyWebEventsNotificationWebMessage**](JourneyWebEventsNotificationWebMessage.html) |  | [optional] |
-| **webActionEvent** | [**JourneyWebEventsNotificationWebActionMessage**](JourneyWebEventsNotificationWebActionMessage.html) |  | [optional] |
-| **outcomeAchievedEvent** | [**JourneyWebEventsNotificationOutcomeAchievedMessage**](JourneyWebEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |
-| **segmentAssignmentEvent** | [**JourneyWebEventsNotificationSegmentAssignmentMessage**](JourneyWebEventsNotificationSegmentAssignmentMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **webEvent** | [**JourneyWebEventsNotificationWebMessage**](JourneyWebEventsNotificationWebMessage) |  | [optional] |
+| **webActionEvent** | [**JourneyWebEventsNotificationWebActionMessage**](JourneyWebEventsNotificationWebActionMessage) |  | [optional] |
+| **outcomeAchievedEvent** | [**JourneyWebEventsNotificationOutcomeAchievedMessage**](JourneyWebEventsNotificationOutcomeAchievedMessage) |  | [optional] |
+| **segmentAssignmentEvent** | [**JourneyWebEventsNotificationSegmentAssignmentMessage**](JourneyWebEventsNotificationSegmentAssignmentMessage) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

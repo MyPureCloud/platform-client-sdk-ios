@@ -1,6 +1,5 @@
----
-title: Topic
----
+# Topic
+
 ## Topic
 
 ## Properties
@@ -12,16 +11,17 @@ title: Topic
 | **_description** | **String** |  | [optional] |
 | **published** | **Bool** |  | [optional] |
 | **strictness** | **String** |  | [optional] |
-| **programs** | [**[BaseProgramEntity]**](BaseProgramEntity.html) |  | [optional] |
+| **programs** | [**[BaseProgramEntity]**](BaseProgramEntity) |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
 | **dialect** | **String** |  | [optional] |
 | **participants** | **String** |  | [optional] |
-| **phrases** | [**[Phrase]**](Phrase.html) |  | [optional] |
-| **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **publishedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
-| **datePublished** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **phrases** | [**[Phrase]**](Phrase) |  | [optional] |
+| **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **publishedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
+| **datePublished** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

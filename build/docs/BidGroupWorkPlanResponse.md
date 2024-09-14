@@ -1,6 +1,5 @@
----
-title: BidGroupWorkPlanResponse
----
+# BidGroupWorkPlanResponse
+
 ## BidGroupWorkPlanResponse
 
 ## Properties
@@ -8,11 +7,12 @@ title: BidGroupWorkPlanResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference.html) | The management unit to which this work plan belongs.  Nullable in some routes | [optional] |
+| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit to which this work plan belongs.  Nullable in some routes | [optional] |
 | **overrideAgentCount** | **Int** | The modified agent count for this work plan | [optional] |
 | **suggestedAgentCount** | **Int** | The number of agents needed for this work plan to produce the optimal schedule | [optional] |
-| **agentCountRange** | [**AgentCountRange**](AgentCountRange.html) | The range of agent slot count per work plan. The suggested slot count must be in agent count range | [optional] |
+| **agentCountRange** | [**AgentCountRange**](AgentCountRange) | The range of agent slot count per work plan. The suggested slot count must be in agent count range | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

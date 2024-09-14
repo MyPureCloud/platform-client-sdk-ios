@@ -1,23 +1,19 @@
----
-title: EmailsAPI
----
-## EmailsAPI
+# EmailsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getEmailsSettings**](EmailsAPI.html#getEmailsSettings) | Get email Contact Center settings |
-| [**patchEmailsSettings**](EmailsAPI.html#patchEmailsSettings) | Patch email Contact Center settings |
+| [**getEmailsSettings**](EmailsAPI#getEmailsSettings) | Get email Contact Center settings |
+| [**patchEmailsSettings**](EmailsAPI#patchEmailsSettings) | Patch email Contact Center settings |
 {: class="table-striped"}
 
-<a name="getEmailsSettings"></a>
 
-# **getEmailsSettings**
-
+## getEmailsSettings
 
 
-> [EmailSettings](EmailSettings.html) getEmailsSettings()
+
+> [EmailSettings](EmailSettings) getEmailsSettings()
 
 Get email Contact Center settings
 
@@ -54,18 +50,16 @@ EmailsAPI.getEmailsSettings() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**EmailSettings**](EmailSettings.html)
-
-<a name="patchEmailsSettings"></a>
-
-# **patchEmailsSettings**
+[**EmailSettings**](EmailSettings)
 
 
+## patchEmailsSettings
 
-> [EmailSettings](EmailSettings.html) patchEmailsSettings(body)
+
+
+> [EmailSettings](EmailSettings) patchEmailsSettings(body)
 
 Patch email Contact Center settings
 
@@ -103,11 +97,12 @@ EmailsAPI.patchEmailsSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EmailSettings**](EmailSettings.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**EmailSettings**](EmailSettings)|  | [optional] |
 
 
 ### Return type
 
-[**EmailSettings**](EmailSettings.html)
+[**EmailSettings**](EmailSettings)
 
+
+_PureCloudPlatformClientV2@151.1.0_

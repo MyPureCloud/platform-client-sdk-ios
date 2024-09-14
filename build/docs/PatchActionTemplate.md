@@ -1,6 +1,5 @@
----
-title: PatchActionTemplate
----
+# PatchActionTemplate
+
 ## PatchActionTemplate
 
 ## Properties
@@ -12,7 +11,8 @@ title: PatchActionTemplate
 | **version** | **Int** | The version of the action template. | [optional] |
 | **mediaType** | **String** | Media type of action described by the action template. | [optional] |
 | **state** | **String** | Whether the action template is currently active, inactive or deleted. | [optional] |
-| **contentOffer** | [**PatchContentOffer**](PatchContentOffer.html) | Properties used to configure an action of type content offer | [optional] |
-{: class="table table-striped"}
+| **contentOffer** | [**PatchContentOffer**](PatchContentOffer) | Properties used to configure an action of type content offer | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

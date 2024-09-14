@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationSessionEvent
----
+# JourneySessionEventsNotificationSessionEvent
+
 ## JourneySessionEventsNotificationSessionEvent
 
 ## Properties
@@ -9,45 +8,46 @@ title: JourneySessionEventsNotificationSessionEvent
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
-| **endedDate** | [**Date**](Date.html) |  | [optional] |
-| **externalContact** | [**JourneySessionEventsNotificationExternalContact**](JourneySessionEventsNotificationExternalContact.html) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
+| **endedDate** | [**Date**](Date) |  | [optional] |
+| **externalContact** | [**JourneySessionEventsNotificationExternalContact**](JourneySessionEventsNotificationExternalContact) |  | [optional] |
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **outcomeAchievements** | [**[JourneySessionEventsNotificationOutcomeAchievement]**](JourneySessionEventsNotificationOutcomeAchievement.html) |  | [optional] |
-| **segmentAssignments** | [**[JourneySessionEventsNotificationSegmentAssignment]**](JourneySessionEventsNotificationSegmentAssignment.html) |  | [optional] |
-| **awayDate** | [**Date**](Date.html) |  | [optional] |
-| **browser** | [**JourneySessionEventsNotificationBrowser**](JourneySessionEventsNotificationBrowser.html) |  | [optional] |
-| **device** | [**JourneySessionEventsNotificationDevice**](JourneySessionEventsNotificationDevice.html) |  | [optional] |
-| **geolocation** | [**JourneySessionEventsNotificationGeoLocation**](JourneySessionEventsNotificationGeoLocation.html) |  | [optional] |
-| **idleDate** | [**Date**](Date.html) |  | [optional] |
+| **outcomeAchievements** | [**[JourneySessionEventsNotificationOutcomeAchievement]**](JourneySessionEventsNotificationOutcomeAchievement) |  | [optional] |
+| **segmentAssignments** | [**[JourneySessionEventsNotificationSegmentAssignment]**](JourneySessionEventsNotificationSegmentAssignment) |  | [optional] |
+| **awayDate** | [**Date**](Date) |  | [optional] |
+| **browser** | [**JourneySessionEventsNotificationBrowser**](JourneySessionEventsNotificationBrowser) |  | [optional] |
+| **device** | [**JourneySessionEventsNotificationDevice**](JourneySessionEventsNotificationDevice) |  | [optional] |
+| **geolocation** | [**JourneySessionEventsNotificationGeoLocation**](JourneySessionEventsNotificationGeoLocation) |  | [optional] |
+| **idleDate** | [**Date**](Date) |  | [optional] |
 | **ipAddress** | **String** |  | [optional] |
 | **ipOrganization** | **String** |  | [optional] |
-| **lastPage** | [**JourneySessionEventsNotificationPage**](JourneySessionEventsNotificationPage.html) |  | [optional] |
-| **mktCampaign** | [**JourneySessionEventsNotificationMktCampaign**](JourneySessionEventsNotificationMktCampaign.html) |  | [optional] |
-| **referrer** | [**JourneySessionEventsNotificationReferrer**](JourneySessionEventsNotificationReferrer.html) |  | [optional] |
+| **lastPage** | [**JourneySessionEventsNotificationPage**](JourneySessionEventsNotificationPage) |  | [optional] |
+| **mktCampaign** | [**JourneySessionEventsNotificationMktCampaign**](JourneySessionEventsNotificationMktCampaign) |  | [optional] |
+| **referrer** | [**JourneySessionEventsNotificationReferrer**](JourneySessionEventsNotificationReferrer) |  | [optional] |
 | **searchTerms** | **[String]** |  | [optional] |
 | **userAgentString** | **String** |  | [optional] |
 | **durationInSeconds** | **Int** |  | [optional] |
 | **eventCount** | **Int** |  | [optional] |
 | **pageviewCount** | **Int** |  | [optional] |
 | **screenviewCount** | **Int** |  | [optional] |
-| **lastEvent** | [**JourneySessionEventsNotificationSessionLastEvent**](JourneySessionEventsNotificationSessionLastEvent.html) |  | [optional] |
-| **conversation** | [**JourneySessionEventsNotificationConversation**](JourneySessionEventsNotificationConversation.html) |  | [optional] |
+| **lastEvent** | [**JourneySessionEventsNotificationSessionLastEvent**](JourneySessionEventsNotificationSessionLastEvent) |  | [optional] |
+| **conversation** | [**JourneySessionEventsNotificationConversation**](JourneySessionEventsNotificationConversation) |  | [optional] |
 | **originatingDirection** | **String** |  | [optional] |
 | **conversationSubject** | **String** |  | [optional] |
-| **lastUserDisposition** | [**JourneySessionEventsNotificationConversationUserDisposition**](JourneySessionEventsNotificationConversationUserDisposition.html) |  | [optional] |
-| **lastConnectedUser** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser.html) |  | [optional] |
-| **lastConnectedQueue** | [**JourneySessionEventsNotificationConnectedQueue**](JourneySessionEventsNotificationConnectedQueue.html) |  | [optional] |
-| **conversationChannels** | [**[JourneySessionEventsNotificationConversationChannel]**](JourneySessionEventsNotificationConversationChannel.html) |  | [optional] |
+| **lastUserDisposition** | [**JourneySessionEventsNotificationConversationUserDisposition**](JourneySessionEventsNotificationConversationUserDisposition) |  | [optional] |
+| **lastConnectedUser** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser) |  | [optional] |
+| **lastConnectedQueue** | [**JourneySessionEventsNotificationConnectedQueue**](JourneySessionEventsNotificationConnectedQueue) |  | [optional] |
+| **conversationChannels** | [**[JourneySessionEventsNotificationConversationChannel]**](JourneySessionEventsNotificationConversationChannel) |  | [optional] |
 | **lastUserDisconnectType** | **String** |  | [optional] |
 | **lastAcdOutcome** | **String** |  | [optional] |
 | **authenticated** | **Bool** |  | [optional] |
-| **app** | [**JourneySessionEventsNotificationApp**](JourneySessionEventsNotificationApp.html) |  | [optional] |
-| **sdkLibrary** | [**JourneySessionEventsNotificationSdkLibrary**](JourneySessionEventsNotificationSdkLibrary.html) |  | [optional] |
-| **networkConnectivity** | [**JourneySessionEventsNotificationNetworkConnectivity**](JourneySessionEventsNotificationNetworkConnectivity.html) |  | [optional] |
+| **app** | [**JourneySessionEventsNotificationApp**](JourneySessionEventsNotificationApp) |  | [optional] |
+| **sdkLibrary** | [**JourneySessionEventsNotificationSdkLibrary**](JourneySessionEventsNotificationSdkLibrary) |  | [optional] |
+| **networkConnectivity** | [**JourneySessionEventsNotificationNetworkConnectivity**](JourneySessionEventsNotificationNetworkConnectivity) |  | [optional] |
 | **divisionIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

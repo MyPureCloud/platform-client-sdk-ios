@@ -1,15 +1,15 @@
----
-title: BulkDeleteResponse
----
+# BulkDeleteResponse
+
 ## BulkDeleteResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[BulkResponseResultVoidEntity]**](BulkResponseResultVoidEntity.html) |  | [optional] |
+| **results** | [**[BulkResponseResultVoidEntity]**](BulkResponseResultVoidEntity) |  | [optional] |
 | **errorCount** | **Int** |  | [optional] |
 | **errorIndexes** | **[Int]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

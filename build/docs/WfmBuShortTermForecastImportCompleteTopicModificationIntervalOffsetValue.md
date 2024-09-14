@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue
----
+# WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue
+
 ## WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue
 |------------ | ------------- | ------------- | -------------|
 | **intervalIndex** | **Int** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

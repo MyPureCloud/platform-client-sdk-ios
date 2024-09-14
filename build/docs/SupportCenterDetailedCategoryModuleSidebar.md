@@ -1,6 +1,5 @@
----
-title: SupportCenterDetailedCategoryModuleSidebar
----
+# SupportCenterDetailedCategoryModuleSidebar
+
 ## SupportCenterDetailedCategoryModuleSidebar
 
 ## Properties
@@ -8,6 +7,7 @@ title: SupportCenterDetailedCategoryModuleSidebar
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Whether sidebar is enabled or not | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

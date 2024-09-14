@@ -1,6 +1,5 @@
----
-title: AuthzSubject
----
+# AuthzSubject
+
 ## AuthzSubject
 
 ## Properties
@@ -9,9 +8,10 @@ title: AuthzSubject
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **grants** | [**[AuthzGrant]**](AuthzGrant.html) |  | [optional] |
+| **grants** | [**[AuthzGrant]**](AuthzGrant) |  | [optional] |
 | **version** | **Int** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

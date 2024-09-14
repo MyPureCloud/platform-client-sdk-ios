@@ -1,6 +1,5 @@
----
-title: Credential
----
+# Credential
+
 ## Credential
 
 ## Properties
@@ -9,9 +8,10 @@ title: Credential
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **type** | [**CredentialType**](CredentialType.html) | The type of credential. | |
+| **type** | [**CredentialType**](CredentialType) | The type of credential. | |
 | **credentialFields** | **[String:String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

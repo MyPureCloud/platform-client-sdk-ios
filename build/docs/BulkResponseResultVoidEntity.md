@@ -1,6 +1,5 @@
----
-title: BulkResponseResultVoidEntity
----
+# BulkResponseResultVoidEntity
+
 ## BulkResponseResultVoidEntity
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultVoidEntity
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **success** | **Bool** |  | [optional] |
-| **entity** | [**JSON**](.html) |  | [optional] |
-| **error** | [**BulkErrorEntity**](BulkErrorEntity.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**JSON**]() |  | [optional] |
+| **error** | [**BulkErrorEntity**](BulkErrorEntity) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

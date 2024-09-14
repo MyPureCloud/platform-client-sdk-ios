@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotification
----
+# WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotification
+
 ## WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotification
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** |  | [optional] |
-| **result** | [**WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast**](WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast.html) |  | [optional] |
+| **result** | [**WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast**](WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast) |  | [optional] |
 | **operationId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

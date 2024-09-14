@@ -1,6 +1,5 @@
----
-title: SmsAvailablePhoneNumber
----
+# SmsAvailablePhoneNumber
+
 ## SmsAvailablePhoneNumber
 
 ## Properties
@@ -17,6 +16,7 @@ title: SmsAvailablePhoneNumber
 | **phoneNumberType** | **String** | The type of phone number available for provisioning. | [optional] |
 | **addressRequirement** | **String** | The address requirement needed for provisioning this number. If there is a requirement, the address must be the residence or place of business of the individual or entity using the phone number. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

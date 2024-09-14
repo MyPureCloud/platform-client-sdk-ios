@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification
----
+# WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification
+
 ## WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification
 
 ## Properties
@@ -13,13 +12,14 @@ title: WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification
 | **metric** | **String** |  | [optional] |
 | **legacyMetric** | **String** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-| **values** | [**[WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue.html) |  | [optional] |
-| **secondaryValues** | [**[WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue.html) |  | [optional] |
+| **values** | [**[WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
+| **secondaryValues** | [**[WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastUpdateCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **granularity** | **String** |  | [optional] |
 | **secondaryGranularity** | **String** |  | [optional] |
 | **displayGranularity** | **String** |  | [optional] |
 | **planningGroupIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

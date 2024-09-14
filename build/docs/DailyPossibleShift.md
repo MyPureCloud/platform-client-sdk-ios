@@ -1,6 +1,5 @@
----
-title: DailyPossibleShift
----
+# DailyPossibleShift
+
 ## DailyPossibleShift
 
 ## Properties
@@ -13,6 +12,7 @@ title: DailyPossibleShift
 | **minimumPaidTimeMinutes** | **Int** | Minimum paid time in minutes of this daily shift | [optional] |
 | **maximumPaidTimeMinutes** | **Int** | Maximum paid time in minutes of this daily shift | [optional] |
 | **intervalScheduleProbabilities** | **[Int]** | The percentage of being scheduled in each interval between the earliest shift start and latest shift end. Range of the values: [0, 100]. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

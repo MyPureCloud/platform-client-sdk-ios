@@ -1,6 +1,5 @@
----
-title: NotificationTemplateFooter
----
+# NotificationTemplateFooter
+
 ## NotificationTemplateFooter
 Template footer object.
 
@@ -9,6 +8,7 @@ Template footer object.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** | Footer text. For WhatsApp, ignored. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

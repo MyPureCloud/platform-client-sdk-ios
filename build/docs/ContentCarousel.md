@@ -1,6 +1,5 @@
----
-title: ContentCarousel
----
+# ContentCarousel
+
 ## ContentCarousel
 Carousel content object.
 
@@ -8,7 +7,8 @@ Carousel content object.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **cards** | [**[ContentCard]**](ContentCard.html) | An array of card objects. | |
-{: class="table table-striped"}
+| **cards** | [**[ContentCard]**](ContentCard) | An array of card objects. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

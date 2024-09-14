@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestSessionContext
----
+# KnowledgeGuestSessionContext
+
 ## KnowledgeGuestSessionContext
 
 ## Properties
@@ -8,7 +7,8 @@ title: KnowledgeGuestSessionContext
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The context id associated with the session. | |
-| **values** | [**[Entity]**](Entity.html) | The list of knowledge context values associated with the session. | |
-{: class="table table-striped"}
+| **values** | [**[Entity]**](Entity) | The list of knowledge context values associated with the session. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

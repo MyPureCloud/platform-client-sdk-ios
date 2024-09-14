@@ -1,6 +1,5 @@
----
-title: UserStationChangeTopicUserStation
----
+# UserStationChangeTopicUserStation
+
 ## UserStationChangeTopicUserStation
 
 ## Properties
@@ -9,7 +8,8 @@ title: UserStationChangeTopicUserStation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **associatedUser** | [**UserStationChangeTopicUser**](UserStationChangeTopicUser.html) |  | [optional] |
-{: class="table table-striped"}
+| **associatedUser** | [**UserStationChangeTopicUser**](UserStationChangeTopicUser) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

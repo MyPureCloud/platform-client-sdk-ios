@@ -1,6 +1,5 @@
----
-title: EvaluationQuestionGroupScore
----
+# EvaluationQuestionGroupScore
+
 ## EvaluationQuestionGroupScore
 
 ## Properties
@@ -22,7 +21,8 @@ title: EvaluationQuestionGroupScore
 | **maxTotalCriticalScoreUnweighted** | **Float** | Maximum possible unweighted score of only the critical questions in the group | [optional] |
 | **totalNonCriticalScoreUnweighted** | **Float** | Unweighted score of only the non critical questions in the group | [optional] |
 | **maxTotalNonCriticalScoreUnweighted** | **Float** | Maximum possible unweighted score of only the non critical questions in the group | [optional] |
-| **questionScores** | [**[EvaluationQuestionScore]**](EvaluationQuestionScore.html) |  | [optional] |
-{: class="table table-striped"}
+| **questionScores** | [**[EvaluationQuestionScore]**](EvaluationQuestionScore) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

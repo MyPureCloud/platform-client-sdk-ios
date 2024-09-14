@@ -1,6 +1,5 @@
----
-title: EntityReference
----
+# EntityReference
+
 ## EntityReference
 
 ## Properties
@@ -8,6 +7,7 @@ title: EntityReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

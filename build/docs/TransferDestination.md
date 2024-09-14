@@ -1,6 +1,5 @@
----
-title: TransferDestination
----
+# TransferDestination
+
 ## TransferDestination
 
 ## Properties
@@ -9,6 +8,7 @@ title: TransferDestination
 |------------ | ------------- | ------------- | -------------|
 | **userId** | **String** | The id of the user if the command destination is a user. | [optional] |
 | **address** | **String** | The destination address if the command destination is an endpoint. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

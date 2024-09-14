@@ -1,6 +1,5 @@
----
-title: AnalyticsEvaluation
----
+# AnalyticsEvaluation
+
 ## AnalyticsEvaluation
 
 ## Properties
@@ -15,7 +14,7 @@ title: AnalyticsEvaluation
 | **evaluationId** | **String** | Unique identifier for the evaluation | [optional] |
 | **evaluationStatus** | **String** | Status of evaluation | [optional] |
 | **evaluatorId** | **String** | A unique identifier of the user who evaluated the interaction | [optional] |
-| **eventTime** | [**Date**](Date.html) | Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **eventTime** | [**Date**](Date) | Specifies when an evaluation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **formId** | **String** | ID of the evaluation form used | [optional] |
 | **formName** | **String** | Name of the evaluation form used | [optional] |
 | **queueId** | **String** | The ID of the associated queue | [optional] |
@@ -24,6 +23,7 @@ title: AnalyticsEvaluation
 | **userId** | **String** | ID of the agent the evaluation was performed against | [optional] |
 | **oTotalCriticalScore** | **Int64** |  | [optional] |
 | **oTotalScore** | **Int64** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

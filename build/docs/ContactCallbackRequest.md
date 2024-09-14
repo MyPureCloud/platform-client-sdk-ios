@@ -1,6 +1,5 @@
----
-title: ContactCallbackRequest
----
+# ContactCallbackRequest
+
 ## ContactCallbackRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: ContactCallbackRequest
 | **contactId** | **String** | Contact identifier | |
 | **phoneColumn** | **String** | Name of the phone column containing the number to be called | |
 | **schedule** | **String** | The scheduled time for the callback as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ\&quot;, example &#x3D; \&quot;2016-01-02T16:59:59\&quot; | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

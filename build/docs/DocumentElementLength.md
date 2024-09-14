@@ -1,6 +1,5 @@
----
-title: DocumentElementLength
----
+# DocumentElementLength
+
 ## DocumentElementLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: DocumentElementLength
 |------------ | ------------- | ------------- | -------------|
 | **value** | **Float** | The length value of the element in the selected unit. | |
 | **unit** | **String** | The unit of length. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

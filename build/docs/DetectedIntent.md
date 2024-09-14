@@ -1,6 +1,5 @@
----
-title: DetectedIntent
----
+# DetectedIntent
+
 ## DetectedIntent
 
 ## Properties
@@ -9,7 +8,8 @@ title: DetectedIntent
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the detected intent. | [optional] |
 | **probability** | **Double** | The probability of the detected intent. | [optional] |
-| **entities** | [**[DetectedNamedEntity]**](DetectedNamedEntity.html) | The collection of named entities detected. | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[DetectedNamedEntity]**](DetectedNamedEntity) | The collection of named entities detected. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

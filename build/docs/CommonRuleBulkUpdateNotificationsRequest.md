@@ -1,6 +1,5 @@
----
-title: CommonRuleBulkUpdateNotificationsRequest
----
+# CommonRuleBulkUpdateNotificationsRequest
+
 ## CommonRuleBulkUpdateNotificationsRequest
 
 ## Properties
@@ -8,9 +7,10 @@ title: CommonRuleBulkUpdateNotificationsRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ruleIds** | **[String]** | The user supplied rules ids to be updated | |
-| **properties** | [**ModifiableRuleProperties**](ModifiableRuleProperties.html) | The rule properties to be updated | [optional] |
+| **properties** | [**ModifiableRuleProperties**](ModifiableRuleProperties) | The rule properties to be updated | [optional] |
 | **typesToAdd** | **[String]** | Collection of alerting notification types to add for all entities in the rules | [optional] |
 | **typesToRemove** | **[String]** | Collection of alerting notification types to remove for all entities in the rules | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

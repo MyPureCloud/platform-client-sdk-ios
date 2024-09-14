@@ -1,6 +1,5 @@
----
-title: ImportForecastResponse
----
+# ImportForecastResponse
+
 ## ImportForecastResponse
 
 ## Properties
@@ -9,7 +8,8 @@ title: ImportForecastResponse
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** | The status of the operation | [optional] |
 | **operationId** | **String** | The ID for the operation | [optional] |
-| **result** | [**BuShortTermForecast**](BuShortTermForecast.html) | The result of the operation. Always null, result will come via notification | [optional] |
-{: class="table table-striped"}
+| **result** | [**BuShortTermForecast**](BuShortTermForecast) | The result of the operation. Always null, result will come via notification | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

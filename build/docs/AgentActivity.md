@@ -1,6 +1,5 @@
----
-title: AgentActivity
----
+# AgentActivity
+
 ## AgentActivity
 
 ## Properties
@@ -9,7 +8,7 @@ title: AgentActivity
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **agent** | [**User**](User.html) |  | [optional] |
+| **agent** | [**User**](User) |  | [optional] |
 | **numEvaluations** | **Int** |  | [optional] |
 | **averageEvaluationScore** | **Int** |  | [optional] |
 | **numCriticalEvaluations** | **Int** |  | [optional] |
@@ -18,9 +17,10 @@ title: AgentActivity
 | **lowestEvaluationScore** | **Float** |  | [optional] |
 | **highestCriticalScore** | **Float** |  | [optional] |
 | **lowestCriticalScore** | **Float** |  | [optional] |
-| **agentEvaluatorActivityList** | [**[AgentEvaluatorActivity]**](AgentEvaluatorActivity.html) |  | [optional] |
+| **agentEvaluatorActivityList** | [**[AgentEvaluatorActivity]**](AgentEvaluatorActivity) |  | [optional] |
 | **numEvaluationsWithoutViewPermission** | **Int** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

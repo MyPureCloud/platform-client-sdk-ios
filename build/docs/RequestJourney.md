@@ -1,13 +1,13 @@
----
-title: RequestJourney
----
+# RequestJourney
+
 ## RequestJourney
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[RequestJourneyPattern]**](RequestJourneyPattern.html) | A list of zero or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **patterns** | [**[RequestJourneyPattern]**](RequestJourneyPattern) | A list of zero or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

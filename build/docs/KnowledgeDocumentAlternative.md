@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentAlternative
----
+# KnowledgeDocumentAlternative
+
 ## KnowledgeDocumentAlternative
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeDocumentAlternative
 |------------ | ------------- | ------------- | -------------|
 | **phrase** | **String** | Alternate phrasing to the document title, having a limit of 500 words. | |
 | **autocomplete** | **Bool** | Autocomplete enabled for the alternate phrase. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

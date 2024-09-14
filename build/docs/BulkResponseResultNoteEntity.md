@@ -1,6 +1,5 @@
----
-title: BulkResponseResultNoteEntity
----
+# BulkResponseResultNoteEntity
+
 ## BulkResponseResultNoteEntity
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultNoteEntity
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **success** | **Bool** |  | [optional] |
-| **entity** | [**Note**](Note.html) |  | [optional] |
-| **error** | [**BulkErrorEntity**](BulkErrorEntity.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**Note**](Note) |  | [optional] |
+| **error** | [**BulkErrorEntity**](BulkErrorEntity) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

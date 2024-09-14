@@ -1,6 +1,5 @@
----
-title: WebChatRoutingTarget
----
+# WebChatRoutingTarget
+
 ## WebChatRoutingTarget
 
 ## Properties
@@ -12,6 +11,7 @@ title: WebChatRoutingTarget
 | **skills** | **[String]** | The list of skill names to use for routing. | [optional] |
 | **language** | **String** | The language name to use for routing. | [optional] |
 | **priority** | **Int64** | The priority to assign to the conversation for routing. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

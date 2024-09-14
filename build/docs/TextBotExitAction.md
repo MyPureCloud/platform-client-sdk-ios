@@ -1,6 +1,5 @@
----
-title: TextBotExitAction
----
+# TextBotExitAction
+
 ## TextBotExitAction
 Settings for a next-action of exiting the bot flow. Any output variables are available in the details.
 
@@ -11,9 +10,10 @@ Settings for a next-action of exiting the bot flow. Any output variables are ava
 | **reason** | **String** | The reason for the exit. | |
 | **reasonExtendedInfo** | **String** | Extended information related to the reason, if available. | [optional] |
 | **activeIntent** | **String** | The active intent at the time of the exit. | [optional] |
-| **flowLocation** | [**TextBotFlowLocation**](TextBotFlowLocation.html) | Describes where in the Bot Flow the user was when the exit occurred. | [optional] |
-| **outputData** | [**TextBotInputOutputData**](TextBotInputOutputData.html) | The output data for the bot flow. | [optional] |
-| **flowOutcomes** | [**[TextBotFlowOutcome]**](TextBotFlowOutcome.html) | The list of Flow Outcomes for the bot flow and their details. | [optional] |
-{: class="table table-striped"}
+| **flowLocation** | [**TextBotFlowLocation**](TextBotFlowLocation) | Describes where in the Bot Flow the user was when the exit occurred. | [optional] |
+| **outputData** | [**TextBotInputOutputData**](TextBotInputOutputData) | The output data for the bot flow. | [optional] |
+| **flowOutcomes** | [**[TextBotFlowOutcome]**](TextBotFlowOutcome) | The list of Flow Outcomes for the bot flow and their details. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

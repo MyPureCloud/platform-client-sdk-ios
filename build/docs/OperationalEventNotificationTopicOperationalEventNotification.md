@@ -1,13 +1,12 @@
----
-title: OperationalEventNotificationTopicOperationalEventNotification
----
+# OperationalEventNotificationTopicOperationalEventNotification
+
 ## OperationalEventNotificationTopicOperationalEventNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventEntity** | [**OperationalEventNotificationTopicEventEntity**](OperationalEventNotificationTopicEventEntity.html) |  | [optional] |
+| **eventEntity** | [**OperationalEventNotificationTopicEventEntity**](OperationalEventNotificationTopicEventEntity) |  | [optional] |
 | **entityId** | **String** |  | [optional] |
 | **entityName** | **String** |  | [optional] |
 | **previousValue** | **String** |  | [optional] |
@@ -18,6 +17,7 @@ title: OperationalEventNotificationTopicOperationalEventNotification
 | **entityType** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **timestamp** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

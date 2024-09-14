@@ -1,6 +1,5 @@
----
-title: SessionEndDetails
----
+# SessionEndDetails
+
 ## SessionEndDetails
 
 ## Properties
@@ -9,6 +8,7 @@ title: SessionEndDetails
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of termination handling that resulted in the session end. It can be either Exit or Disconnect | [optional] |
 | **reason** | **String** | The reason for termination action. It can be due to an error or normal flow execution | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

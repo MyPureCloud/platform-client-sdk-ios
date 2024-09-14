@@ -1,6 +1,5 @@
----
-title: LimitCount
----
+# LimitCount
+
 ## LimitCount
 
 ## Properties
@@ -12,6 +11,7 @@ title: LimitCount
 | **max** | **Int64** | The maximum value of the limit. | [optional] |
 | **entityId** | **String** | The entity which makes this count unique. The context of what the entity is would be dependant on the limit. May not be applicable for all limits. | [optional] |
 | **userId** | **String** | The user which makes this count unique. May not be applicable for all limits. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,16 +1,16 @@
----
-title: WidgetClientConfig
----
+# WidgetClientConfig
+
 ## WidgetClientConfig
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **v1** | [**WidgetClientConfigV1**](WidgetClientConfigV1.html) |  | [optional] |
-| **v2** | [**JSON**](.html) |  | [optional] |
-| **v1Http** | [**WidgetClientConfigV1Http**](WidgetClientConfigV1Http.html) |  | [optional] |
-| **thirdParty** | [**JSON**](.html) |  | [optional] |
-{: class="table table-striped"}
+| **v1** | [**WidgetClientConfigV1**](WidgetClientConfigV1) |  | [optional] |
+| **v2** | [**JSON**]() |  | [optional] |
+| **v1Http** | [**WidgetClientConfigV1Http**](WidgetClientConfigV1Http) |  | [optional] |
+| **thirdParty** | [**JSON**]() |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

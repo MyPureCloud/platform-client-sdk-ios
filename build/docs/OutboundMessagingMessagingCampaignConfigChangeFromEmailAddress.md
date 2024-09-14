@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
----
+# OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
+
 ## OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress
 An outbound-messaging messaging campaign email address
 
@@ -10,7 +9,8 @@ An outbound-messaging messaging campaign email address
 |------------ | ------------- | ------------- | -------------|
 | **friendlyName** | **String** | The friendly name of the email address. | [optional] |
 | **localPart** | **String** | The local part of the email address. | [optional] |
-| **domain** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
-{: class="table table-striped"}
+| **domain** | [**OutboundMessagingMessagingCampaignConfigChangeUriReference**](OutboundMessagingMessagingCampaignConfigChangeUriReference) | A UriReference for a resource | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

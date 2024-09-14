@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptAlternative
----
+# TranscriptionTopicTranscriptAlternative
+
 ## TranscriptionTopicTranscriptAlternative
 
 ## Properties
@@ -11,9 +10,10 @@ title: TranscriptionTopicTranscriptAlternative
 | **offsetMs** | **Int** |  | [optional] |
 | **durationMs** | **Int** |  | [optional] |
 | **transcript** | **String** |  | [optional] |
-| **words** | [**[TranscriptionTopicTranscriptWord]**](TranscriptionTopicTranscriptWord.html) |  | [optional] |
+| **words** | [**[TranscriptionTopicTranscriptWord]**](TranscriptionTopicTranscriptWord) |  | [optional] |
 | **decoratedTranscript** | **String** |  | [optional] |
-| **decoratedWords** | [**[TranscriptionTopicTranscriptWord]**](TranscriptionTopicTranscriptWord.html) |  | [optional] |
-{: class="table table-striped"}
+| **decoratedWords** | [**[TranscriptionTopicTranscriptWord]**](TranscriptionTopicTranscriptWord) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

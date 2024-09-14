@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
----
+# WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
+
 ## WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmIntradayDataUpdateTopicIntradayHistoricalAgentData
 |------------ | ------------- | ------------- | -------------|
 | **onQueueTimeSeconds** | **Double** |  | [optional] |
 | **interactingTimeSeconds** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

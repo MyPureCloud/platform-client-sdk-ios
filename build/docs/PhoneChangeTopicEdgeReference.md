@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicEdgeReference
----
+# PhoneChangeTopicEdgeReference
+
 ## PhoneChangeTopicEdgeReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: PhoneChangeTopicEdgeReference
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

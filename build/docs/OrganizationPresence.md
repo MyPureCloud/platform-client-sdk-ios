@@ -1,6 +1,5 @@
----
-title: OrganizationPresence
----
+# OrganizationPresence
+
 ## OrganizationPresence
 
 ## Properties
@@ -13,11 +12,12 @@ title: OrganizationPresence
 | **systemPresence** | **String** |  | [optional] |
 | **deactivated** | **Bool** |  | [optional] |
 | **primary** | **Bool** |  | [optional] |
-| **createdBy** | [**User**](User.html) |  | [optional] |
-| **createdDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **modifiedBy** | [**User**](User.html) |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **createdBy** | [**User**](User) |  | [optional] |
+| **createdDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modifiedBy** | [**User**](User) |  | [optional] |
+| **modifiedDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

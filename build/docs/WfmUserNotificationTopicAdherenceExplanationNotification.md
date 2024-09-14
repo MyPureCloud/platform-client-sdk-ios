@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicAdherenceExplanationNotification
----
+# WfmUserNotificationTopicAdherenceExplanationNotification
+
 ## WfmUserNotificationTopicAdherenceExplanationNotification
 
 ## Properties
@@ -8,14 +7,15 @@ title: WfmUserNotificationTopicAdherenceExplanationNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **agent** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
-| **managementUnit** | [**WfmUserNotificationTopicManagementUnit**](WfmUserNotificationTopicManagementUnit.html) |  | [optional] |
-| **businessUnit** | [**WfmUserNotificationTopicBusinessUnit**](WfmUserNotificationTopicBusinessUnit.html) |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
+| **agent** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
+| **managementUnit** | [**WfmUserNotificationTopicManagementUnit**](WfmUserNotificationTopicManagementUnit) |  | [optional] |
+| **businessUnit** | [**WfmUserNotificationTopicBusinessUnit**](WfmUserNotificationTopicBusinessUnit) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
 | **lengthMinutes** | **Int** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **notes** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

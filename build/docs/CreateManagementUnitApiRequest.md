@@ -1,6 +1,5 @@
----
-title: CreateManagementUnitApiRequest
----
+# CreateManagementUnitApiRequest
+
 ## CreateManagementUnitApiRequest
 
 ## Properties
@@ -10,9 +9,10 @@ title: CreateManagementUnitApiRequest
 | **name** | **String** | The name of the management unit | |
 | **timeZone** | **String** | The default time zone to use for this management unit.  Moving to Business Unit | [optional] |
 | **startDayOfWeek** | **String** | The configured first day of the week for scheduling and forecasting purposes. Moving to Business Unit | [optional] |
-| **settings** | [**CreateManagementUnitSettingsRequest**](CreateManagementUnitSettingsRequest.html) | The configuration for the management unit.  If omitted, reasonable defaults will be assigned | [optional] |
+| **settings** | [**CreateManagementUnitSettingsRequest**](CreateManagementUnitSettingsRequest) | The configuration for the management unit.  If omitted, reasonable defaults will be assigned | [optional] |
 | **divisionId** | **String** | The id of the division to which this management unit belongs.  Defaults to home division ID | [optional] |
 | **businessUnitId** | **String** | The id of the business unit to which this management unit belongs | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

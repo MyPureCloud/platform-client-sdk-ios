@@ -1,6 +1,5 @@
----
-title: DevelopmentActivityAggregateQueryResponseGroupedData
----
+# DevelopmentActivityAggregateQueryResponseGroupedData
+
 ## DevelopmentActivityAggregateQueryResponseGroupedData
 
 ## Properties
@@ -8,7 +7,8 @@ title: DevelopmentActivityAggregateQueryResponseGroupedData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** | The group values for this data | [optional] |
-| **data** | [**[DevelopmentActivityAggregateQueryResponseData]**](DevelopmentActivityAggregateQueryResponseData.html) | The metrics in this group | [optional] |
-{: class="table table-striped"}
+| **data** | [**[DevelopmentActivityAggregateQueryResponseData]**](DevelopmentActivityAggregateQueryResponseData) | The metrics in this group | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

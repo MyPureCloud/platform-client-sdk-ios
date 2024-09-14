@@ -1,6 +1,5 @@
----
-title: UnansweredPhraseGroup
----
+# UnansweredPhraseGroup
+
 ## UnansweredPhraseGroup
 
 ## Properties
@@ -9,10 +8,11 @@ title: UnansweredPhraseGroup
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **label** | **String** | Knowledge base phrase group label | [optional] |
-| **phrases** | [**[UnansweredPhrase]**](UnansweredPhrase.html) | List of unanswered phrases in a phrase group | [optional] |
+| **phrases** | [**[UnansweredPhrase]**](UnansweredPhrase) | List of unanswered phrases in a phrase group | [optional] |
 | **unlinkedPhraseHitCount** | **Int** | Hit count of the unlinked phrase group | [optional] |
 | **unlinkedPhraseCount** | **Int** | Unique phrase count of the unlinked phrase group | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

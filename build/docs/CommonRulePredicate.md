@@ -1,6 +1,5 @@
----
-title: CommonRulePredicate
----
+# CommonRulePredicate
+
 ## CommonRulePredicate
 
 ## Properties
@@ -12,9 +11,10 @@ title: CommonRulePredicate
 | **comparisonOperator** | **String** | The comparison operator being performed on the metric. | |
 | **value** | **Double** | The value the metric will be compared to. | |
 | **status** | **String** | The status of the entity corresponding to the metric. | [optional] |
-| **entity** | [**CommonRulePredicateEntity**](CommonRulePredicateEntity.html) | The entity whose metric is being represented. | |
+| **entity** | [**CommonRulePredicateEntity**](CommonRulePredicateEntity) | The entity whose metric is being represented. | |
 | **mediaType** | **String** | The media type of the conversation the metric describes. | [optional] |
 | **metric** | **String** | The metric being evaluated. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WebMessagingRecipient
----
+# WebMessagingRecipient
+
 ## WebMessagingRecipient
 Information about the recipient the message is sent to or received from.
 
@@ -12,7 +11,8 @@ Information about the recipient the message is sent to or received from.
 | **lastName** | **String** | Last name of the recipient. | [optional] |
 | **nickname** | **String** | Nickname or display name of the recipient. | [optional] |
 | **image** | **String** | URL of an image that represents the recipient. | [optional] |
-| **additionalIds** | [**[RecipientAdditionalIdentifier]**](RecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
-{: class="table table-striped"}
+| **additionalIds** | [**[RecipientAdditionalIdentifier]**](RecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

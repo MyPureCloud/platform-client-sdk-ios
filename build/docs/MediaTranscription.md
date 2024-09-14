@@ -1,6 +1,5 @@
----
-title: MediaTranscription
----
+# MediaTranscription
+
 ## MediaTranscription
 
 ## Properties
@@ -10,6 +9,7 @@ title: MediaTranscription
 | **displayName** | **String** |  | [optional] |
 | **transcriptionProvider** | **String** |  | [optional] |
 | **integrationId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AtzmTimeSlot
----
+# AtzmTimeSlot
+
 ## AtzmTimeSlot
 
 ## Properties
@@ -9,6 +8,7 @@ title: AtzmTimeSlot
 |------------ | ------------- | ------------- | -------------|
 | **earliestCallableTime** | **String** | The earliest time to dial a contact. Valid format is HH:mm | [optional] |
 | **latestCallableTime** | **String** | The latest time to dial a contact. Valid format is HH:mm | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

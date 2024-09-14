@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestDocumentSuggestionResult
----
+# KnowledgeGuestDocumentSuggestionResult
+
 ## KnowledgeGuestDocumentSuggestionResult
 
 ## Properties
@@ -8,6 +7,7 @@ title: KnowledgeGuestDocumentSuggestionResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **matchedPhrase** | **String** | Matched phrase to the autocomplete suggestions query. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

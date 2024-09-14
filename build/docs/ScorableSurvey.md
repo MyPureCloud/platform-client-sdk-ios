@@ -1,6 +1,5 @@
----
-title: ScorableSurvey
----
+# ScorableSurvey
+
 ## ScorableSurvey
 
 ## Properties
@@ -9,10 +8,11 @@ title: ScorableSurvey
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **surveyForm** | [**SurveyForm**](SurveyForm.html) | Survey form used for this survey. | [optional] |
+| **surveyForm** | [**SurveyForm**](SurveyForm) | Survey form used for this survey. | [optional] |
 | **status** | **String** |  | [optional] |
-| **answers** | [**SurveyScoringSet**](SurveyScoringSet.html) |  | [optional] |
+| **answers** | [**SurveyScoringSet**](SurveyScoringSet) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

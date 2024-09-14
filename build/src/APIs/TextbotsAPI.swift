@@ -285,7 +285,7 @@ open class TextbotsAPI {
       "location" : "{}",
       "text" : "{}",
       "carousel" : "{}",
-      "contentType" : "Attachment",
+      "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
     }, {
@@ -297,7 +297,7 @@ open class TextbotsAPI {
       "location" : "{}",
       "text" : "{}",
       "carousel" : "{}",
-      "contentType" : "Attachment",
+      "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
     } ]
@@ -313,7 +313,7 @@ open class TextbotsAPI {
       "location" : "{}",
       "text" : "{}",
       "carousel" : "{}",
-      "contentType" : "Attachment",
+      "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
     }, {
@@ -325,7 +325,7 @@ open class TextbotsAPI {
       "location" : "{}",
       "text" : "{}",
       "carousel" : "{}",
-      "contentType" : "Attachment",
+      "contentType" : "Reactions",
       "card" : "{}",
       "story" : "{}"
     } ]

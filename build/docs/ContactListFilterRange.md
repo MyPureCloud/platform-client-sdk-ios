@@ -1,6 +1,5 @@
----
-title: ContactListFilterRange
----
+# ContactListFilterRange
+
 ## ContactListFilterRange
 
 ## Properties
@@ -12,6 +11,7 @@ title: ContactListFilterRange
 | **minInclusive** | **Bool** | Whether or not to include the minimum in the range. | [optional] |
 | **maxInclusive** | **Bool** | Whether or not to include the maximum in the range. | [optional] |
 | **inSet** | **[String]** | A set of values that the contact data should be in. Required for the IN operator. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

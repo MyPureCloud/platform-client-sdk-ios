@@ -1,6 +1,5 @@
----
-title: PostInputContract
----
+# PostInputContract
+
 ## PostInputContract
 The schemas defining all of the expected requests/inputs.
 
@@ -8,7 +7,8 @@ The schemas defining all of the expected requests/inputs.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **inputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. | |
-{: class="table table-striped"}
+| **inputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) | JSON Schema that defines the body of the request that the client (edge/architect/postman) is sending to the service, on the /execute path. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

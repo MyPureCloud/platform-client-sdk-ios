@@ -1,13 +1,13 @@
----
-title: Journey
----
+# Journey
+
 ## Journey
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[JourneyPattern]**](JourneyPattern.html) | A list of zero or more patterns to match. | |
-{: class="table table-striped"}
+| **patterns** | [**[JourneyPattern]**](JourneyPattern) | A list of zero or more patterns to match. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

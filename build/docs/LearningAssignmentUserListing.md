@@ -1,6 +1,5 @@
----
-title: LearningAssignmentUserListing
----
+# LearningAssignmentUserListing
+
 ## LearningAssignmentUserListing
 List of users matching the learning module rule
 
@@ -8,7 +7,7 @@ List of users matching the learning module rule
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[LearningAssignmentUser]**](LearningAssignmentUser.html) |  | [optional] |
+| **entities** | [**[LearningAssignmentUser]**](LearningAssignmentUser) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** | The number of users matching search term | [optional] |
@@ -19,6 +18,7 @@ List of users matching the learning module rule
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DraftValidationResult
----
+# DraftValidationResult
+
 ## DraftValidationResult
 Validation results
 
@@ -9,7 +8,8 @@ Validation results
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **valid** | **Bool** | Indicates if configuration is valid | [optional] |
-| **errors** | [**[ErrorBody]**](ErrorBody.html) | List of errors causing validation failure | [optional] |
-{: class="table table-striped"}
+| **errors** | [**[ErrorBody]**](ErrorBody) | List of errors causing validation failure | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

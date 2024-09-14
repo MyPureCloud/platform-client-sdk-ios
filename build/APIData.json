@@ -1715,6 +1715,74 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet emergencyGroupId: String = \"\" // Emergency group ID\n\n// Deletes a emergency group by ID\nDeleteArchitectEmergencygroupRequest.deleteArchitectEmergencygroup(emergencyGroupId: emergencyGroupId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteArchitectEmergencygroupRequest.deleteArchitectEmergencygroup was successful\")\n    }\n}"
   },
+  "deletearchitectgrammar": {
+    "operationId": "deletearchitectgrammar",
+    "functionName": "deleteArchitectGrammar",
+    "signature": "deleteArchitectGrammar(grammarId)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "JSON",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // grammar ID\n\n// Delete a grammar.\nDeleteArchitectGrammarRequest.deleteArchitectGrammar(grammarId: grammarId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteArchitectGrammarRequest.deleteArchitectGrammar was successful\")\n        dump(response)\n    }\n}"
+  },
+  "deletearchitectgrammarlanguage": {
+    "operationId": "deletearchitectgrammarlanguage",
+    "functionName": "deleteArchitectGrammarLanguage",
+    "signature": "deleteArchitectGrammarLanguage(grammarId, languageCode)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\n\n// Delete specified grammar language\nDeleteArchitectGrammarLanguageRequest.deleteArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteArchitectGrammarLanguageRequest.deleteArchitectGrammarLanguage was successful\")\n    }\n}"
+  },
+  "deletearchitectgrammarlanguagefilesdtmf": {
+    "operationId": "deletearchitectgrammarlanguagefilesdtmf",
+    "functionName": "deleteArchitectGrammarLanguageFilesDtmf",
+    "signature": "deleteArchitectGrammarLanguageFilesDtmf(grammarId, languageCode)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\n\n// Clear the DTMF mode file for the grammar language if there is one\nDeleteArchitectGrammarLanguageFilesDtmfRequest.deleteArchitectGrammarLanguageFilesDtmf(grammarId: grammarId, languageCode: languageCode) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteArchitectGrammarLanguageFilesDtmfRequest.deleteArchitectGrammarLanguageFilesDtmf was successful\")\n    }\n}"
+  },
+  "deletearchitectgrammarlanguagefilesvoice": {
+    "operationId": "deletearchitectgrammarlanguagefilesvoice",
+    "functionName": "deleteArchitectGrammarLanguageFilesVoice",
+    "signature": "deleteArchitectGrammarLanguageFilesVoice(grammarId, languageCode)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\n\n// Clear the voice mode file for the grammar language if there is one\nDeleteArchitectGrammarLanguageFilesVoiceRequest.deleteArchitectGrammarLanguageFilesVoice(grammarId: grammarId, languageCode: languageCode) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteArchitectGrammarLanguageFilesVoiceRequest.deleteArchitectGrammarLanguageFilesVoice was successful\")\n    }\n}"
+  },
   "deletearchitectivr": {
     "operationId": "deletearchitectivr",
     "functionName": "deleteArchitectIvr",
@@ -2331,6 +2399,98 @@
     ],
     "return": "EmergencyGroupDivisionViewEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: String = \"\" // Sort order\nlet _id: [String] = [\"\"] // ID of the Emergency Groups to filter by.\nlet name: String = \"\" // Name of the Emergency Group to filter by.\nlet divisionId: [String] = [\"\"] // List of divisionIds on which to filter.\n\n// Get a pageable list of basic emergency group objects filterable by query parameters.\nGetArchitectEmergencygroupsDivisionviewsRequest.getArchitectEmergencygroupsDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectEmergencygroupsDivisionviewsRequest.getArchitectEmergencygroupsDivisionviews was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getarchitectgrammar": {
+    "operationId": "getarchitectgrammar",
+    "functionName": "getArchitectGrammar",
+    "signature": "getArchitectGrammar(grammarId, includeFileUrls)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "includeFileUrls",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "Grammar",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // grammar ID\nlet includeFileUrls: Bool = true // Include grammar language file URLs\n\n// Get a grammar\nGetArchitectGrammarRequest.getArchitectGrammar(grammarId: grammarId, includeFileUrls: includeFileUrls) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectGrammarRequest.getArchitectGrammar was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getarchitectgrammarlanguage": {
+    "operationId": "getarchitectgrammarlanguage",
+    "functionName": "getArchitectGrammarLanguage",
+    "signature": "getArchitectGrammarLanguage(grammarId, languageCode)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "GrammarLanguage",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\n\n// Get a grammar language.\nGetArchitectGrammarLanguageRequest.getArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectGrammarLanguageRequest.getArchitectGrammarLanguage was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getarchitectgrammars": {
+    "operationId": "getarchitectgrammars",
+    "functionName": "getArchitectGrammars",
+    "signature": "getArchitectGrammars(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, includeFileUrls)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortBy",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "_id",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "_description",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "nameOrDescription",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "includeFileUrls",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "GrammarListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortBy: GetArchitectGrammarsRequest.SortBy_getArchitectGrammars = GetArchitectGrammarsRequest.SortBy_getArchitectGrammars.enummember // Sort by\nlet sortOrder: GetArchitectGrammarsRequest.SortOrder_getArchitectGrammars = GetArchitectGrammarsRequest.SortOrder_getArchitectGrammars.enummember // Sort order\nlet _id: [String] = [\"\"] // ID\nlet name: String = \"\" // Name\nlet _description: String = \"\" // Description\nlet nameOrDescription: String = \"\" // Name or description\nlet includeFileUrls: Bool = true // Include grammar language file URLs\n\n// Get a pageable list of grammars, filtered by query parameters\nGetArchitectGrammarsRequest.getArchitectGrammars(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, includeFileUrls: includeFileUrls) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetArchitectGrammarsRequest.getArchitectGrammars was successful\")\n        dump(response)\n    }\n}"
   },
   "getarchitectivr": {
     "operationId": "getarchitectivr",
@@ -4033,6 +4193,49 @@
     "return": "FlowOutcomeDivisionViewEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet sortBy: String = \"\" // Sort by\nlet sortOrder: String = \"\" // Sort order\nlet _id: [String] = [\"\"] // ID\nlet name: String = \"\" // Name\nlet divisionId: [String] = [\"\"] // division ID(s)\n\n// Get a pageable list of basic flow outcome information objects filterable by query parameters.\nGetFlowsOutcomesDivisionviewsRequest.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetFlowsOutcomesDivisionviewsRequest.getFlowsOutcomesDivisionviews was successful\")\n        dump(response)\n    }\n}"
   },
+  "patcharchitectgrammar": {
+    "operationId": "patcharchitectgrammar",
+    "functionName": "patchArchitectGrammar",
+    "signature": "patchArchitectGrammar(grammarId, body)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "Grammar",
+        "required": "false"
+      }
+    ],
+    "return": "Grammar",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // grammar ID\nlet body: Grammar = new Grammar(...) // \n\n// Updates a grammar\nPatchArchitectGrammarRequest.patchArchitectGrammar(grammarId: grammarId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchArchitectGrammarRequest.patchArchitectGrammar was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patcharchitectgrammarlanguage": {
+    "operationId": "patcharchitectgrammarlanguage",
+    "functionName": "patchArchitectGrammarLanguage",
+    "signature": "patchArchitectGrammarLanguage(grammarId, languageCode, body)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "GrammarLanguageUpdate",
+        "required": "false"
+      }
+    ],
+    "return": "GrammarLanguage",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\nlet body: GrammarLanguageUpdate = new GrammarLanguageUpdate(...) // \n\n// Updates a grammar language\nPatchArchitectGrammarLanguageRequest.patchArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchArchitectGrammarLanguageRequest.patchArchitectGrammarLanguage was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchflowsinstancessettingsexecutiondata": {
     "operationId": "patchflowsinstancessettingsexecutiondata",
     "functionName": "patchFlowsInstancesSettingsExecutiondata",
@@ -4066,6 +4269,87 @@
     ],
     "return": "EmergencyGroup",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EmergencyGroup = new EmergencyGroup(...) // \n\n// Creates a new emergency group\nPostArchitectEmergencygroupsRequest.postArchitectEmergencygroups(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostArchitectEmergencygroupsRequest.postArchitectEmergencygroups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postarchitectgrammarlanguagefilesdtmf": {
+    "operationId": "postarchitectgrammarlanguagefilesdtmf",
+    "functionName": "postArchitectGrammarLanguageFilesDtmf",
+    "signature": "postArchitectGrammarLanguageFilesDtmf(grammarId, languageCode, body)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "GrammarFileUploadRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UploadUrlResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\nlet body: GrammarFileUploadRequest = new GrammarFileUploadRequest(...) // query\n\n// Creates a presigned URL for uploading a grammar DTMF mode file\nPostArchitectGrammarLanguageFilesDtmfRequest.postArchitectGrammarLanguageFilesDtmf(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostArchitectGrammarLanguageFilesDtmfRequest.postArchitectGrammarLanguageFilesDtmf was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postarchitectgrammarlanguagefilesvoice": {
+    "operationId": "postarchitectgrammarlanguagefilesvoice",
+    "functionName": "postArchitectGrammarLanguageFilesVoice",
+    "signature": "postArchitectGrammarLanguageFilesVoice(grammarId, languageCode, body)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "GrammarFileUploadRequest",
+        "required": "true"
+      }
+    ],
+    "return": "UploadUrlResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet languageCode: String = \"\" // Language\nlet body: GrammarFileUploadRequest = new GrammarFileUploadRequest(...) // query\n\n// Creates a presigned URL for uploading a grammar voice mode file\nPostArchitectGrammarLanguageFilesVoiceRequest.postArchitectGrammarLanguageFilesVoice(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostArchitectGrammarLanguageFilesVoiceRequest.postArchitectGrammarLanguageFilesVoice was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postarchitectgrammarlanguages": {
+    "operationId": "postarchitectgrammarlanguages",
+    "functionName": "postArchitectGrammarLanguages",
+    "signature": "postArchitectGrammarLanguages(grammarId, body)",
+    "parameters": [
+      {
+        "name": "grammarId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "GrammarLanguage",
+        "required": "true"
+      }
+    ],
+    "return": "GrammarLanguage",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet grammarId: String = \"\" // Grammar ID\nlet body: GrammarLanguage = new GrammarLanguage(...) // \n\n// Create a new language for a given grammar\nPostArchitectGrammarLanguagesRequest.postArchitectGrammarLanguages(grammarId: grammarId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostArchitectGrammarLanguagesRequest.postArchitectGrammarLanguages was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postarchitectgrammars": {
+    "operationId": "postarchitectgrammars",
+    "functionName": "postArchitectGrammars",
+    "signature": "postArchitectGrammars(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "Grammar",
+        "required": "true"
+      }
+    ],
+    "return": "Grammar",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: Grammar = new Grammar(...) // \n\n// Create a new grammar\nPostArchitectGrammarsRequest.postArchitectGrammars(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostArchitectGrammarsRequest.postArchitectGrammars was successful\")\n        dump(response)\n    }\n}"
   },
   "postarchitectivrs": {
     "operationId": "postarchitectivrs",
@@ -9294,6 +9578,25 @@
     ],
     "return": "String",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: ConversationSecureAttributes = new ConversationSecureAttributes(...) // Conversation Secure Attributes\n\n// Update the secure attributes on a conversation.\nPatchConversationSecureattributesRequest.patchConversationSecureattributes(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationSecureattributesRequest.patchConversationSecureattributes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationutilizationlabel": {
+    "operationId": "patchconversationutilizationlabel",
+    "functionName": "patchConversationUtilizationlabel",
+    "signature": "patchConversationUtilizationlabel(conversationId, body)",
+    "parameters": [
+      {
+        "name": "conversationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ConversationUtilizationLabelUpdate",
+        "required": "true"
+      }
+    ],
+    "return": "String",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // conversation ID\nlet body: ConversationUtilizationLabelUpdate = new ConversationUtilizationLabelUpdate(...) // Conversation Utilization Label\n\n// Update the utilization label on a conversation. When there is no value provided, the system default label is applied\nPatchConversationUtilizationlabelRequest.patchConversationUtilizationlabel(conversationId: conversationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationUtilizationlabelRequest.patchConversationUtilizationlabel was successful\")\n        dump(response)\n    }\n}"
   },
   "patchconversationsaftercallworkconversationidparticipantcommunication": {
     "operationId": "patchconversationsaftercallworkconversationidparticipantcommunication",
@@ -16835,6 +17138,39 @@
     "signature": "getIntegrationsCredentialsTypes()",
     "return": "CredentialTypeListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// List all credential types\nGetIntegrationsCredentialsTypesRequest.getIntegrationsCredentialsTypes() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsCredentialsTypesRequest.getIntegrationsCredentialsTypes was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechaudioconnector": {
+    "operationId": "getintegrationsspeechaudioconnector",
+    "functionName": "getIntegrationsSpeechAudioconnector",
+    "signature": "getIntegrationsSpeechAudioconnector(pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "AudioConnectorIntegrationEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\n\n// Get a list of Audio Connector integrations\nGetIntegrationsSpeechAudioconnectorRequest.getIntegrationsSpeechAudioconnector(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechAudioconnectorRequest.getIntegrationsSpeechAudioconnector was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getintegrationsspeechaudioconnectorintegrationid": {
+    "operationId": "getintegrationsspeechaudioconnectorintegrationid",
+    "functionName": "getIntegrationsSpeechAudioconnectorIntegrationId",
+    "signature": "getIntegrationsSpeechAudioconnectorIntegrationId(integrationId)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AudioConnectorIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // The integration ID\n\n// Get an Audio Connector integration\nGetIntegrationsSpeechAudioconnectorIntegrationIdRequest.getIntegrationsSpeechAudioconnectorIntegrationId(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetIntegrationsSpeechAudioconnectorIntegrationIdRequest.getIntegrationsSpeechAudioconnectorIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "getintegrationsspeechdialogflowagent": {
     "operationId": "getintegrationsspeechdialogflowagent",

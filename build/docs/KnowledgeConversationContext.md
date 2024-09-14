@@ -1,6 +1,5 @@
----
-title: KnowledgeConversationContext
----
+# KnowledgeConversationContext
+
 ## KnowledgeConversationContext
 
 ## Properties
@@ -11,6 +10,7 @@ title: KnowledgeConversationContext
 | **mediaType** | **String** | The media type of the conversation. | [optional] |
 | **queueId** | **String** | The unique identifier of the queue used to assign the interaction to the user. | [optional] |
 | **externalContactId** | **String** | The external contact identifier of the end-user participant. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

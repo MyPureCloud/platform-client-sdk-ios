@@ -1,6 +1,5 @@
----
-title: StatEventFlowTopicStatsNotification
----
+# StatEventFlowTopicStatsNotification
+
 ## StatEventFlowTopicStatsNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventFlowTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** |  | [optional] |
-| **data** | [**[StatEventFlowTopicIntervalMetrics]**](StatEventFlowTopicIntervalMetrics.html) |  | [optional] |
-{: class="table table-striped"}
+| **data** | [**[StatEventFlowTopicIntervalMetrics]**](StatEventFlowTopicIntervalMetrics) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

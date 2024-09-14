@@ -1,6 +1,5 @@
----
-title: RoomUpdateRequest
----
+# RoomUpdateRequest
+
 ## RoomUpdateRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: RoomUpdateRequest
 | **subject** | **String** | Room&#39;s subject | [optional] |
 | **pinnedMessageIds** | **[String]** | Room&#39;s pinned messages | [optional] |
 | **ownerIds** | **[String]** | Room&#39;s owners | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

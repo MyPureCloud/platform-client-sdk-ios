@@ -1,6 +1,5 @@
----
-title: CallTarget
----
+# CallTarget
+
 ## CallTarget
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallTarget
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of call | [optional] |
 | **value** | **String** | The id of the station or an E.164 formatted phone number | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CoachingAppointmentStatusRequest
----
+# CoachingAppointmentStatusRequest
+
 ## CoachingAppointmentStatusRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CoachingAppointmentStatusRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** | The status of the coaching appointment | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobSettings
----
+# KnowledgeImportJobSettings
+
 ## KnowledgeImportJobSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: KnowledgeImportJobSettings
 | **visible** | **Bool** | If specified, import will override the visibility of the imported documents. | [optional] |
 | **categoryId** | **String** | If specified, import will override the category of the imported documents. | [optional] |
 | **labelIds** | **[String]** | If specified, import will add this labels to the imported documents. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

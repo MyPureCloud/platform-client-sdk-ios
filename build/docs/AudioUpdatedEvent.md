@@ -1,6 +1,5 @@
----
-title: AudioUpdatedEvent
----
+# AudioUpdatedEvent
+
 ## AudioUpdatedEvent
 
 ## Properties
@@ -8,10 +7,11 @@ title: AudioUpdatedEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventId** | **String** | A unique (V4 UUID) eventId for this event | |
-| **eventDateTime** | [**Date**](Date.html) | A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **eventDateTime** | [**Date**](Date) | A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **conversationId** | **String** | A unique Id (V4 UUID) identifying this conversation | |
 | **communicationId** | **String** | A unique Id (V4 UUID) identifying this communication | |
-| **audioState** | [**AudioState**](AudioState.html) | The updated audioState for the target communication. | |
-{: class="table table-striped"}
+| **audioState** | [**AudioState**](AudioState) | The updated audioState for the target communication. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

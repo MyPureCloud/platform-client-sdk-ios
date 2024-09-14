@@ -1,6 +1,5 @@
----
-title: ConversationUserDisposition
----
+# ConversationUserDisposition
+
 ## ConversationUserDisposition
 
 ## Properties
@@ -9,7 +8,8 @@ title: ConversationUserDisposition
 |------------ | ------------- | ------------- | -------------|
 | **code** | **String** | User-defined wrap-up code for the conversation. | |
 | **notes** | **String** | Text entered by the user to describe the call or disposition. | [optional] |
-| **user** | [**AddressableEntityRef**](AddressableEntityRef.html) | The user that wrapped up the conversation. | |
-{: class="table table-striped"}
+| **user** | [**AddressableEntityRef**](AddressableEntityRef) | The user that wrapped up the conversation. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

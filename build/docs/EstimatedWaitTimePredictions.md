@@ -1,13 +1,13 @@
----
-title: EstimatedWaitTimePredictions
----
+# EstimatedWaitTimePredictions
+
 ## EstimatedWaitTimePredictions
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[PredictionResults]**](PredictionResults.html) | Returned upon a successful estimated wait time request. | |
-{: class="table table-striped"}
+| **results** | [**[PredictionResults]**](PredictionResults) | Returned upon a successful estimated wait time request. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

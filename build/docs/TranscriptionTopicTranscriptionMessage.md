@@ -1,20 +1,20 @@
----
-title: TranscriptionTopicTranscriptionMessage
----
+# TranscriptionTopicTranscriptionMessage
+
 ## TranscriptionTopicTranscriptionMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventTime** | [**Date**](Date.html) |  | [optional] |
+| **eventTime** | [**Date**](Date) |  | [optional] |
 | **organizationId** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **communicationId** | **String** |  | [optional] |
 | **sessionStartTimeMs** | **Int** |  | [optional] |
 | **transcriptionStartTimeMs** | **Int** |  | [optional] |
-| **transcripts** | [**[TranscriptionTopicTranscriptResult]**](TranscriptionTopicTranscriptResult.html) |  | [optional] |
-| **status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus.html) |  | [optional] |
-{: class="table table-striped"}
+| **transcripts** | [**[TranscriptionTopicTranscriptResult]**](TranscriptionTopicTranscriptResult) |  | [optional] |
+| **status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

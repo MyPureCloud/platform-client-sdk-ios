@@ -1,6 +1,5 @@
----
-title: ArchitectPromptResourceNotificationPromptResourceNotification
----
+# ArchitectPromptResourceNotificationPromptResourceNotification
+
 ## ArchitectPromptResourceNotificationPromptResourceNotification
 
 ## Properties
@@ -13,6 +12,7 @@ title: ArchitectPromptResourceNotificationPromptResourceNotification
 | **mediaUri** | **String** | Uri to the file for this prompt resource. | [optional] |
 | **uploadStatus** | **String** | Current upload status of the prompt resource (created, uploaded, transcoded, transcodeFailed). | [optional] |
 | **durationSeconds** | **Double** | Duration (in seconds) for the transcoded audio file. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

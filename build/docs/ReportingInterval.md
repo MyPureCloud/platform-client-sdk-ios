@@ -1,6 +1,5 @@
----
-title: ReportingInterval
----
+# ReportingInterval
+
 ## ReportingInterval
 
 ## Properties
@@ -9,6 +8,7 @@ title: ReportingInterval
 |------------ | ------------- | ------------- | -------------|
 | **intervalType** | **String** | The granularity of the reporting interval period | |
 | **intervalValue** | **Int** | The value of the reporting interval period for a given interval type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: BulkResponseResultExternalContactEntity
----
+# BulkResponseResultExternalContactEntity
+
 ## BulkResponseResultExternalContactEntity
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultExternalContactEntity
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **success** | **Bool** |  | [optional] |
-| **entity** | [**ExternalContact**](ExternalContact.html) |  | [optional] |
-| **error** | [**BulkErrorEntity**](BulkErrorEntity.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**ExternalContact**](ExternalContact) |  | [optional] |
+| **error** | [**BulkErrorEntity**](BulkErrorEntity) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

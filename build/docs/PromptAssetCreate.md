@@ -1,6 +1,5 @@
----
-title: PromptAssetCreate
----
+# PromptAssetCreate
+
 ## PromptAssetCreate
 
 ## Properties
@@ -17,9 +16,10 @@ title: PromptAssetCreate
 | **uploadStatus** | **String** | Audio upload status | [optional] |
 | **uploadUri** | **String** | Upload URI for the resource audio | [optional] |
 | **languageDefault** | **Bool** | Whether or not this resource locale is the default for the language | [optional] |
-| **tags** | [**[String:[String]]**](StringJSON.html) |  | [optional] |
+| **tags** | [**[String:[String]]**](StringJSON) |  | [optional] |
 | **durationSeconds** | **Double** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

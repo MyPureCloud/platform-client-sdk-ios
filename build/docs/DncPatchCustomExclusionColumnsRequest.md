@@ -1,6 +1,5 @@
----
-title: DncPatchCustomExclusionColumnsRequest
----
+# DncPatchCustomExclusionColumnsRequest
+
 ## DncPatchCustomExclusionColumnsRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: DncPatchCustomExclusionColumnsRequest
 | **action** | **String** | The action to perform | [optional] |
 | **customExclusionColumnEntries** | **[String]** | The list of custom exclusion column entries to Add to / Remove from the DNC list  | [optional] |
 | **expirationDateTime** | **String** | Expiration date for DNC customExclusionColumnEntries in yyyy-MM-ddTHH:mmZ format | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

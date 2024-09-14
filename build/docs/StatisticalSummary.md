@@ -1,6 +1,5 @@
----
-title: StatisticalSummary
----
+# StatisticalSummary
+
 ## StatisticalSummary
 
 ## Properties
@@ -20,6 +19,7 @@ title: StatisticalSummary
 | **target** | **Double** |  | [optional] |
 | **p95** | **Int64** |  | [optional] |
 | **p99** | **Int64** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

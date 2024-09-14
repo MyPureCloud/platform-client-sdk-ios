@@ -1,6 +1,5 @@
----
-title: PredictionResults
----
+# PredictionResults
+
 ## PredictionResults
 
 ## Properties
@@ -10,6 +9,7 @@ title: PredictionResults
 | **intent** | **String** | Indicates the media type scope of this estimated wait time | [optional] |
 | **formula** | **String** | Indicates the estimated wait time Formula | |
 | **estimatedWaitTimeSeconds** | **Int** | Estimated wait time in seconds | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

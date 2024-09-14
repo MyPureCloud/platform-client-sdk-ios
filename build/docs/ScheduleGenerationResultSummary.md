@@ -1,6 +1,5 @@
----
-title: ScheduleGenerationResultSummary
----
+# ScheduleGenerationResultSummary
+
 ## ScheduleGenerationResultSummary
 
 ## Properties
@@ -10,7 +9,8 @@ title: ScheduleGenerationResultSummary
 | **failed** | **Bool** | Whether the schedule generation run failed | [optional] |
 | **runId** | **String** | The ID of the schedule generation run. Reference this when requesting support | [optional] |
 | **messageCount** | **Int** | The number of schedule generation messages for this schedule generation run | [optional] |
-| **messageSeverityCounts** | [**[SchedulerMessageSeverityCount]**](SchedulerMessageSeverityCount.html) | The list of schedule generation message counts by severity for this schedule generation run | [optional] |
-{: class="table table-striped"}
+| **messageSeverityCounts** | [**[SchedulerMessageSeverityCount]**](SchedulerMessageSeverityCount) | The list of schedule generation message counts by severity for this schedule generation run | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TopicPhrase
----
+# TopicPhrase
+
 ## TopicPhrase
 
 ## Properties
@@ -10,6 +9,7 @@ title: TopicPhrase
 | **_id** | **String** |  | [optional] |
 | **text** | **String** |  | [optional] |
 | **utteranceCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

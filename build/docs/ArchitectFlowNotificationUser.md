@@ -1,6 +1,5 @@
----
-title: ArchitectFlowNotificationUser
----
+# ArchitectFlowNotificationUser
+
 ## ArchitectFlowNotificationUser
 The user who initiated the change.
 
@@ -10,7 +9,8 @@ The user who initiated the change.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the user. | [optional] |
 | **name** | **String** | The name of the user, if available. | [optional] |
-| **homeOrg** | [**ArchitectFlowNotificationHomeOrganization**](ArchitectFlowNotificationHomeOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **homeOrg** | [**ArchitectFlowNotificationHomeOrganization**](ArchitectFlowNotificationHomeOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

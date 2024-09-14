@@ -1,6 +1,5 @@
----
-title: GenericSAML
----
+# GenericSAML
+
 ## GenericSAML
 
 ## Properties
@@ -21,6 +20,7 @@ title: GenericSAML
 | **endpointCompression** | **Bool** |  | [optional] |
 | **nameIdentifierFormat** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

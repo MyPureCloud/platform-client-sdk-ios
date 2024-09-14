@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuIntradayNotification
----
+# WfmBuIntradayDataUpdateTopicBuIntradayNotification
+
 ## WfmBuIntradayDataUpdateTopicBuIntradayNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmBuIntradayDataUpdateTopicBuIntradayNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **operationId** | **String** |  | [optional] |
-| **result** | [**WfmBuIntradayDataUpdateTopicBuIntradayResult**](WfmBuIntradayDataUpdateTopicBuIntradayResult.html) |  | [optional] |
-{: class="table table-striped"}
+| **result** | [**WfmBuIntradayDataUpdateTopicBuIntradayResult**](WfmBuIntradayDataUpdateTopicBuIntradayResult) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

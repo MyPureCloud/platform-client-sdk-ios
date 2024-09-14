@@ -1,6 +1,5 @@
----
-title: AgentActivityChangedTopicOutOfOffice
----
+# AgentActivityChangedTopicOutOfOffice
+
 ## AgentActivityChangedTopicOutOfOffice
 
 ## Properties
@@ -8,7 +7,8 @@ title: AgentActivityChangedTopicOutOfOffice
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **active** | **Bool** |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **modifiedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,14 +1,14 @@
----
-title: HeadcountForecast
----
+# HeadcountForecast
+
 ## HeadcountForecast
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_required** | [**[HeadcountInterval]**](HeadcountInterval.html) | Headcount information with shrinkage | |
-| **requiredWithoutShrinkage** | [**[HeadcountInterval]**](HeadcountInterval.html) | Headcount information without shrinkage | |
-{: class="table table-striped"}
+| **_required** | [**[HeadcountInterval]**](HeadcountInterval) | Headcount information with shrinkage | |
+| **requiredWithoutShrinkage** | [**[HeadcountInterval]**](HeadcountInterval) | Headcount information without shrinkage | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DialerContactId
----
+# DialerContactId
+
 ## DialerContactId
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialerContactId
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **contactListId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

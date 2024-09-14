@@ -1,22 +1,18 @@
----
-title: WidgetsAPI
----
-## WidgetsAPI
+# WidgetsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteWidgetsDeployment**](WidgetsAPI.html#deleteWidgetsDeployment) | Delete a Widget deployment |
-| [**getWidgetsDeployment**](WidgetsAPI.html#getWidgetsDeployment) | Get a Widget deployment |
-| [**getWidgetsDeployments**](WidgetsAPI.html#getWidgetsDeployments) | List Widget deployments |
-| [**postWidgetsDeployments**](WidgetsAPI.html#postWidgetsDeployments) | Create Widget deployment |
-| [**putWidgetsDeployment**](WidgetsAPI.html#putWidgetsDeployment) | Update a Widget deployment |
+| [**deleteWidgetsDeployment**](WidgetsAPI#deleteWidgetsDeployment) | Delete a Widget deployment |
+| [**getWidgetsDeployment**](WidgetsAPI#getWidgetsDeployment) | Get a Widget deployment |
+| [**getWidgetsDeployments**](WidgetsAPI#getWidgetsDeployments) | List Widget deployments |
+| [**postWidgetsDeployments**](WidgetsAPI#postWidgetsDeployments) | Create Widget deployment |
+| [**putWidgetsDeployment**](WidgetsAPI#putWidgetsDeployment) | Update a Widget deployment |
 {: class="table-striped"}
 
-<a name="deleteWidgetsDeployment"></a>
 
-# **deleteWidgetsDeployment**
+## deleteWidgetsDeployment
 
 
 
@@ -59,20 +55,18 @@ WidgetsAPI.deleteWidgetsDeployment(deploymentId: deploymentId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| Widget Config Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getWidgetsDeployment"></a>
 
-# **getWidgetsDeployment**
-
+## getWidgetsDeployment
 
 
-> [WidgetDeployment](WidgetDeployment.html) getWidgetsDeployment(deploymentId)
+
+> [WidgetDeployment](WidgetDeployment) getWidgetsDeployment(deploymentId)
 
 Get a Widget deployment
 
@@ -112,20 +106,18 @@ WidgetsAPI.getWidgetsDeployment(deploymentId: deploymentId) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| Widget Config Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WidgetDeployment**](WidgetDeployment.html)
-
-<a name="getWidgetsDeployments"></a>
-
-# **getWidgetsDeployments**
+[**WidgetDeployment**](WidgetDeployment)
 
 
+## getWidgetsDeployments
 
-> [WidgetDeploymentEntityListing](WidgetDeploymentEntityListing.html) getWidgetsDeployments()
+
+
+> [WidgetDeploymentEntityListing](WidgetDeploymentEntityListing) getWidgetsDeployments()
 
 List Widget deployments
 
@@ -163,18 +155,16 @@ WidgetsAPI.getWidgetsDeployments() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing.html)
-
-<a name="postWidgetsDeployments"></a>
-
-# **postWidgetsDeployments**
+[**WidgetDeploymentEntityListing**](WidgetDeploymentEntityListing)
 
 
+## postWidgetsDeployments
 
-> [WidgetDeployment](WidgetDeployment.html) postWidgetsDeployments(body)
+
+
+> [WidgetDeployment](WidgetDeployment) postWidgetsDeployments(body)
 
 Create Widget deployment
 
@@ -213,21 +203,19 @@ WidgetsAPI.postWidgetsDeployments(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WidgetDeployment**](WidgetDeployment.html)| Deployment | |
-{: class="table-striped"}
+| **body** | [**WidgetDeployment**](WidgetDeployment)| Deployment | |
 
 
 ### Return type
 
-[**WidgetDeployment**](WidgetDeployment.html)
-
-<a name="putWidgetsDeployment"></a>
-
-# **putWidgetsDeployment**
+[**WidgetDeployment**](WidgetDeployment)
 
 
+## putWidgetsDeployment
 
-> [WidgetDeployment](WidgetDeployment.html) putWidgetsDeployment(deploymentId, body)
+
+
+> [WidgetDeployment](WidgetDeployment) putWidgetsDeployment(deploymentId, body)
 
 Update a Widget deployment
 
@@ -268,11 +256,12 @@ WidgetsAPI.putWidgetsDeployment(deploymentId: deploymentId, body: body) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| Widget Config Id | |
-| **body** | [**WidgetDeployment**](WidgetDeployment.html)| Deployment | |
-{: class="table-striped"}
+| **body** | [**WidgetDeployment**](WidgetDeployment)| Deployment | |
 
 
 ### Return type
 
-[**WidgetDeployment**](WidgetDeployment.html)
+[**WidgetDeployment**](WidgetDeployment)
 
+
+_PureCloudPlatformClientV2@151.1.0_

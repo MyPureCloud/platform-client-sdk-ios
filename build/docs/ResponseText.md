@@ -1,6 +1,5 @@
----
-title: ResponseText
----
+# ResponseText
+
 ## ResponseText
 Contains information about the text associated with a response.
 
@@ -11,6 +10,7 @@ Contains information about the text associated with a response.
 | **content** | **String** | Response text content. | |
 | **contentType** | **String** | Response text content type. | [optional] |
 | **type** | **String** | Response text type. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: UnreadFields
----
+# UnreadFields
+
 ## UnreadFields
 
 ## Properties
@@ -8,6 +7,7 @@ title: UnreadFields
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **Bool** | The new unread state of the alert | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

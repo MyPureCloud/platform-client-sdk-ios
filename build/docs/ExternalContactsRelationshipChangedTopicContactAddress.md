@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicContactAddress
----
+# ExternalContactsRelationshipChangedTopicContactAddress
+
 ## ExternalContactsRelationshipChangedTopicContactAddress
 
 ## Properties
@@ -13,6 +12,7 @@ title: ExternalContactsRelationshipChangedTopicContactAddress
 | **state** | **String** |  | [optional] |
 | **postalCode** | **String** |  | [optional] |
 | **countryCode** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes
----
+# OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes
+
 ## OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes
 
 ## Properties
@@ -12,6 +11,7 @@ title: OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes
 | **contactEmailAddress** | **String** |  | [optional] |
 | **replyToAddress** | **String** |  | [optional] |
 | **contactEmailColumnName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

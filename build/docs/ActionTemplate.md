@@ -1,6 +1,5 @@
----
-title: ActionTemplate
----
+# ActionTemplate
+
 ## ActionTemplate
 
 ## Properties
@@ -13,10 +12,11 @@ title: ActionTemplate
 | **version** | **Int** | The version of the action template. | [optional] |
 | **mediaType** | **String** | Media type of action described by the action template. | |
 | **state** | **String** | Whether the action template is currently active, inactive or deleted. | |
-| **contentOffer** | [**ContentOffer**](ContentOffer.html) | Properties used to configure an action of type content offer | [optional] |
+| **contentOffer** | [**ContentOffer**](ContentOffer) | Properties used to configure an action of type content offer | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-| **createdDate** | [**Date**](Date.html) | Date when action template was created in ISO-8601 format. | [optional] |
-| **modifiedDate** | [**Date**](Date.html) | Date when action template was last modified in ISO-8601 format. | [optional] |
-{: class="table table-striped"}
+| **createdDate** | [**Date**](Date) | Date when action template was created in ISO-8601 format. | [optional] |
+| **modifiedDate** | [**Date**](Date) | Date when action template was last modified in ISO-8601 format. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

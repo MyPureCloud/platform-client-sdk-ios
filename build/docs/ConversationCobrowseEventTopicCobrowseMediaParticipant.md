@@ -1,6 +1,5 @@
----
-title: ConversationCobrowseEventTopicCobrowseMediaParticipant
----
+# ConversationCobrowseEventTopicCobrowseMediaParticipant
+
 ## ConversationCobrowseEventTopicCobrowseMediaParticipant
 
 ## Properties
@@ -10,10 +9,10 @@ title: ConversationCobrowseEventTopicCobrowseMediaParticipant
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **endTime** | [**Date**](Date.html) |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
+| **startTime** | [**Date**](Date) |  | [optional] |
+| **connectedTime** | [**Date**](Date) |  | [optional] |
+| **endTime** | [**Date**](Date) |  | [optional] |
+| **startHoldTime** | [**Date**](Date) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **initialState** | **String** |  | [optional] |
@@ -22,35 +21,36 @@ title: ConversationCobrowseEventTopicCobrowseMediaParticipant
 | **held** | **Bool** |  | [optional] |
 | **wrapupRequired** | **Bool** |  | [optional] |
 | **wrapupPrompt** | **String** |  | [optional] |
-| **user** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **queue** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **team** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
+| **user** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **queue** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **team** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
-| **errorInfo** | [**ConversationCobrowseEventTopicErrorBody**](ConversationCobrowseEventTopicErrorBody.html) |  | [optional] |
-| **script** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
+| **errorInfo** | [**ConversationCobrowseEventTopicErrorBody**](ConversationCobrowseEventTopicErrorBody) |  | [optional] |
+| **script** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference) |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **provider** | **String** |  | [optional] |
-| **externalContact** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **externalOrganization** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference.html) |  | [optional] |
-| **wrapup** | [**ConversationCobrowseEventTopicWrapup**](ConversationCobrowseEventTopicWrapup.html) |  | [optional] |
-| **conversationRoutingData** | [**ConversationCobrowseEventTopicConversationRoutingData**](ConversationCobrowseEventTopicConversationRoutingData.html) |  | [optional] |
+| **externalContact** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **externalOrganization** | [**ConversationCobrowseEventTopicUriReference**](ConversationCobrowseEventTopicUriReference) |  | [optional] |
+| **wrapup** | [**ConversationCobrowseEventTopicWrapup**](ConversationCobrowseEventTopicWrapup) |  | [optional] |
+| **conversationRoutingData** | [**ConversationCobrowseEventTopicConversationRoutingData**](ConversationCobrowseEventTopicConversationRoutingData) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
-| **journeyContext** | [**ConversationCobrowseEventTopicJourneyContext**](ConversationCobrowseEventTopicJourneyContext.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **resumeTime** | [**Date**](Date.html) |  | [optional] |
-| **parkTime** | [**Date**](Date.html) |  | [optional] |
+| **journeyContext** | [**ConversationCobrowseEventTopicJourneyContext**](ConversationCobrowseEventTopicJourneyContext) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) |  | [optional] |
+| **endAcwTime** | [**Date**](Date) |  | [optional] |
+| **resumeTime** | [**Date**](Date) |  | [optional] |
+| **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
-| **queueMediaSettings** | [**ConversationCobrowseEventTopicQueueMediaSettings**](ConversationCobrowseEventTopicQueueMediaSettings.html) |  | [optional] |
+| **queueMediaSettings** | [**ConversationCobrowseEventTopicQueueMediaSettings**](ConversationCobrowseEventTopicQueueMediaSettings) |  | [optional] |
 | **cobrowseSessionId** | **String** |  | [optional] |
 | **cobrowseRole** | **String** |  | [optional] |
 | **viewerUrl** | **String** |  | [optional] |
-| **providerEventTime** | [**Date**](Date.html) |  | [optional] |
+| **providerEventTime** | [**Date**](Date) |  | [optional] |
 | **controlling** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

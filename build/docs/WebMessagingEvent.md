@@ -1,6 +1,5 @@
----
-title: WebMessagingEvent
----
+# WebMessagingEvent
+
 ## WebMessagingEvent
 Message event element.  Examples include: system messages, typing indicators, cobrowse offerings.
 
@@ -9,8 +8,9 @@ Message event element.  Examples include: system messages, typing indicators, co
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventType** | **String** | Type of this event element | |
-| **coBrowse** | [**WebMessagingEventCoBrowse**](WebMessagingEventCoBrowse.html) | Cobrowse event. | [optional] |
-| **presence** | [**WebMessagingEventPresence**](WebMessagingEventPresence.html) | Presence event. | [optional] |
-{: class="table table-striped"}
+| **coBrowse** | [**WebMessagingEventCoBrowse**](WebMessagingEventCoBrowse) | Cobrowse event. | [optional] |
+| **presence** | [**WebMessagingEventPresence**](WebMessagingEventPresence) | Presence event. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

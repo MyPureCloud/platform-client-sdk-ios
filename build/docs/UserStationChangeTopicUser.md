@@ -1,6 +1,5 @@
----
-title: UserStationChangeTopicUser
----
+# UserStationChangeTopicUser
+
 ## UserStationChangeTopicUser
 
 ## Properties
@@ -8,6 +7,7 @@ title: UserStationChangeTopicUser
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

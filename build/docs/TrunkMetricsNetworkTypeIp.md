@@ -1,6 +1,5 @@
----
-title: TrunkMetricsNetworkTypeIp
----
+# TrunkMetricsNetworkTypeIp
+
 ## TrunkMetricsNetworkTypeIp
 
 ## Properties
@@ -8,7 +7,8 @@ title: TrunkMetricsNetworkTypeIp
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **address** | **String** | Assigned IP Address for the interface | [optional] |
-| **errorInfo** | [**TrunkErrorInfo**](TrunkErrorInfo.html) | Information about the error. | [optional] |
-{: class="table table-striped"}
+| **errorInfo** | [**TrunkErrorInfo**](TrunkErrorInfo) | Information about the error. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

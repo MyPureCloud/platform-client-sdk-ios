@@ -1,6 +1,5 @@
----
-title: UpdateManagementUnitRequest
----
+# UpdateManagementUnitRequest
+
 ## UpdateManagementUnitRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: UpdateManagementUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The new name of the management unit | [optional] |
 | **divisionId** | **String** | The new division id for the management unit | [optional] |
-| **settings** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest.html) | Updated settings for the management unit | [optional] |
-{: class="table table-striped"}
+| **settings** | [**ManagementUnitSettingsRequest**](ManagementUnitSettingsRequest) | Updated settings for the management unit | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

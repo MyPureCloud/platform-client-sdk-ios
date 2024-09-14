@@ -1,6 +1,5 @@
----
-title: AnalyticsSession
----
+# AnalyticsSession
+
 ## AnalyticsSession
 
 ## Properties
@@ -22,7 +21,7 @@ title: AnalyticsSession
 | **bargedParticipantId** | **String** | The participantId being barged in on (if someone (e.g. an agent) is being barged in on, this would correspond to one of the other participantIds present in the conversation) | [optional] |
 | **bcc** | **[String]** | Blind carbon copy email address(es) | [optional] |
 | **callbackNumbers** | **[String]** | Callback phone number(s) | [optional] |
-| **callbackScheduledTime** | [**Date**](Date.html) | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **callbackScheduledTime** | [**Date**](Date) | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **callbackUserName** | **String** | The name of the user requesting a call back | [optional] |
 | **cc** | **[String]** | Carbon copy email address(es) | [optional] |
 | **cleared** | **Bool** | Flag that indicates that the conversation has been cleared by the customer | [optional] |
@@ -30,10 +29,10 @@ title: AnalyticsSession
 | **cobrowseRole** | **String** | Describes side of the cobrowse (sharer or viewer) | [optional] |
 | **cobrowseRoomId** | **String** | A unique identifier for a PureCloud cobrowse room | [optional] |
 | **deliveryStatus** | **String** | The email or SMS delivery status | [optional] |
-| **deliveryStatusChangeDate** | [**Date**](Date.html) | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **deliveryStatusChangeDate** | [**Date**](Date) | Date and time of the most recent delivery status change. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **destinationAddresses** | **[String]** | Destination address(es) of transfers or consults | [optional] |
-| **detectedSpeechEnd** | [**Date**](Date.html) | Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **detectedSpeechStart** | [**Date**](Date.html) | Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **detectedSpeechEnd** | [**Date**](Date) | Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **detectedSpeechStart** | [**Date**](Date) | Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **direction** | **String** | The direction of the communication | [optional] |
 | **dispositionAnalyzer** | **String** | (Dialer) Analyzer (for example speech.person) | [optional] |
 | **dispositionName** | **String** | (Dialer) Result of the analysis (for example disposition.classification.callable.machine) | [optional] |
@@ -84,12 +83,13 @@ title: AnalyticsSession
 | **videoAddressSelf** | **String** | Direct Video address | [optional] |
 | **videoRoomId** | **String** | A unique identifier for a PureCloud video room | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
-| **agentGroups** | [**[AnalyticsAgentGroup]**](AnalyticsAgentGroup.html) | Conditional group routing agent groups | [optional] |
-| **proposedAgents** | [**[AnalyticsProposedAgent]**](AnalyticsProposedAgent.html) | Proposed agents | [optional] |
-| **mediaEndpointStats** | [**[AnalyticsMediaEndpointStat]**](AnalyticsMediaEndpointStat.html) | MediaEndpointStats associated with this session | [optional] |
-| **flow** | [**AnalyticsFlow**](AnalyticsFlow.html) | IVR flow execution associated with this session | [optional] |
-| **metrics** | [**[AnalyticsSessionMetric]**](AnalyticsSessionMetric.html) | List of metrics for this session | [optional] |
-| **segments** | [**[AnalyticsConversationSegment]**](AnalyticsConversationSegment.html) | List of segments for this session | [optional] |
-{: class="table table-striped"}
+| **agentGroups** | [**[AnalyticsAgentGroup]**](AnalyticsAgentGroup) | Conditional group routing agent groups | [optional] |
+| **proposedAgents** | [**[AnalyticsProposedAgent]**](AnalyticsProposedAgent) | Proposed agents | [optional] |
+| **mediaEndpointStats** | [**[AnalyticsMediaEndpointStat]**](AnalyticsMediaEndpointStat) | MediaEndpointStats associated with this session | [optional] |
+| **flow** | [**AnalyticsFlow**](AnalyticsFlow) | IVR flow execution associated with this session | [optional] |
+| **metrics** | [**[AnalyticsSessionMetric]**](AnalyticsSessionMetric) | List of metrics for this session | [optional] |
+| **segments** | [**[AnalyticsConversationSegment]**](AnalyticsConversationSegment) | List of segments for this session | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

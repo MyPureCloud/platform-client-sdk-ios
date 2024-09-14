@@ -1,6 +1,5 @@
----
-title: ActionMapScheduleGroup
----
+# ActionMapScheduleGroup
+
 ## ActionMapScheduleGroup
 
 ## Properties
@@ -8,6 +7,7 @@ title: ActionMapScheduleGroup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the action maps&#39;s associated schedule group. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

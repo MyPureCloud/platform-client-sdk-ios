@@ -1,25 +1,21 @@
----
-title: SuggestAPI
----
-## SuggestAPI
+# SuggestAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getSearch**](SuggestAPI.html#getSearch) | Search using the q64 value returned from a previous search. |
-| [**getSearchSuggest**](SuggestAPI.html#getSearchSuggest) | Suggest resources using the q64 value returned from a previous suggest query. |
-| [**postSearch**](SuggestAPI.html#postSearch) | Search resources. |
-| [**postSearchSuggest**](SuggestAPI.html#postSearchSuggest) | Suggest resources. |
+| [**getSearch**](SuggestAPI#getSearch) | Search using the q64 value returned from a previous search. |
+| [**getSearchSuggest**](SuggestAPI#getSearchSuggest) | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**postSearch**](SuggestAPI#postSearch) | Search resources. |
+| [**postSearchSuggest**](SuggestAPI#postSearchSuggest) | Suggest resources. |
 {: class="table-striped"}
 
-<a name="getSearch"></a>
 
-# **getSearch**
-
+## getSearch
 
 
-> [JsonNodeSearchResponse](JsonNodeSearchResponse.html) getSearch(q64, expand, profile)
+
+> [JsonNodeSearchResponse](JsonNodeSearchResponse) getSearch(q64, expand, profile)
 
 Search using the q64 value returned from a previous search.
 
@@ -60,22 +56,20 @@ SuggestAPI.getSearch(q64: q64, expand: expand, profile: profile) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), conversations ("conversations"), transcription ("transcription"), images ("images"), addressverificationdetails ("addressVerificationDetails") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), conversations ("conversations"), transcription ("transcription"), images ("images"), addressverificationdetails ("addressVerificationDetails") |
 | **profile** | **Bool**| profile | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
-
-<a name="getSearchSuggest"></a>
-
-# **getSearchSuggest**
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
+## getSearchSuggest
 
-> [JsonNodeSearchResponse](JsonNodeSearchResponse.html) getSearchSuggest(q64, expand, profile)
+
+
+> [JsonNodeSearchResponse](JsonNodeSearchResponse) getSearchSuggest(q64, expand, profile)
 
 Suggest resources using the q64 value returned from a previous suggest query.
 
@@ -116,22 +110,20 @@ SuggestAPI.getSearchSuggest(q64: q64, expand: expand, profile: profile) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), conversations ("conversations"), transcription ("transcription"), images ("images"), addressverificationdetails ("addressVerificationDetails") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), calleruserRoutingstatus ("callerUser.routingStatus"), calleruserPrimarypresence ("callerUser.primaryPresence"), calleruserConversationsummary ("callerUser.conversationSummary"), calleruserOutofoffice ("callerUser.outOfOffice"), calleruserGeolocation ("callerUser.geolocation"), conversations ("conversations"), transcription ("transcription"), images ("images"), addressverificationdetails ("addressVerificationDetails") |
 | **profile** | **Bool**| profile | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
-
-<a name="postSearch"></a>
-
-# **postSearch**
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
+## postSearch
 
-> [JsonNodeSearchResponse](JsonNodeSearchResponse.html) postSearch(body, profile)
+
+
+> [JsonNodeSearchResponse](JsonNodeSearchResponse) postSearch(body, profile)
 
 Search resources.
 
@@ -170,22 +162,20 @@ SuggestAPI.postSearch(body: body, profile: profile) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SearchRequest**](SearchRequest.html)| Search request options | |
+| **body** | [**SearchRequest**](SearchRequest)| Search request options | |
 | **profile** | **Bool**| profile | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
-
-<a name="postSearchSuggest"></a>
-
-# **postSearchSuggest**
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
 
+## postSearchSuggest
 
-> [JsonNodeSearchResponse](JsonNodeSearchResponse.html) postSearchSuggest(body, profile)
+
+
+> [JsonNodeSearchResponse](JsonNodeSearchResponse) postSearchSuggest(body, profile)
 
 Suggest resources.
 
@@ -224,12 +214,13 @@ SuggestAPI.postSearchSuggest(body: body, profile: profile) { (response, error) i
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SuggestSearchRequest**](SuggestSearchRequest.html)| Search request options | |
+| **body** | [**SuggestSearchRequest**](SuggestSearchRequest)| Search request options | |
 | **profile** | **Bool**| profile | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JsonNodeSearchResponse**](JsonNodeSearchResponse.html)
+[**JsonNodeSearchResponse**](JsonNodeSearchResponse)
 
+
+_PureCloudPlatformClientV2@151.1.0_

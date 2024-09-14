@@ -1,6 +1,5 @@
----
-title: V2FlowExecutionDataFlowidTopicJourneyActionMap
----
+# V2FlowExecutionDataFlowidTopicJourneyActionMap
+
 ## V2FlowExecutionDataFlowidTopicJourneyActionMap
 This contains contextual information about an invoking entity.
 
@@ -10,6 +9,7 @@ This contains contextual information about an invoking entity.
 |------------ | ------------- | ------------- | -------------|
 | **actionMapId** | **String** | The identifier of the journey action map that invoked this flow. | [optional] |
 | **actionId** | **String** | The identifier of the specific action map instance that invoked this flow. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

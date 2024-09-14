@@ -1,6 +1,5 @@
----
-title: GDPRSubject
----
+# GDPRSubject
+
 ## GDPRSubject
 
 ## Properties
@@ -10,13 +9,14 @@ title: GDPRSubject
 | **name** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
 | **externalContactId** | **String** |  | [optional] |
-| **dialerContactId** | [**DialerContactId**](DialerContactId.html) |  | [optional] |
-| **journeyCustomer** | [**GDPRJourneyCustomer**](GDPRJourneyCustomer.html) |  | [optional] |
-| **socialHandle** | [**SocialHandle**](SocialHandle.html) |  | [optional] |
+| **dialerContactId** | [**DialerContactId**](DialerContactId) |  | [optional] |
+| **journeyCustomer** | [**GDPRJourneyCustomer**](GDPRJourneyCustomer) |  | [optional] |
+| **socialHandle** | [**SocialHandle**](SocialHandle) |  | [optional] |
 | **externalId** | **String** |  | [optional] |
 | **addresses** | **[String]** |  | [optional] |
 | **phoneNumbers** | **[String]** |  | [optional] |
 | **emailAddresses** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

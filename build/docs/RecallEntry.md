@@ -1,6 +1,5 @@
----
-title: RecallEntry
----
+# RecallEntry
+
 ## RecallEntry
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecallEntry
 |------------ | ------------- | ------------- | -------------|
 | **nbrAttempts** | **Int** |  | [optional] |
 | **minutesBetweenAttempts** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

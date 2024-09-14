@@ -1,6 +1,5 @@
----
-title: ContentCard
----
+# ContentCard
+
 ## ContentCard
 Card content object.
 
@@ -12,8 +11,9 @@ Card content object.
 | **_description** | **String** | Text to show in the description. | [optional] |
 | **image** | **String** | URL of an image. | [optional] |
 | **video** | **String** | URL of a video. | [optional] |
-| **defaultAction** | [**ContentCardAction**](ContentCardAction.html) | The default button action. | [optional] |
-| **actions** | [**[ContentCardAction]**](ContentCardAction.html) | An array of action objects. | |
-{: class="table table-striped"}
+| **defaultAction** | [**ContentCardAction**](ContentCardAction) | The default button action. | [optional] |
+| **actions** | [**[ContentCardAction]**](ContentCardAction) | An array of action objects. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

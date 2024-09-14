@@ -1,6 +1,5 @@
----
-title: AssignUsers
----
+# AssignUsers
+
 ## AssignUsers
 
 ## Properties
@@ -9,6 +8,7 @@ title: AssignUsers
 |------------ | ------------- | ------------- | -------------|
 | **membersToAssign** | **[String]** | List of user ids to assign to a performance profile | |
 | **membersToRemove** | **[String]** | List of user ids to remove from a performance profile | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

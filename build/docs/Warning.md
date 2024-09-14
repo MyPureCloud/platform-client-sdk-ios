@@ -1,6 +1,5 @@
----
-title: Warning
----
+# Warning
+
 ## Warning
 
 ## Properties
@@ -10,6 +9,7 @@ title: Warning
 | **value** | **Int** | The value for the warning configuration. | [optional] |
 | **rangeType** | **String** | The range type for the warning configuration. | [optional] |
 | **color** | **String** | The color for the warning configuration in RGB hexadecimal format (for example \&quot;#FF0000\&quot; represents red). | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

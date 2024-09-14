@@ -1,6 +1,5 @@
----
-title: TagQueryRequest
----
+# TagQueryRequest
+
 ## TagQueryRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: TagQueryRequest
 | **query** | **String** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

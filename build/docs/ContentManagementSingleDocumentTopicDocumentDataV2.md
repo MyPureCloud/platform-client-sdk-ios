@@ -1,6 +1,5 @@
----
-title: ContentManagementSingleDocumentTopicDocumentDataV2
----
+# ContentManagementSingleDocumentTopicDocumentDataV2
+
 ## ContentManagementSingleDocumentTopicDocumentDataV2
 
 ## Properties
@@ -9,18 +8,19 @@ title: ContentManagementSingleDocumentTopicDocumentDataV2
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-| **workspace** | [**ContentManagementSingleDocumentTopicWorkspaceData**](ContentManagementSingleDocumentTopicWorkspaceData.html) |  | [optional] |
-| **createdBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData.html) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
+| **workspace** | [**ContentManagementSingleDocumentTopicWorkspaceData**](ContentManagementSingleDocumentTopicWorkspaceData) |  | [optional] |
+| **createdBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int** |  | [optional] |
 | **filename** | **String** |  | [optional] |
 | **changeNumber** | **Int** |  | [optional] |
-| **dateUploaded** | [**Date**](Date.html) |  | [optional] |
-| **uploadedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData.html) |  | [optional] |
-| **lockInfo** | [**ContentManagementSingleDocumentTopicLockData**](ContentManagementSingleDocumentTopicLockData.html) |  | [optional] |
+| **dateUploaded** | [**Date**](Date) |  | [optional] |
+| **uploadedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
+| **lockInfo** | [**ContentManagementSingleDocumentTopicLockData**](ContentManagementSingleDocumentTopicLockData) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

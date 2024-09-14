@@ -1,6 +1,5 @@
----
-title: StatEventFlowOutcomeTopicIntervalMetrics
----
+# StatEventFlowOutcomeTopicIntervalMetrics
+
 ## StatEventFlowOutcomeTopicIntervalMetrics
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventFlowOutcomeTopicIntervalMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **interval** | **String** |  | [optional] |
-| **metrics** | [**[StatEventFlowOutcomeTopicMetricStats]**](StatEventFlowOutcomeTopicMetricStats.html) |  | [optional] |
-{: class="table table-striped"}
+| **metrics** | [**[StatEventFlowOutcomeTopicMetricStats]**](StatEventFlowOutcomeTopicMetricStats) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeEventsNotification
----
+# JourneyOutcomeEventsNotificationOutcomeEventsNotification
+
 ## JourneyOutcomeEventsNotificationOutcomeEventsNotification
 
 ## Properties
@@ -9,14 +8,15 @@ title: JourneyOutcomeEventsNotificationOutcomeEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **correlationId** | **String** |  | [optional] |
-| **externalContact** | [**JourneyOutcomeEventsNotificationExternalContact**](JourneyOutcomeEventsNotificationExternalContact.html) |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
+| **externalContact** | [**JourneyOutcomeEventsNotificationExternalContact**](JourneyOutcomeEventsNotificationExternalContact) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
-| **session** | [**JourneyOutcomeEventsNotificationSession**](JourneyOutcomeEventsNotificationSession.html) |  | [optional] |
+| **session** | [**JourneyOutcomeEventsNotificationSession**](JourneyOutcomeEventsNotificationSession) |  | [optional] |
 | **eventType** | **String** |  | [optional] |
-| **outcomeAchievedEvent** | [**JourneyOutcomeEventsNotificationOutcomeAchievedMessage**](JourneyOutcomeEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |
-| **outcomeAttributionEventMessage** | [**JourneyOutcomeEventsNotificationOutcomeAttributionMessage**](JourneyOutcomeEventsNotificationOutcomeAttributionMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **outcomeAchievedEvent** | [**JourneyOutcomeEventsNotificationOutcomeAchievedMessage**](JourneyOutcomeEventsNotificationOutcomeAchievedMessage) |  | [optional] |
+| **outcomeAttributionEventMessage** | [**JourneyOutcomeEventsNotificationOutcomeAttributionMessage**](JourneyOutcomeEventsNotificationOutcomeAttributionMessage) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

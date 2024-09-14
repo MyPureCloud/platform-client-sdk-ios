@@ -1,6 +1,5 @@
----
-title: PagingSpec
----
+# PagingSpec
+
 ## PagingSpec
 
 ## Properties
@@ -9,6 +8,7 @@ title: PagingSpec
 |------------ | ------------- | ------------- | -------------|
 | **pageSize** | **Int** | How many results per page | |
 | **pageNumber** | **Int** | How many pages in | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

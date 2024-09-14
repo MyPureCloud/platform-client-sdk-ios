@@ -1,6 +1,5 @@
----
-title: OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent
----
+# OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent
+
 ## OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent
 
 ## Properties
@@ -9,7 +8,7 @@ title: OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampai
 |------------ | ------------- | ------------- | -------------|
 | **eventTime** | **Int** |  | [optional] |
 | **outboundCampaignType** | **String** |  | [optional] |
-| **emailAttributes** | [**OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes**](OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes.html) |  | [optional] |
+| **emailAttributes** | [**OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes**](OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes) |  | [optional] |
 | **wrapupCode** | **String** |  | [optional] |
 | **outboundCampaignId** | **String** |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
@@ -17,6 +16,7 @@ title: OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampai
 | **outboundContactListId** | **String** |  | [optional] |
 | **outboundContactId** | **String** |  | [optional] |
 | **isCampaignAlwaysRunning** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

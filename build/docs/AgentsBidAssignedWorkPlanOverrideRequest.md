@@ -1,13 +1,13 @@
----
-title: AgentsBidAssignedWorkPlanOverrideRequest
----
+# AgentsBidAssignedWorkPlanOverrideRequest
+
 ## AgentsBidAssignedWorkPlanOverrideRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agentWorkPlanOverrides** | [**[AgentBidWorkPlanOverrideRequest]**](AgentBidWorkPlanOverrideRequest.html) | The list of agent work plan overrides | |
-{: class="table table-striped"}
+| **agentWorkPlanOverrides** | [**[AgentBidWorkPlanOverrideRequest]**](AgentBidWorkPlanOverrideRequest) | The list of agent work plan overrides | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

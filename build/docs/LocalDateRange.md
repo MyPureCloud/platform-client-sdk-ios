@@ -1,14 +1,14 @@
----
-title: LocalDateRange
----
+# LocalDateRange
+
 ## LocalDateRange
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **startDate** | [**Date**](Date.html) | The inclusive start of a date range in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **endDate** | [**Date**](Date.html) | The inclusive end of a date range in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-{: class="table table-striped"}
+| **startDate** | [**Date**](Date) | The inclusive start of a date range in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **endDate** | [**Date**](Date) | The inclusive end of a date range in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

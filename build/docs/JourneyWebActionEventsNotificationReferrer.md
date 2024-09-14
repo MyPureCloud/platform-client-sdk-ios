@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationReferrer
----
+# JourneyWebActionEventsNotificationReferrer
+
 ## JourneyWebActionEventsNotificationReferrer
 
 ## Properties
@@ -16,6 +15,7 @@ title: JourneyWebActionEventsNotificationReferrer
 | **fragment** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **medium** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: QueryRequest
----
+# QueryRequest
+
 ## QueryRequest
 
 ## Properties
@@ -11,10 +10,11 @@ title: QueryRequest
 | **pageNumber** | **Int** |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **facetNameRequests** | **[String]** |  | [optional] |
-| **sort** | [**[SortItem]**](SortItem.html) |  | [optional] |
-| **filters** | [**[ContentFilterItem]**](ContentFilterItem.html) |  | [optional] |
-| **attributeFilters** | [**[AttributeFilterItem]**](AttributeFilterItem.html) |  | [optional] |
+| **sort** | [**[SortItem]**](SortItem) |  | [optional] |
+| **filters** | [**[ContentFilterItem]**](ContentFilterItem) |  | [optional] |
+| **attributeFilters** | [**[AttributeFilterItem]**](AttributeFilterItem) |  | [optional] |
 | **includeShares** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

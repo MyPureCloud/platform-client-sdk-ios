@@ -1,6 +1,5 @@
----
-title: Chat
----
+# Chat
+
 ## Chat
 
 ## Properties
@@ -8,6 +7,7 @@ title: Chat
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **jabberId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

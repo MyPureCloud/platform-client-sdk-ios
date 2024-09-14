@@ -1,6 +1,5 @@
----
-title: QueueObservationDataContainer
----
+# QueueObservationDataContainer
+
 ## QueueObservationDataContainer
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueueObservationDataContainer
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** | A mapping from dimension to value | [optional] |
-| **data** | [**[ObservationMetricData]**](ObservationMetricData.html) |  | [optional] |
-{: class="table table-striped"}
+| **data** | [**[ObservationMetricData]**](ObservationMetricData) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

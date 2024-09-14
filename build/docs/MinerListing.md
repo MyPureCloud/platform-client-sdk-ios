@@ -1,16 +1,16 @@
----
-title: MinerListing
----
+# MinerListing
+
 ## MinerListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Miner]**](Miner.html) |  | [optional] |
+| **entities** | [**[Miner]**](Miner) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

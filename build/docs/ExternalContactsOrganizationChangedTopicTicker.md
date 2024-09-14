@@ -1,6 +1,5 @@
----
-title: ExternalContactsOrganizationChangedTopicTicker
----
+# ExternalContactsOrganizationChangedTopicTicker
+
 ## ExternalContactsOrganizationChangedTopicTicker
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExternalContactsOrganizationChangedTopicTicker
 |------------ | ------------- | ------------- | -------------|
 | **symbol** | **String** |  | [optional] |
 | **exchange** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SettingDirection
----
+# SettingDirection
+
 ## SettingDirection
 
 ## Properties
@@ -9,6 +8,7 @@ title: SettingDirection
 |------------ | ------------- | ------------- | -------------|
 | **inbound** | **String** | Status for the Inbound Direction | [optional] |
 | **outbound** | **String** | Status for the Outbound Direction | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

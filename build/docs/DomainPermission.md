@@ -1,6 +1,5 @@
----
-title: DomainPermission
----
+# DomainPermission
+
 ## DomainPermission
 
 ## Properties
@@ -13,6 +12,7 @@ title: DomainPermission
 | **label** | **String** |  | [optional] |
 | **allowsConditions** | **Bool** |  | [optional] |
 | **divisionAware** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

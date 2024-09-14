@@ -1,6 +1,5 @@
----
-title: ListedProgram
----
+# ListedProgram
+
 ## ListedProgram
 
 ## Properties
@@ -13,9 +12,10 @@ title: ListedProgram
 | **published** | **Bool** |  | [optional] |
 | **topicsCount** | **Int** |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
-| **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

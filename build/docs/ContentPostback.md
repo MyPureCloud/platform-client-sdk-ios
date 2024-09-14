@@ -1,6 +1,5 @@
----
-title: ContentPostback
----
+# ContentPostback
+
 ## ContentPostback
 Postback response object representing the click of a rich media button (Deprecated).
 
@@ -11,6 +10,7 @@ Postback response object representing the click of a rich media button (Deprecat
 | **_id** | **String** | An ID assigned to the button response. | [optional] |
 | **text** | **String** | The response text from the button click. | [optional] |
 | **payload** | **String** | The response payload associated with the clicked button. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

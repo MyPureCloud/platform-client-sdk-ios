@@ -1,6 +1,5 @@
----
-title: VerifierEntityListing
----
+# VerifierEntityListing
+
 ## VerifierEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: VerifierEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[Verifier]**](Verifier.html) |  | [optional] |
+| **entities** | [**[Verifier]**](Verifier) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

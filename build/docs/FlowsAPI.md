@@ -1,24 +1,20 @@
----
-title: FlowsAPI
----
-## FlowsAPI
+# FlowsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**postAnalyticsFlowsActivityQuery**](FlowsAPI.html#postAnalyticsFlowsActivityQuery) | Query for flow activity observations |
-| [**postAnalyticsFlowsAggregatesQuery**](FlowsAPI.html#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
-| [**postAnalyticsFlowsObservationsQuery**](FlowsAPI.html#postAnalyticsFlowsObservationsQuery) | Query for flow observations |
+| [**postAnalyticsFlowsActivityQuery**](FlowsAPI#postAnalyticsFlowsActivityQuery) | Query for flow activity observations |
+| [**postAnalyticsFlowsAggregatesQuery**](FlowsAPI#postAnalyticsFlowsAggregatesQuery) | Query for flow aggregates |
+| [**postAnalyticsFlowsObservationsQuery**](FlowsAPI#postAnalyticsFlowsObservationsQuery) | Query for flow observations |
 {: class="table-striped"}
 
-<a name="postAnalyticsFlowsActivityQuery"></a>
 
-# **postAnalyticsFlowsActivityQuery**
-
+## postAnalyticsFlowsActivityQuery
 
 
-> [FlowActivityResponse](FlowActivityResponse.html) postAnalyticsFlowsActivityQuery(body, pageSize, pageNumber)
+
+> [FlowActivityResponse](FlowActivityResponse) postAnalyticsFlowsActivityQuery(body, pageSize, pageNumber)
 
 Query for flow activity observations
 
@@ -58,23 +54,21 @@ FlowsAPI.postAnalyticsFlowsActivityQuery(body: body, pageSize: pageSize, pageNum
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FlowActivityQuery**](FlowActivityQuery.html)| query | |
+| **body** | [**FlowActivityQuery**](FlowActivityQuery)| query | |
 | **pageSize** | **Int**| The desired page size | [optional] |
 | **pageNumber** | **Int**| The desired page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowActivityResponse**](FlowActivityResponse.html)
-
-<a name="postAnalyticsFlowsAggregatesQuery"></a>
-
-# **postAnalyticsFlowsAggregatesQuery**
+[**FlowActivityResponse**](FlowActivityResponse)
 
 
+## postAnalyticsFlowsAggregatesQuery
 
-> [FlowAggregateQueryResponse](FlowAggregateQueryResponse.html) postAnalyticsFlowsAggregatesQuery(body)
+
+
+> [FlowAggregateQueryResponse](FlowAggregateQueryResponse) postAnalyticsFlowsAggregatesQuery(body)
 
 Query for flow aggregates
 
@@ -112,21 +106,19 @@ FlowsAPI.postAnalyticsFlowsAggregatesQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FlowAggregationQuery**](FlowAggregationQuery.html)| query | |
-{: class="table-striped"}
+| **body** | [**FlowAggregationQuery**](FlowAggregationQuery)| query | |
 
 
 ### Return type
 
-[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse.html)
-
-<a name="postAnalyticsFlowsObservationsQuery"></a>
-
-# **postAnalyticsFlowsObservationsQuery**
+[**FlowAggregateQueryResponse**](FlowAggregateQueryResponse)
 
 
+## postAnalyticsFlowsObservationsQuery
 
-> [FlowObservationQueryResponse](FlowObservationQueryResponse.html) postAnalyticsFlowsObservationsQuery(body)
+
+
+> [FlowObservationQueryResponse](FlowObservationQueryResponse) postAnalyticsFlowsObservationsQuery(body)
 
 Query for flow observations
 
@@ -164,11 +156,12 @@ FlowsAPI.postAnalyticsFlowsObservationsQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FlowObservationQuery**](FlowObservationQuery.html)| query | |
-{: class="table-striped"}
+| **body** | [**FlowObservationQuery**](FlowObservationQuery)| query | |
 
 
 ### Return type
 
-[**FlowObservationQueryResponse**](FlowObservationQueryResponse.html)
+[**FlowObservationQueryResponse**](FlowObservationQueryResponse)
 
+
+_PureCloudPlatformClientV2@151.1.0_

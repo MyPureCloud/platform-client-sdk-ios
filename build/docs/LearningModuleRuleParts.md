@@ -1,6 +1,5 @@
----
-title: LearningModuleRuleParts
----
+# LearningModuleRuleParts
+
 ## LearningModuleRuleParts
 
 ## Properties
@@ -11,6 +10,7 @@ title: LearningModuleRuleParts
 | **selector** | **String** | The learning module rule selector | |
 | **value** | **[String]** | The value of rules | |
 | **order** | **Int** | The order of rules in learning module rule | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

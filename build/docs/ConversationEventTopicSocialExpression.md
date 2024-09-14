@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicSocialExpression
----
+# ConversationEventTopicSocialExpression
+
 ## ConversationEventTopicSocialExpression
 
 ## Properties
@@ -20,12 +19,13 @@ title: ConversationEventTopicSocialExpression
 | **scriptId** | **String** | The UUID of the script to use. | [optional] |
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **disconnectType** | **String** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
-| **startHoldTime** | [**Date**](Date.html) | The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. | [optional] |
-| **connectedTime** | [**Date**](Date.html) | The timestamp when this communication was connected in the cloud clock. | [optional] |
-| **disconnectedTime** | [**Date**](Date.html) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
-| **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **afterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **startHoldTime** | [**Date**](Date) | The timestamp the chat was placed on hold in the cloud clock if the chat is currently on hold. | [optional] |
+| **connectedTime** | [**Date**](Date) | The timestamp when this communication was connected in the cloud clock. | [optional] |
+| **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
+| **wrapup** | [**ConversationEventTopicWrapup**](ConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **afterCallWork** | [**ConversationEventTopicAfterCallWork**](ConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: EdgeInterface
----
+# EdgeInterface
+
 ## EdgeInterface
 
 ## Properties
@@ -12,9 +11,10 @@ title: EdgeInterface
 | **name** | **String** |  | [optional] |
 | **macAddress** | **String** |  | [optional] |
 | **ifName** | **String** |  | [optional] |
-| **endpoints** | [**[DomainEntityRef]**](DomainEntityRef.html) |  | [optional] |
+| **endpoints** | [**[DomainEntityRef]**](DomainEntityRef) |  | [optional] |
 | **lineTypes** | **[String]** |  | [optional] |
 | **addressFamilyId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

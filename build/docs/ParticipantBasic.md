@@ -1,6 +1,5 @@
----
-title: ParticipantBasic
----
+# ParticipantBasic
+
 ## ParticipantBasic
 
 ## Properties
@@ -8,9 +7,9 @@ title: ParticipantBasic
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | A globally unique identifier for this conversation. | [optional] |
-| **startTime** | [**Date**](Date.html) | The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **endTime** | [**Date**](Date.html) | The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **connectedTime** | [**Date**](Date.html) | The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **startTime** | [**Date**](Date) | The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **endTime** | [**Date**](Date) | The timestamp when this participant disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **connectedTime** | [**Date**](Date) | The timestamp when this participant was connected to the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **name** | **String** | A human readable name identifying the participant. | [optional] |
 | **userUri** | **String** | If this participant represents a user, then this will be an URI that can be used to fetch the user. | [optional] |
 | **userId** | **String** | If this participant represents a user, then this will be the globally unique identifier for the user. | [optional] |
@@ -32,28 +31,29 @@ title: ParticipantBasic
 | **wrapupPrompt** | **String** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
 | **wrapupTimeoutMs** | **Int** | Specifies how long a timed ACW session will last. | [optional] |
 | **wrapupSkipped** | **Bool** | The UI sets this field when the agent chooses to skip entering a wrapup for this participant. | [optional] |
-| **wrapup** | [**Wrapup**](Wrapup.html) | Call wrap up or disposition data. | [optional] |
+| **wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
 | **mediaRoles** | **[String]** | List of roles this participant&#39;s media has had on the conversation, ie monitor, coach, etc. | [optional] |
-| **conversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData.html) | Information on how a communication should be routed to an agent. | [optional] |
+| **conversationRoutingData** | [**ConversationRoutingData**](ConversationRoutingData) | Information on how a communication should be routed to an agent. | [optional] |
 | **alertingTimeoutMs** | **Int** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
 | **monitoredParticipantId** | **String** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **coachedParticipantId** | **String** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
 | **attributes** | **[String:String]** | Additional participant attributes | [optional] |
-| **calls** | [**[CallBasic]**](CallBasic.html) |  | [optional] |
-| **callbacks** | [**[CallbackBasic]**](CallbackBasic.html) |  | [optional] |
-| **chats** | [**[ConversationChat]**](ConversationChat.html) |  | [optional] |
-| **cobrowsesessions** | [**[Cobrowsesession]**](Cobrowsesession.html) |  | [optional] |
-| **emails** | [**[Email]**](Email.html) |  | [optional] |
-| **messages** | [**[Message]**](Message.html) |  | [optional] |
-| **screenshares** | [**[Screenshare]**](Screenshare.html) |  | [optional] |
-| **socialExpressions** | [**[SocialExpression]**](SocialExpression.html) |  | [optional] |
-| **videos** | [**[Video]**](Video.html) |  | [optional] |
-| **evaluations** | [**[Evaluation]**](Evaluation.html) |  | [optional] |
+| **calls** | [**[CallBasic]**](CallBasic) |  | [optional] |
+| **callbacks** | [**[CallbackBasic]**](CallbackBasic) |  | [optional] |
+| **chats** | [**[ConversationChat]**](ConversationChat) |  | [optional] |
+| **cobrowsesessions** | [**[Cobrowsesession]**](Cobrowsesession) |  | [optional] |
+| **emails** | [**[Email]**](Email) |  | [optional] |
+| **messages** | [**[Message]**](Message) |  | [optional] |
+| **screenshares** | [**[Screenshare]**](Screenshare) |  | [optional] |
+| **socialExpressions** | [**[SocialExpression]**](SocialExpression) |  | [optional] |
+| **videos** | [**[Video]**](Video) |  | [optional] |
+| **evaluations** | [**[Evaluation]**](Evaluation) |  | [optional] |
 | **screenRecordingState** | **String** | The current screen recording state for this participant. | [optional] |
 | **flaggedReason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
-| **startAcwTime** | [**Date**](Date.html) | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **endAcwTime** | [**Date**](Date.html) | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **startAcwTime** | [**Date**](Date) | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **endAcwTime** | [**Date**](Date) | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **bargedParticipantId** | **String** | If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

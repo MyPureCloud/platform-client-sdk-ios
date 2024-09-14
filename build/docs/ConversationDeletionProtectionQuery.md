@@ -1,6 +1,5 @@
----
-title: ConversationDeletionProtectionQuery
----
+# ConversationDeletionProtectionQuery
+
 ## ConversationDeletionProtectionQuery
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationDeletionProtectionQuery
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **conversationIds** | **[String]** | This is a list of ConversationIds. The list cannot exceed 100 conversationids. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

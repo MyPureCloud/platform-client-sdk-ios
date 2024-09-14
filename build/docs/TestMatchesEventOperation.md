@@ -1,6 +1,5 @@
----
-title: TestMatchesEventOperation
----
+# TestMatchesEventOperation
+
 ## TestMatchesEventOperation
 Results from evaluating matching criteria against test input
 
@@ -10,8 +9,9 @@ Results from evaluating matching criteria against test input
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the processing step | [optional] |
 | **step** | **Int** | The number of the processing step | [optional] |
-| **matchedTriggers** | [**[TestModeTrigger]**](TestModeTrigger.html) | Triggers that matched | [optional] |
-| **unmatchedTriggers** | [**[TestModeTrigger]**](TestModeTrigger.html) | Triggers that did not match | [optional] |
-{: class="table table-striped"}
+| **matchedTriggers** | [**[TestModeTrigger]**](TestModeTrigger) | Triggers that matched | [optional] |
+| **unmatchedTriggers** | [**[TestModeTrigger]**](TestModeTrigger) | Triggers that did not match | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

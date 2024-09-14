@@ -1,6 +1,5 @@
----
-title: RestorePresenceSettings
----
+# RestorePresenceSettings
+
 ## RestorePresenceSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: RestorePresenceSettings
 | **enabled** | **Bool** | Whether the restore presence feature is enabled | |
 | **restoreTimeMilliseconds** | **Int64** | How many milliseconds the presence will be restored within | |
 | **restoreOnQueueEnabled** | **Bool** | Whether the ON_QUEUE presence will be restored | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

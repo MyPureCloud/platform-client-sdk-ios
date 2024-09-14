@@ -1,17 +1,17 @@
----
-title: CursorContactListing
----
+# CursorContactListing
+
 ## CursorContactListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ExternalContact]**](ExternalContact.html) |  | [optional] |
+| **entities** | [**[ExternalContact]**](ExternalContact) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-| **cursors** | [**Cursors**](Cursors.html) | The cursor that points to the next set of entities being returned. | [optional] |
-{: class="table table-striped"}
+| **cursors** | [**Cursors**](Cursors) | The cursor that points to the next set of entities being returned. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

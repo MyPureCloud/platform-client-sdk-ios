@@ -1,6 +1,5 @@
----
-title: Limit
----
+# Limit
+
 ## Limit
 
 ## Properties
@@ -10,6 +9,7 @@ title: Limit
 | **key** | **String** |  | [optional] |
 | **namespace** | **String** |  | [optional] |
 | **value** | **Int64** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

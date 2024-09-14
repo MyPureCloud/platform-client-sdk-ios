@@ -1,6 +1,5 @@
----
-title: WrapUpCodeConfig
----
+# WrapUpCodeConfig
+
 ## WrapUpCodeConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: WrapUpCodeConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **values** | **[String]** | A set of valid Wrap Up Code UUIDs used to optimize a KPI. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SplittingInformation
----
+# SplittingInformation
+
 ## SplittingInformation
 
 ## Properties
@@ -11,6 +10,7 @@ title: SplittingInformation
 | **criteriaValue** | **String** | The criteria value for the specified criteria type | [optional] |
 | **createRemainderContactList** | **Bool** | Whether to create remainder contact list | [optional] |
 | **useWaterfallRule** | **Bool** | Whether to use waterfall rule | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,16 +1,16 @@
----
-title: AssistantListing
----
+# AssistantListing
+
 ## AssistantListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Assistant]**](Assistant.html) |  | [optional] |
+| **entities** | [**[Assistant]**](Assistant) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

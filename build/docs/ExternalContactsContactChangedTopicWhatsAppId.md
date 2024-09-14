@@ -1,14 +1,14 @@
----
-title: ExternalContactsContactChangedTopicWhatsAppId
----
+# ExternalContactsContactChangedTopicWhatsAppId
+
 ## ExternalContactsContactChangedTopicWhatsAppId
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **phoneNumber** | [**ExternalContactsContactChangedTopicPhoneNumber**](ExternalContactsContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **phoneNumber** | [**ExternalContactsContactChangedTopicPhoneNumber**](ExternalContactsContactChangedTopicPhoneNumber) |  | [optional] |
 | **displayName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

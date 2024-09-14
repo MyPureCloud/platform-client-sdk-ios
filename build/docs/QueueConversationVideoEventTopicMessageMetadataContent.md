@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicMessageMetadataContent
----
+# QueueConversationVideoEventTopicMessageMetadataContent
+
 ## QueueConversationVideoEventTopicMessageMetadataContent
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueueConversationVideoEventTopicMessageMetadataContent
 |------------ | ------------- | ------------- | -------------|
 | **contentType** | **String** | Type of this content element. | [optional] |
 | **subType** | **String** | Content subtype, if any | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

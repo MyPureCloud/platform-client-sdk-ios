@@ -1,6 +1,5 @@
----
-title: AudioState
----
+# AudioState
+
 ## AudioState
 
 ## Properties
@@ -9,6 +8,7 @@ title: AudioState
 |------------ | ------------- | ------------- | -------------|
 | **canHear** | **Bool** | Indicates that this communication&#39;s audio allows its participant to hear others. | [optional] |
 | **canSpeak** | **Bool** | Indicates that this communication&#39;s audio allows others to hear this participant. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

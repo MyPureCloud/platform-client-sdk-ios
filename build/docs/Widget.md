@@ -1,6 +1,5 @@
----
-title: Widget
----
+# Widget
+
 ## Widget
 
 ## Properties
@@ -27,14 +26,15 @@ title: Widget
 | **isFullWidth** | **Bool** | Indicates whether a widget should take the full width of a dashboard or be shown only in a single slot. | [optional] |
 | **showPercentageChange** | **Bool** | Indicates whether a widget should show the percentage diff between two values. | [optional] |
 | **showProfilePicture** | **Bool** | Indicates whether a widget should show the profile picture of an agent. | [optional] |
-| **filter** | [**ViewFilter**](ViewFilter.html) | The filters to be applied for dashboard widget configuration | [optional] |
+| **filter** | [**ViewFilter**](ViewFilter) | The filters to be applied for dashboard widget configuration | [optional] |
 | **periods** | **[String]** | The list of periods for the dashboard widget configuration | [optional] |
 | **mediaTypes** | **[String]** | The list of media types for the dashboard widget configuration | [optional] |
-| **warnings** | [**[Warning]**](Warning.html) | List of warnings for dashboard widget configuration | [optional] |
+| **warnings** | [**[Warning]**](Warning) | List of warnings for dashboard widget configuration | [optional] |
 | **showTimeInStatus** | **Bool** | Indicates the show time in status of a widget configuration. | [optional] |
 | **showOfflineAgents** | **Bool** | Indicates to show offline agent widget. | [optional] |
 | **selectedStatuses** | **[String]** | Indicates the selected statuses used to filter the agent widget in the dashboard. | [optional] |
 | **agentInteractionSortOrder** | **String** | The sort order of the interactions in the agent status widget. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

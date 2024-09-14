@@ -1,13 +1,13 @@
----
-title: FlowExecutionAggregateQueryResponse
----
+# FlowExecutionAggregateQueryResponse
+
 ## FlowExecutionAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[FlowExecutionAggregateDataContainer]**](FlowExecutionAggregateDataContainer.html) |  | [optional] |
-{: class="table table-striped"}
+| **results** | [**[FlowExecutionAggregateDataContainer]**](FlowExecutionAggregateDataContainer) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

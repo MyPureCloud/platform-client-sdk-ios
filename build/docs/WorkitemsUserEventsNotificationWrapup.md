@@ -1,6 +1,5 @@
----
-title: WorkitemsUserEventsNotificationWrapup
----
+# WorkitemsUserEventsNotificationWrapup
+
 ## WorkitemsUserEventsNotificationWrapup
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemsUserEventsNotificationWrapup
 | **userId** | **String** |  | [optional] |
 | **op** | **String** |  | [optional] |
 | **action** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

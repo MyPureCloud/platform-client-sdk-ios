@@ -1,6 +1,5 @@
----
-title: ScrollPercentageEventTrigger
----
+# ScrollPercentageEventTrigger
+
 ## ScrollPercentageEventTrigger
 Details about a scroll percentage event trigger
 
@@ -10,6 +9,7 @@ Details about a scroll percentage event trigger
 |------------ | ------------- | ------------- | -------------|
 | **percentage** | **Int** | Percentage of a webpage at which an event is triggered. | |
 | **eventName** | **String** | Name of event triggered after scrolling to the specified percentage. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

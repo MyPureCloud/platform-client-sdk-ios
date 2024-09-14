@@ -1,6 +1,5 @@
----
-title: WorktypeUpdate
----
+# WorktypeUpdate
+
 ## WorktypeUpdate
 
 ## Properties
@@ -23,6 +22,7 @@ title: WorktypeUpdate
 | **defaultLanguageId** | **String** | The ID of the default language for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 | **defaultSkillIds** | **[String]** | The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs | [optional] |
 | **defaultQueueId** | **String** | The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

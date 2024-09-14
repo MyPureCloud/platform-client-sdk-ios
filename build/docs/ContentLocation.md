@@ -1,6 +1,5 @@
----
-title: ContentLocation
----
+# ContentLocation
+
 ## ContentLocation
 Location object.
 
@@ -13,6 +12,7 @@ Location object.
 | **text** | **String** | Location name. | [optional] |
 | **latitude** | **Double** | Latitude of the location. | [optional] |
 | **longitude** | **Double** | Longitude of the location. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

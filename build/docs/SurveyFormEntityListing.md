@@ -1,13 +1,12 @@
----
-title: SurveyFormEntityListing
----
+# SurveyFormEntityListing
+
 ## SurveyFormEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SurveyForm]**](SurveyForm.html) |  | [optional] |
+| **entities** | [**[SurveyForm]**](SurveyForm) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: SurveyFormEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

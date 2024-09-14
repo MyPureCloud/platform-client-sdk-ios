@@ -1,6 +1,5 @@
----
-title: DomainPhysicalCapabilities
----
+# DomainPhysicalCapabilities
+
 ## DomainPhysicalCapabilities
 
 ## Properties
@@ -9,6 +8,7 @@ title: DomainPhysicalCapabilities
 |------------ | ------------- | ------------- | -------------|
 | **vlan** | **Bool** |  | [optional] |
 | **team** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

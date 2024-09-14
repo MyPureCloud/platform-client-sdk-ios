@@ -1,6 +1,5 @@
----
-title: OperationalEventNotificationTopicEventEntity
----
+# OperationalEventNotificationTopicEventEntity
+
 ## OperationalEventNotificationTopicEventEntity
 
 ## Properties
@@ -10,6 +9,7 @@ title: OperationalEventNotificationTopicEventEntity
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

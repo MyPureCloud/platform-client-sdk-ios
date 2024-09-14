@@ -1,6 +1,5 @@
----
-title: TimeOffRequestList
----
+# TimeOffRequestList
+
 ## TimeOffRequestList
 
 ## Properties
@@ -9,8 +8,9 @@ title: TimeOffRequestList
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **timeOffRequests** | [**[TimeOffRequestResponse]**](TimeOffRequestResponse.html) |  | [optional] |
+| **timeOffRequests** | [**[TimeOffRequestResponse]**](TimeOffRequestResponse) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

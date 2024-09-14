@@ -1,6 +1,5 @@
----
-title: PhoneCapabilities
----
+# PhoneCapabilities
+
 ## PhoneCapabilities
 
 ## Properties
@@ -16,6 +15,7 @@ title: PhoneCapabilities
 | **noCloudProvisioning** | **Bool** |  | [optional] |
 | **mediaCodecs** | **[String]** |  | [optional] |
 | **cdm** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Destination
----
+# Destination
+
 ## Destination
 
 ## Properties
@@ -11,6 +10,7 @@ title: Destination
 | **name** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
 | **queueId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

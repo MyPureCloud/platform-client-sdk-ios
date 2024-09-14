@@ -1,13 +1,12 @@
----
-title: ScheduleEntityListing
----
+# ScheduleEntityListing
+
 ## ScheduleEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Schedule]**](Schedule.html) |  | [optional] |
+| **entities** | [**[Schedule]**](Schedule) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ title: ScheduleEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

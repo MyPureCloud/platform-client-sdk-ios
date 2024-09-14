@@ -1,6 +1,5 @@
----
-title: KnowledgeCategoryRequest
----
+# KnowledgeCategoryRequest
+
 ## KnowledgeCategoryRequest
 
 ## Properties
@@ -10,8 +9,9 @@ title: KnowledgeCategoryRequest
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | Category name | |
 | **_description** | **String** | Category description | [optional] |
-| **parent** | [**DocumentCategoryInput**](DocumentCategoryInput.html) | Category parent | [optional] |
+| **parent** | [**DocumentCategoryInput**](DocumentCategoryInput) | Category parent | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

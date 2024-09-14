@@ -1,6 +1,5 @@
----
-title: OutlierInfo
----
+# OutlierInfo
+
 ## OutlierInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: OutlierInfo
 |------------ | ------------- | ------------- | -------------|
 | **outlier** | **Bool** | Boolean to identify if an outlier or not. | [optional] |
 | **score** | **Float** | Outlier score for this utterance. The score is always 0 or greater and higher the score, the more outlier. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

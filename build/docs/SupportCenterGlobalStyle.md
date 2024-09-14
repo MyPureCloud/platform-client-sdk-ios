@@ -1,6 +1,5 @@
----
-title: SupportCenterGlobalStyle
----
+# SupportCenterGlobalStyle
+
 ## SupportCenterGlobalStyle
 
 ## Properties
@@ -13,6 +12,7 @@ title: SupportCenterGlobalStyle
 | **primaryColorLight** | **String** | Global light primary color, in hexadecimal format, eg #ffffff | |
 | **textColor** | **String** | Global text color, in hexadecimal format, eg #ffffff | |
 | **fontFamily** | **String** | Global font family | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

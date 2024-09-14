@@ -1,6 +1,5 @@
----
-title: WebDeploymentConfigurationVersionEntityListing
----
+# WebDeploymentConfigurationVersionEntityListing
+
 ## WebDeploymentConfigurationVersionEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: WebDeploymentConfigurationVersionEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[WebDeploymentConfigurationVersion]**](WebDeploymentConfigurationVersion.html) |  | [optional] |
+| **entities** | [**[WebDeploymentConfigurationVersion]**](WebDeploymentConfigurationVersion) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

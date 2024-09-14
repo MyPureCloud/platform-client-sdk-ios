@@ -1,6 +1,5 @@
----
-title: SchedulerMessageTypeSeverity
----
+# SchedulerMessageTypeSeverity
+
 ## SchedulerMessageTypeSeverity
 
 ## Properties
@@ -9,6 +8,7 @@ title: SchedulerMessageTypeSeverity
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of the message | [optional] |
 | **severity** | **String** | The severity of the message | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

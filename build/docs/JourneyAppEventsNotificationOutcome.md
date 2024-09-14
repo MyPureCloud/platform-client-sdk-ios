@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationOutcome
----
+# JourneyAppEventsNotificationOutcome
+
 ## JourneyAppEventsNotificationOutcome
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneyAppEventsNotificationOutcome
 | **selfUri** | **String** |  | [optional] |
 | **displayName** | **String** |  | [optional] |
 | **version** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PauseCriteria
----
+# PauseCriteria
+
 ## PauseCriteria
 
 ## Properties
@@ -9,6 +8,7 @@ title: PauseCriteria
 |------------ | ------------- | ------------- | -------------|
 | **urlFragment** | **String** |  | [optional] |
 | **condition** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

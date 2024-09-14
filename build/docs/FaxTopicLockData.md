@@ -1,15 +1,15 @@
----
-title: FaxTopicLockData
----
+# FaxTopicLockData
+
 ## FaxTopicLockData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **lockedBy** | [**FaxTopicUserData**](FaxTopicUserData.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateExpires** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **lockedBy** | [**FaxTopicUserData**](FaxTopicUserData) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateExpires** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SystemPrompt
----
+# SystemPrompt
+
 ## SystemPrompt
 
 ## Properties
@@ -10,8 +9,9 @@ title: SystemPrompt
 | **_id** | **String** | The system prompt identifier | [optional] |
 | **name** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-| **resources** | [**[SystemPromptAsset]**](SystemPromptAsset.html) |  | [optional] |
+| **resources** | [**[SystemPromptAsset]**](SystemPromptAsset) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

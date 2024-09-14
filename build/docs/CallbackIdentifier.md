@@ -1,6 +1,5 @@
----
-title: CallbackIdentifier
----
+# CallbackIdentifier
+
 ## CallbackIdentifier
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallbackIdentifier
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of the associated callback participant | |
 | **_id** | **String** | The identifier of the callback | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

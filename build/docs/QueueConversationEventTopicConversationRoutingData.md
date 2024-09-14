@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicConversationRoutingData
----
+# QueueConversationEventTopicConversationRoutingData
+
 ## QueueConversationEventTopicConversationRoutingData
 Information on how a communication should be routed to an agent.
 
@@ -8,11 +7,12 @@ Information on how a communication should be routed to an agent.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **queue** | [**QueueConversationEventTopicUriReference**](QueueConversationEventTopicUriReference.html) |  | [optional] |
-| **language** | [**QueueConversationEventTopicUriReference**](QueueConversationEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **queue** | [**QueueConversationEventTopicUriReference**](QueueConversationEventTopicUriReference) |  | [optional] |
+| **language** | [**QueueConversationEventTopicUriReference**](QueueConversationEventTopicUriReference) | A UriReference for a resource | [optional] |
 | **priority** | **Int** | The priority of the conversation to use for routing decisions | [optional] |
-| **skills** | [**[QueueConversationEventTopicUriReference]**](QueueConversationEventTopicUriReference.html) | The skills to use for routing decisions | [optional] |
-| **scoredAgents** | [**[QueueConversationEventTopicScoredAgent]**](QueueConversationEventTopicScoredAgent.html) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
-{: class="table table-striped"}
+| **skills** | [**[QueueConversationEventTopicUriReference]**](QueueConversationEventTopicUriReference) | The skills to use for routing decisions | [optional] |
+| **scoredAgents** | [**[QueueConversationEventTopicScoredAgent]**](QueueConversationEventTopicScoredAgent) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

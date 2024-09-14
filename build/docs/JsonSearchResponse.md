@@ -1,6 +1,5 @@
----
-title: JsonSearchResponse
----
+# JsonSearchResponse
+
 ## JsonSearchResponse
 
 ## Properties
@@ -12,8 +11,9 @@ title: JsonSearchResponse
 | **pageSize** | **Int** | The current page size | |
 | **pageNumber** | **Int** | The current page number | |
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**JSON**](JSON.html) | Search results | |
-| **aggregations** | [**JSON**](.html) |  | [optional] |
-{: class="table table-striped"}
+| **results** | [**JSON**](JSON) | Search results | |
+| **aggregations** | [**JSON**]() |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

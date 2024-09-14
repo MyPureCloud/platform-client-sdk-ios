@@ -1,6 +1,5 @@
----
-title: ContactListTemplateBulkRetrieveBody
----
+# ContactListTemplateBulkRetrieveBody
+
 ## ContactListTemplateBulkRetrieveBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContactListTemplateBulkRetrieveBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ids** | **[String]** | The IDs of the Contact List Templates to retrieve. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

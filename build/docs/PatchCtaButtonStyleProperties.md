@@ -1,6 +1,5 @@
----
-title: PatchCtaButtonStyleProperties
----
+# PatchCtaButtonStyleProperties
+
 ## PatchCtaButtonStyleProperties
 
 ## Properties
@@ -12,6 +11,7 @@ title: PatchCtaButtonStyleProperties
 | **fontSize** | **String** | Font size of the text. (eg. &#39;12&#39;) | [optional] |
 | **textAlign** | **String** | Text alignment. | [optional] |
 | **backgroundColor** | **String** | Background color of the CTA button. (eg. #A04033) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

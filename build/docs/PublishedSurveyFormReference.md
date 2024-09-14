@@ -1,6 +1,5 @@
----
-title: PublishedSurveyFormReference
----
+# PublishedSurveyFormReference
+
 ## PublishedSurveyFormReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: PublishedSurveyFormReference
 | **name** | **String** |  | [optional] |
 | **contextId** | **String** | The context id of this form. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

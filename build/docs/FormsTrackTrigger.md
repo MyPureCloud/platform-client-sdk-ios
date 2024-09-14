@@ -1,6 +1,5 @@
----
-title: FormsTrackTrigger
----
+# FormsTrackTrigger
+
 ## FormsTrackTrigger
 Details about a forms tracking event trigger
 
@@ -12,6 +11,7 @@ Details about a forms tracking event trigger
 | **formName** | **String** | Prefix for the form submitted or abandoned event name. | |
 | **captureDataOnFormAbandon** | **Bool** | Whether to capture the form data in the form abandoned event. | |
 | **captureDataOnFormSubmit** | **Bool** | Whether to capture the form data in the form submitted event. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

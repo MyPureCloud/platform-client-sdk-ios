@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceBulkJobReference
----
+# WfmHistoricalAdherenceBulkJobReference
+
 ## WfmHistoricalAdherenceBulkJobReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmHistoricalAdherenceBulkJobReference
 | **_id** | **String** | The ID of the historical adherence bulk job to listen for via notification or query using the jobs route | [optional] |
 | **status** | **String** | The status of the historical adherence bulk job | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

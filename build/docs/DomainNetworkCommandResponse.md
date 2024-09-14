@@ -1,6 +1,5 @@
----
-title: DomainNetworkCommandResponse
----
+# DomainNetworkCommandResponse
+
 ## DomainNetworkCommandResponse
 
 ## Properties
@@ -10,7 +9,8 @@ title: DomainNetworkCommandResponse
 | **correlationId** | **String** |  | [optional] |
 | **commandName** | **String** |  | [optional] |
 | **acknowledged** | **Bool** |  | [optional] |
-| **errorInfo** | [**ErrorDetails**](ErrorDetails.html) |  | [optional] |
-{: class="table table-striped"}
+| **errorInfo** | [**ErrorDetails**](ErrorDetails) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

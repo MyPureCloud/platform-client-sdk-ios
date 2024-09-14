@@ -1,6 +1,5 @@
----
-title: IntegrationConfigurationInfo
----
+# IntegrationConfigurationInfo
+
 ## IntegrationConfigurationInfo
 Configuration information for the integration
 
@@ -8,7 +7,8 @@ Configuration information for the integration
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **current** | [**IntegrationConfiguration**](IntegrationConfiguration.html) | The current, active configuration for the integration. | [optional] |
-{: class="table table-striped"}
+| **current** | [**IntegrationConfiguration**](IntegrationConfiguration) | The current, active configuration for the integration. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

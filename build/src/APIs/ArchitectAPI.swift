@@ -58,6 +58,214 @@ open class ArchitectAPI {
     
     
     /**
+     Delete a grammar.
+     
+     - parameter grammarId: (path) grammar ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteArchitectGrammar(grammarId: String, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteArchitectGrammarWithRequestBuilder(grammarId: grammarId)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a grammar.
+     - DELETE /api/v2/architect/grammars/{grammarId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter grammarId: (path) grammar ID 
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func deleteArchitectGrammarWithRequestBuilder(grammarId: String) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/architect/grammars/{grammarId}"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete specified grammar language
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteArchitectGrammarLanguage(grammarId: String, languageCode: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteArchitectGrammarLanguageWithRequestBuilder(grammarId: grammarId, languageCode: languageCode)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete specified grammar language
+     - DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteArchitectGrammarLanguageWithRequestBuilder(grammarId: String, languageCode: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Clear the DTMF mode file for the grammar language if there is one
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteArchitectGrammarLanguageFilesDtmf(grammarId: String, languageCode: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteArchitectGrammarLanguageFilesDtmfWithRequestBuilder(grammarId: grammarId, languageCode: languageCode)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Clear the DTMF mode file for the grammar language if there is one
+     - DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteArchitectGrammarLanguageFilesDtmfWithRequestBuilder(grammarId: String, languageCode: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Clear the voice mode file for the grammar language if there is one
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteArchitectGrammarLanguageFilesVoice(grammarId: String, languageCode: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteArchitectGrammarLanguageFilesVoiceWithRequestBuilder(grammarId: grammarId, languageCode: languageCode)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Clear the voice mode file for the grammar language if there is one
+     - DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteArchitectGrammarLanguageFilesVoiceWithRequestBuilder(grammarId: String, languageCode: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete an IVR Config.
      
      - parameter ivrId: (path) IVR id 
@@ -3931,6 +4139,324 @@ open class ArchitectAPI {
         ])
 
         let requestBuilder: RequestBuilder<EmergencyGroupDivisionViewEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a grammar
+     
+     - parameter grammarId: (path) grammar ID 
+     - parameter includeFileUrls: (query) Include grammar language file URLs (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectGrammar(grammarId: String, includeFileUrls: Bool? = nil, completion: @escaping ((_ data: Grammar?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectGrammarWithRequestBuilder(grammarId: grammarId, includeFileUrls: includeFileUrls)
+        requestBuilder.execute { (response: Response<Grammar>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a grammar
+     - GET /api/v2/architect/grammars/{grammarId}
+     - Returns a specified grammar
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languages" : [ {
+    "dtmfFileUrl" : "dtmfFileUrl",
+    "selfUri" : "https://openapi-generator.tech",
+    "voiceFileMetadata" : "{}",
+    "language" : "language",
+    "dtmfFileMetadata" : "{}",
+    "id" : "id",
+    "grammarId" : "grammarId",
+    "voiceFileUrl" : "voiceFileUrl"
+  }, {
+    "dtmfFileUrl" : "dtmfFileUrl",
+    "selfUri" : "https://openapi-generator.tech",
+    "voiceFileMetadata" : "{}",
+    "language" : "language",
+    "dtmfFileMetadata" : "{}",
+    "id" : "id",
+    "grammarId" : "grammarId",
+    "voiceFileUrl" : "voiceFileUrl"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) grammar ID 
+     - parameter includeFileUrls: (query) Include grammar language file URLs (optional)
+
+     - returns: RequestBuilder<Grammar> 
+     */
+    open class func getArchitectGrammarWithRequestBuilder(grammarId: String, includeFileUrls: Bool? = nil) -> RequestBuilder<Grammar> {        
+        var path = "/api/v2/architect/grammars/{grammarId}"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "includeFileUrls": includeFileUrls
+        ])
+
+        let requestBuilder: RequestBuilder<Grammar>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get a grammar language.
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectGrammarLanguage(grammarId: String, languageCode: String, completion: @escaping ((_ data: GrammarLanguage?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectGrammarLanguageWithRequestBuilder(grammarId: grammarId, languageCode: languageCode)
+        requestBuilder.execute { (response: Response<GrammarLanguage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a grammar language.
+     - GET /api/v2/architect/grammars/{grammarId}/languages/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dtmfFileUrl" : "dtmfFileUrl",
+  "selfUri" : "https://openapi-generator.tech",
+  "voiceFileMetadata" : "{}",
+  "language" : "language",
+  "dtmfFileMetadata" : "{}",
+  "id" : "id",
+  "grammarId" : "grammarId",
+  "voiceFileUrl" : "voiceFileUrl"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+
+     - returns: RequestBuilder<GrammarLanguage> 
+     */
+    open class func getArchitectGrammarLanguageWithRequestBuilder(grammarId: String, languageCode: String) -> RequestBuilder<GrammarLanguage> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GrammarLanguage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum SortBy_getArchitectGrammars: String { 
+        case _description = "description"
+        case _id = "id"
+        case name = "name"
+    }
+    
+    
+    
+    public enum SortOrder_getArchitectGrammars: String { 
+        case asc = "asc"
+        case desc = "desc"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get a pageable list of grammars, filtered by query parameters
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter _description: (query) Description (optional)
+     - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter includeFileUrls: (query) Include grammar language file URLs (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getArchitectGrammars(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getArchitectGrammars? = nil, sortOrder: SortOrder_getArchitectGrammars? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, includeFileUrls: Bool? = nil, completion: @escaping ((_ data: GrammarListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getArchitectGrammarsWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, includeFileUrls: includeFileUrls)
+        requestBuilder.execute { (response: Response<GrammarListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a pageable list of grammars, filtered by query parameters
+     - GET /api/v2/architect/grammars
+     - Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "languages" : [ {
+      "dtmfFileUrl" : "dtmfFileUrl",
+      "selfUri" : "https://openapi-generator.tech",
+      "voiceFileMetadata" : "{}",
+      "language" : "language",
+      "dtmfFileMetadata" : "{}",
+      "id" : "id",
+      "grammarId" : "grammarId",
+      "voiceFileUrl" : "voiceFileUrl"
+    }, {
+      "dtmfFileUrl" : "dtmfFileUrl",
+      "selfUri" : "https://openapi-generator.tech",
+      "voiceFileMetadata" : "{}",
+      "language" : "language",
+      "dtmfFileMetadata" : "{}",
+      "id" : "id",
+      "grammarId" : "grammarId",
+      "voiceFileUrl" : "voiceFileUrl"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id"
+  }, {
+    "languages" : [ {
+      "dtmfFileUrl" : "dtmfFileUrl",
+      "selfUri" : "https://openapi-generator.tech",
+      "voiceFileMetadata" : "{}",
+      "language" : "language",
+      "dtmfFileMetadata" : "{}",
+      "id" : "id",
+      "grammarId" : "grammarId",
+      "voiceFileUrl" : "voiceFileUrl"
+    }, {
+      "dtmfFileUrl" : "dtmfFileUrl",
+      "selfUri" : "https://openapi-generator.tech",
+      "voiceFileMetadata" : "{}",
+      "language" : "language",
+      "dtmfFileMetadata" : "{}",
+      "id" : "id",
+      "grammarId" : "grammarId",
+      "voiceFileUrl" : "voiceFileUrl"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter sortBy: (query) Sort by (optional)
+     - parameter sortOrder: (query) Sort order (optional)
+     - parameter _id: (query) ID (optional)
+     - parameter name: (query) Name (optional)
+     - parameter _description: (query) Description (optional)
+     - parameter nameOrDescription: (query) Name or description (optional)
+     - parameter includeFileUrls: (query) Include grammar language file URLs (optional)
+
+     - returns: RequestBuilder<GrammarListing> 
+     */
+    open class func getArchitectGrammarsWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil, sortBy: SortBy_getArchitectGrammars? = nil, sortOrder: SortOrder_getArchitectGrammars? = nil, _id: [String]? = nil, name: String? = nil, _description: String? = nil, nameOrDescription: String? = nil, includeFileUrls: Bool? = nil) -> RequestBuilder<GrammarListing> {        
+        let path = "/api/v2/architect/grammars"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortBy": sortBy?.rawValue, 
+            "sortOrder": sortOrder?.rawValue, 
+            "id": _id, 
+            "name": name, 
+            "description": _description, 
+            "nameOrDescription": nameOrDescription, 
+            "includeFileUrls": includeFileUrls
+        ])
+
+        let requestBuilder: RequestBuilder<GrammarListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -18410,6 +18936,160 @@ open class ArchitectAPI {
 
     
     
+    
+    
+    /**
+     Updates a grammar
+     
+     - parameter grammarId: (path) grammar ID 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchArchitectGrammar(grammarId: String, body: Grammar? = nil, completion: @escaping ((_ data: Grammar?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchArchitectGrammarWithRequestBuilder(grammarId: grammarId, body: body)
+        requestBuilder.execute { (response: Response<Grammar>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates a grammar
+     - PATCH /api/v2/architect/grammars/{grammarId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languages" : [ {
+    "dtmfFileUrl" : "dtmfFileUrl",
+    "selfUri" : "https://openapi-generator.tech",
+    "voiceFileMetadata" : "{}",
+    "language" : "language",
+    "dtmfFileMetadata" : "{}",
+    "id" : "id",
+    "grammarId" : "grammarId",
+    "voiceFileUrl" : "voiceFileUrl"
+  }, {
+    "dtmfFileUrl" : "dtmfFileUrl",
+    "selfUri" : "https://openapi-generator.tech",
+    "voiceFileMetadata" : "{}",
+    "language" : "language",
+    "dtmfFileMetadata" : "{}",
+    "id" : "id",
+    "grammarId" : "grammarId",
+    "voiceFileUrl" : "voiceFileUrl"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) grammar ID 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<Grammar> 
+     */
+    open class func patchArchitectGrammarWithRequestBuilder(grammarId: String, body: Grammar? = nil) -> RequestBuilder<Grammar> {        
+        var path = "/api/v2/architect/grammars/{grammarId}"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Grammar>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Updates a grammar language
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchArchitectGrammarLanguage(grammarId: String, languageCode: String, body: GrammarLanguageUpdate? = nil, completion: @escaping ((_ data: GrammarLanguage?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchArchitectGrammarLanguageWithRequestBuilder(grammarId: grammarId, languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<GrammarLanguage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates a grammar language
+     - PATCH /api/v2/architect/grammars/{grammarId}/languages/{languageCode}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dtmfFileUrl" : "dtmfFileUrl",
+  "selfUri" : "https://openapi-generator.tech",
+  "voiceFileMetadata" : "{}",
+  "language" : "language",
+  "dtmfFileMetadata" : "{}",
+  "id" : "id",
+  "grammarId" : "grammarId",
+  "voiceFileUrl" : "voiceFileUrl"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<GrammarLanguage> 
+     */
+    open class func patchArchitectGrammarLanguageWithRequestBuilder(grammarId: String, languageCode: String, body: GrammarLanguageUpdate? = nil) -> RequestBuilder<GrammarLanguage> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GrammarLanguage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Edit the execution history enabled setting.
      
@@ -18589,6 +19269,286 @@ open class ArchitectAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmergencyGroup>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Creates a presigned URL for uploading a grammar DTMF mode file
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postArchitectGrammarLanguageFilesDtmf(grammarId: String, languageCode: String, body: GrammarFileUploadRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postArchitectGrammarLanguageFilesDtmfWithRequestBuilder(grammarId: grammarId, languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a presigned URL for uploading a grammar DTMF mode file
+     - POST /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postArchitectGrammarLanguageFilesDtmfWithRequestBuilder(grammarId: String, languageCode: String, body: GrammarFileUploadRequest) -> RequestBuilder<UploadUrlResponse> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Creates a presigned URL for uploading a grammar voice mode file
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postArchitectGrammarLanguageFilesVoice(grammarId: String, languageCode: String, body: GrammarFileUploadRequest, completion: @escaping ((_ data: UploadUrlResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postArchitectGrammarLanguageFilesVoiceWithRequestBuilder(grammarId: grammarId, languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<UploadUrlResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a presigned URL for uploading a grammar voice mode file
+     - POST /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "uploadKey" : "uploadKey",
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter languageCode: (path) Language 
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<UploadUrlResponse> 
+     */
+    open class func postArchitectGrammarLanguageFilesVoiceWithRequestBuilder(grammarId: String, languageCode: String, body: GrammarFileUploadRequest) -> RequestBuilder<UploadUrlResponse> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create a new language for a given grammar
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postArchitectGrammarLanguages(grammarId: String, body: GrammarLanguage, completion: @escaping ((_ data: GrammarLanguage?,_ error: Error?) -> Void)) {
+        let requestBuilder = postArchitectGrammarLanguagesWithRequestBuilder(grammarId: grammarId, body: body)
+        requestBuilder.execute { (response: Response<GrammarLanguage>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new language for a given grammar
+     - POST /api/v2/architect/grammars/{grammarId}/languages
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dtmfFileUrl" : "dtmfFileUrl",
+  "selfUri" : "https://openapi-generator.tech",
+  "voiceFileMetadata" : "{}",
+  "language" : "language",
+  "dtmfFileMetadata" : "{}",
+  "id" : "id",
+  "grammarId" : "grammarId",
+  "voiceFileUrl" : "voiceFileUrl"
+}, statusCode=200}]
+     
+     - parameter grammarId: (path) Grammar ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<GrammarLanguage> 
+     */
+    open class func postArchitectGrammarLanguagesWithRequestBuilder(grammarId: String, body: GrammarLanguage) -> RequestBuilder<GrammarLanguage> {        
+        var path = "/api/v2/architect/grammars/{grammarId}/languages"
+        let grammarIdPreEscape = "\(grammarId)"
+        let grammarIdPostEscape = grammarIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{grammarId}", with: grammarIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GrammarLanguage>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a new grammar
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postArchitectGrammars(body: Grammar, completion: @escaping ((_ data: Grammar?,_ error: Error?) -> Void)) {
+        let requestBuilder = postArchitectGrammarsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Grammar>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new grammar
+     - POST /api/v2/architect/grammars
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "languages" : [ {
+    "dtmfFileUrl" : "dtmfFileUrl",
+    "selfUri" : "https://openapi-generator.tech",
+    "voiceFileMetadata" : "{}",
+    "language" : "language",
+    "dtmfFileMetadata" : "{}",
+    "id" : "id",
+    "grammarId" : "grammarId",
+    "voiceFileUrl" : "voiceFileUrl"
+  }, {
+    "dtmfFileUrl" : "dtmfFileUrl",
+    "selfUri" : "https://openapi-generator.tech",
+    "voiceFileMetadata" : "{}",
+    "language" : "language",
+    "dtmfFileMetadata" : "{}",
+    "id" : "id",
+    "grammarId" : "grammarId",
+    "voiceFileUrl" : "voiceFileUrl"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<Grammar> 
+     */
+    open class func postArchitectGrammarsWithRequestBuilder(body: Grammar) -> RequestBuilder<Grammar> {        
+        let path = "/api/v2/architect/grammars"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Grammar>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -1,6 +1,5 @@
----
-title: GamificationScorecardChangeTopicScorecardChange
----
+# GamificationScorecardChangeTopicScorecardChange
+
 ## GamificationScorecardChangeTopicScorecardChange
 
 ## Properties
@@ -12,7 +11,8 @@ title: GamificationScorecardChangeTopicScorecardChange
 | **teamId** | **String** |  | [optional] |
 | **performanceProfileId** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
-| **performanceMetrics** | [**[GamificationScorecardChangeTopicPerformanceMetric]**](GamificationScorecardChangeTopicPerformanceMetric.html) |  | [optional] |
-{: class="table table-striped"}
+| **performanceMetrics** | [**[GamificationScorecardChangeTopicPerformanceMetric]**](GamificationScorecardChangeTopicPerformanceMetric) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

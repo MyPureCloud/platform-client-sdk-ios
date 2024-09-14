@@ -1,15 +1,15 @@
----
-title: AgentActivityChangedTopicPresence
----
+# AgentActivityChangedTopicPresence
+
 ## AgentActivityChangedTopicPresence
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **presenceDefinition** | [**AgentActivityChangedTopicOrganizationPresence**](AgentActivityChangedTopicOrganizationPresence.html) |  | [optional] |
+| **presenceDefinition** | [**AgentActivityChangedTopicOrganizationPresence**](AgentActivityChangedTopicOrganizationPresence) |  | [optional] |
 | **presenceMessage** | **String** |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **modifiedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

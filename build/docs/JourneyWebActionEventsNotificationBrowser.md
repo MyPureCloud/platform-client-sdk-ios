@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationBrowser
----
+# JourneyWebActionEventsNotificationBrowser
+
 ## JourneyWebActionEventsNotificationBrowser
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyWebActionEventsNotificationBrowser
 | **featuresJava** | **Bool** |  | [optional] |
 | **featuresPdf** | **Bool** |  | [optional] |
 | **featuresWebrtc** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

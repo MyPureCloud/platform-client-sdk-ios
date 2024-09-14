@@ -1,6 +1,5 @@
----
-title: LocaleHealth
----
+# LocaleHealth
+
 ## LocaleHealth
 
 ## Properties
@@ -10,6 +9,7 @@ title: LocaleHealth
 | **overallScore** | **Float** | Overall health score for the intent. | [optional] |
 | **issueCount** | **Int64** | Number of issues found in the intent. | [optional] |
 | **staticValidationResults** | **[String]** | Validation results for the intent. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

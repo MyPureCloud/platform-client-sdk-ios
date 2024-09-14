@@ -1,6 +1,5 @@
----
-title: QueueConversationCallEventTopicFaxStatus
----
+# QueueConversationCallEventTopicFaxStatus
+
 ## QueueConversationCallEventTopicFaxStatus
 
 ## Properties
@@ -15,6 +14,7 @@ title: QueueConversationCallEventTopicFaxStatus
 | **dataRate** | **Int** |  | [optional] |
 | **pageErrors** | **Int** |  | [optional] |
 | **lineErrors** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

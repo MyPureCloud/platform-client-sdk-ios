@@ -1,14 +1,14 @@
----
-title: UserScheduleAdherenceListing
----
+# UserScheduleAdherenceListing
+
 ## UserScheduleAdherenceListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserScheduleAdherence]**](UserScheduleAdherence.html) |  | [optional] |
+| **entities** | [**[UserScheduleAdherence]**](UserScheduleAdherence) |  | [optional] |
 | **downloadUrl** | **String** | The downloadUrl if the response is too large to send directly via http response | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

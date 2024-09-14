@@ -1,6 +1,5 @@
----
-title: ScimConfigResourceType
----
+# ScimConfigResourceType
+
 ## ScimConfigResourceType
 Defines a SCIM resource.
 
@@ -13,9 +12,10 @@ Defines a SCIM resource.
 | **name** | **String** | The name of the resource type. | [optional] |
 | **_description** | **String** | The description of the resource type. | [optional] |
 | **schema** | **String** | The URI of the primary or base schema for the resource type. | [optional] |
-| **schemaExtensions** | [**[ScimConfigResourceTypeSchemaExtension]**](ScimConfigResourceTypeSchemaExtension.html) | The list of schema extensions for the resource type. | [optional] |
+| **schemaExtensions** | [**[ScimConfigResourceTypeSchemaExtension]**](ScimConfigResourceTypeSchemaExtension) | The list of schema extensions for the resource type. | [optional] |
 | **endpoint** | **String** | The HTTP-addressable endpoint of the resource type. Appears after the base URL. | [optional] |
-| **meta** | [**ScimMetadata**](ScimMetadata.html) | The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources. | [optional] |
-{: class="table table-striped"}
+| **meta** | [**ScimMetadata**](ScimMetadata) | The metadata of the SCIM resource. Only \&quot;location\&quot; and \&quot;resourceType\&quot; are set for \&quot;ResourceType\&quot; resources. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

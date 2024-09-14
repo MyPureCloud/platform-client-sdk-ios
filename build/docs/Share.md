@@ -1,6 +1,5 @@
----
-title: Share
----
+# Share
+
 ## Share
 
 ## Properties
@@ -10,14 +9,15 @@ title: Share
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **sharedEntityType** | **String** |  | [optional] |
-| **sharedEntity** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **sharedEntity** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **memberType** | **String** |  | [optional] |
-| **member** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **sharedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **user** | [**User**](User.html) |  | [optional] |
-| **group** | [**Group**](Group.html) |  | [optional] |
+| **member** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **sharedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **user** | [**User**](User) |  | [optional] |
+| **group** | [**Group**](Group) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

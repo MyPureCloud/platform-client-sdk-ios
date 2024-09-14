@@ -1,24 +1,20 @@
----
-title: EventsAPI
----
-## EventsAPI
+# EventsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**postEventsConversations**](EventsAPI.html#postEventsConversations) | Publish Conversation Batch Events |
-| [**postEventsUsersPresence**](EventsAPI.html#postEventsUsersPresence) | Publish User Presence Status Batch Events |
-| [**postEventsUsersRoutingstatus**](EventsAPI.html#postEventsUsersRoutingstatus) | Publish Agent Routing Status Batch Events |
+| [**postEventsConversations**](EventsAPI#postEventsConversations) | Publish Conversation Batch Events |
+| [**postEventsUsersPresence**](EventsAPI#postEventsUsersPresence) | Publish User Presence Status Batch Events |
+| [**postEventsUsersRoutingstatus**](EventsAPI#postEventsUsersRoutingstatus) | Publish Agent Routing Status Batch Events |
 {: class="table-striped"}
 
-<a name="postEventsConversations"></a>
 
-# **postEventsConversations**
-
+## postEventsConversations
 
 
-> [BatchEventResponse](BatchEventResponse.html) postEventsConversations(body)
+
+> [BatchEventResponse](BatchEventResponse) postEventsConversations(body)
 
 Publish Conversation Batch Events
 
@@ -56,21 +52,19 @@ EventsAPI.postEventsConversations(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest.html)| batchRequest | |
-{: class="table-striped"}
+| **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest)| batchRequest | |
 
 
 ### Return type
 
-[**BatchEventResponse**](BatchEventResponse.html)
-
-<a name="postEventsUsersPresence"></a>
-
-# **postEventsUsersPresence**
+[**BatchEventResponse**](BatchEventResponse)
 
 
+## postEventsUsersPresence
 
-> [BatchEventResponse](BatchEventResponse.html) postEventsUsersPresence(body)
+
+
+> [BatchEventResponse](BatchEventResponse) postEventsUsersPresence(body)
 
 Publish User Presence Status Batch Events
 
@@ -108,21 +102,19 @@ EventsAPI.postEventsUsersPresence(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**BatchUserPresenceEventRequest**](BatchUserPresenceEventRequest.html)| batchRequest | |
-{: class="table-striped"}
+| **body** | [**BatchUserPresenceEventRequest**](BatchUserPresenceEventRequest)| batchRequest | |
 
 
 ### Return type
 
-[**BatchEventResponse**](BatchEventResponse.html)
-
-<a name="postEventsUsersRoutingstatus"></a>
-
-# **postEventsUsersRoutingstatus**
+[**BatchEventResponse**](BatchEventResponse)
 
 
+## postEventsUsersRoutingstatus
 
-> [BatchEventResponse](BatchEventResponse.html) postEventsUsersRoutingstatus(body)
+
+
+> [BatchEventResponse](BatchEventResponse) postEventsUsersRoutingstatus(body)
 
 Publish Agent Routing Status Batch Events
 
@@ -160,11 +152,12 @@ EventsAPI.postEventsUsersRoutingstatus(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**BatchUserRoutingStatusEventRequest**](BatchUserRoutingStatusEventRequest.html)| batchRequest | |
-{: class="table-striped"}
+| **body** | [**BatchUserRoutingStatusEventRequest**](BatchUserRoutingStatusEventRequest)| batchRequest | |
 
 
 ### Return type
 
-[**BatchEventResponse**](BatchEventResponse.html)
+[**BatchEventResponse**](BatchEventResponse)
 
+
+_PureCloudPlatformClientV2@151.1.0_

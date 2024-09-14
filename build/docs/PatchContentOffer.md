@@ -1,6 +1,5 @@
----
-title: PatchContentOffer
----
+# PatchContentOffer
+
 ## PatchContentOffer
 
 ## Properties
@@ -13,8 +12,9 @@ title: PatchContentOffer
 | **title** | **String** | Title used in the header of the content offer. | [optional] |
 | **headline** | **String** | Headline displayed above the body text of the content offer. | [optional] |
 | **body** | **String** | Body text of the content offer. | [optional] |
-| **callToAction** | [**PatchCallToAction**](PatchCallToAction.html) | Properties customizing the call to action button on the content offer. | [optional] |
-| **style** | [**PatchContentOfferStylingConfiguration**](PatchContentOfferStylingConfiguration.html) | Properties customizing the styling of the content offer. | [optional] |
-{: class="table table-striped"}
+| **callToAction** | [**PatchCallToAction**](PatchCallToAction) | Properties customizing the call to action button on the content offer. | [optional] |
+| **style** | [**PatchContentOfferStylingConfiguration**](PatchContentOfferStylingConfiguration) | Properties customizing the styling of the content offer. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

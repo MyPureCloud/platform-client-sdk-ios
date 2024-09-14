@@ -1,6 +1,5 @@
----
-title: QueueConversationMessageEventTopicMessageMedia
----
+# QueueConversationMessageEventTopicMessageMedia
+
 ## QueueConversationMessageEventTopicMessageMedia
 
 ## Properties
@@ -12,6 +11,7 @@ title: QueueConversationMessageEventTopicMessageMedia
 | **contentLengthBytes** | **Int** | The optional content length of the the media object, in bytes. | [optional] |
 | **name** | **String** | The optional name of the the media object. | [optional] |
 | **_id** | **String** | The optional id of the the media object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

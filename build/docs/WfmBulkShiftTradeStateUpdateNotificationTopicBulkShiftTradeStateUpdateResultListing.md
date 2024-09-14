@@ -1,13 +1,13 @@
----
-title: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing
----
+# WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing
+
 ## WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResultListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult]**](WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult]**](WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

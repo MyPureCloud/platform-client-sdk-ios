@@ -1,14 +1,14 @@
----
-title: IntegrationExport
----
+# IntegrationExport
+
 ## IntegrationExport
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **integration** | [**DomainEntityRef**](DomainEntityRef.html) | The aws-s3-recording-bulk-actions-integration that the policy uses for exports. | |
+| **integration** | [**DomainEntityRef**](DomainEntityRef) | The aws-s3-recording-bulk-actions-integration that the policy uses for exports. | |
 | **shouldExportScreenRecordings** | **Bool** | True if the policy should export screen recordings in addition to the other conversation media. Default &#x3D; true | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

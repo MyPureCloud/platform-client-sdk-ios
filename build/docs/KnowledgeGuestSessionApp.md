@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestSessionApp
----
+# KnowledgeGuestSessionApp
+
 ## KnowledgeGuestSessionApp
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeGuestSessionApp
 |------------ | ------------- | ------------- | -------------|
 | **deploymentId** | **String** | App deployment ID. | |
 | **type** | **String** | App type. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

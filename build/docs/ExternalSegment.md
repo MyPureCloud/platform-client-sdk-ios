@@ -1,6 +1,5 @@
----
-title: ExternalSegment
----
+# ExternalSegment
+
 ## ExternalSegment
 
 ## Properties
@@ -10,6 +9,7 @@ title: ExternalSegment
 | **_id** | **String** | Identifier for the external segment in the system where it originates from. | |
 | **name** | **String** | Name for the external segment in the system where it originates from. | |
 | **source** | **String** | The external system where the segment originates from. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

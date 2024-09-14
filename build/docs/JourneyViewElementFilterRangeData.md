@@ -1,6 +1,5 @@
----
-title: JourneyViewElementFilterRangeData
----
+# JourneyViewElementFilterRangeData
+
 ## JourneyViewElementFilterRangeData
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyViewElementFilterRangeData
 |------------ | ------------- | ------------- | -------------|
 | **duration** | **String** | An ISO 8601 time duration. Only one of number or duration must be specified. | [optional] |
 | **number** | **Double** | A numeric value. Only one of number or duration must be specified. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

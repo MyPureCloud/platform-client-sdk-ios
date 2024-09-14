@@ -1,6 +1,5 @@
----
-title: LearningModuleJobRequest
----
+# LearningModuleJobRequest
+
 ## LearningModuleJobRequest
 Learning module job request
 
@@ -9,6 +8,7 @@ Learning module job request
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **action** | **String** | The type for the learning module job | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

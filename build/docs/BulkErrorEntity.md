@@ -1,6 +1,5 @@
----
-title: BulkErrorEntity
----
+# BulkErrorEntity
+
 ## BulkErrorEntity
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorEntity
 | **message** | **String** |  | [optional] |
 | **status** | **Int** |  | [optional] |
 | **retryable** | **Bool** |  | [optional] |
-| **entity** | [**Entity**](Entity.html) |  | [optional] |
-| **details** | [**[BulkErrorDetail]**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**Entity**](Entity) |  | [optional] |
+| **details** | [**[BulkErrorDetail]**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

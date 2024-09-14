@@ -1,6 +1,5 @@
----
-title: ConversationChatEventTopicChatConversation
----
+# ConversationChatEventTopicChatConversation
+
 ## ConversationChatEventTopicChatConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationChatEventTopicChatConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationChatEventTopicChatMediaParticipant]**](ConversationChatEventTopicChatMediaParticipant.html) |  | [optional] |
+| **participants** | [**[ConversationChatEventTopicChatMediaParticipant]**](ConversationChatEventTopicChatMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

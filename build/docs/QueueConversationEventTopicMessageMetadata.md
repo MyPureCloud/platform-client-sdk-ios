@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicMessageMetadata
----
+# QueueConversationEventTopicMessageMetadata
+
 ## QueueConversationEventTopicMessageMetadata
 Metadata information about a message.
 
@@ -9,8 +8,9 @@ Metadata information about a message.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Message type. | [optional] |
-| **events** | [**[QueueConversationEventTopicMessageMetadataEvent]**](QueueConversationEventTopicMessageMetadataEvent.html) | List of message events, if any | [optional] |
-| **content** | [**[QueueConversationEventTopicMessageMetadataContent]**](QueueConversationEventTopicMessageMetadataContent.html) | List of message content, if any | [optional] |
-{: class="table table-striped"}
+| **events** | [**[QueueConversationEventTopicMessageMetadataEvent]**](QueueConversationEventTopicMessageMetadataEvent) | List of message events, if any | [optional] |
+| **content** | [**[QueueConversationEventTopicMessageMetadataContent]**](QueueConversationEventTopicMessageMetadataContent) | List of message content, if any | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

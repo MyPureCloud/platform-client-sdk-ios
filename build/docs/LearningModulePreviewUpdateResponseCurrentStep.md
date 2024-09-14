@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateResponseCurrentStep
----
+# LearningModulePreviewUpdateResponseCurrentStep
+
 ## LearningModulePreviewUpdateResponseCurrentStep
 Learning module preview update response current step
 
@@ -8,7 +7,8 @@ Learning module preview update response current step
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **shareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject.html) | The SCO (Shareable Content Object) data | [optional] |
-{: class="table table-striped"}
+| **shareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject) | The SCO (Shareable Content Object) data | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

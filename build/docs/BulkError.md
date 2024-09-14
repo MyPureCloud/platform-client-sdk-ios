@@ -1,6 +1,5 @@
----
-title: BulkError
----
+# BulkError
+
 ## BulkError
 
 ## Properties
@@ -9,6 +8,7 @@ title: BulkError
 |------------ | ------------- | ------------- | -------------|
 | **message** | **String** | Error message of the bulk operation result. | [optional] |
 | **code** | **String** | Error code of the bulk operation result. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

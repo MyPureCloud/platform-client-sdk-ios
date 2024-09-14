@@ -1,15 +1,15 @@
----
-title: BulkFetchNotesResponse
----
+# BulkFetchNotesResponse
+
 ## BulkFetchNotesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[BulkResponseResultNoteEntity]**](BulkResponseResultNoteEntity.html) |  | [optional] |
+| **results** | [**[BulkResponseResultNoteEntity]**](BulkResponseResultNoteEntity) |  | [optional] |
 | **errorCount** | **Int** |  | [optional] |
 | **errorIndexes** | **[Int]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

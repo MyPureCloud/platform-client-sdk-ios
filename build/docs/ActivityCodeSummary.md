@@ -1,6 +1,5 @@
----
-title: ActivityCodeSummary
----
+# ActivityCodeSummary
+
 ## ActivityCodeSummary
 
 ## Properties
@@ -9,8 +8,9 @@ title: ActivityCodeSummary
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | |
 | **name** | **String** |  | [optional] |
-| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence.html) | The secondary presences of this activity code. | [optional] |
+| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence) | The secondary presences of this activity code. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

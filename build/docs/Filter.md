@@ -1,6 +1,5 @@
----
-title: Filter
----
+# Filter
+
 ## Filter
 
 ## Properties
@@ -11,6 +10,7 @@ title: Filter
 | **type** | **String** | The type of the filter, DATE or STRING. | |
 | **_operator** | **String** | The operation that the filter performs. | |
 | **values** | **[String]** | The values to make the filter comparison against. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

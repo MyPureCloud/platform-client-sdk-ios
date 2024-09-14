@@ -1,6 +1,5 @@
----
-title: SearchUpdateRequest
----
+# SearchUpdateRequest
+
 ## SearchUpdateRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: SearchUpdateRequest
 |------------ | ------------- | ------------- | -------------|
 | **sessionId** | **String** | The unique identifier of this session | [optional] |
 | **answered** | **Bool** | Mark the search as answered/unanswered | |
-| **selectedAnswer** | [**SelectedAnswer**](SelectedAnswer.html) | The selected search result chosen as the answer. | [optional] |
-{: class="table table-striped"}
+| **selectedAnswer** | [**SelectedAnswer**](SelectedAnswer) | The selected search result chosen as the answer. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

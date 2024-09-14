@@ -1,6 +1,5 @@
----
-title: ActionCertificate
----
+# ActionCertificate
+
 ## ActionCertificate
 Details for an mTLS certificate
 
@@ -12,6 +11,7 @@ Details for an mTLS certificate
 | **certificate** | **String** | The certificate string | [optional] |
 | **status** | **String** | The certificate status | [optional] |
 | **type** | **String** | The certificate type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

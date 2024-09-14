@@ -1,6 +1,5 @@
----
-title: QueueConversationScreenShareEventTopicDetail
----
+# QueueConversationScreenShareEventTopicDetail
+
 ## QueueConversationScreenShareEventTopicDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: QueueConversationScreenShareEventTopicDetail
 | **fieldName** | **String** |  | [optional] |
 | **entityId** | **String** |  | [optional] |
 | **entityName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

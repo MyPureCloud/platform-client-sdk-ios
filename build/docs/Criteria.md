@@ -1,6 +1,5 @@
----
-title: Criteria
----
+# Criteria
+
 ## Criteria
 
 ## Properties
@@ -11,6 +10,7 @@ title: Criteria
 | **values** | **[String]** | The criteria values. | |
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | |
 | **_operator** | **String** | The comparison operator. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

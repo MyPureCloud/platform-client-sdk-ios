@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicWfmUserNotification
----
+# WfmUserNotificationTopicWfmUserNotification
+
 ## WfmUserNotificationTopicWfmUserNotification
 
 ## Properties
@@ -9,15 +8,16 @@ title: WfmUserNotificationTopicWfmUserNotification
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **mutableGroupId** | **String** |  | [optional] |
-| **timestamp** | [**Date**](Date.html) |  | [optional] |
+| **timestamp** | [**Date**](Date) |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **shiftTrade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification.html) |  | [optional] |
-| **timeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification.html) |  | [optional] |
-| **adherenceExplanation** | [**WfmUserNotificationTopicAdherenceExplanationNotification**](WfmUserNotificationTopicAdherenceExplanationNotification.html) |  | [optional] |
-| **alternativeShift** | [**WfmUserNotificationTopicAlternativeShiftNotification**](WfmUserNotificationTopicAlternativeShiftNotification.html) |  | [optional] |
+| **shiftTrade** | [**WfmUserNotificationTopicShiftTradeNotification**](WfmUserNotificationTopicShiftTradeNotification) |  | [optional] |
+| **timeOffRequest** | [**WfmUserNotificationTopicTimeOffRequestNotification**](WfmUserNotificationTopicTimeOffRequestNotification) |  | [optional] |
+| **adherenceExplanation** | [**WfmUserNotificationTopicAdherenceExplanationNotification**](WfmUserNotificationTopicAdherenceExplanationNotification) |  | [optional] |
+| **alternativeShift** | [**WfmUserNotificationTopicAlternativeShiftNotification**](WfmUserNotificationTopicAlternativeShiftNotification) |  | [optional] |
 | **agentNotification** | **Bool** |  | [optional] |
 | **otherNotificationIdsInGroup** | **[String]** |  | [optional] |
 | **markedAsRead** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

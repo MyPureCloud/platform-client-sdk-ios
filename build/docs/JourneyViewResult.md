@@ -1,6 +1,5 @@
----
-title: JourneyViewResult
----
+# JourneyViewResult
+
 ## JourneyViewResult
 A journey view result
 
@@ -8,7 +7,8 @@ A journey view result
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **elements** | [**[JourneyViewResultElement]**](JourneyViewResultElement.html) | The elements within the journey view result | [optional] |
-{: class="table table-striped"}
+| **elements** | [**[JourneyViewResultElement]**](JourneyViewResultElement) | The elements within the journey view result | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

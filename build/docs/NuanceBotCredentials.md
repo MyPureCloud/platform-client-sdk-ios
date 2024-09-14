@@ -1,6 +1,5 @@
----
-title: NuanceBotCredentials
----
+# NuanceBotCredentials
+
 ## NuanceBotCredentials
 Model for a Nuance bot credentials
 
@@ -12,6 +11,7 @@ Model for a Nuance bot credentials
 | **clientId** | **String** | The credentials client ID | |
 | **clientSecret** | **String** | The credentials client secret | [optional] |
 | **clientSecretProvided** | **Bool** | True if the credentials secret is set (but not returned due to security reasons) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

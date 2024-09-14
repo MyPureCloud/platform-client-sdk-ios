@@ -1,6 +1,5 @@
----
-title: StatEventQueueTopicIntervalMetrics
----
+# StatEventQueueTopicIntervalMetrics
+
 ## StatEventQueueTopicIntervalMetrics
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventQueueTopicIntervalMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **interval** | **String** |  | [optional] |
-| **metrics** | [**[StatEventQueueTopicMetricStats]**](StatEventQueueTopicMetricStats.html) |  | [optional] |
-{: class="table table-striped"}
+| **metrics** | [**[StatEventQueueTopicMetricStats]**](StatEventQueueTopicMetricStats) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

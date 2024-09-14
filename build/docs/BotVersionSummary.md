@@ -1,6 +1,5 @@
----
-title: BotVersionSummary
----
+# BotVersionSummary
+
 ## BotVersionSummary
 A version summary for a botConnector bot.
 
@@ -13,6 +12,7 @@ A version summary for a botConnector bot.
 | **_description** | **String** | An optional description of the bot. | [optional] |
 | **botCompositeTag** | **String** | A system-generated string that contains metadata about this bot. | [optional] |
 | **version** | **String** | The name of the version. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

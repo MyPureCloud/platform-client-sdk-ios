@@ -1,6 +1,5 @@
----
-title: WebMessagingEventCoBrowse
----
+# WebMessagingEventCoBrowse
+
 ## WebMessagingEventCoBrowse
 A Cobrowse event.
 
@@ -11,6 +10,7 @@ A Cobrowse event.
 | **type** | **String** | Describes the type of Cobrowse event. | |
 | **sessionId** | **String** | The Cobrowse session ID. | [optional] |
 | **sessionJoinToken** | **String** | The Cobrowse session join token. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

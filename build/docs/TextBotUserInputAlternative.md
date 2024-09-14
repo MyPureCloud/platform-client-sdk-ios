@@ -1,6 +1,5 @@
----
-title: TextBotUserInputAlternative
----
+# TextBotUserInputAlternative
+
 ## TextBotUserInputAlternative
 User input data used in a bot flow turn.
 
@@ -8,7 +7,8 @@ User input data used in a bot flow turn.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **transcript** | [**TextBotTranscript**](TextBotTranscript.html) | The user input transcript. | |
-{: class="table table-striped"}
+| **transcript** | [**TextBotTranscript**](TextBotTranscript) | The user input transcript. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

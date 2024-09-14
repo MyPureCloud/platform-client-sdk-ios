@@ -1,6 +1,5 @@
----
-title: NuanceGeography
----
+# NuanceGeography
+
 ## NuanceGeography
 Model for a Nuance bot geography
 
@@ -10,6 +9,7 @@ Model for a Nuance bot geography
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The geography ID | |
 | **name** | **String** | The geography name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FacetKeyAttribute
----
+# FacetKeyAttribute
+
 ## FacetKeyAttribute
 
 ## Properties
@@ -10,6 +9,7 @@ title: FacetKeyAttribute
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **count** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

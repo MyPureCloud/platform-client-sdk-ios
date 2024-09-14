@@ -1,13 +1,13 @@
----
-title: WorkPlanBidGroupSummaryList
----
+# WorkPlanBidGroupSummaryList
+
 ## WorkPlanBidGroupSummaryList
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **workPlanBidGroupSummaryList** | [**[WorkPlanBidGroupSummary]**](WorkPlanBidGroupSummary.html) | List of work plan bid group summary | |
-{: class="table table-striped"}
+| **workPlanBidGroupSummaryList** | [**[WorkPlanBidGroupSummary]**](WorkPlanBidGroupSummary) | List of work plan bid group summary | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

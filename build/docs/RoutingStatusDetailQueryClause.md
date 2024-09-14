@@ -1,6 +1,5 @@
----
-title: RoutingStatusDetailQueryClause
----
+# RoutingStatusDetailQueryClause
+
 ## RoutingStatusDetailQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: RoutingStatusDetailQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates | |
-| **predicates** | [**[RoutingStatusDetailQueryPredicate]**](RoutingStatusDetailQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **predicates** | [**[RoutingStatusDetailQueryPredicate]**](RoutingStatusDetailQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

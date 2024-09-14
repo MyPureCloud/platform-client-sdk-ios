@@ -1,6 +1,5 @@
----
-title: ConversationEmailEventTopicEmailConversation
----
+# ConversationEmailEventTopicEmailConversation
+
 ## ConversationEmailEventTopicEmailConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationEmailEventTopicEmailConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationEmailEventTopicEmailMediaParticipant]**](ConversationEmailEventTopicEmailMediaParticipant.html) |  | [optional] |
+| **participants** | [**[ConversationEmailEventTopicEmailMediaParticipant]**](ConversationEmailEventTopicEmailMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

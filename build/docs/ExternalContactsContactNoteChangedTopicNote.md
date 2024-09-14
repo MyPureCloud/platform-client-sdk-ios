@@ -1,6 +1,5 @@
----
-title: ExternalContactsContactNoteChangedTopicNote
----
+# ExternalContactsContactNoteChangedTopicNote
+
 ## ExternalContactsContactNoteChangedTopicNote
 
 ## Properties
@@ -8,13 +7,14 @@ title: ExternalContactsContactNoteChangedTopicNote
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **division** | [**ExternalContactsContactNoteChangedTopicDivision**](ExternalContactsContactNoteChangedTopicDivision.html) |  | [optional] |
+| **division** | [**ExternalContactsContactNoteChangedTopicDivision**](ExternalContactsContactNoteChangedTopicDivision) |  | [optional] |
 | **entityId** | **String** |  | [optional] |
 | **entityType** | **String** |  | [optional] |
 | **noteText** | **String** |  | [optional] |
-| **createdBy** | [**ExternalContactsContactNoteChangedTopicUser**](ExternalContactsContactNoteChangedTopicUser.html) |  | [optional] |
-| **createDate** | [**Date**](Date.html) |  | [optional] |
-| **modifyDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **createdBy** | [**ExternalContactsContactNoteChangedTopicUser**](ExternalContactsContactNoteChangedTopicUser) |  | [optional] |
+| **createDate** | [**Date**](Date) |  | [optional] |
+| **modifyDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

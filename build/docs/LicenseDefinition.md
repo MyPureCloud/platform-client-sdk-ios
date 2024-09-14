@@ -1,6 +1,5 @@
----
-title: LicenseDefinition
----
+# LicenseDefinition
+
 ## LicenseDefinition
 
 ## Properties
@@ -9,10 +8,11 @@ title: LicenseDefinition
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **_description** | **String** |  | [optional] |
-| **permissions** | [**Permissions**](Permissions.html) |  | [optional] |
-| **prerequisites** | [**[AddressableLicenseDefinition]**](AddressableLicenseDefinition.html) |  | [optional] |
-| **comprises** | [**[LicenseDefinition]**](LicenseDefinition.html) |  | [optional] |
+| **permissions** | [**Permissions**](Permissions) |  | [optional] |
+| **prerequisites** | [**[AddressableLicenseDefinition]**](AddressableLicenseDefinition) |  | [optional] |
+| **comprises** | [**[LicenseDefinition]**](LicenseDefinition) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

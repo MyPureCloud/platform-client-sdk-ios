@@ -1,6 +1,5 @@
----
-title: ConfigurationOverrides
----
+# ConfigurationOverrides
+
 ## ConfigurationOverrides
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConfigurationOverrides
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **priority** | **Bool** | Indicates whether or not the contact will be placed in front of the queue or at the end of the queue. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

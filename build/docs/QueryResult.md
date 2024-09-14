@@ -1,6 +1,5 @@
----
-title: QueryResult
----
+# QueryResult
+
 ## QueryResult
 
 ## Properties
@@ -9,8 +8,9 @@ title: QueryResult
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **body** | [**DomainEntity**](DomainEntity.html) |  | [optional] |
+| **body** | [**DomainEntity**](DomainEntity) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

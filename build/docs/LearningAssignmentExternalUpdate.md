@@ -1,6 +1,5 @@
----
-title: LearningAssignmentExternalUpdate
----
+# LearningAssignmentExternalUpdate
+
 ## LearningAssignmentExternalUpdate
 
 ## Properties
@@ -10,6 +9,7 @@ title: LearningAssignmentExternalUpdate
 | **state** | **String** | The Learning Assignment state | [optional] |
 | **percentageScore** | **Float** | The score | [optional] |
 | **isPassed** | **Bool** | Was the assignment marked as passed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

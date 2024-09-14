@@ -1,6 +1,5 @@
----
-title: MetadataSchema
----
+# MetadataSchema
+
 ## MetadataSchema
 A description of the contents of a data gathering interface for an accelerator
 
@@ -11,8 +10,9 @@ A description of the contents of a data gathering interface for an accelerator
 | **title** | **String** | title for the data gathering page | [optional] |
 | **_description** | **String** | description of the data being gathered on this page | [optional] |
 | **type** | **String** | type of data being gathered | [optional] |
-| **properties** | [**[[String:JSON]]**](Dictionary.html) | list of properties for which input is to be gathered, bother required and optional | [optional] |
+| **properties** | [**[[String:JSON]]**](Dictionary) | list of properties for which input is to be gathered, bother required and optional | [optional] |
 | **_required** | **[String]** | list of required properties | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

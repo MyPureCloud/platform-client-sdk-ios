@@ -1,6 +1,5 @@
----
-title: ContentManagementWorkspaceDocumentsTopicDocumentDataV2
----
+# ContentManagementWorkspaceDocumentsTopicDocumentDataV2
+
 ## ContentManagementWorkspaceDocumentsTopicDocumentDataV2
 
 ## Properties
@@ -9,18 +8,19 @@ title: ContentManagementWorkspaceDocumentsTopicDocumentDataV2
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-| **workspace** | [**ContentManagementWorkspaceDocumentsTopicWorkspaceData**](ContentManagementWorkspaceDocumentsTopicWorkspaceData.html) |  | [optional] |
-| **createdBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData.html) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
+| **workspace** | [**ContentManagementWorkspaceDocumentsTopicWorkspaceData**](ContentManagementWorkspaceDocumentsTopicWorkspaceData) |  | [optional] |
+| **createdBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData) |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int** |  | [optional] |
 | **filename** | **String** |  | [optional] |
 | **changeNumber** | **Int** |  | [optional] |
-| **dateUploaded** | [**Date**](Date.html) |  | [optional] |
-| **uploadedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData.html) |  | [optional] |
-| **lockInfo** | [**ContentManagementWorkspaceDocumentsTopicLockData**](ContentManagementWorkspaceDocumentsTopicLockData.html) |  | [optional] |
+| **dateUploaded** | [**Date**](Date) |  | [optional] |
+| **uploadedBy** | [**ContentManagementWorkspaceDocumentsTopicUserData**](ContentManagementWorkspaceDocumentsTopicUserData) |  | [optional] |
+| **lockInfo** | [**ContentManagementWorkspaceDocumentsTopicLockData**](ContentManagementWorkspaceDocumentsTopicLockData) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

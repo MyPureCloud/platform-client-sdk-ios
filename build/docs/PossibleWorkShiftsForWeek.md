@@ -1,6 +1,5 @@
----
-title: PossibleWorkShiftsForWeek
----
+# PossibleWorkShiftsForWeek
+
 ## PossibleWorkShiftsForWeek
 
 ## Properties
@@ -8,7 +7,8 @@ title: PossibleWorkShiftsForWeek
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **Int** | ID of this possible weekly shift | [optional] |
-| **dailyPossibleShifts** | [**[DailyPossibleShift]**](DailyPossibleShift.html) | Daily shifts in this possible weekly shift | [optional] |
-{: class="table table-striped"}
+| **dailyPossibleShifts** | [**[DailyPossibleShift]**](DailyPossibleShift) | Daily shifts in this possible weekly shift | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AggregationRange
----
+# AggregationRange
+
 ## AggregationRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: AggregationRange
 |------------ | ------------- | ------------- | -------------|
 | **gte** | **Double** | Greater than or equal to | [optional] |
 | **lt** | **Double** | Less than | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

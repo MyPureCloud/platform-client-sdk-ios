@@ -1,6 +1,5 @@
----
-title: PatchContentOfferStyleProperties
----
+# PatchContentOfferStyleProperties
+
 ## PatchContentOfferStyleProperties
 
 ## Properties
@@ -10,6 +9,7 @@ title: PatchContentOfferStyleProperties
 | **padding** | **String** | Padding of the offer. (eg. 10px) | [optional] |
 | **color** | **String** | Text color of the offer. (eg. #FF0000) | [optional] |
 | **backgroundColor** | **String** | Background color of the offer. (eg. #000000) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

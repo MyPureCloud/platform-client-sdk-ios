@@ -1,6 +1,5 @@
----
-title: AvailableTranslations
----
+# AvailableTranslations
+
 ## AvailableTranslations
 
 ## Properties
@@ -9,6 +8,7 @@ title: AvailableTranslations
 |------------ | ------------- | ------------- | -------------|
 | **orgSpecific** | **[String]** |  | [optional] |
 | **builtin** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

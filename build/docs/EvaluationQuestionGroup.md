@@ -1,6 +1,5 @@
----
-title: EvaluationQuestionGroup
----
+# EvaluationQuestionGroup
+
 ## EvaluationQuestionGroup
 
 ## Properties
@@ -15,8 +14,9 @@ title: EvaluationQuestionGroup
 | **naEnabled** | **Bool** |  | [optional] |
 | **weight** | **Float** |  | [optional] |
 | **manualWeight** | **Bool** |  | [optional] |
-| **questions** | [**[EvaluationQuestion]**](EvaluationQuestion.html) |  | [optional] |
-| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-{: class="table table-striped"}
+| **questions** | [**[EvaluationQuestion]**](EvaluationQuestion) |  | [optional] |
+| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Faq
----
+# Faq
+
 ## Faq
 
 ## Properties
@@ -13,6 +12,7 @@ title: Faq
 | **documentUrl** | **String** | URL pointing to a web page if document was sourced from a URL. | [optional] |
 | **documentDisplayName** | **String** | A human-readable description of the document, e.g. &#39;Sample store FAQ&#39; | [optional] |
 | **confidence** | **Float** | Value between 0 and 1. 1 corresponds to very confident, 0 to not confident at all | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

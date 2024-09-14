@@ -1,6 +1,5 @@
----
-title: JourneyEventsSettings
----
+# JourneyEventsSettings
+
 ## JourneyEventsSettings
 Settings concerning journey events
 
@@ -13,11 +12,12 @@ Settings concerning journey events
 | **shouldKeepUrlFragment** | **Bool** | Whether or not to keep the URL fragment. | [optional] |
 | **searchQueryParameters** | **[String]** | List of query parameters used for search (e.g. &#39;q&#39;). | [optional] |
 | **pageviewConfig** | **String** | Controls how the pageview events are tracked. | [optional] |
-| **clickEvents** | [**[SelectorEventTrigger]**](SelectorEventTrigger.html) | Tracks when and where a visitor clicks on a webpage. | [optional] |
-| **formsTrackEvents** | [**[FormsTrackTrigger]**](FormsTrackTrigger.html) | Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element. | [optional] |
-| **idleEvents** | [**[IdleEventTrigger]**](IdleEventTrigger.html) | Tracks when and where a visitor becomes inactive on a webpage. | [optional] |
-| **inViewportEvents** | [**[SelectorEventTrigger]**](SelectorEventTrigger.html) | Tracks when elements become visible or hidden on screen. | [optional] |
-| **scrollDepthEvents** | [**[ScrollPercentageEventTrigger]**](ScrollPercentageEventTrigger.html) | Tracks when a visitor scrolls to a specific percentage of a webpage. | [optional] |
-{: class="table table-striped"}
+| **clickEvents** | [**[SelectorEventTrigger]**](SelectorEventTrigger) | Tracks when and where a visitor clicks on a webpage. | [optional] |
+| **formsTrackEvents** | [**[FormsTrackTrigger]**](FormsTrackTrigger) | Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element. | [optional] |
+| **idleEvents** | [**[IdleEventTrigger]**](IdleEventTrigger) | Tracks when and where a visitor becomes inactive on a webpage. | [optional] |
+| **inViewportEvents** | [**[SelectorEventTrigger]**](SelectorEventTrigger) | Tracks when elements become visible or hidden on screen. | [optional] |
+| **scrollDepthEvents** | [**[ScrollPercentageEventTrigger]**](ScrollPercentageEventTrigger) | Tracks when a visitor scrolls to a specific percentage of a webpage. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

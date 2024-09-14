@@ -1,6 +1,5 @@
----
-title: EntityTypeCriteria
----
+# EntityTypeCriteria
+
 ## EntityTypeCriteria
 
 ## Properties
@@ -12,6 +11,7 @@ title: EntityTypeCriteria
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | |
 | **_operator** | **String** | The comparison operator. | |
 | **entityType** | **String** | The entity to match the pattern against. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

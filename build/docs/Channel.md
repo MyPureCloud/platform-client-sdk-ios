@@ -1,6 +1,5 @@
----
-title: Channel
----
+# Channel
+
 ## Channel
 
 ## Properties
@@ -9,7 +8,8 @@ title: Channel
 |------------ | ------------- | ------------- | -------------|
 | **connectUri** | **String** |  | [optional] |
 | **_id** | **String** |  | [optional] |
-| **expires** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **expires** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

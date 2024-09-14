@@ -1,6 +1,5 @@
----
-title: WfmAdherenceExplanationJobCompleteTopicErrorBody
----
+# WfmAdherenceExplanationJobCompleteTopicErrorBody
+
 ## WfmAdherenceExplanationJobCompleteTopicErrorBody
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmAdherenceExplanationJobCompleteTopicErrorBody
 | **code** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

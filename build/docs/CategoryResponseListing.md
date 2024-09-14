@@ -1,16 +1,16 @@
----
-title: CategoryResponseListing
----
+# CategoryResponseListing
+
 ## CategoryResponseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CategoryResponse]**](CategoryResponse.html) |  | [optional] |
+| **entities** | [**[CategoryResponse]**](CategoryResponse) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

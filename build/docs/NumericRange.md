@@ -1,6 +1,5 @@
----
-title: NumericRange
----
+# NumericRange
+
 ## NumericRange
 
 ## Properties
@@ -11,6 +10,7 @@ title: NumericRange
 | **gte** | **Double** | Greater than or equal to | [optional] |
 | **lt** | **Double** | Less than | [optional] |
 | **lte** | **Double** | Less than or equal to | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

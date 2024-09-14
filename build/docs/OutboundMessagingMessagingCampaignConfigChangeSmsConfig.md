@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeSmsConfig
----
+# OutboundMessagingMessagingCampaignConfigChangeSmsConfig
+
 ## OutboundMessagingMessagingCampaignConfigChangeSmsConfig
 An outbound-messaging messaging campaign SMS Config
 
@@ -10,8 +9,9 @@ An outbound-messaging messaging campaign SMS Config
 |------------ | ------------- | ------------- | -------------|
 | **messageColumn** | **String** | The Contact List column specifying the message to send to the contact. | [optional] |
 | **phoneColumn** | **String** | The Contact List column specifying the phone number to send a message to. | [optional] |
-| **senderSmsPhoneNumber** | [**OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef**](OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef.html) |  | [optional] |
-| **contentTemplate** | [**OutboundMessagingMessagingCampaignConfigChangeResponseRef**](OutboundMessagingMessagingCampaignConfigChangeResponseRef.html) |  | [optional] |
-{: class="table table-striped"}
+| **senderSmsPhoneNumber** | [**OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef**](OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef) |  | [optional] |
+| **contentTemplate** | [**OutboundMessagingMessagingCampaignConfigChangeResponseRef**](OutboundMessagingMessagingCampaignConfigChangeResponseRef) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

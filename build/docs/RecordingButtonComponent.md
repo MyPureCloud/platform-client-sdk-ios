@@ -1,6 +1,5 @@
----
-title: RecordingButtonComponent
----
+# RecordingButtonComponent
+
 ## RecordingButtonComponent
 Structured template button object.
 
@@ -9,8 +8,9 @@ Structured template button object.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **title** | **String** |  | [optional] |
-| **actions** | [**RecordingContentActions**](RecordingContentActions.html) |  | [optional] |
+| **actions** | [**RecordingContentActions**](RecordingContentActions) |  | [optional] |
 | **isSelected** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

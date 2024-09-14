@@ -1,6 +1,5 @@
----
-title: OutcomeRefRequest
----
+# OutcomeRefRequest
+
 ## OutcomeRefRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: OutcomeRefRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | ID of outcome. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

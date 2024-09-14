@@ -1,6 +1,5 @@
----
-title: CopilotCondition
----
+# CopilotCondition
+
 ## CopilotCondition
 
 ## Properties
@@ -9,6 +8,7 @@ title: CopilotCondition
 |------------ | ------------- | ------------- | -------------|
 | **conditionType** | **String** | Type of condition. | |
 | **conditionValues** | **[String]** | Condition values. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

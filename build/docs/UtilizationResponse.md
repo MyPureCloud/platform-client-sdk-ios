@@ -1,14 +1,14 @@
----
-title: UtilizationResponse
----
+# UtilizationResponse
+
 ## UtilizationResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **utilization** | [**[String:MediaUtilization]**](MediaUtilization.html) | Map of media type to utilization settings. | [optional] |
-| **labelUtilizations** | [**[String:LabelUtilizationResponse]**](LabelUtilizationResponse.html) | Map of label ids to utilization settings. | [optional] |
-{: class="table table-striped"}
+| **utilization** | [**[String:MediaUtilization]**](MediaUtilization) | Map of media type to utilization settings. | [optional] |
+| **labelUtilizations** | [**[String:LabelUtilizationResponse]**](LabelUtilizationResponse) | Map of label ids to utilization settings. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

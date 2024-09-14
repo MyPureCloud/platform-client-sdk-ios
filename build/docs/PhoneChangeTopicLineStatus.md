@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicLineStatus
----
+# PhoneChangeTopicLineStatus
+
 ## PhoneChangeTopicLineStatus
 
 ## Properties
@@ -11,7 +10,8 @@ title: PhoneChangeTopicLineStatus
 | **reachable** | **Bool** |  | [optional] |
 | **addressOfRecord** | **String** |  | [optional] |
 | **contactAddresses** | **[String]** |  | [optional] |
-| **reachableStateTime** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **reachableStateTime** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkitemsQueueEventsNotificationWorkitem
----
+# WorkitemsQueueEventsNotificationWorkitem
+
 ## WorkitemsQueueEventsNotificationWorkitem
 
 ## Properties
@@ -31,15 +30,16 @@ title: WorkitemsQueueEventsNotificationWorkitem
 | **wrapupId** | **String** |  | [optional] |
 | **modifiedBy** | **String** |  | [optional] |
 | **operation** | **String** |  | [optional] |
-| **changes** | [**[WorkitemsQueueEventsNotificationDelta]**](WorkitemsQueueEventsNotificationDelta.html) |  | [optional] |
+| **changes** | [**[WorkitemsQueueEventsNotificationDelta]**](WorkitemsQueueEventsNotificationDelta) |  | [optional] |
 | **assignmentState** | **String** |  | [optional] |
 | **assignmentId** | **String** |  | [optional] |
 | **alertTimeoutSeconds** | **Int** |  | [optional] |
 | **queueId** | **String** |  | [optional] |
-| **customFields** | [**[String:WorkitemsQueueEventsNotificationCustomAttribute]**](WorkitemsQueueEventsNotificationCustomAttribute.html) |  | [optional] |
-| **wrapup** | [**WorkitemsQueueEventsNotificationWrapup**](WorkitemsQueueEventsNotificationWrapup.html) |  | [optional] |
-| **sessions** | [**[WorkitemsQueueEventsNotificationSession]**](WorkitemsQueueEventsNotificationSession.html) |  | [optional] |
+| **customFields** | [**[String:WorkitemsQueueEventsNotificationCustomAttribute]**](WorkitemsQueueEventsNotificationCustomAttribute) |  | [optional] |
+| **wrapup** | [**WorkitemsQueueEventsNotificationWrapup**](WorkitemsQueueEventsNotificationWrapup) |  | [optional] |
+| **sessions** | [**[WorkitemsQueueEventsNotificationSession]**](WorkitemsQueueEventsNotificationSession) |  | [optional] |
 | **skillIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

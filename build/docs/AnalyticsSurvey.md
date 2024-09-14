@@ -1,15 +1,14 @@
----
-title: AnalyticsSurvey
----
+# AnalyticsSurvey
+
 ## AnalyticsSurvey
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **eventTime** | [**Date**](Date.html) | Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **eventTime** | [**Date**](Date) | Specifies when an event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **queueId** | **String** | The ID of the associated queue | [optional] |
-| **surveyCompletedDate** | [**Date**](Date.html) | Completion datetime of the survey in ISO 8601 format | [optional] |
+| **surveyCompletedDate** | [**Date**](Date) | Completion datetime of the survey in ISO 8601 format | [optional] |
 | **surveyFormContextId** | **String** | Unique identifier for the survey form, regardless of version | [optional] |
 | **surveyFormId** | **String** | ID of the survey form used | [optional] |
 | **surveyFormName** | **String** | Name of the survey form used | [optional] |
@@ -20,6 +19,7 @@ title: AnalyticsSurvey
 | **surveyType** | **String** | The type of the survey | [optional] |
 | **userId** | **String** | ID of the agent the survey was performed against | [optional] |
 | **oSurveyTotalScore** | **Int64** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

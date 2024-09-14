@@ -1,6 +1,5 @@
----
-title: ConversationContentCarousel
----
+# ConversationContentCarousel
+
 ## ConversationContentCarousel
 Carousel content object.
 
@@ -8,7 +7,8 @@ Carousel content object.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **cards** | [**[ConversationContentCard]**](ConversationContentCard.html) | An array of card objects. | |
-{: class="table table-striped"}
+| **cards** | [**[ConversationContentCard]**](ConversationContentCard) | An array of card objects. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

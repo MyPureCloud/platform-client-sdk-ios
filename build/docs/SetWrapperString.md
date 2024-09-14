@@ -1,6 +1,5 @@
----
-title: SetWrapperString
----
+# SetWrapperString
+
 ## SetWrapperString
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetWrapperString
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **values** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

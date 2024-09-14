@@ -1,6 +1,5 @@
----
-title: ErrorBody
----
+# ErrorBody
+
 ## ErrorBody
 
 ## Properties
@@ -15,9 +14,10 @@ title: ErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[Detail]**](Detail.html) |  | [optional] |
-| **errors** | [**[ErrorBody]**](ErrorBody.html) |  | [optional] |
-| **limit** | [**Limit**](Limit.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[Detail]**](Detail) |  | [optional] |
+| **errors** | [**[ErrorBody]**](ErrorBody) |  | [optional] |
+| **limit** | [**Limit**](Limit) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

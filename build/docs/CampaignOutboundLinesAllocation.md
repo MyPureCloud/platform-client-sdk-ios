@@ -1,16 +1,16 @@
----
-title: CampaignOutboundLinesAllocation
----
+# CampaignOutboundLinesAllocation
+
 ## CampaignOutboundLinesAllocation
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **campaign** | [**DomainEntityRef**](DomainEntityRef.html) | The Campaign | [optional] |
+| **campaign** | [**DomainEntityRef**](DomainEntityRef) | The Campaign | [optional] |
 | **campaignWeight** | **Int** | The relative weight of the campaign | [optional] |
 | **linesAssigned** | **Int** | The number of lines dynamically assigned to the campaign | [optional] |
 | **legacyWeight** | **Bool** | true if relative weight of the campaign is not explicitly specified, false otherwise | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

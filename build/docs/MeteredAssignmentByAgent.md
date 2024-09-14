@@ -1,6 +1,5 @@
----
-title: MeteredAssignmentByAgent
----
+# MeteredAssignmentByAgent
+
 ## MeteredAssignmentByAgent
 
 ## Properties
@@ -8,11 +7,12 @@ title: MeteredAssignmentByAgent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **evaluationContextId** | **String** |  | [optional] |
-| **evaluators** | [**[User]**](User.html) |  | [optional] |
+| **evaluators** | [**[User]**](User) |  | [optional] |
 | **maxNumberEvaluations** | **Int** |  | [optional] |
-| **evaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
-| **timeInterval** | [**TimeInterval**](TimeInterval.html) |  | [optional] |
+| **evaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
+| **timeInterval** | [**TimeInterval**](TimeInterval) |  | [optional] |
 | **timeZone** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

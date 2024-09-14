@@ -1,17 +1,17 @@
----
-title: V2MobiusAlertsTopicAlertSummary
----
+# V2MobiusAlertsTopicAlertSummary
+
 ## V2MobiusAlertsTopicAlertSummary
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[V2MobiusAlertsTopicAlertSummaryEntity]**](V2MobiusAlertsTopicAlertSummaryEntity.html) |  | [optional] |
-| **conversation** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef.html) |  | [optional] |
+| **entities** | [**[V2MobiusAlertsTopicAlertSummaryEntity]**](V2MobiusAlertsTopicAlertSummaryEntity) |  | [optional] |
+| **conversation** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef) |  | [optional] |
 | **metricType** | **String** |  | [optional] |
 | **isTeamMemberRuleSummary** | **Bool** |  | [optional] |
 | **teamMemberRuleSummary** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

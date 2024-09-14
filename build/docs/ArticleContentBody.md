@@ -1,6 +1,5 @@
----
-title: ArticleContentBody
----
+# ArticleContentBody
+
 ## ArticleContentBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: ArticleContentBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **locationUrl** | **String** | Presigned URL to retrieve the document content. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

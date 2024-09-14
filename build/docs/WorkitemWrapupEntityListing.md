@@ -1,16 +1,16 @@
----
-title: WorkitemWrapupEntityListing
----
+# WorkitemWrapupEntityListing
+
 ## WorkitemWrapupEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WorkitemWrapup]**](WorkitemWrapup.html) |  | [optional] |
+| **entities** | [**[WorkitemWrapup]**](WorkitemWrapup) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

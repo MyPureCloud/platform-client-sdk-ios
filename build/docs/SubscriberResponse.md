@@ -1,6 +1,5 @@
----
-title: SubscriberResponse
----
+# SubscriberResponse
+
 ## SubscriberResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: SubscriberResponse
 |------------ | ------------- | ------------- | -------------|
 | **messageReturned** | **[String]** | Suggested valid addresses | [optional] |
 | **status** | **String** | http status | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

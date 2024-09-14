@@ -1,6 +1,5 @@
----
-title: StatEventCampaignTopicIntervalMetrics
----
+# StatEventCampaignTopicIntervalMetrics
+
 ## StatEventCampaignTopicIntervalMetrics
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventCampaignTopicIntervalMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **interval** | **String** |  | [optional] |
-| **metrics** | [**[StatEventCampaignTopicMetricStats]**](StatEventCampaignTopicMetricStats.html) |  | [optional] |
-{: class="table table-striped"}
+| **metrics** | [**[StatEventCampaignTopicMetricStats]**](StatEventCampaignTopicMetricStats) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ErrorDetails
----
+# ErrorDetails
+
 ## ErrorDetails
 
 ## Properties
@@ -13,8 +12,9 @@ title: ErrorDetails
 | **messageParams** | **[String:String]** |  | [optional] |
 | **code** | **String** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **nested** | [**ErrorDetails**](ErrorDetails.html) |  | [optional] |
+| **nested** | [**ErrorDetails**](ErrorDetails) |  | [optional] |
 | **details** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

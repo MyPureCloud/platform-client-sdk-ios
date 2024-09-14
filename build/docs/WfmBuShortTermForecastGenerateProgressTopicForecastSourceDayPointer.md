@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
----
+# WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
+
 ## WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer
 | **date** | **String** |  | [optional] |
 | **fileName** | **String** |  | [optional] |
 | **dataKey** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

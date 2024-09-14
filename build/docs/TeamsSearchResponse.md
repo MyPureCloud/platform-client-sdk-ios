@@ -1,6 +1,5 @@
----
-title: TeamsSearchResponse
----
+# TeamsSearchResponse
+
 ## TeamsSearchResponse
 
 ## Properties
@@ -15,7 +14,8 @@ title: TeamsSearchResponse
 | **currentPage** | **String** | Q64 value for the current page of results | [optional] |
 | **nextPage** | **String** | Q64 value for the next page of results | [optional] |
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**[Team]**](Team.html) | Search results | |
-{: class="table table-striped"}
+| **results** | [**[Team]**](Team) | Search results | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

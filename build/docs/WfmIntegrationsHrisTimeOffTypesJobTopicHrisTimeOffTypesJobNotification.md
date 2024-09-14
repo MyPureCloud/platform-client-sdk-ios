@@ -1,6 +1,5 @@
----
-title: WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
----
+# WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
+
 ## WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
 
 ## Properties
@@ -8,9 +7,10 @@ title: WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffTypesJobNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **entities** | [**[WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType]**](WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType.html) |  | [optional] |
+| **entities** | [**[WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType]**](WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType) |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **error** | [**WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody**](WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **error** | [**WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody**](WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

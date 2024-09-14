@@ -1,6 +1,5 @@
----
-title: AggregationResultEntry
----
+# AggregationResultEntry
+
 ## AggregationResultEntry
 
 ## Properties
@@ -11,6 +10,7 @@ title: AggregationResultEntry
 | **value** | **String** | For termFrequency aggregations | [optional] |
 | **gte** | **Double** | For numericRange aggregations | [optional] |
 | **lt** | **Double** | For numericRange aggregations | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

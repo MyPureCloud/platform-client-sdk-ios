@@ -1,6 +1,5 @@
----
-title: CoachingSlotsRequest
----
+# CoachingSlotsRequest
+
 ## CoachingSlotsRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: CoachingSlotsRequest
 | **attendeeIds** | **[String]** | List of attendees to determine coaching appointment slots | |
 | **facilitatorIds** | **[String]** | List of facilitators to determine coaching appointment slots | [optional] |
 | **interruptibleAppointmentIds** | **[String]** | List of appointment ids to exclude from consideration when determining blocked slots | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

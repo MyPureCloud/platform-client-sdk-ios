@@ -1,6 +1,5 @@
----
-title: ContextEntity
----
+# ContextEntity
+
 ## ContextEntity
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContextEntity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the entity. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

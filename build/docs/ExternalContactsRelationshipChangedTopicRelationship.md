@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicRelationship
----
+# ExternalContactsRelationshipChangedTopicRelationship
+
 ## ExternalContactsRelationshipChangedTopicRelationship
 
 ## Properties
@@ -8,12 +7,13 @@ title: ExternalContactsRelationshipChangedTopicRelationship
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **division** | [**ExternalContactsRelationshipChangedTopicDivision**](ExternalContactsRelationshipChangedTopicDivision.html) |  | [optional] |
-| **user** | [**ExternalContactsRelationshipChangedTopicUser**](ExternalContactsRelationshipChangedTopicUser.html) |  | [optional] |
-| **externalOrganization** | [**ExternalContactsRelationshipChangedTopicExternalOrganization**](ExternalContactsRelationshipChangedTopicExternalOrganization.html) |  | [optional] |
+| **division** | [**ExternalContactsRelationshipChangedTopicDivision**](ExternalContactsRelationshipChangedTopicDivision) |  | [optional] |
+| **user** | [**ExternalContactsRelationshipChangedTopicUser**](ExternalContactsRelationshipChangedTopicUser) |  | [optional] |
+| **externalOrganization** | [**ExternalContactsRelationshipChangedTopicExternalOrganization**](ExternalContactsRelationshipChangedTopicExternalOrganization) |  | [optional] |
 | **relationship** | **String** |  | [optional] |
-| **createDate** | [**Date**](Date.html) |  | [optional] |
-| **modifyDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **createDate** | [**Date**](Date) |  | [optional] |
+| **modifyDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

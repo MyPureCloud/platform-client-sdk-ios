@@ -1,6 +1,5 @@
----
-title: ExportScriptRequest
----
+# ExportScriptRequest
+
 ## ExportScriptRequest
 Creating an exported script via Download Service
 
@@ -10,6 +9,7 @@ Creating an exported script via Download Service
 |------------ | ------------- | ------------- | -------------|
 | **fileName** | **String** | The final file name (no extension) of the script download: &lt;fileName&gt;.script | [optional] |
 | **versionId** | **String** | The UUID version of the script to be exported.  Defaults to the current editable version. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

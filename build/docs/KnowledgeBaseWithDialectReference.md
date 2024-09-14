@@ -1,6 +1,5 @@
----
-title: KnowledgeBaseWithDialectReference
----
+# KnowledgeBaseWithDialectReference
+
 ## KnowledgeBaseWithDialectReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeBaseWithDialectReference
 | **_id** | **String** | The globally unique identifier for the knowledge base. | |
 | **languageCode** | **String** | The dialect for the knowledge base. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

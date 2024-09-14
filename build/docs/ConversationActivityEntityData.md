@@ -1,13 +1,12 @@
----
-title: ConversationActivityEntityData
----
+# ConversationActivityEntityData
+
 ## ConversationActivityEntityData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **activityDate** | [**Date**](Date.html) | The time at which the activity was observed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **activityDate** | [**Date**](Date) | The time at which the activity was observed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **metric** | **String** | Activity metric | [optional] |
 | **activeRouting** | **String** | Active routing method | [optional] |
 | **addressFrom** | **String** | The address that initiated an action | [optional] |
@@ -29,7 +28,8 @@ title: ConversationActivityEntityData
 | **teamId** | **String** | The team ID the user is a member of | [optional] |
 | **usedRouting** | **String** | Complete routing method | [optional] |
 | **userId** | **String** | Unique identifier for the user | [optional] |
-| **scoredAgents** | [**[ConversationActivityScoredAgent]**](ConversationActivityScoredAgent.html) | Scored agents | [optional] |
-{: class="table table-striped"}
+| **scoredAgents** | [**[ConversationActivityScoredAgent]**](ConversationActivityScoredAgent) | Scored agents | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

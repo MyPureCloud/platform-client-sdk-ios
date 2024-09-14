@@ -1,6 +1,5 @@
----
-title: OpenMessageEvent
----
+# OpenMessageEvent
+
 ## OpenMessageEvent
 Message event element.
 
@@ -9,7 +8,8 @@ Message event element.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventType** | **String** | Type of this event element | |
-| **typing** | [**ConversationEventTyping**](ConversationEventTyping.html) | Typing event. | [optional] |
-{: class="table table-striped"}
+| **typing** | [**ConversationEventTyping**](ConversationEventTyping) | Typing event. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

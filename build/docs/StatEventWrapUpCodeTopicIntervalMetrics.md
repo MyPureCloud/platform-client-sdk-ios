@@ -1,6 +1,5 @@
----
-title: StatEventWrapUpCodeTopicIntervalMetrics
----
+# StatEventWrapUpCodeTopicIntervalMetrics
+
 ## StatEventWrapUpCodeTopicIntervalMetrics
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventWrapUpCodeTopicIntervalMetrics
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **interval** | **String** |  | [optional] |
-| **metrics** | [**[StatEventWrapUpCodeTopicMetricStats]**](StatEventWrapUpCodeTopicMetricStats.html) |  | [optional] |
-{: class="table table-striped"}
+| **metrics** | [**[StatEventWrapUpCodeTopicMetricStats]**](StatEventWrapUpCodeTopicMetricStats) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

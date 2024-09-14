@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicConversation
----
+# QueueConversationSocialExpressionEventTopicConversation
+
 ## QueueConversationSocialExpressionEventTopicConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: QueueConversationSocialExpressionEventTopicConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
-| **participants** | [**[QueueConversationSocialExpressionEventTopicParticipant]**](QueueConversationSocialExpressionEventTopicParticipant.html) |  | [optional] |
-| **recentTransfers** | [**[QueueConversationSocialExpressionEventTopicRecentTransfer]**](QueueConversationSocialExpressionEventTopicRecentTransfer.html) |  | [optional] |
+| **participants** | [**[QueueConversationSocialExpressionEventTopicParticipant]**](QueueConversationSocialExpressionEventTopicParticipant) |  | [optional] |
+| **recentTransfers** | [**[QueueConversationSocialExpressionEventTopicRecentTransfer]**](QueueConversationSocialExpressionEventTopicRecentTransfer) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **externalTag** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

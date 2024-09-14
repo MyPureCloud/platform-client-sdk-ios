@@ -1,6 +1,5 @@
----
-title: DialogflowParameter
----
+# DialogflowParameter
+
 ## DialogflowParameter
 
 ## Properties
@@ -9,6 +8,7 @@ title: DialogflowParameter
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The parameter name | |
 | **type** | **String** | The parameter type | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

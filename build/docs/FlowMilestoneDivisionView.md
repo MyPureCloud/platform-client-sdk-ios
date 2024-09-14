@@ -1,6 +1,5 @@
----
-title: FlowMilestoneDivisionView
----
+# FlowMilestoneDivisionView
+
 ## FlowMilestoneDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: FlowMilestoneDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The flow milestone identifier | [optional] |
 | **name** | **String** | The flow milestone name | |
-| **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

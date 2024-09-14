@@ -1,6 +1,5 @@
----
-title: WorkitemWrapupUpdate
----
+# WorkitemWrapupUpdate
+
 ## WorkitemWrapupUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemWrapupUpdate
 |------------ | ------------- | ------------- | -------------|
 | **action** | **String** | Action to be performed for the wrapup code. | |
 | **wrapupCode** | **String** | The wrapup code which will be added/removed. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

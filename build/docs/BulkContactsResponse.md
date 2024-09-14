@@ -1,15 +1,15 @@
----
-title: BulkContactsResponse
----
+# BulkContactsResponse
+
 ## BulkContactsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[BulkResponseResultExternalContactExternalContact]**](BulkResponseResultExternalContactExternalContact.html) |  | [optional] |
+| **results** | [**[BulkResponseResultExternalContactExternalContact]**](BulkResponseResultExternalContactExternalContact) |  | [optional] |
 | **errorCount** | **Int** |  | [optional] |
 | **errorIndexes** | **[Int]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

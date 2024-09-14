@@ -1,6 +1,5 @@
----
-title: SchedulerMessageSeverityCount
----
+# SchedulerMessageSeverityCount
+
 ## SchedulerMessageSeverityCount
 
 ## Properties
@@ -9,6 +8,7 @@ title: SchedulerMessageSeverityCount
 |------------ | ------------- | ------------- | -------------|
 | **severity** | **String** | The schedule message severity | [optional] |
 | **count** | **Int** | The number of schedule messages with the given severity | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

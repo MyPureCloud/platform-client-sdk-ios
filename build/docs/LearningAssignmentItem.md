@@ -1,6 +1,5 @@
----
-title: LearningAssignmentItem
----
+# LearningAssignmentItem
+
 ## LearningAssignmentItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: LearningAssignmentItem
 |------------ | ------------- | ------------- | -------------|
 | **moduleId** | **String** | The Learning Module ID associated with this assignment | |
 | **userId** | **String** | The User ID associated with this assignment | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,16 +1,16 @@
----
-title: TrainingListing
----
+# TrainingListing
+
 ## TrainingListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[KnowledgeTraining]**](KnowledgeTraining.html) |  | [optional] |
+| **entities** | [**[KnowledgeTraining]**](KnowledgeTraining) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

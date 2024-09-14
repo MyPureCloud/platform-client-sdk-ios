@@ -1,6 +1,5 @@
----
-title: PlanningGroupOutputs
----
+# PlanningGroupOutputs
+
 ## PlanningGroupOutputs
 
 ## Properties
@@ -12,6 +11,7 @@ title: PlanningGroupOutputs
 | **occupancyPerInterval** | **[Double]** | List of Occupancy percentage (0.0-100.0) results per interval | |
 | **averageSpeedOfAnswerSecondsPerInterval** | **[Double]** | List of Average Speed of Answer (in seconds) results per interval | |
 | **abandonRatePerInterval** | **[Double]** | List of Abandon rate percentage (0.0-100.0) results per interval | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

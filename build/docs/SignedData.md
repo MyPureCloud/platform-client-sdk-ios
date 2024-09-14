@@ -1,6 +1,5 @@
----
-title: SignedData
----
+# SignedData
+
 ## SignedData
 
 ## Properties
@@ -8,6 +7,7 @@ title: SignedData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **jwt** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

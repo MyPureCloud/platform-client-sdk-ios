@@ -1,6 +1,5 @@
----
-title: AdditionalLanguagesIntent
----
+# AdditionalLanguagesIntent
+
 ## AdditionalLanguagesIntent
 
 ## Properties
@@ -8,7 +7,8 @@ title: AdditionalLanguagesIntent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | ID of the intent for respective additional language | [optional] |
-| **utterances** | [**[NluUtterance]**](NluUtterance.html) | Utterances list for additional language | [optional] |
-{: class="table table-striped"}
+| **utterances** | [**[NluUtterance]**](NluUtterance) | Utterances list for additional language | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

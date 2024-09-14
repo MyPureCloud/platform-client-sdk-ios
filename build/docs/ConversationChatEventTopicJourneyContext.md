@@ -1,15 +1,15 @@
----
-title: ConversationChatEventTopicJourneyContext
----
+# ConversationChatEventTopicJourneyContext
+
 ## ConversationChatEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **customer** | [**ConversationChatEventTopicJourneyCustomer**](ConversationChatEventTopicJourneyCustomer.html) |  | [optional] |
-| **customerSession** | [**ConversationChatEventTopicJourneyCustomerSession**](ConversationChatEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **triggeringAction** | [**ConversationChatEventTopicJourneyAction**](ConversationChatEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **customer** | [**ConversationChatEventTopicJourneyCustomer**](ConversationChatEventTopicJourneyCustomer) |  | [optional] |
+| **customerSession** | [**ConversationChatEventTopicJourneyCustomerSession**](ConversationChatEventTopicJourneyCustomerSession) |  | [optional] |
+| **triggeringAction** | [**ConversationChatEventTopicJourneyAction**](ConversationChatEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

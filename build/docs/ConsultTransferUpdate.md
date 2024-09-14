@@ -1,6 +1,5 @@
----
-title: ConsultTransferUpdate
----
+# ConsultTransferUpdate
+
 ## ConsultTransferUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConsultTransferUpdate
 |------------ | ------------- | ------------- | -------------|
 | **speakTo** | **String** | Determines to whom the initiating participant is speaking. | |
 | **consultingUserId** | **String** | The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ChangePasswordRequest
----
+# ChangePasswordRequest
+
 ## ChangePasswordRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChangePasswordRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **newPassword** | **String** | The new password | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

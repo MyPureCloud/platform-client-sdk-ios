@@ -1,6 +1,5 @@
----
-title: SuggestionFeedback
----
+# SuggestionFeedback
+
 ## SuggestionFeedback
 
 ## Properties
@@ -8,6 +7,7 @@ title: SuggestionFeedback
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **rating** | **String** | The rating value of the suggestion feedback. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

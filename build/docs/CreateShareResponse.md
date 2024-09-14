@@ -1,6 +1,5 @@
----
-title: CreateShareResponse
----
+# CreateShareResponse
+
 ## CreateShareResponse
 
 ## Properties
@@ -10,14 +9,15 @@ title: CreateShareResponse
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **sharedEntityType** | **String** |  | [optional] |
-| **sharedEntity** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **sharedEntity** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **memberType** | **String** |  | [optional] |
-| **member** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **sharedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **succeeded** | [**[Share]**](Share.html) |  | [optional] |
-| **failed** | [**[Share]**](Share.html) |  | [optional] |
+| **member** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **sharedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **succeeded** | [**[Share]**](Share) |  | [optional] |
+| **failed** | [**[Share]**](Share) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

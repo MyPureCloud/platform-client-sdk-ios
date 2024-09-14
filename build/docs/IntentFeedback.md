@@ -1,6 +1,5 @@
----
-title: IntentFeedback
----
+# IntentFeedback
+
 ## IntentFeedback
 
 ## Properties
@@ -9,8 +8,9 @@ title: IntentFeedback
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the detected intent. | [optional] |
 | **probability** | **Double** | The probability of the detected intent. | [optional] |
-| **entities** | [**[DetectedNamedEntity]**](DetectedNamedEntity.html) | The collection of named entities detected. | [optional] |
+| **entities** | [**[DetectedNamedEntity]**](DetectedNamedEntity) | The collection of named entities detected. | [optional] |
 | **assessment** | **String** | The assessment on the detection for feedback text. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

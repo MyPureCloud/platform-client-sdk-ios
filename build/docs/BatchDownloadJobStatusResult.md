@@ -1,6 +1,5 @@
----
-title: BatchDownloadJobStatusResult
----
+# BatchDownloadJobStatusResult
+
 ## BatchDownloadJobStatusResult
 
 ## Properties
@@ -12,8 +11,9 @@ title: BatchDownloadJobStatusResult
 | **expectedResultCount** | **Int** | Number of results expected when job is completed, this includes both success and error results. This number could change as recordings are being discovered and processed. | [optional] |
 | **resultCount** | **Int** | Current number of results available, this includes both success and error results. | [optional] |
 | **errorCount** | **Int** | Current number of error results. | [optional] |
-| **results** | [**[BatchDownloadJobResult]**](BatchDownloadJobResult.html) | Current set of results for the job. | [optional] |
+| **results** | [**[BatchDownloadJobResult]**](BatchDownloadJobResult) | Current set of results for the job. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

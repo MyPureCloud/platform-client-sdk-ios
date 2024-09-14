@@ -1,6 +1,5 @@
----
-title: ScimV2SchemaAttribute
----
+# ScimV2SchemaAttribute
+
 ## ScimV2SchemaAttribute
 A complex type that defines service provider attributes or subattributes and their qualities.
 
@@ -10,7 +9,7 @@ A complex type that defines service provider attributes or subattributes and the
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the attribute. | [optional] |
 | **type** | **String** | The data type of the attribute. | [optional] |
-| **subAttributes** | [**[ScimV2SchemaAttribute]**](ScimV2SchemaAttribute.html) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
+| **subAttributes** | [**[ScimV2SchemaAttribute]**](ScimV2SchemaAttribute) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
 | **multiValued** | **Bool** | Indicates whether an attribute contains multiple values. | [optional] |
 | **_description** | **String** | The description of the attribute. | [optional] |
 | **_required** | **Bool** | Indicates whether an attribute is required. | [optional] |
@@ -20,6 +19,7 @@ A complex type that defines service provider attributes or subattributes and the
 | **returned** | **String** | The circumstances under which an attribute and its values are returned in response to a GET, PUT, POST, or PATCH request. | [optional] |
 | **uniqueness** | **String** | The method by which the service provider enforces the uniqueness of an attribute value. A server can reject a value by returning the HTTP response code 400 (Bad Request). A client can enforce uniqueness to a greater degree than the server provider enforces. For example, a client could make a value unique even though the server has \&quot;uniqueness\&quot; set to \&quot;none\&quot;. | [optional] |
 | **referenceTypes** | **[String]** | The list of SCIM resource types that may be referenced. Only applies when \&quot;type\&quot; is set to \&quot;reference\&quot;. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationSocialExpressionEventTopicErrorBody
----
+# ConversationSocialExpressionEventTopicErrorBody
+
 ## ConversationSocialExpressionEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationSocialExpressionEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[ConversationSocialExpressionEventTopicDetail]**](ConversationSocialExpressionEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[ConversationSocialExpressionEventTopicErrorBody]**](ConversationSocialExpressionEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[ConversationSocialExpressionEventTopicDetail]**](ConversationSocialExpressionEventTopicDetail) |  | [optional] |
+| **errors** | [**[ConversationSocialExpressionEventTopicErrorBody]**](ConversationSocialExpressionEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

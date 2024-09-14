@@ -1,6 +1,5 @@
----
-title: SchedulingSettingsResponse
----
+# SchedulingSettingsResponse
+
 ## SchedulingSettingsResponse
 
 ## Properties
@@ -9,9 +8,10 @@ title: SchedulingSettingsResponse
 |------------ | ------------- | ------------- | -------------|
 | **maxOccupancyPercentForDeferredWork** | **Int** | Max occupancy percent for deferred work | [optional] |
 | **defaultShrinkagePercent** | **Double** | Default shrinkage percent for scheduling | [optional] |
-| **shrinkageOverrides** | [**ShrinkageOverrides**](ShrinkageOverrides.html) | Shrinkage overrides for scheduling | [optional] |
-| **planningPeriod** | [**PlanningPeriodSettings**](PlanningPeriodSettings.html) | Planning period settings for scheduling | [optional] |
+| **shrinkageOverrides** | [**ShrinkageOverrides**](ShrinkageOverrides) | Shrinkage overrides for scheduling | [optional] |
+| **planningPeriod** | [**PlanningPeriodSettings**](PlanningPeriodSettings) | Planning period settings for scheduling | [optional] |
 | **startDayOfWeekend** | **String** | Start day of weekend for scheduling | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

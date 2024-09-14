@@ -1,6 +1,5 @@
----
-title: AssessmentFormQuestionGroup
----
+# AssessmentFormQuestionGroup
+
 ## AssessmentFormQuestionGroup
 
 ## Properties
@@ -15,9 +14,10 @@ title: AssessmentFormQuestionGroup
 | **naEnabled** | **Bool** |  | [optional] |
 | **weight** | **Float** |  | [optional] |
 | **manualWeight** | **Bool** |  | [optional] |
-| **questions** | [**[AssessmentFormQuestion]**](AssessmentFormQuestion.html) | The list of questions for this question group | |
-| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
+| **questions** | [**[AssessmentFormQuestion]**](AssessmentFormQuestion) | The list of questions for this question group | |
+| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

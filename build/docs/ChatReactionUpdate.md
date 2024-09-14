@@ -1,6 +1,5 @@
----
-title: ChatReactionUpdate
----
+# ChatReactionUpdate
+
 ## ChatReactionUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatReactionUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **reactions** | **[String]** | Reactions to update | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

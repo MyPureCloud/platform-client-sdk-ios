@@ -1,6 +1,5 @@
----
-title: NuanceOrganization
----
+# NuanceOrganization
+
 ## NuanceOrganization
 Model for a Nuance bot organization
 
@@ -10,6 +9,7 @@ Model for a Nuance bot organization
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The organization ID | |
 | **name** | **String** | The organization name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

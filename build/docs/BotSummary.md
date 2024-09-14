@@ -1,6 +1,5 @@
----
-title: BotSummary
----
+# BotSummary
+
 ## BotSummary
 A summary description for a botConnector bot
 
@@ -12,6 +11,7 @@ A summary description for a botConnector bot
 | **_id** | **String** | The id of the bot. | |
 | **_description** | **String** | An optional description of the bot. | [optional] |
 | **botCompositeTag** | **String** | A system-generated string that contains metadata about this bot. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

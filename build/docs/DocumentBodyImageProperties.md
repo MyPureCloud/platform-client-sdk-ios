@@ -1,6 +1,5 @@
----
-title: DocumentBodyImageProperties
----
+# DocumentBodyImageProperties
+
 ## DocumentBodyImageProperties
 
 ## Properties
@@ -10,6 +9,7 @@ title: DocumentBodyImageProperties
 | **backgroundColor** | **String** | The background color property for the image. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 | **align** | **String** | The align property for the image. | [optional] |
 | **indentation** | **Float** | The indentation property for the image. The valid values in &#39;em&#39;. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

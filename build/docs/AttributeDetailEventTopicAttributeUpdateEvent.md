@@ -1,6 +1,5 @@
----
-title: AttributeDetailEventTopicAttributeUpdateEvent
----
+# AttributeDetailEventTopicAttributeUpdateEvent
+
 ## AttributeDetailEventTopicAttributeUpdateEvent
 
 ## Properties
@@ -13,7 +12,8 @@ title: AttributeDetailEventTopicAttributeUpdateEvent
 | **attributes** | **[String:String]** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
-| **communications** | [**[AttributeDetailEventTopicCommunication]**](AttributeDetailEventTopicCommunication.html) |  | [optional] |
-{: class="table table-striped"}
+| **communications** | [**[AttributeDetailEventTopicCommunication]**](AttributeDetailEventTopicCommunication) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

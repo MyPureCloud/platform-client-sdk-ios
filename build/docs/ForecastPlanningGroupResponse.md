@@ -1,6 +1,5 @@
----
-title: ForecastPlanningGroupResponse
----
+# ForecastPlanningGroupResponse
+
 ## ForecastPlanningGroupResponse
 
 ## Properties
@@ -9,8 +8,9 @@ title: ForecastPlanningGroupResponse
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the planning group | [optional] |
 | **name** | **String** | The name of the planning group | [optional] |
-| **routePaths** | [**[RoutePathResponse]**](RoutePathResponse.html) | Route path configuration for this planning group | [optional] |
-| **serviceGoalTemplate** | [**ForecastServiceGoalTemplateResponse**](ForecastServiceGoalTemplateResponse.html) | Service goals for this planning group | [optional] |
-{: class="table table-striped"}
+| **routePaths** | [**[RoutePathResponse]**](RoutePathResponse) | Route path configuration for this planning group | [optional] |
+| **serviceGoalTemplate** | [**ForecastServiceGoalTemplateResponse**](ForecastServiceGoalTemplateResponse) | Service goals for this planning group | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

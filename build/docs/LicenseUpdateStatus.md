@@ -1,6 +1,5 @@
----
-title: LicenseUpdateStatus
----
+# LicenseUpdateStatus
+
 ## LicenseUpdateStatus
 
 ## Properties
@@ -10,6 +9,7 @@ title: LicenseUpdateStatus
 | **userId** | **String** |  | [optional] |
 | **licenseId** | **String** |  | [optional] |
 | **result** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

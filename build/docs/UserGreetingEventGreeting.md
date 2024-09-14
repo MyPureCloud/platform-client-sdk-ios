@@ -1,6 +1,5 @@
----
-title: UserGreetingEventGreeting
----
+# UserGreetingEventGreeting
+
 ## UserGreetingEventGreeting
 
 ## Properties
@@ -11,9 +10,10 @@ title: UserGreetingEventGreeting
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **ownerType** | **String** |  | [optional] |
-| **owner** | [**UserGreetingEventGreetingOwner**](UserGreetingEventGreetingOwner.html) |  | [optional] |
-| **greetingAudioFile** | [**UserGreetingEventGreetingAudioFile**](UserGreetingEventGreetingAudioFile.html) |  | [optional] |
+| **owner** | [**UserGreetingEventGreetingOwner**](UserGreetingEventGreetingOwner) |  | [optional] |
+| **greetingAudioFile** | [**UserGreetingEventGreetingAudioFile**](UserGreetingEventGreetingAudioFile) |  | [optional] |
 | **audioTTS** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

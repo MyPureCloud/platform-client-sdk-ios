@@ -1,6 +1,5 @@
----
-title: ResourceConditionNode
----
+# ResourceConditionNode
+
 ## ResourceConditionNode
 
 ## Properties
@@ -10,8 +9,9 @@ title: ResourceConditionNode
 | **variableName** | **String** |  | [optional] |
 | **conjunction** | **String** |  | [optional] |
 | **_operator** | **String** |  | [optional] |
-| **operands** | [**[ResourceConditionValue]**](ResourceConditionValue.html) |  | [optional] |
-| **terms** | [**[ResourceConditionNode]**](ResourceConditionNode.html) |  | [optional] |
-{: class="table table-striped"}
+| **operands** | [**[ResourceConditionValue]**](ResourceConditionValue) |  | [optional] |
+| **terms** | [**[ResourceConditionNode]**](ResourceConditionNode) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

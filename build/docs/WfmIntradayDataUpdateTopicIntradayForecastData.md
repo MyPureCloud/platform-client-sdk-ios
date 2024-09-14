@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayForecastData
----
+# WfmIntradayDataUpdateTopicIntradayForecastData
+
 ## WfmIntradayDataUpdateTopicIntradayForecastData
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmIntradayDataUpdateTopicIntradayForecastData
 | **offered** | **Double** |  | [optional] |
 | **averageTalkTimeSeconds** | **Double** |  | [optional] |
 | **averageAfterCallWorkSeconds** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

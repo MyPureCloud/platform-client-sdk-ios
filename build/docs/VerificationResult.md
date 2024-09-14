@@ -1,6 +1,5 @@
----
-title: VerificationResult
----
+# VerificationResult
+
 ## VerificationResult
 
 ## Properties
@@ -8,7 +7,8 @@ title: VerificationResult
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** | The verification status. | [optional] |
-| **records** | [**[Record]**](Record.html) | The list of DNS records that pertain that need to exist for verification. | [optional] |
-{: class="table table-striped"}
+| **records** | [**[Record]**](Record) | The list of DNS records that pertain that need to exist for verification. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

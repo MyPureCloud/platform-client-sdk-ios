@@ -1,14 +1,14 @@
----
-title: NluDetectionOutput
----
+# NluDetectionOutput
+
 ## NluDetectionOutput
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **intents** | [**[DetectedIntent]**](DetectedIntent.html) | The detected intents. | [optional] |
-| **dialogActs** | [**[DetectedDialogAct]**](DetectedDialogAct.html) | The detected dialog acts. | [optional] |
-{: class="table table-striped"}
+| **intents** | [**[DetectedIntent]**](DetectedIntent) | The detected intents. | [optional] |
+| **dialogActs** | [**[DetectedDialogAct]**](DetectedDialogAct) | The detected dialog acts. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CopyVoicemailMessage
----
+# CopyVoicemailMessage
+
 ## CopyVoicemailMessage
 Used to copy a VoicemailMessage to either a User or a Group
 
@@ -11,6 +10,7 @@ Used to copy a VoicemailMessage to either a User or a Group
 | **voicemailMessageId** | **String** | The id of the VoicemailMessage to copy | |
 | **userId** | **String** | The id of the User to copy the VoicemailMessage to | [optional] |
 | **groupId** | **String** | The id of the Group to copy the VoicemailMessage to | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

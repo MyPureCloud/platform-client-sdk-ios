@@ -1,6 +1,5 @@
----
-title: SetContentTemplateActionSettings
----
+# SetContentTemplateActionSettings
+
 ## SetContentTemplateActionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: SetContentTemplateActionSettings
 |------------ | ------------- | ------------- | -------------|
 | **smsContentTemplateId** | **String** | A string of sms contentTemplateId. | |
 | **emailContentTemplateId** | **String** | A string of email contentTemplateId. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

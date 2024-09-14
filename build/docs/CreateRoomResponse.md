@@ -1,6 +1,5 @@
----
-title: CreateRoomResponse
----
+# CreateRoomResponse
+
 ## CreateRoomResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: CreateRoomResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **jid** | **String** | The jid of the room | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

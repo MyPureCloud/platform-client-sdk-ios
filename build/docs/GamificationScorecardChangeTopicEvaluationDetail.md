@@ -1,6 +1,5 @@
----
-title: GamificationScorecardChangeTopicEvaluationDetail
----
+# GamificationScorecardChangeTopicEvaluationDetail
+
 ## GamificationScorecardChangeTopicEvaluationDetail
 
 ## Properties
@@ -16,6 +15,7 @@ title: GamificationScorecardChangeTopicEvaluationDetail
 | **evaluationScore** | **Int** |  | [optional] |
 | **evaluationScoreDouble** | **Double** |  | [optional] |
 | **mediaTypes** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

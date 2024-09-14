@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentsAnswerFilter
----
+# KnowledgeDocumentsAnswerFilter
+
 ## KnowledgeDocumentsAnswerFilter
 
 ## Properties
@@ -15,6 +14,7 @@ title: KnowledgeDocumentsAnswerFilter
 | **insertHighlightIntoVariationContent** | **Bool** | If specified - insert highlight data into the variation content. | [optional] |
 | **answerMode** | **[String]** | Allows extracted answers from an article (AnswerHighlight) and/or AI-generated answers (AnswerGeneration). Default mode: AnswerHighlight | [optional] |
 | **variationIds** | **[String]** | The variation Ids to answer. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

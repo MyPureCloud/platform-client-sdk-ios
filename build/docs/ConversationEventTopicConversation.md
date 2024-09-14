@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicConversation
----
+# ConversationEventTopicConversation
+
 ## ConversationEventTopicConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: ConversationEventTopicConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
-| **participants** | [**[ConversationEventTopicParticipant]**](ConversationEventTopicParticipant.html) |  | [optional] |
-| **recentTransfers** | [**[ConversationEventTopicRecentTransfer]**](ConversationEventTopicRecentTransfer.html) |  | [optional] |
+| **participants** | [**[ConversationEventTopicParticipant]**](ConversationEventTopicParticipant) |  | [optional] |
+| **recentTransfers** | [**[ConversationEventTopicRecentTransfer]**](ConversationEventTopicRecentTransfer) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **externalTag** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

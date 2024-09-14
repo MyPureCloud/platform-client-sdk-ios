@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateScoStructure
----
+# LearningModulePreviewUpdateScoStructure
+
 ## LearningModulePreviewUpdateScoStructure
 Learning module preview update SCO structure
 
@@ -13,7 +12,8 @@ Learning module preview update SCO structure
 | **successStatus** | **String** | The success status of this SCO | [optional] |
 | **completionStatus** | **String** | The completion status of this SCO | [optional] |
 | **percentageScore** | **Float** | Percentage Score | [optional] |
-| **children** | [**[LearningModulePreviewUpdateScoStructure]**](LearningModulePreviewUpdateScoStructure.html) | Child items belonging to this SCO in the course manifest | [optional] |
-{: class="table table-striped"}
+| **children** | [**[LearningModulePreviewUpdateScoStructure]**](LearningModulePreviewUpdateScoStructure) | Child items belonging to this SCO in the course manifest | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

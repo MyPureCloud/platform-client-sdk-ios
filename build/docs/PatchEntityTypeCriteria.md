@@ -1,6 +1,5 @@
----
-title: PatchEntityTypeCriteria
----
+# PatchEntityTypeCriteria
+
 ## PatchEntityTypeCriteria
 
 ## Properties
@@ -12,6 +11,7 @@ title: PatchEntityTypeCriteria
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | [optional] |
 | **_operator** | **String** | The comparison operator. | [optional] |
 | **entityType** | **String** | The entity to match the pattern against. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: BatchUserRoutingStatusEventRequest
----
+# BatchUserRoutingStatusEventRequest
+
 ## BatchUserRoutingStatusEventRequest
 A maximum of 100 events are allowed per request
 
@@ -8,7 +7,8 @@ A maximum of 100 events are allowed per request
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **userRoutingStatusEvents** | [**[UserRoutingStatusEvent]**](UserRoutingStatusEvent.html) | UserRoutingStatus events for this batch | [optional] |
-{: class="table table-striped"}
+| **userRoutingStatusEvents** | [**[UserRoutingStatusEvent]**](UserRoutingStatusEvent) | UserRoutingStatus events for this batch | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

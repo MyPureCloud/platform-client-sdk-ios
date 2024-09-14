@@ -1,6 +1,5 @@
----
-title: WhatsAppId
----
+# WhatsAppId
+
 ## WhatsAppId
 User information for a WhatsApp account
 
@@ -8,8 +7,9 @@ User information for a WhatsApp account
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **phoneNumber** | [**PhoneNumber**](PhoneNumber.html) | The phone number associated with this WhatsApp account | [optional] |
+| **phoneNumber** | [**PhoneNumber**](PhoneNumber) | The phone number associated with this WhatsApp account | [optional] |
 | **displayName** | **String** | The displayName of this person&#39;s account in WhatsApp | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

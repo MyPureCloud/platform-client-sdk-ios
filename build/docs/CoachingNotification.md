@@ -1,6 +1,5 @@
----
-title: CoachingNotification
----
+# CoachingNotification
+
 ## CoachingNotification
 
 ## Properties
@@ -12,12 +11,13 @@ title: CoachingNotification
 | **markedAsRead** | **Bool** | Indicates if notification is read or unread | [optional] |
 | **actionType** | **String** | Action causing the notification. | [optional] |
 | **relationship** | **String** | The relationship of this user to this notification&#39;s appointment | [optional] |
-| **dateStart** | [**Date**](Date.html) | The start time of the appointment relating to this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateStart** | [**Date**](Date) | The start time of the appointment relating to this notification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **lengthInMinutes** | **Int** | The duration of the appointment on this notification | [optional] |
 | **status** | **String** | The status of the appointment for this notification | [optional] |
-| **user** | [**UserReference**](UserReference.html) | The user of this notification | [optional] |
-| **appointment** | [**CoachingAppointmentResponse**](CoachingAppointmentResponse.html) | The appointment | [optional] |
+| **user** | [**UserReference**](UserReference) | The user of this notification | [optional] |
+| **appointment** | [**CoachingAppointmentResponse**](CoachingAppointmentResponse) | The appointment | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AgentQueueTimeRequest
----
+# AgentQueueTimeRequest
+
 ## AgentQueueTimeRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: AgentQueueTimeRequest
 | **agentId** | **String** | ID of the agent | |
 | **startOffsetMinutes** | **[Int]** | List of offsets in minutes from calculationStartDate | |
 | **onQueueLengthMinutesPerInterval** | **[Int]** | List of on queue time lengths in minutes per interval of elements in startOffsetMinutes | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

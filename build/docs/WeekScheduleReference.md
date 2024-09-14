@@ -1,6 +1,5 @@
----
-title: WeekScheduleReference
----
+# WeekScheduleReference
+
 ## WeekScheduleReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: WeekScheduleReference
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **weekDate** | **String** | First day of this week schedule in yyyy-MM-dd format | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

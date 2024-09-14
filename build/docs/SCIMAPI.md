@@ -1,51 +1,47 @@
----
-title: SCIMAPI
----
-## SCIMAPI
+# SCIMAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteScimUser**](SCIMAPI.html#deleteScimUser) | Delete a user |
-| [**deleteScimV2User**](SCIMAPI.html#deleteScimV2User) | Delete a user |
-| [**getScimGroup**](SCIMAPI.html#getScimGroup) | Get a group |
-| [**getScimGroups**](SCIMAPI.html#getScimGroups) | Get a list of groups |
-| [**getScimResourcetype**](SCIMAPI.html#getScimResourcetype) | Get a resource type |
-| [**getScimResourcetypes**](SCIMAPI.html#getScimResourcetypes) | Get a list of resource types |
-| [**getScimSchema**](SCIMAPI.html#getScimSchema) | Get a SCIM schema |
-| [**getScimSchemas**](SCIMAPI.html#getScimSchemas) | Get a list of SCIM schemas |
-| [**getScimServiceproviderconfig**](SCIMAPI.html#getScimServiceproviderconfig) | Get a service provider&#39;s configuration |
-| [**getScimUser**](SCIMAPI.html#getScimUser) | Get a user |
-| [**getScimUsers**](SCIMAPI.html#getScimUsers) | Get a list of users |
-| [**getScimV2Group**](SCIMAPI.html#getScimV2Group) | Get a group |
-| [**getScimV2Groups**](SCIMAPI.html#getScimV2Groups) | Get a list of groups |
-| [**getScimV2Resourcetype**](SCIMAPI.html#getScimV2Resourcetype) | Get a resource type |
-| [**getScimV2Resourcetypes**](SCIMAPI.html#getScimV2Resourcetypes) | Get a list of resource types |
-| [**getScimV2Schema**](SCIMAPI.html#getScimV2Schema) | Get a SCIM schema |
-| [**getScimV2Schemas**](SCIMAPI.html#getScimV2Schemas) | Get a list of SCIM schemas |
-| [**getScimV2Serviceproviderconfig**](SCIMAPI.html#getScimV2Serviceproviderconfig) | Get a service provider&#39;s configuration |
-| [**getScimV2User**](SCIMAPI.html#getScimV2User) | Get a user |
-| [**getScimV2Users**](SCIMAPI.html#getScimV2Users) | Get a list of users |
-| [**patchScimGroup**](SCIMAPI.html#patchScimGroup) | Modify a group |
-| [**patchScimUser**](SCIMAPI.html#patchScimUser) | Modify a user |
-| [**patchScimV2Group**](SCIMAPI.html#patchScimV2Group) | Modify a group |
-| [**patchScimV2User**](SCIMAPI.html#patchScimV2User) | Modify a user |
-| [**postScimUsers**](SCIMAPI.html#postScimUsers) | Create a user |
-| [**postScimV2Users**](SCIMAPI.html#postScimV2Users) | Create a user |
-| [**putScimGroup**](SCIMAPI.html#putScimGroup) | Replace a group |
-| [**putScimUser**](SCIMAPI.html#putScimUser) | Replace a user |
-| [**putScimV2Group**](SCIMAPI.html#putScimV2Group) | Replace a group |
-| [**putScimV2User**](SCIMAPI.html#putScimV2User) | Replace a user |
+| [**deleteScimUser**](SCIMAPI#deleteScimUser) | Delete a user |
+| [**deleteScimV2User**](SCIMAPI#deleteScimV2User) | Delete a user |
+| [**getScimGroup**](SCIMAPI#getScimGroup) | Get a group |
+| [**getScimGroups**](SCIMAPI#getScimGroups) | Get a list of groups |
+| [**getScimResourcetype**](SCIMAPI#getScimResourcetype) | Get a resource type |
+| [**getScimResourcetypes**](SCIMAPI#getScimResourcetypes) | Get a list of resource types |
+| [**getScimSchema**](SCIMAPI#getScimSchema) | Get a SCIM schema |
+| [**getScimSchemas**](SCIMAPI#getScimSchemas) | Get a list of SCIM schemas |
+| [**getScimServiceproviderconfig**](SCIMAPI#getScimServiceproviderconfig) | Get a service provider&#39;s configuration |
+| [**getScimUser**](SCIMAPI#getScimUser) | Get a user |
+| [**getScimUsers**](SCIMAPI#getScimUsers) | Get a list of users |
+| [**getScimV2Group**](SCIMAPI#getScimV2Group) | Get a group |
+| [**getScimV2Groups**](SCIMAPI#getScimV2Groups) | Get a list of groups |
+| [**getScimV2Resourcetype**](SCIMAPI#getScimV2Resourcetype) | Get a resource type |
+| [**getScimV2Resourcetypes**](SCIMAPI#getScimV2Resourcetypes) | Get a list of resource types |
+| [**getScimV2Schema**](SCIMAPI#getScimV2Schema) | Get a SCIM schema |
+| [**getScimV2Schemas**](SCIMAPI#getScimV2Schemas) | Get a list of SCIM schemas |
+| [**getScimV2Serviceproviderconfig**](SCIMAPI#getScimV2Serviceproviderconfig) | Get a service provider&#39;s configuration |
+| [**getScimV2User**](SCIMAPI#getScimV2User) | Get a user |
+| [**getScimV2Users**](SCIMAPI#getScimV2Users) | Get a list of users |
+| [**patchScimGroup**](SCIMAPI#patchScimGroup) | Modify a group |
+| [**patchScimUser**](SCIMAPI#patchScimUser) | Modify a user |
+| [**patchScimV2Group**](SCIMAPI#patchScimV2Group) | Modify a group |
+| [**patchScimV2User**](SCIMAPI#patchScimV2User) | Modify a user |
+| [**postScimUsers**](SCIMAPI#postScimUsers) | Create a user |
+| [**postScimV2Users**](SCIMAPI#postScimV2Users) | Create a user |
+| [**putScimGroup**](SCIMAPI#putScimGroup) | Replace a group |
+| [**putScimUser**](SCIMAPI#putScimUser) | Replace a user |
+| [**putScimV2Group**](SCIMAPI#putScimV2Group) | Replace a group |
+| [**putScimV2User**](SCIMAPI#putScimV2User) | Replace a user |
 {: class="table-striped"}
 
-<a name="deleteScimUser"></a>
 
-# **deleteScimUser**
-
+## deleteScimUser
 
 
-> [JSON](JSON.html) deleteScimUser(userId, ifMatch)
+
+> [JSON](JSON) deleteScimUser(userId, ifMatch)
 
 Delete a user
 
@@ -86,20 +82,18 @@ SCIMAPI.deleteScimUser(userId: userId, ifMatch: ifMatch) { (response, error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="deleteScimV2User"></a>
-
-# **deleteScimV2User**
+[**JSON**](JSON)
 
 
+## deleteScimV2User
 
-> [JSON](JSON.html) deleteScimV2User(userId, ifMatch)
+
+
+> [JSON](JSON) deleteScimV2User(userId, ifMatch)
 
 Delete a user
 
@@ -140,20 +134,18 @@ SCIMAPI.deleteScimV2User(userId: userId, ifMatch: ifMatch) { (response, error) i
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getScimGroup"></a>
-
-# **getScimGroup**
+[**JSON**](JSON)
 
 
+## getScimGroup
 
-> [ScimV2Group](ScimV2Group.html) getScimGroup(groupId, attributes, excludedAttributes, ifNoneMatch)
+
+
+> [ScimV2Group](ScimV2Group) getScimGroup(groupId, attributes, excludedAttributes, ifNoneMatch)
 
 Get a group
 
@@ -195,23 +187,21 @@ SCIMAPI.getScimGroup(groupId: groupId, attributes: attributes, excludedAttribute
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. | |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2Group**](ScimV2Group.html)
-
-<a name="getScimGroups"></a>
-
-# **getScimGroups**
+[**ScimV2Group**](ScimV2Group)
 
 
+## getScimGroups
 
-> [ScimGroupListResponse](ScimGroupListResponse.html) getScimGroups(startIndex, count, attributes, excludedAttributes, filter)
+
+
+> [ScimGroupListResponse](ScimGroupListResponse) getScimGroups(startIndex, count, attributes, excludedAttributes, filter)
 
 Get a list of groups
 
@@ -255,23 +245,21 @@ SCIMAPI.getScimGroups(startIndex: startIndex, count: count, attributes: attribut
 | ------------- | ------------- | ------------- | ------------- |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] |
 | **count** | **Int**| The requested number of items per page. A value of 0 returns \"totalResults\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \"excludedAttributes\" or \"attributes\" query parameters to exclude or only include secondary lookup values such as \"externalId\",  \"roles\", \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\", or \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\". | [optional] |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
 | **filter** | **String**| Filters results. If nothing is specified, returns all groups. Examples of valid values: \"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\", \"displayname eq Sales\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimGroupListResponse**](ScimGroupListResponse.html)
-
-<a name="getScimResourcetype"></a>
-
-# **getScimResourcetype**
+[**ScimGroupListResponse**](ScimGroupListResponse)
 
 
+## getScimResourcetype
 
-> [ScimConfigResourceType](ScimConfigResourceType.html) getScimResourcetype(resourceType)
+
+
+> [ScimConfigResourceType](ScimConfigResourceType) getScimResourcetype(resourceType)
 
 Get a resource type
 
@@ -309,20 +297,18 @@ SCIMAPI.getScimResourcetype(resourceType: resourceType) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **resourceType** | **String**| The type of resource. Returned with GET /api/v2/scim/resourcetypes. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType"), schema ("Schema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimConfigResourceType**](ScimConfigResourceType.html)
-
-<a name="getScimResourcetypes"></a>
-
-# **getScimResourcetypes**
+[**ScimConfigResourceType**](ScimConfigResourceType)
 
 
+## getScimResourcetypes
 
-> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimResourcetypes()
+
+
+> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse) getScimResourcetypes()
 
 Get a list of resource types
 
@@ -358,18 +344,16 @@ SCIMAPI.getScimResourcetypes() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
-
-<a name="getScimSchema"></a>
-
-# **getScimSchema**
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse)
 
 
+## getScimSchema
 
-> [ScimV2SchemaDefinition](ScimV2SchemaDefinition.html) getScimSchema(schemaId)
+
+
+> [ScimV2SchemaDefinition](ScimV2SchemaDefinition) getScimSchema(schemaId)
 
 Get a SCIM schema
 
@@ -407,20 +391,18 @@ SCIMAPI.getScimSchema(schemaId: schemaId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **schemaId** | **String**| The ID of a schema. Returned with GET /api/v2/scim/schemas. |<br />**Values**: urnIetfParamsScimSchemasCore20User ("urn:ietf:params:scim:schemas:core:2.0:User"), urnIetfParamsScimSchemasCore20Group ("urn:ietf:params:scim:schemas:core:2.0:Group"), urnIetfParamsScimSchemasCore20Serviceproviderconfig ("urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"), urnIetfParamsScimSchemasCore20Resourcetype ("urn:ietf:params:scim:schemas:core:2.0:ResourceType"), urnIetfParamsScimSchemasCore20Schema ("urn:ietf:params:scim:schemas:core:2.0:Schema"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2SchemaDefinition**](ScimV2SchemaDefinition.html)
-
-<a name="getScimSchemas"></a>
-
-# **getScimSchemas**
+[**ScimV2SchemaDefinition**](ScimV2SchemaDefinition)
 
 
+## getScimSchemas
 
-> [ScimV2SchemaListResponse](ScimV2SchemaListResponse.html) getScimSchemas(filter)
+
+
+> [ScimV2SchemaListResponse](ScimV2SchemaListResponse) getScimSchemas(filter)
 
 Get a list of SCIM schemas
 
@@ -458,20 +440,18 @@ SCIMAPI.getScimSchemas(filter: filter) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **filter** | **String**| Filtered results are invalid and return 403 Unauthorized. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2SchemaListResponse**](ScimV2SchemaListResponse.html)
-
-<a name="getScimServiceproviderconfig"></a>
-
-# **getScimServiceproviderconfig**
+[**ScimV2SchemaListResponse**](ScimV2SchemaListResponse)
 
 
+## getScimServiceproviderconfig
 
-> [ScimServiceProviderConfig](ScimServiceProviderConfig.html) getScimServiceproviderconfig(ifNoneMatch)
+
+
+> [ScimServiceProviderConfig](ScimServiceProviderConfig) getScimServiceproviderconfig(ifNoneMatch)
 
 Get a service provider&#39;s configuration
 
@@ -509,20 +489,18 @@ SCIMAPI.getScimServiceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, erro
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimServiceProviderConfig**](ScimServiceProviderConfig.html)
-
-<a name="getScimUser"></a>
-
-# **getScimUser**
+[**ScimServiceProviderConfig**](ScimServiceProviderConfig)
 
 
+## getScimUser
 
-> [ScimV2User](ScimV2User.html) getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)
+
+
+> [ScimV2User](ScimV2User) getScimUser(userId, attributes, excludedAttributes, ifNoneMatch)
 
 Get a user
 
@@ -563,23 +541,21 @@ SCIMAPI.getScimUser(userId: userId, attributes: attributes, excludedAttributes: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="getScimUsers"></a>
-
-# **getScimUsers**
+[**ScimV2User**](ScimV2User)
 
 
+## getScimUsers
 
-> [ScimUserListResponse](ScimUserListResponse.html) getScimUsers(startIndex, count, attributes, excludedAttributes, filter)
+
+
+> [ScimUserListResponse](ScimUserListResponse) getScimUsers(startIndex, count, attributes, excludedAttributes, filter)
 
 Get a list of users
 
@@ -624,23 +600,21 @@ SCIMAPI.getScimUsers(startIndex: startIndex, count: count, attributes: attribute
 | ------------- | ------------- | ------------- | ------------- |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] |
 | **count** | **Int**| The requested number of items per page. A value of 0 returns \"totalResults\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \"excludedAttributes\" or \"attributes\" query parameters to exclude or only include secondary lookup values such as \"externalId\",  \"roles\", \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\", or \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\". | [optional] |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
 | **filter** | **String**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\", \"userName eq search@sample.org\", \"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\", \"email eq search@sample.org\", \"division eq divisionName\", \"externalId eq 167844\", \"active eq false\", \"employeeNumber eq 9876543210\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimUserListResponse**](ScimUserListResponse.html)
-
-<a name="getScimV2Group"></a>
-
-# **getScimV2Group**
+[**ScimUserListResponse**](ScimUserListResponse)
 
 
+## getScimV2Group
 
-> [ScimV2Group](ScimV2Group.html) getScimV2Group(groupId, attributes, excludedAttributes, ifNoneMatch)
+
+
+> [ScimV2Group](ScimV2Group) getScimV2Group(groupId, attributes, excludedAttributes, ifNoneMatch)
 
 Get a group
 
@@ -682,23 +656,21 @@ SCIMAPI.getScimV2Group(groupId: groupId, attributes: attributes, excludedAttribu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. | |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2Group**](ScimV2Group.html)
-
-<a name="getScimV2Groups"></a>
-
-# **getScimV2Groups**
+[**ScimV2Group**](ScimV2Group)
 
 
+## getScimV2Groups
 
-> [ScimGroupListResponse](ScimGroupListResponse.html) getScimV2Groups(filter, startIndex, count, attributes, excludedAttributes)
+
+
+> [ScimGroupListResponse](ScimGroupListResponse) getScimV2Groups(filter, startIndex, count, attributes, excludedAttributes)
 
 Get a list of groups
 
@@ -743,22 +715,20 @@ SCIMAPI.getScimV2Groups(filter: filter, startIndex: startIndex, count: count, at
 | **filter** | **String**| Filters results. If nothing is specified, returns all groups. Examples of valid values: \"id eq 5f4bc742-a019-4e38-8e2a-d39d5bc0b0f3\", \"displayname eq Sales\". | |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] |
 | **count** | **Int**| The requested number of items per page. A value of 0 returns \"totalResults\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \"excludedAttributes\" or \"attributes\" query parameters to exclude or only include secondary lookup values such as \"externalId\",  \"roles\", \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\", or \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\". | [optional] |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
-{: class="table-striped"}
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns \"id\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), displayname ("displayName"), members ("members"), externalid ("externalId"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20GroupId ("urn:ietf:params:scim:schemas:core:2.0:Group:id"), urnIetfParamsScimSchemasCore20GroupMeta ("urn:ietf:params:scim:schemas:core:2.0:Group:meta"), urnIetfParamsScimSchemasCore20GroupMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.version"), urnIetfParamsScimSchemasCore20GroupMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:Group:meta.lastModified"), urnIetfParamsScimSchemasCore20GroupDisplayname ("urn:ietf:params:scim:schemas:core:2.0:Group:displayName"), urnIetfParamsScimSchemasCore20GroupMembers ("urn:ietf:params:scim:schemas:core:2.0:Group:members"), urnIetfParamsScimSchemasCore20GroupExternalid ("urn:ietf:params:scim:schemas:core:2.0:Group:externalId") |
 
 
 ### Return type
 
-[**ScimGroupListResponse**](ScimGroupListResponse.html)
-
-<a name="getScimV2Resourcetype"></a>
-
-# **getScimV2Resourcetype**
+[**ScimGroupListResponse**](ScimGroupListResponse)
 
 
+## getScimV2Resourcetype
 
-> [ScimConfigResourceType](ScimConfigResourceType.html) getScimV2Resourcetype(resourceType)
+
+
+> [ScimConfigResourceType](ScimConfigResourceType) getScimV2Resourcetype(resourceType)
 
 Get a resource type
 
@@ -796,20 +766,18 @@ SCIMAPI.getScimV2Resourcetype(resourceType: resourceType) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **resourceType** | **String**| The type of resource. Returned with GET /api/v2/scim/v2/resourcetypes. |<br />**Values**: user ("User"), group ("Group"), serviceProviderConfig ("ServiceProviderConfig"), resourceType ("ResourceType"), schema ("Schema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimConfigResourceType**](ScimConfigResourceType.html)
-
-<a name="getScimV2Resourcetypes"></a>
-
-# **getScimV2Resourcetypes**
+[**ScimConfigResourceType**](ScimConfigResourceType)
 
 
+## getScimV2Resourcetypes
 
-> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse.html) getScimV2Resourcetypes()
+
+
+> [ScimConfigResourceTypesListResponse](ScimConfigResourceTypesListResponse) getScimV2Resourcetypes()
 
 Get a list of resource types
 
@@ -845,18 +813,16 @@ SCIMAPI.getScimV2Resourcetypes() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse.html)
-
-<a name="getScimV2Schema"></a>
-
-# **getScimV2Schema**
+[**ScimConfigResourceTypesListResponse**](ScimConfigResourceTypesListResponse)
 
 
+## getScimV2Schema
 
-> [ScimV2SchemaDefinition](ScimV2SchemaDefinition.html) getScimV2Schema(schemaId)
+
+
+> [ScimV2SchemaDefinition](ScimV2SchemaDefinition) getScimV2Schema(schemaId)
 
 Get a SCIM schema
 
@@ -894,20 +860,18 @@ SCIMAPI.getScimV2Schema(schemaId: schemaId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **schemaId** | **String**| The ID of a schema. Returned with GET /api/v2/scim/v2/schemas. |<br />**Values**: urnIetfParamsScimSchemasCore20User ("urn:ietf:params:scim:schemas:core:2.0:User"), urnIetfParamsScimSchemasCore20Group ("urn:ietf:params:scim:schemas:core:2.0:Group"), urnIetfParamsScimSchemasCore20Serviceproviderconfig ("urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"), urnIetfParamsScimSchemasCore20Resourcetype ("urn:ietf:params:scim:schemas:core:2.0:ResourceType"), urnIetfParamsScimSchemasCore20Schema ("urn:ietf:params:scim:schemas:core:2.0:Schema"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2SchemaDefinition**](ScimV2SchemaDefinition.html)
-
-<a name="getScimV2Schemas"></a>
-
-# **getScimV2Schemas**
+[**ScimV2SchemaDefinition**](ScimV2SchemaDefinition)
 
 
+## getScimV2Schemas
 
-> [ScimV2SchemaListResponse](ScimV2SchemaListResponse.html) getScimV2Schemas(filter)
+
+
+> [ScimV2SchemaListResponse](ScimV2SchemaListResponse) getScimV2Schemas(filter)
 
 Get a list of SCIM schemas
 
@@ -945,20 +909,18 @@ SCIMAPI.getScimV2Schemas(filter: filter) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **filter** | **String**| Filtered results are invalid and return 403 Unauthorized. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2SchemaListResponse**](ScimV2SchemaListResponse.html)
-
-<a name="getScimV2Serviceproviderconfig"></a>
-
-# **getScimV2Serviceproviderconfig**
+[**ScimV2SchemaListResponse**](ScimV2SchemaListResponse)
 
 
+## getScimV2Serviceproviderconfig
 
-> [ScimServiceProviderConfig](ScimServiceProviderConfig.html) getScimV2Serviceproviderconfig(ifNoneMatch)
+
+
+> [ScimServiceProviderConfig](ScimServiceProviderConfig) getScimV2Serviceproviderconfig(ifNoneMatch)
 
 Get a service provider&#39;s configuration
 
@@ -996,20 +958,18 @@ SCIMAPI.getScimV2Serviceproviderconfig(ifNoneMatch: ifNoneMatch) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/serviceproviderconfig. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified.  | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimServiceProviderConfig**](ScimServiceProviderConfig.html)
-
-<a name="getScimV2User"></a>
-
-# **getScimV2User**
+[**ScimServiceProviderConfig**](ScimServiceProviderConfig)
 
 
+## getScimV2User
 
-> [ScimV2User](ScimV2User.html) getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)
+
+
+> [ScimV2User](ScimV2User) getScimV2User(userId, attributes, excludedAttributes, ifNoneMatch)
 
 Get a user
 
@@ -1050,23 +1010,21 @@ SCIMAPI.getScimV2User(userId: userId, attributes: attributes, excludedAttributes
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
 | **ifNoneMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns the current configuration of the resource. If the ETag is current, returns 304 Not Modified. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="getScimV2Users"></a>
-
-# **getScimV2Users**
+[**ScimV2User**](ScimV2User)
 
 
+## getScimV2Users
 
-> [ScimUserListResponse](ScimUserListResponse.html) getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)
+
+
+> [ScimUserListResponse](ScimUserListResponse) getScimV2Users(startIndex, count, attributes, excludedAttributes, filter)
 
 Get a list of users
 
@@ -1111,23 +1069,21 @@ SCIMAPI.getScimV2Users(startIndex: startIndex, count: count, attributes: attribu
 | ------------- | ------------- | ------------- | ------------- |
 | **startIndex** | **Int**| The 1-based index of the first query result. | [optional] |
 | **count** | **Int**| The requested number of items per page. A value of 0 returns \"totalResults\". A page size over 25 may exceed internal resource limits and return a 429 error. For a page size over 25, use the \"excludedAttributes\" or \"attributes\" query parameters to exclude or only include secondary lookup values such as \"externalId\",  \"roles\", \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages\", or \"urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills\". | [optional] |
-| **attributes** | [**[String]**](String.html)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
-| **excludedAttributes** | [**[String]**](String.html)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **attributes** | [**[String]**](String)| Indicates which attributes to include. Returns these attributes and the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"attributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
+| **excludedAttributes** | [**[String]**](String)| Indicates which attributes to exclude. Returns the default attributes minus \"excludedAttributes\". Always returns the \"id\", \"userName\", \"active\", and \"meta\" attributes. Use \"excludedAttributes\" to avoid expensive secondary calls for the default attributes. | [optional]<br />**Values**: _id ("id"), username ("userName"), displayname ("displayName"), title ("title"), active ("active"), externalid ("externalId"), phonenumbers ("phoneNumbers"), emails ("emails"), groups ("groups"), roles ("roles"), meta ("meta"), metaVersion ("meta.version"), metaLastmodified ("meta.lastModified"), urnIetfParamsScimSchemasCore20UserId ("urn:ietf:params:scim:schemas:core:2.0:User:id"), urnIetfParamsScimSchemasCore20UserUsername ("urn:ietf:params:scim:schemas:core:2.0:User:userName"), urnIetfParamsScimSchemasCore20UserDisplayname ("urn:ietf:params:scim:schemas:core:2.0:User:displayName"), urnIetfParamsScimSchemasCore20UserTitle ("urn:ietf:params:scim:schemas:core:2.0:User:title"), urnIetfParamsScimSchemasCore20UserActive ("urn:ietf:params:scim:schemas:core:2.0:User:active"), urnIetfParamsScimSchemasCore20UserExternalid ("urn:ietf:params:scim:schemas:core:2.0:User:externalId"), urnIetfParamsScimSchemasCore20UserPhonenumbers ("urn:ietf:params:scim:schemas:core:2.0:User:phoneNumbers"), urnIetfParamsScimSchemasCore20UserEmails ("urn:ietf:params:scim:schemas:core:2.0:User:emails"), urnIetfParamsScimSchemasCore20UserGroups ("urn:ietf:params:scim:schemas:core:2.0:User:groups"), urnIetfParamsScimSchemasCore20UserRoles ("urn:ietf:params:scim:schemas:core:2.0:User:roles"), urnIetfParamsScimSchemasCore20UserMeta ("urn:ietf:params:scim:schemas:core:2.0:User:meta"), urnIetfParamsScimSchemasCore20UserMetaVersion ("urn:ietf:params:scim:schemas:core:2.0:User:meta.version"), urnIetfParamsScimSchemasCore20UserMetaLastmodified ("urn:ietf:params:scim:schemas:core:2.0:User:meta.lastModified"), urnIetfParamsScimSchemasExtensionEnterprise20User ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"), urnIetfParamsScimSchemasExtensionEnterprise20UserDivision ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:division"), urnIetfParamsScimSchemasExtensionEnterprise20UserDepartment ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:department"), urnIetfParamsScimSchemasExtensionEnterprise20UserManager ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager"), urnIetfParamsScimSchemasExtensionEnterprise20UserManagerValue ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:manager.value"), urnIetfParamsScimSchemasExtensionEnterprise20UserEmployeenumber ("urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20User ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutingskills ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingSkills"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserRoutinglanguages ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:routingLanguages"), urnIetfParamsScimSchemasExtensionGenesysPurecloud20UserExternalids ("urn:ietf:params:scim:schemas:extension:genesys:purecloud:2.0:User:externalIds") |
 | **filter** | **String**| Filters results. If nothing is specified, returns all active users. Examples of valid values: \"id eq 857449b0-d9e7-4cd0-acbf-a6adfb9ef1e9\", \"userName eq search@sample.org\", \"manager eq 16e10e2f-1136-43fe-bb84-eac073168a49\", \"email eq search@sample.org\", \"division eq divisionName\", \"externalId eq 167844\", \"active eq false\", \"employeeNumber eq 9876543210\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimUserListResponse**](ScimUserListResponse.html)
-
-<a name="patchScimGroup"></a>
-
-# **patchScimGroup**
+[**ScimUserListResponse**](ScimUserListResponse)
 
 
+## patchScimGroup
 
-> [ScimV2Group](ScimV2Group.html) patchScimGroup(groupId, body, ifMatch)
+
+
+> [ScimV2Group](ScimV2Group) patchScimGroup(groupId, body, ifMatch)
 
 Modify a group
 
@@ -1168,22 +1124,20 @@ SCIMAPI.patchScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (respon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. | |
-| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a group. | |
+| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2Group**](ScimV2Group.html)
-
-<a name="patchScimUser"></a>
-
-# **patchScimUser**
+[**ScimV2Group**](ScimV2Group)
 
 
+## patchScimUser
 
-> [ScimV2User](ScimV2User.html) patchScimUser(userId, body, ifMatch)
+
+
+> [ScimV2User](ScimV2User) patchScimUser(userId, body, ifMatch)
 
 Modify a user
 
@@ -1230,22 +1184,20 @@ SCIMAPI.patchScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
-| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a user. | |
+| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a user. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="patchScimV2Group"></a>
-
-# **patchScimV2Group**
+[**ScimV2User**](ScimV2User)
 
 
+## patchScimV2Group
 
-> [ScimV2Group](ScimV2Group.html) patchScimV2Group(groupId, body, ifMatch)
+
+
+> [ScimV2Group](ScimV2Group) patchScimV2Group(groupId, body, ifMatch)
 
 Modify a group
 
@@ -1286,22 +1238,20 @@ SCIMAPI.patchScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. | |
-| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a group. | |
+| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a group. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2Group**](ScimV2Group.html)
-
-<a name="patchScimV2User"></a>
-
-# **patchScimV2User**
+[**ScimV2Group**](ScimV2Group)
 
 
+## patchScimV2User
 
-> [ScimV2User](ScimV2User.html) patchScimV2User(userId, body, ifMatch)
+
+
+> [ScimV2User](ScimV2User) patchScimV2User(userId, body, ifMatch)
 
 Modify a user
 
@@ -1348,22 +1298,20 @@ SCIMAPI.patchScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
-| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest.html)| The information used to modify a user. | |
+| **body** | [**ScimV2PatchRequest**](ScimV2PatchRequest)| The information used to modify a user. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="postScimUsers"></a>
-
-# **postScimUsers**
+[**ScimV2User**](ScimV2User)
 
 
+## postScimUsers
 
-> [ScimV2User](ScimV2User.html) postScimUsers(body)
+
+
+> [ScimV2User](ScimV2User) postScimUsers(body)
 
 Create a user
 
@@ -1406,21 +1354,19 @@ SCIMAPI.postScimUsers(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScimV2CreateUser**](ScimV2CreateUser.html)| The information used to create a user. | |
-{: class="table-striped"}
+| **body** | [**ScimV2CreateUser**](ScimV2CreateUser)| The information used to create a user. | |
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="postScimV2Users"></a>
-
-# **postScimV2Users**
+[**ScimV2User**](ScimV2User)
 
 
+## postScimV2Users
 
-> [ScimV2User](ScimV2User.html) postScimV2Users(body)
+
+
+> [ScimV2User](ScimV2User) postScimV2Users(body)
 
 Create a user
 
@@ -1463,21 +1409,19 @@ SCIMAPI.postScimV2Users(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScimV2CreateUser**](ScimV2CreateUser.html)| The information used to create a user. | |
-{: class="table-striped"}
+| **body** | [**ScimV2CreateUser**](ScimV2CreateUser)| The information used to create a user. | |
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="putScimGroup"></a>
-
-# **putScimGroup**
+[**ScimV2User**](ScimV2User)
 
 
+## putScimGroup
 
-> [ScimV2Group](ScimV2Group.html) putScimGroup(groupId, body, ifMatch)
+
+
+> [ScimV2Group](ScimV2Group) putScimGroup(groupId, body, ifMatch)
 
 Replace a group
 
@@ -1518,22 +1462,20 @@ SCIMAPI.putScimGroup(groupId: groupId, body: body, ifMatch: ifMatch) { (response
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/groups. | |
-| **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to replace a group. | |
+| **body** | [**ScimV2Group**](ScimV2Group)| The information used to replace a group. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2Group**](ScimV2Group.html)
-
-<a name="putScimUser"></a>
-
-# **putScimUser**
+[**ScimV2Group**](ScimV2Group)
 
 
+## putScimUser
 
-> [ScimV2User](ScimV2User.html) putScimUser(userId, body, ifMatch)
+
+
+> [ScimV2User](ScimV2User) putScimUser(userId, body, ifMatch)
 
 Replace a user
 
@@ -1580,22 +1522,20 @@ SCIMAPI.putScimUser(userId: userId, body: body, ifMatch: ifMatch) { (response, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/users. | |
-| **body** | [**ScimV2User**](ScimV2User.html)| The information used to replace a user. | |
+| **body** | [**ScimV2User**](ScimV2User)| The information used to replace a user. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
-
-<a name="putScimV2Group"></a>
-
-# **putScimV2Group**
+[**ScimV2User**](ScimV2User)
 
 
+## putScimV2Group
 
-> [ScimV2Group](ScimV2Group.html) putScimV2Group(groupId, body, ifMatch)
+
+
+> [ScimV2Group](ScimV2Group) putScimV2Group(groupId, body, ifMatch)
 
 Replace a group
 
@@ -1636,22 +1576,20 @@ SCIMAPI.putScimV2Group(groupId: groupId, body: body, ifMatch: ifMatch) { (respon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The ID of a group. Returned with GET /api/v2/scim/v2/groups. | |
-| **body** | [**ScimV2Group**](ScimV2Group.html)| The information used to replace a group. | |
+| **body** | [**ScimV2Group**](ScimV2Group)| The information used to replace a group. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/groups/{groupId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2Group**](ScimV2Group.html)
-
-<a name="putScimV2User"></a>
-
-# **putScimV2User**
+[**ScimV2Group**](ScimV2Group)
 
 
+## putScimV2User
 
-> [ScimV2User](ScimV2User.html) putScimV2User(userId, body, ifMatch)
+
+
+> [ScimV2User](ScimV2User) putScimV2User(userId, body, ifMatch)
 
 Replace a user
 
@@ -1698,12 +1636,13 @@ SCIMAPI.putScimV2User(userId: userId, body: body, ifMatch: ifMatch) { (response,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The ID of a user. Returned with GET /api/v2/scim/v2/users. | |
-| **body** | [**ScimV2User**](ScimV2User.html)| The information used to replace a user. | |
+| **body** | [**ScimV2User**](ScimV2User)| The information used to replace a user. | |
 | **ifMatch** | **String**| The ETag of a resource in double quotes. Returned as header and meta.version with initial call to GET /api/v2/scim/v2/users/{userId}. Example: \"42\". If the ETag is different from the version on the server, returns 400 with a \"scimType\" of \"invalidVers\". | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScimV2User**](ScimV2User.html)
+[**ScimV2User**](ScimV2User)
 
+
+_PureCloudPlatformClientV2@151.1.0_

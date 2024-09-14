@@ -1,6 +1,5 @@
----
-title: UCIcon
----
+# UCIcon
+
 ## UCIcon
 
 ## Properties
@@ -8,6 +7,7 @@ title: UCIcon
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **vector** | **String** | vector | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

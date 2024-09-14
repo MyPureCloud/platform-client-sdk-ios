@@ -1,6 +1,5 @@
----
-title: WorkPlanShift
----
+# WorkPlanShift
+
 ## WorkPlanShift
 
 ## Properties
@@ -8,7 +7,7 @@ title: WorkPlanShift
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the shift | |
-| **days** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek.html) | Days of the week applicable for this shift | [optional] |
+| **days** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Days of the week applicable for this shift | [optional] |
 | **flexibleStartTime** | **Bool** | Whether the start time of the shift is flexible | [optional] |
 | **exactStartTimeMinutesFromMidnight** | **Int** | Exact start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; false | [optional] |
 | **earliestStartTimeMinutesFromMidnight** | **Int** | Earliest start time of the shift defined as offset minutes from midnight. Used if flexibleStartTime &#x3D;&#x3D; true | [optional] |
@@ -28,10 +27,11 @@ title: WorkPlanShift
 | **maximumContiguousWorkTimeMinutes** | **Int** | Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime &#x3D;&#x3D; true | [optional] |
 | **constrainDayOff** | **Bool** | Whether day off rule is enabled | [optional] |
 | **dayOffRule** | **String** | The day off rule for agents to have next day off or previous day off. used if constrainDayOff &#x3D; true | [optional] |
-| **activities** | [**[WorkPlanActivity]**](WorkPlanActivity.html) | Activities configured for this shift | [optional] |
+| **activities** | [**[WorkPlanActivity]**](WorkPlanActivity) | Activities configured for this shift | [optional] |
 | **_id** | **String** | ID of the shift. This is required only for the case of updating an existing shift | [optional] |
 | **delete** | **Bool** | If marked true for updating an existing shift, the shift will be permanently deleted | [optional] |
 | **validationId** | **String** | ID of shift in the context of work plan validation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

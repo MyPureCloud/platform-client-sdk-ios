@@ -1,6 +1,5 @@
----
-title: ButtonComponent
----
+# ButtonComponent
+
 ## ButtonComponent
 Structured template button object.
 
@@ -9,7 +8,8 @@ Structured template button object.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **title** | **String** | Text to show inside the button. | [optional] |
-| **actions** | [**ContentActions**](ContentActions.html) | The button actions (Deprecated). | [optional] |
-{: class="table table-striped"}
+| **actions** | [**ContentActions**](ContentActions) | The button actions (Deprecated). | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CtaButtonStyleProperties
----
+# CtaButtonStyleProperties
+
 ## CtaButtonStyleProperties
 
 ## Properties
@@ -12,6 +11,7 @@ title: CtaButtonStyleProperties
 | **fontSize** | **String** | Font size of the text. (eg. &#39;12&#39;) | [optional] |
 | **textAlign** | **String** | Text alignment. | [optional] |
 | **backgroundColor** | **String** | Background color of the CTA button. (eg. #FF0000) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CustomerStartDetailEventTopicCustomerStartEvent
----
+# CustomerStartDetailEventTopicCustomerStartEvent
+
 ## CustomerStartDetailEventTopicCustomerStartEvent
 
 ## Properties
@@ -27,8 +26,9 @@ title: CustomerStartDetailEventTopicCustomerStartEvent
 | **messageType** | **String** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
-| **journeyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext.html) |  | [optional] |
+| **journeyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext) |  | [optional] |
 | **divisionId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

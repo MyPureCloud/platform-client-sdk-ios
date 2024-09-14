@@ -1,6 +1,5 @@
----
-title: RecipientFlow
----
+# RecipientFlow
+
 ## RecipientFlow
 
 ## Properties
@@ -8,6 +7,7 @@ title: RecipientFlow
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The flow identifier | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

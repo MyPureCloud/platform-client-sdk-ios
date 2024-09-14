@@ -1,6 +1,5 @@
----
-title: OutboundDetailEventTopicOutboundInitEvent
----
+# OutboundDetailEventTopicOutboundInitEvent
+
 ## OutboundDetailEventTopicOutboundInitEvent
 
 ## Properties
@@ -26,6 +25,7 @@ title: OutboundDetailEventTopicOutboundInitEvent
 | **outboundContactId** | **String** |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

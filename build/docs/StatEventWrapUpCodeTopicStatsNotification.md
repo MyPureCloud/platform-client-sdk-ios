@@ -1,6 +1,5 @@
----
-title: StatEventWrapUpCodeTopicStatsNotification
----
+# StatEventWrapUpCodeTopicStatsNotification
+
 ## StatEventWrapUpCodeTopicStatsNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventWrapUpCodeTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** |  | [optional] |
-| **data** | [**[StatEventWrapUpCodeTopicIntervalMetrics]**](StatEventWrapUpCodeTopicIntervalMetrics.html) |  | [optional] |
-{: class="table table-striped"}
+| **data** | [**[StatEventWrapUpCodeTopicIntervalMetrics]**](StatEventWrapUpCodeTopicIntervalMetrics) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

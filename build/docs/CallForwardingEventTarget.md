@@ -1,6 +1,5 @@
----
-title: CallForwardingEventTarget
----
+# CallForwardingEventTarget
+
 ## CallForwardingEventTarget
 
 ## Properties
@@ -9,6 +8,7 @@ title: CallForwardingEventTarget
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
 | **value** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: MetadataResults
----
+# MetadataResults
+
 ## MetadataResults
 List of resources created or modified as a result of running an accelerator
 
@@ -8,7 +7,8 @@ List of resources created or modified as a result of running an accelerator
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[MetadataResultEntity]**](MetadataResultEntity.html) | list of resources | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[MetadataResultEntity]**](MetadataResultEntity) | list of resources | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

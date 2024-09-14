@@ -1,6 +1,5 @@
----
-title: ConversationNotificationTemplateParameter
----
+# ConversationNotificationTemplateParameter
+
 ## ConversationNotificationTemplateParameter
 Template parameters for placeholders in template.
 
@@ -10,6 +9,7 @@ Template parameters for placeholders in template.
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Parameter name. | [optional] |
 | **text** | **String** | Parameter text value. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

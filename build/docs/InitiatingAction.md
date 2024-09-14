@@ -1,6 +1,5 @@
----
-title: InitiatingAction
----
+# InitiatingAction
+
 ## InitiatingAction
 
 ## Properties
@@ -9,6 +8,7 @@ title: InitiatingAction
 |------------ | ------------- | ------------- | -------------|
 | **transactionId** | **String** | Id of the audit initiating the transaction | [optional] |
 | **actionContext** | **String** | Action of the audit initiating the transaction | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

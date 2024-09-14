@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricNetworks
----
+# EdgeMetricsTopicEdgeMetricNetworks
+
 ## EdgeMetricsTopicEdgeMetricNetworks
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsTopicEdgeMetricNetworks
 | **receivedBytesPerSec** | **Int** |  | [optional] |
 | **bandwidthBitsPerSec** | **Int** |  | [optional] |
 | **utilizationPct** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

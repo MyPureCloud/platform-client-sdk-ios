@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryResponseMetric
----
+# LearningAssignmentAggregateQueryResponseMetric
+
 ## LearningAssignmentAggregateQueryResponseMetric
 
 ## Properties
@@ -8,7 +7,8 @@ title: LearningAssignmentAggregateQueryResponseMetric
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** | The metric this applies to | [optional] |
-| **stats** | [**LearningAssignmentAggregateQueryResponseStats**](LearningAssignmentAggregateQueryResponseStats.html) | The aggregated values for this metric | [optional] |
-{: class="table table-striped"}
+| **stats** | [**LearningAssignmentAggregateQueryResponseStats**](LearningAssignmentAggregateQueryResponseStats) | The aggregated values for this metric | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

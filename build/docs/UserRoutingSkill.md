@@ -1,6 +1,5 @@
----
-title: UserRoutingSkill
----
+# UserRoutingSkill
+
 ## UserRoutingSkill
 Represents an organization skill assigned to a user. When assigning to a user specify the organization skill id as the id.
 
@@ -14,6 +13,7 @@ Represents an organization skill assigned to a user. When assigning to a user sp
 | **state** | **String** | Activate or deactivate this routing skill. | [optional] |
 | **skillUri** | **String** | URI to the organization skill used by this user skill. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

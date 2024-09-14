@@ -1,6 +1,5 @@
----
-title: QuickReply
----
+# QuickReply
+
 ## QuickReply
 
 ## Properties
@@ -12,6 +11,7 @@ title: QuickReply
 | **url** | **String** | The location of the image file associated with quick reply | [optional] |
 | **action** | **String** | Specifies the type of action that is triggered upon clicking the quick reply. Currently, the only supported action is \&quot;Message\&quot; which sends a message using the quick reply text. | [optional] |
 | **isSelected** | **Bool** | Indicates if the quick reply option is selected by end customer | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,13 @@
----
-title: RequestContext
----
+# RequestContext
+
 ## RequestContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[RequestContextPattern]**](RequestContextPattern.html) | A list of one or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **patterns** | [**[RequestContextPattern]**](RequestContextPattern) | A list of one or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

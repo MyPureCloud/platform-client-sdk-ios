@@ -1,6 +1,5 @@
----
-title: AssignedSegment
----
+# AssignedSegment
+
 ## AssignedSegment
 
 ## Properties
@@ -9,6 +8,7 @@ title: AssignedSegment
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the segment assigned. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

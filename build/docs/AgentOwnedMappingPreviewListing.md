@@ -1,13 +1,13 @@
----
-title: AgentOwnedMappingPreviewListing
----
+# AgentOwnedMappingPreviewListing
+
 ## AgentOwnedMappingPreviewListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AgentOwnedMappingPreview]**](AgentOwnedMappingPreview.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[AgentOwnedMappingPreview]**](AgentOwnedMappingPreview) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

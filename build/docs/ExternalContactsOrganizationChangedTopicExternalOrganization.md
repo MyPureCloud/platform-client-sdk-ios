@@ -1,6 +1,5 @@
----
-title: ExternalContactsOrganizationChangedTopicExternalOrganization
----
+# ExternalContactsOrganizationChangedTopicExternalOrganization
+
 ## ExternalContactsOrganizationChangedTopicExternalOrganization
 
 ## Properties
@@ -8,24 +7,25 @@ title: ExternalContactsOrganizationChangedTopicExternalOrganization
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **division** | [**ExternalContactsOrganizationChangedTopicDivision**](ExternalContactsOrganizationChangedTopicDivision.html) |  | [optional] |
+| **division** | [**ExternalContactsOrganizationChangedTopicDivision**](ExternalContactsOrganizationChangedTopicDivision) |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **companyType** | **String** |  | [optional] |
 | **industry** | **String** |  | [optional] |
 | **primaryContactId** | **String** |  | [optional] |
-| **address** | [**ExternalContactsOrganizationChangedTopicContactAddress**](ExternalContactsOrganizationChangedTopicContactAddress.html) |  | [optional] |
-| **phoneNumber** | [**ExternalContactsOrganizationChangedTopicPhoneNumber**](ExternalContactsOrganizationChangedTopicPhoneNumber.html) |  | [optional] |
-| **faxNumber** | [**ExternalContactsOrganizationChangedTopicPhoneNumber**](ExternalContactsOrganizationChangedTopicPhoneNumber.html) |  | [optional] |
+| **address** | [**ExternalContactsOrganizationChangedTopicContactAddress**](ExternalContactsOrganizationChangedTopicContactAddress) |  | [optional] |
+| **phoneNumber** | [**ExternalContactsOrganizationChangedTopicPhoneNumber**](ExternalContactsOrganizationChangedTopicPhoneNumber) |  | [optional] |
+| **faxNumber** | [**ExternalContactsOrganizationChangedTopicPhoneNumber**](ExternalContactsOrganizationChangedTopicPhoneNumber) |  | [optional] |
 | **employeeCount** | **Int** |  | [optional] |
 | **revenue** | **Int** |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
 | **websites** | **[String]** |  | [optional] |
-| **tickers** | [**[ExternalContactsOrganizationChangedTopicTicker]**](ExternalContactsOrganizationChangedTopicTicker.html) |  | [optional] |
-| **twitterId** | [**ExternalContactsOrganizationChangedTopicTwitterId**](ExternalContactsOrganizationChangedTopicTwitterId.html) |  | [optional] |
+| **tickers** | [**[ExternalContactsOrganizationChangedTopicTicker]**](ExternalContactsOrganizationChangedTopicTicker) |  | [optional] |
+| **twitterId** | [**ExternalContactsOrganizationChangedTopicTwitterId**](ExternalContactsOrganizationChangedTopicTwitterId) |  | [optional] |
 | **externalSystemUrl** | **String** |  | [optional] |
-| **customFields** | [**[String:JSON]**](JSON.html) |  | [optional] |
-| **createDate** | [**Date**](Date.html) |  | [optional] |
-| **modifyDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **customFields** | [**[String:JSON]**](JSON) |  | [optional] |
+| **createDate** | [**Date**](Date) |  | [optional] |
+| **modifyDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

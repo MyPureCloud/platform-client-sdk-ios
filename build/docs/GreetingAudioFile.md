@@ -1,6 +1,5 @@
----
-title: GreetingAudioFile
----
+# GreetingAudioFile
+
 ## GreetingAudioFile
 
 ## Properties
@@ -10,6 +9,7 @@ title: GreetingAudioFile
 | **durationMilliseconds** | **Int64** |  | [optional] |
 | **sizeBytes** | **Int64** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

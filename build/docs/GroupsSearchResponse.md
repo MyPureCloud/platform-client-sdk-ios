@@ -1,6 +1,5 @@
----
-title: GroupsSearchResponse
----
+# GroupsSearchResponse
+
 ## GroupsSearchResponse
 
 ## Properties
@@ -15,7 +14,8 @@ title: GroupsSearchResponse
 | **currentPage** | **String** | Q64 value for the current page of results | [optional] |
 | **nextPage** | **String** | Q64 value for the next page of results | [optional] |
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**[Group]**](Group.html) | Search results | |
-{: class="table table-striped"}
+| **results** | [**[Group]**](Group) | Search results | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

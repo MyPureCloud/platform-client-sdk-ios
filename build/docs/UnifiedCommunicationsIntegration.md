@@ -1,6 +1,5 @@
----
-title: UnifiedCommunicationsIntegration
----
+# UnifiedCommunicationsIntegration
+
 ## UnifiedCommunicationsIntegration
 UC Integration UI configuration data
 
@@ -10,17 +9,18 @@ UC Integration UI configuration data
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **ucIntegrationKey** | [**AddressableEntityRef**](AddressableEntityRef.html) | ucIntegrationKey | |
+| **ucIntegrationKey** | [**AddressableEntityRef**](AddressableEntityRef) | ucIntegrationKey | |
 | **integrationPresenceSource** | **String** | integrationPresenceType | |
 | **pbxPermission** | **String** | pbxPermission | |
-| **icon** | [**UCIcon**](UCIcon.html) | icon | |
-| **badgeIcons** | [**[String:UCIcon]**](UCIcon.html) | badgeIcon | |
-| **i10n** | [**[String:UCI10n]**](UCI10n.html) | i10n | |
+| **icon** | [**UCIcon**](UCIcon) | icon | |
+| **badgeIcons** | [**[String:UCIcon]**](UCIcon) | badgeIcon | |
+| **i10n** | [**[String:UCI10n]**](UCI10n) | i10n | |
 | **polledPresence** | **Bool** | polledPresence | |
 | **pollIntervalSec** | **Int** | pollIntervalSec | [optional] |
 | **userPermissions** | **[String]** | userPermissions | |
 | **oauthScopes** | **[String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

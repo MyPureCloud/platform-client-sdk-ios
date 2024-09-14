@@ -1,6 +1,5 @@
----
-title: PhraseAssociations
----
+# PhraseAssociations
+
 ## PhraseAssociations
 
 ## Properties
@@ -9,6 +8,7 @@ title: PhraseAssociations
 |------------ | ------------- | ------------- | -------------|
 | **phraseId** | **String** | Id of the phrase to be linked | |
 | **documentId** | **String** | Id of the document to be linked | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

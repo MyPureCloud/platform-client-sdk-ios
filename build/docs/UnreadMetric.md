@@ -1,6 +1,5 @@
----
-title: UnreadMetric
----
+# UnreadMetric
+
 ## UnreadMetric
 
 ## Properties
@@ -8,6 +7,7 @@ title: UnreadMetric
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **count** | **Int** | The count of unread alerts for a specific rule type. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

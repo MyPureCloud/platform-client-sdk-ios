@@ -1,6 +1,5 @@
----
-title: PublishTopicTopicsDefinitionsJob
----
+# PublishTopicTopicsDefinitionsJob
+
 ## PublishTopicTopicsDefinitionsJob
 
 ## Properties
@@ -9,6 +8,7 @@ title: PublishTopicTopicsDefinitionsJob
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification
----
+# WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification
+
 ## WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification
 
 ## Properties
@@ -11,7 +10,8 @@ title: WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotificat
 | **type** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
-| **error** | [**WfmAlternativeShiftJobCompleteEventV3ErrorBody**](WfmAlternativeShiftJobCompleteEventV3ErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **error** | [**WfmAlternativeShiftJobCompleteEventV3ErrorBody**](WfmAlternativeShiftJobCompleteEventV3ErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AnalyticsParticipantWithoutAttributes
----
+# AnalyticsParticipantWithoutAttributes
+
 ## AnalyticsParticipantWithoutAttributes
 
 ## Properties
@@ -16,7 +15,8 @@ title: AnalyticsParticipantWithoutAttributes
 | **screenRecording** | **Bool** | Flag determining if a screen recording was started or not | [optional] |
 | **teamId** | **String** | The team ID the user is a member of | [optional] |
 | **userId** | **String** | Unique identifier for the user | [optional] |
-| **sessions** | [**[AnalyticsSession]**](AnalyticsSession.html) | List of sessions associated to this participant | [optional] |
-{: class="table table-striped"}
+| **sessions** | [**[AnalyticsSession]**](AnalyticsSession) | List of sessions associated to this participant | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LicenseAssignmentRequest
----
+# LicenseAssignmentRequest
+
 ## LicenseAssignmentRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: LicenseAssignmentRequest
 | **licenseId** | **String** | The id of the license to assign/unassign. | |
 | **userIdsAdd** | **[String]** | The ids of users to assign this license to. | |
 | **userIdsRemove** | **[String]** | The ids of users to unassign this license from. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

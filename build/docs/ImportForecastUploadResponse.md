@@ -1,6 +1,5 @@
----
-title: ImportForecastUploadResponse
----
+# ImportForecastUploadResponse
+
 ## ImportForecastUploadResponse
 
 ## Properties
@@ -10,7 +9,8 @@ title: ImportForecastUploadResponse
 | **uploadKey** | **String** | The key to pass to the secondary request to start processing of the upload | [optional] |
 | **url** | **String** | The url to which to PUT the upload body | [optional] |
 | **headers** | **[String:String]** | Required headers for the PUT request to the url | [optional] |
-| **uploadBodySchema** | [**BuImportShortTermForecastSchema**](BuImportShortTermForecastSchema.html) | Always null. Defines the schema of the json body to be PUT to the url. The json body should be gzip encoded before uploading | [optional] |
-{: class="table table-striped"}
+| **uploadBodySchema** | [**BuImportShortTermForecastSchema**](BuImportShortTermForecastSchema) | Always null. Defines the schema of the json body to be PUT to the url. The json body should be gzip encoded before uploading | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: OAuthAuthorizationListing
----
+# OAuthAuthorizationListing
+
 ## OAuthAuthorizationListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: OAuthAuthorizationListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[OAuthAuthorization]**](OAuthAuthorization.html) |  | [optional] |
+| **entities** | [**[OAuthAuthorization]**](OAuthAuthorization) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

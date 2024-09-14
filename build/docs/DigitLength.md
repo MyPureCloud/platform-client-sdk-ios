@@ -1,6 +1,5 @@
----
-title: DigitLength
----
+# DigitLength
+
 ## DigitLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: DigitLength
 |------------ | ------------- | ------------- | -------------|
 | **start** | **String** |  | [optional] |
 | **end** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

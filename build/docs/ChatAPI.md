@@ -1,42 +1,38 @@
----
-title: ChatAPI
----
-## ChatAPI
+# ChatAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteChatsRoomMessage**](ChatAPI.html#deleteChatsRoomMessage) | Delete a message in a room |
-| [**deleteChatsRoomMessagesPin**](ChatAPI.html#deleteChatsRoomMessagesPin) | Remove a pinned message from a room |
-| [**deleteChatsRoomParticipant**](ChatAPI.html#deleteChatsRoomParticipant) | Remove a user from a room. |
-| [**deleteChatsUserMessage**](ChatAPI.html#deleteChatsUserMessage) | Delete a message to a user |
-| [**getChatsMessage**](ChatAPI.html#getChatsMessage) | Get a message |
-| [**getChatsRoom**](ChatAPI.html#getChatsRoom) | Get a room |
-| [**getChatsRoomMessage**](ChatAPI.html#getChatsRoomMessage) | Get messages by id(s) from a room |
-| [**getChatsRoomMessages**](ChatAPI.html#getChatsRoomMessages) | Get a room&#39;s message history |
-| [**getChatsRoomParticipant**](ChatAPI.html#getChatsRoomParticipant) | Get a room participant |
-| [**getChatsRoomParticipants**](ChatAPI.html#getChatsRoomParticipants) | Get room participants in a room |
-| [**getChatsSettings**](ChatAPI.html#getChatsSettings) | Get Chat Settings. |
-| [**getChatsThreadMessages**](ChatAPI.html#getChatsThreadMessages) | Get history by thread |
-| [**getChatsUserMessage**](ChatAPI.html#getChatsUserMessage) | Get messages by id(s) from a 1on1 |
-| [**getChatsUserMessages**](ChatAPI.html#getChatsUserMessages) | Get 1on1 History between a user |
-| [**patchChatsRoom**](ChatAPI.html#patchChatsRoom) | Set properties for a room |
-| [**patchChatsRoomMessage**](ChatAPI.html#patchChatsRoomMessage) | Edit a message in a room |
-| [**patchChatsSettings**](ChatAPI.html#patchChatsSettings) | Patch Chat Settings. |
-| [**patchChatsUserMessage**](ChatAPI.html#patchChatsUserMessage) | Edit a message to a user |
-| [**postChatsRoomMessages**](ChatAPI.html#postChatsRoomMessages) | Send a message to a room |
-| [**postChatsRoomMessagesPins**](ChatAPI.html#postChatsRoomMessagesPins) | Add pinned messages for a room, up to a maximum of 5 pinned messages |
-| [**postChatsRoomParticipant**](ChatAPI.html#postChatsRoomParticipant) | Join a room |
-| [**postChatsRooms**](ChatAPI.html#postChatsRooms) | Create an adhoc room |
-| [**postChatsUserMessages**](ChatAPI.html#postChatsUserMessages) | Send a message to a user |
-| [**putChatsMessageReactions**](ChatAPI.html#putChatsMessageReactions) | Update reactions to a message |
-| [**putChatsSettings**](ChatAPI.html#putChatsSettings) | Update Chat Settings. |
+| [**deleteChatsRoomMessage**](ChatAPI#deleteChatsRoomMessage) | Delete a message in a room |
+| [**deleteChatsRoomMessagesPin**](ChatAPI#deleteChatsRoomMessagesPin) | Remove a pinned message from a room |
+| [**deleteChatsRoomParticipant**](ChatAPI#deleteChatsRoomParticipant) | Remove a user from a room. |
+| [**deleteChatsUserMessage**](ChatAPI#deleteChatsUserMessage) | Delete a message to a user |
+| [**getChatsMessage**](ChatAPI#getChatsMessage) | Get a message |
+| [**getChatsRoom**](ChatAPI#getChatsRoom) | Get a room |
+| [**getChatsRoomMessage**](ChatAPI#getChatsRoomMessage) | Get messages by id(s) from a room |
+| [**getChatsRoomMessages**](ChatAPI#getChatsRoomMessages) | Get a room&#39;s message history |
+| [**getChatsRoomParticipant**](ChatAPI#getChatsRoomParticipant) | Get a room participant |
+| [**getChatsRoomParticipants**](ChatAPI#getChatsRoomParticipants) | Get room participants in a room |
+| [**getChatsSettings**](ChatAPI#getChatsSettings) | Get Chat Settings. |
+| [**getChatsThreadMessages**](ChatAPI#getChatsThreadMessages) | Get history by thread |
+| [**getChatsUserMessage**](ChatAPI#getChatsUserMessage) | Get messages by id(s) from a 1on1 |
+| [**getChatsUserMessages**](ChatAPI#getChatsUserMessages) | Get 1on1 History between a user |
+| [**patchChatsRoom**](ChatAPI#patchChatsRoom) | Set properties for a room |
+| [**patchChatsRoomMessage**](ChatAPI#patchChatsRoomMessage) | Edit a message in a room |
+| [**patchChatsSettings**](ChatAPI#patchChatsSettings) | Patch Chat Settings. |
+| [**patchChatsUserMessage**](ChatAPI#patchChatsUserMessage) | Edit a message to a user |
+| [**postChatsRoomMessages**](ChatAPI#postChatsRoomMessages) | Send a message to a room |
+| [**postChatsRoomMessagesPins**](ChatAPI#postChatsRoomMessagesPins) | Add pinned messages for a room, up to a maximum of 5 pinned messages |
+| [**postChatsRoomParticipant**](ChatAPI#postChatsRoomParticipant) | Join a room |
+| [**postChatsRooms**](ChatAPI#postChatsRooms) | Create an adhoc room |
+| [**postChatsUserMessages**](ChatAPI#postChatsUserMessages) | Send a message to a user |
+| [**putChatsMessageReactions**](ChatAPI#putChatsMessageReactions) | Update reactions to a message |
+| [**putChatsSettings**](ChatAPI#putChatsSettings) | Update Chat Settings. |
 {: class="table-striped"}
 
-<a name="deleteChatsRoomMessage"></a>
 
-# **deleteChatsRoomMessage**
+## deleteChatsRoomMessage
 
 
 
@@ -81,16 +77,14 @@ ChatAPI.deleteChatsRoomMessage(roomJid: roomJid, messageId: messageId) { (error)
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomId | |
 | **messageId** | **String**| messageId | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteChatsRoomMessagesPin"></a>
 
-# **deleteChatsRoomMessagesPin**
+## deleteChatsRoomMessagesPin
 
 
 
@@ -135,16 +129,14 @@ ChatAPI.deleteChatsRoomMessagesPin(roomJid: roomJid, pinnedMessageId: pinnedMess
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **pinnedMessageId** | **String**| pinnedMessageId | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteChatsRoomParticipant"></a>
 
-# **deleteChatsRoomParticipant**
+## deleteChatsRoomParticipant
 
 
 
@@ -189,16 +181,14 @@ ChatAPI.deleteChatsRoomParticipant(roomJid: roomJid, userId: userId) { (error) i
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **userId** | **String**| userId | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteChatsUserMessage"></a>
 
-# **deleteChatsUserMessage**
+## deleteChatsUserMessage
 
 
 
@@ -243,20 +233,18 @@ ChatAPI.deleteChatsUserMessage(userId: userId, messageId: messageId) { (error) i
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
 | **messageId** | **String**| messageId | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getChatsMessage"></a>
 
-# **getChatsMessage**
-
+## getChatsMessage
 
 
-> [ChatMessageResponse](ChatMessageResponse.html) getChatsMessage(messageId)
+
+> [ChatMessageResponse](ChatMessageResponse) getChatsMessage(messageId)
 
 Get a message
 
@@ -297,20 +285,18 @@ ChatAPI.getChatsMessage(messageId: messageId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageId** | **String**| messageId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ChatMessageResponse**](ChatMessageResponse.html)
-
-<a name="getChatsRoom"></a>
-
-# **getChatsRoom**
+[**ChatMessageResponse**](ChatMessageResponse)
 
 
+## getChatsRoom
 
-> [Room](Room.html) getChatsRoom(roomJid)
+
+
+> [Room](Room) getChatsRoom(roomJid)
 
 Get a room
 
@@ -350,20 +336,18 @@ ChatAPI.getChatsRoom(roomJid: roomJid) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Room**](Room.html)
-
-<a name="getChatsRoomMessage"></a>
-
-# **getChatsRoomMessage**
+[**Room**](Room)
 
 
+## getChatsRoomMessage
 
-> [ChatMessageEntityListing](ChatMessageEntityListing.html) getChatsRoomMessage(roomJid, messageIds)
+
+
+> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsRoomMessage(roomJid, messageIds)
 
 Get messages by id(s) from a room
 
@@ -405,20 +389,18 @@ ChatAPI.getChatsRoomMessage(roomJid: roomJid, messageIds: messageIds) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **messageIds** | **String**| messageIds, comma separated | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ChatMessageEntityListing**](ChatMessageEntityListing.html)
-
-<a name="getChatsRoomMessages"></a>
-
-# **getChatsRoomMessages**
+[**ChatMessageEntityListing**](ChatMessageEntityListing)
 
 
+## getChatsRoomMessages
 
-> [ChatMessageEntityListing](ChatMessageEntityListing.html) getChatsRoomMessages(roomJid, limit, before, after)
+
+
+> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsRoomMessages(roomJid, limit, before, after)
 
 Get a room&#39;s message history
 
@@ -464,20 +446,18 @@ ChatAPI.getChatsRoomMessages(roomJid: roomJid, limit: limit, before: before, aft
 | **limit** | **String**| The maximum number of messages to retrieve | [optional] |
 | **before** | **String**| The cutoff date for messages to retrieve | [optional] |
 | **after** | **String**| The beginning date for messages to retrieve | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ChatMessageEntityListing**](ChatMessageEntityListing.html)
-
-<a name="getChatsRoomParticipant"></a>
-
-# **getChatsRoomParticipant**
+[**ChatMessageEntityListing**](ChatMessageEntityListing)
 
 
+## getChatsRoomParticipant
 
-> [RoomParticipant](RoomParticipant.html) getChatsRoomParticipant(roomJid, participantJid)
+
+
+> [RoomParticipant](RoomParticipant) getChatsRoomParticipant(roomJid, participantJid)
 
 Get a room participant
 
@@ -517,20 +497,18 @@ ChatAPI.getChatsRoomParticipant(roomJid: roomJid, participantJid: participantJid
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **participantJid** | **String**| participantJid | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**RoomParticipant**](RoomParticipant.html)
-
-<a name="getChatsRoomParticipants"></a>
-
-# **getChatsRoomParticipants**
+[**RoomParticipant**](RoomParticipant)
 
 
+## getChatsRoomParticipants
 
-> [RoomParticipantsResponse](RoomParticipantsResponse.html) getChatsRoomParticipants(roomJid)
+
+
+> [RoomParticipantsResponse](RoomParticipantsResponse) getChatsRoomParticipants(roomJid)
 
 Get room participants in a room
 
@@ -570,20 +548,18 @@ ChatAPI.getChatsRoomParticipants(roomJid: roomJid) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**RoomParticipantsResponse**](RoomParticipantsResponse.html)
-
-<a name="getChatsSettings"></a>
-
-# **getChatsSettings**
+[**RoomParticipantsResponse**](RoomParticipantsResponse)
 
 
+## getChatsSettings
 
-> [ChatSettings](ChatSettings.html) getChatsSettings()
+
+
+> [ChatSettings](ChatSettings) getChatsSettings()
 
 Get Chat Settings.
 
@@ -621,18 +597,16 @@ ChatAPI.getChatsSettings() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**ChatSettings**](ChatSettings.html)
-
-<a name="getChatsThreadMessages"></a>
-
-# **getChatsThreadMessages**
+[**ChatSettings**](ChatSettings)
 
 
+## getChatsThreadMessages
 
-> [ChatMessageEntityListing](ChatMessageEntityListing.html) getChatsThreadMessages(threadId, limit, before, after)
+
+
+> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsThreadMessages(threadId, limit, before, after)
 
 Get history by thread
 
@@ -678,20 +652,18 @@ ChatAPI.getChatsThreadMessages(threadId: threadId, limit: limit, before: before,
 | **limit** | **String**| The maximum number of messages to retrieve | [optional] |
 | **before** | **String**| The cutoff date for messages to retrieve | [optional] |
 | **after** | **String**| The beginning date for messages to retrieve | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ChatMessageEntityListing**](ChatMessageEntityListing.html)
-
-<a name="getChatsUserMessage"></a>
-
-# **getChatsUserMessage**
+[**ChatMessageEntityListing**](ChatMessageEntityListing)
 
 
+## getChatsUserMessage
 
-> [ChatMessageEntityListing](ChatMessageEntityListing.html) getChatsUserMessage(userId, messageIds)
+
+
+> [ChatMessageEntityListing](ChatMessageEntityListing) getChatsUserMessage(userId, messageIds)
 
 Get messages by id(s) from a 1on1
 
@@ -733,20 +705,18 @@ ChatAPI.getChatsUserMessage(userId: userId, messageIds: messageIds) { (response,
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
 | **messageIds** | **String**| messageIds, comma separated | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ChatMessageEntityListing**](ChatMessageEntityListing.html)
-
-<a name="getChatsUserMessages"></a>
-
-# **getChatsUserMessages**
+[**ChatMessageEntityListing**](ChatMessageEntityListing)
 
 
+## getChatsUserMessages
 
-> [ChatMessageResponse](ChatMessageResponse.html) getChatsUserMessages(userId, limit, before, after)
+
+
+> [ChatMessageResponse](ChatMessageResponse) getChatsUserMessages(userId, limit, before, after)
 
 Get 1on1 History between a user
 
@@ -792,16 +762,14 @@ ChatAPI.getChatsUserMessages(userId: userId, limit: limit, before: before, after
 | **limit** | **String**| The maximum number of messages to retrieve | [optional] |
 | **before** | **String**| The cutoff date for messages to retrieve | [optional] |
 | **after** | **String**| The beginning date for messages to retrieve | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ChatMessageResponse**](ChatMessageResponse.html)
+[**ChatMessageResponse**](ChatMessageResponse)
 
-<a name="patchChatsRoom"></a>
 
-# **patchChatsRoom**
+## patchChatsRoom
 
 
 
@@ -845,21 +813,19 @@ ChatAPI.patchChatsRoom(roomJid: roomJid, body: body) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
-| **body** | [**RoomUpdateRequest**](RoomUpdateRequest.html)| Room properties | |
-{: class="table-striped"}
+| **body** | [**RoomUpdateRequest**](RoomUpdateRequest)| Room properties | |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="patchChatsRoomMessage"></a>
 
-# **patchChatsRoomMessage**
-
+## patchChatsRoomMessage
 
 
-> [ChatSendMessageResponse](ChatSendMessageResponse.html) patchChatsRoomMessage(roomJid, messageId, body)
+
+> [ChatSendMessageResponse](ChatSendMessageResponse) patchChatsRoomMessage(roomJid, messageId, body)
 
 Edit a message in a room
 
@@ -902,21 +868,19 @@ ChatAPI.patchChatsRoomMessage(roomJid: roomJid, messageId: messageId, body: body
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomId | |
 | **messageId** | **String**| messageId | |
-| **body** | [**SendMessageBody**](SendMessageBody.html)| messageBody | |
-{: class="table-striped"}
+| **body** | [**SendMessageBody**](SendMessageBody)| messageBody | |
 
 
 ### Return type
 
-[**ChatSendMessageResponse**](ChatSendMessageResponse.html)
-
-<a name="patchChatsSettings"></a>
-
-# **patchChatsSettings**
+[**ChatSendMessageResponse**](ChatSendMessageResponse)
 
 
+## patchChatsSettings
 
-> [ChatSettings](ChatSettings.html) patchChatsSettings(body)
+
+
+> [ChatSettings](ChatSettings) patchChatsSettings(body)
 
 Patch Chat Settings.
 
@@ -954,21 +918,19 @@ ChatAPI.patchChatsSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ChatSettings**](ChatSettings.html)| Chat | |
-{: class="table-striped"}
+| **body** | [**ChatSettings**](ChatSettings)| Chat | |
 
 
 ### Return type
 
-[**ChatSettings**](ChatSettings.html)
-
-<a name="patchChatsUserMessage"></a>
-
-# **patchChatsUserMessage**
+[**ChatSettings**](ChatSettings)
 
 
+## patchChatsUserMessage
 
-> [ChatSendMessageResponse](ChatSendMessageResponse.html) patchChatsUserMessage(userId, messageId, body)
+
+
+> [ChatSendMessageResponse](ChatSendMessageResponse) patchChatsUserMessage(userId, messageId, body)
 
 Edit a message to a user
 
@@ -1011,21 +973,19 @@ ChatAPI.patchChatsUserMessage(userId: userId, messageId: messageId, body: body) 
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
 | **messageId** | **String**| messageId | |
-| **body** | [**SendMessageBody**](SendMessageBody.html)| message body | |
-{: class="table-striped"}
+| **body** | [**SendMessageBody**](SendMessageBody)| message body | |
 
 
 ### Return type
 
-[**ChatSendMessageResponse**](ChatSendMessageResponse.html)
-
-<a name="postChatsRoomMessages"></a>
-
-# **postChatsRoomMessages**
+[**ChatSendMessageResponse**](ChatSendMessageResponse)
 
 
+## postChatsRoomMessages
 
-> [ChatSendMessageResponse](ChatSendMessageResponse.html) postChatsRoomMessages(roomJid, body)
+
+
+> [ChatSendMessageResponse](ChatSendMessageResponse) postChatsRoomMessages(roomJid, body)
 
 Send a message to a room
 
@@ -1066,17 +1026,15 @@ ChatAPI.postChatsRoomMessages(roomJid: roomJid, body: body) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomId | |
-| **body** | [**SendMessageBody**](SendMessageBody.html)| messageBody | |
-{: class="table-striped"}
+| **body** | [**SendMessageBody**](SendMessageBody)| messageBody | |
 
 
 ### Return type
 
-[**ChatSendMessageResponse**](ChatSendMessageResponse.html)
+[**ChatSendMessageResponse**](ChatSendMessageResponse)
 
-<a name="postChatsRoomMessagesPins"></a>
 
-# **postChatsRoomMessagesPins**
+## postChatsRoomMessagesPins
 
 
 
@@ -1120,17 +1078,15 @@ ChatAPI.postChatsRoomMessagesPins(roomJid: roomJid, body: body) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
-| **body** | [**PinnedMessageRequest**](PinnedMessageRequest.html)| Pinned Message Ids | |
-{: class="table-striped"}
+| **body** | [**PinnedMessageRequest**](PinnedMessageRequest)| Pinned Message Ids | |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="postChatsRoomParticipant"></a>
 
-# **postChatsRoomParticipant**
+## postChatsRoomParticipant
 
 
 
@@ -1175,20 +1131,18 @@ ChatAPI.postChatsRoomParticipant(roomJid: roomJid, userId: userId) { (error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **roomJid** | **String**| roomJid | |
 | **userId** | **String**| userId | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="postChatsRooms"></a>
 
-# **postChatsRooms**
-
+## postChatsRooms
 
 
-> [CreateRoomResponse](CreateRoomResponse.html) postChatsRooms(body)
+
+> [CreateRoomResponse](CreateRoomResponse) postChatsRooms(body)
 
 Create an adhoc room
 
@@ -1227,21 +1181,19 @@ ChatAPI.postChatsRooms(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateRoomRequest**](CreateRoomRequest.html)| Room properties | |
-{: class="table-striped"}
+| **body** | [**CreateRoomRequest**](CreateRoomRequest)| Room properties | |
 
 
 ### Return type
 
-[**CreateRoomResponse**](CreateRoomResponse.html)
-
-<a name="postChatsUserMessages"></a>
-
-# **postChatsUserMessages**
+[**CreateRoomResponse**](CreateRoomResponse)
 
 
+## postChatsUserMessages
 
-> [ChatSendMessageResponse](ChatSendMessageResponse.html) postChatsUserMessages(userId, body)
+
+
+> [ChatSendMessageResponse](ChatSendMessageResponse) postChatsUserMessages(userId, body)
 
 Send a message to a user
 
@@ -1282,17 +1234,15 @@ ChatAPI.postChatsUserMessages(userId: userId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
-| **body** | [**SendMessageBody**](SendMessageBody.html)| message body | |
-{: class="table-striped"}
+| **body** | [**SendMessageBody**](SendMessageBody)| message body | |
 
 
 ### Return type
 
-[**ChatSendMessageResponse**](ChatSendMessageResponse.html)
+[**ChatSendMessageResponse**](ChatSendMessageResponse)
 
-<a name="putChatsMessageReactions"></a>
 
-# **putChatsMessageReactions**
+## putChatsMessageReactions
 
 
 
@@ -1336,21 +1286,19 @@ ChatAPI.putChatsMessageReactions(messageId: messageId, body: body) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageId** | **String**| messageId | |
-| **body** | [**ChatReactionUpdate**](ChatReactionUpdate.html)| reactionUpdate | |
-{: class="table-striped"}
+| **body** | [**ChatReactionUpdate**](ChatReactionUpdate)| reactionUpdate | |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="putChatsSettings"></a>
 
-# **putChatsSettings**
-
+## putChatsSettings
 
 
-> [ChatSettings](ChatSettings.html) putChatsSettings(body)
+
+> [ChatSettings](ChatSettings) putChatsSettings(body)
 
 Update Chat Settings.
 
@@ -1388,11 +1336,12 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ChatSettings**](ChatSettings.html)| Chat | |
-{: class="table-striped"}
+| **body** | [**ChatSettings**](ChatSettings)| Chat | |
 
 
 ### Return type
 
-[**ChatSettings**](ChatSettings.html)
+[**ChatSettings**](ChatSettings)
 
+
+_PureCloudPlatformClientV2@151.1.0_

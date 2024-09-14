@@ -1,6 +1,5 @@
----
-title: MessageMediaAttachment
----
+# MessageMediaAttachment
+
 ## MessageMediaAttachment
 
 ## Properties
@@ -12,6 +11,7 @@ title: MessageMediaAttachment
 | **contentLength** | **Int64** | The optional content length of the the media object, in bytes. | [optional] |
 | **name** | **String** | The name of the media object. | [optional] |
 | **_id** | **String** | A globally unique identifier for the media object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

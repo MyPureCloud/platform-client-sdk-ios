@@ -1,6 +1,5 @@
----
-title: UCIntegration
----
+# UCIntegration
+
 ## UCIntegration
 UC Integration UI configuration data
 
@@ -13,12 +12,13 @@ UC Integration UI configuration data
 | **ucIntegrationKey** | **String** | ucIntegrationKey | |
 | **integrationPresenceSource** | **String** | integrationPresenceType | |
 | **pbxPermission** | **String** | pbxPermission | |
-| **icon** | [**UCIcon**](UCIcon.html) | icon | |
-| **badgeIcons** | [**[String:UCIcon]**](UCIcon.html) | badgeIcon | |
-| **i10n** | [**[String:UCI10n]**](UCI10n.html) | i10n | |
+| **icon** | [**UCIcon**](UCIcon) | icon | |
+| **badgeIcons** | [**[String:UCIcon]**](UCIcon) | badgeIcon | |
+| **i10n** | [**[String:UCI10n]**](UCI10n) | i10n | |
 | **polledPresence** | **Bool** | polledPresence | |
 | **userPermissions** | **[String]** | userPermissions | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

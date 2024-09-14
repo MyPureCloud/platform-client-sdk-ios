@@ -1,14 +1,14 @@
----
-title: AgentWorkPlanListResponse
----
+# AgentWorkPlanListResponse
+
 ## AgentWorkPlanListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AgentWorkPlan]**](AgentWorkPlan.html) |  | [optional] |
-| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference.html) | The management unit of the work plans | |
-{: class="table table-striped"}
+| **entities** | [**[AgentWorkPlan]**](AgentWorkPlan) |  | [optional] |
+| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit of the work plans | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

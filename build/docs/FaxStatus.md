@@ -1,6 +1,5 @@
----
-title: FaxStatus
----
+# FaxStatus
+
 ## FaxStatus
 
 ## Properties
@@ -15,6 +14,7 @@ title: FaxStatus
 | **baudRate** | **Int64** | Current signaling rate of transmission, baud rate. | [optional] |
 | **pageErrors** | **Int64** | Number of page errors. | [optional] |
 | **lineErrors** | **Int64** | Number of line errors. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DialerResponsesetConfigChangeReaction
----
+# DialerResponsesetConfigChangeReaction
+
 ## DialerResponsesetConfigChangeReaction
 
 ## Properties
@@ -10,7 +9,8 @@ title: DialerResponsesetConfigChangeReaction
 | **data** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **reactionType** | **String** |  | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

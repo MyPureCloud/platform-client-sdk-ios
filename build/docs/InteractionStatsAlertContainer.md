@@ -1,13 +1,12 @@
----
-title: InteractionStatsAlertContainer
----
+# InteractionStatsAlertContainer
+
 ## InteractionStatsAlertContainer
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[InteractionStatsAlert]**](InteractionStatsAlert.html) |  | [optional] |
+| **entities** | [**[InteractionStatsAlert]**](InteractionStatsAlert) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: InteractionStatsAlertContainer
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

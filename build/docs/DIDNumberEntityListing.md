@@ -1,13 +1,12 @@
----
-title: DIDNumberEntityListing
----
+# DIDNumberEntityListing
+
 ## DIDNumberEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DIDNumber]**](DIDNumber.html) |  | [optional] |
+| **entities** | [**[DIDNumber]**](DIDNumber) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DIDNumberEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

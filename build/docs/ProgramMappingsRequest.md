@@ -1,6 +1,5 @@
----
-title: ProgramMappingsRequest
----
+# ProgramMappingsRequest
+
 ## ProgramMappingsRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: ProgramMappingsRequest
 |------------ | ------------- | ------------- | -------------|
 | **queueIds** | **[String]** | The program queues | |
 | **flowIds** | **[String]** | The program flows | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

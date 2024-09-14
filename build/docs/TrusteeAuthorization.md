@@ -1,6 +1,5 @@
----
-title: TrusteeAuthorization
----
+# TrusteeAuthorization
+
 ## TrusteeAuthorization
 
 ## Properties
@@ -8,6 +7,7 @@ title: TrusteeAuthorization
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **permissions** | **[String]** | Permissions that the trustee user has in the trustor organization | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

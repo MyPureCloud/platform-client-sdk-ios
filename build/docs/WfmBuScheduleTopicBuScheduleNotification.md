@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicBuScheduleNotification
----
+# WfmBuScheduleTopicBuScheduleNotification
+
 ## WfmBuScheduleTopicBuScheduleNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: WfmBuScheduleTopicBuScheduleNotification
 | **status** | **String** |  | [optional] |
 | **operationId** | **String** |  | [optional] |
 | **eventType** | **String** |  | [optional] |
-| **result** | [**WfmBuScheduleTopicBuScheduleMetadata**](WfmBuScheduleTopicBuScheduleMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **result** | [**WfmBuScheduleTopicBuScheduleMetadata**](WfmBuScheduleTopicBuScheduleMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

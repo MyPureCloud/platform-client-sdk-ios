@@ -1,25 +1,21 @@
----
-title: LanguagesAPI
----
-## LanguagesAPI
+# LanguagesAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteLanguage**](LanguagesAPI.html#deleteLanguage) | Delete Language (Deprecated) |
-| [**getLanguage**](LanguagesAPI.html#getLanguage) | Get Language (Deprecated) |
-| [**getLanguages**](LanguagesAPI.html#getLanguages) | Get the list of supported languages. (Deprecated) |
-| [**getLanguagesTranslations**](LanguagesAPI.html#getLanguagesTranslations) | Get all available languages for translation |
-| [**getLanguagesTranslationsBuiltin**](LanguagesAPI.html#getLanguagesTranslationsBuiltin) | Get the builtin translation for a language |
-| [**getLanguagesTranslationsOrganization**](LanguagesAPI.html#getLanguagesTranslationsOrganization) | Get effective translation for an organization by language |
-| [**getLanguagesTranslationsUser**](LanguagesAPI.html#getLanguagesTranslationsUser) | Get effective language translation for a user |
-| [**postLanguages**](LanguagesAPI.html#postLanguages) | Create Language (Deprecated) |
+| [**deleteLanguage**](LanguagesAPI#deleteLanguage) | Delete Language (Deprecated) |
+| [**getLanguage**](LanguagesAPI#getLanguage) | Get Language (Deprecated) |
+| [**getLanguages**](LanguagesAPI#getLanguages) | Get the list of supported languages. (Deprecated) |
+| [**getLanguagesTranslations**](LanguagesAPI#getLanguagesTranslations) | Get all available languages for translation |
+| [**getLanguagesTranslationsBuiltin**](LanguagesAPI#getLanguagesTranslationsBuiltin) | Get the builtin translation for a language |
+| [**getLanguagesTranslationsOrganization**](LanguagesAPI#getLanguagesTranslationsOrganization) | Get effective translation for an organization by language |
+| [**getLanguagesTranslationsUser**](LanguagesAPI#getLanguagesTranslationsUser) | Get effective language translation for a user |
+| [**postLanguages**](LanguagesAPI#postLanguages) | Create Language (Deprecated) |
 {: class="table-striped"}
 
-<a name="deleteLanguage"></a>
 
-# **deleteLanguage**
+## deleteLanguage
 
 
 
@@ -63,20 +59,18 @@ LanguagesAPI.deleteLanguage(languageId: languageId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **languageId** | **String**| Language ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getLanguage"></a>
 
-# **getLanguage**
-
+## getLanguage
 
 
-> [Language](Language.html) getLanguage(languageId)
+
+> [Language](Language) getLanguage(languageId)
 
 Get Language (Deprecated)
 
@@ -117,20 +111,18 @@ LanguagesAPI.getLanguage(languageId: languageId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **languageId** | **String**| Language ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Language**](Language.html)
-
-<a name="getLanguages"></a>
-
-# **getLanguages**
+[**Language**](Language)
 
 
+## getLanguages
 
-> [LanguageEntityListing](LanguageEntityListing.html) getLanguages(pageSize, pageNumber, sortOrder, name)
+
+
+> [LanguageEntityListing](LanguageEntityListing) getLanguages(pageSize, pageNumber, sortOrder, name)
 
 Get the list of supported languages. (Deprecated)
 
@@ -177,20 +169,18 @@ LanguagesAPI.getLanguages(pageSize: pageSize, pageNumber: pageNumber, sortOrder:
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LanguageEntityListing**](LanguageEntityListing.html)
-
-<a name="getLanguagesTranslations"></a>
-
-# **getLanguagesTranslations**
+[**LanguageEntityListing**](LanguageEntityListing)
 
 
+## getLanguagesTranslations
 
-> [AvailableTranslations](AvailableTranslations.html) getLanguagesTranslations()
+
+
+> [AvailableTranslations](AvailableTranslations) getLanguagesTranslations()
 
 Get all available languages for translation
 
@@ -226,18 +216,16 @@ LanguagesAPI.getLanguagesTranslations() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**AvailableTranslations**](AvailableTranslations.html)
-
-<a name="getLanguagesTranslationsBuiltin"></a>
-
-# **getLanguagesTranslationsBuiltin**
+[**AvailableTranslations**](AvailableTranslations)
 
 
+## getLanguagesTranslationsBuiltin
 
-> [[String:JSON]](JSON.html) getLanguagesTranslationsBuiltin(language)
+
+
+> [[String:JSON]](JSON) getLanguagesTranslationsBuiltin(language)
 
 Get the builtin translation for a language
 
@@ -275,20 +263,18 @@ LanguagesAPI.getLanguagesTranslationsBuiltin(language: language) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **String**| The language of the builtin translation to retrieve | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[String:JSON]**](JSON.html)
-
-<a name="getLanguagesTranslationsOrganization"></a>
-
-# **getLanguagesTranslationsOrganization**
+[**[String:JSON]**](JSON)
 
 
+## getLanguagesTranslationsOrganization
 
-> [[String:JSON]](JSON.html) getLanguagesTranslationsOrganization(language)
+
+
+> [[String:JSON]](JSON) getLanguagesTranslationsOrganization(language)
 
 Get effective translation for an organization by language
 
@@ -326,20 +312,18 @@ LanguagesAPI.getLanguagesTranslationsOrganization(language: language) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **String**| The language of the translation to retrieve for the organization | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[String:JSON]**](JSON.html)
-
-<a name="getLanguagesTranslationsUser"></a>
-
-# **getLanguagesTranslationsUser**
+[**[String:JSON]**](JSON)
 
 
+## getLanguagesTranslationsUser
 
-> [[String:JSON]](JSON.html) getLanguagesTranslationsUser(userId)
+
+
+> [[String:JSON]](JSON) getLanguagesTranslationsUser(userId)
 
 Get effective language translation for a user
 
@@ -377,20 +361,18 @@ LanguagesAPI.getLanguagesTranslationsUser(userId: userId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The user id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[String:JSON]**](JSON.html)
-
-<a name="postLanguages"></a>
-
-# **postLanguages**
+[**[String:JSON]**](JSON)
 
 
+## postLanguages
 
-> [Language](Language.html) postLanguages(body)
+
+
+> [Language](Language) postLanguages(body)
 
 Create Language (Deprecated)
 
@@ -430,11 +412,12 @@ LanguagesAPI.postLanguages(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Language**](Language.html)| Language | |
-{: class="table-striped"}
+| **body** | [**Language**](Language)| Language | |
 
 
 ### Return type
 
-[**Language**](Language.html)
+[**Language**](Language)
 
+
+_PureCloudPlatformClientV2@151.1.0_

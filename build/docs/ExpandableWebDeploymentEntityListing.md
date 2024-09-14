@@ -1,6 +1,5 @@
----
-title: ExpandableWebDeploymentEntityListing
----
+# ExpandableWebDeploymentEntityListing
+
 ## ExpandableWebDeploymentEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ExpandableWebDeploymentEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[ExpandableWebDeployment]**](ExpandableWebDeployment.html) |  | [optional] |
+| **entities** | [**[ExpandableWebDeployment]**](ExpandableWebDeployment) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

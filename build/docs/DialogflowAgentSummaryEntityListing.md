@@ -1,13 +1,12 @@
----
-title: DialogflowAgentSummaryEntityListing
----
+# DialogflowAgentSummaryEntityListing
+
 ## DialogflowAgentSummaryEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DialogflowAgentSummary]**](DialogflowAgentSummary.html) |  | [optional] |
+| **entities** | [**[DialogflowAgentSummary]**](DialogflowAgentSummary) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DialogflowAgentSummaryEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

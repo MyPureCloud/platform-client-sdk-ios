@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationConversationUserDisposition
----
+# JourneySessionEventsNotificationConversationUserDisposition
+
 ## JourneySessionEventsNotificationConversationUserDisposition
 
 ## Properties
@@ -9,7 +8,8 @@ title: JourneySessionEventsNotificationConversationUserDisposition
 |------------ | ------------- | ------------- | -------------|
 | **code** | **String** |  | [optional] |
 | **notes** | **String** |  | [optional] |
-| **user** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser.html) |  | [optional] |
-{: class="table table-striped"}
+| **user** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

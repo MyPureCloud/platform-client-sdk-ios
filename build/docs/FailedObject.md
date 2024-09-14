@@ -1,6 +1,5 @@
----
-title: FailedObject
----
+# FailedObject
+
 ## FailedObject
 
 ## Properties
@@ -11,6 +10,7 @@ title: FailedObject
 | **version** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **errorCode** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

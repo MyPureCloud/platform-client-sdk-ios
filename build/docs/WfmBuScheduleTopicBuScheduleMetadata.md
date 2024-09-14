@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicBuScheduleMetadata
----
+# WfmBuScheduleTopicBuScheduleMetadata
+
 ## WfmBuScheduleTopicBuScheduleMetadata
 
 ## Properties
@@ -8,14 +7,15 @@ title: WfmBuScheduleTopicBuScheduleMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **weekDate** | [**Date**](Date.html) |  | [optional] |
+| **weekDate** | [**Date**](Date) |  | [optional] |
 | **weekCount** | **Int** |  | [optional] |
 | **_description** | **String** |  | [optional] |
 | **published** | **Bool** |  | [optional] |
-| **shortTermForecast** | [**WfmBuScheduleTopicBuShortTermForecastReference**](WfmBuScheduleTopicBuShortTermForecastReference.html) |  | [optional] |
-| **managementUnits** | [**[WfmBuScheduleTopicBuManagementUnitScheduleSummary]**](WfmBuScheduleTopicBuManagementUnitScheduleSummary.html) |  | [optional] |
-| **generationResults** | [**WfmBuScheduleTopicBuScheduleGenerationResultSummary**](WfmBuScheduleTopicBuScheduleGenerationResultSummary.html) |  | [optional] |
-| **metadata** | [**WfmBuScheduleTopicWfmVersionedEntityMetadata**](WfmBuScheduleTopicWfmVersionedEntityMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **shortTermForecast** | [**WfmBuScheduleTopicBuShortTermForecastReference**](WfmBuScheduleTopicBuShortTermForecastReference) |  | [optional] |
+| **managementUnits** | [**[WfmBuScheduleTopicBuManagementUnitScheduleSummary]**](WfmBuScheduleTopicBuManagementUnitScheduleSummary) |  | [optional] |
+| **generationResults** | [**WfmBuScheduleTopicBuScheduleGenerationResultSummary**](WfmBuScheduleTopicBuScheduleGenerationResultSummary) |  | [optional] |
+| **metadata** | [**WfmBuScheduleTopicWfmVersionedEntityMetadata**](WfmBuScheduleTopicWfmVersionedEntityMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

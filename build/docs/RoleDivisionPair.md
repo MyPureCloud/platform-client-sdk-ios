@@ -1,6 +1,5 @@
----
-title: RoleDivisionPair
----
+# RoleDivisionPair
+
 ## RoleDivisionPair
 
 ## Properties
@@ -9,6 +8,7 @@ title: RoleDivisionPair
 |------------ | ------------- | ------------- | -------------|
 | **roleId** | **String** | The ID of the role | |
 | **divisionId** | **String** | The ID of the division | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

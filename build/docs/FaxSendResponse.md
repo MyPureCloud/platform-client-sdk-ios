@@ -1,6 +1,5 @@
----
-title: FaxSendResponse
----
+# FaxSendResponse
+
 ## FaxSendResponse
 
 ## Properties
@@ -13,6 +12,7 @@ title: FaxSendResponse
 | **uploadMethodType** | **String** |  | [optional] |
 | **headers** | **[String:String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

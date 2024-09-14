@@ -1,6 +1,5 @@
----
-title: TranscriptTopic
----
+# TranscriptTopic
+
 ## TranscriptTopic
 
 ## Properties
@@ -13,9 +12,10 @@ title: TranscriptTopic
 | **transcriptPhrase** | **String** | The transcript phrase which detected the topic. | [optional] |
 | **confidence** | **Int** | The detection confidence of the topic. | [optional] |
 | **startTimeMilliseconds** | **Int64** | The start time of the topic phrase. | [optional] |
-| **duration** | [**TopicDuration**](TopicDuration.html) |  | [optional] |
-| **offset** | [**TopicOffset**](TopicOffset.html) | Location of the phrase | [optional] |
+| **duration** | [**TopicDuration**](TopicDuration) |  | [optional] |
+| **offset** | [**TopicOffset**](TopicOffset) | Location of the phrase | [optional] |
 | **recordingLocation** | **Int64** | Location of the phrase in the recording in milliseconds | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WorkbinUpdate
----
+# WorkbinUpdate
+
 ## WorkbinUpdate
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkbinUpdate
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Workbin name. Valid length between 3 and 256 characters. | [optional] |
 | **_description** | **String** | Workbin description. Maximum length of 512 characters. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

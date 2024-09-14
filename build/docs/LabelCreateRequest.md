@@ -1,6 +1,5 @@
----
-title: LabelCreateRequest
----
+# LabelCreateRequest
+
 ## LabelCreateRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: LabelCreateRequest
 | **color** | **String** | The color for the label. | |
 | **externalId** | **String** | The external id associated with the label. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

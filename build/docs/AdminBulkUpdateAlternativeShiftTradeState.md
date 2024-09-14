@@ -1,6 +1,5 @@
----
-title: AdminBulkUpdateAlternativeShiftTradeState
----
+# AdminBulkUpdateAlternativeShiftTradeState
+
 ## AdminBulkUpdateAlternativeShiftTradeState
 
 ## Properties
@@ -9,7 +8,8 @@ title: AdminBulkUpdateAlternativeShiftTradeState
 |------------ | ------------- | ------------- | -------------|
 | **tradeId** | **String** | The ID of the trade for this alternative shift trade | |
 | **state** | **String** | The new alternative shift trade state | |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this alternative shift trade | |
-{: class="table table-striped"}
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this alternative shift trade | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: BuAgentScheduleHistoryDeletedChange
----
+# BuAgentScheduleHistoryDeletedChange
+
 ## BuAgentScheduleHistoryDeletedChange
 
 ## Properties
@@ -8,8 +7,9 @@ title: BuAgentScheduleHistoryDeletedChange
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **shiftIds** | **[String]** | The IDs of deleted shifts | [optional] |
-| **fullDayTimeOffMarkerDates** | [**[Date]**](Date.html) | The dates of any deleted full day time off markers | [optional] |
+| **fullDayTimeOffMarkerDates** | [**[Date]**](Date) | The dates of any deleted full day time off markers | [optional] |
 | **agentSchedule** | **Bool** | Whether the entire agent schedule was deleted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

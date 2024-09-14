@@ -1,6 +1,5 @@
----
-title: SchedulerMessageArgument
----
+# SchedulerMessageArgument
+
 ## SchedulerMessageArgument
 
 ## Properties
@@ -9,6 +8,7 @@ title: SchedulerMessageArgument
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of this message parameter | [optional] |
 | **value** | **String** | The value of this message parameter | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationCallbackEventTopicPhoneNumberColumn
----
+# ConversationCallbackEventTopicPhoneNumberColumn
+
 ## ConversationCallbackEventTopicPhoneNumberColumn
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationCallbackEventTopicPhoneNumberColumn
 |------------ | ------------- | ------------- | -------------|
 | **columnName** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

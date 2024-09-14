@@ -1,6 +1,5 @@
----
-title: InboundMessageRequest
----
+# InboundMessageRequest
+
 ## InboundMessageRequest
 
 ## Properties
@@ -19,6 +18,7 @@ title: InboundMessageRequest
 | **fromAddress** | **String** | The email address of the sender of the email. | [optional] |
 | **fromName** | **String** | The name of the sender of the email. | [optional] |
 | **subject** | **String** | The subject of the email | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

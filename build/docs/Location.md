@@ -1,6 +1,5 @@
----
-title: Location
----
+# Location
+
 ## Location
 
 ## Properties
@@ -11,7 +10,8 @@ title: Location
 | **floorplanId** | **String** | Unique identifier for the location floorplan image | [optional] |
 | **coordinates** | **[String:Double]** | Users coordinates on the floorplan. Only used when floorplanImage is set | [optional] |
 | **notes** | **String** | Optional description on the users location | [optional] |
-| **locationDefinition** | [**LocationDefinition**](LocationDefinition.html) |  | [optional] |
-{: class="table table-striped"}
+| **locationDefinition** | [**LocationDefinition**](LocationDefinition) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

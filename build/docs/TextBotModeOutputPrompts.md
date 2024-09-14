@@ -1,6 +1,5 @@
----
-title: TextBotModeOutputPrompts
----
+# TextBotModeOutputPrompts
+
 ## TextBotModeOutputPrompts
 Prompt information related to a bot flow turn.
 
@@ -8,7 +7,8 @@ Prompt information related to a bot flow turn.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **segments** | [**[TextBotPromptSegment]**](TextBotPromptSegment.html) | The list of prompt segments. | |
-{: class="table table-striped"}
+| **segments** | [**[TextBotPromptSegment]**](TextBotPromptSegment) | The list of prompt segments. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

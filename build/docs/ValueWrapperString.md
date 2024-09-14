@@ -1,6 +1,5 @@
----
-title: ValueWrapperString
----
+# ValueWrapperString
+
 ## ValueWrapperString
 
 ## Properties
@@ -8,6 +7,7 @@ title: ValueWrapperString
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **value** | **String** | The value for the associated field | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

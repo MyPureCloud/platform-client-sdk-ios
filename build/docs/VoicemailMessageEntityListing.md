@@ -1,13 +1,12 @@
----
-title: VoicemailMessageEntityListing
----
+# VoicemailMessageEntityListing
+
 ## VoicemailMessageEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[VoicemailMessage]**](VoicemailMessage.html) |  | [optional] |
+| **entities** | [**[VoicemailMessage]**](VoicemailMessage) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: VoicemailMessageEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

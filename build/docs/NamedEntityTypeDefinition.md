@@ -1,6 +1,5 @@
----
-title: NamedEntityTypeDefinition
----
+# NamedEntityTypeDefinition
+
 ## NamedEntityTypeDefinition
 
 ## Properties
@@ -9,7 +8,8 @@ title: NamedEntityTypeDefinition
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the entity type. | |
 | **_description** | **String** | Description of the of the named entity type. | [optional] |
-| **mechanism** | [**NamedEntityTypeMechanism**](NamedEntityTypeMechanism.html) | The mechanism enabling detection of the named entity type. | |
-{: class="table table-striped"}
+| **mechanism** | [**NamedEntityTypeMechanism**](NamedEntityTypeMechanism) | The mechanism enabling detection of the named entity type. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

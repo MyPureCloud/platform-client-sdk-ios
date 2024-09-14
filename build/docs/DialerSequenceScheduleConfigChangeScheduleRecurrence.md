@@ -1,6 +1,5 @@
----
-title: DialerSequenceScheduleConfigChangeScheduleRecurrence
----
+# DialerSequenceScheduleConfigChangeScheduleRecurrence
+
 ## DialerSequenceScheduleConfigChangeScheduleRecurrence
 
 ## Properties
@@ -11,10 +10,11 @@ title: DialerSequenceScheduleConfigChangeScheduleRecurrence
 | **start** | **String** | scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **end** | **String** | scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **timeZone** | **String** | the timezone the recurrence will use | [optional] |
-| **range** | [**DialerSequenceScheduleConfigChangeRecurrenceRange**](DialerSequenceScheduleConfigChangeRecurrenceRange.html) |  | [optional] |
-| **pattern** | [**DialerSequenceScheduleConfigChangeRecurrencePattern**](DialerSequenceScheduleConfigChangeRecurrencePattern.html) |  | [optional] |
-| **alterations** | [**[DialerSequenceScheduleConfigChangeAlteration]**](DialerSequenceScheduleConfigChangeAlteration.html) | modifications to the original recurrence schedule | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **range** | [**DialerSequenceScheduleConfigChangeRecurrenceRange**](DialerSequenceScheduleConfigChangeRecurrenceRange) |  | [optional] |
+| **pattern** | [**DialerSequenceScheduleConfigChangeRecurrencePattern**](DialerSequenceScheduleConfigChangeRecurrencePattern) |  | [optional] |
+| **alterations** | [**[DialerSequenceScheduleConfigChangeAlteration]**](DialerSequenceScheduleConfigChangeAlteration) | modifications to the original recurrence schedule | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

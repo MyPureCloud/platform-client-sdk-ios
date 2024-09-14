@@ -1,15 +1,15 @@
----
-title: ContentManagementSingleDocumentTopicLockData
----
+# ContentManagementSingleDocumentTopicLockData
+
 ## ContentManagementSingleDocumentTopicLockData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **lockedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateExpires** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **lockedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateExpires** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

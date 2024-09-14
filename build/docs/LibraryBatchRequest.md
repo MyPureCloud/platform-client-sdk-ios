@@ -1,6 +1,5 @@
----
-title: LibraryBatchRequest
----
+# LibraryBatchRequest
+
 ## LibraryBatchRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LibraryBatchRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **libraryIds** | **[String]** | List of Library IDs | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

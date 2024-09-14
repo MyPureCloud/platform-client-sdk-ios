@@ -1,6 +1,5 @@
----
-title: TranscriptTopics
----
+# TranscriptTopics
+
 ## TranscriptTopics
 
 ## Properties
@@ -9,6 +8,7 @@ title: TranscriptTopics
 |------------ | ------------- | ------------- | -------------|
 | **includes** | **[String]** | List of topics which need to be included in exact match criteria. This field is not mutually exclusive with excludes topic list. | [optional] |
 | **excludes** | **[String]** | List of topics which need to be excluded in exact match criteria. This field is not mutually exclusive with includes topic list. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

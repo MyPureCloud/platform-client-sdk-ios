@@ -1,6 +1,5 @@
----
-title: BotList
----
+# BotList
+
 ## BotList
 A list of BotConnectorBots
 
@@ -8,7 +7,8 @@ A list of BotConnectorBots
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **chatBots** | [**[BotConnectorBot]**](BotConnectorBot.html) | A list of botConnector Bots. Max 50 | |
-{: class="table table-striped"}
+| **chatBots** | [**[BotConnectorBot]**](BotConnectorBot) | A list of botConnector Bots. Max 50 | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CustomEventAttributeList
----
+# CustomEventAttributeList
+
 ## CustomEventAttributeList
 
 ## Properties
@@ -9,6 +8,7 @@ title: CustomEventAttributeList
 |------------ | ------------- | ------------- | -------------|
 | **dataType** | **String** | The data type of the custom attributes. | |
 | **values** | **[String]** | The list of custom event attribute values. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

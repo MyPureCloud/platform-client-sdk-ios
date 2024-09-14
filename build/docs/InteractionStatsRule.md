@@ -1,6 +1,5 @@
----
-title: InteractionStatsRule
----
+# InteractionStatsRule
+
 ## InteractionStatsRule
 
 ## Properties
@@ -18,9 +17,10 @@ title: InteractionStatsRule
 | **value** | **Double** | The threshold value. | |
 | **enabled** | **Bool** | Indicates if the rule is enabled. | |
 | **inAlarm** | **Bool** | Indicates if the rule is in alarm state. | [optional] |
-| **notificationUsers** | [**[User]**](User.html) | The ids of users who will be notified of alarm state change. | |
+| **notificationUsers** | [**[User]**](User) | The ids of users who will be notified of alarm state change. | |
 | **alertTypes** | **[String]** | A collection of notification methods. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

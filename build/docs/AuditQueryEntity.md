@@ -1,6 +1,5 @@
----
-title: AuditQueryEntity
----
+# AuditQueryEntity
+
 ## AuditQueryEntity
 
 ## Properties
@@ -9,6 +8,7 @@ title: AuditQueryEntity
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the Entity | [optional] |
 | **actions** | **[String]** | List of Actions | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

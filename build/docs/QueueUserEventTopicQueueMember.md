@@ -1,6 +1,5 @@
----
-title: QueueUserEventTopicQueueMember
----
+# QueueUserEventTopicQueueMember
+
 ## QueueUserEventTopicQueueMember
 
 ## Properties
@@ -8,10 +7,11 @@ title: QueueUserEventTopicQueueMember
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **user** | [**QueueUserEventTopicUserReference**](QueueUserEventTopicUserReference.html) |  | [optional] |
+| **user** | [**QueueUserEventTopicUserReference**](QueueUserEventTopicUserReference) |  | [optional] |
 | **queueId** | **String** |  | [optional] |
 | **joined** | **Bool** |  | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

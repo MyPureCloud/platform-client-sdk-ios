@@ -1,6 +1,5 @@
----
-title: DomainOrganizationRoleCreate
----
+# DomainOrganizationRoleCreate
+
 ## DomainOrganizationRoleCreate
 
 ## Properties
@@ -13,12 +12,13 @@ title: DomainOrganizationRoleCreate
 | **defaultRoleId** | **String** |  | [optional] |
 | **permissions** | **[String]** |  | [optional] |
 | **unusedPermissions** | **[String]** | A collection of the permissions the role is not using | [optional] |
-| **permissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy.html) |  | [optional] |
+| **permissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy) |  | [optional] |
 | **userCount** | **Int** |  | [optional] |
 | **roleNeedsUpdate** | **Bool** | Optional unless patch operation. | [optional] |
 | **base** | **Bool** |  | [optional] |
 | **_default** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: RecordingJob
----
+# RecordingJob
+
 ## RecordingJob
 
 ## Properties
@@ -9,8 +8,8 @@ title: RecordingJob
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **state** | **String** | The current state of the job. | |
-| **recordingJobsQuery** | [**RecordingJobsQuery**](RecordingJobsQuery.html) | Original query of the job. | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **recordingJobsQuery** | [**RecordingJobsQuery**](RecordingJobsQuery) | Original query of the job. | [optional] |
+| **dateCreated** | [**Date**](Date) | Date when the job was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **totalConversations** | **Int** | Total number of conversations affected. | [optional] |
 | **totalRecordings** | **Int** | Total number of recordings affected. | [optional] |
 | **totalSkippedRecordings** | **Int** | Total number of recordings that have been skipped. | [optional] |
@@ -20,7 +19,8 @@ title: RecordingJob
 | **errorMessage** | **String** | Error occurred during the job execution | [optional] |
 | **failedRecordings** | **String** | Get IDs of recordings that the bulk job failed for | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-| **user** | [**AddressableEntityRef**](AddressableEntityRef.html) | Details of the user created the job | [optional] |
-{: class="table table-striped"}
+| **user** | [**AddressableEntityRef**](AddressableEntityRef) | Details of the user created the job | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

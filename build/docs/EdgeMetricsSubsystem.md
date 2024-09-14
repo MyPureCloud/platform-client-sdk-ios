@@ -1,6 +1,5 @@
----
-title: EdgeMetricsSubsystem
----
+# EdgeMetricsSubsystem
+
 ## EdgeMetricsSubsystem
 
 ## Properties
@@ -9,7 +8,8 @@ title: EdgeMetricsSubsystem
 |------------ | ------------- | ------------- | -------------|
 | **delayMs** | **Int** | Delay in milliseconds. | [optional] |
 | **processName** | **String** | Name of the Edge process. | [optional] |
-| **mediaSubsystem** | [**EdgeMetricsSubsystem**](EdgeMetricsSubsystem.html) | Subsystem for an Edge device. | [optional] |
-{: class="table table-striped"}
+| **mediaSubsystem** | [**EdgeMetricsSubsystem**](EdgeMetricsSubsystem) | Subsystem for an Edge device. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

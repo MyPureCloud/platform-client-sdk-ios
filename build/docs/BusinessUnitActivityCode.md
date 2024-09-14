@@ -1,6 +1,5 @@
----
-title: BusinessUnitActivityCode
----
+# BusinessUnitActivityCode
+
 ## BusinessUnitActivityCode
 
 ## Properties
@@ -19,9 +18,10 @@ title: BusinessUnitActivityCode
 | **countsTowardShrinkage** | **Bool** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
 | **plannedShrinkage** | **Bool** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
 | **interruptible** | **Bool** | Whether this activity code is considered interruptible | [optional] |
-| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata of this activity code | [optional] |
+| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence) | The secondary presences of this activity code | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata of this activity code | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

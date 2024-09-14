@@ -1,6 +1,5 @@
----
-title: WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate
----
+# WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate
+
 ## WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate
 
 ## Properties
@@ -8,14 +7,15 @@ title: WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdat
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **requestId** | **String** |  | [optional] |
-| **dateImportStarted** | [**Date**](Date.html) |  | [optional] |
-| **dateImportEnded** | [**Date**](Date.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
+| **dateImportStarted** | [**Date**](Date) |  | [optional] |
+| **dateImportEnded** | [**Date**](Date) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **error** | **String** |  | [optional] |
 | **active** | **Bool** |  | [optional] |
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

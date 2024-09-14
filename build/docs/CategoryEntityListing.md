@@ -1,17 +1,17 @@
----
-title: CategoryEntityListing
----
+# CategoryEntityListing
+
 ## CategoryEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Category]**](Category.html) |  | [optional] |
+| **entities** | [**[Category]**](Category) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

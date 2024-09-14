@@ -1,6 +1,5 @@
----
-title: ContactAddressTypeConditionSettings
----
+# ContactAddressTypeConditionSettings
+
 ## ContactAddressTypeConditionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: ContactAddressTypeConditionSettings
 |------------ | ------------- | ------------- | -------------|
 | **_operator** | **String** | The operator to use when comparing the address types. | |
 | **value** | **String** | The type value to compare against the contact column type. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

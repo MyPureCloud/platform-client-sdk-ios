@@ -1,24 +1,24 @@
----
-title: V2MobiusRulesTopicRule
----
+# V2MobiusRulesTopicRule
+
 ## V2MobiusRulesTopicRule
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | [**UUID**](UUID.html) |  | [optional] |
-| **userId** | [**UUID**](UUID.html) |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
+| **userId** | [**UUID**](UUID) |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **notifications** | [**[V2MobiusRulesTopicAlertNotification]**](V2MobiusRulesTopicAlertNotification.html) |  | [optional] |
-| **conditions** | [**V2MobiusRulesTopicCondition**](V2MobiusRulesTopicCondition.html) |  | [optional] |
+| **notifications** | [**[V2MobiusRulesTopicAlertNotification]**](V2MobiusRulesTopicAlertNotification) |  | [optional] |
+| **conditions** | [**V2MobiusRulesTopicCondition**](V2MobiusRulesTopicCondition) |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
 | **action** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
 | **sendExitingAlarmNotification** | **Bool** |  | [optional] |
 | **waitBetweenNotificationMs** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

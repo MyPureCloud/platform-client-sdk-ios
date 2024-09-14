@@ -1,6 +1,5 @@
----
-title: KnowledgeBaseUpdateRequest
----
+# KnowledgeBaseUpdateRequest
+
 ## KnowledgeBaseUpdateRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeBaseUpdateRequest
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Knowledge base name | [optional] |
 | **_description** | **String** | Knowledge base description | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

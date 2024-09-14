@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicSchedulerMessageSeverityCount
----
+# WfmBuScheduleTopicSchedulerMessageSeverityCount
+
 ## WfmBuScheduleTopicSchedulerMessageSeverityCount
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmBuScheduleTopicSchedulerMessageSeverityCount
 |------------ | ------------- | ------------- | -------------|
 | **severity** | **String** |  | [optional] |
 | **count** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

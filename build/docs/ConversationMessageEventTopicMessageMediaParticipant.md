@@ -1,6 +1,5 @@
----
-title: ConversationMessageEventTopicMessageMediaParticipant
----
+# ConversationMessageEventTopicMessageMediaParticipant
+
 ## ConversationMessageEventTopicMessageMediaParticipant
 
 ## Properties
@@ -10,10 +9,10 @@ title: ConversationMessageEventTopicMessageMediaParticipant
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **endTime** | [**Date**](Date.html) |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
+| **startTime** | [**Date**](Date) |  | [optional] |
+| **connectedTime** | [**Date**](Date) |  | [optional] |
+| **endTime** | [**Date**](Date) |  | [optional] |
+| **startHoldTime** | [**Date**](Date) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **initialState** | **String** |  | [optional] |
@@ -22,36 +21,37 @@ title: ConversationMessageEventTopicMessageMediaParticipant
 | **held** | **Bool** |  | [optional] |
 | **wrapupRequired** | **Bool** |  | [optional] |
 | **wrapupPrompt** | **String** |  | [optional] |
-| **user** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **queue** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **team** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
+| **user** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
+| **queue** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
+| **team** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
-| **errorInfo** | [**ConversationMessageEventTopicErrorBody**](ConversationMessageEventTopicErrorBody.html) |  | [optional] |
-| **script** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
+| **errorInfo** | [**ConversationMessageEventTopicErrorBody**](ConversationMessageEventTopicErrorBody) |  | [optional] |
+| **script** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **provider** | **String** |  | [optional] |
-| **externalContact** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **externalOrganization** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **wrapup** | [**ConversationMessageEventTopicWrapup**](ConversationMessageEventTopicWrapup.html) |  | [optional] |
-| **conversationRoutingData** | [**ConversationMessageEventTopicConversationRoutingData**](ConversationMessageEventTopicConversationRoutingData.html) |  | [optional] |
+| **externalContact** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
+| **externalOrganization** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
+| **wrapup** | [**ConversationMessageEventTopicWrapup**](ConversationMessageEventTopicWrapup) |  | [optional] |
+| **conversationRoutingData** | [**ConversationMessageEventTopicConversationRoutingData**](ConversationMessageEventTopicConversationRoutingData) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
-| **journeyContext** | [**ConversationMessageEventTopicJourneyContext**](ConversationMessageEventTopicJourneyContext.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **resumeTime** | [**Date**](Date.html) |  | [optional] |
-| **parkTime** | [**Date**](Date.html) |  | [optional] |
+| **journeyContext** | [**ConversationMessageEventTopicJourneyContext**](ConversationMessageEventTopicJourneyContext) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) |  | [optional] |
+| **endAcwTime** | [**Date**](Date) |  | [optional] |
+| **resumeTime** | [**Date**](Date) |  | [optional] |
+| **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
-| **queueMediaSettings** | [**ConversationMessageEventTopicQueueMediaSettings**](ConversationMessageEventTopicQueueMediaSettings.html) |  | [optional] |
-| **messages** | [**[ConversationMessageEventTopicMessageDetails]**](ConversationMessageEventTopicMessageDetails.html) |  | [optional] |
+| **queueMediaSettings** | [**ConversationMessageEventTopicQueueMediaSettings**](ConversationMessageEventTopicQueueMediaSettings) |  | [optional] |
+| **messages** | [**[ConversationMessageEventTopicMessageDetails]**](ConversationMessageEventTopicMessageDetails) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **recipientCountry** | **String** |  | [optional] |
 | **recipientType** | **String** |  | [optional] |
 | **byoSmsIntegrationId** | **String** |  | [optional] |
 | **monitoredParticipantId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

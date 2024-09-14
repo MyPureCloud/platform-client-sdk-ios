@@ -1,13 +1,12 @@
----
-title: OpenIntegrationEntityListing
----
+# OpenIntegrationEntityListing
+
 ## OpenIntegrationEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[OpenIntegration]**](OpenIntegration.html) |  | [optional] |
+| **entities** | [**[OpenIntegration]**](OpenIntegration) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: OpenIntegrationEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

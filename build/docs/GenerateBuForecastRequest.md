@@ -1,6 +1,5 @@
----
-title: GenerateBuForecastRequest
----
+# GenerateBuForecastRequest
+
 ## GenerateBuForecastRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: GenerateBuForecastRequest
 | **_description** | **String** | The description for the forecast | |
 | **weekCount** | **Int** | The number of weeks this forecast covers | [optional] |
 | **canUseForScheduling** | **Bool** | Whether this forecast can be used for scheduling | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

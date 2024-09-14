@@ -1,6 +1,5 @@
----
-title: EvaluationSource
----
+# EvaluationSource
+
 ## EvaluationSource
 
 ## Properties
@@ -11,6 +10,7 @@ title: EvaluationSource
 | **name** | **String** |  | [optional] |
 | **type** | **String** | Type of the evaluation source. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

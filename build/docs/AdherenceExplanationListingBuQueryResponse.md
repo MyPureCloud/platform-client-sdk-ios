@@ -1,13 +1,13 @@
----
-title: AdherenceExplanationListingBuQueryResponse
----
+# AdherenceExplanationListingBuQueryResponse
+
 ## AdherenceExplanationListingBuQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AdherenceExplanationResponse]**](AdherenceExplanationResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[AdherenceExplanationResponse]**](AdherenceExplanationResponse) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

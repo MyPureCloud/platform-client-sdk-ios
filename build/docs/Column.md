@@ -1,6 +1,5 @@
----
-title: Column
----
+# Column
+
 ## Column
 
 ## Properties
@@ -11,6 +10,7 @@ title: Column
 | **columnNumber** | **Int** | 0 based column number in delimited file format | [optional] |
 | **startPosition** | **Int** | Zero-based position of the first column&#39;s character. Mandatory for Fixed position/length file format. | [optional] |
 | **length** | **Int** | Column width. Mandatory for Fixed position/length file format. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

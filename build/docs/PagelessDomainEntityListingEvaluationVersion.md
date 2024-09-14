@@ -1,6 +1,5 @@
----
-title: PagelessDomainEntityListingEvaluationVersion
----
+# PagelessDomainEntityListingEvaluationVersion
+
 ## PagelessDomainEntityListingEvaluationVersion
 
 ## Properties
@@ -8,8 +7,9 @@ title: PagelessDomainEntityListingEvaluationVersion
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[EvaluationVersion]**](EvaluationVersion.html) |  | [optional] |
+| **entities** | [**[EvaluationVersion]**](EvaluationVersion) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,42 +1,38 @@
----
-title: OrganizationAPI
----
-## OrganizationAPI
+# OrganizationAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getFieldconfig**](OrganizationAPI.html#getFieldconfig) | Fetch field config for an entity type |
-| [**getOrganizationsAuthenticationSettings**](OrganizationAPI.html#getOrganizationsAuthenticationSettings) | Gets the organization&#39;s settings |
-| [**getOrganizationsEmbeddedintegration**](OrganizationAPI.html#getOrganizationsEmbeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications |
-| [**getOrganizationsIpaddressauthentication**](OrganizationAPI.html#getOrganizationsIpaddressauthentication) | Get organization IP address whitelist settings |
-| [**getOrganizationsLimitsChangerequest**](OrganizationAPI.html#getOrganizationsLimitsChangerequest) | Get a limit change request |
-| [**getOrganizationsLimitsChangerequests**](OrganizationAPI.html#getOrganizationsLimitsChangerequests) | Get the available limit change requests |
-| [**getOrganizationsLimitsDocs**](OrganizationAPI.html#getOrganizationsLimitsDocs) | Get limit documentation |
-| [**getOrganizationsLimitsDocsFreetrial**](OrganizationAPI.html#getOrganizationsLimitsDocsFreetrial) | Get free trial limit documentation |
-| [**getOrganizationsLimitsNamespace**](OrganizationAPI.html#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
-| [**getOrganizationsLimitsNamespaceCounts**](OrganizationAPI.html#getOrganizationsLimitsNamespaceCounts) | Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
-| [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI.html#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
-| [**getOrganizationsLimitsNamespaceLimitCounts**](OrganizationAPI.html#getOrganizationsLimitsNamespaceLimitCounts) | Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
-| [**getOrganizationsLimitsNamespaces**](OrganizationAPI.html#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
-| [**getOrganizationsMe**](OrganizationAPI.html#getOrganizationsMe) | Get organization. |
-| [**getOrganizationsWhitelist**](OrganizationAPI.html#getOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
-| [**patchOrganizationsAuthenticationSettings**](OrganizationAPI.html#patchOrganizationsAuthenticationSettings) | Update the organization&#39;s settings |
-| [**patchOrganizationsFeature**](OrganizationAPI.html#patchOrganizationsFeature) | Update organization |
-| [**putOrganizationsEmbeddedintegration**](OrganizationAPI.html#putOrganizationsEmbeddedintegration) | Update the list of domains that will be allowed to embed PureCloud applications |
-| [**putOrganizationsIpaddressauthentication**](OrganizationAPI.html#putOrganizationsIpaddressauthentication) | Update organization IP address whitelist settings |
-| [**putOrganizationsMe**](OrganizationAPI.html#putOrganizationsMe) | Update organization. |
-| [**putOrganizationsWhitelist**](OrganizationAPI.html#putOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
+| [**getFieldconfig**](OrganizationAPI#getFieldconfig) | Fetch field config for an entity type |
+| [**getOrganizationsAuthenticationSettings**](OrganizationAPI#getOrganizationsAuthenticationSettings) | Gets the organization&#39;s settings |
+| [**getOrganizationsEmbeddedintegration**](OrganizationAPI#getOrganizationsEmbeddedintegration) | Get the list of domains that will be allowed to embed PureCloud applications |
+| [**getOrganizationsIpaddressauthentication**](OrganizationAPI#getOrganizationsIpaddressauthentication) | Get organization IP address whitelist settings |
+| [**getOrganizationsLimitsChangerequest**](OrganizationAPI#getOrganizationsLimitsChangerequest) | Get a limit change request |
+| [**getOrganizationsLimitsChangerequests**](OrganizationAPI#getOrganizationsLimitsChangerequests) | Get the available limit change requests |
+| [**getOrganizationsLimitsDocs**](OrganizationAPI#getOrganizationsLimitsDocs) | Get limit documentation |
+| [**getOrganizationsLimitsDocsFreetrial**](OrganizationAPI#getOrganizationsLimitsDocsFreetrial) | Get free trial limit documentation |
+| [**getOrganizationsLimitsNamespace**](OrganizationAPI#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
+| [**getOrganizationsLimitsNamespaceCounts**](OrganizationAPI#getOrganizationsLimitsNamespaceCounts) | Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
+| [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
+| [**getOrganizationsLimitsNamespaceLimitCounts**](OrganizationAPI#getOrganizationsLimitsNamespaceLimitCounts) | Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
+| [**getOrganizationsLimitsNamespaces**](OrganizationAPI#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
+| [**getOrganizationsMe**](OrganizationAPI#getOrganizationsMe) | Get organization. |
+| [**getOrganizationsWhitelist**](OrganizationAPI#getOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
+| [**patchOrganizationsAuthenticationSettings**](OrganizationAPI#patchOrganizationsAuthenticationSettings) | Update the organization&#39;s settings |
+| [**patchOrganizationsFeature**](OrganizationAPI#patchOrganizationsFeature) | Update organization |
+| [**putOrganizationsEmbeddedintegration**](OrganizationAPI#putOrganizationsEmbeddedintegration) | Update the list of domains that will be allowed to embed PureCloud applications |
+| [**putOrganizationsIpaddressauthentication**](OrganizationAPI#putOrganizationsIpaddressauthentication) | Update organization IP address whitelist settings |
+| [**putOrganizationsMe**](OrganizationAPI#putOrganizationsMe) | Update organization. |
+| [**putOrganizationsWhitelist**](OrganizationAPI#putOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
 {: class="table-striped"}
 
-<a name="getFieldconfig"></a>
 
-# **getFieldconfig**
-
+## getFieldconfig
 
 
-> [FieldConfig](FieldConfig.html) getFieldconfig(type)
+
+> [FieldConfig](FieldConfig) getFieldconfig(type)
 
 Fetch field config for an entity type
 
@@ -74,20 +70,18 @@ OrganizationAPI.getFieldconfig(type: type) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **String**| Field type |<br />**Values**: person ("person"), group ("group"), org ("org") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FieldConfig**](FieldConfig.html)
-
-<a name="getOrganizationsAuthenticationSettings"></a>
-
-# **getOrganizationsAuthenticationSettings**
+[**FieldConfig**](FieldConfig)
 
 
+## getOrganizationsAuthenticationSettings
 
-> [OrgAuthSettings](OrgAuthSettings.html) getOrganizationsAuthenticationSettings()
+
+
+> [OrgAuthSettings](OrgAuthSettings) getOrganizationsAuthenticationSettings()
 
 Gets the organization&#39;s settings
 
@@ -124,18 +118,16 @@ OrganizationAPI.getOrganizationsAuthenticationSettings() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**OrgAuthSettings**](OrgAuthSettings.html)
-
-<a name="getOrganizationsEmbeddedintegration"></a>
-
-# **getOrganizationsEmbeddedintegration**
+[**OrgAuthSettings**](OrgAuthSettings)
 
 
+## getOrganizationsEmbeddedintegration
 
-> [EmbeddedIntegration](EmbeddedIntegration.html) getOrganizationsEmbeddedintegration()
+
+
+> [EmbeddedIntegration](EmbeddedIntegration) getOrganizationsEmbeddedintegration()
 
 Get the list of domains that will be allowed to embed PureCloud applications
 
@@ -173,18 +165,16 @@ OrganizationAPI.getOrganizationsEmbeddedintegration() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**EmbeddedIntegration**](EmbeddedIntegration.html)
-
-<a name="getOrganizationsIpaddressauthentication"></a>
-
-# **getOrganizationsIpaddressauthentication**
+[**EmbeddedIntegration**](EmbeddedIntegration)
 
 
+## getOrganizationsIpaddressauthentication
 
-> [IpAddressAuthentication](IpAddressAuthentication.html) getOrganizationsIpaddressauthentication()
+
+
+> [IpAddressAuthentication](IpAddressAuthentication) getOrganizationsIpaddressauthentication()
 
 Get organization IP address whitelist settings
 
@@ -223,18 +213,16 @@ OrganizationAPI.getOrganizationsIpaddressauthentication() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**IpAddressAuthentication**](IpAddressAuthentication.html)
-
-<a name="getOrganizationsLimitsChangerequest"></a>
-
-# **getOrganizationsLimitsChangerequest**
+[**IpAddressAuthentication**](IpAddressAuthentication)
 
 
+## getOrganizationsLimitsChangerequest
 
-> [LimitChangeRequestDetails](LimitChangeRequestDetails.html) getOrganizationsLimitsChangerequest(requestId)
+
+
+> [LimitChangeRequestDetails](LimitChangeRequestDetails) getOrganizationsLimitsChangerequest(requestId)
 
 Get a limit change request
 
@@ -273,20 +261,18 @@ OrganizationAPI.getOrganizationsLimitsChangerequest(requestId: requestId) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **requestId** | **String**| Unique id for the limit change request | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LimitChangeRequestDetails**](LimitChangeRequestDetails.html)
-
-<a name="getOrganizationsLimitsChangerequests"></a>
-
-# **getOrganizationsLimitsChangerequests**
+[**LimitChangeRequestDetails**](LimitChangeRequestDetails)
 
 
+## getOrganizationsLimitsChangerequests
 
-> [LimitChangeRequestsEntityListing](LimitChangeRequestsEntityListing.html) getOrganizationsLimitsChangerequests(after, before, status, pageSize, expand)
+
+
+> [LimitChangeRequestsEntityListing](LimitChangeRequestsEntityListing) getOrganizationsLimitsChangerequests(after, before, status, pageSize, expand)
 
 Get the available limit change requests
 
@@ -334,21 +320,19 @@ OrganizationAPI.getOrganizationsLimitsChangerequests(after: after, before: befor
 | **before** | **Int64**| Timestamp indicating the date to end before when searching for requests. | [optional] |
 | **status** | **String**| Status of the request to be filtered by | [optional]<br />**Values**: approved ("Approved"), rejected ("Rejected"), rollback ("Rollback"), pending ("Pending"), _open ("Open"), secondaryApprovalNamespacesAdded ("SecondaryApprovalNamespacesAdded"), reviewerApproved ("ReviewerApproved"), reviewerRejected ("ReviewerRejected"), reviewerRollback ("ReviewerRollback"), implementingChange ("ImplementingChange"), changeImplemented ("ChangeImplemented"), implementingRollback ("ImplementingRollback"), rollbackImplemented ("RollbackImplemented") |
 | **pageSize** | **Int**| Page Size | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: statushistory ("statusHistory") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: statushistory ("statusHistory") |
 
 
 ### Return type
 
-[**LimitChangeRequestsEntityListing**](LimitChangeRequestsEntityListing.html)
-
-<a name="getOrganizationsLimitsDocs"></a>
-
-# **getOrganizationsLimitsDocs**
+[**LimitChangeRequestsEntityListing**](LimitChangeRequestsEntityListing)
 
 
+## getOrganizationsLimitsDocs
 
-> [LimitDocumentation](LimitDocumentation.html) getOrganizationsLimitsDocs()
+
+
+> [LimitDocumentation](LimitDocumentation) getOrganizationsLimitsDocs()
 
 Get limit documentation
 
@@ -384,18 +368,16 @@ OrganizationAPI.getOrganizationsLimitsDocs() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**LimitDocumentation**](LimitDocumentation.html)
-
-<a name="getOrganizationsLimitsDocsFreetrial"></a>
-
-# **getOrganizationsLimitsDocsFreetrial**
+[**LimitDocumentation**](LimitDocumentation)
 
 
+## getOrganizationsLimitsDocsFreetrial
 
-> [FreeTrialLimitDocs](FreeTrialLimitDocs.html) getOrganizationsLimitsDocsFreetrial()
+
+
+> [FreeTrialLimitDocs](FreeTrialLimitDocs) getOrganizationsLimitsDocsFreetrial()
 
 Get free trial limit documentation
 
@@ -431,18 +413,16 @@ OrganizationAPI.getOrganizationsLimitsDocsFreetrial() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**FreeTrialLimitDocs**](FreeTrialLimitDocs.html)
-
-<a name="getOrganizationsLimitsNamespace"></a>
-
-# **getOrganizationsLimitsNamespace**
+[**FreeTrialLimitDocs**](FreeTrialLimitDocs)
 
 
+## getOrganizationsLimitsNamespace
 
-> [LimitsEntityListing](LimitsEntityListing.html) getOrganizationsLimitsNamespace(namespaceName)
+
+
+> [LimitsEntityListing](LimitsEntityListing) getOrganizationsLimitsNamespace(namespaceName)
 
 Get the effective limits in a namespace for an organization
 
@@ -480,20 +460,18 @@ OrganizationAPI.getOrganizationsLimitsNamespace(namespaceName: namespaceName) { 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **namespaceName** | **String**| The namespace to fetch limits for | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LimitsEntityListing**](LimitsEntityListing.html)
-
-<a name="getOrganizationsLimitsNamespaceCounts"></a>
-
-# **getOrganizationsLimitsNamespaceCounts**
+[**LimitsEntityListing**](LimitsEntityListing)
 
 
+## getOrganizationsLimitsNamespaceCounts
 
-> [LimitCountListing](LimitCountListing.html) getOrganizationsLimitsNamespaceCounts(namespaceName, cursor, entityId, userId)
+
+
+> [LimitCountListing](LimitCountListing) getOrganizationsLimitsNamespaceCounts(namespaceName, cursor, entityId, userId)
 
 Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
 
@@ -540,20 +518,18 @@ OrganizationAPI.getOrganizationsLimitsNamespaceCounts(namespaceName: namespaceNa
 | **cursor** | **String**| Cursor provided when retrieving the last page | [optional] |
 | **entityId** | **String**| entity id of the count | [optional] |
 | **userId** | **String**| userid of the count | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LimitCountListing**](LimitCountListing.html)
-
-<a name="getOrganizationsLimitsNamespaceDefaults"></a>
-
-# **getOrganizationsLimitsNamespaceDefaults**
+[**LimitCountListing**](LimitCountListing)
 
 
+## getOrganizationsLimitsNamespaceDefaults
 
-> [LimitsEntityListing](LimitsEntityListing.html) getOrganizationsLimitsNamespaceDefaults(namespaceName)
+
+
+> [LimitsEntityListing](LimitsEntityListing) getOrganizationsLimitsNamespaceDefaults(namespaceName)
 
 Get the default limits in a namespace for an organization
 
@@ -591,20 +567,18 @@ OrganizationAPI.getOrganizationsLimitsNamespaceDefaults(namespaceName: namespace
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **namespaceName** | **String**| The namespace to fetch defaults limits for | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LimitsEntityListing**](LimitsEntityListing.html)
-
-<a name="getOrganizationsLimitsNamespaceLimitCounts"></a>
-
-# **getOrganizationsLimitsNamespaceLimitCounts**
+[**LimitsEntityListing**](LimitsEntityListing)
 
 
+## getOrganizationsLimitsNamespaceLimitCounts
 
-> [LimitCountListing](LimitCountListing.html) getOrganizationsLimitsNamespaceLimitCounts(namespaceName, limitName, entityId, userId, cursor)
+
+
+> [LimitCountListing](LimitCountListing) getOrganizationsLimitsNamespaceLimitCounts(namespaceName, limitName, entityId, userId, cursor)
 
 Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
 
@@ -653,20 +627,18 @@ OrganizationAPI.getOrganizationsLimitsNamespaceLimitCounts(namespaceName: namesp
 | **entityId** | **String**| entity id of the count | [optional] |
 | **userId** | **String**| userid of the count | [optional] |
 | **cursor** | **String**| Cursor provided when retrieving the last page | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LimitCountListing**](LimitCountListing.html)
-
-<a name="getOrganizationsLimitsNamespaces"></a>
-
-# **getOrganizationsLimitsNamespaces**
+[**LimitCountListing**](LimitCountListing)
 
 
+## getOrganizationsLimitsNamespaces
 
-> [JSON](JSON.html) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
+
+
+> [JSON](JSON) getOrganizationsLimitsNamespaces(pageSize, pageNumber)
 
 Get the available limit namespaces
 
@@ -706,20 +678,18 @@ OrganizationAPI.getOrganizationsLimitsNamespaces(pageSize: pageSize, pageNumber:
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getOrganizationsMe"></a>
-
-# **getOrganizationsMe**
+[**JSON**](JSON)
 
 
+## getOrganizationsMe
 
-> [Organization](Organization.html) getOrganizationsMe()
+
+
+> [Organization](Organization) getOrganizationsMe()
 
 Get organization.
 
@@ -755,18 +725,16 @@ OrganizationAPI.getOrganizationsMe() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**Organization**](Organization.html)
-
-<a name="getOrganizationsWhitelist"></a>
-
-# **getOrganizationsWhitelist**
+[**Organization**](Organization)
 
 
+## getOrganizationsWhitelist
 
-> [OrgWhitelistSettings](OrgWhitelistSettings.html) getOrganizationsWhitelist()
+
+
+> [OrgWhitelistSettings](OrgWhitelistSettings) getOrganizationsWhitelist()
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
@@ -802,18 +770,16 @@ OrganizationAPI.getOrganizationsWhitelist() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**OrgWhitelistSettings**](OrgWhitelistSettings.html)
-
-<a name="patchOrganizationsAuthenticationSettings"></a>
-
-# **patchOrganizationsAuthenticationSettings**
+[**OrgWhitelistSettings**](OrgWhitelistSettings)
 
 
+## patchOrganizationsAuthenticationSettings
 
-> [OrgAuthSettings](OrgAuthSettings.html) patchOrganizationsAuthenticationSettings(body)
+
+
+> [OrgAuthSettings](OrgAuthSettings) patchOrganizationsAuthenticationSettings(body)
 
 Update the organization&#39;s settings
 
@@ -851,21 +817,19 @@ OrganizationAPI.patchOrganizationsAuthenticationSettings(body: body) { (response
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OrgAuthSettings**](OrgAuthSettings.html)| Org settings | |
-{: class="table-striped"}
+| **body** | [**OrgAuthSettings**](OrgAuthSettings)| Org settings | |
 
 
 ### Return type
 
-[**OrgAuthSettings**](OrgAuthSettings.html)
-
-<a name="patchOrganizationsFeature"></a>
-
-# **patchOrganizationsFeature**
+[**OrgAuthSettings**](OrgAuthSettings)
 
 
+## patchOrganizationsFeature
 
-> [OrganizationFeatures](OrganizationFeatures.html) patchOrganizationsFeature(featureName, enabled)
+
+
+> [OrganizationFeatures](OrganizationFeatures) patchOrganizationsFeature(featureName, enabled)
 
 Update organization
 
@@ -905,21 +869,19 @@ OrganizationAPI.patchOrganizationsFeature(featureName: featureName, enabled: ena
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **featureName** | **String**| Organization feature |<br />**Values**: realtimecic ("realtimeCIC"), purecloud ("purecloud"), hipaa ("hipaa"), ucenabled ("ucEnabled"), pci ("pci"), purecloudvoice ("purecloudVoice"), xmppfederation ("xmppFederation"), chat ("chat"), informalphotos ("informalPhotos"), directory ("directory"), contactcenter ("contactCenter"), unifiedcommunications ("unifiedCommunications"), custserv ("custserv") |
-| **enabled** | [**FeatureState**](FeatureState.html)| New state of feature | |
-{: class="table-striped"}
+| **enabled** | [**FeatureState**](FeatureState)| New state of feature | |
 
 
 ### Return type
 
-[**OrganizationFeatures**](OrganizationFeatures.html)
-
-<a name="putOrganizationsEmbeddedintegration"></a>
-
-# **putOrganizationsEmbeddedintegration**
+[**OrganizationFeatures**](OrganizationFeatures)
 
 
+## putOrganizationsEmbeddedintegration
 
-> [EmbeddedIntegration](EmbeddedIntegration.html) putOrganizationsEmbeddedintegration(body)
+
+
+> [EmbeddedIntegration](EmbeddedIntegration) putOrganizationsEmbeddedintegration(body)
 
 Update the list of domains that will be allowed to embed PureCloud applications
 
@@ -959,21 +921,19 @@ OrganizationAPI.putOrganizationsEmbeddedintegration(body: body) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EmbeddedIntegration**](EmbeddedIntegration.html)| Whitelist settings | |
-{: class="table-striped"}
+| **body** | [**EmbeddedIntegration**](EmbeddedIntegration)| Whitelist settings | |
 
 
 ### Return type
 
-[**EmbeddedIntegration**](EmbeddedIntegration.html)
-
-<a name="putOrganizationsIpaddressauthentication"></a>
-
-# **putOrganizationsIpaddressauthentication**
+[**EmbeddedIntegration**](EmbeddedIntegration)
 
 
+## putOrganizationsIpaddressauthentication
 
-> [IpAddressAuthentication](IpAddressAuthentication.html) putOrganizationsIpaddressauthentication(body)
+
+
+> [IpAddressAuthentication](IpAddressAuthentication) putOrganizationsIpaddressauthentication(body)
 
 Update organization IP address whitelist settings
 
@@ -1013,21 +973,19 @@ OrganizationAPI.putOrganizationsIpaddressauthentication(body: body) { (response,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**IpAddressAuthentication**](IpAddressAuthentication.html)| IP address Whitelist settings | |
-{: class="table-striped"}
+| **body** | [**IpAddressAuthentication**](IpAddressAuthentication)| IP address Whitelist settings | |
 
 
 ### Return type
 
-[**IpAddressAuthentication**](IpAddressAuthentication.html)
-
-<a name="putOrganizationsMe"></a>
-
-# **putOrganizationsMe**
+[**IpAddressAuthentication**](IpAddressAuthentication)
 
 
+## putOrganizationsMe
 
-> [Organization](Organization.html) putOrganizationsMe(body)
+
+
+> [Organization](Organization) putOrganizationsMe(body)
 
 Update organization.
 
@@ -1065,21 +1023,19 @@ OrganizationAPI.putOrganizationsMe(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Organization**](Organization.html)| Organization | [optional] |
-{: class="table-striped"}
+| **body** | [**Organization**](Organization)| Organization | [optional] |
 
 
 ### Return type
 
-[**Organization**](Organization.html)
-
-<a name="putOrganizationsWhitelist"></a>
-
-# **putOrganizationsWhitelist**
+[**Organization**](Organization)
 
 
+## putOrganizationsWhitelist
 
-> [OrgWhitelistSettings](OrgWhitelistSettings.html) putOrganizationsWhitelist(body)
+
+
+> [OrgWhitelistSettings](OrgWhitelistSettings) putOrganizationsWhitelist(body)
 
 This route is deprecated, please use /api/v2/organizations/authentication/settings instead
 
@@ -1117,11 +1073,12 @@ OrganizationAPI.putOrganizationsWhitelist(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OrgWhitelistSettings**](OrgWhitelistSettings.html)| Whitelist settings | |
-{: class="table-striped"}
+| **body** | [**OrgWhitelistSettings**](OrgWhitelistSettings)| Whitelist settings | |
 
 
 ### Return type
 
-[**OrgWhitelistSettings**](OrgWhitelistSettings.html)
+[**OrgWhitelistSettings**](OrgWhitelistSettings)
 
+
+_PureCloudPlatformClientV2@151.1.0_

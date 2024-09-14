@@ -1,15 +1,15 @@
----
-title: BuAgentSchedulesSearchResponse
----
+# BuAgentSchedulesSearchResponse
+
 ## BuAgentSchedulesSearchResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agentSchedules** | [**[BuAgentScheduleSearchResponse]**](BuAgentScheduleSearchResponse.html) | The requested agent schedules | [optional] |
+| **agentSchedules** | [**[BuAgentScheduleSearchResponse]**](BuAgentScheduleSearchResponse) | The requested agent schedules | [optional] |
 | **businessUnitTimeZone** | **String** | The time zone configured for the business unit to which this schedule applies | [optional] |
-| **publishedSchedules** | [**[BuAgentSchedulePublishedScheduleReference]**](BuAgentSchedulePublishedScheduleReference.html) | References to all published week schedules overlapping the start/end date query parameters | [optional] |
-{: class="table table-striped"}
+| **publishedSchedules** | [**[BuAgentSchedulePublishedScheduleReference]**](BuAgentSchedulePublishedScheduleReference) | References to all published week schedules overlapping the start/end date query parameters | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

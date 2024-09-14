@@ -1,6 +1,5 @@
----
-title: ContextIntent
----
+# ContextIntent
+
 ## ContextIntent
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContextIntent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the intent. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

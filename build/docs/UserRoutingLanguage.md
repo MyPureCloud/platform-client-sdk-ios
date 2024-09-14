@@ -1,6 +1,5 @@
----
-title: UserRoutingLanguage
----
+# UserRoutingLanguage
+
 ## UserRoutingLanguage
 Represents an organization language assigned to a user. When assigning to a user specify the organization language id as the id.
 
@@ -14,6 +13,7 @@ Represents an organization language assigned to a user. When assigning to a user
 | **state** | **String** | Activate or deactivate this routing language. | [optional] |
 | **languageUri** | **String** | URI to the organization language used by this user language. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

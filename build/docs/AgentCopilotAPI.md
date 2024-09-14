@@ -1,23 +1,19 @@
----
-title: AgentCopilotAPI
----
-## AgentCopilotAPI
+# AgentCopilotAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getAssistantCopilot**](AgentCopilotAPI.html#getAssistantCopilot) | Get copilot configuration of an assistant. |
-| [**putAssistantCopilot**](AgentCopilotAPI.html#putAssistantCopilot) | Update agent copilot configuration |
+| [**getAssistantCopilot**](AgentCopilotAPI#getAssistantCopilot) | Get copilot configuration of an assistant. |
+| [**putAssistantCopilot**](AgentCopilotAPI#putAssistantCopilot) | Update agent copilot configuration |
 {: class="table-striped"}
 
-<a name="getAssistantCopilot"></a>
 
-# **getAssistantCopilot**
-
+## getAssistantCopilot
 
 
-> [Copilot](Copilot.html) getAssistantCopilot(assistantId)
+
+> [Copilot](Copilot) getAssistantCopilot(assistantId)
 
 Get copilot configuration of an assistant.
 
@@ -56,20 +52,18 @@ AgentCopilotAPI.getAssistantCopilot(assistantId: assistantId) { (response, error
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Copilot**](Copilot.html)
-
-<a name="putAssistantCopilot"></a>
-
-# **putAssistantCopilot**
+[**Copilot**](Copilot)
 
 
+## putAssistantCopilot
 
-> [Copilot](Copilot.html) putAssistantCopilot(assistantId, body)
+
+
+> [Copilot](Copilot) putAssistantCopilot(assistantId, body)
 
 Update agent copilot configuration
 
@@ -109,11 +103,12 @@ AgentCopilotAPI.putAssistantCopilot(assistantId: assistantId, body: body) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
-| **body** | [**Copilot**](Copilot.html)|  | |
-{: class="table-striped"}
+| **body** | [**Copilot**](Copilot)|  | |
 
 
 ### Return type
 
-[**Copilot**](Copilot.html)
+[**Copilot**](Copilot)
 
+
+_PureCloudPlatformClientV2@151.1.0_

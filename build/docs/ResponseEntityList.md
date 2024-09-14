@@ -1,6 +1,5 @@
----
-title: ResponseEntityList
----
+# ResponseEntityList
+
 ## ResponseEntityList
 Query result list
 
@@ -8,7 +7,7 @@ Query result list
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ModelResponse]**](Response.html) |  | [optional] |
+| **entities** | [**[ModelResponse]**](Response) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ Query result list
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

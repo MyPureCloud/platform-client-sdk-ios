@@ -1,14 +1,14 @@
----
-title: DraftRequest
----
+# DraftRequest
+
 ## DraftRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **intents** | [**[DraftIntents]**](DraftIntents.html) | Draft intent object. | [optional] |
-| **topics** | [**[DraftTopicRequest]**](DraftTopicRequest.html) | Draft topic object. | [optional] |
-{: class="table table-striped"}
+| **intents** | [**[DraftIntents]**](DraftIntents) | Draft intent object. | [optional] |
+| **topics** | [**[DraftTopicRequest]**](DraftTopicRequest) | Draft topic object. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

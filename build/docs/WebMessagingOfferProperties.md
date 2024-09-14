@@ -1,6 +1,5 @@
----
-title: WebMessagingOfferProperties
----
+# WebMessagingOfferProperties
+
 ## WebMessagingOfferProperties
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebMessagingOfferProperties
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **offerText** | **String** | Text value to be used when inviting a visitor to engage with a web messaging offer. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

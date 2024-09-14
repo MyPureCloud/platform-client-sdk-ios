@@ -1,6 +1,5 @@
----
-title: UploadUrlRequest
----
+# UploadUrlRequest
+
 ## UploadUrlRequest
 
 ## Properties
@@ -12,6 +11,7 @@ title: UploadUrlRequest
 | **signedUrlTimeoutSeconds** | **Int** | The number of seconds the presigned URL is valid for (from 1 to 604800 seconds). If none provided, defaults to 600 seconds | [optional] |
 | **contentType** | **String** | The content type of the file to upload. Allows all MIME types | [optional] |
 | **serverSideEncryption** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

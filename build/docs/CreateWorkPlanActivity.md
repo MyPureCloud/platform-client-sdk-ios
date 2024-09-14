@@ -1,6 +1,5 @@
----
-title: CreateWorkPlanActivity
----
+# CreateWorkPlanActivity
+
 ## CreateWorkPlanActivity
 
 ## Properties
@@ -20,6 +19,7 @@ title: CreateWorkPlanActivity
 | **countsAsContiguousWorkTime** | **Bool** | Whether the activity duration is counted towards contiguous work time | [optional] |
 | **minimumLengthFromShiftStartMinutes** | **Int** | The minimum duration between shift start and shift item (e.g., break or meal) start in minutes | [optional] |
 | **minimumLengthFromShiftEndMinutes** | **Int** | The minimum duration between shift item (e.g., break or meal) end and shift end in minutes | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

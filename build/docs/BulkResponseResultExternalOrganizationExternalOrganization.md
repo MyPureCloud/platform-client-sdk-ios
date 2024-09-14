@@ -1,6 +1,5 @@
----
-title: BulkResponseResultExternalOrganizationExternalOrganization
----
+# BulkResponseResultExternalOrganizationExternalOrganization
+
 ## BulkResponseResultExternalOrganizationExternalOrganization
 
 ## Properties
@@ -9,8 +8,9 @@ title: BulkResponseResultExternalOrganizationExternalOrganization
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **success** | **Bool** |  | [optional] |
-| **entity** | [**ExternalOrganization**](ExternalOrganization.html) |  | [optional] |
-| **error** | [**BulkErrorExternalOrganization**](BulkErrorExternalOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**ExternalOrganization**](ExternalOrganization) |  | [optional] |
+| **error** | [**BulkErrorExternalOrganization**](BulkErrorExternalOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

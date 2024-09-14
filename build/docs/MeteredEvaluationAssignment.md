@@ -1,6 +1,5 @@
----
-title: MeteredEvaluationAssignment
----
+# MeteredEvaluationAssignment
+
 ## MeteredEvaluationAssignment
 
 ## Properties
@@ -8,11 +7,12 @@ title: MeteredEvaluationAssignment
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **evaluationContextId** | **String** |  | [optional] |
-| **evaluators** | [**[User]**](User.html) |  | [optional] |
+| **evaluators** | [**[User]**](User) |  | [optional] |
 | **maxNumberEvaluations** | **Int** |  | [optional] |
-| **evaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
+| **evaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
 | **assignToActiveUser** | **Bool** |  | [optional] |
-| **timeInterval** | [**TimeInterval**](TimeInterval.html) |  | [optional] |
-{: class="table table-striped"}
+| **timeInterval** | [**TimeInterval**](TimeInterval) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

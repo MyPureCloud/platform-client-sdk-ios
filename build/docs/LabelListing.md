@@ -1,16 +1,16 @@
----
-title: LabelListing
----
+# LabelListing
+
 ## LabelListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[LabelResponse]**](LabelResponse.html) |  | [optional] |
+| **entities** | [**[LabelResponse]**](LabelResponse) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

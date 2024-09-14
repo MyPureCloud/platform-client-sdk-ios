@@ -1,17 +1,16 @@
----
-title: AnalyticsConversationWithoutAttributes
----
+# AnalyticsConversationWithoutAttributes
+
 ## AnalyticsConversationWithoutAttributes
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conferenceStart** | [**Date**](Date.html) | The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **conversationEnd** | [**Date**](Date.html) | The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **conferenceStart** | [**Date**](Date) | The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **conversationEnd** | [**Date**](Date) | The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **conversationId** | **String** | Unique identifier for the conversation | [optional] |
 | **conversationInitiator** | **String** | Indicates the participant purpose of the participant initiating a message conversation | [optional] |
-| **conversationStart** | [**Date**](Date.html) | The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **conversationStart** | [**Date**](Date) | The start time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **customerParticipation** | **Bool** | Indicates a messaging conversation in which the customer participated by sending at least one message | [optional] |
 | **divisionIds** | **[String]** | Identifier(s) of division(s) associated with a conversation | [optional] |
 | **externalTag** | **String** | External tag for the conversation | [optional] |
@@ -20,10 +19,11 @@ title: AnalyticsConversationWithoutAttributes
 | **mediaStatsMinConversationRFactor** | **Double** | The lowest R-factor value among all of the audio streams belonging to this conversation | [optional] |
 | **originatingDirection** | **String** | The original direction of the conversation | [optional] |
 | **selfServed** | **Bool** | Indicates whether all flow sessions were self serviced | [optional] |
-| **evaluations** | [**[AnalyticsEvaluation]**](AnalyticsEvaluation.html) | Evaluations associated with this conversation | [optional] |
-| **surveys** | [**[AnalyticsSurvey]**](AnalyticsSurvey.html) | Surveys associated with this conversation | [optional] |
-| **resolutions** | [**[AnalyticsResolution]**](AnalyticsResolution.html) | Resolutions associated with this conversation | [optional] |
-| **participants** | [**[AnalyticsParticipantWithoutAttributes]**](AnalyticsParticipantWithoutAttributes.html) | Participants in the conversation | [optional] |
-{: class="table table-striped"}
+| **evaluations** | [**[AnalyticsEvaluation]**](AnalyticsEvaluation) | Evaluations associated with this conversation | [optional] |
+| **surveys** | [**[AnalyticsSurvey]**](AnalyticsSurvey) | Surveys associated with this conversation | [optional] |
+| **resolutions** | [**[AnalyticsResolution]**](AnalyticsResolution) | Resolutions associated with this conversation | [optional] |
+| **participants** | [**[AnalyticsParticipantWithoutAttributes]**](AnalyticsParticipantWithoutAttributes) | Participants in the conversation | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

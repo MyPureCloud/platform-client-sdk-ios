@@ -1,6 +1,5 @@
----
-title: AgentIntegrationAssociationResponse
----
+# AgentIntegrationAssociationResponse
+
 ## AgentIntegrationAssociationResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: AgentIntegrationAssociationResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **agentExternalId** | **String** | ID of the agent in external system | |
-| **integration** | [**WfmIntegrationReference**](WfmIntegrationReference.html) | The integration associated with the agent | |
+| **integration** | [**WfmIntegrationReference**](WfmIntegrationReference) | The integration associated with the agent | |
 | **locked** | **Bool** | Whether agentExternalId should be protected from update by automatic processes | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

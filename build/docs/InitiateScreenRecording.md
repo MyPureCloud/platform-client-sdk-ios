@@ -1,6 +1,5 @@
----
-title: InitiateScreenRecording
----
+# InitiateScreenRecording
+
 ## InitiateScreenRecording
 
 ## Properties
@@ -8,8 +7,9 @@ title: InitiateScreenRecording
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **recordACW** | **Bool** |  | [optional] |
-| **archiveRetention** | [**ArchiveRetention**](ArchiveRetention.html) |  | [optional] |
-| **deleteRetention** | [**DeleteRetention**](DeleteRetention.html) |  | [optional] |
-{: class="table table-striped"}
+| **archiveRetention** | [**ArchiveRetention**](ArchiveRetention) |  | [optional] |
+| **deleteRetention** | [**DeleteRetention**](DeleteRetention) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

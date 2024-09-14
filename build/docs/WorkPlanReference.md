@@ -1,6 +1,5 @@
----
-title: WorkPlanReference
----
+# WorkPlanReference
+
 ## WorkPlanReference
 
 ## Properties
@@ -8,8 +7,9 @@ title: WorkPlanReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference.html) | The management unit to which this work plan belongs.  Nullable in some routes | [optional] |
+| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit to which this work plan belongs.  Nullable in some routes | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

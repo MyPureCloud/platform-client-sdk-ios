@@ -1,6 +1,5 @@
----
-title: BuGenerateScheduleRequest
----
+# BuGenerateScheduleRequest
+
 ## BuGenerateScheduleRequest
 
 ## Properties
@@ -8,9 +7,10 @@ title: BuGenerateScheduleRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** | The description for the schedule | |
-| **shortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference.html) | The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count | [optional] |
+| **shortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | The forecast to use when generating the schedule.  Note that the forecast must fully encompass the schedule&#39;s start week + week count | [optional] |
 | **weekCount** | **Int** | The number of weeks in the schedule. One extra day is added at the end | |
-| **options** | [**SchedulingOptionsRequest**](SchedulingOptionsRequest.html) | Additional scheduling options | [optional] |
-{: class="table table-striped"}
+| **options** | [**SchedulingOptionsRequest**](SchedulingOptionsRequest) | Additional scheduling options | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

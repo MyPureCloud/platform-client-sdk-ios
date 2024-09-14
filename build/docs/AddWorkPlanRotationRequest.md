@@ -1,6 +1,5 @@
----
-title: AddWorkPlanRotationRequest
----
+# AddWorkPlanRotationRequest
+
 ## AddWorkPlanRotationRequest
 
 ## Properties
@@ -8,9 +7,10 @@ title: AddWorkPlanRotationRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of this work plan rotation | |
-| **dateRange** | [**DateRangeWithOptionalEnd**](DateRangeWithOptionalEnd.html) | The date range to which this work plan rotation applies | |
-| **agents** | [**[AddWorkPlanRotationAgentRequest]**](AddWorkPlanRotationAgentRequest.html) | Agents in this work plan rotation | [optional] |
-| **pattern** | [**WorkPlanPatternRequest**](WorkPlanPatternRequest.html) | Pattern with list of work plan IDs that rotate on a weekly basis | |
-{: class="table table-striped"}
+| **dateRange** | [**DateRangeWithOptionalEnd**](DateRangeWithOptionalEnd) | The date range to which this work plan rotation applies | |
+| **agents** | [**[AddWorkPlanRotationAgentRequest]**](AddWorkPlanRotationAgentRequest) | Agents in this work plan rotation | [optional] |
+| **pattern** | [**WorkPlanPatternRequest**](WorkPlanPatternRequest) | Pattern with list of work plan IDs that rotate on a weekly basis | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

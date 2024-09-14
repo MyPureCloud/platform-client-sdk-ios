@@ -1,6 +1,5 @@
----
-title: Ticker
----
+# Ticker
+
 ## Ticker
 
 ## Properties
@@ -9,6 +8,7 @@ title: Ticker
 |------------ | ------------- | ------------- | -------------|
 | **symbol** | **String** | The ticker symbol for this organization. Example: ININ, AAPL, MSFT, etc. | |
 | **exchange** | **String** | The exchange for this ticker symbol. Examples: NYSE, FTSE, NASDAQ, etc. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

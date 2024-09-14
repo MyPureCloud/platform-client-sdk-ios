@@ -1,6 +1,5 @@
----
-title: ReportingTurnKnowledgeSearch
----
+# ReportingTurnKnowledgeSearch
+
 ## ReportingTurnKnowledgeSearch
 
 ## Properties
@@ -8,8 +7,9 @@ title: ReportingTurnKnowledgeSearch
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **searchId** | **String** | The ID of this knowledge search. | [optional] |
-| **documents** | [**[ReportingTurnKnowledgeDocument]**](ReportingTurnKnowledgeDocument.html) | The list of search documents captured during this reporting turn. | [optional] |
+| **documents** | [**[ReportingTurnKnowledgeDocument]**](ReportingTurnKnowledgeDocument) | The list of search documents captured during this reporting turn. | [optional] |
 | **query** | **String** | The search query that was used to search the Knowledge Base documents for a matching question. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

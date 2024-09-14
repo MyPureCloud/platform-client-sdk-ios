@@ -1,6 +1,5 @@
----
-title: KeyRotationSchedule
----
+# KeyRotationSchedule
+
 ## KeyRotationSchedule
 
 ## Properties
@@ -11,6 +10,7 @@ title: KeyRotationSchedule
 | **name** | **String** |  | [optional] |
 | **period** | **String** | Value to set schedule to | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

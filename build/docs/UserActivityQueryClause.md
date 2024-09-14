@@ -1,6 +1,5 @@
----
-title: UserActivityQueryClause
----
+# UserActivityQueryClause
+
 ## UserActivityQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: UserActivityQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates | |
-| **predicates** | [**[UserActivityQueryPredicate]**](UserActivityQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **predicates** | [**[UserActivityQueryPredicate]**](UserActivityQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

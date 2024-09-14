@@ -1,6 +1,5 @@
----
-title: ConversationDisconnectSettings
----
+# ConversationDisconnectSettings
+
 ## ConversationDisconnectSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationDisconnectSettings
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | whether or not conversation disconnect setting is enabled | [optional] |
 | **type** | **String** | Conversation disconnect type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

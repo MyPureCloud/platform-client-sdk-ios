@@ -1,15 +1,15 @@
----
-title: PhoneChangeTopicProvisionInfo
----
+# PhoneChangeTopicProvisionInfo
+
 ## PhoneChangeTopicProvisionInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **time** | [**Date**](Date.html) |  | [optional] |
+| **time** | [**Date**](Date) |  | [optional] |
 | **source** | **String** |  | [optional] |
 | **errorInfo** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

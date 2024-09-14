@@ -1,6 +1,5 @@
----
-title: WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification
----
+# WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification
+
 ## WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification
 
 ## Properties
@@ -16,6 +15,7 @@ title: WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification
 | **agentRankingType** | **String** |  | [optional] |
 | **rankingTiebreakerType** | **String** |  | [optional] |
 | **workPlanFieldsVisibleToAgents** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

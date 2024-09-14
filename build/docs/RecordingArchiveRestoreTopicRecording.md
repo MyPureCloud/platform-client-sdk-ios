@@ -1,6 +1,5 @@
----
-title: RecordingArchiveRestoreTopicRecording
----
+# RecordingArchiveRestoreTopicRecording
+
 ## RecordingArchiveRestoreTopicRecording
 
 ## Properties
@@ -10,9 +9,10 @@ title: RecordingArchiveRestoreTopicRecording
 | **_id** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **fileState** | **String** |  | [optional] |
-| **mediaUris** | [**[RecordingArchiveRestoreTopicMediaResult]**](RecordingArchiveRestoreTopicMediaResult.html) |  | [optional] |
+| **mediaUris** | [**[RecordingArchiveRestoreTopicMediaResult]**](RecordingArchiveRestoreTopicMediaResult) |  | [optional] |
 | **estimatedTranscodeTimeMs** | **Int** |  | [optional] |
 | **actualTranscodeTimeMs** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

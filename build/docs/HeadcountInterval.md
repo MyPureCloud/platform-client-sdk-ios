@@ -1,14 +1,14 @@
----
-title: HeadcountInterval
----
+# HeadcountInterval
+
 ## HeadcountInterval
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **interval** | [**Date**](Date.html) | The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule | |
+| **interval** | [**Date**](Date) | The start date-time for this headcount interval in ISO-8601 format, must be within the 8 day schedule | |
 | **value** | **Double** | Headcount value for this interval | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

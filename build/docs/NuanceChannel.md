@@ -1,6 +1,5 @@
----
-title: NuanceChannel
----
+# NuanceChannel
+
 ## NuanceChannel
 Model for a Nuance channel
 
@@ -12,6 +11,7 @@ Model for a Nuance channel
 | **name** | **String** | The channel name | |
 | **modes** | **[String]** | Supported Channel Modes | [optional] |
 | **color** | **String** | The Channel Color | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

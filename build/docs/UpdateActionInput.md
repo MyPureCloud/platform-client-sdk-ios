@@ -1,6 +1,5 @@
----
-title: UpdateActionInput
----
+# UpdateActionInput
+
 ## UpdateActionInput
 
 ## Properties
@@ -9,8 +8,9 @@ title: UpdateActionInput
 |------------ | ------------- | ------------- | -------------|
 | **category** | **String** | Category of action, Can be up to 256 characters long | [optional] |
 | **name** | **String** | Name of action, Can be up to 256 characters long | [optional] |
-| **config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | [optional] |
+| **config** | [**ActionConfig**](ActionConfig) | Configuration to support request and response processing | [optional] |
 | **version** | **Int** | Version of this action | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

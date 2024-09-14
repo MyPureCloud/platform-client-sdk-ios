@@ -1,6 +1,5 @@
----
-title: Record
----
+# Record
+
 ## Record
 
 ## Properties
@@ -10,6 +9,7 @@ title: Record
 | **name** | **String** | The name of the record. | |
 | **type** | **String** | The type of the record. (Example values:  MX, TXT, CNAME) | |
 | **value** | **String** | The value of the record. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

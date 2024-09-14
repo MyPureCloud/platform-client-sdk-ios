@@ -1,6 +1,5 @@
----
-title: ChatSettings
----
+# ChatSettings
+
 ## ChatSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **messageRetentionPeriodDays** | **Int** | Retention time for messages in days, expressed as int in the range [10,3650] | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,16 +1,16 @@
----
-title: KnowledgeBaseListing
----
+# KnowledgeBaseListing
+
 ## KnowledgeBaseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[KnowledgeBase]**](KnowledgeBase.html) |  | [optional] |
+| **entities** | [**[KnowledgeBase]**](KnowledgeBase) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

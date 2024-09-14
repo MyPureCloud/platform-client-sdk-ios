@@ -1,6 +1,5 @@
----
-title: QueueConversationScreenShareEventTopicScreenShareMediaParticipant
----
+# QueueConversationScreenShareEventTopicScreenShareMediaParticipant
+
 ## QueueConversationScreenShareEventTopicScreenShareMediaParticipant
 
 ## Properties
@@ -10,10 +9,10 @@ title: QueueConversationScreenShareEventTopicScreenShareMediaParticipant
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **endTime** | [**Date**](Date.html) |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
+| **startTime** | [**Date**](Date) |  | [optional] |
+| **connectedTime** | [**Date**](Date) |  | [optional] |
+| **endTime** | [**Date**](Date) |  | [optional] |
+| **startHoldTime** | [**Date**](Date) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **initialState** | **String** |  | [optional] |
@@ -22,33 +21,34 @@ title: QueueConversationScreenShareEventTopicScreenShareMediaParticipant
 | **held** | **Bool** |  | [optional] |
 | **wrapupRequired** | **Bool** |  | [optional] |
 | **wrapupPrompt** | **String** |  | [optional] |
-| **user** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **queue** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **team** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
+| **user** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference) |  | [optional] |
+| **queue** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference) |  | [optional] |
+| **team** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
-| **errorInfo** | [**QueueConversationScreenShareEventTopicErrorBody**](QueueConversationScreenShareEventTopicErrorBody.html) |  | [optional] |
-| **script** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
+| **errorInfo** | [**QueueConversationScreenShareEventTopicErrorBody**](QueueConversationScreenShareEventTopicErrorBody) |  | [optional] |
+| **script** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference) |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **provider** | **String** |  | [optional] |
-| **externalContact** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **externalOrganization** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference.html) |  | [optional] |
-| **wrapup** | [**QueueConversationScreenShareEventTopicWrapup**](QueueConversationScreenShareEventTopicWrapup.html) |  | [optional] |
-| **conversationRoutingData** | [**QueueConversationScreenShareEventTopicConversationRoutingData**](QueueConversationScreenShareEventTopicConversationRoutingData.html) |  | [optional] |
+| **externalContact** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference) |  | [optional] |
+| **externalOrganization** | [**QueueConversationScreenShareEventTopicUriReference**](QueueConversationScreenShareEventTopicUriReference) |  | [optional] |
+| **wrapup** | [**QueueConversationScreenShareEventTopicWrapup**](QueueConversationScreenShareEventTopicWrapup) |  | [optional] |
+| **conversationRoutingData** | [**QueueConversationScreenShareEventTopicConversationRoutingData**](QueueConversationScreenShareEventTopicConversationRoutingData) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
-| **journeyContext** | [**QueueConversationScreenShareEventTopicJourneyContext**](QueueConversationScreenShareEventTopicJourneyContext.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **resumeTime** | [**Date**](Date.html) |  | [optional] |
-| **parkTime** | [**Date**](Date.html) |  | [optional] |
+| **journeyContext** | [**QueueConversationScreenShareEventTopicJourneyContext**](QueueConversationScreenShareEventTopicJourneyContext) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) |  | [optional] |
+| **endAcwTime** | [**Date**](Date) |  | [optional] |
+| **resumeTime** | [**Date**](Date) |  | [optional] |
+| **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
-| **queueMediaSettings** | [**QueueConversationScreenShareEventTopicQueueMediaSettings**](QueueConversationScreenShareEventTopicQueueMediaSettings.html) |  | [optional] |
+| **queueMediaSettings** | [**QueueConversationScreenShareEventTopicQueueMediaSettings**](QueueConversationScreenShareEventTopicQueueMediaSettings) |  | [optional] |
 | **context** | **String** |  | [optional] |
 | **peerCount** | **Int** |  | [optional] |
 | **sharing** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,30 +1,26 @@
----
-title: OAuthAPI
----
-## OAuthAPI
+# OAuthAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteOauthClient**](OAuthAPI.html#deleteOauthClient) | Delete OAuth Client |
-| [**getOauthAuthorization**](OAuthAPI.html#getOauthAuthorization) | Get a client that is authorized by the resource owner |
-| [**getOauthAuthorizations**](OAuthAPI.html#getOauthAuthorizations) | List clients that have been authorized, requested, or revoked by the resource owner |
-| [**getOauthClient**](OAuthAPI.html#getOauthClient) | Get OAuth Client |
-| [**getOauthClientUsageQueryResult**](OAuthAPI.html#getOauthClientUsageQueryResult) | Get the results of a usage query |
-| [**getOauthClientUsageSummary**](OAuthAPI.html#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
-| [**getOauthClients**](OAuthAPI.html#getOauthClients) | The list of OAuth clients |
-| [**getOauthScope**](OAuthAPI.html#getOauthScope) | An OAuth scope |
-| [**getOauthScopes**](OAuthAPI.html#getOauthScopes) | The list of OAuth scopes |
-| [**postOauthClientSecret**](OAuthAPI.html#postOauthClientSecret) | Regenerate Client Secret |
-| [**postOauthClientUsageQuery**](OAuthAPI.html#postOauthClientUsageQuery) | Query for OAuth client API usage |
-| [**postOauthClients**](OAuthAPI.html#postOauthClients) | Create OAuth client |
-| [**putOauthClient**](OAuthAPI.html#putOauthClient) | Update OAuth Client |
+| [**deleteOauthClient**](OAuthAPI#deleteOauthClient) | Delete OAuth Client |
+| [**getOauthAuthorization**](OAuthAPI#getOauthAuthorization) | Get a client that is authorized by the resource owner |
+| [**getOauthAuthorizations**](OAuthAPI#getOauthAuthorizations) | List clients that have been authorized, requested, or revoked by the resource owner |
+| [**getOauthClient**](OAuthAPI#getOauthClient) | Get OAuth Client |
+| [**getOauthClientUsageQueryResult**](OAuthAPI#getOauthClientUsageQueryResult) | Get the results of a usage query |
+| [**getOauthClientUsageSummary**](OAuthAPI#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
+| [**getOauthClients**](OAuthAPI#getOauthClients) | The list of OAuth clients |
+| [**getOauthScope**](OAuthAPI#getOauthScope) | An OAuth scope |
+| [**getOauthScopes**](OAuthAPI#getOauthScopes) | The list of OAuth scopes |
+| [**postOauthClientSecret**](OAuthAPI#postOauthClientSecret) | Regenerate Client Secret |
+| [**postOauthClientUsageQuery**](OAuthAPI#postOauthClientUsageQuery) | Query for OAuth client API usage |
+| [**postOauthClients**](OAuthAPI#postOauthClients) | Create OAuth client |
+| [**putOauthClient**](OAuthAPI#putOauthClient) | Update OAuth Client |
 {: class="table-striped"}
 
-<a name="deleteOauthClient"></a>
 
-# **deleteOauthClient**
+## deleteOauthClient
 
 
 
@@ -66,20 +62,18 @@ OAuthAPI.deleteOauthClient(clientId: clientId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getOauthAuthorization"></a>
 
-# **getOauthAuthorization**
-
+## getOauthAuthorization
 
 
-> [OAuthAuthorization](OAuthAuthorization.html) getOauthAuthorization(clientId, acceptLanguage)
+
+> [OAuthAuthorization](OAuthAuthorization) getOauthAuthorization(clientId, acceptLanguage)
 
 Get a client that is authorized by the resource owner
 
@@ -120,20 +114,18 @@ OAuthAPI.getOauthAuthorization(clientId: clientId, acceptLanguage: acceptLanguag
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| The ID of client | |
 | **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**OAuthAuthorization**](OAuthAuthorization.html)
-
-<a name="getOauthAuthorizations"></a>
-
-# **getOauthAuthorizations**
+[**OAuthAuthorization**](OAuthAuthorization)
 
 
+## getOauthAuthorizations
 
-> [OAuthAuthorizationListing](OAuthAuthorizationListing.html) getOauthAuthorizations(acceptLanguage)
+
+
+> [OAuthAuthorizationListing](OAuthAuthorizationListing) getOauthAuthorizations(acceptLanguage)
 
 List clients that have been authorized, requested, or revoked by the resource owner
 
@@ -172,20 +164,18 @@ OAuthAPI.getOauthAuthorizations(acceptLanguage: acceptLanguage) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **acceptLanguage** | **String**| The language in which to display the client descriptions. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**OAuthAuthorizationListing**](OAuthAuthorizationListing.html)
-
-<a name="getOauthClient"></a>
-
-# **getOauthClient**
+[**OAuthAuthorizationListing**](OAuthAuthorizationListing)
 
 
+## getOauthClient
 
-> [OAuthClient](OAuthClient.html) getOauthClient(clientId)
+
+
+> [OAuthClient](OAuthClient) getOauthClient(clientId)
 
 Get OAuth Client
 
@@ -224,20 +214,18 @@ OAuthAPI.getOauthClient(clientId: clientId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
-
-<a name="getOauthClientUsageQueryResult"></a>
-
-# **getOauthClientUsageQueryResult**
+[**OAuthClient**](OAuthClient)
 
 
+## getOauthClientUsageQueryResult
 
-> [ApiUsageQueryResult](ApiUsageQueryResult.html) getOauthClientUsageQueryResult(executionId, clientId)
+
+
+> [ApiUsageQueryResult](ApiUsageQueryResult) getOauthClientUsageQueryResult(executionId, clientId)
 
 Get the results of a usage query
 
@@ -279,20 +267,18 @@ OAuthAPI.getOauthClientUsageQueryResult(executionId: executionId, clientId: clie
 | ------------- | ------------- | ------------- | ------------- |
 | **executionId** | **String**| ID of the query execution | |
 | **clientId** | **String**| Client ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
-
-<a name="getOauthClientUsageSummary"></a>
-
-# **getOauthClientUsageSummary**
+[**ApiUsageQueryResult**](ApiUsageQueryResult)
 
 
+## getOauthClientUsageSummary
 
-> [UsageExecutionResult](UsageExecutionResult.html) getOauthClientUsageSummary(clientId, days)
+
+
+> [UsageExecutionResult](UsageExecutionResult) getOauthClientUsageSummary(clientId, days)
 
 Get a summary of OAuth client API usage
 
@@ -336,20 +322,18 @@ OAuthAPI.getOauthClientUsageSummary(clientId: clientId, days: days) { (response,
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
 | **days** | **String**| Previous number of days to query | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
-
-<a name="getOauthClients"></a>
-
-# **getOauthClients**
+[**UsageExecutionResult**](UsageExecutionResult)
 
 
+## getOauthClients
 
-> [OAuthClientEntityListing](OAuthClientEntityListing.html) getOauthClients()
+
+
+> [OAuthClientEntityListing](OAuthClientEntityListing) getOauthClients()
 
 The list of OAuth clients
 
@@ -386,18 +370,16 @@ OAuthAPI.getOauthClients() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**OAuthClientEntityListing**](OAuthClientEntityListing.html)
-
-<a name="getOauthScope"></a>
-
-# **getOauthScope**
+[**OAuthClientEntityListing**](OAuthClientEntityListing)
 
 
+## getOauthScope
 
-> [OAuthScope](OAuthScope.html) getOauthScope(scopeId, acceptLanguage)
+
+
+> [OAuthScope](OAuthScope) getOauthScope(scopeId, acceptLanguage)
 
 An OAuth scope
 
@@ -437,20 +419,18 @@ OAuthAPI.getOauthScope(scopeId: scopeId, acceptLanguage: acceptLanguage) { (resp
 | ------------- | ------------- | ------------- | ------------- |
 | **scopeId** | **String**| Scope ID | |
 | **acceptLanguage** | **String**| The language with which to display the scope description. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**OAuthScope**](OAuthScope.html)
-
-<a name="getOauthScopes"></a>
-
-# **getOauthScopes**
+[**OAuthScope**](OAuthScope)
 
 
+## getOauthScopes
 
-> [OAuthScopeListing](OAuthScopeListing.html) getOauthScopes(acceptLanguage)
+
+
+> [OAuthScopeListing](OAuthScopeListing) getOauthScopes(acceptLanguage)
 
 The list of OAuth scopes
 
@@ -488,20 +468,18 @@ OAuthAPI.getOauthScopes(acceptLanguage: acceptLanguage) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **acceptLanguage** | **String**| The language with which to display the scope descriptions. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**OAuthScopeListing**](OAuthScopeListing.html)
-
-<a name="postOauthClientSecret"></a>
-
-# **postOauthClientSecret**
+[**OAuthScopeListing**](OAuthScopeListing)
 
 
+## postOauthClientSecret
 
-> [OAuthClient](OAuthClient.html) postOauthClientSecret(clientId)
+
+
+> [OAuthClient](OAuthClient) postOauthClientSecret(clientId)
 
 Regenerate Client Secret
 
@@ -542,20 +520,18 @@ OAuthAPI.postOauthClientSecret(clientId: clientId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
-
-<a name="postOauthClientUsageQuery"></a>
-
-# **postOauthClientUsageQuery**
+[**OAuthClient**](OAuthClient)
 
 
+## postOauthClientUsageQuery
 
-> [UsageExecutionResult](UsageExecutionResult.html) postOauthClientUsageQuery(clientId, body)
+
+
+> [UsageExecutionResult](UsageExecutionResult) postOauthClientUsageQuery(clientId, body)
 
 Query for OAuth client API usage
 
@@ -598,21 +574,19 @@ OAuthAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery.html)| Query | |
-{: class="table-striped"}
+| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery)| Query | |
 
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
-
-<a name="postOauthClients"></a>
-
-# **postOauthClients**
+[**UsageExecutionResult**](UsageExecutionResult)
 
 
+## postOauthClients
 
-> [OAuthClient](OAuthClient.html) postOauthClients(body)
+
+
+> [OAuthClient](OAuthClient) postOauthClients(body)
 
 Create OAuth client
 
@@ -652,21 +626,19 @@ OAuthAPI.postOauthClients(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**OAuthClientRequest**](OAuthClientRequest.html)| Client | |
-{: class="table-striped"}
+| **body** | [**OAuthClientRequest**](OAuthClientRequest)| Client | |
 
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
-
-<a name="putOauthClient"></a>
-
-# **putOauthClient**
+[**OAuthClient**](OAuthClient)
 
 
+## putOauthClient
 
-> [OAuthClient](OAuthClient.html) putOauthClient(clientId, body)
+
+
+> [OAuthClient](OAuthClient) putOauthClient(clientId, body)
 
 Update OAuth Client
 
@@ -706,11 +678,12 @@ OAuthAPI.putOauthClient(clientId: clientId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-| **body** | [**OAuthClientRequest**](OAuthClientRequest.html)| Client | |
-{: class="table-striped"}
+| **body** | [**OAuthClientRequest**](OAuthClientRequest)| Client | |
 
 
 ### Return type
 
-[**OAuthClient**](OAuthClient.html)
+[**OAuthClient**](OAuthClient)
 
+
+_PureCloudPlatformClientV2@151.1.0_

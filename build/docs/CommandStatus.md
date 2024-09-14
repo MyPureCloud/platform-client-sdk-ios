@@ -1,6 +1,5 @@
----
-title: CommandStatus
----
+# CommandStatus
+
 ## CommandStatus
 
 ## Properties
@@ -9,12 +8,13 @@ title: CommandStatus
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **expiration** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **expiration** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **userId** | **String** |  | [optional] |
 | **statusCode** | **String** |  | [optional] |
 | **commandType** | **String** |  | [optional] |
-| **document** | [**Document**](Document.html) |  | [optional] |
+| **document** | [**Document**](Document) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

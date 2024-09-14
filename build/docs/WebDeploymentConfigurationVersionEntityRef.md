@@ -1,6 +1,5 @@
----
-title: WebDeploymentConfigurationVersionEntityRef
----
+# WebDeploymentConfigurationVersionEntityRef
+
 ## WebDeploymentConfigurationVersionEntityRef
 
 ## Properties
@@ -11,6 +10,7 @@ title: WebDeploymentConfigurationVersionEntityRef
 | **name** | **String** | The configuration version name | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **version** | **String** | The version of the configuration | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ReportingTurnAction
----
+# ReportingTurnAction
+
 ## ReportingTurnAction
 
 ## Properties
@@ -11,6 +10,7 @@ title: ReportingTurnAction
 | **actionName** | **String** | The name of the action in the bot flow. | [optional] |
 | **actionNumber** | **Int** | The number of the action in the bot flow. | [optional] |
 | **actionType** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: HelpSettings
----
+# HelpSettings
+
 ## HelpSettings
 
 ## Properties
@@ -8,7 +7,8 @@ title: HelpSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **keyword** | **[String]** | List of keywords for compliance | |
-| **response** | [**ComplianceResponse**](ComplianceResponse.html) | The response configuration for the keywords | |
-{: class="table table-striped"}
+| **response** | [**ComplianceResponse**](ComplianceResponse) | The response configuration for the keywords | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Document
----
+# Document
+
 ## Document
 
 ## Properties
@@ -10,13 +9,13 @@ title: Document
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **changeNumber** | **Int** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateUploaded** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateUploaded** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **contentUri** | **String** |  | [optional] |
-| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **uploadedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **createdBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **uploadedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **sharingUri** | **String** |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int64** |  | [optional] |
@@ -27,17 +26,18 @@ title: Document
 | **callerAddress** | **String** |  | [optional] |
 | **receiverAddress** | **String** |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
-| **tagValues** | [**[TagValue]**](TagValue.html) |  | [optional] |
-| **attributes** | [**[DocumentAttribute]**](DocumentAttribute.html) |  | [optional] |
-| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail.html) |  | [optional] |
-| **uploadStatus** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **tagValues** | [**[TagValue]**](TagValue) |  | [optional] |
+| **attributes** | [**[DocumentAttribute]**](DocumentAttribute) |  | [optional] |
+| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail) |  | [optional] |
+| **uploadStatus** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **uploadDestinationUri** | **String** |  | [optional] |
 | **uploadMethod** | **String** |  | [optional] |
-| **lockInfo** | [**LockInfo**](LockInfo.html) |  | [optional] |
+| **lockInfo** | [**LockInfo**](LockInfo) |  | [optional] |
 | **acl** | **[String]** | A list of permitted action rights for the user making the request | [optional] |
 | **sharingStatus** | **String** |  | [optional] |
 | **downloadSharingUri** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PublishDraftInput
----
+# PublishDraftInput
+
 ## PublishDraftInput
 Draft to be published
 
@@ -9,6 +8,7 @@ Draft to be published
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **version** | **Int** | The current draft version. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

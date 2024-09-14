@@ -1,14 +1,14 @@
----
-title: SetTimeOffLimitValuesRequest
----
+# SetTimeOffLimitValuesRequest
+
 ## SetTimeOffLimitValuesRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[TimeOffLimitRange]**](TimeOffLimitRange.html) |  | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the time off limit | |
-{: class="table table-striped"}
+| **values** | [**[TimeOffLimitRange]**](TimeOffLimitRange) |  | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time off limit | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Pattern
----
+# Pattern
+
 ## Pattern
 
 ## Properties
@@ -10,6 +9,7 @@ title: Pattern
 | **type** | **String** | Pattern type (Daily/Weekly) | |
 | **interval** | **Int** | The interval of days between the occurrences for Daily pattern type, and weeks between the occurrences for Weekly | |
 | **daysOfWeek** | **[String]** | The day(s) of week the occurrence should be repeated. Required to set for Weekly pattern type. E.g. [\&quot;Monday\&quot;, \&quot;Wednesday\&quot;] | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

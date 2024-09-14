@@ -1,6 +1,5 @@
----
-title: WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete
----
+# WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete
+
 ## WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmUpdateAgentDetailsTopicWfmUpdateAgentDetailsComplete
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LearningScormResponse
----
+# LearningScormResponse
+
 ## LearningScormResponse
 Learning SCORM package
 
@@ -14,6 +13,7 @@ Learning SCORM package
 | **errorMessage** | **String** | The error message associated with the error code | [optional] |
 | **percentageUnpacked** | **Float** | The percentage of the SCORM package that has been unpacked | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

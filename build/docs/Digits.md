@@ -1,6 +1,5 @@
----
-title: Digits
----
+# Digits
+
 ## Digits
 
 ## Properties
@@ -8,6 +7,7 @@ title: Digits
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **digits** | **String** | A string representing the digits pressed on phone. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

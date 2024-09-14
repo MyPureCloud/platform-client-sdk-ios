@@ -1,6 +1,5 @@
----
-title: UserBestPointsItem
----
+# UserBestPointsItem
+
 ## UserBestPointsItem
 
 ## Properties
@@ -9,9 +8,10 @@ title: UserBestPointsItem
 |------------ | ------------- | ------------- | -------------|
 | **granularityType** | **String** | Best points aggregation interval granularity | [optional] |
 | **points** | **Int** | Gamification points | [optional] |
-| **dateStartWorkday** | [**Date**](Date.html) | Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **dateEndWorkday** | [**Date**](Date.html) | End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateStartWorkday** | [**Date**](Date) | Start workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateEndWorkday** | [**Date**](Date) | End workday of the best points aggregation interval. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **rank** | **Int** | The rank of this user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

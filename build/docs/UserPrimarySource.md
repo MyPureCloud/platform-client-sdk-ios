@@ -1,6 +1,5 @@
----
-title: UserPrimarySource
----
+# UserPrimarySource
+
 ## UserPrimarySource
 
 ## Properties
@@ -12,6 +11,7 @@ title: UserPrimarySource
 | **sourceId** | **String** | The id of the source | [optional] |
 | **registered** | **Bool** | Whether or not the source is registered | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WebChatMessageEntityList
----
+# WebChatMessageEntityList
+
 ## WebChatMessageEntityList
 
 ## Properties
@@ -8,10 +7,11 @@ title: WebChatMessageEntityList
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **pageSize** | **Int** |  | [optional] |
-| **entities** | [**[WebChatMessage]**](WebChatMessage.html) |  | [optional] |
+| **entities** | [**[WebChatMessage]**](WebChatMessage) |  | [optional] |
 | **previousPage** | **String** |  | [optional] |
 | **next** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

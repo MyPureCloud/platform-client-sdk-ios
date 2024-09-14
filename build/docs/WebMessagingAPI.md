@@ -1,22 +1,18 @@
----
-title: WebMessagingAPI
----
-## WebMessagingAPI
+# WebMessagingAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getWebmessagingMessages**](WebMessagingAPI.html#getWebmessagingMessages) | Get the messages for a web messaging session. |
+| [**getWebmessagingMessages**](WebMessagingAPI#getWebmessagingMessages) | Get the messages for a web messaging session. |
 {: class="table-striped"}
 
-<a name="getWebmessagingMessages"></a>
 
-# **getWebmessagingMessages**
-
+## getWebmessagingMessages
 
 
-> [WebMessagingMessageEntityList](WebMessagingMessageEntityList.html) getWebmessagingMessages(pageSize, pageNumber)
+
+> [WebMessagingMessageEntityList](WebMessagingMessageEntityList) getWebmessagingMessages(pageSize, pageNumber)
 
 Get the messages for a web messaging session.
 
@@ -56,10 +52,11 @@ WebMessagingAPI.getWebmessagingMessages(pageSize: pageSize, pageNumber: pageNumb
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebMessagingMessageEntityList**](WebMessagingMessageEntityList.html)
+[**WebMessagingMessageEntityList**](WebMessagingMessageEntityList)
 
+
+_PureCloudPlatformClientV2@151.1.0_

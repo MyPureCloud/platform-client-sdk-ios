@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryRequestClause
----
+# LearningAssignmentAggregateQueryRequestClause
+
 ## LearningAssignmentAggregateQueryRequestClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: LearningAssignmentAggregateQueryRequestClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The logic used to combine the predicates | |
-| **predicates** | [**[LearningAssignmentAggregateQueryRequestPredicate]**](LearningAssignmentAggregateQueryRequestPredicate.html) | The list of predicates used to filter the data | |
-{: class="table table-striped"}
+| **predicates** | [**[LearningAssignmentAggregateQueryRequestPredicate]**](LearningAssignmentAggregateQueryRequestPredicate) | The list of predicates used to filter the data | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

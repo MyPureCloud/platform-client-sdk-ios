@@ -1,13 +1,12 @@
----
-title: ActionCertificateListing
----
+# ActionCertificateListing
+
 ## ActionCertificateListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ActionCertificate]**](ActionCertificate.html) |  | [optional] |
+| **entities** | [**[ActionCertificate]**](ActionCertificate) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: ActionCertificateListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

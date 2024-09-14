@@ -1,6 +1,5 @@
----
-title: TopicRequest
----
+# TopicRequest
+
 ## TopicRequest
 
 ## Properties
@@ -14,7 +13,8 @@ title: TopicRequest
 | **tags** | **[String]** | The topic tags | [optional] |
 | **dialect** | **String** | The topic dialect | |
 | **participants** | **String** | The topic participants, default value is All | [optional] |
-| **phrases** | [**[Phrase]**](Phrase.html) | The topic phrases | [optional] |
-{: class="table table-striped"}
+| **phrases** | [**[Phrase]**](Phrase) | The topic phrases | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

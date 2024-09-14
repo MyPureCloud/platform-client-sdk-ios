@@ -1,6 +1,5 @@
----
-title: ScreenRecordingMetaDataRequest
----
+# ScreenRecordingMetaDataRequest
+
 ## ScreenRecordingMetaDataRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: ScreenRecordingMetaDataRequest
 |------------ | ------------- | ------------- | -------------|
 | **participantJid** | **String** |  | [optional] |
 | **roomId** | **String** |  | [optional] |
-| **metaData** | [**[ScreenRecordingMetaData]**](ScreenRecordingMetaData.html) |  | [optional] |
-{: class="table table-striped"}
+| **metaData** | [**[ScreenRecordingMetaData]**](ScreenRecordingMetaData) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: QueryResponseMetric
----
+# QueryResponseMetric
+
 ## QueryResponseMetric
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueryResponseMetric
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** | The metric this applies to | [optional] |
-| **stats** | [**QueryResponseStats**](QueryResponseStats.html) | The aggregated values for this metric | [optional] |
-{: class="table table-striped"}
+| **stats** | [**QueryResponseStats**](QueryResponseStats) | The aggregated values for this metric | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

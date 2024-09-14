@@ -1,6 +1,5 @@
----
-title: EmailsSettings
----
+# EmailsSettings
+
 ## EmailsSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: EmailsSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **sendingSizeLimit** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

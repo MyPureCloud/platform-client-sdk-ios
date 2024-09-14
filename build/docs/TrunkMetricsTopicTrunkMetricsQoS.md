@@ -1,6 +1,5 @@
----
-title: TrunkMetricsTopicTrunkMetricsQoS
----
+# TrunkMetricsTopicTrunkMetricsQoS
+
 ## TrunkMetricsTopicTrunkMetricsQoS
 
 ## Properties
@@ -8,6 +7,7 @@ title: TrunkMetricsTopicTrunkMetricsQoS
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mismatchCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

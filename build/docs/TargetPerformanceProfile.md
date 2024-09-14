@@ -1,6 +1,5 @@
----
-title: TargetPerformanceProfile
----
+# TargetPerformanceProfile
+
 ## TargetPerformanceProfile
 
 ## Properties
@@ -8,6 +7,7 @@ title: TargetPerformanceProfile
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **targetPerformanceProfileId** | **String** | The target destination performanceProfileId for the linked metric. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

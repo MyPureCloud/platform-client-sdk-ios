@@ -1,6 +1,5 @@
----
-title: Browser
----
+# Browser
+
 ## Browser
 
 ## Properties
@@ -18,6 +17,7 @@ title: Browser
 | **featuresJava** | **Bool** | Whether Java is installed. | |
 | **featuresPdf** | **Bool** | Whether the browser recognizes PDFs. | |
 | **featuresWebrtc** | **Bool** | Whether WebRTC is supported. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

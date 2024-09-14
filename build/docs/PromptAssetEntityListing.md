@@ -1,13 +1,12 @@
----
-title: PromptAssetEntityListing
----
+# PromptAssetEntityListing
+
 ## PromptAssetEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[PromptAsset]**](PromptAsset.html) |  | [optional] |
+| **entities** | [**[PromptAsset]**](PromptAsset) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: PromptAssetEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

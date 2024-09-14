@@ -1,6 +1,5 @@
----
-title: HrisTimeOffType
----
+# HrisTimeOffType
+
 ## HrisTimeOffType
 
 ## Properties
@@ -11,6 +10,7 @@ title: HrisTimeOffType
 | **name** | **String** | The name of the time off type configured in integration. | |
 | **hrisIntegrationId** | **String** | The ID of the integration. | |
 | **secondaryId** | **String** | Secondary ID of the time off type, if configured in integration. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

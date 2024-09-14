@@ -1,21 +1,21 @@
----
-title: CallMediaPolicyConditions
----
+# CallMediaPolicyConditions
+
 ## CallMediaPolicyConditions
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **forUsers** | [**[User]**](User.html) |  | [optional] |
+| **forUsers** | [**[User]**](User) |  | [optional] |
 | **dateRanges** | **[String]** |  | [optional] |
-| **forQueues** | [**[Queue]**](Queue.html) |  | [optional] |
-| **wrapupCodes** | [**[WrapupCode]**](WrapupCode.html) |  | [optional] |
-| **languages** | [**[Language]**](Language.html) |  | [optional] |
-| **timeAllowed** | [**TimeAllowed**](TimeAllowed.html) |  | [optional] |
-| **teams** | [**[Team]**](Team.html) | Teams to match conversations against | [optional] |
+| **forQueues** | [**[Queue]**](Queue) |  | [optional] |
+| **wrapupCodes** | [**[WrapupCode]**](WrapupCode) |  | [optional] |
+| **languages** | [**[Language]**](Language) |  | [optional] |
+| **timeAllowed** | [**TimeAllowed**](TimeAllowed) |  | [optional] |
+| **teams** | [**[Team]**](Team) | Teams to match conversations against | [optional] |
 | **directions** | **[String]** |  | [optional] |
-| **duration** | [**DurationCondition**](DurationCondition.html) |  | [optional] |
-{: class="table table-striped"}
+| **duration** | [**DurationCondition**](DurationCondition) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

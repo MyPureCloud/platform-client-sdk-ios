@@ -1,6 +1,5 @@
----
-title: ContactSort
----
+# ContactSort
+
 ## ContactSort
 
 ## Properties
@@ -10,6 +9,7 @@ title: ContactSort
 | **fieldName** | **String** |  | [optional] |
 | **direction** | **String** | The direction in which to sort contacts. | [optional] |
 | **numeric** | **Bool** | Whether or not the column contains numeric data. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

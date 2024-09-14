@@ -1,6 +1,5 @@
----
-title: Condition
----
+# Condition
+
 ## Condition
 
 ## Properties
@@ -16,13 +15,14 @@ title: Condition
 | **codes** | **[String]** | List of wrap-up code identifiers. Required for a wrapupCondition. | [optional] |
 | **property** | **String** | A value associated with the property type of this Condition. Required for a contactPropertyCondition. | [optional] |
 | **propertyType** | **String** | The type of the property associated with this Condition. Required for a contactPropertyCondition. | [optional] |
-| **dataAction** | [**DomainEntityRef**](DomainEntityRef.html) | The Data Action to use for this condition. Required for a dataActionCondition. | [optional] |
+| **dataAction** | [**DomainEntityRef**](DomainEntityRef) | The Data Action to use for this condition. Required for a dataActionCondition. | [optional] |
 | **dataNotFoundResolution** | **Bool** | The result of this condition if the data action returns a result indicating there was no data. Required for a DataActionCondition. | [optional] |
 | **contactIdField** | **String** | The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition. | [optional] |
 | **callAnalysisResultField** | **String** | The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition. | [optional] |
 | **agentWrapupField** | **String** | The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition. | [optional] |
-| **contactColumnToDataActionFieldMappings** | [**[ContactColumnToDataActionFieldMapping]**](ContactColumnToDataActionFieldMapping.html) | A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. | [optional] |
-| **predicates** | [**[DataActionConditionPredicate]**](DataActionConditionPredicate.html) | A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. | [optional] |
-{: class="table table-striped"}
+| **contactColumnToDataActionFieldMappings** | [**[ContactColumnToDataActionFieldMapping]**](ContactColumnToDataActionFieldMapping) | A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. | [optional] |
+| **predicates** | [**[DataActionConditionPredicate]**](DataActionConditionPredicate) | A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

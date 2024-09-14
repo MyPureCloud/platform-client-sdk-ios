@@ -1,6 +1,5 @@
----
-title: ActiveAlertCount
----
+# ActiveAlertCount
+
 ## ActiveAlertCount
 
 ## Properties
@@ -8,6 +7,7 @@ title: ActiveAlertCount
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **count** | **Int** | The count of active alerts for a user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

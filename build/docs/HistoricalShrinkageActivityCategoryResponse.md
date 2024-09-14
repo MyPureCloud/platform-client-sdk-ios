@@ -1,6 +1,5 @@
----
-title: HistoricalShrinkageActivityCategoryResponse
----
+# HistoricalShrinkageActivityCategoryResponse
+
 ## HistoricalShrinkageActivityCategoryResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: HistoricalShrinkageActivityCategoryResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **activityCategory** | **String** | Activity category for which shrinkage data is provided | [optional] |
-| **shrinkageForActivityCategory** | [**HistoricalShrinkageAggregateResponse**](HistoricalShrinkageAggregateResponse.html) | Aggregated shrinkage data for the activity category | [optional] |
-| **shrinkageForActivityCodes** | [**[HistoricalShrinkageActivityCodeResponse]**](HistoricalShrinkageActivityCodeResponse.html) | Shrinkage for the activity codes under this activity category | [optional] |
-{: class="table table-striped"}
+| **shrinkageForActivityCategory** | [**HistoricalShrinkageAggregateResponse**](HistoricalShrinkageAggregateResponse) | Aggregated shrinkage data for the activity category | [optional] |
+| **shrinkageForActivityCodes** | [**[HistoricalShrinkageActivityCodeResponse]**](HistoricalShrinkageActivityCodeResponse) | Shrinkage for the activity codes under this activity category | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

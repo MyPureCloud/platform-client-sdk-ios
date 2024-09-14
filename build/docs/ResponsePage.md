@@ -1,6 +1,5 @@
----
-title: ResponsePage
----
+# ResponsePage
+
 ## ResponsePage
 
 ## Properties
@@ -16,6 +15,7 @@ title: ResponsePage
 | **lang** | **String** | ISO 639-1 language code for the page as defined in the &lt;html&gt; tag. | [optional] |
 | **pathname** | **String** | Path name of the page for the event. | |
 | **queryString** | **String** | Query string that is passed to the page in the current event. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

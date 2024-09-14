@@ -1,6 +1,5 @@
----
-title: MaxLength
----
+# MaxLength
+
 ## MaxLength
 
 ## Properties
@@ -9,6 +8,7 @@ title: MaxLength
 |------------ | ------------- | ------------- | -------------|
 | **min** | **Int64** | A non-negative integer for a text-based schema field denoting the minimum largest length string the field can contain for a schema instance. | |
 | **max** | **Int64** | A non-negative integer for a text-based schema field denoting the maximum largest string the field can contain for a schema instance. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ChatSendMessageResponse
----
+# ChatSendMessageResponse
+
 ## ChatSendMessageResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatSendMessageResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The id of the created message | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

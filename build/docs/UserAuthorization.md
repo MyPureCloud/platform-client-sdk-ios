@@ -1,16 +1,16 @@
----
-title: UserAuthorization
----
+# UserAuthorization
+
 ## UserAuthorization
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **roles** | [**[DomainRole]**](DomainRole.html) |  | [optional] |
-| **unusedRoles** | [**[DomainRole]**](DomainRole.html) | A collection of the roles the user is not using | [optional] |
+| **roles** | [**[DomainRole]**](DomainRole) |  | [optional] |
+| **unusedRoles** | [**[DomainRole]**](DomainRole) | A collection of the roles the user is not using | [optional] |
 | **permissions** | **[String]** | A collection of the permissions granted by all assigned roles | [optional] |
-| **permissionPolicies** | [**[ResourcePermissionPolicy]**](ResourcePermissionPolicy.html) | The policies configured for assigned permissions. | [optional] |
-{: class="table table-striped"}
+| **permissionPolicies** | [**[ResourcePermissionPolicy]**](ResourcePermissionPolicy) | The policies configured for assigned permissions. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

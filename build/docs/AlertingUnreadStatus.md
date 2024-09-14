@@ -1,6 +1,5 @@
----
-title: AlertingUnreadStatus
----
+# AlertingUnreadStatus
+
 ## AlertingUnreadStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: AlertingUnreadStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **unread** | **Bool** | True is alert is unread, false if it has not been. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

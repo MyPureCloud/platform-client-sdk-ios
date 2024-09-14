@@ -1,14 +1,13 @@
----
-title: DialerRulesetConfigChangeCondition
----
+# DialerRulesetConfigChangeCondition
+
 ## DialerRulesetConfigChangeCondition
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **dataAction** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference.html) | A UriReference for a resource | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
+| **dataAction** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference) | A UriReference for a resource | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 | **type** | **String** | The type of the condition | [optional] |
 | **inverted** | **Bool** | Indicates whether to evaluate for the opposite of the stated condition; default is false | [optional] |
 | **attributeName** | **String** | An attribute name associated with the condition (applies only to certain rule conditions) | [optional] |
@@ -22,8 +21,9 @@ title: DialerRulesetConfigChangeCondition
 | **contactIdField** | **String** | The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition. | [optional] |
 | **callAnalysisResultField** | **String** | The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition. | [optional] |
 | **agentWrapupField** | **String** | The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition. | [optional] |
-| **contactColumnToDataActionFieldMappings** | [**[DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]**](DialerRulesetConfigChangeContactColumnToDataActionFieldMapping.html) | A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. | [optional] |
-| **predicates** | [**[DialerRulesetConfigChangeDataActionConditionPredicate]**](DialerRulesetConfigChangeDataActionConditionPredicate.html) | A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. | [optional] |
-{: class="table table-striped"}
+| **contactColumnToDataActionFieldMappings** | [**[DialerRulesetConfigChangeContactColumnToDataActionFieldMapping]**](DialerRulesetConfigChangeContactColumnToDataActionFieldMapping) | A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. | [optional] |
+| **predicates** | [**[DialerRulesetConfigChangeDataActionConditionPredicate]**](DialerRulesetConfigChangeDataActionConditionPredicate) | A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

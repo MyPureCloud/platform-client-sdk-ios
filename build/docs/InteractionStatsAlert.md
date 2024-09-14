@@ -1,6 +1,5 @@
----
-title: InteractionStatsAlert
----
+# InteractionStatsAlert
+
 ## InteractionStatsAlert
 
 ## Properties
@@ -18,12 +17,13 @@ title: InteractionStatsAlert
 | **value** | **Double** | The threshold value. | |
 | **ruleId** | **String** | The id of the rule. | |
 | **unread** | **Bool** | Indicates if the alert has been read. | |
-| **startDate** | [**Date**](Date.html) | The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-| **endDate** | [**Date**](Date.html) | The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **notificationUsers** | [**[User]**](User.html) | The ids of users who were notified of alarm state change. | |
+| **startDate** | [**Date**](Date) | The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **endDate** | [**Date**](Date) | The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **notificationUsers** | [**[User]**](User) | The ids of users who were notified of alarm state change. | |
 | **alertTypes** | **[String]** | A collection of notification methods. | |
 | **ruleUri** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: GroupSearchRequest
----
+# GroupSearchRequest
+
 ## GroupSearchRequest
 
 ## Properties
@@ -11,8 +10,9 @@ title: GroupSearchRequest
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
 | **pageSize** | **Int** | The number of results per page | [optional] |
 | **pageNumber** | **Int** | The page of resources you want to retrieve | [optional] |
-| **sort** | [**[SearchSort]**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
-| **query** | [**[GroupSearchCriteria]**](GroupSearchCriteria.html) |  | [optional] |
-{: class="table table-striped"}
+| **sort** | [**[SearchSort]**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
+| **query** | [**[GroupSearchCriteria]**](GroupSearchCriteria) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

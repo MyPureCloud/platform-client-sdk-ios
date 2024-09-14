@@ -1,36 +1,32 @@
----
-title: WebChatAPI
----
-## WebChatAPI
+# WebChatAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteWebchatDeployment**](WebChatAPI.html#deleteWebchatDeployment) | Delete a WebChat deployment |
-| [**deleteWebchatGuestConversationMember**](WebChatAPI.html#deleteWebchatGuestConversationMember) | Remove a member from a chat conversation |
-| [**deleteWebchatSettings**](WebChatAPI.html#deleteWebchatSettings) | Remove WebChat deployment settings |
-| [**getWebchatDeployment**](WebChatAPI.html#getWebchatDeployment) | Get a WebChat deployment |
-| [**getWebchatDeployments**](WebChatAPI.html#getWebchatDeployments) | List WebChat deployments |
-| [**getWebchatGuestConversationMediarequest**](WebChatAPI.html#getWebchatGuestConversationMediarequest) | Get a media request in the conversation |
-| [**getWebchatGuestConversationMediarequests**](WebChatAPI.html#getWebchatGuestConversationMediarequests) | Get all media requests to the guest in the conversation |
-| [**getWebchatGuestConversationMember**](WebChatAPI.html#getWebchatGuestConversationMember) | Get a web chat conversation member |
-| [**getWebchatGuestConversationMembers**](WebChatAPI.html#getWebchatGuestConversationMembers) | Get the members of a chat conversation. |
-| [**getWebchatGuestConversationMessage**](WebChatAPI.html#getWebchatGuestConversationMessage) | Get a web chat conversation message |
-| [**getWebchatGuestConversationMessages**](WebChatAPI.html#getWebchatGuestConversationMessages) | Get the messages of a chat conversation. |
-| [**getWebchatSettings**](WebChatAPI.html#getWebchatSettings) | Get WebChat deployment settings |
-| [**patchWebchatGuestConversationMediarequest**](WebChatAPI.html#patchWebchatGuestConversationMediarequest) | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
-| [**postWebchatDeployments**](WebChatAPI.html#postWebchatDeployments) | Create WebChat deployment |
-| [**postWebchatGuestConversationMemberMessages**](WebChatAPI.html#postWebchatGuestConversationMemberMessages) | Send a message in a chat conversation. |
-| [**postWebchatGuestConversationMemberTyping**](WebChatAPI.html#postWebchatGuestConversationMemberTyping) | Send a typing-indicator in a chat conversation. |
-| [**postWebchatGuestConversations**](WebChatAPI.html#postWebchatGuestConversations) | Create an ACD chat conversation from an external customer. |
-| [**putWebchatDeployment**](WebChatAPI.html#putWebchatDeployment) | Update a WebChat deployment |
-| [**putWebchatSettings**](WebChatAPI.html#putWebchatSettings) | Update WebChat deployment settings |
+| [**deleteWebchatDeployment**](WebChatAPI#deleteWebchatDeployment) | Delete a WebChat deployment |
+| [**deleteWebchatGuestConversationMember**](WebChatAPI#deleteWebchatGuestConversationMember) | Remove a member from a chat conversation |
+| [**deleteWebchatSettings**](WebChatAPI#deleteWebchatSettings) | Remove WebChat deployment settings |
+| [**getWebchatDeployment**](WebChatAPI#getWebchatDeployment) | Get a WebChat deployment |
+| [**getWebchatDeployments**](WebChatAPI#getWebchatDeployments) | List WebChat deployments |
+| [**getWebchatGuestConversationMediarequest**](WebChatAPI#getWebchatGuestConversationMediarequest) | Get a media request in the conversation |
+| [**getWebchatGuestConversationMediarequests**](WebChatAPI#getWebchatGuestConversationMediarequests) | Get all media requests to the guest in the conversation |
+| [**getWebchatGuestConversationMember**](WebChatAPI#getWebchatGuestConversationMember) | Get a web chat conversation member |
+| [**getWebchatGuestConversationMembers**](WebChatAPI#getWebchatGuestConversationMembers) | Get the members of a chat conversation. |
+| [**getWebchatGuestConversationMessage**](WebChatAPI#getWebchatGuestConversationMessage) | Get a web chat conversation message |
+| [**getWebchatGuestConversationMessages**](WebChatAPI#getWebchatGuestConversationMessages) | Get the messages of a chat conversation. |
+| [**getWebchatSettings**](WebChatAPI#getWebchatSettings) | Get WebChat deployment settings |
+| [**patchWebchatGuestConversationMediarequest**](WebChatAPI#patchWebchatGuestConversationMediarequest) | Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED |
+| [**postWebchatDeployments**](WebChatAPI#postWebchatDeployments) | Create WebChat deployment |
+| [**postWebchatGuestConversationMemberMessages**](WebChatAPI#postWebchatGuestConversationMemberMessages) | Send a message in a chat conversation. |
+| [**postWebchatGuestConversationMemberTyping**](WebChatAPI#postWebchatGuestConversationMemberTyping) | Send a typing-indicator in a chat conversation. |
+| [**postWebchatGuestConversations**](WebChatAPI#postWebchatGuestConversations) | Create an ACD chat conversation from an external customer. |
+| [**putWebchatDeployment**](WebChatAPI#putWebchatDeployment) | Update a WebChat deployment |
+| [**putWebchatSettings**](WebChatAPI#putWebchatSettings) | Update WebChat deployment settings |
 {: class="table-striped"}
 
-<a name="deleteWebchatDeployment"></a>
 
-# **deleteWebchatDeployment**
+## deleteWebchatDeployment
 
 
 
@@ -72,16 +68,14 @@ WebChatAPI.deleteWebchatDeployment(deploymentId: deploymentId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| Deployment Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWebchatGuestConversationMember"></a>
 
-# **deleteWebchatGuestConversationMember**
+## deleteWebchatGuestConversationMember
 
 
 
@@ -124,16 +118,14 @@ WebChatAPI.deleteWebchatGuestConversationMember(conversationId: conversationId, 
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWebchatSettings"></a>
 
-# **deleteWebchatSettings**
+## deleteWebchatSettings
 
 
 
@@ -173,18 +165,16 @@ WebChatAPI.deleteWebchatSettings() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getWebchatDeployment"></a>
 
-# **getWebchatDeployment**
-
+## getWebchatDeployment
 
 
-> [WebChatDeployment](WebChatDeployment.html) getWebchatDeployment(deploymentId)
+
+> [WebChatDeployment](WebChatDeployment) getWebchatDeployment(deploymentId)
 
 Get a WebChat deployment
 
@@ -223,20 +213,18 @@ WebChatAPI.getWebchatDeployment(deploymentId: deploymentId) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| Deployment Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatDeployment**](WebChatDeployment.html)
-
-<a name="getWebchatDeployments"></a>
-
-# **getWebchatDeployments**
+[**WebChatDeployment**](WebChatDeployment)
 
 
+## getWebchatDeployments
 
-> [WebChatDeploymentEntityListing](WebChatDeploymentEntityListing.html) getWebchatDeployments()
+
+
+> [WebChatDeploymentEntityListing](WebChatDeploymentEntityListing) getWebchatDeployments()
 
 List WebChat deployments
 
@@ -273,18 +261,16 @@ WebChatAPI.getWebchatDeployments() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html)
-
-<a name="getWebchatGuestConversationMediarequest"></a>
-
-# **getWebchatGuestConversationMediarequest**
+[**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing)
 
 
+## getWebchatGuestConversationMediarequest
 
-> [WebChatGuestMediaRequest](WebChatGuestMediaRequest.html) getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)
+
+
+> [WebChatGuestMediaRequest](WebChatGuestMediaRequest) getWebchatGuestConversationMediarequest(conversationId, mediaRequestId)
 
 Get a media request in the conversation
 
@@ -326,20 +312,18 @@ WebChatAPI.getWebchatGuestConversationMediarequest(conversationId: conversationI
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **mediaRequestId** | **String**| mediaRequestId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)
-
-<a name="getWebchatGuestConversationMediarequests"></a>
-
-# **getWebchatGuestConversationMediarequests**
+[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)
 
 
+## getWebchatGuestConversationMediarequests
 
-> [WebChatGuestMediaRequestEntityList](WebChatGuestMediaRequestEntityList.html) getWebchatGuestConversationMediarequests(conversationId)
+
+
+> [WebChatGuestMediaRequestEntityList](WebChatGuestMediaRequestEntityList) getWebchatGuestConversationMediarequests(conversationId)
 
 Get all media requests to the guest in the conversation
 
@@ -377,20 +361,18 @@ WebChatAPI.getWebchatGuestConversationMediarequests(conversationId: conversation
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList.html)
-
-<a name="getWebchatGuestConversationMember"></a>
-
-# **getWebchatGuestConversationMember**
+[**WebChatGuestMediaRequestEntityList**](WebChatGuestMediaRequestEntityList)
 
 
+## getWebchatGuestConversationMember
 
-> [WebChatMemberInfo](WebChatMemberInfo.html) getWebchatGuestConversationMember(conversationId, memberId)
+
+
+> [WebChatMemberInfo](WebChatMemberInfo) getWebchatGuestConversationMember(conversationId, memberId)
 
 Get a web chat conversation member
 
@@ -430,20 +412,18 @@ WebChatAPI.getWebchatGuestConversationMember(conversationId: conversationId, mem
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatMemberInfo**](WebChatMemberInfo.html)
-
-<a name="getWebchatGuestConversationMembers"></a>
-
-# **getWebchatGuestConversationMembers**
+[**WebChatMemberInfo**](WebChatMemberInfo)
 
 
+## getWebchatGuestConversationMembers
 
-> [WebChatMemberInfoEntityList](WebChatMemberInfoEntityList.html) getWebchatGuestConversationMembers(conversationId, pageSize, pageNumber, excludeDisconnectedMembers)
+
+
+> [WebChatMemberInfoEntityList](WebChatMemberInfoEntityList) getWebchatGuestConversationMembers(conversationId, pageSize, pageNumber, excludeDisconnectedMembers)
 
 Get the members of a chat conversation.
 
@@ -487,20 +467,18 @@ WebChatAPI.getWebchatGuestConversationMembers(conversationId: conversationId, pa
 | **pageSize** | **Int**| The number of entries to return per page, or omitted for the default. | [optional] |
 | **pageNumber** | **Int**| The page number to return, or omitted for the first page. | [optional] |
 | **excludeDisconnectedMembers** | **Bool**| If true, the results will not contain members who have a DISCONNECTED state. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatMemberInfoEntityList**](WebChatMemberInfoEntityList.html)
-
-<a name="getWebchatGuestConversationMessage"></a>
-
-# **getWebchatGuestConversationMessage**
+[**WebChatMemberInfoEntityList**](WebChatMemberInfoEntityList)
 
 
+## getWebchatGuestConversationMessage
 
-> [WebChatMessage](WebChatMessage.html) getWebchatGuestConversationMessage(conversationId, messageId)
+
+
+> [WebChatMessage](WebChatMessage) getWebchatGuestConversationMessage(conversationId, messageId)
 
 Get a web chat conversation message
 
@@ -540,20 +518,18 @@ WebChatAPI.getWebchatGuestConversationMessage(conversationId: conversationId, me
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **messageId** | **String**| messageId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatMessage**](WebChatMessage.html)
-
-<a name="getWebchatGuestConversationMessages"></a>
-
-# **getWebchatGuestConversationMessages**
+[**WebChatMessage**](WebChatMessage)
 
 
+## getWebchatGuestConversationMessages
 
-> [WebChatMessageEntityList](WebChatMessageEntityList.html) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)
+
+
+> [WebChatMessageEntityList](WebChatMessageEntityList) getWebchatGuestConversationMessages(conversationId, after, before, sortOrder, maxResults)
 
 Get the messages of a chat conversation.
 
@@ -599,20 +575,18 @@ WebChatAPI.getWebchatGuestConversationMessages(conversationId: conversationId, a
 | **before** | **String**| If available, get the messages chronologically before the id of this message | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **maxResults** | **Int**| Limit the returned number of messages, up to a maximum of 100 | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatMessageEntityList**](WebChatMessageEntityList.html)
-
-<a name="getWebchatSettings"></a>
-
-# **getWebchatSettings**
+[**WebChatMessageEntityList**](WebChatMessageEntityList)
 
 
+## getWebchatSettings
 
-> [WebChatSettings](WebChatSettings.html) getWebchatSettings()
+
+
+> [WebChatSettings](WebChatSettings) getWebchatSettings()
 
 Get WebChat deployment settings
 
@@ -649,18 +623,16 @@ WebChatAPI.getWebchatSettings() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**WebChatSettings**](WebChatSettings.html)
-
-<a name="patchWebchatGuestConversationMediarequest"></a>
-
-# **patchWebchatGuestConversationMediarequest**
+[**WebChatSettings**](WebChatSettings)
 
 
+## patchWebchatGuestConversationMediarequest
 
-> [WebChatGuestMediaRequest](WebChatGuestMediaRequest.html) patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)
+
+
+> [WebChatGuestMediaRequest](WebChatGuestMediaRequest) patchWebchatGuestConversationMediarequest(conversationId, mediaRequestId, body)
 
 Update a media request in the conversation, setting the state to ACCEPTED/DECLINED/ERRORED
 
@@ -703,21 +675,19 @@ WebChatAPI.patchWebchatGuestConversationMediarequest(conversationId: conversatio
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **mediaRequestId** | **String**| mediaRequestId | |
-| **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)| Request | |
-{: class="table-striped"}
+| **body** | [**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)| Request | |
 
 
 ### Return type
 
-[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest.html)
-
-<a name="postWebchatDeployments"></a>
-
-# **postWebchatDeployments**
+[**WebChatGuestMediaRequest**](WebChatGuestMediaRequest)
 
 
+## postWebchatDeployments
 
-> [WebChatDeployment](WebChatDeployment.html) postWebchatDeployments(body)
+
+
+> [WebChatDeployment](WebChatDeployment) postWebchatDeployments(body)
 
 Create WebChat deployment
 
@@ -755,21 +725,19 @@ WebChatAPI.postWebchatDeployments(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WebChatDeployment**](WebChatDeployment.html)| Deployment | |
-{: class="table-striped"}
+| **body** | [**WebChatDeployment**](WebChatDeployment)| Deployment | |
 
 
 ### Return type
 
-[**WebChatDeployment**](WebChatDeployment.html)
-
-<a name="postWebchatGuestConversationMemberMessages"></a>
-
-# **postWebchatGuestConversationMemberMessages**
+[**WebChatDeployment**](WebChatDeployment)
 
 
+## postWebchatGuestConversationMemberMessages
 
-> [WebChatMessage](WebChatMessage.html) postWebchatGuestConversationMemberMessages(conversationId, memberId, body)
+
+
+> [WebChatMessage](WebChatMessage) postWebchatGuestConversationMemberMessages(conversationId, memberId, body)
 
 Send a message in a chat conversation.
 
@@ -810,21 +778,19 @@ WebChatAPI.postWebchatGuestConversationMemberMessages(conversationId: conversati
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest.html)| Message | |
-{: class="table-striped"}
+| **body** | [**CreateWebChatMessageRequest**](CreateWebChatMessageRequest)| Message | |
 
 
 ### Return type
 
-[**WebChatMessage**](WebChatMessage.html)
-
-<a name="postWebchatGuestConversationMemberTyping"></a>
-
-# **postWebchatGuestConversationMemberTyping**
+[**WebChatMessage**](WebChatMessage)
 
 
+## postWebchatGuestConversationMemberTyping
 
-> [WebChatTyping](WebChatTyping.html) postWebchatGuestConversationMemberTyping(conversationId, memberId)
+
+
+> [WebChatTyping](WebChatTyping) postWebchatGuestConversationMemberTyping(conversationId, memberId)
 
 Send a typing-indicator in a chat conversation.
 
@@ -864,20 +830,18 @@ WebChatAPI.postWebchatGuestConversationMemberTyping(conversationId: conversation
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **memberId** | **String**| memberId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WebChatTyping**](WebChatTyping.html)
-
-<a name="postWebchatGuestConversations"></a>
-
-# **postWebchatGuestConversations**
+[**WebChatTyping**](WebChatTyping)
 
 
+## postWebchatGuestConversations
 
-> [CreateWebChatConversationResponse](CreateWebChatConversationResponse.html) postWebchatGuestConversations(body)
+
+
+> [CreateWebChatConversationResponse](CreateWebChatConversationResponse) postWebchatGuestConversations(body)
 
 Create an ACD chat conversation from an external customer.
 
@@ -916,21 +880,19 @@ WebChatAPI.postWebchatGuestConversations(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateWebChatConversationRequest**](CreateWebChatConversationRequest.html)| CreateConversationRequest | |
-{: class="table-striped"}
+| **body** | [**CreateWebChatConversationRequest**](CreateWebChatConversationRequest)| CreateConversationRequest | |
 
 
 ### Return type
 
-[**CreateWebChatConversationResponse**](CreateWebChatConversationResponse.html)
-
-<a name="putWebchatDeployment"></a>
-
-# **putWebchatDeployment**
+[**CreateWebChatConversationResponse**](CreateWebChatConversationResponse)
 
 
+## putWebchatDeployment
 
-> [WebChatDeployment](WebChatDeployment.html) putWebchatDeployment(deploymentId, body)
+
+
+> [WebChatDeployment](WebChatDeployment) putWebchatDeployment(deploymentId, body)
 
 Update a WebChat deployment
 
@@ -970,21 +932,19 @@ WebChatAPI.putWebchatDeployment(deploymentId: deploymentId, body: body) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| Deployment Id | |
-| **body** | [**WebChatDeployment**](WebChatDeployment.html)| Deployment | |
-{: class="table-striped"}
+| **body** | [**WebChatDeployment**](WebChatDeployment)| Deployment | |
 
 
 ### Return type
 
-[**WebChatDeployment**](WebChatDeployment.html)
-
-<a name="putWebchatSettings"></a>
-
-# **putWebchatSettings**
+[**WebChatDeployment**](WebChatDeployment)
 
 
+## putWebchatSettings
 
-> [WebChatSettings](WebChatSettings.html) putWebchatSettings(body)
+
+
+> [WebChatSettings](WebChatSettings) putWebchatSettings(body)
 
 Update WebChat deployment settings
 
@@ -1022,11 +982,12 @@ WebChatAPI.putWebchatSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WebChatSettings**](WebChatSettings.html)| webChatSettings | |
-{: class="table-striped"}
+| **body** | [**WebChatSettings**](WebChatSettings)| webChatSettings | |
 
 
 ### Return type
 
-[**WebChatSettings**](WebChatSettings.html)
+[**WebChatSettings**](WebChatSettings)
 
+
+_PureCloudPlatformClientV2@151.1.0_

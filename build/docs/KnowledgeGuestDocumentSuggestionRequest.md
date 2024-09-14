@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestDocumentSuggestionRequest
----
+# KnowledgeGuestDocumentSuggestionRequest
+
 ## KnowledgeGuestDocumentSuggestionRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeGuestDocumentSuggestionRequest
 | **query** | **String** | Query to get autocomplete suggestions for the matching knowledge documents. | |
 | **pageSize** | **Int** | Page size of the returned results. | [optional] |
 | **includeDraftDocuments** | **Bool** | Indicates whether the suggestion results would also include draft documents. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

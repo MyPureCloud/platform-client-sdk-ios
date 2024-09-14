@@ -1,6 +1,5 @@
----
-title: IpAddressRange
----
+# IpAddressRange
+
 ## IpAddressRange
 
 ## Properties
@@ -10,6 +9,7 @@ title: IpAddressRange
 | **cidr** | **String** |  | [optional] |
 | **service** | **String** |  | [optional] |
 | **region** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

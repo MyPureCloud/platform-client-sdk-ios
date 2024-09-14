@@ -1,6 +1,5 @@
----
-title: AcceleratorParameter
----
+# AcceleratorParameter
+
 ## AcceleratorParameter
 Input parameter for a CX infrastructure as code accelerator
 
@@ -10,6 +9,7 @@ Input parameter for a CX infrastructure as code accelerator
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Parameter Name | |
 | **value** | **String** | Parameter Value | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

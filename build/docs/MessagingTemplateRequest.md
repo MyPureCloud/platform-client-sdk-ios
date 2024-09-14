@@ -1,6 +1,5 @@
----
-title: MessagingTemplateRequest
----
+# MessagingTemplateRequest
+
 ## MessagingTemplateRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: MessagingTemplateRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **responseId** | **String** | A Response Management response identifier for a messaging template defined response | [optional] |
-| **parameters** | [**[TemplateParameter]**](TemplateParameter.html) | A list of Response Management response substitutions for the response&#39;s messaging template | [optional] |
-{: class="table table-striped"}
+| **parameters** | [**[TemplateParameter]**](TemplateParameter) | A list of Response Management response substitutions for the response&#39;s messaging template | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

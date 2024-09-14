@@ -1,6 +1,5 @@
----
-title: LearningScormUploadResponse
----
+# LearningScormUploadResponse
+
 ## LearningScormUploadResponse
 Learning SCORM upload response
 
@@ -13,6 +12,7 @@ Learning SCORM upload response
 | **uploadUrl** | **String** | The pre-signed URL. Use it with headers below to upload file to S3 | [optional] |
 | **headers** | **[String:String]** | The additional headers that need to be included in the upload request | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

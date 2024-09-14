@@ -1,17 +1,17 @@
----
-title: WfmBuScheduleTopicBuManagementUnitScheduleSummary
----
+# WfmBuScheduleTopicBuManagementUnitScheduleSummary
+
 ## WfmBuScheduleTopicBuManagementUnitScheduleSummary
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **managementUnit** | [**WfmBuScheduleTopicManagementUnit**](WfmBuScheduleTopicManagementUnit.html) |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
-| **endDate** | [**Date**](Date.html) |  | [optional] |
-| **agents** | [**[WfmBuScheduleTopicUserReference]**](WfmBuScheduleTopicUserReference.html) |  | [optional] |
+| **managementUnit** | [**WfmBuScheduleTopicManagementUnit**](WfmBuScheduleTopicManagementUnit) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
+| **endDate** | [**Date**](Date) |  | [optional] |
+| **agents** | [**[WfmBuScheduleTopicUserReference]**](WfmBuScheduleTopicUserReference) |  | [optional] |
 | **agentCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

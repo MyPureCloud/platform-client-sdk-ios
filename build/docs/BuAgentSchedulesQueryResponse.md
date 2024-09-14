@@ -1,14 +1,14 @@
----
-title: BuAgentSchedulesQueryResponse
----
+# BuAgentSchedulesQueryResponse
+
 ## BuAgentSchedulesQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agentSchedules** | [**[BuAgentScheduleQueryResponse]**](BuAgentScheduleQueryResponse.html) | The requested agent schedules | [optional] |
+| **agentSchedules** | [**[BuAgentScheduleQueryResponse]**](BuAgentScheduleQueryResponse) | The requested agent schedules | [optional] |
 | **businessUnitTimeZone** | **String** | The time zone configured for the business unit to which these schedules apply | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

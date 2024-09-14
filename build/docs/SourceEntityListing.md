@@ -1,6 +1,5 @@
----
-title: SourceEntityListing
----
+# SourceEntityListing
+
 ## SourceEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: SourceEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[Source]**](Source.html) |  | [optional] |
+| **entities** | [**[Source]**](Source) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

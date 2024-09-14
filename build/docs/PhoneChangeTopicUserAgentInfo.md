@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicUserAgentInfo
----
+# PhoneChangeTopicUserAgentInfo
+
 ## PhoneChangeTopicUserAgentInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: PhoneChangeTopicUserAgentInfo
 | **firmwareVersion** | **String** |  | [optional] |
 | **manufacturer** | **String** |  | [optional] |
 | **model** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

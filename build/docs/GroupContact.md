@@ -1,6 +1,5 @@
----
-title: GroupContact
----
+# GroupContact
+
 ## GroupContact
 
 ## Properties
@@ -12,6 +11,7 @@ title: GroupContact
 | **display** | **String** | Formatted version of the address property | [optional] |
 | **type** | **String** | Contact type of the address | |
 | **mediaType** | **String** | Media type of the address | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

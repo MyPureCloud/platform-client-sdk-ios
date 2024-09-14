@@ -1,6 +1,5 @@
----
-title: EdgeNetworkDiagnosticResponse
----
+# EdgeNetworkDiagnosticResponse
+
 ## EdgeNetworkDiagnosticResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: EdgeNetworkDiagnosticResponse
 |------------ | ------------- | ------------- | -------------|
 | **commandCorrelationId** | **String** | UUID of each executed command on edge | [optional] |
 | **diagnostics** | **String** | Response string of executed command from edge | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

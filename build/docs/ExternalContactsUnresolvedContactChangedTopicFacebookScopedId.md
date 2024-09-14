@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicFacebookScopedId
----
+# ExternalContactsUnresolvedContactChangedTopicFacebookScopedId
+
 ## ExternalContactsUnresolvedContactChangedTopicFacebookScopedId
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExternalContactsUnresolvedContactChangedTopicFacebookScopedId
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **scopedId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

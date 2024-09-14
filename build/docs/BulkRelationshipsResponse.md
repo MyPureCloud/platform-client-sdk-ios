@@ -1,15 +1,15 @@
----
-title: BulkRelationshipsResponse
----
+# BulkRelationshipsResponse
+
 ## BulkRelationshipsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[BulkResponseResultRelationshipRelationship]**](BulkResponseResultRelationshipRelationship.html) |  | [optional] |
+| **results** | [**[BulkResponseResultRelationshipRelationship]**](BulkResponseResultRelationshipRelationship) |  | [optional] |
 | **errorCount** | **Int** |  | [optional] |
 | **errorIndexes** | **[Int]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

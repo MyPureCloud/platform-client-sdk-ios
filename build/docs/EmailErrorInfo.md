@@ -1,6 +1,5 @@
----
-title: EmailErrorInfo
----
+# EmailErrorInfo
+
 ## EmailErrorInfo
 
 ## Properties
@@ -9,6 +8,7 @@ title: EmailErrorInfo
 |------------ | ------------- | ------------- | -------------|
 | **message** | **String** | Error Message | [optional] |
 | **code** | **String** | Error Code | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

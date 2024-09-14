@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
----
+# JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
+
 ## JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
 
 ## Properties
@@ -8,6 +7,7 @@ title: JourneyOutcomeEventsNotificationOutcomeTouchpointChannel
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowAggregateQueryFilter
----
+# FlowAggregateQueryFilter
+
 ## FlowAggregateQueryFilter
 
 ## Properties
@@ -8,8 +7,9 @@ title: FlowAggregateQueryFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates and clauses | |
-| **clauses** | [**[FlowAggregateQueryClause]**](FlowAggregateQueryClause.html) | Boolean &#39;and/or&#39; logic with up to two-levels of nesting | [optional] |
-| **predicates** | [**[FlowAggregateQueryPredicate]**](FlowAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | [optional] |
-{: class="table table-striped"}
+| **clauses** | [**[FlowAggregateQueryClause]**](FlowAggregateQueryClause) | Boolean &#39;and/or&#39; logic with up to two-levels of nesting | [optional] |
+| **predicates** | [**[FlowAggregateQueryPredicate]**](FlowAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

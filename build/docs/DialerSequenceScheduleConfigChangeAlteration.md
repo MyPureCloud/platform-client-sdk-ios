@@ -1,6 +1,5 @@
----
-title: DialerSequenceScheduleConfigChangeAlteration
----
+# DialerSequenceScheduleConfigChangeAlteration
+
 ## DialerSequenceScheduleConfigChangeAlteration
 
 ## Properties
@@ -10,7 +9,8 @@ title: DialerSequenceScheduleConfigChangeAlteration
 | **type** | **String** |  | [optional] |
 | **start** | **String** | the end date of an alteration range as an ISO-8601 string | [optional] |
 | **end** | **String** | the end date of an alteration range as an ISO-8601 string | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

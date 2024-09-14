@@ -1,6 +1,5 @@
----
-title: Organization
----
+# Organization
+
 ## Organization
 
 ## Properties
@@ -22,6 +21,7 @@ title: Organization
 | **productPlatform** | **String** | Organizations Originating Platform. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **features** | **[String:Bool]** | The state of features available for the organization. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

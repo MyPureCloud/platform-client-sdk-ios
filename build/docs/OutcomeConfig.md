@@ -1,6 +1,5 @@
----
-title: OutcomeConfig
----
+# OutcomeConfig
+
 ## OutcomeConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: OutcomeConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **values** | **[String]** | A set of valid Outcome UUIDs used to optimize a KPI. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,23 +1,19 @@
----
-title: CarrierServicesAPI
----
-## CarrierServicesAPI
+# CarrierServicesAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesAPI.html#getCarrierservicesIntegrationsEmergencylocationsMe) | Get location for the logged in user |
-| [**postCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesAPI.html#postCarrierservicesIntegrationsEmergencylocationsMe) | Set current location for the logged in user |
+| [**getCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesAPI#getCarrierservicesIntegrationsEmergencylocationsMe) | Get location for the logged in user |
+| [**postCarrierservicesIntegrationsEmergencylocationsMe**](CarrierServicesAPI#postCarrierservicesIntegrationsEmergencylocationsMe) | Set current location for the logged in user |
 {: class="table-striped"}
 
-<a name="getCarrierservicesIntegrationsEmergencylocationsMe"></a>
 
-# **getCarrierservicesIntegrationsEmergencylocationsMe**
-
+## getCarrierservicesIntegrationsEmergencylocationsMe
 
 
-> [EmergencyLocation](EmergencyLocation.html) getCarrierservicesIntegrationsEmergencylocationsMe(phoneNumber)
+
+> [EmergencyLocation](EmergencyLocation) getCarrierservicesIntegrationsEmergencylocationsMe(phoneNumber)
 
 Get location for the logged in user
 
@@ -55,20 +51,18 @@ CarrierServicesAPI.getCarrierservicesIntegrationsEmergencylocationsMe(phoneNumbe
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **phoneNumber** | **String**| Phone number in E164 format | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EmergencyLocation**](EmergencyLocation.html)
-
-<a name="postCarrierservicesIntegrationsEmergencylocationsMe"></a>
-
-# **postCarrierservicesIntegrationsEmergencylocationsMe**
+[**EmergencyLocation**](EmergencyLocation)
 
 
+## postCarrierservicesIntegrationsEmergencylocationsMe
 
-> [EmergencyLocation](EmergencyLocation.html) postCarrierservicesIntegrationsEmergencylocationsMe(body)
+
+
+> [EmergencyLocation](EmergencyLocation) postCarrierservicesIntegrationsEmergencylocationsMe(body)
 
 Set current location for the logged in user
 
@@ -105,11 +99,12 @@ CarrierServicesAPI.postCarrierservicesIntegrationsEmergencylocationsMe(body: bod
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EmergencyLocation**](EmergencyLocation.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**EmergencyLocation**](EmergencyLocation)|  | [optional] |
 
 
 ### Return type
 
-[**EmergencyLocation**](EmergencyLocation.html)
+[**EmergencyLocation**](EmergencyLocation)
 
+
+_PureCloudPlatformClientV2@151.1.0_

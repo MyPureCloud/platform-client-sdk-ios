@@ -1,6 +1,5 @@
----
-title: ArchitectJobStateResponse
----
+# ArchitectJobStateResponse
+
 ## ArchitectJobStateResponse
 
 ## Properties
@@ -8,11 +7,12 @@ title: ArchitectJobStateResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **flow** | [**AddressableEntityRef**](AddressableEntityRef.html) | Flow created from the Architect Job | [optional] |
+| **flow** | [**AddressableEntityRef**](AddressableEntityRef) | Flow created from the Architect Job | [optional] |
 | **status** | **String** | Status of the Architect Job | [optional] |
 | **command** | **String** | The command executed by the Architect Job | [optional] |
-| **messages** | [**[ArchitectJobMessage]**](ArchitectJobMessage.html) | Warnings and Errors messages of the Architect Job | [optional] |
+| **messages** | [**[ArchitectJobMessage]**](ArchitectJobMessage) | Warnings and Errors messages of the Architect Job | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,16 +1,16 @@
----
-title: KnowledgeGuestDocumentResponseListing
----
+# KnowledgeGuestDocumentResponseListing
+
 ## KnowledgeGuestDocumentResponseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[KnowledgeGuestDocumentResponse]**](KnowledgeGuestDocumentResponse.html) |  | [optional] |
+| **entities** | [**[KnowledgeGuestDocumentResponse]**](KnowledgeGuestDocumentResponse) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

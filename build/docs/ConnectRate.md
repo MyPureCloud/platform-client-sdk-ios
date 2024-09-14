@@ -1,6 +1,5 @@
----
-title: ConnectRate
----
+# ConnectRate
+
 ## ConnectRate
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConnectRate
 | **attempts** | **Int64** | Number of call attempts made | [optional] |
 | **connects** | **Int64** | Number of calls with a live voice detected | [optional] |
 | **connectRatio** | **Double** | Ratio of connects to attempts | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ContentPositionProperties
----
+# ContentPositionProperties
+
 ## ContentPositionProperties
 
 ## Properties
@@ -11,6 +10,7 @@ title: ContentPositionProperties
 | **bottom** | **String** | Bottom positioning offset. | [optional] |
 | **_left** | **String** | Left positioning offset. | [optional] |
 | **_right** | **String** | Right positioning offset. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

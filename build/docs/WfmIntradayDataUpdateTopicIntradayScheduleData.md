@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayScheduleData
----
+# WfmIntradayDataUpdateTopicIntradayScheduleData
+
 ## WfmIntradayDataUpdateTopicIntradayScheduleData
 
 ## Properties
@@ -9,6 +8,7 @@ title: WfmIntradayDataUpdateTopicIntradayScheduleData
 |------------ | ------------- | ------------- | -------------|
 | **onQueueTimeSeconds** | **Int** |  | [optional] |
 | **scheduledTimeSeconds** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

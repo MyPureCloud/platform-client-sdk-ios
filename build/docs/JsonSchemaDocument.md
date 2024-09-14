@@ -1,6 +1,5 @@
----
-title: JsonSchemaDocument
----
+# JsonSchemaDocument
+
 ## JsonSchemaDocument
 A JSON Schema document.
 
@@ -14,8 +13,9 @@ A JSON Schema document.
 | **_description** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **_required** | **[String]** |  | [optional] |
-| **properties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-| **additionalProperties** | [**JSON**](.html) |  | [optional] |
-{: class="table table-striped"}
+| **properties** | [**[String:JSON]**](JSON) |  | [optional] |
+| **additionalProperties** | [**JSON**]() |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

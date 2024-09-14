@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForUserTopicConversationMessageEvent
----
+# V2ConversationMessageTypingEventForUserTopicConversationMessageEvent
+
 ## V2ConversationMessageTypingEventForUserTopicConversationMessageEvent
 
 ## Properties
@@ -8,7 +7,8 @@ title: V2ConversationMessageTypingEventForUserTopicConversationMessageEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventType** | **String** |  | [optional] |
-| **typing** | [**V2ConversationMessageTypingEventForUserTopicConversationEventTyping**](V2ConversationMessageTypingEventForUserTopicConversationEventTyping.html) |  | [optional] |
-{: class="table table-striped"}
+| **typing** | [**V2ConversationMessageTypingEventForUserTopicConversationEventTyping**](V2ConversationMessageTypingEventForUserTopicConversationEventTyping) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

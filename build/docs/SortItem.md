@@ -1,6 +1,5 @@
----
-title: SortItem
----
+# SortItem
+
 ## SortItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: SortItem
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** |  | [optional] |
 | **ascending** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

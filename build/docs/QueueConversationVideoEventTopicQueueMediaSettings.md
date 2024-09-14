@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicQueueMediaSettings
----
+# QueueConversationVideoEventTopicQueueMediaSettings
+
 ## QueueConversationVideoEventTopicQueueMediaSettings
 Represents the queue setting for this media.
 
@@ -12,6 +11,7 @@ Represents the queue setting for this media.
 | **autoAnswerAlertToneSeconds** | **Double** | Specifies the duration of the alerting sound to be played for auto answered interactions. | [optional] |
 | **manualAnswerAlertToneSeconds** | **Double** | Specifies the duration of the alerting sound to be played for manually answered interactions | [optional] |
 | **enableAutoAnswer** | **Bool** | Flag to indicate if auto answer is enabled for the given media type or media subtype. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

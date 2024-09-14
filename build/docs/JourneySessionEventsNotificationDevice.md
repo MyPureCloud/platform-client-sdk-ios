@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationDevice
----
+# JourneySessionEventsNotificationDevice
+
 ## JourneySessionEventsNotificationDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneySessionEventsNotificationDevice
 | **osVersion** | **String** |  | [optional] |
 | **category** | **String** |  | [optional] |
 | **manufacturer** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

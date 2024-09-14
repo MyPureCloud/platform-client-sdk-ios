@@ -1,14 +1,14 @@
----
-title: UserInsightsTrends
----
+# UserInsightsTrends
+
 ## UserInsightsTrends
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **comparativePeriod** | [**[UserTrendData]**](UserTrendData.html) | List of trend data in the comparative period | [optional] |
-| **primaryPeriod** | [**[UserTrendData]**](UserTrendData.html) | List of trend data in the primary period | [optional] |
-{: class="table table-striped"}
+| **comparativePeriod** | [**[UserTrendData]**](UserTrendData) | List of trend data in the comparative period | [optional] |
+| **primaryPeriod** | [**[UserTrendData]**](UserTrendData) | List of trend data in the primary period | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

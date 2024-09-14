@@ -1,13 +1,12 @@
----
-title: ManagementUnitListing
----
+# ManagementUnitListing
+
 ## ManagementUnitListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ManagementUnit]**](ManagementUnit.html) |  | [optional] |
+| **entities** | [**[ManagementUnit]**](ManagementUnit) |  | [optional] |
 | **pageSize** | **Int** | Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int** | Deprecated, paging is not supported | [optional] |
 | **total** | **Int64** | Deprecated, paging is not supported | [optional] |
@@ -17,6 +16,7 @@ title: ManagementUnitListing
 | **pageCount** | **Int** | Deprecated, paging is not supported | [optional] |
 | **previousUri** | **String** | Deprecated, paging is not supported | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

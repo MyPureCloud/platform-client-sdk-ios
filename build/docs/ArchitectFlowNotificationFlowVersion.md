@@ -1,6 +1,5 @@
----
-title: ArchitectFlowNotificationFlowVersion
----
+# ArchitectFlowNotificationFlowVersion
+
 ## ArchitectFlowNotificationFlowVersion
 A bare-bones flow version object
 
@@ -9,6 +8,7 @@ A bare-bones flow version object
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The version ID | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

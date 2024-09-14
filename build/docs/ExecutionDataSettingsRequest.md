@@ -1,6 +1,5 @@
----
-title: ExecutionDataSettingsRequest
----
+# ExecutionDataSettingsRequest
+
 ## ExecutionDataSettingsRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExecutionDataSettingsRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | whether or not the setting is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

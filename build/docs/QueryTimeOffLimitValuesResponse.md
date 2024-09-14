@@ -1,13 +1,13 @@
----
-title: QueryTimeOffLimitValuesResponse
----
+# QueryTimeOffLimitValuesResponse
+
 ## QueryTimeOffLimitValuesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[TimeOffLimitValueRange]**](TimeOffLimitValueRange.html) |  | [optional] |
-{: class="table table-striped"}
+| **values** | [**[TimeOffLimitValueRange]**](TimeOffLimitValueRange) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WebEventDevice
----
+# WebEventDevice
+
 ## WebEventDevice
 
 ## Properties
@@ -16,6 +15,7 @@ title: WebEventDevice
 | **osFamily** | **String** | Operating system family. | |
 | **osVersion** | **String** | Operating system version. | |
 | **manufacturer** | **String** | Manufacturer of the device. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

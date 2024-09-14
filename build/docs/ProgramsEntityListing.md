@@ -1,17 +1,17 @@
----
-title: ProgramsEntityListing
----
+# ProgramsEntityListing
+
 ## ProgramsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ListedProgram]**](ListedProgram.html) |  | [optional] |
+| **entities** | [**[ListedProgram]**](ListedProgram) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

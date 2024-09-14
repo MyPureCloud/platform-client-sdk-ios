@@ -1,6 +1,5 @@
----
-title: ListItemComponent
----
+# ListItemComponent
+
 ## ListItemComponent
 An entry in a List template.
 
@@ -14,7 +13,8 @@ An entry in a List template.
 | **image** | **String** | URL of an image. | [optional] |
 | **title** | **String** | The main headline of the list item. | [optional] |
 | **_description** | **String** | Text to show in the list item description. | [optional] |
-| **actions** | [**ContentActions**](ContentActions.html) | The list item actions (Deprecated). | [optional] |
-{: class="table table-striped"}
+| **actions** | [**ContentActions**](ContentActions) | The list item actions (Deprecated). | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

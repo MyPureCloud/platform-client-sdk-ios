@@ -1,17 +1,17 @@
----
-title: GamificationScorecardChangeTopicPerformanceMetric
----
+# GamificationScorecardChangeTopicPerformanceMetric
+
 ## GamificationScorecardChangeTopicPerformanceMetric
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **metric** | [**GamificationScorecardChangeTopicMetric**](GamificationScorecardChangeTopicMetric.html) |  | [optional] |
+| **metric** | [**GamificationScorecardChangeTopicMetric**](GamificationScorecardChangeTopicMetric) |  | [optional] |
 | **points** | **Int** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-| **punctualityEvents** | [**[GamificationScorecardChangeTopicPunctualityEvent]**](GamificationScorecardChangeTopicPunctualityEvent.html) |  | [optional] |
-| **evaluationDetails** | [**[GamificationScorecardChangeTopicEvaluationDetail]**](GamificationScorecardChangeTopicEvaluationDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **punctualityEvents** | [**[GamificationScorecardChangeTopicPunctualityEvent]**](GamificationScorecardChangeTopicPunctualityEvent) |  | [optional] |
+| **evaluationDetails** | [**[GamificationScorecardChangeTopicEvaluationDetail]**](GamificationScorecardChangeTopicEvaluationDetail) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

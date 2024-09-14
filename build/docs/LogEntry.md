@@ -1,6 +1,5 @@
----
-title: LogEntry
----
+# LogEntry
+
 ## LogEntry
 
 ## Properties
@@ -10,6 +9,7 @@ title: LogEntry
 | **level** | **String** | Level of log entry | [optional] |
 | **message** | **String** | Log message | [optional] |
 | **timestamp** | **Int64** | Timestamp of log entry | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DocumentBodyTableCellBlockProperties
----
+# DocumentBodyTableCellBlockProperties
+
 ## DocumentBodyTableCellBlockProperties
 
 ## Properties
@@ -19,6 +18,7 @@ title: DocumentBodyTableCellBlockProperties
 | **scope** | **String** | The scope for the table cell. | [optional] |
 | **colSpan** | **Int** | The colSpan for the table cell. | [optional] |
 | **rowSpan** | **Int** | The rowSpan for the table cell. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

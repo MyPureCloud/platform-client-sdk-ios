@@ -1,6 +1,5 @@
----
-title: SpeechTextAnalyticsSettingsRequest
----
+# SpeechTextAnalyticsSettingsRequest
+
 ## SpeechTextAnalyticsSettingsRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: SpeechTextAnalyticsSettingsRequest
 | **expectedDialects** | **[String]** | Setting to choose expected dialects | [optional] |
 | **textAnalyticsEnabled** | **Bool** | Setting to enable/disable text analytics | [optional] |
 | **agentEmpathyEnabled** | **Bool** | Setting to enable/disable Agent Empathy setting | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

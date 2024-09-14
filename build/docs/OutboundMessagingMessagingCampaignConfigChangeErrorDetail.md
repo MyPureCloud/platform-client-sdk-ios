@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeErrorDetail
----
+# OutboundMessagingMessagingCampaignConfigChangeErrorDetail
+
 ## OutboundMessagingMessagingCampaignConfigChangeErrorDetail
 
 ## Properties
@@ -9,6 +8,7 @@ title: OutboundMessagingMessagingCampaignConfigChangeErrorDetail
 |------------ | ------------- | ------------- | -------------|
 | **error** | **String** | The name of the error code. | [optional] |
 | **details** | **String** | The additional information regarding the error message. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

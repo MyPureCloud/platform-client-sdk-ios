@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationActionMap
----
+# JourneyWebEventsNotificationActionMap
+
 ## JourneyWebEventsNotificationActionMap
 
 ## Properties
@@ -11,6 +10,7 @@ title: JourneyWebEventsNotificationActionMap
 | **selfUri** | **String** |  | [optional] |
 | **displayName** | **String** |  | [optional] |
 | **version** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

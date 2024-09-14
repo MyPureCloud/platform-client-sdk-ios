@@ -1,6 +1,5 @@
----
-title: PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification
----
+# PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification
+
 ## PerformancePredictionRecalculationCompleteEventTopicPerformancePredictionUserRecalculationNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: PerformancePredictionRecalculationCompleteEventTopicPerformancePrediction
 | **operationId** | **String** |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **error** | [**PerformancePredictionRecalculationCompleteEventTopicErrorBody**](PerformancePredictionRecalculationCompleteEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **error** | [**PerformancePredictionRecalculationCompleteEventTopicErrorBody**](PerformancePredictionRecalculationCompleteEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

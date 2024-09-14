@@ -1,6 +1,5 @@
----
-title: DeploymentWebAction
----
+# DeploymentWebAction
+
 ## DeploymentWebAction
 
 ## Properties
@@ -14,9 +13,10 @@ title: DeploymentWebAction
 | **actionMapId** | **String** | ID of the action map that triggered the action. | |
 | **actionMapVersion** | **Int** | Version of the action map that triggered the action. | |
 | **sessionId** | **String** | ID of the session that the action was triggered for. | |
-| **webMessagingOfferProperties** | [**WebMessagingOfferProperties**](WebMessagingOfferProperties.html) | Web messaging offer specific properties. | [optional] |
-| **contentOfferProperties** | [**ContentOffer**](ContentOffer.html) | Content offer specific properties. | [optional] |
-| **openActionProperties** | [**OpenActionProperties**](OpenActionProperties.html) | Open action specific properties. | [optional] |
-{: class="table table-striped"}
+| **webMessagingOfferProperties** | [**WebMessagingOfferProperties**](WebMessagingOfferProperties) | Web messaging offer specific properties. | [optional] |
+| **contentOfferProperties** | [**ContentOffer**](ContentOffer) | Content offer specific properties. | [optional] |
+| **openActionProperties** | [**OpenActionProperties**](OpenActionProperties) | Open action specific properties. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

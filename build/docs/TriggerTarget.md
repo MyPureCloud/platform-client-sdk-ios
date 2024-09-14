@@ -1,6 +1,5 @@
----
-title: TriggerTarget
----
+# TriggerTarget
+
 ## TriggerTarget
 The target of a trigger invocation
 
@@ -10,7 +9,8 @@ The target of a trigger invocation
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The entity type to target | [optional] |
 | **_id** | **String** | The ID of the entity to target | [optional] |
-| **workflowTargetSettings** | [**WorkflowTargetSettings**](WorkflowTargetSettings.html) | Optional config for the target. | [optional] |
-{: class="table table-striped"}
+| **workflowTargetSettings** | [**WorkflowTargetSettings**](WorkflowTargetSettings) | Optional config for the target. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: MuAgentQueueTimeRequest
----
+# MuAgentQueueTimeRequest
+
 ## MuAgentQueueTimeRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: MuAgentQueueTimeRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **managementUnitId** | **String** | ID of the management unit | |
-| **agentOnQueueTimes** | [**[AgentQueueTimeRequest]**](AgentQueueTimeRequest.html) | List of Agent queue times within the management unit | |
-{: class="table table-striped"}
+| **agentOnQueueTimes** | [**[AgentQueueTimeRequest]**](AgentQueueTimeRequest) | List of Agent queue times within the management unit | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: QueryAgentsIntegrationsRequest
----
+# QueryAgentsIntegrationsRequest
+
 ## QueryAgentsIntegrationsRequest
 Query integrations for agents request
 
@@ -9,6 +8,7 @@ Query integrations for agents request
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **agentIds** | **[String]** | The IDs of the agents to query associated integrations | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

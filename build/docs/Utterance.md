@@ -1,6 +1,5 @@
----
-title: Utterance
----
+# Utterance
+
 ## Utterance
 
 ## Properties
@@ -8,6 +7,7 @@ title: Utterance
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **utteranceText** | **String** | Utterance text | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

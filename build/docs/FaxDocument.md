@@ -1,6 +1,5 @@
----
-title: FaxDocument
----
+# FaxDocument
+
 ## FaxDocument
 
 ## Properties
@@ -9,11 +8,11 @@ title: FaxDocument
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **contentUri** | **String** |  | [optional] |
-| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **createdBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **sharingUri** | **String** |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int64** |  | [optional] |
@@ -22,9 +21,10 @@ title: FaxDocument
 | **pageCount** | **Int64** |  | [optional] |
 | **callerAddress** | **String** |  | [optional] |
 | **receiverAddress** | **String** |  | [optional] |
-| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail.html) |  | [optional] |
+| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail) |  | [optional] |
 | **downloadSharingUri** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

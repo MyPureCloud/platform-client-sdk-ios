@@ -1,6 +1,5 @@
----
-title: DomainResourceConditionNode
----
+# DomainResourceConditionNode
+
 ## DomainResourceConditionNode
 
 ## Properties
@@ -9,9 +8,10 @@ title: DomainResourceConditionNode
 |------------ | ------------- | ------------- | -------------|
 | **variableName** | **String** |  | [optional] |
 | **_operator** | **String** |  | [optional] |
-| **operands** | [**[DomainResourceConditionValue]**](DomainResourceConditionValue.html) |  | [optional] |
+| **operands** | [**[DomainResourceConditionValue]**](DomainResourceConditionValue) |  | [optional] |
 | **conjunction** | **String** |  | [optional] |
-| **terms** | [**[DomainResourceConditionNode]**](DomainResourceConditionNode.html) |  | [optional] |
-{: class="table table-striped"}
+| **terms** | [**[DomainResourceConditionNode]**](DomainResourceConditionNode) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: OrganizationPresenceDefinition
----
+# OrganizationPresenceDefinition
+
 ## OrganizationPresenceDefinition
 
 ## Properties
@@ -15,6 +14,7 @@ title: OrganizationPresenceDefinition
 | **divisionId** | **String** |  | [optional] |
 | **deactivated** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

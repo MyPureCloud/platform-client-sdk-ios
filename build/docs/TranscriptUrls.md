@@ -1,15 +1,15 @@
----
-title: TranscriptUrls
----
+# TranscriptUrls
+
 ## TranscriptUrls
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conversation** | [**AddressableEntityRef**](AddressableEntityRef.html) | The Conversation Reference | [optional] |
+| **conversation** | [**AddressableEntityRef**](AddressableEntityRef) | The Conversation Reference | [optional] |
 | **communicationId** | **String** | The Communication ID | [optional] |
-| **urls** | [**[SegmentUrl]**](SegmentUrl.html) | List of Transcript URLs | [optional] |
-{: class="table table-striped"}
+| **urls** | [**[SegmentUrl]**](SegmentUrl) | List of Transcript URLs | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

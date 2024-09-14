@@ -1,6 +1,5 @@
----
-title: BotMessengerProfile
----
+# BotMessengerProfile
+
 ## BotMessengerProfile
 
 ## Properties
@@ -9,6 +8,7 @@ title: BotMessengerProfile
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the Bot | [optional] |
 | **avatarUrl** | **String** | Avatar for Bot | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

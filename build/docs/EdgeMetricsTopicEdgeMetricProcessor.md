@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricProcessor
----
+# EdgeMetricsTopicEdgeMetricProcessor
+
 ## EdgeMetricsTopicEdgeMetricProcessor
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsTopicEdgeMetricProcessor
 | **activeTimePct** | **Int** |  | [optional] |
 | **privilegedTimePct** | **Int** |  | [optional] |
 | **userTimePct** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

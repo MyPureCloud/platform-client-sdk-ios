@@ -1,6 +1,5 @@
----
-title: CreateBusinessUnitRequest
----
+# CreateBusinessUnitRequest
+
 ## CreateBusinessUnitRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: CreateBusinessUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the business unit | |
 | **divisionId** | **String** | The ID of the division to which the business unit should be added | |
-| **settings** | [**CreateBusinessUnitSettingsRequest**](CreateBusinessUnitSettingsRequest.html) | Configuration for the business unit | |
-{: class="table table-striped"}
+| **settings** | [**CreateBusinessUnitSettingsRequest**](CreateBusinessUnitSettingsRequest) | Configuration for the business unit | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

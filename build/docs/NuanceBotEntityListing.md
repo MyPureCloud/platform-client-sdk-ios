@@ -1,6 +1,5 @@
----
-title: NuanceBotEntityListing
----
+# NuanceBotEntityListing
+
 ## NuanceBotEntityListing
 Model for a paged listing of Nuance bots
 
@@ -8,7 +7,7 @@ Model for a paged listing of Nuance bots
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[NuanceBot]**](NuanceBot.html) |  | [optional] |
+| **entities** | [**[NuanceBot]**](NuanceBot) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ Model for a paged listing of Nuance bots
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

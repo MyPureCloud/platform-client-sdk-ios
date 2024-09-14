@@ -1,14 +1,14 @@
----
-title: TimeOffBalancesResponse
----
+# TimeOffBalancesResponse
+
 ## TimeOffBalancesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **job** | [**TimeOffBalanceJobReference**](TimeOffBalanceJobReference.html) | The asynchronous job handling the query | [optional] |
-| **entities** | [**[TimeOffBalanceResponse]**](TimeOffBalanceResponse.html) | The list of time off balances. May come via notification | [optional] |
-{: class="table table-striped"}
+| **job** | [**TimeOffBalanceJobReference**](TimeOffBalanceJobReference) | The asynchronous job handling the query | [optional] |
+| **entities** | [**[TimeOffBalanceResponse]**](TimeOffBalanceResponse) | The list of time off balances. May come via notification | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

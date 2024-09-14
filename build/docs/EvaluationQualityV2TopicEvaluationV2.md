@@ -1,6 +1,5 @@
----
-title: EvaluationQualityV2TopicEvaluationV2
----
+# EvaluationQualityV2TopicEvaluationV2
+
 ## EvaluationQualityV2TopicEvaluationV2
 
 ## Properties
@@ -9,27 +8,27 @@ title: EvaluationQualityV2TopicEvaluationV2
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
-| **agent** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser.html) |  | [optional] |
-| **evaluator** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser.html) |  | [optional] |
-| **eventTime** | [**Date**](Date.html) |  | [optional] |
+| **agent** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser) |  | [optional] |
+| **evaluator** | [**EvaluationQualityV2TopicUser**](EvaluationQualityV2TopicUser) |  | [optional] |
+| **eventTime** | [**Date**](Date) |  | [optional] |
 | **evaluationFormId** | **String** |  | [optional] |
 | **formName** | **String** |  | [optional] |
-| **scoringSet** | [**EvaluationQualityV2TopicEvaluationScoringSet**](EvaluationQualityV2TopicEvaluationScoringSet.html) |  | [optional] |
+| **scoringSet** | [**EvaluationQualityV2TopicEvaluationScoringSet**](EvaluationQualityV2TopicEvaluationScoringSet) |  | [optional] |
 | **contextId** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **agentHasRead** | **Bool** |  | [optional] |
-| **releaseDate** | [**Date**](Date.html) |  | [optional] |
-| **assignedDate** | [**Date**](Date.html) |  | [optional] |
-| **changedDate** | [**Date**](Date.html) |  | [optional] |
+| **releaseDate** | [**Date**](Date) |  | [optional] |
+| **assignedDate** | [**Date**](Date) |  | [optional] |
+| **changedDate** | [**Date**](Date) |  | [optional] |
 | **eventType** | **String** |  | [optional] |
 | **resourceId** | **String** |  | [optional] |
 | **resourceType** | **String** |  | [optional] |
 | **divisionIds** | **[String]** |  | [optional] |
 | **rescore** | **Bool** |  | [optional] |
-| **conversationDate** | [**Date**](Date.html) |  | [optional] |
+| **conversationDate** | [**Date**](Date) |  | [optional] |
 | **mediaType** | **[String]** |  | [optional] |
-| **calibration** | [**EvaluationQualityV2TopicCalibration**](EvaluationQualityV2TopicCalibration.html) |  | [optional] |
-| **evaluationSource** | [**EvaluationQualityV2TopicEvaluationSource**](EvaluationQualityV2TopicEvaluationSource.html) |  | [optional] |
+| **calibration** | [**EvaluationQualityV2TopicCalibration**](EvaluationQualityV2TopicCalibration) |  | [optional] |
+| **evaluationSource** | [**EvaluationQualityV2TopicEvaluationSource**](EvaluationQualityV2TopicEvaluationSource) |  | [optional] |
 | **assigneeUserId** | **String** |  | [optional] |
 | **previousAssigneeUserId** | **String** |  | [optional] |
 | **assigneeApplicable** | **Bool** |  | [optional] |
@@ -38,12 +37,13 @@ title: EvaluationQualityV2TopicEvaluationV2
 | **version** | **Int** |  | [optional] |
 | **previousStatus** | **String** |  | [optional] |
 | **declinedReview** | **Bool** |  | [optional] |
-| **retractedEvaluation** | [**EvaluationQualityV2TopicEvaluationReference**](EvaluationQualityV2TopicEvaluationReference.html) |  | [optional] |
+| **retractedEvaluation** | [**EvaluationQualityV2TopicEvaluationReference**](EvaluationQualityV2TopicEvaluationReference) |  | [optional] |
 | **rescoreCount** | **Int** |  | [optional] |
 | **evaluatorCommentHasUpdated** | **Bool** |  | [optional] |
 | **agentCommentHasUpdated** | **Bool** |  | [optional] |
 | **previousRescoreCount** | **Int** |  | [optional] |
 | **previousEvaluatorUserId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

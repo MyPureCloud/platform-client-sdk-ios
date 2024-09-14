@@ -1,6 +1,5 @@
----
-title: TrunkMetricsQoS
----
+# TrunkMetricsQoS
+
 ## TrunkMetricsQoS
 
 ## Properties
@@ -8,6 +7,7 @@ title: TrunkMetricsQoS
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mismatchCount** | **Int** | Total number of QoS mismatches over the course of the last 24-hour period (sliding window). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

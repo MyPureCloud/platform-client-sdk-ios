@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkErrorInfo
----
+# TrunkInstanceTopicTrunkErrorInfo
+
 ## TrunkInstanceTopicTrunkErrorInfo
 
 ## Properties
@@ -9,7 +8,8 @@ title: TrunkInstanceTopicTrunkErrorInfo
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** |  | [optional] |
 | **code** | **String** |  | [optional] |
-| **details** | [**TrunkInstanceTopicTrunkErrorInfoDetails**](TrunkInstanceTopicTrunkErrorInfoDetails.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**TrunkInstanceTopicTrunkErrorInfoDetails**](TrunkInstanceTopicTrunkErrorInfoDetails) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowHealthUtterance
----
+# FlowHealthUtterance
+
 ## FlowHealthUtterance
 
 ## Properties
@@ -12,9 +11,10 @@ title: FlowHealthUtterance
 | **issueCount** | **Int64** | Number of issues found for this utterance. | [optional] |
 | **language** | **String** | Language provided for this utterance&#39;s health. | [optional] |
 | **staticValidationResults** | **[String]** | Validation results for the utterance. | [optional] |
-| **outlierInfo** | [**OutlierInfo**](OutlierInfo.html) | Details about this utterance being an outlier or not. | [optional] |
-| **confusionInfo** | [**ConfusionDetails**](ConfusionDetails.html) | Confusion details with other utterances. | [optional] |
+| **outlierInfo** | [**OutlierInfo**](OutlierInfo) | Details about this utterance being an outlier or not. | [optional] |
+| **confusionInfo** | [**ConfusionDetails**](ConfusionDetails) | Confusion details with other utterances. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

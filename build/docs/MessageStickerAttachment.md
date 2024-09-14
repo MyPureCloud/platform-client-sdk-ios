@@ -1,6 +1,5 @@
----
-title: MessageStickerAttachment
----
+# MessageStickerAttachment
+
 ## MessageStickerAttachment
 
 ## Properties
@@ -9,6 +8,7 @@ title: MessageStickerAttachment
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** | The location of the media, useful for retrieving it | [optional] |
 | **_id** | **String** | A globally unique identifier for the media object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

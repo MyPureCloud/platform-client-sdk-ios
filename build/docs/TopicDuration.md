@@ -1,6 +1,5 @@
----
-title: TopicDuration
----
+# TopicDuration
+
 ## TopicDuration
 
 ## Properties
@@ -8,6 +7,7 @@ title: TopicDuration
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **totalMilliseconds** | **Int64** | The total duration of the topic phrase within the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

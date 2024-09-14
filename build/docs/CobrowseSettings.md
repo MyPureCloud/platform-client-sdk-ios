@@ -1,6 +1,5 @@
----
-title: CobrowseSettings
----
+# CobrowseSettings
+
 ## CobrowseSettings
 Settings concerning cobrowse
 
@@ -14,7 +13,8 @@ Settings concerning cobrowse
 | **maskSelectors** | **[String]** | Mask patterns that will apply to pages being shared | [optional] |
 | **channels** | **[String]** | Cobrowse channels for web messenger | [optional] |
 | **readonlySelectors** | **[String]** | Readonly patterns that will apply to pages being shared | [optional] |
-| **pauseCriteria** | [**[PauseCriteria]**](PauseCriteria.html) | Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL | [optional] |
-{: class="table table-striped"}
+| **pauseCriteria** | [**[PauseCriteria]**](PauseCriteria) | Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedNotification
----
+# WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedNotification
+
 ## WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedNotification
 
 ## Properties
@@ -8,16 +7,17 @@ title: WfmAgentAdherenceExplanationChangedAgentTopicAdherenceExplanationChangedN
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **agent** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference.html) |  | [optional] |
-| **managementUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit**](WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit.html) |  | [optional] |
-| **businessUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit**](WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit.html) |  | [optional] |
+| **agent** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference) |  | [optional] |
+| **managementUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit**](WfmAgentAdherenceExplanationChangedAgentTopicManagementUnit) |  | [optional] |
+| **businessUnit** | [**WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit**](WfmAgentAdherenceExplanationChangedAgentTopicBusinessUnit) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
 | **lengthMinutes** | **Int** |  | [optional] |
 | **notes** | **String** |  | [optional] |
-| **reviewedBy** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference.html) |  | [optional] |
-| **reviewedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **reviewedBy** | [**WfmAgentAdherenceExplanationChangedAgentTopicUserReference**](WfmAgentAdherenceExplanationChangedAgentTopicUserReference) |  | [optional] |
+| **reviewedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

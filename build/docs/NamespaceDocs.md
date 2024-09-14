@@ -1,6 +1,5 @@
----
-title: NamespaceDocs
----
+# NamespaceDocs
+
 ## NamespaceDocs
 
 ## Properties
@@ -8,7 +7,8 @@ title: NamespaceDocs
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **friendlyName** | **String** |  | [optional] |
-| **limits** | [**[LimitDocs]**](LimitDocs.html) |  | [optional] |
-{: class="table table-striped"}
+| **limits** | [**[LimitDocs]**](LimitDocs) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

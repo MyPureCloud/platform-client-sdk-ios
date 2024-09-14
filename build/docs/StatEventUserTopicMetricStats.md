@@ -1,6 +1,5 @@
----
-title: StatEventUserTopicMetricStats
----
+# StatEventUserTopicMetricStats
+
 ## StatEventUserTopicMetricStats
 
 ## Properties
@@ -10,6 +9,7 @@ title: StatEventUserTopicMetricStats
 | **metric** | **String** |  | [optional] |
 | **qualifier** | **String** |  | [optional] |
 | **stats** | **[String:Double]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

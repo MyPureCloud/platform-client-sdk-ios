@@ -1,20 +1,20 @@
----
-title: ConversationMessageEventTopicMessageDetails
----
+# ConversationMessageEventTopicMessageDetails
+
 ## ConversationMessageEventTopicMessageDetails
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **message** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference.html) |  | [optional] |
-| **messageTime** | [**Date**](Date.html) |  | [optional] |
+| **message** | [**ConversationMessageEventTopicUriReference**](ConversationMessageEventTopicUriReference) |  | [optional] |
+| **messageTime** | [**Date**](Date) |  | [optional] |
 | **messageSegmentCount** | **Int** |  | [optional] |
 | **messageStatus** | **String** |  | [optional] |
-| **media** | [**[ConversationMessageEventTopicMessageMedia]**](ConversationMessageEventTopicMessageMedia.html) |  | [optional] |
-| **stickers** | [**[ConversationMessageEventTopicMessageSticker]**](ConversationMessageEventTopicMessageSticker.html) |  | [optional] |
-| **errorInfo** | [**ConversationMessageEventTopicErrorDetails**](ConversationMessageEventTopicErrorDetails.html) |  | [optional] |
-| **messageMetadata** | [**ConversationMessageEventTopicMessageMetadata**](ConversationMessageEventTopicMessageMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **media** | [**[ConversationMessageEventTopicMessageMedia]**](ConversationMessageEventTopicMessageMedia) |  | [optional] |
+| **stickers** | [**[ConversationMessageEventTopicMessageSticker]**](ConversationMessageEventTopicMessageSticker) |  | [optional] |
+| **errorInfo** | [**ConversationMessageEventTopicErrorDetails**](ConversationMessageEventTopicErrorDetails) |  | [optional] |
+| **messageMetadata** | [**ConversationMessageEventTopicMessageMetadata**](ConversationMessageEventTopicMessageMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

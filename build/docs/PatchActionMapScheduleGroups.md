@@ -1,14 +1,14 @@
----
-title: PatchActionMapScheduleGroups
----
+# PatchActionMapScheduleGroups
+
 ## PatchActionMapScheduleGroups
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **actionMapScheduleGroup** | [**ActionMapScheduleGroup**](ActionMapScheduleGroup.html) | The actions map&#39;s associated schedule group. | |
-| **emergencyActionMapScheduleGroup** | [**ActionMapScheduleGroup**](ActionMapScheduleGroup.html) | The action map&#39;s associated emergency schedule group. | [optional] |
-{: class="table table-striped"}
+| **actionMapScheduleGroup** | [**ActionMapScheduleGroup**](ActionMapScheduleGroup) | The actions map&#39;s associated schedule group. | |
+| **emergencyActionMapScheduleGroup** | [**ActionMapScheduleGroup**](ActionMapScheduleGroup) | The action map&#39;s associated emergency schedule group. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

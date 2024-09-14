@@ -1,13 +1,12 @@
----
-title: ExtensionPoolDivisionViewEntityListing
----
+# ExtensionPoolDivisionViewEntityListing
+
 ## ExtensionPoolDivisionViewEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ExtensionPoolDivisionView]**](ExtensionPoolDivisionView.html) |  | [optional] |
+| **entities** | [**[ExtensionPoolDivisionView]**](ExtensionPoolDivisionView) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ title: ExtensionPoolDivisionViewEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

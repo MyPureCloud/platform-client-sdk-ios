@@ -1,6 +1,5 @@
----
-title: WfmTimeOffBalanceJobTopicTimeOffBalance
----
+# WfmTimeOffBalanceJobTopicTimeOffBalance
+
 ## WfmTimeOffBalanceJobTopicTimeOffBalance
 
 ## Properties
@@ -10,8 +9,9 @@ title: WfmTimeOffBalanceJobTopicTimeOffBalance
 | **activityCodeId** | **String** |  | [optional] |
 | **hrisTimeOffTypeId** | **String** |  | [optional] |
 | **hrisTimeOffTypeSecondaryId** | **String** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
 | **balanceMinutesPerDay** | **[Int]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

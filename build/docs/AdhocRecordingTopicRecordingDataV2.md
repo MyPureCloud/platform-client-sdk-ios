@@ -1,6 +1,5 @@
----
-title: AdhocRecordingTopicRecordingDataV2
----
+# AdhocRecordingTopicRecordingDataV2
+
 ## AdhocRecordingTopicRecordingDataV2
 
 ## Properties
@@ -9,21 +8,22 @@ title: AdhocRecordingTopicRecordingDataV2
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-| **workspace** | [**AdhocRecordingTopicWorkspaceData**](AdhocRecordingTopicWorkspaceData.html) |  | [optional] |
-| **createdBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData.html) |  | [optional] |
+| **dateCreated** | [**Date**](Date) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
+| **workspace** | [**AdhocRecordingTopicWorkspaceData**](AdhocRecordingTopicWorkspaceData) |  | [optional] |
+| **createdBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData) |  | [optional] |
 | **contentType** | **String** |  | [optional] |
 | **contentLength** | **Int** |  | [optional] |
 | **filename** | **String** |  | [optional] |
 | **changeNumber** | **Int** |  | [optional] |
-| **dateUploaded** | [**Date**](Date.html) |  | [optional] |
-| **uploadedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData.html) |  | [optional] |
-| **lockInfo** | [**AdhocRecordingTopicLockData**](AdhocRecordingTopicLockData.html) |  | [optional] |
+| **dateUploaded** | [**Date**](Date) |  | [optional] |
+| **uploadedBy** | [**AdhocRecordingTopicUserData**](AdhocRecordingTopicUserData) |  | [optional] |
+| **lockInfo** | [**AdhocRecordingTopicLockData**](AdhocRecordingTopicLockData) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **durationMillieconds** | **Int** |  | [optional] |
-| **conversation** | [**AdhocRecordingTopicConversationData**](AdhocRecordingTopicConversationData.html) |  | [optional] |
+| **conversation** | [**AdhocRecordingTopicConversationData**](AdhocRecordingTopicConversationData) |  | [optional] |
 | **read** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

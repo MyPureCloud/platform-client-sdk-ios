@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptResult
----
+# TranscriptionTopicTranscriptResult
+
 ## TranscriptionTopicTranscriptResult
 
 ## Properties
@@ -10,7 +9,7 @@ title: TranscriptionTopicTranscriptResult
 | **utteranceId** | **String** |  | [optional] |
 | **isFinal** | **Bool** |  | [optional] |
 | **channel** | **String** |  | [optional] |
-| **alternatives** | [**[TranscriptionTopicTranscriptAlternative]**](TranscriptionTopicTranscriptAlternative.html) |  | [optional] |
+| **alternatives** | [**[TranscriptionTopicTranscriptAlternative]**](TranscriptionTopicTranscriptAlternative) |  | [optional] |
 | **agentAssistantId** | **String** |  | [optional] |
 | **engineProvider** | **String** |  | [optional] |
 | **engineId** | **String** |  | [optional] |
@@ -19,6 +18,7 @@ title: TranscriptionTopicTranscriptResult
 | **speechTextAnalyticsProgramId** | **String** |  | [optional] |
 | **agentAssistEnabled** | **Bool** |  | [optional] |
 | **voiceTranscriptionEnabled** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

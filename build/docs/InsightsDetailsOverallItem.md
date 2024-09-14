@@ -1,15 +1,15 @@
----
-title: InsightsDetailsOverallItem
----
+# InsightsDetailsOverallItem
+
 ## InsightsDetailsOverallItem
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **comparativePeriod** | [**InsightsDetailsOverallPeriodPoints**](InsightsDetailsOverallPeriodPoints.html) | Insights data in the comparative period | [optional] |
-| **primaryPeriod** | [**InsightsDetailsOverallPeriodPoints**](InsightsDetailsOverallPeriodPoints.html) | Insights data in the primary period | [optional] |
+| **comparativePeriod** | [**InsightsDetailsOverallPeriodPoints**](InsightsDetailsOverallPeriodPoints) | Insights data in the comparative period | [optional] |
+| **primaryPeriod** | [**InsightsDetailsOverallPeriodPoints**](InsightsDetailsOverallPeriodPoints) | Insights data in the primary period | [optional] |
 | **percentOfGoalChange** | **Double** | Percent of goal change | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

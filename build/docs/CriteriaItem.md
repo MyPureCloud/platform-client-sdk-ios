@@ -1,6 +1,5 @@
----
-title: CriteriaItem
----
+# CriteriaItem
+
 ## CriteriaItem
 A singular criteria used to query executionData.
 
@@ -11,6 +10,7 @@ A singular criteria used to query executionData.
 | **key** | **String** | The id of the criteria to be checked. | [optional] |
 | **_operator** | **String** | The operator used to check on the criteria id. | [optional] |
 | **value** | **String** | The target value used to query on. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

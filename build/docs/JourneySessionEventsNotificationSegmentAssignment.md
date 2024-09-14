@@ -1,14 +1,14 @@
----
-title: JourneySessionEventsNotificationSegmentAssignment
----
+# JourneySessionEventsNotificationSegmentAssignment
+
 ## JourneySessionEventsNotificationSegmentAssignment
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **segment** | [**JourneySessionEventsNotificationSegment**](JourneySessionEventsNotificationSegment.html) |  | [optional] |
-| **assignedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **segment** | [**JourneySessionEventsNotificationSegment**](JourneySessionEventsNotificationSegment) |  | [optional] |
+| **assignedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

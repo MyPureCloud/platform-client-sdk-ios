@@ -1,6 +1,5 @@
----
-title: JourneyViewChartResult
----
+# JourneyViewChartResult
+
 ## JourneyViewChartResult
 
 ## Properties
@@ -9,8 +8,9 @@ title: JourneyViewChartResult
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **version** | **Int** | Version of the chart | [optional] |
-| **metrics** | [**[JourneyViewChartMetricResult]**](JourneyViewChartMetricResult.html) | Metric results for this chart | [optional] |
+| **metrics** | [**[JourneyViewChartMetricResult]**](JourneyViewChartMetricResult) | Metric results for this chart | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

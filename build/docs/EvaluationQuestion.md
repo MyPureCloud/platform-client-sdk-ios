@@ -1,6 +1,5 @@
----
-title: EvaluationQuestion
----
+# EvaluationQuestion
+
 ## EvaluationQuestion
 
 ## Properties
@@ -13,10 +12,11 @@ title: EvaluationQuestion
 | **type** | **String** |  | [optional] |
 | **naEnabled** | **Bool** |  | [optional] |
 | **commentsRequired** | **Bool** |  | [optional] |
-| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-| **answerOptions** | [**[AnswerOption]**](AnswerOption.html) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
+| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
+| **answerOptions** | [**[AnswerOption]**](AnswerOption) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
 | **isKill** | **Bool** |  | [optional] |
 | **isCritical** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

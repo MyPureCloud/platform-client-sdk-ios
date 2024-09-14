@@ -1,13 +1,12 @@
----
-title: CredentialInfoListing
----
+# CredentialInfoListing
+
 ## CredentialInfoListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CredentialInfo]**](CredentialInfo.html) |  | [optional] |
+| **entities** | [**[CredentialInfo]**](CredentialInfo) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CredentialInfoListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LearningModuleCoverArtRequest
----
+# LearningModuleCoverArtRequest
+
 ## LearningModuleCoverArtRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: LearningModuleCoverArtRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The key identifier for the cover art | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

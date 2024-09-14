@@ -1,6 +1,5 @@
----
-title: EmployerInfo
----
+# EmployerInfo
+
 ## EmployerInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: EmployerInfo
 | **employeeId** | **String** |  | [optional] |
 | **employeeType** | **String** |  | [optional] |
 | **dateHire** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

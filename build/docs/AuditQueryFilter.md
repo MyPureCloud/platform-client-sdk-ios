@@ -1,6 +1,5 @@
----
-title: AuditQueryFilter
----
+# AuditQueryFilter
+
 ## AuditQueryFilter
 
 ## Properties
@@ -9,6 +8,7 @@ title: AuditQueryFilter
 |------------ | ------------- | ------------- | -------------|
 | **property** | **String** | Name of the property to filter. | |
 | **value** | **String** | Value of the property to filter. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

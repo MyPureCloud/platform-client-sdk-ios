@@ -1,6 +1,5 @@
----
-title: WorkPlanBidGroupResponse
----
+# WorkPlanBidGroupResponse
+
 ## WorkPlanBidGroupResponse
 
 ## Properties
@@ -8,9 +7,10 @@ title: WorkPlanBidGroupResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **workPlanBidGroup** | [**WorkPlanBidGroup**](WorkPlanBidGroup.html) | The work plan bid group | [optional] |
-| **metadata** | [**WorkPlanBidMetadata**](WorkPlanBidMetadata.html) | The meta data of the bid group | [optional] |
+| **workPlanBidGroup** | [**WorkPlanBidGroup**](WorkPlanBidGroup) | The work plan bid group | [optional] |
+| **metadata** | [**WorkPlanBidMetadata**](WorkPlanBidMetadata) | The meta data of the bid group | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

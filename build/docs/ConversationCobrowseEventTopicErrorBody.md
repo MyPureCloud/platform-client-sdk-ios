@@ -1,6 +1,5 @@
----
-title: ConversationCobrowseEventTopicErrorBody
----
+# ConversationCobrowseEventTopicErrorBody
+
 ## ConversationCobrowseEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationCobrowseEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[ConversationCobrowseEventTopicDetail]**](ConversationCobrowseEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[ConversationCobrowseEventTopicErrorBody]**](ConversationCobrowseEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[ConversationCobrowseEventTopicDetail]**](ConversationCobrowseEventTopicDetail) |  | [optional] |
+| **errors** | [**[ConversationCobrowseEventTopicErrorBody]**](ConversationCobrowseEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,13 @@
----
-title: BulkCallbackDisconnectRequest
----
+# BulkCallbackDisconnectRequest
+
 ## BulkCallbackDisconnectRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **callbackDisconnectIdentifiers** | [**[CallbackDisconnectIdentifier]**](CallbackDisconnectIdentifier.html) | The list of requests to disconnect callbacks in bulk | |
-{: class="table table-striped"}
+| **callbackDisconnectIdentifiers** | [**[CallbackDisconnectIdentifier]**](CallbackDisconnectIdentifier) | The list of requests to disconnect callbacks in bulk | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

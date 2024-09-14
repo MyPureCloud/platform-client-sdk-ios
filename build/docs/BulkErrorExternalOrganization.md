@@ -1,6 +1,5 @@
----
-title: BulkErrorExternalOrganization
----
+# BulkErrorExternalOrganization
+
 ## BulkErrorExternalOrganization
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorExternalOrganization
 | **message** | **String** |  | [optional] |
 | **status** | **Int** |  | [optional] |
 | **retryable** | **Bool** |  | [optional] |
-| **entity** | [**ExternalOrganization**](ExternalOrganization.html) |  | [optional] |
-| **details** | [**[BulkErrorDetail]**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**ExternalOrganization**](ExternalOrganization) |  | [optional] |
+| **details** | [**[BulkErrorDetail]**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

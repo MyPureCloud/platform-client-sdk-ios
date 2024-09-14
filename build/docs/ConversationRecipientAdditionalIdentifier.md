@@ -1,6 +1,5 @@
----
-title: ConversationRecipientAdditionalIdentifier
----
+# ConversationRecipientAdditionalIdentifier
+
 ## ConversationRecipientAdditionalIdentifier
 Additional identifiers for describing messaging recipient.
 
@@ -10,6 +9,7 @@ Additional identifiers for describing messaging recipient.
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Type of the Identifier | |
 | **value** | **String** | The Identifier value. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

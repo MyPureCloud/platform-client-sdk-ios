@@ -1,6 +1,5 @@
----
-title: ConversationCobrowseEventTopicDetail
----
+# ConversationCobrowseEventTopicDetail
+
 ## ConversationCobrowseEventTopicDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: ConversationCobrowseEventTopicDetail
 | **fieldName** | **String** |  | [optional] |
 | **entityId** | **String** |  | [optional] |
 | **entityName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

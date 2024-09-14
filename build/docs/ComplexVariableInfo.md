@@ -1,6 +1,5 @@
----
-title: ComplexVariableInfo
----
+# ComplexVariableInfo
+
 ## ComplexVariableInfo
 Variable type information about a complex type from the bot&#39;s definition
 
@@ -10,6 +9,7 @@ Variable type information about a complex type from the bot&#39;s definition
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The variable type ID | |
 | **name** | **String** | The variable type display name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

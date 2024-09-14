@@ -1,6 +1,5 @@
----
-title: QueueConversationCobrowseEventTopicCobrowseConversation
----
+# QueueConversationCobrowseEventTopicCobrowseConversation
+
 ## QueueConversationCobrowseEventTopicCobrowseConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: QueueConversationCobrowseEventTopicCobrowseConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[QueueConversationCobrowseEventTopicCobrowseMediaParticipant]**](QueueConversationCobrowseEventTopicCobrowseMediaParticipant.html) |  | [optional] |
+| **participants** | [**[QueueConversationCobrowseEventTopicCobrowseMediaParticipant]**](QueueConversationCobrowseEventTopicCobrowseMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

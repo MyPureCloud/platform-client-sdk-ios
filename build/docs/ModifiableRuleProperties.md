@@ -1,6 +1,5 @@
----
-title: ModifiableRuleProperties
----
+# ModifiableRuleProperties
+
 ## ModifiableRuleProperties
 
 ## Properties
@@ -11,11 +10,12 @@ title: ModifiableRuleProperties
 | **name** | **String** | Name of the rule | |
 | **_description** | **String** | The description of the rule. | [optional] |
 | **enabled** | **Bool** | Indicates if the rule is enabled. | [optional] |
-| **notifications** | [**[AlertNotification]**](AlertNotification.html) | The alert notification types to trigger when alarm state changes as well as the users they will be sent to. | [optional] |
+| **notifications** | [**[AlertNotification]**](AlertNotification) | The alert notification types to trigger when alarm state changes as well as the users they will be sent to. | [optional] |
 | **sendExitingAlarmNotifications** | **Bool** | Indicates if the alert will send a notification when it is closed. | [optional] |
 | **waitBetweenNotificationMs** | **Int64** | The amount of time in milliseconds to wait between notification. | [optional] |
-| **conditions** | [**CommonRuleConditions**](CommonRuleConditions.html) | The set of metric conditions that would trigger an alert. | [optional] |
+| **conditions** | [**CommonRuleConditions**](CommonRuleConditions) | The set of metric conditions that would trigger an alert. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

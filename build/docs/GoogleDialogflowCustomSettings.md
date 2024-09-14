@@ -1,6 +1,5 @@
----
-title: GoogleDialogflowCustomSettings
----
+# GoogleDialogflowCustomSettings
+
 ## GoogleDialogflowCustomSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: GoogleDialogflowCustomSettings
 | **eventName** | **String** | If set this eventName will be used to initiate the dialogflow bot rather than language processing on the input text.  See https://cloud.google.com/dialogflow/es/docs/events-overview | [optional] |
 | **webhookQueryParameters** | **[String:String]** | Parameters passed to the fulfillment webhook of the bot (if any). | [optional] |
 | **eventInputParameters** | **[String:String]** | Parameters passed to the event input of the bot. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

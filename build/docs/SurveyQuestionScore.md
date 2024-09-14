@@ -1,6 +1,5 @@
----
-title: SurveyQuestionScore
----
+# SurveyQuestionScore
+
 ## SurveyQuestionScore
 
 ## Properties
@@ -16,6 +15,7 @@ title: SurveyQuestionScore
 | **npsScore** | **Int** |  | [optional] |
 | **npsTextAnswer** | **String** |  | [optional] |
 | **freeTextAnswer** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

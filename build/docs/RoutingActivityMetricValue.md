@@ -1,6 +1,5 @@
----
-title: RoutingActivityMetricValue
----
+# RoutingActivityMetricValue
+
 ## RoutingActivityMetricValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: RoutingActivityMetricValue
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** | metric | [optional] |
 | **count** | **Int** | metric count | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

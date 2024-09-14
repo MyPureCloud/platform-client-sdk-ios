@@ -1,6 +1,5 @@
----
-title: ConversationMessageEventTopicMessageMetadata
----
+# ConversationMessageEventTopicMessageMetadata
+
 ## ConversationMessageEventTopicMessageMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: ConversationMessageEventTopicMessageMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Message type. | [optional] |
-| **events** | [**[ConversationMessageEventTopicMessageMetadataEvent]**](ConversationMessageEventTopicMessageMetadataEvent.html) | List of message events, if any | [optional] |
-| **content** | [**[ConversationMessageEventTopicMessageMetadataContent]**](ConversationMessageEventTopicMessageMetadataContent.html) | List of message content, if any | [optional] |
-{: class="table table-striped"}
+| **events** | [**[ConversationMessageEventTopicMessageMetadataEvent]**](ConversationMessageEventTopicMessageMetadataEvent) | List of message events, if any | [optional] |
+| **content** | [**[ConversationMessageEventTopicMessageMetadataContent]**](ConversationMessageEventTopicMessageMetadataContent) | List of message content, if any | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

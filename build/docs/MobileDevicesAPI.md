@@ -1,22 +1,18 @@
----
-title: MobileDevicesAPI
----
-## MobileDevicesAPI
+# MobileDevicesAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteMobiledevice**](MobileDevicesAPI.html#deleteMobiledevice) | Delete device |
-| [**getMobiledevice**](MobileDevicesAPI.html#getMobiledevice) | Get device |
-| [**getMobiledevices**](MobileDevicesAPI.html#getMobiledevices) | Get a list of all devices. |
-| [**postMobiledevices**](MobileDevicesAPI.html#postMobiledevices) | Create User device |
-| [**putMobiledevice**](MobileDevicesAPI.html#putMobiledevice) | Update device |
+| [**deleteMobiledevice**](MobileDevicesAPI#deleteMobiledevice) | Delete device |
+| [**getMobiledevice**](MobileDevicesAPI#getMobiledevice) | Get device |
+| [**getMobiledevices**](MobileDevicesAPI#getMobiledevices) | Get a list of all devices. |
+| [**postMobiledevices**](MobileDevicesAPI#postMobiledevices) | Create User device |
+| [**putMobiledevice**](MobileDevicesAPI#putMobiledevice) | Update device |
 {: class="table-striped"}
 
-<a name="deleteMobiledevice"></a>
 
-# **deleteMobiledevice**
+## deleteMobiledevice
 
 
 
@@ -57,20 +53,18 @@ MobileDevicesAPI.deleteMobiledevice(deviceId: deviceId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deviceId** | **String**| Device ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getMobiledevice"></a>
 
-# **getMobiledevice**
-
+## getMobiledevice
 
 
-> [UserDevice](UserDevice.html) getMobiledevice(deviceId)
+
+> [UserDevice](UserDevice) getMobiledevice(deviceId)
 
 Get device
 
@@ -108,20 +102,18 @@ MobileDevicesAPI.getMobiledevice(deviceId: deviceId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deviceId** | **String**| Device ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UserDevice**](UserDevice.html)
-
-<a name="getMobiledevices"></a>
-
-# **getMobiledevices**
+[**UserDevice**](UserDevice)
 
 
+## getMobiledevices
 
-> [DirectoryUserDevicesListing](DirectoryUserDevicesListing.html) getMobiledevices(pageSize, pageNumber, sortOrder)
+
+
+> [DirectoryUserDevicesListing](DirectoryUserDevicesListing) getMobiledevices(pageSize, pageNumber, sortOrder)
 
 Get a list of all devices.
 
@@ -163,20 +155,18 @@ MobileDevicesAPI.getMobiledevices(pageSize: pageSize, pageNumber: pageNumber, so
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html)
-
-<a name="postMobiledevices"></a>
-
-# **postMobiledevices**
+[**DirectoryUserDevicesListing**](DirectoryUserDevicesListing)
 
 
+## postMobiledevices
 
-> [UserDevice](UserDevice.html) postMobiledevices(body)
+
+
+> [UserDevice](UserDevice) postMobiledevices(body)
 
 Create User device
 
@@ -213,21 +203,19 @@ MobileDevicesAPI.postMobiledevices(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**UserDevice**](UserDevice.html)| Device | |
-{: class="table-striped"}
+| **body** | [**UserDevice**](UserDevice)| Device | |
 
 
 ### Return type
 
-[**UserDevice**](UserDevice.html)
-
-<a name="putMobiledevice"></a>
-
-# **putMobiledevice**
+[**UserDevice**](UserDevice)
 
 
+## putMobiledevice
 
-> [UserDevice](UserDevice.html) putMobiledevice(deviceId, body)
+
+
+> [UserDevice](UserDevice) putMobiledevice(deviceId, body)
 
 Update device
 
@@ -266,11 +254,12 @@ MobileDevicesAPI.putMobiledevice(deviceId: deviceId, body: body) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deviceId** | **String**| Device ID | |
-| **body** | [**UserDevice**](UserDevice.html)| Device | [optional] |
-{: class="table-striped"}
+| **body** | [**UserDevice**](UserDevice)| Device | [optional] |
 
 
 ### Return type
 
-[**UserDevice**](UserDevice.html)
+[**UserDevice**](UserDevice)
 
+
+_PureCloudPlatformClientV2@151.1.0_

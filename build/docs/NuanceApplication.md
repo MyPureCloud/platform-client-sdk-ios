@@ -1,6 +1,5 @@
----
-title: NuanceApplication
----
+# NuanceApplication
+
 ## NuanceApplication
 Model for a Nuance bot application
 
@@ -11,6 +10,7 @@ Model for a Nuance bot application
 | **_id** | **String** | The application ID | |
 | **tag** | **String** | The application Tag | |
 | **name** | **String** | The application name | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

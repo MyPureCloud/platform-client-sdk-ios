@@ -1,6 +1,5 @@
----
-title: ConversationContentText
----
+# ConversationContentText
+
 ## ConversationContentText
 Message content element containing text only.
 
@@ -10,6 +9,7 @@ Message content element containing text only.
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Type of text content (Deprecated). | [optional] |
 | **body** | **String** | Text to be shown for this content element. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

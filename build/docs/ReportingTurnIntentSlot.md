@@ -1,6 +1,5 @@
----
-title: ReportingTurnIntentSlot
----
+# ReportingTurnIntentSlot
+
 ## ReportingTurnIntentSlot
 
 ## Properties
@@ -11,6 +10,7 @@ title: ReportingTurnIntentSlot
 | **value** | **String** | The value of the slot. | [optional] |
 | **type** | **String** | The NLU entity type of the slot (either builtin or user defined) | [optional] |
 | **confidence** | **Double** | The confidence score this slot received during detection. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

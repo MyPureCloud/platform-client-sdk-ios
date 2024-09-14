@@ -1,6 +1,5 @@
----
-title: UpdateAgentWorkPlanBiddingPreference
----
+# UpdateAgentWorkPlanBiddingPreference
+
 ## UpdateAgentWorkPlanBiddingPreference
 
 ## Properties
@@ -8,7 +7,8 @@ title: UpdateAgentWorkPlanBiddingPreference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **submitted** | **Bool** | Whether the preference is submitted | |
-| **agentWorkPlanBidPreferences** | [**[AgentWorkPlanBiddingPreferenceRequest]**](AgentWorkPlanBiddingPreferenceRequest.html) | The list of work plan bidding preferences | |
-{: class="table table-striped"}
+| **agentWorkPlanBidPreferences** | [**[AgentWorkPlanBiddingPreferenceRequest]**](AgentWorkPlanBiddingPreferenceRequest) | The list of work plan bidding preferences | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

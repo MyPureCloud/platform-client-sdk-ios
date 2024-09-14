@@ -1,6 +1,5 @@
----
-title: FlowOutcomeDetailEventTopicFlowOutcomeEvent
----
+# FlowOutcomeDetailEventTopicFlowOutcomeEvent
+
 ## FlowOutcomeDetailEventTopicFlowOutcomeEvent
 
 ## Properties
@@ -28,9 +27,10 @@ title: FlowOutcomeDetailEventTopicFlowOutcomeEvent
 | **flowOutcomeStartTime** | **Int** |  | [optional] |
 | **flowOutcomeEndTime** | **Int** |  | [optional] |
 | **flowOutcomeValue** | **String** |  | [optional] |
-| **flowMilestones** | [**[FlowOutcomeDetailEventTopicFlowMilestone]**](FlowOutcomeDetailEventTopicFlowMilestone.html) |  | [optional] |
+| **flowMilestones** | [**[FlowOutcomeDetailEventTopicFlowMilestone]**](FlowOutcomeDetailEventTopicFlowMilestone) |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

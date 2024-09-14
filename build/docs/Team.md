@@ -1,6 +1,5 @@
----
-title: Team
----
+# Team
+
 ## Team
 
 ## Properties
@@ -9,12 +8,13 @@ title: Team
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The team name | |
-| **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **_description** | **String** | Team information. | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateCreated** | [**Date**](Date) | Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Last modified datetime. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **memberCount** | **Int64** | Number of members in a team | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

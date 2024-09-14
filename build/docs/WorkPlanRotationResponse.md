@@ -1,6 +1,5 @@
----
-title: WorkPlanRotationResponse
----
+# WorkPlanRotationResponse
+
 ## WorkPlanRotationResponse
 
 ## Properties
@@ -10,12 +9,13 @@ title: WorkPlanRotationResponse
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **enabled** | **Bool** | Whether the work plan rotation is enabled for scheduling | [optional] |
-| **dateRange** | [**DateRangeWithOptionalEnd**](DateRangeWithOptionalEnd.html) | The date range to which this work plan rotation applies | [optional] |
-| **pattern** | [**WorkPlanPatternResponse**](WorkPlanPatternResponse.html) | Pattern with ordered list of work plans that rotate on a weekly basis | [optional] |
+| **dateRange** | [**DateRangeWithOptionalEnd**](DateRangeWithOptionalEnd) | The date range to which this work plan rotation applies | [optional] |
+| **pattern** | [**WorkPlanPatternResponse**](WorkPlanPatternResponse) | Pattern with ordered list of work plans that rotate on a weekly basis | [optional] |
 | **agentCount** | **Int** | Number of agents in this work plan rotation | [optional] |
-| **agents** | [**[WorkPlanRotationAgentResponse]**](WorkPlanRotationAgentResponse.html) | Agents in this work plan rotation. Populate with expand&#x3D;agents for GET WorkPlanRotationsList (defaults to empty list) | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this work plan rotation | [optional] |
+| **agents** | [**[WorkPlanRotationAgentResponse]**](WorkPlanRotationAgentResponse) | Agents in this work plan rotation. Populate with expand&#x3D;agents for GET WorkPlanRotationsList (defaults to empty list) | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this work plan rotation | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

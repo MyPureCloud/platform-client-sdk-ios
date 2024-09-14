@@ -1,6 +1,5 @@
----
-title: MessagingSettingRequestReference
----
+# MessagingSettingRequestReference
+
 ## MessagingSettingRequestReference
 Messaging Setting for messaging platform integrations
 
@@ -9,6 +8,7 @@ Messaging Setting for messaging platform integrations
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The messaging Setting unique identifier associated with this integration | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

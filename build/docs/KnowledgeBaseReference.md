@@ -1,6 +1,5 @@
----
-title: KnowledgeBaseReference
----
+# KnowledgeBaseReference
+
 ## KnowledgeBaseReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: KnowledgeBaseReference
 | **_id** | **String** | The globally unique identifier for the knowledge base. | |
 | **languageCode** | **String** | Language of the knowledge base | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

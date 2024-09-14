@@ -1,6 +1,5 @@
----
-title: ConversationVideoEventTopicErrorBody
----
+# ConversationVideoEventTopicErrorBody
+
 ## ConversationVideoEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationVideoEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[ConversationVideoEventTopicDetail]**](ConversationVideoEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[ConversationVideoEventTopicErrorBody]**](ConversationVideoEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[ConversationVideoEventTopicDetail]**](ConversationVideoEventTopicDetail) |  | [optional] |
+| **errors** | [**[ConversationVideoEventTopicErrorBody]**](ConversationVideoEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

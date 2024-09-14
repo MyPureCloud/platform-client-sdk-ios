@@ -1,6 +1,5 @@
----
-title: ConversationEmailEventTopicEmailMediaParticipant
----
+# ConversationEmailEventTopicEmailMediaParticipant
+
 ## ConversationEmailEventTopicEmailMediaParticipant
 
 ## Properties
@@ -10,10 +9,10 @@ title: ConversationEmailEventTopicEmailMediaParticipant
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **endTime** | [**Date**](Date.html) |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
+| **startTime** | [**Date**](Date) |  | [optional] |
+| **connectedTime** | [**Date**](Date) |  | [optional] |
+| **endTime** | [**Date**](Date) |  | [optional] |
+| **startHoldTime** | [**Date**](Date) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **initialState** | **String** |  | [optional] |
@@ -22,36 +21,37 @@ title: ConversationEmailEventTopicEmailMediaParticipant
 | **held** | **Bool** |  | [optional] |
 | **wrapupRequired** | **Bool** |  | [optional] |
 | **wrapupPrompt** | **String** |  | [optional] |
-| **user** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference.html) |  | [optional] |
-| **queue** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference.html) |  | [optional] |
-| **team** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference.html) |  | [optional] |
+| **user** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference) |  | [optional] |
+| **queue** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference) |  | [optional] |
+| **team** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
-| **errorInfo** | [**ConversationEmailEventTopicErrorBody**](ConversationEmailEventTopicErrorBody.html) |  | [optional] |
-| **script** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference.html) |  | [optional] |
+| **errorInfo** | [**ConversationEmailEventTopicErrorBody**](ConversationEmailEventTopicErrorBody) |  | [optional] |
+| **script** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference) |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **provider** | **String** |  | [optional] |
-| **externalContact** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference.html) |  | [optional] |
-| **externalOrganization** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference.html) |  | [optional] |
-| **wrapup** | [**ConversationEmailEventTopicWrapup**](ConversationEmailEventTopicWrapup.html) |  | [optional] |
-| **conversationRoutingData** | [**ConversationEmailEventTopicConversationRoutingData**](ConversationEmailEventTopicConversationRoutingData.html) |  | [optional] |
+| **externalContact** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference) |  | [optional] |
+| **externalOrganization** | [**ConversationEmailEventTopicUriReference**](ConversationEmailEventTopicUriReference) |  | [optional] |
+| **wrapup** | [**ConversationEmailEventTopicWrapup**](ConversationEmailEventTopicWrapup) |  | [optional] |
+| **conversationRoutingData** | [**ConversationEmailEventTopicConversationRoutingData**](ConversationEmailEventTopicConversationRoutingData) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
-| **journeyContext** | [**ConversationEmailEventTopicJourneyContext**](ConversationEmailEventTopicJourneyContext.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **resumeTime** | [**Date**](Date.html) |  | [optional] |
-| **parkTime** | [**Date**](Date.html) |  | [optional] |
+| **journeyContext** | [**ConversationEmailEventTopicJourneyContext**](ConversationEmailEventTopicJourneyContext) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) |  | [optional] |
+| **endAcwTime** | [**Date**](Date) |  | [optional] |
+| **resumeTime** | [**Date**](Date) |  | [optional] |
+| **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
-| **queueMediaSettings** | [**ConversationEmailEventTopicQueueMediaSettings**](ConversationEmailEventTopicQueueMediaSettings.html) |  | [optional] |
+| **queueMediaSettings** | [**ConversationEmailEventTopicQueueMediaSettings**](ConversationEmailEventTopicQueueMediaSettings) |  | [optional] |
 | **subject** | **String** |  | [optional] |
 | **messagesSent** | **Int** |  | [optional] |
 | **autoGenerated** | **Bool** |  | [optional] |
 | **messageId** | **String** |  | [optional] |
-| **draftAttachments** | [**[ConversationEmailEventTopicAttachment]**](ConversationEmailEventTopicAttachment.html) |  | [optional] |
+| **draftAttachments** | [**[ConversationEmailEventTopicAttachment]**](ConversationEmailEventTopicAttachment) |  | [optional] |
 | **spam** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: EndConsultTransferEvent
----
+# EndConsultTransferEvent
+
 ## EndConsultTransferEvent
 
 ## Properties
@@ -8,8 +7,9 @@ title: EndConsultTransferEvent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventId** | **String** | A unique (V4 UUID) eventId for this event | |
-| **eventDateTime** | [**Date**](Date.html) | A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **eventDateTime** | [**Date**](Date) | A Date Time representing the time this event occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **conversationId** | **String** | A unique Id (V4 UUID) identifying this conversation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

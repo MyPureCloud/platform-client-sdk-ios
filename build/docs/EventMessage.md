@@ -1,6 +1,5 @@
----
-title: EventMessage
----
+# EventMessage
+
 ## EventMessage
 
 ## Properties
@@ -10,9 +9,10 @@ title: EventMessage
 | **code** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **messageWithParams** | **String** |  | [optional] |
-| **messageParams** | [**[String:JSON]**](JSON.html) |  | [optional] |
+| **messageParams** | [**[String:JSON]**](JSON) |  | [optional] |
 | **documentationUri** | **String** |  | [optional] |
 | **resourceURIs** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

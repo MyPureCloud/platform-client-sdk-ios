@@ -1,6 +1,5 @@
----
-title: OperatorPosition
----
+# OperatorPosition
+
 ## OperatorPosition
 
 ## Properties
@@ -9,6 +8,7 @@ title: OperatorPosition
 |------------ | ------------- | ------------- | -------------|
 | **voiceSecondsPosition** | **Int** | Number of seconds (for voice interactions) from operand match | [optional] |
 | **digitalWordsPosition** | **Int** | Number of words (for digital interactions) from operand match | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

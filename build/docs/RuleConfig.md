@@ -1,6 +1,5 @@
----
-title: RuleConfig
----
+# RuleConfig
+
 ## RuleConfig
 
 ## Properties
@@ -9,7 +8,8 @@ title: RuleConfig
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | Rule ID. | [optional] |
 | **enabled** | **Bool** | Rule enabled. | |
-| **rule** | [**CopilotRule**](CopilotRule.html) | Rule configuration. | |
-{: class="table table-striped"}
+| **rule** | [**CopilotRule**](CopilotRule) | Rule configuration. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

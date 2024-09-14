@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkMetricsRegisters
----
+# TrunkInstanceTopicTrunkMetricsRegisters
+
 ## TrunkInstanceTopicTrunkMetricsRegisters
 
 ## Properties
@@ -9,8 +8,9 @@ title: TrunkInstanceTopicTrunkMetricsRegisters
 |------------ | ------------- | ------------- | -------------|
 | **proxyAddress** | **String** |  | [optional] |
 | **registerState** | **Bool** |  | [optional] |
-| **registerStateTime** | [**Date**](Date.html) |  | [optional] |
-| **errorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **registerStateTime** | [**Date**](Date) |  | [optional] |
+| **errorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

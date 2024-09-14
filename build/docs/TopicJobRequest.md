@@ -1,6 +1,5 @@
----
-title: TopicJobRequest
----
+# TopicJobRequest
+
 ## TopicJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: TopicJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **topicIds** | **[String]** | The ids of the topics used for this job | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

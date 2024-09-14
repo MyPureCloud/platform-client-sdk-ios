@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationGeoLocation
----
+# JourneyWebEventsNotificationGeoLocation
+
 ## JourneyWebEventsNotificationGeoLocation
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyWebEventsNotificationGeoLocation
 | **regionName** | **String** |  | [optional] |
 | **timezone** | **String** |  | [optional] |
 | **source** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

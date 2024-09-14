@@ -1,6 +1,5 @@
----
-title: ActionProperties
----
+# ActionProperties
+
 ## ActionProperties
 
 ## Properties
@@ -11,7 +10,8 @@ title: ActionProperties
 | **webchatTitleText** | **String** | Title shown to the user, used for webchat type action. | [optional] |
 | **webchatAcceptText** | **String** | Accept button text shown to user, used for webchat type action. | [optional] |
 | **webchatDeclineText** | **String** | Decline button text shown to user, used for webchat type action. | [optional] |
-| **webchatSurvey** | [**ActionSurvey**](ActionSurvey.html) | Survey provided to the user, used for webchat type action. | [optional] |
-{: class="table table-striped"}
+| **webchatSurvey** | [**ActionSurvey**](ActionSurvey) | Survey provided to the user, used for webchat type action. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

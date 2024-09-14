@@ -1,13 +1,12 @@
----
-title: DirectoryUserDevicesListing
----
+# DirectoryUserDevicesListing
+
 ## DirectoryUserDevicesListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserDevice]**](UserDevice.html) |  | [optional] |
+| **entities** | [**[UserDevice]**](UserDevice) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DirectoryUserDevicesListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

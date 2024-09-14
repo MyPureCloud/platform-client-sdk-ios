@@ -1,13 +1,13 @@
----
-title: BuScheduleRunListing
----
+# BuScheduleRunListing
+
 ## BuScheduleRunListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BuScheduleRun]**](BuScheduleRun.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[BuScheduleRun]**](BuScheduleRun) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,13 @@
----
-title: UserSearchRule
----
+# UserSearchRule
+
 ## UserSearchRule
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **parts** | [**[UserSearchRulePart]**](UserSearchRulePart.html) | The parts of this rule; the results of these are ANDed together. | |
-{: class="table table-striped"}
+| **parts** | [**[UserSearchRulePart]**](UserSearchRulePart) | The parts of this rule; the results of these are ANDed together. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

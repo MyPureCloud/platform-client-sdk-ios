@@ -1,61 +1,57 @@
----
-title: OrganizationAuthorizationAPI
----
-## OrganizationAuthorizationAPI
+# OrganizationAuthorizationAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustee) | Delete Org Trust |
-| [**deleteOrgauthorizationTrusteeCloneduser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeCloneduser) | Deletes cloned user |
-| [**deleteOrgauthorizationTrusteeGroup**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeGroup) | Delete Trustee Group |
-| [**deleteOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeGroupRoles) | Delete Trustee Group Roles |
-| [**deleteOrgauthorizationTrusteeUser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeUser) | Delete Trustee User |
-| [**deleteOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrusteeUserRoles) | Delete Trustee User Roles |
-| [**deleteOrgauthorizationTrustor**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustor) | Delete Org Trust |
-| [**deleteOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustorCloneduser) | Delete Cloned User |
-| [**deleteOrgauthorizationTrustorGroup**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustorGroup) | Delete Trustee Group |
-| [**deleteOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#deleteOrgauthorizationTrustorUser) | Delete Trustee User |
-| [**getOrgauthorizationPairing**](OrganizationAuthorizationAPI.html#getOrgauthorizationPairing) | Get Pairing Info |
-| [**getOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustee) | Get Org Trust |
-| [**getOrgauthorizationTrusteeClonedusers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeClonedusers) | The list of cloned users from the trustee organization (i.e. users with a native user record). |
-| [**getOrgauthorizationTrusteeGroup**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeGroup) | Get Trustee Group |
-| [**getOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeGroupRoles) | Get Trustee Group Roles |
-| [**getOrgauthorizationTrusteeGroups**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeGroups) | The list of trustee groups for this organization (i.e. groups granted access to this organization). |
-| [**getOrgauthorizationTrusteeUser**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeUser) | Get Trustee User |
-| [**getOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeUserRoles) | Get Trustee User Roles |
-| [**getOrgauthorizationTrusteeUsers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteeUsers) | The list of trustee users for this organization (i.e. users granted access to this organization). |
-| [**getOrgauthorizationTrustees**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustees) | The list of trustees for this organization (i.e. organizations granted access to this organization). |
-| [**getOrgauthorizationTrusteesDefault**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrusteesDefault) | Get organization authorization trust with Customer Care, if one exists. |
-| [**getOrgauthorizationTrustor**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustor) | Get Org Trust |
-| [**getOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorCloneduser) | Get Cloned User |
-| [**getOrgauthorizationTrustorClonedusers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorClonedusers) | The list of cloned users in the trustor organization (i.e. users with a native user record). |
-| [**getOrgauthorizationTrustorGroup**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorGroup) | Get Trustee Group |
-| [**getOrgauthorizationTrustorGroups**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorGroups) | The list of groups in the trustor organization (i.e. groups granted access). |
-| [**getOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorUser) | Get Trustee User |
-| [**getOrgauthorizationTrustorUsers**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustorUsers) | The list of users in the trustor organization (i.e. users granted access). |
-| [**getOrgauthorizationTrustors**](OrganizationAuthorizationAPI.html#getOrgauthorizationTrustors) | The list of organizations that have authorized/trusted your organization. |
-| [**postOrgauthorizationPairings**](OrganizationAuthorizationAPI.html#postOrgauthorizationPairings) | A pairing id is created by the trustee and given to the trustor to create a trust. |
-| [**postOrgauthorizationTrusteeGroups**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteeGroups) | Add a group to the trust. |
-| [**postOrgauthorizationTrusteeUsers**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteeUsers) | Add a user to the trust. |
-| [**postOrgauthorizationTrustees**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrustees) | Create a new organization authorization trust. This is required to grant other organizations access to your organization. |
-| [**postOrgauthorizationTrusteesAudits**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteesAudits) | Get Org Trustee Audits |
-| [**postOrgauthorizationTrusteesDefault**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrusteesDefault) | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
-| [**postOrgauthorizationTrustorAudits**](OrganizationAuthorizationAPI.html#postOrgauthorizationTrustorAudits) | Get Org Trustor Audits |
-| [**putOrgauthorizationTrustee**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustee) | Update Org Trust |
-| [**putOrgauthorizationTrusteeGroupRoledivisions**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeGroupRoledivisions) | Update Trustee Group Roles |
-| [**putOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeGroupRoles) | Update Trustee Group Roles |
-| [**putOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeUserRoledivisions) | Update Trustee User Roles |
-| [**putOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrusteeUserRoles) | Update Trustee User Roles |
-| [**putOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustorCloneduser) | Creates a clone of the trustee user in the trustor org. |
-| [**putOrgauthorizationTrustorGroup**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustorGroup) | Add a Trustee Group to the trust. |
-| [**putOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI.html#putOrgauthorizationTrustorUser) | Add a Trustee user to the trust. |
+| [**deleteOrgauthorizationTrustee**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrustee) | Delete Org Trust |
+| [**deleteOrgauthorizationTrusteeCloneduser**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrusteeCloneduser) | Deletes cloned user |
+| [**deleteOrgauthorizationTrusteeGroup**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrusteeGroup) | Delete Trustee Group |
+| [**deleteOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrusteeGroupRoles) | Delete Trustee Group Roles |
+| [**deleteOrgauthorizationTrusteeUser**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrusteeUser) | Delete Trustee User |
+| [**deleteOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrusteeUserRoles) | Delete Trustee User Roles |
+| [**deleteOrgauthorizationTrustor**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrustor) | Delete Org Trust |
+| [**deleteOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrustorCloneduser) | Delete Cloned User |
+| [**deleteOrgauthorizationTrustorGroup**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrustorGroup) | Delete Trustee Group |
+| [**deleteOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI#deleteOrgauthorizationTrustorUser) | Delete Trustee User |
+| [**getOrgauthorizationPairing**](OrganizationAuthorizationAPI#getOrgauthorizationPairing) | Get Pairing Info |
+| [**getOrgauthorizationTrustee**](OrganizationAuthorizationAPI#getOrgauthorizationTrustee) | Get Org Trust |
+| [**getOrgauthorizationTrusteeClonedusers**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeClonedusers) | The list of cloned users from the trustee organization (i.e. users with a native user record). |
+| [**getOrgauthorizationTrusteeGroup**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeGroup) | Get Trustee Group |
+| [**getOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeGroupRoles) | Get Trustee Group Roles |
+| [**getOrgauthorizationTrusteeGroups**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeGroups) | The list of trustee groups for this organization (i.e. groups granted access to this organization). |
+| [**getOrgauthorizationTrusteeUser**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeUser) | Get Trustee User |
+| [**getOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeUserRoles) | Get Trustee User Roles |
+| [**getOrgauthorizationTrusteeUsers**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteeUsers) | The list of trustee users for this organization (i.e. users granted access to this organization). |
+| [**getOrgauthorizationTrustees**](OrganizationAuthorizationAPI#getOrgauthorizationTrustees) | The list of trustees for this organization (i.e. organizations granted access to this organization). |
+| [**getOrgauthorizationTrusteesDefault**](OrganizationAuthorizationAPI#getOrgauthorizationTrusteesDefault) | Get organization authorization trust with Customer Care, if one exists. |
+| [**getOrgauthorizationTrustor**](OrganizationAuthorizationAPI#getOrgauthorizationTrustor) | Get Org Trust |
+| [**getOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI#getOrgauthorizationTrustorCloneduser) | Get Cloned User |
+| [**getOrgauthorizationTrustorClonedusers**](OrganizationAuthorizationAPI#getOrgauthorizationTrustorClonedusers) | The list of cloned users in the trustor organization (i.e. users with a native user record). |
+| [**getOrgauthorizationTrustorGroup**](OrganizationAuthorizationAPI#getOrgauthorizationTrustorGroup) | Get Trustee Group |
+| [**getOrgauthorizationTrustorGroups**](OrganizationAuthorizationAPI#getOrgauthorizationTrustorGroups) | The list of groups in the trustor organization (i.e. groups granted access). |
+| [**getOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI#getOrgauthorizationTrustorUser) | Get Trustee User |
+| [**getOrgauthorizationTrustorUsers**](OrganizationAuthorizationAPI#getOrgauthorizationTrustorUsers) | The list of users in the trustor organization (i.e. users granted access). |
+| [**getOrgauthorizationTrustors**](OrganizationAuthorizationAPI#getOrgauthorizationTrustors) | The list of organizations that have authorized/trusted your organization. |
+| [**postOrgauthorizationPairings**](OrganizationAuthorizationAPI#postOrgauthorizationPairings) | A pairing id is created by the trustee and given to the trustor to create a trust. |
+| [**postOrgauthorizationTrusteeGroups**](OrganizationAuthorizationAPI#postOrgauthorizationTrusteeGroups) | Add a group to the trust. |
+| [**postOrgauthorizationTrusteeUsers**](OrganizationAuthorizationAPI#postOrgauthorizationTrusteeUsers) | Add a user to the trust. |
+| [**postOrgauthorizationTrustees**](OrganizationAuthorizationAPI#postOrgauthorizationTrustees) | Create a new organization authorization trust. This is required to grant other organizations access to your organization. |
+| [**postOrgauthorizationTrusteesAudits**](OrganizationAuthorizationAPI#postOrgauthorizationTrusteesAudits) | Get Org Trustee Audits |
+| [**postOrgauthorizationTrusteesDefault**](OrganizationAuthorizationAPI#postOrgauthorizationTrusteesDefault) | Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization. |
+| [**postOrgauthorizationTrustorAudits**](OrganizationAuthorizationAPI#postOrgauthorizationTrustorAudits) | Get Org Trustor Audits |
+| [**putOrgauthorizationTrustee**](OrganizationAuthorizationAPI#putOrgauthorizationTrustee) | Update Org Trust |
+| [**putOrgauthorizationTrusteeGroupRoledivisions**](OrganizationAuthorizationAPI#putOrgauthorizationTrusteeGroupRoledivisions) | Update Trustee Group Roles |
+| [**putOrgauthorizationTrusteeGroupRoles**](OrganizationAuthorizationAPI#putOrgauthorizationTrusteeGroupRoles) | Update Trustee Group Roles |
+| [**putOrgauthorizationTrusteeUserRoledivisions**](OrganizationAuthorizationAPI#putOrgauthorizationTrusteeUserRoledivisions) | Update Trustee User Roles |
+| [**putOrgauthorizationTrusteeUserRoles**](OrganizationAuthorizationAPI#putOrgauthorizationTrusteeUserRoles) | Update Trustee User Roles |
+| [**putOrgauthorizationTrustorCloneduser**](OrganizationAuthorizationAPI#putOrgauthorizationTrustorCloneduser) | Creates a clone of the trustee user in the trustor org. |
+| [**putOrgauthorizationTrustorGroup**](OrganizationAuthorizationAPI#putOrgauthorizationTrustorGroup) | Add a Trustee Group to the trust. |
+| [**putOrgauthorizationTrustorUser**](OrganizationAuthorizationAPI#putOrgauthorizationTrustorUser) | Add a Trustee user to the trust. |
 {: class="table-striped"}
 
-<a name="deleteOrgauthorizationTrustee"></a>
 
-# **deleteOrgauthorizationTrustee**
+## deleteOrgauthorizationTrustee
 
 
 
@@ -97,16 +93,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustee(trusteeOrgId: trustee
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrusteeCloneduser"></a>
 
-# **deleteOrgauthorizationTrusteeCloneduser**
+## deleteOrgauthorizationTrusteeCloneduser
 
 
 
@@ -150,16 +144,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeCloneduser(trusteeOrgI
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Id of the cloned user to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrusteeGroup"></a>
 
-# **deleteOrgauthorizationTrusteeGroup**
+## deleteOrgauthorizationTrusteeGroup
 
 
 
@@ -203,16 +195,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeGroup(trusteeOrgId: tr
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeGroupId** | **String**| Trustee Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrusteeGroupRoles"></a>
 
-# **deleteOrgauthorizationTrusteeGroupRoles**
+## deleteOrgauthorizationTrusteeGroupRoles
 
 
 
@@ -256,16 +246,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeGroupRoles(trusteeOrgI
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeGroupId** | **String**| Trustee Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrusteeUser"></a>
 
-# **deleteOrgauthorizationTrusteeUser**
+## deleteOrgauthorizationTrusteeUser
 
 
 
@@ -309,16 +297,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeUser(trusteeOrgId: tru
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrusteeUserRoles"></a>
 
-# **deleteOrgauthorizationTrusteeUserRoles**
+## deleteOrgauthorizationTrusteeUserRoles
 
 
 
@@ -362,16 +348,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrusteeUserRoles(trusteeOrgId
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrustor"></a>
 
-# **deleteOrgauthorizationTrustor**
+## deleteOrgauthorizationTrustor
 
 
 
@@ -413,16 +397,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustor(trustorOrgId: trustor
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrustorCloneduser"></a>
 
-# **deleteOrgauthorizationTrustorCloneduser**
+## deleteOrgauthorizationTrustorCloneduser
 
 
 
@@ -466,16 +448,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustorCloneduser(trustorOrgI
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrustorGroup"></a>
 
-# **deleteOrgauthorizationTrustorGroup**
+## deleteOrgauthorizationTrustorGroup
 
 
 
@@ -519,16 +499,14 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustorGroup(trustorOrgId: tr
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trustorGroupId** | **String**| Trustor Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteOrgauthorizationTrustorUser"></a>
 
-# **deleteOrgauthorizationTrustorUser**
+## deleteOrgauthorizationTrustorUser
 
 
 
@@ -572,20 +550,18 @@ OrganizationAuthorizationAPI.deleteOrgauthorizationTrustorUser(trustorOrgId: tru
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getOrgauthorizationPairing"></a>
 
-# **getOrgauthorizationPairing**
-
+## getOrgauthorizationPairing
 
 
-> [TrustRequest](TrustRequest.html) getOrgauthorizationPairing(pairingId)
+
+> [TrustRequest](TrustRequest) getOrgauthorizationPairing(pairingId)
 
 Get Pairing Info
 
@@ -625,20 +601,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationPairing(pairingId: pairingId) { 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **pairingId** | **String**| Pairing Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustRequest**](TrustRequest.html)
-
-<a name="getOrgauthorizationTrustee"></a>
-
-# **getOrgauthorizationTrustee**
+[**TrustRequest**](TrustRequest)
 
 
+## getOrgauthorizationTrustee
 
-> [Trustee](Trustee.html) getOrgauthorizationTrustee(trusteeOrgId)
+
+
+> [Trustee](Trustee) getOrgauthorizationTrustee(trusteeOrgId)
 
 Get Org Trust
 
@@ -677,20 +651,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustee(trusteeOrgId: trusteeOrg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Trustee**](Trustee.html)
-
-<a name="getOrgauthorizationTrusteeClonedusers"></a>
-
-# **getOrgauthorizationTrusteeClonedusers**
+[**Trustee**](Trustee)
 
 
+## getOrgauthorizationTrusteeClonedusers
 
-> [ClonedUserEntityListing](ClonedUserEntityListing.html) getOrgauthorizationTrusteeClonedusers(trusteeOrgId)
+
+
+> [ClonedUserEntityListing](ClonedUserEntityListing) getOrgauthorizationTrusteeClonedusers(trusteeOrgId)
 
 The list of cloned users from the trustee organization (i.e. users with a native user record).
 
@@ -731,20 +703,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeClonedusers(trusteeOrgId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ClonedUserEntityListing**](ClonedUserEntityListing.html)
-
-<a name="getOrgauthorizationTrusteeGroup"></a>
-
-# **getOrgauthorizationTrusteeGroup**
+[**ClonedUserEntityListing**](ClonedUserEntityListing)
 
 
+## getOrgauthorizationTrusteeGroup
 
-> [TrustGroup](TrustGroup.html) getOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId)
+
+
+> [TrustGroup](TrustGroup) getOrgauthorizationTrusteeGroup(trusteeOrgId, trusteeGroupId)
 
 Get Trustee Group
 
@@ -785,20 +755,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeGroup(trusteeOrgId: trust
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeGroupId** | **String**| Trustee Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustGroup**](TrustGroup.html)
-
-<a name="getOrgauthorizationTrusteeGroupRoles"></a>
-
-# **getOrgauthorizationTrusteeGroupRoles**
+[**TrustGroup**](TrustGroup)
 
 
+## getOrgauthorizationTrusteeGroupRoles
 
-> [UserAuthorization](UserAuthorization.html) getOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId)
+
+
+> [UserAuthorization](UserAuthorization) getOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId)
 
 Get Trustee Group Roles
 
@@ -839,20 +807,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeGroupRoles(trusteeOrgId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeGroupId** | **String**| Trustee Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.html)
-
-<a name="getOrgauthorizationTrusteeGroups"></a>
-
-# **getOrgauthorizationTrusteeGroups**
+[**UserAuthorization**](UserAuthorization)
 
 
+## getOrgauthorizationTrusteeGroups
 
-> [TrustGroupEntityListing](TrustGroupEntityListing.html) getOrgauthorizationTrusteeGroups(trusteeOrgId, pageSize, pageNumber)
+
+
+> [TrustGroupEntityListing](TrustGroupEntityListing) getOrgauthorizationTrusteeGroups(trusteeOrgId, pageSize, pageNumber)
 
 The list of trustee groups for this organization (i.e. groups granted access to this organization).
 
@@ -895,20 +861,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeGroups(trusteeOrgId: trus
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustGroupEntityListing**](TrustGroupEntityListing.html)
-
-<a name="getOrgauthorizationTrusteeUser"></a>
-
-# **getOrgauthorizationTrusteeUser**
+[**TrustGroupEntityListing**](TrustGroupEntityListing)
 
 
+## getOrgauthorizationTrusteeUser
 
-> [TrustUser](TrustUser.html) getOrgauthorizationTrusteeUser(trusteeOrgId, trusteeUserId)
+
+
+> [TrustUser](TrustUser) getOrgauthorizationTrusteeUser(trusteeOrgId, trusteeUserId)
 
 Get Trustee User
 
@@ -949,20 +913,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeUser(trusteeOrgId: truste
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustUser**](TrustUser.html)
-
-<a name="getOrgauthorizationTrusteeUserRoles"></a>
-
-# **getOrgauthorizationTrusteeUserRoles**
+[**TrustUser**](TrustUser)
 
 
+## getOrgauthorizationTrusteeUserRoles
 
-> [UserAuthorization](UserAuthorization.html) getOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId)
+
+
+> [UserAuthorization](UserAuthorization) getOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId)
 
 Get Trustee User Roles
 
@@ -1003,20 +965,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeUserRoles(trusteeOrgId: t
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.html)
-
-<a name="getOrgauthorizationTrusteeUsers"></a>
-
-# **getOrgauthorizationTrusteeUsers**
+[**UserAuthorization**](UserAuthorization)
 
 
+## getOrgauthorizationTrusteeUsers
 
-> [TrustUserEntityListing](TrustUserEntityListing.html) getOrgauthorizationTrusteeUsers(trusteeOrgId, pageSize, pageNumber)
+
+
+> [TrustUserEntityListing](TrustUserEntityListing) getOrgauthorizationTrusteeUsers(trusteeOrgId, pageSize, pageNumber)
 
 The list of trustee users for this organization (i.e. users granted access to this organization).
 
@@ -1059,20 +1019,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteeUsers(trusteeOrgId: trust
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustUserEntityListing**](TrustUserEntityListing.html)
-
-<a name="getOrgauthorizationTrustees"></a>
-
-# **getOrgauthorizationTrustees**
+[**TrustUserEntityListing**](TrustUserEntityListing)
 
 
+## getOrgauthorizationTrustees
 
-> [TrustEntityListing](TrustEntityListing.html) getOrgauthorizationTrustees(pageSize, pageNumber)
+
+
+> [TrustEntityListing](TrustEntityListing) getOrgauthorizationTrustees(pageSize, pageNumber)
 
 The list of trustees for this organization (i.e. organizations granted access to this organization).
 
@@ -1113,20 +1071,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustees(pageSize: pageSize, pag
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustEntityListing**](TrustEntityListing.html)
-
-<a name="getOrgauthorizationTrusteesDefault"></a>
-
-# **getOrgauthorizationTrusteesDefault**
+[**TrustEntityListing**](TrustEntityListing)
 
 
+## getOrgauthorizationTrusteesDefault
 
-> [Trustee](Trustee.html) getOrgauthorizationTrusteesDefault()
+
+
+> [Trustee](Trustee) getOrgauthorizationTrusteesDefault()
 
 Get organization authorization trust with Customer Care, if one exists.
 
@@ -1164,18 +1120,16 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrusteesDefault() { (response, e
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**Trustee**](Trustee.html)
-
-<a name="getOrgauthorizationTrustor"></a>
-
-# **getOrgauthorizationTrustor**
+[**Trustee**](Trustee)
 
 
+## getOrgauthorizationTrustor
 
-> [Trustor](Trustor.html) getOrgauthorizationTrustor(trustorOrgId)
+
+
+> [Trustor](Trustor) getOrgauthorizationTrustor(trustorOrgId)
 
 Get Org Trust
 
@@ -1214,20 +1168,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustor(trustorOrgId: trustorOrg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Trustor**](Trustor.html)
-
-<a name="getOrgauthorizationTrustorCloneduser"></a>
-
-# **getOrgauthorizationTrustorCloneduser**
+[**Trustor**](Trustor)
 
 
+## getOrgauthorizationTrustorCloneduser
 
-> [ClonedUser](ClonedUser.html) getOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
+
+
+> [ClonedUser](ClonedUser) getOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
 
 Get Cloned User
 
@@ -1268,20 +1220,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorCloneduser(trustorOrgId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ClonedUser**](ClonedUser.html)
-
-<a name="getOrgauthorizationTrustorClonedusers"></a>
-
-# **getOrgauthorizationTrustorClonedusers**
+[**ClonedUser**](ClonedUser)
 
 
+## getOrgauthorizationTrustorClonedusers
 
-> [ClonedUserEntityListing](ClonedUserEntityListing.html) getOrgauthorizationTrustorClonedusers(trustorOrgId)
+
+
+> [ClonedUserEntityListing](ClonedUserEntityListing) getOrgauthorizationTrustorClonedusers(trustorOrgId)
 
 The list of cloned users in the trustor organization (i.e. users with a native user record).
 
@@ -1320,20 +1270,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorClonedusers(trustorOrgId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ClonedUserEntityListing**](ClonedUserEntityListing.html)
-
-<a name="getOrgauthorizationTrustorGroup"></a>
-
-# **getOrgauthorizationTrustorGroup**
+[**ClonedUserEntityListing**](ClonedUserEntityListing)
 
 
+## getOrgauthorizationTrustorGroup
 
-> [TrustGroup](TrustGroup.html) getOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)
+
+
+> [TrustGroup](TrustGroup) getOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)
 
 Get Trustee Group
 
@@ -1374,20 +1322,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorGroup(trustorOrgId: trust
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trustorGroupId** | **String**| Trustor Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustGroup**](TrustGroup.html)
-
-<a name="getOrgauthorizationTrustorGroups"></a>
-
-# **getOrgauthorizationTrustorGroups**
+[**TrustGroup**](TrustGroup)
 
 
+## getOrgauthorizationTrustorGroups
 
-> [TrustGroupEntityListing](TrustGroupEntityListing.html) getOrgauthorizationTrustorGroups(trustorOrgId, pageSize, pageNumber)
+
+
+> [TrustGroupEntityListing](TrustGroupEntityListing) getOrgauthorizationTrustorGroups(trustorOrgId, pageSize, pageNumber)
 
 The list of groups in the trustor organization (i.e. groups granted access).
 
@@ -1430,20 +1376,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorGroups(trustorOrgId: trus
 | **trustorOrgId** | **String**| Trustee Organization Id | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustGroupEntityListing**](TrustGroupEntityListing.html)
-
-<a name="getOrgauthorizationTrustorUser"></a>
-
-# **getOrgauthorizationTrustorUser**
+[**TrustGroupEntityListing**](TrustGroupEntityListing)
 
 
+## getOrgauthorizationTrustorUser
 
-> [TrustUser](TrustUser.html) getOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId)
+
+
+> [TrustUser](TrustUser) getOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId)
 
 Get Trustee User
 
@@ -1484,20 +1428,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorUser(trustorOrgId: trusto
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustUser**](TrustUser.html)
-
-<a name="getOrgauthorizationTrustorUsers"></a>
-
-# **getOrgauthorizationTrustorUsers**
+[**TrustUser**](TrustUser)
 
 
+## getOrgauthorizationTrustorUsers
 
-> [TrustUserEntityListing](TrustUserEntityListing.html) getOrgauthorizationTrustorUsers(trustorOrgId, pageSize, pageNumber)
+
+
+> [TrustUserEntityListing](TrustUserEntityListing) getOrgauthorizationTrustorUsers(trustorOrgId, pageSize, pageNumber)
 
 The list of users in the trustor organization (i.e. users granted access).
 
@@ -1540,20 +1482,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustorUsers(trustorOrgId: trust
 | **trustorOrgId** | **String**| Trustee Organization Id | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustUserEntityListing**](TrustUserEntityListing.html)
-
-<a name="getOrgauthorizationTrustors"></a>
-
-# **getOrgauthorizationTrustors**
+[**TrustUserEntityListing**](TrustUserEntityListing)
 
 
+## getOrgauthorizationTrustors
 
-> [TrustorEntityListing](TrustorEntityListing.html) getOrgauthorizationTrustors(pageSize, pageNumber)
+
+
+> [TrustorEntityListing](TrustorEntityListing) getOrgauthorizationTrustors(pageSize, pageNumber)
 
 The list of organizations that have authorized/trusted your organization.
 
@@ -1594,20 +1534,18 @@ OrganizationAuthorizationAPI.getOrgauthorizationTrustors(pageSize: pageSize, pag
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustorEntityListing**](TrustorEntityListing.html)
-
-<a name="postOrgauthorizationPairings"></a>
-
-# **postOrgauthorizationPairings**
+[**TrustorEntityListing**](TrustorEntityListing)
 
 
+## postOrgauthorizationPairings
 
-> [TrustRequest](TrustRequest.html) postOrgauthorizationPairings(body)
+
+
+> [TrustRequest](TrustRequest) postOrgauthorizationPairings(body)
 
 A pairing id is created by the trustee and given to the trustor to create a trust.
 
@@ -1645,21 +1583,19 @@ OrganizationAuthorizationAPI.postOrgauthorizationPairings(body: body) { (respons
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TrustRequestCreate**](TrustRequestCreate.html)| Pairing Info | |
-{: class="table-striped"}
+| **body** | [**TrustRequestCreate**](TrustRequestCreate)| Pairing Info | |
 
 
 ### Return type
 
-[**TrustRequest**](TrustRequest.html)
-
-<a name="postOrgauthorizationTrusteeGroups"></a>
-
-# **postOrgauthorizationTrusteeGroups**
+[**TrustRequest**](TrustRequest)
 
 
+## postOrgauthorizationTrusteeGroups
 
-> [TrustGroup](TrustGroup.html) postOrgauthorizationTrusteeGroups(trusteeOrgId, body)
+
+
+> [TrustGroup](TrustGroup) postOrgauthorizationTrusteeGroups(trusteeOrgId, body)
 
 Add a group to the trust.
 
@@ -1699,21 +1635,19 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteeGroups(trusteeOrgId: tru
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-| **body** | [**TrustMemberCreate**](TrustMemberCreate.html)| Trust | |
-{: class="table-striped"}
+| **body** | [**TrustMemberCreate**](TrustMemberCreate)| Trust | |
 
 
 ### Return type
 
-[**TrustGroup**](TrustGroup.html)
-
-<a name="postOrgauthorizationTrusteeUsers"></a>
-
-# **postOrgauthorizationTrusteeUsers**
+[**TrustGroup**](TrustGroup)
 
 
+## postOrgauthorizationTrusteeUsers
 
-> [TrustUser](TrustUser.html) postOrgauthorizationTrusteeUsers(trusteeOrgId, body)
+
+
+> [TrustUser](TrustUser) postOrgauthorizationTrusteeUsers(trusteeOrgId, body)
 
 Add a user to the trust.
 
@@ -1753,21 +1687,19 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteeUsers(trusteeOrgId: trus
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-| **body** | [**TrustMemberCreate**](TrustMemberCreate.html)| Trust | |
-{: class="table-striped"}
+| **body** | [**TrustMemberCreate**](TrustMemberCreate)| Trust | |
 
 
 ### Return type
 
-[**TrustUser**](TrustUser.html)
-
-<a name="postOrgauthorizationTrustees"></a>
-
-# **postOrgauthorizationTrustees**
+[**TrustUser**](TrustUser)
 
 
+## postOrgauthorizationTrustees
 
-> [Trustee](Trustee.html) postOrgauthorizationTrustees(body)
+
+
+> [Trustee](Trustee) postOrgauthorizationTrustees(body)
 
 Create a new organization authorization trust. This is required to grant other organizations access to your organization.
 
@@ -1806,21 +1738,19 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrustees(body: body) { (respons
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TrustCreate**](TrustCreate.html)| Trust | |
-{: class="table-striped"}
+| **body** | [**TrustCreate**](TrustCreate)| Trust | |
 
 
 ### Return type
 
-[**Trustee**](Trustee.html)
-
-<a name="postOrgauthorizationTrusteesAudits"></a>
-
-# **postOrgauthorizationTrusteesAudits**
+[**Trustee**](Trustee)
 
 
+## postOrgauthorizationTrusteesAudits
 
-> [JSON](JSON.html) postOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder)
+
+
+> [JSON](JSON) postOrgauthorizationTrusteesAudits(body, pageSize, pageNumber, sortBy, sortOrder)
 
 Get Org Trustee Audits
 
@@ -1862,25 +1792,23 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteesAudits(body: body, page
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TrusteeAuditQueryRequest**](TrusteeAuditQueryRequest.html)| Values to scope the request. | |
+| **body** | [**TrusteeAuditQueryRequest**](TrusteeAuditQueryRequest)| Values to scope the request. | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="postOrgauthorizationTrusteesDefault"></a>
-
-# **postOrgauthorizationTrusteesDefault**
+[**JSON**](JSON)
 
 
+## postOrgauthorizationTrusteesDefault
 
-> [Trustee](Trustee.html) postOrgauthorizationTrusteesDefault(assignDefaultRole, autoExpire)
+
+
+> [Trustee](Trustee) postOrgauthorizationTrusteesDefault(assignDefaultRole, autoExpire)
 
 Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
 
@@ -1922,20 +1850,18 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrusteesDefault(assignDefaultRo
 | ------------- | ------------- | ------------- | ------------- |
 | **assignDefaultRole** | **Bool**| Assign Admin role to default pairing with Customer Care | [optional] |
 | **autoExpire** | **Bool**| Automatically expire pairing after 30 days | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Trustee**](Trustee.html)
-
-<a name="postOrgauthorizationTrustorAudits"></a>
-
-# **postOrgauthorizationTrustorAudits**
+[**Trustee**](Trustee)
 
 
+## postOrgauthorizationTrustorAudits
 
-> [JSON](JSON.html) postOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder)
+
+
+> [JSON](JSON) postOrgauthorizationTrustorAudits(body, pageSize, pageNumber, sortBy, sortOrder)
 
 Get Org Trustor Audits
 
@@ -1977,25 +1903,23 @@ OrganizationAuthorizationAPI.postOrgauthorizationTrustorAudits(body: body, pageS
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TrustorAuditQueryRequest**](TrustorAuditQueryRequest.html)| Values to scope the request. | |
+| **body** | [**TrustorAuditQueryRequest**](TrustorAuditQueryRequest)| Values to scope the request. | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="putOrgauthorizationTrustee"></a>
-
-# **putOrgauthorizationTrustee**
+[**JSON**](JSON)
 
 
+## putOrgauthorizationTrustee
 
-> [Trustee](Trustee.html) putOrgauthorizationTrustee(trusteeOrgId, body)
+
+
+> [Trustee](Trustee) putOrgauthorizationTrustee(trusteeOrgId, body)
 
 Update Org Trust
 
@@ -2035,21 +1959,19 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrustee(trusteeOrgId: trusteeOrg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
-| **body** | [**TrustUpdate**](TrustUpdate.html)| Client | |
-{: class="table-striped"}
+| **body** | [**TrustUpdate**](TrustUpdate)| Client | |
 
 
 ### Return type
 
-[**Trustee**](Trustee.html)
-
-<a name="putOrgauthorizationTrusteeGroupRoledivisions"></a>
-
-# **putOrgauthorizationTrusteeGroupRoledivisions**
+[**Trustee**](Trustee)
 
 
+## putOrgauthorizationTrusteeGroupRoledivisions
 
-> [UserAuthorization](UserAuthorization.html) putOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId, trusteeGroupId, body)
+
+
+> [UserAuthorization](UserAuthorization) putOrgauthorizationTrusteeGroupRoledivisions(trusteeOrgId, trusteeGroupId, body)
 
 Update Trustee Group Roles
 
@@ -2091,21 +2013,19 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrusteeGroupRoledivisions(truste
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeGroupId** | **String**| Trustee Group Id | |
-| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Set of roles with corresponding divisions to apply | |
-{: class="table-striped"}
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Set of roles with corresponding divisions to apply | |
 
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.html)
-
-<a name="putOrgauthorizationTrusteeGroupRoles"></a>
-
-# **putOrgauthorizationTrusteeGroupRoles**
+[**UserAuthorization**](UserAuthorization)
 
 
+## putOrgauthorizationTrusteeGroupRoles
 
-> [UserAuthorization](UserAuthorization.html) putOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId, body)
+
+
+> [UserAuthorization](UserAuthorization) putOrgauthorizationTrusteeGroupRoles(trusteeOrgId, trusteeGroupId, body)
 
 Update Trustee Group Roles
 
@@ -2147,21 +2067,19 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrusteeGroupRoles(trusteeOrgId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeGroupId** | **String**| Trustee Group Id | |
-| **body** | [**[String]**](String.html)| List of roles | |
-{: class="table-striped"}
+| **body** | [**[String]**](String)| List of roles | |
 
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.html)
-
-<a name="putOrgauthorizationTrusteeUserRoledivisions"></a>
-
-# **putOrgauthorizationTrusteeUserRoledivisions**
+[**UserAuthorization**](UserAuthorization)
 
 
+## putOrgauthorizationTrusteeUserRoledivisions
 
-> [UserAuthorization](UserAuthorization.html) putOrgauthorizationTrusteeUserRoledivisions(trusteeOrgId, trusteeUserId, body)
+
+
+> [UserAuthorization](UserAuthorization) putOrgauthorizationTrusteeUserRoledivisions(trusteeOrgId, trusteeUserId, body)
 
 Update Trustee User Roles
 
@@ -2203,21 +2121,19 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoledivisions(trustee
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-| **body** | [**RoleDivisionGrants**](RoleDivisionGrants.html)| Set of roles with corresponding divisions to apply | |
-{: class="table-striped"}
+| **body** | [**RoleDivisionGrants**](RoleDivisionGrants)| Set of roles with corresponding divisions to apply | |
 
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.html)
-
-<a name="putOrgauthorizationTrusteeUserRoles"></a>
-
-# **putOrgauthorizationTrusteeUserRoles**
+[**UserAuthorization**](UserAuthorization)
 
 
+## putOrgauthorizationTrusteeUserRoles
 
-> [UserAuthorization](UserAuthorization.html) putOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId, body)
+
+
+> [UserAuthorization](UserAuthorization) putOrgauthorizationTrusteeUserRoles(trusteeOrgId, trusteeUserId, body)
 
 Update Trustee User Roles
 
@@ -2259,21 +2175,19 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrusteeUserRoles(trusteeOrgId: t
 | ------------- | ------------- | ------------- | ------------- |
 | **trusteeOrgId** | **String**| Trustee Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-| **body** | [**[String]**](String.html)| List of roles | |
-{: class="table-striped"}
+| **body** | [**[String]**](String)| List of roles | |
 
 
 ### Return type
 
-[**UserAuthorization**](UserAuthorization.html)
-
-<a name="putOrgauthorizationTrustorCloneduser"></a>
-
-# **putOrgauthorizationTrustorCloneduser**
+[**UserAuthorization**](UserAuthorization)
 
 
+## putOrgauthorizationTrustorCloneduser
 
-> [ClonedUser](ClonedUser.html) putOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
+
+
+> [ClonedUser](ClonedUser) putOrgauthorizationTrustorCloneduser(trustorOrgId, trusteeUserId)
 
 Creates a clone of the trustee user in the trustor org.
 
@@ -2314,20 +2228,18 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrustorCloneduser(trustorOrgId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ClonedUser**](ClonedUser.html)
-
-<a name="putOrgauthorizationTrustorGroup"></a>
-
-# **putOrgauthorizationTrustorGroup**
+[**ClonedUser**](ClonedUser)
 
 
+## putOrgauthorizationTrustorGroup
 
-> [TrustGroup](TrustGroup.html) putOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)
+
+
+> [TrustGroup](TrustGroup) putOrgauthorizationTrustorGroup(trustorOrgId, trustorGroupId)
 
 Add a Trustee Group to the trust.
 
@@ -2368,20 +2280,18 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrustorGroup(trustorOrgId: trust
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trustorGroupId** | **String**| Trustor Group Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustGroup**](TrustGroup.html)
-
-<a name="putOrgauthorizationTrustorUser"></a>
-
-# **putOrgauthorizationTrustorUser**
+[**TrustGroup**](TrustGroup)
 
 
+## putOrgauthorizationTrustorUser
 
-> [TrustUser](TrustUser.html) putOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId)
+
+
+> [TrustUser](TrustUser) putOrgauthorizationTrustorUser(trustorOrgId, trusteeUserId)
 
 Add a Trustee user to the trust.
 
@@ -2422,10 +2332,11 @@ OrganizationAuthorizationAPI.putOrgauthorizationTrustorUser(trustorOrgId: trusto
 | ------------- | ------------- | ------------- | ------------- |
 | **trustorOrgId** | **String**| Trustor Organization Id | |
 | **trusteeUserId** | **String**| Trustee User Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TrustUser**](TrustUser.html)
+[**TrustUser**](TrustUser)
 
+
+_PureCloudPlatformClientV2@151.1.0_

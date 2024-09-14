@@ -1,53 +1,49 @@
----
-title: ContentManagementAPI
----
-## ContentManagementAPI
+# ContentManagementAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteContentmanagementDocument**](ContentManagementAPI.html#deleteContentmanagementDocument) | Delete a document. |
-| [**deleteContentmanagementShare**](ContentManagementAPI.html#deleteContentmanagementShare) | Deletes an existing share. |
-| [**deleteContentmanagementStatusStatusId**](ContentManagementAPI.html#deleteContentmanagementStatusStatusId) | Cancel the command for this status |
-| [**deleteContentmanagementWorkspace**](ContentManagementAPI.html#deleteContentmanagementWorkspace) | Delete a workspace |
-| [**deleteContentmanagementWorkspaceMember**](ContentManagementAPI.html#deleteContentmanagementWorkspaceMember) | Delete a member from a workspace |
-| [**deleteContentmanagementWorkspaceTagvalue**](ContentManagementAPI.html#deleteContentmanagementWorkspaceTagvalue) | Delete workspace tag |
-| [**getContentmanagementDocument**](ContentManagementAPI.html#getContentmanagementDocument) | Get a document. |
-| [**getContentmanagementDocumentContent**](ContentManagementAPI.html#getContentmanagementDocumentContent) | Download a document. |
-| [**getContentmanagementDocuments**](ContentManagementAPI.html#getContentmanagementDocuments) | Get a list of documents. |
-| [**getContentmanagementQuery**](ContentManagementAPI.html#getContentmanagementQuery) | Query content |
-| [**getContentmanagementSecurityprofile**](ContentManagementAPI.html#getContentmanagementSecurityprofile) | Get a Security Profile |
-| [**getContentmanagementSecurityprofiles**](ContentManagementAPI.html#getContentmanagementSecurityprofiles) | Get a List of Security Profiles |
-| [**getContentmanagementShare**](ContentManagementAPI.html#getContentmanagementShare) | Retrieve details about an existing share. |
-| [**getContentmanagementSharedSharedId**](ContentManagementAPI.html#getContentmanagementSharedSharedId) | Get shared documents. Securely download a shared document. |
-| [**getContentmanagementShares**](ContentManagementAPI.html#getContentmanagementShares) | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
-| [**getContentmanagementStatus**](ContentManagementAPI.html#getContentmanagementStatus) | Get a list of statuses for pending operations |
-| [**getContentmanagementStatusStatusId**](ContentManagementAPI.html#getContentmanagementStatusStatusId) | Get a status. |
-| [**getContentmanagementUsage**](ContentManagementAPI.html#getContentmanagementUsage) | Get usage details. |
-| [**getContentmanagementWorkspace**](ContentManagementAPI.html#getContentmanagementWorkspace) | Get a workspace. |
-| [**getContentmanagementWorkspaceDocuments**](ContentManagementAPI.html#getContentmanagementWorkspaceDocuments) | Get a list of documents. |
-| [**getContentmanagementWorkspaceMember**](ContentManagementAPI.html#getContentmanagementWorkspaceMember) | Get a workspace member |
-| [**getContentmanagementWorkspaceMembers**](ContentManagementAPI.html#getContentmanagementWorkspaceMembers) | Get a list workspace members |
-| [**getContentmanagementWorkspaceTagvalue**](ContentManagementAPI.html#getContentmanagementWorkspaceTagvalue) | Get a workspace tag |
-| [**getContentmanagementWorkspaceTagvalues**](ContentManagementAPI.html#getContentmanagementWorkspaceTagvalues) | Get a list of workspace tags |
-| [**getContentmanagementWorkspaces**](ContentManagementAPI.html#getContentmanagementWorkspaces) | Get a list of workspaces. |
-| [**postContentmanagementDocument**](ContentManagementAPI.html#postContentmanagementDocument) | Update a document. |
-| [**postContentmanagementDocumentContent**](ContentManagementAPI.html#postContentmanagementDocumentContent) | Replace the contents of a document. |
-| [**postContentmanagementDocuments**](ContentManagementAPI.html#postContentmanagementDocuments) | Add a document. |
-| [**postContentmanagementQuery**](ContentManagementAPI.html#postContentmanagementQuery) | Query content |
-| [**postContentmanagementShares**](ContentManagementAPI.html#postContentmanagementShares) | Creates a new share or updates an existing share if the entity has already been shared |
-| [**postContentmanagementWorkspaceTagvalues**](ContentManagementAPI.html#postContentmanagementWorkspaceTagvalues) | Create a workspace tag |
-| [**postContentmanagementWorkspaceTagvaluesQuery**](ContentManagementAPI.html#postContentmanagementWorkspaceTagvaluesQuery) | Perform a prefix query on tags in the workspace |
-| [**postContentmanagementWorkspaces**](ContentManagementAPI.html#postContentmanagementWorkspaces) | Create a group workspace |
-| [**putContentmanagementWorkspace**](ContentManagementAPI.html#putContentmanagementWorkspace) | Update a workspace |
-| [**putContentmanagementWorkspaceMember**](ContentManagementAPI.html#putContentmanagementWorkspaceMember) | Add a member to a workspace |
-| [**putContentmanagementWorkspaceTagvalue**](ContentManagementAPI.html#putContentmanagementWorkspaceTagvalue) | Update a workspace tag. Will update all documents with the new tag value. |
+| [**deleteContentmanagementDocument**](ContentManagementAPI#deleteContentmanagementDocument) | Delete a document. |
+| [**deleteContentmanagementShare**](ContentManagementAPI#deleteContentmanagementShare) | Deletes an existing share. |
+| [**deleteContentmanagementStatusStatusId**](ContentManagementAPI#deleteContentmanagementStatusStatusId) | Cancel the command for this status |
+| [**deleteContentmanagementWorkspace**](ContentManagementAPI#deleteContentmanagementWorkspace) | Delete a workspace |
+| [**deleteContentmanagementWorkspaceMember**](ContentManagementAPI#deleteContentmanagementWorkspaceMember) | Delete a member from a workspace |
+| [**deleteContentmanagementWorkspaceTagvalue**](ContentManagementAPI#deleteContentmanagementWorkspaceTagvalue) | Delete workspace tag |
+| [**getContentmanagementDocument**](ContentManagementAPI#getContentmanagementDocument) | Get a document. |
+| [**getContentmanagementDocumentContent**](ContentManagementAPI#getContentmanagementDocumentContent) | Download a document. |
+| [**getContentmanagementDocuments**](ContentManagementAPI#getContentmanagementDocuments) | Get a list of documents. |
+| [**getContentmanagementQuery**](ContentManagementAPI#getContentmanagementQuery) | Query content |
+| [**getContentmanagementSecurityprofile**](ContentManagementAPI#getContentmanagementSecurityprofile) | Get a Security Profile |
+| [**getContentmanagementSecurityprofiles**](ContentManagementAPI#getContentmanagementSecurityprofiles) | Get a List of Security Profiles |
+| [**getContentmanagementShare**](ContentManagementAPI#getContentmanagementShare) | Retrieve details about an existing share. |
+| [**getContentmanagementSharedSharedId**](ContentManagementAPI#getContentmanagementSharedSharedId) | Get shared documents. Securely download a shared document. |
+| [**getContentmanagementShares**](ContentManagementAPI#getContentmanagementShares) | Gets a list of shares.  You must specify at least one filter (e.g. entityId). |
+| [**getContentmanagementStatus**](ContentManagementAPI#getContentmanagementStatus) | Get a list of statuses for pending operations |
+| [**getContentmanagementStatusStatusId**](ContentManagementAPI#getContentmanagementStatusStatusId) | Get a status. |
+| [**getContentmanagementUsage**](ContentManagementAPI#getContentmanagementUsage) | Get usage details. |
+| [**getContentmanagementWorkspace**](ContentManagementAPI#getContentmanagementWorkspace) | Get a workspace. |
+| [**getContentmanagementWorkspaceDocuments**](ContentManagementAPI#getContentmanagementWorkspaceDocuments) | Get a list of documents. |
+| [**getContentmanagementWorkspaceMember**](ContentManagementAPI#getContentmanagementWorkspaceMember) | Get a workspace member |
+| [**getContentmanagementWorkspaceMembers**](ContentManagementAPI#getContentmanagementWorkspaceMembers) | Get a list workspace members |
+| [**getContentmanagementWorkspaceTagvalue**](ContentManagementAPI#getContentmanagementWorkspaceTagvalue) | Get a workspace tag |
+| [**getContentmanagementWorkspaceTagvalues**](ContentManagementAPI#getContentmanagementWorkspaceTagvalues) | Get a list of workspace tags |
+| [**getContentmanagementWorkspaces**](ContentManagementAPI#getContentmanagementWorkspaces) | Get a list of workspaces. |
+| [**postContentmanagementDocument**](ContentManagementAPI#postContentmanagementDocument) | Update a document. |
+| [**postContentmanagementDocumentContent**](ContentManagementAPI#postContentmanagementDocumentContent) | Replace the contents of a document. |
+| [**postContentmanagementDocuments**](ContentManagementAPI#postContentmanagementDocuments) | Add a document. |
+| [**postContentmanagementQuery**](ContentManagementAPI#postContentmanagementQuery) | Query content |
+| [**postContentmanagementShares**](ContentManagementAPI#postContentmanagementShares) | Creates a new share or updates an existing share if the entity has already been shared |
+| [**postContentmanagementWorkspaceTagvalues**](ContentManagementAPI#postContentmanagementWorkspaceTagvalues) | Create a workspace tag |
+| [**postContentmanagementWorkspaceTagvaluesQuery**](ContentManagementAPI#postContentmanagementWorkspaceTagvaluesQuery) | Perform a prefix query on tags in the workspace |
+| [**postContentmanagementWorkspaces**](ContentManagementAPI#postContentmanagementWorkspaces) | Create a group workspace |
+| [**putContentmanagementWorkspace**](ContentManagementAPI#putContentmanagementWorkspace) | Update a workspace |
+| [**putContentmanagementWorkspaceMember**](ContentManagementAPI#putContentmanagementWorkspaceMember) | Add a member to a workspace |
+| [**putContentmanagementWorkspaceTagvalue**](ContentManagementAPI#putContentmanagementWorkspaceTagvalue) | Update a workspace tag. Will update all documents with the new tag value. |
 {: class="table-striped"}
 
-<a name="deleteContentmanagementDocument"></a>
 
-# **deleteContentmanagementDocument**
+## deleteContentmanagementDocument
 
 
 
@@ -59,8 +55,9 @@ Delete a document.
 
 Wraps DELETE /api/v2/contentmanagement/documents/{documentId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 
@@ -90,16 +87,14 @@ ContentManagementAPI.deleteContentmanagementDocument(documentId: documentId, _ov
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
 | **_override** | **Bool**| Override any lock on the document | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteContentmanagementShare"></a>
 
-# **deleteContentmanagementShare**
+## deleteContentmanagementShare
 
 
 
@@ -142,16 +137,14 @@ ContentManagementAPI.deleteContentmanagementShare(shareId: shareId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **shareId** | **String**| Share ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteContentmanagementStatusStatusId"></a>
 
-# **deleteContentmanagementStatusStatusId**
+## deleteContentmanagementStatusStatusId
 
 
 
@@ -192,16 +185,14 @@ ContentManagementAPI.deleteContentmanagementStatusStatusId(statusId: statusId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **statusId** | **String**| Status ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteContentmanagementWorkspace"></a>
 
-# **deleteContentmanagementWorkspace**
+## deleteContentmanagementWorkspace
 
 
 
@@ -244,16 +235,14 @@ ContentManagementAPI.deleteContentmanagementWorkspace(workspaceId: workspaceId, 
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **moveChildrenToWorkspaceId** | **String**| New location for objects in deleted workspace. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteContentmanagementWorkspaceMember"></a>
 
-# **deleteContentmanagementWorkspaceMember**
+## deleteContentmanagementWorkspaceMember
 
 
 
@@ -296,16 +285,14 @@ ContentManagementAPI.deleteContentmanagementWorkspaceMember(workspaceId: workspa
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **memberId** | **String**| Member ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteContentmanagementWorkspaceTagvalue"></a>
 
-# **deleteContentmanagementWorkspaceTagvalue**
+## deleteContentmanagementWorkspaceTagvalue
 
 
 
@@ -350,20 +337,18 @@ ContentManagementAPI.deleteContentmanagementWorkspaceTagvalue(workspaceId: works
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **tagId** | **String**| Tag ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getContentmanagementDocument"></a>
 
-# **getContentmanagementDocument**
-
+## getContentmanagementDocument
 
 
-> [Document](Document.html) getContentmanagementDocument(documentId, expand)
+
+> [Document](Document) getContentmanagementDocument(documentId, expand)
 
 Get a document.
 
@@ -371,8 +356,9 @@ Get a document.
 
 Wraps GET /api/v2/contentmanagement/documents/{documentId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 
@@ -402,21 +388,19 @@ ContentManagementAPI.getContentmanagementDocument(documentId: documentId, expand
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: lockinfo ("lockInfo"), acl ("acl"), workspace ("workspace") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: lockinfo ("lockInfo"), acl ("acl"), workspace ("workspace") |
 
 
 ### Return type
 
-[**Document**](Document.html)
-
-<a name="getContentmanagementDocumentContent"></a>
-
-# **getContentmanagementDocumentContent**
+[**Document**](Document)
 
 
+## getContentmanagementDocumentContent
 
-> [DownloadResponse](DownloadResponse.html) getContentmanagementDocumentContent(documentId, disposition, contentType)
+
+
+> [DownloadResponse](DownloadResponse) getContentmanagementDocumentContent(documentId, disposition, contentType)
 
 Download a document.
 
@@ -424,8 +408,9 @@ Download a document.
 
 Wraps GET /api/v2/contentmanagement/documents/{documentId}/content  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 
@@ -458,20 +443,18 @@ ContentManagementAPI.getContentmanagementDocumentContent(documentId: documentId,
 | **documentId** | **String**| Document ID | |
 | **disposition** | **String**| Request how the content will be downloaded: a file attachment or inline. Default is attachment. | [optional]<br />**Values**: attachment ("attachment"), inline ("inline") |
 | **contentType** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
-
-<a name="getContentmanagementDocuments"></a>
-
-# **getContentmanagementDocuments**
+[**DownloadResponse**](DownloadResponse)
 
 
+## getContentmanagementDocuments
 
-> [DocumentEntityListing](DocumentEntityListing.html) getContentmanagementDocuments(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder)
+
+
+> [DocumentEntityListing](DocumentEntityListing) getContentmanagementDocuments(workspaceId, name, expand, pageSize, pageNumber, sortBy, sortOrder)
 
 Get a list of documents.
 
@@ -516,25 +499,23 @@ ContentManagementAPI.getContentmanagementDocuments(workspaceId: workspaceId, nam
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **name** | **String**| Name | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| name or dateCreated | [optional] |
 | **sortOrder** | **String**| ascending or descending | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DocumentEntityListing**](DocumentEntityListing.html)
-
-<a name="getContentmanagementQuery"></a>
-
-# **getContentmanagementQuery**
+[**DocumentEntityListing**](DocumentEntityListing)
 
 
+## getContentmanagementQuery
 
-> [QueryResults](QueryResults.html) getContentmanagementQuery(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand)
+
+
+> [QueryResults](QueryResults) getContentmanagementQuery(queryPhrase, pageSize, pageNumber, sortBy, sortOrder, expand)
 
 Query content
 
@@ -581,21 +562,19 @@ ContentManagementAPI.getContentmanagementQuery(queryPhrase: queryPhrase, pageSiz
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| name or dateCreated | [optional] |
 | **sortOrder** | **String**| ascending or descending | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
 
 
 ### Return type
 
-[**QueryResults**](QueryResults.html)
-
-<a name="getContentmanagementSecurityprofile"></a>
-
-# **getContentmanagementSecurityprofile**
+[**QueryResults**](QueryResults)
 
 
+## getContentmanagementSecurityprofile
 
-> [SecurityProfile](SecurityProfile.html) getContentmanagementSecurityprofile(securityProfileId)
+
+
+> [SecurityProfile](SecurityProfile) getContentmanagementSecurityprofile(securityProfileId)
 
 Get a Security Profile
 
@@ -633,20 +612,18 @@ ContentManagementAPI.getContentmanagementSecurityprofile(securityProfileId: secu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **securityProfileId** | **String**| Security Profile Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SecurityProfile**](SecurityProfile.html)
-
-<a name="getContentmanagementSecurityprofiles"></a>
-
-# **getContentmanagementSecurityprofiles**
+[**SecurityProfile**](SecurityProfile)
 
 
+## getContentmanagementSecurityprofiles
 
-> [SecurityProfileEntityListing](SecurityProfileEntityListing.html) getContentmanagementSecurityprofiles()
+
+
+> [SecurityProfileEntityListing](SecurityProfileEntityListing) getContentmanagementSecurityprofiles()
 
 Get a List of Security Profiles
 
@@ -682,18 +659,16 @@ ContentManagementAPI.getContentmanagementSecurityprofiles() { (response, error) 
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**SecurityProfileEntityListing**](SecurityProfileEntityListing.html)
-
-<a name="getContentmanagementShare"></a>
-
-# **getContentmanagementShare**
+[**SecurityProfileEntityListing**](SecurityProfileEntityListing)
 
 
+## getContentmanagementShare
 
-> [Share](Share.html) getContentmanagementShare(shareId, expand)
+
+
+> [Share](Share) getContentmanagementShare(shareId, expand)
 
 Retrieve details about an existing share.
 
@@ -732,21 +707,19 @@ ContentManagementAPI.getContentmanagementShare(shareId: shareId, expand: expand)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **shareId** | **String**| Share ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
 
 
 ### Return type
 
-[**Share**](Share.html)
-
-<a name="getContentmanagementSharedSharedId"></a>
-
-# **getContentmanagementSharedSharedId**
+[**Share**](Share)
 
 
+## getContentmanagementSharedSharedId
 
-> [SharedResponse](SharedResponse.html) getContentmanagementSharedSharedId(sharedId, redirect, disposition, contentType, expand)
+
+
+> [SharedResponse](SharedResponse) getContentmanagementSharedSharedId(sharedId, redirect, disposition, contentType, expand)
 
 Get shared documents. Securely download a shared document.
 
@@ -794,20 +767,18 @@ ContentManagementAPI.getContentmanagementSharedSharedId(sharedId: sharedId, redi
 | **disposition** | **String**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional]<br />**Values**: attachment ("attachment"), inline ("inline"), _none ("none") |
 | **contentType** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional] |
 | **expand** | **String**| Expand some document fields | [optional]<br />**Values**: documentAcl ("document.acl") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SharedResponse**](SharedResponse.html)
-
-<a name="getContentmanagementShares"></a>
-
-# **getContentmanagementShares**
+[**SharedResponse**](SharedResponse)
 
 
+## getContentmanagementShares
 
-> [ShareEntityListing](ShareEntityListing.html) getContentmanagementShares(entityId, expand, pageSize, pageNumber)
+
+
+> [ShareEntityListing](ShareEntityListing) getContentmanagementShares(entityId, expand, pageSize, pageNumber)
 
 Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
@@ -850,23 +821,21 @@ ContentManagementAPI.getContentmanagementShares(entityId: entityId, expand: expa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **entityId** | **String**| Filters the shares returned to only the entity specified by the value of this parameter. | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ShareEntityListing**](ShareEntityListing.html)
-
-<a name="getContentmanagementStatus"></a>
-
-# **getContentmanagementStatus**
+[**ShareEntityListing**](ShareEntityListing)
 
 
+## getContentmanagementStatus
 
-> [CommandStatusEntityListing](CommandStatusEntityListing.html) getContentmanagementStatus(pageSize, pageNumber)
+
+
+> [CommandStatusEntityListing](CommandStatusEntityListing) getContentmanagementStatus(pageSize, pageNumber)
 
 Get a list of statuses for pending operations
 
@@ -906,20 +875,18 @@ ContentManagementAPI.getContentmanagementStatus(pageSize: pageSize, pageNumber: 
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**CommandStatusEntityListing**](CommandStatusEntityListing.html)
-
-<a name="getContentmanagementStatusStatusId"></a>
-
-# **getContentmanagementStatusStatusId**
+[**CommandStatusEntityListing**](CommandStatusEntityListing)
 
 
+## getContentmanagementStatusStatusId
 
-> [CommandStatus](CommandStatus.html) getContentmanagementStatusStatusId(statusId)
+
+
+> [CommandStatus](CommandStatus) getContentmanagementStatusStatusId(statusId)
 
 Get a status.
 
@@ -957,20 +924,18 @@ ContentManagementAPI.getContentmanagementStatusStatusId(statusId: statusId) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **statusId** | **String**| Status ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**CommandStatus**](CommandStatus.html)
-
-<a name="getContentmanagementUsage"></a>
-
-# **getContentmanagementUsage**
+[**CommandStatus**](CommandStatus)
 
 
+## getContentmanagementUsage
 
-> [Usage](Usage.html) getContentmanagementUsage()
+
+
+> [Usage](Usage) getContentmanagementUsage()
 
 Get usage details.
 
@@ -1006,18 +971,16 @@ ContentManagementAPI.getContentmanagementUsage() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**Usage**](Usage.html)
-
-<a name="getContentmanagementWorkspace"></a>
-
-# **getContentmanagementWorkspace**
+[**Usage**](Usage)
 
 
+## getContentmanagementWorkspace
 
-> [Workspace](Workspace.html) getContentmanagementWorkspace(workspaceId, expand)
+
+
+> [Workspace](Workspace) getContentmanagementWorkspace(workspaceId, expand)
 
 Get a workspace.
 
@@ -1056,21 +1019,19 @@ ContentManagementAPI.getContentmanagementWorkspace(workspaceId: workspaceId, exp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: summary ("summary"), acl ("acl") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: summary ("summary"), acl ("acl") |
 
 
 ### Return type
 
-[**Workspace**](Workspace.html)
-
-<a name="getContentmanagementWorkspaceDocuments"></a>
-
-# **getContentmanagementWorkspaceDocuments**
+[**Workspace**](Workspace)
 
 
+## getContentmanagementWorkspaceDocuments
 
-> [DocumentEntityListing](DocumentEntityListing.html) getContentmanagementWorkspaceDocuments(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder)
+
+
+> [DocumentEntityListing](DocumentEntityListing) getContentmanagementWorkspaceDocuments(workspaceId, expand, pageSize, pageNumber, sortBy, sortOrder)
 
 Get a list of documents.
 
@@ -1113,25 +1074,23 @@ ContentManagementAPI.getContentmanagementWorkspaceDocuments(workspaceId: workspa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| name or dateCreated | [optional] |
 | **sortOrder** | **String**| ascending or descending | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DocumentEntityListing**](DocumentEntityListing.html)
-
-<a name="getContentmanagementWorkspaceMember"></a>
-
-# **getContentmanagementWorkspaceMember**
+[**DocumentEntityListing**](DocumentEntityListing)
 
 
+## getContentmanagementWorkspaceMember
 
-> [WorkspaceMember](WorkspaceMember.html) getContentmanagementWorkspaceMember(workspaceId, memberId, expand)
+
+
+> [WorkspaceMember](WorkspaceMember) getContentmanagementWorkspaceMember(workspaceId, memberId, expand)
 
 Get a workspace member
 
@@ -1172,21 +1131,19 @@ ContentManagementAPI.getContentmanagementWorkspaceMember(workspaceId: workspaceI
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **memberId** | **String**| Member ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
 
 
 ### Return type
 
-[**WorkspaceMember**](WorkspaceMember.html)
-
-<a name="getContentmanagementWorkspaceMembers"></a>
-
-# **getContentmanagementWorkspaceMembers**
+[**WorkspaceMember**](WorkspaceMember)
 
 
+## getContentmanagementWorkspaceMembers
 
-> [WorkspaceMemberEntityListing](WorkspaceMemberEntityListing.html) getContentmanagementWorkspaceMembers(workspaceId, pageSize, pageNumber, expand)
+
+
+> [WorkspaceMemberEntityListing](WorkspaceMemberEntityListing) getContentmanagementWorkspaceMembers(workspaceId, pageSize, pageNumber, expand)
 
 Get a list workspace members
 
@@ -1229,21 +1186,19 @@ ContentManagementAPI.getContentmanagementWorkspaceMembers(workspaceId: workspace
 | **workspaceId** | **String**| Workspace ID | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: member ("member") |
 
 
 ### Return type
 
-[**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html)
-
-<a name="getContentmanagementWorkspaceTagvalue"></a>
-
-# **getContentmanagementWorkspaceTagvalue**
+[**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing)
 
 
+## getContentmanagementWorkspaceTagvalue
 
-> [TagValue](TagValue.html) getContentmanagementWorkspaceTagvalue(workspaceId, tagId, expand)
+
+
+> [TagValue](TagValue) getContentmanagementWorkspaceTagvalue(workspaceId, tagId, expand)
 
 Get a workspace tag
 
@@ -1284,21 +1239,19 @@ ContentManagementAPI.getContentmanagementWorkspaceTagvalue(workspaceId: workspac
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **tagId** | **String**| Tag ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
 
 
 ### Return type
 
-[**TagValue**](TagValue.html)
-
-<a name="getContentmanagementWorkspaceTagvalues"></a>
-
-# **getContentmanagementWorkspaceTagvalues**
+[**TagValue**](TagValue)
 
 
+## getContentmanagementWorkspaceTagvalues
 
-> [TagValueEntityListing](TagValueEntityListing.html) getContentmanagementWorkspaceTagvalues(workspaceId, value, pageSize, pageNumber, expand)
+
+
+> [TagValueEntityListing](TagValueEntityListing) getContentmanagementWorkspaceTagvalues(workspaceId, value, pageSize, pageNumber, expand)
 
 Get a list of workspace tags
 
@@ -1343,21 +1296,19 @@ ContentManagementAPI.getContentmanagementWorkspaceTagvalues(workspaceId: workspa
 | **value** | **String**| filter the list of tags returned | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
 
 
 ### Return type
 
-[**TagValueEntityListing**](TagValueEntityListing.html)
-
-<a name="getContentmanagementWorkspaces"></a>
-
-# **getContentmanagementWorkspaces**
+[**TagValueEntityListing**](TagValueEntityListing)
 
 
+## getContentmanagementWorkspaces
 
-> [WorkspaceEntityListing](WorkspaceEntityListing.html) getContentmanagementWorkspaces(pageSize, pageNumber, access, expand)
+
+
+> [WorkspaceEntityListing](WorkspaceEntityListing) getContentmanagementWorkspaces(pageSize, pageNumber, access, expand)
 
 Get a list of workspaces.
 
@@ -1401,22 +1352,20 @@ ContentManagementAPI.getContentmanagementWorkspaces(pageSize: pageSize, pageNumb
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **access** | [**[String]**](String.html)| Requested access level. | [optional]<br />**Values**: content ("content"), admin ("admin"), documentCreate ("document:create"), documentViewcontent ("document:viewContent"), documentViewmetadata ("document:viewMetadata"), documentDownload ("document:download"), documentDelete ("document:delete"), documentUpdate ("document:update"), documentShare ("document:share"), documentShareview ("document:shareView"), documentEmail ("document:email"), documentPrint ("document:print"), documentAuditview ("document:auditView"), documentReplace ("document:replace"), documentTag ("document:tag"), tagCreate ("tag:create"), tagView ("tag:view"), tagUpdate ("tag:update"), tagApply ("tag:apply"), tagRemove ("tag:remove"), tagDelete ("tag:delete") |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: summary ("summary"), acl ("acl") |
-{: class="table-striped"}
+| **access** | [**[String]**](String)| Requested access level. | [optional]<br />**Values**: content ("content"), admin ("admin"), documentCreate ("document:create"), documentViewcontent ("document:viewContent"), documentViewmetadata ("document:viewMetadata"), documentDownload ("document:download"), documentDelete ("document:delete"), documentUpdate ("document:update"), documentShare ("document:share"), documentShareview ("document:shareView"), documentEmail ("document:email"), documentPrint ("document:print"), documentAuditview ("document:auditView"), documentReplace ("document:replace"), documentTag ("document:tag"), tagCreate ("tag:create"), tagView ("tag:view"), tagUpdate ("tag:update"), tagApply ("tag:apply"), tagRemove ("tag:remove"), tagDelete ("tag:delete") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: summary ("summary"), acl ("acl") |
 
 
 ### Return type
 
-[**WorkspaceEntityListing**](WorkspaceEntityListing.html)
-
-<a name="postContentmanagementDocument"></a>
-
-# **postContentmanagementDocument**
+[**WorkspaceEntityListing**](WorkspaceEntityListing)
 
 
+## postContentmanagementDocument
 
-> [Document](Document.html) postContentmanagementDocument(documentId, body, expand, _override)
+
+
+> [Document](Document) postContentmanagementDocument(documentId, body, expand, _override)
 
 Update a document.
 
@@ -1424,8 +1373,9 @@ Update a document.
 
 Wraps POST /api/v2/contentmanagement/documents/{documentId}  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 
@@ -1457,23 +1407,21 @@ ContentManagementAPI.postContentmanagementDocument(documentId: documentId, body:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-| **body** | [**DocumentUpdate**](DocumentUpdate.html)| Document | |
+| **body** | [**DocumentUpdate**](DocumentUpdate)| Document | |
 | **expand** | **String**| Expand some document fields | [optional]<br />**Values**: acl ("acl") |
 | **_override** | **Bool**| Override any lock on the document | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Document**](Document.html)
-
-<a name="postContentmanagementDocumentContent"></a>
-
-# **postContentmanagementDocumentContent**
+[**Document**](Document)
 
 
+## postContentmanagementDocumentContent
 
-> [ReplaceResponse](ReplaceResponse.html) postContentmanagementDocumentContent(documentId, body, _override)
+
+
+> [ReplaceResponse](ReplaceResponse) postContentmanagementDocumentContent(documentId, body, _override)
 
 Replace the contents of a document.
 
@@ -1481,8 +1429,9 @@ Replace the contents of a document.
 
 Wraps POST /api/v2/contentmanagement/documents/{documentId}/content  
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* content_management_user
 
 ### Example
 
@@ -1513,22 +1462,20 @@ ContentManagementAPI.postContentmanagementDocumentContent(documentId: documentId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-| **body** | [**ReplaceRequest**](ReplaceRequest.html)| Replace Request | |
+| **body** | [**ReplaceRequest**](ReplaceRequest)| Replace Request | |
 | **_override** | **Bool**| Override any lock on the document | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ReplaceResponse**](ReplaceResponse.html)
-
-<a name="postContentmanagementDocuments"></a>
-
-# **postContentmanagementDocuments**
+[**ReplaceResponse**](ReplaceResponse)
 
 
+## postContentmanagementDocuments
 
-> [Document](Document.html) postContentmanagementDocuments(body, copySource, moveSource, _override)
+
+
+> [Document](Document) postContentmanagementDocuments(body, copySource, moveSource, _override)
 
 Add a document.
 
@@ -1568,24 +1515,22 @@ ContentManagementAPI.postContentmanagementDocuments(body: body, copySource: copy
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**DocumentUpload**](DocumentUpload.html)| Document | |
+| **body** | [**DocumentUpload**](DocumentUpload)| Document | |
 | **copySource** | **String**| Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. | [optional] |
 | **moveSource** | **String**| Move a document to a new workspace. Provide a document ID as the move source. | [optional] |
 | **_override** | **Bool**| Override any lock on the source document | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Document**](Document.html)
-
-<a name="postContentmanagementQuery"></a>
-
-# **postContentmanagementQuery**
+[**Document**](Document)
 
 
+## postContentmanagementQuery
 
-> [QueryResults](QueryResults.html) postContentmanagementQuery(body, expand)
+
+
+> [QueryResults](QueryResults) postContentmanagementQuery(body, expand)
 
 Query content
 
@@ -1623,22 +1568,20 @@ ContentManagementAPI.postContentmanagementQuery(body: body, expand: expand) { (r
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**QueryRequest**](QueryRequest.html)| Allows for a filtered query returning facet information | |
+| **body** | [**QueryRequest**](QueryRequest)| Allows for a filtered query returning facet information | |
 | **expand** | **String**| Expand some document fields | [optional]<br />**Values**: acl ("acl"), workspace ("workspace") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**QueryResults**](QueryResults.html)
-
-<a name="postContentmanagementShares"></a>
-
-# **postContentmanagementShares**
+[**QueryResults**](QueryResults)
 
 
+## postContentmanagementShares
 
-> [CreateShareResponse](CreateShareResponse.html) postContentmanagementShares(body)
+
+
+> [CreateShareResponse](CreateShareResponse) postContentmanagementShares(body)
 
 Creates a new share or updates an existing share if the entity has already been shared
 
@@ -1675,21 +1618,19 @@ ContentManagementAPI.postContentmanagementShares(body: body) { (response, error)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateShareRequest**](CreateShareRequest.html)| CreateShareRequest - entity id and type and a single member or list of members are required | |
-{: class="table-striped"}
+| **body** | [**CreateShareRequest**](CreateShareRequest)| CreateShareRequest - entity id and type and a single member or list of members are required | |
 
 
 ### Return type
 
-[**CreateShareResponse**](CreateShareResponse.html)
-
-<a name="postContentmanagementWorkspaceTagvalues"></a>
-
-# **postContentmanagementWorkspaceTagvalues**
+[**CreateShareResponse**](CreateShareResponse)
 
 
+## postContentmanagementWorkspaceTagvalues
 
-> [TagValue](TagValue.html) postContentmanagementWorkspaceTagvalues(workspaceId, body)
+
+
+> [TagValue](TagValue) postContentmanagementWorkspaceTagvalues(workspaceId, body)
 
 Create a workspace tag
 
@@ -1728,21 +1669,19 @@ ContentManagementAPI.postContentmanagementWorkspaceTagvalues(workspaceId: worksp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
-| **body** | [**TagValue**](TagValue.html)| tag | |
-{: class="table-striped"}
+| **body** | [**TagValue**](TagValue)| tag | |
 
 
 ### Return type
 
-[**TagValue**](TagValue.html)
-
-<a name="postContentmanagementWorkspaceTagvaluesQuery"></a>
-
-# **postContentmanagementWorkspaceTagvaluesQuery**
+[**TagValue**](TagValue)
 
 
+## postContentmanagementWorkspaceTagvaluesQuery
 
-> [TagValueEntityListing](TagValueEntityListing.html) postContentmanagementWorkspaceTagvaluesQuery(workspaceId, body, expand)
+
+
+> [TagValueEntityListing](TagValueEntityListing) postContentmanagementWorkspaceTagvaluesQuery(workspaceId, body, expand)
 
 Perform a prefix query on tags in the workspace
 
@@ -1782,22 +1721,20 @@ ContentManagementAPI.postContentmanagementWorkspaceTagvaluesQuery(workspaceId: w
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
-| **body** | [**TagQueryRequest**](TagQueryRequest.html)| query | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
-{: class="table-striped"}
+| **body** | [**TagQueryRequest**](TagQueryRequest)| query | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: acl ("acl") |
 
 
 ### Return type
 
-[**TagValueEntityListing**](TagValueEntityListing.html)
-
-<a name="postContentmanagementWorkspaces"></a>
-
-# **postContentmanagementWorkspaces**
+[**TagValueEntityListing**](TagValueEntityListing)
 
 
+## postContentmanagementWorkspaces
 
-> [Workspace](Workspace.html) postContentmanagementWorkspaces(body)
+
+
+> [Workspace](Workspace) postContentmanagementWorkspaces(body)
 
 Create a group workspace
 
@@ -1834,21 +1771,19 @@ ContentManagementAPI.postContentmanagementWorkspaces(body: body) { (response, er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WorkspaceCreate**](WorkspaceCreate.html)| Workspace | |
-{: class="table-striped"}
+| **body** | [**WorkspaceCreate**](WorkspaceCreate)| Workspace | |
 
 
 ### Return type
 
-[**Workspace**](Workspace.html)
-
-<a name="putContentmanagementWorkspace"></a>
-
-# **putContentmanagementWorkspace**
+[**Workspace**](Workspace)
 
 
+## putContentmanagementWorkspace
 
-> [Workspace](Workspace.html) putContentmanagementWorkspace(workspaceId, body)
+
+
+> [Workspace](Workspace) putContentmanagementWorkspace(workspaceId, body)
 
 Update a workspace
 
@@ -1887,21 +1822,19 @@ ContentManagementAPI.putContentmanagementWorkspace(workspaceId: workspaceId, bod
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
-| **body** | [**Workspace**](Workspace.html)| Workspace | |
-{: class="table-striped"}
+| **body** | [**Workspace**](Workspace)| Workspace | |
 
 
 ### Return type
 
-[**Workspace**](Workspace.html)
-
-<a name="putContentmanagementWorkspaceMember"></a>
-
-# **putContentmanagementWorkspaceMember**
+[**Workspace**](Workspace)
 
 
+## putContentmanagementWorkspaceMember
 
-> [WorkspaceMember](WorkspaceMember.html) putContentmanagementWorkspaceMember(workspaceId, memberId, body)
+
+
+> [WorkspaceMember](WorkspaceMember) putContentmanagementWorkspaceMember(workspaceId, memberId, body)
 
 Add a member to a workspace
 
@@ -1942,21 +1875,19 @@ ContentManagementAPI.putContentmanagementWorkspaceMember(workspaceId: workspaceI
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **memberId** | **String**| Member ID | |
-| **body** | [**WorkspaceMember**](WorkspaceMember.html)| Workspace Member | |
-{: class="table-striped"}
+| **body** | [**WorkspaceMember**](WorkspaceMember)| Workspace Member | |
 
 
 ### Return type
 
-[**WorkspaceMember**](WorkspaceMember.html)
-
-<a name="putContentmanagementWorkspaceTagvalue"></a>
-
-# **putContentmanagementWorkspaceTagvalue**
+[**WorkspaceMember**](WorkspaceMember)
 
 
+## putContentmanagementWorkspaceTagvalue
 
-> [TagValue](TagValue.html) putContentmanagementWorkspaceTagvalue(workspaceId, tagId, body)
+
+
+> [TagValue](TagValue) putContentmanagementWorkspaceTagvalue(workspaceId, tagId, body)
 
 Update a workspace tag. Will update all documents with the new tag value.
 
@@ -1997,11 +1928,12 @@ ContentManagementAPI.putContentmanagementWorkspaceTagvalue(workspaceId: workspac
 | ------------- | ------------- | ------------- | ------------- |
 | **workspaceId** | **String**| Workspace ID | |
 | **tagId** | **String**| Tag ID | |
-| **body** | [**TagValue**](TagValue.html)| Workspace | |
-{: class="table-striped"}
+| **body** | [**TagValue**](TagValue)| Workspace | |
 
 
 ### Return type
 
-[**TagValue**](TagValue.html)
+[**TagValue**](TagValue)
 
+
+_PureCloudPlatformClientV2@151.1.0_

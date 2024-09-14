@@ -1,6 +1,5 @@
----
-title: ConversationChannelMetadata
----
+# ConversationChannelMetadata
+
 ## ConversationChannelMetadata
 Information about the channel.
 
@@ -8,6 +7,7 @@ Information about the channel.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

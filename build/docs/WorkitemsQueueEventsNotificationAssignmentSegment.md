@@ -1,6 +1,5 @@
----
-title: WorkitemsQueueEventsNotificationAssignmentSegment
----
+# WorkitemsQueueEventsNotificationAssignmentSegment
+
 ## WorkitemsQueueEventsNotificationAssignmentSegment
 
 ## Properties
@@ -10,6 +9,7 @@ title: WorkitemsQueueEventsNotificationAssignmentSegment
 | **startState** | **String** |  | [optional] |
 | **endState** | **String** |  | [optional] |
 | **durationMs** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

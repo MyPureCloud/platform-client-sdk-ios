@@ -1,6 +1,5 @@
----
-title: EventCondition
----
+# EventCondition
+
 ## EventCondition
 
 ## Properties
@@ -13,6 +12,7 @@ title: EventCondition
 | **streamType** | **String** | The stream type for which this condition can be satisfied. | |
 | **sessionType** | **String** | The session type for which this condition can be satisfied. | |
 | **eventName** | **String** | The name of the event for which this condition can be satisfied. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

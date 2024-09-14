@@ -1,6 +1,5 @@
----
-title: VideoConferenceUpdateTopicVideoConference
----
+# VideoConferenceUpdateTopicVideoConference
+
 ## VideoConferenceUpdateTopicVideoConference
 
 ## Properties
@@ -9,7 +8,8 @@ title: VideoConferenceUpdateTopicVideoConference
 |------------ | ------------- | ------------- | -------------|
 | **conversationId** | **String** |  | [optional] |
 | **conferenceId** | **String** |  | [optional] |
-| **participantInfo** | [**VideoConferenceUpdateTopicParticipantInfo**](VideoConferenceUpdateTopicParticipantInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **participantInfo** | [**VideoConferenceUpdateTopicParticipantInfo**](VideoConferenceUpdateTopicParticipantInfo) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

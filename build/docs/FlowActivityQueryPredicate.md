@@ -1,6 +1,5 @@
----
-title: FlowActivityQueryPredicate
----
+# FlowActivityQueryPredicate
+
 ## FlowActivityQueryPredicate
 
 ## Properties
@@ -11,6 +10,7 @@ title: FlowActivityQueryPredicate
 | **dimension** | **String** | Left hand side for dimension predicates | [optional] |
 | **_operator** | **String** | Optional operator, default is matches | [optional] |
 | **value** | **String** | Right hand side for dimension predicates | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

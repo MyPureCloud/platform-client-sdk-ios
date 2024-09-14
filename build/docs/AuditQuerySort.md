@@ -1,6 +1,5 @@
----
-title: AuditQuerySort
----
+# AuditQuerySort
+
 ## AuditQuerySort
 
 ## Properties
@@ -9,6 +8,7 @@ title: AuditQuerySort
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the property to sort. | |
 | **sortOrder** | **String** | Sort Order | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

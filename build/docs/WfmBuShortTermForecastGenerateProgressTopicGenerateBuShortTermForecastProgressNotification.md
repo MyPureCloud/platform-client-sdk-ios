@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification
----
+# WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification
+
 ## WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastProgressNotification
 
 ## Properties
@@ -8,9 +7,10 @@ title: WfmBuShortTermForecastGenerateProgressTopicGenerateBuShortTermForecastPro
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** |  | [optional] |
-| **result** | [**WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast**](WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast.html) |  | [optional] |
+| **result** | [**WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast**](WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast) |  | [optional] |
 | **operationId** | **String** |  | [optional] |
 | **progress** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

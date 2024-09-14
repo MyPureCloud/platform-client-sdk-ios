@@ -1,13 +1,13 @@
----
-title: ListWrapperSecondaryPresence
----
+# ListWrapperSecondaryPresence
+
 ## ListWrapperSecondaryPresence
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[SecondaryPresence]**](SecondaryPresence.html) |  | [optional] |
-{: class="table table-striped"}
+| **values** | [**[SecondaryPresence]**](SecondaryPresence) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

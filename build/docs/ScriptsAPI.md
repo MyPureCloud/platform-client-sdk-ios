@@ -1,35 +1,31 @@
----
-title: ScriptsAPI
----
-## ScriptsAPI
+# ScriptsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getScript**](ScriptsAPI.html#getScript) | Get a script |
-| [**getScriptPage**](ScriptsAPI.html#getScriptPage) | Get a page |
-| [**getScriptPages**](ScriptsAPI.html#getScriptPages) | Get the list of pages |
-| [**getScripts**](ScriptsAPI.html#getScripts) | Get the list of scripts |
-| [**getScriptsDivisionviews**](ScriptsAPI.html#getScriptsDivisionviews) | Get the metadata for a list of scripts |
-| [**getScriptsPublished**](ScriptsAPI.html#getScriptsPublished) | Get the published scripts. |
-| [**getScriptsPublishedDivisionviews**](ScriptsAPI.html#getScriptsPublishedDivisionviews) | Get the published scripts metadata. |
-| [**getScriptsPublishedScriptId**](ScriptsAPI.html#getScriptsPublishedScriptId) | Get the published script. |
-| [**getScriptsPublishedScriptIdPage**](ScriptsAPI.html#getScriptsPublishedScriptIdPage) | Get the published page. |
-| [**getScriptsPublishedScriptIdPages**](ScriptsAPI.html#getScriptsPublishedScriptIdPages) | Get the list of published pages |
-| [**getScriptsPublishedScriptIdVariables**](ScriptsAPI.html#getScriptsPublishedScriptIdVariables) | Get the published variables |
-| [**getScriptsUploadStatus**](ScriptsAPI.html#getScriptsUploadStatus) | Get the upload status of an imported script |
-| [**postScriptExport**](ScriptsAPI.html#postScriptExport) | Export a script via download service. |
-| [**postScriptsPublished**](ScriptsAPI.html#postScriptsPublished) | Publish a script. |
+| [**getScript**](ScriptsAPI#getScript) | Get a script |
+| [**getScriptPage**](ScriptsAPI#getScriptPage) | Get a page |
+| [**getScriptPages**](ScriptsAPI#getScriptPages) | Get the list of pages |
+| [**getScripts**](ScriptsAPI#getScripts) | Get the list of scripts |
+| [**getScriptsDivisionviews**](ScriptsAPI#getScriptsDivisionviews) | Get the metadata for a list of scripts |
+| [**getScriptsPublished**](ScriptsAPI#getScriptsPublished) | Get the published scripts. |
+| [**getScriptsPublishedDivisionviews**](ScriptsAPI#getScriptsPublishedDivisionviews) | Get the published scripts metadata. |
+| [**getScriptsPublishedScriptId**](ScriptsAPI#getScriptsPublishedScriptId) | Get the published script. |
+| [**getScriptsPublishedScriptIdPage**](ScriptsAPI#getScriptsPublishedScriptIdPage) | Get the published page. |
+| [**getScriptsPublishedScriptIdPages**](ScriptsAPI#getScriptsPublishedScriptIdPages) | Get the list of published pages |
+| [**getScriptsPublishedScriptIdVariables**](ScriptsAPI#getScriptsPublishedScriptIdVariables) | Get the published variables |
+| [**getScriptsUploadStatus**](ScriptsAPI#getScriptsUploadStatus) | Get the upload status of an imported script |
+| [**postScriptExport**](ScriptsAPI#postScriptExport) | Export a script via download service. |
+| [**postScriptsPublished**](ScriptsAPI#postScriptsPublished) | Publish a script. |
 {: class="table-striped"}
 
-<a name="getScript"></a>
 
-# **getScript**
-
+## getScript
 
 
-> [Script](Script.html) getScript(scriptId)
+
+> [Script](Script) getScript(scriptId)
 
 Get a script
 
@@ -68,20 +64,18 @@ ScriptsAPI.getScript(scriptId: scriptId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptId** | **String**| Script ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Script**](Script.html)
-
-<a name="getScriptPage"></a>
-
-# **getScriptPage**
+[**Script**](Script)
 
 
+## getScriptPage
 
-> [Page](Page.html) getScriptPage(scriptId, pageId, scriptDataVersion)
+
+
+> [Page](Page) getScriptPage(scriptId, pageId, scriptDataVersion)
 
 Get a page
 
@@ -124,20 +118,18 @@ ScriptsAPI.getScriptPage(scriptId: scriptId, pageId: pageId, scriptDataVersion: 
 | **scriptId** | **String**| Script ID | |
 | **pageId** | **String**| Page ID | |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Page**](Page.html)
-
-<a name="getScriptPages"></a>
-
-# **getScriptPages**
+[**Page**](Page)
 
 
+## getScriptPages
 
-> [[Page]](Page.html) getScriptPages(scriptId, scriptDataVersion)
+
+
+> [[Page]](Page) getScriptPages(scriptId, scriptDataVersion)
 
 Get the list of pages
 
@@ -178,20 +170,18 @@ ScriptsAPI.getScriptPages(scriptId: scriptId, scriptDataVersion: scriptDataVersi
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptId** | **String**| Script ID | |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[Page]**](Page.html)
-
-<a name="getScripts"></a>
-
-# **getScripts**
+[**[Page]**](Page)
 
 
+## getScripts
 
-> [ScriptEntityListing](ScriptEntityListing.html) getScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds)
+
+
+> [ScriptEntityListing](ScriptEntityListing) getScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds)
 
 Get the list of scripts
 
@@ -248,20 +238,18 @@ ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand
 | **sortOrder** | **String**| SortOrder | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 | **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScriptEntityListing**](ScriptEntityListing.html)
-
-<a name="getScriptsDivisionviews"></a>
-
-# **getScriptsDivisionviews**
+[**ScriptEntityListing**](ScriptEntityListing)
 
 
+## getScriptsDivisionviews
 
-> [ScriptEntityListing](ScriptEntityListing.html) getScriptsDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds)
+
+
+> [ScriptEntityListing](ScriptEntityListing) getScriptsDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion, divisionIds)
 
 Get the metadata for a list of scripts
 
@@ -318,20 +306,18 @@ ScriptsAPI.getScriptsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, e
 | **sortOrder** | **String**| SortOrder | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 | **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScriptEntityListing**](ScriptEntityListing.html)
-
-<a name="getScriptsPublished"></a>
-
-# **getScriptsPublished**
+[**ScriptEntityListing**](ScriptEntityListing)
 
 
+## getScriptsPublished
 
-> [ScriptEntityListing](ScriptEntityListing.html) getScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds)
+
+
+> [ScriptEntityListing](ScriptEntityListing) getScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds)
 
 Get the published scripts.
 
@@ -384,20 +370,18 @@ ScriptsAPI.getScriptsPublished(pageSize: pageSize, pageNumber: pageNumber, expan
 | **flowId** | **String**| Secure flow id filter | [optional] |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 | **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScriptEntityListing**](ScriptEntityListing.html)
-
-<a name="getScriptsPublishedDivisionviews"></a>
-
-# **getScriptsPublishedDivisionviews**
+[**ScriptEntityListing**](ScriptEntityListing)
 
 
+## getScriptsPublishedDivisionviews
 
-> [ScriptEntityListing](ScriptEntityListing.html) getScriptsPublishedDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds)
+
+
+> [ScriptEntityListing](ScriptEntityListing) getScriptsPublishedDivisionviews(pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion, divisionIds)
 
 Get the published scripts metadata.
 
@@ -450,20 +434,18 @@ ScriptsAPI.getScriptsPublishedDivisionviews(pageSize: pageSize, pageNumber: page
 | **flowId** | **String**| Secure flow id filter | [optional] |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 | **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScriptEntityListing**](ScriptEntityListing.html)
-
-<a name="getScriptsPublishedScriptId"></a>
-
-# **getScriptsPublishedScriptId**
+[**ScriptEntityListing**](ScriptEntityListing)
 
 
+## getScriptsPublishedScriptId
 
-> [Script](Script.html) getScriptsPublishedScriptId(scriptId, scriptDataVersion)
+
+
+> [Script](Script) getScriptsPublishedScriptId(scriptId, scriptDataVersion)
 
 Get the published script.
 
@@ -504,20 +486,18 @@ ScriptsAPI.getScriptsPublishedScriptId(scriptId: scriptId, scriptDataVersion: sc
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptId** | **String**| Script ID | |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Script**](Script.html)
-
-<a name="getScriptsPublishedScriptIdPage"></a>
-
-# **getScriptsPublishedScriptIdPage**
+[**Script**](Script)
 
 
+## getScriptsPublishedScriptIdPage
 
-> [Page](Page.html) getScriptsPublishedScriptIdPage(scriptId, pageId, scriptDataVersion)
+
+
+> [Page](Page) getScriptsPublishedScriptIdPage(scriptId, pageId, scriptDataVersion)
 
 Get the published page.
 
@@ -560,20 +540,18 @@ ScriptsAPI.getScriptsPublishedScriptIdPage(scriptId: scriptId, pageId: pageId, s
 | **scriptId** | **String**| Script ID | |
 | **pageId** | **String**| Page ID | |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Page**](Page.html)
-
-<a name="getScriptsPublishedScriptIdPages"></a>
-
-# **getScriptsPublishedScriptIdPages**
+[**Page**](Page)
 
 
+## getScriptsPublishedScriptIdPages
 
-> [[Page]](Page.html) getScriptsPublishedScriptIdPages(scriptId, scriptDataVersion)
+
+
+> [[Page]](Page) getScriptsPublishedScriptIdPages(scriptId, scriptDataVersion)
 
 Get the list of published pages
 
@@ -614,20 +592,18 @@ ScriptsAPI.getScriptsPublishedScriptIdPages(scriptId: scriptId, scriptDataVersio
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptId** | **String**| Script ID | |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[Page]**](Page.html)
-
-<a name="getScriptsPublishedScriptIdVariables"></a>
-
-# **getScriptsPublishedScriptIdVariables**
+[**[Page]**](Page)
 
 
+## getScriptsPublishedScriptIdVariables
 
-> [JSON](JSON.html) getScriptsPublishedScriptIdVariables(scriptId, input, output, type, scriptDataVersion)
+
+
+> [JSON](JSON) getScriptsPublishedScriptIdVariables(scriptId, input, output, type, scriptDataVersion)
 
 Get the published variables
 
@@ -674,20 +650,18 @@ ScriptsAPI.getScriptsPublishedScriptIdVariables(scriptId: scriptId, input: input
 | **output** | **String**| output | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **type** | **String**| type | [optional]<br />**Values**: string ("string"), number ("number"), boolean ("boolean") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getScriptsUploadStatus"></a>
-
-# **getScriptsUploadStatus**
+[**JSON**](JSON)
 
 
+## getScriptsUploadStatus
 
-> [ImportScriptStatusResponse](ImportScriptStatusResponse.html) getScriptsUploadStatus(uploadId, longPoll)
+
+
+> [ImportScriptStatusResponse](ImportScriptStatusResponse) getScriptsUploadStatus(uploadId, longPoll)
 
 Get the upload status of an imported script
 
@@ -697,7 +671,7 @@ Wraps GET /api/v2/scripts/uploads/{uploadId}/status
 
 Requires ANY permissions: 
 
-* scripter:script:search
+* scripter:script:view
 
 ### Example
 
@@ -728,20 +702,18 @@ ScriptsAPI.getScriptsUploadStatus(uploadId: uploadId, longPoll: longPoll) { (res
 | ------------- | ------------- | ------------- | ------------- |
 | **uploadId** | **String**| Upload ID | |
 | **longPoll** | **Bool**| Enable longPolling endpoint | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ImportScriptStatusResponse**](ImportScriptStatusResponse.html)
-
-<a name="postScriptExport"></a>
-
-# **postScriptExport**
+[**ImportScriptStatusResponse**](ImportScriptStatusResponse)
 
 
+## postScriptExport
 
-> [ExportScriptResponse](ExportScriptResponse.html) postScriptExport(scriptId, body)
+
+
+> [ExportScriptResponse](ExportScriptResponse) postScriptExport(scriptId, body)
 
 Export a script via download service.
 
@@ -781,21 +753,19 @@ ScriptsAPI.postScriptExport(scriptId: scriptId, body: body) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptId** | **String**| Script ID | |
-| **body** | [**ExportScriptRequest**](ExportScriptRequest.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**ExportScriptRequest**](ExportScriptRequest)|  | [optional] |
 
 
 ### Return type
 
-[**ExportScriptResponse**](ExportScriptResponse.html)
-
-<a name="postScriptsPublished"></a>
-
-# **postScriptsPublished**
+[**ExportScriptResponse**](ExportScriptResponse)
 
 
+## postScriptsPublished
 
-> [Script](Script.html) postScriptsPublished(scriptDataVersion, body)
+
+
+> [Script](Script) postScriptsPublished(scriptDataVersion, body)
 
 Publish a script.
 
@@ -835,11 +805,12 @@ ScriptsAPI.postScriptsPublished(scriptDataVersion: scriptDataVersion, body: body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
-| **body** | [**PublishScriptRequestData**](PublishScriptRequestData.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**PublishScriptRequestData**](PublishScriptRequestData)| body | [optional] |
 
 
 ### Return type
 
-[**Script**](Script.html)
+[**Script**](Script)
 
+
+_PureCloudPlatformClientV2@151.1.0_

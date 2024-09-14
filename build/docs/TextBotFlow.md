@@ -1,6 +1,5 @@
----
-title: TextBotFlow
----
+# TextBotFlow
+
 ## TextBotFlow
 Description of the Bot Flow.
 
@@ -9,6 +8,7 @@ Description of the Bot Flow.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The Bot Flow ID. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

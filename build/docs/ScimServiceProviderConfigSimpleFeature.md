@@ -1,6 +1,5 @@
----
-title: ScimServiceProviderConfigSimpleFeature
----
+# ScimServiceProviderConfigSimpleFeature
+
 ## ScimServiceProviderConfigSimpleFeature
 Defines a request in the SCIM service provider&#39;s configuration.
 
@@ -9,6 +8,7 @@ Defines a request in the SCIM service provider&#39;s configuration.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **supported** | **Bool** | Indicates whether configuration options are supported. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

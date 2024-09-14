@@ -1,6 +1,5 @@
----
-title: StatisticalResponse
----
+# StatisticalResponse
+
 ## StatisticalResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: StatisticalResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **interval** | **String** |  | [optional] |
-| **metrics** | [**[AggregateMetricData]**](AggregateMetricData.html) |  | [optional] |
-| **views** | [**[AggregateViewData]**](AggregateViewData.html) |  | [optional] |
-{: class="table table-striped"}
+| **metrics** | [**[AggregateMetricData]**](AggregateMetricData) |  | [optional] |
+| **views** | [**[AggregateViewData]**](AggregateViewData) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,13 @@
----
-title: LicenseBatchAssignmentRequest
----
+# LicenseBatchAssignmentRequest
+
 ## LicenseBatchAssignmentRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **assignments** | [**[LicenseAssignmentRequest]**](LicenseAssignmentRequest.html) | The list of license assignment updates to make. | |
-{: class="table table-striped"}
+| **assignments** | [**[LicenseAssignmentRequest]**](LicenseAssignmentRequest) | The list of license assignment updates to make. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

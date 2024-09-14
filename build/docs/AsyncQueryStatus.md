@@ -1,6 +1,5 @@
----
-title: AsyncQueryStatus
----
+# AsyncQueryStatus
+
 ## AsyncQueryStatus
 
 ## Properties
@@ -9,9 +8,10 @@ title: AsyncQueryStatus
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The current state of the asynchronous query | [optional] |
 | **errorMessage** | **String** | The error associated with the current query, if the state is FAILED | [optional] |
-| **expirationDate** | [**Date**](Date.html) | The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **submissionDate** | [**Date**](Date.html) | The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **completionDate** | [**Date**](Date.html) | The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **expirationDate** | [**Date**](Date) | The time at which results for this query will expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **submissionDate** | [**Date**](Date) | The time at which the query was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **completionDate** | [**Date**](Date) | The time at which the query completed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

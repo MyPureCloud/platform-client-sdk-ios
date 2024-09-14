@@ -1,6 +1,5 @@
----
-title: SetRecordingState
----
+# SetRecordingState
+
 ## SetRecordingState
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetRecordingState
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **recordingState** | **String** | On update, &#39;paused&#39; initiates a secure pause, &#39;active&#39; resumes any paused recordings. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

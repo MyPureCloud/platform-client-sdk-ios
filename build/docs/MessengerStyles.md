@@ -1,6 +1,5 @@
----
-title: MessengerStyles
----
+# MessengerStyles
+
 ## MessengerStyles
 
 ## Properties
@@ -8,6 +7,7 @@ title: MessengerStyles
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **primaryColor** | **String** | The primary color of messenger in hexadecimal | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

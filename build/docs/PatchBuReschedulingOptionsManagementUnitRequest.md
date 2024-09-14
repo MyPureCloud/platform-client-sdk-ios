@@ -1,6 +1,5 @@
----
-title: PatchBuReschedulingOptionsManagementUnitRequest
----
+# PatchBuReschedulingOptionsManagementUnitRequest
+
 ## PatchBuReschedulingOptionsManagementUnitRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: PatchBuReschedulingOptionsManagementUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **managementUnitId** | **String** | The management unit portion of the rescheduling run to update | |
 | **applied** | **Bool** | Whether to mark the run as applied.  Only applies to reschedule runs.  Once applied, a run cannot be un-marked as applied | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

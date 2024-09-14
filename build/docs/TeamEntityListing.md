@@ -1,16 +1,16 @@
----
-title: TeamEntityListing
----
+# TeamEntityListing
+
 ## TeamEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Team]**](Team.html) |  | [optional] |
+| **entities** | [**[Team]**](Team) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

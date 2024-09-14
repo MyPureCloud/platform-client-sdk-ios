@@ -1,6 +1,5 @@
----
-title: FlowDivisionView
----
+# FlowDivisionView
+
 ## FlowDivisionView
 
 ## Properties
@@ -9,15 +8,16 @@ title: FlowDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The flow identifier | [optional] |
 | **name** | **String** | The flow name | |
-| **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **type** | **String** |  | [optional] |
 | **_description** | **String** | the flow description | [optional] |
-| **inputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | json schema describing the inputs for the flow | [optional] |
-| **outputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument.html) | json schema describing the outputs for the flow | [optional] |
-| **supportedLanguages** | [**[SupportedLanguage]**](SupportedLanguage.html) | List of supported languages for the published version of the flow. | [optional] |
-| **publishedVersion** | [**FlowVersion**](FlowVersion.html) | published version information if there is a published version | [optional] |
-| **debugVersion** | [**FlowVersion**](FlowVersion.html) | debug version information if there is a debug version | [optional] |
+| **inputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) | json schema describing the inputs for the flow | [optional] |
+| **outputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) | json schema describing the outputs for the flow | [optional] |
+| **supportedLanguages** | [**[SupportedLanguage]**](SupportedLanguage) | List of supported languages for the published version of the flow. | [optional] |
+| **publishedVersion** | [**FlowVersion**](FlowVersion) | published version information if there is a published version | [optional] |
+| **debugVersion** | [**FlowVersion**](FlowVersion) | debug version information if there is a debug version | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationEncryptionConfigurationListing
----
+# ConversationEncryptionConfigurationListing
+
 ## ConversationEncryptionConfigurationListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ConversationEncryptionConfigurationListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[ConversationEncryptionConfiguration]**](ConversationEncryptionConfiguration.html) |  | [optional] |
+| **entities** | [**[ConversationEncryptionConfiguration]**](ConversationEncryptionConfiguration) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneBaseSettings
----
+# PhoneBaseSettings
+
 ## PhoneBaseSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: PhoneBaseSettings
 | **_id** | **String** | The globally unique identifier for this phone base settings | |
 | **name** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

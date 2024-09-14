@@ -1,6 +1,5 @@
----
-title: UpdateBusinessUnitSettingsRequest
----
+# UpdateBusinessUnitSettingsRequest
+
 ## UpdateBusinessUnitSettingsRequest
 
 ## Properties
@@ -9,9 +8,10 @@ title: UpdateBusinessUnitSettingsRequest
 |------------ | ------------- | ------------- | -------------|
 | **startDayOfWeek** | **String** | The start day of week for this business unit | [optional] |
 | **timeZone** | **String** | The time zone for this business unit, using the Olsen tz database format | [optional] |
-| **shortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings.html) | Short term forecasting settings | [optional] |
-| **scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest.html) | Scheduling settings | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this business unit | |
-{: class="table table-striped"}
+| **shortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings) | Short term forecasting settings | [optional] |
+| **scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest) | Scheduling settings | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this business unit | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

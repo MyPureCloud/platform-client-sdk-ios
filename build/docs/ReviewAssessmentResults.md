@@ -1,6 +1,5 @@
----
-title: ReviewAssessmentResults
----
+# ReviewAssessmentResults
+
 ## ReviewAssessmentResults
 
 ## Properties
@@ -9,6 +8,7 @@ title: ReviewAssessmentResults
 |------------ | ------------- | ------------- | -------------|
 | **byAssignees** | **Bool** | If true, learning assignment results can be seen in detail by assignees | [optional] |
 | **byViewers** | **Bool** | If true, learning assignment results can be seen in detail by people who are eligible to view | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

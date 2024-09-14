@@ -1,6 +1,5 @@
----
-title: LexV2Intent
----
+# LexV2Intent
+
 ## LexV2Intent
 
 ## Properties
@@ -9,8 +8,9 @@ title: LexV2Intent
 |------------ | ------------- | ------------- | -------------|
 | **intentName** | **String** | The intent name | |
 | **_description** | **String** | A description of the intent | [optional] |
-| **slots** | [**[String:LexV2Slot]**](LexV2Slot.html) | An object mapping slot names to Slot objects | |
+| **slots** | [**[String:LexV2Slot]**](LexV2Slot) | An object mapping slot names to Slot objects | |
 | **intentId** | **String** | The intent id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

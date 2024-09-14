@@ -1,6 +1,5 @@
----
-title: OpenInboundMessageMessagingChannel
----
+# OpenInboundMessageMessagingChannel
+
 ## OpenInboundMessageMessagingChannel
 Open Channel-specific information that describes the message and the message channel/provider, with additional message information
 
@@ -8,10 +7,11 @@ Open Channel-specific information that describes the message and the message cha
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **from** | [**OpenMessagingFromRecipient**](OpenMessagingFromRecipient.html) | Information about the recipient the message is received from. | |
-| **time** | [**Date**](Date.html) | Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **from** | [**OpenMessagingFromRecipient**](OpenMessagingFromRecipient) | Information about the recipient the message is received from. | |
+| **time** | [**Date**](Date) | Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **messageId** | **String** | Unique provider ID of the message. | [optional] |
-| **metadata** | [**JSON**](JSON.html) | Additional Custom Information about the channel. | [optional] |
-{: class="table table-striped"}
+| **metadata** | [**JSON**](JSON) | Additional Custom Information about the channel. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

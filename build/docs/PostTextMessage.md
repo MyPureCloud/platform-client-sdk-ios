@@ -1,6 +1,5 @@
----
-title: PostTextMessage
----
+# PostTextMessage
+
 ## PostTextMessage
 
 ## Properties
@@ -9,7 +8,8 @@ title: PostTextMessage
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Message type | |
 | **text** | **String** | Message text. If type is structured, used as fallback for clients that do not support particular structured content | [optional] |
-| **content** | [**[ConversationMessageContent]**](ConversationMessageContent.html) | A list of content elements in message | [optional] |
-{: class="table table-striped"}
+| **content** | [**[ConversationMessageContent]**](ConversationMessageContent) | A list of content elements in message | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

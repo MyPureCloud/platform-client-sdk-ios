@@ -1,6 +1,5 @@
----
-title: JsonCursorSearchResponse
----
+# JsonCursorSearchResponse
+
 ## JsonCursorSearchResponse
 
 ## Properties
@@ -8,9 +7,10 @@ title: JsonCursorSearchResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**JSON**](JSON.html) | Search results | |
-| **aggregations** | [**JSON**](.html) |  | [optional] |
+| **results** | [**JSON**](JSON) | Search results | |
+| **aggregations** | [**JSON**]() |  | [optional] |
 | **cursor** | **String** | The page cursor | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

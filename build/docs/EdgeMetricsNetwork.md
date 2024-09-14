@@ -1,6 +1,5 @@
----
-title: EdgeMetricsNetwork
----
+# EdgeMetricsNetwork
+
 ## EdgeMetricsNetwork
 
 ## Properties
@@ -12,6 +11,7 @@ title: EdgeMetricsNetwork
 | **receivedBytesPerSec** | **Int** | Number of byes received per second. | [optional] |
 | **bandwidthBitsPerSec** | **Double** | Total bandwidth of the adapter in bits per second. | [optional] |
 | **utilizationPct** | **Double** | Percent utilization of the network adapter. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

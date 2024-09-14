@@ -1,6 +1,5 @@
----
-title: DialogflowIntent
----
+# DialogflowIntent
+
 ## DialogflowIntent
 
 ## Properties
@@ -8,7 +7,8 @@ title: DialogflowIntent
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The intent name | |
-| **parameters** | [**[String:DialogflowParameter]**](DialogflowParameter.html) | An object mapping parameter names to Parameter objects | |
-{: class="table table-striped"}
+| **parameters** | [**[String:DialogflowParameter]**](DialogflowParameter) | An object mapping parameter names to Parameter objects | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

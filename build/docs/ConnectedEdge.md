@@ -1,6 +1,5 @@
----
-title: ConnectedEdge
----
+# ConnectedEdge
+
 ## ConnectedEdge
 
 ## Properties
@@ -11,8 +10,9 @@ title: ConnectedEdge
 | **name** | **String** |  | [optional] |
 | **interfaceName** | **String** | Edge interface name used for the connection | [optional] |
 | **interfaceIpAddress** | **String** | Edge interface IP address | [optional] |
-| **edgeConnectionList** | [**[EdgeConnectionInfo]**](EdgeConnectionInfo.html) |  | [optional] |
+| **edgeConnectionList** | [**[EdgeConnectionInfo]**](EdgeConnectionInfo) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

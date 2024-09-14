@@ -1,17 +1,17 @@
----
-title: ProgramsMappingsEntityListing
----
+# ProgramsMappingsEntityListing
+
 ## ProgramsMappingsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ProgramMappings]**](ProgramMappings.html) |  | [optional] |
+| **entities** | [**[ProgramMappings]**](ProgramMappings) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: MediaSummaryDetail
----
+# MediaSummaryDetail
+
 ## MediaSummaryDetail
 
 ## Properties
@@ -9,6 +8,7 @@ title: MediaSummaryDetail
 |------------ | ------------- | ------------- | -------------|
 | **active** | **Int** |  | [optional] |
 | **acw** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

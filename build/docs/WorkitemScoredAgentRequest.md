@@ -1,6 +1,5 @@
----
-title: WorkitemScoredAgentRequest
----
+# WorkitemScoredAgentRequest
+
 ## WorkitemScoredAgentRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemScoredAgentRequest
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | An agents ID. Must be a valid UUID. | [optional] |
 | **score** | **Int** | Agent&#39;s score for the workitem, from 0 - 100, higher being better | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

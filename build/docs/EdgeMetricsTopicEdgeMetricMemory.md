@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricMemory
----
+# EdgeMetricsTopicEdgeMetricMemory
+
 ## EdgeMetricsTopicEdgeMetricMemory
 
 ## Properties
@@ -10,6 +9,7 @@ title: EdgeMetricsTopicEdgeMetricMemory
 | **type** | **String** |  | [optional] |
 | **availableBytes** | **Int** |  | [optional] |
 | **totalBytes** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AuditQueryService
----
+# AuditQueryService
+
 ## AuditQueryService
 
 ## Properties
@@ -8,7 +7,8 @@ title: AuditQueryService
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the Service | [optional] |
-| **entities** | [**[AuditQueryEntity]**](AuditQueryEntity.html) | List of Entities | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[AuditQueryEntity]**](AuditQueryEntity) | List of Entities | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

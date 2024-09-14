@@ -1,6 +1,5 @@
----
-title: TextBotFlowLocation
----
+# TextBotFlowLocation
+
 ## TextBotFlowLocation
 Describes a flow location.
 
@@ -11,6 +10,7 @@ Describes a flow location.
 | **actionName** | **String** | The name of the action that was active when the event of interest happened. | |
 | **actionNumber** | **Int** | The number of the action that was active when the event of interest happened. | |
 | **sequenceName** | **String** | The name of the state or task which was active when the event of interest happened. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

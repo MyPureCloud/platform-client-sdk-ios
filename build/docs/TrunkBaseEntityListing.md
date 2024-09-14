@@ -1,13 +1,12 @@
----
-title: TrunkBaseEntityListing
----
+# TrunkBaseEntityListing
+
 ## TrunkBaseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TrunkBase]**](TrunkBase.html) |  | [optional] |
+| **entities** | [**[TrunkBase]**](TrunkBase) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ title: TrunkBaseEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

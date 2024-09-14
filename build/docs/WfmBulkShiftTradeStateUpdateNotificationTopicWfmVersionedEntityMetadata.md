@@ -1,6 +1,5 @@
----
-title: WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
----
+# WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
+
 ## WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **version** | **Int** |  | [optional] |
-| **modifiedBy** | [**WfmBulkShiftTradeStateUpdateNotificationTopicUserReference**](WfmBulkShiftTradeStateUpdateNotificationTopicUserReference.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **modifiedBy** | [**WfmBulkShiftTradeStateUpdateNotificationTopicUserReference**](WfmBulkShiftTradeStateUpdateNotificationTopicUserReference) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

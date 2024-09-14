@@ -1,6 +1,5 @@
----
-title: ExternalContactsContactChangedTopicExternalSource
----
+# ExternalContactsContactChangedTopicExternalSource
+
 ## ExternalContactsContactChangedTopicExternalSource
 
 ## Properties
@@ -8,6 +7,7 @@ title: ExternalContactsContactChangedTopicExternalSource
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

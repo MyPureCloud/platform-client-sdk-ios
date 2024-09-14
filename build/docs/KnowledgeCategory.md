@@ -1,6 +1,5 @@
----
-title: KnowledgeCategory
----
+# KnowledgeCategory
+
 ## KnowledgeCategory
 
 ## Properties
@@ -10,11 +9,12 @@ title: KnowledgeCategory
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | Category name | |
 | **_description** | **String** | Category description | [optional] |
-| **knowledgeBase** | [**KnowledgeBase**](KnowledgeBase.html) | Knowledge base which category does belong to | [optional] |
+| **knowledgeBase** | [**KnowledgeBase**](KnowledgeBase) | Knowledge base which category does belong to | [optional] |
 | **languageCode** | **String** | Actual language of the category | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateCreated** | [**Date**](Date) | Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: InsightsSummaryMetricPeriodPoints
----
+# InsightsSummaryMetricPeriodPoints
+
 ## InsightsSummaryMetricPeriodPoints
 
 ## Properties
@@ -12,6 +11,7 @@ title: InsightsSummaryMetricPeriodPoints
 | **dataPointCount** | **Int** | Number of data points | [optional] |
 | **percentOfGoal** | **Double** | Percentage of the goal | [optional] |
 | **value** | **Double** | Average value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

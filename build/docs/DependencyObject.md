@@ -1,6 +1,5 @@
----
-title: DependencyObject
----
+# DependencyObject
+
 ## DependencyObject
 
 ## Properties
@@ -14,9 +13,10 @@ title: DependencyObject
 | **deleted** | **Bool** |  | [optional] |
 | **updated** | **Bool** |  | [optional] |
 | **stateUnknown** | **Bool** |  | [optional] |
-| **consumedResources** | [**[Dependency]**](Dependency.html) |  | [optional] |
-| **consumingResources** | [**[Dependency]**](Dependency.html) |  | [optional] |
+| **consumedResources** | [**[Dependency]**](Dependency) |  | [optional] |
+| **consumingResources** | [**[Dependency]**](Dependency) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicShiftTradeNotification
----
+# WfmUserNotificationTopicShiftTradeNotification
+
 ## WfmUserNotificationTopicShiftTradeNotification
 
 ## Properties
@@ -11,10 +10,11 @@ title: WfmUserNotificationTopicShiftTradeNotification
 | **tradeId** | **String** |  | [optional] |
 | **oneSided** | **Bool** |  | [optional] |
 | **newState** | **String** |  | [optional] |
-| **initiatingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
-| **initiatingShiftDate** | [**Date**](Date.html) |  | [optional] |
-| **receivingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
-| **receivingShiftDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **initiatingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
+| **initiatingShiftDate** | [**Date**](Date) |  | [optional] |
+| **receivingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
+| **receivingShiftDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

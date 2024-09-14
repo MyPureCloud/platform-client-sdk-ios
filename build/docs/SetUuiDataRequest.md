@@ -1,6 +1,5 @@
----
-title: SetUuiDataRequest
----
+# SetUuiDataRequest
+
 ## SetUuiDataRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: SetUuiDataRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **uuiData** | **String** | The value of the uuiData to set. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

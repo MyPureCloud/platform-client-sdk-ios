@@ -1,6 +1,5 @@
----
-title: ConversationMessageEvent
----
+# ConversationMessageEvent
+
 ## ConversationMessageEvent
 Message event element.  Examples include: system messages, typing indicators, cobrowse offerings.
 
@@ -9,10 +8,11 @@ Message event element.  Examples include: system messages, typing indicators, co
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventType** | **String** | Type of this event element | |
-| **coBrowse** | [**ConversationEventCoBrowse**](ConversationEventCoBrowse.html) | CoBrowse event. | [optional] |
-| **typing** | [**ConversationEventTyping**](ConversationEventTyping.html) | Typing event. | [optional] |
-| **presence** | [**ConversationEventPresence**](ConversationEventPresence.html) | Presence event. | [optional] |
-| **video** | [**ConversationEventVideo**](ConversationEventVideo.html) | Video event. | [optional] |
-{: class="table table-striped"}
+| **coBrowse** | [**ConversationEventCoBrowse**](ConversationEventCoBrowse) | CoBrowse event. | [optional] |
+| **typing** | [**ConversationEventTyping**](ConversationEventTyping) | Typing event. | [optional] |
+| **presence** | [**ConversationEventPresence**](ConversationEventPresence) | Presence event. | [optional] |
+| **video** | [**ConversationEventVideo**](ConversationEventVideo) | Video event. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

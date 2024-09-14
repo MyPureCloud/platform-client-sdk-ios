@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationWebActionEventsNotification
----
+# JourneyWebActionEventsNotificationWebActionEventsNotification
+
 ## JourneyWebActionEventsNotificationWebActionEventsNotification
 
 ## Properties
@@ -9,14 +8,15 @@ title: JourneyWebActionEventsNotificationWebActionEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **correlationId** | **String** |  | [optional] |
-| **externalContact** | [**JourneyWebActionEventsNotificationExternalContact**](JourneyWebActionEventsNotificationExternalContact.html) |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
+| **externalContact** | [**JourneyWebActionEventsNotificationExternalContact**](JourneyWebActionEventsNotificationExternalContact) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
-| **session** | [**JourneyWebActionEventsNotificationSession**](JourneyWebActionEventsNotificationSession.html) |  | [optional] |
+| **session** | [**JourneyWebActionEventsNotificationSession**](JourneyWebActionEventsNotificationSession) |  | [optional] |
 | **eventType** | **String** |  | [optional] |
-| **webActionEvent** | [**JourneyWebActionEventsNotificationWebActionMessage**](JourneyWebActionEventsNotificationWebActionMessage.html) |  | [optional] |
-| **blockedWebActionOfferEvent** | [**JourneyWebActionEventsNotificationBlockedWebActionOfferMessage**](JourneyWebActionEventsNotificationBlockedWebActionOfferMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **webActionEvent** | [**JourneyWebActionEventsNotificationWebActionMessage**](JourneyWebActionEventsNotificationWebActionMessage) |  | [optional] |
+| **blockedWebActionOfferEvent** | [**JourneyWebActionEventsNotificationBlockedWebActionOfferMessage**](JourneyWebActionEventsNotificationBlockedWebActionOfferMessage) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

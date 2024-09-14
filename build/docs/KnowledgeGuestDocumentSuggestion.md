@@ -1,6 +1,5 @@
----
-title: KnowledgeGuestDocumentSuggestion
----
+# KnowledgeGuestDocumentSuggestion
+
 ## KnowledgeGuestDocumentSuggestion
 
 ## Properties
@@ -10,7 +9,8 @@ title: KnowledgeGuestDocumentSuggestion
 | **query** | **String** | Query to get autocomplete suggestions for the matching knowledge documents. | |
 | **pageSize** | **Int** | Page size of the returned results. | [optional] |
 | **sessionId** | **String** | Session ID of the guest suggestions. | [optional] |
-| **results** | [**[KnowledgeGuestDocumentSuggestionResult]**](KnowledgeGuestDocumentSuggestionResult.html) | Suggestions matching the query. | [optional] |
-{: class="table table-striped"}
+| **results** | [**[KnowledgeGuestDocumentSuggestionResult]**](KnowledgeGuestDocumentSuggestionResult) | Suggestions matching the query. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

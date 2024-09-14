@@ -1,20 +1,16 @@
----
-title: StationsAPI
----
-## StationsAPI
+# StationsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteStationAssociateduser**](StationsAPI.html#deleteStationAssociateduser) | Unassigns the user assigned to this station |
-| [**getStation**](StationsAPI.html#getStation) | Get station. |
-| [**getStations**](StationsAPI.html#getStations) | Get the list of available stations. |
+| [**deleteStationAssociateduser**](StationsAPI#deleteStationAssociateduser) | Unassigns the user assigned to this station |
+| [**getStation**](StationsAPI#getStation) | Get station. |
+| [**getStations**](StationsAPI#getStations) | Get the list of available stations. |
 {: class="table-striped"}
 
-<a name="deleteStationAssociateduser"></a>
 
-# **deleteStationAssociateduser**
+## deleteStationAssociateduser
 
 
 
@@ -55,20 +51,18 @@ StationsAPI.deleteStationAssociateduser(stationId: stationId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **stationId** | **String**| Station ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getStation"></a>
 
-# **getStation**
-
+## getStation
 
 
-> [Station](Station.html) getStation(stationId)
+
+> [Station](Station) getStation(stationId)
 
 Get station.
 
@@ -106,20 +100,18 @@ StationsAPI.getStation(stationId: stationId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **stationId** | **String**| Station ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Station**](Station.html)
-
-<a name="getStations"></a>
-
-# **getStations**
+[**Station**](Station)
 
 
+## getStations
 
-> [StationEntityListing](StationEntityListing.html) getStations(pageSize, pageNumber, sortBy, name, userSelectable, webRtcUserId, _id, lineAppearanceId)
+
+
+> [StationEntityListing](StationEntityListing) getStations(pageSize, pageNumber, sortBy, name, userSelectable, webRtcUserId, _id, lineAppearanceId)
 
 Get the list of available stations.
 
@@ -171,10 +163,11 @@ StationsAPI.getStations(pageSize: pageSize, pageNumber: pageNumber, sortBy: sort
 | **webRtcUserId** | **String**| Filter for the webRtc station of the webRtcUserId | [optional] |
 | **_id** | **String**| Comma separated list of stationIds | [optional] |
 | **lineAppearanceId** | **String**| lineAppearanceId | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**StationEntityListing**](StationEntityListing.html)
+[**StationEntityListing**](StationEntityListing)
 
+
+_PureCloudPlatformClientV2@151.1.0_

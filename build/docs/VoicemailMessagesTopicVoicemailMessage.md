@@ -1,6 +1,5 @@
----
-title: VoicemailMessagesTopicVoicemailMessage
----
+# VoicemailMessagesTopicVoicemailMessage
+
 ## VoicemailMessagesTopicVoicemailMessage
 
 ## Properties
@@ -11,8 +10,8 @@ title: VoicemailMessagesTopicVoicemailMessage
 | **read** | **Bool** |  | [optional] |
 | **audioRecordingDurationSeconds** | **Int** |  | [optional] |
 | **audioRecordingSizeBytes** | **Int** |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
+| **modifiedDate** | [**Date**](Date) |  | [optional] |
 | **createdDateString** | **String** |  | [optional] |
 | **callerAddress** | **String** |  | [optional] |
 | **callerName** | **String** |  | [optional] |
@@ -20,9 +19,10 @@ title: VoicemailMessagesTopicVoicemailMessage
 | **note** | **String** |  | [optional] |
 | **deleted** | **Bool** |  | [optional] |
 | **modifiedByUserId** | **String** |  | [optional] |
-| **copiedTo** | [**[VoicemailMessagesTopicVoicemailCopyRecord]**](VoicemailMessagesTopicVoicemailCopyRecord.html) |  | [optional] |
-| **copiedFrom** | [**VoicemailMessagesTopicVoicemailCopyRecord**](VoicemailMessagesTopicVoicemailCopyRecord.html) |  | [optional] |
+| **copiedTo** | [**[VoicemailMessagesTopicVoicemailCopyRecord]**](VoicemailMessagesTopicVoicemailCopyRecord) |  | [optional] |
+| **copiedFrom** | [**VoicemailMessagesTopicVoicemailCopyRecord**](VoicemailMessagesTopicVoicemailCopyRecord) |  | [optional] |
 | **modifiedDateString** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

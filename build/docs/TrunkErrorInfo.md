@@ -1,6 +1,5 @@
----
-title: TrunkErrorInfo
----
+# TrunkErrorInfo
+
 ## TrunkErrorInfo
 
 ## Properties
@@ -9,7 +8,8 @@ title: TrunkErrorInfo
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** |  | [optional] |
 | **code** | **String** |  | [optional] |
-| **details** | [**TrunkErrorInfoDetails**](TrunkErrorInfoDetails.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**TrunkErrorInfoDetails**](TrunkErrorInfoDetails) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

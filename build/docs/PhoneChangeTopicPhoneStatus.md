@@ -1,6 +1,5 @@
----
-title: PhoneChangeTopicPhoneStatus
----
+# PhoneChangeTopicPhoneStatus
+
 ## PhoneChangeTopicPhoneStatus
 
 ## Properties
@@ -9,10 +8,11 @@ title: PhoneChangeTopicPhoneStatus
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **operationalStatus** | **String** |  | [optional] |
-| **edge** | [**PhoneChangeTopicEdgeReference**](PhoneChangeTopicEdgeReference.html) |  | [optional] |
-| **provision** | [**PhoneChangeTopicProvisionInfo**](PhoneChangeTopicProvisionInfo.html) |  | [optional] |
-| **lineStatuses** | [**[PhoneChangeTopicLineStatus]**](PhoneChangeTopicLineStatus.html) |  | [optional] |
-| **eventCreationTime** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **edge** | [**PhoneChangeTopicEdgeReference**](PhoneChangeTopicEdgeReference) |  | [optional] |
+| **provision** | [**PhoneChangeTopicProvisionInfo**](PhoneChangeTopicProvisionInfo) |  | [optional] |
+| **lineStatuses** | [**[PhoneChangeTopicLineStatus]**](PhoneChangeTopicLineStatus) |  | [optional] |
+| **eventCreationTime** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: KlaxonInteractionStatsAlertsTopicInteractionStatAlert
----
+# KlaxonInteractionStatsAlertsTopicInteractionStatAlert
+
 ## KlaxonInteractionStatsAlertsTopicInteractionStatAlert
 
 ## Properties
@@ -19,10 +18,11 @@ title: KlaxonInteractionStatsAlertsTopicInteractionStatAlert
 | **statistic** | **String** |  | [optional] |
 | **value** | **Double** |  | [optional] |
 | **unread** | **Bool** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
-| **endDate** | [**Date**](Date.html) |  | [optional] |
-| **notificationUsers** | [**[KlaxonInteractionStatsAlertsTopicNotificationUser]**](KlaxonInteractionStatsAlertsTopicNotificationUser.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
+| **endDate** | [**Date**](Date) |  | [optional] |
+| **notificationUsers** | [**[KlaxonInteractionStatsAlertsTopicNotificationUser]**](KlaxonInteractionStatsAlertsTopicNotificationUser) |  | [optional] |
 | **alertTypes** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

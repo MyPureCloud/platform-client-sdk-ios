@@ -1,13 +1,12 @@
----
-title: CertificateAuthorityEntityListing
----
+# CertificateAuthorityEntityListing
+
 ## CertificateAuthorityEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DomainCertificateAuthority]**](DomainCertificateAuthority.html) |  | [optional] |
+| **entities** | [**[DomainCertificateAuthority]**](DomainCertificateAuthority) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CertificateAuthorityEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

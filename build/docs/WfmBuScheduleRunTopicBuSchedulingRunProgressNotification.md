@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
----
+# WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
+
 ## WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
 
 ## Properties
@@ -9,7 +8,8 @@ title: WfmBuScheduleRunTopicBuSchedulingRunProgressNotification
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** |  | [optional] |
 | **operationId** | **String** |  | [optional] |
-| **result** | [**WfmBuScheduleRunTopicBuScheduleRun**](WfmBuScheduleRunTopicBuScheduleRun.html) |  | [optional] |
-{: class="table table-striped"}
+| **result** | [**WfmBuScheduleRunTopicBuScheduleRun**](WfmBuScheduleRunTopicBuScheduleRun) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

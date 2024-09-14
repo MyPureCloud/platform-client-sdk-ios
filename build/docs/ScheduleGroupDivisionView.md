@@ -1,6 +1,5 @@
----
-title: ScheduleGroupDivisionView
----
+# ScheduleGroupDivisionView
+
 ## ScheduleGroupDivisionView
 A schedule group.
 
@@ -10,8 +9,9 @@ A schedule group.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The schedule group identifier | [optional] |
 | **name** | **String** | The schedule group name | |
-| **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

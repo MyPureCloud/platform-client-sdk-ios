@@ -1,6 +1,5 @@
----
-title: ExternalContactsRelationshipChangedTopicTwitterId
----
+# ExternalContactsRelationshipChangedTopicTwitterId
+
 ## ExternalContactsRelationshipChangedTopicTwitterId
 
 ## Properties
@@ -12,6 +11,7 @@ title: ExternalContactsRelationshipChangedTopicTwitterId
 | **screenName** | **String** |  | [optional] |
 | **verified** | **Bool** |  | [optional] |
 | **profileUrl** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

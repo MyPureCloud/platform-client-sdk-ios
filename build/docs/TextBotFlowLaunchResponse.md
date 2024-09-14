@@ -1,6 +1,5 @@
----
-title: TextBotFlowLaunchResponse
----
+# TextBotFlowLaunchResponse
+
 ## TextBotFlowLaunchResponse
 Information related to a successful launch of a bot flow. The ID will be used in subsequent turn requests of the bot flow.
 
@@ -9,6 +8,7 @@ Information related to a successful launch of a bot flow. The ID will be used in
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The session ID of the bot flow, used to send to subsequent turn requests | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

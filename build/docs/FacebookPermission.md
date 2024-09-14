@@ -1,6 +1,5 @@
----
-title: FacebookPermission
----
+# FacebookPermission
+
 ## FacebookPermission
 Facebook Permissions Model
 
@@ -10,6 +9,7 @@ Facebook Permissions Model
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Facebook permission name | [optional] |
 | **type** | **String** | Facebook permission type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

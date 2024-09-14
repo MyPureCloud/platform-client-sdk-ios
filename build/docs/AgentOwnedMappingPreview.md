@@ -1,6 +1,5 @@
----
-title: AgentOwnedMappingPreview
----
+# AgentOwnedMappingPreview
+
 ## AgentOwnedMappingPreview
 
 ## Properties
@@ -13,6 +12,7 @@ title: AgentOwnedMappingPreview
 | **exists** | **Bool** | Whether the user exists | [optional] |
 | **isQueueMember** | **Bool** | Whether the user is a member of the campaign&#39;s queue | [optional] |
 | **recordCount** | **Int** | The number of contact records whose agent-owned column matches the raw value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

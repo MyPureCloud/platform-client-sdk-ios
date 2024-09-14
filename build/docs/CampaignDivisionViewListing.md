@@ -1,13 +1,12 @@
----
-title: CampaignDivisionViewListing
----
+# CampaignDivisionViewListing
+
 ## CampaignDivisionViewListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CampaignDivisionView]**](CampaignDivisionView.html) |  | [optional] |
+| **entities** | [**[CampaignDivisionView]**](CampaignDivisionView) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CampaignDivisionViewListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

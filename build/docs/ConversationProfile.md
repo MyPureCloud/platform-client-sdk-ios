@@ -1,6 +1,5 @@
----
-title: ConversationProfile
----
+# ConversationProfile
+
 ## ConversationProfile
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationProfile
 |------------ | ------------- | ------------- | -------------|
 | **languageCode** | **String** | The language code supported by the conversation profile belonging to a particular project for Dialogflow. | |
 | **name** | **String** | The name of the conversation profile belonging to a particular project for Dialogflow | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

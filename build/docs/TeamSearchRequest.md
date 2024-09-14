@@ -1,6 +1,5 @@
----
-title: TeamSearchRequest
----
+# TeamSearchRequest
+
 ## TeamSearchRequest
 
 ## Properties
@@ -11,8 +10,9 @@ title: TeamSearchRequest
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
 | **pageSize** | **Int** | The number of results per page | [optional] |
 | **pageNumber** | **Int** | The page of resources you want to retrieve | [optional] |
-| **sort** | [**[SearchSort]**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
-| **query** | [**[TeamSearchCriteria]**](TeamSearchCriteria.html) | Team Search Criteria | |
-{: class="table table-striped"}
+| **sort** | [**[SearchSort]**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
+| **query** | [**[TeamSearchCriteria]**](TeamSearchCriteria) | Team Search Criteria | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

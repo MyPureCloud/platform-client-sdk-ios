@@ -1,6 +1,5 @@
----
-title: QueueConversationMessageEventTopicMessageConversation
----
+# QueueConversationMessageEventTopicMessageConversation
+
 ## QueueConversationMessageEventTopicMessageConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: QueueConversationMessageEventTopicMessageConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[QueueConversationMessageEventTopicMessageMediaParticipant]**](QueueConversationMessageEventTopicMessageMediaParticipant.html) |  | [optional] |
+| **participants** | [**[QueueConversationMessageEventTopicMessageMediaParticipant]**](QueueConversationMessageEventTopicMessageMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

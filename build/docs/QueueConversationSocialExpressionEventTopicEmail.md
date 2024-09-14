@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicEmail
----
+# QueueConversationSocialExpressionEventTopicEmail
+
 ## QueueConversationSocialExpressionEventTopicEmail
 
 ## Properties
@@ -17,21 +16,22 @@ title: QueueConversationSocialExpressionEventTopicEmail
 | **scriptId** | **String** | The UUID of the script to use. | [optional] |
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **messagesSent** | **Int** | The number of email messages sent by this participant. | [optional] |
-| **errorInfo** | [**QueueConversationSocialExpressionEventTopicErrorDetails**](QueueConversationSocialExpressionEventTopicErrorDetails.html) | Detailed information about an error response. | [optional] |
+| **errorInfo** | [**QueueConversationSocialExpressionEventTopicErrorDetails**](QueueConversationSocialExpressionEventTopicErrorDetails) | Detailed information about an error response. | [optional] |
 | **disconnectType** | **String** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
-| **startHoldTime** | [**Date**](Date.html) | The timestamp the email was placed on hold in the cloud clock if the email is currently on hold. | [optional] |
-| **connectedTime** | [**Date**](Date.html) | The timestamp when this communication was connected in the cloud clock. | [optional] |
-| **disconnectedTime** | [**Date**](Date.html) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
+| **startHoldTime** | [**Date**](Date) | The timestamp the email was placed on hold in the cloud clock if the email is currently on hold. | [optional] |
+| **connectedTime** | [**Date**](Date) | The timestamp when this communication was connected in the cloud clock. | [optional] |
+| **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **messageId** | **String** | A globally unique identifier for the stored content of this communication. | [optional] |
 | **direction** | **String** | Whether an email is inbound or outbound. | [optional] |
-| **draftAttachments** | [**[QueueConversationSocialExpressionEventTopicAttachment]**](QueueConversationSocialExpressionEventTopicAttachment.html) | A list of uploaded attachments on the email draft. | [optional] |
+| **draftAttachments** | [**[QueueConversationSocialExpressionEventTopicAttachment]**](QueueConversationSocialExpressionEventTopicAttachment) | A list of uploaded attachments on the email draft. | [optional] |
 | **spam** | **Bool** | Indicates if the inbound email was marked as spam. | [optional] |
-| **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) | Call wrap up or disposition data. | [optional] |
-| **afterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork.html) | A communication&#39;s after-call work data. | [optional] |
+| **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
+| **afterCallWork** | [**QueueConversationSocialExpressionEventTopicAfterCallWork**](QueueConversationSocialExpressionEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
-| **queueMediaSettings** | [**QueueConversationSocialExpressionEventTopicQueueMediaSettings**](QueueConversationSocialExpressionEventTopicQueueMediaSettings.html) | Represents the queue setting for this media. | [optional] |
-| **resumeTime** | [**Date**](Date.html) | The time when a parked email should resume. | [optional] |
-| **parkTime** | [**Date**](Date.html) | The time when an  parked email was parked. | [optional] |
-{: class="table table-striped"}
+| **queueMediaSettings** | [**QueueConversationSocialExpressionEventTopicQueueMediaSettings**](QueueConversationSocialExpressionEventTopicQueueMediaSettings) | Represents the queue setting for this media. | [optional] |
+| **resumeTime** | [**Date**](Date) | The time when a parked email should resume. | [optional] |
+| **parkTime** | [**Date**](Date) | The time when an  parked email was parked. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

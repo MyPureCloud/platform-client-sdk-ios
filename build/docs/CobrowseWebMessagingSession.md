@@ -1,6 +1,5 @@
----
-title: CobrowseWebMessagingSession
----
+# CobrowseWebMessagingSession
+
 ## CobrowseWebMessagingSession
 
 ## Properties
@@ -11,9 +10,10 @@ title: CobrowseWebMessagingSession
 | **name** | **String** |  | [optional] |
 | **joinCode** | **String** | Cobrowse session join code | [optional] |
 | **websocketUrl** | **String** | WebSocket URL for the JS client | [optional] |
-| **dateOfferEnds** | [**Date**](Date.html) | Date when Cobrowse Offer Expires. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateOfferEnds** | [**Date**](Date) | Date when Cobrowse Offer Expires. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **communicationType** | **String** | CommunicationType for Cobrowse Session | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

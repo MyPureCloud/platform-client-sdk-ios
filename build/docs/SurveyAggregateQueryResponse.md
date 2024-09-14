@@ -1,13 +1,13 @@
----
-title: SurveyAggregateQueryResponse
----
+# SurveyAggregateQueryResponse
+
 ## SurveyAggregateQueryResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[SurveyAggregateDataContainer]**](SurveyAggregateDataContainer.html) |  | [optional] |
-{: class="table table-striped"}
+| **results** | [**[SurveyAggregateDataContainer]**](SurveyAggregateDataContainer) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

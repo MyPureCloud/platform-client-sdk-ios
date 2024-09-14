@@ -1,6 +1,5 @@
----
-title: RoutingConversationAttributesRequest
----
+# RoutingConversationAttributesRequest
+
 ## RoutingConversationAttributesRequest
 
 ## Properties
@@ -11,7 +10,8 @@ title: RoutingConversationAttributesRequest
 | **skillIds** | **[String]** | Skill requirements for the conversation.  To remove all skill requirements, specify an empty list, i.e. []. | [optional] |
 | **languageId** | **String** | Language requirement for the conversation.  To remove the language requirement, specify an empty string, i.e., \&quot;\&quot;. | [optional] |
 | **labelId** | **String** | Label requirement for the conversation.  To remove the label requirement (setting it to System Default Label), specify an empty string, i.e., \&quot;\&quot;. | [optional] |
-| **requestScoredAgents** | [**[RequestScoredAgent]**](RequestScoredAgent.html) |  | [optional] |
-{: class="table table-striped"}
+| **requestScoredAgents** | [**[RequestScoredAgent]**](RequestScoredAgent) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

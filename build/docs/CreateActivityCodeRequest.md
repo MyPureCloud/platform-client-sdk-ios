@@ -1,6 +1,5 @@
----
-title: CreateActivityCodeRequest
----
+# CreateActivityCodeRequest
+
 ## CreateActivityCodeRequest
 
 ## Properties
@@ -16,7 +15,8 @@ title: CreateActivityCodeRequest
 | **countsTowardShrinkage** | **Bool** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
 | **plannedShrinkage** | **Bool** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
 | **interruptible** | **Bool** | Whether this activity code is considered interruptible | [optional] |
-| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence.html) | The secondary presences of this activity code | [optional] |
-{: class="table table-striped"}
+| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence) | The secondary presences of this activity code | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

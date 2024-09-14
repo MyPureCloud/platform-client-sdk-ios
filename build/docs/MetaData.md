@@ -1,6 +1,5 @@
----
-title: MetaData
----
+# MetaData
+
 ## MetaData
 
 ## Properties
@@ -10,6 +9,7 @@ title: MetaData
 | **pairingToken** | **String** |  | [optional] |
 | **pairingTrust** | **[String]** |  | [optional] |
 | **pairingUrl** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

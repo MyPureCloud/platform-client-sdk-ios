@@ -1,6 +1,5 @@
----
-title: SignedUrlResponse
----
+# SignedUrlResponse
+
 ## SignedUrlResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: SignedUrlResponse
 | **name** | **String** |  | [optional] |
 | **url** | **String** | Url of the downloaded pcap file | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ColumnDataTypeSpecification
----
+# ColumnDataTypeSpecification
+
 ## ColumnDataTypeSpecification
 
 ## Properties
@@ -12,6 +11,7 @@ title: ColumnDataTypeSpecification
 | **min** | **Int** | The minimum length of the numeric column selected for dynamic queueing | [optional] |
 | **max** | **Int** | The maximum length of the numeric column selected for dynamic queueing | [optional] |
 | **maxLength** | **Int** | The maximum length of the text column selected for dynamic queueing | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

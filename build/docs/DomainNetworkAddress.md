@@ -1,6 +1,5 @@
----
-title: DomainNetworkAddress
----
+# DomainNetworkAddress
+
 ## DomainNetworkAddress
 
 ## Properties
@@ -11,6 +10,7 @@ title: DomainNetworkAddress
 | **address** | **String** | An IPv4 or IPv6 IP address. When specifying an address of type \&quot;ip\&quot;, use CIDR format for the subnet mask. | [optional] |
 | **persistent** | **Bool** | True if this address will persist on Edge restart.  Addresses assigned by DHCP will be returned as false. | [optional] |
 | **family** | **Int** | The address family for this address. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

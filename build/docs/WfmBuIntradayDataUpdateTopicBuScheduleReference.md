@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuScheduleReference
----
+# WfmBuIntradayDataUpdateTopicBuScheduleReference
+
 ## WfmBuIntradayDataUpdateTopicBuScheduleReference
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmBuIntradayDataUpdateTopicBuScheduleReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **weekDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **weekDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowMetricsTopicFlowScoredAgent
----
+# FlowMetricsTopicFlowScoredAgent
+
 ## FlowMetricsTopicFlowScoredAgent
 
 ## Properties
@@ -9,6 +8,7 @@ title: FlowMetricsTopicFlowScoredAgent
 |------------ | ------------- | ------------- | -------------|
 | **agentScore** | **Int** | Assigned agent score for this conversation (0 - 100, higher being better) | [optional] |
 | **scoredAgentId** | **String** | Unique identifier for the agent that was scored for this conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

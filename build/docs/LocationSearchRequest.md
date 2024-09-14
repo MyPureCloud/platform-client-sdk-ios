@@ -1,6 +1,5 @@
----
-title: LocationSearchRequest
----
+# LocationSearchRequest
+
 ## LocationSearchRequest
 
 ## Properties
@@ -11,9 +10,10 @@ title: LocationSearchRequest
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
 | **pageSize** | **Int** | The number of results per page | [optional] |
 | **pageNumber** | **Int** | The page of resources you want to retrieve | [optional] |
-| **sort** | [**[SearchSort]**](SearchSort.html) | Multi-value sort order, list of multiple sort values | [optional] |
+| **sort** | [**[SearchSort]**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
 | **expand** | **[String]** | Provides more details about a specified resource | [optional] |
-| **query** | [**[LocationSearchCriteria]**](LocationSearchCriteria.html) |  | [optional] |
-{: class="table table-striped"}
+| **query** | [**[LocationSearchCriteria]**](LocationSearchCriteria) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

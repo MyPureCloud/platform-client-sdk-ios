@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationAssociatedValue
----
+# JourneyAppEventsNotificationAssociatedValue
+
 ## JourneyAppEventsNotificationAssociatedValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyAppEventsNotificationAssociatedValue
 |------------ | ------------- | ------------- | -------------|
 | **dataType** | **String** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

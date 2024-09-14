@@ -1,6 +1,5 @@
----
-title: SearchSort
----
+# SearchSort
+
 ## SearchSort
 
 ## Properties
@@ -9,6 +8,7 @@ title: SearchSort
 |------------ | ------------- | ------------- | -------------|
 | **sortOrder** | **String** | The sort order for results | [optional] |
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

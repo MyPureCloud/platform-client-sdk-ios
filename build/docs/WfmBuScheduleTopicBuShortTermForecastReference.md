@@ -1,6 +1,5 @@
----
-title: WfmBuScheduleTopicBuShortTermForecastReference
----
+# WfmBuScheduleTopicBuShortTermForecastReference
+
 ## WfmBuScheduleTopicBuShortTermForecastReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuScheduleTopicBuShortTermForecastReference
 | **_id** | **String** |  | [optional] |
 | **weekDate** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

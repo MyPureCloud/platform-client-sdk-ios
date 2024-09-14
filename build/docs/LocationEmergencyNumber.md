@@ -1,6 +1,5 @@
----
-title: LocationEmergencyNumber
----
+# LocationEmergencyNumber
+
 ## LocationEmergencyNumber
 
 ## Properties
@@ -10,6 +9,7 @@ title: LocationEmergencyNumber
 | **e164** | **String** |  | [optional] |
 | **number** | **String** |  | [optional] |
 | **type** | **String** | The type of emergency number. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

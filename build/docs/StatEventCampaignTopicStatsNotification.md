@@ -1,6 +1,5 @@
----
-title: StatEventCampaignTopicStatsNotification
----
+# StatEventCampaignTopicStatsNotification
+
 ## StatEventCampaignTopicStatsNotification
 
 ## Properties
@@ -8,7 +7,8 @@ title: StatEventCampaignTopicStatsNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** |  | [optional] |
-| **data** | [**[StatEventCampaignTopicIntervalMetrics]**](StatEventCampaignTopicIntervalMetrics.html) |  | [optional] |
-{: class="table table-striped"}
+| **data** | [**[StatEventCampaignTopicIntervalMetrics]**](StatEventCampaignTopicIntervalMetrics) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

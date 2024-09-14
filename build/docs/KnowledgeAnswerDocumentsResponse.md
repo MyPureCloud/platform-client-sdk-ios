@@ -1,14 +1,14 @@
----
-title: KnowledgeAnswerDocumentsResponse
----
+# KnowledgeAnswerDocumentsResponse
+
 ## KnowledgeAnswerDocumentsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[KnowledgeAnswerDocumentResponse]**](KnowledgeAnswerDocumentResponse.html) | The results with answers if the answerMode request property is not set or contains \&quot;AnswerHighlight\&quot;. Empty array otherwise. | [optional] |
-| **answerGeneration** | [**KnowledgeAnswerGenerationResponse**](KnowledgeAnswerGenerationResponse.html) | The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;. | [optional] |
-{: class="table table-striped"}
+| **results** | [**[KnowledgeAnswerDocumentResponse]**](KnowledgeAnswerDocumentResponse) | The results with answers if the answerMode request property is not set or contains \&quot;AnswerHighlight\&quot;. Empty array otherwise. | [optional] |
+| **answerGeneration** | [**KnowledgeAnswerGenerationResponse**](KnowledgeAnswerGenerationResponse) | The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

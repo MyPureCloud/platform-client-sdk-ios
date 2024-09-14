@@ -1,6 +1,5 @@
----
-title: DashboardConfigurationQueryRequest
----
+# DashboardConfigurationQueryRequest
+
 ## DashboardConfigurationQueryRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: DashboardConfigurationQueryRequest
 | **pageNumber** | **Int** | The page number of the queried response | [optional] |
 | **pageSize** | **Int** | The number of entities to return of the queried response. The max is 25 | [optional] |
 | **sortBy** | **String** | The order in which response will be sorted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

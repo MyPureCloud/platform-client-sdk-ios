@@ -1,6 +1,5 @@
----
-title: WorkPlanBidGroupSummary
----
+# WorkPlanBidGroupSummary
+
 ## WorkPlanBidGroupSummary
 
 ## Properties
@@ -9,11 +8,12 @@ title: WorkPlanBidGroupSummary
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name assigned to this bid group | |
-| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference.html) | The management unit this bid group belongs to | |
+| **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit this bid group belongs to | |
 | **agentCount** | **Int** | The number of agents in this bid group | |
 | **workPlanCount** | **Int** | The number of work plans in this bid group | |
 | **planningGroupCount** | **Int** | The number of planning groups in this bid group | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

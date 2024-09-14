@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient
----
+# V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient
+
 ## V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFromRecipient
 
 ## Properties
@@ -14,7 +13,8 @@ title: V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingFrom
 | **firstName** | **String** |  | [optional] |
 | **lastName** | **String** |  | [optional] |
 | **email** | **String** |  | [optional] |
-| **additionalIds** | [**[V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier]**](V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalIds** | [**[V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier]**](V2ConversationMessageTypingEventForWorkflowTopicConversationRecipientAdditionalIdentifier) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

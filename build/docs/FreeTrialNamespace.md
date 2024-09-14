@@ -1,6 +1,5 @@
----
-title: FreeTrialNamespace
----
+# FreeTrialNamespace
+
 ## FreeTrialNamespace
 
 ## Properties
@@ -8,7 +7,8 @@ title: FreeTrialNamespace
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **friendlyName** | **String** |  | [optional] |
-| **limits** | [**[FreeTrialLimit]**](FreeTrialLimit.html) |  | [optional] |
-{: class="table table-striped"}
+| **limits** | [**[FreeTrialLimit]**](FreeTrialLimit) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

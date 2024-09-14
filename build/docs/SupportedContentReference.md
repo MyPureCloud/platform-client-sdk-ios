@@ -1,6 +1,5 @@
----
-title: SupportedContentReference
----
+# SupportedContentReference
+
 ## SupportedContentReference
 Reference to supported content profile associated with the integration
 
@@ -11,7 +10,8 @@ Reference to supported content profile associated with the integration
 | **_id** | **String** | The SupportedContent unique identifier associated with this integration | |
 | **name** | **String** | The SupportedContent profile name | [optional] |
 | **selfUri** | **String** | The SupportedContent profile URI | [optional] |
-| **mediaTypes** | [**MediaTypes**](MediaTypes.html) | Media types definition for the supported content | [optional] |
-{: class="table table-striped"}
+| **mediaTypes** | [**MediaTypes**](MediaTypes) | Media types definition for the supported content | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

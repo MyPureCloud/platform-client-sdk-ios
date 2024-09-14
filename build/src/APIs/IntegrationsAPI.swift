@@ -2467,6 +2467,140 @@ open class IntegrationsAPI {
 
     
     
+    
+    
+    /**
+     Get a list of Audio Connector integrations
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechAudioconnector(pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: AudioConnectorIntegrationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechAudioconnectorWithRequestBuilder(pageNumber: pageNumber, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<AudioConnectorIntegrationEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Audio Connector integrations
+     - GET /api/v2/integrations/speech/audioconnector
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter pageSize: (query) Page size (optional)
+
+     - returns: RequestBuilder<AudioConnectorIntegrationEntityListing> 
+     */
+    open class func getIntegrationsSpeechAudioconnectorWithRequestBuilder(pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<AudioConnectorIntegrationEntityListing> {        
+        let path = "/api/v2/integrations/speech/audioconnector"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<AudioConnectorIntegrationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get an Audio Connector integration
+     
+     - parameter integrationId: (path) The integration ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsSpeechAudioconnectorIntegrationId(integrationId: String, completion: @escaping ((_ data: AudioConnectorIntegration?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsSpeechAudioconnectorIntegrationIdWithRequestBuilder(integrationId: integrationId)
+        requestBuilder.execute { (response: Response<AudioConnectorIntegration>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an Audio Connector integration
+     - GET /api/v2/integrations/speech/audioconnector/{integrationId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter integrationId: (path) The integration ID 
+
+     - returns: RequestBuilder<AudioConnectorIntegration> 
+     */
+    open class func getIntegrationsSpeechAudioconnectorIntegrationIdWithRequestBuilder(integrationId: String) -> RequestBuilder<AudioConnectorIntegration> {        
+        var path = "/api/v2/integrations/speech/audioconnector/{integrationId}"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AudioConnectorIntegration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get details about a Dialogflow agent
      

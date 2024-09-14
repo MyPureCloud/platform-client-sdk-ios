@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunk
----
+# TrunkInstanceTopicTrunk
+
 ## TrunkInstanceTopicTrunk
 
 ## Properties
@@ -8,10 +7,11 @@ title: TrunkInstanceTopicTrunk
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **connectedStatus** | [**TrunkInstanceTopicTrunkConnectedStatus**](TrunkInstanceTopicTrunkConnectedStatus.html) |  | [optional] |
-| **optionsStatus** | [**[TrunkInstanceTopicTrunkMetricsOptions]**](TrunkInstanceTopicTrunkMetricsOptions.html) |  | [optional] |
-| **registersStatus** | [**[TrunkInstanceTopicTrunkMetricsRegisters]**](TrunkInstanceTopicTrunkMetricsRegisters.html) |  | [optional] |
-| **ipStatus** | [**TrunkInstanceTopicTrunkMetricsNetworkTypeIp**](TrunkInstanceTopicTrunkMetricsNetworkTypeIp.html) |  | [optional] |
-{: class="table table-striped"}
+| **connectedStatus** | [**TrunkInstanceTopicTrunkConnectedStatus**](TrunkInstanceTopicTrunkConnectedStatus) |  | [optional] |
+| **optionsStatus** | [**[TrunkInstanceTopicTrunkMetricsOptions]**](TrunkInstanceTopicTrunkMetricsOptions) |  | [optional] |
+| **registersStatus** | [**[TrunkInstanceTopicTrunkMetricsRegisters]**](TrunkInstanceTopicTrunkMetricsRegisters) |  | [optional] |
+| **ipStatus** | [**TrunkInstanceTopicTrunkMetricsNetworkTypeIp**](TrunkInstanceTopicTrunkMetricsNetworkTypeIp) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

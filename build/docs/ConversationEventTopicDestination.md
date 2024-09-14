@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicDestination
----
+# ConversationEventTopicDestination
+
 ## ConversationEventTopicDestination
 Fields identifying the destination of a given conversation command.
 
@@ -10,6 +9,7 @@ Fields identifying the destination of a given conversation command.
 |------------ | ------------- | ------------- | -------------|
 | **userId** | **String** | The id of the user if the command destination is a user. | [optional] |
 | **address** | **String** | The destination address if the command destination is an endpoint. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

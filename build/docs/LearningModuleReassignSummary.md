@@ -1,6 +1,5 @@
----
-title: LearningModuleReassignSummary
----
+# LearningModuleReassignSummary
+
 ## LearningModuleReassignSummary
 Learning module reassign summary data
 
@@ -13,6 +12,7 @@ Learning module reassign summary data
 | **inProgressCount** | **Int** | The total number of users who have the assignment in InProgress state | [optional] |
 | **assignedCount** | **Int** | The total number of users who have the assignment in Assigned state | [optional] |
 | **notCompletedCount** | **Int** | The total number of users who have their assignment overdue | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

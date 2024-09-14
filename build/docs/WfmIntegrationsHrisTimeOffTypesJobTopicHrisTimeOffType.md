@@ -1,6 +1,5 @@
----
-title: WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType
----
+# WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType
+
 ## WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmIntegrationsHrisTimeOffTypesJobTopicHrisTimeOffType
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **secondaryId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

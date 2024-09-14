@@ -1,6 +1,5 @@
----
-title: CloseButtonStyleProperties
----
+# CloseButtonStyleProperties
+
 ## CloseButtonStyleProperties
 
 ## Properties
@@ -9,6 +8,7 @@ title: CloseButtonStyleProperties
 |------------ | ------------- | ------------- | -------------|
 | **color** | **String** | Color of button. (eg. #FF0000) | [optional] |
 | **opacity** | **Float** | Opacity of button. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

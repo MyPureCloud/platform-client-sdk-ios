@@ -1,6 +1,5 @@
----
-title: UpdateAnalyticsDataRetentionRequest
----
+# UpdateAnalyticsDataRetentionRequest
+
 ## UpdateAnalyticsDataRetentionRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: UpdateAnalyticsDataRetentionRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **retentionDays** | **Int** | Analytics data retention period in days to set for the organization. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

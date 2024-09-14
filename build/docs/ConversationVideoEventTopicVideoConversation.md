@@ -1,6 +1,5 @@
----
-title: ConversationVideoEventTopicVideoConversation
----
+# ConversationVideoEventTopicVideoConversation
+
 ## ConversationVideoEventTopicVideoConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationVideoEventTopicVideoConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationVideoEventTopicVideoMediaParticipant]**](ConversationVideoEventTopicVideoMediaParticipant.html) |  | [optional] |
+| **participants** | [**[ConversationVideoEventTopicVideoMediaParticipant]**](ConversationVideoEventTopicVideoMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AggregationResult
----
+# AggregationResult
+
 ## AggregationResult
 
 ## Properties
@@ -11,7 +10,8 @@ title: AggregationResult
 | **dimension** | **String** | For termFrequency aggregations | [optional] |
 | **metric** | **String** | For numericRange aggregations | [optional] |
 | **count** | **Int64** |  | [optional] |
-| **results** | [**[AggregationResultEntry]**](AggregationResultEntry.html) |  | [optional] |
-{: class="table table-striped"}
+| **results** | [**[AggregationResultEntry]**](AggregationResultEntry) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

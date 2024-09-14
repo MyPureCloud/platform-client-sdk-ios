@@ -1,6 +1,5 @@
----
-title: WfmProcessUploadRequest
----
+# WfmProcessUploadRequest
+
 ## WfmProcessUploadRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmProcessUploadRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **uploadKey** | **String** | The uploadKey provided by the request to get an upload URL | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

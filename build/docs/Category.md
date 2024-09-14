@@ -1,6 +1,5 @@
----
-title: Category
----
+# Category
+
 ## Category
 List of available Action categories.
 
@@ -9,6 +8,7 @@ List of available Action categories.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Category name | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

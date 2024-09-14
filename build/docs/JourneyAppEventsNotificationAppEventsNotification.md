@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationAppEventsNotification
----
+# JourneyAppEventsNotificationAppEventsNotification
+
 ## JourneyAppEventsNotificationAppEventsNotification
 
 ## Properties
@@ -9,15 +8,16 @@ title: JourneyAppEventsNotificationAppEventsNotification
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **correlationId** | **String** |  | [optional] |
-| **externalContact** | [**JourneyAppEventsNotificationExternalContact**](JourneyAppEventsNotificationExternalContact.html) |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
+| **externalContact** | [**JourneyAppEventsNotificationExternalContact**](JourneyAppEventsNotificationExternalContact) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
-| **session** | [**JourneyAppEventsNotificationSession**](JourneyAppEventsNotificationSession.html) |  | [optional] |
+| **session** | [**JourneyAppEventsNotificationSession**](JourneyAppEventsNotificationSession) |  | [optional] |
 | **eventType** | **String** |  | [optional] |
-| **appEvent** | [**JourneyAppEventsNotificationAppMessage**](JourneyAppEventsNotificationAppMessage.html) |  | [optional] |
-| **outcomeAchievedEvent** | [**JourneyAppEventsNotificationOutcomeAchievedMessage**](JourneyAppEventsNotificationOutcomeAchievedMessage.html) |  | [optional] |
-| **segmentAssignmentEvent** | [**JourneyAppEventsNotificationSegmentAssignmentMessage**](JourneyAppEventsNotificationSegmentAssignmentMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **appEvent** | [**JourneyAppEventsNotificationAppMessage**](JourneyAppEventsNotificationAppMessage) |  | [optional] |
+| **outcomeAchievedEvent** | [**JourneyAppEventsNotificationOutcomeAchievedMessage**](JourneyAppEventsNotificationOutcomeAchievedMessage) |  | [optional] |
+| **segmentAssignmentEvent** | [**JourneyAppEventsNotificationSegmentAssignmentMessage**](JourneyAppEventsNotificationSegmentAssignmentMessage) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

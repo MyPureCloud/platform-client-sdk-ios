@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateResponse
----
+# LearningModulePreviewUpdateResponse
+
 ## LearningModulePreviewUpdateResponse
 Learning module preview update response
 
@@ -9,7 +8,8 @@ Learning module preview update response
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The Learning Module id | [optional] |
-| **assignment** | [**LearningModulePreviewUpdateResponseAssignment**](LearningModulePreviewUpdateResponseAssignment.html) | The Assignment Preview | [optional] |
-{: class="table table-striped"}
+| **assignment** | [**LearningModulePreviewUpdateResponseAssignment**](LearningModulePreviewUpdateResponseAssignment) | The Assignment Preview | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

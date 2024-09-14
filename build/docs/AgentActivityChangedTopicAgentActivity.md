@@ -1,6 +1,5 @@
----
-title: AgentActivityChangedTopicAgentActivity
----
+# AgentActivityChangedTopicAgentActivity
+
 ## AgentActivityChangedTopicAgentActivity
 
 ## Properties
@@ -8,11 +7,12 @@ title: AgentActivityChangedTopicAgentActivity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **routingStatus** | [**AgentActivityChangedTopicRoutingStatus**](AgentActivityChangedTopicRoutingStatus.html) |  | [optional] |
-| **presence** | [**AgentActivityChangedTopicPresence**](AgentActivityChangedTopicPresence.html) |  | [optional] |
-| **outOfOffice** | [**AgentActivityChangedTopicOutOfOffice**](AgentActivityChangedTopicOutOfOffice.html) |  | [optional] |
+| **routingStatus** | [**AgentActivityChangedTopicRoutingStatus**](AgentActivityChangedTopicRoutingStatus) |  | [optional] |
+| **presence** | [**AgentActivityChangedTopicPresence**](AgentActivityChangedTopicPresence) |  | [optional] |
+| **outOfOffice** | [**AgentActivityChangedTopicOutOfOffice**](AgentActivityChangedTopicOutOfOffice) |  | [optional] |
 | **activeQueueIds** | **[String]** |  | [optional] |
-| **dateActiveQueuesChanged** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **dateActiveQueuesChanged** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

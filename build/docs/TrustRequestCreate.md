@@ -1,6 +1,5 @@
----
-title: TrustRequestCreate
----
+# TrustRequestCreate
+
 ## TrustRequestCreate
 
 ## Properties
@@ -9,6 +8,7 @@ title: TrustRequestCreate
 |------------ | ------------- | ------------- | -------------|
 | **userIds** | **[String]** | The list of trustee users that are requesting access. If no users are specified, at least one group is required. | [optional] |
 | **groupIds** | **[String]** | The list of trustee groups that are requesting access. If no groups are specified, at least one user is required. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

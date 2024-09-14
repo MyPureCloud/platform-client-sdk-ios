@@ -1,6 +1,5 @@
----
-title: RecordingEncryptionConfiguration
----
+# RecordingEncryptionConfiguration
+
 ## RecordingEncryptionConfiguration
 
 ## Properties
@@ -12,8 +11,9 @@ title: RecordingEncryptionConfiguration
 | **apiId** | **String** | The api id for Hawk Authentication. Null if keyConfigurationType is KmsSymmetric | [optional] |
 | **apiKey** | **String** | The api shared symmetric key used for hawk authentication. Null if keyConfigurationType is KmsSymmetric | [optional] |
 | **keyConfigurationType** | **String** | Type should be LocalKeyManager or KmsSymmetric when create or update Key configurations; &#39;Native&#39; for disabling configuration. | |
-| **lastError** | [**ErrorBody**](ErrorBody.html) | The error message related to the configuration | [optional] |
+| **lastError** | [**ErrorBody**](ErrorBody) | The error message related to the configuration | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

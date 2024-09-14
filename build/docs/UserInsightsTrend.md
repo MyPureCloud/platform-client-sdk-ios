@@ -1,20 +1,20 @@
----
-title: UserInsightsTrend
----
+# UserInsightsTrend
+
 ## UserInsightsTrend
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **performanceProfile** | [**AddressableEntityRef**](AddressableEntityRef.html) | The performance profile | [optional] |
-| **division** | [**DivisionReference**](DivisionReference.html) | The division | [optional] |
+| **performanceProfile** | [**AddressableEntityRef**](AddressableEntityRef) | The performance profile | [optional] |
+| **division** | [**DivisionReference**](DivisionReference) | The division | [optional] |
 | **granularity** | **String** | Granularity | [optional] |
-| **comparativePeriod** | [**WorkdayPeriod**](WorkdayPeriod.html) | The comparative period work day date range | [optional] |
-| **primaryPeriod** | [**WorkdayPeriod**](WorkdayPeriod.html) | The primary period work day date range | [optional] |
-| **user** | [**UserReference**](UserReference.html) | The query user | [optional] |
-| **entities** | [**[UserInsightsTrendMetricItem]**](UserInsightsTrendMetricItem.html) | The list of insights trend for each metric | [optional] |
-| **total** | [**UserInsightsTrendTotalItem**](UserInsightsTrendTotalItem.html) | The insights trend in total | [optional] |
-{: class="table table-striped"}
+| **comparativePeriod** | [**WorkdayPeriod**](WorkdayPeriod) | The comparative period work day date range | [optional] |
+| **primaryPeriod** | [**WorkdayPeriod**](WorkdayPeriod) | The primary period work day date range | [optional] |
+| **user** | [**UserReference**](UserReference) | The query user | [optional] |
+| **entities** | [**[UserInsightsTrendMetricItem]**](UserInsightsTrendMetricItem) | The list of insights trend for each metric | [optional] |
+| **total** | [**UserInsightsTrendTotalItem**](UserInsightsTrendTotalItem) | The insights trend in total | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

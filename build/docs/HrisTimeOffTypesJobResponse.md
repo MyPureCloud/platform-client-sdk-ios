@@ -1,14 +1,14 @@
----
-title: HrisTimeOffTypesJobResponse
----
+# HrisTimeOffTypesJobResponse
+
 ## HrisTimeOffTypesJobResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[HrisTimeOffTypeResponse]**](HrisTimeOffTypeResponse.html) |  | [optional] |
+| **entities** | [**[HrisTimeOffTypeResponse]**](HrisTimeOffTypeResponse) |  | [optional] |
 | **status** | **String** | The status of the time off types job | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

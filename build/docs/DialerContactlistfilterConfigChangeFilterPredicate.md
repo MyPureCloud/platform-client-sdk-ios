@@ -1,6 +1,5 @@
----
-title: DialerContactlistfilterConfigChangeFilterPredicate
----
+# DialerContactlistfilterConfigChangeFilterPredicate
+
 ## DialerContactlistfilterConfigChangeFilterPredicate
 
 ## Properties
@@ -11,9 +10,10 @@ title: DialerContactlistfilterConfigChangeFilterPredicate
 | **columnType** | **String** | Whether a contact column is numeric or alphabetic | [optional] |
 | **_operator** | **String** | The comparison operator | [optional] |
 | **value** | **String** | The value the predicate applies to | [optional] |
-| **range** | [**DialerContactlistfilterConfigChangeRange**](DialerContactlistfilterConfigChangeRange.html) |  | [optional] |
+| **range** | [**DialerContactlistfilterConfigChangeRange**](DialerContactlistfilterConfigChangeRange) |  | [optional] |
 | **inverted** | **Bool** | Whether or not to invert to result of evaluating the predicate | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

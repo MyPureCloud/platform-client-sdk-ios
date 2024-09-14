@@ -1,6 +1,5 @@
----
-title: JourneyViewLinkTimeConstraint
----
+# JourneyViewLinkTimeConstraint
+
 ## JourneyViewLinkTimeConstraint
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyViewLinkTimeConstraint
 |------------ | ------------- | ------------- | -------------|
 | **unit** | **String** | The unit for the link&#39;s time constraint | [optional] |
 | **value** | **Int** | The value for the link&#39;s time constraint | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

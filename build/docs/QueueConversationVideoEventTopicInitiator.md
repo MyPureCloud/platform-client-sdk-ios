@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicInitiator
----
+# QueueConversationVideoEventTopicInitiator
+
 ## QueueConversationVideoEventTopicInitiator
 Fields identifying the initiator of a given conversation command.
 
@@ -9,6 +8,7 @@ Fields identifying the initiator of a given conversation command.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **userId** | **String** | The id of the user who initiated the command if it was initiated by a user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

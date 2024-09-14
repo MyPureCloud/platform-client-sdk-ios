@@ -1,6 +1,5 @@
----
-title: WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification
----
+# WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification
+
 ## WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalcula
 | **operationId** | **String** |  | [optional] |
 | **downloadUrls** | **[String]** |  | [optional] |
 | **state** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: BuScheduleNotificationsSettingsRequest
----
+# BuScheduleNotificationsSettingsRequest
+
 ## BuScheduleNotificationsSettingsRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: BuScheduleNotificationsSettingsRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **earlyReminderMinutes** | **Int** | The number of minutes prior to the scheduled event to display an early reminder notification | [optional] |
-| **activityCategorySettings** | [**[BuScheduleNotificationsCategorySettings]**](BuScheduleNotificationsCategorySettings.html) | List of activity category notification settings | [optional] |
-{: class="table table-striped"}
+| **activityCategorySettings** | [**[BuScheduleNotificationsCategorySettings]**](BuScheduleNotificationsCategorySettings) | List of activity category notification settings | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

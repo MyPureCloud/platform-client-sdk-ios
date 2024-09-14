@@ -1,6 +1,5 @@
----
-title: DeletableUserReference
----
+# DeletableUserReference
+
 ## DeletableUserReference
 
 ## Properties
@@ -10,6 +9,7 @@ title: DeletableUserReference
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **delete** | **Bool** | If marked true, the user will be removed an associated entity | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

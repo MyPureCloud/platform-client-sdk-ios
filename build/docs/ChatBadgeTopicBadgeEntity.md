@@ -1,6 +1,5 @@
----
-title: ChatBadgeTopicBadgeEntity
----
+# ChatBadgeTopicBadgeEntity
+
 ## ChatBadgeTopicBadgeEntity
 
 ## Properties
@@ -8,6 +7,7 @@ title: ChatBadgeTopicBadgeEntity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **jabberId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

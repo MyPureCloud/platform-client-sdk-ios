@@ -1,13 +1,12 @@
----
-title: SystemPromptEntityListing
----
+# SystemPromptEntityListing
+
 ## SystemPromptEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SystemPrompt]**](SystemPrompt.html) |  | [optional] |
+| **entities** | [**[SystemPrompt]**](SystemPrompt) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: SystemPromptEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

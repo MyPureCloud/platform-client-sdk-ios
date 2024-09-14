@@ -1,13 +1,12 @@
----
-title: UtilizationLabelEntityListing
----
+# UtilizationLabelEntityListing
+
 ## UtilizationLabelEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UtilizationLabel]**](UtilizationLabel.html) |  | [optional] |
+| **entities** | [**[UtilizationLabel]**](UtilizationLabel) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: UtilizationLabelEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: KnowledgeSearchRequest
----
+# KnowledgeSearchRequest
+
 ## KnowledgeSearchRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: KnowledgeSearchRequest
 | **documentType** | **String** | Document type to be used while searching | [optional] |
 | **languageCode** | **String** | query search for specific languageCode | |
 | **searchOnDraftDocuments** | **Bool** | If true the search query will be executed on draft documents, else it will be on active documents | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

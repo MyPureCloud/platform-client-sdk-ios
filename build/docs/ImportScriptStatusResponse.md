@@ -1,6 +1,5 @@
----
-title: ImportScriptStatusResponse
----
+# ImportScriptStatusResponse
+
 ## ImportScriptStatusResponse
 
 ## Properties
@@ -10,6 +9,7 @@ title: ImportScriptStatusResponse
 | **url** | **String** |  | [optional] |
 | **succeeded** | **Bool** |  | [optional] |
 | **message** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DynamicContactQueueingSettings
----
+# DynamicContactQueueingSettings
+
 ## DynamicContactQueueingSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: DynamicContactQueueingSettings
 |------------ | ------------- | ------------- | -------------|
 | **sort** | **Bool** | Whether to sort contacts dynamically | [optional] |
 | **filter** | **Bool** | Whether to filter contacts dynamically | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

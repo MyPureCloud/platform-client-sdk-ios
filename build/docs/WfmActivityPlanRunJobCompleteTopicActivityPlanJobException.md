@@ -1,6 +1,5 @@
----
-title: WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
----
+# WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
+
 ## WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmActivityPlanRunJobCompleteTopicActivityPlanJobException
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **exceptionType** | **String** |  | [optional] |
-| **occurrences** | [**[WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference]**](WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **occurrences** | [**[WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference]**](WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

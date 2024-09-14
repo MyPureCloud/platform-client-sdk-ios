@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryResponseStats
----
+# LearningAssignmentAggregateQueryResponseStats
+
 ## LearningAssignmentAggregateQueryResponseStats
 
 ## Properties
@@ -11,6 +10,7 @@ title: LearningAssignmentAggregateQueryResponseStats
 | **min** | **Double** | The minimum value in this metric | [optional] |
 | **max** | **Double** | The maximum value in this metric | [optional] |
 | **sum** | **Double** | The total of the values for this metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

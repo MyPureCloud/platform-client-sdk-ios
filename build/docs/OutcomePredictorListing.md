@@ -1,13 +1,13 @@
----
-title: OutcomePredictorListing
----
+# OutcomePredictorListing
+
 ## OutcomePredictorListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[OutcomePredictor]**](OutcomePredictor.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[OutcomePredictor]**](OutcomePredictor) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

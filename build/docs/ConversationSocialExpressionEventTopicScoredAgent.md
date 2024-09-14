@@ -1,14 +1,14 @@
----
-title: ConversationSocialExpressionEventTopicScoredAgent
----
+# ConversationSocialExpressionEventTopicScoredAgent
+
 ## ConversationSocialExpressionEventTopicScoredAgent
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agent** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **agent** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) | A UriReference for a resource | [optional] |
 | **score** | **Int** | Agent&#39;s score for the current conversation, from 0 - 100, higher being better | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

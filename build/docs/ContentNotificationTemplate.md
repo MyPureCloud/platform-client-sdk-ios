@@ -1,6 +1,5 @@
----
-title: ContentNotificationTemplate
----
+# ContentNotificationTemplate
+
 ## ContentNotificationTemplate
 Template notification object.
 
@@ -10,9 +9,10 @@ Template notification object.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The messaging provider template ID. For WhatsApp, &#39;namespace@name&#39;. | [optional] |
 | **language** | **String** | Template language. | [optional] |
-| **header** | [**NotificationTemplateHeader**](NotificationTemplateHeader.html) | The template header. | [optional] |
-| **body** | [**NotificationTemplateBody**](NotificationTemplateBody.html) | The template body. | |
-| **footer** | [**NotificationTemplateFooter**](NotificationTemplateFooter.html) | The template footer. | [optional] |
-{: class="table table-striped"}
+| **header** | [**NotificationTemplateHeader**](NotificationTemplateHeader) | The template header. | [optional] |
+| **body** | [**NotificationTemplateBody**](NotificationTemplateBody) | The template body. | |
+| **footer** | [**NotificationTemplateFooter**](NotificationTemplateFooter) | The template footer. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

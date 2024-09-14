@@ -1,6 +1,5 @@
----
-title: OpenMessagingFromRecipient
----
+# OpenMessagingFromRecipient
+
 ## OpenMessagingFromRecipient
 Information about the recipient the message is received from.
 
@@ -15,6 +14,7 @@ Information about the recipient the message is received from.
 | **lastName** | **String** | Last name of the recipient. | [optional] |
 | **image** | **String** | URL of an image that represents the recipient. | [optional] |
 | **email** | **String** | E-mail address of the recipient. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

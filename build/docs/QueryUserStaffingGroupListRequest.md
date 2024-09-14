@@ -1,6 +1,5 @@
----
-title: QueryUserStaffingGroupListRequest
----
+# QueryUserStaffingGroupListRequest
+
 ## QueryUserStaffingGroupListRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: QueryUserStaffingGroupListRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **userIds** | **[String]** | The set of user IDs to fetch associated staffing groups | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

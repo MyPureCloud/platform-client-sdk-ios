@@ -1,6 +1,5 @@
----
-title: ServiceGoalTemplate
----
+# ServiceGoalTemplate
+
 ## ServiceGoalTemplate
 
 ## Properties
@@ -9,12 +8,13 @@ title: ServiceGoalTemplate
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **serviceLevel** | [**BuServiceLevel**](BuServiceLevel.html) | Service level targets for this service goal template | [optional] |
-| **averageSpeedOfAnswer** | [**BuAverageSpeedOfAnswer**](BuAverageSpeedOfAnswer.html) | Average speed of answer targets for this service goal template | [optional] |
-| **abandonRate** | [**BuAbandonRate**](BuAbandonRate.html) | Abandon rate targets for this service goal template | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the service goal template | [optional] |
-| **impactOverride** | [**ServiceGoalTemplateImpactOverride**](ServiceGoalTemplateImpactOverride.html) | Settings controlling max percent increase and decrease of service goals for this service goal template | [optional] |
+| **serviceLevel** | [**BuServiceLevel**](BuServiceLevel) | Service level targets for this service goal template | [optional] |
+| **averageSpeedOfAnswer** | [**BuAverageSpeedOfAnswer**](BuAverageSpeedOfAnswer) | Average speed of answer targets for this service goal template | [optional] |
+| **abandonRate** | [**BuAbandonRate**](BuAbandonRate) | Abandon rate targets for this service goal template | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the service goal template | [optional] |
+| **impactOverride** | [**ServiceGoalTemplateImpactOverride**](ServiceGoalTemplateImpactOverride) | Settings controlling max percent increase and decrease of service goals for this service goal template | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

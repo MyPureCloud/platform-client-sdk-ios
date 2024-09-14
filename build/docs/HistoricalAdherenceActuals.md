@@ -1,6 +1,5 @@
----
-title: HistoricalAdherenceActuals
----
+# HistoricalAdherenceActuals
+
 ## HistoricalAdherenceActuals
 
 ## Properties
@@ -11,6 +10,7 @@ title: HistoricalAdherenceActuals
 | **actualSecondaryPresenceLookupId** | **String** | The lookup ID used to retrieve the actual secondary status from map of lookup ID to corresponding secondary presence ID | [optional] |
 | **startOffsetSeconds** | **Int** | Actual start offset in seconds relative to query start time | [optional] |
 | **endOffsetSeconds** | **Int** | Actual end offset in seconds relative to query start time | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

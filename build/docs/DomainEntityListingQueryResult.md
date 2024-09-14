@@ -1,13 +1,12 @@
----
-title: DomainEntityListingQueryResult
----
+# DomainEntityListingQueryResult
+
 ## DomainEntityListingQueryResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[QueryResult]**](QueryResult.html) |  | [optional] |
+| **entities** | [**[QueryResult]**](QueryResult) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DomainEntityListingQueryResult
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

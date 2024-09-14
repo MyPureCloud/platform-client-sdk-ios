@@ -1,22 +1,22 @@
----
-title: PolicyConditions
----
+# PolicyConditions
+
 ## PolicyConditions
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **forUsers** | [**[User]**](User.html) |  | [optional] |
+| **forUsers** | [**[User]**](User) |  | [optional] |
 | **directions** | **[String]** |  | [optional] |
 | **dateRanges** | **[String]** |  | [optional] |
 | **mediaTypes** | **[String]** |  | [optional] |
-| **forQueues** | [**[Queue]**](Queue.html) |  | [optional] |
-| **duration** | [**DurationCondition**](DurationCondition.html) |  | [optional] |
-| **wrapupCodes** | [**[WrapupCode]**](WrapupCode.html) |  | [optional] |
-| **timeAllowed** | [**TimeAllowed**](TimeAllowed.html) |  | [optional] |
-| **teams** | [**[Team]**](Team.html) | Teams to match conversations against | [optional] |
+| **forQueues** | [**[Queue]**](Queue) |  | [optional] |
+| **duration** | [**DurationCondition**](DurationCondition) |  | [optional] |
+| **wrapupCodes** | [**[WrapupCode]**](WrapupCode) |  | [optional] |
+| **timeAllowed** | [**TimeAllowed**](TimeAllowed) |  | [optional] |
+| **teams** | [**[Team]**](Team) | Teams to match conversations against | [optional] |
 | **customerParticipation** | **String** | This condition is to filter out conversation with and without customer participation. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

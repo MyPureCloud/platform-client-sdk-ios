@@ -1,6 +1,5 @@
----
-title: KlaxonHeartBeatAlertsTopicHeartBeatAlert
----
+# KlaxonHeartBeatAlertsTopicHeartBeatAlert
+
 ## KlaxonHeartBeatAlertsTopicHeartBeatAlert
 
 ## Properties
@@ -12,11 +11,12 @@ title: KlaxonHeartBeatAlertsTopicHeartBeatAlert
 | **senderId** | **String** |  | [optional] |
 | **heartBeatTimeoutInMinutes** | **Double** |  | [optional] |
 | **ruleId** | **String** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
-| **endDate** | [**Date**](Date.html) |  | [optional] |
-| **notificationUsers** | [**[KlaxonHeartBeatAlertsTopicNotificationUser]**](KlaxonHeartBeatAlertsTopicNotificationUser.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
+| **endDate** | [**Date**](Date) |  | [optional] |
+| **notificationUsers** | [**[KlaxonHeartBeatAlertsTopicNotificationUser]**](KlaxonHeartBeatAlertsTopicNotificationUser) |  | [optional] |
 | **alertTypes** | **[String]** |  | [optional] |
 | **ruleType** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

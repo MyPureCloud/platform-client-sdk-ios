@@ -1,13 +1,12 @@
----
-title: PhysicalInterfaceEntityListing
----
+# PhysicalInterfaceEntityListing
+
 ## PhysicalInterfaceEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DomainPhysicalInterface]**](DomainPhysicalInterface.html) |  | [optional] |
+| **entities** | [**[DomainPhysicalInterface]**](DomainPhysicalInterface) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: PhysicalInterfaceEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,14 +1,14 @@
----
-title: RuleSetDiagnostic
----
+# RuleSetDiagnostic
+
 ## RuleSetDiagnostic
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ruleSet** | [**DomainEntityRef**](DomainEntityRef.html) | A campaign rule set | [optional] |
+| **ruleSet** | [**DomainEntityRef**](DomainEntityRef) | A campaign rule set | [optional] |
 | **warnings** | **[String]** | Diagnostic warnings for the rule set | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

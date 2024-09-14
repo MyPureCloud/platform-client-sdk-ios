@@ -1,6 +1,5 @@
----
-title: MergeRequest
----
+# MergeRequest
+
 ## MergeRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: MergeRequest
 |------------ | ------------- | ------------- | -------------|
 | **sourceContactId** | **String** | The ID of the source contact for the merge operation | |
 | **targetContactId** | **String** | The ID of the target contact for the merge operation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CopyWorkPlan
----
+# CopyWorkPlan
+
 ## CopyWorkPlan
 
 ## Properties
@@ -8,6 +7,7 @@ title: CopyWorkPlan
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the copied work plan | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

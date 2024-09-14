@@ -1,6 +1,5 @@
----
-title: UserGreetingEventGreetingAudioFile
----
+# UserGreetingEventGreetingAudioFile
+
 ## UserGreetingEventGreetingAudioFile
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserGreetingEventGreetingAudioFile
 |------------ | ------------- | ------------- | -------------|
 | **durationMilliseconds** | **Int** |  | [optional] |
 | **sizeBytes** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

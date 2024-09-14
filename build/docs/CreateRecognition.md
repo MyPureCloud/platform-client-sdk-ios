@@ -1,6 +1,5 @@
----
-title: CreateRecognition
----
+# CreateRecognition
+
 ## CreateRecognition
 
 ## Properties
@@ -13,6 +12,7 @@ title: CreateRecognition
 | **note** | **String** | The note of the recognition. Max length of 800 characters (optional) | [optional] |
 | **contextType** | **String** | The context type (optional) | [optional] |
 | **contextId** | **String** | The context id (optional) | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

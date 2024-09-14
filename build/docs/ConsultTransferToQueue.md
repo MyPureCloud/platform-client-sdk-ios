@@ -1,6 +1,5 @@
----
-title: ConsultTransferToQueue
----
+# ConsultTransferToQueue
+
 ## ConsultTransferToQueue
 
 ## Properties
@@ -11,6 +10,7 @@ title: ConsultTransferToQueue
 | **consultingUserId** | **String** | The user ID of the person who wants to talk before completing the transfer. Could be the same of the context user ID | [optional] |
 | **queueId** | **String** | The id of the queue. | [optional] |
 | **queueName** | **String** | The name of the queue. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: NluConfusionMatrixColumn
----
+# NluConfusionMatrixColumn
+
 ## NluConfusionMatrixColumn
 
 ## Properties
@@ -9,6 +8,7 @@ title: NluConfusionMatrixColumn
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the intent for the column. | |
 | **value** | **Float** | The confusion value between the intents | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

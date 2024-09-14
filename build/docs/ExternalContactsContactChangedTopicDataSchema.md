@@ -1,6 +1,5 @@
----
-title: ExternalContactsContactChangedTopicDataSchema
----
+# ExternalContactsContactChangedTopicDataSchema
+
 ## ExternalContactsContactChangedTopicDataSchema
 
 ## Properties
@@ -9,6 +8,7 @@ title: ExternalContactsContactChangedTopicDataSchema
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **version** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ActionEventActionMap
----
+# ActionEventActionMap
+
 ## ActionEventActionMap
 
 ## Properties
@@ -11,6 +10,7 @@ title: ActionEventActionMap
 | **selfUri** | **String** |  | [optional] |
 | **version** | **Int** | The version of the action map. | |
 | **displayName** | **String** | Display name of the action map. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

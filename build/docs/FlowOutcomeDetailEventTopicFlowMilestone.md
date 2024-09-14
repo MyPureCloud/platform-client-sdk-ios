@@ -1,6 +1,5 @@
----
-title: FlowOutcomeDetailEventTopicFlowMilestone
----
+# FlowOutcomeDetailEventTopicFlowMilestone
+
 ## FlowOutcomeDetailEventTopicFlowMilestone
 
 ## Properties
@@ -9,6 +8,7 @@ title: FlowOutcomeDetailEventTopicFlowMilestone
 |------------ | ------------- | ------------- | -------------|
 | **milestoneId** | **String** |  | [optional] |
 | **milestoneTime** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

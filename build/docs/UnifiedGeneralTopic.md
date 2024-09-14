@@ -1,6 +1,5 @@
----
-title: UnifiedGeneralTopic
----
+# UnifiedGeneralTopic
+
 ## UnifiedGeneralTopic
 
 ## Properties
@@ -9,6 +8,7 @@ title: UnifiedGeneralTopic
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

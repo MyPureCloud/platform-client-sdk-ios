@@ -1,27 +1,23 @@
----
-title: TelephonyAPI
----
-## TelephonyAPI
+# TelephonyAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getTelephonyMediaregions**](TelephonyAPI.html#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
-| [**getTelephonySipmessagesConversation**](TelephonyAPI.html#getTelephonySipmessagesConversation) | Get a SIP message. |
-| [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI.html#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
-| [**getTelephonySiptraces**](TelephonyAPI.html#getTelephonySiptraces) | Fetch SIP metadata |
-| [**getTelephonySiptracesDownloadDownloadId**](TelephonyAPI.html#getTelephonySiptracesDownloadDownloadId) | Get signed S3 URL for a pcap download |
-| [**postTelephonySiptracesDownload**](TelephonyAPI.html#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
+| [**getTelephonyMediaregions**](TelephonyAPI#getTelephonyMediaregions) | Retrieve the list of AWS regions media can stream through. |
+| [**getTelephonySipmessagesConversation**](TelephonyAPI#getTelephonySipmessagesConversation) | Get a SIP message. |
+| [**getTelephonySipmessagesConversationHeaders**](TelephonyAPI#getTelephonySipmessagesConversationHeaders) | Get SIP headers. |
+| [**getTelephonySiptraces**](TelephonyAPI#getTelephonySiptraces) | Fetch SIP metadata |
+| [**getTelephonySiptracesDownloadDownloadId**](TelephonyAPI#getTelephonySiptracesDownloadDownloadId) | Get signed S3 URL for a pcap download |
+| [**postTelephonySiptracesDownload**](TelephonyAPI#postTelephonySiptracesDownload) | Request a download of a pcap file to S3 |
 {: class="table-striped"}
 
-<a name="getTelephonyMediaregions"></a>
 
-# **getTelephonyMediaregions**
-
+## getTelephonyMediaregions
 
 
-> [MediaRegions](MediaRegions.html) getTelephonyMediaregions()
+
+> [MediaRegions](MediaRegions) getTelephonyMediaregions()
 
 Retrieve the list of AWS regions media can stream through.
 
@@ -58,18 +54,16 @@ TelephonyAPI.getTelephonyMediaregions() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**MediaRegions**](MediaRegions.html)
-
-<a name="getTelephonySipmessagesConversation"></a>
-
-# **getTelephonySipmessagesConversation**
+[**MediaRegions**](MediaRegions)
 
 
+## getTelephonySipmessagesConversation
 
-> [Callmessage](Callmessage.html) getTelephonySipmessagesConversation(conversationId)
+
+
+> [Callmessage](Callmessage) getTelephonySipmessagesConversation(conversationId)
 
 Get a SIP message.
 
@@ -110,20 +104,18 @@ TelephonyAPI.getTelephonySipmessagesConversation(conversationId: conversationId)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| Conversation id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Callmessage**](Callmessage.html)
-
-<a name="getTelephonySipmessagesConversationHeaders"></a>
-
-# **getTelephonySipmessagesConversationHeaders**
+[**Callmessage**](Callmessage)
 
 
+## getTelephonySipmessagesConversationHeaders
 
-> [Callheader](Callheader.html) getTelephonySipmessagesConversationHeaders(conversationId, keys)
+
+
+> [Callheader](Callheader) getTelephonySipmessagesConversationHeaders(conversationId, keys)
 
 Get SIP headers.
 
@@ -165,21 +157,19 @@ TelephonyAPI.getTelephonySipmessagesConversationHeaders(conversationId: conversa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| Conversation id | |
-| **keys** | [**[String]**](String.html)| comma-separated list of header identifiers to query. e.g. ruri,to,from | [optional] |
-{: class="table-striped"}
+| **keys** | [**[String]**](String)| comma-separated list of header identifiers to query. e.g. ruri,to,from | [optional] |
 
 
 ### Return type
 
-[**Callheader**](Callheader.html)
-
-<a name="getTelephonySiptraces"></a>
-
-# **getTelephonySiptraces**
+[**Callheader**](Callheader)
 
 
+## getTelephonySiptraces
 
-> [SipSearchResult](SipSearchResult.html) getTelephonySiptraces(dateStart, dateEnd, callId, toUser, fromUser, conversationId)
+
+
+> [SipSearchResult](SipSearchResult) getTelephonySiptraces(dateStart, dateEnd, callId, toUser, fromUser, conversationId)
 
 Fetch SIP metadata
 
@@ -230,20 +220,18 @@ TelephonyAPI.getTelephonySiptraces(dateStart: dateStart, dateEnd: dateEnd, callI
 | **toUser** | **String**| User to who the call was placed | [optional] |
 | **fromUser** | **String**| user who placed the call | [optional] |
 | **conversationId** | **String**| Unique identification of the conversation | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SipSearchResult**](SipSearchResult.html)
-
-<a name="getTelephonySiptracesDownloadDownloadId"></a>
-
-# **getTelephonySiptracesDownloadDownloadId**
+[**SipSearchResult**](SipSearchResult)
 
 
+## getTelephonySiptracesDownloadDownloadId
 
-> [SignedUrlResponse](SignedUrlResponse.html) getTelephonySiptracesDownloadDownloadId(downloadId)
+
+
+> [SignedUrlResponse](SignedUrlResponse) getTelephonySiptracesDownloadDownloadId(downloadId)
 
 Get signed S3 URL for a pcap download
 
@@ -282,20 +270,18 @@ TelephonyAPI.getTelephonySiptracesDownloadDownloadId(downloadId: downloadId) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **downloadId** | **String**| unique id for the downloaded file in S3 | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SignedUrlResponse**](SignedUrlResponse.html)
-
-<a name="postTelephonySiptracesDownload"></a>
-
-# **postTelephonySiptracesDownload**
+[**SignedUrlResponse**](SignedUrlResponse)
 
 
+## postTelephonySiptracesDownload
 
-> [SipDownloadResponse](SipDownloadResponse.html) postTelephonySiptracesDownload(sIPSearchPublicRequest)
+
+
+> [SipDownloadResponse](SipDownloadResponse) postTelephonySiptracesDownload(sIPSearchPublicRequest)
 
 Request a download of a pcap file to S3
 
@@ -333,11 +319,12 @@ TelephonyAPI.postTelephonySiptracesDownload(sIPSearchPublicRequest: sIPSearchPub
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **sIPSearchPublicRequest** | [**SIPSearchPublicRequest**](SIPSearchPublicRequest.html)|  | |
-{: class="table-striped"}
+| **sIPSearchPublicRequest** | [**SIPSearchPublicRequest**](SIPSearchPublicRequest)|  | |
 
 
 ### Return type
 
-[**SipDownloadResponse**](SipDownloadResponse.html)
+[**SipDownloadResponse**](SipDownloadResponse)
 
+
+_PureCloudPlatformClientV2@151.1.0_

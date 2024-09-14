@@ -1,6 +1,5 @@
----
-title: ConversationCallEventTopicCallConversation
----
+# ConversationCallEventTopicCallConversation
+
 ## ConversationCallEventTopicCallConversation
 
 ## Properties
@@ -9,13 +8,14 @@ title: ConversationCallEventTopicCallConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationCallEventTopicCallMediaParticipant]**](ConversationCallEventTopicCallMediaParticipant.html) |  | [optional] |
+| **participants** | [**[ConversationCallEventTopicCallMediaParticipant]**](ConversationCallEventTopicCallMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

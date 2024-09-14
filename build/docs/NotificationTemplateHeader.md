@@ -1,6 +1,5 @@
----
-title: NotificationTemplateHeader
----
+# NotificationTemplateHeader
+
 ## NotificationTemplateHeader
 Template header object.
 
@@ -10,8 +9,9 @@ Template header object.
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Template header type. | |
 | **text** | **String** | Header text. For WhatsApp, ignored. | [optional] |
-| **media** | [**ContentAttachment**](ContentAttachment.html) | Media template header image. | [optional] |
-| **parameters** | [**[NotificationTemplateParameter]**](NotificationTemplateParameter.html) | Template parameters for placeholders in template. | [optional] |
-{: class="table table-striped"}
+| **media** | [**ContentAttachment**](ContentAttachment) | Media template header image. | [optional] |
+| **parameters** | [**[NotificationTemplateParameter]**](NotificationTemplateParameter) | Template parameters for placeholders in template. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

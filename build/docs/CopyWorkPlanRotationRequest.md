@@ -1,6 +1,5 @@
----
-title: CopyWorkPlanRotationRequest
----
+# CopyWorkPlanRotationRequest
+
 ## CopyWorkPlanRotationRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CopyWorkPlanRotationRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name to apply to the new copy of the work plan rotation | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

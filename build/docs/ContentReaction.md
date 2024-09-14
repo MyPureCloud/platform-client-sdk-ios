@@ -1,6 +1,5 @@
----
-title: ContentReaction
----
+# ContentReaction
+
 ## ContentReaction
 User reaction to public message.
 
@@ -10,6 +9,7 @@ User reaction to public message.
 |------------ | ------------- | ------------- | -------------|
 | **reactionType** | **String** | Type of reaction. | |
 | **count** | **Int** | Number of users that reacted this way to the message. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

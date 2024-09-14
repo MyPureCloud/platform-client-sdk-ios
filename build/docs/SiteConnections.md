@@ -1,6 +1,5 @@
----
-title: SiteConnections
----
+# SiteConnections
+
 ## SiteConnections
 
 ## Properties
@@ -9,8 +8,9 @@ title: SiteConnections
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **siteConnections** | [**[SiteConnection]**](SiteConnection.html) | List of site connections | [optional] |
+| **siteConnections** | [**[SiteConnection]**](SiteConnection) | List of site connections | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

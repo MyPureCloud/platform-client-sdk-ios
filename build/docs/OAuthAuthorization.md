@@ -1,23 +1,23 @@
----
-title: OAuthAuthorization
----
+# OAuthAuthorization
+
 ## OAuthAuthorization
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **client** | [**OAuthClient**](OAuthClient.html) |  | [optional] |
+| **client** | [**OAuthClient**](OAuthClient) |  | [optional] |
 | **scope** | **[String]** |  | [optional] |
 | **roles** | **[String]** |  | [optional] |
-| **resourceOwner** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **modifiedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **resourceOwner** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **createdBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **modifiedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **pending** | **Bool** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

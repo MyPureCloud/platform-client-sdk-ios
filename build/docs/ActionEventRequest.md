@@ -1,6 +1,5 @@
----
-title: ActionEventRequest
----
+# ActionEventRequest
+
 ## ActionEventRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: ActionEventRequest
 | **errorCode** | **String** | Client defined error code (when state transitions to errored) | [optional] |
 | **errorMessage** | **String** | Message of the error returned when the action fails (when state transitions to errored) | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

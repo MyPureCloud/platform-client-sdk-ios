@@ -1,6 +1,5 @@
----
-title: ResponseSubstitution
----
+# ResponseSubstitution
+
 ## ResponseSubstitution
 Contains information about the substitutions associated with a response.
 
@@ -11,6 +10,7 @@ Contains information about the substitutions associated with a response.
 | **_id** | **String** | Response substitution identifier. | |
 | **_description** | **String** | Response substitution description. | [optional] |
 | **defaultValue** | **String** | Response substitution default value. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

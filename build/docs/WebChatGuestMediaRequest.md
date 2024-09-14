@@ -1,6 +1,5 @@
----
-title: WebChatGuestMediaRequest
----
+# WebChatGuestMediaRequest
+
 ## WebChatGuestMediaRequest
 Object representing the guest model of a media request of a chat conversation.
 
@@ -15,6 +14,7 @@ Object representing the guest model of a media request of a chat conversation.
 | **communicationId** | **String** | The ID of the new media communication, if applicable. | [optional] |
 | **securityKey** | **String** | The security information related to a media request. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CelebrationStateParam
----
+# CelebrationStateParam
+
 ## CelebrationStateParam
 
 ## Properties
@@ -8,6 +7,7 @@ title: CelebrationStateParam
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The state of the celebration | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

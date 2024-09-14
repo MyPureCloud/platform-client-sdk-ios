@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForWorkflowTopicMessageData
----
+# V2ConversationMessageTypingEventForWorkflowTopicMessageData
+
 ## V2ConversationMessageTypingEventForWorkflowTopicMessageData
 
 ## Properties
@@ -8,7 +7,8 @@ title: V2ConversationMessageTypingEventForWorkflowTopicMessageData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **conversationId** | **String** |  | [optional] |
-| **normalizedMessage** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage**](V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage.html) |  | [optional] |
-{: class="table table-striped"}
+| **normalizedMessage** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage**](V2ConversationMessageTypingEventForWorkflowTopicConversationNormalizedMessage) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: BuScheduleReferenceForMuRoute
----
+# BuScheduleReferenceForMuRoute
+
 ## BuScheduleReferenceForMuRoute
 
 ## Properties
@@ -8,9 +7,10 @@ title: BuScheduleReferenceForMuRoute
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **weekDate** | [**Date**](Date.html) | The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **businessUnit** | [**BusinessUnitReference**](BusinessUnitReference.html) | The start week date for this schedule | [optional] |
+| **weekDate** | [**Date**](Date) | The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **businessUnit** | [**BusinessUnitReference**](BusinessUnitReference) | The start week date for this schedule | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ParticipantAttributes
----
+# ParticipantAttributes
+
 ## ParticipantAttributes
 
 ## Properties
@@ -8,6 +7,7 @@ title: ParticipantAttributes
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **attributes** | **[String:String]** | The map of attribute keys to values. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

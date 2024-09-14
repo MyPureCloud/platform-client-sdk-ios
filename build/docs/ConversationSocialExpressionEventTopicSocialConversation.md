@@ -1,6 +1,5 @@
----
-title: ConversationSocialExpressionEventTopicSocialConversation
----
+# ConversationSocialExpressionEventTopicSocialConversation
+
 ## ConversationSocialExpressionEventTopicSocialConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationSocialExpressionEventTopicSocialConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationSocialExpressionEventTopicSocialMediaParticipant]**](ConversationSocialExpressionEventTopicSocialMediaParticipant.html) |  | [optional] |
+| **participants** | [**[ConversationSocialExpressionEventTopicSocialMediaParticipant]**](ConversationSocialExpressionEventTopicSocialMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

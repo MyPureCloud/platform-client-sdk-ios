@@ -1,13 +1,13 @@
----
-title: PatchJourney
----
+# PatchJourney
+
 ## PatchJourney
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[PatchJourneyPattern]**](PatchJourneyPattern.html) | A list of zero or more patterns to match. | [optional] |
-{: class="table table-striped"}
+| **patterns** | [**[PatchJourneyPattern]**](PatchJourneyPattern) | A list of zero or more patterns to match. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

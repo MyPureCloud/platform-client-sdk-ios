@@ -1,6 +1,5 @@
----
-title: WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification
----
+# WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification
+
 ## WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification
 
 ## Properties
@@ -8,16 +7,17 @@ title: WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotific
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **agent** | [**WfmAdherenceExplanationJobCompleteTopicUserReference**](WfmAdherenceExplanationJobCompleteTopicUserReference.html) |  | [optional] |
-| **managementUnit** | [**WfmAdherenceExplanationJobCompleteTopicManagementUnit**](WfmAdherenceExplanationJobCompleteTopicManagementUnit.html) |  | [optional] |
-| **businessUnit** | [**WfmAdherenceExplanationJobCompleteTopicBusinessUnit**](WfmAdherenceExplanationJobCompleteTopicBusinessUnit.html) |  | [optional] |
+| **agent** | [**WfmAdherenceExplanationJobCompleteTopicUserReference**](WfmAdherenceExplanationJobCompleteTopicUserReference) |  | [optional] |
+| **managementUnit** | [**WfmAdherenceExplanationJobCompleteTopicManagementUnit**](WfmAdherenceExplanationJobCompleteTopicManagementUnit) |  | [optional] |
+| **businessUnit** | [**WfmAdherenceExplanationJobCompleteTopicBusinessUnit**](WfmAdherenceExplanationJobCompleteTopicBusinessUnit) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
 | **lengthMinutes** | **Int** |  | [optional] |
 | **notes** | **String** |  | [optional] |
-| **reviewedBy** | [**WfmAdherenceExplanationJobCompleteTopicUserReference**](WfmAdherenceExplanationJobCompleteTopicUserReference.html) |  | [optional] |
-| **reviewedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **reviewedBy** | [**WfmAdherenceExplanationJobCompleteTopicUserReference**](WfmAdherenceExplanationJobCompleteTopicUserReference) |  | [optional] |
+| **reviewedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

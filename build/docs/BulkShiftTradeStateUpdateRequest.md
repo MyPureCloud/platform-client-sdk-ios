@@ -1,13 +1,13 @@
----
-title: BulkShiftTradeStateUpdateRequest
----
+# BulkShiftTradeStateUpdateRequest
+
 ## BulkShiftTradeStateUpdateRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BulkUpdateShiftTradeStateRequestItem]**](BulkUpdateShiftTradeStateRequestItem.html) | The shift trades to update | |
-{: class="table table-striped"}
+| **entities** | [**[BulkUpdateShiftTradeStateRequestItem]**](BulkUpdateShiftTradeStateRequestItem) | The shift trades to update | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

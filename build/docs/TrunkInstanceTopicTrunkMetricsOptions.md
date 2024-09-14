@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkMetricsOptions
----
+# TrunkInstanceTopicTrunkMetricsOptions
+
 ## TrunkInstanceTopicTrunkMetricsOptions
 
 ## Properties
@@ -9,8 +8,9 @@ title: TrunkInstanceTopicTrunkMetricsOptions
 |------------ | ------------- | ------------- | -------------|
 | **proxyAddress** | **String** |  | [optional] |
 | **optionState** | **Bool** |  | [optional] |
-| **optionStateTime** | [**Date**](Date.html) |  | [optional] |
-| **errorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo.html) |  | [optional] |
-{: class="table table-striped"}
+| **optionStateTime** | [**Date**](Date) |  | [optional] |
+| **errorInfo** | [**TrunkInstanceTopicTrunkErrorInfo**](TrunkInstanceTopicTrunkErrorInfo) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

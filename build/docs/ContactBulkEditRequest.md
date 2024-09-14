@@ -1,6 +1,5 @@
----
-title: ContactBulkEditRequest
----
+# ContactBulkEditRequest
+
 ## ContactBulkEditRequest
 
 ## Properties
@@ -8,9 +7,10 @@ title: ContactBulkEditRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **contactListFilterId** | **String** | Contact List Filter ID. | [optional] |
-| **criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria.html) | Criteria to filter the contacts by. | [optional] |
+| **criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria) | Criteria to filter the contacts by. | [optional] |
 | **contactIds** | **[String]** | Contact IDs to be bulk edited. | [optional] |
-| **contact** | [**DialerContact**](DialerContact.html) | Contact object with details of fields used for patching. | [optional] |
-{: class="table table-striped"}
+| **contact** | [**DialerContact**](DialerContact) | Contact object with details of fields used for patching. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

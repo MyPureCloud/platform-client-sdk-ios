@@ -1,6 +1,5 @@
----
-title: BulkErrorExternalContact
----
+# BulkErrorExternalContact
+
 ## BulkErrorExternalContact
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorExternalContact
 | **message** | **String** |  | [optional] |
 | **status** | **Int** |  | [optional] |
 | **retryable** | **Bool** |  | [optional] |
-| **entity** | [**ExternalContact**](ExternalContact.html) |  | [optional] |
-| **details** | [**[BulkErrorDetail]**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**ExternalContact**](ExternalContact) |  | [optional] |
+| **details** | [**[BulkErrorDetail]**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

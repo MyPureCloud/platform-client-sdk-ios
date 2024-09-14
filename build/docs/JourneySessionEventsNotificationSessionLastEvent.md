@@ -1,6 +1,5 @@
----
-title: JourneySessionEventsNotificationSessionLastEvent
----
+# JourneySessionEventsNotificationSessionLastEvent
+
 ## JourneySessionEventsNotificationSessionLastEvent
 
 ## Properties
@@ -9,7 +8,8 @@ title: JourneySessionEventsNotificationSessionLastEvent
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **eventName** | **String** |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **createdDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

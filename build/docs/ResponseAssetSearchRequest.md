@@ -1,6 +1,5 @@
----
-title: ResponseAssetSearchRequest
----
+# ResponseAssetSearchRequest
+
 ## ResponseAssetSearchRequest
 
 ## Properties
@@ -11,7 +10,8 @@ title: ResponseAssetSearchRequest
 | **pageNumber** | **Int** | The page of resources you want to retrieve | [optional] |
 | **sortOrder** | **String** | The sort order for results | [optional] |
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
-| **query** | [**[ResponseAssetFilter]**](ResponseAssetFilter.html) | Filter the query results. | |
-{: class="table table-striped"}
+| **query** | [**[ResponseAssetFilter]**](ResponseAssetFilter) | Filter the query results. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

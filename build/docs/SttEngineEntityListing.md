@@ -1,13 +1,12 @@
----
-title: SttEngineEntityListing
----
+# SttEngineEntityListing
+
 ## SttEngineEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SttEngineEntity]**](SttEngineEntity.html) |  | [optional] |
+| **entities** | [**[SttEngineEntity]**](SttEngineEntity) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: SttEngineEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

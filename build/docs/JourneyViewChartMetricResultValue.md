@@ -1,6 +1,5 @@
----
-title: JourneyViewChartMetricResultValue
----
+# JourneyViewChartMetricResultValue
+
 ## JourneyViewChartMetricResultValue
 
 ## Properties
@@ -8,7 +7,8 @@ title: JourneyViewChartMetricResultValue
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **value** | **Int** | Value for this metric | [optional] |
-| **groupByAttributes** | [**[GroupByAttribute]**](GroupByAttribute.html) | Group by attributes for this metric | [optional] |
-{: class="table table-striped"}
+| **groupByAttributes** | [**[GroupByAttribute]**](GroupByAttribute) | Group by attributes for this metric | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

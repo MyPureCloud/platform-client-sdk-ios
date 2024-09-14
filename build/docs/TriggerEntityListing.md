@@ -1,16 +1,16 @@
----
-title: TriggerEntityListing
----
+# TriggerEntityListing
+
 ## TriggerEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Trigger]**](Trigger.html) |  | [optional] |
+| **entities** | [**[Trigger]**](Trigger) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

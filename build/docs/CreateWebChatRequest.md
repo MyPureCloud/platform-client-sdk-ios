@@ -1,6 +1,5 @@
----
-title: CreateWebChatRequest
----
+# CreateWebChatRequest
+
 ## CreateWebChatRequest
 
 ## Properties
@@ -14,6 +13,7 @@ title: CreateWebChatRequest
 | **priority** | **Int64** | The priority to assign to the conversation for routing. | [optional] |
 | **attributes** | **[String:String]** | The list of attributes to associate with the customer participant. | [optional] |
 | **customerName** | **String** | The name of the customer participating in the web chat. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

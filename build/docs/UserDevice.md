@@ -1,6 +1,5 @@
----
-title: UserDevice
----
+# UserDevice
+
 ## UserDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: UserDevice
 | **type** | **String** | type of the device; ios or android | |
 | **sessionHash** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

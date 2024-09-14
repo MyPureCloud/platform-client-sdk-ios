@@ -1,6 +1,5 @@
----
-title: WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody
----
+# WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody
+
 ## WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody
 
 ## Properties
@@ -10,6 +9,7 @@ title: WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody
 | **_id** | **String** |  | [optional] |
 | **version** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

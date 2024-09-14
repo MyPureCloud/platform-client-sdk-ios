@@ -1,6 +1,5 @@
----
-title: MarkContactUncontactableActionSettings
----
+# MarkContactUncontactableActionSettings
+
 ## MarkContactUncontactableActionSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: MarkContactUncontactableActionSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mediaTypes** | **[String]** | A list of media types to evaluate. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

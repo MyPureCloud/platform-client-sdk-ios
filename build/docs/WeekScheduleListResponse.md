@@ -1,13 +1,13 @@
----
-title: WeekScheduleListResponse
----
+# WeekScheduleListResponse
+
 ## WeekScheduleListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WeekScheduleListItemResponse]**](WeekScheduleListItemResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[WeekScheduleListItemResponse]**](WeekScheduleListItemResponse) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

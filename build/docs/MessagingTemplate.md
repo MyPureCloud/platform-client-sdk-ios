@@ -1,6 +1,5 @@
----
-title: MessagingTemplate
----
+# MessagingTemplate
+
 ## MessagingTemplate
 The messaging template identifies a structured message templates supported by a messaging channel.
 
@@ -8,7 +7,8 @@ The messaging template identifies a structured message templates supported by a 
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **whatsApp** | [**WhatsAppDefinition**](WhatsAppDefinition.html) | Defines a messaging template for a WhatsApp messaging channel | [optional] |
-{: class="table table-striped"}
+| **whatsApp** | [**WhatsAppDefinition**](WhatsAppDefinition) | Defines a messaging template for a WhatsApp messaging channel | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationContentNotificationTemplate
----
+# ConversationContentNotificationTemplate
+
 ## ConversationContentNotificationTemplate
 Template notification object.
 
@@ -10,9 +9,10 @@ Template notification object.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The identifier of the message template in &#39;your-namespace@your-template-id/name&#39; format. For External vendor (e.g WhatsApp), &#39;your-namespace@your-template-name&#39;. For GenesysCloud canned response message template use &#39;cannedresponse&#39; as your-namespace and use response ID as your-template-id (e.g. response ID&#x3D;1234 then &#39;cannedresponse@1234&#39;) | [optional] |
 | **language** | **String** | Template language. | [optional] |
-| **header** | [**ConversationNotificationTemplateHeader**](ConversationNotificationTemplateHeader.html) | The template header. | [optional] |
-| **body** | [**ConversationNotificationTemplateBody**](ConversationNotificationTemplateBody.html) | The template body. | |
-| **footer** | [**ConversationNotificationTemplateFooter**](ConversationNotificationTemplateFooter.html) | The template footer. | [optional] |
-{: class="table table-striped"}
+| **header** | [**ConversationNotificationTemplateHeader**](ConversationNotificationTemplateHeader) | The template header. | [optional] |
+| **body** | [**ConversationNotificationTemplateBody**](ConversationNotificationTemplateBody) | The template body. | |
+| **footer** | [**ConversationNotificationTemplateFooter**](ConversationNotificationTemplateFooter) | The template footer. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

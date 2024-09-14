@@ -1,14 +1,14 @@
----
-title: WorkdayValuesTrendItem
----
+# WorkdayValuesTrendItem
+
 ## WorkdayValuesTrendItem
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **dateWorkday** | [**Date**](Date.html) | The workday for the metric value. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
+| **dateWorkday** | [**Date**](Date) | The workday for the metric value. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
 | **value** | **Double** | The metric value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

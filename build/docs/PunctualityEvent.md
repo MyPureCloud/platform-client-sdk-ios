@@ -1,14 +1,13 @@
----
-title: PunctualityEvent
----
+# PunctualityEvent
+
 ## PunctualityEvent
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **dateScheduleStart** | [**Date**](Date.html) | The scheduled activity start time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateStart** | [**Date**](Date.html) | The time the user started the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateScheduleStart** | [**Date**](Date) | The scheduled activity start time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateStart** | [**Date**](Date) | The time the user started the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **lengthMinutes** | **Int** | The length of the activity in minutes | [optional] |
 | **_description** | **String** | The description of the activity | [optional] |
 | **activityCodeId** | **String** | The ID of the activity code associated with this activity | [optional] |
@@ -18,6 +17,7 @@ title: PunctualityEvent
 | **points** | **Int** | The points earned for this activity | [optional] |
 | **delta** | **Double** | Difference between this activity and the last activity in seconds | [optional] |
 | **bullseye** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TaskManagementErrorDetails
----
+# TaskManagementErrorDetails
+
 ## TaskManagementErrorDetails
 
 ## Properties
@@ -9,6 +8,7 @@ title: TaskManagementErrorDetails
 |------------ | ------------- | ------------- | -------------|
 | **code** | **String** | System defined error code for the error. | [optional] |
 | **message** | **String** | Error message. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

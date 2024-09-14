@@ -1,13 +1,13 @@
----
-title: WfmIntegrationListing
----
+# WfmIntegrationListing
+
 ## WfmIntegrationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WfmIntegrationResponse]**](WfmIntegrationResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[WfmIntegrationResponse]**](WfmIntegrationResponse) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

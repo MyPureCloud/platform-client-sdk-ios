@@ -1,13 +1,13 @@
----
-title: Actions
----
+# Actions
+
 ## Actions
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **skillsToRemove** | [**[SkillsToRemove]**](SkillsToRemove.html) |  | [optional] |
-{: class="table table-striped"}
+| **skillsToRemove** | [**[SkillsToRemove]**](SkillsToRemove) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,12 @@
----
-title: DevelopmentActivityListing
----
+# DevelopmentActivityListing
+
 ## DevelopmentActivityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DevelopmentActivity]**](DevelopmentActivity.html) |  | [optional] |
+| **entities** | [**[DevelopmentActivity]**](DevelopmentActivity) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DevelopmentActivityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

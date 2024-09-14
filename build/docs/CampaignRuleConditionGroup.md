@@ -1,6 +1,5 @@
----
-title: CampaignRuleConditionGroup
----
+# CampaignRuleConditionGroup
+
 ## CampaignRuleConditionGroup
 
 ## Properties
@@ -8,7 +7,8 @@ title: CampaignRuleConditionGroup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **matchAnyConditions** | **Bool** | Whether or not this condition group should be evaluated as true if any of sub conditions is matched | |
-| **conditions** | [**[CampaignRuleCondition]**](CampaignRuleCondition.html) | The parameters for the CampaignRuleCondition. | |
-{: class="table table-striped"}
+| **conditions** | [**[CampaignRuleCondition]**](CampaignRuleCondition) | The parameters for the CampaignRuleCondition. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

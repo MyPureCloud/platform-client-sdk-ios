@@ -1,6 +1,5 @@
----
-title: SubjectDivisions
----
+# SubjectDivisions
+
 ## SubjectDivisions
 
 ## Properties
@@ -9,6 +8,7 @@ title: SubjectDivisions
 |------------ | ------------- | ------------- | -------------|
 | **subjectIds** | **[String]** | A collection of subject IDs to associate with the given divisions | |
 | **divisionIds** | **[String]** | A collection of division IDs to associate with the given subjects | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

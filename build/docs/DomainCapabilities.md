@@ -1,6 +1,5 @@
----
-title: DomainCapabilities
----
+# DomainCapabilities
+
 ## DomainCapabilities
 
 ## Properties
@@ -13,6 +12,7 @@ title: DomainCapabilities
 | **autoMetric** | **Bool** | True if the metric is being calculated automatically for the address family on this interface. | [optional] |
 | **supportsMetric** | **Bool** | True if metric configuration is supported. | [optional] |
 | **pingEnabled** | **Bool** | Set to true to enable this address family on this interface to respond to ping requests. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

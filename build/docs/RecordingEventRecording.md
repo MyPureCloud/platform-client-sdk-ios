@@ -1,6 +1,5 @@
----
-title: RecordingEventRecording
----
+# RecordingEventRecording
+
 ## RecordingEventRecording
 
 ## Properties
@@ -10,9 +9,10 @@ title: RecordingEventRecording
 | **_id** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **fileState** | **String** |  | [optional] |
-| **mediaUris** | [**[RecordingEventMediaResult]**](RecordingEventMediaResult.html) |  | [optional] |
+| **mediaUris** | [**[RecordingEventMediaResult]**](RecordingEventMediaResult) |  | [optional] |
 | **estimatedTranscodeTimeMs** | **Int** |  | [optional] |
 | **actualTranscodeTimeMs** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

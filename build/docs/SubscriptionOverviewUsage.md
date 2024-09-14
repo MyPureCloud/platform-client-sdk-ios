@@ -1,6 +1,5 @@
----
-title: SubscriptionOverviewUsage
----
+# SubscriptionOverviewUsage
+
 ## SubscriptionOverviewUsage
 
 ## Properties
@@ -19,6 +18,7 @@ title: SubscriptionOverviewUsage
 | **isCancellable** | **Bool** | Indicates whether the item is cancellable | [optional] |
 | **bundleQuantity** | **String** | Quantity multiplier for this charge | [optional] |
 | **isThirdParty** | **Bool** | A charge from a third party entity | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

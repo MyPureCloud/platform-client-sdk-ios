@@ -1,6 +1,5 @@
----
-title: MatchCriteria
----
+# MatchCriteria
+
 ## MatchCriteria
 Defines a simple matching condition
 
@@ -10,8 +9,9 @@ Defines a simple matching condition
 |------------ | ------------- | ------------- | -------------|
 | **jsonPath** | **String** | The Goessner json path of the field to match | [optional] |
 | **_operator** | **String** | The type of operation to perform for matching check | [optional] |
-| **value** | [**JSON**](JSON.html) | The value to match on. Only one of value and values can be included | [optional] |
-| **values** | [**[JSON]**](JSON.html) | The list of values to match on. Only one of value and values can be included | [optional] |
-{: class="table table-striped"}
+| **value** | [**JSON**](JSON) | The value to match on. Only one of value and values can be included | [optional] |
+| **values** | [**[JSON]**](JSON) | The list of values to match on. Only one of value and values can be included | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

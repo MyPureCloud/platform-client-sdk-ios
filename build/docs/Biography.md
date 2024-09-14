@@ -1,6 +1,5 @@
----
-title: Biography
----
+# Biography
+
 ## Biography
 
 ## Properties
@@ -11,7 +10,8 @@ title: Biography
 | **interests** | **[String]** |  | [optional] |
 | **hobbies** | **[String]** |  | [optional] |
 | **spouse** | **String** |  | [optional] |
-| **education** | [**[Education]**](Education.html) | User education details | [optional] |
-{: class="table table-striped"}
+| **education** | [**[Education]**](Education) | User education details | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

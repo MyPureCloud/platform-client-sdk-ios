@@ -1,6 +1,5 @@
----
-title: ResponseAssetSearchResults
----
+# ResponseAssetSearchResults
+
 ## ResponseAssetSearchResults
 
 ## Properties
@@ -11,7 +10,8 @@ title: ResponseAssetSearchResults
 | **pageCount** | **Int** | The total number of pages | [optional] |
 | **pageSize** | **Int** | The current page size | [optional] |
 | **pageNumber** | **Int** | The current page number | [optional] |
-| **results** | [**[ResponseAsset]**](ResponseAsset.html) | Search results | [optional] |
-{: class="table table-striped"}
+| **results** | [**[ResponseAsset]**](ResponseAsset) | Search results | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

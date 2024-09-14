@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationSegment
----
+# JourneyOutcomeEventsNotificationSegment
+
 ## JourneyOutcomeEventsNotificationSegment
 
 ## Properties
@@ -9,7 +8,8 @@ title: JourneyOutcomeEventsNotificationSegment
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-| **assignedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **assignedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

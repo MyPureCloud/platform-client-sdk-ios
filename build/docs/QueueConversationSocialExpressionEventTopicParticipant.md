@@ -1,6 +1,5 @@
----
-title: QueueConversationSocialExpressionEventTopicParticipant
----
+# QueueConversationSocialExpressionEventTopicParticipant
+
 ## QueueConversationSocialExpressionEventTopicParticipant
 
 ## Properties
@@ -8,8 +7,8 @@ title: QueueConversationSocialExpressionEventTopicParticipant
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | A globally unique identifier for this conversation. | [optional] |
-| **connectedTime** | [**Date**](Date.html) | The timestamp when this participant was connected to the conversation in the provider clock. | [optional] |
-| **endTime** | [**Date**](Date.html) | The timestamp when this participant disconnected from the conversation in the provider clock. | [optional] |
+| **connectedTime** | [**Date**](Date) | The timestamp when this participant was connected to the conversation in the provider clock. | [optional] |
+| **endTime** | [**Date**](Date) | The timestamp when this participant disconnected from the conversation in the provider clock. | [optional] |
 | **userId** | **String** | If this participant represents a user, then this will be the globally unique identifier for the user. | [optional] |
 | **externalContactId** | **String** | If this participant represents an external contact, then this will be the globally unique identifier for the external contact. | [optional] |
 | **externalOrganizationId** | **String** | If this participant represents an external org, then this will be the globally unique identifier for the external org. | [optional] |
@@ -24,10 +23,10 @@ title: QueueConversationSocialExpressionEventTopicParticipant
 | **wrapupExpected** | **Bool** | True when a participant is expected to enter a wrapup code once the call connects. | [optional] |
 | **wrapupPrompt** | **String** | This field controls how the UI prompts the agent for a wrapup. | [optional] |
 | **wrapupTimeoutMs** | **Int** | Specifies how long a timed ACW session will last. | [optional] |
-| **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) | The timestamp when this participant started after-call work. | [optional] |
-| **endAcwTime** | [**Date**](Date.html) | The timestamp when this participant ended after-call work. | [optional] |
-| **conversationRoutingData** | [**QueueConversationSocialExpressionEventTopicConversationRoutingData**](QueueConversationSocialExpressionEventTopicConversationRoutingData.html) |  | [optional] |
+| **wrapup** | [**QueueConversationSocialExpressionEventTopicWrapup**](QueueConversationSocialExpressionEventTopicWrapup) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) | The timestamp when this participant started after-call work. | [optional] |
+| **endAcwTime** | [**Date**](Date) | The timestamp when this participant ended after-call work. | [optional] |
+| **conversationRoutingData** | [**QueueConversationSocialExpressionEventTopicConversationRoutingData**](QueueConversationSocialExpressionEventTopicConversationRoutingData) |  | [optional] |
 | **alertingTimeoutMs** | **Int** | Specifies how long the agent has to answer an interaction before being marked as not responding. | [optional] |
 | **monitoredParticipantId** | **String** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **coachedParticipantId** | **String** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
@@ -36,16 +35,17 @@ title: QueueConversationSocialExpressionEventTopicParticipant
 | **screenRecordingState** | **String** | The current screen recording state for this participant. | [optional] |
 | **flaggedReason** | **String** | If this participant has flagged the conversation, the reason code given. | [optional] |
 | **attributes** | **[String:String]** | Additional participant attributes | [optional] |
-| **calls** | [**[QueueConversationSocialExpressionEventTopicCall]**](QueueConversationSocialExpressionEventTopicCall.html) |  | [optional] |
-| **callbacks** | [**[QueueConversationSocialExpressionEventTopicCallback]**](QueueConversationSocialExpressionEventTopicCallback.html) |  | [optional] |
-| **chats** | [**[QueueConversationSocialExpressionEventTopicChat]**](QueueConversationSocialExpressionEventTopicChat.html) |  | [optional] |
-| **cobrowsesessions** | [**[QueueConversationSocialExpressionEventTopicCobrowse]**](QueueConversationSocialExpressionEventTopicCobrowse.html) |  | [optional] |
-| **emails** | [**[QueueConversationSocialExpressionEventTopicEmail]**](QueueConversationSocialExpressionEventTopicEmail.html) |  | [optional] |
-| **messages** | [**[QueueConversationSocialExpressionEventTopicMessage]**](QueueConversationSocialExpressionEventTopicMessage.html) |  | [optional] |
-| **screenshares** | [**[QueueConversationSocialExpressionEventTopicScreenshare]**](QueueConversationSocialExpressionEventTopicScreenshare.html) |  | [optional] |
-| **socialExpressions** | [**[QueueConversationSocialExpressionEventTopicSocialExpression]**](QueueConversationSocialExpressionEventTopicSocialExpression.html) |  | [optional] |
-| **videos** | [**[QueueConversationSocialExpressionEventTopicVideo]**](QueueConversationSocialExpressionEventTopicVideo.html) |  | [optional] |
-| **workflow** | [**QueueConversationSocialExpressionEventTopicWorkflow**](QueueConversationSocialExpressionEventTopicWorkflow.html) |  | [optional] |
-{: class="table table-striped"}
+| **calls** | [**[QueueConversationSocialExpressionEventTopicCall]**](QueueConversationSocialExpressionEventTopicCall) |  | [optional] |
+| **callbacks** | [**[QueueConversationSocialExpressionEventTopicCallback]**](QueueConversationSocialExpressionEventTopicCallback) |  | [optional] |
+| **chats** | [**[QueueConversationSocialExpressionEventTopicChat]**](QueueConversationSocialExpressionEventTopicChat) |  | [optional] |
+| **cobrowsesessions** | [**[QueueConversationSocialExpressionEventTopicCobrowse]**](QueueConversationSocialExpressionEventTopicCobrowse) |  | [optional] |
+| **emails** | [**[QueueConversationSocialExpressionEventTopicEmail]**](QueueConversationSocialExpressionEventTopicEmail) |  | [optional] |
+| **messages** | [**[QueueConversationSocialExpressionEventTopicMessage]**](QueueConversationSocialExpressionEventTopicMessage) |  | [optional] |
+| **screenshares** | [**[QueueConversationSocialExpressionEventTopicScreenshare]**](QueueConversationSocialExpressionEventTopicScreenshare) |  | [optional] |
+| **socialExpressions** | [**[QueueConversationSocialExpressionEventTopicSocialExpression]**](QueueConversationSocialExpressionEventTopicSocialExpression) |  | [optional] |
+| **videos** | [**[QueueConversationSocialExpressionEventTopicVideo]**](QueueConversationSocialExpressionEventTopicVideo) |  | [optional] |
+| **workflow** | [**QueueConversationSocialExpressionEventTopicWorkflow**](QueueConversationSocialExpressionEventTopicWorkflow) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

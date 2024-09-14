@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateResponseAssignment
----
+# LearningModulePreviewUpdateResponseAssignment
+
 ## LearningModulePreviewUpdateResponseAssignment
 Learning module preview update response assignment
 
@@ -14,8 +13,9 @@ Learning module preview update response assignment
 | **assessmentPercentageScore** | **Float** | The user&#39;s percentage score for this assignment&#39;s assessment | [optional] |
 | **assessmentCompletionPercentage** | **Float** | The assessment completion percentage of assignment | [optional] |
 | **isPassed** | **Bool** | True if the assessment was passed | [optional] |
-| **currentStep** | [**LearningModulePreviewUpdateResponseCurrentStep**](LearningModulePreviewUpdateResponseCurrentStep.html) | The next assignment step | [optional] |
-| **steps** | [**[LearningModulePreviewUpdateStep]**](LearningModulePreviewUpdateStep.html) | List of assignment steps | [optional] |
-{: class="table table-striped"}
+| **currentStep** | [**LearningModulePreviewUpdateResponseCurrentStep**](LearningModulePreviewUpdateResponseCurrentStep) | The next assignment step | [optional] |
+| **steps** | [**[LearningModulePreviewUpdateStep]**](LearningModulePreviewUpdateStep) | List of assignment steps | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

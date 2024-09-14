@@ -1,6 +1,5 @@
----
-title: PredictorSchedule
----
+# PredictorSchedule
+
 ## PredictorSchedule
 
 ## Properties
@@ -8,7 +7,8 @@ title: PredictorSchedule
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **scheduleType** | **String** | The predictor schedule type. | |
-| **dateStarted** | [**Date**](Date.html) | DateTime indicating when the predictor schedule was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **dateStarted** | [**Date**](Date) | DateTime indicating when the predictor schedule was started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DataActionConditionPredicate
----
+# DataActionConditionPredicate
+
 ## DataActionConditionPredicate
 
 ## Properties
@@ -12,6 +11,7 @@ title: DataActionConditionPredicate
 | **comparisonValue** | **String** | The value to compare against for this condition | |
 | **inverted** | **Bool** | If true, inverts the result of evaluating this Predicate. Default is false. | |
 | **outputFieldMissingResolution** | **Bool** | The result of this predicate if the requested output field is missing from the data action&#39;s result | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

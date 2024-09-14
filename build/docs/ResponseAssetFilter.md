@@ -1,6 +1,5 @@
----
-title: ResponseAssetFilter
----
+# ResponseAssetFilter
+
 ## ResponseAssetFilter
 
 ## Properties
@@ -13,6 +12,7 @@ title: ResponseAssetFilter
 | **fields** | **[String]** | Field name to search against. Allowed Values: divisionId, name, contentLength, contentType, dateCreated | [optional] |
 | **value** | **String** | A value for the search to match against | [optional] |
 | **type** | **String** | How to apply this search criteria against other criteria. Filter type supported for each field:- name:[STARTS_WITH, TERM], divisionId:[TERM, TERMS], contentLength:[RANGE, GREATER_THAN_EQUAL_TO, LESS_THAN_EQUAL_TO], contentType:[STARTS_WITH, TERM] dateCreated:[DATE_RANGE] | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: InstagramId
----
+# InstagramId
+
 ## InstagramId
 User information for an Instagram account
 
@@ -8,8 +7,9 @@ User information for an Instagram account
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ids** | [**[InstagramScopedId]**](InstagramScopedId.html) | The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with. | [optional] |
+| **ids** | [**[InstagramScopedId]**](InstagramScopedId) | The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with. | [optional] |
 | **displayName** | **String** | The displayName of the person who owns this Instagram account | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

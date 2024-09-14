@@ -1,6 +1,5 @@
----
-title: HistoricalShrinkageAggregateResponse
----
+# HistoricalShrinkageAggregateResponse
+
 ## HistoricalShrinkageAggregateResponse
 
 ## Properties
@@ -15,6 +14,7 @@ title: HistoricalShrinkageAggregateResponse
 | **unpaidShrinkageSeconds** | **Int** | Aggregated shrinkage value in seconds for unpaid activities | [optional] |
 | **plannedShrinkageSeconds** | **Int** | Aggregated shrinkage value in seconds for planned activities | [optional] |
 | **unplannedShrinkageSeconds** | **Int** | Aggregated shrinkage value in seconds for unplanned activities | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

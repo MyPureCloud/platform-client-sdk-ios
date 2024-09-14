@@ -1,15 +1,15 @@
----
-title: ApiUsageQueryResult
----
+# ApiUsageQueryResult
+
 ## ApiUsageQueryResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[ApiUsageRow]**](ApiUsageRow.html) | Query results | [optional] |
+| **results** | [**[ApiUsageRow]**](ApiUsageRow) | Query results | [optional] |
 | **queryStatus** | **String** | Query status | [optional] |
-| **cursors** | [**Cursors**](Cursors.html) | Cursor tokens to be used for navigating paginated results | [optional] |
-{: class="table table-striped"}
+| **cursors** | [**Cursors**](Cursors) | Cursor tokens to be used for navigating paginated results | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

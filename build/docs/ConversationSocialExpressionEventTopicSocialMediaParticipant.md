@@ -1,6 +1,5 @@
----
-title: ConversationSocialExpressionEventTopicSocialMediaParticipant
----
+# ConversationSocialExpressionEventTopicSocialMediaParticipant
+
 ## ConversationSocialExpressionEventTopicSocialMediaParticipant
 
 ## Properties
@@ -10,10 +9,10 @@ title: ConversationSocialExpressionEventTopicSocialMediaParticipant
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **endTime** | [**Date**](Date.html) |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
+| **startTime** | [**Date**](Date) |  | [optional] |
+| **connectedTime** | [**Date**](Date) |  | [optional] |
+| **endTime** | [**Date**](Date) |  | [optional] |
+| **startHoldTime** | [**Date**](Date) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **initialState** | **String** |  | [optional] |
@@ -22,34 +21,35 @@ title: ConversationSocialExpressionEventTopicSocialMediaParticipant
 | **held** | **Bool** |  | [optional] |
 | **wrapupRequired** | **Bool** |  | [optional] |
 | **wrapupPrompt** | **String** |  | [optional] |
-| **user** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
-| **queue** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
-| **team** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
+| **user** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) |  | [optional] |
+| **queue** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) |  | [optional] |
+| **team** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
-| **errorInfo** | [**ConversationSocialExpressionEventTopicErrorBody**](ConversationSocialExpressionEventTopicErrorBody.html) |  | [optional] |
-| **script** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
+| **errorInfo** | [**ConversationSocialExpressionEventTopicErrorBody**](ConversationSocialExpressionEventTopicErrorBody) |  | [optional] |
+| **script** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **provider** | **String** |  | [optional] |
-| **externalContact** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
-| **externalOrganization** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) |  | [optional] |
-| **wrapup** | [**ConversationSocialExpressionEventTopicWrapup**](ConversationSocialExpressionEventTopicWrapup.html) |  | [optional] |
-| **conversationRoutingData** | [**ConversationSocialExpressionEventTopicConversationRoutingData**](ConversationSocialExpressionEventTopicConversationRoutingData.html) |  | [optional] |
+| **externalContact** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) |  | [optional] |
+| **externalOrganization** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) |  | [optional] |
+| **wrapup** | [**ConversationSocialExpressionEventTopicWrapup**](ConversationSocialExpressionEventTopicWrapup) |  | [optional] |
+| **conversationRoutingData** | [**ConversationSocialExpressionEventTopicConversationRoutingData**](ConversationSocialExpressionEventTopicConversationRoutingData) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
-| **journeyContext** | [**ConversationSocialExpressionEventTopicJourneyContext**](ConversationSocialExpressionEventTopicJourneyContext.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **resumeTime** | [**Date**](Date.html) |  | [optional] |
-| **parkTime** | [**Date**](Date.html) |  | [optional] |
+| **journeyContext** | [**ConversationSocialExpressionEventTopicJourneyContext**](ConversationSocialExpressionEventTopicJourneyContext) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) |  | [optional] |
+| **endAcwTime** | [**Date**](Date) |  | [optional] |
+| **resumeTime** | [**Date**](Date) |  | [optional] |
+| **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
-| **queueMediaSettings** | [**ConversationSocialExpressionEventTopicQueueMediaSettings**](ConversationSocialExpressionEventTopicQueueMediaSettings.html) |  | [optional] |
+| **queueMediaSettings** | [**ConversationSocialExpressionEventTopicQueueMediaSettings**](ConversationSocialExpressionEventTopicQueueMediaSettings) |  | [optional] |
 | **socialMediaId** | **String** |  | [optional] |
 | **socialMediaHub** | **String** |  | [optional] |
 | **socialUserName** | **String** |  | [optional] |
 | **previewText** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

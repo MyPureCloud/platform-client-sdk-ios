@@ -1,6 +1,5 @@
----
-title: CalendarUrlResponse
----
+# CalendarUrlResponse
+
 ## CalendarUrlResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: CalendarUrlResponse
 |------------ | ------------- | ------------- | -------------|
 | **calendarUrl** | **String** | The calendar url for the user to subscribe with supported clients | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

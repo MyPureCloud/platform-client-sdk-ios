@@ -1,6 +1,5 @@
----
-title: RegisterArchitectJobResponse
----
+# RegisterArchitectJobResponse
+
 ## RegisterArchitectJobResponse
 
 ## Properties
@@ -11,6 +10,7 @@ title: RegisterArchitectJobResponse
 | **presignedUrl** | **String** | Presigned URL to upload the file in S3 | [optional] |
 | **headers** | **[String:String]** | Required headers when uploading a file through PUT request to the URL | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

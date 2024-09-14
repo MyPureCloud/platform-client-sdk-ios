@@ -1,6 +1,5 @@
----
-title: AgentWorkPlanBiddingPreferenceRequest
----
+# AgentWorkPlanBiddingPreferenceRequest
+
 ## AgentWorkPlanBiddingPreferenceRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentWorkPlanBiddingPreferenceRequest
 |------------ | ------------- | ------------- | -------------|
 | **workPlanId** | **String** | The ID of the work plan that belongs to agent&#39;s bid group | |
 | **priority** | **Int** | The agent&#39;s priority for this work plan, with 1 being the best priority. Null if priority is not set for the work plan | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

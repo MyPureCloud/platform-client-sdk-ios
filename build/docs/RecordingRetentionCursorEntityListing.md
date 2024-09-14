@@ -1,16 +1,16 @@
----
-title: RecordingRetentionCursorEntityListing
----
+# RecordingRetentionCursorEntityListing
+
 ## RecordingRetentionCursorEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[RecordingRetention]**](RecordingRetention.html) |  | [optional] |
+| **entities** | [**[RecordingRetention]**](RecordingRetention) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

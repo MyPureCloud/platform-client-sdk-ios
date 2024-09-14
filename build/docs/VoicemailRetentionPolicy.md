@@ -1,6 +1,5 @@
----
-title: VoicemailRetentionPolicy
----
+# VoicemailRetentionPolicy
+
 ## VoicemailRetentionPolicy
 Governs how the voicemail is retained
 
@@ -10,6 +9,7 @@ Governs how the voicemail is retained
 |------------ | ------------- | ------------- | -------------|
 | **voicemailRetentionPolicyType** | **String** | The retention policy type | [optional] |
 | **numberOfDays** | **Int** | If retentionPolicyType &#x3D;&#x3D; RETAIN_WITH_TTL, then this value represents the number of days for the TTL | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ShiftStartVariance
----
+# ShiftStartVariance
+
 ## ShiftStartVariance
 
 ## Properties
@@ -9,6 +8,7 @@ title: ShiftStartVariance
 |------------ | ------------- | ------------- | -------------|
 | **applicableDays** | **[String]** | Days for which shift start variance is configured | |
 | **maxShiftStartVarianceMinutes** | **Int** | Maximum variance in minutes across shift starts | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

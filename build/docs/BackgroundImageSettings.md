@@ -1,6 +1,5 @@
----
-title: BackgroundImageSettings
----
+# BackgroundImageSettings
+
 ## BackgroundImageSettings
 The settings to Agent Video background image
 
@@ -9,6 +8,7 @@ The settings to Agent Video background image
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** | BackgroundImage URL for agent video settings | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

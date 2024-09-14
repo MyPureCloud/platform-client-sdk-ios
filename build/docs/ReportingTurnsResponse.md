@@ -1,16 +1,16 @@
----
-title: ReportingTurnsResponse
----
+# ReportingTurnsResponse
+
 ## ReportingTurnsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ReportingTurn]**](ReportingTurn.html) |  | [optional] |
+| **entities** | [**[ReportingTurn]**](ReportingTurn) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

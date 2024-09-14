@@ -1,6 +1,5 @@
----
-title: TeamAddMemberFailure
----
+# TeamAddMemberFailure
+
 ## TeamAddMemberFailure
 
 ## Properties
@@ -9,6 +8,7 @@ title: TeamAddMemberFailure
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **reason** | **String** | Specific reason the member could not be added. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

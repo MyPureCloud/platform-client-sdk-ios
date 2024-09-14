@@ -1,25 +1,21 @@
----
-title: LocationsAPI
----
-## LocationsAPI
+# LocationsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteLocation**](LocationsAPI.html#deleteLocation) | Delete a location |
-| [**getLocation**](LocationsAPI.html#getLocation) | Get Location by ID. |
-| [**getLocationSublocations**](LocationsAPI.html#getLocationSublocations) | Get sublocations for location ID. |
-| [**getLocations**](LocationsAPI.html#getLocations) | Get a list of all locations. |
-| [**getLocationsSearch**](LocationsAPI.html#getLocationsSearch) | Search locations using the q64 value returned from a previous search |
-| [**patchLocation**](LocationsAPI.html#patchLocation) | Update a location |
-| [**postLocations**](LocationsAPI.html#postLocations) | Create a location |
-| [**postLocationsSearch**](LocationsAPI.html#postLocationsSearch) | Search locations |
+| [**deleteLocation**](LocationsAPI#deleteLocation) | Delete a location |
+| [**getLocation**](LocationsAPI#getLocation) | Get Location by ID. |
+| [**getLocationSublocations**](LocationsAPI#getLocationSublocations) | Get sublocations for location ID. |
+| [**getLocations**](LocationsAPI#getLocations) | Get a list of all locations. |
+| [**getLocationsSearch**](LocationsAPI#getLocationsSearch) | Search locations using the q64 value returned from a previous search |
+| [**patchLocation**](LocationsAPI#patchLocation) | Update a location |
+| [**postLocations**](LocationsAPI#postLocations) | Create a location |
+| [**postLocationsSearch**](LocationsAPI#postLocationsSearch) | Search locations |
 {: class="table-striped"}
 
-<a name="deleteLocation"></a>
 
-# **deleteLocation**
+## deleteLocation
 
 
 
@@ -61,20 +57,18 @@ LocationsAPI.deleteLocation(locationId: locationId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **locationId** | **String**| Location ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getLocation"></a>
 
-# **getLocation**
-
+## getLocation
 
 
-> [LocationDefinition](LocationDefinition.html) getLocation(locationId, expand)
+
+> [LocationDefinition](LocationDefinition) getLocation(locationId, expand)
 
 Get Location by ID.
 
@@ -113,21 +107,19 @@ LocationsAPI.getLocation(locationId: locationId, expand: expand) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **locationId** | **String**| Location ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: images ("images"), addressverificationdetails ("addressVerificationDetails") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: images ("images"), addressverificationdetails ("addressVerificationDetails") |
 
 
 ### Return type
 
-[**LocationDefinition**](LocationDefinition.html)
-
-<a name="getLocationSublocations"></a>
-
-# **getLocationSublocations**
+[**LocationDefinition**](LocationDefinition)
 
 
+## getLocationSublocations
 
-> [LocationEntityListing](LocationEntityListing.html) getLocationSublocations(locationId)
+
+
+> [LocationEntityListing](LocationEntityListing) getLocationSublocations(locationId)
 
 Get sublocations for location ID.
 
@@ -165,20 +157,18 @@ LocationsAPI.getLocationSublocations(locationId: locationId) { (response, error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **locationId** | **String**| Location ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LocationEntityListing**](LocationEntityListing.html)
-
-<a name="getLocations"></a>
-
-# **getLocations**
+[**LocationEntityListing**](LocationEntityListing)
 
 
+## getLocations
 
-> [LocationEntityListing](LocationEntityListing.html) getLocations(pageSize, pageNumber, _id, sortOrder)
+
+
+> [LocationEntityListing](LocationEntityListing) getLocations(pageSize, pageNumber, _id, sortOrder)
 
 Get a list of all locations.
 
@@ -220,22 +210,20 @@ LocationsAPI.getLocations(pageSize: pageSize, pageNumber: pageNumber, _id: _id, 
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **_id** | [**[String]**](String.html)| id | [optional] |
+| **_id** | [**[String]**](String)| id | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LocationEntityListing**](LocationEntityListing.html)
-
-<a name="getLocationsSearch"></a>
-
-# **getLocationsSearch**
+[**LocationEntityListing**](LocationEntityListing)
 
 
+## getLocationsSearch
 
-> [LocationsSearchResponse](LocationsSearchResponse.html) getLocationsSearch(q64, expand)
+
+
+> [LocationsSearchResponse](LocationsSearchResponse) getLocationsSearch(q64, expand)
 
 Search locations using the q64 value returned from a previous search
 
@@ -274,21 +262,19 @@ LocationsAPI.getLocationsSearch(q64: q64, expand: expand) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
-| **expand** | [**[String]**](String.html)| Provides more details about a specified resource | [optional]<br />**Values**: images ("images"), addressverificationdetails ("addressVerificationDetails") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Provides more details about a specified resource | [optional]<br />**Values**: images ("images"), addressverificationdetails ("addressVerificationDetails") |
 
 
 ### Return type
 
-[**LocationsSearchResponse**](LocationsSearchResponse.html)
-
-<a name="patchLocation"></a>
-
-# **patchLocation**
+[**LocationsSearchResponse**](LocationsSearchResponse)
 
 
+## patchLocation
 
-> [LocationDefinition](LocationDefinition.html) patchLocation(locationId, body)
+
+
+> [LocationDefinition](LocationDefinition) patchLocation(locationId, body)
 
 Update a location
 
@@ -328,21 +314,19 @@ LocationsAPI.patchLocation(locationId: locationId, body: body) { (response, erro
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **locationId** | **String**| Location ID | |
-| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition.html)| Location | |
-{: class="table-striped"}
+| **body** | [**LocationUpdateDefinition**](LocationUpdateDefinition)| Location | |
 
 
 ### Return type
 
-[**LocationDefinition**](LocationDefinition.html)
-
-<a name="postLocations"></a>
-
-# **postLocations**
+[**LocationDefinition**](LocationDefinition)
 
 
+## postLocations
 
-> [LocationDefinition](LocationDefinition.html) postLocations(body)
+
+
+> [LocationDefinition](LocationDefinition) postLocations(body)
 
 Create a location
 
@@ -380,21 +364,19 @@ LocationsAPI.postLocations(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**LocationCreateDefinition**](LocationCreateDefinition.html)| Location | |
-{: class="table-striped"}
+| **body** | [**LocationCreateDefinition**](LocationCreateDefinition)| Location | |
 
 
 ### Return type
 
-[**LocationDefinition**](LocationDefinition.html)
-
-<a name="postLocationsSearch"></a>
-
-# **postLocationsSearch**
+[**LocationDefinition**](LocationDefinition)
 
 
+## postLocationsSearch
 
-> [LocationsSearchResponse](LocationsSearchResponse.html) postLocationsSearch(body)
+
+
+> [LocationsSearchResponse](LocationsSearchResponse) postLocationsSearch(body)
 
 Search locations
 
@@ -431,11 +413,12 @@ LocationsAPI.postLocationsSearch(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**LocationSearchRequest**](LocationSearchRequest.html)| Search request options | |
-{: class="table-striped"}
+| **body** | [**LocationSearchRequest**](LocationSearchRequest)| Search request options | |
 
 
 ### Return type
 
-[**LocationsSearchResponse**](LocationsSearchResponse.html)
+[**LocationsSearchResponse**](LocationsSearchResponse)
 
+
+_PureCloudPlatformClientV2@151.1.0_

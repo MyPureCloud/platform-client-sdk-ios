@@ -1,6 +1,5 @@
----
-title: InsightsSummaryOverallPeriodPoints
----
+# InsightsSummaryOverallPeriodPoints
+
 ## InsightsSummaryOverallPeriodPoints
 
 ## Properties
@@ -11,6 +10,7 @@ title: InsightsSummaryOverallPeriodPoints
 | **maxPoints** | **Int** | Max possible points | [optional] |
 | **dataPointCount** | **Int** | Number of data points | [optional] |
 | **percentOfGoal** | **Double** | Percentage of the goal | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

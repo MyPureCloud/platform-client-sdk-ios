@@ -1,6 +1,5 @@
----
-title: CampaignRuleCondition
----
+# CampaignRuleCondition
+
 ## CampaignRuleCondition
 
 ## Properties
@@ -8,8 +7,9 @@ title: CampaignRuleCondition
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **parameters** | [**CampaignRuleParameters**](CampaignRuleParameters.html) | The parameters for the CampaignRuleCondition. | |
+| **parameters** | [**CampaignRuleParameters**](CampaignRuleParameters) | The parameters for the CampaignRuleCondition. | |
 | **conditionType** | **String** | The type of condition to evaluate. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

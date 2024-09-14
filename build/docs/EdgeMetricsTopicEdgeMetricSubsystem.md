@@ -1,6 +1,5 @@
----
-title: EdgeMetricsTopicEdgeMetricSubsystem
----
+# EdgeMetricsTopicEdgeMetricSubsystem
+
 ## EdgeMetricsTopicEdgeMetricSubsystem
 
 ## Properties
@@ -9,7 +8,8 @@ title: EdgeMetricsTopicEdgeMetricSubsystem
 |------------ | ------------- | ------------- | -------------|
 | **processName** | **String** |  | [optional] |
 | **delayMs** | **Int** |  | [optional] |
-| **mediaSubsystem** | [**EdgeMetricsTopicEdgeMetricSubsystemMedia**](EdgeMetricsTopicEdgeMetricSubsystemMedia.html) |  | [optional] |
-{: class="table table-striped"}
+| **mediaSubsystem** | [**EdgeMetricsTopicEdgeMetricSubsystemMedia**](EdgeMetricsTopicEdgeMetricSubsystemMedia) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

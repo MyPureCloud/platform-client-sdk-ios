@@ -1,6 +1,5 @@
----
-title: SupportedLanguage
----
+# SupportedLanguage
+
 ## SupportedLanguage
 
 ## Properties
@@ -9,6 +8,7 @@ title: SupportedLanguage
 |------------ | ------------- | ------------- | -------------|
 | **language** | **String** | Architect supported language tag, e.g. en-us, es-us | [optional] |
 | **isDefault** | **Bool** | Whether or not this language is the default language | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: GroupSettings
----
+# GroupSettings
+
 ## GroupSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: GroupSettings
 | **maximumGroupSize** | **Int** | The maximum size of a group for a session | [optional] |
 | **maximumTotalSessions** | **Int** | The maximum total number of sessions | [optional] |
 | **maximumConcurrentSessions** | **Int** | The maximum number of sessions that can be scheduled concurrently | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

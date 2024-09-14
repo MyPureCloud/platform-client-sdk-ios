@@ -1,13 +1,13 @@
----
-title: BuTimeOffLimitValuesResponse
----
+# BuTimeOffLimitValuesResponse
+
 ## BuTimeOffLimitValuesResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[BuTimeOffLimitValueRange]**](BuTimeOffLimitValueRange.html) |  | [optional] |
-{: class="table table-striped"}
+| **values** | [**[BuTimeOffLimitValueRange]**](BuTimeOffLimitValueRange) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

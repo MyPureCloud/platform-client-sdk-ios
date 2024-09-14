@@ -1,6 +1,5 @@
----
-title: DnclistDownloadReadyExportUri
----
+# DnclistDownloadReadyExportUri
+
 ## DnclistDownloadReadyExportUri
 
 ## Properties
@@ -9,7 +8,8 @@ title: DnclistDownloadReadyExportUri
 |------------ | ------------- | ------------- | -------------|
 | **uri** | **String** |  | [optional] |
 | **exportTimestamp** | **String** |  | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

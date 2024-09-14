@@ -1,6 +1,5 @@
----
-title: UserParam
----
+# UserParam
+
 ## UserParam
 
 ## Properties
@@ -9,6 +8,7 @@ title: UserParam
 |------------ | ------------- | ------------- | -------------|
 | **key** | **String** |  | [optional] |
 | **value** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

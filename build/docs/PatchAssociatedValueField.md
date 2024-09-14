@@ -1,6 +1,5 @@
----
-title: PatchAssociatedValueField
----
+# PatchAssociatedValueField
+
 ## PatchAssociatedValueField
 
 ## Properties
@@ -9,6 +8,7 @@ title: PatchAssociatedValueField
 |------------ | ------------- | ------------- | -------------|
 | **dataType** | **String** | The data type of the value field. | [optional] |
 | **name** | **String** | The field name for extracting value from event. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

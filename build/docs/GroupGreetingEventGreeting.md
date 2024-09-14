@@ -1,6 +1,5 @@
----
-title: GroupGreetingEventGreeting
----
+# GroupGreetingEventGreeting
+
 ## GroupGreetingEventGreeting
 
 ## Properties
@@ -11,9 +10,10 @@ title: GroupGreetingEventGreeting
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **ownerType** | **String** |  | [optional] |
-| **owner** | [**GroupGreetingEventGreetingOwner**](GroupGreetingEventGreetingOwner.html) |  | [optional] |
-| **greetingAudioFile** | [**GroupGreetingEventGreetingAudioFile**](GroupGreetingEventGreetingAudioFile.html) |  | [optional] |
+| **owner** | [**GroupGreetingEventGreetingOwner**](GroupGreetingEventGreetingOwner) |  | [optional] |
+| **greetingAudioFile** | [**GroupGreetingEventGreetingAudioFile**](GroupGreetingEventGreetingAudioFile) |  | [optional] |
 | **audioTTS** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WrapupInput
----
+# WrapupInput
+
 ## WrapupInput
 
 ## Properties
@@ -12,9 +11,10 @@ title: WrapupInput
 | **notes** | **String** | Text entered by the agent to describe the call or disposition. | [optional] |
 | **tags** | **[String]** | List of tags selected by the agent to describe the call or disposition. | [optional] |
 | **durationSeconds** | **Int** | The length of time in seconds that the agent spent doing after call work. | [optional] |
-| **endTime** | [**Date**](Date.html) | The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **endTime** | [**Date**](Date) | The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **provisional** | **Bool** | Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later. | [optional] |
 | **disableEndTimeUpdates** | **Bool** | Prevent updates to wrapup end time when set to true. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

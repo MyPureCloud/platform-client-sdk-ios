@@ -1,14 +1,14 @@
----
-title: MoveAgentResponse
----
+# MoveAgentResponse
+
 ## MoveAgentResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**UserReference**](UserReference.html) | The user associated with the move | [optional] |
+| **user** | [**UserReference**](UserReference) | The user associated with the move | [optional] |
 | **result** | **String** | The result of the move | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

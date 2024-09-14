@@ -1,25 +1,21 @@
----
-title: FaxAPI
----
-## FaxAPI
+# FaxAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteFaxDocument**](FaxAPI.html#deleteFaxDocument) | Delete a fax document. |
-| [**getFaxDocument**](FaxAPI.html#getFaxDocument) | Get a document. |
-| [**getFaxDocumentContent**](FaxAPI.html#getFaxDocumentContent) | Download a fax document. |
-| [**getFaxDocuments**](FaxAPI.html#getFaxDocuments) | Get a list of fax documents. |
-| [**getFaxSettings**](FaxAPI.html#getFaxSettings) | Get organization config for given organization |
-| [**getFaxSummary**](FaxAPI.html#getFaxSummary) | Get fax summary |
-| [**putFaxDocument**](FaxAPI.html#putFaxDocument) | Update a fax document. |
-| [**putFaxSettings**](FaxAPI.html#putFaxSettings) | Update/write organization config for given organization |
+| [**deleteFaxDocument**](FaxAPI#deleteFaxDocument) | Delete a fax document. |
+| [**getFaxDocument**](FaxAPI#getFaxDocument) | Get a document. |
+| [**getFaxDocumentContent**](FaxAPI#getFaxDocumentContent) | Download a fax document. |
+| [**getFaxDocuments**](FaxAPI#getFaxDocuments) | Get a list of fax documents. |
+| [**getFaxSettings**](FaxAPI#getFaxSettings) | Get organization config for given organization |
+| [**getFaxSummary**](FaxAPI#getFaxSummary) | Get fax summary |
+| [**putFaxDocument**](FaxAPI#putFaxDocument) | Update a fax document. |
+| [**putFaxSettings**](FaxAPI#putFaxSettings) | Update/write organization config for given organization |
 {: class="table-striped"}
 
-<a name="deleteFaxDocument"></a>
 
-# **deleteFaxDocument**
+## deleteFaxDocument
 
 
 
@@ -60,20 +56,18 @@ FaxAPI.deleteFaxDocument(documentId: documentId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getFaxDocument"></a>
 
-# **getFaxDocument**
-
+## getFaxDocument
 
 
-> [FaxDocument](FaxDocument.html) getFaxDocument(documentId)
+
+> [FaxDocument](FaxDocument) getFaxDocument(documentId)
 
 Get a document.
 
@@ -111,20 +105,18 @@ FaxAPI.getFaxDocument(documentId: documentId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FaxDocument**](FaxDocument.html)
-
-<a name="getFaxDocumentContent"></a>
-
-# **getFaxDocumentContent**
+[**FaxDocument**](FaxDocument)
 
 
+## getFaxDocumentContent
 
-> [DownloadResponse](DownloadResponse.html) getFaxDocumentContent(documentId)
+
+
+> [DownloadResponse](DownloadResponse) getFaxDocumentContent(documentId)
 
 Download a fax document.
 
@@ -162,20 +154,18 @@ FaxAPI.getFaxDocumentContent(documentId: documentId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
-
-<a name="getFaxDocuments"></a>
-
-# **getFaxDocuments**
+[**DownloadResponse**](DownloadResponse)
 
 
+## getFaxDocuments
 
-> [FaxDocumentEntityListing](FaxDocumentEntityListing.html) getFaxDocuments(pageSize, pageNumber)
+
+
+> [FaxDocumentEntityListing](FaxDocumentEntityListing) getFaxDocuments(pageSize, pageNumber)
 
 Get a list of fax documents.
 
@@ -215,20 +205,18 @@ FaxAPI.getFaxDocuments(pageSize: pageSize, pageNumber: pageNumber) { (response, 
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FaxDocumentEntityListing**](FaxDocumentEntityListing.html)
-
-<a name="getFaxSettings"></a>
-
-# **getFaxSettings**
+[**FaxDocumentEntityListing**](FaxDocumentEntityListing)
 
 
+## getFaxSettings
 
-> [FaxConfig](FaxConfig.html) getFaxSettings()
+
+
+> [FaxConfig](FaxConfig) getFaxSettings()
 
 Get organization config for given organization
 
@@ -264,18 +252,16 @@ FaxAPI.getFaxSettings() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**FaxConfig**](FaxConfig.html)
-
-<a name="getFaxSummary"></a>
-
-# **getFaxSummary**
+[**FaxConfig**](FaxConfig)
 
 
+## getFaxSummary
 
-> [FaxSummary](FaxSummary.html) getFaxSummary()
+
+
+> [FaxSummary](FaxSummary) getFaxSummary()
 
 Get fax summary
 
@@ -311,18 +297,16 @@ FaxAPI.getFaxSummary() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**FaxSummary**](FaxSummary.html)
-
-<a name="putFaxDocument"></a>
-
-# **putFaxDocument**
+[**FaxSummary**](FaxSummary)
 
 
+## putFaxDocument
 
-> [FaxDocument](FaxDocument.html) putFaxDocument(documentId, body)
+
+
+> [FaxDocument](FaxDocument) putFaxDocument(documentId, body)
 
 Update a fax document.
 
@@ -361,21 +345,19 @@ FaxAPI.putFaxDocument(documentId: documentId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **documentId** | **String**| Document ID | |
-| **body** | [**FaxDocument**](FaxDocument.html)| Document | |
-{: class="table-striped"}
+| **body** | [**FaxDocument**](FaxDocument)| Document | |
 
 
 ### Return type
 
-[**FaxDocument**](FaxDocument.html)
-
-<a name="putFaxSettings"></a>
-
-# **putFaxSettings**
+[**FaxDocument**](FaxDocument)
 
 
+## putFaxSettings
 
-> [FaxConfig](FaxConfig.html) putFaxSettings(body)
+
+
+> [FaxConfig](FaxConfig) putFaxSettings(body)
 
 Update/write organization config for given organization
 
@@ -413,11 +395,12 @@ FaxAPI.putFaxSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FaxConfig**](FaxConfig.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**FaxConfig**](FaxConfig)|  | [optional] |
 
 
 ### Return type
 
-[**FaxConfig**](FaxConfig.html)
+[**FaxConfig**](FaxConfig)
 
+
+_PureCloudPlatformClientV2@151.1.0_

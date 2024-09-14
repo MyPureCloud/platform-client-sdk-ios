@@ -1,6 +1,5 @@
----
-title: GamificationScorecardChangeTopicPunctualityEvent
----
+# GamificationScorecardChangeTopicPunctualityEvent
+
 ## GamificationScorecardChangeTopicPunctualityEvent
 
 ## Properties
@@ -11,6 +10,7 @@ title: GamificationScorecardChangeTopicPunctualityEvent
 | **dateScheduleStart** | **String** |  | [optional] |
 | **activityCode** | **String** |  | [optional] |
 | **points** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

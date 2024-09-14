@@ -1,29 +1,25 @@
----
-title: AgentAssistantsAPI
----
-## AgentAssistantsAPI
+# AgentAssistantsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteAssistant**](AgentAssistantsAPI.html#deleteAssistant) | Delete an assistant. |
-| [**deleteAssistantQueue**](AgentAssistantsAPI.html#deleteAssistantQueue) | Disassociate a queue from an assistant. |
-| [**deleteAssistantQueues**](AgentAssistantsAPI.html#deleteAssistantQueues) | Disassociate the queues from an assistant for the given assistant ID and queue IDs. |
-| [**getAssistant**](AgentAssistantsAPI.html#getAssistant) | Get an assistant. |
-| [**getAssistantQueue**](AgentAssistantsAPI.html#getAssistantQueue) | Get queue Information for an assistant. |
-| [**getAssistantQueues**](AgentAssistantsAPI.html#getAssistantQueues) | Get all the queues associated with an assistant. |
-| [**getAssistants**](AgentAssistantsAPI.html#getAssistants) | Get all assistants. |
-| [**getAssistantsQueues**](AgentAssistantsAPI.html#getAssistantsQueues) | Get all queues assigned to any assistant. |
-| [**patchAssistant**](AgentAssistantsAPI.html#patchAssistant) | Update an assistant. |
-| [**patchAssistantQueues**](AgentAssistantsAPI.html#patchAssistantQueues) | Update Queues for an Assistant. |
-| [**postAssistants**](AgentAssistantsAPI.html#postAssistants) | Create an Assistant. |
-| [**putAssistantQueue**](AgentAssistantsAPI.html#putAssistantQueue) | Create a queue assistant association. |
+| [**deleteAssistant**](AgentAssistantsAPI#deleteAssistant) | Delete an assistant. |
+| [**deleteAssistantQueue**](AgentAssistantsAPI#deleteAssistantQueue) | Disassociate a queue from an assistant. |
+| [**deleteAssistantQueues**](AgentAssistantsAPI#deleteAssistantQueues) | Disassociate the queues from an assistant for the given assistant ID and queue IDs. |
+| [**getAssistant**](AgentAssistantsAPI#getAssistant) | Get an assistant. |
+| [**getAssistantQueue**](AgentAssistantsAPI#getAssistantQueue) | Get queue Information for an assistant. |
+| [**getAssistantQueues**](AgentAssistantsAPI#getAssistantQueues) | Get all the queues associated with an assistant. |
+| [**getAssistants**](AgentAssistantsAPI#getAssistants) | Get all assistants. |
+| [**getAssistantsQueues**](AgentAssistantsAPI#getAssistantsQueues) | Get all queues assigned to any assistant. |
+| [**patchAssistant**](AgentAssistantsAPI#patchAssistant) | Update an assistant. |
+| [**patchAssistantQueues**](AgentAssistantsAPI#patchAssistantQueues) | Update Queues for an Assistant. |
+| [**postAssistants**](AgentAssistantsAPI#postAssistants) | Create an Assistant. |
+| [**putAssistantQueue**](AgentAssistantsAPI#putAssistantQueue) | Create a queue assistant association. |
 {: class="table-striped"}
 
-<a name="deleteAssistant"></a>
 
-# **deleteAssistant**
+## deleteAssistant
 
 
 
@@ -65,16 +61,14 @@ AgentAssistantsAPI.deleteAssistant(assistantId: assistantId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteAssistantQueue"></a>
 
-# **deleteAssistantQueue**
+## deleteAssistantQueue
 
 
 
@@ -118,16 +112,14 @@ AgentAssistantsAPI.deleteAssistantQueue(assistantId: assistantId, queueId: queue
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
 | **queueId** | **String**| Queue ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteAssistantQueues"></a>
 
-# **deleteAssistantQueues**
+## deleteAssistantQueues
 
 
 
@@ -171,20 +163,18 @@ AgentAssistantsAPI.deleteAssistantQueues(assistantId: assistantId, queueIds: que
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
 | **queueIds** | **String**| Comma-separated identifiers of the queues that need to be deleted. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getAssistant"></a>
 
-# **getAssistant**
-
+## getAssistant
 
 
-> [Assistant](Assistant.html) getAssistant(assistantId, expand)
+
+> [Assistant](Assistant) getAssistant(assistantId, expand)
 
 Get an assistant.
 
@@ -225,20 +215,18 @@ AgentAssistantsAPI.getAssistant(assistantId: assistantId, expand: expand) { (res
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
 | **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: copilot ("copilot") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Assistant**](Assistant.html)
-
-<a name="getAssistantQueue"></a>
-
-# **getAssistantQueue**
+[**Assistant**](Assistant)
 
 
+## getAssistantQueue
 
-> [AssistantQueue](AssistantQueue.html) getAssistantQueue(assistantId, queueId, expand)
+
+
+> [AssistantQueue](AssistantQueue) getAssistantQueue(assistantId, queueId, expand)
 
 Get queue Information for an assistant.
 
@@ -281,20 +269,18 @@ AgentAssistantsAPI.getAssistantQueue(assistantId: assistantId, queueId: queueId,
 | **assistantId** | **String**| Assistant ID | |
 | **queueId** | **String**| Queue ID | |
 | **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AssistantQueue**](AssistantQueue.html)
-
-<a name="getAssistantQueues"></a>
-
-# **getAssistantQueues**
+[**AssistantQueue**](AssistantQueue)
 
 
+## getAssistantQueues
 
-> [AssistantQueueListing](AssistantQueueListing.html) getAssistantQueues(assistantId, before, after, pageSize, expand)
+
+
+> [AssistantQueueListing](AssistantQueueListing) getAssistantQueues(assistantId, before, after, pageSize, expand)
 
 Get all the queues associated with an assistant.
 
@@ -341,20 +327,18 @@ AgentAssistantsAPI.getAssistantQueues(assistantId: assistantId, before: before, 
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AssistantQueueListing**](AssistantQueueListing.html)
-
-<a name="getAssistants"></a>
-
-# **getAssistants**
+[**AssistantQueueListing**](AssistantQueueListing)
 
 
+## getAssistants
 
-> [AssistantListing](AssistantListing.html) getAssistants(before, after, limit, pageSize, name)
+
+
+> [AssistantListing](AssistantListing) getAssistants(before, after, limit, pageSize, name)
 
 Get all assistants.
 
@@ -401,20 +385,18 @@ AgentAssistantsAPI.getAssistants(before: before, after: after, limit: limit, pag
 | **limit** | **String**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **name** | **String**| Return the assistant by the given name. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AssistantListing**](AssistantListing.html)
-
-<a name="getAssistantsQueues"></a>
-
-# **getAssistantsQueues**
+[**AssistantListing**](AssistantListing)
 
 
+## getAssistantsQueues
 
-> [AssistantQueueListing](AssistantQueueListing.html) getAssistantsQueues(before, after, pageSize, queueIds, expand)
+
+
+> [AssistantQueueListing](AssistantQueueListing) getAssistantsQueues(before, after, pageSize, queueIds, expand)
 
 Get all queues assigned to any assistant.
 
@@ -461,20 +443,18 @@ AgentAssistantsAPI.getAssistantsQueues(before: before, after: after, pageSize: p
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **queueIds** | **String**| Comma-separated identifiers of the queues that need to be retrieved. | [optional] |
 | **expand** | **String**| Which fields, if any, to expand. | [optional]<br />**Values**: assistant ("assistant") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AssistantQueueListing**](AssistantQueueListing.html)
-
-<a name="patchAssistant"></a>
-
-# **patchAssistant**
+[**AssistantQueueListing**](AssistantQueueListing)
 
 
+## patchAssistant
 
-> [Assistant](Assistant.html) patchAssistant(assistantId, body)
+
+
+> [Assistant](Assistant) patchAssistant(assistantId, body)
 
 Update an assistant.
 
@@ -514,21 +494,19 @@ AgentAssistantsAPI.patchAssistant(assistantId: assistantId, body: body) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
-| **body** | [**Assistant**](Assistant.html)|  | |
-{: class="table-striped"}
+| **body** | [**Assistant**](Assistant)|  | |
 
 
 ### Return type
 
-[**Assistant**](Assistant.html)
-
-<a name="patchAssistantQueues"></a>
-
-# **patchAssistantQueues**
+[**Assistant**](Assistant)
 
 
+## patchAssistantQueues
 
-> [AssistantQueueListing](AssistantQueueListing.html) patchAssistantQueues(assistantId, body)
+
+
+> [AssistantQueueListing](AssistantQueueListing) patchAssistantQueues(assistantId, body)
 
 Update Queues for an Assistant.
 
@@ -568,21 +546,19 @@ AgentAssistantsAPI.patchAssistantQueues(assistantId: assistantId, body: body) { 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
-| **body** | [**[AssistantQueue]**](AssistantQueue.html)|  | |
-{: class="table-striped"}
+| **body** | [**[AssistantQueue]**](AssistantQueue)|  | |
 
 
 ### Return type
 
-[**AssistantQueueListing**](AssistantQueueListing.html)
-
-<a name="postAssistants"></a>
-
-# **postAssistants**
+[**AssistantQueueListing**](AssistantQueueListing)
 
 
+## postAssistants
 
-> [Assistant](Assistant.html) postAssistants(body)
+
+
+> [Assistant](Assistant) postAssistants(body)
 
 Create an Assistant.
 
@@ -620,21 +596,19 @@ AgentAssistantsAPI.postAssistants(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Assistant**](Assistant.html)|  | |
-{: class="table-striped"}
+| **body** | [**Assistant**](Assistant)|  | |
 
 
 ### Return type
 
-[**Assistant**](Assistant.html)
-
-<a name="putAssistantQueue"></a>
-
-# **putAssistantQueue**
+[**Assistant**](Assistant)
 
 
+## putAssistantQueue
 
-> [AssistantQueue](AssistantQueue.html) putAssistantQueue(assistantId, queueId, body)
+
+
+> [AssistantQueue](AssistantQueue) putAssistantQueue(assistantId, queueId, body)
 
 Create a queue assistant association.
 
@@ -676,11 +650,12 @@ AgentAssistantsAPI.putAssistantQueue(assistantId: assistantId, queueId: queueId,
 | ------------- | ------------- | ------------- | ------------- |
 | **assistantId** | **String**| Assistant ID | |
 | **queueId** | **String**| Queue ID | |
-| **body** | [**AssistantQueue**](AssistantQueue.html)|  | |
-{: class="table-striped"}
+| **body** | [**AssistantQueue**](AssistantQueue)|  | |
 
 
 ### Return type
 
-[**AssistantQueue**](AssistantQueue.html)
+[**AssistantQueue**](AssistantQueue)
 
+
+_PureCloudPlatformClientV2@151.1.0_

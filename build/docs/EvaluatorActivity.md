@@ -1,6 +1,5 @@
----
-title: EvaluatorActivity
----
+# EvaluatorActivity
+
 ## EvaluatorActivity
 
 ## Properties
@@ -9,7 +8,7 @@ title: EvaluatorActivity
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **evaluator** | [**User**](User.html) |  | [optional] |
+| **evaluator** | [**User**](User) |  | [optional] |
 | **numEvaluationsAssigned** | **Int** |  | [optional] |
 | **numEvaluationsStarted** | **Int** |  | [optional] |
 | **numEvaluationsCompleted** | **Int** |  | [optional] |
@@ -18,6 +17,7 @@ title: EvaluatorActivity
 | **numCalibrationsCompleted** | **Int** |  | [optional] |
 | **numEvaluationsWithoutViewPermission** | **Int** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

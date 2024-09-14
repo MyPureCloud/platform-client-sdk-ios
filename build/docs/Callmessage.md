@@ -1,6 +1,5 @@
----
-title: Callmessage
----
+# Callmessage
+
 ## Callmessage
 
 ## Properties
@@ -11,6 +10,7 @@ title: Callmessage
 | **name** | **String** |  | [optional] |
 | **message** | **String** | raw SIP message | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

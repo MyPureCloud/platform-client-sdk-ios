@@ -1,6 +1,5 @@
----
-title: ForecastSourceDayPointer
----
+# ForecastSourceDayPointer
+
 ## ForecastSourceDayPointer
 
 ## Properties
@@ -12,6 +11,7 @@ title: ForecastSourceDayPointer
 | **date** | **String** | The date this source data represents, in yyyy-MM-dd format | [optional] |
 | **fileName** | **String** | The name of the source file this data came from if it originated from a data import | [optional] |
 | **dataKey** | **String** | The key to look up the forecast source data for this source day | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

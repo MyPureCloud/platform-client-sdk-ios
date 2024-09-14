@@ -1,6 +1,5 @@
----
-title: AvailabilityRange
----
+# AvailabilityRange
+
 ## AvailabilityRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: AvailabilityRange
 |------------ | ------------- | ------------- | -------------|
 | **earliestStartMinutesFromMidnight** | **Int** | The earliest time of day the activity can be scheduled to begin, in minutes from midnight in the configured time zone of the business unit | |
 | **latestEndMinutesFromMidnight** | **Int** | The latest time of day the activity can be scheduled to end, in minutes from midnight in the configured time zone of the business unit | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

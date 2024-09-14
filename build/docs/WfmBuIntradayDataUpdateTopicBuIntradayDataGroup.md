@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
----
+# WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
+
 ## WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
 
 ## Properties
@@ -8,12 +7,13 @@ title: WfmBuIntradayDataUpdateTopicBuIntradayDataGroup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mediaType** | **String** |  | [optional] |
-| **forecastDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayForecastData**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData.html) |  | [optional] |
-| **forecastDataPerInterval** | [**[WfmBuIntradayDataUpdateTopicBuIntradayForecastData]**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData.html) |  | [optional] |
-| **scheduleDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayScheduleData**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData.html) |  | [optional] |
-| **scheduleDataPerInterval** | [**[WfmBuIntradayDataUpdateTopicBuIntradayScheduleData]**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData.html) |  | [optional] |
-| **performancePredictionDataSummary** | [**WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData.html) |  | [optional] |
-| **performancePredictionDataPerInterval** | [**[WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData]**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData.html) |  | [optional] |
-{: class="table table-striped"}
+| **forecastDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayForecastData**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData) |  | [optional] |
+| **forecastDataPerInterval** | [**[WfmBuIntradayDataUpdateTopicBuIntradayForecastData]**](WfmBuIntradayDataUpdateTopicBuIntradayForecastData) |  | [optional] |
+| **scheduleDataSummary** | [**WfmBuIntradayDataUpdateTopicBuIntradayScheduleData**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData) |  | [optional] |
+| **scheduleDataPerInterval** | [**[WfmBuIntradayDataUpdateTopicBuIntradayScheduleData]**](WfmBuIntradayDataUpdateTopicBuIntradayScheduleData) |  | [optional] |
+| **performancePredictionDataSummary** | [**WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData) |  | [optional] |
+| **performancePredictionDataPerInterval** | [**[WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData]**](WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

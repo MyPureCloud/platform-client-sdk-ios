@@ -1,6 +1,5 @@
----
-title: FlowOutcomeDivisionView
----
+# FlowOutcomeDivisionView
+
 ## FlowOutcomeDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: FlowOutcomeDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The flow outcome identifier | [optional] |
 | **name** | **String** | The flow outcome name | |
-| **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

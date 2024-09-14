@@ -1,6 +1,5 @@
----
-title: CustomerStartDetailEventTopicJourneyContext
----
+# CustomerStartDetailEventTopicJourneyContext
+
 ## CustomerStartDetailEventTopicJourneyContext
 
 ## Properties
@@ -11,6 +10,7 @@ title: CustomerStartDetailEventTopicJourneyContext
 | **sessionIdType** | **String** |  | [optional] |
 | **actionId** | **String** |  | [optional] |
 | **actionMapId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

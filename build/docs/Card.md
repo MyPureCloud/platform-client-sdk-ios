@@ -1,6 +1,5 @@
----
-title: Card
----
+# Card
+
 ## Card
 
 ## Properties
@@ -10,8 +9,9 @@ title: Card
 | **title** | **String** | Text to show in the title. | [optional] |
 | **_description** | **String** | Text to show in the description. | [optional] |
 | **url** | **String** | URL of an image. | [optional] |
-| **defaultAction** | [**CardAction**](CardAction.html) | The default action to be taken. | [optional] |
-| **actions** | [**[CardAction]**](CardAction.html) | List of possible action objects. | [optional] |
-{: class="table table-striped"}
+| **defaultAction** | [**CardAction**](CardAction) | The default action to be taken. | [optional] |
+| **actions** | [**[CardAction]**](CardAction) | List of possible action objects. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

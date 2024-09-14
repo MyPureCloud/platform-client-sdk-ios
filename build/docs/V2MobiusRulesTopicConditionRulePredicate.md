@@ -1,14 +1,13 @@
----
-title: V2MobiusRulesTopicConditionRulePredicate
----
+# V2MobiusRulesTopicConditionRulePredicate
+
 ## V2MobiusRulesTopicConditionRulePredicate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | [**UUID**](UUID.html) |  | [optional] |
-| **entity** | [**V2MobiusRulesTopicEntityProperties**](V2MobiusRulesTopicEntityProperties.html) |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
+| **entity** | [**V2MobiusRulesTopicEntityProperties**](V2MobiusRulesTopicEntityProperties) |  | [optional] |
 | **metric** | **String** |  | [optional] |
 | **metricType** | **String** |  | [optional] |
 | **metricValueType** | **String** |  | [optional] |
@@ -16,6 +15,7 @@ title: V2MobiusRulesTopicConditionRulePredicate
 | **status** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
 | **comparisonOperator** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

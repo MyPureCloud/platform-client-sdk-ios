@@ -1,13 +1,12 @@
----
-title: FlowSettingsResponseEntityListing
----
+# FlowSettingsResponseEntityListing
+
 ## FlowSettingsResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[FlowSettingsResponse]**](FlowSettingsResponse.html) |  | [optional] |
+| **entities** | [**[FlowSettingsResponse]**](FlowSettingsResponse) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: FlowSettingsResponseEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

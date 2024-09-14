@@ -1,6 +1,5 @@
----
-title: NTPSettings
----
+# NTPSettings
+
 ## NTPSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: NTPSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **servers** | **[String]** | List of NTP servers, in priority order | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

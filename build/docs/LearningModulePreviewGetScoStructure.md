@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewGetScoStructure
----
+# LearningModulePreviewGetScoStructure
+
 ## LearningModulePreviewGetScoStructure
 Learning module preview get SCO structure
 
@@ -13,8 +12,9 @@ Learning module preview get SCO structure
 | **successStatus** | **String** | The success status of this SCO | [optional] |
 | **completionStatus** | **String** | The completion status of this SCO | [optional] |
 | **percentageScore** | **Float** | Percentage Score | [optional] |
-| **shareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject.html) | The SCO (Shareable Content Object) data | [optional] |
-| **children** | [**[LearningModulePreviewGetScoStructure]**](LearningModulePreviewGetScoStructure.html) | Child items belonging to this SCO in the course manifest | [optional] |
-{: class="table table-striped"}
+| **shareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject) | The SCO (Shareable Content Object) data | [optional] |
+| **children** | [**[LearningModulePreviewGetScoStructure]**](LearningModulePreviewGetScoStructure) | Child items belonging to this SCO in the course manifest | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

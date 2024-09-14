@@ -1,6 +1,5 @@
----
-title: ContactListFilterBulkRetrieveBody
----
+# ContactListFilterBulkRetrieveBody
+
 ## ContactListFilterBulkRetrieveBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: ContactListFilterBulkRetrieveBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ids** | **[String]** | The IDs of the Contact List Filters to retrieve. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

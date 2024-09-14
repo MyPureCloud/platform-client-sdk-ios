@@ -1,6 +1,5 @@
----
-title: ExtensionPoolDivisionView
----
+# ExtensionPoolDivisionView
+
 ## ExtensionPoolDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: ExtensionPoolDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The extension pool identifier | [optional] |
 | **name** | **String** | The start number of the extension pool. | |
-| **division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

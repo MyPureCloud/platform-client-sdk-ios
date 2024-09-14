@@ -1,6 +1,5 @@
----
-title: CurrentUserTimeOffIntegrationStatusRequest
----
+# CurrentUserTimeOffIntegrationStatusRequest
+
 ## CurrentUserTimeOffIntegrationStatusRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CurrentUserTimeOffIntegrationStatusRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **timeOffRequestIds** | **[String]** | A list of time off request IDs | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

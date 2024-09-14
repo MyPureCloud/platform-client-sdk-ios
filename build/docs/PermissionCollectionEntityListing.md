@@ -1,13 +1,12 @@
----
-title: PermissionCollectionEntityListing
----
+# PermissionCollectionEntityListing
+
 ## PermissionCollectionEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DomainPermissionCollection]**](DomainPermissionCollection.html) |  | [optional] |
+| **entities** | [**[DomainPermissionCollection]**](DomainPermissionCollection) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: PermissionCollectionEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

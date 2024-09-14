@@ -1,6 +1,5 @@
----
-title: DocumentQueryPredicate
----
+# DocumentQueryPredicate
+
 ## DocumentQueryPredicate
 
 ## Properties
@@ -10,6 +9,7 @@ title: DocumentQueryPredicate
 | **fields** | **[String]** | Specifies the document fields to be matched against. | |
 | **values** | **[String]** | Specifies the values of the fields to be matched against. | |
 | **type** | **String** | Specifies the matching criteria between the fields and values. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

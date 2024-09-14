@@ -1,6 +1,5 @@
----
-title: GoogleDialogflowConfig
----
+# GoogleDialogflowConfig
+
 ## GoogleDialogflowConfig
 
 ## Properties
@@ -8,7 +7,8 @@ title: GoogleDialogflowConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **integrationId** | **String** | The integration identifier with which the assistant will fetch transcriptions and knowledge suggestions. | [optional] |
-| **conversationProfiles** | [**[ConversationProfile]**](ConversationProfile.html) | The conversation profiles for which the assistant will fetch transcription and knowledge suggestions. | |
-{: class="table table-striped"}
+| **conversationProfiles** | [**[ConversationProfile]**](ConversationProfile) | The conversation profiles for which the assistant will fetch transcription and knowledge suggestions. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: UcUserPresence
----
+# UcUserPresence
+
 ## UcUserPresence
 Presence from a given source for a user
 
@@ -13,10 +12,11 @@ Presence from a given source for a user
 | **userId** | **String** | User ID of the associated Genesys Cloud user. | [optional] |
 | **source** | **String** | Deprecated - The sourceID field should be used as a replacement. | [optional] |
 | **sourceId** | **String** | The registered source ID from where the presence was set | [optional] |
-| **presenceDefinition** | [**PresenceDefinition**](PresenceDefinition.html) |  | [optional] |
+| **presenceDefinition** | [**PresenceDefinition**](PresenceDefinition) |  | [optional] |
 | **message** | **String** |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modifiedDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

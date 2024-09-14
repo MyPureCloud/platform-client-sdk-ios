@@ -1,6 +1,5 @@
----
-title: WorkitemsUserEventsNotificationCustomAttribute
----
+# WorkitemsUserEventsNotificationCustomAttribute
+
 ## WorkitemsUserEventsNotificationCustomAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemsUserEventsNotificationCustomAttribute
 |------------ | ------------- | ------------- | -------------|
 | **dataType** | **String** |  | [optional] |
 | **value** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

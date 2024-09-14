@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicRecentTransfer
----
+# QueueConversationVideoEventTopicRecentTransfer
+
 ## QueueConversationVideoEventTopicRecentTransfer
 
 ## Properties
@@ -9,11 +8,12 @@ title: QueueConversationVideoEventTopicRecentTransfer
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The id of the command. | [optional] |
 | **state** | **String** |  | [optional] |
-| **dateIssued** | [**Date**](Date.html) | The date/time that this command was issued. | [optional] |
-| **initiator** | [**QueueConversationVideoEventTopicInitiator**](QueueConversationVideoEventTopicInitiator.html) |  | [optional] |
-| **modifiedBy** | [**QueueConversationVideoEventTopicModifiedBy**](QueueConversationVideoEventTopicModifiedBy.html) |  | [optional] |
-| **destination** | [**QueueConversationVideoEventTopicDestination**](QueueConversationVideoEventTopicDestination.html) |  | [optional] |
+| **dateIssued** | [**Date**](Date) | The date/time that this command was issued. | [optional] |
+| **initiator** | [**QueueConversationVideoEventTopicInitiator**](QueueConversationVideoEventTopicInitiator) |  | [optional] |
+| **modifiedBy** | [**QueueConversationVideoEventTopicModifiedBy**](QueueConversationVideoEventTopicModifiedBy) |  | [optional] |
+| **destination** | [**QueueConversationVideoEventTopicDestination**](QueueConversationVideoEventTopicDestination) |  | [optional] |
 | **transferType** | **String** | The type of transfer to perform. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

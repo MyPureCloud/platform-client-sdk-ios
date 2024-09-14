@@ -1,6 +1,5 @@
----
-title: Member
----
+# Member
+
 ## Member
 The associated user reference as a member of a performance profile
 
@@ -10,6 +9,7 @@ The associated user reference as a member of a performance profile
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The user&#39;s id | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification
----
+# PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification
+
 ## PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNotification
 
 ## Properties
@@ -11,7 +10,8 @@ title: PerformancePredictionCompleteEventTopicPerformancePredictionCalculationNo
 | **weekDate** | **String** |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **error** | [**PerformancePredictionCompleteEventTopicErrorBody**](PerformancePredictionCompleteEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **error** | [**PerformancePredictionCompleteEventTopicErrorBody**](PerformancePredictionCompleteEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

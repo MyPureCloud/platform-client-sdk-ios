@@ -1,6 +1,5 @@
----
-title: SharedResponse
----
+# SharedResponse
+
 ## SharedResponse
 
 ## Properties
@@ -10,8 +9,9 @@ title: SharedResponse
 | **_id** | **String** |  | [optional] |
 | **downloadUri** | **String** |  | [optional] |
 | **viewUri** | **String** |  | [optional] |
-| **document** | [**Document**](Document.html) |  | [optional] |
-| **share** | [**Share**](Share.html) |  | [optional] |
-{: class="table table-striped"}
+| **document** | [**Document**](Document) |  | [optional] |
+| **share** | [**Share**](Share) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LearningModuleInformStep
----
+# LearningModuleInformStep
+
 ## LearningModuleInformStep
 
 ## Properties
@@ -15,6 +14,7 @@ title: LearningModuleInformStep
 | **order** | **Int** | The order of inform step in a learning module | |
 | **displayName** | **String** | The display name for the inform step | [optional] |
 | **_description** | **String** | The description for the inform step | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

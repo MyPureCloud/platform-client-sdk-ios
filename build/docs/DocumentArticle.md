@@ -1,6 +1,5 @@
----
-title: DocumentArticle
----
+# DocumentArticle
+
 ## DocumentArticle
 
 ## Properties
@@ -8,8 +7,9 @@ title: DocumentArticle
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **title** | **String** | The title of the Article. | |
-| **content** | [**ArticleContent**](ArticleContent.html) | The content of the Article. | [optional] |
+| **content** | [**ArticleContent**](ArticleContent) | The content of the Article. | [optional] |
 | **alternatives** | **[String]** | List of Alternative questions related to the title which helps in improving the likelihood of a match to user query. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

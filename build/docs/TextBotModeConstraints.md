@@ -1,6 +1,5 @@
----
-title: TextBotModeConstraints
----
+# TextBotModeConstraints
+
 ## TextBotModeConstraints
 Mode constraints to observe when operating on a bot flow.
 
@@ -8,7 +7,8 @@ Mode constraints to observe when operating on a bot flow.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **text** | [**TextBotTextModeConstraints**](TextBotTextModeConstraints.html) | Mode constraints that apply to text scenarios. | [optional] |
-{: class="table table-striped"}
+| **text** | [**TextBotTextModeConstraints**](TextBotTextModeConstraints) | Mode constraints that apply to text scenarios. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

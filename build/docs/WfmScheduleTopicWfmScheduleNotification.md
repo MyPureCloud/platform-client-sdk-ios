@@ -1,6 +1,5 @@
----
-title: WfmScheduleTopicWfmScheduleNotification
----
+# WfmScheduleTopicWfmScheduleNotification
+
 ## WfmScheduleTopicWfmScheduleNotification
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmScheduleTopicWfmScheduleNotification
 | **downloadUrl** | **String** |  | [optional] |
 | **percentComplete** | **Int** |  | [optional] |
 | **eventType** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

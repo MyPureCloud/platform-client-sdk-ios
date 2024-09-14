@@ -1,6 +1,5 @@
----
-title: WebDeploymentsRefreshJWTRequest
----
+# WebDeploymentsRefreshJWTRequest
+
 ## WebDeploymentsRefreshJWTRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: WebDeploymentsRefreshJWTRequest
 |------------ | ------------- | ------------- | -------------|
 | **refreshToken** | **String** | Refresh token used to issue a new JWT. | |
 | **deploymentId** | **String** | The WebDeployment ID | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyWebActionEventsNotificationActionMapPageUrlCondition
----
+# JourneyWebActionEventsNotificationActionMapPageUrlCondition
+
 ## JourneyWebActionEventsNotificationActionMapPageUrlCondition
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyWebActionEventsNotificationActionMapPageUrlCondition
 |------------ | ------------- | ------------- | -------------|
 | **values** | **[String]** |  | [optional] |
 | **_operator** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

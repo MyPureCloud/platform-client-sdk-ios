@@ -1,6 +1,5 @@
----
-title: ConversationMessageMetadataEvent
----
+# ConversationMessageMetadataEvent
+
 ## ConversationMessageMetadataEvent
 Metadata information about a message event.
 
@@ -10,6 +9,7 @@ Metadata information about a message event.
 |------------ | ------------- | ------------- | -------------|
 | **eventType** | **String** | Type of this event element | [optional] |
 | **subType** | **String** | Event subtype | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

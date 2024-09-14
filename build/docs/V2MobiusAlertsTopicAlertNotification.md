@@ -1,15 +1,15 @@
----
-title: V2MobiusAlertsTopicAlertNotification
----
+# V2MobiusAlertsTopicAlertNotification
+
 ## V2MobiusAlertsTopicAlertNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **recipient** | [**V2MobiusAlertsTopicAlertNotificationRecipient**](V2MobiusAlertsTopicAlertNotificationRecipient.html) |  | [optional] |
+| **recipient** | [**V2MobiusAlertsTopicAlertNotificationRecipient**](V2MobiusAlertsTopicAlertNotificationRecipient) |  | [optional] |
 | **notificationTypes** | **[String]** |  | [optional] |
 | **locale** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

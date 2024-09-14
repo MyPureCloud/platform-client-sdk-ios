@@ -1,6 +1,5 @@
----
-title: UpdateWorkPlanRotationRequest
----
+# UpdateWorkPlanRotationRequest
+
 ## UpdateWorkPlanRotationRequest
 
 ## Properties
@@ -9,10 +8,11 @@ title: UpdateWorkPlanRotationRequest
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of this work plan rotation | [optional] |
 | **enabled** | **Bool** | Whether the work plan rotation is enabled for scheduling | [optional] |
-| **dateRange** | [**DateRangeWithOptionalEnd**](DateRangeWithOptionalEnd.html) | The date range to which this work plan rotation applies | [optional] |
-| **agents** | [**[UpdateWorkPlanRotationAgentRequest]**](UpdateWorkPlanRotationAgentRequest.html) | Agents in this work plan rotation | [optional] |
-| **pattern** | [**WorkPlanPatternRequest**](WorkPlanPatternRequest.html) | Pattern with list of work plan IDs that rotate on a weekly basis | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this work plan rotation | |
-{: class="table table-striped"}
+| **dateRange** | [**DateRangeWithOptionalEnd**](DateRangeWithOptionalEnd) | The date range to which this work plan rotation applies | [optional] |
+| **agents** | [**[UpdateWorkPlanRotationAgentRequest]**](UpdateWorkPlanRotationAgentRequest) | Agents in this work plan rotation | [optional] |
+| **pattern** | [**WorkPlanPatternRequest**](WorkPlanPatternRequest) | Pattern with list of work plan IDs that rotate on a weekly basis | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this work plan rotation | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

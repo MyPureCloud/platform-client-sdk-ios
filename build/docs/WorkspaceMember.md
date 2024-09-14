@@ -1,6 +1,5 @@
----
-title: WorkspaceMember
----
+# WorkspaceMember
+
 ## WorkspaceMember
 
 ## Properties
@@ -9,13 +8,14 @@ title: WorkspaceMember
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **workspace** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **memberType** | **String** | The workspace member type. | |
-| **member** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **user** | [**User**](User.html) |  | [optional] |
-| **group** | [**Group**](Group.html) |  | [optional] |
-| **securityProfile** | [**SecurityProfile**](SecurityProfile.html) |  | [optional] |
+| **member** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **user** | [**User**](User) |  | [optional] |
+| **group** | [**Group**](Group) |  | [optional] |
+| **securityProfile** | [**SecurityProfile**](SecurityProfile) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

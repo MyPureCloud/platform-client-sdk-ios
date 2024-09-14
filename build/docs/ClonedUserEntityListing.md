@@ -1,6 +1,5 @@
----
-title: ClonedUserEntityListing
----
+# ClonedUserEntityListing
+
 ## ClonedUserEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: ClonedUserEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[ClonedUser]**](ClonedUser.html) |  | [optional] |
+| **entities** | [**[ClonedUser]**](ClonedUser) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

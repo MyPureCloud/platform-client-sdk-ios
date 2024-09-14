@@ -1,6 +1,5 @@
----
-title: SupportCenterCompactCategoryModuleTemplate
----
+# SupportCenterCompactCategoryModuleTemplate
+
 ## SupportCenterCompactCategoryModuleTemplate
 
 ## Properties
@@ -8,6 +7,7 @@ title: SupportCenterCompactCategoryModuleTemplate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **active** | **Bool** | Whether this template is active or not | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

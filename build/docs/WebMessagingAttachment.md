@@ -1,6 +1,5 @@
----
-title: WebMessagingAttachment
----
+# WebMessagingAttachment
+
 ## WebMessagingAttachment
 Attachment object.
 
@@ -16,6 +15,7 @@ Attachment object.
 | **sha256** | **String** | Secure hash of the attachment content. | [optional] |
 | **filename** | **String** | Suggested file name for attachment. | [optional] |
 | **fileSize** | **Int** | The file size associated with the file | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

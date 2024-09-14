@@ -1,6 +1,5 @@
----
-title: KnowledgeContextValueReference
----
+# KnowledgeContextValueReference
+
 ## KnowledgeContextValueReference
 
 ## Properties
@@ -9,6 +8,7 @@ title: KnowledgeContextValueReference
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the knowledge context value. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

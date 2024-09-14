@@ -1,6 +1,5 @@
----
-title: QueueConversationScreenShareEventTopicScreenShareConversation
----
+# QueueConversationScreenShareEventTopicScreenShareConversation
+
 ## QueueConversationScreenShareEventTopicScreenShareConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: QueueConversationScreenShareEventTopicScreenShareConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[QueueConversationScreenShareEventTopicScreenShareMediaParticipant]**](QueueConversationScreenShareEventTopicScreenShareMediaParticipant.html) |  | [optional] |
+| **participants** | [**[QueueConversationScreenShareEventTopicScreenShareMediaParticipant]**](QueueConversationScreenShareEventTopicScreenShareMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ImportError
----
+# ImportError
+
 ## ImportError
 
 ## Properties
@@ -9,6 +8,7 @@ title: ImportError
 |------------ | ------------- | ------------- | -------------|
 | **message** | **String** |  | [optional] |
 | **line** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

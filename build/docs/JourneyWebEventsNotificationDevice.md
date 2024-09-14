@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationDevice
----
+# JourneyWebEventsNotificationDevice
+
 ## JourneyWebEventsNotificationDevice
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyWebEventsNotificationDevice
 | **osVersion** | **String** |  | [optional] |
 | **category** | **String** |  | [optional] |
 | **manufacturer** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

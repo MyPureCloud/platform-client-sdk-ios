@@ -1,6 +1,5 @@
----
-title: ArchitectFlowOutcomeNotificationHomeOrganization
----
+# ArchitectFlowOutcomeNotificationHomeOrganization
+
 ## ArchitectFlowOutcomeNotificationHomeOrganization
 
 ## Properties
@@ -10,6 +9,7 @@ title: ArchitectFlowOutcomeNotificationHomeOrganization
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **thirdPartyOrgName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TextBotErrorInputEvent
----
+# TextBotErrorInputEvent
+
 ## TextBotErrorInputEvent
 Settings for an input event to the bot flow indicating an error has occurred.
 
@@ -10,6 +9,7 @@ Settings for an input event to the bot flow indicating an error has occurred.
 |------------ | ------------- | ------------- | -------------|
 | **code** | **String** | The error code. | |
 | **message** | **String** | The error message. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

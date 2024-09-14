@@ -1,6 +1,5 @@
----
-title: DocumentThumbnail
----
+# DocumentThumbnail
+
 ## DocumentThumbnail
 
 ## Properties
@@ -11,6 +10,7 @@ title: DocumentThumbnail
 | **imageUri** | **String** |  | [optional] |
 | **height** | **Int** |  | [optional] |
 | **width** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

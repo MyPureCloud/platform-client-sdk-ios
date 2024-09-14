@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicVoicemail
----
+# QueueConversationEventTopicVoicemail
+
 ## QueueConversationEventTopicVoicemail
 The voicemail data to be used when this callback is an ACD voicemail.
 
@@ -10,6 +9,7 @@ The voicemail data to be used when this callback is an ACD voicemail.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The voicemail id | [optional] |
 | **uploadStatus** | **String** | current state of the voicemail upload | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

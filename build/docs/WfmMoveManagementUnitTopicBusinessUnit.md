@@ -1,6 +1,5 @@
----
-title: WfmMoveManagementUnitTopicBusinessUnit
----
+# WfmMoveManagementUnitTopicBusinessUnit
+
 ## WfmMoveManagementUnitTopicBusinessUnit
 
 ## Properties
@@ -8,6 +7,7 @@ title: WfmMoveManagementUnitTopicBusinessUnit
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeContactSort
----
+# OutboundMessagingMessagingCampaignConfigChangeContactSort
+
 ## OutboundMessagingMessagingCampaignConfigChangeContactSort
 
 ## Properties
@@ -10,7 +9,8 @@ title: OutboundMessagingMessagingCampaignConfigChangeContactSort
 | **fieldName** | **String** |  | [optional] |
 | **direction** | **String** |  | [optional] |
 | **numeric** | **Bool** | Whether that column contains numeric data | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

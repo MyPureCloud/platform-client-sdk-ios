@@ -1,6 +1,5 @@
----
-title: SchemaQuantityLimits
----
+# SchemaQuantityLimits
+
 ## SchemaQuantityLimits
 
 ## Properties
@@ -21,6 +20,7 @@ title: SchemaQuantityLimits
 | **maxNumberOfFieldsPerSchema** | **Int** | The maximum number of schema fields allowed per schema. | [optional] |
 | **maxNumberOfFieldsPerOrg** | **Int** | The maximum number of schema fields allowed per organization across all of their schemas. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

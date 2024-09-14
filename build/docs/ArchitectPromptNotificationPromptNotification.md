@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationPromptNotification
----
+# ArchitectPromptNotificationPromptNotification
+
 ## ArchitectPromptNotificationPromptNotification
 
 ## Properties
@@ -10,7 +9,8 @@ title: ArchitectPromptNotificationPromptNotification
 | **_id** | **String** | The prompt ID | [optional] |
 | **name** | **String** | The prompt name | [optional] |
 | **_description** | **String** | The prompt description | [optional] |
-| **currentOperation** | [**ArchitectPromptNotificationArchitectOperation**](ArchitectPromptNotificationArchitectOperation.html) |  | [optional] |
-{: class="table table-striped"}
+| **currentOperation** | [**ArchitectPromptNotificationArchitectOperation**](ArchitectPromptNotificationArchitectOperation) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

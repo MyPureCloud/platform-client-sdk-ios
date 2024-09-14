@@ -1,6 +1,5 @@
----
-title: PositionSettings
----
+# PositionSettings
+
 ## PositionSettings
 Settings concerning position
 
@@ -11,6 +10,7 @@ Settings concerning position
 | **alignment** | **String** | The alignment for position | [optional] |
 | **sideSpace** | **Int** | The sidespace value for position | [optional] |
 | **bottomSpace** | **Int** | The bottomspace value for position | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

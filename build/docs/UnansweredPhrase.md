@@ -1,6 +1,5 @@
----
-title: UnansweredPhrase
----
+# UnansweredPhrase
+
 ## UnansweredPhrase
 
 ## Properties
@@ -10,6 +9,7 @@ title: UnansweredPhrase
 | **_id** | **String** | Id of an unanswered phrase | [optional] |
 | **text** | **String** | Phrase text of an unanswered phrase | [optional] |
 | **unlinkedPhraseHitCount** | **Int** | Hit count of an unlinked phrase | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

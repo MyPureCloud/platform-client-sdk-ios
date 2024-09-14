@@ -1,145 +1,154 @@
----
-title: ArchitectAPI
----
-## ArchitectAPI
+# ArchitectAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteArchitectEmergencygroup**](ArchitectAPI.html#deleteArchitectEmergencygroup) | Deletes a emergency group by ID |
-| [**deleteArchitectIvr**](ArchitectAPI.html#deleteArchitectIvr) | Delete an IVR Config. |
-| [**deleteArchitectPrompt**](ArchitectAPI.html#deleteArchitectPrompt) | Delete specified user prompt |
-| [**deleteArchitectPromptResource**](ArchitectAPI.html#deleteArchitectPromptResource) | Delete specified user prompt resource |
-| [**deleteArchitectPromptResourceAudio**](ArchitectAPI.html#deleteArchitectPromptResourceAudio) | Delete specified user prompt resource audio |
-| [**deleteArchitectPrompts**](ArchitectAPI.html#deleteArchitectPrompts) | Batch-delete a list of prompts |
-| [**deleteArchitectSchedule**](ArchitectAPI.html#deleteArchitectSchedule) | Delete a schedule by id |
-| [**deleteArchitectSchedulegroup**](ArchitectAPI.html#deleteArchitectSchedulegroup) | Deletes a schedule group by ID |
-| [**deleteArchitectSystempromptResource**](ArchitectAPI.html#deleteArchitectSystempromptResource) | Delete a system prompt resource override. |
-| [**deleteFlow**](ArchitectAPI.html#deleteFlow) | Delete flow |
-| [**deleteFlowInstancesSettingsLoglevels**](ArchitectAPI.html#deleteFlowInstancesSettingsLoglevels) | Deletes a log level for a flow by flow id. |
-| [**deleteFlows**](ArchitectAPI.html#deleteFlows) | Batch-delete a list of flows |
-| [**deleteFlowsDatatable**](ArchitectAPI.html#deleteFlowsDatatable) | deletes a specific datatable by id |
-| [**deleteFlowsDatatableRow**](ArchitectAPI.html#deleteFlowsDatatableRow) | Delete a row entry |
-| [**deleteFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI.html#deleteFlowsInstancesSettingsLoglevelsDefault) | Resets the org log level to default, base |
-| [**deleteFlowsMilestone**](ArchitectAPI.html#deleteFlowsMilestone) | Delete a flow milestone. |
-| [**getArchitectDependencytracking**](ArchitectAPI.html#getArchitectDependencytracking) | Get Dependency Tracking objects that have a given display name |
-| [**getArchitectDependencytrackingBuild**](ArchitectAPI.html#getArchitectDependencytrackingBuild) | Get Dependency Tracking build status for an organization |
-| [**getArchitectDependencytrackingConsumedresources**](ArchitectAPI.html#getArchitectDependencytrackingConsumedresources) | Get resources that are consumed by a given Dependency Tracking object |
-| [**getArchitectDependencytrackingConsumingresources**](ArchitectAPI.html#getArchitectDependencytrackingConsumingresources) | Get resources that consume a given Dependency Tracking object |
-| [**getArchitectDependencytrackingDeletedresourceconsumers**](ArchitectAPI.html#getArchitectDependencytrackingDeletedresourceconsumers) | Get Dependency Tracking objects that consume deleted resources |
-| [**getArchitectDependencytrackingObject**](ArchitectAPI.html#getArchitectDependencytrackingObject) | Get a Dependency Tracking object |
-| [**getArchitectDependencytrackingType**](ArchitectAPI.html#getArchitectDependencytrackingType) | Get a Dependency Tracking type. |
-| [**getArchitectDependencytrackingTypes**](ArchitectAPI.html#getArchitectDependencytrackingTypes) | Get Dependency Tracking types. |
-| [**getArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectAPI.html#getArchitectDependencytrackingUpdatedresourceconsumers) | Get Dependency Tracking objects that depend on updated resources |
-| [**getArchitectEmergencygroup**](ArchitectAPI.html#getArchitectEmergencygroup) | Gets a emergency group by ID |
-| [**getArchitectEmergencygroups**](ArchitectAPI.html#getArchitectEmergencygroups) | Get a list of emergency groups. |
-| [**getArchitectEmergencygroupsDivisionviews**](ArchitectAPI.html#getArchitectEmergencygroupsDivisionviews) | Get a pageable list of basic emergency group objects filterable by query parameters. |
-| [**getArchitectIvr**](ArchitectAPI.html#getArchitectIvr) | Get an IVR config. |
-| [**getArchitectIvrs**](ArchitectAPI.html#getArchitectIvrs) | Get IVR configs. |
-| [**getArchitectIvrsDivisionviews**](ArchitectAPI.html#getArchitectIvrsDivisionviews) | Get a pageable list of basic ivr configuration information objects filterable by query parameters. |
-| [**getArchitectPrompt**](ArchitectAPI.html#getArchitectPrompt) | Get specified user prompt |
-| [**getArchitectPromptHistoryHistoryId**](ArchitectAPI.html#getArchitectPromptHistoryHistoryId) | Get generated prompt history |
-| [**getArchitectPromptResource**](ArchitectAPI.html#getArchitectPromptResource) | Get specified user prompt resource |
-| [**getArchitectPromptResources**](ArchitectAPI.html#getArchitectPromptResources) | Get a pageable list of user prompt resources |
-| [**getArchitectPrompts**](ArchitectAPI.html#getArchitectPrompts) | Get a pageable list of user prompts |
-| [**getArchitectSchedule**](ArchitectAPI.html#getArchitectSchedule) | Get a schedule by ID |
-| [**getArchitectSchedulegroup**](ArchitectAPI.html#getArchitectSchedulegroup) | Gets a schedule group by ID |
-| [**getArchitectSchedulegroups**](ArchitectAPI.html#getArchitectSchedulegroups) | Get a list of schedule groups. |
-| [**getArchitectSchedulegroupsDivisionviews**](ArchitectAPI.html#getArchitectSchedulegroupsDivisionviews) | Get a pageable list of basic schedule group configuration information objects filterable by query parameters. |
-| [**getArchitectSchedules**](ArchitectAPI.html#getArchitectSchedules) | Get a list of schedules. |
-| [**getArchitectSchedulesDivisionviews**](ArchitectAPI.html#getArchitectSchedulesDivisionviews) | Get a pageable list of basic schedule configuration information objects filterable by query parameters. |
-| [**getArchitectSystemprompt**](ArchitectAPI.html#getArchitectSystemprompt) | Get a system prompt |
-| [**getArchitectSystempromptHistoryHistoryId**](ArchitectAPI.html#getArchitectSystempromptHistoryHistoryId) | Get generated prompt history |
-| [**getArchitectSystempromptResource**](ArchitectAPI.html#getArchitectSystempromptResource) | Get a system prompt resource. |
-| [**getArchitectSystempromptResources**](ArchitectAPI.html#getArchitectSystempromptResources) | Get system prompt resources. |
-| [**getArchitectSystemprompts**](ArchitectAPI.html#getArchitectSystemprompts) | Get System Prompts |
-| [**getFlow**](ArchitectAPI.html#getFlow) | Get flow |
-| [**getFlowHistoryHistoryId**](ArchitectAPI.html#getFlowHistoryHistoryId) | Get generated flow history |
-| [**getFlowInstancesSettingsLoglevels**](ArchitectAPI.html#getFlowInstancesSettingsLoglevels) | Retrieves the log level for a flow by flow id. |
-| [**getFlowLatestconfiguration**](ArchitectAPI.html#getFlowLatestconfiguration) | Get the latest configuration for flow |
-| [**getFlowVersion**](ArchitectAPI.html#getFlowVersion) | Get flow version |
-| [**getFlowVersionConfiguration**](ArchitectAPI.html#getFlowVersionConfiguration) | Create flow version configuration |
-| [**getFlowVersionHealth**](ArchitectAPI.html#getFlowVersionHealth) | Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. |
-| [**getFlowVersionIntentHealth**](ArchitectAPI.html#getFlowVersionIntentHealth) | Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. |
-| [**getFlowVersionIntentUtteranceHealth**](ArchitectAPI.html#getFlowVersionIntentUtteranceHealth) | Get health metrics associated with a specific utterance of an intent. |
-| [**getFlowVersions**](ArchitectAPI.html#getFlowVersions) | Get flow version list |
-| [**getFlows**](ArchitectAPI.html#getFlows) | Get a pageable list of flows, filtered by query parameters |
-| [**getFlowsDatatable**](ArchitectAPI.html#getFlowsDatatable) | Returns a specific datatable by id |
-| [**getFlowsDatatableExportJob**](ArchitectAPI.html#getFlowsDatatableExportJob) | Returns the state information about an export job |
-| [**getFlowsDatatableImportJob**](ArchitectAPI.html#getFlowsDatatableImportJob) | Returns the state information about an import job |
-| [**getFlowsDatatableImportJobs**](ArchitectAPI.html#getFlowsDatatableImportJobs) | Get all recent import jobs |
-| [**getFlowsDatatableRow**](ArchitectAPI.html#getFlowsDatatableRow) | Returns a specific row for the datatable |
-| [**getFlowsDatatableRows**](ArchitectAPI.html#getFlowsDatatableRows) | Returns the rows for the datatable with the given id |
-| [**getFlowsDatatables**](ArchitectAPI.html#getFlowsDatatables) | Retrieve a list of datatables for the org |
-| [**getFlowsDatatablesDivisionview**](ArchitectAPI.html#getFlowsDatatablesDivisionview) | Returns a specific datatable by id |
-| [**getFlowsDatatablesDivisionviews**](ArchitectAPI.html#getFlowsDatatablesDivisionviews) | Retrieve a list of datatables for the org |
-| [**getFlowsDivisionviews**](ArchitectAPI.html#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
-| [**getFlowsExecution**](ArchitectAPI.html#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
-| [**getFlowsInstance**](ArchitectAPI.html#getFlowsInstance) | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
-| [**getFlowsInstancesJob**](ArchitectAPI.html#getFlowsInstancesJob) | Get the status and/or results of an asynchronous flow execution data retrieval job |
-| [**getFlowsInstancesQuerycapabilities**](ArchitectAPI.html#getFlowsInstancesQuerycapabilities) | Retrieve a list of capabilities that the org can use to query for execution data |
-| [**getFlowsInstancesSettingsExecutiondata**](ArchitectAPI.html#getFlowsInstancesSettingsExecutiondata) | Get the execution history enabled setting. |
-| [**getFlowsInstancesSettingsLoglevels**](ArchitectAPI.html#getFlowsInstancesSettingsLoglevels) | Retrieve a list of LogLevels for the organization. |
-| [**getFlowsInstancesSettingsLoglevelsCharacteristics**](ArchitectAPI.html#getFlowsInstancesSettingsLoglevelsCharacteristics) | Gets the available flow log level characteristics for this organization. |
-| [**getFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI.html#getFlowsInstancesSettingsLoglevelsDefault) | Returns the flow default log level. |
-| [**getFlowsJob**](ArchitectAPI.html#getFlowsJob) | Fetch Architect Job Status |
-| [**getFlowsMilestone**](ArchitectAPI.html#getFlowsMilestone) | Get a flow milestone |
-| [**getFlowsMilestones**](ArchitectAPI.html#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
-| [**getFlowsMilestonesDivisionviews**](ArchitectAPI.html#getFlowsMilestonesDivisionviews) | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
-| [**getFlowsOutcome**](ArchitectAPI.html#getFlowsOutcome) | Get a flow outcome |
-| [**getFlowsOutcomes**](ArchitectAPI.html#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
-| [**getFlowsOutcomesDivisionviews**](ArchitectAPI.html#getFlowsOutcomesDivisionviews) | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
-| [**patchFlowsInstancesSettingsExecutiondata**](ArchitectAPI.html#patchFlowsInstancesSettingsExecutiondata) | Edit the execution history enabled setting. |
-| [**postArchitectDependencytrackingBuild**](ArchitectAPI.html#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
-| [**postArchitectEmergencygroups**](ArchitectAPI.html#postArchitectEmergencygroups) | Creates a new emergency group |
-| [**postArchitectIvrs**](ArchitectAPI.html#postArchitectIvrs) | Create IVR config. |
-| [**postArchitectPromptHistory**](ArchitectAPI.html#postArchitectPromptHistory) | Generate prompt history |
-| [**postArchitectPromptResources**](ArchitectAPI.html#postArchitectPromptResources) | Create a new user prompt resource |
-| [**postArchitectPrompts**](ArchitectAPI.html#postArchitectPrompts) | Create a new user prompt |
-| [**postArchitectSchedulegroups**](ArchitectAPI.html#postArchitectSchedulegroups) | Creates a new schedule group |
-| [**postArchitectSchedules**](ArchitectAPI.html#postArchitectSchedules) | Create a new schedule. |
-| [**postArchitectSystempromptHistory**](ArchitectAPI.html#postArchitectSystempromptHistory) | Generate system prompt history |
-| [**postArchitectSystempromptResources**](ArchitectAPI.html#postArchitectSystempromptResources) | Create system prompt resource override. |
-| [**postFlowHistory**](ArchitectAPI.html#postFlowHistory) | Generate flow history |
-| [**postFlowInstancesSettingsLoglevels**](ArchitectAPI.html#postFlowInstancesSettingsLoglevels) | Set the logLevel for a particular flow id |
-| [**postFlowVersions**](ArchitectAPI.html#postFlowVersions) | Create flow version |
-| [**postFlows**](ArchitectAPI.html#postFlows) | Create flow |
-| [**postFlowsActionsCheckin**](ArchitectAPI.html#postFlowsActionsCheckin) | Check-in flow |
-| [**postFlowsActionsCheckout**](ArchitectAPI.html#postFlowsActionsCheckout) | Check-out flow |
-| [**postFlowsActionsDeactivate**](ArchitectAPI.html#postFlowsActionsDeactivate) | Deactivate flow |
-| [**postFlowsActionsPublish**](ArchitectAPI.html#postFlowsActionsPublish) | Publish flow |
-| [**postFlowsActionsRevert**](ArchitectAPI.html#postFlowsActionsRevert) | Revert flow |
-| [**postFlowsActionsUnlock**](ArchitectAPI.html#postFlowsActionsUnlock) | Unlock flow |
-| [**postFlowsDatatableExportJobs**](ArchitectAPI.html#postFlowsDatatableExportJobs) | Begin an export process for exporting all rows from a datatable |
-| [**postFlowsDatatableImportJobs**](ArchitectAPI.html#postFlowsDatatableImportJobs) | Begin an import process for importing rows into a datatable |
-| [**postFlowsDatatableRows**](ArchitectAPI.html#postFlowsDatatableRows) | Create a new row entry for the datatable. |
-| [**postFlowsDatatables**](ArchitectAPI.html#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
-| [**postFlowsExecutions**](ArchitectAPI.html#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
-| [**postFlowsInstancesJobs**](ArchitectAPI.html#postFlowsInstancesJobs) | Start a process (job) that will prepare a list of execution data IDs for download. |
-| [**postFlowsInstancesQuery**](ArchitectAPI.html#postFlowsInstancesQuery) | Query the database of existing flow histories to look for particular flow criteria |
-| [**postFlowsJobs**](ArchitectAPI.html#postFlowsJobs) | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
-| [**postFlowsMilestones**](ArchitectAPI.html#postFlowsMilestones) | Create a flow milestone |
-| [**postFlowsOutcomes**](ArchitectAPI.html#postFlowsOutcomes) | Create a flow outcome |
-| [**putArchitectEmergencygroup**](ArchitectAPI.html#putArchitectEmergencygroup) | Updates a emergency group by ID |
-| [**putArchitectIvr**](ArchitectAPI.html#putArchitectIvr) | Update an IVR Config. |
-| [**putArchitectPrompt**](ArchitectAPI.html#putArchitectPrompt) | Update specified user prompt |
-| [**putArchitectPromptResource**](ArchitectAPI.html#putArchitectPromptResource) | Update specified user prompt resource |
-| [**putArchitectSchedule**](ArchitectAPI.html#putArchitectSchedule) | Update schedule by ID |
-| [**putArchitectSchedulegroup**](ArchitectAPI.html#putArchitectSchedulegroup) | Updates a schedule group by ID |
-| [**putArchitectSystempromptResource**](ArchitectAPI.html#putArchitectSystempromptResource) | Updates a system prompt resource override. |
-| [**putFlow**](ArchitectAPI.html#putFlow) | Update flow |
-| [**putFlowInstancesSettingsLoglevels**](ArchitectAPI.html#putFlowInstancesSettingsLoglevels) | Edit the logLevel for a particular flow id |
-| [**putFlowsDatatable**](ArchitectAPI.html#putFlowsDatatable) | Updates a specific datatable by id |
-| [**putFlowsDatatableRow**](ArchitectAPI.html#putFlowsDatatableRow) | Update a row entry |
-| [**putFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI.html#putFlowsInstancesSettingsLoglevelsDefault) | Edit the flow default log level. |
-| [**putFlowsMilestone**](ArchitectAPI.html#putFlowsMilestone) | Updates a flow milestone |
-| [**putFlowsOutcome**](ArchitectAPI.html#putFlowsOutcome) | Updates a flow outcome |
+| [**deleteArchitectEmergencygroup**](ArchitectAPI#deleteArchitectEmergencygroup) | Deletes a emergency group by ID |
+| [**deleteArchitectGrammar**](ArchitectAPI#deleteArchitectGrammar) | Delete a grammar. |
+| [**deleteArchitectGrammarLanguage**](ArchitectAPI#deleteArchitectGrammarLanguage) | Delete specified grammar language |
+| [**deleteArchitectGrammarLanguageFilesDtmf**](ArchitectAPI#deleteArchitectGrammarLanguageFilesDtmf) | Clear the DTMF mode file for the grammar language if there is one |
+| [**deleteArchitectGrammarLanguageFilesVoice**](ArchitectAPI#deleteArchitectGrammarLanguageFilesVoice) | Clear the voice mode file for the grammar language if there is one |
+| [**deleteArchitectIvr**](ArchitectAPI#deleteArchitectIvr) | Delete an IVR Config. |
+| [**deleteArchitectPrompt**](ArchitectAPI#deleteArchitectPrompt) | Delete specified user prompt |
+| [**deleteArchitectPromptResource**](ArchitectAPI#deleteArchitectPromptResource) | Delete specified user prompt resource |
+| [**deleteArchitectPromptResourceAudio**](ArchitectAPI#deleteArchitectPromptResourceAudio) | Delete specified user prompt resource audio |
+| [**deleteArchitectPrompts**](ArchitectAPI#deleteArchitectPrompts) | Batch-delete a list of prompts |
+| [**deleteArchitectSchedule**](ArchitectAPI#deleteArchitectSchedule) | Delete a schedule by id |
+| [**deleteArchitectSchedulegroup**](ArchitectAPI#deleteArchitectSchedulegroup) | Deletes a schedule group by ID |
+| [**deleteArchitectSystempromptResource**](ArchitectAPI#deleteArchitectSystempromptResource) | Delete a system prompt resource override. |
+| [**deleteFlow**](ArchitectAPI#deleteFlow) | Delete flow |
+| [**deleteFlowInstancesSettingsLoglevels**](ArchitectAPI#deleteFlowInstancesSettingsLoglevels) | Deletes a log level for a flow by flow id. |
+| [**deleteFlows**](ArchitectAPI#deleteFlows) | Batch-delete a list of flows |
+| [**deleteFlowsDatatable**](ArchitectAPI#deleteFlowsDatatable) | deletes a specific datatable by id |
+| [**deleteFlowsDatatableRow**](ArchitectAPI#deleteFlowsDatatableRow) | Delete a row entry |
+| [**deleteFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI#deleteFlowsInstancesSettingsLoglevelsDefault) | Resets the org log level to default, base |
+| [**deleteFlowsMilestone**](ArchitectAPI#deleteFlowsMilestone) | Delete a flow milestone. |
+| [**getArchitectDependencytracking**](ArchitectAPI#getArchitectDependencytracking) | Get Dependency Tracking objects that have a given display name |
+| [**getArchitectDependencytrackingBuild**](ArchitectAPI#getArchitectDependencytrackingBuild) | Get Dependency Tracking build status for an organization |
+| [**getArchitectDependencytrackingConsumedresources**](ArchitectAPI#getArchitectDependencytrackingConsumedresources) | Get resources that are consumed by a given Dependency Tracking object |
+| [**getArchitectDependencytrackingConsumingresources**](ArchitectAPI#getArchitectDependencytrackingConsumingresources) | Get resources that consume a given Dependency Tracking object |
+| [**getArchitectDependencytrackingDeletedresourceconsumers**](ArchitectAPI#getArchitectDependencytrackingDeletedresourceconsumers) | Get Dependency Tracking objects that consume deleted resources |
+| [**getArchitectDependencytrackingObject**](ArchitectAPI#getArchitectDependencytrackingObject) | Get a Dependency Tracking object |
+| [**getArchitectDependencytrackingType**](ArchitectAPI#getArchitectDependencytrackingType) | Get a Dependency Tracking type. |
+| [**getArchitectDependencytrackingTypes**](ArchitectAPI#getArchitectDependencytrackingTypes) | Get Dependency Tracking types. |
+| [**getArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectAPI#getArchitectDependencytrackingUpdatedresourceconsumers) | Get Dependency Tracking objects that depend on updated resources |
+| [**getArchitectEmergencygroup**](ArchitectAPI#getArchitectEmergencygroup) | Gets a emergency group by ID |
+| [**getArchitectEmergencygroups**](ArchitectAPI#getArchitectEmergencygroups) | Get a list of emergency groups. |
+| [**getArchitectEmergencygroupsDivisionviews**](ArchitectAPI#getArchitectEmergencygroupsDivisionviews) | Get a pageable list of basic emergency group objects filterable by query parameters. |
+| [**getArchitectGrammar**](ArchitectAPI#getArchitectGrammar) | Get a grammar |
+| [**getArchitectGrammarLanguage**](ArchitectAPI#getArchitectGrammarLanguage) | Get a grammar language. |
+| [**getArchitectGrammars**](ArchitectAPI#getArchitectGrammars) | Get a pageable list of grammars, filtered by query parameters |
+| [**getArchitectIvr**](ArchitectAPI#getArchitectIvr) | Get an IVR config. |
+| [**getArchitectIvrs**](ArchitectAPI#getArchitectIvrs) | Get IVR configs. |
+| [**getArchitectIvrsDivisionviews**](ArchitectAPI#getArchitectIvrsDivisionviews) | Get a pageable list of basic ivr configuration information objects filterable by query parameters. |
+| [**getArchitectPrompt**](ArchitectAPI#getArchitectPrompt) | Get specified user prompt |
+| [**getArchitectPromptHistoryHistoryId**](ArchitectAPI#getArchitectPromptHistoryHistoryId) | Get generated prompt history |
+| [**getArchitectPromptResource**](ArchitectAPI#getArchitectPromptResource) | Get specified user prompt resource |
+| [**getArchitectPromptResources**](ArchitectAPI#getArchitectPromptResources) | Get a pageable list of user prompt resources |
+| [**getArchitectPrompts**](ArchitectAPI#getArchitectPrompts) | Get a pageable list of user prompts |
+| [**getArchitectSchedule**](ArchitectAPI#getArchitectSchedule) | Get a schedule by ID |
+| [**getArchitectSchedulegroup**](ArchitectAPI#getArchitectSchedulegroup) | Gets a schedule group by ID |
+| [**getArchitectSchedulegroups**](ArchitectAPI#getArchitectSchedulegroups) | Get a list of schedule groups. |
+| [**getArchitectSchedulegroupsDivisionviews**](ArchitectAPI#getArchitectSchedulegroupsDivisionviews) | Get a pageable list of basic schedule group configuration information objects filterable by query parameters. |
+| [**getArchitectSchedules**](ArchitectAPI#getArchitectSchedules) | Get a list of schedules. |
+| [**getArchitectSchedulesDivisionviews**](ArchitectAPI#getArchitectSchedulesDivisionviews) | Get a pageable list of basic schedule configuration information objects filterable by query parameters. |
+| [**getArchitectSystemprompt**](ArchitectAPI#getArchitectSystemprompt) | Get a system prompt |
+| [**getArchitectSystempromptHistoryHistoryId**](ArchitectAPI#getArchitectSystempromptHistoryHistoryId) | Get generated prompt history |
+| [**getArchitectSystempromptResource**](ArchitectAPI#getArchitectSystempromptResource) | Get a system prompt resource. |
+| [**getArchitectSystempromptResources**](ArchitectAPI#getArchitectSystempromptResources) | Get system prompt resources. |
+| [**getArchitectSystemprompts**](ArchitectAPI#getArchitectSystemprompts) | Get System Prompts |
+| [**getFlow**](ArchitectAPI#getFlow) | Get flow |
+| [**getFlowHistoryHistoryId**](ArchitectAPI#getFlowHistoryHistoryId) | Get generated flow history |
+| [**getFlowInstancesSettingsLoglevels**](ArchitectAPI#getFlowInstancesSettingsLoglevels) | Retrieves the log level for a flow by flow id. |
+| [**getFlowLatestconfiguration**](ArchitectAPI#getFlowLatestconfiguration) | Get the latest configuration for flow |
+| [**getFlowVersion**](ArchitectAPI#getFlowVersion) | Get flow version |
+| [**getFlowVersionConfiguration**](ArchitectAPI#getFlowVersionConfiguration) | Create flow version configuration |
+| [**getFlowVersionHealth**](ArchitectAPI#getFlowVersionHealth) | Get overall health scores for all intents present in the NLU domain version associated with the bot flow version. |
+| [**getFlowVersionIntentHealth**](ArchitectAPI#getFlowVersionIntentHealth) | Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent. |
+| [**getFlowVersionIntentUtteranceHealth**](ArchitectAPI#getFlowVersionIntentUtteranceHealth) | Get health metrics associated with a specific utterance of an intent. |
+| [**getFlowVersions**](ArchitectAPI#getFlowVersions) | Get flow version list |
+| [**getFlows**](ArchitectAPI#getFlows) | Get a pageable list of flows, filtered by query parameters |
+| [**getFlowsDatatable**](ArchitectAPI#getFlowsDatatable) | Returns a specific datatable by id |
+| [**getFlowsDatatableExportJob**](ArchitectAPI#getFlowsDatatableExportJob) | Returns the state information about an export job |
+| [**getFlowsDatatableImportJob**](ArchitectAPI#getFlowsDatatableImportJob) | Returns the state information about an import job |
+| [**getFlowsDatatableImportJobs**](ArchitectAPI#getFlowsDatatableImportJobs) | Get all recent import jobs |
+| [**getFlowsDatatableRow**](ArchitectAPI#getFlowsDatatableRow) | Returns a specific row for the datatable |
+| [**getFlowsDatatableRows**](ArchitectAPI#getFlowsDatatableRows) | Returns the rows for the datatable with the given id |
+| [**getFlowsDatatables**](ArchitectAPI#getFlowsDatatables) | Retrieve a list of datatables for the org |
+| [**getFlowsDatatablesDivisionview**](ArchitectAPI#getFlowsDatatablesDivisionview) | Returns a specific datatable by id |
+| [**getFlowsDatatablesDivisionviews**](ArchitectAPI#getFlowsDatatablesDivisionviews) | Retrieve a list of datatables for the org |
+| [**getFlowsDivisionviews**](ArchitectAPI#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
+| [**getFlowsExecution**](ArchitectAPI#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**getFlowsInstance**](ArchitectAPI#getFlowsInstance) | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
+| [**getFlowsInstancesJob**](ArchitectAPI#getFlowsInstancesJob) | Get the status and/or results of an asynchronous flow execution data retrieval job |
+| [**getFlowsInstancesQuerycapabilities**](ArchitectAPI#getFlowsInstancesQuerycapabilities) | Retrieve a list of capabilities that the org can use to query for execution data |
+| [**getFlowsInstancesSettingsExecutiondata**](ArchitectAPI#getFlowsInstancesSettingsExecutiondata) | Get the execution history enabled setting. |
+| [**getFlowsInstancesSettingsLoglevels**](ArchitectAPI#getFlowsInstancesSettingsLoglevels) | Retrieve a list of LogLevels for the organization. |
+| [**getFlowsInstancesSettingsLoglevelsCharacteristics**](ArchitectAPI#getFlowsInstancesSettingsLoglevelsCharacteristics) | Gets the available flow log level characteristics for this organization. |
+| [**getFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI#getFlowsInstancesSettingsLoglevelsDefault) | Returns the flow default log level. |
+| [**getFlowsJob**](ArchitectAPI#getFlowsJob) | Fetch Architect Job Status |
+| [**getFlowsMilestone**](ArchitectAPI#getFlowsMilestone) | Get a flow milestone |
+| [**getFlowsMilestones**](ArchitectAPI#getFlowsMilestones) | Get a pageable list of flow milestones, filtered by query parameters |
+| [**getFlowsMilestonesDivisionviews**](ArchitectAPI#getFlowsMilestonesDivisionviews) | Get a pageable list of basic flow milestone information objects filterable by query parameters. |
+| [**getFlowsOutcome**](ArchitectAPI#getFlowsOutcome) | Get a flow outcome |
+| [**getFlowsOutcomes**](ArchitectAPI#getFlowsOutcomes) | Get a pageable list of flow outcomes, filtered by query parameters |
+| [**getFlowsOutcomesDivisionviews**](ArchitectAPI#getFlowsOutcomesDivisionviews) | Get a pageable list of basic flow outcome information objects filterable by query parameters. |
+| [**patchArchitectGrammar**](ArchitectAPI#patchArchitectGrammar) | Updates a grammar |
+| [**patchArchitectGrammarLanguage**](ArchitectAPI#patchArchitectGrammarLanguage) | Updates a grammar language |
+| [**patchFlowsInstancesSettingsExecutiondata**](ArchitectAPI#patchFlowsInstancesSettingsExecutiondata) | Edit the execution history enabled setting. |
+| [**postArchitectDependencytrackingBuild**](ArchitectAPI#postArchitectDependencytrackingBuild) | Rebuild Dependency Tracking data for an organization |
+| [**postArchitectEmergencygroups**](ArchitectAPI#postArchitectEmergencygroups) | Creates a new emergency group |
+| [**postArchitectGrammarLanguageFilesDtmf**](ArchitectAPI#postArchitectGrammarLanguageFilesDtmf) | Creates a presigned URL for uploading a grammar DTMF mode file |
+| [**postArchitectGrammarLanguageFilesVoice**](ArchitectAPI#postArchitectGrammarLanguageFilesVoice) | Creates a presigned URL for uploading a grammar voice mode file |
+| [**postArchitectGrammarLanguages**](ArchitectAPI#postArchitectGrammarLanguages) | Create a new language for a given grammar |
+| [**postArchitectGrammars**](ArchitectAPI#postArchitectGrammars) | Create a new grammar |
+| [**postArchitectIvrs**](ArchitectAPI#postArchitectIvrs) | Create IVR config. |
+| [**postArchitectPromptHistory**](ArchitectAPI#postArchitectPromptHistory) | Generate prompt history |
+| [**postArchitectPromptResources**](ArchitectAPI#postArchitectPromptResources) | Create a new user prompt resource |
+| [**postArchitectPrompts**](ArchitectAPI#postArchitectPrompts) | Create a new user prompt |
+| [**postArchitectSchedulegroups**](ArchitectAPI#postArchitectSchedulegroups) | Creates a new schedule group |
+| [**postArchitectSchedules**](ArchitectAPI#postArchitectSchedules) | Create a new schedule. |
+| [**postArchitectSystempromptHistory**](ArchitectAPI#postArchitectSystempromptHistory) | Generate system prompt history |
+| [**postArchitectSystempromptResources**](ArchitectAPI#postArchitectSystempromptResources) | Create system prompt resource override. |
+| [**postFlowHistory**](ArchitectAPI#postFlowHistory) | Generate flow history |
+| [**postFlowInstancesSettingsLoglevels**](ArchitectAPI#postFlowInstancesSettingsLoglevels) | Set the logLevel for a particular flow id |
+| [**postFlowVersions**](ArchitectAPI#postFlowVersions) | Create flow version |
+| [**postFlows**](ArchitectAPI#postFlows) | Create flow |
+| [**postFlowsActionsCheckin**](ArchitectAPI#postFlowsActionsCheckin) | Check-in flow |
+| [**postFlowsActionsCheckout**](ArchitectAPI#postFlowsActionsCheckout) | Check-out flow |
+| [**postFlowsActionsDeactivate**](ArchitectAPI#postFlowsActionsDeactivate) | Deactivate flow |
+| [**postFlowsActionsPublish**](ArchitectAPI#postFlowsActionsPublish) | Publish flow |
+| [**postFlowsActionsRevert**](ArchitectAPI#postFlowsActionsRevert) | Revert flow |
+| [**postFlowsActionsUnlock**](ArchitectAPI#postFlowsActionsUnlock) | Unlock flow |
+| [**postFlowsDatatableExportJobs**](ArchitectAPI#postFlowsDatatableExportJobs) | Begin an export process for exporting all rows from a datatable |
+| [**postFlowsDatatableImportJobs**](ArchitectAPI#postFlowsDatatableImportJobs) | Begin an import process for importing rows into a datatable |
+| [**postFlowsDatatableRows**](ArchitectAPI#postFlowsDatatableRows) | Create a new row entry for the datatable. |
+| [**postFlowsDatatables**](ArchitectAPI#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
+| [**postFlowsExecutions**](ArchitectAPI#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**postFlowsInstancesJobs**](ArchitectAPI#postFlowsInstancesJobs) | Start a process (job) that will prepare a list of execution data IDs for download. |
+| [**postFlowsInstancesQuery**](ArchitectAPI#postFlowsInstancesQuery) | Query the database of existing flow histories to look for particular flow criteria |
+| [**postFlowsJobs**](ArchitectAPI#postFlowsJobs) | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
+| [**postFlowsMilestones**](ArchitectAPI#postFlowsMilestones) | Create a flow milestone |
+| [**postFlowsOutcomes**](ArchitectAPI#postFlowsOutcomes) | Create a flow outcome |
+| [**putArchitectEmergencygroup**](ArchitectAPI#putArchitectEmergencygroup) | Updates a emergency group by ID |
+| [**putArchitectIvr**](ArchitectAPI#putArchitectIvr) | Update an IVR Config. |
+| [**putArchitectPrompt**](ArchitectAPI#putArchitectPrompt) | Update specified user prompt |
+| [**putArchitectPromptResource**](ArchitectAPI#putArchitectPromptResource) | Update specified user prompt resource |
+| [**putArchitectSchedule**](ArchitectAPI#putArchitectSchedule) | Update schedule by ID |
+| [**putArchitectSchedulegroup**](ArchitectAPI#putArchitectSchedulegroup) | Updates a schedule group by ID |
+| [**putArchitectSystempromptResource**](ArchitectAPI#putArchitectSystempromptResource) | Updates a system prompt resource override. |
+| [**putFlow**](ArchitectAPI#putFlow) | Update flow |
+| [**putFlowInstancesSettingsLoglevels**](ArchitectAPI#putFlowInstancesSettingsLoglevels) | Edit the logLevel for a particular flow id |
+| [**putFlowsDatatable**](ArchitectAPI#putFlowsDatatable) | Updates a specific datatable by id |
+| [**putFlowsDatatableRow**](ArchitectAPI#putFlowsDatatableRow) | Update a row entry |
+| [**putFlowsInstancesSettingsLoglevelsDefault**](ArchitectAPI#putFlowsInstancesSettingsLoglevelsDefault) | Edit the flow default log level. |
+| [**putFlowsMilestone**](ArchitectAPI#putFlowsMilestone) | Updates a flow milestone |
+| [**putFlowsOutcome**](ArchitectAPI#putFlowsOutcome) | Updates a flow outcome |
 {: class="table-striped"}
 
-<a name="deleteArchitectEmergencygroup"></a>
 
-# **deleteArchitectEmergencygroup**
+## deleteArchitectEmergencygroup
 
 
 
@@ -181,16 +190,217 @@ ArchitectAPI.deleteArchitectEmergencygroup(emergencyGroupId: emergencyGroupId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **emergencyGroupId** | **String**| Emergency group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectIvr"></a>
 
-# **deleteArchitectIvr**
+## deleteArchitectGrammar
+
+
+
+> [JSON](JSON) deleteArchitectGrammar(grammarId)
+
+Delete a grammar.
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}  
+
+Requires ALL permissions: 
+
+* architect:grammar:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // grammar ID
+
+// Code example
+ArchitectAPI.deleteArchitectGrammar(grammarId: grammarId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.deleteArchitectGrammar was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| grammar ID | |
+
+
+### Return type
+
+[**JSON**](JSON)
+
+
+## deleteArchitectGrammarLanguage
+
+
+
+> Void deleteArchitectGrammarLanguage(grammarId, languageCode)
+
+Delete specified grammar language
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.deleteArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteArchitectGrammarLanguage was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteArchitectGrammarLanguageFilesDtmf
+
+
+
+> Void deleteArchitectGrammarLanguageFilesDtmf(grammarId, languageCode)
+
+Clear the DTMF mode file for the grammar language if there is one
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.deleteArchitectGrammarLanguageFilesDtmf(grammarId: grammarId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteArchitectGrammarLanguageFilesDtmf was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteArchitectGrammarLanguageFilesVoice
+
+
+
+> Void deleteArchitectGrammarLanguageFilesVoice(grammarId, languageCode)
+
+Clear the voice mode file for the grammar language if there is one
+
+
+
+Wraps DELETE /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.deleteArchitectGrammarLanguageFilesVoice(grammarId: grammarId, languageCode: languageCode) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ArchitectAPI.deleteArchitectGrammarLanguageFilesVoice was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteArchitectIvr
 
 
 
@@ -232,16 +442,14 @@ ArchitectAPI.deleteArchitectIvr(ivrId: ivrId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ivrId** | **String**| IVR id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectPrompt"></a>
 
-# **deleteArchitectPrompt**
+## deleteArchitectPrompt
 
 
 
@@ -285,16 +493,14 @@ ArchitectAPI.deleteArchitectPrompt(promptId: promptId, allResources: allResource
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **allResources** | **Bool**| Whether or not to delete all the prompt resources | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectPromptResource"></a>
 
-# **deleteArchitectPromptResource**
+## deleteArchitectPromptResource
 
 
 
@@ -338,16 +544,14 @@ ArchitectAPI.deleteArchitectPromptResource(promptId: promptId, languageCode: lan
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectPromptResourceAudio"></a>
 
-# **deleteArchitectPromptResourceAudio**
+## deleteArchitectPromptResourceAudio
 
 
 
@@ -391,20 +595,18 @@ ArchitectAPI.deleteArchitectPromptResourceAudio(promptId: promptId, languageCode
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectPrompts"></a>
 
-# **deleteArchitectPrompts**
-
+## deleteArchitectPrompts
 
 
-> [Operation](Operation.html) deleteArchitectPrompts(_id)
+
+> [Operation](Operation) deleteArchitectPrompts(_id)
 
 Batch-delete a list of prompts
 
@@ -444,17 +646,15 @@ ArchitectAPI.deleteArchitectPrompts(_id: _id) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_id** | [**[String]**](String.html)| List of Prompt IDs | |
-{: class="table-striped"}
+| **_id** | [**[String]**](String)| List of Prompt IDs | |
 
 
 ### Return type
 
-[**Operation**](Operation.html)
+[**Operation**](Operation)
 
-<a name="deleteArchitectSchedule"></a>
 
-# **deleteArchitectSchedule**
+## deleteArchitectSchedule
 
 
 
@@ -496,16 +696,14 @@ ArchitectAPI.deleteArchitectSchedule(scheduleId: scheduleId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleId** | **String**| Schedule ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectSchedulegroup"></a>
 
-# **deleteArchitectSchedulegroup**
+## deleteArchitectSchedulegroup
 
 
 
@@ -547,16 +745,14 @@ ArchitectAPI.deleteArchitectSchedulegroup(scheduleGroupId: scheduleGroupId) { (e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleGroupId** | **String**| Schedule group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteArchitectSystempromptResource"></a>
 
-# **deleteArchitectSystempromptResource**
+## deleteArchitectSystempromptResource
 
 
 
@@ -600,16 +796,14 @@ ArchitectAPI.deleteArchitectSystempromptResource(promptId: promptId, languageCod
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteFlow"></a>
 
-# **deleteFlow**
+## deleteFlow
 
 
 
@@ -651,16 +845,14 @@ ArchitectAPI.deleteFlow(flowId: flowId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteFlowInstancesSettingsLoglevels"></a>
 
-# **deleteFlowInstancesSettingsLoglevels**
+## deleteFlowInstancesSettingsLoglevels
 
 
 
@@ -704,20 +896,18 @@ ArchitectAPI.deleteFlowInstancesSettingsLoglevels(flowId: flowId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| The flow id to delete the loglevel for | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteFlows"></a>
 
-# **deleteFlows**
-
+## deleteFlows
 
 
-> [Operation](Operation.html) deleteFlows(_id)
+
+> [Operation](Operation) deleteFlows(_id)
 
 Batch-delete a list of flows
 
@@ -757,17 +947,15 @@ ArchitectAPI.deleteFlows(_id: _id) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_id** | [**[String]**](String.html)| List of Flow IDs | |
-{: class="table-striped"}
+| **_id** | [**[String]**](String)| List of Flow IDs | |
 
 
 ### Return type
 
-[**Operation**](Operation.html)
+[**Operation**](Operation)
 
-<a name="deleteFlowsDatatable"></a>
 
-# **deleteFlowsDatatable**
+## deleteFlowsDatatable
 
 
 
@@ -813,16 +1001,14 @@ ArchitectAPI.deleteFlowsDatatable(datatableId: datatableId, force: force) { (err
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **force** | **Bool**| force delete, even if in use | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteFlowsDatatableRow"></a>
 
-# **deleteFlowsDatatableRow**
+## deleteFlowsDatatableRow
 
 
 
@@ -869,16 +1055,14 @@ ArchitectAPI.deleteFlowsDatatableRow(datatableId: datatableId, rowId: rowId) { (
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **rowId** | **String**| the key for the row | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteFlowsInstancesSettingsLoglevelsDefault"></a>
 
-# **deleteFlowsInstancesSettingsLoglevelsDefault**
+## deleteFlowsInstancesSettingsLoglevelsDefault
 
 
 
@@ -920,18 +1104,16 @@ ArchitectAPI.deleteFlowsInstancesSettingsLoglevelsDefault() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteFlowsMilestone"></a>
 
-# **deleteFlowsMilestone**
-
+## deleteFlowsMilestone
 
 
-> [JSON](JSON.html) deleteFlowsMilestone(milestoneId)
+
+> [JSON](JSON) deleteFlowsMilestone(milestoneId)
 
 Delete a flow milestone.
 
@@ -970,20 +1152,18 @@ ArchitectAPI.deleteFlowsMilestone(milestoneId: milestoneId) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **milestoneId** | **String**| flow milestone ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getArchitectDependencytracking"></a>
-
-# **getArchitectDependencytracking**
+[**JSON**](JSON)
 
 
+## getArchitectDependencytracking
 
-> [DependencyObjectEntityListing](DependencyObjectEntityListing.html) getArchitectDependencytracking(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType)
+
+
+> [DependencyObjectEntityListing](DependencyObjectEntityListing) getArchitectDependencytracking(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType)
 
 Get Dependency Tracking objects that have a given display name
 
@@ -1031,25 +1211,23 @@ ArchitectAPI.getArchitectDependencytracking(name: name, pageNumber: pageNumber, 
 | **name** | **String**| Object name to search for | |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResources** | **Bool**| Include resources each result item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume each result item | [optional] |
-| **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-| **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-{: class="table-striped"}
+| **consumedResourceType** | [**[String]**](String)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumingResourceType** | [**[String]**](String)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 
 
 ### Return type
 
-[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
-
-<a name="getArchitectDependencytrackingBuild"></a>
-
-# **getArchitectDependencytrackingBuild**
+[**DependencyObjectEntityListing**](DependencyObjectEntityListing)
 
 
+## getArchitectDependencytrackingBuild
 
-> [DependencyStatus](DependencyStatus.html) getArchitectDependencytrackingBuild()
+
+
+> [DependencyStatus](DependencyStatus) getArchitectDependencytrackingBuild()
 
 Get Dependency Tracking build status for an organization
 
@@ -1086,18 +1264,16 @@ ArchitectAPI.getArchitectDependencytrackingBuild() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**DependencyStatus**](DependencyStatus.html)
-
-<a name="getArchitectDependencytrackingConsumedresources"></a>
-
-# **getArchitectDependencytrackingConsumedresources**
+[**DependencyStatus**](DependencyStatus)
 
 
+## getArchitectDependencytrackingConsumedresources
 
-> [ConsumedResourcesEntityListing](ConsumedResourcesEntityListing.html) getArchitectDependencytrackingConsumedresources(_id, version, objectType, resourceType, pageNumber, pageSize)
+
+
+> [ConsumedResourcesEntityListing](ConsumedResourcesEntityListing) getArchitectDependencytrackingConsumedresources(_id, version, objectType, resourceType, pageNumber, pageSize)
 
 Get resources that are consumed by a given Dependency Tracking object
 
@@ -1143,23 +1319,21 @@ ArchitectAPI.getArchitectDependencytrackingConsumedresources(_id: _id, version: 
 | **_id** | **String**| Consuming object ID | |
 | **version** | **String**| Consuming object version | |
 | **objectType** | **String**| Consuming object type.  Only versioned types are allowed here. |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-| **resourceType** | [**[String]**](String.html)| Types of consumed resources to show | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **resourceType** | [**[String]**](String)| Types of consumed resources to show | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html)
-
-<a name="getArchitectDependencytrackingConsumingresources"></a>
-
-# **getArchitectDependencytrackingConsumingresources**
+[**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing)
 
 
+## getArchitectDependencytrackingConsumingresources
 
-> [ConsumingResourcesEntityListing](ConsumingResourcesEntityListing.html) getArchitectDependencytrackingConsumingresources(_id, objectType, resourceType, version, pageNumber, pageSize, flowFilter)
+
+
+> [ConsumingResourcesEntityListing](ConsumingResourcesEntityListing) getArchitectDependencytrackingConsumingresources(_id, objectType, resourceType, version, pageNumber, pageSize, flowFilter)
 
 Get resources that consume a given Dependency Tracking object
 
@@ -1205,25 +1379,23 @@ ArchitectAPI.getArchitectDependencytrackingConsumingresources(_id: _id, objectTy
 | ------------- | ------------- | ------------- | ------------- |
 | **_id** | **String**| Consumed object ID | |
 | **objectType** | **String**| Consumed object type |<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-| **resourceType** | [**[String]**](String.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **resourceType** | [**[String]**](String)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **version** | **String**| Object version | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html)
-
-<a name="getArchitectDependencytrackingDeletedresourceconsumers"></a>
-
-# **getArchitectDependencytrackingDeletedresourceconsumers**
+[**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing)
 
 
+## getArchitectDependencytrackingDeletedresourceconsumers
 
-> [DependencyObjectEntityListing](DependencyObjectEntityListing.html) getArchitectDependencytrackingDeletedresourceconsumers(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize)
+
+
+> [DependencyObjectEntityListing](DependencyObjectEntityListing) getArchitectDependencytrackingDeletedresourceconsumers(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize)
 
 Get Dependency Tracking objects that consume deleted resources
 
@@ -1268,26 +1440,24 @@ ArchitectAPI.getArchitectDependencytrackingDeletedresourceconsumers(name: name, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
-| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **flowFilter** | **String**| Show only checkedIn or published flows | [optional]<br />**Values**: checkedin ("checkedIn"), published ("published") |
 | **consumedResources** | **Bool**| Return consumed resources? | [optional] |
-| **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
-
-<a name="getArchitectDependencytrackingObject"></a>
-
-# **getArchitectDependencytrackingObject**
+[**DependencyObjectEntityListing**](DependencyObjectEntityListing)
 
 
+## getArchitectDependencytrackingObject
 
-> [DependencyObject](DependencyObject.html) getArchitectDependencytrackingObject(_id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest)
+
+
+> [DependencyObject](DependencyObject) getArchitectDependencytrackingObject(_id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest)
 
 Get a Dependency Tracking object
 
@@ -1337,23 +1507,21 @@ ArchitectAPI.getArchitectDependencytrackingObject(_id: _id, version: version, ob
 | **objectType** | **String**| Object type | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResources** | **Bool**| Include resources this item consumes | [optional] |
 | **consumingResources** | **Bool**| Include resources that consume this item | [optional] |
-| **consumedResourceType** | [**[String]**](String.html)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
-| **consumingResourceType** | [**[String]**](String.html)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Types of consumed resources to return, if consumed resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumingResourceType** | [**[String]**](String)| Types of consuming resources to return, if consuming resources are requested | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResourceRequest** | **Bool**| Indicate that this is going to look up a consumed resource object | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DependencyObject**](DependencyObject.html)
-
-<a name="getArchitectDependencytrackingType"></a>
-
-# **getArchitectDependencytrackingType**
+[**DependencyObject**](DependencyObject)
 
 
+## getArchitectDependencytrackingType
 
-> [DependencyType](DependencyType.html) getArchitectDependencytrackingType(typeId)
+
+
+> [DependencyType](DependencyType) getArchitectDependencytrackingType(typeId)
 
 Get a Dependency Tracking type.
 
@@ -1392,20 +1560,18 @@ ArchitectAPI.getArchitectDependencytrackingType(typeId: typeId) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **typeId** | **String**| Type ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DependencyType**](DependencyType.html)
-
-<a name="getArchitectDependencytrackingTypes"></a>
-
-# **getArchitectDependencytrackingTypes**
+[**DependencyType**](DependencyType)
 
 
+## getArchitectDependencytrackingTypes
 
-> [DependencyTypeEntityListing](DependencyTypeEntityListing.html) getArchitectDependencytrackingTypes(pageNumber, pageSize)
+
+
+> [DependencyTypeEntityListing](DependencyTypeEntityListing) getArchitectDependencytrackingTypes(pageNumber, pageSize)
 
 Get Dependency Tracking types.
 
@@ -1446,20 +1612,18 @@ ArchitectAPI.getArchitectDependencytrackingTypes(pageNumber: pageNumber, pageSiz
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DependencyTypeEntityListing**](DependencyTypeEntityListing.html)
-
-<a name="getArchitectDependencytrackingUpdatedresourceconsumers"></a>
-
-# **getArchitectDependencytrackingUpdatedresourceconsumers**
+[**DependencyTypeEntityListing**](DependencyTypeEntityListing)
 
 
+## getArchitectDependencytrackingUpdatedresourceconsumers
 
-> [DependencyObjectEntityListing](DependencyObjectEntityListing.html) getArchitectDependencytrackingUpdatedresourceconsumers(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize)
+
+
+> [DependencyObjectEntityListing](DependencyObjectEntityListing) getArchitectDependencytrackingUpdatedresourceconsumers(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize)
 
 Get Dependency Tracking objects that depend on updated resources
 
@@ -1503,25 +1667,23 @@ ArchitectAPI.getArchitectDependencytrackingUpdatedresourceconsumers(name: name, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **name** | **String**| Name to search for | [optional] |
-| **objectType** | [**[String]**](String.html)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **objectType** | [**[String]**](String)| Object type(s) to search for | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **consumedResources** | **Bool**| Return consumed resources? | [optional] |
-| **consumedResourceType** | [**[String]**](String.html)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
+| **consumedResourceType** | [**[String]**](String)| Resource type(s) to return | [optional]<br />**Values**: acdlanguage ("ACDLANGUAGE"), acdskill ("ACDSKILL"), acdwrapupcode ("ACDWRAPUPCODE"), audioconnectorbot ("AUDIOCONNECTORBOT"), botconnectorbot ("BOTCONNECTORBOT"), botconnectorintegration ("BOTCONNECTORINTEGRATION"), botflow ("BOTFLOW"), bridgeaction ("BRIDGEACTION"), commonmoduleflow ("COMMONMODULEFLOW"), composerscript ("COMPOSERSCRIPT"), contactlist ("CONTACTLIST"), dataaction ("DATAACTION"), datatable ("DATATABLE"), dialogenginebot ("DIALOGENGINEBOT"), dialogenginebotversion ("DIALOGENGINEBOTVERSION"), dialogflowagent ("DIALOGFLOWAGENT"), dialogflowcxagent ("DIALOGFLOWCXAGENT"), digitalbotflow ("DIGITALBOTFLOW"), emailroute ("EMAILROUTE"), emergencygroup ("EMERGENCYGROUP"), flowaction ("FLOWACTION"), flowdatatype ("FLOWDATATYPE"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), grammar ("GRAMMAR"), group ("GROUP"), image ("IMAGE"), inboundcallflow ("INBOUNDCALLFLOW"), inboundchatflow ("INBOUNDCHATFLOW"), inboundemailflow ("INBOUNDEMAILFLOW"), inboundshortmessageflow ("INBOUNDSHORTMESSAGEFLOW"), inqueuecallflow ("INQUEUECALLFLOW"), inqueueemailflow ("INQUEUEEMAILFLOW"), inqueueshortmessageflow ("INQUEUESHORTMESSAGEFLOW"), ivrconfiguration ("IVRCONFIGURATION"), knowledgebase ("KNOWLEDGEBASE"), knowledgebasedocument ("KNOWLEDGEBASEDOCUMENT"), language ("LANGUAGE"), lexbot ("LEXBOT"), lexbotalias ("LEXBOTALIAS"), lexv2bot ("LEXV2BOT"), lexv2botalias ("LEXV2BOTALIAS"), nludomain ("NLUDOMAIN"), nuancemixbot ("NUANCEMIXBOT"), nuancemixintegration ("NUANCEMIXINTEGRATION"), oauthclient ("OAUTHCLIENT"), outboundcallflow ("OUTBOUNDCALLFLOW"), queue ("QUEUE"), recordingpolicy ("RECORDINGPOLICY"), response ("RESPONSE"), schedule ("SCHEDULE"), schedulegroup ("SCHEDULEGROUP"), secureaction ("SECUREACTION"), securecallflow ("SECURECALLFLOW"), sttengine ("STTENGINE"), surveyform ("SURVEYFORM"), surveyinviteflow ("SURVEYINVITEFLOW"), systemprompt ("SYSTEMPROMPT"), ttsengine ("TTSENGINE"), ttsvoice ("TTSVOICE"), user ("USER"), userprompt ("USERPROMPT"), utilizationlabel ("UTILIZATIONLABEL"), voiceflow ("VOICEFLOW"), voicemailflow ("VOICEMAILFLOW"), voicesurveyflow ("VOICESURVEYFLOW"), widget ("WIDGET"), workflow ("WORKFLOW"), workitemflow ("WORKITEMFLOW"), worktype ("WORKTYPE") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
-
-<a name="getArchitectEmergencygroup"></a>
-
-# **getArchitectEmergencygroup**
+[**DependencyObjectEntityListing**](DependencyObjectEntityListing)
 
 
+## getArchitectEmergencygroup
 
-> [EmergencyGroup](EmergencyGroup.html) getArchitectEmergencygroup(emergencyGroupId)
+
+
+> [EmergencyGroup](EmergencyGroup) getArchitectEmergencygroup(emergencyGroupId)
 
 Gets a emergency group by ID
 
@@ -1560,20 +1722,18 @@ ArchitectAPI.getArchitectEmergencygroup(emergencyGroupId: emergencyGroupId) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **emergencyGroupId** | **String**| Emergency group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EmergencyGroup**](EmergencyGroup.html)
-
-<a name="getArchitectEmergencygroups"></a>
-
-# **getArchitectEmergencygroups**
+[**EmergencyGroup**](EmergencyGroup)
 
 
+## getArchitectEmergencygroups
 
-> [EmergencyGroupListing](EmergencyGroupListing.html) getArchitectEmergencygroups(pageNumber, pageSize, sortBy, sortOrder, name)
+
+
+> [EmergencyGroupListing](EmergencyGroupListing) getArchitectEmergencygroups(pageNumber, pageSize, sortBy, sortOrder, name)
 
 Get a list of emergency groups.
 
@@ -1620,20 +1780,18 @@ ArchitectAPI.getArchitectEmergencygroups(pageNumber: pageNumber, pageSize: pageS
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the Emergency Group to filter by. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EmergencyGroupListing**](EmergencyGroupListing.html)
-
-<a name="getArchitectEmergencygroupsDivisionviews"></a>
-
-# **getArchitectEmergencygroupsDivisionviews**
+[**EmergencyGroupListing**](EmergencyGroupListing)
 
 
+## getArchitectEmergencygroupsDivisionviews
 
-> [EmergencyGroupDivisionViewEntityListing](EmergencyGroupDivisionViewEntityListing.html) getArchitectEmergencygroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+
+> [EmergencyGroupDivisionViewEntityListing](EmergencyGroupDivisionViewEntityListing) getArchitectEmergencygroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
 
 Get a pageable list of basic emergency group objects filterable by query parameters.
 
@@ -1683,23 +1841,195 @@ ArchitectAPI.getArchitectEmergencygroupsDivisionviews(pageNumber: pageNumber, pa
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID of the Emergency Groups to filter by. | [optional] |
+| **_id** | [**[String]**](String)| ID of the Emergency Groups to filter by. | [optional] |
 | **name** | **String**| Name of the Emergency Group to filter by. | [optional] |
-| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
 
-[**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing.html)
-
-<a name="getArchitectIvr"></a>
-
-# **getArchitectIvr**
+[**EmergencyGroupDivisionViewEntityListing**](EmergencyGroupDivisionViewEntityListing)
 
 
+## getArchitectGrammar
 
-> [IVR](IVR.html) getArchitectIvr(ivrId)
+
+
+> [Grammar](Grammar) getArchitectGrammar(grammarId, includeFileUrls)
+
+Get a grammar
+
+Returns a specified grammar
+
+
+
+Wraps GET /api/v2/architect/grammars/{grammarId}  
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // grammar ID
+let includeFileUrls: Bool = true // Include grammar language file URLs
+
+// Code example
+ArchitectAPI.getArchitectGrammar(grammarId: grammarId, includeFileUrls: includeFileUrls) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectGrammar was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| grammar ID | |
+| **includeFileUrls** | **Bool**| Include grammar language file URLs | [optional] |
+
+
+### Return type
+
+[**Grammar**](Grammar)
+
+
+## getArchitectGrammarLanguage
+
+
+
+> [GrammarLanguage](GrammarLanguage) getArchitectGrammarLanguage(grammarId, languageCode)
+
+Get a grammar language.
+
+
+
+Wraps GET /api/v2/architect/grammars/{grammarId}/languages/{languageCode}  
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+
+// Code example
+ArchitectAPI.getArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectGrammarLanguage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage)
+
+
+## getArchitectGrammars
+
+
+
+> [GrammarListing](GrammarListing) getArchitectGrammars(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, includeFileUrls)
+
+Get a pageable list of grammars, filtered by query parameters
+
+Multiple IDs can be specified, in which case all matching grammars will be returned, and no other parameters will be evaluated.
+
+
+
+Wraps GET /api/v2/architect/grammars  
+
+Requires ALL permissions: 
+
+* architect:grammar:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+let sortBy: ArchitectAPI.SortBy_getArchitectGrammars = ArchitectAPI.SortBy_getArchitectGrammars.enummember // Sort by
+let sortOrder: ArchitectAPI.SortOrder_getArchitectGrammars = ArchitectAPI.SortOrder_getArchitectGrammars.enummember // Sort order
+let _id: [String] = [""] // ID
+let name: String = "" // Name
+let _description: String = "" // Description
+let nameOrDescription: String = "" // Name or description
+let includeFileUrls: Bool = true // Include grammar language file URLs
+
+// Code example
+ArchitectAPI.getArchitectGrammars(pageNumber: pageNumber, pageSize: pageSize, sortBy: sortBy, sortOrder: sortOrder, _id: _id, name: name, _description: _description, nameOrDescription: nameOrDescription, includeFileUrls: includeFileUrls) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getArchitectGrammars was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **sortBy** | **String**| Sort by | [optional]<br />**Values**: _description ("description"), _id ("id"), name ("name") |
+| **sortOrder** | **String**| Sort order | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
+| **_id** | [**[String]**](String)| ID | [optional] |
+| **name** | **String**| Name | [optional] |
+| **_description** | **String**| Description | [optional] |
+| **nameOrDescription** | **String**| Name or description | [optional] |
+| **includeFileUrls** | **Bool**| Include grammar language file URLs | [optional] |
+
+
+### Return type
+
+[**GrammarListing**](GrammarListing)
+
+
+## getArchitectIvr
+
+
+
+> [IVR](IVR) getArchitectIvr(ivrId)
 
 Get an IVR config.
 
@@ -1738,20 +2068,18 @@ ArchitectAPI.getArchitectIvr(ivrId: ivrId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ivrId** | **String**| IVR id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**IVR**](IVR.html)
-
-<a name="getArchitectIvrs"></a>
-
-# **getArchitectIvrs**
+[**IVR**](IVR)
 
 
+## getArchitectIvrs
 
-> [IVREntityListing](IVREntityListing.html) getArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup)
+
+
+> [IVREntityListing](IVREntityListing) getArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name, dnis, scheduleGroup)
 
 Get IVR configs.
 
@@ -1802,20 +2130,18 @@ ArchitectAPI.getArchitectIvrs(pageNumber: pageNumber, pageSize: pageSize, sortBy
 | **name** | **String**| Name of the IVR to filter by. | [optional] |
 | **dnis** | **String**| The phone number of the IVR to filter by. | [optional] |
 | **scheduleGroup** | **String**| The Schedule Group of the IVR to filter by. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**IVREntityListing**](IVREntityListing.html)
-
-<a name="getArchitectIvrsDivisionviews"></a>
-
-# **getArchitectIvrsDivisionviews**
+[**IVREntityListing**](IVREntityListing)
 
 
+## getArchitectIvrsDivisionviews
 
-> [IVRDivisionViewEntityListing](IVRDivisionViewEntityListing.html) getArchitectIvrsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+
+> [IVRDivisionViewEntityListing](IVRDivisionViewEntityListing) getArchitectIvrsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
 
 Get a pageable list of basic ivr configuration information objects filterable by query parameters.
 
@@ -1863,23 +2189,21 @@ ArchitectAPI.getArchitectIvrsDivisionviews(pageNumber: pageNumber, pageSize: pag
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID of the IVR to filter by. | [optional] |
+| **_id** | [**[String]**](String)| ID of the IVR to filter by. | [optional] |
 | **name** | **String**| Name of the IVR to filter by. | [optional] |
-| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
 
-[**IVRDivisionViewEntityListing**](IVRDivisionViewEntityListing.html)
-
-<a name="getArchitectPrompt"></a>
-
-# **getArchitectPrompt**
+[**IVRDivisionViewEntityListing**](IVRDivisionViewEntityListing)
 
 
+## getArchitectPrompt
 
-> [Prompt](Prompt.html) getArchitectPrompt(promptId, includeMediaUris, includeResources, language)
+
+
+> [Prompt](Prompt) getArchitectPrompt(promptId, includeMediaUris, includeResources, language)
 
 Get specified user prompt
 
@@ -1923,21 +2247,19 @@ ArchitectAPI.getArchitectPrompt(promptId: promptId, includeMediaUris: includeMed
 | **promptId** | **String**| Prompt ID | |
 | **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
 | **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
-| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
-{: class="table-striped"}
+| **language** | [**[String]**](String)| Filter the resources down to the provided languages | [optional] |
 
 
 ### Return type
 
-[**Prompt**](Prompt.html)
-
-<a name="getArchitectPromptHistoryHistoryId"></a>
-
-# **getArchitectPromptHistoryHistoryId**
+[**Prompt**](Prompt)
 
 
+## getArchitectPromptHistoryHistoryId
 
-> [HistoryListing](HistoryListing.html) getArchitectPromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action)
+
+
+> [HistoryListing](HistoryListing) getArchitectPromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action)
 
 Get generated prompt history
 
@@ -1987,21 +2309,19 @@ ArchitectAPI.getArchitectPromptHistoryHistoryId(promptId: promptId, historyId: h
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
-| **action** | [**[String]**](String.html)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
-{: class="table-striped"}
+| **action** | [**[String]**](String)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
 
 
 ### Return type
 
-[**HistoryListing**](HistoryListing.html)
-
-<a name="getArchitectPromptResource"></a>
-
-# **getArchitectPromptResource**
+[**HistoryListing**](HistoryListing)
 
 
+## getArchitectPromptResource
 
-> [PromptAsset](PromptAsset.html) getArchitectPromptResource(promptId, languageCode)
+
+
+> [PromptAsset](PromptAsset) getArchitectPromptResource(promptId, languageCode)
 
 Get specified user prompt resource
 
@@ -2042,20 +2362,18 @@ ArchitectAPI.getArchitectPromptResource(promptId: promptId, languageCode: langua
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**PromptAsset**](PromptAsset.html)
-
-<a name="getArchitectPromptResources"></a>
-
-# **getArchitectPromptResources**
+[**PromptAsset**](PromptAsset)
 
 
+## getArchitectPromptResources
 
-> [PromptAssetEntityListing](PromptAssetEntityListing.html) getArchitectPromptResources(promptId, pageNumber, pageSize)
+
+
+> [PromptAssetEntityListing](PromptAssetEntityListing) getArchitectPromptResources(promptId, pageNumber, pageSize)
 
 Get a pageable list of user prompt resources
 
@@ -2100,20 +2418,18 @@ ArchitectAPI.getArchitectPromptResources(promptId: promptId, pageNumber: pageNum
 | **promptId** | **String**| Prompt ID | |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**PromptAssetEntityListing**](PromptAssetEntityListing.html)
-
-<a name="getArchitectPrompts"></a>
-
-# **getArchitectPrompts**
+[**PromptAssetEntityListing**](PromptAssetEntityListing)
 
 
+## getArchitectPrompts
 
-> [PromptEntityListing](PromptEntityListing.html) getArchitectPrompts(pageNumber, pageSize, name, _description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language)
+
+
+> [PromptEntityListing](PromptEntityListing) getArchitectPrompts(pageNumber, pageSize, name, _description, nameOrDescription, sortBy, sortOrder, includeMediaUris, includeResources, language)
 
 Get a pageable list of user prompts
 
@@ -2164,28 +2480,26 @@ ArchitectAPI.getArchitectPrompts(pageNumber: pageNumber, pageSize: pageSize, nam
 | ------------- | ------------- | ------------- | ------------- |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-| **name** | [**[String]**](String.html)| Name | [optional] |
+| **name** | [**[String]**](String)| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
 | **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
-| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
-{: class="table-striped"}
+| **language** | [**[String]**](String)| Filter the resources down to the provided languages | [optional] |
 
 
 ### Return type
 
-[**PromptEntityListing**](PromptEntityListing.html)
-
-<a name="getArchitectSchedule"></a>
-
-# **getArchitectSchedule**
+[**PromptEntityListing**](PromptEntityListing)
 
 
+## getArchitectSchedule
 
-> [Schedule](Schedule.html) getArchitectSchedule(scheduleId)
+
+
+> [Schedule](Schedule) getArchitectSchedule(scheduleId)
 
 Get a schedule by ID
 
@@ -2224,20 +2538,18 @@ ArchitectAPI.getArchitectSchedule(scheduleId: scheduleId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleId** | **String**| Schedule ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Schedule**](Schedule.html)
-
-<a name="getArchitectSchedulegroup"></a>
-
-# **getArchitectSchedulegroup**
+[**Schedule**](Schedule)
 
 
+## getArchitectSchedulegroup
 
-> [ScheduleGroup](ScheduleGroup.html) getArchitectSchedulegroup(scheduleGroupId)
+
+
+> [ScheduleGroup](ScheduleGroup) getArchitectSchedulegroup(scheduleGroupId)
 
 Gets a schedule group by ID
 
@@ -2276,20 +2588,18 @@ ArchitectAPI.getArchitectSchedulegroup(scheduleGroupId: scheduleGroupId) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleGroupId** | **String**| Schedule group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScheduleGroup**](ScheduleGroup.html)
-
-<a name="getArchitectSchedulegroups"></a>
-
-# **getArchitectSchedulegroups**
+[**ScheduleGroup**](ScheduleGroup)
 
 
+## getArchitectSchedulegroups
 
-> [ScheduleGroupEntityListing](ScheduleGroupEntityListing.html) getArchitectSchedulegroups(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds, divisionId)
+
+
+> [ScheduleGroupEntityListing](ScheduleGroupEntityListing) getArchitectSchedulegroups(pageNumber, pageSize, sortBy, sortOrder, name, scheduleIds, divisionId)
 
 Get a list of schedule groups.
 
@@ -2339,21 +2649,19 @@ ArchitectAPI.getArchitectSchedulegroups(pageNumber: pageNumber, pageSize: pageSi
 | **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the Schedule Group to filter by. | [optional] |
 | **scheduleIds** | **String**| A comma-delimited list of Schedule IDs to filter by. | [optional] |
-| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
 
-[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html)
-
-<a name="getArchitectSchedulegroupsDivisionviews"></a>
-
-# **getArchitectSchedulegroupsDivisionviews**
+[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing)
 
 
+## getArchitectSchedulegroupsDivisionviews
 
-> [ScheduleGroupDivisionViewEntityListing](ScheduleGroupDivisionViewEntityListing.html) getArchitectSchedulegroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+
+> [ScheduleGroupDivisionViewEntityListing](ScheduleGroupDivisionViewEntityListing) getArchitectSchedulegroupsDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
 
 Get a pageable list of basic schedule group configuration information objects filterable by query parameters.
 
@@ -2401,23 +2709,21 @@ ArchitectAPI.getArchitectSchedulegroupsDivisionviews(pageNumber: pageNumber, pag
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID of the schedule group to filter by. | [optional] |
+| **_id** | [**[String]**](String)| ID of the schedule group to filter by. | [optional] |
 | **name** | **String**| Name of the schedule group to filter by. | [optional] |
-| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
 
-[**ScheduleGroupDivisionViewEntityListing**](ScheduleGroupDivisionViewEntityListing.html)
-
-<a name="getArchitectSchedules"></a>
-
-# **getArchitectSchedules**
+[**ScheduleGroupDivisionViewEntityListing**](ScheduleGroupDivisionViewEntityListing)
 
 
+## getArchitectSchedules
 
-> [ScheduleEntityListing](ScheduleEntityListing.html) getArchitectSchedules(pageNumber, pageSize, sortBy, sortOrder, name, divisionId)
+
+
+> [ScheduleEntityListing](ScheduleEntityListing) getArchitectSchedules(pageNumber, pageSize, sortBy, sortOrder, name, divisionId)
 
 Get a list of schedules.
 
@@ -2465,21 +2771,19 @@ ArchitectAPI.getArchitectSchedules(pageNumber: pageNumber, pageSize: pageSize, s
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **name** | **String**| Name of the Schedule to filter by. | [optional] |
-| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
 
-[**ScheduleEntityListing**](ScheduleEntityListing.html)
-
-<a name="getArchitectSchedulesDivisionviews"></a>
-
-# **getArchitectSchedulesDivisionviews**
+[**ScheduleEntityListing**](ScheduleEntityListing)
 
 
+## getArchitectSchedulesDivisionviews
 
-> [ScheduleDivisionViewEntityListing](ScheduleDivisionViewEntityListing.html) getArchitectSchedulesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+
+> [ScheduleDivisionViewEntityListing](ScheduleDivisionViewEntityListing) getArchitectSchedulesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
 
 Get a pageable list of basic schedule configuration information objects filterable by query parameters.
 
@@ -2527,23 +2831,21 @@ ArchitectAPI.getArchitectSchedulesDivisionviews(pageNumber: pageNumber, pageSize
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID of the schedule group to filter by. | [optional] |
+| **_id** | [**[String]**](String)| ID of the schedule group to filter by. | [optional] |
 | **name** | **String**| Name of the schedule group to filter by. | [optional] |
-| **divisionId** | [**[String]**](String.html)| List of divisionIds on which to filter. | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
 
-[**ScheduleDivisionViewEntityListing**](ScheduleDivisionViewEntityListing.html)
-
-<a name="getArchitectSystemprompt"></a>
-
-# **getArchitectSystemprompt**
+[**ScheduleDivisionViewEntityListing**](ScheduleDivisionViewEntityListing)
 
 
+## getArchitectSystemprompt
 
-> [SystemPrompt](SystemPrompt.html) getArchitectSystemprompt(promptId, includeMediaUris, includeResources, language)
+
+
+> [SystemPrompt](SystemPrompt) getArchitectSystemprompt(promptId, includeMediaUris, includeResources, language)
 
 Get a system prompt
 
@@ -2587,21 +2889,19 @@ ArchitectAPI.getArchitectSystemprompt(promptId: promptId, includeMediaUris: incl
 | **promptId** | **String**| promptId | |
 | **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
 | **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
-| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
-{: class="table-striped"}
+| **language** | [**[String]**](String)| Filter the resources down to the provided languages | [optional] |
 
 
 ### Return type
 
-[**SystemPrompt**](SystemPrompt.html)
-
-<a name="getArchitectSystempromptHistoryHistoryId"></a>
-
-# **getArchitectSystempromptHistoryHistoryId**
+[**SystemPrompt**](SystemPrompt)
 
 
+## getArchitectSystempromptHistoryHistoryId
 
-> [HistoryListing](HistoryListing.html) getArchitectSystempromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action)
+
+
+> [HistoryListing](HistoryListing) getArchitectSystempromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action)
 
 Get generated prompt history
 
@@ -2651,21 +2951,19 @@ ArchitectAPI.getArchitectSystempromptHistoryHistoryId(promptId: promptId, histor
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
-| **action** | [**[String]**](String.html)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
-{: class="table-striped"}
+| **action** | [**[String]**](String)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
 
 
 ### Return type
 
-[**HistoryListing**](HistoryListing.html)
-
-<a name="getArchitectSystempromptResource"></a>
-
-# **getArchitectSystempromptResource**
+[**HistoryListing**](HistoryListing)
 
 
+## getArchitectSystempromptResource
 
-> [SystemPromptAsset](SystemPromptAsset.html) getArchitectSystempromptResource(promptId, languageCode)
+
+
+> [SystemPromptAsset](SystemPromptAsset) getArchitectSystempromptResource(promptId, languageCode)
 
 Get a system prompt resource.
 
@@ -2706,20 +3004,18 @@ ArchitectAPI.getArchitectSystempromptResource(promptId: promptId, languageCode: 
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SystemPromptAsset**](SystemPromptAsset.html)
-
-<a name="getArchitectSystempromptResources"></a>
-
-# **getArchitectSystempromptResources**
+[**SystemPromptAsset**](SystemPromptAsset)
 
 
+## getArchitectSystempromptResources
 
-> [SystemPromptAssetEntityListing](SystemPromptAssetEntityListing.html) getArchitectSystempromptResources(promptId, pageNumber, pageSize, sortBy, sortOrder)
+
+
+> [SystemPromptAssetEntityListing](SystemPromptAssetEntityListing) getArchitectSystempromptResources(promptId, pageNumber, pageSize, sortBy, sortOrder)
 
 Get system prompt resources.
 
@@ -2766,20 +3062,18 @@ ArchitectAPI.getArchitectSystempromptResources(promptId: promptId, pageNumber: p
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing.html)
-
-<a name="getArchitectSystemprompts"></a>
-
-# **getArchitectSystemprompts**
+[**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing)
 
 
+## getArchitectSystemprompts
 
-> [SystemPromptEntityListing](SystemPromptEntityListing.html) getArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, _description, nameOrDescription, includeMediaUris, includeResources, language)
+
+
+> [SystemPromptEntityListing](SystemPromptEntityListing) getArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, _description, nameOrDescription, includeMediaUris, includeResources, language)
 
 Get System Prompts
 
@@ -2835,21 +3129,19 @@ ArchitectAPI.getArchitectSystemprompts(pageNumber: pageNumber, pageSize: pageSiz
 | **nameOrDescription** | **String**| Name or description | [optional] |
 | **includeMediaUris** | **Bool**| Include the media URIs for each resource | [optional] |
 | **includeResources** | **Bool**| Include the resources for each system prompt | [optional] |
-| **language** | [**[String]**](String.html)| Filter the resources down to the provided languages | [optional] |
-{: class="table-striped"}
+| **language** | [**[String]**](String)| Filter the resources down to the provided languages | [optional] |
 
 
 ### Return type
 
-[**SystemPromptEntityListing**](SystemPromptEntityListing.html)
-
-<a name="getFlow"></a>
-
-# **getFlow**
+[**SystemPromptEntityListing**](SystemPromptEntityListing)
 
 
+## getFlow
 
-> [Flow](Flow.html) getFlow(flowId, deleted)
+
+
+> [Flow](Flow) getFlow(flowId, deleted)
 
 Get flow
 
@@ -2890,20 +3182,18 @@ ArchitectAPI.getFlow(flowId: flowId, deleted: deleted) { (response, error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
 | **deleted** | **Bool**| Deleted flows | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="getFlowHistoryHistoryId"></a>
-
-# **getFlowHistoryHistoryId**
+[**Flow**](Flow)
 
 
+## getFlowHistoryHistoryId
 
-> [HistoryListing](HistoryListing.html) getFlowHistoryHistoryId(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action)
+
+
+> [HistoryListing](HistoryListing) getFlowHistoryHistoryId(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action)
 
 Get generated flow history
 
@@ -2953,21 +3243,19 @@ ArchitectAPI.getFlowHistoryHistoryId(flowId: flowId, historyId: historyId, pageN
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: action ("action"), timestamp ("timestamp"), user ("user") |
-| **action** | [**[String]**](String.html)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
-{: class="table-striped"}
+| **action** | [**[String]**](String)| Flow actions to include (omit to include all) | [optional]<br />**Values**: checkin ("checkin"), checkout ("checkout"), create ("create"), deactivate ("deactivate"), debug ("debug"), delete ("delete"), publish ("publish"), revert ("revert"), save ("save") |
 
 
 ### Return type
 
-[**HistoryListing**](HistoryListing.html)
-
-<a name="getFlowInstancesSettingsLoglevels"></a>
-
-# **getFlowInstancesSettingsLoglevels**
+[**HistoryListing**](HistoryListing)
 
 
+## getFlowInstancesSettingsLoglevels
 
-> [FlowSettingsResponse](FlowSettingsResponse.html) getFlowInstancesSettingsLoglevels(flowId, expand)
+
+
+> [FlowSettingsResponse](FlowSettingsResponse) getFlowInstancesSettingsLoglevels(flowId, expand)
 
 Retrieves the log level for a flow by flow id.
 
@@ -3009,21 +3297,19 @@ ArchitectAPI.getFlowInstancesSettingsLoglevels(flowId: flowId, expand: expand) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| The flow id to get the loglevel for | |
-| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
 
 
 ### Return type
 
-[**FlowSettingsResponse**](FlowSettingsResponse.html)
-
-<a name="getFlowLatestconfiguration"></a>
-
-# **getFlowLatestconfiguration**
+[**FlowSettingsResponse**](FlowSettingsResponse)
 
 
+## getFlowLatestconfiguration
 
-> [JSON](JSON.html) getFlowLatestconfiguration(flowId, deleted)
+
+
+> [JSON](JSON) getFlowLatestconfiguration(flowId, deleted)
 
 Get the latest configuration for flow
 
@@ -3064,20 +3350,18 @@ ArchitectAPI.getFlowLatestconfiguration(flowId: flowId, deleted: deleted) { (res
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
 | **deleted** | **Bool**| Deleted flows | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getFlowVersion"></a>
-
-# **getFlowVersion**
+[**JSON**](JSON)
 
 
+## getFlowVersion
 
-> [FlowVersion](FlowVersion.html) getFlowVersion(flowId, versionId, deleted)
+
+
+> [FlowVersion](FlowVersion) getFlowVersion(flowId, versionId, deleted)
 
 Get flow version
 
@@ -3120,20 +3404,18 @@ ArchitectAPI.getFlowVersion(flowId: flowId, versionId: versionId, deleted: delet
 | **flowId** | **String**| Flow ID | |
 | **versionId** | **String**| Version ID | |
 | **deleted** | **String**| Deleted flows | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowVersion**](FlowVersion.html)
-
-<a name="getFlowVersionConfiguration"></a>
-
-# **getFlowVersionConfiguration**
+[**FlowVersion**](FlowVersion)
 
 
+## getFlowVersionConfiguration
 
-> [JSON](JSON.html) getFlowVersionConfiguration(flowId, versionId, deleted)
+
+
+> [JSON](JSON) getFlowVersionConfiguration(flowId, versionId, deleted)
 
 Create flow version configuration
 
@@ -3176,20 +3458,18 @@ ArchitectAPI.getFlowVersionConfiguration(flowId: flowId, versionId: versionId, d
 | **flowId** | **String**| Flow ID | |
 | **versionId** | **String**| Version ID | |
 | **deleted** | **String**| Deleted flows | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getFlowVersionHealth"></a>
-
-# **getFlowVersionHealth**
+[**JSON**](JSON)
 
 
+## getFlowVersionHealth
 
-> [FlowHealth](FlowHealth.html) getFlowVersionHealth(flowId, versionId, language)
+
+
+> [FlowHealth](FlowHealth) getFlowVersionHealth(flowId, versionId, language)
 
 Get overall health scores for all intents present in the NLU domain version associated with the bot flow version.
 
@@ -3232,20 +3512,18 @@ ArchitectAPI.getFlowVersionHealth(flowId: flowId, versionId: versionId, language
 | **flowId** | **String**| Flow ID. | |
 | **versionId** | **String**| Version ID. | |
 | **language** | **String**| Language to filter for | [optional]<br />**Values**: enUs ("en-us"), enGb ("en-gb"), enAu ("en-au"), enZa ("en-za"), enNz ("en-nz"), enIe ("en-ie"), frCa ("fr-ca"), frFr ("fr-fr"), esUs ("es-us"), esEs ("es-es"), esMx ("es-mx"), deDe ("de-de"), itIt ("it-it"), ptBr ("pt-br"), ptPt ("pt-pt"), nlNl ("nl-nl") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowHealth**](FlowHealth.html)
-
-<a name="getFlowVersionIntentHealth"></a>
-
-# **getFlowVersionIntentHealth**
+[**FlowHealth**](FlowHealth)
 
 
+## getFlowVersionIntentHealth
 
-> [FlowHealthIntent](FlowHealthIntent.html) getFlowVersionIntentHealth(flowId, versionId, intentId, language)
+
+
+> [FlowHealthIntent](FlowHealthIntent) getFlowVersionIntentHealth(flowId, versionId, intentId, language)
 
 Get health scores and other health metrics for a specific intent. This includes the health metrics for each utterance in an intent.
 
@@ -3290,20 +3568,18 @@ ArchitectAPI.getFlowVersionIntentHealth(flowId: flowId, versionId: versionId, in
 | **versionId** | **String**| Version ID. | |
 | **intentId** | **String**| Intent ID. | |
 | **language** | **String**| Language to filter for |<br />**Values**: enUs ("en-us"), enGb ("en-gb"), enAu ("en-au"), enZa ("en-za"), enNz ("en-nz"), enIe ("en-ie"), frCa ("fr-ca"), frFr ("fr-fr"), esUs ("es-us"), esEs ("es-es"), esMx ("es-mx"), deDe ("de-de"), itIt ("it-it"), ptBr ("pt-br"), ptPt ("pt-pt"), nlNl ("nl-nl") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowHealthIntent**](FlowHealthIntent.html)
-
-<a name="getFlowVersionIntentUtteranceHealth"></a>
-
-# **getFlowVersionIntentUtteranceHealth**
+[**FlowHealthIntent**](FlowHealthIntent)
 
 
+## getFlowVersionIntentUtteranceHealth
 
-> [FlowHealthUtterance](FlowHealthUtterance.html) getFlowVersionIntentUtteranceHealth(flowId, versionId, intentId, utteranceId, language)
+
+
+> [FlowHealthUtterance](FlowHealthUtterance) getFlowVersionIntentUtteranceHealth(flowId, versionId, intentId, utteranceId, language)
 
 Get health metrics associated with a specific utterance of an intent.
 
@@ -3350,20 +3626,18 @@ ArchitectAPI.getFlowVersionIntentUtteranceHealth(flowId: flowId, versionId: vers
 | **intentId** | **String**| Intent ID. | |
 | **utteranceId** | **String**| Utterance ID. | |
 | **language** | **String**| Language to filter for |<br />**Values**: enUs ("en-us"), enGb ("en-gb"), enAu ("en-au"), enZa ("en-za"), enNz ("en-nz"), enIe ("en-ie"), frCa ("fr-ca"), frFr ("fr-fr"), esUs ("es-us"), esEs ("es-es"), esMx ("es-mx"), deDe ("de-de"), itIt ("it-it"), ptBr ("pt-br"), ptPt ("pt-pt"), nlNl ("nl-nl") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowHealthUtterance**](FlowHealthUtterance.html)
-
-<a name="getFlowVersions"></a>
-
-# **getFlowVersions**
+[**FlowHealthUtterance**](FlowHealthUtterance)
 
 
+## getFlowVersions
 
-> [FlowVersionEntityListing](FlowVersionEntityListing.html) getFlowVersions(flowId, pageNumber, pageSize, deleted)
+
+
+> [FlowVersionEntityListing](FlowVersionEntityListing) getFlowVersions(flowId, pageNumber, pageSize, deleted)
 
 Get flow version list
 
@@ -3408,20 +3682,18 @@ ArchitectAPI.getFlowVersions(flowId: flowId, pageNumber: pageNumber, pageSize: p
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **deleted** | **Bool**| Include Deleted flows | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowVersionEntityListing**](FlowVersionEntityListing.html)
-
-<a name="getFlows"></a>
-
-# **getFlows**
+[**FlowVersionEntityListing**](FlowVersionEntityListing)
 
 
+## getFlows
 
-> [FlowEntityListing](FlowEntityListing.html) getFlows(type, pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, publishVersionId, editableBy, lockedBy, lockedByClientId, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId)
+
+
+> [FlowEntityListing](FlowEntityListing) getFlows(type, pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, publishVersionId, editableBy, lockedBy, lockedByClientId, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId)
 
 Get a pageable list of flows, filtered by query parameters
 
@@ -3479,12 +3751,12 @@ ArchitectAPI.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, so
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **type** | [**[String]**](String.html)| Type | [optional]<br />**Values**: bot ("bot"), commonmodule ("commonmodule"), digitalbot ("digitalbot"), inboundcall ("inboundcall"), inboundchat ("inboundchat"), inboundemail ("inboundemail"), inboundshortmessage ("inboundshortmessage"), outboundcall ("outboundcall"), inqueuecall ("inqueuecall"), inqueueemail ("inqueueemail"), inqueueshortmessage ("inqueueshortmessage"), speech ("speech"), securecall ("securecall"), surveyinvite ("surveyinvite"), voice ("voice"), voicemail ("voicemail"), voicesurvey ("voicesurvey"), workflow ("workflow"), workitem ("workitem") |
+| **type** | [**[String]**](String)| Type | [optional]<br />**Values**: bot ("bot"), commonmodule ("commonmodule"), digitalbot ("digitalbot"), inboundcall ("inboundcall"), inboundchat ("inboundchat"), inboundemail ("inboundemail"), inboundshortmessage ("inboundshortmessage"), outboundcall ("outboundcall"), inqueuecall ("inqueuecall"), inqueueemail ("inqueueemail"), inqueueshortmessage ("inqueueshortmessage"), speech ("speech"), securecall ("securecall"), surveyinvite ("surveyinvite"), voice ("voice"), voicemail ("voicemail"), voicesurvey ("voicesurvey"), workflow ("workflow"), workitem ("workitem") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
@@ -3497,21 +3769,19 @@ ArchitectAPI.getFlows(type: type, pageNumber: pageNumber, pageSize: pageSize, so
 | **includeSchemas** | **Bool**| Include variable schemas | [optional] |
 | **publishedAfter** | **String**| Published after | [optional] |
 | **publishedBefore** | **String**| Published before | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 
 
 ### Return type
 
-[**FlowEntityListing**](FlowEntityListing.html)
-
-<a name="getFlowsDatatable"></a>
-
-# **getFlowsDatatable**
+[**FlowEntityListing**](FlowEntityListing)
 
 
+## getFlowsDatatable
 
-> [DataTable](DataTable.html) getFlowsDatatable(datatableId, expand)
+
+
+> [DataTable](DataTable) getFlowsDatatable(datatableId, expand)
 
 Returns a specific datatable by id
 
@@ -3554,20 +3824,18 @@ ArchitectAPI.getFlowsDatatable(datatableId: datatableId, expand: expand) { (resp
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTable**](DataTable.html)
-
-<a name="getFlowsDatatableExportJob"></a>
-
-# **getFlowsDatatableExportJob**
+[**DataTable**](DataTable)
 
 
+## getFlowsDatatableExportJob
 
-> [DataTableExportJob](DataTableExportJob.html) getFlowsDatatableExportJob(datatableId, exportJobId)
+
+
+> [DataTableExportJob](DataTableExportJob) getFlowsDatatableExportJob(datatableId, exportJobId)
 
 Returns the state information about an export job
 
@@ -3611,20 +3879,18 @@ ArchitectAPI.getFlowsDatatableExportJob(datatableId: datatableId, exportJobId: e
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **exportJobId** | **String**| id of export job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTableExportJob**](DataTableExportJob.html)
-
-<a name="getFlowsDatatableImportJob"></a>
-
-# **getFlowsDatatableImportJob**
+[**DataTableExportJob**](DataTableExportJob)
 
 
+## getFlowsDatatableImportJob
 
-> [DataTableImportJob](DataTableImportJob.html) getFlowsDatatableImportJob(datatableId, importJobId)
+
+
+> [DataTableImportJob](DataTableImportJob) getFlowsDatatableImportJob(datatableId, importJobId)
 
 Returns the state information about an import job
 
@@ -3668,20 +3934,18 @@ ArchitectAPI.getFlowsDatatableImportJob(datatableId: datatableId, importJobId: i
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **importJobId** | **String**| id of import job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTableImportJob**](DataTableImportJob.html)
-
-<a name="getFlowsDatatableImportJobs"></a>
-
-# **getFlowsDatatableImportJobs**
+[**DataTableImportJob**](DataTableImportJob)
 
 
+## getFlowsDatatableImportJobs
 
-> [DataTableImportEntityListing](DataTableImportEntityListing.html) getFlowsDatatableImportJobs(datatableId, pageNumber, pageSize)
+
+
+> [DataTableImportEntityListing](DataTableImportEntityListing) getFlowsDatatableImportJobs(datatableId, pageNumber, pageSize)
 
 Get all recent import jobs
 
@@ -3727,20 +3991,18 @@ ArchitectAPI.getFlowsDatatableImportJobs(datatableId: datatableId, pageNumber: p
 | **datatableId** | **String**| id of datatable | |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTableImportEntityListing**](DataTableImportEntityListing.html)
-
-<a name="getFlowsDatatableRow"></a>
-
-# **getFlowsDatatableRow**
+[**DataTableImportEntityListing**](DataTableImportEntityListing)
 
 
+## getFlowsDatatableRow
 
-> [[String:JSON]](JSON.html) getFlowsDatatableRow(datatableId, rowId, showbrief)
+
+
+> [[String:JSON]](JSON) getFlowsDatatableRow(datatableId, rowId, showbrief)
 
 Returns a specific row for the datatable
 
@@ -3786,20 +4048,18 @@ ArchitectAPI.getFlowsDatatableRow(datatableId: datatableId, rowId: rowId, showbr
 | **datatableId** | **String**| id of datatable | |
 | **rowId** | **String**| The key for the row | |
 | **showbrief** | **Bool**| if true returns just the key field for the row | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[String:JSON]**](JSON.html)
-
-<a name="getFlowsDatatableRows"></a>
-
-# **getFlowsDatatableRows**
+[**[String:JSON]**](JSON)
 
 
+## getFlowsDatatableRows
 
-> [DataTableRowEntityListing](DataTableRowEntityListing.html) getFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief, sortOrder)
+
+
+> [DataTableRowEntityListing](DataTableRowEntityListing) getFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief, sortOrder)
 
 Returns the rows for the datatable with the given id
 
@@ -3849,20 +4109,18 @@ ArchitectAPI.getFlowsDatatableRows(datatableId: datatableId, pageNumber: pageNum
 | **pageSize** | **Int**| Page size | [optional] |
 | **showbrief** | **Bool**| If true returns just the key value of the row | [optional] |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTableRowEntityListing**](DataTableRowEntityListing.html)
-
-<a name="getFlowsDatatables"></a>
-
-# **getFlowsDatatables**
+[**DataTableRowEntityListing**](DataTableRowEntityListing)
 
 
+## getFlowsDatatables
 
-> [DataTablesDomainEntityListing](DataTablesDomainEntityListing.html) getFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name)
+
+
+> [DataTablesDomainEntityListing](DataTablesDomainEntityListing) getFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name)
 
 Retrieve a list of datatables for the org
 
@@ -3913,22 +4171,20 @@ ArchitectAPI.getFlowsDatatables(expand: expand, pageNumber: pageNumber, pageSize
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: _id ("id"), name ("name") |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 | **name** | **String**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
-
-<a name="getFlowsDatatablesDivisionview"></a>
-
-# **getFlowsDatatablesDivisionview**
+[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing)
 
 
+## getFlowsDatatablesDivisionview
 
-> [DataTable](DataTable.html) getFlowsDatatablesDivisionview(datatableId, expand)
+
+
+> [DataTable](DataTable) getFlowsDatatablesDivisionview(datatableId, expand)
 
 Returns a specific datatable by id
 
@@ -3971,20 +4227,18 @@ ArchitectAPI.getFlowsDatatablesDivisionview(datatableId: datatableId, expand: ex
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTable**](DataTable.html)
-
-<a name="getFlowsDatatablesDivisionviews"></a>
-
-# **getFlowsDatatablesDivisionviews**
+[**DataTable**](DataTable)
 
 
+## getFlowsDatatablesDivisionviews
 
-> [DataTablesDomainEntityListing](DataTablesDomainEntityListing.html) getFlowsDatatablesDivisionviews(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name)
+
+
+> [DataTablesDomainEntityListing](DataTablesDomainEntityListing) getFlowsDatatablesDivisionviews(expand, pageNumber, pageSize, sortBy, sortOrder, divisionId, name)
 
 Retrieve a list of datatables for the org
 
@@ -4035,22 +4289,20 @@ ArchitectAPI.getFlowsDatatablesDivisionviews(expand: expand, pageNumber: pageNum
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional]<br />**Values**: _id ("id"), name ("name") |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 | **name** | **String**| Filter by Name. The wildcard character * is supported within the filter. Matches are case-insensitive. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
-
-<a name="getFlowsDivisionviews"></a>
-
-# **getFlowsDivisionviews**
+[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing)
 
 
+## getFlowsDivisionviews
 
-> [FlowDivisionViewEntityListing](FlowDivisionViewEntityListing.html) getFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, _id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas)
+
+
+> [FlowDivisionViewEntityListing](FlowDivisionViewEntityListing) getFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, _id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas)
 
 Get a pageable list of basic flow information objects filterable by query parameters.
 
@@ -4101,32 +4353,30 @@ ArchitectAPI.getFlowsDivisionviews(type: type, pageNumber: pageNumber, pageSize:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **type** | [**[String]**](String.html)| Type | [optional]<br />**Values**: bot ("bot"), commonmodule ("commonmodule"), digitalbot ("digitalbot"), inboundcall ("inboundcall"), inboundchat ("inboundchat"), inboundemail ("inboundemail"), inboundshortmessage ("inboundshortmessage"), outboundcall ("outboundcall"), inqueuecall ("inqueuecall"), inqueueemail ("inqueueemail"), inqueueshortmessage ("inqueueshortmessage"), speech ("speech"), securecall ("securecall"), surveyinvite ("surveyinvite"), voice ("voice"), voicemail ("voicemail"), voicesurvey ("voicesurvey"), workflow ("workflow"), workitem ("workitem") |
+| **type** | [**[String]**](String)| Type | [optional]<br />**Values**: bot ("bot"), commonmodule ("commonmodule"), digitalbot ("digitalbot"), inboundcall ("inboundcall"), inboundchat ("inboundchat"), inboundemail ("inboundemail"), inboundshortmessage ("inboundshortmessage"), outboundcall ("outboundcall"), inqueuecall ("inqueuecall"), inqueueemail ("inqueueemail"), inqueueshortmessage ("inqueueshortmessage"), speech ("speech"), securecall ("securecall"), surveyinvite ("surveyinvite"), voice ("voice"), voicemail ("voicemail"), voicesurvey ("voicesurvey"), workflow ("workflow"), workitem ("workitem") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **publishVersionId** | **String**| Publish version ID | [optional] |
 | **publishedAfter** | **String**| Published after | [optional] |
 | **publishedBefore** | **String**| Published before | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 | **includeSchemas** | **Bool**| Include variable schemas | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html)
-
-<a name="getFlowsExecution"></a>
-
-# **getFlowsExecution**
+[**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing)
 
 
+## getFlowsExecution
 
-> [FlowRuntimeExecution](FlowRuntimeExecution.html) getFlowsExecution(flowExecutionId)
+
+
+> [FlowRuntimeExecution](FlowRuntimeExecution) getFlowsExecution(flowExecutionId)
 
 Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started.
 
@@ -4165,20 +4415,18 @@ ArchitectAPI.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowExecutionId** | **String**| flow execution ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowRuntimeExecution**](FlowRuntimeExecution.html)
-
-<a name="getFlowsInstance"></a>
-
-# **getFlowsInstance**
+[**FlowRuntimeExecution**](FlowRuntimeExecution)
 
 
+## getFlowsInstance
 
-> [GetFlowExecutionDataJobResult](GetFlowExecutionDataJobResult.html) getFlowsInstance(instanceId, expand)
+
+
+> [GetFlowExecutionDataJobResult](GetFlowExecutionDataJobResult) getFlowsInstance(instanceId, expand)
 
 Start a process (job) to prepare a download of a singular flow execution data instance by Id
 
@@ -4221,20 +4469,18 @@ ArchitectAPI.getFlowsInstance(instanceId: instanceId, expand: expand) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **instanceId** | **String**| Instance ID | |
 | **expand** | **String**| Expand various details. | [optional]<br />**Values**: bots ("bots"), dataactions ("dataActions") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html)
-
-<a name="getFlowsInstancesJob"></a>
-
-# **getFlowsInstancesJob**
+[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult)
 
 
+## getFlowsInstancesJob
 
-> [GetFlowExecutionDataJobResult](GetFlowExecutionDataJobResult.html) getFlowsInstancesJob(jobId)
+
+
+> [GetFlowExecutionDataJobResult](GetFlowExecutionDataJobResult) getFlowsInstancesJob(jobId)
 
 Get the status and/or results of an asynchronous flow execution data retrieval job
 
@@ -4273,20 +4519,18 @@ ArchitectAPI.getFlowsInstancesJob(jobId: jobId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The asynchronous job ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html)
-
-<a name="getFlowsInstancesQuerycapabilities"></a>
-
-# **getFlowsInstancesQuerycapabilities**
+[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult)
 
 
+## getFlowsInstancesQuerycapabilities
 
-> [FlowsQueryCriteriaResponse](FlowsQueryCriteriaResponse.html) getFlowsInstancesQuerycapabilities(expand)
+
+
+> [FlowsQueryCriteriaResponse](FlowsQueryCriteriaResponse) getFlowsInstancesQuerycapabilities(expand)
 
 Retrieve a list of capabilities that the org can use to query for execution data
 
@@ -4327,20 +4571,18 @@ ArchitectAPI.getFlowsInstancesQuerycapabilities(expand: expand) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **expand** | **String**| Expand various query types. | [optional]<br />**Values**: flow ("flow"), action ("action") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowsQueryCriteriaResponse**](FlowsQueryCriteriaResponse.html)
-
-<a name="getFlowsInstancesSettingsExecutiondata"></a>
-
-# **getFlowsInstancesSettingsExecutiondata**
+[**FlowsQueryCriteriaResponse**](FlowsQueryCriteriaResponse)
 
 
+## getFlowsInstancesSettingsExecutiondata
 
-> [ExecutionDataFlowSettingsResponse](ExecutionDataFlowSettingsResponse.html) getFlowsInstancesSettingsExecutiondata()
+
+
+> [ExecutionDataFlowSettingsResponse](ExecutionDataFlowSettingsResponse) getFlowsInstancesSettingsExecutiondata()
 
 Get the execution history enabled setting.
 
@@ -4379,18 +4621,16 @@ ArchitectAPI.getFlowsInstancesSettingsExecutiondata() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse.html)
-
-<a name="getFlowsInstancesSettingsLoglevels"></a>
-
-# **getFlowsInstancesSettingsLoglevels**
+[**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse)
 
 
+## getFlowsInstancesSettingsLoglevels
 
-> [FlowSettingsResponseEntityListing](FlowSettingsResponseEntityListing.html) getFlowsInstancesSettingsLoglevels(expand, pageNumber, pageSize)
+
+
+> [FlowSettingsResponseEntityListing](FlowSettingsResponseEntityListing) getFlowsInstancesSettingsLoglevels(expand, pageNumber, pageSize)
 
 Retrieve a list of LogLevels for the organization.
 
@@ -4433,23 +4673,21 @@ ArchitectAPI.getFlowsInstancesSettingsLoglevels(expand: expand, pageNumber: page
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
+| **expand** | [**[String]**](String)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Number of entities to return. Maximum of 200. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowSettingsResponseEntityListing**](FlowSettingsResponseEntityListing.html)
-
-<a name="getFlowsInstancesSettingsLoglevelsCharacteristics"></a>
-
-# **getFlowsInstancesSettingsLoglevelsCharacteristics**
+[**FlowSettingsResponseEntityListing**](FlowSettingsResponseEntityListing)
 
 
+## getFlowsInstancesSettingsLoglevelsCharacteristics
 
-> [FlowLogLevelCharacteristicsDefinitions](FlowLogLevelCharacteristicsDefinitions.html) getFlowsInstancesSettingsLoglevelsCharacteristics()
+
+
+> [FlowLogLevelCharacteristicsDefinitions](FlowLogLevelCharacteristicsDefinitions) getFlowsInstancesSettingsLoglevelsCharacteristics()
 
 Gets the available flow log level characteristics for this organization.
 
@@ -4489,18 +4727,16 @@ ArchitectAPI.getFlowsInstancesSettingsLoglevelsCharacteristics() { (response, er
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**FlowLogLevelCharacteristicsDefinitions**](FlowLogLevelCharacteristicsDefinitions.html)
-
-<a name="getFlowsInstancesSettingsLoglevelsDefault"></a>
-
-# **getFlowsInstancesSettingsLoglevelsDefault**
+[**FlowLogLevelCharacteristicsDefinitions**](FlowLogLevelCharacteristicsDefinitions)
 
 
+## getFlowsInstancesSettingsLoglevelsDefault
 
-> [FlowSettingsResponse](FlowSettingsResponse.html) getFlowsInstancesSettingsLoglevelsDefault(expand)
+
+
+> [FlowSettingsResponse](FlowSettingsResponse) getFlowsInstancesSettingsLoglevelsDefault(expand)
 
 Returns the flow default log level.
 
@@ -4540,21 +4776,19 @@ ArchitectAPI.getFlowsInstancesSettingsLoglevelsDefault(expand: expand) { (respon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Expand instructions for the result | [optional]<br />**Values**: loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
 
 
 ### Return type
 
-[**FlowSettingsResponse**](FlowSettingsResponse.html)
-
-<a name="getFlowsJob"></a>
-
-# **getFlowsJob**
+[**FlowSettingsResponse**](FlowSettingsResponse)
 
 
+## getFlowsJob
 
-> [ArchitectJobStateResponse](ArchitectJobStateResponse.html) getFlowsJob(jobId, expand)
+
+
+> [ArchitectJobStateResponse](ArchitectJobStateResponse) getFlowsJob(jobId, expand)
 
 Fetch Architect Job Status
 
@@ -4594,21 +4828,19 @@ ArchitectAPI.getFlowsJob(jobId: jobId, expand: expand) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| Job ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: messages ("messages") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: messages ("messages") |
 
 
 ### Return type
 
-[**ArchitectJobStateResponse**](ArchitectJobStateResponse.html)
-
-<a name="getFlowsMilestone"></a>
-
-# **getFlowsMilestone**
+[**ArchitectJobStateResponse**](ArchitectJobStateResponse)
 
 
+## getFlowsMilestone
 
-> [FlowMilestone](FlowMilestone.html) getFlowsMilestone(milestoneId)
+
+
+> [FlowMilestone](FlowMilestone) getFlowsMilestone(milestoneId)
 
 Get a flow milestone
 
@@ -4649,20 +4881,18 @@ ArchitectAPI.getFlowsMilestone(milestoneId: milestoneId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **milestoneId** | **String**| flow milestone ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowMilestone**](FlowMilestone.html)
-
-<a name="getFlowsMilestones"></a>
-
-# **getFlowsMilestones**
+[**FlowMilestone**](FlowMilestone)
 
 
+## getFlowsMilestones
 
-> [FlowMilestoneListing](FlowMilestoneListing.html) getFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, divisionId)
+
+
+> [FlowMilestoneListing](FlowMilestoneListing) getFlowsMilestones(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, divisionId)
 
 Get a pageable list of flow milestones, filtered by query parameters
 
@@ -4714,25 +4944,23 @@ ArchitectAPI.getFlowsMilestones(pageNumber: pageNumber, pageSize: pageSize, sort
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 
 
 ### Return type
 
-[**FlowMilestoneListing**](FlowMilestoneListing.html)
-
-<a name="getFlowsMilestonesDivisionviews"></a>
-
-# **getFlowsMilestonesDivisionviews**
+[**FlowMilestoneListing**](FlowMilestoneListing)
 
 
+## getFlowsMilestonesDivisionviews
 
-> [FlowMilestoneDivisionViewEntityListing](FlowMilestoneDivisionViewEntityListing.html) getFlowsMilestonesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+
+> [FlowMilestoneDivisionViewEntityListing](FlowMilestoneDivisionViewEntityListing) getFlowsMilestonesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
 
 Get a pageable list of basic flow milestone information objects filterable by query parameters.
 
@@ -4782,23 +5010,21 @@ ArchitectAPI.getFlowsMilestonesDivisionviews(pageNumber: pageNumber, pageSize: p
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 
 
 ### Return type
 
-[**FlowMilestoneDivisionViewEntityListing**](FlowMilestoneDivisionViewEntityListing.html)
-
-<a name="getFlowsOutcome"></a>
-
-# **getFlowsOutcome**
+[**FlowMilestoneDivisionViewEntityListing**](FlowMilestoneDivisionViewEntityListing)
 
 
+## getFlowsOutcome
 
-> [FlowOutcome](FlowOutcome.html) getFlowsOutcome(flowOutcomeId)
+
+
+> [FlowOutcome](FlowOutcome) getFlowsOutcome(flowOutcomeId)
 
 Get a flow outcome
 
@@ -4839,20 +5065,18 @@ ArchitectAPI.getFlowsOutcome(flowOutcomeId: flowOutcomeId) { (response, error) i
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowOutcomeId** | **String**| flow outcome ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowOutcome**](FlowOutcome.html)
-
-<a name="getFlowsOutcomes"></a>
-
-# **getFlowsOutcomes**
+[**FlowOutcome**](FlowOutcome)
 
 
+## getFlowsOutcomes
 
-> [FlowOutcomeListing](FlowOutcomeListing.html) getFlowsOutcomes(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, divisionId)
+
+
+> [FlowOutcomeListing](FlowOutcomeListing) getFlowsOutcomes(pageNumber, pageSize, sortBy, sortOrder, _id, name, _description, nameOrDescription, divisionId)
 
 Get a pageable list of flow outcomes, filtered by query parameters
 
@@ -4904,25 +5128,23 @@ ArchitectAPI.getFlowsOutcomes(pageNumber: pageNumber, pageSize: pageSize, sortBy
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
 | **_description** | **String**| Description | [optional] |
 | **nameOrDescription** | **String**| Name or description | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 
 
 ### Return type
 
-[**FlowOutcomeListing**](FlowOutcomeListing.html)
-
-<a name="getFlowsOutcomesDivisionviews"></a>
-
-# **getFlowsOutcomesDivisionviews**
+[**FlowOutcomeListing**](FlowOutcomeListing)
 
 
+## getFlowsOutcomesDivisionviews
 
-> [FlowOutcomeDivisionViewEntityListing](FlowOutcomeDivisionViewEntityListing.html) getFlowsOutcomesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
+
+
+> [FlowOutcomeDivisionViewEntityListing](FlowOutcomeDivisionViewEntityListing) getFlowsOutcomesDivisionviews(pageNumber, pageSize, sortBy, sortOrder, _id, name, divisionId)
 
 Get a pageable list of basic flow outcome information objects filterable by query parameters.
 
@@ -4972,23 +5194,127 @@ ArchitectAPI.getFlowsOutcomesDivisionviews(pageNumber: pageNumber, pageSize: pag
 | **pageSize** | **Int**| Page size | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-| **_id** | [**[String]**](String.html)| ID | [optional] |
+| **_id** | [**[String]**](String)| ID | [optional] |
 | **name** | **String**| Name | [optional] |
-| **divisionId** | [**[String]**](String.html)| division ID(s) | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| division ID(s) | [optional] |
 
 
 ### Return type
 
-[**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing.html)
-
-<a name="patchFlowsInstancesSettingsExecutiondata"></a>
-
-# **patchFlowsInstancesSettingsExecutiondata**
+[**FlowOutcomeDivisionViewEntityListing**](FlowOutcomeDivisionViewEntityListing)
 
 
+## patchArchitectGrammar
 
-> [ExecutionDataFlowSettingsResponse](ExecutionDataFlowSettingsResponse.html) patchFlowsInstancesSettingsExecutiondata(body)
+
+
+> [Grammar](Grammar) patchArchitectGrammar(grammarId, body)
+
+Updates a grammar
+
+
+
+Wraps PATCH /api/v2/architect/grammars/{grammarId}  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // grammar ID
+let body: Grammar = new Grammar(...) // 
+
+// Code example
+ArchitectAPI.patchArchitectGrammar(grammarId: grammarId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.patchArchitectGrammar was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| grammar ID | |
+| **body** | [**Grammar**](Grammar)|  | [optional] |
+
+
+### Return type
+
+[**Grammar**](Grammar)
+
+
+## patchArchitectGrammarLanguage
+
+
+
+> [GrammarLanguage](GrammarLanguage) patchArchitectGrammarLanguage(grammarId, languageCode, body)
+
+Updates a grammar language
+
+
+
+Wraps PATCH /api/v2/architect/grammars/{grammarId}/languages/{languageCode}  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+let body: GrammarLanguageUpdate = new GrammarLanguageUpdate(...) // 
+
+// Code example
+ArchitectAPI.patchArchitectGrammarLanguage(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.patchArchitectGrammarLanguage was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+| **body** | [**GrammarLanguageUpdate**](GrammarLanguageUpdate)|  | [optional] |
+
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage)
+
+
+## patchFlowsInstancesSettingsExecutiondata
+
+
+
+> [ExecutionDataFlowSettingsResponse](ExecutionDataFlowSettingsResponse) patchFlowsInstancesSettingsExecutiondata(body)
 
 Edit the execution history enabled setting.
 
@@ -5028,17 +5354,15 @@ ArchitectAPI.patchFlowsInstancesSettingsExecutiondata(body: body) { (response, e
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest.html)| New Execution Data Setting | |
-{: class="table-striped"}
+| **body** | [**ExecutionDataSettingsRequest**](ExecutionDataSettingsRequest)| New Execution Data Setting | |
 
 
 ### Return type
 
-[**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse.html)
+[**ExecutionDataFlowSettingsResponse**](ExecutionDataFlowSettingsResponse)
 
-<a name="postArchitectDependencytrackingBuild"></a>
 
-# **postArchitectDependencytrackingBuild**
+## postArchitectDependencytrackingBuild
 
 
 
@@ -5080,18 +5404,16 @@ ArchitectAPI.postArchitectDependencytrackingBuild() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="postArchitectEmergencygroups"></a>
 
-# **postArchitectEmergencygroups**
-
+## postArchitectEmergencygroups
 
 
-> [EmergencyGroup](EmergencyGroup.html) postArchitectEmergencygroups(body)
+
+> [EmergencyGroup](EmergencyGroup) postArchitectEmergencygroups(body)
 
 Creates a new emergency group
 
@@ -5129,21 +5451,229 @@ ArchitectAPI.postArchitectEmergencygroups(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | |
-{: class="table-striped"}
+| **body** | [**EmergencyGroup**](EmergencyGroup)|  | |
 
 
 ### Return type
 
-[**EmergencyGroup**](EmergencyGroup.html)
-
-<a name="postArchitectIvrs"></a>
-
-# **postArchitectIvrs**
+[**EmergencyGroup**](EmergencyGroup)
 
 
+## postArchitectGrammarLanguageFilesDtmf
 
-> [IVR](IVR.html) postArchitectIvrs(body)
+
+
+> [UploadUrlResponse](UploadUrlResponse) postArchitectGrammarLanguageFilesDtmf(grammarId, languageCode, body)
+
+Creates a presigned URL for uploading a grammar DTMF mode file
+
+
+
+Wraps POST /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+let body: GrammarFileUploadRequest = new GrammarFileUploadRequest(...) // query
+
+// Code example
+ArchitectAPI.postArchitectGrammarLanguageFilesDtmf(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammarLanguageFilesDtmf was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+| **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
+## postArchitectGrammarLanguageFilesVoice
+
+
+
+> [UploadUrlResponse](UploadUrlResponse) postArchitectGrammarLanguageFilesVoice(grammarId, languageCode, body)
+
+Creates a presigned URL for uploading a grammar voice mode file
+
+
+
+Wraps POST /api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let languageCode: String = "" // Language
+let body: GrammarFileUploadRequest = new GrammarFileUploadRequest(...) // query
+
+// Code example
+ArchitectAPI.postArchitectGrammarLanguageFilesVoice(grammarId: grammarId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammarLanguageFilesVoice was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **languageCode** | **String**| Language | |
+| **body** | [**GrammarFileUploadRequest**](GrammarFileUploadRequest)| query | |
+
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
+## postArchitectGrammarLanguages
+
+
+
+> [GrammarLanguage](GrammarLanguage) postArchitectGrammarLanguages(grammarId, body)
+
+Create a new language for a given grammar
+
+
+
+Wraps POST /api/v2/architect/grammars/{grammarId}/languages  
+
+Requires ALL permissions: 
+
+* architect:grammar:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let grammarId: String = "" // Grammar ID
+let body: GrammarLanguage = new GrammarLanguage(...) // 
+
+// Code example
+ArchitectAPI.postArchitectGrammarLanguages(grammarId: grammarId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammarLanguages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **grammarId** | **String**| Grammar ID | |
+| **body** | [**GrammarLanguage**](GrammarLanguage)|  | |
+
+
+### Return type
+
+[**GrammarLanguage**](GrammarLanguage)
+
+
+## postArchitectGrammars
+
+
+
+> [Grammar](Grammar) postArchitectGrammars(body)
+
+Create a new grammar
+
+
+
+Wraps POST /api/v2/architect/grammars  
+
+Requires ALL permissions: 
+
+* architect:grammar:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: Grammar = new Grammar(...) // 
+
+// Code example
+ArchitectAPI.postArchitectGrammars(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postArchitectGrammars was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**Grammar**](Grammar)|  | |
+
+
+### Return type
+
+[**Grammar**](Grammar)
+
+
+## postArchitectIvrs
+
+
+
+> [IVR](IVR) postArchitectIvrs(body)
 
 Create IVR config.
 
@@ -5181,21 +5711,19 @@ ArchitectAPI.postArchitectIvrs(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**IVR**](IVR.html)|  | |
-{: class="table-striped"}
+| **body** | [**IVR**](IVR)|  | |
 
 
 ### Return type
 
-[**IVR**](IVR.html)
-
-<a name="postArchitectPromptHistory"></a>
-
-# **postArchitectPromptHistory**
+[**IVR**](IVR)
 
 
+## postArchitectPromptHistory
 
-> [Operation](Operation.html) postArchitectPromptHistory(promptId)
+
+
+> [Operation](Operation) postArchitectPromptHistory(promptId)
 
 Generate prompt history
 
@@ -5236,20 +5764,18 @@ ArchitectAPI.postArchitectPromptHistory(promptId: promptId) { (response, error) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Operation**](Operation.html)
-
-<a name="postArchitectPromptResources"></a>
-
-# **postArchitectPromptResources**
+[**Operation**](Operation)
 
 
+## postArchitectPromptResources
 
-> [PromptAsset](PromptAsset.html) postArchitectPromptResources(promptId, body)
+
+
+> [PromptAsset](PromptAsset) postArchitectPromptResources(promptId, body)
 
 Create a new user prompt resource
 
@@ -5289,21 +5815,19 @@ ArchitectAPI.postArchitectPromptResources(promptId: promptId, body: body) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
-| **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  | |
-{: class="table-striped"}
+| **body** | [**PromptAssetCreate**](PromptAssetCreate)|  | |
 
 
 ### Return type
 
-[**PromptAsset**](PromptAsset.html)
-
-<a name="postArchitectPrompts"></a>
-
-# **postArchitectPrompts**
+[**PromptAsset**](PromptAsset)
 
 
+## postArchitectPrompts
 
-> [Prompt](Prompt.html) postArchitectPrompts(body)
+
+
+> [Prompt](Prompt) postArchitectPrompts(body)
 
 Create a new user prompt
 
@@ -5341,21 +5865,19 @@ ArchitectAPI.postArchitectPrompts(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Prompt**](Prompt.html)|  | |
-{: class="table-striped"}
+| **body** | [**Prompt**](Prompt)|  | |
 
 
 ### Return type
 
-[**Prompt**](Prompt.html)
-
-<a name="postArchitectSchedulegroups"></a>
-
-# **postArchitectSchedulegroups**
+[**Prompt**](Prompt)
 
 
+## postArchitectSchedulegroups
 
-> [ScheduleGroup](ScheduleGroup.html) postArchitectSchedulegroups(body)
+
+
+> [ScheduleGroup](ScheduleGroup) postArchitectSchedulegroups(body)
 
 Creates a new schedule group
 
@@ -5393,21 +5915,19 @@ ArchitectAPI.postArchitectSchedulegroups(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | |
-{: class="table-striped"}
+| **body** | [**ScheduleGroup**](ScheduleGroup)|  | |
 
 
 ### Return type
 
-[**ScheduleGroup**](ScheduleGroup.html)
-
-<a name="postArchitectSchedules"></a>
-
-# **postArchitectSchedules**
+[**ScheduleGroup**](ScheduleGroup)
 
 
+## postArchitectSchedules
 
-> [Schedule](Schedule.html) postArchitectSchedules(body)
+
+
+> [Schedule](Schedule) postArchitectSchedules(body)
 
 Create a new schedule.
 
@@ -5445,21 +5965,19 @@ ArchitectAPI.postArchitectSchedules(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Schedule**](Schedule.html)|  | |
-{: class="table-striped"}
+| **body** | [**Schedule**](Schedule)|  | |
 
 
 ### Return type
 
-[**Schedule**](Schedule.html)
-
-<a name="postArchitectSystempromptHistory"></a>
-
-# **postArchitectSystempromptHistory**
+[**Schedule**](Schedule)
 
 
+## postArchitectSystempromptHistory
 
-> [Operation](Operation.html) postArchitectSystempromptHistory(promptId)
+
+
+> [Operation](Operation) postArchitectSystempromptHistory(promptId)
 
 Generate system prompt history
 
@@ -5500,20 +6018,18 @@ ArchitectAPI.postArchitectSystempromptHistory(promptId: promptId) { (response, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| promptId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Operation**](Operation.html)
-
-<a name="postArchitectSystempromptResources"></a>
-
-# **postArchitectSystempromptResources**
+[**Operation**](Operation)
 
 
+## postArchitectSystempromptResources
 
-> [SystemPromptAsset](SystemPromptAsset.html) postArchitectSystempromptResources(promptId, body)
+
+
+> [SystemPromptAsset](SystemPromptAsset) postArchitectSystempromptResources(promptId, body)
 
 Create system prompt resource override.
 
@@ -5553,21 +6069,19 @@ ArchitectAPI.postArchitectSystempromptResources(promptId: promptId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
-| **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | |
-{: class="table-striped"}
+| **body** | [**SystemPromptAsset**](SystemPromptAsset)|  | |
 
 
 ### Return type
 
-[**SystemPromptAsset**](SystemPromptAsset.html)
-
-<a name="postFlowHistory"></a>
-
-# **postFlowHistory**
+[**SystemPromptAsset**](SystemPromptAsset)
 
 
+## postFlowHistory
 
-> [Operation](Operation.html) postFlowHistory(flowId)
+
+
+> [Operation](Operation) postFlowHistory(flowId)
 
 Generate flow history
 
@@ -5608,20 +6122,18 @@ ArchitectAPI.postFlowHistory(flowId: flowId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Operation**](Operation.html)
-
-<a name="postFlowInstancesSettingsLoglevels"></a>
-
-# **postFlowInstancesSettingsLoglevels**
+[**Operation**](Operation)
 
 
+## postFlowInstancesSettingsLoglevels
 
-> [FlowSettingsResponse](FlowSettingsResponse.html) postFlowInstancesSettingsLoglevels(flowId, body, expand)
+
+
+> [FlowSettingsResponse](FlowSettingsResponse) postFlowInstancesSettingsLoglevels(flowId, body, expand)
 
 Set the logLevel for a particular flow id
 
@@ -5664,22 +6176,20 @@ ArchitectAPI.postFlowInstancesSettingsLoglevels(flowId: flowId, body: body, expa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| The flow id to set the loglevel for | |
-| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest.html)| New LogLevel settings | |
-| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
-{: class="table-striped"}
+| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest)| New LogLevel settings | |
+| **expand** | [**[String]**](String)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
 
 
 ### Return type
 
-[**FlowSettingsResponse**](FlowSettingsResponse.html)
-
-<a name="postFlowVersions"></a>
-
-# **postFlowVersions**
+[**FlowSettingsResponse**](FlowSettingsResponse)
 
 
+## postFlowVersions
 
-> [FlowVersion](FlowVersion.html) postFlowVersions(flowId, body)
+
+
+> [FlowVersion](FlowVersion) postFlowVersions(flowId, body)
 
 Create flow version
 
@@ -5719,21 +6229,19 @@ ArchitectAPI.postFlowVersions(flowId: flowId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **body** | [**[String:JSON]**](JSON.html)|  | |
-{: class="table-striped"}
+| **body** | [**[String:JSON]**](JSON)|  | |
 
 
 ### Return type
 
-[**FlowVersion**](FlowVersion.html)
-
-<a name="postFlows"></a>
-
-# **postFlows**
+[**FlowVersion**](FlowVersion)
 
 
+## postFlows
 
-> [Flow](Flow.html) postFlows(body, language)
+
+
+> [Flow](Flow) postFlows(body, language)
 
 Create flow
 
@@ -5772,22 +6280,20 @@ ArchitectAPI.postFlows(body: body, language: language) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Flow**](Flow.html)|  | |
+| **body** | [**Flow**](Flow)|  | |
 | **language** | **String**| Language | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="postFlowsActionsCheckin"></a>
-
-# **postFlowsActionsCheckin**
+[**Flow**](Flow)
 
 
+## postFlowsActionsCheckin
 
-> [Operation](Operation.html) postFlowsActionsCheckin(flow)
+
+
+> [Operation](Operation) postFlowsActionsCheckin(flow)
 
 Check-in flow
 
@@ -5829,20 +6335,18 @@ ArchitectAPI.postFlowsActionsCheckin(flow: flow) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flow** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Operation**](Operation.html)
-
-<a name="postFlowsActionsCheckout"></a>
-
-# **postFlowsActionsCheckout**
+[**Operation**](Operation)
 
 
+## postFlowsActionsCheckout
 
-> [Flow](Flow.html) postFlowsActionsCheckout(flow)
+
+
+> [Flow](Flow) postFlowsActionsCheckout(flow)
 
 Check-out flow
 
@@ -5881,20 +6385,18 @@ ArchitectAPI.postFlowsActionsCheckout(flow: flow) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flow** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="postFlowsActionsDeactivate"></a>
-
-# **postFlowsActionsDeactivate**
+[**Flow**](Flow)
 
 
+## postFlowsActionsDeactivate
 
-> [Flow](Flow.html) postFlowsActionsDeactivate(flow)
+
+
+> [Flow](Flow) postFlowsActionsDeactivate(flow)
 
 Deactivate flow
 
@@ -5933,20 +6435,18 @@ ArchitectAPI.postFlowsActionsDeactivate(flow: flow) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flow** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="postFlowsActionsPublish"></a>
-
-# **postFlowsActionsPublish**
+[**Flow**](Flow)
 
 
+## postFlowsActionsPublish
 
-> [Operation](Operation.html) postFlowsActionsPublish(flow, version)
+
+
+> [Operation](Operation) postFlowsActionsPublish(flow, version)
 
 Publish flow
 
@@ -5990,20 +6490,18 @@ ArchitectAPI.postFlowsActionsPublish(flow: flow, version: version) { (response, 
 | ------------- | ------------- | ------------- | ------------- |
 | **flow** | **String**| Flow ID | |
 | **version** | **String**| version | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Operation**](Operation.html)
-
-<a name="postFlowsActionsRevert"></a>
-
-# **postFlowsActionsRevert**
+[**Operation**](Operation)
 
 
+## postFlowsActionsRevert
 
-> [Flow](Flow.html) postFlowsActionsRevert(flow)
+
+
+> [Flow](Flow) postFlowsActionsRevert(flow)
 
 Revert flow
 
@@ -6042,20 +6540,18 @@ ArchitectAPI.postFlowsActionsRevert(flow: flow) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flow** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="postFlowsActionsUnlock"></a>
-
-# **postFlowsActionsUnlock**
+[**Flow**](Flow)
 
 
+## postFlowsActionsUnlock
 
-> [Flow](Flow.html) postFlowsActionsUnlock(flow)
+
+
+> [Flow](Flow) postFlowsActionsUnlock(flow)
 
 Unlock flow
 
@@ -6096,20 +6592,18 @@ ArchitectAPI.postFlowsActionsUnlock(flow: flow) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flow** | **String**| Flow ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="postFlowsDatatableExportJobs"></a>
-
-# **postFlowsDatatableExportJobs**
+[**Flow**](Flow)
 
 
+## postFlowsDatatableExportJobs
 
-> [DataTableExportJob](DataTableExportJob.html) postFlowsDatatableExportJobs(datatableId)
+
+
+> [DataTableExportJob](DataTableExportJob) postFlowsDatatableExportJobs(datatableId)
 
 Begin an export process for exporting all rows from a datatable
 
@@ -6151,20 +6645,18 @@ ArchitectAPI.postFlowsDatatableExportJobs(datatableId: datatableId) { (response,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTableExportJob**](DataTableExportJob.html)
-
-<a name="postFlowsDatatableImportJobs"></a>
-
-# **postFlowsDatatableImportJobs**
+[**DataTableExportJob**](DataTableExportJob)
 
 
+## postFlowsDatatableImportJobs
 
-> [DataTableImportJob](DataTableImportJob.html) postFlowsDatatableImportJobs(datatableId, body)
+
+
+> [DataTableImportJob](DataTableImportJob) postFlowsDatatableImportJobs(datatableId, body)
 
 Begin an import process for importing rows into a datatable
 
@@ -6207,21 +6699,19 @@ ArchitectAPI.postFlowsDatatableImportJobs(datatableId: datatableId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **body** | [**DataTableImportJob**](DataTableImportJob.html)| import job information | |
-{: class="table-striped"}
+| **body** | [**DataTableImportJob**](DataTableImportJob)| import job information | |
 
 
 ### Return type
 
-[**DataTableImportJob**](DataTableImportJob.html)
-
-<a name="postFlowsDatatableRows"></a>
-
-# **postFlowsDatatableRows**
+[**DataTableImportJob**](DataTableImportJob)
 
 
+## postFlowsDatatableRows
 
-> [[String:JSON]](JSON.html) postFlowsDatatableRows(datatableId, dataTableRow)
+
+
+> [[String:JSON]](JSON) postFlowsDatatableRows(datatableId, dataTableRow)
 
 Create a new row entry for the datatable.
 
@@ -6264,21 +6754,19 @@ ArchitectAPI.postFlowsDatatableRows(datatableId: datatableId, dataTableRow: data
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **dataTableRow** | [**[String:JSON]**](JSON.html)|  | |
-{: class="table-striped"}
+| **dataTableRow** | [**[String:JSON]**](JSON)|  | |
 
 
 ### Return type
 
-[**[String:JSON]**](JSON.html)
-
-<a name="postFlowsDatatables"></a>
-
-# **postFlowsDatatables**
+[**[String:JSON]**](JSON)
 
 
+## postFlowsDatatables
 
-> [DataTable](DataTable.html) postFlowsDatatables(body)
+
+
+> [DataTable](DataTable) postFlowsDatatables(body)
 
 Create a new datatable with the specified json-schema definition
 
@@ -6318,21 +6806,19 @@ ArchitectAPI.postFlowsDatatables(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**DataTable**](DataTable.html)| datatable json-schema | |
-{: class="table-striped"}
+| **body** | [**DataTable**](DataTable)| datatable json-schema | |
 
 
 ### Return type
 
-[**DataTable**](DataTable.html)
-
-<a name="postFlowsExecutions"></a>
-
-# **postFlowsExecutions**
+[**DataTable**](DataTable)
 
 
+## postFlowsExecutions
 
-> [FlowExecutionLaunchResponse](FlowExecutionLaunchResponse.html) postFlowsExecutions(flowLaunchRequest)
+
+
+> [FlowExecutionLaunchResponse](FlowExecutionLaunchResponse) postFlowsExecutions(flowLaunchRequest)
 
 Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type.
 
@@ -6372,21 +6858,19 @@ ArchitectAPI.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (respon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **flowLaunchRequest** | [**FlowExecutionLaunchRequest**](FlowExecutionLaunchRequest.html)|  | |
-{: class="table-striped"}
+| **flowLaunchRequest** | [**FlowExecutionLaunchRequest**](FlowExecutionLaunchRequest)|  | |
 
 
 ### Return type
 
-[**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse.html)
-
-<a name="postFlowsInstancesJobs"></a>
-
-# **postFlowsInstancesJobs**
+[**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse)
 
 
+## postFlowsInstancesJobs
 
-> [GetFlowExecutionDataJobResult](GetFlowExecutionDataJobResult.html) postFlowsInstancesJobs(body, expand)
+
+
+> [GetFlowExecutionDataJobResult](GetFlowExecutionDataJobResult) postFlowsInstancesJobs(body, expand)
 
 Start a process (job) that will prepare a list of execution data IDs for download.
 
@@ -6427,22 +6911,20 @@ ArchitectAPI.postFlowsInstancesJobs(body: body, expand: expand) { (response, err
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ExecutionDataRequest**](ExecutionDataRequest.html)| Requested Flow Ids | |
+| **body** | [**ExecutionDataRequest**](ExecutionDataRequest)| Requested Flow Ids | |
 | **expand** | **String**| Expand various query types. | [optional]<br />**Values**: bots ("bots"), dataactions ("dataActions") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult.html)
-
-<a name="postFlowsInstancesQuery"></a>
-
-# **postFlowsInstancesQuery**
+[**GetFlowExecutionDataJobResult**](GetFlowExecutionDataJobResult)
 
 
+## postFlowsInstancesQuery
 
-> [FlowResultEntityListing](FlowResultEntityListing.html) postFlowsInstancesQuery(body, indexOnly, pageSize)
+
+
+> [FlowResultEntityListing](FlowResultEntityListing) postFlowsInstancesQuery(body, indexOnly, pageSize)
 
 Query the database of existing flow histories to look for particular flow criteria
 
@@ -6484,23 +6966,21 @@ ArchitectAPI.postFlowsInstancesQuery(body: body, indexOnly: indexOnly, pageSize:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CriteriaQuery**](CriteriaQuery.html)| query | |
+| **body** | [**CriteriaQuery**](CriteriaQuery)| query | |
 | **indexOnly** | **Bool**| indexes only | [optional] |
 | **pageSize** | **Int**| number of results to return | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FlowResultEntityListing**](FlowResultEntityListing.html)
-
-<a name="postFlowsJobs"></a>
-
-# **postFlowsJobs**
+[**FlowResultEntityListing**](FlowResultEntityListing)
 
 
+## postFlowsJobs
 
-> [RegisterArchitectJobResponse](RegisterArchitectJobResponse.html) postFlowsJobs()
+
+
+> [RegisterArchitectJobResponse](RegisterArchitectJobResponse) postFlowsJobs()
 
 Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job.
 
@@ -6537,18 +7017,16 @@ ArchitectAPI.postFlowsJobs() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**RegisterArchitectJobResponse**](RegisterArchitectJobResponse.html)
-
-<a name="postFlowsMilestones"></a>
-
-# **postFlowsMilestones**
+[**RegisterArchitectJobResponse**](RegisterArchitectJobResponse)
 
 
+## postFlowsMilestones
 
-> [FlowMilestone](FlowMilestone.html) postFlowsMilestones(body)
+
+
+> [FlowMilestone](FlowMilestone) postFlowsMilestones(body)
 
 Create a flow milestone
 
@@ -6586,21 +7064,19 @@ ArchitectAPI.postFlowsMilestones(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FlowMilestone**](FlowMilestone.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**FlowMilestone**](FlowMilestone)|  | [optional] |
 
 
 ### Return type
 
-[**FlowMilestone**](FlowMilestone.html)
-
-<a name="postFlowsOutcomes"></a>
-
-# **postFlowsOutcomes**
+[**FlowMilestone**](FlowMilestone)
 
 
+## postFlowsOutcomes
 
-> [FlowOutcome](FlowOutcome.html) postFlowsOutcomes(body)
+
+
+> [FlowOutcome](FlowOutcome) postFlowsOutcomes(body)
 
 Create a flow outcome
 
@@ -6640,21 +7116,19 @@ ArchitectAPI.postFlowsOutcomes(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FlowOutcome**](FlowOutcome.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**FlowOutcome**](FlowOutcome)|  | [optional] |
 
 
 ### Return type
 
-[**FlowOutcome**](FlowOutcome.html)
-
-<a name="putArchitectEmergencygroup"></a>
-
-# **putArchitectEmergencygroup**
+[**FlowOutcome**](FlowOutcome)
 
 
+## putArchitectEmergencygroup
 
-> [EmergencyGroup](EmergencyGroup.html) putArchitectEmergencygroup(emergencyGroupId, body)
+
+
+> [EmergencyGroup](EmergencyGroup) putArchitectEmergencygroup(emergencyGroupId, body)
 
 Updates a emergency group by ID
 
@@ -6694,21 +7168,19 @@ ArchitectAPI.putArchitectEmergencygroup(emergencyGroupId: emergencyGroupId, body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **emergencyGroupId** | **String**| Emergency group ID | |
-| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | |
-{: class="table-striped"}
+| **body** | [**EmergencyGroup**](EmergencyGroup)|  | |
 
 
 ### Return type
 
-[**EmergencyGroup**](EmergencyGroup.html)
-
-<a name="putArchitectIvr"></a>
-
-# **putArchitectIvr**
+[**EmergencyGroup**](EmergencyGroup)
 
 
+## putArchitectIvr
 
-> [IVR](IVR.html) putArchitectIvr(ivrId, body)
+
+
+> [IVR](IVR) putArchitectIvr(ivrId, body)
 
 Update an IVR Config.
 
@@ -6748,21 +7220,19 @@ ArchitectAPI.putArchitectIvr(ivrId: ivrId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ivrId** | **String**| IVR id | |
-| **body** | [**IVR**](IVR.html)|  | |
-{: class="table-striped"}
+| **body** | [**IVR**](IVR)|  | |
 
 
 ### Return type
 
-[**IVR**](IVR.html)
-
-<a name="putArchitectPrompt"></a>
-
-# **putArchitectPrompt**
+[**IVR**](IVR)
 
 
+## putArchitectPrompt
 
-> [Prompt](Prompt.html) putArchitectPrompt(promptId, body)
+
+
+> [Prompt](Prompt) putArchitectPrompt(promptId, body)
 
 Update specified user prompt
 
@@ -6802,21 +7272,19 @@ ArchitectAPI.putArchitectPrompt(promptId: promptId, body: body) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
-| **body** | [**Prompt**](Prompt.html)|  | |
-{: class="table-striped"}
+| **body** | [**Prompt**](Prompt)|  | |
 
 
 ### Return type
 
-[**Prompt**](Prompt.html)
-
-<a name="putArchitectPromptResource"></a>
-
-# **putArchitectPromptResource**
+[**Prompt**](Prompt)
 
 
+## putArchitectPromptResource
 
-> [PromptAsset](PromptAsset.html) putArchitectPromptResource(promptId, languageCode, body)
+
+
+> [PromptAsset](PromptAsset) putArchitectPromptResource(promptId, languageCode, body)
 
 Update specified user prompt resource
 
@@ -6858,21 +7326,19 @@ ArchitectAPI.putArchitectPromptResource(promptId: promptId, languageCode: langua
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-| **body** | [**PromptAsset**](PromptAsset.html)|  | |
-{: class="table-striped"}
+| **body** | [**PromptAsset**](PromptAsset)|  | |
 
 
 ### Return type
 
-[**PromptAsset**](PromptAsset.html)
-
-<a name="putArchitectSchedule"></a>
-
-# **putArchitectSchedule**
+[**PromptAsset**](PromptAsset)
 
 
+## putArchitectSchedule
 
-> [Schedule](Schedule.html) putArchitectSchedule(scheduleId, body)
+
+
+> [Schedule](Schedule) putArchitectSchedule(scheduleId, body)
 
 Update schedule by ID
 
@@ -6912,21 +7378,19 @@ ArchitectAPI.putArchitectSchedule(scheduleId: scheduleId, body: body) { (respons
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleId** | **String**| Schedule ID | |
-| **body** | [**Schedule**](Schedule.html)|  | |
-{: class="table-striped"}
+| **body** | [**Schedule**](Schedule)|  | |
 
 
 ### Return type
 
-[**Schedule**](Schedule.html)
-
-<a name="putArchitectSchedulegroup"></a>
-
-# **putArchitectSchedulegroup**
+[**Schedule**](Schedule)
 
 
+## putArchitectSchedulegroup
 
-> [ScheduleGroup](ScheduleGroup.html) putArchitectSchedulegroup(scheduleGroupId, body)
+
+
+> [ScheduleGroup](ScheduleGroup) putArchitectSchedulegroup(scheduleGroupId, body)
 
 Updates a schedule group by ID
 
@@ -6966,21 +7430,19 @@ ArchitectAPI.putArchitectSchedulegroup(scheduleGroupId: scheduleGroupId, body: b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **scheduleGroupId** | **String**| Schedule group ID | |
-| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | |
-{: class="table-striped"}
+| **body** | [**ScheduleGroup**](ScheduleGroup)|  | |
 
 
 ### Return type
 
-[**ScheduleGroup**](ScheduleGroup.html)
-
-<a name="putArchitectSystempromptResource"></a>
-
-# **putArchitectSystempromptResource**
+[**ScheduleGroup**](ScheduleGroup)
 
 
+## putArchitectSystempromptResource
 
-> [SystemPromptAsset](SystemPromptAsset.html) putArchitectSystempromptResource(promptId, languageCode, body)
+
+
+> [SystemPromptAsset](SystemPromptAsset) putArchitectSystempromptResource(promptId, languageCode, body)
 
 Updates a system prompt resource override.
 
@@ -7022,21 +7484,19 @@ ArchitectAPI.putArchitectSystempromptResource(promptId: promptId, languageCode: 
 | ------------- | ------------- | ------------- | ------------- |
 | **promptId** | **String**| Prompt ID | |
 | **languageCode** | **String**| Language | |
-| **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | |
-{: class="table-striped"}
+| **body** | [**SystemPromptAsset**](SystemPromptAsset)|  | |
 
 
 ### Return type
 
-[**SystemPromptAsset**](SystemPromptAsset.html)
-
-<a name="putFlow"></a>
-
-# **putFlow**
+[**SystemPromptAsset**](SystemPromptAsset)
 
 
+## putFlow
 
-> [Flow](Flow.html) putFlow(flowId, body)
+
+
+> [Flow](Flow) putFlow(flowId, body)
 
 Update flow
 
@@ -7076,21 +7536,19 @@ ArchitectAPI.putFlow(flowId: flowId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| Flow ID | |
-| **body** | [**Flow**](Flow.html)|  | |
-{: class="table-striped"}
+| **body** | [**Flow**](Flow)|  | |
 
 
 ### Return type
 
-[**Flow**](Flow.html)
-
-<a name="putFlowInstancesSettingsLoglevels"></a>
-
-# **putFlowInstancesSettingsLoglevels**
+[**Flow**](Flow)
 
 
+## putFlowInstancesSettingsLoglevels
 
-> [FlowSettingsResponse](FlowSettingsResponse.html) putFlowInstancesSettingsLoglevels(flowId, body, expand)
+
+
+> [FlowSettingsResponse](FlowSettingsResponse) putFlowInstancesSettingsLoglevels(flowId, body, expand)
 
 Edit the logLevel for a particular flow id
 
@@ -7133,22 +7591,20 @@ ArchitectAPI.putFlowInstancesSettingsLoglevels(flowId: flowId, body: body, expan
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowId** | **String**| The flow id to edit the loglevel for | |
-| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest.html)| New LogLevel settings | |
-| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
-{: class="table-striped"}
+| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest)| New LogLevel settings | |
+| **expand** | [**[String]**](String)| Expand instructions for the result | [optional]<br />**Values**: name ("name"), type ("type"), loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
 
 
 ### Return type
 
-[**FlowSettingsResponse**](FlowSettingsResponse.html)
-
-<a name="putFlowsDatatable"></a>
-
-# **putFlowsDatatable**
+[**FlowSettingsResponse**](FlowSettingsResponse)
 
 
+## putFlowsDatatable
 
-> [DataTable](DataTable.html) putFlowsDatatable(datatableId, body, expand)
+
+
+> [DataTable](DataTable) putFlowsDatatable(datatableId, body, expand)
 
 Updates a specific datatable by id
 
@@ -7191,22 +7647,20 @@ ArchitectAPI.putFlowsDatatable(datatableId: datatableId, body: body, expand: exp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
-| **body** | [**DataTable**](DataTable.html)| datatable json-schema | |
+| **body** | [**DataTable**](DataTable)| datatable json-schema | |
 | **expand** | **String**| Expand instructions for the result | [optional]<br />**Values**: schema ("schema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DataTable**](DataTable.html)
-
-<a name="putFlowsDatatableRow"></a>
-
-# **putFlowsDatatableRow**
+[**DataTable**](DataTable)
 
 
+## putFlowsDatatableRow
 
-> [[String:JSON]](JSON.html) putFlowsDatatableRow(datatableId, rowId, body)
+
+
+> [[String:JSON]](JSON) putFlowsDatatableRow(datatableId, rowId, body)
 
 Update a row entry
 
@@ -7251,21 +7705,19 @@ ArchitectAPI.putFlowsDatatableRow(datatableId: datatableId, rowId: rowId, body: 
 | ------------- | ------------- | ------------- | ------------- |
 | **datatableId** | **String**| id of datatable | |
 | **rowId** | **String**| the key for the row | |
-| **body** | [**[String:JSON]**](JSON.html)| datatable row | [optional] |
-{: class="table-striped"}
+| **body** | [**[String:JSON]**](JSON)| datatable row | [optional] |
 
 
 ### Return type
 
-[**[String:JSON]**](JSON.html)
-
-<a name="putFlowsInstancesSettingsLoglevelsDefault"></a>
-
-# **putFlowsInstancesSettingsLoglevelsDefault**
+[**[String:JSON]**](JSON)
 
 
+## putFlowsInstancesSettingsLoglevelsDefault
 
-> [FlowSettingsResponse](FlowSettingsResponse.html) putFlowsInstancesSettingsLoglevelsDefault(body, expand)
+
+
+> [FlowSettingsResponse](FlowSettingsResponse) putFlowsInstancesSettingsLoglevelsDefault(body, expand)
 
 Edit the flow default log level.
 
@@ -7306,22 +7758,20 @@ ArchitectAPI.putFlowsInstancesSettingsLoglevelsDefault(body: body, expand: expan
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest.html)| New LogLevel settings | |
-| **expand** | [**[String]**](String.html)| Expand instructions for the result | [optional]<br />**Values**: loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
-{: class="table-striped"}
+| **body** | [**FlowLogLevelRequest**](FlowLogLevelRequest)| New LogLevel settings | |
+| **expand** | [**[String]**](String)| Expand instructions for the result | [optional]<br />**Values**: loglevelcharacteristicsCharacteristics ("logLevelCharacteristics.characteristics") |
 
 
 ### Return type
 
-[**FlowSettingsResponse**](FlowSettingsResponse.html)
-
-<a name="putFlowsMilestone"></a>
-
-# **putFlowsMilestone**
+[**FlowSettingsResponse**](FlowSettingsResponse)
 
 
+## putFlowsMilestone
 
-> [FlowMilestone](FlowMilestone.html) putFlowsMilestone(milestoneId, body)
+
+
+> [FlowMilestone](FlowMilestone) putFlowsMilestone(milestoneId, body)
 
 Updates a flow milestone
 
@@ -7361,21 +7811,19 @@ ArchitectAPI.putFlowsMilestone(milestoneId: milestoneId, body: body) { (response
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **milestoneId** | **String**| flow milestone ID | |
-| **body** | [**FlowMilestone**](FlowMilestone.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**FlowMilestone**](FlowMilestone)|  | [optional] |
 
 
 ### Return type
 
-[**FlowMilestone**](FlowMilestone.html)
-
-<a name="putFlowsOutcome"></a>
-
-# **putFlowsOutcome**
+[**FlowMilestone**](FlowMilestone)
 
 
+## putFlowsOutcome
 
-> [Operation](Operation.html) putFlowsOutcome(flowOutcomeId, body)
+
+
+> [Operation](Operation) putFlowsOutcome(flowOutcomeId, body)
 
 Updates a flow outcome
 
@@ -7417,11 +7865,12 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **flowOutcomeId** | **String**| flow outcome ID | |
-| **body** | [**FlowOutcome**](FlowOutcome.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**FlowOutcome**](FlowOutcome)|  | [optional] |
 
 
 ### Return type
 
-[**Operation**](Operation.html)
+[**Operation**](Operation)
 
+
+_PureCloudPlatformClientV2@151.1.0_

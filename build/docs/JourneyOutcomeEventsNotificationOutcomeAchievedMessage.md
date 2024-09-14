@@ -1,23 +1,23 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeAchievedMessage
----
+# JourneyOutcomeEventsNotificationOutcomeAchievedMessage
+
 ## JourneyOutcomeEventsNotificationOutcomeAchievedMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome.html) |  | [optional] |
-| **browser** | [**JourneyOutcomeEventsNotificationBrowser**](JourneyOutcomeEventsNotificationBrowser.html) |  | [optional] |
-| **visitCreatedDate** | [**Date**](Date.html) |  | [optional] |
+| **outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome) |  | [optional] |
+| **browser** | [**JourneyOutcomeEventsNotificationBrowser**](JourneyOutcomeEventsNotificationBrowser) |  | [optional] |
+| **visitCreatedDate** | [**Date**](Date) |  | [optional] |
 | **ipAddress** | **String** |  | [optional] |
 | **ipOrganization** | **String** |  | [optional] |
 | **userAgentString** | **String** |  | [optional] |
-| **device** | [**JourneyOutcomeEventsNotificationDevice**](JourneyOutcomeEventsNotificationDevice.html) |  | [optional] |
-| **geolocation** | [**JourneyOutcomeEventsNotificationGeoLocation**](JourneyOutcomeEventsNotificationGeoLocation.html) |  | [optional] |
-| **mktCampaign** | [**JourneyOutcomeEventsNotificationMktCampaign**](JourneyOutcomeEventsNotificationMktCampaign.html) |  | [optional] |
-| **visitReferrer** | [**JourneyOutcomeEventsNotificationReferrer**](JourneyOutcomeEventsNotificationReferrer.html) |  | [optional] |
-| **associatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue.html) |  | [optional] |
-{: class="table table-striped"}
+| **device** | [**JourneyOutcomeEventsNotificationDevice**](JourneyOutcomeEventsNotificationDevice) |  | [optional] |
+| **geolocation** | [**JourneyOutcomeEventsNotificationGeoLocation**](JourneyOutcomeEventsNotificationGeoLocation) |  | [optional] |
+| **mktCampaign** | [**JourneyOutcomeEventsNotificationMktCampaign**](JourneyOutcomeEventsNotificationMktCampaign) |  | [optional] |
+| **visitReferrer** | [**JourneyOutcomeEventsNotificationReferrer**](JourneyOutcomeEventsNotificationReferrer) |  | [optional] |
+| **associatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

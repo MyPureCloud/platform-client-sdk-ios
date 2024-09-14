@@ -1,6 +1,5 @@
----
-title: AgentDirectRoutingBackupSettings
----
+# AgentDirectRoutingBackupSettings
+
 ## AgentDirectRoutingBackupSettings
 
 ## Properties
@@ -12,6 +11,7 @@ title: AgentDirectRoutingBackupSettings
 | **waitForAgent** | **Bool** | Flag indicating if Direct Routing interactions should wait for Direct Routing agent or go immediately to selected backup. | [optional] |
 | **agentWaitSeconds** | **Int** | Time (in seconds) that a Direct Routing interaction will wait for Direct Routing agent before going to selected backup. Valid range [60, 864000]. | [optional] |
 | **backedUpUsers** | **[String]** | Set of users that this user is a backup for. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

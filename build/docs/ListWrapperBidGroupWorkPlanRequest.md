@@ -1,13 +1,13 @@
----
-title: ListWrapperBidGroupWorkPlanRequest
----
+# ListWrapperBidGroupWorkPlanRequest
+
 ## ListWrapperBidGroupWorkPlanRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[BidGroupWorkPlanRequest]**](BidGroupWorkPlanRequest.html) |  | [optional] |
-{: class="table table-striped"}
+| **values** | [**[BidGroupWorkPlanRequest]**](BidGroupWorkPlanRequest) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

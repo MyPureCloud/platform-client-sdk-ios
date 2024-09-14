@@ -1,6 +1,5 @@
----
-title: VideoSettings
----
+# VideoSettings
+
 ## VideoSettings
 The settings to enable video chat
 
@@ -9,8 +8,9 @@ The settings to enable video chat
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | whether or not video is enabled | [optional] |
-| **agent** | [**AgentVideoSettings**](AgentVideoSettings.html) | Video Settings for agent | [optional] |
-| **user** | [**UserVideoSettings**](UserVideoSettings.html) | Video Settings for user | [optional] |
-{: class="table table-striped"}
+| **agent** | [**AgentVideoSettings**](AgentVideoSettings) | Video Settings for agent | [optional] |
+| **user** | [**UserVideoSettings**](UserVideoSettings) | Video Settings for user | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

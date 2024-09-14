@@ -1,6 +1,5 @@
----
-title: ContactIdentifier
----
+# ContactIdentifier
+
 ## ContactIdentifier
 
 ## Properties
@@ -10,8 +9,9 @@ title: ContactIdentifier
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **type** | **String** | The type of this identifier | |
 | **value** | **String** | The string value of the identifier. Will vary in syntax by type. | |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

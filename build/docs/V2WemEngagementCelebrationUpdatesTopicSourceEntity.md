@@ -1,6 +1,5 @@
----
-title: V2WemEngagementCelebrationUpdatesTopicSourceEntity
----
+# V2WemEngagementCelebrationUpdatesTopicSourceEntity
+
 ## V2WemEngagementCelebrationUpdatesTopicSourceEntity
 
 ## Properties
@@ -9,6 +8,7 @@ title: V2WemEngagementCelebrationUpdatesTopicSourceEntity
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

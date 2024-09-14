@@ -1,6 +1,5 @@
----
-title: ResourcePermissionPolicy
----
+# ResourcePermissionPolicy
+
 ## ResourcePermissionPolicy
 
 ## Properties
@@ -14,10 +13,11 @@ title: ResourcePermissionPolicy
 | **policyDescription** | **String** |  | [optional] |
 | **actionSetKey** | **String** |  | [optional] |
 | **allowConditions** | **Bool** |  | [optional] |
-| **resourceConditionNode** | [**ResourceConditionNode**](ResourceConditionNode.html) |  | [optional] |
+| **resourceConditionNode** | [**ResourceConditionNode**](ResourceConditionNode) |  | [optional] |
 | **namedResources** | **[String]** |  | [optional] |
 | **resourceCondition** | **String** |  | [optional] |
 | **actionSet** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

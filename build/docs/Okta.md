@@ -1,6 +1,5 @@
----
-title: Okta
----
+# Okta
+
 ## Okta
 
 ## Properties
@@ -18,6 +17,7 @@ title: Okta
 | **certificate** | **String** |  | [optional] |
 | **certificates** | **[String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

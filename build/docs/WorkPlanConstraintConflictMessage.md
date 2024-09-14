@@ -1,6 +1,5 @@
----
-title: WorkPlanConstraintConflictMessage
----
+# WorkPlanConstraintConflictMessage
+
 ## WorkPlanConstraintConflictMessage
 
 ## Properties
@@ -8,7 +7,8 @@ title: WorkPlanConstraintConflictMessage
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Type of constraint conflict that can be resolved by clients in order to generate agent schedules | [optional] |
-| **arguments** | [**[WorkPlanValidationMessageArgument]**](WorkPlanValidationMessageArgument.html) | The arguments to the type of the message that can help clients resolve validation issues | [optional] |
-{: class="table table-striped"}
+| **arguments** | [**[WorkPlanValidationMessageArgument]**](WorkPlanValidationMessageArgument) | The arguments to the type of the message that can help clients resolve validation issues | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,14 +1,14 @@
----
-title: ExternalContactsContactChangedTopicExternalId
----
+# ExternalContactsContactChangedTopicExternalId
+
 ## ExternalContactsContactChangedTopicExternalId
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **externalSource** | [**ExternalContactsContactChangedTopicExternalSource**](ExternalContactsContactChangedTopicExternalSource.html) |  | [optional] |
+| **externalSource** | [**ExternalContactsContactChangedTopicExternalSource**](ExternalContactsContactChangedTopicExternalSource) |  | [optional] |
 | **value** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

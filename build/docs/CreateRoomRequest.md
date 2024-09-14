@@ -1,6 +1,5 @@
----
-title: CreateRoomRequest
----
+# CreateRoomRequest
+
 ## CreateRoomRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: CreateRoomRequest
 | **_description** | **String** | Room&#39;s description | [optional] |
 | **subject** | **String** | Room&#39;s subject | |
 | **userIds** | **[String]** | Users to add to the room | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

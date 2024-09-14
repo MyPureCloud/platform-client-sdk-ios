@@ -1,6 +1,5 @@
----
-title: FaxSendRequest
----
+# FaxSendRequest
+
 ## FaxSendRequest
 
 ## Properties
@@ -12,10 +11,11 @@ title: FaxSendRequest
 | **addresses** | **[String]** | A list of outbound fax dialing addresses. E.g. +13175555555 or 3175555555 | |
 | **documentId** | **String** | DocumentId of Content Management artifact. If Content Management document is not used for faxing, documentId should be null | [optional] |
 | **contentType** | **String** | The content type that is going to be uploaded. If Content Management document is used for faxing, contentType will be ignored | [optional] |
-| **workspace** | [**Workspace**](Workspace.html) | Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored | [optional] |
-| **coverSheet** | [**CoverSheet**](CoverSheet.html) | Data for coversheet generation. | [optional] |
+| **workspace** | [**Workspace**](Workspace) | Workspace in which the document should be stored. If Content Management document is used for faxing, workspace will be ignored | [optional] |
+| **coverSheet** | [**CoverSheet**](CoverSheet) | Data for coversheet generation. | [optional] |
 | **timeZoneOffsetMinutes** | **Int** | Time zone offset minutes from GMT | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

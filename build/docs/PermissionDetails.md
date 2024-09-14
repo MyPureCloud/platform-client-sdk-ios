@@ -1,6 +1,5 @@
----
-title: PermissionDetails
----
+# PermissionDetails
+
 ## PermissionDetails
 
 ## Properties
@@ -11,6 +10,7 @@ title: PermissionDetails
 | **permissions** | **[String]** | List of required permissions | [optional] |
 | **allowsCurrentUser** | **Bool** | Whether the current user can subscribe, when division permissions are otherwise required | [optional] |
 | **enforced** | **Bool** | Whether or not this permission requirement is enforced | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

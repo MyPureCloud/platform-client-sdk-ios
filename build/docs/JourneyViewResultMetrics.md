@@ -1,6 +1,5 @@
----
-title: JourneyViewResultMetrics
----
+# JourneyViewResultMetrics
+
 ## JourneyViewResultMetrics
 The metrics of an element or a link in journey 
 
@@ -13,6 +12,7 @@ The metrics of an element or a link in journey
 | **completedCount** | **Int** | number of external contacts who completed the journey forward | [optional] |
 | **dropoutCount** | **Int** | number of external contacts who did not make it to the next element | [optional] |
 | **flowCount** | **Int** | number of external contacts who moved from one element to next element but did not complete the journey | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: OrgWhitelistSettings
----
+# OrgWhitelistSettings
+
 ## OrgWhitelistSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: OrgWhitelistSettings
 |------------ | ------------- | ------------- | -------------|
 | **enableWhitelist** | **Bool** |  | [optional] |
 | **domainWhitelist** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

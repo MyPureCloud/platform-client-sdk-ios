@@ -1,6 +1,5 @@
----
-title: Contact
----
+# Contact
+
 ## Contact
 
 ## Properties
@@ -14,6 +13,7 @@ title: Contact
 | **_extension** | **String** | Use internal extension instead of address. Mutually exclusive with the address field. | [optional] |
 | **countryCode** | **String** |  | [optional] |
 | **integration** | **String** | Integration tag value if this number is associated with an external integration. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

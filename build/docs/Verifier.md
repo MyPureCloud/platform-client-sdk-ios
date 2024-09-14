@@ -1,6 +1,5 @@
----
-title: Verifier
----
+# Verifier
+
 ## Verifier
 
 ## Properties
@@ -12,6 +11,7 @@ title: Verifier
 | **enabled** | **Bool** | Indicates whether this verifier is enabled. | [optional] |
 | **_default** | **Bool** | Indicates whether this is the default verifier. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

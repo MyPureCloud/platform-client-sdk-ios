@@ -1,13 +1,12 @@
----
-title: AcceleratorList
----
+# AcceleratorList
+
 ## AcceleratorList
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AcceleratorMetadata]**](AcceleratorMetadata.html) |  | [optional] |
+| **entities** | [**[AcceleratorMetadata]**](AcceleratorMetadata) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: AcceleratorList
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

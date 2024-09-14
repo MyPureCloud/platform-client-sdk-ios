@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicAlternativeShiftNotification
----
+# WfmUserNotificationTopicAlternativeShiftNotification
+
 ## WfmUserNotificationTopicAlternativeShiftNotification
 
 ## Properties
@@ -8,13 +7,14 @@ title: WfmUserNotificationTopicAlternativeShiftNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **weekDate** | [**Date**](Date.html) |  | [optional] |
+| **weekDate** | [**Date**](Date) |  | [optional] |
 | **granularity** | **String** |  | [optional] |
 | **newState** | **String** |  | [optional] |
-| **initiatingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
-| **initiatingShiftDate** | [**Date**](Date.html) |  | [optional] |
-| **receivingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
-| **receivingShiftDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **initiatingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
+| **initiatingShiftDate** | [**Date**](Date) |  | [optional] |
+| **receivingUser** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
+| **receivingShiftDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,15 +1,15 @@
----
-title: SearchShiftTradeResponse
----
+# SearchShiftTradeResponse
+
 ## SearchShiftTradeResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **trade** | [**ShiftTradeResponse**](ShiftTradeResponse.html) | A trade which matches search criteria | [optional] |
+| **trade** | [**ShiftTradeResponse**](ShiftTradeResponse) | A trade which matches search criteria | [optional] |
 | **matchingReceivingShiftIds** | **[String]** | IDs of shifts which match the search criteria | [optional] |
-| **preview** | [**ShiftTradePreviewResponse**](ShiftTradePreviewResponse.html) | A preview of what the shift trade would look like if matched | [optional] |
-{: class="table table-striped"}
+| **preview** | [**ShiftTradePreviewResponse**](ShiftTradePreviewResponse) | A preview of what the shift trade would look like if matched | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

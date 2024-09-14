@@ -1,6 +1,5 @@
----
-title: JourneyViewResultLink
----
+# JourneyViewResultLink
+
 ## JourneyViewResultLink
 Represents a link between 2 elements in a journey view result
 
@@ -11,6 +10,7 @@ Represents a link between 2 elements in a journey view result
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **connectionCount** | **Int** | the number of connections for the journey view link | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,17 +1,17 @@
----
-title: OutOfOfficeEventOutOfOffice
----
+# OutOfOfficeEventOutOfOffice
+
 ## OutOfOfficeEventOutOfOffice
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**OutOfOfficeEventUser**](OutOfOfficeEventUser.html) |  | [optional] |
+| **user** | [**OutOfOfficeEventUser**](OutOfOfficeEventUser) |  | [optional] |
 | **active** | **Bool** |  | [optional] |
 | **indefinite** | **Bool** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
-| **endDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **startDate** | [**Date**](Date) |  | [optional] |
+| **endDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

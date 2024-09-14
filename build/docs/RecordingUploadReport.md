@@ -1,6 +1,5 @@
----
-title: RecordingUploadReport
----
+# RecordingUploadReport
+
 ## RecordingUploadReport
 
 ## Properties
@@ -12,6 +11,7 @@ title: RecordingUploadReport
 | **state** | **String** | The current status of the upload report. | [optional] |
 | **signedUrl** | **String** | For COMPLETED tasks, the signed url to download the report. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

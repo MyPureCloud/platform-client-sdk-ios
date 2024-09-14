@@ -1,17 +1,16 @@
----
-title: WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
----
+# WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
+
 ## WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**WfmUserScheduleAdherenceUpdatedTeamTopicUserReference**](WfmUserScheduleAdherenceUpdatedTeamTopicUserReference.html) |  | [optional] |
+| **user** | [**WfmUserScheduleAdherenceUpdatedTeamTopicUserReference**](WfmUserScheduleAdherenceUpdatedTeamTopicUserReference) |  | [optional] |
 | **managementUnitId** | **String** |  | [optional] |
-| **team** | [**WfmUserScheduleAdherenceUpdatedTeamTopicUriReference**](WfmUserScheduleAdherenceUpdatedTeamTopicUriReference.html) |  | [optional] |
+| **team** | [**WfmUserScheduleAdherenceUpdatedTeamTopicUriReference**](WfmUserScheduleAdherenceUpdatedTeamTopicUriReference) |  | [optional] |
 | **scheduledActivityCategory** | **String** |  | [optional] |
-| **scheduledActivityCode** | [**WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference**](WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference.html) |  | [optional] |
+| **scheduledActivityCode** | [**WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference**](WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference) |  | [optional] |
 | **systemPresence** | **String** |  | [optional] |
 | **organizationSecondaryPresenceId** | **String** |  | [optional] |
 | **routingStatus** | **String** |  | [optional] |
@@ -19,12 +18,13 @@ title: WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate
 | **isOutOfOffice** | **Bool** |  | [optional] |
 | **adherenceState** | **String** |  | [optional] |
 | **impact** | **String** |  | [optional] |
-| **adherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation.html) |  | [optional] |
-| **adherenceChangeTime** | [**Date**](Date.html) |  | [optional] |
-| **presenceUpdateTime** | [**Date**](Date.html) |  | [optional] |
-| **activeQueues** | [**[WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]**](WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference.html) |  | [optional] |
-| **activeQueuesModifiedTime** | [**Date**](Date.html) |  | [optional] |
+| **adherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation) |  | [optional] |
+| **adherenceChangeTime** | [**Date**](Date) |  | [optional] |
+| **presenceUpdateTime** | [**Date**](Date) |  | [optional] |
+| **activeQueues** | [**[WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference]**](WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference) |  | [optional] |
+| **activeQueuesModifiedTime** | [**Date**](Date) |  | [optional] |
 | **removedFromManagementUnit** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

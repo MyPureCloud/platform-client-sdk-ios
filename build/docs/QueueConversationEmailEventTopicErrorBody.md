@@ -1,6 +1,5 @@
----
-title: QueueConversationEmailEventTopicErrorBody
----
+# QueueConversationEmailEventTopicErrorBody
+
 ## QueueConversationEmailEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationEmailEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[QueueConversationEmailEventTopicDetail]**](QueueConversationEmailEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[QueueConversationEmailEventTopicErrorBody]**](QueueConversationEmailEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[QueueConversationEmailEventTopicDetail]**](QueueConversationEmailEventTopicDetail) |  | [optional] |
+| **errors** | [**[QueueConversationEmailEventTopicErrorBody]**](QueueConversationEmailEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

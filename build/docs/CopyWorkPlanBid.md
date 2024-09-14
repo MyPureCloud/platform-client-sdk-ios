@@ -1,6 +1,5 @@
----
-title: CopyWorkPlanBid
----
+# CopyWorkPlanBid
+
 ## CopyWorkPlanBid
 
 ## Properties
@@ -8,6 +7,7 @@ title: CopyWorkPlanBid
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the new work plan bid | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

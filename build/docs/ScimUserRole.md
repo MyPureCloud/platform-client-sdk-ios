@@ -1,6 +1,5 @@
----
-title: ScimUserRole
----
+# ScimUserRole
+
 ## ScimUserRole
 Defines a user role.
 
@@ -9,6 +8,7 @@ Defines a user role.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **value** | **String** | The role of the Genesys Cloud user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

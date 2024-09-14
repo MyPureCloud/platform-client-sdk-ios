@@ -1,6 +1,5 @@
----
-title: PresenceEventUserPresence
----
+# PresenceEventUserPresence
+
 ## PresenceEventUserPresence
 
 ## Properties
@@ -8,10 +7,11 @@ title: PresenceEventUserPresence
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **source** | **String** |  | [optional] |
-| **presenceDefinition** | [**PresenceEventOrganizationPresence**](PresenceEventOrganizationPresence.html) |  | [optional] |
+| **presenceDefinition** | [**PresenceEventOrganizationPresence**](PresenceEventOrganizationPresence) |  | [optional] |
 | **primary** | **Bool** |  | [optional] |
 | **message** | **String** |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **modifiedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

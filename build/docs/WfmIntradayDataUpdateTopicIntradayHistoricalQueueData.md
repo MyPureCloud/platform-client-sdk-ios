@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
----
+# WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
+
 ## WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
 
 ## Properties
@@ -15,6 +14,7 @@ title: WfmIntradayDataUpdateTopicIntradayHistoricalQueueData
 | **averageAfterCallWorkSeconds** | **Double** |  | [optional] |
 | **serviceLevelPercent** | **Double** |  | [optional] |
 | **averageSpeedOfAnswerSeconds** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,28 +1,24 @@
----
-title: UsageAPI
----
-## UsageAPI
+# UsageAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getOauthClientUsageQueryResult**](UsageAPI.html#getOauthClientUsageQueryResult) | Get the results of a usage query |
-| [**getOauthClientUsageSummary**](UsageAPI.html#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
-| [**getUsageQueryExecutionIdResults**](UsageAPI.html#getUsageQueryExecutionIdResults) | Get the results of a usage query |
-| [**getUsageSimplesearchExecutionIdResults**](UsageAPI.html#getUsageSimplesearchExecutionIdResults) | Get the results of a usage search. Number of records to be returned is limited to 20,000 results. |
-| [**postOauthClientUsageQuery**](UsageAPI.html#postOauthClientUsageQuery) | Query for OAuth client API usage |
-| [**postUsageQuery**](UsageAPI.html#postUsageQuery) | Query organization API Usage -  |
-| [**postUsageSimplesearch**](UsageAPI.html#postUsageSimplesearch) | Search organization API Usage |
+| [**getOauthClientUsageQueryResult**](UsageAPI#getOauthClientUsageQueryResult) | Get the results of a usage query |
+| [**getOauthClientUsageSummary**](UsageAPI#getOauthClientUsageSummary) | Get a summary of OAuth client API usage |
+| [**getUsageQueryExecutionIdResults**](UsageAPI#getUsageQueryExecutionIdResults) | Get the results of a usage query |
+| [**getUsageSimplesearchExecutionIdResults**](UsageAPI#getUsageSimplesearchExecutionIdResults) | Get the results of a usage search. Number of records to be returned is limited to 20,000 results. |
+| [**postOauthClientUsageQuery**](UsageAPI#postOauthClientUsageQuery) | Query for OAuth client API usage |
+| [**postUsageQuery**](UsageAPI#postUsageQuery) | Query organization API Usage -  |
+| [**postUsageSimplesearch**](UsageAPI#postUsageSimplesearch) | Search organization API Usage |
 {: class="table-striped"}
 
-<a name="getOauthClientUsageQueryResult"></a>
 
-# **getOauthClientUsageQueryResult**
-
+## getOauthClientUsageQueryResult
 
 
-> [ApiUsageQueryResult](ApiUsageQueryResult.html) getOauthClientUsageQueryResult(executionId, clientId)
+
+> [ApiUsageQueryResult](ApiUsageQueryResult) getOauthClientUsageQueryResult(executionId, clientId)
 
 Get the results of a usage query
 
@@ -64,20 +60,18 @@ UsageAPI.getOauthClientUsageQueryResult(executionId: executionId, clientId: clie
 | ------------- | ------------- | ------------- | ------------- |
 | **executionId** | **String**| ID of the query execution | |
 | **clientId** | **String**| Client ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
-
-<a name="getOauthClientUsageSummary"></a>
-
-# **getOauthClientUsageSummary**
+[**ApiUsageQueryResult**](ApiUsageQueryResult)
 
 
+## getOauthClientUsageSummary
 
-> [UsageExecutionResult](UsageExecutionResult.html) getOauthClientUsageSummary(clientId, days)
+
+
+> [UsageExecutionResult](UsageExecutionResult) getOauthClientUsageSummary(clientId, days)
 
 Get a summary of OAuth client API usage
 
@@ -121,20 +115,18 @@ UsageAPI.getOauthClientUsageSummary(clientId: clientId, days: days) { (response,
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
 | **days** | **String**| Previous number of days to query | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
-
-<a name="getUsageQueryExecutionIdResults"></a>
-
-# **getUsageQueryExecutionIdResults**
+[**UsageExecutionResult**](UsageExecutionResult)
 
 
+## getUsageQueryExecutionIdResults
 
-> [ApiUsageQueryResult](ApiUsageQueryResult.html) getUsageQueryExecutionIdResults(executionId)
+
+
+> [ApiUsageQueryResult](ApiUsageQueryResult) getUsageQueryExecutionIdResults(executionId)
 
 Get the results of a usage query
 
@@ -174,20 +166,18 @@ UsageAPI.getUsageQueryExecutionIdResults(executionId: executionId) { (response, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **executionId** | **String**| ID of the query execution | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
-
-<a name="getUsageSimplesearchExecutionIdResults"></a>
-
-# **getUsageSimplesearchExecutionIdResults**
+[**ApiUsageQueryResult**](ApiUsageQueryResult)
 
 
+## getUsageSimplesearchExecutionIdResults
 
-> [ApiUsageQueryResult](ApiUsageQueryResult.html) getUsageSimplesearchExecutionIdResults(executionId, after, pageSize)
+
+
+> [ApiUsageQueryResult](ApiUsageQueryResult) getUsageSimplesearchExecutionIdResults(executionId, after, pageSize)
 
 Get the results of a usage search. Number of records to be returned is limited to 20,000 results.
 
@@ -231,20 +221,18 @@ UsageAPI.getUsageSimplesearchExecutionIdResults(executionId: executionId, after:
 | **executionId** | **String**| ID of the search execution | |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned | [optional] |
 | **pageSize** | **Int**| The max number of entities to be returned per request. Maximum page size of 1000 | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ApiUsageQueryResult**](ApiUsageQueryResult.html)
-
-<a name="postOauthClientUsageQuery"></a>
-
-# **postOauthClientUsageQuery**
+[**ApiUsageQueryResult**](ApiUsageQueryResult)
 
 
+## postOauthClientUsageQuery
 
-> [UsageExecutionResult](UsageExecutionResult.html) postOauthClientUsageQuery(clientId, body)
+
+
+> [UsageExecutionResult](UsageExecutionResult) postOauthClientUsageQuery(clientId, body)
 
 Query for OAuth client API usage
 
@@ -287,21 +275,19 @@ UsageAPI.postOauthClientUsageQuery(clientId: clientId, body: body) { (response, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clientId** | **String**| Client ID | |
-| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery.html)| Query | |
-{: class="table-striped"}
+| **body** | [**ApiUsageClientQuery**](ApiUsageClientQuery)| Query | |
 
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
-
-<a name="postUsageQuery"></a>
-
-# **postUsageQuery**
+[**UsageExecutionResult**](UsageExecutionResult)
 
 
+## postUsageQuery
 
-> [UsageExecutionResult](UsageExecutionResult.html) postUsageQuery(body)
+
+
+> [UsageExecutionResult](UsageExecutionResult) postUsageQuery(body)
 
 Query organization API Usage - 
 
@@ -342,21 +328,19 @@ UsageAPI.postUsageQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ApiUsageOrganizationQuery**](ApiUsageOrganizationQuery.html)| Query | |
-{: class="table-striped"}
+| **body** | [**ApiUsageOrganizationQuery**](ApiUsageOrganizationQuery)| Query | |
 
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
-
-<a name="postUsageSimplesearch"></a>
-
-# **postUsageSimplesearch**
+[**UsageExecutionResult**](UsageExecutionResult)
 
 
+## postUsageSimplesearch
 
-> [UsageExecutionResult](UsageExecutionResult.html) postUsageSimplesearch(body)
+
+
+> [UsageExecutionResult](UsageExecutionResult) postUsageSimplesearch(body)
 
 Search organization API Usage
 
@@ -397,11 +381,12 @@ UsageAPI.postUsageSimplesearch(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ApiUsageSimpleSearch**](ApiUsageSimpleSearch.html)| SimpleSearch | |
-{: class="table-striped"}
+| **body** | [**ApiUsageSimpleSearch**](ApiUsageSimpleSearch)| SimpleSearch | |
 
 
 ### Return type
 
-[**UsageExecutionResult**](UsageExecutionResult.html)
+[**UsageExecutionResult**](UsageExecutionResult)
 
+
+_PureCloudPlatformClientV2@151.1.0_

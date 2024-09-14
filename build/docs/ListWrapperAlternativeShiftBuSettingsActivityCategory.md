@@ -1,6 +1,5 @@
----
-title: ListWrapperAlternativeShiftBuSettingsActivityCategory
----
+# ListWrapperAlternativeShiftBuSettingsActivityCategory
+
 ## ListWrapperAlternativeShiftBuSettingsActivityCategory
 
 ## Properties
@@ -8,6 +7,7 @@ title: ListWrapperAlternativeShiftBuSettingsActivityCategory
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **values** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

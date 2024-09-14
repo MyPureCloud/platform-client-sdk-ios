@@ -1,6 +1,5 @@
----
-title: EmergencyGroupDivisionView
----
+# EmergencyGroupDivisionView
+
 ## EmergencyGroupDivisionView
 A group of call flows.
 
@@ -10,8 +9,9 @@ A group of call flows.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The emergency group identifier | [optional] |
 | **name** | **String** | The emergency group name | |
-| **division** | [**WritableDivision**](WritableDivision.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**WritableDivision**](WritableDivision) | The division to which this entity belongs. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

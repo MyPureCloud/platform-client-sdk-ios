@@ -1,6 +1,5 @@
----
-title: CreateTimeOffLimitRequest
----
+# CreateTimeOffLimitRequest
+
 ## CreateTimeOffLimitRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: CreateTimeOffLimitRequest
 |------------ | ------------- | ------------- | -------------|
 | **granularity** | **String** | Granularity choice for time off limit. If not specified, &#39;Daily&#39; is assumed | [optional] |
 | **defaultLimitMinutes** | **Int** | The default limit value in minutes per granularity. If not specified, then 0 is assumed, which means there are no time off minutes available | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

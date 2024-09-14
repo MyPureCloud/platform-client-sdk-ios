@@ -1,6 +1,5 @@
----
-title: ConversationMessagingFromRecipient
----
+# ConversationMessagingFromRecipient
+
 ## ConversationMessagingFromRecipient
 Information about the recipient the message is received from.
 
@@ -15,7 +14,8 @@ Information about the recipient the message is received from.
 | **firstName** | **String** | First name of the recipient. | [optional] |
 | **lastName** | **String** | Last name of the recipient. | [optional] |
 | **email** | **String** | E-mail address of the recipient. | [optional] |
-| **additionalIds** | [**[ConversationRecipientAdditionalIdentifier]**](ConversationRecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
-{: class="table table-striped"}
+| **additionalIds** | [**[ConversationRecipientAdditionalIdentifier]**](ConversationRecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

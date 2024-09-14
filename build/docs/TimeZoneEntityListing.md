@@ -1,13 +1,12 @@
----
-title: TimeZoneEntityListing
----
+# TimeZoneEntityListing
+
 ## TimeZoneEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[RegionTimeZone]**](RegionTimeZone.html) |  | [optional] |
+| **entities** | [**[RegionTimeZone]**](RegionTimeZone) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: TimeZoneEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

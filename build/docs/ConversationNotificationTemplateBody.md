@@ -1,6 +1,5 @@
----
-title: ConversationNotificationTemplateBody
----
+# ConversationNotificationTemplateBody
+
 ## ConversationNotificationTemplateBody
 Template body object.
 
@@ -9,7 +8,8 @@ Template body object.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** | Body text. For WhatsApp, ignored. | [optional] |
-| **parameters** | [**[ConversationNotificationTemplateParameter]**](ConversationNotificationTemplateParameter.html) | Template parameters for placeholders in template. | |
-{: class="table table-striped"}
+| **parameters** | [**[ConversationNotificationTemplateParameter]**](ConversationNotificationTemplateParameter) | Template parameters for placeholders in template. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

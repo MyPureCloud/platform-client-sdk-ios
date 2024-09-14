@@ -1,6 +1,5 @@
----
-title: ShrinkageOverrides
----
+# ShrinkageOverrides
+
 ## ShrinkageOverrides
 
 ## Properties
@@ -8,7 +7,8 @@ title: ShrinkageOverrides
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **clear** | **Bool** | Set true to clear the shrinkage interval overrides | [optional] |
-| **values** | [**[ShrinkageOverride]**](ShrinkageOverride.html) | List of interval shrinkage overrides | [optional] |
-{: class="table table-striped"}
+| **values** | [**[ShrinkageOverride]**](ShrinkageOverride) | List of interval shrinkage overrides | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

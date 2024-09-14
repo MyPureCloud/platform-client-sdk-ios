@@ -1,6 +1,5 @@
----
-title: WorkitemQueryJobCreate
----
+# WorkitemQueryJobCreate
+
 ## WorkitemQueryJobCreate
 
 ## Properties
@@ -9,10 +8,11 @@ title: WorkitemQueryJobCreate
 |------------ | ------------- | ------------- | -------------|
 | **pageSize** | **Int** | The total page size requested. Default 25 | [optional] |
 | **pageNumber** | **Int** | The page number requested | [optional] |
-| **filters** | [**[WorkitemQueryJobFilter]**](WorkitemQueryJobFilter.html) | List of filter objects to be used in the search. | |
+| **filters** | [**[WorkitemQueryJobFilter]**](WorkitemQueryJobFilter) | List of filter objects to be used in the search. | |
 | **expands** | **[String]** | List of entity attributes to be expanded in the result. | [optional] |
 | **attributes** | **[String]** | List of entity attributes to be retrieved in the result. | [optional] |
-| **sort** | [**WorkitemQueryJobSort**](WorkitemQueryJobSort.html) | Sort | [optional] |
-{: class="table table-striped"}
+| **sort** | [**WorkitemQueryJobSort**](WorkitemQueryJobSort) | Sort | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

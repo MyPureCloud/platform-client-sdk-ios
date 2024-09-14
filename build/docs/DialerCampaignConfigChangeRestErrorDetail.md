@@ -1,6 +1,5 @@
----
-title: DialerCampaignConfigChangeRestErrorDetail
----
+# DialerCampaignConfigChangeRestErrorDetail
+
 ## DialerCampaignConfigChangeRestErrorDetail
 
 ## Properties
@@ -9,7 +8,8 @@ title: DialerCampaignConfigChangeRestErrorDetail
 |------------ | ------------- | ------------- | -------------|
 | **error** | **String** | name of the error | [optional] |
 | **details** | **String** | additional information regarding the error | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

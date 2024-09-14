@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicMergeOperation
----
+# ExternalContactsUnresolvedContactChangedTopicMergeOperation
+
 ## ExternalContactsUnresolvedContactChangedTopicMergeOperation
 
 ## Properties
@@ -10,6 +9,7 @@ title: ExternalContactsUnresolvedContactChangedTopicMergeOperation
 | **sourceContactId** | **String** |  | [optional] |
 | **targetContactId** | **String** |  | [optional] |
 | **resultingContactId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,22 +1,18 @@
----
-title: DownloadsAPI
----
-## DownloadsAPI
+# DownloadsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getDownload**](DownloadsAPI.html#getDownload) | Issues a redirect to a signed secure download URL for specified download |
+| [**getDownload**](DownloadsAPI#getDownload) | Issues a redirect to a signed secure download URL for specified download |
 {: class="table-striped"}
 
-<a name="getDownload"></a>
 
-# **getDownload**
-
+## getDownload
 
 
-> [UrlResponse](UrlResponse.html) getDownload(downloadId, contentDisposition, issueRedirect, redirectToAuth)
+
+> [UrlResponse](UrlResponse) getDownload(downloadId, contentDisposition, issueRedirect, redirectToAuth)
 
 Issues a redirect to a signed secure download URL for specified download
 
@@ -62,10 +58,11 @@ DownloadsAPI.getDownload(downloadId: downloadId, contentDisposition: contentDisp
 | **contentDisposition** | **String**|  | [optional] |
 | **issueRedirect** | **Bool**|  | [optional] |
 | **redirectToAuth** | **Bool**|  | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UrlResponse**](UrlResponse.html)
+[**UrlResponse**](UrlResponse)
 
+
+_PureCloudPlatformClientV2@151.1.0_

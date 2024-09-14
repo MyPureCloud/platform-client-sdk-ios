@@ -1,13 +1,12 @@
----
-title: ContactListDivisionViewListing
----
+# ContactListDivisionViewListing
+
 ## ContactListDivisionViewListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ContactListDivisionView]**](ContactListDivisionView.html) |  | [optional] |
+| **entities** | [**[ContactListDivisionView]**](ContactListDivisionView) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: ContactListDivisionViewListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

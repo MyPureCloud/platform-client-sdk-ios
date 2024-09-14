@@ -1,6 +1,5 @@
----
-title: LearningModuleSummary
----
+# LearningModuleSummary
+
 ## LearningModuleSummary
 Learning module summary data
 
@@ -12,6 +11,7 @@ Learning module summary data
 | **completedCount** | **Int** | The number of assignments completed for a learning module | [optional] |
 | **passedCount** | **Int** | The number of assignments passed for a learning module | [optional] |
 | **completedSum** | **Float** | The sum of assignment scores for a learning module | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

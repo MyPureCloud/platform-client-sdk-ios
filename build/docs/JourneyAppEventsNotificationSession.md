@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationSession
----
+# JourneyAppEventsNotificationSession
+
 ## JourneyAppEventsNotificationSession
 
 ## Properties
@@ -10,6 +9,7 @@ title: JourneyAppEventsNotificationSession
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

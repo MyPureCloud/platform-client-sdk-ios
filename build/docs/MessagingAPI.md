@@ -1,30 +1,26 @@
----
-title: MessagingAPI
----
-## MessagingAPI
+# MessagingAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteMessagingSetting**](MessagingAPI.html#deleteMessagingSetting) | Delete a messaging setting |
-| [**deleteMessagingSettingsDefault**](MessagingAPI.html#deleteMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
-| [**deleteMessagingSupportedcontentSupportedContentId**](MessagingAPI.html#deleteMessagingSupportedcontentSupportedContentId) | Delete a supported content profile |
-| [**getMessagingSetting**](MessagingAPI.html#getMessagingSetting) | Get a messaging setting |
-| [**getMessagingSettings**](MessagingAPI.html#getMessagingSettings) | Get a list of messaging settings |
-| [**getMessagingSettingsDefault**](MessagingAPI.html#getMessagingSettingsDefault) | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
-| [**getMessagingSupportedcontent**](MessagingAPI.html#getMessagingSupportedcontent) | Get a list of Supported Content profiles |
-| [**getMessagingSupportedcontentSupportedContentId**](MessagingAPI.html#getMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
-| [**patchMessagingSetting**](MessagingAPI.html#patchMessagingSetting) | Update a messaging setting |
-| [**patchMessagingSupportedcontentSupportedContentId**](MessagingAPI.html#patchMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
-| [**postMessagingSettings**](MessagingAPI.html#postMessagingSettings) | Create a messaging setting |
-| [**postMessagingSupportedcontent**](MessagingAPI.html#postMessagingSupportedcontent) | Create a Supported Content profile |
-| [**putMessagingSettingsDefault**](MessagingAPI.html#putMessagingSettingsDefault) | Set the organization&#39;s default settings that may be applied to an integration when it is created. |
+| [**deleteMessagingSetting**](MessagingAPI#deleteMessagingSetting) | Delete a messaging setting |
+| [**deleteMessagingSettingsDefault**](MessagingAPI#deleteMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
+| [**deleteMessagingSupportedcontentSupportedContentId**](MessagingAPI#deleteMessagingSupportedcontentSupportedContentId) | Delete a supported content profile |
+| [**getMessagingSetting**](MessagingAPI#getMessagingSetting) | Get a messaging setting |
+| [**getMessagingSettings**](MessagingAPI#getMessagingSettings) | Get a list of messaging settings |
+| [**getMessagingSettingsDefault**](MessagingAPI#getMessagingSettingsDefault) | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
+| [**getMessagingSupportedcontent**](MessagingAPI#getMessagingSupportedcontent) | Get a list of Supported Content profiles |
+| [**getMessagingSupportedcontentSupportedContentId**](MessagingAPI#getMessagingSupportedcontentSupportedContentId) | Get a supported content profile |
+| [**patchMessagingSetting**](MessagingAPI#patchMessagingSetting) | Update a messaging setting |
+| [**patchMessagingSupportedcontentSupportedContentId**](MessagingAPI#patchMessagingSupportedcontentSupportedContentId) | Update a supported content profile |
+| [**postMessagingSettings**](MessagingAPI#postMessagingSettings) | Create a messaging setting |
+| [**postMessagingSupportedcontent**](MessagingAPI#postMessagingSupportedcontent) | Create a Supported Content profile |
+| [**putMessagingSettingsDefault**](MessagingAPI#putMessagingSettingsDefault) | Set the organization&#39;s default settings that may be applied to an integration when it is created. |
 {: class="table-striped"}
 
-<a name="deleteMessagingSetting"></a>
 
-# **deleteMessagingSetting**
+## deleteMessagingSetting
 
 
 
@@ -66,16 +62,14 @@ MessagingAPI.deleteMessagingSetting(messageSettingId: messageSettingId) { (error
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageSettingId** | **String**| Message Settings ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteMessagingSettingsDefault"></a>
 
-# **deleteMessagingSettingsDefault**
+## deleteMessagingSettingsDefault
 
 
 
@@ -117,14 +111,12 @@ MessagingAPI.deleteMessagingSettingsDefault() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteMessagingSupportedcontentSupportedContentId"></a>
 
-# **deleteMessagingSupportedcontentSupportedContentId**
+## deleteMessagingSupportedcontentSupportedContentId
 
 
 
@@ -168,20 +160,18 @@ MessagingAPI.deleteMessagingSupportedcontentSupportedContentId(supportedContentI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **supportedContentId** | **String**| Supported Content ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getMessagingSetting"></a>
 
-# **getMessagingSetting**
-
+## getMessagingSetting
 
 
-> [MessagingSetting](MessagingSetting.html) getMessagingSetting(messageSettingId)
+
+> [MessagingSetting](MessagingSetting) getMessagingSetting(messageSettingId)
 
 Get a messaging setting
 
@@ -220,20 +210,18 @@ MessagingAPI.getMessagingSetting(messageSettingId: messageSettingId) { (response
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageSettingId** | **String**| Message Settings ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
-
-<a name="getMessagingSettings"></a>
-
-# **getMessagingSettings**
+[**MessagingSetting**](MessagingSetting)
 
 
+## getMessagingSettings
 
-> [MessagingConfigListing](MessagingConfigListing.html) getMessagingSettings(pageSize, pageNumber)
+
+
+> [MessagingConfigListing](MessagingConfigListing) getMessagingSettings(pageSize, pageNumber)
 
 Get a list of messaging settings
 
@@ -274,20 +262,18 @@ MessagingAPI.getMessagingSettings(pageSize: pageSize, pageNumber: pageNumber) { 
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**MessagingConfigListing**](MessagingConfigListing.html)
-
-<a name="getMessagingSettingsDefault"></a>
-
-# **getMessagingSettingsDefault**
+[**MessagingConfigListing**](MessagingConfigListing)
 
 
+## getMessagingSettingsDefault
 
-> [MessagingSetting](MessagingSetting.html) getMessagingSettingsDefault()
+
+
+> [MessagingSetting](MessagingSetting) getMessagingSettingsDefault()
 
 Get the organization&#39;s default settings that will be used as the default when creating an integration.
 
@@ -326,18 +312,16 @@ MessagingAPI.getMessagingSettingsDefault() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
-
-<a name="getMessagingSupportedcontent"></a>
-
-# **getMessagingSupportedcontent**
+[**MessagingSetting**](MessagingSetting)
 
 
+## getMessagingSupportedcontent
 
-> [SupportedContentListing](SupportedContentListing.html) getMessagingSupportedcontent(pageSize, pageNumber)
+
+
+> [SupportedContentListing](SupportedContentListing) getMessagingSupportedcontent(pageSize, pageNumber)
 
 Get a list of Supported Content profiles
 
@@ -380,20 +364,18 @@ MessagingAPI.getMessagingSupportedcontent(pageSize: pageSize, pageNumber: pageNu
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SupportedContentListing**](SupportedContentListing.html)
-
-<a name="getMessagingSupportedcontentSupportedContentId"></a>
-
-# **getMessagingSupportedcontentSupportedContentId**
+[**SupportedContentListing**](SupportedContentListing)
 
 
+## getMessagingSupportedcontentSupportedContentId
 
-> [SupportedContent](SupportedContent.html) getMessagingSupportedcontentSupportedContentId(supportedContentId)
+
+
+> [SupportedContent](SupportedContent) getMessagingSupportedcontentSupportedContentId(supportedContentId)
 
 Get a supported content profile
 
@@ -434,20 +416,18 @@ MessagingAPI.getMessagingSupportedcontentSupportedContentId(supportedContentId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **supportedContentId** | **String**| Supported Content ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
-
-<a name="patchMessagingSetting"></a>
-
-# **patchMessagingSetting**
+[**SupportedContent**](SupportedContent)
 
 
+## patchMessagingSetting
 
-> [MessagingSetting](MessagingSetting.html) patchMessagingSetting(messageSettingId, body)
+
+
+> [MessagingSetting](MessagingSetting) patchMessagingSetting(messageSettingId, body)
 
 Update a messaging setting
 
@@ -487,21 +467,19 @@ MessagingAPI.patchMessagingSetting(messageSettingId: messageSettingId, body: bod
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **messageSettingId** | **String**| Message Settings ID | |
-| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting | |
-{: class="table-striped"}
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest)| MessagingSetting | |
 
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
-
-<a name="patchMessagingSupportedcontentSupportedContentId"></a>
-
-# **patchMessagingSupportedcontentSupportedContentId**
+[**MessagingSetting**](MessagingSetting)
 
 
+## patchMessagingSupportedcontentSupportedContentId
 
-> [SupportedContent](SupportedContent.html) patchMessagingSupportedcontentSupportedContentId(supportedContentId, body)
+
+
+> [SupportedContent](SupportedContent) patchMessagingSupportedcontentSupportedContentId(supportedContentId, body)
 
 Update a supported content profile
 
@@ -543,21 +521,19 @@ MessagingAPI.patchMessagingSupportedcontentSupportedContentId(supportedContentId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **supportedContentId** | **String**| Supported Content ID | |
-| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent | |
-{: class="table-striped"}
+| **body** | [**SupportedContent**](SupportedContent)| SupportedContent | |
 
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
-
-<a name="postMessagingSettings"></a>
-
-# **postMessagingSettings**
+[**SupportedContent**](SupportedContent)
 
 
+## postMessagingSettings
 
-> [MessagingSetting](MessagingSetting.html) postMessagingSettings(body)
+
+
+> [MessagingSetting](MessagingSetting) postMessagingSettings(body)
 
 Create a messaging setting
 
@@ -595,21 +571,19 @@ MessagingAPI.postMessagingSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**MessagingSettingRequest**](MessagingSettingRequest.html)| MessagingSetting | |
-{: class="table-striped"}
+| **body** | [**MessagingSettingRequest**](MessagingSettingRequest)| MessagingSetting | |
 
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
-
-<a name="postMessagingSupportedcontent"></a>
-
-# **postMessagingSupportedcontent**
+[**MessagingSetting**](MessagingSetting)
 
 
+## postMessagingSupportedcontent
 
-> [SupportedContent](SupportedContent.html) postMessagingSupportedcontent(body)
+
+
+> [SupportedContent](SupportedContent) postMessagingSupportedcontent(body)
 
 Create a Supported Content profile
 
@@ -649,21 +623,19 @@ MessagingAPI.postMessagingSupportedcontent(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SupportedContent**](SupportedContent.html)| SupportedContent | |
-{: class="table-striped"}
+| **body** | [**SupportedContent**](SupportedContent)| SupportedContent | |
 
 
 ### Return type
 
-[**SupportedContent**](SupportedContent.html)
-
-<a name="putMessagingSettingsDefault"></a>
-
-# **putMessagingSettingsDefault**
+[**SupportedContent**](SupportedContent)
 
 
+## putMessagingSettingsDefault
 
-> [MessagingSetting](MessagingSetting.html) putMessagingSettingsDefault(body)
+
+
+> [MessagingSetting](MessagingSetting) putMessagingSettingsDefault(body)
 
 Set the organization&#39;s default settings that may be applied to an integration when it is created.
 
@@ -703,11 +675,12 @@ MessagingAPI.putMessagingSettingsDefault(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest.html)| Messaging Setting ID | |
-{: class="table-striped"}
+| **body** | [**MessagingSettingDefaultRequest**](MessagingSettingDefaultRequest)| Messaging Setting ID | |
 
 
 ### Return type
 
-[**MessagingSetting**](MessagingSetting.html)
+[**MessagingSetting**](MessagingSetting)
 
+
+_PureCloudPlatformClientV2@151.1.0_

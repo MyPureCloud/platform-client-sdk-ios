@@ -1,18 +1,18 @@
----
-title: DictionaryFeedbackEntityListing
----
+# DictionaryFeedbackEntityListing
+
 ## DictionaryFeedbackEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ListedDictionaryFeedback]**](ListedDictionaryFeedback.html) |  | [optional] |
+| **entities** | [**[ListedDictionaryFeedback]**](ListedDictionaryFeedback) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 | **total** | **Int** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

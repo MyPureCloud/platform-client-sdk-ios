@@ -1,6 +1,5 @@
----
-title: MetadataDocumentation
----
+# MetadataDocumentation
+
 ## MetadataDocumentation
 Additional documentation about an artifact
 
@@ -10,6 +9,7 @@ Additional documentation about an artifact
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** | description of the documentation | [optional] |
 | **location** | **String** | location where the documentation can be accessed | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

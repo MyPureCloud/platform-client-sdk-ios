@@ -1,6 +1,5 @@
----
-title: Check
----
+# Check
+
 ## Check
 
 ## Properties
@@ -9,6 +8,7 @@ title: Check
 |------------ | ------------- | ------------- | -------------|
 | **result** | **String** | The result of a check executed. This indicates if the check was successful or not. | [optional] |
 | **type** | **String** | The type of check executed. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

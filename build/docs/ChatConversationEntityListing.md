@@ -1,13 +1,12 @@
----
-title: ChatConversationEntityListing
----
+# ChatConversationEntityListing
+
 ## ChatConversationEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ChatConversation]**](ChatConversation.html) |  | [optional] |
+| **entities** | [**[ChatConversation]**](ChatConversation) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: ChatConversationEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

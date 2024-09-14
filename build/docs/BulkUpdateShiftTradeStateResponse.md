@@ -1,6 +1,5 @@
----
-title: BulkUpdateShiftTradeStateResponse
----
+# BulkUpdateShiftTradeStateResponse
+
 ## BulkUpdateShiftTradeStateResponse
 
 ## Properties
@@ -9,7 +8,8 @@ title: BulkUpdateShiftTradeStateResponse
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** | The status of the operation | [optional] |
 | **operationId** | **String** | The ID for the operation | [optional] |
-| **result** | [**BulkUpdateShiftTradeStateResult**](BulkUpdateShiftTradeStateResult.html) | The result of the operation.  Null unless status &#x3D;&#x3D; Complete | [optional] |
-{: class="table table-striped"}
+| **result** | [**BulkUpdateShiftTradeStateResult**](BulkUpdateShiftTradeStateResult) | The result of the operation.  Null unless status &#x3D;&#x3D; Complete | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

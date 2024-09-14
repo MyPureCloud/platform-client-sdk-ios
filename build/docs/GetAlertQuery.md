@@ -1,6 +1,5 @@
----
-title: GetAlertQuery
----
+# GetAlertQuery
+
 ## GetAlertQuery
 
 ## Properties
@@ -15,6 +14,7 @@ title: GetAlertQuery
 | **pageSize** | **Int** | The number of entities to return of the queried response.  The max is 25 | [optional] |
 | **sortBy** | **String** | The field to sort responses by.  The accepted choices are Name and DateStart | [optional] |
 | **sortOrder** | **String** | The order in which response will be sorted.  The accepted choices are Asc and Desc | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

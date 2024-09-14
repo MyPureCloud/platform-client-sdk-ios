@@ -1,6 +1,5 @@
----
-title: PredictorModelFeature
----
+# PredictorModelFeature
+
 ## PredictorModelFeature
 
 ## Properties
@@ -10,6 +9,7 @@ title: PredictorModelFeature
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **type** | **String** | The type of feature. | [optional] |
 | **percentageImportance** | **Double** | The percentage of how important a feature is in the model. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

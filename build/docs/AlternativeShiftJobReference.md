@@ -1,6 +1,5 @@
----
-title: AlternativeShiftJobReference
----
+# AlternativeShiftJobReference
+
 ## AlternativeShiftJobReference
 
 ## Properties
@@ -11,6 +10,7 @@ title: AlternativeShiftJobReference
 | **status** | **String** | The status of the alternative shift job | |
 | **type** | **String** | The type of alternative shift asynchronous job | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

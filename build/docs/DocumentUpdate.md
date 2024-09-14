@@ -1,6 +1,5 @@
----
-title: DocumentUpdate
----
+# DocumentUpdate
+
 ## DocumentUpdate
 
 ## Properties
@@ -14,8 +13,9 @@ title: DocumentUpdate
 | **removeTags** | **[String]** |  | [optional] |
 | **addTagIds** | **[String]** |  | [optional] |
 | **removeTagIds** | **[String]** |  | [optional] |
-| **updateAttributes** | [**[DocumentAttribute]**](DocumentAttribute.html) |  | [optional] |
+| **updateAttributes** | [**[DocumentAttribute]**](DocumentAttribute) |  | [optional] |
 | **removeAttributes** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: MessengerHomeScreen
----
+# MessengerHomeScreen
+
 ## MessengerHomeScreen
 
 ## Properties
@@ -9,6 +8,7 @@ title: MessengerHomeScreen
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | whether or not homescreen is enabled | [optional] |
 | **logoUrl** | **String** | to capture uploaded company logoUrl | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

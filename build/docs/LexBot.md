@@ -1,6 +1,5 @@
----
-title: LexBot
----
+# LexBot
+
 ## LexBot
 
 ## Properties
@@ -11,6 +10,7 @@ title: LexBot
 | **name** | **String** |  | [optional] |
 | **_description** | **String** | A description of the Lex bot | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

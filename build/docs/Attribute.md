@@ -1,6 +1,5 @@
----
-title: Attribute
----
+# Attribute
+
 ## Attribute
 
 ## Properties
@@ -11,11 +10,12 @@ title: Attribute
 | **name** | **String** | The attribute name. | |
 | **version** | **Int** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-| **createdBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **modifiedBy** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **createdBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modifiedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

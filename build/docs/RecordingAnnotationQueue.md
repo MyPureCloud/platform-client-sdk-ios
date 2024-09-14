@@ -1,6 +1,5 @@
----
-title: RecordingAnnotationQueue
----
+# RecordingAnnotationQueue
+
 ## RecordingAnnotationQueue
 
 ## Properties
@@ -9,6 +8,7 @@ title: RecordingAnnotationQueue
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The queue name | |
 | **_id** | **String** | The queue Id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

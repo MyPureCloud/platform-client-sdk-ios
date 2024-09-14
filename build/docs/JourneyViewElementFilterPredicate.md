@@ -1,6 +1,5 @@
----
-title: JourneyViewElementFilterPredicate
----
+# JourneyViewElementFilterPredicate
+
 ## JourneyViewElementFilterPredicate
 A filter on an element within a journey view
 
@@ -12,6 +11,7 @@ A filter on an element within a journey view
 | **values** | **[String]** | the values of the attribute to filter on | |
 | **_operator** | **String** | Optional operator, default is Matches. Valid values: Matches | [optional] |
 | **noValue** | **Bool** | set this to true if no specific value to be considered | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

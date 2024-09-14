@@ -1,13 +1,13 @@
----
-title: PatchBuReschedulingOptionsRequest
----
+# PatchBuReschedulingOptionsRequest
+
 ## PatchBuReschedulingOptionsRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **managementUnits** | [**[PatchBuReschedulingOptionsManagementUnitRequest]**](PatchBuReschedulingOptionsManagementUnitRequest.html) | Per-management unit rescheduling options to update | [optional] |
-{: class="table table-striped"}
+| **managementUnits** | [**[PatchBuReschedulingOptionsManagementUnitRequest]**](PatchBuReschedulingOptionsManagementUnitRequest) | Per-management unit rescheduling options to update | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TranscriptionTopicTranscriptWord
----
+# TranscriptionTopicTranscriptWord
+
 ## TranscriptionTopicTranscriptWord
 
 ## Properties
@@ -12,6 +11,7 @@ title: TranscriptionTopicTranscriptWord
 | **offsetMs** | **Int** |  | [optional] |
 | **durationMs** | **Int** |  | [optional] |
 | **word** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

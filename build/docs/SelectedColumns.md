@@ -1,6 +1,5 @@
----
-title: SelectedColumns
----
+# SelectedColumns
+
 ## SelectedColumns
 
 ## Properties
@@ -9,6 +8,7 @@ title: SelectedColumns
 |------------ | ------------- | ------------- | -------------|
 | **columnOrder** | **Int** | Indicates the order/position of the selected column | [optional] |
 | **columnName** | **String** | Indicates enum name of the column from the export view | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

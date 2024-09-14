@@ -1,13 +1,12 @@
----
-title: CommandStatusEntityListing
----
+# CommandStatusEntityListing
+
 ## CommandStatusEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CommandStatus]**](CommandStatus.html) |  | [optional] |
+| **entities** | [**[CommandStatus]**](CommandStatus) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CommandStatusEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

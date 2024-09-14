@@ -1,6 +1,5 @@
----
-title: DataSchemaListing
----
+# DataSchemaListing
+
 ## DataSchemaListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: DataSchemaListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[DataSchema]**](DataSchema.html) |  | [optional] |
+| **entities** | [**[DataSchema]**](DataSchema) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

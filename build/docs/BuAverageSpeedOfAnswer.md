@@ -1,6 +1,5 @@
----
-title: BuAverageSpeedOfAnswer
----
+# BuAverageSpeedOfAnswer
+
 ## BuAverageSpeedOfAnswer
 
 ## Properties
@@ -9,6 +8,7 @@ title: BuAverageSpeedOfAnswer
 |------------ | ------------- | ------------- | -------------|
 | **include** | **Bool** | Whether to include average speed of answer (ASA) in the associated configuration | |
 | **seconds** | **Int** | The target average speed of answer (ASA) in seconds. Required if include &#x3D;&#x3D; true | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

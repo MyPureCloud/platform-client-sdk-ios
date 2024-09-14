@@ -1,6 +1,5 @@
----
-title: WebChatDeploymentEntityListing
----
+# WebChatDeploymentEntityListing
+
 ## WebChatDeploymentEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: WebChatDeploymentEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[WebChatDeployment]**](WebChatDeployment.html) |  | [optional] |
+| **entities** | [**[WebChatDeployment]**](WebChatDeployment) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

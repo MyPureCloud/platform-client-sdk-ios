@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults
----
+# WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults
+
 ## WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults
 
 ## Properties
@@ -9,7 +8,8 @@ title: WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecast
 |------------ | ------------- | ------------- | -------------|
 | **weekNumber** | **Int** |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
-| **downloadUrlExpirationDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **downloadUrlExpirationDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

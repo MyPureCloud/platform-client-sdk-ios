@@ -1,6 +1,5 @@
----
-title: BulkErrorNote
----
+# BulkErrorNote
+
 ## BulkErrorNote
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorNote
 | **message** | **String** |  | [optional] |
 | **status** | **Int** |  | [optional] |
 | **retryable** | **Bool** |  | [optional] |
-| **entity** | [**Note**](Note.html) |  | [optional] |
-| **details** | [**[BulkErrorDetail]**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**Note**](Note) |  | [optional] |
+| **details** | [**[BulkErrorDetail]**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

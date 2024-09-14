@@ -1,31 +1,27 @@
----
-title: GroupsAPI
----
-## GroupsAPI
+# GroupsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteGroup**](GroupsAPI.html#deleteGroup) | Delete group |
-| [**deleteGroupMembers**](GroupsAPI.html#deleteGroupMembers) | Remove members |
-| [**getFieldconfig**](GroupsAPI.html#getFieldconfig) | Fetch field config for an entity type |
-| [**getGroup**](GroupsAPI.html#getGroup) | Get group |
-| [**getGroupIndividuals**](GroupsAPI.html#getGroupIndividuals) | Get all individuals associated with the group |
-| [**getGroupMembers**](GroupsAPI.html#getGroupMembers) | Get group members, includes individuals, owners, and dynamically included people |
-| [**getGroupProfile**](GroupsAPI.html#getGroupProfile) | Get group profile |
-| [**getGroups**](GroupsAPI.html#getGroups) | Get a group list |
-| [**getGroupsSearch**](GroupsAPI.html#getGroupsSearch) | Search groups using the q64 value returned from a previous search |
-| [**getProfilesGroups**](GroupsAPI.html#getProfilesGroups) | Get group profile listing |
-| [**postGroupMembers**](GroupsAPI.html#postGroupMembers) | Add members |
-| [**postGroups**](GroupsAPI.html#postGroups) | Create a group |
-| [**postGroupsSearch**](GroupsAPI.html#postGroupsSearch) | Search groups |
-| [**putGroup**](GroupsAPI.html#putGroup) | Update group |
+| [**deleteGroup**](GroupsAPI#deleteGroup) | Delete group |
+| [**deleteGroupMembers**](GroupsAPI#deleteGroupMembers) | Remove members |
+| [**getFieldconfig**](GroupsAPI#getFieldconfig) | Fetch field config for an entity type |
+| [**getGroup**](GroupsAPI#getGroup) | Get group |
+| [**getGroupIndividuals**](GroupsAPI#getGroupIndividuals) | Get all individuals associated with the group |
+| [**getGroupMembers**](GroupsAPI#getGroupMembers) | Get group members, includes individuals, owners, and dynamically included people |
+| [**getGroupProfile**](GroupsAPI#getGroupProfile) | Get group profile |
+| [**getGroups**](GroupsAPI#getGroups) | Get a group list |
+| [**getGroupsSearch**](GroupsAPI#getGroupsSearch) | Search groups using the q64 value returned from a previous search |
+| [**getProfilesGroups**](GroupsAPI#getProfilesGroups) | Get group profile listing |
+| [**postGroupMembers**](GroupsAPI#postGroupMembers) | Add members |
+| [**postGroups**](GroupsAPI#postGroups) | Create a group |
+| [**postGroupsSearch**](GroupsAPI#postGroupsSearch) | Search groups |
+| [**putGroup**](GroupsAPI#putGroup) | Update group |
 {: class="table-striped"}
 
-<a name="deleteGroup"></a>
 
-# **deleteGroup**
+## deleteGroup
 
 
 
@@ -67,20 +63,18 @@ GroupsAPI.deleteGroup(groupId: groupId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteGroupMembers"></a>
 
-# **deleteGroupMembers**
-
+## deleteGroupMembers
 
 
-> [JSON](JSON.html) deleteGroupMembers(groupId, ids)
+
+> [JSON](JSON) deleteGroupMembers(groupId, ids)
 
 Remove members
 
@@ -120,20 +114,18 @@ GroupsAPI.deleteGroupMembers(groupId: groupId, ids: ids) { (response, error) in
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
 | **ids** | **String**| Comma separated list of userIds to remove | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="getFieldconfig"></a>
-
-# **getFieldconfig**
+[**JSON**](JSON)
 
 
+## getFieldconfig
 
-> [FieldConfig](FieldConfig.html) getFieldconfig(type)
+
+
+> [FieldConfig](FieldConfig) getFieldconfig(type)
 
 Fetch field config for an entity type
 
@@ -171,20 +163,18 @@ GroupsAPI.getFieldconfig(type: type) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **type** | **String**| Field type |<br />**Values**: person ("person"), group ("group"), org ("org") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**FieldConfig**](FieldConfig.html)
-
-<a name="getGroup"></a>
-
-# **getGroup**
+[**FieldConfig**](FieldConfig)
 
 
+## getGroup
 
-> [Group](Group.html) getGroup(groupId)
+
+
+> [Group](Group) getGroup(groupId)
 
 Get group
 
@@ -222,20 +212,18 @@ GroupsAPI.getGroup(groupId: groupId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Group**](Group.html)
-
-<a name="getGroupIndividuals"></a>
-
-# **getGroupIndividuals**
+[**Group**](Group)
 
 
+## getGroupIndividuals
 
-> [UserEntityListing](UserEntityListing.html) getGroupIndividuals(groupId)
+
+
+> [UserEntityListing](UserEntityListing) getGroupIndividuals(groupId)
 
 Get all individuals associated with the group
 
@@ -273,20 +261,18 @@ GroupsAPI.getGroupIndividuals(groupId: groupId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UserEntityListing**](UserEntityListing.html)
-
-<a name="getGroupMembers"></a>
-
-# **getGroupMembers**
+[**UserEntityListing**](UserEntityListing)
 
 
+## getGroupMembers
 
-> [UserEntityListing](UserEntityListing.html) getGroupMembers(groupId, pageSize, pageNumber, sortOrder, expand)
+
+
+> [UserEntityListing](UserEntityListing) getGroupMembers(groupId, pageSize, pageNumber, sortOrder, expand)
 
 Get group members, includes individuals, owners, and dynamically included people
 
@@ -331,21 +317,19 @@ GroupsAPI.getGroupMembers(groupId: groupId, pageSize: pageSize, pageNumber: page
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin") |
 
 
 ### Return type
 
-[**UserEntityListing**](UserEntityListing.html)
-
-<a name="getGroupProfile"></a>
-
-# **getGroupProfile**
+[**UserEntityListing**](UserEntityListing)
 
 
+## getGroupProfile
 
-> [GroupProfile](GroupProfile.html) getGroupProfile(groupId, fields)
+
+
+> [GroupProfile](GroupProfile) getGroupProfile(groupId, fields)
 
 Get group profile
 
@@ -387,20 +371,18 @@ GroupsAPI.getGroupProfile(groupId: groupId, fields: fields) { (response, error) 
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| groupId | |
 | **fields** | **String**| Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GroupProfile**](GroupProfile.html)
-
-<a name="getGroups"></a>
-
-# **getGroups**
+[**GroupProfile**](GroupProfile)
 
 
+## getGroups
 
-> [GroupEntityListing](GroupEntityListing.html) getGroups(pageSize, pageNumber, _id, jabberId, sortOrder)
+
+
+> [GroupEntityListing](GroupEntityListing) getGroups(pageSize, pageNumber, _id, jabberId, sortOrder)
 
 Get a group list
 
@@ -443,23 +425,21 @@ GroupsAPI.getGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabber
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **_id** | [**[String]**](String.html)| id | [optional] |
-| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
+| **_id** | [**[String]**](String)| id | [optional] |
+| **jabberId** | [**[String]**](String)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GroupEntityListing**](GroupEntityListing.html)
-
-<a name="getGroupsSearch"></a>
-
-# **getGroupsSearch**
+[**GroupEntityListing**](GroupEntityListing)
 
 
+## getGroupsSearch
 
-> [GroupsSearchResponse](GroupsSearchResponse.html) getGroupsSearch(q64, expand)
+
+
+> [GroupsSearchResponse](GroupsSearchResponse) getGroupsSearch(q64, expand)
 
 Search groups using the q64 value returned from a previous search
 
@@ -498,21 +478,19 @@ GroupsAPI.getGroupsSearch(q64: q64, expand: expand) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **q64** | **String**| q64 | |
-| **expand** | [**[String]**](String.html)| expand | [optional] |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| expand | [optional] |
 
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.html)
-
-<a name="getProfilesGroups"></a>
-
-# **getProfilesGroups**
+[**GroupsSearchResponse**](GroupsSearchResponse)
 
 
+## getProfilesGroups
 
-> [GroupProfileEntityListing](GroupProfileEntityListing.html) getProfilesGroups(pageSize, pageNumber, _id, jabberId, sortOrder)
+
+
+> [GroupProfileEntityListing](GroupProfileEntityListing) getProfilesGroups(pageSize, pageNumber, _id, jabberId, sortOrder)
 
 Get group profile listing
 
@@ -557,23 +535,21 @@ GroupsAPI.getProfilesGroups(pageSize: pageSize, pageNumber: pageNumber, _id: _id
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **_id** | [**[String]**](String.html)| id | [optional] |
-| **jabberId** | [**[String]**](String.html)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
+| **_id** | [**[String]**](String)| id | [optional] |
+| **jabberId** | [**[String]**](String)| A list of jabberIds to fetch by bulk (cannot be used with the \"id\" parameter) | [optional] |
 | **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GroupProfileEntityListing**](GroupProfileEntityListing.html)
-
-<a name="postGroupMembers"></a>
-
-# **postGroupMembers**
+[**GroupProfileEntityListing**](GroupProfileEntityListing)
 
 
+## postGroupMembers
 
-> [JSON](JSON.html) postGroupMembers(groupId, body)
+
+
+> [JSON](JSON) postGroupMembers(groupId, body)
 
 Add members
 
@@ -612,21 +588,19 @@ GroupsAPI.postGroupMembers(groupId: groupId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-| **body** | [**GroupMembersUpdate**](GroupMembersUpdate.html)| Add members | |
-{: class="table-striped"}
+| **body** | [**GroupMembersUpdate**](GroupMembersUpdate)| Add members | |
 
 
 ### Return type
 
-[**JSON**](JSON.html)
-
-<a name="postGroups"></a>
-
-# **postGroups**
+[**JSON**](JSON)
 
 
+## postGroups
 
-> [Group](Group.html) postGroups(body)
+
+
+> [Group](Group) postGroups(body)
 
 Create a group
 
@@ -664,21 +638,19 @@ GroupsAPI.postGroups(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**GroupCreate**](GroupCreate.html)| Group | |
-{: class="table-striped"}
+| **body** | [**GroupCreate**](GroupCreate)| Group | |
 
 
 ### Return type
 
-[**Group**](Group.html)
-
-<a name="postGroupsSearch"></a>
-
-# **postGroupsSearch**
+[**Group**](Group)
 
 
+## postGroupsSearch
 
-> [GroupsSearchResponse](GroupsSearchResponse.html) postGroupsSearch(body)
+
+
+> [GroupsSearchResponse](GroupsSearchResponse) postGroupsSearch(body)
 
 Search groups
 
@@ -715,21 +687,19 @@ GroupsAPI.postGroupsSearch(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**GroupSearchRequest**](GroupSearchRequest.html)| Search request options | |
-{: class="table-striped"}
+| **body** | [**GroupSearchRequest**](GroupSearchRequest)| Search request options | |
 
 
 ### Return type
 
-[**GroupsSearchResponse**](GroupsSearchResponse.html)
-
-<a name="putGroup"></a>
-
-# **putGroup**
+[**GroupsSearchResponse**](GroupsSearchResponse)
 
 
+## putGroup
 
-> [Group](Group.html) putGroup(groupId, body)
+
+
+> [Group](Group) putGroup(groupId, body)
 
 Update group
 
@@ -769,11 +739,12 @@ GroupsAPI.putGroup(groupId: groupId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-| **body** | [**GroupUpdate**](GroupUpdate.html)| Group | [optional] |
-{: class="table-striped"}
+| **body** | [**GroupUpdate**](GroupUpdate)| Group | [optional] |
 
 
 ### Return type
 
-[**Group**](Group.html)
+[**Group**](Group)
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SupportCenterDetailedCategoryModuleTemplate
----
+# SupportCenterDetailedCategoryModuleTemplate
+
 ## SupportCenterDetailedCategoryModuleTemplate
 
 ## Properties
@@ -8,7 +7,8 @@ title: SupportCenterDetailedCategoryModuleTemplate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **active** | **Bool** | Whether this template is active or not | |
-| **sidebar** | [**SupportCenterDetailedCategoryModuleSidebar**](SupportCenterDetailedCategoryModuleSidebar.html) | Sidebar settings for the template | |
-{: class="table table-striped"}
+| **sidebar** | [**SupportCenterDetailedCategoryModuleSidebar**](SupportCenterDetailedCategoryModuleSidebar) | Sidebar settings for the template | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CreateBusinessUnitSettingsRequest
----
+# CreateBusinessUnitSettingsRequest
+
 ## CreateBusinessUnitSettingsRequest
 
 ## Properties
@@ -9,8 +8,9 @@ title: CreateBusinessUnitSettingsRequest
 |------------ | ------------- | ------------- | -------------|
 | **startDayOfWeek** | **String** | The start day of week for this business unit | |
 | **timeZone** | **String** | The time zone for this business unit, using the Olsen tz database format | |
-| **shortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings.html) | Short term forecasting settings | [optional] |
-| **scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest.html) | Scheduling settings | [optional] |
-{: class="table table-striped"}
+| **shortTermForecasting** | [**BuShortTermForecastingSettings**](BuShortTermForecastingSettings) | Short term forecasting settings | [optional] |
+| **scheduling** | [**BuSchedulingSettingsRequest**](BuSchedulingSettingsRequest) | Scheduling settings | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

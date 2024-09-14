@@ -1,6 +1,5 @@
----
-title: FlowHealthIntentUtterance
----
+# FlowHealthIntentUtterance
+
 ## FlowHealthIntentUtterance
 
 ## Properties
@@ -11,8 +10,9 @@ title: FlowHealthIntentUtterance
 | **text** | **String** | Utterance Text. | [optional] |
 | **issueCount** | **Int64** | Number of issues found for this utterance. | [optional] |
 | **staticValidationResults** | **[String]** | Validation results for this utterance. | [optional] |
-| **outlierInfo** | [**OutlierInfo**](OutlierInfo.html) | Details about this utterance being an outlier or not. | [optional] |
-| **confusionInfo** | [**ConfusionInfo**](ConfusionInfo.html) | Confusion details with other utterances. | [optional] |
-{: class="table table-striped"}
+| **outlierInfo** | [**OutlierInfo**](OutlierInfo) | Details about this utterance being an outlier or not. | [optional] |
+| **confusionInfo** | [**ConfusionInfo**](ConfusionInfo) | Confusion details with other utterances. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

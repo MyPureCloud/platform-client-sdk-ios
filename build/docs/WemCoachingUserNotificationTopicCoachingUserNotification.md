@@ -1,6 +1,5 @@
----
-title: WemCoachingUserNotificationTopicCoachingUserNotification
----
+# WemCoachingUserNotificationTopicCoachingUserNotification
+
 ## WemCoachingUserNotificationTopicCoachingUserNotification
 
 ## Properties
@@ -12,10 +11,11 @@ title: WemCoachingUserNotificationTopicCoachingUserNotification
 | **markedAsRead** | **Bool** |  | [optional] |
 | **actionType** | **String** |  | [optional] |
 | **relationship** | **String** |  | [optional] |
-| **appointment** | [**WemCoachingUserNotificationTopicCoachingAppointmentReference**](WemCoachingUserNotificationTopicCoachingAppointmentReference.html) |  | [optional] |
-| **dateStart** | [**Date**](Date.html) |  | [optional] |
+| **appointment** | [**WemCoachingUserNotificationTopicCoachingAppointmentReference**](WemCoachingUserNotificationTopicCoachingAppointmentReference) |  | [optional] |
+| **dateStart** | [**Date**](Date) |  | [optional] |
 | **lengthInMinutes** | **Int** |  | [optional] |
 | **status** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

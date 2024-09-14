@@ -1,6 +1,5 @@
----
-title: EmailConfig
----
+# EmailConfig
+
 ## EmailConfig
 
 ## Properties
@@ -8,9 +7,10 @@ title: EmailConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **emailColumns** | **[String]** | The contact list columns specifying the email address(es) of the contact. | |
-| **contentTemplate** | [**DomainEntityRef**](DomainEntityRef.html) | The content template used to formulate the email to send to the contact. | [optional] |
-| **fromAddress** | [**FromEmailAddress**](FromEmailAddress.html) | The email address that will be used as the sender of the email. | |
-| **replyToAddress** | [**ReplyToEmailAddress**](ReplyToEmailAddress.html) | The email address from which any reply will be sent. | [optional] |
-{: class="table table-striped"}
+| **contentTemplate** | [**DomainEntityRef**](DomainEntityRef) | The content template used to formulate the email to send to the contact. | [optional] |
+| **fromAddress** | [**FromEmailAddress**](FromEmailAddress) | The email address that will be used as the sender of the email. | |
+| **replyToAddress** | [**ReplyToEmailAddress**](ReplyToEmailAddress) | The email address from which any reply will be sent. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

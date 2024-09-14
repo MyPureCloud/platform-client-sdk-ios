@@ -1,14 +1,14 @@
----
-title: FlowActivityResponse
----
+# FlowActivityResponse
+
 ## FlowActivityResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[FlowActivityData]**](FlowActivityData.html) | Query results | [optional] |
+| **results** | [**[FlowActivityData]**](FlowActivityData) | Query results | [optional] |
 | **entityIdDimension** | **String** | Dimension that is used as an entityId | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationCallbackEventTopicCallbackConversation
----
+# ConversationCallbackEventTopicCallbackConversation
+
 ## ConversationCallbackEventTopicCallbackConversation
 
 ## Properties
@@ -9,10 +8,11 @@ title: ConversationCallbackEventTopicCallbackConversation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationCallbackEventTopicCallbackMediaParticipant]**](ConversationCallbackEventTopicCallbackMediaParticipant.html) |  | [optional] |
+| **participants** | [**[ConversationCallbackEventTopicCallbackMediaParticipant]**](ConversationCallbackEventTopicCallbackMediaParticipant) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

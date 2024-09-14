@@ -1,6 +1,5 @@
----
-title: ResponseAssetStatus
----
+# ResponseAssetStatus
+
 ## ResponseAssetStatus
 
 ## Properties
@@ -11,6 +10,7 @@ title: ResponseAssetStatus
 | **status** | **String** | Upload status of the asset | [optional] |
 | **errorCode** | **String** | Error code. Used for localization | [optional] |
 | **errorMessage** | **String** | Error message that explains upload failure status  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

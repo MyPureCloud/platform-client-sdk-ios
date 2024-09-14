@@ -1,6 +1,5 @@
----
-title: BulkErrorRelationship
----
+# BulkErrorRelationship
+
 ## BulkErrorRelationship
 
 ## Properties
@@ -11,8 +10,9 @@ title: BulkErrorRelationship
 | **message** | **String** |  | [optional] |
 | **status** | **Int** |  | [optional] |
 | **retryable** | **Bool** |  | [optional] |
-| **entity** | [**Relationship**](Relationship.html) |  | [optional] |
-| **details** | [**[BulkErrorDetail]**](BulkErrorDetail.html) |  | [optional] |
-{: class="table table-striped"}
+| **entity** | [**Relationship**](Relationship) |  | [optional] |
+| **details** | [**[BulkErrorDetail]**](BulkErrorDetail) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PatchActionProperties
----
+# PatchActionProperties
+
 ## PatchActionProperties
 
 ## Properties
@@ -11,7 +10,8 @@ title: PatchActionProperties
 | **webchatTitleText** | **String** | Title shown to the user, used for webchat type action. | [optional] |
 | **webchatAcceptText** | **String** | Accept button text shown to user, used for webchat type action. | [optional] |
 | **webchatDeclineText** | **String** | Decline button text shown to user, used for webchat type action. | [optional] |
-| **webchatSurvey** | [**PatchActionSurvey**](PatchActionSurvey.html) | Survey provided to the user, used for webchat type action. | [optional] |
-{: class="table table-striped"}
+| **webchatSurvey** | [**PatchActionSurvey**](PatchActionSurvey) | Survey provided to the user, used for webchat type action. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

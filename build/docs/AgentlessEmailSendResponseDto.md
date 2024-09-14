@@ -1,6 +1,5 @@
----
-title: AgentlessEmailSendResponseDto
----
+# AgentlessEmailSendResponseDto
+
 ## AgentlessEmailSendResponseDto
 
 ## Properties
@@ -10,12 +9,13 @@ title: AgentlessEmailSendResponseDto
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **conversationId** | **String** | The identifier of the conversation. | |
 | **senderType** | **String** | The identifier of the external participant of the given conversation. | |
-| **fromAddress** | [**EmailAddress**](EmailAddress.html) | The sender of the message. | |
-| **toAddresses** | [**[EmailAddress]**](EmailAddress.html) | The recipient of the message. We currently support one recipient only. | |
-| **replyToAddress** | [**EmailAddress**](EmailAddress.html) | The address to use for reply. | [optional] |
+| **fromAddress** | [**EmailAddress**](EmailAddress) | The sender of the message. | |
+| **toAddresses** | [**[EmailAddress]**](EmailAddress) | The recipient of the message. We currently support one recipient only. | |
+| **replyToAddress** | [**EmailAddress**](EmailAddress) | The address to use for reply. | [optional] |
 | **subject** | **String** | The subject of the message. | [optional] |
-| **dateCreated** | [**Date**](Date.html) | The message creation timestamp. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **dateCreated** | [**Date**](Date) | The message creation timestamp. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

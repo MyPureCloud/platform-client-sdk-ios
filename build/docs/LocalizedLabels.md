@@ -1,6 +1,5 @@
----
-title: LocalizedLabels
----
+# LocalizedLabels
+
 ## LocalizedLabels
 Contains localized labels used in messenger apps
 
@@ -10,6 +9,7 @@ Contains localized labels used in messenger apps
 |------------ | ------------- | ------------- | -------------|
 | **key** | **String** | Contains localized label key used in messenger homescreen | [optional] |
 | **value** | **String** | Contains localized label value used in messenger homescreen | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

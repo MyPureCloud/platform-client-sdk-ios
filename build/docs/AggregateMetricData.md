@@ -1,6 +1,5 @@
----
-title: AggregateMetricData
----
+# AggregateMetricData
+
 ## AggregateMetricData
 
 ## Properties
@@ -9,7 +8,8 @@ title: AggregateMetricData
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** |  | [optional] |
 | **qualifier** | **String** |  | [optional] |
-| **stats** | [**StatisticalSummary**](StatisticalSummary.html) |  | [optional] |
-{: class="table table-striped"}
+| **stats** | [**StatisticalSummary**](StatisticalSummary) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

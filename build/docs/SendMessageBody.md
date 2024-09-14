@@ -1,6 +1,5 @@
----
-title: SendMessageBody
----
+# SendMessageBody
+
 ## SendMessageBody
 
 ## Properties
@@ -10,6 +9,7 @@ title: SendMessageBody
 | **message** | **String** | The body of the message | |
 | **mentions** | **[String]** | user ids to be notified | [optional] |
 | **threadId** | **String** | The thread id of the message | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

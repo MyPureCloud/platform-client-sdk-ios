@@ -1,6 +1,5 @@
----
-title: DocumentBodyTableProperties
----
+# DocumentBodyTableProperties
+
 ## DocumentBodyTableProperties
 
 ## Properties
@@ -16,7 +15,8 @@ title: DocumentBodyTableProperties
 | **borderStyle** | **String** | The border style for the table. | [optional] |
 | **borderColor** | **String** | The border color for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 | **backgroundColor** | **String** | The background color for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
-| **caption** | [**DocumentBodyTableCaptionBlock**](DocumentBodyTableCaptionBlock.html) | The caption for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
-{: class="table table-striped"}
+| **caption** | [**DocumentBodyTableCaptionBlock**](DocumentBodyTableCaptionBlock) | The caption for the table. The valid values in hex color code representation. For example black color - #000000 | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WidgetClientConfigV1Http
----
+# WidgetClientConfigV1Http
+
 ## WidgetClientConfigV1Http
 
 ## Properties
@@ -9,6 +8,7 @@ title: WidgetClientConfigV1Http
 |------------ | ------------- | ------------- | -------------|
 | **webChatSkin** | **String** |  | [optional] |
 | **authenticationUrl** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

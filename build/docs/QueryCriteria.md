@@ -1,6 +1,5 @@
----
-title: QueryCriteria
----
+# QueryCriteria
+
 ## QueryCriteria
 A criteria type that can be used in tandem with other criteria type to create queries of executionData
 
@@ -13,7 +12,8 @@ A criteria type that can be used in tandem with other criteria type to create qu
 | **_description** | **String** | The is the description of the criteria. | [optional] |
 | **operators** | **[String]** | A list of operators that can be used on this criteria. | [optional] |
 | **dataType** | **String** | The type of data for the criteria (string, int, etc). | [optional] |
-| **categoryInfo** | [**CriteriaCategoryInfo**](CriteriaCategoryInfo.html) | A logical grouping and display order for this item. | [optional] |
-{: class="table table-striped"}
+| **categoryInfo** | [**CriteriaCategoryInfo**](CriteriaCategoryInfo) | A logical grouping and display order for this item. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

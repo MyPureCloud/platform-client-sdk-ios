@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeTouchpoint
----
+# JourneyOutcomeEventsNotificationOutcomeTouchpoint
+
 ## JourneyOutcomeEventsNotificationOutcomeTouchpoint
 
 ## Properties
@@ -8,9 +7,10 @@ title: JourneyOutcomeEventsNotificationOutcomeTouchpoint
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **channels** | [**[JourneyOutcomeEventsNotificationOutcomeTouchpointChannel]**](JourneyOutcomeEventsNotificationOutcomeTouchpointChannel.html) |  | [optional] |
-| **createdDate** | [**Date**](Date.html) |  | [optional] |
-| **actionMap** | [**JourneyOutcomeEventsNotificationActionMap**](JourneyOutcomeEventsNotificationActionMap.html) |  | [optional] |
-{: class="table table-striped"}
+| **channels** | [**[JourneyOutcomeEventsNotificationOutcomeTouchpointChannel]**](JourneyOutcomeEventsNotificationOutcomeTouchpointChannel) |  | [optional] |
+| **createdDate** | [**Date**](Date) |  | [optional] |
+| **actionMap** | [**JourneyOutcomeEventsNotificationActionMap**](JourneyOutcomeEventsNotificationActionMap) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

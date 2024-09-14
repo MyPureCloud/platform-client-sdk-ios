@@ -1,13 +1,13 @@
----
-title: WorkdayMetricListing
----
+# WorkdayMetricListing
+
 ## WorkdayMetricListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WorkdayMetric]**](WorkdayMetric.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[WorkdayMetric]**](WorkdayMetric) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

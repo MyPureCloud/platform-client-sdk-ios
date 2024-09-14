@@ -1,6 +1,5 @@
----
-title: ReplaceResponse
----
+# ReplaceResponse
+
 ## ReplaceResponse
 
 ## Properties
@@ -10,9 +9,10 @@ title: ReplaceResponse
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **changeNumber** | **Int** |  | [optional] |
-| **uploadStatus** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **uploadStatus** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **uploadDestinationUri** | **String** |  | [optional] |
 | **uploadMethod** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

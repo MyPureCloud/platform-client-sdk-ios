@@ -1,6 +1,5 @@
----
-title: TranscriptionSettings
----
+# TranscriptionSettings
+
 ## TranscriptionSettings
 
 ## Properties
@@ -13,6 +12,7 @@ title: TranscriptionSettings
 | **contentSearchEnabled** | **Bool** | Setting to enable/disable content search | [optional] |
 | **pciDssRedactionEnabled** | **Bool** | Setting to enable/disable PCI DSS Redaction | [optional] |
 | **piiRedactionEnabled** | **Bool** | Setting to enable/disable PII Redaction | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

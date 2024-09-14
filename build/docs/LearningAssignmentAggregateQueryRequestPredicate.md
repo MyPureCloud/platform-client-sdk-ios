@@ -1,6 +1,5 @@
----
-title: LearningAssignmentAggregateQueryRequestPredicate
----
+# LearningAssignmentAggregateQueryRequestPredicate
+
 ## LearningAssignmentAggregateQueryRequestPredicate
 
 ## Properties
@@ -9,6 +8,7 @@ title: LearningAssignmentAggregateQueryRequestPredicate
 |------------ | ------------- | ------------- | -------------|
 | **dimension** | **String** | Each predicates specifies a dimension. | |
 | **value** | **String** | Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational (deprecated), AssessedContent (deprecated), Assessment (deprecated), External, Native | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

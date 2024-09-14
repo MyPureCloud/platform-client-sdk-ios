@@ -1,6 +1,5 @@
----
-title: WebDeploymentHeadlessMode
----
+# WebDeploymentHeadlessMode
+
 ## WebDeploymentHeadlessMode
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebDeploymentHeadlessMode
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Whether or not Headless Mode is enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

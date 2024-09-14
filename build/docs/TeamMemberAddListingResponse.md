@@ -1,14 +1,14 @@
----
-title: TeamMemberAddListingResponse
----
+# TeamMemberAddListingResponse
+
 ## TeamMemberAddListingResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserReference]**](UserReference.html) |  | [optional] |
-| **failures** | [**[TeamAddMemberFailure]**](TeamAddMemberFailure.html) | List of any user ids that were not added. | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[UserReference]**](UserReference) |  | [optional] |
+| **failures** | [**[TeamAddMemberFailure]**](TeamAddMemberFailure) | List of any user ids that were not added. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

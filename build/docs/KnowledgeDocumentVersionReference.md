@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentVersionReference
----
+# KnowledgeDocumentVersionReference
+
 ## KnowledgeDocumentVersionReference
 
 ## Properties
@@ -8,9 +7,10 @@ title: KnowledgeDocumentVersionReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the document. | [optional] |
-| **knowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference.html) | The knowledge base that the document belongs to. | |
+| **knowledgeBase** | [**KnowledgeBaseReference**](KnowledgeBaseReference) | The knowledge base that the document belongs to. | |
 | **versionId** | **String** | The globally unique identifier for the version of the document. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SourcePlanningGroupRequest
----
+# SourcePlanningGroupRequest
+
 ## SourcePlanningGroupRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: SourcePlanningGroupRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the planning group | |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the planning group | |
-{: class="table table-striped"}
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the planning group | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

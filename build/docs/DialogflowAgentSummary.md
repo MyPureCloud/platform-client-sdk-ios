@@ -1,6 +1,5 @@
----
-title: DialogflowAgentSummary
----
+# DialogflowAgentSummary
+
 ## DialogflowAgentSummary
 
 ## Properties
@@ -9,10 +8,11 @@ title: DialogflowAgentSummary
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **project** | [**DialogflowProject**](DialogflowProject.html) | The project this Dialogflow agent belongs to. | [optional] |
+| **project** | [**DialogflowProject**](DialogflowProject) | The project this Dialogflow agent belongs to. | [optional] |
 | **_description** | **String** | A description of the Dialogflow agent. | [optional] |
-| **integration** | [**DomainEntityRef**](DomainEntityRef.html) | The Integration this Dialogflow agent was referenced from. | [optional] |
+| **integration** | [**DomainEntityRef**](DomainEntityRef) | The Integration this Dialogflow agent was referenced from. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LimitDocs
----
+# LimitDocs
+
 ## LimitDocs
 
 ## Properties
@@ -13,6 +12,7 @@ title: LimitDocs
 | **resource** | **String** |  | [optional] |
 | **configurable** | **Bool** |  | [optional] |
 | **trackable** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

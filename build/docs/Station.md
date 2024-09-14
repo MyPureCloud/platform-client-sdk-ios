@@ -1,6 +1,5 @@
----
-title: Station
----
+# Station
+
 ## Station
 
 ## Properties
@@ -13,8 +12,8 @@ title: Station
 | **status** | **String** |  | [optional] |
 | **userId** | **String** | The Id of the user currently logged in and associated with the station. | [optional] |
 | **webRtcUserId** | **String** | The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone. | [optional] |
-| **primaryEdge** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
-| **secondaryEdge** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **primaryEdge** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **secondaryEdge** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **lineAppearanceId** | **String** |  | [optional] |
 | **webRtcMediaDscp** | **Int** | The default or configured value of media dscp for the station. Empty if station type is not inin_webrtc_softphone. | [optional] |
@@ -23,6 +22,7 @@ title: Station
 | **webRtcCallAppearances** | **Int** | The number of call appearances on the station. | [optional] |
 | **webRtcRequireMediaHelper** | **Bool** | True when the media helper required. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

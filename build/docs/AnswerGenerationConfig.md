@@ -1,6 +1,5 @@
----
-title: AnswerGenerationConfig
----
+# AnswerGenerationConfig
+
 ## AnswerGenerationConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: AnswerGenerationConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Answer generation is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

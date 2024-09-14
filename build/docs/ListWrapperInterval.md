@@ -1,6 +1,5 @@
----
-title: ListWrapperInterval
----
+# ListWrapperInterval
+
 ## ListWrapperInterval
 
 ## Properties
@@ -8,6 +7,7 @@ title: ListWrapperInterval
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **values** | **[String]** | Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

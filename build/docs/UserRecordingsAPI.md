@@ -1,24 +1,20 @@
----
-title: UserRecordingsAPI
----
-## UserRecordingsAPI
+# UserRecordingsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteUserrecording**](UserRecordingsAPI.html#deleteUserrecording) | Delete a user recording. |
-| [**getUserrecording**](UserRecordingsAPI.html#getUserrecording) | Get a user recording. |
-| [**getUserrecordingMedia**](UserRecordingsAPI.html#getUserrecordingMedia) | Download a user recording. |
-| [**getUserrecordingTranscoding**](UserRecordingsAPI.html#getUserrecordingTranscoding) | Download a user recording. |
-| [**getUserrecordings**](UserRecordingsAPI.html#getUserrecordings) | Get a list of user recordings. |
-| [**getUserrecordingsSummary**](UserRecordingsAPI.html#getUserrecordingsSummary) | Get user recording summary |
-| [**putUserrecording**](UserRecordingsAPI.html#putUserrecording) | Update a user recording. |
+| [**deleteUserrecording**](UserRecordingsAPI#deleteUserrecording) | Delete a user recording. |
+| [**getUserrecording**](UserRecordingsAPI#getUserrecording) | Get a user recording. |
+| [**getUserrecordingMedia**](UserRecordingsAPI#getUserrecordingMedia) | Download a user recording. |
+| [**getUserrecordingTranscoding**](UserRecordingsAPI#getUserrecordingTranscoding) | Download a user recording. |
+| [**getUserrecordings**](UserRecordingsAPI#getUserrecordings) | Get a list of user recordings. |
+| [**getUserrecordingsSummary**](UserRecordingsAPI#getUserrecordingsSummary) | Get user recording summary |
+| [**putUserrecording**](UserRecordingsAPI#putUserrecording) | Update a user recording. |
 {: class="table-striped"}
 
-<a name="deleteUserrecording"></a>
 
-# **deleteUserrecording**
+## deleteUserrecording
 
 
 
@@ -59,20 +55,18 @@ UserRecordingsAPI.deleteUserrecording(recordingId: recordingId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **recordingId** | **String**| User Recording ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getUserrecording"></a>
 
-# **getUserrecording**
-
+## getUserrecording
 
 
-> [UserRecording](UserRecording.html) getUserrecording(recordingId, expand)
+
+> [UserRecording](UserRecording) getUserrecording(recordingId, expand)
 
 Get a user recording.
 
@@ -111,21 +105,19 @@ UserRecordingsAPI.getUserrecording(recordingId: recordingId, expand: expand) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **recordingId** | **String**| User Recording ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
 
 
 ### Return type
 
-[**UserRecording**](UserRecording.html)
-
-<a name="getUserrecordingMedia"></a>
-
-# **getUserrecordingMedia**
+[**UserRecording**](UserRecording)
 
 
+## getUserrecordingMedia
 
-> [DownloadResponse](DownloadResponse.html) getUserrecordingMedia(recordingId, formatId, async)
+
+
+> [DownloadResponse](DownloadResponse) getUserrecordingMedia(recordingId, formatId, async)
 
 Download a user recording.
 
@@ -169,20 +161,18 @@ UserRecordingsAPI.getUserrecordingMedia(recordingId: recordingId, formatId: form
 | **recordingId** | **String**| User Recording ID | |
 | **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **async** | **Bool**| When set to true, api will return 202 response until the recording is ready for download | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
-
-<a name="getUserrecordingTranscoding"></a>
-
-# **getUserrecordingTranscoding**
+[**DownloadResponse**](DownloadResponse)
 
 
+## getUserrecordingTranscoding
 
-> [DownloadResponse](DownloadResponse.html) getUserrecordingTranscoding(recordingId, formatId)
+
+
+> [DownloadResponse](DownloadResponse) getUserrecordingTranscoding(recordingId, formatId)
 
 Download a user recording.
 
@@ -223,20 +213,18 @@ UserRecordingsAPI.getUserrecordingTranscoding(recordingId: recordingId, formatId
 | ------------- | ------------- | ------------- | ------------- |
 | **recordingId** | **String**| User Recording ID | |
 | **formatId** | **String**| The desired media format. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**DownloadResponse**](DownloadResponse.html)
-
-<a name="getUserrecordings"></a>
-
-# **getUserrecordings**
+[**DownloadResponse**](DownloadResponse)
 
 
+## getUserrecordings
 
-> [UserRecordingEntityListing](UserRecordingEntityListing.html) getUserrecordings(pageSize, pageNumber, expand)
+
+
+> [UserRecordingEntityListing](UserRecordingEntityListing) getUserrecordings(pageSize, pageNumber, expand)
 
 Get a list of user recordings.
 
@@ -277,21 +265,19 @@ UserRecordingsAPI.getUserrecordings(pageSize: pageSize, pageNumber: pageNumber, 
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
 
 
 ### Return type
 
-[**UserRecordingEntityListing**](UserRecordingEntityListing.html)
-
-<a name="getUserrecordingsSummary"></a>
-
-# **getUserrecordingsSummary**
+[**UserRecordingEntityListing**](UserRecordingEntityListing)
 
 
+## getUserrecordingsSummary
 
-> [FaxSummary](FaxSummary.html) getUserrecordingsSummary()
+
+
+> [FaxSummary](FaxSummary) getUserrecordingsSummary()
 
 Get user recording summary
 
@@ -327,18 +313,16 @@ UserRecordingsAPI.getUserrecordingsSummary() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**FaxSummary**](FaxSummary.html)
-
-<a name="putUserrecording"></a>
-
-# **putUserrecording**
+[**FaxSummary**](FaxSummary)
 
 
+## putUserrecording
 
-> [UserRecording](UserRecording.html) putUserrecording(recordingId, body, expand)
+
+
+> [UserRecording](UserRecording) putUserrecording(recordingId, body, expand)
 
 Update a user recording.
 
@@ -378,12 +362,13 @@ UserRecordingsAPI.putUserrecording(recordingId: recordingId, body: body, expand:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **recordingId** | **String**| User Recording ID | |
-| **body** | [**UserRecording**](UserRecording.html)| UserRecording | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
-{: class="table-striped"}
+| **body** | [**UserRecording**](UserRecording)| UserRecording | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: conversation ("conversation") |
 
 
 ### Return type
 
-[**UserRecording**](UserRecording.html)
+[**UserRecording**](UserRecording)
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SurveyQuestion
----
+# SurveyQuestion
+
 ## SurveyQuestion
 
 ## Properties
@@ -12,10 +11,11 @@ title: SurveyQuestion
 | **helpText** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **naEnabled** | **Bool** |  | [optional] |
-| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition.html) |  | [optional] |
-| **answerOptions** | [**[AnswerOption]**](AnswerOption.html) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
+| **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
+| **answerOptions** | [**[AnswerOption]**](AnswerOption) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
 | **maxResponseCharacters** | **Int** | How many characters are allowed in the text response to this question. Used by NPS and Free Text question types. | [optional] |
 | **explanationPrompt** | **String** | Prompt for details explaining the chosen NPS score. Used by NPS questions. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

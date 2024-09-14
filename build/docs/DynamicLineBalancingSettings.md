@@ -1,6 +1,5 @@
----
-title: DynamicLineBalancingSettings
----
+# DynamicLineBalancingSettings
+
 ## DynamicLineBalancingSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: DynamicLineBalancingSettings
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Indicates that this campaign is subject of dynamic line balancing | [optional] |
 | **relativeWeight** | **Int** | Relative weight of this campaign in dynamic line balancing | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

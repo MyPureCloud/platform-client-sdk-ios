@@ -1,6 +1,5 @@
----
-title: LastAttemptByColumnConditionSettings
----
+# LastAttemptByColumnConditionSettings
+
 ## LastAttemptByColumnConditionSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: LastAttemptByColumnConditionSettings
 | **smsColumnName** | **String** | The name of the contact column to evaluate for SMS. | [optional] |
 | **_operator** | **String** | The operator to use when comparing values. | |
 | **value** | **String** | The period value to compare against the contact&#39;s data. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

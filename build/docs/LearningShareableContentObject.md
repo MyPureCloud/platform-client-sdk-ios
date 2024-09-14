@@ -1,6 +1,5 @@
----
-title: LearningShareableContentObject
----
+# LearningShareableContentObject
+
 ## LearningShareableContentObject
 Learning assignment SCO (Shareable Content Object)
 
@@ -24,6 +23,7 @@ Learning assignment SCO (Shareable Content Object)
 | **href** | **String** | The href from the course manifest for this SCO. | [optional] |
 | **parameters** | **String** | The parameters from the course manifest for this SCO. | [optional] |
 | **launchData** | **String** | The launch data from the course manifest for this SCO. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

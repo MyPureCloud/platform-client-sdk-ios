@@ -1,6 +1,5 @@
----
-title: LexV2Bot
----
+# LexV2Bot
+
 ## LexV2Bot
 
 ## Properties
@@ -13,6 +12,7 @@ title: LexV2Bot
 | **region** | **String** | A region of the Lex V2 bot | |
 | **_description** | **String** | A description of the Lex V2 bot | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

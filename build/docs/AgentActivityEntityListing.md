@@ -1,13 +1,12 @@
----
-title: AgentActivityEntityListing
----
+# AgentActivityEntityListing
+
 ## AgentActivityEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AgentActivity]**](AgentActivity.html) |  | [optional] |
+| **entities** | [**[AgentActivity]**](AgentActivity) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: AgentActivityEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

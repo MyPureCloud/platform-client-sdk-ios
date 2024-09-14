@@ -1,6 +1,5 @@
----
-title: UnreadStatus
----
+# UnreadStatus
+
 ## UnreadStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: UnreadStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **unread** | **Bool** | Sets if the alert is read or unread. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

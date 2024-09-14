@@ -1,6 +1,5 @@
----
-title: ReportingTurnKnowledgeFeedback
----
+# ReportingTurnKnowledgeFeedback
+
 ## ReportingTurnKnowledgeFeedback
 
 ## Properties
@@ -9,7 +8,8 @@ title: ReportingTurnKnowledgeFeedback
 |------------ | ------------- | ------------- | -------------|
 | **searchId** | **String** | The ID of the original knowledge search that this feedback relates to. | [optional] |
 | **rating** | **Int** | The feedback rating for the search (1.0 - 5.0). 1 &#x3D; Negative, 5 &#x3D; Positive. | [optional] |
-| **documents** | [**[ReportingTurnKnowledgeDocument]**](ReportingTurnKnowledgeDocument.html) | The list of search documents that the feedback applies to. | [optional] |
-{: class="table table-striped"}
+| **documents** | [**[ReportingTurnKnowledgeDocument]**](ReportingTurnKnowledgeDocument) | The list of search documents that the feedback applies to. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

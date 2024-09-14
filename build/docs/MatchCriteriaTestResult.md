@@ -1,6 +1,5 @@
----
-title: MatchCriteriaTestResult
----
+# MatchCriteriaTestResult
+
 ## MatchCriteriaTestResult
 Results of a matching expression
 
@@ -10,11 +9,12 @@ Results of a matching expression
 |------------ | ------------- | ------------- | -------------|
 | **jsonPath** | **String** | The Goessner json path of the field to match | [optional] |
 | **_operator** | **String** | The type of operation to perform for matching check | [optional] |
-| **value** | [**JSON**](JSON.html) | The value to match on. Only one of value and values can be included | [optional] |
-| **values** | [**[JSON]**](JSON.html) | The list of values to match on. Only one of value and values can be included | [optional] |
+| **value** | [**JSON**](JSON) | The value to match on. Only one of value and values can be included | [optional] |
+| **values** | [**[JSON]**](JSON) | The list of values to match on. Only one of value and values can be included | [optional] |
 | **generatedJsonPathCondition** | **String** | The generated json path condition | [optional] |
 | **match** | **Bool** | Did the generated json path condition match | [optional] |
-| **jsonPathExtraction** | [**[MatchTestResult]**](MatchTestResult.html) | The json paths and their values that were compared | [optional] |
-{: class="table table-striped"}
+| **jsonPathExtraction** | [**[MatchTestResult]**](MatchTestResult) | The json paths and their values that were compared | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

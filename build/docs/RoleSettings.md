@@ -1,6 +1,5 @@
----
-title: RoleSettings
----
+# RoleSettings
+
 ## RoleSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: RoleSettings
 | **backfillEnabled** | **Bool** | Boolean showing if organization is opted in or not to role backfills | [optional] |
 | **authorizationGrantDivisionAware** | **Bool** | Boolean enabling enforcement of division aware for authorization grant add and delete | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

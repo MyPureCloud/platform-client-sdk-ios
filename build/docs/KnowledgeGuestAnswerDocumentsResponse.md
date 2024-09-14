@@ -1,13 +1,13 @@
----
-title: KnowledgeGuestAnswerDocumentsResponse
----
+# KnowledgeGuestAnswerDocumentsResponse
+
 ## KnowledgeGuestAnswerDocumentsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[KnowledgeGuestAnswerDocumentResponse]**](KnowledgeGuestAnswerDocumentResponse.html) | The results with answers. | [optional] |
-{: class="table table-striped"}
+| **results** | [**[KnowledgeGuestAnswerDocumentResponse]**](KnowledgeGuestAnswerDocumentResponse) | The results with answers. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

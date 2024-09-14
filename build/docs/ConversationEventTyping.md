@@ -1,6 +1,5 @@
----
-title: ConversationEventTyping
----
+# ConversationEventTyping
+
 ## ConversationEventTyping
 A Typing event.
 
@@ -10,6 +9,7 @@ A Typing event.
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Describes the type of Typing event. | |
 | **duration** | **Int64** | The duration of the Typing event in milliseconds. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: BuAgentScheduleUpdate
----
+# BuAgentScheduleUpdate
+
 ## BuAgentScheduleUpdate
 
 ## Properties
@@ -8,7 +7,8 @@ title: BuAgentScheduleUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of update | [optional] |
-| **shiftStartDates** | [**[Date]**](Date.html) | The start date for the affected shifts | [optional] |
-{: class="table table-striped"}
+| **shiftStartDates** | [**[Date]**](Date) | The start date for the affected shifts | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

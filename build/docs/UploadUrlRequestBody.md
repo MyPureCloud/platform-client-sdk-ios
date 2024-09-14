@@ -1,6 +1,5 @@
----
-title: UploadUrlRequestBody
----
+# UploadUrlRequestBody
+
 ## UploadUrlRequestBody
 
 ## Properties
@@ -8,6 +7,7 @@ title: UploadUrlRequestBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **contentLengthBytes** | **Int64** | The expected content length (in bytes) of the gzip-encoded data that will be PUT to the returned signed URL | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

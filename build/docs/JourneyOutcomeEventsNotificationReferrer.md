@@ -1,6 +1,5 @@
----
-title: JourneyOutcomeEventsNotificationReferrer
----
+# JourneyOutcomeEventsNotificationReferrer
+
 ## JourneyOutcomeEventsNotificationReferrer
 
 ## Properties
@@ -16,6 +15,7 @@ title: JourneyOutcomeEventsNotificationReferrer
 | **fragment** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **medium** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

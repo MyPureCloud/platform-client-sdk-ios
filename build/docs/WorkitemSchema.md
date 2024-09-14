@@ -1,6 +1,5 @@
----
-title: WorkitemSchema
----
+# WorkitemSchema
+
 ## WorkitemSchema
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemSchema
 | **name** | **String** |  | [optional] |
 | **version** | **Int** | The version of the Workitem custom attribute schema. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: MetadataResultEntity
----
+# MetadataResultEntity
+
 ## MetadataResultEntity
 A Genesys Cloud resource created or modified as a result of running an accelerator
 
@@ -11,6 +10,7 @@ A Genesys Cloud resource created or modified as a result of running an accelerat
 | **type** | **String** | object type of the modified resource | [optional] |
 | **_description** | **String** | description of the modified resource | [optional] |
 | **visibility** | **String** | whether the modified resource is visible or hidden | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TimeOffRequestLookup
----
+# TimeOffRequestLookup
+
 ## TimeOffRequestLookup
 
 ## Properties
@@ -9,6 +8,7 @@ title: TimeOffRequestLookup
 |------------ | ------------- | ------------- | -------------|
 | **timeOffRequestId** | **String** | The ID of the time off request | |
 | **userId** | **String** | The ID of the user to whom the time off request belongs | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

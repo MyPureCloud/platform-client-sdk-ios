@@ -1,6 +1,5 @@
----
-title: OrganizationFeatures
----
+# OrganizationFeatures
+
 ## OrganizationFeatures
 
 ## Properties
@@ -20,6 +19,7 @@ title: OrganizationFeatures
 | **contactCenter** | **Bool** |  | [optional] |
 | **unifiedCommunications** | **Bool** |  | [optional] |
 | **custserv** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

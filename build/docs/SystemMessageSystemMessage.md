@@ -1,6 +1,5 @@
----
-title: SystemMessageSystemMessage
----
+# SystemMessageSystemMessage
+
 ## SystemMessageSystemMessage
 
 ## Properties
@@ -15,7 +14,8 @@ title: SystemMessageSystemMessage
 | **oauthClientId** | **String** |  | [optional] |
 | **reason** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
-| **data** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **data** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyViewChartMetric
----
+# JourneyViewChartMetric
+
 ## JourneyViewChartMetric
 A metric to measure within the chart
 
@@ -12,6 +11,7 @@ A metric to measure within the chart
 | **elementId** | **String** | The element in the list of elements which the metric is measuring | |
 | **aggregate** | **String** | How to aggregate the given element, defaults to EventCount | [optional] |
 | **displayLabel** | **String** | A display label for the metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

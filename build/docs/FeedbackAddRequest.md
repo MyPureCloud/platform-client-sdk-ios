@@ -1,6 +1,5 @@
----
-title: FeedbackAddRequest
----
+# FeedbackAddRequest
+
 ## FeedbackAddRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: FeedbackAddRequest
 |------------ | ------------- | ------------- | -------------|
 | **summary** | **String** | Agent&#39;s summary for the conversation | |
 | **rating** | **String** | Agent’s rating for the system-generated summary. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

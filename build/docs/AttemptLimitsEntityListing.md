@@ -1,13 +1,12 @@
----
-title: AttemptLimitsEntityListing
----
+# AttemptLimitsEntityListing
+
 ## AttemptLimitsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AttemptLimits]**](AttemptLimits.html) |  | [optional] |
+| **entities** | [**[AttemptLimits]**](AttemptLimits) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: AttemptLimitsEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

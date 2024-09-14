@@ -1,6 +1,5 @@
----
-title: UpdateAdherenceExplanationStatusRequest
----
+# UpdateAdherenceExplanationStatusRequest
+
 ## UpdateAdherenceExplanationStatusRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: UpdateAdherenceExplanationStatusRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **status** | **String** | The status of the adherence explanation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

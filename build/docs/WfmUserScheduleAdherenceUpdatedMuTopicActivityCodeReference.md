@@ -1,6 +1,5 @@
----
-title: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
----
+# WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
+
 ## WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
 
 ## Properties
@@ -8,7 +7,8 @@ title: WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **secondaryPresences** | [**[WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference]**](WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **secondaryPresences** | [**[WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference]**](WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

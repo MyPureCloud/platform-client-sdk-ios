@@ -1,6 +1,5 @@
----
-title: AvailableMediaType
----
+# AvailableMediaType
+
 ## AvailableMediaType
 
 ## Properties
@@ -9,6 +8,7 @@ title: AvailableMediaType
 |------------ | ------------- | ------------- | -------------|
 | **mediaType** | **String** | Name of the available media type | [optional] |
 | **availableSubTypes** | **[String]** | List of available subtypes for this media type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

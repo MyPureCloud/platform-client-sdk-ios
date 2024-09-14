@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast
----
+# WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast
+
 ## WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast
 
 ## Properties
@@ -12,14 +11,15 @@ title: WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecast
 | **creationMethod** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
 | **legacy** | **Bool** |  | [optional] |
-| **referenceStartDate** | [**Date**](Date.html) |  | [optional] |
-| **sourceDays** | [**[WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer]**](WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer.html) |  | [optional] |
-| **modifications** | [**[WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification]**](WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification.html) |  | [optional] |
+| **referenceStartDate** | [**Date**](Date) |  | [optional] |
+| **sourceDays** | [**[WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer]**](WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer) |  | [optional] |
+| **modifications** | [**[WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification]**](WfmBuShortTermForecastUpdateCompleteTopicBuForecastModification) |  | [optional] |
 | **timeZone** | **String** |  | [optional] |
 | **planningGroupsVersion** | **Int** |  | [optional] |
 | **weekCount** | **Int** |  | [optional] |
-| **metadata** | [**WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata.html) |  | [optional] |
+| **metadata** | [**WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata) |  | [optional] |
 | **canUseForScheduling** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

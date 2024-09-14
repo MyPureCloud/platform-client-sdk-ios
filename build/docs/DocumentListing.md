@@ -1,16 +1,16 @@
----
-title: DocumentListing
----
+# DocumentListing
+
 ## DocumentListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[KnowledgeDocument]**](KnowledgeDocument.html) |  | [optional] |
+| **entities** | [**[KnowledgeDocument]**](KnowledgeDocument) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

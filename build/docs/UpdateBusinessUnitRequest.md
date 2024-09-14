@@ -1,6 +1,5 @@
----
-title: UpdateBusinessUnitRequest
----
+# UpdateBusinessUnitRequest
+
 ## UpdateBusinessUnitRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: UpdateBusinessUnitRequest
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the business unit | [optional] |
 | **divisionId** | **String** | The ID of the division to which the business unit should be moved | [optional] |
-| **settings** | [**UpdateBusinessUnitSettingsRequest**](UpdateBusinessUnitSettingsRequest.html) | Configuration for the business unit | [optional] |
-{: class="table table-striped"}
+| **settings** | [**UpdateBusinessUnitSettingsRequest**](UpdateBusinessUnitSettingsRequest) | Configuration for the business unit | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

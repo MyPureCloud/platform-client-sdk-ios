@@ -1,13 +1,12 @@
----
-title: ObservationValue
----
+# ObservationValue
+
 ## ObservationValue
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **observationDate** | [**Date**](Date.html) | The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **observationDate** | [**Date**](Date) | The time at which the observation occurred. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **conversationId** | **String** | Unique identifier for the conversation | [optional] |
 | **sessionId** | **String** | The unique identifier of this session | [optional] |
 | **requestedRoutingSkillIds** | **[String]** | Unique identifier for a skill requested for an interaction | [optional] |
@@ -25,7 +24,8 @@ title: ObservationValue
 | **teamId** | **String** | The team id the user is a member of | [optional] |
 | **requestedRoutings** | **[String]** | All routing types for requested/attempted routing methods | [optional] |
 | **usedRouting** | **String** | Complete routing method | [optional] |
-| **scoredAgents** | [**[AnalyticsScoredAgent]**](AnalyticsScoredAgent.html) |  | [optional] |
-{: class="table table-striped"}
+| **scoredAgents** | [**[AnalyticsScoredAgent]**](AnalyticsScoredAgent) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

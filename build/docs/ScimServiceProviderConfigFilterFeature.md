@@ -1,6 +1,5 @@
----
-title: ScimServiceProviderConfigFilterFeature
----
+# ScimServiceProviderConfigFilterFeature
+
 ## ScimServiceProviderConfigFilterFeature
 Defines a \&quot;filter\&quot; request in the SCIM service provider&#39;s configuration.
 
@@ -10,6 +9,7 @@ Defines a \&quot;filter\&quot; request in the SCIM service provider&#39;s config
 |------------ | ------------- | ------------- | -------------|
 | **supported** | **Bool** | Indicates whether configuration options are supported. | [optional] |
 | **maxResults** | **Int** | The maximum number of results returned from a filtered query. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

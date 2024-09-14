@@ -1,6 +1,5 @@
----
-title: LastResultOverallConditionSettings
----
+# LastResultOverallConditionSettings
+
 ## LastResultOverallConditionSettings
 
 ## Properties
@@ -9,6 +8,7 @@ title: LastResultOverallConditionSettings
 |------------ | ------------- | ------------- | -------------|
 | **emailWrapupCodes** | **[String]** | A list of wrapup code identifiers to match for Email. | [optional] |
 | **smsWrapupCodes** | **[String]** | A list of wrapup code identifiers to match for SMS. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

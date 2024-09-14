@@ -1,6 +1,5 @@
----
-title: AcceleratorMetadata
----
+# AcceleratorMetadata
+
 ## AcceleratorMetadata
 Metadata for a CX infrastructure as code accelerator
 
@@ -16,6 +15,7 @@ Metadata for a CX infrastructure as code accelerator
 | **classification** | **String** | architectural classification into which the accelerator belongs | [optional] |
 | **tags** | **[String]** | tags | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

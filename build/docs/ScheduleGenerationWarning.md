@@ -1,6 +1,5 @@
----
-title: ScheduleGenerationWarning
----
+# ScheduleGenerationWarning
+
 ## ScheduleGenerationWarning
 
 ## Properties
@@ -15,6 +14,7 @@ title: ScheduleGenerationWarning
 | **unableToMeetMaxPaidForTheWeek** | **Bool** | Whether the schedule exceeded the maximum paid time for the week defined in the agent work plan | [optional] |
 | **noNeedDays** | **[String]** | Days agent was scheduled but there was no need to meet. The scheduled days have no effect on service levels | [optional] |
 | **shiftsTooCloseTogether** | **Bool** | Whether the schedule did not meet the minimum time between shifts defined in the agent work plan | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

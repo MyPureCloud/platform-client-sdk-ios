@@ -1,6 +1,5 @@
----
-title: GetRulesQuery
----
+# GetRulesQuery
+
 ## GetRulesQuery
 
 ## Properties
@@ -16,6 +15,7 @@ title: GetRulesQuery
 | **sortOrder** | **String** | The order in which response will be sorted.  The accepted choices are Asc and Desc | [optional] |
 | **ruleName** | **String** | The name of the rule being queries. | [optional] |
 | **nameSearchType** | **String** | Specifies how strict the name search needs to be. Expected values are Exact and Contains if querying by name. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

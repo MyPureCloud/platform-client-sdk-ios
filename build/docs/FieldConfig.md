@@ -1,6 +1,5 @@
----
-title: FieldConfig
----
+# FieldConfig
+
 ## FieldConfig
 
 ## Properties
@@ -11,10 +10,11 @@ title: FieldConfig
 | **name** | **String** |  | [optional] |
 | **entityType** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **sections** | [**[Section]**](Section.html) |  | [optional] |
+| **sections** | [**[Section]**](Section) |  | [optional] |
 | **version** | **String** |  | [optional] |
 | **schemaVersion** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DocumentationResult
----
+# DocumentationResult
+
 ## DocumentationResult
 
 ## Properties
@@ -13,7 +12,7 @@ title: DocumentationResult
 | **content** | **String** | The text or html content for the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **excerpt** | **String** | The excerpt of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **link** | **String** | URL link for the documentation entity. Will be returned in responses for certain entities. | [optional] |
-| **modified** | [**Date**](Date.html) | The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modified** | [**Date**](Date) | The modified date for the documentation entity. Will be returned in responses for certain entities. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **name** | **String** | The name of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **service** | **[Int]** | The service of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **slug** | **String** | The slug of the documentation entity. Will be returned in responses for certain entities. | [optional] |
@@ -27,6 +26,7 @@ title: DocumentationResult
 | **releasenoteTag** | **[Int]** | The releasenote tag of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **serviceArea** | **[Int]** | The service area of the documentation entity. Will be returned in responses for certain entities. | [optional] |
 | **videoCategories** | **[Int]** | The video categories of the documentation entity. Will be returned in responses for certain entities. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

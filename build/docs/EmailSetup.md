@@ -1,6 +1,5 @@
----
-title: EmailSetup
----
+# EmailSetup
+
 ## EmailSetup
 
 ## Properties
@@ -8,6 +7,7 @@ title: EmailSetup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **rootDomain** | **String** | The root PureCloud domain that all sub-domains are created from. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

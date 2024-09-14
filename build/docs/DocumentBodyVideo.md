@@ -1,6 +1,5 @@
----
-title: DocumentBodyVideo
----
+# DocumentBodyVideo
+
 ## DocumentBodyVideo
 
 ## Properties
@@ -8,7 +7,8 @@ title: DocumentBodyVideo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** | The URL for the video. | |
-| **properties** | [**DocumentBodyVideoProperties**](DocumentBodyVideoProperties.html) | The properties for the video. | [optional] |
-{: class="table table-striped"}
+| **properties** | [**DocumentBodyVideoProperties**](DocumentBodyVideoProperties) | The properties for the video. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

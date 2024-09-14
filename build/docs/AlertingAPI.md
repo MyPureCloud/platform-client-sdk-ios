@@ -1,41 +1,37 @@
----
-title: AlertingAPI
----
-## AlertingAPI
+# AlertingAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteAlertingAlert**](AlertingAPI.html#deleteAlertingAlert) | Delete an alert |
-| [**deleteAlertingInteractionstatsAlert**](AlertingAPI.html#deleteAlertingInteractionstatsAlert) | Delete an interaction stats alert |
-| [**deleteAlertingInteractionstatsRule**](AlertingAPI.html#deleteAlertingInteractionstatsRule) | Delete an interaction stats rule |
-| [**deleteAlertingRule**](AlertingAPI.html#deleteAlertingRule) | Delete a rule. |
-| [**getAlertingAlert**](AlertingAPI.html#getAlertingAlert) | Get an alert |
-| [**getAlertingAlertsActive**](AlertingAPI.html#getAlertingAlertsActive) | Gets active alert count for a user |
-| [**getAlertingInteractionstatsAlert**](AlertingAPI.html#getAlertingInteractionstatsAlert) | Get an interaction stats alert |
-| [**getAlertingInteractionstatsAlerts**](AlertingAPI.html#getAlertingInteractionstatsAlerts) | Get interaction stats alert list |
-| [**getAlertingInteractionstatsAlertsUnread**](AlertingAPI.html#getAlertingInteractionstatsAlertsUnread) | Gets user unread count of interaction stats alerts |
-| [**getAlertingInteractionstatsRule**](AlertingAPI.html#getAlertingInteractionstatsRule) | Get an interaction stats rule |
-| [**getAlertingInteractionstatsRules**](AlertingAPI.html#getAlertingInteractionstatsRules) | Get an interaction stats rule list |
-| [**getAlertingRule**](AlertingAPI.html#getAlertingRule) | Get a rule. |
-| [**patchAlertingAlert**](AlertingAPI.html#patchAlertingAlert) | Allows an entity to mute/snooze an alert or update the unread status of the alert. |
-| [**patchAlertingAlertsBulk**](AlertingAPI.html#patchAlertingAlertsBulk) | Bulk alert updates |
-| [**patchAlertingRulesBulk**](AlertingAPI.html#patchAlertingRulesBulk) | Bulk update of notification lists |
-| [**postAlertingAlertsQuery**](AlertingAPI.html#postAlertingAlertsQuery) | Gets a paged list of alerts. The max page size is 50 |
-| [**postAlertingInteractionstatsRules**](AlertingAPI.html#postAlertingInteractionstatsRules) | Create an interaction stats rule |
-| [**postAlertingRules**](AlertingAPI.html#postAlertingRules) | Create a Rule. |
-| [**postAlertingRulesBulkRemove**](AlertingAPI.html#postAlertingRulesBulkRemove) | Bulk remove rules |
-| [**postAlertingRulesQuery**](AlertingAPI.html#postAlertingRulesQuery) | Get a paged list of rules.  The max size of the page is 50 items. |
-| [**putAlertingAlert**](AlertingAPI.html#putAlertingAlert) | Update an alert read status |
-| [**putAlertingInteractionstatsAlert**](AlertingAPI.html#putAlertingInteractionstatsAlert) | Update an interaction stats alert read status |
-| [**putAlertingInteractionstatsRule**](AlertingAPI.html#putAlertingInteractionstatsRule) | Update an interaction stats rule |
-| [**putAlertingRule**](AlertingAPI.html#putAlertingRule) | Update a rule |
+| [**deleteAlertingAlert**](AlertingAPI#deleteAlertingAlert) | Delete an alert |
+| [**deleteAlertingInteractionstatsAlert**](AlertingAPI#deleteAlertingInteractionstatsAlert) | Delete an interaction stats alert |
+| [**deleteAlertingInteractionstatsRule**](AlertingAPI#deleteAlertingInteractionstatsRule) | Delete an interaction stats rule |
+| [**deleteAlertingRule**](AlertingAPI#deleteAlertingRule) | Delete a rule. |
+| [**getAlertingAlert**](AlertingAPI#getAlertingAlert) | Get an alert |
+| [**getAlertingAlertsActive**](AlertingAPI#getAlertingAlertsActive) | Gets active alert count for a user |
+| [**getAlertingInteractionstatsAlert**](AlertingAPI#getAlertingInteractionstatsAlert) | Get an interaction stats alert |
+| [**getAlertingInteractionstatsAlerts**](AlertingAPI#getAlertingInteractionstatsAlerts) | Get interaction stats alert list |
+| [**getAlertingInteractionstatsAlertsUnread**](AlertingAPI#getAlertingInteractionstatsAlertsUnread) | Gets user unread count of interaction stats alerts |
+| [**getAlertingInteractionstatsRule**](AlertingAPI#getAlertingInteractionstatsRule) | Get an interaction stats rule |
+| [**getAlertingInteractionstatsRules**](AlertingAPI#getAlertingInteractionstatsRules) | Get an interaction stats rule list |
+| [**getAlertingRule**](AlertingAPI#getAlertingRule) | Get a rule. |
+| [**patchAlertingAlert**](AlertingAPI#patchAlertingAlert) | Allows an entity to mute/snooze an alert or update the unread status of the alert. |
+| [**patchAlertingAlertsBulk**](AlertingAPI#patchAlertingAlertsBulk) | Bulk alert updates |
+| [**patchAlertingRulesBulk**](AlertingAPI#patchAlertingRulesBulk) | Bulk update of notification lists |
+| [**postAlertingAlertsQuery**](AlertingAPI#postAlertingAlertsQuery) | Gets a paged list of alerts. The max page size is 50 |
+| [**postAlertingInteractionstatsRules**](AlertingAPI#postAlertingInteractionstatsRules) | Create an interaction stats rule |
+| [**postAlertingRules**](AlertingAPI#postAlertingRules) | Create a Rule. |
+| [**postAlertingRulesBulkRemove**](AlertingAPI#postAlertingRulesBulkRemove) | Bulk remove rules |
+| [**postAlertingRulesQuery**](AlertingAPI#postAlertingRulesQuery) | Get a paged list of rules.  The max size of the page is 50 items. |
+| [**putAlertingAlert**](AlertingAPI#putAlertingAlert) | Update an alert read status |
+| [**putAlertingInteractionstatsAlert**](AlertingAPI#putAlertingInteractionstatsAlert) | Update an interaction stats alert read status |
+| [**putAlertingInteractionstatsRule**](AlertingAPI#putAlertingInteractionstatsRule) | Update an interaction stats rule |
+| [**putAlertingRule**](AlertingAPI#putAlertingRule) | Update a rule |
 {: class="table-striped"}
 
-<a name="deleteAlertingAlert"></a>
 
-# **deleteAlertingAlert**
+## deleteAlertingAlert
 
 
 
@@ -77,16 +73,14 @@ AlertingAPI.deleteAlertingAlert(alertId: alertId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteAlertingInteractionstatsAlert"></a>
 
-# **deleteAlertingInteractionstatsAlert**
+## deleteAlertingInteractionstatsAlert
 
 
 
@@ -130,16 +124,14 @@ AlertingAPI.deleteAlertingInteractionstatsAlert(alertId: alertId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteAlertingInteractionstatsRule"></a>
 
-# **deleteAlertingInteractionstatsRule**
+## deleteAlertingInteractionstatsRule
 
 
 
@@ -183,16 +175,14 @@ AlertingAPI.deleteAlertingInteractionstatsRule(ruleId: ruleId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ruleId** | **String**| Rule ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteAlertingRule"></a>
 
-# **deleteAlertingRule**
+## deleteAlertingRule
 
 
 
@@ -234,20 +224,18 @@ AlertingAPI.deleteAlertingRule(ruleId: ruleId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ruleId** | **String**| Rule Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getAlertingAlert"></a>
 
-# **getAlertingAlert**
-
+## getAlertingAlert
 
 
-> [CommonAlert](CommonAlert.html) getAlertingAlert(alertId)
+
+> [CommonAlert](CommonAlert) getAlertingAlert(alertId)
 
 Get an alert
 
@@ -286,20 +274,18 @@ AlertingAPI.getAlertingAlert(alertId: alertId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**CommonAlert**](CommonAlert.html)
-
-<a name="getAlertingAlertsActive"></a>
-
-# **getAlertingAlertsActive**
+[**CommonAlert**](CommonAlert)
 
 
+## getAlertingAlertsActive
 
-> [ActiveAlertCount](ActiveAlertCount.html) getAlertingAlertsActive()
+
+
+> [ActiveAlertCount](ActiveAlertCount) getAlertingAlertsActive()
 
 Gets active alert count for a user
 
@@ -337,18 +323,16 @@ AlertingAPI.getAlertingAlertsActive() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**ActiveAlertCount**](ActiveAlertCount.html)
-
-<a name="getAlertingInteractionstatsAlert"></a>
-
-# **getAlertingInteractionstatsAlert**
+[**ActiveAlertCount**](ActiveAlertCount)
 
 
+## getAlertingInteractionstatsAlert
 
-> [InteractionStatsAlert](InteractionStatsAlert.html) getAlertingInteractionstatsAlert(alertId, expand)
+
+
+> [InteractionStatsAlert](InteractionStatsAlert) getAlertingInteractionstatsAlert(alertId, expand)
 
 Get an interaction stats alert
 
@@ -390,21 +374,19 @@ AlertingAPI.getAlertingInteractionstatsAlert(alertId: alertId, expand: expand) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**InteractionStatsAlert**](InteractionStatsAlert.html)
-
-<a name="getAlertingInteractionstatsAlerts"></a>
-
-# **getAlertingInteractionstatsAlerts**
+[**InteractionStatsAlert**](InteractionStatsAlert)
 
 
+## getAlertingInteractionstatsAlerts
 
-> [InteractionStatsAlertContainer](InteractionStatsAlertContainer.html) getAlertingInteractionstatsAlerts(expand)
+
+
+> [InteractionStatsAlertContainer](InteractionStatsAlertContainer) getAlertingInteractionstatsAlerts(expand)
 
 Get interaction stats alert list
 
@@ -444,21 +426,19 @@ AlertingAPI.getAlertingInteractionstatsAlerts(expand: expand) { (response, error
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html)
-
-<a name="getAlertingInteractionstatsAlertsUnread"></a>
-
-# **getAlertingInteractionstatsAlertsUnread**
+[**InteractionStatsAlertContainer**](InteractionStatsAlertContainer)
 
 
+## getAlertingInteractionstatsAlertsUnread
 
-> [UnreadMetric](UnreadMetric.html) getAlertingInteractionstatsAlertsUnread()
+
+
+> [UnreadMetric](UnreadMetric) getAlertingInteractionstatsAlertsUnread()
 
 Gets user unread count of interaction stats alerts
 
@@ -496,18 +476,16 @@ AlertingAPI.getAlertingInteractionstatsAlertsUnread() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**UnreadMetric**](UnreadMetric.html)
-
-<a name="getAlertingInteractionstatsRule"></a>
-
-# **getAlertingInteractionstatsRule**
+[**UnreadMetric**](UnreadMetric)
 
 
+## getAlertingInteractionstatsRule
 
-> [InteractionStatsRule](InteractionStatsRule.html) getAlertingInteractionstatsRule(ruleId, expand)
+
+
+> [InteractionStatsRule](InteractionStatsRule) getAlertingInteractionstatsRule(ruleId, expand)
 
 Get an interaction stats rule
 
@@ -549,21 +527,19 @@ AlertingAPI.getAlertingInteractionstatsRule(ruleId: ruleId, expand: expand) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ruleId** | **String**| Rule ID | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**InteractionStatsRule**](InteractionStatsRule.html)
-
-<a name="getAlertingInteractionstatsRules"></a>
-
-# **getAlertingInteractionstatsRules**
+[**InteractionStatsRule**](InteractionStatsRule)
 
 
+## getAlertingInteractionstatsRules
 
-> [InteractionStatsRuleContainer](InteractionStatsRuleContainer.html) getAlertingInteractionstatsRules(expand)
+
+
+> [InteractionStatsRuleContainer](InteractionStatsRuleContainer) getAlertingInteractionstatsRules(expand)
 
 Get an interaction stats rule list
 
@@ -603,21 +579,19 @@ AlertingAPI.getAlertingInteractionstatsRules(expand: expand) { (response, error)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html)
-
-<a name="getAlertingRule"></a>
-
-# **getAlertingRule**
+[**InteractionStatsRuleContainer**](InteractionStatsRuleContainer)
 
 
+## getAlertingRule
 
-> [CommonRule](CommonRule.html) getAlertingRule(ruleId)
+
+
+> [CommonRule](CommonRule) getAlertingRule(ruleId)
 
 Get a rule.
 
@@ -656,20 +630,18 @@ AlertingAPI.getAlertingRule(ruleId: ruleId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ruleId** | **String**| Rule Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**CommonRule**](CommonRule.html)
-
-<a name="patchAlertingAlert"></a>
-
-# **patchAlertingAlert**
+[**CommonRule**](CommonRule)
 
 
+## patchAlertingAlert
 
-> [CommonAlert](CommonAlert.html) patchAlertingAlert(alertId, body)
+
+
+> [CommonAlert](CommonAlert) patchAlertingAlert(alertId, body)
 
 Allows an entity to mute/snooze an alert or update the unread status of the alert.
 
@@ -711,21 +683,19 @@ AlertingAPI.patchAlertingAlert(alertId: alertId, body: body) { (response, error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-| **body** | [**AlertRequest**](AlertRequest.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**AlertRequest**](AlertRequest)|  | [optional] |
 
 
 ### Return type
 
-[**CommonAlert**](CommonAlert.html)
-
-<a name="patchAlertingAlertsBulk"></a>
-
-# **patchAlertingAlertsBulk**
+[**CommonAlert**](CommonAlert)
 
 
+## patchAlertingAlertsBulk
 
-> [BulkResponse](BulkResponse.html) patchAlertingAlertsBulk(body)
+
+
+> [BulkResponse](BulkResponse) patchAlertingAlertsBulk(body)
 
 Bulk alert updates
 
@@ -763,21 +733,19 @@ AlertingAPI.patchAlertingAlertsBulk(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CommonAlertBulkUpdateRequest**](CommonAlertBulkUpdateRequest.html)|  | |
-{: class="table-striped"}
+| **body** | [**CommonAlertBulkUpdateRequest**](CommonAlertBulkUpdateRequest)|  | |
 
 
 ### Return type
 
-[**BulkResponse**](BulkResponse.html)
-
-<a name="patchAlertingRulesBulk"></a>
-
-# **patchAlertingRulesBulk**
+[**BulkResponse**](BulkResponse)
 
 
+## patchAlertingRulesBulk
 
-> [BulkResponse](BulkResponse.html) patchAlertingRulesBulk(body)
+
+
+> [BulkResponse](BulkResponse) patchAlertingRulesBulk(body)
 
 Bulk update of notification lists
 
@@ -815,21 +783,19 @@ AlertingAPI.patchAlertingRulesBulk(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CommonRuleBulkUpdateNotificationsRequest**](CommonRuleBulkUpdateNotificationsRequest.html)|  | |
-{: class="table-striped"}
+| **body** | [**CommonRuleBulkUpdateNotificationsRequest**](CommonRuleBulkUpdateNotificationsRequest)|  | |
 
 
 ### Return type
 
-[**BulkResponse**](BulkResponse.html)
-
-<a name="postAlertingAlertsQuery"></a>
-
-# **postAlertingAlertsQuery**
+[**BulkResponse**](BulkResponse)
 
 
+## postAlertingAlertsQuery
 
-> [AlertListing](AlertListing.html) postAlertingAlertsQuery(body)
+
+
+> [AlertListing](AlertListing) postAlertingAlertsQuery(body)
 
 Gets a paged list of alerts. The max page size is 50
 
@@ -867,21 +833,19 @@ AlertingAPI.postAlertingAlertsQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**GetAlertQuery**](GetAlertQuery.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**GetAlertQuery**](GetAlertQuery)|  | [optional] |
 
 
 ### Return type
 
-[**AlertListing**](AlertListing.html)
-
-<a name="postAlertingInteractionstatsRules"></a>
-
-# **postAlertingInteractionstatsRules**
+[**AlertListing**](AlertListing)
 
 
+## postAlertingInteractionstatsRules
 
-> [InteractionStatsRule](InteractionStatsRule.html) postAlertingInteractionstatsRules(body, expand)
+
+
+> [InteractionStatsRule](InteractionStatsRule) postAlertingInteractionstatsRules(body, expand)
 
 Create an interaction stats rule
 
@@ -922,22 +886,20 @@ AlertingAPI.postAlertingInteractionstatsRules(body: body, expand: expand) { (res
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **body** | [**InteractionStatsRule**](InteractionStatsRule)| AlertingRule | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**InteractionStatsRule**](InteractionStatsRule.html)
-
-<a name="postAlertingRules"></a>
-
-# **postAlertingRules**
+[**InteractionStatsRule**](InteractionStatsRule)
 
 
+## postAlertingRules
 
-> [CommonRule](CommonRule.html) postAlertingRules(body)
+
+
+> [CommonRule](CommonRule) postAlertingRules(body)
 
 Create a Rule.
 
@@ -975,21 +937,19 @@ AlertingAPI.postAlertingRules(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CommonRule**](CommonRule.html)| rule to be created | |
-{: class="table-striped"}
+| **body** | [**CommonRule**](CommonRule)| rule to be created | |
 
 
 ### Return type
 
-[**CommonRule**](CommonRule.html)
-
-<a name="postAlertingRulesBulkRemove"></a>
-
-# **postAlertingRulesBulkRemove**
+[**CommonRule**](CommonRule)
 
 
+## postAlertingRulesBulkRemove
 
-> [BulkResponse](BulkResponse.html) postAlertingRulesBulkRemove(body)
+
+
+> [BulkResponse](BulkResponse) postAlertingRulesBulkRemove(body)
 
 Bulk remove rules
 
@@ -1027,21 +987,19 @@ AlertingAPI.postAlertingRulesBulkRemove(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CommonRuleBulkDeleteRequest**](CommonRuleBulkDeleteRequest.html)|  | |
-{: class="table-striped"}
+| **body** | [**CommonRuleBulkDeleteRequest**](CommonRuleBulkDeleteRequest)|  | |
 
 
 ### Return type
 
-[**BulkResponse**](BulkResponse.html)
-
-<a name="postAlertingRulesQuery"></a>
-
-# **postAlertingRulesQuery**
+[**BulkResponse**](BulkResponse)
 
 
+## postAlertingRulesQuery
 
-> [CommonRuleContainer](CommonRuleContainer.html) postAlertingRulesQuery(body)
+
+
+> [CommonRuleContainer](CommonRuleContainer) postAlertingRulesQuery(body)
 
 Get a paged list of rules.  The max size of the page is 50 items.
 
@@ -1079,21 +1037,19 @@ AlertingAPI.postAlertingRulesQuery(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**GetRulesQuery**](GetRulesQuery.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**GetRulesQuery**](GetRulesQuery)|  | [optional] |
 
 
 ### Return type
 
-[**CommonRuleContainer**](CommonRuleContainer.html)
-
-<a name="putAlertingAlert"></a>
-
-# **putAlertingAlert**
+[**CommonRuleContainer**](CommonRuleContainer)
 
 
+## putAlertingAlert
 
-> [UnreadStatus](UnreadStatus.html) putAlertingAlert(alertId, body)
+
+
+> [UnreadStatus](UnreadStatus) putAlertingAlert(alertId, body)
 
 Update an alert read status
 
@@ -1133,21 +1089,19 @@ AlertingAPI.putAlertingAlert(alertId: alertId, body: body) { (response, error) i
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-| **body** | [**AlertingUnreadStatus**](AlertingUnreadStatus.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**AlertingUnreadStatus**](AlertingUnreadStatus)|  | [optional] |
 
 
 ### Return type
 
-[**UnreadStatus**](UnreadStatus.html)
-
-<a name="putAlertingInteractionstatsAlert"></a>
-
-# **putAlertingInteractionstatsAlert**
+[**UnreadStatus**](UnreadStatus)
 
 
+## putAlertingInteractionstatsAlert
 
-> [UnreadStatus](UnreadStatus.html) putAlertingInteractionstatsAlert(alertId, body, expand)
+
+
+> [UnreadStatus](UnreadStatus) putAlertingInteractionstatsAlert(alertId, body, expand)
 
 Update an interaction stats alert read status
 
@@ -1190,22 +1144,20 @@ AlertingAPI.putAlertingInteractionstatsAlert(alertId: alertId, body: body, expan
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **alertId** | **String**| Alert ID | |
-| **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **body** | [**UnreadStatus**](UnreadStatus)| InteractionStatsAlert | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**UnreadStatus**](UnreadStatus.html)
-
-<a name="putAlertingInteractionstatsRule"></a>
-
-# **putAlertingInteractionstatsRule**
+[**UnreadStatus**](UnreadStatus)
 
 
+## putAlertingInteractionstatsRule
 
-> [InteractionStatsRule](InteractionStatsRule.html) putAlertingInteractionstatsRule(ruleId, body, expand)
+
+
+> [InteractionStatsRule](InteractionStatsRule) putAlertingInteractionstatsRule(ruleId, body, expand)
 
 Update an interaction stats rule
 
@@ -1248,22 +1200,20 @@ AlertingAPI.putAlertingInteractionstatsRule(ruleId: ruleId, body: body, expand: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ruleId** | **String**| Rule ID | |
-| **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
-{: class="table-striped"}
+| **body** | [**InteractionStatsRule**](InteractionStatsRule)| AlertingRule | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: notificationusers ("notificationUsers") |
 
 
 ### Return type
 
-[**InteractionStatsRule**](InteractionStatsRule.html)
-
-<a name="putAlertingRule"></a>
-
-# **putAlertingRule**
+[**InteractionStatsRule**](InteractionStatsRule)
 
 
+## putAlertingRule
 
-> [CommonRule](CommonRule.html) putAlertingRule(ruleId, body)
+
+
+> [CommonRule](CommonRule) putAlertingRule(ruleId, body)
 
 Update a rule
 
@@ -1303,11 +1253,12 @@ AlertingAPI.putAlertingRule(ruleId: ruleId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ruleId** | **String**| Rule Id | |
-| **body** | [**ModifiableRuleProperties**](ModifiableRuleProperties.html)| rule to be updated | |
-{: class="table-striped"}
+| **body** | [**ModifiableRuleProperties**](ModifiableRuleProperties)| rule to be updated | |
 
 
 ### Return type
 
-[**CommonRule**](CommonRule.html)
+[**CommonRule**](CommonRule)
 
+
+_PureCloudPlatformClientV2@151.1.0_

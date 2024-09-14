@@ -1,6 +1,5 @@
----
-title: MessageMediaData
----
+# MessageMediaData
+
 ## MessageMediaData
 
 ## Properties
@@ -15,6 +14,7 @@ title: MessageMediaData
 | **uploadUrl** | **String** | The URL returned to upload an attachment | [optional] |
 | **status** | **String** | The status of the media, indicates if the media is in the process of uploading. If the upload fails, the media becomes invalid | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

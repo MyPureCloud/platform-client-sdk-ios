@@ -1,6 +1,5 @@
----
-title: SdkLibrary
----
+# SdkLibrary
+
 ## SdkLibrary
 
 ## Properties
@@ -9,6 +8,7 @@ title: SdkLibrary
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the SDK. | |
 | **version** | **String** | The version of the SDK. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

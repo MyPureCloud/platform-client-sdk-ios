@@ -1,6 +1,5 @@
----
-title: KnowledgeSearchResponse
----
+# KnowledgeSearchResponse
+
 ## KnowledgeSearchResponse
 
 ## Properties
@@ -12,7 +11,8 @@ title: KnowledgeSearchResponse
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **pageSize** | **Int** | Number of records according to the page size | [optional] |
 | **pageNumber** | **Int** | Current page number for the returned records | [optional] |
-| **results** | [**[KnowledgeSearchDocumentV1]**](KnowledgeSearchDocumentV1.html) | Results associated to the search response | [optional] |
-{: class="table table-striped"}
+| **results** | [**[KnowledgeSearchDocumentV1]**](KnowledgeSearchDocumentV1) | Results associated to the search response | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

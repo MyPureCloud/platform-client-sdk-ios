@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicObject
----
+# ConversationEventTopicObject
+
 ## ConversationEventTopicObject
 The number of peer participants from the perspective of the participant in the conference.
 
@@ -8,6 +7,7 @@ The number of peer participants from the perspective of the participant in the c
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

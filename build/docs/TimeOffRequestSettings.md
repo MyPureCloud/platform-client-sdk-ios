@@ -1,6 +1,5 @@
----
-title: TimeOffRequestSettings
----
+# TimeOffRequestSettings
+
 ## TimeOffRequestSettings
 
 ## Properties
@@ -10,6 +9,7 @@ title: TimeOffRequestSettings
 | **submissionRangeEnforced** | **Bool** | Whether to enforce a submission range for agent time off requests | [optional] |
 | **submissionEarliestDaysFromNow** | **Int** | The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past | [optional] |
 | **submissionLatestDaysFromNow** | **Int** | The latest number of days from now for which an agent can submit a time off request | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

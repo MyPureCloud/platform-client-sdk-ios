@@ -1,6 +1,5 @@
----
-title: RecordingEmailMessage
----
+# RecordingEmailMessage
+
 ## RecordingEmailMessage
 
 ## Properties
@@ -10,13 +9,14 @@ title: RecordingEmailMessage
 | **htmlBody** | **String** |  | [optional] |
 | **textBody** | **String** |  | [optional] |
 | **_id** | **String** |  | [optional] |
-| **to** | [**[EmailAddress]**](EmailAddress.html) |  | [optional] |
-| **cc** | [**[EmailAddress]**](EmailAddress.html) |  | [optional] |
-| **bcc** | [**[EmailAddress]**](EmailAddress.html) |  | [optional] |
-| **from** | [**EmailAddress**](EmailAddress.html) |  | [optional] |
+| **to** | [**[EmailAddress]**](EmailAddress) |  | [optional] |
+| **cc** | [**[EmailAddress]**](EmailAddress) |  | [optional] |
+| **bcc** | [**[EmailAddress]**](EmailAddress) |  | [optional] |
+| **from** | [**EmailAddress**](EmailAddress) |  | [optional] |
 | **subject** | **String** |  | [optional] |
-| **attachments** | [**[EmailAttachment]**](EmailAttachment.html) |  | [optional] |
-| **time** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **attachments** | [**[EmailAttachment]**](EmailAttachment) |  | [optional] |
+| **time** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

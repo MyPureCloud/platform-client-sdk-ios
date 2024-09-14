@@ -1,6 +1,5 @@
----
-title: UserSearchRulePart
----
+# UserSearchRulePart
+
 ## UserSearchRulePart
 
 ## Properties
@@ -10,6 +9,7 @@ title: UserSearchRulePart
 | **operation** | **String** | The operation for this part | |
 | **selector** | **String** | The type of item being selected by this part | |
 | **ids** | **[String]** | The ids for the selector; the results of these are ORed together | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: UsageExecutionResult
----
+# UsageExecutionResult
+
 ## UsageExecutionResult
 
 ## Properties
@@ -9,6 +8,7 @@ title: UsageExecutionResult
 |------------ | ------------- | ------------- | -------------|
 | **executionId** | **String** | The id of the query execution | [optional] |
 | **resultsUri** | **String** | URI where the query results can be retrieved | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

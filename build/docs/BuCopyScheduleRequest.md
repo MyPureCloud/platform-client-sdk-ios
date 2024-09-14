@@ -1,6 +1,5 @@
----
-title: BuCopyScheduleRequest
----
+# BuCopyScheduleRequest
+
 ## BuCopyScheduleRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: BuCopyScheduleRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** | The description for the new schedule | |
-| **weekDate** | [**Date**](Date.html) | The start weekDate for the new copy of the schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-{: class="table table-striped"}
+| **weekDate** | [**Date**](Date) | The start weekDate for the new copy of the schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PostActionInput
----
+# PostActionInput
+
 ## PostActionInput
 Definition of an Action to be created or updated.
 
@@ -11,9 +10,10 @@ Definition of an Action to be created or updated.
 | **category** | **String** | Category of action, Can be up to 256 characters long | |
 | **name** | **String** | Name of action, Can be up to 256 characters long | |
 | **integrationId** | **String** | The ID of the integration this action is associated to | |
-| **config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | |
-| **contract** | [**ActionContractInput**](ActionContractInput.html) | Action contract | |
+| **config** | [**ActionConfig**](ActionConfig) | Configuration to support request and response processing | |
+| **contract** | [**ActionContractInput**](ActionContractInput) | Action contract | |
 | **secure** | **Bool** | Indication of whether or not the action is designed to accept sensitive data | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

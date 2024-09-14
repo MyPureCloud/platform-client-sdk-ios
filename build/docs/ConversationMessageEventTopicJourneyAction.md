@@ -1,6 +1,5 @@
----
-title: ConversationMessageEventTopicJourneyAction
----
+# ConversationMessageEventTopicJourneyAction
+
 ## ConversationMessageEventTopicJourneyAction
 A subset of the Journey System&#39;s action data relevant to a part of a conversation (for external linkage and internal usage/context)
 
@@ -9,7 +8,8 @@ A subset of the Journey System&#39;s action data relevant to a part of a convers
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of an action from the Journey System (an action is spawned from an actionMap) | [optional] |
-| **actionMap** | [**ConversationMessageEventTopicJourneyActionMap**](ConversationMessageEventTopicJourneyActionMap.html) |  | [optional] |
-{: class="table table-striped"}
+| **actionMap** | [**ConversationMessageEventTopicJourneyActionMap**](ConversationMessageEventTopicJourneyActionMap) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

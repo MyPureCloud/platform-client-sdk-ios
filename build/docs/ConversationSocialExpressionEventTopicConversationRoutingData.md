@@ -1,17 +1,17 @@
----
-title: ConversationSocialExpressionEventTopicConversationRoutingData
----
+# ConversationSocialExpressionEventTopicConversationRoutingData
+
 ## ConversationSocialExpressionEventTopicConversationRoutingData
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **queue** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) | A UriReference for a resource | [optional] |
-| **language** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **queue** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) | A UriReference for a resource | [optional] |
+| **language** | [**ConversationSocialExpressionEventTopicUriReference**](ConversationSocialExpressionEventTopicUriReference) | A UriReference for a resource | [optional] |
 | **priority** | **Int** | The priority of the conversation to use for routing decisions | [optional] |
-| **skills** | [**[ConversationSocialExpressionEventTopicUriReference]**](ConversationSocialExpressionEventTopicUriReference.html) | The skills to use for routing decisions | [optional] |
-| **scoredAgents** | [**[ConversationSocialExpressionEventTopicScoredAgent]**](ConversationSocialExpressionEventTopicScoredAgent.html) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
-{: class="table table-striped"}
+| **skills** | [**[ConversationSocialExpressionEventTopicUriReference]**](ConversationSocialExpressionEventTopicUriReference) | The skills to use for routing decisions | [optional] |
+| **scoredAgents** | [**[ConversationSocialExpressionEventTopicScoredAgent]**](ConversationSocialExpressionEventTopicScoredAgent) | A collection of agents and their assigned scores for this conversation (0 - 100, higher being better), for use in routing to preferred agents | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AgentActivityChangedTopicOrganizationPresence
----
+# AgentActivityChangedTopicOrganizationPresence
+
 ## AgentActivityChangedTopicOrganizationPresence
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentActivityChangedTopicOrganizationPresence
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **systemPresence** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

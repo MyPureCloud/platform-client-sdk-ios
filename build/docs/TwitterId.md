@@ -1,6 +1,5 @@
----
-title: TwitterId
----
+# TwitterId
+
 ## TwitterId
 User information for a twitter account
 
@@ -13,6 +12,7 @@ User information for a twitter account
 | **screenName** | **String** | twitter user.screen_name | [optional] |
 | **verified** | **Bool** | whether this data has been verified using the twitter API | [optional] |
 | **profileUrl** | **String** | url of user&#39;s twitter profile | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

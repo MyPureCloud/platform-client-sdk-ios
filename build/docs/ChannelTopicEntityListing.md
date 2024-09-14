@@ -1,13 +1,13 @@
----
-title: ChannelTopicEntityListing
----
+# ChannelTopicEntityListing
+
 ## ChannelTopicEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ChannelTopic]**](ChannelTopic.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[ChannelTopic]**](ChannelTopic) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

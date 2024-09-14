@@ -1,6 +1,5 @@
----
-title: PINConfiguration
----
+# PINConfiguration
+
 ## PINConfiguration
 
 ## Properties
@@ -9,6 +8,7 @@ title: PINConfiguration
 |------------ | ------------- | ------------- | -------------|
 | **minimumLength** | **Int** |  | [optional] |
 | **maximumLength** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

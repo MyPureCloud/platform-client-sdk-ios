@@ -1,6 +1,5 @@
----
-title: LearningModulePublishRequest
----
+# LearningModulePublishRequest
+
 ## LearningModulePublishRequest
 Learning module publish request
 
@@ -9,6 +8,7 @@ Learning module publish request
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **termsAndConditionsAccepted** | **Bool** | Whether the terms and conditions were accepted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

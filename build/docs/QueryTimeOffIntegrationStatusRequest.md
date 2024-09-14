@@ -1,13 +1,13 @@
----
-title: QueryTimeOffIntegrationStatusRequest
----
+# QueryTimeOffIntegrationStatusRequest
+
 ## QueryTimeOffIntegrationStatusRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **timeOffRequestLookups** | [**[TimeOffRequestLookup]**](TimeOffRequestLookup.html) | A list of time off request lookups | |
-{: class="table table-striped"}
+| **timeOffRequestLookups** | [**[TimeOffRequestLookup]**](TimeOffRequestLookup) | A list of time off request lookups | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

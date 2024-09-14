@@ -1,6 +1,5 @@
----
-title: DialerContactlistfilterConfigChangeFilterClause
----
+# DialerContactlistfilterConfigChangeFilterClause
+
 ## DialerContactlistfilterConfigChangeFilterClause
 
 ## Properties
@@ -8,8 +7,9 @@ title: DialerContactlistfilterConfigChangeFilterClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **filterType** | **String** | Contact list filter type | [optional] |
-| **predicates** | [**[DialerContactlistfilterConfigChangeFilterPredicate]**](DialerContactlistfilterConfigChangeFilterPredicate.html) | The list of predicates in that clause | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **predicates** | [**[DialerContactlistfilterConfigChangeFilterPredicate]**](DialerContactlistfilterConfigChangeFilterPredicate) | The list of predicates in that clause | [optional] |
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

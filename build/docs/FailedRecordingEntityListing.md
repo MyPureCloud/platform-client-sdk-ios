@@ -1,13 +1,12 @@
----
-title: FailedRecordingEntityListing
----
+# FailedRecordingEntityListing
+
 ## FailedRecordingEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[RecordingJobFailedRecording]**](RecordingJobFailedRecording.html) |  | [optional] |
+| **entities** | [**[RecordingJobFailedRecording]**](RecordingJobFailedRecording) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: FailedRecordingEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

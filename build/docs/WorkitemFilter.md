@@ -1,6 +1,5 @@
----
-title: WorkitemFilter
----
+# WorkitemFilter
+
 ## WorkitemFilter
 
 ## Properties
@@ -11,6 +10,7 @@ title: WorkitemFilter
 | **type** | **String** | Attribute type. | |
 | **_operator** | **String** | Filter operator. | |
 | **values** | **[String]** | List of values to be used in the filter. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

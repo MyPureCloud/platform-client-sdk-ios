@@ -1,6 +1,5 @@
----
-title: DocumentationSearchResponse
----
+# DocumentationSearchResponse
+
 ## DocumentationSearchResponse
 
 ## Properties
@@ -15,7 +14,8 @@ title: DocumentationSearchResponse
 | **currentPage** | **String** | Q64 value for the current page of results | [optional] |
 | **nextPage** | **String** | Q64 value for the next page of results | [optional] |
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**[DocumentationResult]**](DocumentationResult.html) | Search results | |
-{: class="table table-striped"}
+| **results** | [**[DocumentationResult]**](DocumentationResult) | Search results | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

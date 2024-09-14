@@ -1,13 +1,13 @@
----
-title: AvailableTimeOffResponse
----
+# AvailableTimeOffResponse
+
 ## AvailableTimeOffResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[AvailableTimeOffRange]**](AvailableTimeOffRange.html) |  | [optional] |
-{: class="table table-striped"}
+| **values** | [**[AvailableTimeOffRange]**](AvailableTimeOffRange) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

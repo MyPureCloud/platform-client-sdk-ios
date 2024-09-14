@@ -1,6 +1,5 @@
----
-title: GeolocationEventGeolocation
----
+# GeolocationEventGeolocation
+
 ## GeolocationEventGeolocation
 
 ## Properties
@@ -12,6 +11,7 @@ title: GeolocationEventGeolocation
 | **country** | **String** |  | [optional] |
 | **region** | **String** |  | [optional] |
 | **city** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: RecordingTranscodeCompleteTopicRecording
----
+# RecordingTranscodeCompleteTopicRecording
+
 ## RecordingTranscodeCompleteTopicRecording
 
 ## Properties
@@ -10,9 +9,10 @@ title: RecordingTranscodeCompleteTopicRecording
 | **_id** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **fileState** | **String** |  | [optional] |
-| **mediaUris** | [**[RecordingTranscodeCompleteTopicMediaResult]**](RecordingTranscodeCompleteTopicMediaResult.html) |  | [optional] |
+| **mediaUris** | [**[RecordingTranscodeCompleteTopicMediaResult]**](RecordingTranscodeCompleteTopicMediaResult) |  | [optional] |
 | **estimatedTranscodeTimeMs** | **Int** |  | [optional] |
 | **actualTranscodeTimeMs** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

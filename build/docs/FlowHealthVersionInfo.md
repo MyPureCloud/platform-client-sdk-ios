@@ -1,14 +1,14 @@
----
-title: FlowHealthVersionInfo
----
+# FlowHealthVersionInfo
+
 ## FlowHealthVersionInfo
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **flowVersion** | [**AddressableEntityRef**](AddressableEntityRef.html) | Given flow&#39;s Version Info. | [optional] |
-| **nluDomain** | [**AddressableEntityRef**](AddressableEntityRef.html) | NLU Domain Info for this flow version. | [optional] |
-{: class="table table-striped"}
+| **flowVersion** | [**AddressableEntityRef**](AddressableEntityRef) | Given flow&#39;s Version Info. | [optional] |
+| **nluDomain** | [**AddressableEntityRef**](AddressableEntityRef) | NLU Domain Info for this flow version. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ConversationTagsUpdate
----
+# ConversationTagsUpdate
+
 ## ConversationTagsUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationTagsUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **externalTag** | **String** | The external tag associated with the conversation. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

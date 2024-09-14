@@ -1,6 +1,5 @@
----
-title: SearchAggregation
----
+# SearchAggregation
+
 ## SearchAggregation
 
 ## Properties
@@ -13,6 +12,7 @@ title: SearchAggregation
 | **value** | **String** | A value to use for aggregation | [optional] |
 | **size** | **Int** | The number aggregations results to return out of the entire result set | [optional] |
 | **order** | **[String]** | The order in which aggregation results are sorted | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

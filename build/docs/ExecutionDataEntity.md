@@ -1,6 +1,5 @@
----
-title: ExecutionDataEntity
----
+# ExecutionDataEntity
+
 ## ExecutionDataEntity
 Represents an individual result of an execution data lookup
 
@@ -12,6 +11,7 @@ Represents an individual result of an execution data lookup
 | **downloadUri** | **String** | A downloadable link to the execution data file. | [optional] |
 | **failed** | **Bool** | If the retrieval failed (not found, no permission, etc;), this will be set true. | [optional] |
 | **statusCode** | **String** | This will contain the http status code for the failure | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

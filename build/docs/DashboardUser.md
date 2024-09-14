@@ -1,6 +1,5 @@
----
-title: DashboardUser
----
+# DashboardUser
+
 ## DashboardUser
 
 ## Properties
@@ -13,6 +12,7 @@ title: DashboardUser
 | **publicDashboardCount** | **Int** | The count of public dashboards for the user | [optional] |
 | **state** | **String** | The state of the user | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

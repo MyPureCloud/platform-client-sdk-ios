@@ -1,6 +1,5 @@
----
-title: WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification
----
+# WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification
+
 ## WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification
 
 ## Properties
@@ -10,9 +9,10 @@ title: WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotificatio
 | **_id** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **adherenceExplanation** | [**WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification**](WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.html) |  | [optional] |
+| **adherenceExplanation** | [**WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification**](WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification) |  | [optional] |
 | **downloadUrl** | **String** |  | [optional] |
-| **error** | [**WfmAdherenceExplanationJobCompleteTopicErrorBody**](WfmAdherenceExplanationJobCompleteTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **error** | [**WfmAdherenceExplanationJobCompleteTopicErrorBody**](WfmAdherenceExplanationJobCompleteTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

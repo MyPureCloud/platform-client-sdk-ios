@@ -1,15 +1,15 @@
----
-title: V2MobiusAlertsTopicAlertRuleProperties
----
+# V2MobiusAlertsTopicAlertRuleProperties
+
 ## V2MobiusAlertsTopicAlertRuleProperties
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | [**UUID**](UUID.html) |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

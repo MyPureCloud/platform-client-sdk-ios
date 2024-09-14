@@ -1,6 +1,5 @@
----
-title: TestModeTrigger
----
+# TestModeTrigger
+
 ## TestModeTrigger
 Basic identifying information about a trigger
 
@@ -12,6 +11,7 @@ Basic identifying information about a trigger
 | **name** | **String** | The name of the trigger | [optional] |
 | **enabled** | **Bool** | Whether or not the trigger is enabled | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

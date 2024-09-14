@@ -1,6 +1,5 @@
----
-title: BuIntradayScheduleData
----
+# BuIntradayScheduleData
+
 ## BuIntradayScheduleData
 
 ## Properties
@@ -8,6 +7,7 @@ title: BuIntradayScheduleData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **onQueueTimeSeconds** | **Int64** | The total on-queue time in seconds for all agents in this group | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

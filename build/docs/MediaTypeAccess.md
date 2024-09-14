@@ -1,6 +1,5 @@
----
-title: MediaTypeAccess
----
+# MediaTypeAccess
+
 ## MediaTypeAccess
 Media type access definitions
 
@@ -8,8 +7,9 @@ Media type access definitions
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **inbound** | [**[MediaType]**](MediaType.html) | List of media types allowed for inbound messages from customers. If inbound messages from a customer contain media that is not in this list, the media will be dropped from the outbound message. | [optional] |
-| **outbound** | [**[MediaType]**](MediaType.html) | List of media types allowed for outbound messages to customers. If an outbound message is sent that contains media that is not in this list, the message will not be sent. | [optional] |
-{: class="table table-striped"}
+| **inbound** | [**[MediaType]**](MediaType) | List of media types allowed for inbound messages from customers. If inbound messages from a customer contain media that is not in this list, the media will be dropped from the outbound message. | [optional] |
+| **outbound** | [**[MediaType]**](MediaType) | List of media types allowed for outbound messages to customers. If an outbound message is sent that contains media that is not in this list, the message will not be sent. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

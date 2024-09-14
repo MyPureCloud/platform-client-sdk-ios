@@ -1,16 +1,16 @@
----
-title: SuggestionListing
----
+# SuggestionListing
+
 ## SuggestionListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Suggestion]**](Suggestion.html) |  | [optional] |
+| **entities** | [**[Suggestion]**](Suggestion) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

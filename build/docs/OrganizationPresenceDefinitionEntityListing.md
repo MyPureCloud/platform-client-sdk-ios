@@ -1,6 +1,5 @@
----
-title: OrganizationPresenceDefinitionEntityListing
----
+# OrganizationPresenceDefinitionEntityListing
+
 ## OrganizationPresenceDefinitionEntityListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: OrganizationPresenceDefinitionEntityListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[OrganizationPresenceDefinition]**](OrganizationPresenceDefinition.html) |  | [optional] |
+| **entities** | [**[OrganizationPresenceDefinition]**](OrganizationPresenceDefinition) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

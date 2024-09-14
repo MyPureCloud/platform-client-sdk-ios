@@ -1,6 +1,5 @@
----
-title: ComplianceResponse
----
+# ComplianceResponse
+
 ## ComplianceResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ComplianceResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **message** | **String** | Message response | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

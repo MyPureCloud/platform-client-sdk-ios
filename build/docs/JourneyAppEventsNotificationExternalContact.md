@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationExternalContact
----
+# JourneyAppEventsNotificationExternalContact
+
 ## JourneyAppEventsNotificationExternalContact
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyAppEventsNotificationExternalContact
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

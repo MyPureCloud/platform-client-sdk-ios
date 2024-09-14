@@ -1,6 +1,5 @@
----
-title: ConversationActivityData
----
+# ConversationActivityData
+
 ## ConversationActivityData
 
 ## Properties
@@ -8,9 +7,10 @@ title: ConversationActivityData
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** | A mapping from grouping dimension to value | [optional] |
-| **data** | [**[ConversationActivityMetricValue]**](ConversationActivityMetricValue.html) | Data for metrics | [optional] |
+| **data** | [**[ConversationActivityMetricValue]**](ConversationActivityMetricValue) | Data for metrics | [optional] |
 | **truncated** | **Bool** | Flag for a truncated list of entities. If truncated, the first half of the list of entities will contain the oldest entities and the second half the newest entities. | [optional] |
-| **entities** | [**[ConversationActivityEntityData]**](ConversationActivityEntityData.html) | Details for active entities | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[ConversationActivityEntityData]**](ConversationActivityEntityData) | Details for active entities | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

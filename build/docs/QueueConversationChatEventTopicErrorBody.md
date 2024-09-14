@@ -1,6 +1,5 @@
----
-title: QueueConversationChatEventTopicErrorBody
----
+# QueueConversationChatEventTopicErrorBody
+
 ## QueueConversationChatEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: QueueConversationChatEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[QueueConversationChatEventTopicDetail]**](QueueConversationChatEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[QueueConversationChatEventTopicErrorBody]**](QueueConversationChatEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[QueueConversationChatEventTopicDetail]**](QueueConversationChatEventTopicDetail) |  | [optional] |
+| **errors** | [**[QueueConversationChatEventTopicErrorBody]**](QueueConversationChatEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

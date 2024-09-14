@@ -1,6 +1,5 @@
----
-title: WfmUserNotificationTopicTimeOffRequestNotification
----
+# WfmUserNotificationTopicTimeOffRequestNotification
+
 ## WfmUserNotificationTopicTimeOffRequestNotification
 
 ## Properties
@@ -8,11 +7,12 @@ title: WfmUserNotificationTopicTimeOffRequestNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **timeOffRequestId** | **String** |  | [optional] |
-| **user** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference.html) |  | [optional] |
+| **user** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
 | **isFullDayRequest** | **Bool** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **partialDayStartDateTimes** | [**[Date]**](Date.html) |  | [optional] |
+| **partialDayStartDateTimes** | [**[Date]**](Date) |  | [optional] |
 | **fullDayManagementUnitDates** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

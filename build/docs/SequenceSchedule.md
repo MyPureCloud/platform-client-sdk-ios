@@ -1,6 +1,5 @@
----
-title: SequenceSchedule
----
+# SequenceSchedule
+
 ## SequenceSchedule
 
 ## Properties
@@ -9,13 +8,14 @@ title: SequenceSchedule
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateCreated** | [**Date**](Date) | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
-| **intervals** | [**[ScheduleInterval]**](ScheduleInterval.html) | A list of intervals during which to run the associated CampaignSequence. | |
+| **intervals** | [**[ScheduleInterval]**](ScheduleInterval) | A list of intervals during which to run the associated CampaignSequence. | |
 | **timeZone** | **String** | The time zone for this SequenceSchedule. For example, Africa/Abidjan. | |
-| **sequence** | [**DomainEntityRef**](DomainEntityRef.html) | The CampaignSequence that this SequenceSchedule is for. | |
+| **sequence** | [**DomainEntityRef**](DomainEntityRef) | The CampaignSequence that this SequenceSchedule is for. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

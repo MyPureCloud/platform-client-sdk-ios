@@ -1,6 +1,5 @@
----
-title: WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
----
+# WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
+
 ## WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
 
 ## Properties
@@ -10,6 +9,7 @@ title: WfmBuIntradayDataUpdateTopicIntradayPerformancePredictionData
 | **serviceLevelPercent** | **Double** |  | [optional] |
 | **averageSpeedOfAnswerSeconds** | **Double** |  | [optional] |
 | **occupancyPercent** | **Double** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

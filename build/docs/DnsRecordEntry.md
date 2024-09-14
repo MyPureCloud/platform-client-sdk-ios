@@ -1,6 +1,5 @@
----
-title: DnsRecordEntry
----
+# DnsRecordEntry
+
 ## DnsRecordEntry
 
 ## Properties
@@ -10,6 +9,7 @@ title: DnsRecordEntry
 | **host** | **String** | the hostname of the DNS entry | [optional] |
 | **recordContents** | **String** | the payload of the DNS entry | [optional] |
 | **verificationStatus** | **String** | the current status of the related verification process | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

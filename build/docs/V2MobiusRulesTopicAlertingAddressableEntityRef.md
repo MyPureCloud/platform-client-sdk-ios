@@ -1,6 +1,5 @@
----
-title: V2MobiusRulesTopicAlertingAddressableEntityRef
----
+# V2MobiusRulesTopicAlertingAddressableEntityRef
+
 ## V2MobiusRulesTopicAlertingAddressableEntityRef
 
 ## Properties
@@ -9,6 +8,7 @@ title: V2MobiusRulesTopicAlertingAddressableEntityRef
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the resource | [optional] |
 | **displayName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: AgentCountRange
----
+# AgentCountRange
+
 ## AgentCountRange
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentCountRange
 |------------ | ------------- | ------------- | -------------|
 | **minimum** | **Int** | The minimum value of agent count per work plan | |
 | **maximum** | **Int** | The maximum value of agent count per work plan | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

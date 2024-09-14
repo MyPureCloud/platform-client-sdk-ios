@@ -1,6 +1,5 @@
----
-title: LearningAssignmentUpdate
----
+# LearningAssignmentUpdate
+
 ## LearningAssignmentUpdate
 
 ## Properties
@@ -8,7 +7,8 @@ title: LearningAssignmentUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The Learning Assignment state | [optional] |
-| **assessment** | [**LearningAssessment**](LearningAssessment.html) | An updated Assessment | [optional] |
-{: class="table table-striped"}
+| **assessment** | [**LearningAssessment**](LearningAssessment) | An updated Assessment | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,13 @@
----
-title: BatchDownloadJobSubmission
----
+# BatchDownloadJobSubmission
+
 ## BatchDownloadJobSubmission
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **batchDownloadRequestList** | [**[BatchDownloadRequest]**](BatchDownloadRequest.html) | List of up to 100 items requested | |
-{: class="table table-striped"}
+| **batchDownloadRequestList** | [**[BatchDownloadRequest]**](BatchDownloadRequest) | List of up to 100 items requested | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

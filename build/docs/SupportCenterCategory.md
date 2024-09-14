@@ -1,6 +1,5 @@
----
-title: SupportCenterCategory
----
+# SupportCenterCategory
+
 ## SupportCenterCategory
 
 ## Properties
@@ -9,7 +8,8 @@ title: SupportCenterCategory
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-| **image** | [**SupportCenterImage**](SupportCenterImage.html) | Image attributes for a featured category | [optional] |
-{: class="table table-striped"}
+| **image** | [**SupportCenterImage**](SupportCenterImage) | Image attributes for a featured category | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

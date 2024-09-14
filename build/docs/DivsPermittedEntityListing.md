@@ -1,13 +1,12 @@
----
-title: DivsPermittedEntityListing
----
+# DivsPermittedEntityListing
+
 ## DivsPermittedEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AuthzDivision]**](AuthzDivision.html) |  | [optional] |
+| **entities** | [**[AuthzDivision]**](AuthzDivision) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -18,6 +17,7 @@ title: DivsPermittedEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

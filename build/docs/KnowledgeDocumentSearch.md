@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentSearch
----
+# KnowledgeDocumentSearch
+
 ## KnowledgeDocumentSearch
 
 ## Properties
@@ -14,11 +13,12 @@ title: KnowledgeDocumentSearch
 | **total** | **Int** | The total number of documents matching the query. | [optional] |
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **queryType** | **String** | The type of the query that initiates the search. | [optional] |
-| **results** | [**[KnowledgeDocumentSearchResult]**](KnowledgeDocumentSearchResult.html) | Documents matching the search query. | [optional] |
-| **application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication.html) | The client application details from which search happened. | [optional] |
-| **conversationContext** | [**KnowledgeConversationContextResponse**](KnowledgeConversationContextResponse.html) | Conversation context information if the search is initiated in the context of a conversation. | [optional] |
+| **results** | [**[KnowledgeDocumentSearchResult]**](KnowledgeDocumentSearchResult) | Documents matching the search query. | [optional] |
+| **application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication) | The client application details from which search happened. | [optional] |
+| **conversationContext** | [**KnowledgeConversationContextResponse**](KnowledgeConversationContextResponse) | Conversation context information if the search is initiated in the context of a conversation. | [optional] |
 | **confidenceThreshold** | **Float** | The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. | [optional] |
-| **answerGeneration** | [**KnowledgeAnswerGenerationResponse**](KnowledgeAnswerGenerationResponse.html) | The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;. | [optional] |
-{: class="table table-striped"}
+| **answerGeneration** | [**KnowledgeAnswerGenerationResponse**](KnowledgeAnswerGenerationResponse) | The results with AI-generated answer if the answerMode request property contains \&quot;AnswerGeneration\&quot;. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

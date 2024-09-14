@@ -1,6 +1,5 @@
----
-title: ShiftTradeMatchViolation
----
+# ShiftTradeMatchViolation
+
 ## ShiftTradeMatchViolation
 
 ## Properties
@@ -9,6 +8,7 @@ title: ShiftTradeMatchViolation
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The type of constraint violation | [optional] |
 | **params** | **[String:String]** | Clarifying user params for constructing helpful error messages | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

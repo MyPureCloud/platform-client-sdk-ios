@@ -1,6 +1,5 @@
----
-title: ConversationScreenShareEventTopicErrorBody
----
+# ConversationScreenShareEventTopicErrorBody
+
 ## ConversationScreenShareEventTopicErrorBody
 
 ## Properties
@@ -15,8 +14,9 @@ title: ConversationScreenShareEventTopicErrorBody
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[ConversationScreenShareEventTopicDetail]**](ConversationScreenShareEventTopicDetail.html) |  | [optional] |
-| **errors** | [**[ConversationScreenShareEventTopicErrorBody]**](ConversationScreenShareEventTopicErrorBody.html) |  | [optional] |
-{: class="table table-striped"}
+| **details** | [**[ConversationScreenShareEventTopicDetail]**](ConversationScreenShareEventTopicDetail) |  | [optional] |
+| **errors** | [**[ConversationScreenShareEventTopicErrorBody]**](ConversationScreenShareEventTopicErrorBody) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

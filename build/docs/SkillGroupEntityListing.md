@@ -1,16 +1,16 @@
----
-title: SkillGroupEntityListing
----
+# SkillGroupEntityListing
+
 ## SkillGroupEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SkillGroupDefinition]**](SkillGroupDefinition.html) |  | [optional] |
+| **entities** | [**[SkillGroupDefinition]**](SkillGroupDefinition) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: EdgeRebootParameters
----
+# EdgeRebootParameters
+
 ## EdgeRebootParameters
 
 ## Properties
@@ -8,6 +7,7 @@ title: EdgeRebootParameters
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **callDrainingWaitTimeSeconds** | **Int** | The number of seconds to wait for call draining to complete before initiating the reboot. A value of 0 will prevent call draining and all calls will disconnect immediately. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

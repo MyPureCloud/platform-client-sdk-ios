@@ -1,6 +1,5 @@
----
-title: QueryRequestClause
----
+# QueryRequestClause
+
 ## QueryRequestClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: QueryRequestClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | The logic used to combine the predicates | |
-| **predicates** | [**[QueryRequestPredicate]**](QueryRequestPredicate.html) | The list of predicates used to filter the data | |
-{: class="table table-striped"}
+| **predicates** | [**[QueryRequestPredicate]**](QueryRequestPredicate) | The list of predicates used to filter the data | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

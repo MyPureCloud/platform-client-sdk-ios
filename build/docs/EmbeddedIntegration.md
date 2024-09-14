@@ -1,6 +1,5 @@
----
-title: EmbeddedIntegration
----
+# EmbeddedIntegration
+
 ## EmbeddedIntegration
 
 ## Properties
@@ -9,6 +8,7 @@ title: EmbeddedIntegration
 |------------ | ------------- | ------------- | -------------|
 | **enableWhitelist** | **Bool** |  | [optional] |
 | **domainWhitelist** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

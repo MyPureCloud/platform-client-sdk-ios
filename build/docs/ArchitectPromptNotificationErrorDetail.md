@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationErrorDetail
----
+# ArchitectPromptNotificationErrorDetail
+
 ## ArchitectPromptNotificationErrorDetail
 
 ## Properties
@@ -11,6 +10,7 @@ title: ArchitectPromptNotificationErrorDetail
 | **entityId** | **String** |  | [optional] |
 | **entityName** | **String** |  | [optional] |
 | **fieldName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

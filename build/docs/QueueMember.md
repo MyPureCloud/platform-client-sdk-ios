@@ -1,6 +1,5 @@
----
-title: QueueMember
----
+# QueueMember
+
 ## QueueMember
 
 ## Properties
@@ -9,12 +8,13 @@ title: QueueMember
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The queue member&#39;s id. | [optional] |
 | **name** | **String** |  | [optional] |
-| **user** | [**User**](User.html) |  | [optional] |
+| **user** | [**User**](User) |  | [optional] |
 | **ringNumber** | **Int** |  | [optional] |
 | **joined** | **Bool** |  | [optional] |
 | **memberBy** | **String** |  | [optional] |
-| **routingStatus** | [**RoutingStatus**](RoutingStatus.html) |  | [optional] |
+| **routingStatus** | [**RoutingStatus**](RoutingStatus) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

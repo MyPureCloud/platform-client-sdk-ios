@@ -1,15 +1,15 @@
----
-title: AnalyticsSessionMetric
----
+# AnalyticsSessionMetric
+
 ## AnalyticsSessionMetric
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **emitDate** | [**Date**](Date.html) | Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **emitDate** | [**Date**](Date) | Metric emission date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **name** | **String** | Unique name of this metric | [optional] |
 | **value** | **Int64** | The metric value | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

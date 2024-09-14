@@ -1,6 +1,5 @@
----
-title: TranscriptAggregateQueryClause
----
+# TranscriptAggregateQueryClause
+
 ## TranscriptAggregateQueryClause
 
 ## Properties
@@ -8,7 +7,8 @@ title: TranscriptAggregateQueryClause
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates | |
-| **predicates** | [**[TranscriptAggregateQueryPredicate]**](TranscriptAggregateQueryPredicate.html) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
-{: class="table table-striped"}
+| **predicates** | [**[TranscriptAggregateQueryPredicate]**](TranscriptAggregateQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LearningModuleJobResponse
----
+# LearningModuleJobResponse
+
 ## LearningModuleJobResponse
 Learning module job response
 
@@ -11,6 +10,7 @@ Learning module job response
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **status** | **String** | The status of learning module job | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

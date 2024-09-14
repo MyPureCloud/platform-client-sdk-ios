@@ -1,6 +1,5 @@
----
-title: TextBotUserInputEvent
----
+# TextBotUserInputEvent
+
 ## TextBotUserInputEvent
 Settings for an input event to the bot flow indicating user input is available.
 
@@ -9,7 +8,8 @@ Settings for an input event to the bot flow indicating user input is available.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mode** | **String** | The input mode. | |
-| **alternatives** | [**[TextBotUserInputAlternative]**](TextBotUserInputAlternative.html) | The input alternatives. | |
-{: class="table table-striped"}
+| **alternatives** | [**[TextBotUserInputAlternative]**](TextBotUserInputAlternative) | The input alternatives. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

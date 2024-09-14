@@ -1,6 +1,5 @@
----
-title: AttributeDetailEventTopicCommunication
----
+# AttributeDetailEventTopicCommunication
+
 ## AttributeDetailEventTopicCommunication
 
 ## Properties
@@ -9,6 +8,7 @@ title: AttributeDetailEventTopicCommunication
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

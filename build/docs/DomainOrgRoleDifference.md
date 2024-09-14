@@ -1,17 +1,17 @@
----
-title: DomainOrgRoleDifference
----
+# DomainOrgRoleDifference
+
 ## DomainOrgRoleDifference
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **removedPermissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy.html) |  | [optional] |
-| **addedPermissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy.html) |  | [optional] |
-| **samePermissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy.html) |  | [optional] |
-| **userOrgRole** | [**DomainOrganizationRole**](DomainOrganizationRole.html) |  | [optional] |
-| **roleFromDefault** | [**DomainOrganizationRole**](DomainOrganizationRole.html) |  | [optional] |
-{: class="table table-striped"}
+| **removedPermissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy) |  | [optional] |
+| **addedPermissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy) |  | [optional] |
+| **samePermissionPolicies** | [**[DomainPermissionPolicy]**](DomainPermissionPolicy) |  | [optional] |
+| **userOrgRole** | [**DomainOrganizationRole**](DomainOrganizationRole) |  | [optional] |
+| **roleFromDefault** | [**DomainOrganizationRole**](DomainOrganizationRole) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

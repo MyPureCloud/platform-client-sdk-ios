@@ -1,6 +1,5 @@
----
-title: ConversationClearSettings
----
+# ConversationClearSettings
+
 ## ConversationClearSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConversationClearSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | whether or not conversation clear setting is enabled | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

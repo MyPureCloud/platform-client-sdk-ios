@@ -1,6 +1,5 @@
----
-title: Humanize
----
+# Humanize
+
 ## Humanize
 
 ## Properties
@@ -8,7 +7,8 @@ title: Humanize
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Whether or not humanize conversations setting is enabled | [optional] |
-| **bot** | [**BotMessengerProfile**](BotMessengerProfile.html) | Bot messenger profile setting | [optional] |
-{: class="table table-striped"}
+| **bot** | [**BotMessengerProfile**](BotMessengerProfile) | Bot messenger profile setting | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

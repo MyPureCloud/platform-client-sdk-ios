@@ -1,6 +1,5 @@
----
-title: OpenInboundMessageContent
----
+# OpenInboundMessageContent
+
 ## OpenInboundMessageContent
 Message content element.
 
@@ -8,7 +7,8 @@ Message content element.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **attachment** | [**OpenContentAttachment**](OpenContentAttachment.html) | Attachment content. | [optional] |
-{: class="table table-striped"}
+| **attachment** | [**OpenContentAttachment**](OpenContentAttachment) | Attachment content. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

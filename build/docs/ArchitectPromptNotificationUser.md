@@ -1,6 +1,5 @@
----
-title: ArchitectPromptNotificationUser
----
+# ArchitectPromptNotificationUser
+
 ## ArchitectPromptNotificationUser
 The user who initiated the change.
 
@@ -10,7 +9,8 @@ The user who initiated the change.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the user. | [optional] |
 | **name** | **String** | The name of the user, if available. | [optional] |
-| **homeOrg** | [**ArchitectPromptNotificationHomeOrganization**](ArchitectPromptNotificationHomeOrganization.html) |  | [optional] |
-{: class="table table-striped"}
+| **homeOrg** | [**ArchitectPromptNotificationHomeOrganization**](ArchitectPromptNotificationHomeOrganization) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

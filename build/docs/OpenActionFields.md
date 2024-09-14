@@ -1,14 +1,14 @@
----
-title: OpenActionFields
----
+# OpenActionFields
+
 ## OpenActionFields
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **openAction** | [**DomainEntityRef**](DomainEntityRef.html) | The specific type of the open action. | |
-| **configurationFields** | [**[String:JSON]**](JSON.html) | Custom fields defined in the schema referenced by the open action type selected. | [optional] |
-{: class="table table-striped"}
+| **openAction** | [**DomainEntityRef**](DomainEntityRef) | The specific type of the open action. | |
+| **configurationFields** | [**[String:JSON]**](JSON) | Custom fields defined in the schema referenced by the open action type selected. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

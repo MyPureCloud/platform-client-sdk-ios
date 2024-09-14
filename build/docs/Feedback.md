@@ -1,6 +1,5 @@
----
-title: Feedback
----
+# Feedback
+
 ## Feedback
 
 ## Properties
@@ -10,6 +9,7 @@ title: Feedback
 | **suggestionId** | **String** | Feedback suggestion id. | |
 | **userProvided** | **Bool** | Indicates whether the answer/item was clicked by the human agent or not. | [optional] |
 | **relevance** | **String** | Feedback relevance. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

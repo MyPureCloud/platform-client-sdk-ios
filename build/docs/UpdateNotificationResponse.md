@@ -1,6 +1,5 @@
----
-title: UpdateNotificationResponse
----
+# UpdateNotificationResponse
+
 ## UpdateNotificationResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: UpdateNotificationResponse
 |------------ | ------------- | ------------- | -------------|
 | **mutableGroupId** | **String** | The mutableGroupId of the notification | [optional] |
 | **_id** | **String** | The id of the notification for mapping the potentially new mutableGroupId | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

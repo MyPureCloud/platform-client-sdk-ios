@@ -1,6 +1,5 @@
----
-title: WebChatSettings
----
+# WebChatSettings
+
 ## WebChatSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebChatSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **requireDeployment** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

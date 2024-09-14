@@ -1,6 +1,5 @@
----
-title: Referrer
----
+# Referrer
+
 ## Referrer
 
 ## Properties
@@ -16,6 +15,7 @@ title: Referrer
 | **fragment** | **String** | Referrer URL fragment. | [optional] |
 | **name** | **String** | Name of referrer (e.g. Yahoo!, Google, InfoSpace). | [optional] |
 | **medium** | **String** | Type of referrer (e.g. search, social). | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

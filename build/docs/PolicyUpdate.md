@@ -1,6 +1,5 @@
----
-title: PolicyUpdate
----
+# PolicyUpdate
+
 ## PolicyUpdate
 
 ## Properties
@@ -8,6 +7,7 @@ title: PolicyUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

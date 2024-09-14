@@ -1,6 +1,5 @@
----
-title: CoverSheet
----
+# CoverSheet
+
 ## CoverSheet
 
 ## Properties
@@ -9,6 +8,7 @@ title: CoverSheet
 |------------ | ------------- | ------------- | -------------|
 | **notes** | **String** | Text to be added to the coversheet | [optional] |
 | **locale** | **String** | Locale, e.g. &#x3D; en-US | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

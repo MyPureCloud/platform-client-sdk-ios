@@ -1,6 +1,5 @@
----
-title: ContentList
----
+# ContentList
+
 ## ContentList
 List content object.
 
@@ -13,8 +12,9 @@ List content object.
 | **title** | **String** | Text to show in the title. | [optional] |
 | **_description** | **String** | Text to show in the description. | [optional] |
 | **submitLabel** | **String** | Label for Submit button. | [optional] |
-| **actions** | [**ContentActions**](ContentActions.html) | The list actions (Deprecated). | [optional] |
-| **components** | [**[ListItemComponent]**](ListItemComponent.html) | An array of component objects. | [optional] |
-{: class="table table-striped"}
+| **actions** | [**ContentActions**](ContentActions) | The list actions (Deprecated). | [optional] |
+| **components** | [**[ListItemComponent]**](ListItemComponent) | An array of component objects. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SegmentDetailQueryPredicate
----
+# SegmentDetailQueryPredicate
+
 ## SegmentDetailQueryPredicate
 
 ## Properties
@@ -14,7 +13,8 @@ title: SegmentDetailQueryPredicate
 | **metric** | **String** | Left hand side for metric predicates | [optional] |
 | **_operator** | **String** | Optional operator, default is matches | [optional] |
 | **value** | **String** | Right hand side for dimension, metric, or property predicates | [optional] |
-| **range** | [**NumericRange**](NumericRange.html) | Right hand side for dimension, metric, or property predicates | [optional] |
-{: class="table table-striped"}
+| **range** | [**NumericRange**](NumericRange) | Right hand side for dimension, metric, or property predicates | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

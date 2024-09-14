@@ -1,6 +1,5 @@
----
-title: PresenceDefinition
----
+# PresenceDefinition
+
 ## PresenceDefinition
 
 ## Properties
@@ -10,6 +9,7 @@ title: PresenceDefinition
 | **_id** | **String** | description | [optional] |
 | **systemPresence** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

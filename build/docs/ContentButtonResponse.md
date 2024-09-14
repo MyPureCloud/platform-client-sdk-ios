@@ -1,6 +1,5 @@
----
-title: ContentButtonResponse
----
+# ContentButtonResponse
+
 ## ContentButtonResponse
 Button response object representing the click of a structured message button, such as a quick reply.
 
@@ -12,6 +11,7 @@ Button response object representing the click of a structured message button, su
 | **type** | **String** | Describes the button that resulted in the Button Response. | |
 | **text** | **String** | The response text from the button click. | |
 | **payload** | **String** | The response payload associated with the clicked button. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

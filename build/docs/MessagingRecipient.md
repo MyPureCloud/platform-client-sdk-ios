@@ -1,6 +1,5 @@
----
-title: MessagingRecipient
----
+# MessagingRecipient
+
 ## MessagingRecipient
 Information about the recipient the message is sent to or received from.
 
@@ -15,7 +14,8 @@ Information about the recipient the message is sent to or received from.
 | **firstName** | **String** | First name of the recipient. | [optional] |
 | **lastName** | **String** | Last name of the recipient. | [optional] |
 | **email** | **String** | E-mail address of the recipient. | [optional] |
-| **additionalIds** | [**[RecipientAdditionalIdentifier]**](RecipientAdditionalIdentifier.html) | List of recipient additional identifiers | [optional] |
-{: class="table table-striped"}
+| **additionalIds** | [**[RecipientAdditionalIdentifier]**](RecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

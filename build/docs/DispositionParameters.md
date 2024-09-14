@@ -1,13 +1,13 @@
----
-title: DispositionParameters
----
+# DispositionParameters
+
 ## DispositionParameters
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **adjustableLiveSpeakerDetection** | [**AdjustableLiveSpeakerDetection**](AdjustableLiveSpeakerDetection.html) | ALSD evaluation inputs and output (isPersonalLikely) of the ALSD detector the last time it ran on the call (could be multiple times) | [optional] |
-{: class="table table-striped"}
+| **adjustableLiveSpeakerDetection** | [**AdjustableLiveSpeakerDetection**](AdjustableLiveSpeakerDetection) | ALSD evaluation inputs and output (isPersonalLikely) of the ALSD detector the last time it ran on the call (could be multiple times) | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

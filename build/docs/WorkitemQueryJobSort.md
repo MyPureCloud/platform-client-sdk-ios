@@ -1,6 +1,5 @@
----
-title: WorkitemQueryJobSort
----
+# WorkitemQueryJobSort
+
 ## WorkitemQueryJobSort
 
 ## Properties
@@ -9,6 +8,7 @@ title: WorkitemQueryJobSort
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Specify an attribute for sorting. | [optional] |
 | **ascending** | **Bool** | Sort Ascending | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

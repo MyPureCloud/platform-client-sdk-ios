@@ -1,6 +1,5 @@
----
-title: JourneyPage
----
+# JourneyPage
+
 ## JourneyPage
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyPage
 | **pathname** | **String** | Path name of the page for the event. | |
 | **queryString** | **String** | Query string that is passed to the page in the current event. | [optional] |
 | **breadcrumb** | **[String]** | Hierarchy of the current page in relation to the website&#39;s structure. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ServiceGoalTemplateImpactOverride
----
+# ServiceGoalTemplateImpactOverride
+
 ## ServiceGoalTemplateImpactOverride
 
 ## Properties
@@ -8,7 +7,8 @@ title: ServiceGoalTemplateImpactOverride
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Whether service goal overrides are enabled for this service goal template | |
-| **impact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings.html) | Settings controlling max percent increase and decrease of service goals for this service goal template | |
-{: class="table table-striped"}
+| **impact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings) | Settings controlling max percent increase and decrease of service goals for this service goal template | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

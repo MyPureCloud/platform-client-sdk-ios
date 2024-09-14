@@ -1,6 +1,5 @@
----
-title: AsyncJob
----
+# AsyncJob
+
 ## AsyncJob
 
 ## Properties
@@ -10,6 +9,7 @@ title: AsyncJob
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

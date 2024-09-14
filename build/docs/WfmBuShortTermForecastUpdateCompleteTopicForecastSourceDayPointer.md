@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer
----
+# WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer
+
 ## WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer
 
 ## Properties
@@ -12,6 +11,7 @@ title: WfmBuShortTermForecastUpdateCompleteTopicForecastSourceDayPointer
 | **date** | **String** |  | [optional] |
 | **fileName** | **String** |  | [optional] |
 | **dataKey** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

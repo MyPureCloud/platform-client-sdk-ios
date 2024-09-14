@@ -1,6 +1,5 @@
----
-title: SuggestSearchRequest
----
+# SuggestSearchRequest
+
 ## SuggestSearchRequest
 
 ## Properties
@@ -9,7 +8,8 @@ title: SuggestSearchRequest
 |------------ | ------------- | ------------- | -------------|
 | **expand** | **[String]** | Provides more details about a specified resource | [optional] |
 | **types** | **[String]** | Resource domain type to search | |
-| **query** | [**[SuggestSearchCriteria]**](SuggestSearchCriteria.html) | Suggest query | |
-{: class="table table-striped"}
+| **query** | [**[SuggestSearchCriteria]**](SuggestSearchCriteria) | Suggest query | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LicenseOrgToggle
----
+# LicenseOrgToggle
+
 ## LicenseOrgToggle
 
 ## Properties
@@ -9,6 +8,7 @@ title: LicenseOrgToggle
 |------------ | ------------- | ------------- | -------------|
 | **featureName** | **String** |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

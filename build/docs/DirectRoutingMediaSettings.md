@@ -1,6 +1,5 @@
----
-title: DirectRoutingMediaSettings
----
+# DirectRoutingMediaSettings
+
 ## DirectRoutingMediaSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: DirectRoutingMediaSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **useAgentAddressOutbound** | **Bool** | Toggle that enables using an agent&#39;s Direct Routing address outbound on behalf of queue for this media type. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Items
----
+# Items
+
 ## Items
 
 ## Properties
@@ -9,6 +8,7 @@ title: Items
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
 | **pattern** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

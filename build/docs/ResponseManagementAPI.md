@@ -1,35 +1,31 @@
----
-title: ResponseManagementAPI
----
-## ResponseManagementAPI
+# ResponseManagementAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteResponsemanagementLibrary**](ResponseManagementAPI.html#deleteResponsemanagementLibrary) | Delete an existing response library. |
-| [**deleteResponsemanagementResponse**](ResponseManagementAPI.html#deleteResponsemanagementResponse) | Delete an existing response. |
-| [**deleteResponsemanagementResponseasset**](ResponseManagementAPI.html#deleteResponsemanagementResponseasset) | Delete response asset |
-| [**getResponsemanagementLibraries**](ResponseManagementAPI.html#getResponsemanagementLibraries) | Gets a list of existing response libraries. |
-| [**getResponsemanagementLibrary**](ResponseManagementAPI.html#getResponsemanagementLibrary) | Get details about an existing response library. |
-| [**getResponsemanagementResponse**](ResponseManagementAPI.html#getResponsemanagementResponse) | Get details about an existing response. |
-| [**getResponsemanagementResponseasset**](ResponseManagementAPI.html#getResponsemanagementResponseasset) | Get response asset information |
-| [**getResponsemanagementResponseassetsStatusStatusId**](ResponseManagementAPI.html#getResponsemanagementResponseassetsStatusStatusId) | Get response asset upload status |
-| [**getResponsemanagementResponses**](ResponseManagementAPI.html#getResponsemanagementResponses) | Gets a list of existing responses. |
-| [**postResponsemanagementLibraries**](ResponseManagementAPI.html#postResponsemanagementLibraries) | Create a response library. |
-| [**postResponsemanagementLibrariesBulk**](ResponseManagementAPI.html#postResponsemanagementLibrariesBulk) | Get response libraries. |
-| [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI.html#postResponsemanagementResponseassetsSearch) | Search response assets |
-| [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI.html#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
-| [**postResponsemanagementResponses**](ResponseManagementAPI.html#postResponsemanagementResponses) | Create a response. |
-| [**postResponsemanagementResponsesQuery**](ResponseManagementAPI.html#postResponsemanagementResponsesQuery) | Query responses |
-| [**putResponsemanagementLibrary**](ResponseManagementAPI.html#putResponsemanagementLibrary) | Update an existing response library. |
-| [**putResponsemanagementResponse**](ResponseManagementAPI.html#putResponsemanagementResponse) | Update an existing response. |
-| [**putResponsemanagementResponseasset**](ResponseManagementAPI.html#putResponsemanagementResponseasset) | Update response asset |
+| [**deleteResponsemanagementLibrary**](ResponseManagementAPI#deleteResponsemanagementLibrary) | Delete an existing response library. |
+| [**deleteResponsemanagementResponse**](ResponseManagementAPI#deleteResponsemanagementResponse) | Delete an existing response. |
+| [**deleteResponsemanagementResponseasset**](ResponseManagementAPI#deleteResponsemanagementResponseasset) | Delete response asset |
+| [**getResponsemanagementLibraries**](ResponseManagementAPI#getResponsemanagementLibraries) | Gets a list of existing response libraries. |
+| [**getResponsemanagementLibrary**](ResponseManagementAPI#getResponsemanagementLibrary) | Get details about an existing response library. |
+| [**getResponsemanagementResponse**](ResponseManagementAPI#getResponsemanagementResponse) | Get details about an existing response. |
+| [**getResponsemanagementResponseasset**](ResponseManagementAPI#getResponsemanagementResponseasset) | Get response asset information |
+| [**getResponsemanagementResponseassetsStatusStatusId**](ResponseManagementAPI#getResponsemanagementResponseassetsStatusStatusId) | Get response asset upload status |
+| [**getResponsemanagementResponses**](ResponseManagementAPI#getResponsemanagementResponses) | Gets a list of existing responses. |
+| [**postResponsemanagementLibraries**](ResponseManagementAPI#postResponsemanagementLibraries) | Create a response library. |
+| [**postResponsemanagementLibrariesBulk**](ResponseManagementAPI#postResponsemanagementLibrariesBulk) | Get response libraries. |
+| [**postResponsemanagementResponseassetsSearch**](ResponseManagementAPI#postResponsemanagementResponseassetsSearch) | Search response assets |
+| [**postResponsemanagementResponseassetsUploads**](ResponseManagementAPI#postResponsemanagementResponseassetsUploads) | Creates pre-signed url for uploading response asset |
+| [**postResponsemanagementResponses**](ResponseManagementAPI#postResponsemanagementResponses) | Create a response. |
+| [**postResponsemanagementResponsesQuery**](ResponseManagementAPI#postResponsemanagementResponsesQuery) | Query responses |
+| [**putResponsemanagementLibrary**](ResponseManagementAPI#putResponsemanagementLibrary) | Update an existing response library. |
+| [**putResponsemanagementResponse**](ResponseManagementAPI#putResponsemanagementResponse) | Update an existing response. |
+| [**putResponsemanagementResponseasset**](ResponseManagementAPI#putResponsemanagementResponseasset) | Update response asset |
 {: class="table-striped"}
 
-<a name="deleteResponsemanagementLibrary"></a>
 
-# **deleteResponsemanagementLibrary**
+## deleteResponsemanagementLibrary
 
 
 
@@ -73,16 +69,14 @@ ResponseManagementAPI.deleteResponsemanagementLibrary(libraryId: libraryId) { (e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **libraryId** | **String**| Library ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteResponsemanagementResponse"></a>
 
-# **deleteResponsemanagementResponse**
+## deleteResponsemanagementResponse
 
 
 
@@ -126,16 +120,14 @@ ResponseManagementAPI.deleteResponsemanagementResponse(responseId: responseId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **responseId** | **String**| Response ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteResponsemanagementResponseasset"></a>
 
-# **deleteResponsemanagementResponseasset**
+## deleteResponsemanagementResponseasset
 
 
 
@@ -177,20 +169,18 @@ ResponseManagementAPI.deleteResponsemanagementResponseasset(responseAssetId: res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **responseAssetId** | **String**| Asset Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getResponsemanagementLibraries"></a>
 
-# **getResponsemanagementLibraries**
-
+## getResponsemanagementLibraries
 
 
-> [LibraryEntityListing](LibraryEntityListing.html) getResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix)
+
+> [LibraryEntityListing](LibraryEntityListing) getResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix)
 
 Gets a list of existing response libraries.
 
@@ -235,20 +225,18 @@ ResponseManagementAPI.getResponsemanagementLibraries(pageNumber: pageNumber, pag
 | **pageSize** | **Int**| Page size | [optional] |
 | **messagingTemplateFilter** | **String**| Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel | [optional]<br />**Values**: whatsapp ("whatsapp") |
 | **libraryPrefix** | **String**| Returns a list of libraries that contain the prefix provided | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LibraryEntityListing**](LibraryEntityListing.html)
-
-<a name="getResponsemanagementLibrary"></a>
-
-# **getResponsemanagementLibrary**
+[**LibraryEntityListing**](LibraryEntityListing)
 
 
+## getResponsemanagementLibrary
 
-> [Library](Library.html) getResponsemanagementLibrary(libraryId)
+
+
+> [Library](Library) getResponsemanagementLibrary(libraryId)
 
 Get details about an existing response library.
 
@@ -287,20 +275,18 @@ ResponseManagementAPI.getResponsemanagementLibrary(libraryId: libraryId) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **libraryId** | **String**| Library ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Library**](Library.html)
-
-<a name="getResponsemanagementResponse"></a>
-
-# **getResponsemanagementResponse**
+[**Library**](Library)
 
 
+## getResponsemanagementResponse
 
-> [ModelResponse](Response.html) getResponsemanagementResponse(responseId, expand)
+
+
+> [ModelResponse](Response) getResponsemanagementResponse(responseId, expand)
 
 Get details about an existing response.
 
@@ -341,20 +327,18 @@ ResponseManagementAPI.getResponsemanagementResponse(responseId: responseId, expa
 | ------------- | ------------- | ------------- | ------------- |
 | **responseId** | **String**| Response ID | |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: substitutionsschema ("substitutionsSchema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ModelResponse**](Response.html)
-
-<a name="getResponsemanagementResponseasset"></a>
-
-# **getResponsemanagementResponseasset**
+[**ModelResponse**](Response)
 
 
+## getResponsemanagementResponseasset
 
-> [ResponseAsset](ResponseAsset.html) getResponsemanagementResponseasset(responseAssetId)
+
+
+> [ResponseAsset](ResponseAsset) getResponsemanagementResponseasset(responseAssetId)
 
 Get response asset information
 
@@ -393,20 +377,18 @@ ResponseManagementAPI.getResponsemanagementResponseasset(responseAssetId: respon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **responseAssetId** | **String**| Asset Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ResponseAsset**](ResponseAsset.html)
-
-<a name="getResponsemanagementResponseassetsStatusStatusId"></a>
-
-# **getResponsemanagementResponseassetsStatusStatusId**
+[**ResponseAsset**](ResponseAsset)
 
 
+## getResponsemanagementResponseassetsStatusStatusId
 
-> [ResponseAssetStatus](ResponseAssetStatus.html) getResponsemanagementResponseassetsStatusStatusId(statusId)
+
+
+> [ResponseAssetStatus](ResponseAssetStatus) getResponsemanagementResponseassetsStatusStatusId(statusId)
 
 Get response asset upload status
 
@@ -445,20 +427,18 @@ ResponseManagementAPI.getResponsemanagementResponseassetsStatusStatusId(statusId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **statusId** | **String**| Status Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ResponseAssetStatus**](ResponseAssetStatus.html)
-
-<a name="getResponsemanagementResponses"></a>
-
-# **getResponsemanagementResponses**
+[**ResponseAssetStatus**](ResponseAssetStatus)
 
 
+## getResponsemanagementResponses
 
-> [ResponseEntityListing](ResponseEntityListing.html) getResponsemanagementResponses(libraryId, pageNumber, pageSize, expand)
+
+
+> [ResponseEntityListing](ResponseEntityListing) getResponsemanagementResponses(libraryId, pageNumber, pageSize, expand)
 
 Gets a list of existing responses.
 
@@ -503,20 +483,18 @@ ResponseManagementAPI.getResponsemanagementResponses(libraryId: libraryId, pageN
 | **pageNumber** | **Int**| Page number | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: substitutionsschema ("substitutionsSchema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ResponseEntityListing**](ResponseEntityListing.html)
-
-<a name="postResponsemanagementLibraries"></a>
-
-# **postResponsemanagementLibraries**
+[**ResponseEntityListing**](ResponseEntityListing)
 
 
+## postResponsemanagementLibraries
 
-> [Library](Library.html) postResponsemanagementLibraries(body)
+
+
+> [Library](Library) postResponsemanagementLibraries(body)
 
 Create a response library.
 
@@ -554,21 +532,19 @@ ResponseManagementAPI.postResponsemanagementLibraries(body: body) { (response, e
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**Library**](Library.html)| Library | |
-{: class="table-striped"}
+| **body** | [**Library**](Library)| Library | |
 
 
 ### Return type
 
-[**Library**](Library.html)
-
-<a name="postResponsemanagementLibrariesBulk"></a>
-
-# **postResponsemanagementLibrariesBulk**
+[**Library**](Library)
 
 
+## postResponsemanagementLibrariesBulk
 
-> [LibraryEntityListing](LibraryEntityListing.html) postResponsemanagementLibrariesBulk(body)
+
+
+> [LibraryEntityListing](LibraryEntityListing) postResponsemanagementLibrariesBulk(body)
 
 Get response libraries.
 
@@ -606,21 +582,19 @@ ResponseManagementAPI.postResponsemanagementLibrariesBulk(body: body) { (respons
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**LibraryBatchRequest**](LibraryBatchRequest.html)| LibraryIDs (max allowed 50) | |
-{: class="table-striped"}
+| **body** | [**LibraryBatchRequest**](LibraryBatchRequest)| LibraryIDs (max allowed 50) | |
 
 
 ### Return type
 
-[**LibraryEntityListing**](LibraryEntityListing.html)
-
-<a name="postResponsemanagementResponseassetsSearch"></a>
-
-# **postResponsemanagementResponseassetsSearch**
+[**LibraryEntityListing**](LibraryEntityListing)
 
 
+## postResponsemanagementResponseassetsSearch
 
-> [ResponseAssetSearchResults](ResponseAssetSearchResults.html) postResponsemanagementResponseassetsSearch(body, expand)
+
+
+> [ResponseAssetSearchResults](ResponseAssetSearchResults) postResponsemanagementResponseassetsSearch(body, expand)
 
 Search response assets
 
@@ -659,22 +633,20 @@ ResponseManagementAPI.postResponsemanagementResponseassetsSearch(body: body, exp
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ResponseAssetSearchRequest**](ResponseAssetSearchRequest.html)| request | |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user"), division ("division") |
-{: class="table-striped"}
+| **body** | [**ResponseAssetSearchRequest**](ResponseAssetSearchRequest)| request | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user"), division ("division") |
 
 
 ### Return type
 
-[**ResponseAssetSearchResults**](ResponseAssetSearchResults.html)
-
-<a name="postResponsemanagementResponseassetsUploads"></a>
-
-# **postResponsemanagementResponseassetsUploads**
+[**ResponseAssetSearchResults**](ResponseAssetSearchResults)
 
 
+## postResponsemanagementResponseassetsUploads
 
-> [CreateResponseAssetResponse](CreateResponseAssetResponse.html) postResponsemanagementResponseassetsUploads(body)
+
+
+> [CreateResponseAssetResponse](CreateResponseAssetResponse) postResponsemanagementResponseassetsUploads(body)
 
 Creates pre-signed url for uploading response asset
 
@@ -712,21 +684,19 @@ ResponseManagementAPI.postResponsemanagementResponseassetsUploads(body: body) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateResponseAssetRequest**](CreateResponseAssetRequest.html)| request | |
-{: class="table-striped"}
+| **body** | [**CreateResponseAssetRequest**](CreateResponseAssetRequest)| request | |
 
 
 ### Return type
 
-[**CreateResponseAssetResponse**](CreateResponseAssetResponse.html)
-
-<a name="postResponsemanagementResponses"></a>
-
-# **postResponsemanagementResponses**
+[**CreateResponseAssetResponse**](CreateResponseAssetResponse)
 
 
+## postResponsemanagementResponses
 
-> [ModelResponse](Response.html) postResponsemanagementResponses(body, expand)
+
+
+> [ModelResponse](Response) postResponsemanagementResponses(body, expand)
 
 Create a response.
 
@@ -765,22 +735,20 @@ ResponseManagementAPI.postResponsemanagementResponses(body: body, expand: expand
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ModelResponse**](ModelResponse.html)| Response | |
+| **body** | [**ModelResponse**](ModelResponse)| Response | |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: substitutionsschema ("substitutionsSchema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ModelResponse**](Response.html)
-
-<a name="postResponsemanagementResponsesQuery"></a>
-
-# **postResponsemanagementResponsesQuery**
+[**ModelResponse**](Response)
 
 
+## postResponsemanagementResponsesQuery
 
-> [ResponseQueryResults](ResponseQueryResults.html) postResponsemanagementResponsesQuery(body)
+
+
+> [ResponseQueryResults](ResponseQueryResults) postResponsemanagementResponsesQuery(body)
 
 Query responses
 
@@ -818,21 +786,19 @@ ResponseManagementAPI.postResponsemanagementResponsesQuery(body: body) { (respon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ResponseQueryRequest**](ResponseQueryRequest.html)| Response | |
-{: class="table-striped"}
+| **body** | [**ResponseQueryRequest**](ResponseQueryRequest)| Response | |
 
 
 ### Return type
 
-[**ResponseQueryResults**](ResponseQueryResults.html)
-
-<a name="putResponsemanagementLibrary"></a>
-
-# **putResponsemanagementLibrary**
+[**ResponseQueryResults**](ResponseQueryResults)
 
 
+## putResponsemanagementLibrary
 
-> [Library](Library.html) putResponsemanagementLibrary(libraryId, body)
+
+
+> [Library](Library) putResponsemanagementLibrary(libraryId, body)
 
 Update an existing response library.
 
@@ -874,21 +840,19 @@ ResponseManagementAPI.putResponsemanagementLibrary(libraryId: libraryId, body: b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **libraryId** | **String**| Library ID | |
-| **body** | [**Library**](Library.html)| Library | |
-{: class="table-striped"}
+| **body** | [**Library**](Library)| Library | |
 
 
 ### Return type
 
-[**Library**](Library.html)
-
-<a name="putResponsemanagementResponse"></a>
-
-# **putResponsemanagementResponse**
+[**Library**](Library)
 
 
+## putResponsemanagementResponse
 
-> [ModelResponse](Response.html) putResponsemanagementResponse(responseId, body, expand)
+
+
+> [ModelResponse](Response) putResponsemanagementResponse(responseId, body, expand)
 
 Update an existing response.
 
@@ -931,22 +895,20 @@ ResponseManagementAPI.putResponsemanagementResponse(responseId: responseId, body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **responseId** | **String**| Response ID | |
-| **body** | [**ModelResponse**](ModelResponse.html)| Response | |
+| **body** | [**ModelResponse**](ModelResponse)| Response | |
 | **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: substitutionsschema ("substitutionsSchema") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ModelResponse**](Response.html)
-
-<a name="putResponsemanagementResponseasset"></a>
-
-# **putResponsemanagementResponseasset**
+[**ModelResponse**](Response)
 
 
+## putResponsemanagementResponseasset
 
-> [ResponseAsset](ResponseAsset.html) putResponsemanagementResponseasset(responseAssetId, body)
+
+
+> [ResponseAsset](ResponseAsset) putResponsemanagementResponseasset(responseAssetId, body)
 
 Update response asset
 
@@ -986,11 +948,12 @@ ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: respon
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **responseAssetId** | **String**| Asset Id | |
-| **body** | [**ResponseAssetRequest**](ResponseAssetRequest.html)| request | |
-{: class="table-striped"}
+| **body** | [**ResponseAssetRequest**](ResponseAssetRequest)| request | |
 
 
 ### Return type
 
-[**ResponseAsset**](ResponseAsset.html)
+[**ResponseAsset**](ResponseAsset)
 
+
+_PureCloudPlatformClientV2@151.1.0_

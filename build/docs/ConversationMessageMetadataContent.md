@@ -1,6 +1,5 @@
----
-title: ConversationMessageMetadataContent
----
+# ConversationMessageMetadataContent
+
 ## ConversationMessageMetadataContent
 Metadata information about a message content.
 
@@ -10,6 +9,7 @@ Metadata information about a message content.
 |------------ | ------------- | ------------- | -------------|
 | **contentType** | **String** | Type of this content element. | [optional] |
 | **subType** | **String** | Content subtype | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

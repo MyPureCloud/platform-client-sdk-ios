@@ -1,6 +1,5 @@
----
-title: RequestConfig
----
+# RequestConfig
+
 ## RequestConfig
 Defines response components of the Action Request.
 
@@ -13,6 +12,7 @@ Defines response components of the Action Request.
 | **requestTemplateUri** | **String** | URI to retrieve requestTemplate | [optional] |
 | **requestType** | **String** | HTTP method to use for request | [optional] |
 | **headers** | **[String:String]** | Headers to include in request in (Header Name, Value) pairs. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

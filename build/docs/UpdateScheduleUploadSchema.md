@@ -1,6 +1,5 @@
----
-title: UpdateScheduleUploadSchema
----
+# UpdateScheduleUploadSchema
+
 ## UpdateScheduleUploadSchema
 
 ## Properties
@@ -9,10 +8,11 @@ title: UpdateScheduleUploadSchema
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** | The description to set for the schedule | [optional] |
 | **published** | **Bool** | Whether to publish the schedule. Note: a schedule cannot be un-published unless another schedule is published over it | [optional] |
-| **shortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference.html) | The short term forecast to associate with the schedule | [optional] |
-| **headcountForecast** | [**BuHeadcountForecast**](BuHeadcountForecast.html) | The headcount forecast to associate with the schedule | [optional] |
-| **agentSchedules** | [**[BuUpdateAgentScheduleUploadSchema]**](BuUpdateAgentScheduleUploadSchema.html) | Individual agent schedules | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this schedule | |
-{: class="table table-striped"}
+| **shortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | The short term forecast to associate with the schedule | [optional] |
+| **headcountForecast** | [**BuHeadcountForecast**](BuHeadcountForecast) | The headcount forecast to associate with the schedule | [optional] |
+| **agentSchedules** | [**[BuUpdateAgentScheduleUploadSchema]**](BuUpdateAgentScheduleUploadSchema) | Individual agent schedules | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this schedule | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

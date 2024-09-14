@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewGetResponseAssignment
----
+# LearningModulePreviewGetResponseAssignment
+
 ## LearningModulePreviewGetResponseAssignment
 Learning module preview get response assignment
 
@@ -14,7 +13,8 @@ Learning module preview get response assignment
 | **isPassed** | **Bool** | True if the assessment was passed | [optional] |
 | **assessmentCompletionPercentage** | **Float** | The assessment completion percentage of assignment | [optional] |
 | **completionPercentage** | **Float** | The overall completion percentage of assignment | [optional] |
-| **steps** | [**[LearningModulePreviewGetResponseStep]**](LearningModulePreviewGetResponseStep.html) | List of assignment steps | [optional] |
-{: class="table table-striped"}
+| **steps** | [**[LearningModulePreviewGetResponseStep]**](LearningModulePreviewGetResponseStep) | List of assignment steps | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

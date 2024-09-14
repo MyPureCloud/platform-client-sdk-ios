@@ -1,6 +1,5 @@
----
-title: DomainRole
----
+# DomainRole
+
 ## DomainRole
 
 ## Properties
@@ -9,6 +8,7 @@ title: DomainRole
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the role | [optional] |
 | **name** | **String** | The name of the role | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

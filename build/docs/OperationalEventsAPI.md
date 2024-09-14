@@ -1,23 +1,19 @@
----
-title: OperationalEventsAPI
----
-## OperationalEventsAPI
+# OperationalEventsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getUsageEventsDefinition**](OperationalEventsAPI.html#getUsageEventsDefinition) | Get an operational event definition by its id |
-| [**getUsageEventsDefinitions**](OperationalEventsAPI.html#getUsageEventsDefinitions) | Get all operational event definitions |
+| [**getUsageEventsDefinition**](OperationalEventsAPI#getUsageEventsDefinition) | Get an operational event definition by its id |
+| [**getUsageEventsDefinitions**](OperationalEventsAPI#getUsageEventsDefinitions) | Get all operational event definitions |
 {: class="table-striped"}
 
-<a name="getUsageEventsDefinition"></a>
 
-# **getUsageEventsDefinition**
-
+## getUsageEventsDefinition
 
 
-> [EventDefinition](EventDefinition.html) getUsageEventsDefinition(eventDefinitionId)
+
+> [EventDefinition](EventDefinition) getUsageEventsDefinition(eventDefinitionId)
 
 Get an operational event definition by its id
 
@@ -56,20 +52,18 @@ OperationalEventsAPI.getUsageEventsDefinition(eventDefinitionId: eventDefinition
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **eventDefinitionId** | **String**| EventDefinition id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EventDefinition**](EventDefinition.html)
-
-<a name="getUsageEventsDefinitions"></a>
-
-# **getUsageEventsDefinitions**
+[**EventDefinition**](EventDefinition)
 
 
+## getUsageEventsDefinitions
 
-> [EventDefinitionListing](EventDefinitionListing.html) getUsageEventsDefinitions()
+
+
+> [EventDefinitionListing](EventDefinitionListing) getUsageEventsDefinitions()
 
 Get all operational event definitions
 
@@ -106,8 +100,9 @@ OperationalEventsAPI.getUsageEventsDefinitions() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**EventDefinitionListing**](EventDefinitionListing.html)
+[**EventDefinitionListing**](EventDefinitionListing)
 
+
+_PureCloudPlatformClientV2@151.1.0_

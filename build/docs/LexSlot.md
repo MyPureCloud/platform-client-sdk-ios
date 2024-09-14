@@ -1,6 +1,5 @@
----
-title: LexSlot
----
+# LexSlot
+
 ## LexSlot
 
 ## Properties
@@ -11,6 +10,7 @@ title: LexSlot
 | **_description** | **String** | The slot description | [optional] |
 | **type** | **String** | The slot type | |
 | **priority** | **Int** | The priority of the slot | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

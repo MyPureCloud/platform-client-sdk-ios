@@ -1,6 +1,5 @@
----
-title: UpdateActivityCodeRequest
----
+# UpdateActivityCodeRequest
+
 ## UpdateActivityCodeRequest
 
 ## Properties
@@ -16,8 +15,9 @@ title: UpdateActivityCodeRequest
 | **countsTowardShrinkage** | **Bool** | Whether or not this activity code counts toward shrinkage calculations | [optional] |
 | **plannedShrinkage** | **Bool** | Whether this activity code is considered planned or unplanned shrinkage | [optional] |
 | **interruptible** | **Bool** | Whether this activity code is considered interruptible | [optional] |
-| **secondaryPresences** | [**ListWrapperSecondaryPresence**](ListWrapperSecondaryPresence.html) | The secondary presences of this activity code | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for the associated business unit&#39;s list of activity codes | |
-{: class="table table-striped"}
+| **secondaryPresences** | [**ListWrapperSecondaryPresence**](ListWrapperSecondaryPresence) | The secondary presences of this activity code | [optional] |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the associated business unit&#39;s list of activity codes | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

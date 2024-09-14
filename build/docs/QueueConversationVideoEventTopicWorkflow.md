@@ -1,6 +1,5 @@
----
-title: QueueConversationVideoEventTopicWorkflow
----
+# QueueConversationVideoEventTopicWorkflow
+
 ## QueueConversationVideoEventTopicWorkflow
 Information about the workflow.
 
@@ -9,6 +8,7 @@ Information about the workflow.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **workflowId** | **String** | The id of the workflow | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

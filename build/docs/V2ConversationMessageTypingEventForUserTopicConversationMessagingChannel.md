@@ -1,6 +1,5 @@
----
-title: V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
----
+# V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
+
 ## V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
 
 ## Properties
@@ -9,9 +8,10 @@ title: V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **platform** | **String** |  | [optional] |
-| **to** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient.html) |  | [optional] |
-| **from** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient.html) |  | [optional] |
-| **time** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **to** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingToRecipient) |  | [optional] |
+| **from** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient**](V2ConversationMessageTypingEventForUserTopicConversationMessagingFromRecipient) |  | [optional] |
+| **time** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

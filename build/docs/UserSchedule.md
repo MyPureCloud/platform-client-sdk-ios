@@ -1,17 +1,17 @@
----
-title: UserSchedule
----
+# UserSchedule
+
 ## UserSchedule
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **shifts** | [**[UserScheduleShift]**](UserScheduleShift.html) | The shifts that belong to this schedule | [optional] |
-| **fullDayTimeOffMarkers** | [**[UserScheduleFullDayTimeOffMarker]**](UserScheduleFullDayTimeOffMarker.html) | Markers to indicate a full day time off request, relative to the management unit time zone | [optional] |
+| **shifts** | [**[UserScheduleShift]**](UserScheduleShift) | The shifts that belong to this schedule | [optional] |
+| **fullDayTimeOffMarkers** | [**[UserScheduleFullDayTimeOffMarker]**](UserScheduleFullDayTimeOffMarker) | Markers to indicate a full day time off request, relative to the management unit time zone | [optional] |
 | **delete** | **Bool** | If marked true for updating an existing user schedule, it will be deleted | [optional] |
-| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata.html) | Version metadata for this schedule | |
+| **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this schedule | |
 | **workPlanId** | **String** | ID of the work plan associated with the user during schedule creation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

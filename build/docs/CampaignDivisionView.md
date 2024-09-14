@@ -1,6 +1,5 @@
----
-title: CampaignDivisionView
----
+# CampaignDivisionView
+
 ## CampaignDivisionView
 
 ## Properties
@@ -9,8 +8,9 @@ title: CampaignDivisionView
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **division** | [**Division**](Division.html) | The division to which this entity belongs. | [optional] |
+| **division** | [**Division**](Division) | The division to which this entity belongs. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,253 +1,249 @@
----
-title: WorkforceManagementAPI
----
-## WorkforceManagementAPI
+# WorkforceManagementAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunit) | Delete business unit |
-| [**deleteWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitActivitycode) | Deletes an activity code |
-| [**deleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitPlanninggroup) | Deletes the planning group |
-| [**deleteWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitSchedulingRun) | Cancel a scheduling run |
-| [**deleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitServicegoaltemplate) | Delete a service goal template |
-| [**deleteWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitStaffinggroup) | Deletes a staffing group |
-| [**deleteWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitTimeofflimit) | Deletes a time-off limit object |
-| [**deleteWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitTimeoffplan) | Deletes a time-off plan |
-| [**deleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekSchedule) | Delete a schedule |
-| [**deleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWeekShorttermforecast) | Delete a short term forecast |
-| [**deleteWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWorkplanbid) | Delete a work plan bid |
-| [**deleteWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementAPI.html#deleteWorkforcemanagementBusinessunitWorkplanbidGroup) | Delete a bid group by bid group Id |
-| [**deleteWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#deleteWorkforcemanagementCalendarUrlIcs) | Disable generated calendar link for the current user |
-| [**deleteWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunit) | Delete management unit |
-| [**deleteWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitTimeofflimit) | Deletes a time off limit object |
-| [**deleteWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitTimeoffplan) | Deletes a time off plan |
-| [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
-| [**deleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#deleteWorkforcemanagementManagementunitWorkplanrotation) | Delete a work plan rotation |
-| [**getWorkforcemanagementAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
-| [**getWorkforcemanagementAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanation) | Get an adherence explanation for the current user |
-| [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalBulkJob) | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI.html#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
-| [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
-| [**getWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementAgentsMeManagementunit) | Get the management unit to which the currently logged in agent belongs |
-| [**getWorkforcemanagementAlternativeshiftsOffersJob**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsOffersJob) | Query the status of an alternative shift offers operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAlternativeshiftsOffersSearchJob**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsOffersSearchJob) | Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAlternativeshiftsSettings**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsSettings) | Get alternative shifts settings from the current logged in agent’s business unit |
-| [**getWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsTrade) | Get my alternative shift trade by trade ID |
-| [**getWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsTrades) | Get a list of my alternative shifts trades |
-| [**getWorkforcemanagementAlternativeshiftsTradesJob**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsTradesJob) | Query the status of an alternative shift trades operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementAlternativeshiftsTradesStateJob**](WorkforceManagementAPI.html#getWorkforcemanagementAlternativeshiftsTradesStateJob) | Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunit) | Get business unit |
-| [**getWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivitycode) | Get an activity code |
-| [**getWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivitycodes) | Get activity codes |
-| [**getWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplan) | Get an activity plan |
-| [**getWorkforcemanagementBusinessunitActivityplanRunsJob**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplanRunsJob) | Gets an activity plan run job |
-| [**getWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplans) | Get activity plans |
-| [**getWorkforcemanagementBusinessunitActivityplansJobs**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitActivityplansJobs) | Gets the latest job for all activity plans in the business unit |
-| [**getWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Get alternative shifts settings for a business unit |
-| [**getWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitAlternativeshiftsTrade) | Get an alternative shifts trade in a business unit for a given trade ID |
-| [**getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
-| [**getWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitIntradayPlanninggroups) | Get intraday planning groups for the given date |
-| [**getWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitManagementunits) | Get all authorized management units in the business unit |
-| [**getWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitPlanninggroup) | Get a planning group |
-| [**getWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitPlanninggroups) | Gets list of planning groups |
-| [**getWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitSchedulingRun) | Get a scheduling run |
-| [**getWorkforcemanagementBusinessunitSchedulingRunResult**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitSchedulingRunResult) | Get the result of a rescheduling operation |
-| [**getWorkforcemanagementBusinessunitSchedulingRuns**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitSchedulingRuns) | Get the list of scheduling runs |
-| [**getWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitServicegoaltemplate) | Get a service goal template |
-| [**getWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitServicegoaltemplates) | Gets list of service goal templates |
-| [**getWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitStaffinggroup) | Gets a staffing group |
-| [**getWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitStaffinggroups) | Gets a list of staffing groups |
-| [**getWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeofflimit) | Gets a time-off limit object |
-| [**getWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeofflimits) | Gets a list of time-off limit objects |
-| [**getWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeoffplan) | Gets a time-off plan |
-| [**getWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitTimeoffplans) | Gets a list of time-off plans |
-| [**getWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedule) | Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route |
-| [**getWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleGenerationresults) | Get the generation results for a generated schedule |
-| [**getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast) | Get the headcount forecast by planning group for the schedule |
-| [**getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent) | Loads agent&#39;s schedule history. |
-| [**getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions) | Get the performance prediction for the associated schedule |
-| [**getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation) | Get recalculated performance prediction result |
-| [**getWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekSchedules) | Get the list of week schedules for the specified week |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecast) | Get a short term forecast |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecastData**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastData) | Get the result of a short term forecast calculation |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults) | Gets the forecast generation results |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata) | Get the result of a long term forecast calculation |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups) | Gets the forecast planning group snapshot |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement) | Get the staffing requirement by planning group for a forecast |
-| [**getWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWeekShorttermforecasts) | Get short term forecasts |
-| [**getWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWorkplanbid) | Get a work plan bid |
-| [**getWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWorkplanbidGroup) | Get a bid group by bid group Id |
-| [**getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences) | Gets the work plan preferences of all the agents in the work plan bid group |
-| [**getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary) | Get summary of bid groups that belong to a work plan bid |
-| [**getWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitWorkplanbids) | Get list of work plan bids |
-| [**getWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunits) | Get business units |
-| [**getWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementAPI.html#getWorkforcemanagementBusinessunitsDivisionviews) | Get business units across divisions |
-| [**getWorkforcemanagementCalendarDataIcs**](WorkforceManagementAPI.html#getWorkforcemanagementCalendarDataIcs) | Get ics formatted calendar based on shareable link |
-| [**getWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#getWorkforcemanagementCalendarUrlIcs) | Get existing calendar link for the current user |
-| [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
-| [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI.html#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
-| [**getWorkforcemanagementIntegrationsHris**](WorkforceManagementAPI.html#getWorkforcemanagementIntegrationsHris) | Get integrations |
-| [**getWorkforcemanagementIntegrationsHrisTimeofftypesJob**](WorkforceManagementAPI.html#getWorkforcemanagementIntegrationsHrisTimeofftypesJob) | Query the results of time off types job |
-| [**getWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunit) | Get management unit |
-| [**getWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitActivitycodes) | Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes |
-| [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
-| [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
-| [**getWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitAgentShifttrades) | Gets all the shift trades for a given agent |
-| [**getWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitShifttradesMatched) | Gets a summary of all shift trades in the matched state |
-| [**getWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitShifttradesUsers) | Gets list of users available for whom you can send direct shift trade requests |
-| [**getWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitTimeofflimit) | Gets a time off limit object |
-| [**getWorkforcemanagementManagementunitTimeofflimits**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitTimeofflimits) | Gets a list of time off limit objects under management unit. |
-| [**getWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitTimeoffplan) | Gets a time off plan |
-| [**getWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitTimeoffplans) | Gets a list of time off plans |
-| [**getWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUserTimeoffrequest) | Get a time off request |
-| [**getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits) | Retrieves time off limit, allocated and waitlisted values according to specific time off request |
-| [**getWorkforcemanagementManagementunitUserTimeoffrequests**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUserTimeoffrequests) | Get a list of time off requests for a given user |
-| [**getWorkforcemanagementManagementunitUsers**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitUsers) | Get users in the management unit |
-| [**getWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekSchedule) | Deprecated.  Use the equivalent business unit resource instead. Get a week schedule |
-| [**getWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekSchedules) | Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit |
-| [**getWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWeekShifttrades) | Gets all the shift trades for a given week |
-| [**getWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWorkplan) | Get a work plan |
-| [**getWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWorkplanrotation) | Get a work plan rotation |
-| [**getWorkforcemanagementManagementunitWorkplanrotations**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWorkplanrotations) | Get work plan rotations |
-| [**getWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitWorkplans) | Get work plans |
-| [**getWorkforcemanagementManagementunits**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunits) | Get management units |
-| [**getWorkforcemanagementManagementunitsDivisionviews**](WorkforceManagementAPI.html#getWorkforcemanagementManagementunitsDivisionviews) | Get management units across divisions |
-| [**getWorkforcemanagementNotifications**](WorkforceManagementAPI.html#getWorkforcemanagementNotifications) | Get a list of notifications for the current user |
-| [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI.html#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
-| [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI.html#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
-| [**getWorkforcemanagementShrinkageJob**](WorkforceManagementAPI.html#getWorkforcemanagementShrinkageJob) | Request to fetch the status of the historical shrinkage query |
-| [**getWorkforcemanagementTimeoffbalanceJob**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffbalanceJob) | Query the results of time off types job |
-| [**getWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequest) | Get a time off request for the current user |
-| [**getWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequestWaitlistpositions) | Get the daily waitlist positions of a time off request for the current user |
-| [**getWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI.html#getWorkforcemanagementTimeoffrequests) | Get a list of time off requests for the current user |
-| [**getWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI.html#getWorkforcemanagementUserWorkplanbidranks) | Get work plan bid ranks for a user |
-| [**getWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementAPI.html#getWorkforcemanagementWorkplanbidPreferences) | Gets an agent&#39;s work plan bidding preference |
-| [**getWorkforcemanagementWorkplanbidWorkplans**](WorkforceManagementAPI.html#getWorkforcemanagementWorkplanbidWorkplans) | Gets an agent&#39;s work plans for a bid |
-| [**getWorkforcemanagementWorkplanbids**](WorkforceManagementAPI.html#getWorkforcemanagementWorkplanbids) | Gets the list of work plan bids that belong to an agent |
-| [**patchWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI.html#patchWorkforcemanagementAgentAdherenceExplanation) | Update an adherence explanation |
-| [**patchWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementAPI.html#patchWorkforcemanagementAlternativeshiftsTrade) | Update my alternative shifts trade by trade ID |
-| [**patchWorkforcemanagementAlternativeshiftsTradesStateJobs**](WorkforceManagementAPI.html#patchWorkforcemanagementAlternativeshiftsTradesStateJobs) | Bulk update alternative shift trade states |
-| [**patchWorkforcemanagementBusinessunit**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunit) | Update business unit |
-| [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
-| [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
-| [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
-| [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
-| [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
-| [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
-| [**patchWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitStaffinggroup) | Updates a staffing group |
-| [**patchWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitTimeoffplan) | Updates a time-off plan |
-| [**patchWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitWorkplanbid) | Update work plan bid |
-| [**patchWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitWorkplanbidGroup) | Update a bid group by bid group Id |
-| [**patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementAPI.html#patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences) | Overrides the assigned work plan for the specified agents |
-| [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunit) | Update the requested management unit |
-| [**patchWorkforcemanagementManagementunitAgents**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitAgents) | Update agent configurations |
-| [**patchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeofflimit) | Updates a time off limit object. |
-| [**patchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeoffplan) | Updates a time off plan |
-| [**patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | Set integration status for a time off request. |
-| [**patchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitUserTimeoffrequest) | Update a time off request |
-| [**patchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWeekShifttrade) | Updates a shift trade. This route can only be called by the initiating agent |
-| [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
-| [**patchWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI.html#patchWorkforcemanagementManagementunitWorkplanrotation) | Update a work plan rotation |
-| [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI.html#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
-| [**patchWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI.html#patchWorkforcemanagementUserWorkplanbidranks) | Update work plan bid ranks for a user |
-| [**patchWorkforcemanagementUsersWorkplanbidranksBulk**](WorkforceManagementAPI.html#patchWorkforcemanagementUsersWorkplanbidranksBulk) | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
-| [**patchWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementAPI.html#patchWorkforcemanagementWorkplanbidPreferences) | Update an agent&#39;s work plan bidding preference |
-| [**postWorkforcemanagementAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanations) | Submit an adherence explanation for the current user |
-| [**postWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceExplanationsQuery) | Query adherence explanations for the current user |
-| [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistorical) | Deprecated. Use bulk routes instead (/adherence/historical/bulk) |
-| [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI.html#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
-| [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
-| [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
-| [**postWorkforcemanagementAgents**](WorkforceManagementAPI.html#postWorkforcemanagementAgents) | Move agents in and out of management unit |
-| [**postWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsIntegrationsHrisQuery) | Query integrations for agents |
-| [**postWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementAPI.html#postWorkforcemanagementAgentsMePossibleworkshifts) | Get agent possible work shifts for requested time frame |
-| [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI.html#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
-| [**postWorkforcemanagementAlternativeshiftsOffersJobs**](WorkforceManagementAPI.html#postWorkforcemanagementAlternativeshiftsOffersJobs) | Request a list of alternative shift offers for a given schedule |
-| [**postWorkforcemanagementAlternativeshiftsOffersSearchJobs**](WorkforceManagementAPI.html#postWorkforcemanagementAlternativeshiftsOffersSearchJobs) | Request a search of alternative shift offers for a given shift |
-| [**postWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementAPI.html#postWorkforcemanagementAlternativeshiftsTrades) | Create my alternative shift trade using an existing offer&#39;s jobId |
-| [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
-| [**postWorkforcemanagementBusinessunitActivityplanRunsJobs**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivityplanRunsJobs) | Run an activity plan manually |
-| [**postWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitActivityplans) | Create an activity plan |
-| [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
-| [**postWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAgentschedulesSearch) | Search published schedules |
-| [**postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | List alternative shifts trades for a given management unit or agent |
-| [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
-| [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
-| [**postWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitServicegoaltemplates) | Adds a new service goal template |
-| [**postWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitStaffinggroups) | Creates a new staffing group |
-| [**postWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitStaffinggroupsQuery) | Gets staffing group associations for a list of user IDs |
-| [**postWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitTimeofflimits) | Creates a new time-off limit object |
-| [**postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | Retrieves time-off limit related values based on a given set of filters. |
-| [**postWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitTimeoffplans) | Creates a new time-off plan |
-| [**postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery) | Loads agent schedule data from the schedule. Used in combination with the metadata route |
-| [**postWorkforcemanagementBusinessunitWeekScheduleCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleCopy) | Copy a schedule |
-| [**postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations) | Request a daily recalculation of the performance prediction for the associated schedule |
-| [**postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl) | Upload daily activity changes to be able to request a performance prediction recalculation |
-| [**postWorkforcemanagementBusinessunitWeekScheduleReschedule**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleReschedule) | Start a rescheduling run |
-| [**postWorkforcemanagementBusinessunitWeekScheduleUpdate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleUpdate) | Starts processing a schedule update |
-| [**postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl) | Creates a signed upload URL for updating a schedule |
-| [**postWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedules) | Create a blank schedule |
-| [**postWorkforcemanagementBusinessunitWeekSchedulesGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulesGenerate) | Generate a schedule |
-| [**postWorkforcemanagementBusinessunitWeekSchedulesImport**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulesImport) | Starts processing a schedule import |
-| [**postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl) | Creates a signed upload URL for importing a schedule |
-| [**postWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastCopy) | Copy a short term forecast |
-| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate) | Generate a short term forecast |
-| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsImport**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsImport) | Starts importing the uploaded short term forecast |
-| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl) | Creates a signed upload URL for importing a short term forecast |
-| [**postWorkforcemanagementBusinessunitWorkplanbidCopy**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWorkplanbidCopy) | Copy a work plan bid |
-| [**postWorkforcemanagementBusinessunitWorkplanbidGroups**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWorkplanbidGroups) | Add a bid group in a given work plan bid |
-| [**postWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunitWorkplanbids) | Create a new work plan bid |
-| [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI.html#postWorkforcemanagementBusinessunits) | Add a new business unit |
-| [**postWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI.html#postWorkforcemanagementCalendarUrlIcs) | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
-| [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
-| [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI.html#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
-| [**postWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementAPI.html#postWorkforcemanagementIntegrationsHriTimeofftypesJobs) | Get list of time off types configured in integration |
-| [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
-| [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
-| [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
-| [**postWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitSchedulesSearch) | Query published schedules for given given time range for set of users |
-| [**postWorkforcemanagementManagementunitShrinkageJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitShrinkageJobs) | Request a historical shrinkage report |
-| [**postWorkforcemanagementManagementunitTimeofflimits**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeofflimits) | Creates a new time off limit object under management unit. |
-| [**postWorkforcemanagementManagementunitTimeofflimitsValuesQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeofflimitsValuesQuery) | Retrieves time off limit related values based on a given set of filters. |
-| [**postWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffplans) | Creates a new time off plan |
-| [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
-| [**postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of time off requests |
-| [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Fetches time off requests matching the conditions specified in the request body |
-| [**postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery) | Retrieves daily waitlist position for a list of time off requests |
-| [**postWorkforcemanagementManagementunitUserTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffbalanceJobs) | Query time off balances for a given user for specified activity code and dates |
-| [**postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs) | Query time off balances for dates spanned by a given time off request |
-| [**postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate) | Estimates available time off for an agent |
-| [**postWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradeMatch) | Matches a shift trade. This route can only be called by the receiving agent |
-| [**postWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttrades) | Adds a shift trade |
-| [**postWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesSearch) | Searches for potential shift trade matches for the current agent |
-| [**postWorkforcemanagementManagementunitWeekShifttradesStateBulk**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWeekShifttradesStateBulk) | Updates the state of a batch of shift trades |
-| [**postWorkforcemanagementManagementunitWorkplanCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanCopy) | Create a copy of work plan |
-| [**postWorkforcemanagementManagementunitWorkplanValidate**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanValidate) | Validate Work Plan |
-| [**postWorkforcemanagementManagementunitWorkplanrotationCopy**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanrotationCopy) | Create a copy of work plan rotation |
-| [**postWorkforcemanagementManagementunitWorkplanrotations**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplanrotations) | Create a new work plan rotation |
-| [**postWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunitWorkplans) | Create a new work plan |
-| [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI.html#postWorkforcemanagementManagementunits) | Add a management unit |
-| [**postWorkforcemanagementNotificationsUpdate**](WorkforceManagementAPI.html#postWorkforcemanagementNotificationsUpdate) | Mark a list of notifications as read or unread |
-| [**postWorkforcemanagementSchedules**](WorkforceManagementAPI.html#postWorkforcemanagementSchedules) | Get published schedule for the current user |
-| [**postWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementAPI.html#postWorkforcemanagementTeamAdherenceHistorical) | Request a teams historical adherence report |
-| [**postWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementAPI.html#postWorkforcemanagementTeamShrinkageJobs) | Request a historical shrinkage report |
-| [**postWorkforcemanagementTimeoffbalanceJobs**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffbalanceJobs) | Query time off balances for the current user for specified activity code and dates |
-| [**postWorkforcemanagementTimeofflimitsAvailableQuery**](WorkforceManagementAPI.html#postWorkforcemanagementTimeofflimitsAvailableQuery) | Queries available time off for the current user |
-| [**postWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequests) | Create a time off request for the current user |
-| [**postWorkforcemanagementTimeoffrequestsEstimate**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequestsEstimate) | Estimates available time off for current user |
-| [**postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI.html#postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of current user time off requests |
-| [**putWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementAPI.html#putWorkforcemanagementAgentIntegrationsHris) | Update integrations for agent |
-| [**putWorkforcemanagementBusinessunitTimeofflimitValues**](WorkforceManagementAPI.html#putWorkforcemanagementBusinessunitTimeofflimitValues) | Sets daily values for a date range of time-off limit object |
-| [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI.html#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
+| [**deleteWorkforcemanagementBusinessunit**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunit) | Delete business unit |
+| [**deleteWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitActivitycode) | Deletes an activity code |
+| [**deleteWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitPlanninggroup) | Deletes the planning group |
+| [**deleteWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitSchedulingRun) | Cancel a scheduling run |
+| [**deleteWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitServicegoaltemplate) | Delete a service goal template |
+| [**deleteWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitStaffinggroup) | Deletes a staffing group |
+| [**deleteWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitTimeofflimit) | Deletes a time-off limit object |
+| [**deleteWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitTimeoffplan) | Deletes a time-off plan |
+| [**deleteWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitWeekSchedule) | Delete a schedule |
+| [**deleteWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitWeekShorttermforecast) | Delete a short term forecast |
+| [**deleteWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitWorkplanbid) | Delete a work plan bid |
+| [**deleteWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementAPI#deleteWorkforcemanagementBusinessunitWorkplanbidGroup) | Delete a bid group by bid group Id |
+| [**deleteWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#deleteWorkforcemanagementCalendarUrlIcs) | Disable generated calendar link for the current user |
+| [**deleteWorkforcemanagementManagementunit**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunit) | Delete management unit |
+| [**deleteWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunitTimeofflimit) | Deletes a time off limit object |
+| [**deleteWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunitTimeoffplan) | Deletes a time off plan |
+| [**deleteWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunitWorkplan) | Delete a work plan |
+| [**deleteWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI#deleteWorkforcemanagementManagementunitWorkplanrotation) | Delete a work plan rotation |
+| [**getWorkforcemanagementAdherence**](WorkforceManagementAPI#getWorkforcemanagementAdherence) | Get a list of UserScheduleAdherence records for the requested users |
+| [**getWorkforcemanagementAdherenceExplanation**](WorkforceManagementAPI#getWorkforcemanagementAdherenceExplanation) | Get an adherence explanation for the current user |
+| [**getWorkforcemanagementAdherenceExplanationsJob**](WorkforceManagementAPI#getWorkforcemanagementAdherenceExplanationsJob) | Query the status of an adherence explanation operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAdherenceHistoricalBulkJob**](WorkforceManagementAPI#getWorkforcemanagementAdherenceHistoricalBulkJob) | Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAdherenceHistoricalJob**](WorkforceManagementAPI#getWorkforcemanagementAdherenceHistoricalJob) | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI#getWorkforcemanagementAgentAdherenceExplanation) | Get an adherence explanation |
+| [**getWorkforcemanagementAgentManagementunit**](WorkforceManagementAPI#getWorkforcemanagementAgentManagementunit) | Get the management unit to which the agent belongs |
+| [**getWorkforcemanagementAgentsMeManagementunit**](WorkforceManagementAPI#getWorkforcemanagementAgentsMeManagementunit) | Get the management unit to which the currently logged in agent belongs |
+| [**getWorkforcemanagementAlternativeshiftsOffersJob**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsOffersJob) | Query the status of an alternative shift offers operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAlternativeshiftsOffersSearchJob**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsOffersSearchJob) | Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAlternativeshiftsSettings**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsSettings) | Get alternative shifts settings from the current logged in agent’s business unit |
+| [**getWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsTrade) | Get my alternative shift trade by trade ID |
+| [**getWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsTrades) | Get a list of my alternative shifts trades |
+| [**getWorkforcemanagementAlternativeshiftsTradesJob**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsTradesJob) | Query the status of an alternative shift trades operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementAlternativeshiftsTradesStateJob**](WorkforceManagementAPI#getWorkforcemanagementAlternativeshiftsTradesStateJob) | Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunit**](WorkforceManagementAPI#getWorkforcemanagementBusinessunit) | Get business unit |
+| [**getWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivitycode) | Get an activity code |
+| [**getWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivitycodes) | Get activity codes |
+| [**getWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplan) | Get an activity plan |
+| [**getWorkforcemanagementBusinessunitActivityplanRunsJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplanRunsJob) | Gets an activity plan run job |
+| [**getWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplans) | Get activity plans |
+| [**getWorkforcemanagementBusinessunitActivityplansJobs**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitActivityplansJobs) | Gets the latest job for all activity plans in the business unit |
+| [**getWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Get alternative shifts settings for a business unit |
+| [**getWorkforcemanagementBusinessunitAlternativeshiftsTrade**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTrade) | Get an alternative shifts trade in a business unit for a given trade ID |
+| [**getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
+| [**getWorkforcemanagementBusinessunitIntradayPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitIntradayPlanninggroups) | Get intraday planning groups for the given date |
+| [**getWorkforcemanagementBusinessunitManagementunits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitManagementunits) | Get all authorized management units in the business unit |
+| [**getWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroup) | Get a planning group |
+| [**getWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitPlanninggroups) | Gets list of planning groups |
+| [**getWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRun) | Get a scheduling run |
+| [**getWorkforcemanagementBusinessunitSchedulingRunResult**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRunResult) | Get the result of a rescheduling operation |
+| [**getWorkforcemanagementBusinessunitSchedulingRuns**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitSchedulingRuns) | Get the list of scheduling runs |
+| [**getWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitServicegoaltemplate) | Get a service goal template |
+| [**getWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitServicegoaltemplates) | Gets list of service goal templates |
+| [**getWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitStaffinggroup) | Gets a staffing group |
+| [**getWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitStaffinggroups) | Gets a list of staffing groups |
+| [**getWorkforcemanagementBusinessunitTimeofflimit**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimit) | Gets a time-off limit object |
+| [**getWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeofflimits) | Gets a list of time-off limit objects |
+| [**getWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeoffplan) | Gets a time-off plan |
+| [**getWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitTimeoffplans) | Gets a list of time-off plans |
+| [**getWorkforcemanagementBusinessunitWeekSchedule**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekSchedule) | Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route |
+| [**getWorkforcemanagementBusinessunitWeekScheduleGenerationresults**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekScheduleGenerationresults) | Get the generation results for a generated schedule |
+| [**getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast) | Get the headcount forecast by planning group for the schedule |
+| [**getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent) | Loads agent&#39;s schedule history. |
+| [**getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions) | Get the performance prediction for the associated schedule |
+| [**getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation) | Get recalculated performance prediction result |
+| [**getWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekSchedules) | Get the list of week schedules for the specified week |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecast**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecast) | Get a short term forecast |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecastData**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecastData) | Get the result of a short term forecast calculation |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults) | Gets the forecast generation results |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata) | Get the result of a long term forecast calculation |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups) | Gets the forecast planning group snapshot |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement) | Get the staffing requirement by planning group for a forecast |
+| [**getWorkforcemanagementBusinessunitWeekShorttermforecasts**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWeekShorttermforecasts) | Get short term forecasts |
+| [**getWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWorkplanbid) | Get a work plan bid |
+| [**getWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWorkplanbidGroup) | Get a bid group by bid group Id |
+| [**getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences) | Gets the work plan preferences of all the agents in the work plan bid group |
+| [**getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary) | Get summary of bid groups that belong to a work plan bid |
+| [**getWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitWorkplanbids) | Get list of work plan bids |
+| [**getWorkforcemanagementBusinessunits**](WorkforceManagementAPI#getWorkforcemanagementBusinessunits) | Get business units |
+| [**getWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitsDivisionviews) | Get business units across divisions |
+| [**getWorkforcemanagementCalendarDataIcs**](WorkforceManagementAPI#getWorkforcemanagementCalendarDataIcs) | Get ics formatted calendar based on shareable link |
+| [**getWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#getWorkforcemanagementCalendarUrlIcs) | Get existing calendar link for the current user |
+| [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
+| [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
+| [**getWorkforcemanagementIntegrationsHris**](WorkforceManagementAPI#getWorkforcemanagementIntegrationsHris) | Get integrations |
+| [**getWorkforcemanagementIntegrationsHrisTimeofftypesJob**](WorkforceManagementAPI#getWorkforcemanagementIntegrationsHrisTimeofftypesJob) | Query the results of time off types job |
+| [**getWorkforcemanagementManagementunit**](WorkforceManagementAPI#getWorkforcemanagementManagementunit) | Get management unit |
+| [**getWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementAPI#getWorkforcemanagementManagementunitActivitycodes) | Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes |
+| [**getWorkforcemanagementManagementunitAdherence**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAdherence) | Get a list of user schedule adherence records for the requested management unit |
+| [**getWorkforcemanagementManagementunitAgent**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAgent) | Get data for agent in the management unit |
+| [**getWorkforcemanagementManagementunitAgentShifttrades**](WorkforceManagementAPI#getWorkforcemanagementManagementunitAgentShifttrades) | Gets all the shift trades for a given agent |
+| [**getWorkforcemanagementManagementunitShifttradesMatched**](WorkforceManagementAPI#getWorkforcemanagementManagementunitShifttradesMatched) | Gets a summary of all shift trades in the matched state |
+| [**getWorkforcemanagementManagementunitShifttradesUsers**](WorkforceManagementAPI#getWorkforcemanagementManagementunitShifttradesUsers) | Gets list of users available for whom you can send direct shift trade requests |
+| [**getWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#getWorkforcemanagementManagementunitTimeofflimit) | Gets a time off limit object |
+| [**getWorkforcemanagementManagementunitTimeofflimits**](WorkforceManagementAPI#getWorkforcemanagementManagementunitTimeofflimits) | Gets a list of time off limit objects under management unit. |
+| [**getWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI#getWorkforcemanagementManagementunitTimeoffplan) | Gets a time off plan |
+| [**getWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI#getWorkforcemanagementManagementunitTimeoffplans) | Gets a list of time off plans |
+| [**getWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI#getWorkforcemanagementManagementunitUserTimeoffrequest) | Get a time off request |
+| [**getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits**](WorkforceManagementAPI#getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits) | Retrieves time off limit, allocated and waitlisted values according to specific time off request |
+| [**getWorkforcemanagementManagementunitUserTimeoffrequests**](WorkforceManagementAPI#getWorkforcemanagementManagementunitUserTimeoffrequests) | Get a list of time off requests for a given user |
+| [**getWorkforcemanagementManagementunitUsers**](WorkforceManagementAPI#getWorkforcemanagementManagementunitUsers) | Get users in the management unit |
+| [**getWorkforcemanagementManagementunitWeekSchedule**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWeekSchedule) | Deprecated.  Use the equivalent business unit resource instead. Get a week schedule |
+| [**getWorkforcemanagementManagementunitWeekSchedules**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWeekSchedules) | Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit |
+| [**getWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWeekShifttrades) | Gets all the shift trades for a given week |
+| [**getWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWorkplan) | Get a work plan |
+| [**getWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWorkplanrotation) | Get a work plan rotation |
+| [**getWorkforcemanagementManagementunitWorkplanrotations**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWorkplanrotations) | Get work plan rotations |
+| [**getWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI#getWorkforcemanagementManagementunitWorkplans) | Get work plans |
+| [**getWorkforcemanagementManagementunits**](WorkforceManagementAPI#getWorkforcemanagementManagementunits) | Get management units |
+| [**getWorkforcemanagementManagementunitsDivisionviews**](WorkforceManagementAPI#getWorkforcemanagementManagementunitsDivisionviews) | Get management units across divisions |
+| [**getWorkforcemanagementNotifications**](WorkforceManagementAPI#getWorkforcemanagementNotifications) | Get a list of notifications for the current user |
+| [**getWorkforcemanagementSchedulingjob**](WorkforceManagementAPI#getWorkforcemanagementSchedulingjob) | Get status of the scheduling job |
+| [**getWorkforcemanagementShifttrades**](WorkforceManagementAPI#getWorkforcemanagementShifttrades) | Gets all of my shift trades |
+| [**getWorkforcemanagementShrinkageJob**](WorkforceManagementAPI#getWorkforcemanagementShrinkageJob) | Request to fetch the status of the historical shrinkage query |
+| [**getWorkforcemanagementTimeoffbalanceJob**](WorkforceManagementAPI#getWorkforcemanagementTimeoffbalanceJob) | Query the results of time off types job |
+| [**getWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequest) | Get a time off request for the current user |
+| [**getWorkforcemanagementTimeoffrequestWaitlistpositions**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequestWaitlistpositions) | Get the daily waitlist positions of a time off request for the current user |
+| [**getWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI#getWorkforcemanagementTimeoffrequests) | Get a list of time off requests for the current user |
+| [**getWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI#getWorkforcemanagementUserWorkplanbidranks) | Get work plan bid ranks for a user |
+| [**getWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementAPI#getWorkforcemanagementWorkplanbidPreferences) | Gets an agent&#39;s work plan bidding preference |
+| [**getWorkforcemanagementWorkplanbidWorkplans**](WorkforceManagementAPI#getWorkforcemanagementWorkplanbidWorkplans) | Gets an agent&#39;s work plans for a bid |
+| [**getWorkforcemanagementWorkplanbids**](WorkforceManagementAPI#getWorkforcemanagementWorkplanbids) | Gets the list of work plan bids that belong to an agent |
+| [**patchWorkforcemanagementAgentAdherenceExplanation**](WorkforceManagementAPI#patchWorkforcemanagementAgentAdherenceExplanation) | Update an adherence explanation |
+| [**patchWorkforcemanagementAlternativeshiftsTrade**](WorkforceManagementAPI#patchWorkforcemanagementAlternativeshiftsTrade) | Update my alternative shifts trade by trade ID |
+| [**patchWorkforcemanagementAlternativeshiftsTradesStateJobs**](WorkforceManagementAPI#patchWorkforcemanagementAlternativeshiftsTradesStateJobs) | Bulk update alternative shift trade states |
+| [**patchWorkforcemanagementBusinessunit**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunit) | Update business unit |
+| [**patchWorkforcemanagementBusinessunitActivitycode**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivitycode) | Update an activity code |
+| [**patchWorkforcemanagementBusinessunitActivityplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitActivityplan) | Update an activity plan |
+| [**patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | Update alternative shifts settings for a business unit |
+| [**patchWorkforcemanagementBusinessunitPlanninggroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitPlanninggroup) | Updates the planning group |
+| [**patchWorkforcemanagementBusinessunitSchedulingRun**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitSchedulingRun) | Mark a schedule run as applied |
+| [**patchWorkforcemanagementBusinessunitServicegoaltemplate**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitServicegoaltemplate) | Updates a service goal template |
+| [**patchWorkforcemanagementBusinessunitStaffinggroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitStaffinggroup) | Updates a staffing group |
+| [**patchWorkforcemanagementBusinessunitTimeoffplan**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitTimeoffplan) | Updates a time-off plan |
+| [**patchWorkforcemanagementBusinessunitWorkplanbid**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitWorkplanbid) | Update work plan bid |
+| [**patchWorkforcemanagementBusinessunitWorkplanbidGroup**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitWorkplanbidGroup) | Update a bid group by bid group Id |
+| [**patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences) | Overrides the assigned work plan for the specified agents |
+| [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI#patchWorkforcemanagementManagementunit) | Update the requested management unit |
+| [**patchWorkforcemanagementManagementunitAgents**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitAgents) | Update agent configurations |
+| [**patchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeofflimit) | Updates a time off limit object. |
+| [**patchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeoffplan) | Updates a time off plan |
+| [**patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | Set integration status for a time off request. |
+| [**patchWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitUserTimeoffrequest) | Update a time off request |
+| [**patchWorkforcemanagementManagementunitWeekShifttrade**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitWeekShifttrade) | Updates a shift trade. This route can only be called by the initiating agent |
+| [**patchWorkforcemanagementManagementunitWorkplan**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitWorkplan) | Update a work plan |
+| [**patchWorkforcemanagementManagementunitWorkplanrotation**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitWorkplanrotation) | Update a work plan rotation |
+| [**patchWorkforcemanagementTimeoffrequest**](WorkforceManagementAPI#patchWorkforcemanagementTimeoffrequest) | Update a time off request for the current user |
+| [**patchWorkforcemanagementUserWorkplanbidranks**](WorkforceManagementAPI#patchWorkforcemanagementUserWorkplanbidranks) | Update work plan bid ranks for a user |
+| [**patchWorkforcemanagementUsersWorkplanbidranksBulk**](WorkforceManagementAPI#patchWorkforcemanagementUsersWorkplanbidranksBulk) | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
+| [**patchWorkforcemanagementWorkplanbidPreferences**](WorkforceManagementAPI#patchWorkforcemanagementWorkplanbidPreferences) | Update an agent&#39;s work plan bidding preference |
+| [**postWorkforcemanagementAdherenceExplanations**](WorkforceManagementAPI#postWorkforcemanagementAdherenceExplanations) | Submit an adherence explanation for the current user |
+| [**postWorkforcemanagementAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementAdherenceExplanationsQuery) | Query adherence explanations for the current user |
+| [**postWorkforcemanagementAdherenceHistorical**](WorkforceManagementAPI#postWorkforcemanagementAdherenceHistorical) | Deprecated. Use bulk routes instead (/adherence/historical/bulk) |
+| [**postWorkforcemanagementAdherenceHistoricalBulk**](WorkforceManagementAPI#postWorkforcemanagementAdherenceHistoricalBulk) | Request a historical adherence report in bulk |
+| [**postWorkforcemanagementAgentAdherenceExplanations**](WorkforceManagementAPI#postWorkforcemanagementAgentAdherenceExplanations) | Add an adherence explanation for the requested user |
+| [**postWorkforcemanagementAgentAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementAgentAdherenceExplanationsQuery) | Query adherence explanations for the given agent across a specified range |
+| [**postWorkforcemanagementAgents**](WorkforceManagementAPI#postWorkforcemanagementAgents) | Move agents in and out of management unit |
+| [**postWorkforcemanagementAgentsIntegrationsHrisQuery**](WorkforceManagementAPI#postWorkforcemanagementAgentsIntegrationsHrisQuery) | Query integrations for agents |
+| [**postWorkforcemanagementAgentsMePossibleworkshifts**](WorkforceManagementAPI#postWorkforcemanagementAgentsMePossibleworkshifts) | Get agent possible work shifts for requested time frame |
+| [**postWorkforcemanagementAgentschedulesMine**](WorkforceManagementAPI#postWorkforcemanagementAgentschedulesMine) | Get published schedule for the current user |
+| [**postWorkforcemanagementAlternativeshiftsOffersJobs**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsOffersJobs) | Request a list of alternative shift offers for a given schedule |
+| [**postWorkforcemanagementAlternativeshiftsOffersSearchJobs**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsOffersSearchJobs) | Request a search of alternative shift offers for a given shift |
+| [**postWorkforcemanagementAlternativeshiftsTrades**](WorkforceManagementAPI#postWorkforcemanagementAlternativeshiftsTrades) | Create my alternative shift trade using an existing offer&#39;s jobId |
+| [**postWorkforcemanagementBusinessunitActivitycodes**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivitycodes) | Create a new activity code |
+| [**postWorkforcemanagementBusinessunitActivityplanRunsJobs**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplanRunsJobs) | Run an activity plan manually |
+| [**postWorkforcemanagementBusinessunitActivityplans**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitActivityplans) | Create an activity plan |
+| [**postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | Query adherence explanations across an entire business unit for the requested period |
+| [**postWorkforcemanagementBusinessunitAgentschedulesSearch**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAgentschedulesSearch) | Search published schedules |
+| [**postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | List alternative shifts trades for a given management unit or agent |
+| [**postWorkforcemanagementBusinessunitIntraday**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitIntraday) | Get intraday data for the given date for the requested planningGroupIds |
+| [**postWorkforcemanagementBusinessunitPlanninggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitPlanninggroups) | Adds a new planning group |
+| [**postWorkforcemanagementBusinessunitServicegoaltemplates**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitServicegoaltemplates) | Adds a new service goal template |
+| [**postWorkforcemanagementBusinessunitStaffinggroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroups) | Creates a new staffing group |
+| [**postWorkforcemanagementBusinessunitStaffinggroupsQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitStaffinggroupsQuery) | Gets staffing group associations for a list of user IDs |
+| [**postWorkforcemanagementBusinessunitTimeofflimits**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimits) | Creates a new time-off limit object |
+| [**postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | Retrieves time-off limit related values based on a given set of filters. |
+| [**postWorkforcemanagementBusinessunitTimeoffplans**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitTimeoffplans) | Creates a new time-off plan |
+| [**postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery) | Loads agent schedule data from the schedule. Used in combination with the metadata route |
+| [**postWorkforcemanagementBusinessunitWeekScheduleCopy**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekScheduleCopy) | Copy a schedule |
+| [**postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations) | Request a daily recalculation of the performance prediction for the associated schedule |
+| [**postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl) | Upload daily activity changes to be able to request a performance prediction recalculation |
+| [**postWorkforcemanagementBusinessunitWeekScheduleReschedule**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekScheduleReschedule) | Start a rescheduling run |
+| [**postWorkforcemanagementBusinessunitWeekScheduleUpdate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekScheduleUpdate) | Starts processing a schedule update |
+| [**postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl) | Creates a signed upload URL for updating a schedule |
+| [**postWorkforcemanagementBusinessunitWeekSchedules**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekSchedules) | Create a blank schedule |
+| [**postWorkforcemanagementBusinessunitWeekSchedulesGenerate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekSchedulesGenerate) | Generate a schedule |
+| [**postWorkforcemanagementBusinessunitWeekSchedulesImport**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekSchedulesImport) | Starts processing a schedule import |
+| [**postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl) | Creates a signed upload URL for importing a schedule |
+| [**postWorkforcemanagementBusinessunitWeekShorttermforecastCopy**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekShorttermforecastCopy) | Copy a short term forecast |
+| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate) | Generate a short term forecast |
+| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsImport**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekShorttermforecastsImport) | Starts importing the uploaded short term forecast |
+| [**postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl) | Creates a signed upload URL for importing a short term forecast |
+| [**postWorkforcemanagementBusinessunitWorkplanbidCopy**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWorkplanbidCopy) | Copy a work plan bid |
+| [**postWorkforcemanagementBusinessunitWorkplanbidGroups**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWorkplanbidGroups) | Add a bid group in a given work plan bid |
+| [**postWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWorkplanbids) | Create a new work plan bid |
+| [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI#postWorkforcemanagementBusinessunits) | Add a new business unit |
+| [**postWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#postWorkforcemanagementCalendarUrlIcs) | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
+| [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
+| [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
+| [**postWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementAPI#postWorkforcemanagementIntegrationsHriTimeofftypesJobs) | Get list of time off types configured in integration |
+| [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
+| [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
+| [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
+| [**postWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementAPI#postWorkforcemanagementManagementunitSchedulesSearch) | Query published schedules for given given time range for set of users |
+| [**postWorkforcemanagementManagementunitShrinkageJobs**](WorkforceManagementAPI#postWorkforcemanagementManagementunitShrinkageJobs) | Request a historical shrinkage report |
+| [**postWorkforcemanagementManagementunitTimeofflimits**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeofflimits) | Creates a new time off limit object under management unit. |
+| [**postWorkforcemanagementManagementunitTimeofflimitsValuesQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeofflimitsValuesQuery) | Retrieves time off limit related values based on a given set of filters. |
+| [**postWorkforcemanagementManagementunitTimeoffplans**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffplans) | Creates a new time off plan |
+| [**postWorkforcemanagementManagementunitTimeoffrequests**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequests) | Create a new time off request |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of time off requests |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsQuery) | Fetches time off requests matching the conditions specified in the request body |
+| [**postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery) | Retrieves daily waitlist position for a list of time off requests |
+| [**postWorkforcemanagementManagementunitUserTimeoffbalanceJobs**](WorkforceManagementAPI#postWorkforcemanagementManagementunitUserTimeoffbalanceJobs) | Query time off balances for a given user for specified activity code and dates |
+| [**postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**](WorkforceManagementAPI#postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs) | Query time off balances for dates spanned by a given time off request |
+| [**postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate**](WorkforceManagementAPI#postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate) | Estimates available time off for an agent |
+| [**postWorkforcemanagementManagementunitWeekShifttradeMatch**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWeekShifttradeMatch) | Matches a shift trade. This route can only be called by the receiving agent |
+| [**postWorkforcemanagementManagementunitWeekShifttrades**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWeekShifttrades) | Adds a shift trade |
+| [**postWorkforcemanagementManagementunitWeekShifttradesSearch**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWeekShifttradesSearch) | Searches for potential shift trade matches for the current agent |
+| [**postWorkforcemanagementManagementunitWeekShifttradesStateBulk**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWeekShifttradesStateBulk) | Updates the state of a batch of shift trades |
+| [**postWorkforcemanagementManagementunitWorkplanCopy**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWorkplanCopy) | Create a copy of work plan |
+| [**postWorkforcemanagementManagementunitWorkplanValidate**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWorkplanValidate) | Validate Work Plan |
+| [**postWorkforcemanagementManagementunitWorkplanrotationCopy**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWorkplanrotationCopy) | Create a copy of work plan rotation |
+| [**postWorkforcemanagementManagementunitWorkplanrotations**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWorkplanrotations) | Create a new work plan rotation |
+| [**postWorkforcemanagementManagementunitWorkplans**](WorkforceManagementAPI#postWorkforcemanagementManagementunitWorkplans) | Create a new work plan |
+| [**postWorkforcemanagementManagementunits**](WorkforceManagementAPI#postWorkforcemanagementManagementunits) | Add a management unit |
+| [**postWorkforcemanagementNotificationsUpdate**](WorkforceManagementAPI#postWorkforcemanagementNotificationsUpdate) | Mark a list of notifications as read or unread |
+| [**postWorkforcemanagementSchedules**](WorkforceManagementAPI#postWorkforcemanagementSchedules) | Get published schedule for the current user |
+| [**postWorkforcemanagementTeamAdherenceHistorical**](WorkforceManagementAPI#postWorkforcemanagementTeamAdherenceHistorical) | Request a teams historical adherence report |
+| [**postWorkforcemanagementTeamShrinkageJobs**](WorkforceManagementAPI#postWorkforcemanagementTeamShrinkageJobs) | Request a historical shrinkage report |
+| [**postWorkforcemanagementTimeoffbalanceJobs**](WorkforceManagementAPI#postWorkforcemanagementTimeoffbalanceJobs) | Query time off balances for the current user for specified activity code and dates |
+| [**postWorkforcemanagementTimeofflimitsAvailableQuery**](WorkforceManagementAPI#postWorkforcemanagementTimeofflimitsAvailableQuery) | Queries available time off for the current user |
+| [**postWorkforcemanagementTimeoffrequests**](WorkforceManagementAPI#postWorkforcemanagementTimeoffrequests) | Create a time off request for the current user |
+| [**postWorkforcemanagementTimeoffrequestsEstimate**](WorkforceManagementAPI#postWorkforcemanagementTimeoffrequestsEstimate) | Estimates available time off for current user |
+| [**postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](WorkforceManagementAPI#postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | Retrieves integration statuses for a list of current user time off requests |
+| [**putWorkforcemanagementAgentIntegrationsHris**](WorkforceManagementAPI#putWorkforcemanagementAgentIntegrationsHris) | Update integrations for agent |
+| [**putWorkforcemanagementBusinessunitTimeofflimitValues**](WorkforceManagementAPI#putWorkforcemanagementBusinessunitTimeofflimitValues) | Sets daily values for a date range of time-off limit object |
+| [**putWorkforcemanagementManagementunitTimeofflimitValues**](WorkforceManagementAPI#putWorkforcemanagementManagementunitTimeofflimitValues) | Sets daily values for a date range of time off limit object |
 {: class="table-striped"}
 
-<a name="deleteWorkforcemanagementBusinessunit"></a>
 
-# **deleteWorkforcemanagementBusinessunit**
+## deleteWorkforcemanagementBusinessunit
 
 
 
@@ -291,16 +287,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunit(businessUnitId: bus
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitActivitycode"></a>
 
-# **deleteWorkforcemanagementBusinessunitActivitycode**
+## deleteWorkforcemanagementBusinessunitActivitycode
 
 
 
@@ -344,16 +338,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitActivitycode(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitPlanninggroup"></a>
 
-# **deleteWorkforcemanagementBusinessunitPlanninggroup**
+## deleteWorkforcemanagementBusinessunitPlanninggroup
 
 
 
@@ -397,16 +389,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitPlanninggroup(busine
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **planningGroupId** | **String**| The ID of a planning group to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitSchedulingRun"></a>
 
-# **deleteWorkforcemanagementBusinessunitSchedulingRun**
+## deleteWorkforcemanagementBusinessunitSchedulingRun
 
 
 
@@ -450,16 +440,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitSchedulingRun(busine
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **runId** | **String**| The ID of the schedule run | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitServicegoaltemplate"></a>
 
-# **deleteWorkforcemanagementBusinessunitServicegoaltemplate**
+## deleteWorkforcemanagementBusinessunitServicegoaltemplate
 
 
 
@@ -503,16 +491,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitServicegoaltemplate(
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **serviceGoalTemplateId** | **String**| The ID of the service goal template to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitStaffinggroup"></a>
 
-# **deleteWorkforcemanagementBusinessunitStaffinggroup**
+## deleteWorkforcemanagementBusinessunitStaffinggroup
 
 
 
@@ -556,16 +542,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitStaffinggroup(busine
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **staffingGroupId** | **String**| The ID of the staffing group to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitTimeofflimit"></a>
 
-# **deleteWorkforcemanagementBusinessunitTimeofflimit**
+## deleteWorkforcemanagementBusinessunitTimeofflimit
 
 
 
@@ -609,16 +593,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitTimeofflimit(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffLimitId** | **String**| The ID of the time-off limit object to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitTimeoffplan"></a>
 
-# **deleteWorkforcemanagementBusinessunitTimeoffplan**
+## deleteWorkforcemanagementBusinessunitTimeoffplan
 
 
 
@@ -662,20 +644,18 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitTimeoffplan(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffPlanId** | **String**| The ID of the time-off plan to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitWeekSchedule"></a>
 
-# **deleteWorkforcemanagementBusinessunitWeekSchedule**
-
+## deleteWorkforcemanagementBusinessunitWeekSchedule
 
 
-> [BuAsyncScheduleResponse](BuAsyncScheduleResponse.html) deleteWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId)
+
+> [BuAsyncScheduleResponse](BuAsyncScheduleResponse) deleteWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId)
 
 Delete a schedule
 
@@ -718,16 +698,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWeekSchedule(busines
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html)
+[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse)
 
-<a name="deleteWorkforcemanagementBusinessunitWeekShorttermforecast"></a>
 
-# **deleteWorkforcemanagementBusinessunitWeekShorttermforecast**
+## deleteWorkforcemanagementBusinessunitWeekShorttermforecast
 
 
 
@@ -775,16 +753,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWeekShorttermforecas
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitWorkplanbid"></a>
 
-# **deleteWorkforcemanagementBusinessunitWorkplanbid**
+## deleteWorkforcemanagementBusinessunitWorkplanbid
 
 
 
@@ -828,16 +804,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWorkplanbid(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The ID of the work plan bid | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementBusinessunitWorkplanbidGroup"></a>
 
-# **deleteWorkforcemanagementBusinessunitWorkplanbidGroup**
+## deleteWorkforcemanagementBusinessunitWorkplanbidGroup
 
 
 
@@ -883,16 +857,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementBusinessunitWorkplanbidGroup(bus
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| Work Plan Bid Group id | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementCalendarUrlIcs"></a>
 
-# **deleteWorkforcemanagementCalendarUrlIcs**
+## deleteWorkforcemanagementCalendarUrlIcs
 
 
 
@@ -932,14 +904,12 @@ WorkforceManagementAPI.deleteWorkforcemanagementCalendarUrlIcs() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementManagementunit"></a>
 
-# **deleteWorkforcemanagementManagementunit**
+## deleteWorkforcemanagementManagementunit
 
 
 
@@ -981,16 +951,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunit(managementUnitId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementManagementunitTimeofflimit"></a>
 
-# **deleteWorkforcemanagementManagementunitTimeofflimit**
+## deleteWorkforcemanagementManagementunitTimeofflimit
 
 
 
@@ -1034,16 +1002,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitTimeofflimit(manag
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit object to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementManagementunitTimeoffplan"></a>
 
-# **deleteWorkforcemanagementManagementunitTimeoffplan**
+## deleteWorkforcemanagementManagementunitTimeoffplan
 
 
 
@@ -1087,16 +1053,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitTimeoffplan(manage
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementManagementunitWorkplan"></a>
 
-# **deleteWorkforcemanagementManagementunitWorkplan**
+## deleteWorkforcemanagementManagementunitWorkplan
 
 
 
@@ -1140,16 +1104,14 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWorkplan(managemen
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to delete | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteWorkforcemanagementManagementunitWorkplanrotation"></a>
 
-# **deleteWorkforcemanagementManagementunitWorkplanrotation**
+## deleteWorkforcemanagementManagementunitWorkplanrotation
 
 
 
@@ -1193,20 +1155,18 @@ WorkforceManagementAPI.deleteWorkforcemanagementManagementunitWorkplanrotation(m
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to be deleted | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getWorkforcemanagementAdherence"></a>
 
-# **getWorkforcemanagementAdherence**
-
+## getWorkforcemanagementAdherence
 
 
-> [[UserScheduleAdherence]](UserScheduleAdherence.html) getWorkforcemanagementAdherence(userId)
+
+> [[UserScheduleAdherence]](UserScheduleAdherence) getWorkforcemanagementAdherence(userId)
 
 Get a list of UserScheduleAdherence records for the requested users
 
@@ -1244,21 +1204,19 @@ WorkforceManagementAPI.getWorkforcemanagementAdherence(userId: userId) { (respon
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | [**[String]**](String.html)| User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request | |
-{: class="table-striped"}
+| **userId** | [**[String]**](String)| User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request | |
 
 
 ### Return type
 
-[**[UserScheduleAdherence]**](UserScheduleAdherence.html)
-
-<a name="getWorkforcemanagementAdherenceExplanation"></a>
-
-# **getWorkforcemanagementAdherenceExplanation**
+[**[UserScheduleAdherence]**](UserScheduleAdherence)
 
 
+## getWorkforcemanagementAdherenceExplanation
 
-> [AdherenceExplanationResponse](AdherenceExplanationResponse.html) getWorkforcemanagementAdherenceExplanation(explanationId)
+
+
+> [AdherenceExplanationResponse](AdherenceExplanationResponse) getWorkforcemanagementAdherenceExplanation(explanationId)
 
 Get an adherence explanation for the current user
 
@@ -1297,20 +1255,18 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanation(explanationId:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **explanationId** | **String**| The ID of the explanation to update | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AdherenceExplanationResponse**](AdherenceExplanationResponse.html)
-
-<a name="getWorkforcemanagementAdherenceExplanationsJob"></a>
-
-# **getWorkforcemanagementAdherenceExplanationsJob**
+[**AdherenceExplanationResponse**](AdherenceExplanationResponse)
 
 
+## getWorkforcemanagementAdherenceExplanationsJob
 
-> [AdherenceExplanationJob](AdherenceExplanationJob.html) getWorkforcemanagementAdherenceExplanationsJob(jobId)
+
+
+> [AdherenceExplanationJob](AdherenceExplanationJob) getWorkforcemanagementAdherenceExplanationsJob(jobId)
 
 Query the status of an adherence explanation operation. Only the user who started the operation can query the status
 
@@ -1350,20 +1306,18 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceExplanationsJob(jobId: job
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AdherenceExplanationJob**](AdherenceExplanationJob.html)
-
-<a name="getWorkforcemanagementAdherenceHistoricalBulkJob"></a>
-
-# **getWorkforcemanagementAdherenceHistoricalBulkJob**
+[**AdherenceExplanationJob**](AdherenceExplanationJob)
 
 
+## getWorkforcemanagementAdherenceHistoricalBulkJob
 
-> [WfmHistoricalAdherenceBulkResponse](WfmHistoricalAdherenceBulkResponse.html) getWorkforcemanagementAdherenceHistoricalBulkJob(jobId)
+
+
+> [WfmHistoricalAdherenceBulkResponse](WfmHistoricalAdherenceBulkResponse) getWorkforcemanagementAdherenceHistoricalBulkJob(jobId)
 
 Request to fetch the status of the historical adherence bulk job. Only the user who started the operation can query the status
 
@@ -1403,20 +1357,18 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalBulkJob(jobId: j
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| ID of the job to get | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html)
-
-<a name="getWorkforcemanagementAdherenceHistoricalJob"></a>
-
-# **getWorkforcemanagementAdherenceHistoricalJob**
+[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse)
 
 
+## getWorkforcemanagementAdherenceHistoricalJob
 
-> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) getWorkforcemanagementAdherenceHistoricalJob(jobId)
+
+
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse) getWorkforcemanagementAdherenceHistoricalJob(jobId)
 
 Query the status of a historical adherence request operation. Only the user who started the operation can query the status
 
@@ -1457,20 +1409,18 @@ WorkforceManagementAPI.getWorkforcemanagementAdherenceHistoricalJob(jobId: jobId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
-
-<a name="getWorkforcemanagementAgentAdherenceExplanation"></a>
-
-# **getWorkforcemanagementAgentAdherenceExplanation**
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
 
 
+## getWorkforcemanagementAgentAdherenceExplanation
 
-> [AdherenceExplanationResponse](AdherenceExplanationResponse.html) getWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId)
+
+
+> [AdherenceExplanationResponse](AdherenceExplanationResponse) getWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId)
 
 Get an adherence explanation
 
@@ -1511,20 +1461,18 @@ WorkforceManagementAPI.getWorkforcemanagementAgentAdherenceExplanation(agentId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The ID of the agent to query | |
 | **explanationId** | **String**| The ID of the explanation to update | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AdherenceExplanationResponse**](AdherenceExplanationResponse.html)
-
-<a name="getWorkforcemanagementAgentManagementunit"></a>
-
-# **getWorkforcemanagementAgentManagementunit**
+[**AdherenceExplanationResponse**](AdherenceExplanationResponse)
 
 
+## getWorkforcemanagementAgentManagementunit
 
-> [AgentManagementUnitReference](AgentManagementUnitReference.html) getWorkforcemanagementAgentManagementunit(agentId)
+
+
+> [AgentManagementUnitReference](AgentManagementUnitReference) getWorkforcemanagementAgentManagementunit(agentId)
 
 Get the management unit to which the agent belongs
 
@@ -1569,20 +1517,18 @@ WorkforceManagementAPI.getWorkforcemanagementAgentManagementunit(agentId: agentI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The ID of the agent to look up | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AgentManagementUnitReference**](AgentManagementUnitReference.html)
-
-<a name="getWorkforcemanagementAgentsMeManagementunit"></a>
-
-# **getWorkforcemanagementAgentsMeManagementunit**
+[**AgentManagementUnitReference**](AgentManagementUnitReference)
 
 
+## getWorkforcemanagementAgentsMeManagementunit
 
-> [AgentManagementUnitReference](AgentManagementUnitReference.html) getWorkforcemanagementAgentsMeManagementunit()
+
+
+> [AgentManagementUnitReference](AgentManagementUnitReference) getWorkforcemanagementAgentsMeManagementunit()
 
 Get the management unit to which the currently logged in agent belongs
 
@@ -1676,18 +1622,16 @@ WorkforceManagementAPI.getWorkforcemanagementAgentsMeManagementunit() { (respons
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**AgentManagementUnitReference**](AgentManagementUnitReference.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsOffersJob"></a>
-
-# **getWorkforcemanagementAlternativeshiftsOffersJob**
+[**AgentManagementUnitReference**](AgentManagementUnitReference)
 
 
+## getWorkforcemanagementAlternativeshiftsOffersJob
 
-> [AlternativeShiftJobResponse](AlternativeShiftJobResponse.html) getWorkforcemanagementAlternativeshiftsOffersJob(jobId)
+
+
+> [AlternativeShiftJobResponse](AlternativeShiftJobResponse) getWorkforcemanagementAlternativeshiftsOffersJob(jobId)
 
 Query the status of an alternative shift offers operation. Only the user who started the operation can query the status
 
@@ -1728,20 +1672,18 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsOffersJob(jobId: j
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsOffersSearchJob"></a>
-
-# **getWorkforcemanagementAlternativeshiftsOffersSearchJob**
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse)
 
 
+## getWorkforcemanagementAlternativeshiftsOffersSearchJob
 
-> [AlternativeShiftJobResponse](AlternativeShiftJobResponse.html) getWorkforcemanagementAlternativeshiftsOffersSearchJob(jobId)
+
+
+> [AlternativeShiftJobResponse](AlternativeShiftJobResponse) getWorkforcemanagementAlternativeshiftsOffersSearchJob(jobId)
 
 Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status
 
@@ -1782,20 +1724,18 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsOffersSearchJob(jo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsSettings"></a>
-
-# **getWorkforcemanagementAlternativeshiftsSettings**
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse)
 
 
+## getWorkforcemanagementAlternativeshiftsSettings
 
-> [AlternativeShiftBuSettingsResponse](AlternativeShiftBuSettingsResponse.html) getWorkforcemanagementAlternativeshiftsSettings()
+
+
+> [AlternativeShiftBuSettingsResponse](AlternativeShiftBuSettingsResponse) getWorkforcemanagementAlternativeshiftsSettings()
 
 Get alternative shifts settings from the current logged in agent’s business unit
 
@@ -1832,18 +1772,16 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsSettings() { (resp
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsTrade"></a>
-
-# **getWorkforcemanagementAlternativeshiftsTrade**
+[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse)
 
 
+## getWorkforcemanagementAlternativeshiftsTrade
 
-> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse.html) getWorkforcemanagementAlternativeshiftsTrade(tradeId)
+
+
+> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse) getWorkforcemanagementAlternativeshiftsTrade(tradeId)
 
 Get my alternative shift trade by trade ID
 
@@ -1882,20 +1820,18 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsTrade(tradeId: tra
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tradeId** | **String**| The ID of the alternative shift trade | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsTrades"></a>
-
-# **getWorkforcemanagementAlternativeshiftsTrades**
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse)
 
 
+## getWorkforcemanagementAlternativeshiftsTrades
 
-> [ListAlternativeShiftTradesResponse](ListAlternativeShiftTradesResponse.html) getWorkforcemanagementAlternativeshiftsTrades(forceAsync)
+
+
+> [ListAlternativeShiftTradesResponse](ListAlternativeShiftTradesResponse) getWorkforcemanagementAlternativeshiftsTrades(forceAsync)
 
 Get a list of my alternative shifts trades
 
@@ -1934,20 +1870,18 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsTrades(forceAsync:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ListAlternativeShiftTradesResponse**](ListAlternativeShiftTradesResponse.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsTradesJob"></a>
-
-# **getWorkforcemanagementAlternativeshiftsTradesJob**
+[**ListAlternativeShiftTradesResponse**](ListAlternativeShiftTradesResponse)
 
 
+## getWorkforcemanagementAlternativeshiftsTradesJob
 
-> [AlternativeShiftJobResponse](AlternativeShiftJobResponse.html) getWorkforcemanagementAlternativeshiftsTradesJob(jobId)
+
+
+> [AlternativeShiftJobResponse](AlternativeShiftJobResponse) getWorkforcemanagementAlternativeshiftsTradesJob(jobId)
 
 Query the status of an alternative shift trades operation. Only the user who started the operation can query the status
 
@@ -1988,20 +1922,18 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsTradesJob(jobId: j
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
-
-<a name="getWorkforcemanagementAlternativeshiftsTradesStateJob"></a>
-
-# **getWorkforcemanagementAlternativeshiftsTradesStateJob**
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse)
 
 
+## getWorkforcemanagementAlternativeshiftsTradesStateJob
 
-> [AlternativeShiftJobResponse](AlternativeShiftJobResponse.html) getWorkforcemanagementAlternativeshiftsTradesStateJob(jobId)
+
+
+> [AlternativeShiftJobResponse](AlternativeShiftJobResponse) getWorkforcemanagementAlternativeshiftsTradesStateJob(jobId)
 
 Query the status of an alternative shift trade state operation. Only the user who started the operation can query the status
 
@@ -2042,20 +1974,18 @@ WorkforceManagementAPI.getWorkforcemanagementAlternativeshiftsTradesStateJob(job
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse.html)
-
-<a name="getWorkforcemanagementBusinessunit"></a>
-
-# **getWorkforcemanagementBusinessunit**
+[**AlternativeShiftJobResponse**](AlternativeShiftJobResponse)
 
 
+## getWorkforcemanagementBusinessunit
 
-> [BusinessUnitResponse](BusinessUnitResponse.html) getWorkforcemanagementBusinessunit(businessUnitId, expand)
+
+
+> [BusinessUnitResponse](BusinessUnitResponse) getWorkforcemanagementBusinessunit(businessUnitId, expand)
 
 Get business unit
 
@@ -2167,21 +2097,19 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunit(businessUnitId: busine
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)| Include to access additional data on the business unit | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling"), settingsNotificationsScheduling ("settings.notifications.scheduling"), settingsLearning ("settings.learning"), settingsCoaching ("settings.coaching") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Include to access additional data on the business unit | [optional]<br />**Values**: settings ("settings"), settingsTimezone ("settings.timeZone"), settingsStartdayofweek ("settings.startDayOfWeek"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsScheduling ("settings.scheduling"), settingsNotificationsScheduling ("settings.notifications.scheduling"), settingsLearning ("settings.learning"), settingsCoaching ("settings.coaching") |
 
 
 ### Return type
 
-[**BusinessUnitResponse**](BusinessUnitResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitActivitycode"></a>
-
-# **getWorkforcemanagementBusinessunitActivitycode**
+[**BusinessUnitResponse**](BusinessUnitResponse)
 
 
+## getWorkforcemanagementBusinessunitActivitycode
 
-> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) getWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId)
+
+
+> [BusinessUnitActivityCode](BusinessUnitActivityCode) getWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId)
 
 Get an activity code
 
@@ -2222,20 +2150,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycode(businessUn
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
-
-<a name="getWorkforcemanagementBusinessunitActivitycodes"></a>
-
-# **getWorkforcemanagementBusinessunitActivitycodes**
+[**BusinessUnitActivityCode**](BusinessUnitActivityCode)
 
 
+## getWorkforcemanagementBusinessunitActivitycodes
 
-> [BusinessUnitActivityCodeListing](BusinessUnitActivityCodeListing.html) getWorkforcemanagementBusinessunitActivitycodes(businessUnitId, forceDownloadService)
+
+
+> [BusinessUnitActivityCodeListing](BusinessUnitActivityCodeListing) getWorkforcemanagementBusinessunitActivitycodes(businessUnitId, forceDownloadService)
 
 Get activity codes
 
@@ -2334,20 +2260,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivitycodes(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BusinessUnitActivityCodeListing**](BusinessUnitActivityCodeListing.html)
-
-<a name="getWorkforcemanagementBusinessunitActivityplan"></a>
-
-# **getWorkforcemanagementBusinessunitActivityplan**
+[**BusinessUnitActivityCodeListing**](BusinessUnitActivityCodeListing)
 
 
+## getWorkforcemanagementBusinessunitActivityplan
 
-> [ActivityPlanResponse](ActivityPlanResponse.html) getWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId)
+
+
+> [ActivityPlanResponse](ActivityPlanResponse) getWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId)
 
 Get an activity plan
 
@@ -2388,20 +2312,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplan(businessUn
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **activityPlanId** | **String**| The ID of the activity plan to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityPlanResponse**](ActivityPlanResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitActivityplanRunsJob"></a>
-
-# **getWorkforcemanagementBusinessunitActivityplanRunsJob**
+[**ActivityPlanResponse**](ActivityPlanResponse)
 
 
+## getWorkforcemanagementBusinessunitActivityplanRunsJob
 
-> [ActivityPlanRunJobResponse](ActivityPlanRunJobResponse.html) getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId, activityPlanId, jobId)
+
+
+> [ActivityPlanRunJobResponse](ActivityPlanRunJobResponse) getWorkforcemanagementBusinessunitActivityplanRunsJob(businessUnitId, activityPlanId, jobId)
 
 Gets an activity plan run job
 
@@ -2444,20 +2366,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplanRunsJob(bus
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **activityPlanId** | **String**| The ID of the activity plan associated with the run job | |
 | **jobId** | **String**| The ID of the activity plan run job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityPlanRunJobResponse**](ActivityPlanRunJobResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitActivityplans"></a>
-
-# **getWorkforcemanagementBusinessunitActivityplans**
+[**ActivityPlanRunJobResponse**](ActivityPlanRunJobResponse)
 
 
+## getWorkforcemanagementBusinessunitActivityplans
 
-> [ActivityPlanListing](ActivityPlanListing.html) getWorkforcemanagementBusinessunitActivityplans(businessUnitId, state)
+
+
+> [ActivityPlanListing](ActivityPlanListing) getWorkforcemanagementBusinessunitActivityplans(businessUnitId, state)
 
 Get activity plans
 
@@ -2498,20 +2418,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplans(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **state** | **String**| Optionally filter by activity plan state | [optional]<br />**Values**: active ("Active"), inactive ("Inactive") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityPlanListing**](ActivityPlanListing.html)
-
-<a name="getWorkforcemanagementBusinessunitActivityplansJobs"></a>
-
-# **getWorkforcemanagementBusinessunitActivityplansJobs**
+[**ActivityPlanListing**](ActivityPlanListing)
 
 
+## getWorkforcemanagementBusinessunitActivityplansJobs
 
-> [ActivityPlanJobListing](ActivityPlanJobListing.html) getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId)
+
+
+> [ActivityPlanJobListing](ActivityPlanJobListing) getWorkforcemanagementBusinessunitActivityplansJobs(businessUnitId)
 
 Gets the latest job for all activity plans in the business unit
 
@@ -2550,20 +2468,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitActivityplansJobs(busin
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityPlanJobListing**](ActivityPlanJobListing.html)
-
-<a name="getWorkforcemanagementBusinessunitAlternativeshiftsSettings"></a>
-
-# **getWorkforcemanagementBusinessunitAlternativeshiftsSettings**
+[**ActivityPlanJobListing**](ActivityPlanJobListing)
 
 
+## getWorkforcemanagementBusinessunitAlternativeshiftsSettings
 
-> [AlternativeShiftBuSettingsResponse](AlternativeShiftBuSettingsResponse.html) getWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId)
+
+
+> [AlternativeShiftBuSettingsResponse](AlternativeShiftBuSettingsResponse) getWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId)
 
 Get alternative shifts settings for a business unit
 
@@ -2602,20 +2518,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitAlternativeshiftsSettin
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitAlternativeshiftsTrade"></a>
-
-# **getWorkforcemanagementBusinessunitAlternativeshiftsTrade**
+[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse)
 
 
+## getWorkforcemanagementBusinessunitAlternativeshiftsTrade
 
-> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse.html) getWorkforcemanagementBusinessunitAlternativeshiftsTrade(businessUnitId, tradeId)
+
+
+> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse) getWorkforcemanagementBusinessunitAlternativeshiftsTrade(businessUnitId, tradeId)
 
 Get an alternative shifts trade in a business unit for a given trade ID
 
@@ -2656,20 +2570,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitAlternativeshiftsTrade(
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **tradeId** | **String**| The ID of the alternative shift trade | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob"></a>
-
-# **getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse)
 
 
+## getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob
 
-> [BuAlternativeShiftJobResponse](BuAlternativeShiftJobResponse.html) getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob(businessUnitId, jobId)
+
+
+> [BuAlternativeShiftJobResponse](BuAlternativeShiftJobResponse) getWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob(businessUnitId, jobId)
 
 Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status
 
@@ -2712,20 +2624,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitAlternativeshiftsTrades
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **jobId** | **String**| The ID of the job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuAlternativeShiftJobResponse**](BuAlternativeShiftJobResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitIntradayPlanninggroups"></a>
-
-# **getWorkforcemanagementBusinessunitIntradayPlanninggroups**
+[**BuAlternativeShiftJobResponse**](BuAlternativeShiftJobResponse)
 
 
+## getWorkforcemanagementBusinessunitIntradayPlanninggroups
 
-> [WfmIntradayPlanningGroupListing](WfmIntradayPlanningGroupListing.html) getWorkforcemanagementBusinessunitIntradayPlanninggroups(businessUnitId, date)
+
+
+> [WfmIntradayPlanningGroupListing](WfmIntradayPlanningGroupListing) getWorkforcemanagementBusinessunitIntradayPlanninggroups(businessUnitId, date)
 
 Get intraday planning groups for the given date
 
@@ -2766,20 +2676,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitIntradayPlanninggroups(
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **date** | **Date**| yyyy-MM-dd date string interpreted in the configured business unit time zone. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WfmIntradayPlanningGroupListing**](WfmIntradayPlanningGroupListing.html)
-
-<a name="getWorkforcemanagementBusinessunitManagementunits"></a>
-
-# **getWorkforcemanagementBusinessunitManagementunits**
+[**WfmIntradayPlanningGroupListing**](WfmIntradayPlanningGroupListing)
 
 
+## getWorkforcemanagementBusinessunitManagementunits
 
-> [ManagementUnitListing](ManagementUnitListing.html) getWorkforcemanagementBusinessunitManagementunits(businessUnitId, feature, divisionId)
+
+
+> [ManagementUnitListing](ManagementUnitListing) getWorkforcemanagementBusinessunitManagementunits(businessUnitId, feature, divisionId)
 
 Get all authorized management units in the business unit
 
@@ -2821,20 +2729,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitManagementunits(busines
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ManagementUnitListing**](ManagementUnitListing.html)
-
-<a name="getWorkforcemanagementBusinessunitPlanninggroup"></a>
-
-# **getWorkforcemanagementBusinessunitPlanninggroup**
+[**ManagementUnitListing**](ManagementUnitListing)
 
 
+## getWorkforcemanagementBusinessunitPlanninggroup
 
-> [PlanningGroup](PlanningGroup.html) getWorkforcemanagementBusinessunitPlanninggroup(businessUnitId, planningGroupId)
+
+
+> [PlanningGroup](PlanningGroup) getWorkforcemanagementBusinessunitPlanninggroup(businessUnitId, planningGroupId)
 
 Get a planning group
 
@@ -2875,20 +2781,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitPlanninggroup(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **planningGroupId** | **String**| The ID of a planning group to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**PlanningGroup**](PlanningGroup.html)
-
-<a name="getWorkforcemanagementBusinessunitPlanninggroups"></a>
-
-# **getWorkforcemanagementBusinessunitPlanninggroups**
+[**PlanningGroup**](PlanningGroup)
 
 
+## getWorkforcemanagementBusinessunitPlanninggroups
 
-> [PlanningGroupList](PlanningGroupList.html) getWorkforcemanagementBusinessunitPlanninggroups(businessUnitId)
+
+
+> [PlanningGroupList](PlanningGroupList) getWorkforcemanagementBusinessunitPlanninggroups(businessUnitId)
 
 Gets list of planning groups
 
@@ -2932,20 +2836,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitPlanninggroups(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**PlanningGroupList**](PlanningGroupList.html)
-
-<a name="getWorkforcemanagementBusinessunitSchedulingRun"></a>
-
-# **getWorkforcemanagementBusinessunitSchedulingRun**
+[**PlanningGroupList**](PlanningGroupList)
 
 
+## getWorkforcemanagementBusinessunitSchedulingRun
 
-> [BuScheduleRun](BuScheduleRun.html) getWorkforcemanagementBusinessunitSchedulingRun(businessUnitId, runId)
+
+
+> [BuScheduleRun](BuScheduleRun) getWorkforcemanagementBusinessunitSchedulingRun(businessUnitId, runId)
 
 Get a scheduling run
 
@@ -2987,20 +2889,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulingRun(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **runId** | **String**| The ID of the schedule run | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuScheduleRun**](BuScheduleRun.html)
-
-<a name="getWorkforcemanagementBusinessunitSchedulingRunResult"></a>
-
-# **getWorkforcemanagementBusinessunitSchedulingRunResult**
+[**BuScheduleRun**](BuScheduleRun)
 
 
+## getWorkforcemanagementBusinessunitSchedulingRunResult
 
-> [BuRescheduleResult](BuRescheduleResult.html) getWorkforcemanagementBusinessunitSchedulingRunResult(businessUnitId, runId, managementUnitIds, expand)
+
+
+> [BuRescheduleResult](BuRescheduleResult) getWorkforcemanagementBusinessunitSchedulingRunResult(businessUnitId, runId, managementUnitIds, expand)
 
 Get the result of a rescheduling operation
 
@@ -3044,22 +2944,20 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulingRunResult(bus
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **runId** | **String**| The ID of the schedule run | |
-| **managementUnitIds** | [**[String]**](String.html)| The IDs of the management units for which to fetch the reschedule results | |
-| **expand** | [**[String]**](String.html)| The fields to expand. Omitting will return an empty response |<br />**Values**: headcountforecast ("headcountForecast"), generationresults ("generationResults"), agentschedules ("agentSchedules") |
-{: class="table-striped"}
+| **managementUnitIds** | [**[String]**](String)| The IDs of the management units for which to fetch the reschedule results | |
+| **expand** | [**[String]**](String)| The fields to expand. Omitting will return an empty response |<br />**Values**: headcountforecast ("headcountForecast"), generationresults ("generationResults"), agentschedules ("agentSchedules") |
 
 
 ### Return type
 
-[**BuRescheduleResult**](BuRescheduleResult.html)
-
-<a name="getWorkforcemanagementBusinessunitSchedulingRuns"></a>
-
-# **getWorkforcemanagementBusinessunitSchedulingRuns**
+[**BuRescheduleResult**](BuRescheduleResult)
 
 
+## getWorkforcemanagementBusinessunitSchedulingRuns
 
-> [BuScheduleRunListing](BuScheduleRunListing.html) getWorkforcemanagementBusinessunitSchedulingRuns(businessUnitId)
+
+
+> [BuScheduleRunListing](BuScheduleRunListing) getWorkforcemanagementBusinessunitSchedulingRuns(businessUnitId)
 
 Get the list of scheduling runs
 
@@ -3099,20 +2997,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitSchedulingRuns(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuScheduleRunListing**](BuScheduleRunListing.html)
-
-<a name="getWorkforcemanagementBusinessunitServicegoaltemplate"></a>
-
-# **getWorkforcemanagementBusinessunitServicegoaltemplate**
+[**BuScheduleRunListing**](BuScheduleRunListing)
 
 
+## getWorkforcemanagementBusinessunitServicegoaltemplate
 
-> [ServiceGoalTemplate](ServiceGoalTemplate.html) getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId, expand)
+
+
+> [ServiceGoalTemplate](ServiceGoalTemplate) getWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId, expand)
 
 Get a service goal template
 
@@ -3154,21 +3050,19 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplate(bus
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **serviceGoalTemplateId** | **String**| The ID of a service goal template to fetch | |
-| **expand** | [**[String]**](String.html)| Include to access additional data on the service goal template | [optional]<br />**Values**: impactoverride ("impactOverride") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Include to access additional data on the service goal template | [optional]<br />**Values**: impactoverride ("impactOverride") |
 
 
 ### Return type
 
-[**ServiceGoalTemplate**](ServiceGoalTemplate.html)
-
-<a name="getWorkforcemanagementBusinessunitServicegoaltemplates"></a>
-
-# **getWorkforcemanagementBusinessunitServicegoaltemplates**
+[**ServiceGoalTemplate**](ServiceGoalTemplate)
 
 
+## getWorkforcemanagementBusinessunitServicegoaltemplates
 
-> [ServiceGoalTemplateList](ServiceGoalTemplateList.html) getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId, expand)
+
+
+> [ServiceGoalTemplateList](ServiceGoalTemplateList) getWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId, expand)
 
 Gets list of service goal templates
 
@@ -3210,21 +3104,19 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitServicegoaltemplates(bu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
-| **expand** | [**[String]**](String.html)| Include to access additional data on the service goal template | [optional]<br />**Values**: impactoverride ("impactOverride") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Include to access additional data on the service goal template | [optional]<br />**Values**: impactoverride ("impactOverride") |
 
 
 ### Return type
 
-[**ServiceGoalTemplateList**](ServiceGoalTemplateList.html)
-
-<a name="getWorkforcemanagementBusinessunitStaffinggroup"></a>
-
-# **getWorkforcemanagementBusinessunitStaffinggroup**
+[**ServiceGoalTemplateList**](ServiceGoalTemplateList)
 
 
+## getWorkforcemanagementBusinessunitStaffinggroup
 
-> [StaffingGroupResponse](StaffingGroupResponse.html) getWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId)
+
+
+> [StaffingGroupResponse](StaffingGroupResponse) getWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId)
 
 Gets a staffing group
 
@@ -3265,20 +3157,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitStaffinggroup(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **staffingGroupId** | **String**| The ID of the staffing group to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**StaffingGroupResponse**](StaffingGroupResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitStaffinggroups"></a>
-
-# **getWorkforcemanagementBusinessunitStaffinggroups**
+[**StaffingGroupResponse**](StaffingGroupResponse)
 
 
+## getWorkforcemanagementBusinessunitStaffinggroups
 
-> [StaffingGroupListing](StaffingGroupListing.html) getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, managementUnitId)
+
+
+> [StaffingGroupListing](StaffingGroupListing) getWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, managementUnitId)
 
 Gets a list of staffing groups
 
@@ -3319,20 +3209,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitStaffinggroups(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **managementUnitId** | **String**| The ID of the management unit to get management unit specific staffing groups | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**StaffingGroupListing**](StaffingGroupListing.html)
-
-<a name="getWorkforcemanagementBusinessunitTimeofflimit"></a>
-
-# **getWorkforcemanagementBusinessunitTimeofflimit**
+[**StaffingGroupListing**](StaffingGroupListing)
 
 
+## getWorkforcemanagementBusinessunitTimeofflimit
 
-> [BuTimeOffLimitResponse](BuTimeOffLimitResponse.html) getWorkforcemanagementBusinessunitTimeofflimit(businessUnitId, timeOffLimitId)
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse) getWorkforcemanagementBusinessunitTimeofflimit(businessUnitId, timeOffLimitId)
 
 Gets a time-off limit object
 
@@ -3375,20 +3263,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimit(businessUn
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffLimitId** | **String**| The ID of the time-off limit to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitTimeofflimits"></a>
-
-# **getWorkforcemanagementBusinessunitTimeofflimits**
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
 
 
+## getWorkforcemanagementBusinessunitTimeofflimits
 
-> [BuTimeOffLimitListing](BuTimeOffLimitListing.html) getWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, managementUnitId)
+
+
+> [BuTimeOffLimitListing](BuTimeOffLimitListing) getWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, managementUnitId)
 
 Gets a list of time-off limit objects
 
@@ -3430,20 +3316,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeofflimits(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **managementUnitId** | **String**| The ID of the management unit to get management unit specific time-off limit objects | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuTimeOffLimitListing**](BuTimeOffLimitListing.html)
-
-<a name="getWorkforcemanagementBusinessunitTimeoffplan"></a>
-
-# **getWorkforcemanagementBusinessunitTimeoffplan**
+[**BuTimeOffLimitListing**](BuTimeOffLimitListing)
 
 
+## getWorkforcemanagementBusinessunitTimeoffplan
 
-> [BuTimeOffPlanResponse](BuTimeOffPlanResponse.html) getWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId)
+
+
+> [BuTimeOffPlanResponse](BuTimeOffPlanResponse) getWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId)
 
 Gets a time-off plan
 
@@ -3484,20 +3368,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplan(businessUni
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffPlanId** | **String**| The ID of the time-off plan to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitTimeoffplans"></a>
-
-# **getWorkforcemanagementBusinessunitTimeoffplans**
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse)
 
 
+## getWorkforcemanagementBusinessunitTimeoffplans
 
-> [BuTimeOffPlanListing](BuTimeOffPlanListing.html) getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, managementUnitId, forceDownloadService)
+
+
+> [BuTimeOffPlanListing](BuTimeOffPlanListing) getWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, managementUnitId, forceDownloadService)
 
 Gets a list of time-off plans
 
@@ -3540,20 +3422,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitTimeoffplans(businessUn
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **managementUnitId** | **String**| The ID of the management unit to get management unit specific staffing groups | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuTimeOffPlanListing**](BuTimeOffPlanListing.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekSchedule"></a>
-
-# **getWorkforcemanagementBusinessunitWeekSchedule**
+[**BuTimeOffPlanListing**](BuTimeOffPlanListing)
 
 
+## getWorkforcemanagementBusinessunitWeekSchedule
 
-> [BuScheduleMetadata](BuScheduleMetadata.html) getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId, expand)
+
+
+> [BuScheduleMetadata](BuScheduleMetadata) getWorkforcemanagementBusinessunitWeekSchedule(businessUnitId, weekId, scheduleId, expand)
 
 Get the metadata for the schedule, describing which management units and agents are in the scheduleSchedule data can then be loaded with the query route
 
@@ -3599,20 +3479,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedule(businessUn
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
 | **expand** | **String**| expand | [optional]<br />**Values**: managementunitsAgents ("managementUnits.agents") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuScheduleMetadata**](BuScheduleMetadata.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekScheduleGenerationresults"></a>
-
-# **getWorkforcemanagementBusinessunitWeekScheduleGenerationresults**
+[**BuScheduleMetadata**](BuScheduleMetadata)
 
 
+## getWorkforcemanagementBusinessunitWeekScheduleGenerationresults
 
-> [ScheduleGenerationResult](ScheduleGenerationResult.html) getWorkforcemanagementBusinessunitWeekScheduleGenerationresults(businessUnitId, weekId, scheduleId)
+
+
+> [ScheduleGenerationResult](ScheduleGenerationResult) getWorkforcemanagementBusinessunitWeekScheduleGenerationresults(businessUnitId, weekId, scheduleId)
 
 Get the generation results for a generated schedule
 
@@ -3656,20 +3534,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleGenerationr
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScheduleGenerationResult**](ScheduleGenerationResult.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast"></a>
-
-# **getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast**
+[**ScheduleGenerationResult**](ScheduleGenerationResult)
 
 
+## getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast
 
-> [BuHeadcountForecastResponse](BuHeadcountForecastResponse.html) getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast(businessUnitId, weekId, scheduleId, forceDownload)
+
+
+> [BuHeadcountForecastResponse](BuHeadcountForecastResponse) getWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast(businessUnitId, weekId, scheduleId, forceDownload)
 
 Get the headcount forecast by planning group for the schedule
 
@@ -3715,20 +3591,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHeadcountfo
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
 | **forceDownload** | **Bool**| Whether to force the result to come via download url.  For testing purposes only | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuHeadcountForecastResponse**](BuHeadcountForecastResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent"></a>
-
-# **getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent**
+[**BuHeadcountForecastResponse**](BuHeadcountForecastResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent
 
-> [BuAgentScheduleHistoryResponse](BuAgentScheduleHistoryResponse.html) getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId, weekId, scheduleId, agentId)
+
+
+> [BuAgentScheduleHistoryResponse](BuAgentScheduleHistoryResponse) getWorkforcemanagementBusinessunitWeekScheduleHistoryAgent(businessUnitId, weekId, scheduleId, agentId)
 
 Loads agent&#39;s schedule history.
 
@@ -3774,20 +3648,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekScheduleHistoryAgen
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
 | **agentId** | **String**| THe ID of the agent | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuAgentScheduleHistoryResponse**](BuAgentScheduleHistoryResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions"></a>
-
-# **getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions**
+[**BuAgentScheduleHistoryResponse**](BuAgentScheduleHistoryResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions
 
-> [PerformancePredictionResponse](PerformancePredictionResponse.html) getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions(businessUnitId, weekId, scheduleId)
+
+
+> [PerformancePredictionResponse](PerformancePredictionResponse) getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions(businessUnitId, weekId, scheduleId)
 
 Get the performance prediction for the associated schedule
 
@@ -3831,20 +3703,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedulePerformance
 | **businessUnitId** | **String**| The ID of the business unit to which the performance prediction belongs | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format | |
 | **scheduleId** | **String**| The ID of the schedule the performance prediction belongs to | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**PerformancePredictionResponse**](PerformancePredictionResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation"></a>
-
-# **getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation**
+[**PerformancePredictionResponse**](PerformancePredictionResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation
 
-> [PerformancePredictionRecalculationResponse](PerformancePredictionRecalculationResponse.html) getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation(businessUnitId, weekId, scheduleId, recalculationId)
+
+
+> [PerformancePredictionRecalculationResponse](PerformancePredictionRecalculationResponse) getWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation(businessUnitId, weekId, scheduleId, recalculationId)
 
 Get recalculated performance prediction result
 
@@ -3890,20 +3760,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedulePerformance
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format | |
 | **scheduleId** | **String**| The ID of the schedule the recalculation belongs to | |
 | **recalculationId** | **String**| The ID of the recalculation request | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekSchedules"></a>
-
-# **getWorkforcemanagementBusinessunitWeekSchedules**
+[**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekSchedules
 
-> [BuScheduleListing](BuScheduleListing.html) getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId, weekId, includeOnlyPublished, expand)
+
+
+> [BuScheduleListing](BuScheduleListing) getWorkforcemanagementBusinessunitWeekSchedules(businessUnitId, weekId, includeOnlyPublished, expand)
 
 Get the list of week schedules for the specified week
 
@@ -3951,20 +3819,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekSchedules(businessU
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format, or 'recent' (without quotes) to get recent schedules | |
 | **includeOnlyPublished** | **Bool**| includeOnlyPublished | [optional] |
 | **expand** | **String**| expand | [optional]<br />**Values**: forecastDescription ("forecast.description") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuScheduleListing**](BuScheduleListing.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecast"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecast**
+[**BuScheduleListing**](BuScheduleListing)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecast
 
-> [BuShortTermForecast](BuShortTermForecast.html) getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId, weekDateId, forecastId, expand)
+
+
+> [BuShortTermForecast](BuShortTermForecast) getWorkforcemanagementBusinessunitWeekShorttermforecast(businessUnitId, weekDateId, forecastId, expand)
 
 Get a short term forecast
 
@@ -4008,21 +3874,19 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecast(b
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-| **expand** | [**[String]**](String.html)| Include to access additional data on the forecast | [optional]<br />**Values**: planninggroups ("planningGroups"), generationresults ("generationResults") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Include to access additional data on the forecast | [optional]<br />**Values**: planninggroups ("planningGroups"), generationresults ("generationResults") |
 
 
 ### Return type
 
-[**BuShortTermForecast**](BuShortTermForecast.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecastData"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecastData**
+[**BuShortTermForecast**](BuShortTermForecast)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecastData
 
-> [BuForecastResultResponse](BuForecastResultResponse.html) getWorkforcemanagementBusinessunitWeekShorttermforecastData(businessUnitId, weekDateId, forecastId, weekNumber, forceDownloadService)
+
+
+> [BuForecastResultResponse](BuForecastResultResponse) getWorkforcemanagementBusinessunitWeekShorttermforecastData(businessUnitId, weekDateId, forecastId, weekNumber, forceDownloadService)
 
 Get the result of a short term forecast calculation
 
@@ -4071,20 +3935,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastDa
 | **forecastId** | **String**| The ID of the forecast | |
 | **weekNumber** | **Int**| The week number to fetch (for multi-week forecasts) | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuForecastResultResponse**](BuForecastResultResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults**
+[**BuForecastResultResponse**](BuForecastResultResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults
 
-> [BuForecastGenerationResult](BuForecastGenerationResult.html) getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults(businessUnitId, weekDateId, forecastId)
+
+
+> [BuForecastGenerationResult](BuForecastGenerationResult) getWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults(businessUnitId, weekDateId, forecastId)
 
 Gets the forecast generation results
 
@@ -4127,20 +3989,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastGe
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuForecastGenerationResult**](BuForecastGenerationResult.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata**
+[**BuForecastGenerationResult**](BuForecastGenerationResult)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata
 
-> [LongTermForecastResultResponse](LongTermForecastResultResponse.html) getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata(businessUnitId, weekDateId, forecastId, forceDownloadService)
+
+
+> [LongTermForecastResultResponse](LongTermForecastResultResponse) getWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata(businessUnitId, weekDateId, forecastId, forceDownloadService)
 
 Get the result of a long term forecast calculation
 
@@ -4187,20 +4047,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastLo
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**LongTermForecastResultResponse**](LongTermForecastResultResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups**
+[**LongTermForecastResultResponse**](LongTermForecastResultResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups
 
-> [ForecastPlanningGroupsResponse](ForecastPlanningGroupsResponse.html) getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups(businessUnitId, weekDateId, forecastId)
+
+
+> [ForecastPlanningGroupsResponse](ForecastPlanningGroupsResponse) getWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups(businessUnitId, weekDateId, forecastId)
 
 Gets the forecast planning group snapshot
 
@@ -4245,20 +4103,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastPl
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement**
+[**ForecastPlanningGroupsResponse**](ForecastPlanningGroupsResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement
 
-> [BuForecastStaffingRequirementsResultResponse](BuForecastStaffingRequirementsResultResponse.html) getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers)
+
+
+> [BuForecastStaffingRequirementsResultResponse](BuForecastStaffingRequirementsResultResponse) getWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers)
 
 Get the staffing requirement by planning group for a forecast
 
@@ -4302,21 +4158,19 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecastSt
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast | |
-| **weekNumbers** | [**[String]**](String.html)| The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified | [optional] |
-{: class="table-striped"}
+| **weekNumbers** | [**[String]**](String)| The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified | [optional] |
 
 
 ### Return type
 
-[**BuForecastStaffingRequirementsResultResponse**](BuForecastStaffingRequirementsResultResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWeekShorttermforecasts"></a>
-
-# **getWorkforcemanagementBusinessunitWeekShorttermforecasts**
+[**BuForecastStaffingRequirementsResultResponse**](BuForecastStaffingRequirementsResultResponse)
 
 
+## getWorkforcemanagementBusinessunitWeekShorttermforecasts
 
-> [BuShortTermForecastListing](BuShortTermForecastListing.html) getWorkforcemanagementBusinessunitWeekShorttermforecasts(businessUnitId, weekDateId)
+
+
+> [BuShortTermForecastListing](BuShortTermForecastListing) getWorkforcemanagementBusinessunitWeekShorttermforecasts(businessUnitId, weekDateId)
 
 Get short term forecasts
 
@@ -4360,20 +4214,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWeekShorttermforecasts(
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format or 'recent' (without quotes) to fetch recent forecasts | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuShortTermForecastListing**](BuShortTermForecastListing.html)
-
-<a name="getWorkforcemanagementBusinessunitWorkplanbid"></a>
-
-# **getWorkforcemanagementBusinessunitWorkplanbid**
+[**BuShortTermForecastListing**](BuShortTermForecastListing)
 
 
+## getWorkforcemanagementBusinessunitWorkplanbid
 
-> [WorkPlanBid](WorkPlanBid.html) getWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId)
+
+
+> [WorkPlanBid](WorkPlanBid) getWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId)
 
 Get a work plan bid
 
@@ -4414,20 +4266,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWorkplanbid(businessUni
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The id of the workplanbid | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WorkPlanBid**](WorkPlanBid.html)
-
-<a name="getWorkforcemanagementBusinessunitWorkplanbidGroup"></a>
-
-# **getWorkforcemanagementBusinessunitWorkplanbidGroup**
+[**WorkPlanBid**](WorkPlanBid)
 
 
+## getWorkforcemanagementBusinessunitWorkplanbidGroup
 
-> [WorkPlanBidGroupResponse](WorkPlanBidGroupResponse.html) getWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId)
+
+
+> [WorkPlanBidGroupResponse](WorkPlanBidGroupResponse) getWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId)
 
 Get a bid group by bid group Id
 
@@ -4470,20 +4320,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWorkplanbidGroup(busine
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| Work Plan Bid Group id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences"></a>
-
-# **getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**
+[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse)
 
 
+## getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences
 
-> [AdminAgentWorkPlanPreferenceResponse](AdminAgentWorkPlanPreferenceResponse.html) getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId)
+
+
+> [AdminAgentWorkPlanPreferenceResponse](AdminAgentWorkPlanPreferenceResponse) getWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId)
 
 Gets the work plan preferences of all the agents in the work plan bid group
 
@@ -4526,20 +4374,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWorkplanbidGroupPrefere
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| The ID of the work plan bid group | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse.html)
-
-<a name="getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary"></a>
-
-# **getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary**
+[**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse)
 
 
+## getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary
 
-> [WorkPlanBidGroupSummaryList](WorkPlanBidGroupSummaryList.html) getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary(businessUnitId, bidId)
+
+
+> [WorkPlanBidGroupSummaryList](WorkPlanBidGroupSummaryList) getWorkforcemanagementBusinessunitWorkplanbidGroupsSummary(businessUnitId, bidId)
 
 Get summary of bid groups that belong to a work plan bid
 
@@ -4580,20 +4426,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWorkplanbidGroupsSummar
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WorkPlanBidGroupSummaryList**](WorkPlanBidGroupSummaryList.html)
-
-<a name="getWorkforcemanagementBusinessunitWorkplanbids"></a>
-
-# **getWorkforcemanagementBusinessunitWorkplanbids**
+[**WorkPlanBidGroupSummaryList**](WorkPlanBidGroupSummaryList)
 
 
+## getWorkforcemanagementBusinessunitWorkplanbids
 
-> [WorkPlanBidListResponse](WorkPlanBidListResponse.html) getWorkforcemanagementBusinessunitWorkplanbids(businessUnitId)
+
+
+> [WorkPlanBidListResponse](WorkPlanBidListResponse) getWorkforcemanagementBusinessunitWorkplanbids(businessUnitId)
 
 Get list of work plan bids
 
@@ -4632,20 +4476,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitWorkplanbids(businessUn
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WorkPlanBidListResponse**](WorkPlanBidListResponse.html)
-
-<a name="getWorkforcemanagementBusinessunits"></a>
-
-# **getWorkforcemanagementBusinessunits**
+[**WorkPlanBidListResponse**](WorkPlanBidListResponse)
 
 
+## getWorkforcemanagementBusinessunits
 
-> [BusinessUnitListing](BusinessUnitListing.html) getWorkforcemanagementBusinessunits(feature, divisionId)
+
+
+> [BusinessUnitListing](BusinessUnitListing) getWorkforcemanagementBusinessunits(feature, divisionId)
 
 Get business units
 
@@ -4685,20 +4527,18 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunits(feature: feature, div
 | ------------- | ------------- | ------------- | ------------- |
 | **feature** | **String**| If specified, the list of business units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**| If specified, the list of business units belonging to the specified division will be returned | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BusinessUnitListing**](BusinessUnitListing.html)
-
-<a name="getWorkforcemanagementBusinessunitsDivisionviews"></a>
-
-# **getWorkforcemanagementBusinessunitsDivisionviews**
+[**BusinessUnitListing**](BusinessUnitListing)
 
 
+## getWorkforcemanagementBusinessunitsDivisionviews
 
-> [BusinessUnitListing](BusinessUnitListing.html) getWorkforcemanagementBusinessunitsDivisionviews(divisionId)
+
+
+> [BusinessUnitListing](BusinessUnitListing) getWorkforcemanagementBusinessunitsDivisionviews(divisionId)
 
 Get business units across divisions
 
@@ -4736,17 +4576,15 @@ WorkforceManagementAPI.getWorkforcemanagementBusinessunitsDivisionviews(division
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **divisionId** | [**[String]**](String.html)| The divisionIds to filter by. If omitted, will return business units in all divisions | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| The divisionIds to filter by. If omitted, will return business units in all divisions | [optional] |
 
 
 ### Return type
 
-[**BusinessUnitListing**](BusinessUnitListing.html)
+[**BusinessUnitListing**](BusinessUnitListing)
 
-<a name="getWorkforcemanagementCalendarDataIcs"></a>
 
-# **getWorkforcemanagementCalendarDataIcs**
+## getWorkforcemanagementCalendarDataIcs
 
 
 
@@ -4788,20 +4626,18 @@ WorkforceManagementAPI.getWorkforcemanagementCalendarDataIcs(calendarId: calenda
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **calendarId** | **String**| The id of the ics-formatted calendar | |
-{: class="table-striped"}
 
 
 ### Return type
 
 **String**
 
-<a name="getWorkforcemanagementCalendarUrlIcs"></a>
 
-# **getWorkforcemanagementCalendarUrlIcs**
-
+## getWorkforcemanagementCalendarUrlIcs
 
 
-> [CalendarUrlResponse](CalendarUrlResponse.html) getWorkforcemanagementCalendarUrlIcs()
+
+> [CalendarUrlResponse](CalendarUrlResponse) getWorkforcemanagementCalendarUrlIcs()
 
 Get existing calendar link for the current user
 
@@ -4839,18 +4675,16 @@ WorkforceManagementAPI.getWorkforcemanagementCalendarUrlIcs() { (response, error
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**CalendarUrlResponse**](CalendarUrlResponse.html)
-
-<a name="getWorkforcemanagementHistoricaldataDeletejob"></a>
-
-# **getWorkforcemanagementHistoricaldataDeletejob**
+[**CalendarUrlResponse**](CalendarUrlResponse)
 
 
+## getWorkforcemanagementHistoricaldataDeletejob
 
-> [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse.html) getWorkforcemanagementHistoricaldataDeletejob()
+
+
+> [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse) getWorkforcemanagementHistoricaldataDeletejob()
 
 Retrieves delete job status for historical data imports of the organization
 
@@ -4887,18 +4721,16 @@ WorkforceManagementAPI.getWorkforcemanagementHistoricaldataDeletejob() { (respon
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html)
-
-<a name="getWorkforcemanagementHistoricaldataImportstatus"></a>
-
-# **getWorkforcemanagementHistoricaldataImportstatus**
+[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse)
 
 
+## getWorkforcemanagementHistoricaldataImportstatus
 
-> [HistoricalImportStatusListing](HistoricalImportStatusListing.html) getWorkforcemanagementHistoricaldataImportstatus()
+
+
+> [HistoricalImportStatusListing](HistoricalImportStatusListing) getWorkforcemanagementHistoricaldataImportstatus()
 
 Retrieves status of the historical data imports of the organization
 
@@ -4935,18 +4767,16 @@ WorkforceManagementAPI.getWorkforcemanagementHistoricaldataImportstatus() { (res
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**HistoricalImportStatusListing**](HistoricalImportStatusListing.html)
-
-<a name="getWorkforcemanagementIntegrationsHris"></a>
-
-# **getWorkforcemanagementIntegrationsHris**
+[**HistoricalImportStatusListing**](HistoricalImportStatusListing)
 
 
+## getWorkforcemanagementIntegrationsHris
 
-> [WfmIntegrationListing](WfmIntegrationListing.html) getWorkforcemanagementIntegrationsHris()
+
+
+> [WfmIntegrationListing](WfmIntegrationListing) getWorkforcemanagementIntegrationsHris()
 
 Get integrations
 
@@ -4983,18 +4813,16 @@ WorkforceManagementAPI.getWorkforcemanagementIntegrationsHris() { (response, err
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**WfmIntegrationListing**](WfmIntegrationListing.html)
-
-<a name="getWorkforcemanagementIntegrationsHrisTimeofftypesJob"></a>
-
-# **getWorkforcemanagementIntegrationsHrisTimeofftypesJob**
+[**WfmIntegrationListing**](WfmIntegrationListing)
 
 
+## getWorkforcemanagementIntegrationsHrisTimeofftypesJob
 
-> [HrisTimeOffTypesJobResponse](HrisTimeOffTypesJobResponse.html) getWorkforcemanagementIntegrationsHrisTimeofftypesJob(jobId)
+
+
+> [HrisTimeOffTypesJobResponse](HrisTimeOffTypesJobResponse) getWorkforcemanagementIntegrationsHrisTimeofftypesJob(jobId)
 
 Query the results of time off types job
 
@@ -5032,20 +4860,18 @@ WorkforceManagementAPI.getWorkforcemanagementIntegrationsHrisTimeofftypesJob(job
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**HrisTimeOffTypesJobResponse**](HrisTimeOffTypesJobResponse.html)
-
-<a name="getWorkforcemanagementManagementunit"></a>
-
-# **getWorkforcemanagementManagementunit**
+[**HrisTimeOffTypesJobResponse**](HrisTimeOffTypesJobResponse)
 
 
+## getWorkforcemanagementManagementunit
 
-> [ManagementUnit](ManagementUnit.html) getWorkforcemanagementManagementunit(managementUnitId, expand)
+
+
+> [ManagementUnit](ManagementUnit) getWorkforcemanagementManagementunit(managementUnitId, expand)
 
 Get management unit
 
@@ -5150,21 +4976,19 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunit(managementUnitId: ma
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: settings ("settings"), settingsAdherence ("settings.adherence"), settingsTimeoff ("settings.timeOff"), settingsScheduling ("settings.scheduling"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsShifttrading ("settings.shiftTrading") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)|  | [optional]<br />**Values**: settings ("settings"), settingsAdherence ("settings.adherence"), settingsTimeoff ("settings.timeOff"), settingsScheduling ("settings.scheduling"), settingsShorttermforecasting ("settings.shortTermForecasting"), settingsShifttrading ("settings.shiftTrading") |
 
 
 ### Return type
 
-[**ManagementUnit**](ManagementUnit.html)
-
-<a name="getWorkforcemanagementManagementunitActivitycodes"></a>
-
-# **getWorkforcemanagementManagementunitActivitycodes**
+[**ManagementUnit**](ManagementUnit)
 
 
+## getWorkforcemanagementManagementunitActivitycodes
 
-> [ActivityCodeContainer](ActivityCodeContainer.html) getWorkforcemanagementManagementunitActivitycodes(managementUnitId)
+
+
+> [ActivityCodeContainer](ActivityCodeContainer) getWorkforcemanagementManagementunitActivitycodes(managementUnitId)
 
 Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
 
@@ -5243,20 +5067,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitActivitycodes(managem
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityCodeContainer**](ActivityCodeContainer.html)
-
-<a name="getWorkforcemanagementManagementunitAdherence"></a>
-
-# **getWorkforcemanagementManagementunitAdherence**
+[**ActivityCodeContainer**](ActivityCodeContainer)
 
 
+## getWorkforcemanagementManagementunitAdherence
 
-> [UserScheduleAdherenceListing](UserScheduleAdherenceListing.html) getWorkforcemanagementManagementunitAdherence(managementUnitId, forceDownloadService)
+
+
+> [UserScheduleAdherenceListing](UserScheduleAdherenceListing) getWorkforcemanagementManagementunitAdherence(managementUnitId, forceDownloadService)
 
 Get a list of user schedule adherence records for the requested management unit
 
@@ -5297,20 +5119,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAdherence(managementU
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**UserScheduleAdherenceListing**](UserScheduleAdherenceListing.html)
-
-<a name="getWorkforcemanagementManagementunitAgent"></a>
-
-# **getWorkforcemanagementManagementunitAgent**
+[**UserScheduleAdherenceListing**](UserScheduleAdherenceListing)
 
 
+## getWorkforcemanagementManagementunitAgent
 
-> [WfmAgent](WfmAgent.html) getWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities, expand)
+
+
+> [WfmAgent](WfmAgent) getWorkforcemanagementManagementunitAgent(managementUnitId, agentId, excludeCapabilities, expand)
 
 Get data for agent in the management unit
 
@@ -5354,21 +5174,19 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgent(managementUnitI
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
 | **excludeCapabilities** | **Bool**| Excludes all capabilities of the agent such as queues, languages, and skills | [optional] |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: workplanoverrides ("workPlanOverrides") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)|  | [optional]<br />**Values**: workplanoverrides ("workPlanOverrides") |
 
 
 ### Return type
 
-[**WfmAgent**](WfmAgent.html)
-
-<a name="getWorkforcemanagementManagementunitAgentShifttrades"></a>
-
-# **getWorkforcemanagementManagementunitAgentShifttrades**
+[**WfmAgent**](WfmAgent)
 
 
+## getWorkforcemanagementManagementunitAgentShifttrades
 
-> [ShiftTradeListResponse](ShiftTradeListResponse.html) getWorkforcemanagementManagementunitAgentShifttrades(managementUnitId, agentId)
+
+
+> [ShiftTradeListResponse](ShiftTradeListResponse) getWorkforcemanagementManagementunitAgentShifttrades(managementUnitId, agentId)
 
 Gets all the shift trades for a given agent
 
@@ -5410,20 +5228,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitAgentShifttrades(mana
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **agentId** | **String**| The agent id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ShiftTradeListResponse**](ShiftTradeListResponse.html)
-
-<a name="getWorkforcemanagementManagementunitShifttradesMatched"></a>
-
-# **getWorkforcemanagementManagementunitShifttradesMatched**
+[**ShiftTradeListResponse**](ShiftTradeListResponse)
 
 
+## getWorkforcemanagementManagementunitShifttradesMatched
 
-> [ShiftTradeMatchesSummaryResponse](ShiftTradeMatchesSummaryResponse.html) getWorkforcemanagementManagementunitShifttradesMatched(managementUnitId)
+
+
+> [ShiftTradeMatchesSummaryResponse](ShiftTradeMatchesSummaryResponse) getWorkforcemanagementManagementunitShifttradesMatched(managementUnitId)
 
 Gets a summary of all shift trades in the matched state
 
@@ -5463,20 +5279,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesMatched(ma
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ShiftTradeMatchesSummaryResponse**](ShiftTradeMatchesSummaryResponse.html)
-
-<a name="getWorkforcemanagementManagementunitShifttradesUsers"></a>
-
-# **getWorkforcemanagementManagementunitShifttradesUsers**
+[**ShiftTradeMatchesSummaryResponse**](ShiftTradeMatchesSummaryResponse)
 
 
+## getWorkforcemanagementManagementunitShifttradesUsers
 
-> [WfmUserEntityListing](WfmUserEntityListing.html) getWorkforcemanagementManagementunitShifttradesUsers(managementUnitId)
+
+
+> [WfmUserEntityListing](WfmUserEntityListing) getWorkforcemanagementManagementunitShifttradesUsers(managementUnitId)
 
 Gets list of users available for whom you can send direct shift trade requests
 
@@ -5515,20 +5329,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitShifttradesUsers(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WfmUserEntityListing**](WfmUserEntityListing.html)
-
-<a name="getWorkforcemanagementManagementunitTimeofflimit"></a>
-
-# **getWorkforcemanagementManagementunitTimeofflimit**
+[**WfmUserEntityListing**](WfmUserEntityListing)
 
 
+## getWorkforcemanagementManagementunitTimeofflimit
 
-> [TimeOffLimit](TimeOffLimit.html) getWorkforcemanagementManagementunitTimeofflimit(managementUnitId, timeOffLimitId)
+
+
+> [TimeOffLimit](TimeOffLimit) getWorkforcemanagementManagementunitTimeofflimit(managementUnitId, timeOffLimitId)
 
 Gets a time off limit object
 
@@ -5571,20 +5383,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeofflimit(manageme
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffLimit**](TimeOffLimit.html)
-
-<a name="getWorkforcemanagementManagementunitTimeofflimits"></a>
-
-# **getWorkforcemanagementManagementunitTimeofflimits**
+[**TimeOffLimit**](TimeOffLimit)
 
 
+## getWorkforcemanagementManagementunitTimeofflimits
 
-> [TimeOffLimitListing](TimeOffLimitListing.html) getWorkforcemanagementManagementunitTimeofflimits(managementUnitId)
+
+
+> [TimeOffLimitListing](TimeOffLimitListing) getWorkforcemanagementManagementunitTimeofflimits(managementUnitId)
 
 Gets a list of time off limit objects under management unit.
 
@@ -5626,20 +5436,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeofflimits(managem
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffLimitListing**](TimeOffLimitListing.html)
-
-<a name="getWorkforcemanagementManagementunitTimeoffplan"></a>
-
-# **getWorkforcemanagementManagementunitTimeoffplan**
+[**TimeOffLimitListing**](TimeOffLimitListing)
 
 
+## getWorkforcemanagementManagementunitTimeoffplan
 
-> [TimeOffPlan](TimeOffPlan.html) getWorkforcemanagementManagementunitTimeoffplan(managementUnitId, timeOffPlanId)
+
+
+> [TimeOffPlan](TimeOffPlan) getWorkforcemanagementManagementunitTimeoffplan(managementUnitId, timeOffPlanId)
 
 Gets a time off plan
 
@@ -5680,20 +5488,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeoffplan(managemen
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffPlan**](TimeOffPlan.html)
-
-<a name="getWorkforcemanagementManagementunitTimeoffplans"></a>
-
-# **getWorkforcemanagementManagementunitTimeoffplans**
+[**TimeOffPlan**](TimeOffPlan)
 
 
+## getWorkforcemanagementManagementunitTimeoffplans
 
-> [TimeOffPlanListing](TimeOffPlanListing.html) getWorkforcemanagementManagementunitTimeoffplans(managementUnitId)
+
+
+> [TimeOffPlanListing](TimeOffPlanListing) getWorkforcemanagementManagementunitTimeoffplans(managementUnitId)
 
 Gets a list of time off plans
 
@@ -5732,20 +5538,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitTimeoffplans(manageme
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffPlanListing**](TimeOffPlanListing.html)
-
-<a name="getWorkforcemanagementManagementunitUserTimeoffrequest"></a>
-
-# **getWorkforcemanagementManagementunitUserTimeoffrequest**
+[**TimeOffPlanListing**](TimeOffPlanListing)
 
 
+## getWorkforcemanagementManagementunitUserTimeoffrequest
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) getWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId, userId, timeOffRequestId)
+
+
+> [TimeOffRequestResponse](TimeOffRequestResponse) getWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId, userId, timeOffRequestId)
 
 Get a time off request
 
@@ -5788,20 +5592,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequest(ma
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **timeOffRequestId** | **String**| Time Off Request Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
-
-<a name="getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits"></a>
-
-# **getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits**
+[**TimeOffRequestResponse**](TimeOffRequestResponse)
 
 
+## getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits
 
-> [QueryTimeOffLimitValuesResponse](QueryTimeOffLimitValuesResponse.html) getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits(managementUnitId, userId, timeOffRequestId)
+
+
+> [QueryTimeOffLimitValuesResponse](QueryTimeOffLimitValuesResponse) getWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits(managementUnitId, userId, timeOffRequestId)
 
 Retrieves time off limit, allocated and waitlisted values according to specific time off request
 
@@ -5845,20 +5647,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequestTim
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **userId** | **String**| The userId to whom the time off request applies. | |
 | **timeOffRequestId** | **String**| The ID of the time off request, which dates and activityCodeId determine limit values to retrieve | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**QueryTimeOffLimitValuesResponse**](QueryTimeOffLimitValuesResponse.html)
-
-<a name="getWorkforcemanagementManagementunitUserTimeoffrequests"></a>
-
-# **getWorkforcemanagementManagementunitUserTimeoffrequests**
+[**QueryTimeOffLimitValuesResponse**](QueryTimeOffLimitValuesResponse)
 
 
+## getWorkforcemanagementManagementunitUserTimeoffrequests
 
-> [TimeOffRequestList](TimeOffRequestList.html) getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId, recentlyReviewed)
+
+
+> [TimeOffRequestList](TimeOffRequestList) getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId, recentlyReviewed)
 
 Get a list of time off requests for a given user
 
@@ -5901,20 +5701,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(m
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
 | **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffRequestList**](TimeOffRequestList.html)
-
-<a name="getWorkforcemanagementManagementunitUsers"></a>
-
-# **getWorkforcemanagementManagementunitUsers**
+[**TimeOffRequestList**](TimeOffRequestList)
 
 
+## getWorkforcemanagementManagementunitUsers
 
-> [WfmUserEntityListing](WfmUserEntityListing.html) getWorkforcemanagementManagementunitUsers(managementUnitId)
+
+
+> [WfmUserEntityListing](WfmUserEntityListing) getWorkforcemanagementManagementunitUsers(managementUnitId)
 
 Get users in the management unit
 
@@ -5961,20 +5759,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUsers(managementUnitI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WfmUserEntityListing**](WfmUserEntityListing.html)
-
-<a name="getWorkforcemanagementManagementunitWeekSchedule"></a>
-
-# **getWorkforcemanagementManagementunitWeekSchedule**
+[**WfmUserEntityListing**](WfmUserEntityListing)
 
 
+## getWorkforcemanagementManagementunitWeekSchedule
 
-> [WeekScheduleResponse](WeekScheduleResponse.html) getWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, expand, forceDownloadService)
+
+
+> [WeekScheduleResponse](WeekScheduleResponse) getWorkforcemanagementManagementunitWeekSchedule(managementUnitId, weekId, scheduleId, expand, forceDownloadService)
 
 Deprecated.  Use the equivalent business unit resource instead. Get a week schedule
 
@@ -6022,20 +5818,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedule(manageme
 | **scheduleId** | **String**| The ID of the schedule to fetch | |
 | **expand** | **String**| Which fields, if any, to expand | [optional]<br />**Values**: generationresults ("generationResults"), headcountforecast ("headcountForecast") |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WeekScheduleResponse**](WeekScheduleResponse.html)
-
-<a name="getWorkforcemanagementManagementunitWeekSchedules"></a>
-
-# **getWorkforcemanagementManagementunitWeekSchedules**
+[**WeekScheduleResponse**](WeekScheduleResponse)
 
 
+## getWorkforcemanagementManagementunitWeekSchedules
 
-> [WeekScheduleListResponse](WeekScheduleListResponse.html) getWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate)
+
+
+> [WeekScheduleListResponse](WeekScheduleListResponse) getWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate)
 
 Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
 
@@ -6083,20 +5877,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekSchedules(managem
 | **includeOnlyPublished** | **Bool**| Return only published schedules | [optional] |
 | **earliestWeekDate** | **String**| The start date of the earliest week to query in yyyy-MM-dd format | [optional] |
 | **latestWeekDate** | **String**| The start date of the latest week to query in yyyy-MM-dd format | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WeekScheduleListResponse**](WeekScheduleListResponse.html)
-
-<a name="getWorkforcemanagementManagementunitWeekShifttrades"></a>
-
-# **getWorkforcemanagementManagementunitWeekShifttrades**
+[**WeekScheduleListResponse**](WeekScheduleListResponse)
 
 
+## getWorkforcemanagementManagementunitWeekShifttrades
 
-> [WeekShiftTradeListResponse](WeekShiftTradeListResponse.html) getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, forceDownloadService)
+
+
+> [WeekShiftTradeListResponse](WeekShiftTradeListResponse) getWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, evaluateMatches, forceDownloadService)
 
 Gets all the shift trades for a given week
 
@@ -6142,20 +5934,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WeekShiftTradeListResponse**](WeekShiftTradeListResponse.html)
-
-<a name="getWorkforcemanagementManagementunitWorkplan"></a>
-
-# **getWorkforcemanagementManagementunitWorkplan**
+[**WeekShiftTradeListResponse**](WeekShiftTradeListResponse)
 
 
+## getWorkforcemanagementManagementunitWorkplan
 
-> [WorkPlan](WorkPlan.html) getWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, includeOnly)
+
+
+> [WorkPlan](WorkPlan) getWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, includeOnly)
 
 Get a work plan
 
@@ -6199,21 +5989,19 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplan(managementUn
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to fetch | |
-| **includeOnly** | [**[String]**](String.html)| limit response to the specified fields | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances") |
-{: class="table-striped"}
+| **includeOnly** | [**[String]**](String)| limit response to the specified fields | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances") |
 
 
 ### Return type
 
-[**WorkPlan**](WorkPlan.html)
-
-<a name="getWorkforcemanagementManagementunitWorkplanrotation"></a>
-
-# **getWorkforcemanagementManagementunitWorkplanrotation**
+[**WorkPlan**](WorkPlan)
 
 
+## getWorkforcemanagementManagementunitWorkplanrotation
 
-> [WorkPlanRotationResponse](WorkPlanRotationResponse.html) getWorkforcemanagementManagementunitWorkplanrotation(managementUnitId, workPlanRotationId)
+
+
+> [WorkPlanRotationResponse](WorkPlanRotationResponse) getWorkforcemanagementManagementunitWorkplanrotation(managementUnitId, workPlanRotationId)
 
 Get a work plan rotation
 
@@ -6254,20 +6042,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotation(mana
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to fetch | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WorkPlanRotationResponse**](WorkPlanRotationResponse.html)
-
-<a name="getWorkforcemanagementManagementunitWorkplanrotations"></a>
-
-# **getWorkforcemanagementManagementunitWorkplanrotations**
+[**WorkPlanRotationResponse**](WorkPlanRotationResponse)
 
 
+## getWorkforcemanagementManagementunitWorkplanrotations
 
-> [WorkPlanRotationListResponse](WorkPlanRotationListResponse.html) getWorkforcemanagementManagementunitWorkplanrotations(managementUnitId, expand)
+
+
+> [WorkPlanRotationListResponse](WorkPlanRotationListResponse) getWorkforcemanagementManagementunitWorkplanrotations(managementUnitId, expand)
 
 Get work plan rotations
 
@@ -6308,21 +6094,19 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplanrotations(man
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: agents ("agents") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)|  | [optional]<br />**Values**: agents ("agents") |
 
 
 ### Return type
 
-[**WorkPlanRotationListResponse**](WorkPlanRotationListResponse.html)
-
-<a name="getWorkforcemanagementManagementunitWorkplans"></a>
-
-# **getWorkforcemanagementManagementunitWorkplans**
+[**WorkPlanRotationListResponse**](WorkPlanRotationListResponse)
 
 
+## getWorkforcemanagementManagementunitWorkplans
 
-> [WorkPlanListResponse](WorkPlanListResponse.html) getWorkforcemanagementManagementunitWorkplans(managementUnitId, expand, exclude)
+
+
+> [WorkPlanListResponse](WorkPlanListResponse) getWorkforcemanagementManagementunitWorkplans(managementUnitId, expand, exclude)
 
 Get work plans
 
@@ -6369,22 +6153,20 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWorkplans(managementU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **expand** | [**[String]**](String.html)| Include to access additional data on the work plans | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
-| **exclude** | [**[String]**](String.html)| Exclude specific data on the work plans from the response | [optional]<br />**Values**: shiftsActivities ("shifts.activities") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Include to access additional data on the work plans | [optional]<br />**Values**: agentcount ("agentCount"), agents ("agents"), optionaldays ("optionalDays"), shifts ("shifts"), shiftstartvariances ("shiftStartVariances"), details ("details") |
+| **exclude** | [**[String]**](String)| Exclude specific data on the work plans from the response | [optional]<br />**Values**: shiftsActivities ("shifts.activities") |
 
 
 ### Return type
 
-[**WorkPlanListResponse**](WorkPlanListResponse.html)
-
-<a name="getWorkforcemanagementManagementunits"></a>
-
-# **getWorkforcemanagementManagementunits**
+[**WorkPlanListResponse**](WorkPlanListResponse)
 
 
+## getWorkforcemanagementManagementunits
 
-> [ManagementUnitListing](ManagementUnitListing.html) getWorkforcemanagementManagementunits(pageSize, pageNumber, expand, feature, divisionId)
+
+
+> [ManagementUnitListing](ManagementUnitListing) getWorkforcemanagementManagementunits(pageSize, pageNumber, expand, feature, divisionId)
 
 Get management units
 
@@ -6430,20 +6212,18 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunits(pageSize: pageSize,
 | **expand** | **String**| Deprecated, expand settings on the single MU route | [optional]<br />**Values**: details ("details") |
 | **feature** | **String**| If specified, the list of management units for which the user is authorized to use the requested feature will be returned | [optional]<br />**Values**: agentSchedule ("AgentSchedule"), agentTimeOffRequest ("AgentTimeOffRequest"), agentWorkPlanBid ("AgentWorkPlanBid"), alternativeShift ("AlternativeShift"), coaching ("Coaching"), learning ("Learning"), activityCodes ("ActivityCodes"), activityPlans ("ActivityPlans"), agents ("Agents"), buActivityCodes ("BuActivityCodes"), businessUnits ("BusinessUnits"), continuousForecast ("ContinuousForecast"), historicalAdherence ("HistoricalAdherence"), historicalShrinkage ("HistoricalShrinkage"), intradayMonitoring ("IntradayMonitoring"), buIntradayMonitoring ("BuIntradayMonitoring"), managementUnits ("ManagementUnits"), realTimeAdherence ("RealTimeAdherence"), schedules ("Schedules"), buSchedules ("BuSchedules"), serviceGoalTemplates ("ServiceGoalTemplates"), planningGroups ("PlanningGroups"), shiftTrading ("ShiftTrading"), shortTermForecasts ("ShortTermForecasts"), buShortTermForecasts ("BuShortTermForecasts"), staffingGroups ("StaffingGroups"), timeOffPlans ("TimeOffPlans"), timeOffRequests ("TimeOffRequests"), timeOffLimits ("TimeOffLimits"), workPlanBids ("WorkPlanBids"), workPlanBidGroups ("WorkPlanBidGroups"), workPlanRotations ("WorkPlanRotations"), workPlans ("WorkPlans") |
 | **divisionId** | **String**| If specified, the list of management units belonging to the specified division will be returned | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ManagementUnitListing**](ManagementUnitListing.html)
-
-<a name="getWorkforcemanagementManagementunitsDivisionviews"></a>
-
-# **getWorkforcemanagementManagementunitsDivisionviews**
+[**ManagementUnitListing**](ManagementUnitListing)
 
 
+## getWorkforcemanagementManagementunitsDivisionviews
 
-> [ManagementUnitListing](ManagementUnitListing.html) getWorkforcemanagementManagementunitsDivisionviews(divisionId)
+
+
+> [ManagementUnitListing](ManagementUnitListing) getWorkforcemanagementManagementunitsDivisionviews(divisionId)
 
 Get management units across divisions
 
@@ -6481,21 +6261,19 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitsDivisionviews(divisi
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **divisionId** | [**[String]**](String.html)| The divisionIds to filter by. If omitted, will return all divisions | [optional] |
-{: class="table-striped"}
+| **divisionId** | [**[String]**](String)| The divisionIds to filter by. If omitted, will return all divisions | [optional] |
 
 
 ### Return type
 
-[**ManagementUnitListing**](ManagementUnitListing.html)
-
-<a name="getWorkforcemanagementNotifications"></a>
-
-# **getWorkforcemanagementNotifications**
+[**ManagementUnitListing**](ManagementUnitListing)
 
 
+## getWorkforcemanagementNotifications
 
-> [NotificationsResponse](NotificationsResponse.html) getWorkforcemanagementNotifications()
+
+
+> [NotificationsResponse](NotificationsResponse) getWorkforcemanagementNotifications()
 
 Get a list of notifications for the current user
 
@@ -6533,18 +6311,16 @@ WorkforceManagementAPI.getWorkforcemanagementNotifications() { (response, error)
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**NotificationsResponse**](NotificationsResponse.html)
-
-<a name="getWorkforcemanagementSchedulingjob"></a>
-
-# **getWorkforcemanagementSchedulingjob**
+[**NotificationsResponse**](NotificationsResponse)
 
 
+## getWorkforcemanagementSchedulingjob
 
-> [SchedulingStatusResponse](SchedulingStatusResponse.html) getWorkforcemanagementSchedulingjob(jobId)
+
+
+> [SchedulingStatusResponse](SchedulingStatusResponse) getWorkforcemanagementSchedulingjob(jobId)
 
 Get status of the scheduling job
 
@@ -6583,20 +6359,18 @@ WorkforceManagementAPI.getWorkforcemanagementSchedulingjob(jobId: jobId) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The id of the scheduling job | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SchedulingStatusResponse**](SchedulingStatusResponse.html)
-
-<a name="getWorkforcemanagementShifttrades"></a>
-
-# **getWorkforcemanagementShifttrades**
+[**SchedulingStatusResponse**](SchedulingStatusResponse)
 
 
+## getWorkforcemanagementShifttrades
 
-> [ShiftTradeListResponse](ShiftTradeListResponse.html) getWorkforcemanagementShifttrades()
+
+
+> [ShiftTradeListResponse](ShiftTradeListResponse) getWorkforcemanagementShifttrades()
 
 Gets all of my shift trades
 
@@ -6635,18 +6409,16 @@ WorkforceManagementAPI.getWorkforcemanagementShifttrades() { (response, error) i
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**ShiftTradeListResponse**](ShiftTradeListResponse.html)
-
-<a name="getWorkforcemanagementShrinkageJob"></a>
-
-# **getWorkforcemanagementShrinkageJob**
+[**ShiftTradeListResponse**](ShiftTradeListResponse)
 
 
+## getWorkforcemanagementShrinkageJob
 
-> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse.html) getWorkforcemanagementShrinkageJob(jobId)
+
+
+> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse) getWorkforcemanagementShrinkageJob(jobId)
 
 Request to fetch the status of the historical shrinkage query
 
@@ -6684,20 +6456,18 @@ WorkforceManagementAPI.getWorkforcemanagementShrinkageJob(jobId: jobId) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| jobId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
-
-<a name="getWorkforcemanagementTimeoffbalanceJob"></a>
-
-# **getWorkforcemanagementTimeoffbalanceJob**
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse)
 
 
+## getWorkforcemanagementTimeoffbalanceJob
 
-> [TimeOffBalanceJobResponse](TimeOffBalanceJobResponse.html) getWorkforcemanagementTimeoffbalanceJob(jobId)
+
+
+> [TimeOffBalanceJobResponse](TimeOffBalanceJobResponse) getWorkforcemanagementTimeoffbalanceJob(jobId)
 
 Query the results of time off types job
 
@@ -6735,20 +6505,18 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffbalanceJob(jobId: jobId) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| The ID of the job. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffBalanceJobResponse**](TimeOffBalanceJobResponse.html)
-
-<a name="getWorkforcemanagementTimeoffrequest"></a>
-
-# **getWorkforcemanagementTimeoffrequest**
+[**TimeOffBalanceJobResponse**](TimeOffBalanceJobResponse)
 
 
+## getWorkforcemanagementTimeoffrequest
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) getWorkforcemanagementTimeoffrequest(timeOffRequestId)
+
+
+> [TimeOffRequestResponse](TimeOffRequestResponse) getWorkforcemanagementTimeoffrequest(timeOffRequestId)
 
 Get a time off request for the current user
 
@@ -6788,20 +6556,18 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequest(timeOffRequestId: ti
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **timeOffRequestId** | **String**| The ID of the time off request | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
-
-<a name="getWorkforcemanagementTimeoffrequestWaitlistpositions"></a>
-
-# **getWorkforcemanagementTimeoffrequestWaitlistpositions**
+[**TimeOffRequestResponse**](TimeOffRequestResponse)
 
 
+## getWorkforcemanagementTimeoffrequestWaitlistpositions
 
-> [WaitlistPositionListing](WaitlistPositionListing.html) getWorkforcemanagementTimeoffrequestWaitlistpositions(timeOffRequestId)
+
+
+> [WaitlistPositionListing](WaitlistPositionListing) getWorkforcemanagementTimeoffrequestWaitlistpositions(timeOffRequestId)
 
 Get the daily waitlist positions of a time off request for the current user
 
@@ -6840,20 +6606,18 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequestWaitlistpositions(tim
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **timeOffRequestId** | **String**| The ID of the time off request | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WaitlistPositionListing**](WaitlistPositionListing.html)
-
-<a name="getWorkforcemanagementTimeoffrequests"></a>
-
-# **getWorkforcemanagementTimeoffrequests**
+[**WaitlistPositionListing**](WaitlistPositionListing)
 
 
+## getWorkforcemanagementTimeoffrequests
 
-> [TimeOffRequestList](TimeOffRequestList.html) getWorkforcemanagementTimeoffrequests(recentlyReviewed)
+
+
+> [TimeOffRequestList](TimeOffRequestList) getWorkforcemanagementTimeoffrequests(recentlyReviewed)
 
 Get a list of time off requests for the current user
 
@@ -6893,20 +6657,18 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffRequestList**](TimeOffRequestList.html)
-
-<a name="getWorkforcemanagementUserWorkplanbidranks"></a>
-
-# **getWorkforcemanagementUserWorkplanbidranks**
+[**TimeOffRequestList**](TimeOffRequestList)
 
 
+## getWorkforcemanagementUserWorkplanbidranks
 
-> [WorkPlanBidRanks](WorkPlanBidRanks.html) getWorkforcemanagementUserWorkplanbidranks(userId)
+
+
+> [WorkPlanBidRanks](WorkPlanBidRanks) getWorkforcemanagementUserWorkplanbidranks(userId)
 
 Get work plan bid ranks for a user
 
@@ -6945,20 +6707,18 @@ WorkforceManagementAPI.getWorkforcemanagementUserWorkplanbidranks(userId: userId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The userId to whom the work plan bid ranks apply. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**WorkPlanBidRanks**](WorkPlanBidRanks.html)
-
-<a name="getWorkforcemanagementWorkplanbidPreferences"></a>
-
-# **getWorkforcemanagementWorkplanbidPreferences**
+[**WorkPlanBidRanks**](WorkPlanBidRanks)
 
 
+## getWorkforcemanagementWorkplanbidPreferences
 
-> [AgentWorkPlanBiddingPreferenceResponse](AgentWorkPlanBiddingPreferenceResponse.html) getWorkforcemanagementWorkplanbidPreferences(bidId)
+
+
+> [AgentWorkPlanBiddingPreferenceResponse](AgentWorkPlanBiddingPreferenceResponse) getWorkforcemanagementWorkplanbidPreferences(bidId)
 
 Gets an agent&#39;s work plan bidding preference
 
@@ -6997,20 +6757,18 @@ WorkforceManagementAPI.getWorkforcemanagementWorkplanbidPreferences(bidId: bidId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **bidId** | **String**| The ID of the work plan bid | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse.html)
-
-<a name="getWorkforcemanagementWorkplanbidWorkplans"></a>
-
-# **getWorkforcemanagementWorkplanbidWorkplans**
+[**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse)
 
 
+## getWorkforcemanagementWorkplanbidWorkplans
 
-> [AgentWorkPlanListResponse](AgentWorkPlanListResponse.html) getWorkforcemanagementWorkplanbidWorkplans(bidId)
+
+
+> [AgentWorkPlanListResponse](AgentWorkPlanListResponse) getWorkforcemanagementWorkplanbidWorkplans(bidId)
 
 Gets an agent&#39;s work plans for a bid
 
@@ -7049,20 +6807,18 @@ WorkforceManagementAPI.getWorkforcemanagementWorkplanbidWorkplans(bidId: bidId) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **bidId** | **String**| The ID of the work plan bid | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AgentWorkPlanListResponse**](AgentWorkPlanListResponse.html)
-
-<a name="getWorkforcemanagementWorkplanbids"></a>
-
-# **getWorkforcemanagementWorkplanbids**
+[**AgentWorkPlanListResponse**](AgentWorkPlanListResponse)
 
 
+## getWorkforcemanagementWorkplanbids
 
-> [AgentWorkPlanBids](AgentWorkPlanBids.html) getWorkforcemanagementWorkplanbids()
+
+
+> [AgentWorkPlanBids](AgentWorkPlanBids) getWorkforcemanagementWorkplanbids()
 
 Gets the list of work plan bids that belong to an agent
 
@@ -7099,18 +6855,16 @@ WorkforceManagementAPI.getWorkforcemanagementWorkplanbids() { (response, error) 
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**AgentWorkPlanBids**](AgentWorkPlanBids.html)
-
-<a name="patchWorkforcemanagementAgentAdherenceExplanation"></a>
-
-# **patchWorkforcemanagementAgentAdherenceExplanation**
+[**AgentWorkPlanBids**](AgentWorkPlanBids)
 
 
+## patchWorkforcemanagementAgentAdherenceExplanation
 
-> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse.html) patchWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId, body)
+
+
+> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse) patchWorkforcemanagementAgentAdherenceExplanation(agentId, explanationId, body)
 
 Update an adherence explanation
 
@@ -7152,21 +6906,19 @@ WorkforceManagementAPI.patchWorkforcemanagementAgentAdherenceExplanation(agentId
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The ID of the agent to query | |
 | **explanationId** | **String**| The ID of the explanation to update | |
-| **body** | [**UpdateAdherenceExplanationStatusRequest**](UpdateAdherenceExplanationStatusRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**UpdateAdherenceExplanationStatusRequest**](UpdateAdherenceExplanationStatusRequest)| The request body | |
 
 
 ### Return type
 
-[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
-
-<a name="patchWorkforcemanagementAlternativeshiftsTrade"></a>
-
-# **patchWorkforcemanagementAlternativeshiftsTrade**
+[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse)
 
 
+## patchWorkforcemanagementAlternativeshiftsTrade
 
-> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse.html) patchWorkforcemanagementAlternativeshiftsTrade(tradeId, body)
+
+
+> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse) patchWorkforcemanagementAlternativeshiftsTrade(tradeId, body)
 
 Update my alternative shifts trade by trade ID
 
@@ -7206,21 +6958,19 @@ WorkforceManagementAPI.patchWorkforcemanagementAlternativeshiftsTrade(tradeId: t
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **tradeId** | **String**| The ID of the alternative shift trade | |
-| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**AgentUpdateAlternativeShiftTradeRequest**](AgentUpdateAlternativeShiftTradeRequest)| body | [optional] |
 
 
 ### Return type
 
-[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
-
-<a name="patchWorkforcemanagementAlternativeshiftsTradesStateJobs"></a>
-
-# **patchWorkforcemanagementAlternativeshiftsTradesStateJobs**
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse)
 
 
+## patchWorkforcemanagementAlternativeshiftsTradesStateJobs
 
-> [AlternativeShiftAsyncResponse](AlternativeShiftAsyncResponse.html) patchWorkforcemanagementAlternativeshiftsTradesStateJobs(body)
+
+
+> [AlternativeShiftAsyncResponse](AlternativeShiftAsyncResponse) patchWorkforcemanagementAlternativeshiftsTradesStateJobs(body)
 
 Bulk update alternative shift trade states
 
@@ -7258,21 +7008,19 @@ WorkforceManagementAPI.patchWorkforcemanagementAlternativeshiftsTradesStateJobs(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AdminBulkUpdateAlternativeShiftTradeStateRequest**](AdminBulkUpdateAlternativeShiftTradeStateRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**AdminBulkUpdateAlternativeShiftTradeStateRequest**](AdminBulkUpdateAlternativeShiftTradeStateRequest)| The request body | |
 
 
 ### Return type
 
-[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunit"></a>
-
-# **patchWorkforcemanagementBusinessunit**
+[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse)
 
 
+## patchWorkforcemanagementBusinessunit
 
-> [BusinessUnitResponse](BusinessUnitResponse.html) patchWorkforcemanagementBusinessunit(businessUnitId, body)
+
+
+> [BusinessUnitResponse](BusinessUnitResponse) patchWorkforcemanagementBusinessunit(businessUnitId, body)
 
 Update business unit
 
@@ -7312,21 +7060,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunit(businessUnitId: busi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BusinessUnitResponse**](BusinessUnitResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunitActivitycode"></a>
-
-# **patchWorkforcemanagementBusinessunitActivitycode**
+[**BusinessUnitResponse**](BusinessUnitResponse)
 
 
+## patchWorkforcemanagementBusinessunitActivitycode
 
-> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) patchWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId, body)
+
+
+> [BusinessUnitActivityCode](BusinessUnitActivityCode) patchWorkforcemanagementBusinessunitActivitycode(businessUnitId, activityCodeId, body)
 
 Update an activity code
 
@@ -7368,21 +7114,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivitycode(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
 | **activityCodeId** | **String**| The ID of the activity code to update | |
-| **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateActivityCodeRequest**](UpdateActivityCodeRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
-
-<a name="patchWorkforcemanagementBusinessunitActivityplan"></a>
-
-# **patchWorkforcemanagementBusinessunitActivityplan**
+[**BusinessUnitActivityCode**](BusinessUnitActivityCode)
 
 
+## patchWorkforcemanagementBusinessunitActivityplan
 
-> [ActivityPlanResponse](ActivityPlanResponse.html) patchWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId, body)
+
+
+> [ActivityPlanResponse](ActivityPlanResponse) patchWorkforcemanagementBusinessunitActivityplan(businessUnitId, activityPlanId, body)
 
 Update an activity plan
 
@@ -7426,21 +7170,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitActivityplan(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **activityPlanId** | **String**| The ID of the activity plan to update | |
-| **body** | [**UpdateActivityPlanRequest**](UpdateActivityPlanRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**UpdateActivityPlanRequest**](UpdateActivityPlanRequest)| body | |
 
 
 ### Return type
 
-[**ActivityPlanResponse**](ActivityPlanResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunitAlternativeshiftsSettings"></a>
-
-# **patchWorkforcemanagementBusinessunitAlternativeshiftsSettings**
+[**ActivityPlanResponse**](ActivityPlanResponse)
 
 
+## patchWorkforcemanagementBusinessunitAlternativeshiftsSettings
 
-> [AlternativeShiftBuSettingsResponse](AlternativeShiftBuSettingsResponse.html) patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId, body)
+
+
+> [AlternativeShiftBuSettingsResponse](AlternativeShiftBuSettingsResponse) patchWorkforcemanagementBusinessunitAlternativeshiftsSettings(businessUnitId, body)
 
 Update alternative shifts settings for a business unit
 
@@ -7480,21 +7222,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitAlternativeshiftsSett
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateAlternativeShiftBuSettingsRequest**](UpdateAlternativeShiftBuSettingsRequest)| body | [optional] |
 
 
 ### Return type
 
-[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunitPlanninggroup"></a>
-
-# **patchWorkforcemanagementBusinessunitPlanninggroup**
+[**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse)
 
 
+## patchWorkforcemanagementBusinessunitPlanninggroup
 
-> [PlanningGroup](PlanningGroup.html) patchWorkforcemanagementBusinessunitPlanninggroup(businessUnitId, planningGroupId, body)
+
+
+> [PlanningGroup](PlanningGroup) patchWorkforcemanagementBusinessunitPlanninggroup(businessUnitId, planningGroupId, body)
 
 Updates the planning group
 
@@ -7536,17 +7276,15 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitPlanninggroup(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **planningGroupId** | **String**| The ID of a planning group to update | |
-| **body** | [**UpdatePlanningGroupRequest**](UpdatePlanningGroupRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdatePlanningGroupRequest**](UpdatePlanningGroupRequest)| body | [optional] |
 
 
 ### Return type
 
-[**PlanningGroup**](PlanningGroup.html)
+[**PlanningGroup**](PlanningGroup)
 
-<a name="patchWorkforcemanagementBusinessunitSchedulingRun"></a>
 
-# **patchWorkforcemanagementBusinessunitSchedulingRun**
+## patchWorkforcemanagementBusinessunitSchedulingRun
 
 
 
@@ -7591,21 +7329,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitSchedulingRun(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **runId** | **String**| The ID of the schedule run | |
-| **body** | [**PatchBuScheduleRunRequest**](PatchBuScheduleRunRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**PatchBuScheduleRunRequest**](PatchBuScheduleRunRequest)| body | [optional] |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="patchWorkforcemanagementBusinessunitServicegoaltemplate"></a>
 
-# **patchWorkforcemanagementBusinessunitServicegoaltemplate**
-
+## patchWorkforcemanagementBusinessunitServicegoaltemplate
 
 
-> [ServiceGoalTemplate](ServiceGoalTemplate.html) patchWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId, body)
+
+> [ServiceGoalTemplate](ServiceGoalTemplate) patchWorkforcemanagementBusinessunitServicegoaltemplate(businessUnitId, serviceGoalTemplateId, body)
 
 Updates a service goal template
 
@@ -7647,21 +7383,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitServicegoaltemplate(b
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
 | **serviceGoalTemplateId** | **String**| The ID of a service goal template to update | |
-| **body** | [**UpdateServiceGoalTemplate**](UpdateServiceGoalTemplate.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateServiceGoalTemplate**](UpdateServiceGoalTemplate)| body | [optional] |
 
 
 ### Return type
 
-[**ServiceGoalTemplate**](ServiceGoalTemplate.html)
-
-<a name="patchWorkforcemanagementBusinessunitStaffinggroup"></a>
-
-# **patchWorkforcemanagementBusinessunitStaffinggroup**
+[**ServiceGoalTemplate**](ServiceGoalTemplate)
 
 
+## patchWorkforcemanagementBusinessunitStaffinggroup
 
-> [StaffingGroupResponse](StaffingGroupResponse.html) patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId, body)
+
+
+> [StaffingGroupResponse](StaffingGroupResponse) patchWorkforcemanagementBusinessunitStaffinggroup(businessUnitId, staffingGroupId, body)
 
 Updates a staffing group
 
@@ -7703,21 +7437,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitStaffinggroup(busines
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **staffingGroupId** | **String**| The ID of the staffing group to update | |
-| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateStaffingGroupRequest**](UpdateStaffingGroupRequest)| body | [optional] |
 
 
 ### Return type
 
-[**StaffingGroupResponse**](StaffingGroupResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunitTimeoffplan"></a>
-
-# **patchWorkforcemanagementBusinessunitTimeoffplan**
+[**StaffingGroupResponse**](StaffingGroupResponse)
 
 
+## patchWorkforcemanagementBusinessunitTimeoffplan
 
-> [BuTimeOffPlanResponse](BuTimeOffPlanResponse.html) patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId, body)
+
+
+> [BuTimeOffPlanResponse](BuTimeOffPlanResponse) patchWorkforcemanagementBusinessunitTimeoffplan(businessUnitId, timeOffPlanId, body)
 
 Updates a time-off plan
 
@@ -7759,21 +7491,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitTimeoffplan(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffPlanId** | **String**| The ID of the time-off plan to update | |
-| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuUpdateTimeOffPlanRequest**](BuUpdateTimeOffPlanRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunitWorkplanbid"></a>
-
-# **patchWorkforcemanagementBusinessunitWorkplanbid**
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse)
 
 
+## patchWorkforcemanagementBusinessunitWorkplanbid
 
-> [WorkPlanBid](WorkPlanBid.html) patchWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId, body)
+
+
+> [WorkPlanBid](WorkPlanBid) patchWorkforcemanagementBusinessunitWorkplanbid(businessUnitId, bidId, body)
 
 Update work plan bid
 
@@ -7815,21 +7545,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitWorkplanbid(businessU
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The id of the workplanbid | |
-| **body** | [**UpdateWorkPlanBid**](UpdateWorkPlanBid.html)| The work plan bid to be updated | |
-{: class="table-striped"}
+| **body** | [**UpdateWorkPlanBid**](UpdateWorkPlanBid)| The work plan bid to be updated | |
 
 
 ### Return type
 
-[**WorkPlanBid**](WorkPlanBid.html)
-
-<a name="patchWorkforcemanagementBusinessunitWorkplanbidGroup"></a>
-
-# **patchWorkforcemanagementBusinessunitWorkplanbidGroup**
+[**WorkPlanBid**](WorkPlanBid)
 
 
+## patchWorkforcemanagementBusinessunitWorkplanbidGroup
 
-> [WorkPlanBidGroupResponse](WorkPlanBidGroupResponse.html) patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId, body)
+
+
+> [WorkPlanBidGroupResponse](WorkPlanBidGroupResponse) patchWorkforcemanagementBusinessunitWorkplanbidGroup(businessUnitId, bidId, bidGroupId, body)
 
 Update a bid group by bid group Id
 
@@ -7873,21 +7601,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitWorkplanbidGroup(busi
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| Work Plan Bid Group id | |
-| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WorkPlanBidGroupUpdate**](WorkPlanBidGroupUpdate)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html)
-
-<a name="patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences"></a>
-
-# **patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**
+[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse)
 
 
+## patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences
 
-> [AdminAgentWorkPlanPreferenceResponse](AdminAgentWorkPlanPreferenceResponse.html) patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId, body)
+
+
+> [AdminAgentWorkPlanPreferenceResponse](AdminAgentWorkPlanPreferenceResponse) patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences(businessUnitId, bidId, bidGroupId, body)
 
 Overrides the assigned work plan for the specified agents
 
@@ -7931,21 +7657,19 @@ WorkforceManagementAPI.patchWorkforcemanagementBusinessunitWorkplanbidGroupPrefe
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
 | **bidGroupId** | **String**| The ID of the work plan bid group | |
-| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**AgentsBidAssignedWorkPlanOverrideRequest**](AgentsBidAssignedWorkPlanOverrideRequest)| body | [optional] |
 
 
 ### Return type
 
-[**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse.html)
-
-<a name="patchWorkforcemanagementManagementunit"></a>
-
-# **patchWorkforcemanagementManagementunit**
+[**AdminAgentWorkPlanPreferenceResponse**](AdminAgentWorkPlanPreferenceResponse)
 
 
+## patchWorkforcemanagementManagementunit
 
-> [ManagementUnit](ManagementUnit.html) patchWorkforcemanagementManagementunit(managementUnitId, body)
+
+
+> [ManagementUnit](ManagementUnit) patchWorkforcemanagementManagementunit(managementUnitId, body)
 
 Update the requested management unit
 
@@ -7985,17 +7709,15 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunit(managementUnitId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateManagementUnitRequest**](UpdateManagementUnitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**ManagementUnit**](ManagementUnit.html)
+[**ManagementUnit**](ManagementUnit)
 
-<a name="patchWorkforcemanagementManagementunitAgents"></a>
 
-# **patchWorkforcemanagementManagementunitAgents**
+## patchWorkforcemanagementManagementunitAgents
 
 
 
@@ -8038,21 +7760,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgents(managementUn
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateMuAgentsRequest**](UpdateMuAgentsRequest)| body | [optional] |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="patchWorkforcemanagementManagementunitTimeofflimit"></a>
 
-# **patchWorkforcemanagementManagementunitTimeofflimit**
-
+## patchWorkforcemanagementManagementunitTimeofflimit
 
 
-> [TimeOffLimit](TimeOffLimit.html) patchWorkforcemanagementManagementunitTimeofflimit(managementUnitId, timeOffLimitId, body)
+
+> [TimeOffLimit](TimeOffLimit) patchWorkforcemanagementManagementunitTimeofflimit(managementUnitId, timeOffLimitId, body)
 
 Updates a time off limit object.
 
@@ -8096,21 +7816,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeofflimit(manage
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The id of time off limit object to update | |
-| **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateTimeOffLimitRequest**](UpdateTimeOffLimitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffLimit**](TimeOffLimit.html)
-
-<a name="patchWorkforcemanagementManagementunitTimeoffplan"></a>
-
-# **patchWorkforcemanagementManagementunitTimeoffplan**
+[**TimeOffLimit**](TimeOffLimit)
 
 
+## patchWorkforcemanagementManagementunitTimeoffplan
 
-> [TimeOffPlan](TimeOffPlan.html) patchWorkforcemanagementManagementunitTimeoffplan(managementUnitId, timeOffPlanId, body)
+
+
+> [TimeOffPlan](TimeOffPlan) patchWorkforcemanagementManagementunitTimeoffplan(managementUnitId, timeOffPlanId, body)
 
 Updates a time off plan
 
@@ -8152,21 +7870,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffplan(managem
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **timeOffPlanId** | **String**| The ID of the time off plan to update | |
-| **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateTimeOffPlanRequest**](UpdateTimeOffPlanRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffPlan**](TimeOffPlan.html)
-
-<a name="patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus"></a>
-
-# **patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**
+[**TimeOffPlan**](TimeOffPlan)
 
 
+## patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus
 
-> [UserTimeOffIntegrationStatusResponse](UserTimeOffIntegrationStatusResponse.html) patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId, timeOffRequestId, userId, body)
+
+
+> [UserTimeOffIntegrationStatusResponse](UserTimeOffIntegrationStatusResponse) patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus(managementUnitId, timeOffRequestId, userId, body)
 
 Set integration status for a time off request.
 
@@ -8210,21 +7926,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitTimeoffrequestUserI
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffRequestId** | **String**| The ID of the time off request. | |
 | **userId** | **String**| The ID of user to whom the time off request belongs. | |
-| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**SetTimeOffIntegrationStatusRequest**](SetTimeOffIntegrationStatusRequest)| body | [optional] |
 
 
 ### Return type
 
-[**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse.html)
-
-<a name="patchWorkforcemanagementManagementunitUserTimeoffrequest"></a>
-
-# **patchWorkforcemanagementManagementunitUserTimeoffrequest**
+[**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse)
 
 
+## patchWorkforcemanagementManagementunitUserTimeoffrequest
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) patchWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId, userId, timeOffRequestId, body)
+
+
+> [TimeOffRequestResponse](TimeOffRequestResponse) patchWorkforcemanagementManagementunitUserTimeoffrequest(managementUnitId, userId, timeOffRequestId, body)
 
 Update a time off request
 
@@ -8268,21 +7982,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitUserTimeoffrequest(
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The id of the user the requested time off request belongs to | |
 | **timeOffRequestId** | **String**| The id of the time off request to update | |
-| **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**AdminTimeOffRequestPatch**](AdminTimeOffRequestPatch)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
-
-<a name="patchWorkforcemanagementManagementunitWeekShifttrade"></a>
-
-# **patchWorkforcemanagementManagementunitWeekShifttrade**
+[**TimeOffRequestResponse**](TimeOffRequestResponse)
 
 
+## patchWorkforcemanagementManagementunitWeekShifttrade
 
-> [ShiftTradeResponse](ShiftTradeResponse.html) patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId, weekDateId, tradeId, body)
+
+
+> [ShiftTradeResponse](ShiftTradeResponse) patchWorkforcemanagementManagementunitWeekShifttrade(managementUnitId, weekDateId, tradeId, body)
 
 Updates a shift trade. This route can only be called by the initiating agent
 
@@ -8326,21 +8038,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
-| **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest)| body | |
 
 
 ### Return type
 
-[**ShiftTradeResponse**](ShiftTradeResponse.html)
-
-<a name="patchWorkforcemanagementManagementunitWorkplan"></a>
-
-# **patchWorkforcemanagementManagementunitWorkplan**
+[**ShiftTradeResponse**](ShiftTradeResponse)
 
 
+## patchWorkforcemanagementManagementunitWorkplan
 
-> [WorkPlan](WorkPlan.html) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, validationMode, body)
+
+
+> [WorkPlan](WorkPlan) patchWorkforcemanagementManagementunitWorkplan(managementUnitId, workPlanId, validationMode, body)
 
 Update a work plan
 
@@ -8384,21 +8094,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplan(management
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to update | |
 | **validationMode** | **String**| Allows to update work plan even if validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
-| **body** | [**WorkPlan**](WorkPlan.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WorkPlan**](WorkPlan)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlan**](WorkPlan.html)
-
-<a name="patchWorkforcemanagementManagementunitWorkplanrotation"></a>
-
-# **patchWorkforcemanagementManagementunitWorkplanrotation**
+[**WorkPlan**](WorkPlan)
 
 
+## patchWorkforcemanagementManagementunitWorkplanrotation
 
-> [WorkPlanRotationResponse](WorkPlanRotationResponse.html) patchWorkforcemanagementManagementunitWorkplanrotation(managementUnitId, workPlanRotationId, body)
+
+
+> [WorkPlanRotationResponse](WorkPlanRotationResponse) patchWorkforcemanagementManagementunitWorkplanrotation(managementUnitId, workPlanRotationId, body)
 
 Update a work plan rotation
 
@@ -8440,21 +8148,19 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWorkplanrotation(ma
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to update | |
-| **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateWorkPlanRotationRequest**](UpdateWorkPlanRotationRequest)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanRotationResponse**](WorkPlanRotationResponse.html)
-
-<a name="patchWorkforcemanagementTimeoffrequest"></a>
-
-# **patchWorkforcemanagementTimeoffrequest**
+[**WorkPlanRotationResponse**](WorkPlanRotationResponse)
 
 
+## patchWorkforcemanagementTimeoffrequest
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) patchWorkforcemanagementTimeoffrequest(timeOffRequestId, body)
+
+
+> [TimeOffRequestResponse](TimeOffRequestResponse) patchWorkforcemanagementTimeoffrequest(timeOffRequestId, body)
 
 Update a time off request for the current user
 
@@ -8494,21 +8200,19 @@ WorkforceManagementAPI.patchWorkforcemanagementTimeoffrequest(timeOffRequestId: 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **timeOffRequestId** | **String**| The ID of the time off request | |
-| **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**AgentTimeOffRequestPatch**](AgentTimeOffRequestPatch)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
-
-<a name="patchWorkforcemanagementUserWorkplanbidranks"></a>
-
-# **patchWorkforcemanagementUserWorkplanbidranks**
+[**TimeOffRequestResponse**](TimeOffRequestResponse)
 
 
+## patchWorkforcemanagementUserWorkplanbidranks
 
-> [WorkPlanBidRanks](WorkPlanBidRanks.html) patchWorkforcemanagementUserWorkplanbidranks(userId, body)
+
+
+> [WorkPlanBidRanks](WorkPlanBidRanks) patchWorkforcemanagementUserWorkplanbidranks(userId, body)
 
 Update work plan bid ranks for a user
 
@@ -8548,21 +8252,19 @@ WorkforceManagementAPI.patchWorkforcemanagementUserWorkplanbidranks(userId: user
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The userId to whom the work plan bid ranks apply. | |
-| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WorkPlanBidRanks**](WorkPlanBidRanks)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanBidRanks**](WorkPlanBidRanks.html)
-
-<a name="patchWorkforcemanagementUsersWorkplanbidranksBulk"></a>
-
-# **patchWorkforcemanagementUsersWorkplanbidranksBulk**
+[**WorkPlanBidRanks**](WorkPlanBidRanks)
 
 
+## patchWorkforcemanagementUsersWorkplanbidranksBulk
 
-> [EntityListing](EntityListing.html) patchWorkforcemanagementUsersWorkplanbidranksBulk(body)
+
+
+> [EntityListing](EntityListing) patchWorkforcemanagementUsersWorkplanbidranksBulk(body)
 
 Update bulk work plan bid ranks on users. Max 50 users can be updated at a time.
 
@@ -8600,21 +8302,19 @@ WorkforceManagementAPI.patchWorkforcemanagementUsersWorkplanbidranksBulk(body: b
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**[WorkPlanBidRanks]**](WorkPlanBidRanks.html)| Users | |
-{: class="table-striped"}
+| **body** | [**[WorkPlanBidRanks]**](WorkPlanBidRanks)| Users | |
 
 
 ### Return type
 
-[**EntityListing**](EntityListing.html)
-
-<a name="patchWorkforcemanagementWorkplanbidPreferences"></a>
-
-# **patchWorkforcemanagementWorkplanbidPreferences**
+[**EntityListing**](EntityListing)
 
 
+## patchWorkforcemanagementWorkplanbidPreferences
 
-> [AgentWorkPlanBiddingPreferenceResponse](AgentWorkPlanBiddingPreferenceResponse.html) patchWorkforcemanagementWorkplanbidPreferences(bidId, body)
+
+
+> [AgentWorkPlanBiddingPreferenceResponse](AgentWorkPlanBiddingPreferenceResponse) patchWorkforcemanagementWorkplanbidPreferences(bidId, body)
 
 Update an agent&#39;s work plan bidding preference
 
@@ -8654,21 +8354,19 @@ WorkforceManagementAPI.patchWorkforcemanagementWorkplanbidPreferences(bidId: bid
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **bidId** | **String**| The ID of the work plan bid | |
-| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateAgentWorkPlanBiddingPreference**](UpdateAgentWorkPlanBiddingPreference)| body | [optional] |
 
 
 ### Return type
 
-[**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse.html)
-
-<a name="postWorkforcemanagementAdherenceExplanations"></a>
-
-# **postWorkforcemanagementAdherenceExplanations**
+[**AgentWorkPlanBiddingPreferenceResponse**](AgentWorkPlanBiddingPreferenceResponse)
 
 
+## postWorkforcemanagementAdherenceExplanations
 
-> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse.html) postWorkforcemanagementAdherenceExplanations(body)
+
+
+> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse) postWorkforcemanagementAdherenceExplanations(body)
 
 Submit an adherence explanation for the current user
 
@@ -8706,21 +8404,19 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanations(body: body) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AddAdherenceExplanationAgentRequest**](AddAdherenceExplanationAgentRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**AddAdherenceExplanationAgentRequest**](AddAdherenceExplanationAgentRequest)| The request body | |
 
 
 ### Return type
 
-[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
-
-<a name="postWorkforcemanagementAdherenceExplanationsQuery"></a>
-
-# **postWorkforcemanagementAdherenceExplanationsQuery**
+[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse)
 
 
+## postWorkforcemanagementAdherenceExplanationsQuery
 
-> [QueryAdherenceExplanationsResponse](QueryAdherenceExplanationsResponse.html) postWorkforcemanagementAdherenceExplanationsQuery(body, forceAsync, forceDownloadService)
+
+
+> [QueryAdherenceExplanationsResponse](QueryAdherenceExplanationsResponse) postWorkforcemanagementAdherenceExplanationsQuery(body, forceAsync, forceDownloadService)
 
 Query adherence explanations for the current user
 
@@ -8760,23 +8456,21 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceExplanationsQuery(body: b
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AgentQueryAdherenceExplanationsRequest**](AgentQueryAdherenceExplanationsRequest.html)| The request body | |
+| **body** | [**AgentQueryAdherenceExplanationsRequest**](AgentQueryAdherenceExplanationsRequest)| The request body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**QueryAdherenceExplanationsResponse**](QueryAdherenceExplanationsResponse.html)
-
-<a name="postWorkforcemanagementAdherenceHistorical"></a>
-
-# **postWorkforcemanagementAdherenceHistorical**
+[**QueryAdherenceExplanationsResponse**](QueryAdherenceExplanationsResponse)
 
 
+## postWorkforcemanagementAdherenceHistorical
 
-> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementAdherenceHistorical(body)
+
+
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse) postWorkforcemanagementAdherenceHistorical(body)
 
 Deprecated. Use bulk routes instead (/adherence/historical/bulk)
 
@@ -8814,21 +8508,19 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceHistorical(body: body) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WfmHistoricalAdherenceQueryForUsers**](WfmHistoricalAdherenceQueryForUsers.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmHistoricalAdherenceQueryForUsers**](WfmHistoricalAdherenceQueryForUsers)| body | [optional] |
 
 
 ### Return type
 
-[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
-
-<a name="postWorkforcemanagementAdherenceHistoricalBulk"></a>
-
-# **postWorkforcemanagementAdherenceHistoricalBulk**
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
 
 
+## postWorkforcemanagementAdherenceHistoricalBulk
 
-> [WfmHistoricalAdherenceBulkResponse](WfmHistoricalAdherenceBulkResponse.html) postWorkforcemanagementAdherenceHistoricalBulk(body)
+
+
+> [WfmHistoricalAdherenceBulkResponse](WfmHistoricalAdherenceBulkResponse) postWorkforcemanagementAdherenceHistoricalBulk(body)
 
 Request a historical adherence report in bulk
 
@@ -8866,21 +8558,19 @@ WorkforceManagementAPI.postWorkforcemanagementAdherenceHistoricalBulk(body: body
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmHistoricalAdherenceBulkQuery**](WfmHistoricalAdherenceBulkQuery)| body | [optional] |
 
 
 ### Return type
 
-[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse.html)
-
-<a name="postWorkforcemanagementAgentAdherenceExplanations"></a>
-
-# **postWorkforcemanagementAgentAdherenceExplanations**
+[**WfmHistoricalAdherenceBulkResponse**](WfmHistoricalAdherenceBulkResponse)
 
 
+## postWorkforcemanagementAgentAdherenceExplanations
 
-> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse.html) postWorkforcemanagementAgentAdherenceExplanations(agentId, body)
+
+
+> [AdherenceExplanationAsyncResponse](AdherenceExplanationAsyncResponse) postWorkforcemanagementAgentAdherenceExplanations(agentId, body)
 
 Add an adherence explanation for the requested user
 
@@ -8920,21 +8610,19 @@ WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanations(agentId
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The ID of the agent to query | |
-| **body** | [**AddAdherenceExplanationAdminRequest**](AddAdherenceExplanationAdminRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**AddAdherenceExplanationAdminRequest**](AddAdherenceExplanationAdminRequest)| The request body | |
 
 
 ### Return type
 
-[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse.html)
-
-<a name="postWorkforcemanagementAgentAdherenceExplanationsQuery"></a>
-
-# **postWorkforcemanagementAgentAdherenceExplanationsQuery**
+[**AdherenceExplanationAsyncResponse**](AdherenceExplanationAsyncResponse)
 
 
+## postWorkforcemanagementAgentAdherenceExplanationsQuery
 
-> [AgentQueryAdherenceExplanationsResponse](AgentQueryAdherenceExplanationsResponse.html) postWorkforcemanagementAgentAdherenceExplanationsQuery(agentId, body, forceAsync, forceDownloadService)
+
+
+> [AgentQueryAdherenceExplanationsResponse](AgentQueryAdherenceExplanationsResponse) postWorkforcemanagementAgentAdherenceExplanationsQuery(agentId, body, forceAsync, forceDownloadService)
 
 Query adherence explanations for the given agent across a specified range
 
@@ -8976,23 +8664,21 @@ WorkforceManagementAPI.postWorkforcemanagementAgentAdherenceExplanationsQuery(ag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The ID of the agent to query | |
-| **body** | [**AgentQueryAdherenceExplanationsRequest**](AgentQueryAdherenceExplanationsRequest.html)| The request body | |
+| **body** | [**AgentQueryAdherenceExplanationsRequest**](AgentQueryAdherenceExplanationsRequest)| The request body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse.html)
-
-<a name="postWorkforcemanagementAgents"></a>
-
-# **postWorkforcemanagementAgents**
+[**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse)
 
 
+## postWorkforcemanagementAgents
 
-> [MoveAgentsResponse](MoveAgentsResponse.html) postWorkforcemanagementAgents(body)
+
+
+> [MoveAgentsResponse](MoveAgentsResponse) postWorkforcemanagementAgents(body)
 
 Move agents in and out of management unit
 
@@ -9030,21 +8716,19 @@ WorkforceManagementAPI.postWorkforcemanagementAgents(body: body) { (response, er
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**MoveAgentsRequest**](MoveAgentsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**MoveAgentsRequest**](MoveAgentsRequest)| body | [optional] |
 
 
 ### Return type
 
-[**MoveAgentsResponse**](MoveAgentsResponse.html)
-
-<a name="postWorkforcemanagementAgentsIntegrationsHrisQuery"></a>
-
-# **postWorkforcemanagementAgentsIntegrationsHrisQuery**
+[**MoveAgentsResponse**](MoveAgentsResponse)
 
 
+## postWorkforcemanagementAgentsIntegrationsHrisQuery
 
-> [AgentsIntegrationsListing](AgentsIntegrationsListing.html) postWorkforcemanagementAgentsIntegrationsHrisQuery(body)
+
+
+> [AgentsIntegrationsListing](AgentsIntegrationsListing) postWorkforcemanagementAgentsIntegrationsHrisQuery(body)
 
 Query integrations for agents
 
@@ -9082,21 +8766,19 @@ WorkforceManagementAPI.postWorkforcemanagementAgentsIntegrationsHrisQuery(body: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**QueryAgentsIntegrationsRequest**](QueryAgentsIntegrationsRequest)| body | [optional] |
 
 
 ### Return type
 
-[**AgentsIntegrationsListing**](AgentsIntegrationsListing.html)
-
-<a name="postWorkforcemanagementAgentsMePossibleworkshifts"></a>
-
-# **postWorkforcemanagementAgentsMePossibleworkshifts**
+[**AgentsIntegrationsListing**](AgentsIntegrationsListing)
 
 
+## postWorkforcemanagementAgentsMePossibleworkshifts
 
-> [AgentPossibleWorkShiftsResponse](AgentPossibleWorkShiftsResponse.html) postWorkforcemanagementAgentsMePossibleworkshifts(body)
+
+
+> [AgentPossibleWorkShiftsResponse](AgentPossibleWorkShiftsResponse) postWorkforcemanagementAgentsMePossibleworkshifts(body)
 
 Get agent possible work shifts for requested time frame
 
@@ -9134,21 +8816,19 @@ WorkforceManagementAPI.postWorkforcemanagementAgentsMePossibleworkshifts(body: b
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AgentPossibleWorkShiftsRequest**](AgentPossibleWorkShiftsRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**AgentPossibleWorkShiftsRequest**](AgentPossibleWorkShiftsRequest)| body | |
 
 
 ### Return type
 
-[**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse.html)
-
-<a name="postWorkforcemanagementAgentschedulesMine"></a>
-
-# **postWorkforcemanagementAgentschedulesMine**
+[**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse)
 
 
+## postWorkforcemanagementAgentschedulesMine
 
-> [BuCurrentAgentScheduleSearchResponse](BuCurrentAgentScheduleSearchResponse.html) postWorkforcemanagementAgentschedulesMine(body)
+
+
+> [BuCurrentAgentScheduleSearchResponse](BuCurrentAgentScheduleSearchResponse) postWorkforcemanagementAgentschedulesMine(body)
 
 Get published schedule for the current user
 
@@ -9186,21 +8866,19 @@ WorkforceManagementAPI.postWorkforcemanagementAgentschedulesMine(body: body) { (
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuGetCurrentAgentScheduleRequest**](BuGetCurrentAgentScheduleRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse.html)
-
-<a name="postWorkforcemanagementAlternativeshiftsOffersJobs"></a>
-
-# **postWorkforcemanagementAlternativeshiftsOffersJobs**
+[**BuCurrentAgentScheduleSearchResponse**](BuCurrentAgentScheduleSearchResponse)
 
 
+## postWorkforcemanagementAlternativeshiftsOffersJobs
 
-> [AlternativeShiftAsyncResponse](AlternativeShiftAsyncResponse.html) postWorkforcemanagementAlternativeshiftsOffersJobs(body)
+
+
+> [AlternativeShiftAsyncResponse](AlternativeShiftAsyncResponse) postWorkforcemanagementAlternativeshiftsOffersJobs(body)
 
 Request a list of alternative shift offers for a given schedule
 
@@ -9238,21 +8916,19 @@ WorkforceManagementAPI.postWorkforcemanagementAlternativeshiftsOffersJobs(body: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AlternativeShiftOffersRequest**](AlternativeShiftOffersRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**AlternativeShiftOffersRequest**](AlternativeShiftOffersRequest)| The request body | |
 
 
 ### Return type
 
-[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html)
-
-<a name="postWorkforcemanagementAlternativeshiftsOffersSearchJobs"></a>
-
-# **postWorkforcemanagementAlternativeshiftsOffersSearchJobs**
+[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse)
 
 
+## postWorkforcemanagementAlternativeshiftsOffersSearchJobs
 
-> [AlternativeShiftAsyncResponse](AlternativeShiftAsyncResponse.html) postWorkforcemanagementAlternativeshiftsOffersSearchJobs(body)
+
+
+> [AlternativeShiftAsyncResponse](AlternativeShiftAsyncResponse) postWorkforcemanagementAlternativeshiftsOffersSearchJobs(body)
 
 Request a search of alternative shift offers for a given shift
 
@@ -9290,21 +8966,19 @@ WorkforceManagementAPI.postWorkforcemanagementAlternativeshiftsOffersSearchJobs(
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AlternativeShiftSearchOffersRequest**](AlternativeShiftSearchOffersRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**AlternativeShiftSearchOffersRequest**](AlternativeShiftSearchOffersRequest)| The request body | |
 
 
 ### Return type
 
-[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse.html)
-
-<a name="postWorkforcemanagementAlternativeshiftsTrades"></a>
-
-# **postWorkforcemanagementAlternativeshiftsTrades**
+[**AlternativeShiftAsyncResponse**](AlternativeShiftAsyncResponse)
 
 
+## postWorkforcemanagementAlternativeshiftsTrades
 
-> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse.html) postWorkforcemanagementAlternativeshiftsTrades(body)
+
+
+> [AlternativeShiftTradeResponse](AlternativeShiftTradeResponse) postWorkforcemanagementAlternativeshiftsTrades(body)
 
 Create my alternative shift trade using an existing offer&#39;s jobId
 
@@ -9342,21 +9016,19 @@ WorkforceManagementAPI.postWorkforcemanagementAlternativeshiftsTrades(body: body
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateAlternativeShiftTradeRequest**](CreateAlternativeShiftTradeRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**CreateAlternativeShiftTradeRequest**](CreateAlternativeShiftTradeRequest)| The request body | |
 
 
 ### Return type
 
-[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitActivitycodes"></a>
-
-# **postWorkforcemanagementBusinessunitActivitycodes**
+[**AlternativeShiftTradeResponse**](AlternativeShiftTradeResponse)
 
 
+## postWorkforcemanagementBusinessunitActivitycodes
 
-> [BusinessUnitActivityCode](BusinessUnitActivityCode.html) postWorkforcemanagementBusinessunitActivitycodes(businessUnitId, body)
+
+
+> [BusinessUnitActivityCode](BusinessUnitActivityCode) postWorkforcemanagementBusinessunitActivitycodes(businessUnitId, body)
 
 Create a new activity code
 
@@ -9396,21 +9068,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivitycodes(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit, or 'mine' for the business unit of the logged-in user. | |
-| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BusinessUnitActivityCode**](BusinessUnitActivityCode.html)
-
-<a name="postWorkforcemanagementBusinessunitActivityplanRunsJobs"></a>
-
-# **postWorkforcemanagementBusinessunitActivityplanRunsJobs**
+[**BusinessUnitActivityCode**](BusinessUnitActivityCode)
 
 
+## postWorkforcemanagementBusinessunitActivityplanRunsJobs
 
-> [ActivityPlanJobResponse](ActivityPlanJobResponse.html) postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId, activityPlanId)
+
+
+> [ActivityPlanJobResponse](ActivityPlanJobResponse) postWorkforcemanagementBusinessunitActivityplanRunsJobs(businessUnitId, activityPlanId)
 
 Run an activity plan manually
 
@@ -9453,20 +9123,18 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplanRunsJobs(b
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **activityPlanId** | **String**| The ID of the activity plan to run | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ActivityPlanJobResponse**](ActivityPlanJobResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitActivityplans"></a>
-
-# **postWorkforcemanagementBusinessunitActivityplans**
+[**ActivityPlanJobResponse**](ActivityPlanJobResponse)
 
 
+## postWorkforcemanagementBusinessunitActivityplans
 
-> [ActivityPlanResponse](ActivityPlanResponse.html) postWorkforcemanagementBusinessunitActivityplans(businessUnitId, body)
+
+
+> [ActivityPlanResponse](ActivityPlanResponse) postWorkforcemanagementBusinessunitActivityplans(businessUnitId, body)
 
 Create an activity plan
 
@@ -9506,21 +9174,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitActivityplans(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**CreateActivityPlanRequest**](CreateActivityPlanRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**CreateActivityPlanRequest**](CreateActivityPlanRequest)| body | |
 
 
 ### Return type
 
-[**ActivityPlanResponse**](ActivityPlanResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitAdherenceExplanationsQuery"></a>
-
-# **postWorkforcemanagementBusinessunitAdherenceExplanationsQuery**
+[**ActivityPlanResponse**](ActivityPlanResponse)
 
 
+## postWorkforcemanagementBusinessunitAdherenceExplanationsQuery
 
-> [BuQueryAdherenceExplanationsResponse](BuQueryAdherenceExplanationsResponse.html) postWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId, body, forceAsync, forceDownloadService)
+
+
+> [BuQueryAdherenceExplanationsResponse](BuQueryAdherenceExplanationsResponse) postWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId, body, forceAsync, forceDownloadService)
 
 Query adherence explanations across an entire business unit for the requested period
 
@@ -9562,23 +9228,21 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAdherenceExplanationsQ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**BuQueryAdherenceExplanationsRequest**](BuQueryAdherenceExplanationsRequest.html)| The request body | |
+| **body** | [**BuQueryAdherenceExplanationsRequest**](BuQueryAdherenceExplanationsRequest)| The request body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuQueryAdherenceExplanationsResponse**](BuQueryAdherenceExplanationsResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitAgentschedulesSearch"></a>
-
-# **postWorkforcemanagementBusinessunitAgentschedulesSearch**
+[**BuQueryAdherenceExplanationsResponse**](BuQueryAdherenceExplanationsResponse)
 
 
+## postWorkforcemanagementBusinessunitAgentschedulesSearch
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, forceAsync, forceDownloadService, body)
+
+
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse) postWorkforcemanagementBusinessunitAgentschedulesSearch(businessUnitId, forceAsync, forceDownloadService, body)
 
 Search published schedules
 
@@ -9623,21 +9287,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAgentschedulesSearch(b
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch"></a>
-
-# **postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**
+[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse)
 
 
+## postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch
 
-> [BuListAlternativeShiftTradesResponse](BuListAlternativeShiftTradesResponse.html) postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch(businessUnitId, body, forceAsync)
+
+
+> [BuListAlternativeShiftTradesResponse](BuListAlternativeShiftTradesResponse) postWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch(businessUnitId, body, forceAsync)
 
 List alternative shifts trades for a given management unit or agent
 
@@ -9678,22 +9340,20 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitAlternativeshiftsTrade
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**SearchAlternativeShiftTradesRequest**](SearchAlternativeShiftTradesRequest.html)| The request body | |
+| **body** | [**SearchAlternativeShiftTradesRequest**](SearchAlternativeShiftTradesRequest)| The request body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuListAlternativeShiftTradesResponse**](BuListAlternativeShiftTradesResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitIntraday"></a>
-
-# **postWorkforcemanagementBusinessunitIntraday**
+[**BuListAlternativeShiftTradesResponse**](BuListAlternativeShiftTradesResponse)
 
 
+## postWorkforcemanagementBusinessunitIntraday
 
-> [AsyncIntradayResponse](AsyncIntradayResponse.html) postWorkforcemanagementBusinessunitIntraday(businessUnitId, forceAsync, body)
+
+
+> [AsyncIntradayResponse](AsyncIntradayResponse) postWorkforcemanagementBusinessunitIntraday(businessUnitId, forceAsync, body)
 
 Get intraday data for the given date for the requested planningGroupIds
 
@@ -9735,21 +9395,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitIntraday(businessUnitI
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-| **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**IntradayPlanningGroupRequest**](IntradayPlanningGroupRequest)| body | [optional] |
 
 
 ### Return type
 
-[**AsyncIntradayResponse**](AsyncIntradayResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitPlanninggroups"></a>
-
-# **postWorkforcemanagementBusinessunitPlanninggroups**
+[**AsyncIntradayResponse**](AsyncIntradayResponse)
 
 
+## postWorkforcemanagementBusinessunitPlanninggroups
 
-> [PlanningGroup](PlanningGroup.html) postWorkforcemanagementBusinessunitPlanninggroups(businessUnitId, body)
+
+
+> [PlanningGroup](PlanningGroup) postWorkforcemanagementBusinessunitPlanninggroups(businessUnitId, body)
 
 Adds a new planning group
 
@@ -9789,21 +9447,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitPlanninggroups(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
-| **body** | [**CreatePlanningGroupRequest**](CreatePlanningGroupRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreatePlanningGroupRequest**](CreatePlanningGroupRequest)| body | [optional] |
 
 
 ### Return type
 
-[**PlanningGroup**](PlanningGroup.html)
-
-<a name="postWorkforcemanagementBusinessunitServicegoaltemplates"></a>
-
-# **postWorkforcemanagementBusinessunitServicegoaltemplates**
+[**PlanningGroup**](PlanningGroup)
 
 
+## postWorkforcemanagementBusinessunitServicegoaltemplates
 
-> [ServiceGoalTemplate](ServiceGoalTemplate.html) postWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId, body)
+
+
+> [ServiceGoalTemplate](ServiceGoalTemplate) postWorkforcemanagementBusinessunitServicegoaltemplates(businessUnitId, body)
 
 Adds a new service goal template
 
@@ -9843,21 +9499,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitServicegoaltemplates(b
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit. | |
-| **body** | [**CreateServiceGoalTemplate**](CreateServiceGoalTemplate.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateServiceGoalTemplate**](CreateServiceGoalTemplate)| body | [optional] |
 
 
 ### Return type
 
-[**ServiceGoalTemplate**](ServiceGoalTemplate.html)
-
-<a name="postWorkforcemanagementBusinessunitStaffinggroups"></a>
-
-# **postWorkforcemanagementBusinessunitStaffinggroups**
+[**ServiceGoalTemplate**](ServiceGoalTemplate)
 
 
+## postWorkforcemanagementBusinessunitStaffinggroups
 
-> [StaffingGroupResponse](StaffingGroupResponse.html) postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, body)
+
+
+> [StaffingGroupResponse](StaffingGroupResponse) postWorkforcemanagementBusinessunitStaffinggroups(businessUnitId, body)
 
 Creates a new staffing group
 
@@ -9897,21 +9551,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroups(busines
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateStaffingGroupRequest**](CreateStaffingGroupRequest)| body | [optional] |
 
 
 ### Return type
 
-[**StaffingGroupResponse**](StaffingGroupResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitStaffinggroupsQuery"></a>
-
-# **postWorkforcemanagementBusinessunitStaffinggroupsQuery**
+[**StaffingGroupResponse**](StaffingGroupResponse)
 
 
+## postWorkforcemanagementBusinessunitStaffinggroupsQuery
 
-> [UserStaffingGroupListing](UserStaffingGroupListing.html) postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId, body)
+
+
+> [UserStaffingGroupListing](UserStaffingGroupListing) postWorkforcemanagementBusinessunitStaffinggroupsQuery(businessUnitId, body)
 
 Gets staffing group associations for a list of user IDs
 
@@ -9951,21 +9603,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitStaffinggroupsQuery(bu
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**QueryUserStaffingGroupListRequest**](QueryUserStaffingGroupListRequest)| body | [optional] |
 
 
 ### Return type
 
-[**UserStaffingGroupListing**](UserStaffingGroupListing.html)
-
-<a name="postWorkforcemanagementBusinessunitTimeofflimits"></a>
-
-# **postWorkforcemanagementBusinessunitTimeofflimits**
+[**UserStaffingGroupListing**](UserStaffingGroupListing)
 
 
+## postWorkforcemanagementBusinessunitTimeofflimits
 
-> [BuTimeOffLimitResponse](BuTimeOffLimitResponse.html) postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, body)
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse) postWorkforcemanagementBusinessunitTimeofflimits(businessUnitId, body)
 
 Creates a new time-off limit object
 
@@ -10005,21 +9655,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimits(business
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuCreateTimeOffLimitRequest**](BuCreateTimeOffLimitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery"></a>
-
-# **postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
 
 
+## postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery
 
-> [BuTimeOffLimitValuesResponse](BuTimeOffLimitValuesResponse.html) postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId, body)
+
+
+> [BuTimeOffLimitValuesResponse](BuTimeOffLimitValuesResponse) postWorkforcemanagementBusinessunitTimeofflimitsValuesQuery(businessUnitId, body)
 
 Retrieves time-off limit related values based on a given set of filters.
 
@@ -10059,21 +9707,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeofflimitsValuesQue
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitTimeoffplans"></a>
-
-# **postWorkforcemanagementBusinessunitTimeoffplans**
+[**BuTimeOffLimitValuesResponse**](BuTimeOffLimitValuesResponse)
 
 
+## postWorkforcemanagementBusinessunitTimeoffplans
 
-> [BuTimeOffPlanResponse](BuTimeOffPlanResponse.html) postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, body)
+
+
+> [BuTimeOffPlanResponse](BuTimeOffPlanResponse) postWorkforcemanagementBusinessunitTimeoffplans(businessUnitId, body)
 
 Creates a new time-off plan
 
@@ -10113,21 +9759,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitTimeoffplans(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuCreateTimeOffPlanRequest**](BuCreateTimeOffPlanRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery"></a>
-
-# **postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**
+[**BuTimeOffPlanResponse**](BuTimeOffPlanResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery
 
-> [BuAsyncAgentSchedulesQueryResponse](BuAsyncAgentSchedulesQueryResponse.html) postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService)
+
+
+> [BuAsyncAgentSchedulesQueryResponse](BuAsyncAgentSchedulesQueryResponse) postWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery(businessUnitId, weekId, scheduleId, body, forceAsync, forceDownloadService)
 
 Loads agent schedule data from the schedule. Used in combination with the metadata route
 
@@ -10174,23 +9818,21 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleAgentsched
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
-| **body** | [**BuQueryAgentSchedulesRequest**](BuQueryAgentSchedulesRequest.html)| body | |
+| **body** | [**BuQueryAgentSchedulesRequest**](BuQueryAgentSchedulesRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BuAsyncAgentSchedulesQueryResponse**](BuAsyncAgentSchedulesQueryResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekScheduleCopy"></a>
-
-# **postWorkforcemanagementBusinessunitWeekScheduleCopy**
+[**BuAsyncAgentSchedulesQueryResponse**](BuAsyncAgentSchedulesQueryResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekScheduleCopy
 
-> [BuAsyncScheduleResponse](BuAsyncScheduleResponse.html) postWorkforcemanagementBusinessunitWeekScheduleCopy(businessUnitId, weekId, scheduleId, body)
+
+
+> [BuAsyncScheduleResponse](BuAsyncScheduleResponse) postWorkforcemanagementBusinessunitWeekScheduleCopy(businessUnitId, weekId, scheduleId, body)
 
 Copy a schedule
 
@@ -10234,21 +9876,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleCopy(busin
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule to copy | |
-| **body** | [**BuCopyScheduleRequest**](BuCopyScheduleRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**BuCopyScheduleRequest**](BuCopyScheduleRequest)| body | |
 
 
 ### Return type
 
-[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations"></a>
-
-# **postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**
+[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations
 
-> [PerformancePredictionRecalculationResponse](PerformancePredictionRecalculationResponse.html) postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId, weekId, scheduleId, body)
+
+
+> [PerformancePredictionRecalculationResponse](PerformancePredictionRecalculationResponse) postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId, weekId, scheduleId, body)
 
 Request a daily recalculation of the performance prediction for the associated schedule
 
@@ -10292,21 +9932,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulePerformanc
 | **businessUnitId** | **String**| The ID of the business unit to which the performance prediction belongs | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format | |
 | **scheduleId** | **String**| The ID of the schedule the performance prediction belongs to | |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)| body | [optional] |
 
 
 ### Return type
 
-[**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl"></a>
-
-# **postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl**
+[**PerformancePredictionRecalculationResponse**](PerformancePredictionRecalculationResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl
 
-> [PerformancePredictionRecalculationUploadResponse](PerformancePredictionRecalculationUploadResponse.html) postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId, weekId, scheduleId, body)
+
+
+> [PerformancePredictionRecalculationUploadResponse](PerformancePredictionRecalculationUploadResponse) postWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl(businessUnitId, weekId, scheduleId, body)
 
 Upload daily activity changes to be able to request a performance prediction recalculation
 
@@ -10350,21 +9988,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulePerformanc
 | **businessUnitId** | **String**| The ID of the business unit to which the performance prediction belongs | |
 | **weekId** | **String**| First day of schedule week in yyyy-MM-dd format | |
 | **scheduleId** | **String**| The ID of the schedule the performance prediction belongs to | |
-| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | [optional] |
 
 
 ### Return type
 
-[**PerformancePredictionRecalculationUploadResponse**](PerformancePredictionRecalculationUploadResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekScheduleReschedule"></a>
-
-# **postWorkforcemanagementBusinessunitWeekScheduleReschedule**
+[**PerformancePredictionRecalculationUploadResponse**](PerformancePredictionRecalculationUploadResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekScheduleReschedule
 
-> [BuAsyncScheduleRunResponse](BuAsyncScheduleRunResponse.html) postWorkforcemanagementBusinessunitWeekScheduleReschedule(businessUnitId, weekId, scheduleId, body)
+
+
+> [BuAsyncScheduleRunResponse](BuAsyncScheduleRunResponse) postWorkforcemanagementBusinessunitWeekScheduleReschedule(businessUnitId, weekId, scheduleId, body)
 
 Start a rescheduling run
 
@@ -10408,21 +10044,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleReschedule
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
-| **body** | [**BuRescheduleRequest**](BuRescheduleRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**BuRescheduleRequest**](BuRescheduleRequest)| body | |
 
 
 ### Return type
 
-[**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekScheduleUpdate"></a>
-
-# **postWorkforcemanagementBusinessunitWeekScheduleUpdate**
+[**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekScheduleUpdate
 
-> [BuAsyncScheduleResponse](BuAsyncScheduleResponse.html) postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId, weekId, scheduleId, body)
+
+
+> [BuAsyncScheduleResponse](BuAsyncScheduleResponse) postWorkforcemanagementBusinessunitWeekScheduleUpdate(businessUnitId, weekId, scheduleId, body)
 
 Starts processing a schedule update
 
@@ -10468,21 +10102,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdate(bus
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
-| **body** | [**ProcessScheduleUpdateUploadRequest**](ProcessScheduleUpdateUploadRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**ProcessScheduleUpdateUploadRequest**](ProcessScheduleUpdateUploadRequest)| body | |
 
 
 ### Return type
 
-[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl"></a>
-
-# **postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl**
+[**BuAsyncScheduleResponse**](BuAsyncScheduleResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl
 
-> [UpdateScheduleUploadResponse](UpdateScheduleUploadResponse.html) postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId, weekId, scheduleId, body)
+
+
+> [UpdateScheduleUploadResponse](UpdateScheduleUploadResponse) postWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl(businessUnitId, weekId, scheduleId, body)
 
 Creates a signed upload URL for updating a schedule
 
@@ -10528,21 +10160,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekScheduleUpdateUplo
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **scheduleId** | **String**| The ID of the schedule | |
-| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
-{: class="table-striped"}
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | |
 
 
 ### Return type
 
-[**UpdateScheduleUploadResponse**](UpdateScheduleUploadResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekSchedules"></a>
-
-# **postWorkforcemanagementBusinessunitWeekSchedules**
+[**UpdateScheduleUploadResponse**](UpdateScheduleUploadResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekSchedules
 
-> [BuScheduleMetadata](BuScheduleMetadata.html) postWorkforcemanagementBusinessunitWeekSchedules(businessUnitId, weekId, body)
+
+
+> [BuScheduleMetadata](BuScheduleMetadata) postWorkforcemanagementBusinessunitWeekSchedules(businessUnitId, weekId, body)
 
 Create a blank schedule
 
@@ -10584,21 +10214,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedules(business
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**BuCreateBlankScheduleRequest**](BuCreateBlankScheduleRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**BuCreateBlankScheduleRequest**](BuCreateBlankScheduleRequest)| body | |
 
 
 ### Return type
 
-[**BuScheduleMetadata**](BuScheduleMetadata.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekSchedulesGenerate"></a>
-
-# **postWorkforcemanagementBusinessunitWeekSchedulesGenerate**
+[**BuScheduleMetadata**](BuScheduleMetadata)
 
 
+## postWorkforcemanagementBusinessunitWeekSchedulesGenerate
 
-> [BuAsyncScheduleRunResponse](BuAsyncScheduleRunResponse.html) postWorkforcemanagementBusinessunitWeekSchedulesGenerate(businessUnitId, weekId, body)
+
+
+> [BuAsyncScheduleRunResponse](BuAsyncScheduleRunResponse) postWorkforcemanagementBusinessunitWeekSchedulesGenerate(businessUnitId, weekId, body)
 
 Generate a schedule
 
@@ -10640,21 +10268,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesGenerate(
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**BuGenerateScheduleRequest**](BuGenerateScheduleRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**BuGenerateScheduleRequest**](BuGenerateScheduleRequest)| body | |
 
 
 ### Return type
 
-[**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekSchedulesImport"></a>
-
-# **postWorkforcemanagementBusinessunitWeekSchedulesImport**
+[**BuAsyncScheduleRunResponse**](BuAsyncScheduleRunResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekSchedulesImport
 
-> [ScheduleUploadProcessingResponse](ScheduleUploadProcessingResponse.html) postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId, weekId, body)
+
+
+> [ScheduleUploadProcessingResponse](ScheduleUploadProcessingResponse) postWorkforcemanagementBusinessunitWeekSchedulesImport(businessUnitId, weekId, body)
 
 Starts processing a schedule import
 
@@ -10698,21 +10324,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImport(bu
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)|  | |
-{: class="table-striped"}
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)|  | |
 
 
 ### Return type
 
-[**ScheduleUploadProcessingResponse**](ScheduleUploadProcessingResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl"></a>
-
-# **postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl**
+[**ScheduleUploadProcessingResponse**](ScheduleUploadProcessingResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl
 
-> [ImportScheduleUploadResponse](ImportScheduleUploadResponse.html) postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId, weekId, body)
+
+
+> [ImportScheduleUploadResponse](ImportScheduleUploadResponse) postWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl(businessUnitId, weekId, body)
 
 Creates a signed upload URL for importing a schedule
 
@@ -10756,21 +10380,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekSchedulesImportUpl
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **weekId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
-{: class="table-striped"}
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | |
 
 
 ### Return type
 
-[**ImportScheduleUploadResponse**](ImportScheduleUploadResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekShorttermforecastCopy"></a>
-
-# **postWorkforcemanagementBusinessunitWeekShorttermforecastCopy**
+[**ImportScheduleUploadResponse**](ImportScheduleUploadResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekShorttermforecastCopy
 
-> [AsyncForecastOperationResult](AsyncForecastOperationResult.html) postWorkforcemanagementBusinessunitWeekShorttermforecastCopy(businessUnitId, weekDateId, forecastId, body, forceAsync)
+
+
+> [AsyncForecastOperationResult](AsyncForecastOperationResult) postWorkforcemanagementBusinessunitWeekShorttermforecastCopy(businessUnitId, weekDateId, forecastId, body, forceAsync)
 
 Copy a short term forecast
 
@@ -10815,22 +10437,20 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecastC
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **forecastId** | **String**| The ID of the forecast to copy | |
-| **body** | [**CopyBuForecastRequest**](CopyBuForecastRequest.html)| body | |
+| **body** | [**CopyBuForecastRequest**](CopyBuForecastRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AsyncForecastOperationResult**](AsyncForecastOperationResult.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate"></a>
-
-# **postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate**
+[**AsyncForecastOperationResult**](AsyncForecastOperationResult)
 
 
+## postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate
 
-> [AsyncForecastOperationResult](AsyncForecastOperationResult.html) postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate(businessUnitId, weekDateId, body, forceAsync)
+
+
+> [AsyncForecastOperationResult](AsyncForecastOperationResult) postWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate(businessUnitId, weekDateId, body, forceAsync)
 
 Generate a short term forecast
 
@@ -10873,22 +10493,20 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest.html)| body | |
+| **body** | [**GenerateBuForecastRequest**](GenerateBuForecastRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AsyncForecastOperationResult**](AsyncForecastOperationResult.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekShorttermforecastsImport"></a>
-
-# **postWorkforcemanagementBusinessunitWeekShorttermforecastsImport**
+[**AsyncForecastOperationResult**](AsyncForecastOperationResult)
 
 
+## postWorkforcemanagementBusinessunitWeekShorttermforecastsImport
 
-> [ImportForecastResponse](ImportForecastResponse.html) postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId, weekDateId, body)
+
+
+> [ImportForecastResponse](ImportForecastResponse) postWorkforcemanagementBusinessunitWeekShorttermforecastsImport(businessUnitId, weekDateId, body)
 
 Starts importing the uploaded short term forecast
 
@@ -10932,21 +10550,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**WfmProcessUploadRequest**](WfmProcessUploadRequest)| body | |
 
 
 ### Return type
 
-[**ImportForecastResponse**](ImportForecastResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl"></a>
-
-# **postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl**
+[**ImportForecastResponse**](ImportForecastResponse)
 
 
+## postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl
 
-> [ImportForecastUploadResponse](ImportForecastUploadResponse.html) postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId, weekDateId, body)
+
+
+> [ImportForecastUploadResponse](ImportForecastUploadResponse) postWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl(businessUnitId, weekDateId, body)
 
 Creates a signed upload URL for importing a short term forecast
 
@@ -10990,21 +10606,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWeekShorttermforecasts
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit to which the forecast belongs | |
 | **weekDateId** | **Date**| First day of schedule week in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody.html)| body | |
-{: class="table-striped"}
+| **body** | [**UploadUrlRequestBody**](UploadUrlRequestBody)| body | |
 
 
 ### Return type
 
-[**ImportForecastUploadResponse**](ImportForecastUploadResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWorkplanbidCopy"></a>
-
-# **postWorkforcemanagementBusinessunitWorkplanbidCopy**
+[**ImportForecastUploadResponse**](ImportForecastUploadResponse)
 
 
+## postWorkforcemanagementBusinessunitWorkplanbidCopy
 
-> [WorkPlanBid](WorkPlanBid.html) postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId, bidId, body)
+
+
+> [WorkPlanBid](WorkPlanBid) postWorkforcemanagementBusinessunitWorkplanbidCopy(businessUnitId, bidId, body)
 
 Copy a work plan bid
 
@@ -11046,21 +10660,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWorkplanbidCopy(busine
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The ID of the work plan bid to copy | |
-| **body** | [**CopyWorkPlanBid**](CopyWorkPlanBid.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CopyWorkPlanBid**](CopyWorkPlanBid)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanBid**](WorkPlanBid.html)
-
-<a name="postWorkforcemanagementBusinessunitWorkplanbidGroups"></a>
-
-# **postWorkforcemanagementBusinessunitWorkplanbidGroups**
+[**WorkPlanBid**](WorkPlanBid)
 
 
+## postWorkforcemanagementBusinessunitWorkplanbidGroups
 
-> [WorkPlanBidGroupResponse](WorkPlanBidGroupResponse.html) postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId, bidId, body)
+
+
+> [WorkPlanBidGroupResponse](WorkPlanBidGroupResponse) postWorkforcemanagementBusinessunitWorkplanbidGroups(businessUnitId, bidId, body)
 
 Add a bid group in a given work plan bid
 
@@ -11102,21 +10714,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWorkplanbidGroups(busi
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **bidId** | **String**| The work plan bid id of the bid groups | |
-| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WorkPlanBidGroupCreate**](WorkPlanBidGroupCreate)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse.html)
-
-<a name="postWorkforcemanagementBusinessunitWorkplanbids"></a>
-
-# **postWorkforcemanagementBusinessunitWorkplanbids**
+[**WorkPlanBidGroupResponse**](WorkPlanBidGroupResponse)
 
 
+## postWorkforcemanagementBusinessunitWorkplanbids
 
-> [WorkPlanBid](WorkPlanBid.html) postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId, body)
+
+
+> [WorkPlanBid](WorkPlanBid) postWorkforcemanagementBusinessunitWorkplanbids(businessUnitId, body)
 
 Create a new work plan bid
 
@@ -11156,21 +10766,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunitWorkplanbids(businessU
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
-| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid.html)| The work plan bid to be created | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateWorkPlanBid**](CreateWorkPlanBid)| The work plan bid to be created | [optional] |
 
 
 ### Return type
 
-[**WorkPlanBid**](WorkPlanBid.html)
-
-<a name="postWorkforcemanagementBusinessunits"></a>
-
-# **postWorkforcemanagementBusinessunits**
+[**WorkPlanBid**](WorkPlanBid)
 
 
+## postWorkforcemanagementBusinessunits
 
-> [BusinessUnitResponse](BusinessUnitResponse.html) postWorkforcemanagementBusinessunits(body)
+
+
+> [BusinessUnitResponse](BusinessUnitResponse) postWorkforcemanagementBusinessunits(body)
 
 Add a new business unit
 
@@ -11210,21 +10818,19 @@ WorkforceManagementAPI.postWorkforcemanagementBusinessunits(body: body) { (respo
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BusinessUnitResponse**](BusinessUnitResponse.html)
-
-<a name="postWorkforcemanagementCalendarUrlIcs"></a>
-
-# **postWorkforcemanagementCalendarUrlIcs**
+[**BusinessUnitResponse**](BusinessUnitResponse)
 
 
+## postWorkforcemanagementCalendarUrlIcs
 
-> [CalendarUrlResponse](CalendarUrlResponse.html) postWorkforcemanagementCalendarUrlIcs(language)
+
+
+> [CalendarUrlResponse](CalendarUrlResponse) postWorkforcemanagementCalendarUrlIcs(language)
 
 Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned
 
@@ -11264,20 +10870,18 @@ WorkforceManagementAPI.postWorkforcemanagementCalendarUrlIcs(language: language)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **language** | **String**| A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize default activity code names in the ics-formatted calendar | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**CalendarUrlResponse**](CalendarUrlResponse.html)
-
-<a name="postWorkforcemanagementHistoricaldataDeletejob"></a>
-
-# **postWorkforcemanagementHistoricaldataDeletejob**
+[**CalendarUrlResponse**](CalendarUrlResponse)
 
 
+## postWorkforcemanagementHistoricaldataDeletejob
 
-> [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse.html) postWorkforcemanagementHistoricaldataDeletejob()
+
+
+> [HistoricalImportDeleteJobResponse](HistoricalImportDeleteJobResponse) postWorkforcemanagementHistoricaldataDeletejob()
 
 Delete the entries of the historical data imports in the organization
 
@@ -11314,14 +10918,12 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataDeletejob() { (respo
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse.html)
+[**HistoricalImportDeleteJobResponse**](HistoricalImportDeleteJobResponse)
 
-<a name="postWorkforcemanagementHistoricaldataValidate"></a>
 
-# **postWorkforcemanagementHistoricaldataValidate**
+## postWorkforcemanagementHistoricaldataValidate
 
 
 
@@ -11362,21 +10964,19 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body)
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**ValidationServiceRequest**](ValidationServiceRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**ValidationServiceRequest**](ValidationServiceRequest)| body | [optional] |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="postWorkforcemanagementIntegrationsHriTimeofftypesJobs"></a>
 
-# **postWorkforcemanagementIntegrationsHriTimeofftypesJobs**
-
+## postWorkforcemanagementIntegrationsHriTimeofftypesJobs
 
 
-> [HrisTimeOffTypesResponse](HrisTimeOffTypesResponse.html) postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId)
+
+> [HrisTimeOffTypesResponse](HrisTimeOffTypesResponse) postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hrisIntegrationId)
 
 Get list of time off types configured in integration
 
@@ -11415,20 +11015,18 @@ WorkforceManagementAPI.postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hr
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **hrisIntegrationId** | **String**| The ID of the HRIS integration for which time off types are queried. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse.html)
-
-<a name="postWorkforcemanagementManagementunitAgentschedulesSearch"></a>
-
-# **postWorkforcemanagementManagementunitAgentschedulesSearch**
+[**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse)
 
 
+## postWorkforcemanagementManagementunitAgentschedulesSearch
 
-> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse.html) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, forceAsync, forceDownloadService, body)
+
+
+> [BuAsyncAgentSchedulesSearchResponse](BuAsyncAgentSchedulesSearchResponse) postWorkforcemanagementManagementunitAgentschedulesSearch(managementUnitId, forceAsync, forceDownloadService, body)
 
 Query published schedules for given given time range for set of users
 
@@ -11473,21 +11071,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentschedulesSearch
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuSearchAgentSchedulesRequest**](BuSearchAgentSchedulesRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse.html)
-
-<a name="postWorkforcemanagementManagementunitHistoricaladherencequery"></a>
-
-# **postWorkforcemanagementManagementunitHistoricaladherencequery**
+[**BuAsyncAgentSchedulesSearchResponse**](BuAsyncAgentSchedulesSearchResponse)
 
 
+## postWorkforcemanagementManagementunitHistoricaladherencequery
 
-> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId, body)
+
+
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse) postWorkforcemanagementManagementunitHistoricaladherencequery(managementUnitId, body)
 
 Request a historical adherence report
 
@@ -11529,21 +11125,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitHistoricaladherenceq
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-| **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery)| body | [optional] |
 
 
 ### Return type
 
-[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
-
-<a name="postWorkforcemanagementManagementunitMove"></a>
-
-# **postWorkforcemanagementManagementunitMove**
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
 
 
+## postWorkforcemanagementManagementunitMove
 
-> [MoveManagementUnitResponse](MoveManagementUnitResponse.html) postWorkforcemanagementManagementunitMove(managementUnitId, body)
+
+
+> [MoveManagementUnitResponse](MoveManagementUnitResponse) postWorkforcemanagementManagementunitMove(managementUnitId, body)
 
 Move the requested management unit to a new business unit
 
@@ -11585,21 +11179,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitMove(managementUnitI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**MoveManagementUnitRequest**](MoveManagementUnitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**MoveManagementUnitResponse**](MoveManagementUnitResponse.html)
-
-<a name="postWorkforcemanagementManagementunitSchedulesSearch"></a>
-
-# **postWorkforcemanagementManagementunitSchedulesSearch**
+[**MoveManagementUnitResponse**](MoveManagementUnitResponse)
 
 
+## postWorkforcemanagementManagementunitSchedulesSearch
 
-> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId, body)
+
+
+> [UserScheduleContainer](UserScheduleContainer) postWorkforcemanagementManagementunitSchedulesSearch(managementUnitId, body)
 
 Query published schedules for given given time range for set of users
 
@@ -11640,21 +11232,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitSchedulesSearch(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody)| body | [optional] |
 
 
 ### Return type
 
-[**UserScheduleContainer**](UserScheduleContainer.html)
-
-<a name="postWorkforcemanagementManagementunitShrinkageJobs"></a>
-
-# **postWorkforcemanagementManagementunitShrinkageJobs**
+[**UserScheduleContainer**](UserScheduleContainer)
 
 
+## postWorkforcemanagementManagementunitShrinkageJobs
 
-> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse.html) postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId, body)
+
+
+> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse) postWorkforcemanagementManagementunitShrinkageJobs(managementUnitId, body)
 
 Request a historical shrinkage report
 
@@ -11696,21 +11286,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitShrinkageJobs(manage
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmHistoricalShrinkageRequest**](WfmHistoricalShrinkageRequest)| body | [optional] |
 
 
 ### Return type
 
-[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
-
-<a name="postWorkforcemanagementManagementunitTimeofflimits"></a>
-
-# **postWorkforcemanagementManagementunitTimeofflimits**
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse)
 
 
+## postWorkforcemanagementManagementunitTimeofflimits
 
-> [TimeOffLimit](TimeOffLimit.html) postWorkforcemanagementManagementunitTimeofflimits(managementUnitId, body)
+
+
+> [TimeOffLimit](TimeOffLimit) postWorkforcemanagementManagementunitTimeofflimits(managementUnitId, body)
 
 Creates a new time off limit object under management unit.
 
@@ -11752,21 +11340,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeofflimits(manage
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateTimeOffLimitRequest**](CreateTimeOffLimitRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffLimit**](TimeOffLimit.html)
-
-<a name="postWorkforcemanagementManagementunitTimeofflimitsValuesQuery"></a>
-
-# **postWorkforcemanagementManagementunitTimeofflimitsValuesQuery**
+[**TimeOffLimit**](TimeOffLimit)
 
 
+## postWorkforcemanagementManagementunitTimeofflimitsValuesQuery
 
-> [QueryTimeOffLimitValuesResponse](QueryTimeOffLimitValuesResponse.html) postWorkforcemanagementManagementunitTimeofflimitsValuesQuery(managementUnitId, body)
+
+
+> [QueryTimeOffLimitValuesResponse](QueryTimeOffLimitValuesResponse) postWorkforcemanagementManagementunitTimeofflimitsValuesQuery(managementUnitId, body)
 
 Retrieves time off limit related values based on a given set of filters.
 
@@ -11806,21 +11392,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeofflimitsValuesQ
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**QueryTimeOffLimitValuesRequest**](QueryTimeOffLimitValuesRequest)| body | [optional] |
 
 
 ### Return type
 
-[**QueryTimeOffLimitValuesResponse**](QueryTimeOffLimitValuesResponse.html)
-
-<a name="postWorkforcemanagementManagementunitTimeoffplans"></a>
-
-# **postWorkforcemanagementManagementunitTimeoffplans**
+[**QueryTimeOffLimitValuesResponse**](QueryTimeOffLimitValuesResponse)
 
 
+## postWorkforcemanagementManagementunitTimeoffplans
 
-> [TimeOffPlan](TimeOffPlan.html) postWorkforcemanagementManagementunitTimeoffplans(managementUnitId, body)
+
+
+> [TimeOffPlan](TimeOffPlan) postWorkforcemanagementManagementunitTimeoffplans(managementUnitId, body)
 
 Creates a new time off plan
 
@@ -11860,21 +11444,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffplans(managem
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
-| **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateTimeOffPlanRequest**](CreateTimeOffPlanRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffPlan**](TimeOffPlan.html)
-
-<a name="postWorkforcemanagementManagementunitTimeoffrequests"></a>
-
-# **postWorkforcemanagementManagementunitTimeoffrequests**
+[**TimeOffPlan**](TimeOffPlan)
 
 
+## postWorkforcemanagementManagementunitTimeoffrequests
 
-> [TimeOffRequestList](TimeOffRequestList.html) postWorkforcemanagementManagementunitTimeoffrequests(managementUnitId, body)
+
+
+> [TimeOffRequestList](TimeOffRequestList) postWorkforcemanagementManagementunitTimeoffrequests(managementUnitId, body)
 
 Create a new time off request
 
@@ -11914,21 +11496,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequests(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateAdminTimeOffRequest**](CreateAdminTimeOffRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffRequestList**](TimeOffRequestList.html)
-
-<a name="postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery"></a>
-
-# **postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery**
+[**TimeOffRequestList**](TimeOffRequestList)
 
 
+## postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery
 
-> [UserTimeOffIntegrationStatusResponseListing](UserTimeOffIntegrationStatusResponseListing.html) postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId, body)
+
+
+> [UserTimeOffIntegrationStatusResponseListing](UserTimeOffIntegrationStatusResponseListing) postWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery(managementUnitId, body)
 
 Retrieves integration statuses for a list of time off requests
 
@@ -11968,21 +11548,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsInteg
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**QueryTimeOffIntegrationStatusRequest**](QueryTimeOffIntegrationStatusRequest)| body | [optional] |
 
 
 ### Return type
 
-[**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing.html)
-
-<a name="postWorkforcemanagementManagementunitTimeoffrequestsQuery"></a>
-
-# **postWorkforcemanagementManagementunitTimeoffrequestsQuery**
+[**UserTimeOffIntegrationStatusResponseListing**](UserTimeOffIntegrationStatusResponseListing)
 
 
+## postWorkforcemanagementManagementunitTimeoffrequestsQuery
 
-> [TimeOffRequestListing](TimeOffRequestListing.html) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, forceDownloadService, body)
+
+
+> [TimeOffRequestListing](TimeOffRequestListing) postWorkforcemanagementManagementunitTimeoffrequestsQuery(managementUnitId, forceDownloadService, body)
 
 Fetches time off requests matching the conditions specified in the request body
 
@@ -12026,21 +11604,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsQuery
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-| **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**TimeOffRequestQueryBody**](TimeOffRequestQueryBody)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffRequestListing**](TimeOffRequestListing.html)
-
-<a name="postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery"></a>
-
-# **postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery**
+[**TimeOffRequestListing**](TimeOffRequestListing)
 
 
+## postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery
 
-> [WaitlistPositionListing](WaitlistPositionListing.html) postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery(managementUnitId, body)
+
+
+> [WaitlistPositionListing](WaitlistPositionListing) postWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery(managementUnitId, body)
 
 Retrieves daily waitlist position for a list of time off requests
 
@@ -12080,21 +11656,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitTimeoffrequestsWaitl
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
-| **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**QueryWaitlistPositionsRequest**](QueryWaitlistPositionsRequest)| body | [optional] |
 
 
 ### Return type
 
-[**WaitlistPositionListing**](WaitlistPositionListing.html)
-
-<a name="postWorkforcemanagementManagementunitUserTimeoffbalanceJobs"></a>
-
-# **postWorkforcemanagementManagementunitUserTimeoffbalanceJobs**
+[**WaitlistPositionListing**](WaitlistPositionListing)
 
 
+## postWorkforcemanagementManagementunitUserTimeoffbalanceJobs
 
-> [TimeOffBalancesResponse](TimeOffBalancesResponse.html) postWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId, userId, body)
+
+
+> [TimeOffBalancesResponse](TimeOffBalancesResponse) postWorkforcemanagementManagementunitUserTimeoffbalanceJobs(managementUnitId, userId, body)
 
 Query time off balances for a given user for specified activity code and dates
 
@@ -12136,21 +11710,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffbalanceJo
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **userId** | **String**| The ID of the user | |
-| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest)| The request body | |
 
 
 ### Return type
 
-[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
-
-<a name="postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs"></a>
-
-# **postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs**
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse)
 
 
+## postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs
 
-> [TimeOffBalancesResponse](TimeOffBalancesResponse.html) postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs(managementUnitId, userId, timeOffRequestId)
+
+
+> [TimeOffBalancesResponse](TimeOffBalancesResponse) postWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs(managementUnitId, userId, timeOffRequestId)
 
 Query time off balances for dates spanned by a given time off request
 
@@ -12193,20 +11765,18 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestTi
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **userId** | **String**| The userId to whom the time off request applies. | |
 | **timeOffRequestId** | **String**| The time off request id. | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
-
-<a name="postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate"></a>
-
-# **postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate**
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse)
 
 
+## postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate
 
-> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse.html) postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId, userId, body)
+
+
+> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse) postWorkforcemanagementManagementunitUserTimeoffrequestsEstimate(managementUnitId, userId, body)
 
 Estimates available time off for an agent
 
@@ -12248,21 +11818,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitUserTimeoffrequestsE
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit | |
 | **userId** | **String**| The id of the user for whom the time off request estimate is requested | |
-| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | [optional] |
 
 
 ### Return type
 
-[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWeekShifttradeMatch"></a>
-
-# **postWorkforcemanagementManagementunitWeekShifttradeMatch**
+[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse)
 
 
+## postWorkforcemanagementManagementunitWeekShifttradeMatch
 
-> [MatchShiftTradeResponse](MatchShiftTradeResponse.html) postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, tradeId, body)
+
+
+> [MatchShiftTradeResponse](MatchShiftTradeResponse) postWorkforcemanagementManagementunitWeekShifttradeMatch(managementUnitId, weekDateId, tradeId, body)
 
 Matches a shift trade. This route can only be called by the receiving agent
 
@@ -12306,21 +11874,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradeMatch(
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
-| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest)| body | |
 
 
 ### Return type
 
-[**MatchShiftTradeResponse**](MatchShiftTradeResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWeekShifttrades"></a>
-
-# **postWorkforcemanagementManagementunitWeekShifttrades**
+[**MatchShiftTradeResponse**](MatchShiftTradeResponse)
 
 
+## postWorkforcemanagementManagementunitWeekShifttrades
 
-> [ShiftTradeResponse](ShiftTradeResponse.html) postWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, body)
+
+
+> [ShiftTradeResponse](ShiftTradeResponse) postWorkforcemanagementManagementunitWeekShifttrades(managementUnitId, weekDateId, body)
 
 Adds a shift trade
 
@@ -12362,21 +11928,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttrades(mana
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest)| body | |
 
 
 ### Return type
 
-[**ShiftTradeResponse**](ShiftTradeResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWeekShifttradesSearch"></a>
-
-# **postWorkforcemanagementManagementunitWeekShifttradesSearch**
+[**ShiftTradeResponse**](ShiftTradeResponse)
 
 
+## postWorkforcemanagementManagementunitWeekShifttradesSearch
 
-> [SearchShiftTradesResponse](SearchShiftTradesResponse.html) postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body, forceDownloadService)
+
+
+> [SearchShiftTradesResponse](SearchShiftTradesResponse) postWorkforcemanagementManagementunitWeekShifttradesSearch(managementUnitId, weekDateId, body, forceDownloadService)
 
 Searches for potential shift trade matches for the current agent
 
@@ -12419,22 +11983,20 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearc
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest.html)| body | |
+| **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest)| body | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SearchShiftTradesResponse**](SearchShiftTradesResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWeekShifttradesStateBulk"></a>
-
-# **postWorkforcemanagementManagementunitWeekShifttradesStateBulk**
+[**SearchShiftTradesResponse**](SearchShiftTradesResponse)
 
 
+## postWorkforcemanagementManagementunitWeekShifttradesStateBulk
 
-> [BulkUpdateShiftTradeStateResponse](BulkUpdateShiftTradeStateResponse.html) postWorkforcemanagementManagementunitWeekShifttradesStateBulk(managementUnitId, weekDateId, body, forceAsync)
+
+
+> [BulkUpdateShiftTradeStateResponse](BulkUpdateShiftTradeStateResponse) postWorkforcemanagementManagementunitWeekShifttradesStateBulk(managementUnitId, weekDateId, body, forceAsync)
 
 Updates the state of a batch of shift trades
 
@@ -12480,22 +12042,20 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesState
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
-| **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest.html)| body | |
+| **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**BulkUpdateShiftTradeStateResponse**](BulkUpdateShiftTradeStateResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWorkplanCopy"></a>
-
-# **postWorkforcemanagementManagementunitWorkplanCopy**
+[**BulkUpdateShiftTradeStateResponse**](BulkUpdateShiftTradeStateResponse)
 
 
+## postWorkforcemanagementManagementunitWorkplanCopy
 
-> [WorkPlan](WorkPlan.html) postWorkforcemanagementManagementunitWorkplanCopy(managementUnitId, workPlanId, body)
+
+
+> [WorkPlan](WorkPlan) postWorkforcemanagementManagementunitWorkplanCopy(managementUnitId, workPlanId, body)
 
 Create a copy of work plan
 
@@ -12537,21 +12097,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanCopy(managem
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to create a copy | |
-| **body** | [**CopyWorkPlan**](CopyWorkPlan.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CopyWorkPlan**](CopyWorkPlan)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlan**](WorkPlan.html)
-
-<a name="postWorkforcemanagementManagementunitWorkplanValidate"></a>
-
-# **postWorkforcemanagementManagementunitWorkplanValidate**
+[**WorkPlan**](WorkPlan)
 
 
+## postWorkforcemanagementManagementunitWorkplanValidate
 
-> [ValidateWorkPlanResponse](ValidateWorkPlanResponse.html) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, expand, body)
+
+
+> [ValidateWorkPlanResponse](ValidateWorkPlanResponse) postWorkforcemanagementManagementunitWorkplanValidate(managementUnitId, workPlanId, expand, body)
 
 Validate Work Plan
 
@@ -12595,22 +12153,20 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanValidate(man
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanId** | **String**| The ID of the work plan to validate. For new work plan, use the word 'new' for the ID. | |
-| **expand** | [**[String]**](String.html)|  | [optional]<br />**Values**: messages ("messages") |
-| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)|  | [optional]<br />**Values**: messages ("messages") |
+| **body** | [**WorkPlanValidationRequest**](WorkPlanValidationRequest)| body | [optional] |
 
 
 ### Return type
 
-[**ValidateWorkPlanResponse**](ValidateWorkPlanResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWorkplanrotationCopy"></a>
-
-# **postWorkforcemanagementManagementunitWorkplanrotationCopy**
+[**ValidateWorkPlanResponse**](ValidateWorkPlanResponse)
 
 
+## postWorkforcemanagementManagementunitWorkplanrotationCopy
 
-> [WorkPlanRotationResponse](WorkPlanRotationResponse.html) postWorkforcemanagementManagementunitWorkplanrotationCopy(managementUnitId, workPlanRotationId, body)
+
+
+> [WorkPlanRotationResponse](WorkPlanRotationResponse) postWorkforcemanagementManagementunitWorkplanrotationCopy(managementUnitId, workPlanRotationId, body)
 
 Create a copy of work plan rotation
 
@@ -12652,21 +12208,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotationCopy
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **workPlanRotationId** | **String**| The ID of the work plan rotation to create a copy | |
-| **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CopyWorkPlanRotationRequest**](CopyWorkPlanRotationRequest)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanRotationResponse**](WorkPlanRotationResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWorkplanrotations"></a>
-
-# **postWorkforcemanagementManagementunitWorkplanrotations**
+[**WorkPlanRotationResponse**](WorkPlanRotationResponse)
 
 
+## postWorkforcemanagementManagementunitWorkplanrotations
 
-> [WorkPlanRotationResponse](WorkPlanRotationResponse.html) postWorkforcemanagementManagementunitWorkplanrotations(managementUnitId, body)
+
+
+> [WorkPlanRotationResponse](WorkPlanRotationResponse) postWorkforcemanagementManagementunitWorkplanrotations(managementUnitId, body)
 
 Create a new work plan rotation
 
@@ -12706,21 +12260,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplanrotations(ma
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**AddWorkPlanRotationRequest**](AddWorkPlanRotationRequest)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlanRotationResponse**](WorkPlanRotationResponse.html)
-
-<a name="postWorkforcemanagementManagementunitWorkplans"></a>
-
-# **postWorkforcemanagementManagementunitWorkplans**
+[**WorkPlanRotationResponse**](WorkPlanRotationResponse)
 
 
+## postWorkforcemanagementManagementunitWorkplans
 
-> [WorkPlan](WorkPlan.html) postWorkforcemanagementManagementunitWorkplans(managementUnitId, validationMode, body)
+
+
+> [WorkPlan](WorkPlan) postWorkforcemanagementManagementunitWorkplans(managementUnitId, validationMode, body)
 
 Create a new work plan
 
@@ -12762,21 +12314,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWorkplans(management
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **validationMode** | **String**| Allows to create work plan even if the validation result is invalid | [optional]<br />**Values**: ignore ("Ignore") |
-| **body** | [**CreateWorkPlan**](CreateWorkPlan.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateWorkPlan**](CreateWorkPlan)| body | [optional] |
 
 
 ### Return type
 
-[**WorkPlan**](WorkPlan.html)
-
-<a name="postWorkforcemanagementManagementunits"></a>
-
-# **postWorkforcemanagementManagementunits**
+[**WorkPlan**](WorkPlan)
 
 
+## postWorkforcemanagementManagementunits
 
-> [ManagementUnit](ManagementUnit.html) postWorkforcemanagementManagementunits(body)
+
+
+> [ManagementUnit](ManagementUnit) postWorkforcemanagementManagementunits(body)
 
 Add a management unit
 
@@ -12816,21 +12366,19 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunits(body: body) { (res
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateManagementUnitApiRequest**](CreateManagementUnitApiRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateManagementUnitApiRequest**](CreateManagementUnitApiRequest)| body | [optional] |
 
 
 ### Return type
 
-[**ManagementUnit**](ManagementUnit.html)
-
-<a name="postWorkforcemanagementNotificationsUpdate"></a>
-
-# **postWorkforcemanagementNotificationsUpdate**
+[**ManagementUnit**](ManagementUnit)
 
 
+## postWorkforcemanagementNotificationsUpdate
 
-> [UpdateNotificationsResponse](UpdateNotificationsResponse.html) postWorkforcemanagementNotificationsUpdate(body)
+
+
+> [UpdateNotificationsResponse](UpdateNotificationsResponse) postWorkforcemanagementNotificationsUpdate(body)
 
 Mark a list of notifications as read or unread
 
@@ -12867,21 +12415,19 @@ WorkforceManagementAPI.postWorkforcemanagementNotificationsUpdate(body: body) { 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**UpdateNotificationsRequest**](UpdateNotificationsRequest)| body | [optional] |
 
 
 ### Return type
 
-[**UpdateNotificationsResponse**](UpdateNotificationsResponse.html)
-
-<a name="postWorkforcemanagementSchedules"></a>
-
-# **postWorkforcemanagementSchedules**
+[**UpdateNotificationsResponse**](UpdateNotificationsResponse)
 
 
+## postWorkforcemanagementSchedules
 
-> [UserScheduleContainer](UserScheduleContainer.html) postWorkforcemanagementSchedules(body)
+
+
+> [UserScheduleContainer](UserScheduleContainer) postWorkforcemanagementSchedules(body)
 
 Get published schedule for the current user
 
@@ -12919,21 +12465,19 @@ WorkforceManagementAPI.postWorkforcemanagementSchedules(body: body) { (response,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CurrentUserScheduleRequestBody**](CurrentUserScheduleRequestBody.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CurrentUserScheduleRequestBody**](CurrentUserScheduleRequestBody)| body | [optional] |
 
 
 ### Return type
 
-[**UserScheduleContainer**](UserScheduleContainer.html)
-
-<a name="postWorkforcemanagementTeamAdherenceHistorical"></a>
-
-# **postWorkforcemanagementTeamAdherenceHistorical**
+[**UserScheduleContainer**](UserScheduleContainer)
 
 
+## postWorkforcemanagementTeamAdherenceHistorical
 
-> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse.html) postWorkforcemanagementTeamAdherenceHistorical(teamId, body)
+
+
+> [WfmHistoricalAdherenceResponse](WfmHistoricalAdherenceResponse) postWorkforcemanagementTeamAdherenceHistorical(teamId, body)
 
 Request a teams historical adherence report
 
@@ -12975,21 +12519,19 @@ WorkforceManagementAPI.postWorkforcemanagementTeamAdherenceHistorical(teamId: te
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **teamId** | **String**| The ID of the team | |
-| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmHistoricalAdherenceQueryForTeams**](WfmHistoricalAdherenceQueryForTeams)| body | [optional] |
 
 
 ### Return type
 
-[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html)
-
-<a name="postWorkforcemanagementTeamShrinkageJobs"></a>
-
-# **postWorkforcemanagementTeamShrinkageJobs**
+[**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse)
 
 
+## postWorkforcemanagementTeamShrinkageJobs
 
-> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse.html) postWorkforcemanagementTeamShrinkageJobs(teamId, body)
+
+
+> [WfmHistoricalShrinkageResponse](WfmHistoricalShrinkageResponse) postWorkforcemanagementTeamShrinkageJobs(teamId, body)
 
 Request a historical shrinkage report
 
@@ -13031,21 +12573,19 @@ WorkforceManagementAPI.postWorkforcemanagementTeamShrinkageJobs(teamId: teamId, 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **teamId** | **String**| The ID of the team | |
-| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**WfmHistoricalShrinkageTeamsRequest**](WfmHistoricalShrinkageTeamsRequest)| body | [optional] |
 
 
 ### Return type
 
-[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse.html)
-
-<a name="postWorkforcemanagementTimeoffbalanceJobs"></a>
-
-# **postWorkforcemanagementTimeoffbalanceJobs**
+[**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse)
 
 
+## postWorkforcemanagementTimeoffbalanceJobs
 
-> [TimeOffBalancesResponse](TimeOffBalancesResponse.html) postWorkforcemanagementTimeoffbalanceJobs(body)
+
+
+> [TimeOffBalancesResponse](TimeOffBalancesResponse) postWorkforcemanagementTimeoffbalanceJobs(body)
 
 Query time off balances for the current user for specified activity code and dates
 
@@ -13083,21 +12623,19 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffbalanceJobs(body: body) { (
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest.html)| The request body | |
-{: class="table-striped"}
+| **body** | [**TimeOffBalanceRequest**](TimeOffBalanceRequest)| The request body | |
 
 
 ### Return type
 
-[**TimeOffBalancesResponse**](TimeOffBalancesResponse.html)
-
-<a name="postWorkforcemanagementTimeofflimitsAvailableQuery"></a>
-
-# **postWorkforcemanagementTimeofflimitsAvailableQuery**
+[**TimeOffBalancesResponse**](TimeOffBalancesResponse)
 
 
+## postWorkforcemanagementTimeofflimitsAvailableQuery
 
-> [AvailableTimeOffResponse](AvailableTimeOffResponse.html) postWorkforcemanagementTimeofflimitsAvailableQuery(body)
+
+
+> [AvailableTimeOffResponse](AvailableTimeOffResponse) postWorkforcemanagementTimeofflimitsAvailableQuery(body)
 
 Queries available time off for the current user
 
@@ -13135,21 +12673,19 @@ WorkforceManagementAPI.postWorkforcemanagementTimeofflimitsAvailableQuery(body: 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AvailableTimeOffRequest**](AvailableTimeOffRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**AvailableTimeOffRequest**](AvailableTimeOffRequest)| body | [optional] |
 
 
 ### Return type
 
-[**AvailableTimeOffResponse**](AvailableTimeOffResponse.html)
-
-<a name="postWorkforcemanagementTimeoffrequests"></a>
-
-# **postWorkforcemanagementTimeoffrequests**
+[**AvailableTimeOffResponse**](AvailableTimeOffResponse)
 
 
+## postWorkforcemanagementTimeoffrequests
 
-> [TimeOffRequestResponse](TimeOffRequestResponse.html) postWorkforcemanagementTimeoffrequests(body)
+
+
+> [TimeOffRequestResponse](TimeOffRequestResponse) postWorkforcemanagementTimeoffrequests(body)
 
 Create a time off request for the current user
 
@@ -13187,21 +12723,19 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequests(body: body) { (res
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CreateAgentTimeOffRequest**](CreateAgentTimeOffRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CreateAgentTimeOffRequest**](CreateAgentTimeOffRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffRequestResponse**](TimeOffRequestResponse.html)
-
-<a name="postWorkforcemanagementTimeoffrequestsEstimate"></a>
-
-# **postWorkforcemanagementTimeoffrequestsEstimate**
+[**TimeOffRequestResponse**](TimeOffRequestResponse)
 
 
+## postWorkforcemanagementTimeoffrequestsEstimate
 
-> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse.html) postWorkforcemanagementTimeoffrequestsEstimate(body)
+
+
+> [EstimateAvailableTimeOffResponse](EstimateAvailableTimeOffResponse) postWorkforcemanagementTimeoffrequestsEstimate(body)
 
 Estimates available time off for current user
 
@@ -13239,21 +12773,19 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsEstimate(body: body
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**EstimateAvailableTimeOffRequest**](EstimateAvailableTimeOffRequest)| body | [optional] |
 
 
 ### Return type
 
-[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse.html)
-
-<a name="postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery"></a>
-
-# **postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**
+[**EstimateAvailableTimeOffResponse**](EstimateAvailableTimeOffResponse)
 
 
+## postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery
 
-> [TimeOffIntegrationStatusResponseListing](TimeOffIntegrationStatusResponseListing.html) postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body)
+
+
+> [TimeOffIntegrationStatusResponseListing](TimeOffIntegrationStatusResponseListing) postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery(body)
 
 Retrieves integration statuses for a list of current user time off requests
 
@@ -13291,21 +12823,19 @@ WorkforceManagementAPI.postWorkforcemanagementTimeoffrequestsIntegrationstatusQu
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**CurrentUserTimeOffIntegrationStatusRequest**](CurrentUserTimeOffIntegrationStatusRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing.html)
-
-<a name="putWorkforcemanagementAgentIntegrationsHris"></a>
-
-# **putWorkforcemanagementAgentIntegrationsHris**
+[**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing)
 
 
+## putWorkforcemanagementAgentIntegrationsHris
 
-> [AgentIntegrationsResponse](AgentIntegrationsResponse.html) putWorkforcemanagementAgentIntegrationsHris(agentId, body)
+
+
+> [AgentIntegrationsResponse](AgentIntegrationsResponse) putWorkforcemanagementAgentIntegrationsHris(agentId, body)
 
 Update integrations for agent
 
@@ -13345,21 +12875,19 @@ WorkforceManagementAPI.putWorkforcemanagementAgentIntegrationsHris(agentId: agen
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The ID of the agent | |
-| **body** | [**AgentIntegrationsRequest**](AgentIntegrationsRequest.html)| body | |
-{: class="table-striped"}
+| **body** | [**AgentIntegrationsRequest**](AgentIntegrationsRequest)| body | |
 
 
 ### Return type
 
-[**AgentIntegrationsResponse**](AgentIntegrationsResponse.html)
-
-<a name="putWorkforcemanagementBusinessunitTimeofflimitValues"></a>
-
-# **putWorkforcemanagementBusinessunitTimeofflimitValues**
+[**AgentIntegrationsResponse**](AgentIntegrationsResponse)
 
 
+## putWorkforcemanagementBusinessunitTimeofflimitValues
 
-> [BuTimeOffLimitResponse](BuTimeOffLimitResponse.html) putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId, timeOffLimitId, body)
+
+
+> [BuTimeOffLimitResponse](BuTimeOffLimitResponse) putWorkforcemanagementBusinessunitTimeofflimitValues(businessUnitId, timeOffLimitId, body)
 
 Sets daily values for a date range of time-off limit object
 
@@ -13403,21 +12931,19 @@ WorkforceManagementAPI.putWorkforcemanagementBusinessunitTimeofflimitValues(busi
 | ------------- | ------------- | ------------- | ------------- |
 | **businessUnitId** | **String**| The ID of the business unit | |
 | **timeOffLimitId** | **String**| The ID of the time-off limit object to set values for | |
-| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**BuSetTimeOffLimitValuesRequest**](BuSetTimeOffLimitValuesRequest)| body | [optional] |
 
 
 ### Return type
 
-[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse.html)
-
-<a name="putWorkforcemanagementManagementunitTimeofflimitValues"></a>
-
-# **putWorkforcemanagementManagementunitTimeofflimitValues**
+[**BuTimeOffLimitResponse**](BuTimeOffLimitResponse)
 
 
+## putWorkforcemanagementManagementunitTimeofflimitValues
 
-> [TimeOffLimit](TimeOffLimit.html) putWorkforcemanagementManagementunitTimeofflimitValues(managementUnitId, timeOffLimitId, body)
+
+
+> [TimeOffLimit](TimeOffLimit) putWorkforcemanagementManagementunitTimeofflimitValues(managementUnitId, timeOffLimitId, body)
 
 Sets daily values for a date range of time off limit object
 
@@ -13461,11 +12987,12 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit. | |
 | **timeOffLimitId** | **String**| The ID of the time off limit object to set values for | |
-| **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest.html)| body | [optional] |
-{: class="table-striped"}
+| **body** | [**SetTimeOffLimitValuesRequest**](SetTimeOffLimitValuesRequest)| body | [optional] |
 
 
 ### Return type
 
-[**TimeOffLimit**](TimeOffLimit.html)
+[**TimeOffLimit**](TimeOffLimit)
 
+
+_PureCloudPlatformClientV2@151.1.0_

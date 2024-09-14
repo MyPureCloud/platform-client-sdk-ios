@@ -1,6 +1,5 @@
----
-title: ConsultTransferResponse
----
+# ConsultTransferResponse
+
 ## ConsultTransferResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ConsultTransferResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **destinationParticipantId** | **String** | Participant ID to whom the call is being transferred. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

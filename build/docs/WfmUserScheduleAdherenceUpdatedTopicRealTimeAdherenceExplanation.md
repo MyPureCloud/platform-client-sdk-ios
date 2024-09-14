@@ -1,6 +1,5 @@
----
-title: WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
----
+# WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
+
 ## WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
 
 ## Properties
@@ -8,9 +7,10 @@ title: WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
 | **lengthMinutes** | **Int** |  | [optional] |
 | **status** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: Activation
----
+# Activation
+
 ## Activation
 
 ## Properties
@@ -9,6 +8,7 @@ title: Activation
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Type of activation. | |
 | **delayInSeconds** | **Int** | Activation delay time amount. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

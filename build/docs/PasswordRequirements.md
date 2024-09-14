@@ -1,6 +1,5 @@
----
-title: PasswordRequirements
----
+# PasswordRequirements
+
 ## PasswordRequirements
 
 ## Properties
@@ -15,6 +14,7 @@ title: PasswordRequirements
 | **minimumSpecials** | **Int** |  | [optional] |
 | **minimumAgeSeconds** | **Int** |  | [optional] |
 | **expirationDays** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

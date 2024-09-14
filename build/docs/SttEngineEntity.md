@@ -1,6 +1,5 @@
----
-title: SttEngineEntity
----
+# SttEngineEntity
+
 ## SttEngineEntity
 
 ## Properties
@@ -11,6 +10,7 @@ title: SttEngineEntity
 | **name** | **String** |  | [optional] |
 | **grammarBased** | **Bool** | The STT engine is intended to be used for Grammars | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,16 +1,16 @@
----
-title: SessionsResponse
----
+# SessionsResponse
+
 ## SessionsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BotFlowSession]**](BotFlowSession.html) |  | [optional] |
+| **entities** | [**[BotFlowSession]**](BotFlowSession) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

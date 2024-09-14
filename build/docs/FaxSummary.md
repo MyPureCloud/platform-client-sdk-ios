@@ -1,6 +1,5 @@
----
-title: FaxSummary
----
+# FaxSummary
+
 ## FaxSummary
 
 ## Properties
@@ -10,6 +9,7 @@ title: FaxSummary
 | **readCount** | **Int** |  | [optional] |
 | **unreadCount** | **Int** |  | [optional] |
 | **totalCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -2128,6 +2128,38 @@ public class Attribute: Codable {
 
 
 
+public class AudioConnectorIntegration: Codable {
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class AudioUpdatedEvent: Codable {
 
 
@@ -2875,6 +2907,51 @@ public class BuForecastTimeSeriesResult: Codable {
         self.metric = metric
         self.forecastingMethod = forecastingMethod
         self.forecastType = forecastType
+    }
+
+
+}
+
+
+
+
+public class Card: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** Text to show in the title. */
+    public var title: String?
+    /** Text to show in the description. */
+    public var _description: String?
+    /** URL of an image. */
+    public var url: String?
+    /** The default action to be taken. */
+    public var defaultAction: CardAction?
+    /** List of possible action objects. */
+    public var actions: [CardAction]?
+
+    public init(title: String?, _description: String?, url: String?, defaultAction: CardAction?, actions: [CardAction]?) {
+        self.title = title
+        self._description = _description
+        self.url = url
+        self.defaultAction = defaultAction
+        self.actions = actions
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case title
+        case _description = "description"
+        case url
+        case defaultAction
+        case actions
     }
 
 
@@ -4473,51 +4550,6 @@ public class CampaignSkillStatistics: Codable {
     public init(skillCombinations: Int?, eligibleSkilledAgents: Int?) {
         self.skillCombinations = skillCombinations
         self.eligibleSkilledAgents = eligibleSkilledAgents
-    }
-
-
-}
-
-
-
-
-public class Card: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** Text to show in the title. */
-    public var title: String?
-    /** Text to show in the description. */
-    public var _description: String?
-    /** URL of an image. */
-    public var url: String?
-    /** The default action to be taken. */
-    public var defaultAction: CardAction?
-    /** List of possible action objects. */
-    public var actions: [CardAction]?
-
-    public init(title: String?, _description: String?, url: String?, defaultAction: CardAction?, actions: [CardAction]?) {
-        self.title = title
-        self._description = _description
-        self.url = url
-        self.defaultAction = defaultAction
-        self.actions = actions
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case title
-        case _description = "description"
-        case url
-        case defaultAction
-        case actions
     }
 
 
@@ -12062,19 +12094,19 @@ public class DomainEdgeSoftwareVersionDto: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var publishDate: Date?
     public var edgeUri: String?
-    public var latestRelease: Bool?
     public var current: Bool?
+    public var latestRelease: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, latestRelease: Bool?, current: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, current: Bool?, latestRelease: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.edgeVersion = edgeVersion
         self.publishDate = publishDate
         self.edgeUri = edgeUri
-        self.latestRelease = latestRelease
         self.current = current
+        self.latestRelease = latestRelease
         self.selfUri = selfUri
     }
 
@@ -12084,8 +12116,8 @@ public class DomainEdgeSoftwareVersionDto: Codable {
         case edgeVersion
         case publishDate
         case edgeUri
-        case latestRelease
         case current
+        case latestRelease
         case selfUri
     }
 
@@ -14652,6 +14684,26 @@ public class ExternalContactsEntity: Codable {
 
 
 
+public class ExternalId: Codable {
+
+
+
+
+
+    public var externalSource: ExternalSource?
+    public var value: String?
+
+    public init(externalSource: ExternalSource?, value: String?) {
+        self.externalSource = externalSource
+        self.value = value
+    }
+
+
+}
+
+
+
+
 public class ExternalContactsOrganizationChangedTopicTicker: Codable {
 
 
@@ -14855,26 +14907,6 @@ public class ExternalDataSource: Codable {
     public init(platform: Platform?, url: String?) {
         self.platform = platform
         self.url = url
-    }
-
-
-}
-
-
-
-
-public class ExternalId: Codable {
-
-
-
-
-
-    public var externalSource: ExternalSource?
-    public var value: String?
-
-    public init(externalSource: ExternalSource?, value: String?) {
-        self.externalSource = externalSource
-        self.value = value
     }
 
 
@@ -17859,6 +17891,25 @@ public class GetTemplatesResponse: Codable {
 
 
 
+public class GrammarFileUploadRequest: Codable {
+
+    public enum FileType: String, Codable { 
+        case gram = "gram"
+        case grxml = "grxml"
+    }
+
+    public var fileType: FileType?
+
+    public init(fileType: FileType?) {
+        self.fileType = fileType
+    }
+
+
+}
+
+
+
+
 public class GreetingAudioFile: Codable {
 
 
@@ -19694,6 +19745,37 @@ public class JourneyWebActionEventsNotificationReferrer: Codable {
 
 
 
+public class JsonCursorSearchResponse: Codable {
+
+
+
+
+
+
+
+
+
+    /** Resource types the search was performed against */
+    public var types: [String]?
+    /** Search results */
+    public var results: JSON?
+    public var aggregations: JSON?
+    /** The page cursor */
+    public var cursor: String?
+
+    public init(types: [String]?, results: JSON?, aggregations: JSON?, cursor: String?) {
+        self.types = types
+        self.results = results
+        self.aggregations = aggregations
+        self.cursor = cursor
+    }
+
+
+}
+
+
+
+
 public class JourneyWebEventsNotificationBrowser: Codable {
 
 
@@ -20024,37 +20106,6 @@ public class JourneyWebEventsNotificationWebMessage: Codable {
         self.referrer = referrer
         self.attributes = attributes
         self.traits = traits
-    }
-
-
-}
-
-
-
-
-public class JsonCursorSearchResponse: Codable {
-
-
-
-
-
-
-
-
-
-    /** Resource types the search was performed against */
-    public var types: [String]?
-    /** Search results */
-    public var results: JSON?
-    public var aggregations: JSON?
-    /** The page cursor */
-    public var cursor: String?
-
-    public init(types: [String]?, results: JSON?, aggregations: JSON?, cursor: String?) {
-        self.types = types
-        self.results = results
-        self.aggregations = aggregations
-        self.cursor = cursor
     }
 
 
@@ -38628,6 +38679,170 @@ public class UserStaffingGroupListing: Codable {
 
 
 
+public class Video: Codable {
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case client = "client"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The connection state of this communication. */
+    public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
+    /** A globally unique identifier for this communication. */
+    public var _id: String?
+    /** The room id context (xmpp jid) for the conference session. */
+    public var context: String?
+    /** Indicates whether this participant has muted their outgoing audio. */
+    public var audioMuted: Bool?
+    /** Indicates whether this participant has muted/paused their outgoing video. */
+    public var videoMuted: Bool?
+    /** Indicates whether this participant is sharing their screen to the session. */
+    public var sharingScreen: Bool?
+    /** The number of peer participants from the perspective of the participant in the conference. */
+    public var peerCount: Int?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
+    public var disconnectType: DisconnectType?
+    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startAlertingTime: Date?
+    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var disconnectedTime: Date?
+    /** The source provider for the video. */
+    public var provider: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
+    public var peerId: String?
+    /** List of media stream ids */
+    public var msids: [String]?
+    /** Address and name data for a call endpoint. */
+    public var _self: Address?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
+    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
+    public var afterCallWorkRequired: Bool?
+
+    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+        self.state = state
+        self.initialState = initialState
+        self._id = _id
+        self.context = context
+        self.audioMuted = audioMuted
+        self.videoMuted = videoMuted
+        self.sharingScreen = sharingScreen
+        self.peerCount = peerCount
+        self.disconnectType = disconnectType
+        self.startAlertingTime = startAlertingTime
+        self.connectedTime = connectedTime
+        self.disconnectedTime = disconnectedTime
+        self.provider = provider
+        self.peerId = peerId
+        self.msids = msids
+        self._self = _self
+        self.wrapup = wrapup
+        self.afterCallWork = afterCallWork
+        self.afterCallWorkRequired = afterCallWorkRequired
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case state
+        case initialState
+        case _id = "id"
+        case context
+        case audioMuted
+        case videoMuted
+        case sharingScreen
+        case peerCount
+        case disconnectType
+        case startAlertingTime
+        case connectedTime
+        case disconnectedTime
+        case provider
+        case peerId
+        case msids
+        case _self = "self"
+        case wrapup
+        case afterCallWork
+        case afterCallWorkRequired
+    }
+
+
+}
+
+
+
+
 public class UserState: Codable {
 
     public enum State: String, Codable { 
@@ -39254,170 +39469,6 @@ public class Verifier: Codable {
         case enabled
         case _default = "default"
         case selfUri
-    }
-
-
-}
-
-
-
-
-public class Video: Codable {
-
-    public enum State: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum DisconnectType: String, Codable { 
-        case endpoint = "endpoint"
-        case client = "client"
-        case system = "system"
-        case timeout = "timeout"
-        case transfer = "transfer"
-        case transferConference = "transfer.conference"
-        case transferConsult = "transfer.consult"
-        case transferForward = "transfer.forward"
-        case transferNoanswer = "transfer.noanswer"
-        case transferNotavailable = "transfer.notavailable"
-        case transportFailure = "transport.failure"
-        case error = "error"
-        case peer = "peer"
-        case other = "other"
-        case spam = "spam"
-        case uncallable = "uncallable"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The connection state of this communication. */
-    public var state: State?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
-    /** A globally unique identifier for this communication. */
-    public var _id: String?
-    /** The room id context (xmpp jid) for the conference session. */
-    public var context: String?
-    /** Indicates whether this participant has muted their outgoing audio. */
-    public var audioMuted: Bool?
-    /** Indicates whether this participant has muted/paused their outgoing video. */
-    public var videoMuted: Bool?
-    /** Indicates whether this participant is sharing their screen to the session. */
-    public var sharingScreen: Bool?
-    /** The number of peer participants from the perspective of the participant in the conference. */
-    public var peerCount: Int?
-    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
-    public var disconnectType: DisconnectType?
-    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var startAlertingTime: Date?
-    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var connectedTime: Date?
-    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var disconnectedTime: Date?
-    /** The source provider for the video. */
-    public var provider: String?
-    /** The id of the peer communication corresponding to a matching leg for this communication. */
-    public var peerId: String?
-    /** List of media stream ids */
-    public var msids: [String]?
-    /** Address and name data for a call endpoint. */
-    public var _self: Address?
-    /** Call wrap up or disposition data. */
-    public var wrapup: Wrapup?
-    /** After-call work for the communication. */
-    public var afterCallWork: AfterCallWork?
-    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
-    public var afterCallWorkRequired: Bool?
-
-    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        self.state = state
-        self.initialState = initialState
-        self._id = _id
-        self.context = context
-        self.audioMuted = audioMuted
-        self.videoMuted = videoMuted
-        self.sharingScreen = sharingScreen
-        self.peerCount = peerCount
-        self.disconnectType = disconnectType
-        self.startAlertingTime = startAlertingTime
-        self.connectedTime = connectedTime
-        self.disconnectedTime = disconnectedTime
-        self.provider = provider
-        self.peerId = peerId
-        self.msids = msids
-        self._self = _self
-        self.wrapup = wrapup
-        self.afterCallWork = afterCallWork
-        self.afterCallWorkRequired = afterCallWorkRequired
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case state
-        case initialState
-        case _id = "id"
-        case context
-        case audioMuted
-        case videoMuted
-        case sharingScreen
-        case peerCount
-        case disconnectType
-        case startAlertingTime
-        case connectedTime
-        case disconnectedTime
-        case provider
-        case peerId
-        case msids
-        case _self = "self"
-        case wrapup
-        case afterCallWork
-        case afterCallWorkRequired
     }
 
 

@@ -1,6 +1,5 @@
----
-title: ForecastAbandonRateResponse
----
+# ForecastAbandonRateResponse
+
 ## ForecastAbandonRateResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: ForecastAbandonRateResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **percent** | **Int** | The target percent abandon rate goal | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ReplaceRequest
----
+# ReplaceRequest
+
 ## ReplaceRequest
 
 ## Properties
@@ -10,6 +9,7 @@ title: ReplaceRequest
 | **changeNumber** | **Int** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **authToken** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,21 +1,17 @@
----
-title: AgentUIAPI
----
-## AgentUIAPI
+# AgentUIAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI.html#deleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | Delete agent auto answer settings |
-| [**getUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI.html#getUsersAgentuiAgentsAutoanswerAgentIdSettings) | Get agent auto answer settings |
-| [**patchUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI.html#patchUsersAgentuiAgentsAutoanswerAgentIdSettings) | Update agent auto answer settings |
-| [**putUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI.html#putUsersAgentuiAgentsAutoanswerAgentIdSettings) | Set agent auto answer settings |
+| [**deleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI#deleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | Delete agent auto answer settings |
+| [**getUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI#getUsersAgentuiAgentsAutoanswerAgentIdSettings) | Get agent auto answer settings |
+| [**patchUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI#patchUsersAgentuiAgentsAutoanswerAgentIdSettings) | Update agent auto answer settings |
+| [**putUsersAgentuiAgentsAutoanswerAgentIdSettings**](AgentUIAPI#putUsersAgentuiAgentsAutoanswerAgentIdSettings) | Set agent auto answer settings |
 {: class="table-striped"}
 
-<a name="deleteUsersAgentuiAgentsAutoanswerAgentIdSettings"></a>
 
-# **deleteUsersAgentuiAgentsAutoanswerAgentIdSettings**
+## deleteUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 
 
@@ -57,20 +53,18 @@ AgentUIAPI.deleteUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId) {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The agent to apply the auto answer settings to | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getUsersAgentuiAgentsAutoanswerAgentIdSettings"></a>
 
-# **getUsersAgentuiAgentsAutoanswerAgentIdSettings**
-
+## getUsersAgentuiAgentsAutoanswerAgentIdSettings
 
 
-> [AutoAnswerSettings](AutoAnswerSettings.html) getUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId)
+
+> [AutoAnswerSettings](AutoAnswerSettings) getUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId)
 
 Get agent auto answer settings
 
@@ -109,20 +103,18 @@ AgentUIAPI.getUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId) { (r
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The agent to apply the auto answer settings to | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AutoAnswerSettings**](AutoAnswerSettings.html)
-
-<a name="patchUsersAgentuiAgentsAutoanswerAgentIdSettings"></a>
-
-# **patchUsersAgentuiAgentsAutoanswerAgentIdSettings**
+[**AutoAnswerSettings**](AutoAnswerSettings)
 
 
+## patchUsersAgentuiAgentsAutoanswerAgentIdSettings
 
-> [AutoAnswerSettings](AutoAnswerSettings.html) patchUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId, body)
+
+
+> [AutoAnswerSettings](AutoAnswerSettings) patchUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId, body)
 
 Update agent auto answer settings
 
@@ -162,21 +154,19 @@ AgentUIAPI.patchUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId, bo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The agent to apply the auto answer settings to | |
-| **body** | [**AutoAnswerSettings**](AutoAnswerSettings.html)| AutoAnswerSettings | |
-{: class="table-striped"}
+| **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings | |
 
 
 ### Return type
 
-[**AutoAnswerSettings**](AutoAnswerSettings.html)
-
-<a name="putUsersAgentuiAgentsAutoanswerAgentIdSettings"></a>
-
-# **putUsersAgentuiAgentsAutoanswerAgentIdSettings**
+[**AutoAnswerSettings**](AutoAnswerSettings)
 
 
+## putUsersAgentuiAgentsAutoanswerAgentIdSettings
 
-> [AutoAnswerSettings](AutoAnswerSettings.html) putUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId, body)
+
+
+> [AutoAnswerSettings](AutoAnswerSettings) putUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId, body)
 
 Set agent auto answer settings
 
@@ -216,11 +206,12 @@ AgentUIAPI.putUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId, body
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **agentId** | **String**| The agent to apply the auto answer settings to | |
-| **body** | [**AutoAnswerSettings**](AutoAnswerSettings.html)| AutoAnswerSettings | |
-{: class="table-striped"}
+| **body** | [**AutoAnswerSettings**](AutoAnswerSettings)| AutoAnswerSettings | |
 
 
 ### Return type
 
-[**AutoAnswerSettings**](AutoAnswerSettings.html)
+[**AutoAnswerSettings**](AutoAnswerSettings)
 
+
+_PureCloudPlatformClientV2@151.1.0_

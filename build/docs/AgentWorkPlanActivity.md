@@ -1,6 +1,5 @@
----
-title: AgentWorkPlanActivity
----
+# AgentWorkPlanActivity
+
 ## AgentWorkPlanActivity
 
 ## Properties
@@ -9,6 +8,7 @@ title: AgentWorkPlanActivity
 |------------ | ------------- | ------------- | -------------|
 | **lengthMinutes** | **Int** | Length of the activity in minutes | |
 | **countsAsPaidTime** | **Bool** | Whether the activity is paid | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast
----
+# WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast
+
 ## WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast
 
 ## Properties
@@ -12,14 +11,15 @@ title: WfmBuShortTermForecastGenerateProgressTopicBuShortTermForecast
 | **creationMethod** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
 | **legacy** | **Bool** |  | [optional] |
-| **referenceStartDate** | [**Date**](Date.html) |  | [optional] |
-| **sourceDays** | [**[WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer]**](WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer.html) |  | [optional] |
-| **modifications** | [**[WfmBuShortTermForecastGenerateProgressTopicBuForecastModification]**](WfmBuShortTermForecastGenerateProgressTopicBuForecastModification.html) |  | [optional] |
+| **referenceStartDate** | [**Date**](Date) |  | [optional] |
+| **sourceDays** | [**[WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer]**](WfmBuShortTermForecastGenerateProgressTopicForecastSourceDayPointer) |  | [optional] |
+| **modifications** | [**[WfmBuShortTermForecastGenerateProgressTopicBuForecastModification]**](WfmBuShortTermForecastGenerateProgressTopicBuForecastModification) |  | [optional] |
 | **timeZone** | **String** |  | [optional] |
 | **planningGroupsVersion** | **Int** |  | [optional] |
 | **weekCount** | **Int** |  | [optional] |
-| **metadata** | [**WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata.html) |  | [optional] |
+| **metadata** | [**WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata**](WfmBuShortTermForecastGenerateProgressTopicWfmVersionedEntityMetadata) |  | [optional] |
 | **canUseForScheduling** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

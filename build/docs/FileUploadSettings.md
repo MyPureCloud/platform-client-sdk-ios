@@ -1,6 +1,5 @@
----
-title: FileUploadSettings
----
+# FileUploadSettings
+
 ## FileUploadSettings
 File upload settings for messenger
 
@@ -9,7 +8,8 @@ File upload settings for messenger
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enableAttachments** | **Bool** | whether or not attachments are enabled | [optional] |
-| **modes** | [**[FileUploadMode]**](FileUploadMode.html) | The list of supported file upload modes | [optional] |
-{: class="table table-striped"}
+| **modes** | [**[FileUploadMode]**](FileUploadMode) | The list of supported file upload modes | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

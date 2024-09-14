@@ -1,6 +1,5 @@
----
-title: GetMetricDefinitionsResponse
----
+# GetMetricDefinitionsResponse
+
 ## GetMetricDefinitionsResponse
 
 ## Properties
@@ -8,8 +7,9 @@ title: GetMetricDefinitionsResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[MetricDefinition]**](MetricDefinition.html) |  | [optional] |
+| **entities** | [**[MetricDefinition]**](MetricDefinition) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

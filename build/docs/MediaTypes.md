@@ -1,6 +1,5 @@
----
-title: MediaTypes
----
+# MediaTypes
+
 ## MediaTypes
 Media types
 
@@ -8,7 +7,8 @@ Media types
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **allow** | [**MediaTypeAccess**](MediaTypeAccess.html) | Specify allowed media types for inbound and outbound messages. If this field is empty, all inbound and outbound media will be blocked. | [optional] |
-{: class="table table-striped"}
+| **allow** | [**MediaTypeAccess**](MediaTypeAccess) | Specify allowed media types for inbound and outbound messages. If this field is empty, all inbound and outbound media will be blocked. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

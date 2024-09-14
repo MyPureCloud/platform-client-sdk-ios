@@ -1,6 +1,5 @@
----
-title: BotExecutionConfiguration
----
+# BotExecutionConfiguration
+
 ## BotExecutionConfiguration
 Model for setting the launch configuration for a Nuance bot available to Genesys Cloud
 
@@ -10,7 +9,8 @@ Model for setting the launch configuration for a Nuance bot available to Genesys
 |------------ | ------------- | ------------- | -------------|
 | **botId** | **String** | The Nuance bot ID | |
 | **executionHost** | **String** | The hostname to use when contacting Nuance to execute this bot | |
-| **botCredentials** | [**NuanceBotCredentials**](NuanceBotCredentials.html) | The bot&#39;s launch credentials | |
-{: class="table table-striped"}
+| **botCredentials** | [**NuanceBotCredentials**](NuanceBotCredentials) | The bot&#39;s launch credentials | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

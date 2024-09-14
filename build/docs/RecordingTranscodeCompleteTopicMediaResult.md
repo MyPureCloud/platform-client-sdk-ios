@@ -1,6 +1,5 @@
----
-title: RecordingTranscodeCompleteTopicMediaResult
----
+# RecordingTranscodeCompleteTopicMediaResult
+
 ## RecordingTranscodeCompleteTopicMediaResult
 
 ## Properties
@@ -11,6 +10,7 @@ title: RecordingTranscodeCompleteTopicMediaResult
 | **waveUri** | **String** |  | [optional] |
 | **mediaUri** | **String** |  | [optional] |
 | **waveformData** | **[Double]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LexV2BotAlias
----
+# LexV2BotAlias
+
 ## LexV2BotAlias
 
 ## Properties
@@ -11,12 +10,13 @@ title: LexV2BotAlias
 | **name** | **String** |  | [optional] |
 | **region** | **String** | The Lex V2 bot region | |
 | **aliasId** | **String** | The Lex V2 bot alias Id | |
-| **bot** | [**LexV2Bot**](LexV2Bot.html) | The Lex V2 bot this is an alias for | [optional] |
+| **bot** | [**LexV2Bot**](LexV2Bot) | The Lex V2 bot this is an alias for | [optional] |
 | **botVersion** | **String** | The version of the Lex V2 bot this alias points at | [optional] |
 | **status** | **String** | The status of the Lex V2 bot alias | [optional] |
 | **language** | **String** | The target language of the Lex V2 bot | [optional] |
-| **intents** | [**[LexV2Intent]**](LexV2Intent.html) | An array of Intents associated with this bot alias | [optional] |
+| **intents** | [**[LexV2Intent]**](LexV2Intent) | An array of Intents associated with this bot alias | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

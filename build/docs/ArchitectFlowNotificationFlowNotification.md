@@ -1,6 +1,5 @@
----
-title: ArchitectFlowNotificationFlowNotification
----
+# ArchitectFlowNotificationFlowNotification
+
 ## ArchitectFlowNotificationFlowNotification
 
 ## Properties
@@ -11,10 +10,11 @@ title: ArchitectFlowNotificationFlowNotification
 | **name** | **String** | The flow name | [optional] |
 | **_description** | **String** | The flow description | [optional] |
 | **deleted** | **Bool** | The flow deleted state | [optional] |
-| **checkedInVersion** | [**ArchitectFlowNotificationFlowVersion**](ArchitectFlowNotificationFlowVersion.html) |  | [optional] |
-| **savedVersion** | [**ArchitectFlowNotificationFlowVersion**](ArchitectFlowNotificationFlowVersion.html) | A bare-bones flow version object | [optional] |
-| **publishedVersion** | [**ArchitectFlowNotificationFlowVersion**](ArchitectFlowNotificationFlowVersion.html) | A bare-bones flow version object | [optional] |
-| **currentOperation** | [**ArchitectFlowNotificationArchitectOperation**](ArchitectFlowNotificationArchitectOperation.html) |  | [optional] |
-{: class="table table-striped"}
+| **checkedInVersion** | [**ArchitectFlowNotificationFlowVersion**](ArchitectFlowNotificationFlowVersion) |  | [optional] |
+| **savedVersion** | [**ArchitectFlowNotificationFlowVersion**](ArchitectFlowNotificationFlowVersion) | A bare-bones flow version object | [optional] |
+| **publishedVersion** | [**ArchitectFlowNotificationFlowVersion**](ArchitectFlowNotificationFlowVersion) | A bare-bones flow version object | [optional] |
+| **currentOperation** | [**ArchitectFlowNotificationArchitectOperation**](ArchitectFlowNotificationArchitectOperation) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

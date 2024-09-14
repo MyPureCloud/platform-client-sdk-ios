@@ -1,6 +1,5 @@
----
-title: WebChatConfig
----
+# WebChatConfig
+
 ## WebChatConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: WebChatConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **webChatSkin** | **String** | css class to be applied to the web chat widget. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

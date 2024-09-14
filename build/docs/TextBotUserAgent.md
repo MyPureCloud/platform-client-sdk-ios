@@ -1,6 +1,5 @@
----
-title: TextBotUserAgent
----
+# TextBotUserAgent
+
 ## TextBotUserAgent
 Information about the caller executing a bot flow.
 
@@ -9,6 +8,7 @@ Information about the caller executing a bot flow.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the user agent. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

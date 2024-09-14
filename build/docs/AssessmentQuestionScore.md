@@ -1,6 +1,5 @@
----
-title: AssessmentQuestionScore
----
+# AssessmentQuestionScore
+
 ## AssessmentQuestionScore
 
 ## Properties
@@ -15,6 +14,7 @@ title: AssessmentQuestionScore
 | **markedNA** | **Bool** | True if this question was marked as NA | [optional] |
 | **systemMarkedNA** | **Bool** | If markedNA is true, systemMarkedNA indicates whether it was marked by a user or by the system due to visibility conditions. Always false if markedNA is false. | [optional] |
 | **freeTextAnswer** | **String** | Answer for free text answer type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

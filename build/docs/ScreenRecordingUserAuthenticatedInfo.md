@@ -1,6 +1,5 @@
----
-title: ScreenRecordingUserAuthenticatedInfo
----
+# ScreenRecordingUserAuthenticatedInfo
+
 ## ScreenRecordingUserAuthenticatedInfo
 
 ## Properties
@@ -8,6 +7,7 @@ title: ScreenRecordingUserAuthenticatedInfo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **backgroundAssistantId** | **String** | Id of Genesys Cloud Background Assistant | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

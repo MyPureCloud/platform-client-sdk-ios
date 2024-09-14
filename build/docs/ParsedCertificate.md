@@ -1,6 +1,5 @@
----
-title: ParsedCertificate
----
+# ParsedCertificate
+
 ## ParsedCertificate
 Represents the parsed certificate information.
 
@@ -8,7 +7,8 @@ Represents the parsed certificate information.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **certificateDetails** | [**[CertificateDetails]**](CertificateDetails.html) | The details of the certificates that were parsed correctly. | [optional] |
-{: class="table table-striped"}
+| **certificateDetails** | [**[CertificateDetails]**](CertificateDetails) | The details of the certificates that were parsed correctly. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

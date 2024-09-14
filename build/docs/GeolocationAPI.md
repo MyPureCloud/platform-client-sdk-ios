@@ -1,25 +1,21 @@
----
-title: GeolocationAPI
----
-## GeolocationAPI
+# GeolocationAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getGeolocationsSettings**](GeolocationAPI.html#getGeolocationsSettings) | Get a organization&#39;s GeolocationSettings |
-| [**getUserGeolocation**](GeolocationAPI.html#getUserGeolocation) | Get a user&#39;s Geolocation |
-| [**patchGeolocationsSettings**](GeolocationAPI.html#patchGeolocationsSettings) | Patch a organization&#39;s GeolocationSettings |
-| [**patchUserGeolocation**](GeolocationAPI.html#patchUserGeolocation) | Patch a user&#39;s Geolocation |
+| [**getGeolocationsSettings**](GeolocationAPI#getGeolocationsSettings) | Get a organization&#39;s GeolocationSettings |
+| [**getUserGeolocation**](GeolocationAPI#getUserGeolocation) | Get a user&#39;s Geolocation |
+| [**patchGeolocationsSettings**](GeolocationAPI#patchGeolocationsSettings) | Patch a organization&#39;s GeolocationSettings |
+| [**patchUserGeolocation**](GeolocationAPI#patchUserGeolocation) | Patch a user&#39;s Geolocation |
 {: class="table-striped"}
 
-<a name="getGeolocationsSettings"></a>
 
-# **getGeolocationsSettings**
-
+## getGeolocationsSettings
 
 
-> [GeolocationSettings](GeolocationSettings.html) getGeolocationsSettings()
+
+> [GeolocationSettings](GeolocationSettings) getGeolocationsSettings()
 
 Get a organization&#39;s GeolocationSettings
 
@@ -55,18 +51,16 @@ GeolocationAPI.getGeolocationsSettings() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**GeolocationSettings**](GeolocationSettings.html)
-
-<a name="getUserGeolocation"></a>
-
-# **getUserGeolocation**
+[**GeolocationSettings**](GeolocationSettings)
 
 
+## getUserGeolocation
 
-> [Geolocation](Geolocation.html) getUserGeolocation(userId, clientId)
+
+
+> [Geolocation](Geolocation) getUserGeolocation(userId, clientId)
 
 Get a user&#39;s Geolocation
 
@@ -106,20 +100,18 @@ GeolocationAPI.getUserGeolocation(userId: userId, clientId: clientId) { (respons
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| user Id | |
 | **clientId** | **String**| client Id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Geolocation**](Geolocation.html)
-
-<a name="patchGeolocationsSettings"></a>
-
-# **patchGeolocationsSettings**
+[**Geolocation**](Geolocation)
 
 
+## patchGeolocationsSettings
 
-> [GeolocationSettings](GeolocationSettings.html) patchGeolocationsSettings(body)
+
+
+> [GeolocationSettings](GeolocationSettings) patchGeolocationsSettings(body)
 
 Patch a organization&#39;s GeolocationSettings
 
@@ -157,21 +149,19 @@ GeolocationAPI.patchGeolocationsSettings(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**GeolocationSettings**](GeolocationSettings.html)| Geolocation settings | |
-{: class="table-striped"}
+| **body** | [**GeolocationSettings**](GeolocationSettings)| Geolocation settings | |
 
 
 ### Return type
 
-[**GeolocationSettings**](GeolocationSettings.html)
-
-<a name="patchUserGeolocation"></a>
-
-# **patchUserGeolocation**
+[**GeolocationSettings**](GeolocationSettings)
 
 
+## patchUserGeolocation
 
-> [Geolocation](Geolocation.html) patchUserGeolocation(userId, clientId, body)
+
+
+> [Geolocation](Geolocation) patchUserGeolocation(userId, clientId, body)
 
 Patch a user&#39;s Geolocation
 
@@ -214,11 +204,12 @@ GeolocationAPI.patchUserGeolocation(userId: userId, clientId: clientId, body: bo
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| user Id | |
 | **clientId** | **String**| client Id | |
-| **body** | [**Geolocation**](Geolocation.html)| Geolocation | |
-{: class="table-striped"}
+| **body** | [**Geolocation**](Geolocation)| Geolocation | |
 
 
 ### Return type
 
-[**Geolocation**](Geolocation.html)
+[**Geolocation**](Geolocation)
 
+
+_PureCloudPlatformClientV2@151.1.0_

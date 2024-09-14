@@ -1,14 +1,14 @@
----
-title: ExternalId
----
+# ExternalId
+
 ## ExternalId
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **externalSource** | [**ExternalSource**](ExternalSource.html) |  | [optional] |
+| **externalSource** | [**ExternalSource**](ExternalSource) |  | [optional] |
 | **value** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

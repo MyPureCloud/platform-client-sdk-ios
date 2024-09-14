@@ -1,6 +1,5 @@
----
-title: PublishForm
----
+# PublishForm
+
 ## PublishForm
 
 ## Properties
@@ -9,6 +8,7 @@ title: PublishForm
 |------------ | ------------- | ------------- | -------------|
 | **published** | **Bool** | Is this form published | |
 | **_id** | **String** | Unique Id for this version of this form | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

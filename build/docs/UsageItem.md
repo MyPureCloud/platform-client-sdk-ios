@@ -1,6 +1,5 @@
----
-title: UsageItem
----
+# UsageItem
+
 ## UsageItem
 
 ## Properties
@@ -10,6 +9,7 @@ title: UsageItem
 | **type** | **String** |  | [optional] |
 | **totalDocumentByteCount** | **Int64** |  | [optional] |
 | **totalDocumentCount** | **Int64** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CardAction
----
+# CardAction
+
 ## CardAction
 A card action that a user can take.
 
@@ -13,6 +12,7 @@ A card action that a user can take.
 | **payload** | **String** | Content of the textback payload after clicking a button. | [optional] |
 | **url** | **String** | The location of the image file associated with action. | [optional] |
 | **isSelected** | **Bool** | Indicates if the card option is selected by end customer. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

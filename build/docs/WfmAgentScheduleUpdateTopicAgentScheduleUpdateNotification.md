@@ -1,16 +1,16 @@
----
-title: WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification
----
+# WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification
+
 ## WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**WfmAgentScheduleUpdateTopicUserReference**](WfmAgentScheduleUpdateTopicUserReference.html) |  | [optional] |
-| **startDate** | [**Date**](Date.html) |  | [optional] |
-| **endDate** | [**Date**](Date.html) |  | [optional] |
-| **updates** | [**[WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate]**](WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.html) |  | [optional] |
-{: class="table table-striped"}
+| **user** | [**WfmAgentScheduleUpdateTopicUserReference**](WfmAgentScheduleUpdateTopicUserReference) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
+| **endDate** | [**Date**](Date) |  | [optional] |
+| **updates** | [**[WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate]**](WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

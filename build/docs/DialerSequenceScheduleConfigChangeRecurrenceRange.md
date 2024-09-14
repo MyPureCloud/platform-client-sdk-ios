@@ -1,6 +1,5 @@
----
-title: DialerSequenceScheduleConfigChangeRecurrenceRange
----
+# DialerSequenceScheduleConfigChangeRecurrenceRange
+
 ## DialerSequenceScheduleConfigChangeRecurrenceRange
 the schedule range
 
@@ -11,7 +10,8 @@ the schedule range
 | **type** | **String** |  | [optional] |
 | **end** | **String** | the range end date | [optional] |
 | **numberOfOccurrences** | **Int** | the number of occurrences to happen before ending | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

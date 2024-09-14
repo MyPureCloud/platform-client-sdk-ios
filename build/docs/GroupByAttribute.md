@@ -1,6 +1,5 @@
----
-title: GroupByAttribute
----
+# GroupByAttribute
+
 ## GroupByAttribute
 
 ## Properties
@@ -9,6 +8,7 @@ title: GroupByAttribute
 |------------ | ------------- | ------------- | -------------|
 | **attribute** | **String** | Group by attribute | [optional] |
 | **value** | **String** | Value of this group by attribute | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

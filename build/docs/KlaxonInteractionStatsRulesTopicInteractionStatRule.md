@@ -1,6 +1,5 @@
----
-title: KlaxonInteractionStatsRulesTopicInteractionStatRule
----
+# KlaxonInteractionStatsRulesTopicInteractionStatRule
+
 ## KlaxonInteractionStatsRulesTopicInteractionStatRule
 
 ## Properties
@@ -19,8 +18,9 @@ title: KlaxonInteractionStatsRulesTopicInteractionStatRule
 | **value** | **Double** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
-| **notificationUsers** | [**[KlaxonInteractionStatsRulesTopicNotificationUser]**](KlaxonInteractionStatsRulesTopicNotificationUser.html) |  | [optional] |
+| **notificationUsers** | [**[KlaxonInteractionStatsRulesTopicNotificationUser]**](KlaxonInteractionStatsRulesTopicNotificationUser) |  | [optional] |
 | **alertTypes** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

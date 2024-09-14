@@ -1,6 +1,5 @@
----
-title: ExternalContactsOrganizationChangedTopicPhoneNumber
----
+# ExternalContactsOrganizationChangedTopicPhoneNumber
+
 ## ExternalContactsOrganizationChangedTopicPhoneNumber
 
 ## Properties
@@ -14,6 +13,7 @@ title: ExternalContactsOrganizationChangedTopicPhoneNumber
 | **e164** | **String** |  | [optional] |
 | **countryCode** | **String** |  | [optional] |
 | **normalizationCountryCode** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

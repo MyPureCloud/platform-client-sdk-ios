@@ -1,6 +1,5 @@
----
-title: FreeTrialLimit
----
+# FreeTrialLimit
+
 ## FreeTrialLimit
 
 ## Properties
@@ -11,6 +10,7 @@ title: FreeTrialLimit
 | **defaultValue** | **Int64** |  | [optional] |
 | **_description** | **String** |  | [optional] |
 | **resource** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

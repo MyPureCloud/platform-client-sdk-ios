@@ -1,6 +1,5 @@
----
-title: Subscription
----
+# Subscription
+
 ## Subscription
 
 ## Properties
@@ -9,6 +8,7 @@ title: Subscription
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The subscription id | [optional] |
 | **topic** | **String** | Notification topic | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TtsSettings
----
+# TtsSettings
+
 ## TtsSettings
 
 ## Properties
@@ -8,7 +7,8 @@ title: TtsSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **defaultEngine** | **String** | ID of the global default TTS engine | |
-| **languageOverrides** | [**[LanguageOverride]**](LanguageOverride.html) | The list of default overrides for specific languages | |
-{: class="table table-striped"}
+| **languageOverrides** | [**[LanguageOverride]**](LanguageOverride) | The list of default overrides for specific languages | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

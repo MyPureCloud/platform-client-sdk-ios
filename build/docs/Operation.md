@@ -1,6 +1,5 @@
----
-title: Operation
----
+# Operation
+
 ## Operation
 
 ## Properties
@@ -9,14 +8,15 @@ title: Operation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **complete** | **Bool** |  | [optional] |
-| **user** | [**User**](User.html) |  | [optional] |
-| **client** | [**DomainEntityRef**](DomainEntityRef.html) |  | [optional] |
+| **user** | [**User**](User) |  | [optional] |
+| **client** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **errorMessage** | **String** |  | [optional] |
 | **errorCode** | **String** |  | [optional] |
-| **errorDetails** | [**[Detail]**](Detail.html) |  | [optional] |
+| **errorDetails** | [**[Detail]**](Detail) |  | [optional] |
 | **errorMessageParams** | **[String:String]** |  | [optional] |
 | **actionName** | **String** | Action name | [optional] |
 | **actionStatus** | **String** | Action status | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

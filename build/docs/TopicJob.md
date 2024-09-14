@@ -1,6 +1,5 @@
----
-title: TopicJob
----
+# TopicJob
+
 ## TopicJob
 
 ## Properties
@@ -9,11 +8,12 @@ title: TopicJob
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **state** | **String** |  | [optional] |
-| **topics** | [**[BaseTopicEntitiy]**](BaseTopicEntitiy.html) |  | [optional] |
-| **createdBy** | [**AddressableEntityRef**](AddressableEntityRef.html) |  | [optional] |
-| **dateCreated** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **dateModified** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **topics** | [**[BaseTopicEntitiy]**](BaseTopicEntitiy) |  | [optional] |
+| **createdBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
+| **dateCreated** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

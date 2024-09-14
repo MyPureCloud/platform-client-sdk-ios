@@ -1,6 +1,5 @@
----
-title: FlowDiagnosticInfo
----
+# FlowDiagnosticInfo
+
 ## FlowDiagnosticInfo
 
 ## Properties
@@ -8,6 +7,7 @@ title: FlowDiagnosticInfo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **lastActionId** | **Int** | The step number of the survey invite flow where the error occurred. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

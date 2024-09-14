@@ -1,6 +1,5 @@
----
-title: BotAggregateDataContainer
----
+# BotAggregateDataContainer
+
 ## BotAggregateDataContainer
 
 ## Properties
@@ -8,7 +7,8 @@ title: BotAggregateDataContainer
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** | A mapping from dimension to value | [optional] |
-| **data** | [**[StatisticalResponse]**](StatisticalResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **data** | [**[StatisticalResponse]**](StatisticalResponse) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

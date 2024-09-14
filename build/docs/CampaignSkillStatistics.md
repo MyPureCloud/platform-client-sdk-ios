@@ -1,6 +1,5 @@
----
-title: CampaignSkillStatistics
----
+# CampaignSkillStatistics
+
 ## CampaignSkillStatistics
 
 ## Properties
@@ -9,6 +8,7 @@ title: CampaignSkillStatistics
 |------------ | ------------- | ------------- | -------------|
 | **skillCombinations** | **Int** | Number of available skill combinations for the campaign | [optional] |
 | **eligibleSkilledAgents** | **Int** | Number of eligible agents with skills for campaign | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

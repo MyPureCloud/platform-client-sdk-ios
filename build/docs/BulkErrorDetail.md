@@ -1,6 +1,5 @@
----
-title: BulkErrorDetail
----
+# BulkErrorDetail
+
 ## BulkErrorDetail
 
 ## Properties
@@ -10,6 +9,7 @@ title: BulkErrorDetail
 | **fieldName** | **String** |  | [optional] |
 | **value** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

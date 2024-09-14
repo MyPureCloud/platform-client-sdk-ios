@@ -1,6 +1,5 @@
----
-title: RequestMapping
----
+# RequestMapping
+
 ## RequestMapping
 
 ## Properties
@@ -11,6 +10,7 @@ title: RequestMapping
 | **attributeType** | **String** | Type of the value supplied | [optional] |
 | **mappingType** | **String** | Method of finding value to use with Attribute | [optional] |
 | **value** | **String** | Value to supply for the specified Attribute | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

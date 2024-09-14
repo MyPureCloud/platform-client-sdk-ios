@@ -1,6 +1,5 @@
----
-title: UpdateDraftInput
----
+# UpdateDraftInput
+
 ## UpdateDraftInput
 Definition of an Action Draft to be created or updated.
 
@@ -10,10 +9,11 @@ Definition of an Action Draft to be created or updated.
 |------------ | ------------- | ------------- | -------------|
 | **category** | **String** | Category of action, Can be up to 256 characters long | [optional] |
 | **name** | **String** | Name of action, Can be up to 256 characters long | [optional] |
-| **config** | [**ActionConfig**](ActionConfig.html) | Configuration to support request and response processing | [optional] |
-| **contract** | [**ActionContractInput**](ActionContractInput.html) | Action contract | [optional] |
+| **config** | [**ActionConfig**](ActionConfig) | Configuration to support request and response processing | [optional] |
+| **contract** | [**ActionContractInput**](ActionContractInput) | Action contract | [optional] |
 | **secure** | **Bool** | Indication of whether or not the action is designed to accept sensitive data | [optional] |
 | **version** | **Int** | Version of current Draft | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

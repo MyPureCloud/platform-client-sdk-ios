@@ -1,6 +1,5 @@
----
-title: KlaxonHeartBeatRulesTopicHeartBeatRule
----
+# KlaxonHeartBeatRulesTopicHeartBeatRule
+
 ## KlaxonHeartBeatRulesTopicHeartBeatRule
 
 ## Properties
@@ -13,9 +12,10 @@ title: KlaxonHeartBeatRulesTopicHeartBeatRule
 | **heartBeatTimeoutInMinutes** | **Double** |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
-| **notificationUsers** | [**[KlaxonHeartBeatRulesTopicNotificationUser]**](KlaxonHeartBeatRulesTopicNotificationUser.html) |  | [optional] |
+| **notificationUsers** | [**[KlaxonHeartBeatRulesTopicNotificationUser]**](KlaxonHeartBeatRulesTopicNotificationUser) |  | [optional] |
 | **alertTypes** | **[String]** |  | [optional] |
 | **ruleType** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

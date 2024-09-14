@@ -1,6 +1,5 @@
----
-title: JourneyViewChartDisplayAttributes
----
+# JourneyViewChartDisplayAttributes
+
 ## JourneyViewChartDisplayAttributes
 Display attributes for the chart, such as type, labels and legends
 
@@ -12,6 +11,7 @@ Display attributes for the chart, such as type, labels and legends
 | **groupByTitle** | **String** | A title for the grouped by attributes (aka the x axis) | [optional] |
 | **metricsTitle** | **String** | A title for the metrics (aka the y axis) | [optional] |
 | **showLegend** | **Bool** | Whether to show a legend | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

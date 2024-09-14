@@ -1,6 +1,5 @@
----
-title: ConversationMetricsTopicConversationMetricRecord
----
+# ConversationMetricsTopicConversationMetricRecord
+
 ## ConversationMetricsTopicConversationMetricRecord
 
 ## Properties
@@ -8,7 +7,7 @@ title: ConversationMetricsTopicConversationMetricRecord
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** | Metric name | [optional] |
-| **metricDate** | [**Date**](Date.html) | The date and time of metric creation | [optional] |
+| **metricDate** | [**Date**](Date) | The date and time of metric creation | [optional] |
 | **value** | **Int** | Metric value | [optional] |
 | **recordId** | **String** | Record identifier | [optional] |
 | **activeRouting** | **String** | Active routing method | [optional] |
@@ -88,8 +87,9 @@ title: ConversationMetricsTopicConversationMetricRecord
 | **videoPresent** | **Bool** | Flag indicating if video is present | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **wrapUpCode** | **String** | Wrap up code | [optional] |
-| **proposedAgents** | [**[ConversationMetricsTopicConversationProposedAgent]**](ConversationMetricsTopicConversationProposedAgent.html) | Proposed agents | [optional] |
-| **scoredAgents** | [**[ConversationMetricsTopicConversationScoredAgent]**](ConversationMetricsTopicConversationScoredAgent.html) | Scored agents | [optional] |
-{: class="table table-striped"}
+| **proposedAgents** | [**[ConversationMetricsTopicConversationProposedAgent]**](ConversationMetricsTopicConversationProposedAgent) | Proposed agents | [optional] |
+| **scoredAgents** | [**[ConversationMetricsTopicConversationScoredAgent]**](ConversationMetricsTopicConversationScoredAgent) | Scored agents | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

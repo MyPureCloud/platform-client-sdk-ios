@@ -1,6 +1,5 @@
----
-title: AsyncQueryResponse
----
+# AsyncQueryResponse
+
 ## AsyncQueryResponse
 
 ## Properties
@@ -8,6 +7,7 @@ title: AsyncQueryResponse
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **jobId** | **String** | Unique identifier for the async query execution. Can be used to check the status of the query and retrieve results. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

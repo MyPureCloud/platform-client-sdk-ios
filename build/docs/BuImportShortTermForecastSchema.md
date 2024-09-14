@@ -1,6 +1,5 @@
----
-title: BuImportShortTermForecastSchema
----
+# BuImportShortTermForecastSchema
+
 ## BuImportShortTermForecastSchema
 
 ## Properties
@@ -9,9 +8,10 @@ title: BuImportShortTermForecastSchema
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** | The description for the forecast | |
 | **weekCount** | **Int** | The number of weeks covered by the forecast | |
-| **planningGroups** | [**[ForecastPlanningGroupData]**](ForecastPlanningGroupData.html) | The short term planning group data | |
-| **longTermPlanningGroups** | [**[LongTermForecastPlanningGroupData]**](LongTermForecastPlanningGroupData.html) | The long term planning group data | [optional] |
+| **planningGroups** | [**[ForecastPlanningGroupData]**](ForecastPlanningGroupData) | The short term planning group data | |
+| **longTermPlanningGroups** | [**[LongTermForecastPlanningGroupData]**](LongTermForecastPlanningGroupData) | The long term planning group data | [optional] |
 | **canUseForScheduling** | **Bool** | Whether this forecast can be used for scheduling | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

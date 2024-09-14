@@ -1,6 +1,5 @@
----
-title: DnclistImportStatusImportStatus
----
+# DnclistImportStatusImportStatus
+
 ## DnclistImportStatusImportStatus
 
 ## Properties
@@ -14,7 +13,8 @@ title: DnclistImportStatusImportStatus
 | **failureReason** | **String** | if the import has failed, the reason for the failure | [optional] |
 | **targetContactListIds** | **[String]** | The ids for target contact lists | [optional] |
 | **listNamePrefix** | **String** | The prefix used for target contact list names | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

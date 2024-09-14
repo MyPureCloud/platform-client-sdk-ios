@@ -1,6 +1,5 @@
----
-title: GroupProfile
----
+# GroupProfile
+
 ## GroupProfile
 
 ## Properties
@@ -10,9 +9,10 @@ title: GroupProfile
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **state** | **String** | The state of the user resource | [optional] |
-| **dateModified** | [**Date**](Date.html) | Datetime of the last modification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **dateModified** | [**Date**](Date) | Datetime of the last modification. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **version** | **Int64** | The version of the group resource | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: SmsPhoneNumberProvision
----
+# SmsPhoneNumberProvision
+
 ## SmsPhoneNumberProvision
 
 ## Properties
@@ -14,6 +13,7 @@ title: SmsPhoneNumberProvision
 | **name** | **String** |  | [optional] |
 | **addressId** | **String** | The id of an address added on your account. Due to regulatory requirements in some countries, an address may be required when provisioning a sms number. In those cases you should provide the provisioned sms address id here | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

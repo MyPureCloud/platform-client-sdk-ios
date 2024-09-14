@@ -1,6 +1,5 @@
----
-title: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult
----
+# WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult
+
 ## WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult
 
 ## Properties
@@ -9,10 +8,11 @@ title: WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateRes
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **reviewedBy** | [**WfmBulkShiftTradeStateUpdateNotificationTopicUserReference**](WfmBulkShiftTradeStateUpdateNotificationTopicUserReference.html) |  | [optional] |
-| **reviewedDate** | [**Date**](Date.html) |  | [optional] |
+| **reviewedBy** | [**WfmBulkShiftTradeStateUpdateNotificationTopicUserReference**](WfmBulkShiftTradeStateUpdateNotificationTopicUserReference) |  | [optional] |
+| **reviewedDate** | [**Date**](Date) |  | [optional] |
 | **failureReason** | **String** |  | [optional] |
-| **metadata** | [**WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata**](WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata.html) |  | [optional] |
-{: class="table table-striped"}
+| **metadata** | [**WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata**](WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMetadata) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

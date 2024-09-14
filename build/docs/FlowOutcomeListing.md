@@ -1,13 +1,12 @@
----
-title: FlowOutcomeListing
----
+# FlowOutcomeListing
+
 ## FlowOutcomeListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[FlowOutcome]**](FlowOutcome.html) |  | [optional] |
+| **entities** | [**[FlowOutcome]**](FlowOutcome) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: FlowOutcomeListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

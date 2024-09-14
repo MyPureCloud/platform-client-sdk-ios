@@ -1,16 +1,16 @@
----
-title: JourneyOutcomeEventsNotificationOutcomeAttributionMessage
----
+# JourneyOutcomeEventsNotificationOutcomeAttributionMessage
+
 ## JourneyOutcomeEventsNotificationOutcomeAttributionMessage
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome.html) |  | [optional] |
-| **outcomeTouchpoints** | [**[JourneyOutcomeEventsNotificationOutcomeTouchpoint]**](JourneyOutcomeEventsNotificationOutcomeTouchpoint.html) |  | [optional] |
-| **segmentAssignments** | [**[JourneyOutcomeEventsNotificationSegment]**](JourneyOutcomeEventsNotificationSegment.html) |  | [optional] |
-| **associatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue.html) |  | [optional] |
-{: class="table table-striped"}
+| **outcome** | [**JourneyOutcomeEventsNotificationOutcome**](JourneyOutcomeEventsNotificationOutcome) |  | [optional] |
+| **outcomeTouchpoints** | [**[JourneyOutcomeEventsNotificationOutcomeTouchpoint]**](JourneyOutcomeEventsNotificationOutcomeTouchpoint) |  | [optional] |
+| **segmentAssignments** | [**[JourneyOutcomeEventsNotificationSegment]**](JourneyOutcomeEventsNotificationSegment) |  | [optional] |
+| **associatedValue** | [**JourneyOutcomeEventsNotificationAssociatedValue**](JourneyOutcomeEventsNotificationAssociatedValue) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

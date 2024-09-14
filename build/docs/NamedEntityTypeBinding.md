@@ -1,6 +1,5 @@
----
-title: NamedEntityTypeBinding
----
+# NamedEntityTypeBinding
+
 ## NamedEntityTypeBinding
 
 ## Properties
@@ -9,6 +8,7 @@ title: NamedEntityTypeBinding
 |------------ | ------------- | ------------- | -------------|
 | **entityType** | **String** | The named entity type of the binding. It can be a built-in one such as builtin:number or a custom entity type such as BeverageType. | |
 | **entityName** | **String** | The name that this named entity type is bound to. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

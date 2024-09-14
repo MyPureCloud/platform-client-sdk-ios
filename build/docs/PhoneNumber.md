@@ -1,6 +1,5 @@
----
-title: PhoneNumber
----
+# PhoneNumber
+
 ## PhoneNumber
 
 ## Properties
@@ -14,6 +13,7 @@ title: PhoneNumber
 | **userInput** | **String** | The user-inputted phone number string that was provided to the display field on write. This field is not user-writeable and will always be set by the system. | [optional] |
 | **e164** | **String** | The E164-formatted form of the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. | [optional] |
 | **countryCode** | **String** | The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

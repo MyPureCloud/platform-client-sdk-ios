@@ -1,6 +1,5 @@
----
-title: TransferToQueueRequest
----
+# TransferToQueueRequest
+
 ## TransferToQueueRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: TransferToQueueRequest
 | **keepInternalMessageAlive** | **Bool** | If true, the digital internal message will NOT be terminated. | [optional] |
 | **queueId** | **String** | The id of the queue. | [optional] |
 | **queueName** | **String** | The name of the queue. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

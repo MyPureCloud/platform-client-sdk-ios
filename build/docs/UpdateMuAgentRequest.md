@@ -1,6 +1,5 @@
----
-title: UpdateMuAgentRequest
----
+# UpdateMuAgentRequest
+
 ## UpdateMuAgentRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: UpdateMuAgentRequest
 |------------ | ------------- | ------------- | -------------|
 | **schedulable** | **Bool** | Whether the agent can be included in schedule generation | [optional] |
 | **userId** | **String** | User to be updated | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

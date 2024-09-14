@@ -1,6 +1,5 @@
----
-title: ConversationSecureAttributes
----
+# ConversationSecureAttributes
+
 ## ConversationSecureAttributes
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationSecureAttributes
 |------------ | ------------- | ------------- | -------------|
 | **attributes** | **[String:String]** | The map of attribute keys to values. | [optional] |
 | **version** | **Int** | The version used to detect conflicting updates when using PUT. Not used for PATCH. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

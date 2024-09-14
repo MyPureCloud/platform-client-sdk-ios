@@ -1,6 +1,5 @@
----
-title: DashboardConfigurationBulkRequest
----
+# DashboardConfigurationBulkRequest
+
 ## DashboardConfigurationBulkRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: DashboardConfigurationBulkRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **dashboardConfigurationIds** | **[String]** | The user supplied dashboard configuration ids | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

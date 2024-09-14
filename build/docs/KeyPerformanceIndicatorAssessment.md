@@ -1,6 +1,5 @@
----
-title: KeyPerformanceIndicatorAssessment
----
+# KeyPerformanceIndicatorAssessment
+
 ## KeyPerformanceIndicatorAssessment
 
 ## Properties
@@ -9,7 +8,8 @@ title: KeyPerformanceIndicatorAssessment
 |------------ | ------------- | ------------- | -------------|
 | **kpi** | **String** | Name of the key performance indicator assessed. | [optional] |
 | **assessmentResult** | **String** | The overall result of the assessment for a key performance indicator. | [optional] |
-| **checks** | [**[Check]**](Check.html) | Set of checks executed as part of an assessment. | [optional] |
-{: class="table table-striped"}
+| **checks** | [**[Check]**](Check) | Set of checks executed as part of an assessment. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

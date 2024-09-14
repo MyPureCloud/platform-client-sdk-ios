@@ -1,6 +1,5 @@
----
-title: InsightsDetailsOverallPeriodPoints
----
+# InsightsDetailsOverallPeriodPoints
+
 ## InsightsDetailsOverallPeriodPoints
 
 ## Properties
@@ -13,6 +12,7 @@ title: InsightsDetailsOverallPeriodPoints
 | **percentOfGoal** | **Double** | Percentage of the goal | [optional] |
 | **rankTotalPoints** | **Int** | The agent&#39;s rank in leader board for points on this metric | [optional] |
 | **rankPercentagePoints** | **Int** | The agent&#39;s rank in leader board for percentage on this metric | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

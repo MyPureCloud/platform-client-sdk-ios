@@ -1,6 +1,5 @@
----
-title: DevelopmentActivityAggregateQueryRequestPredicate
----
+# DevelopmentActivityAggregateQueryRequestPredicate
+
 ## DevelopmentActivityAggregateQueryRequestPredicate
 
 ## Properties
@@ -9,6 +8,7 @@ title: DevelopmentActivityAggregateQueryRequestPredicate
 |------------ | ------------- | ------------- | -------------|
 | **dimension** | **String** | Each predicates specifies a dimension. | |
 | **value** | **String** | Corresponding value for dimensions in predicates. If the dimension is type, Valid Values: Informational (deprecated), AssessedContent (deprecated), Assessment (deprecated), Coaching, External, Native | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

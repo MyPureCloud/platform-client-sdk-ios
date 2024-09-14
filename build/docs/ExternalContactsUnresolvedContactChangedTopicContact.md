@@ -1,6 +1,5 @@
----
-title: ExternalContactsUnresolvedContactChangedTopicContact
----
+# ExternalContactsUnresolvedContactChangedTopicContact
+
 ## ExternalContactsUnresolvedContactChangedTopicContact
 
 ## Properties
@@ -8,39 +7,40 @@ title: ExternalContactsUnresolvedContactChangedTopicContact
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **division** | [**ExternalContactsUnresolvedContactChangedTopicDivision**](ExternalContactsUnresolvedContactChangedTopicDivision.html) |  | [optional] |
-| **externalOrganization** | [**ExternalContactsUnresolvedContactChangedTopicExternalOrganization**](ExternalContactsUnresolvedContactChangedTopicExternalOrganization.html) |  | [optional] |
+| **division** | [**ExternalContactsUnresolvedContactChangedTopicDivision**](ExternalContactsUnresolvedContactChangedTopicDivision) |  | [optional] |
+| **externalOrganization** | [**ExternalContactsUnresolvedContactChangedTopicExternalOrganization**](ExternalContactsUnresolvedContactChangedTopicExternalOrganization) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **firstName** | **String** |  | [optional] |
 | **middleName** | **String** |  | [optional] |
 | **lastName** | **String** |  | [optional] |
 | **salutation** | **String** |  | [optional] |
 | **title** | **String** |  | [optional] |
-| **workPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
-| **cellPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
-| **homePhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
-| **otherPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber.html) |  | [optional] |
+| **workPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber) |  | [optional] |
+| **cellPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber) |  | [optional] |
+| **homePhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber) |  | [optional] |
+| **otherPhone** | [**ExternalContactsUnresolvedContactChangedTopicPhoneNumber**](ExternalContactsUnresolvedContactChangedTopicPhoneNumber) |  | [optional] |
 | **workEmail** | **String** |  | [optional] |
 | **personalEmail** | **String** |  | [optional] |
 | **otherEmail** | **String** |  | [optional] |
-| **address** | [**ExternalContactsUnresolvedContactChangedTopicContactAddress**](ExternalContactsUnresolvedContactChangedTopicContactAddress.html) |  | [optional] |
+| **address** | [**ExternalContactsUnresolvedContactChangedTopicContactAddress**](ExternalContactsUnresolvedContactChangedTopicContactAddress) |  | [optional] |
 | **surveyOptOut** | **Bool** |  | [optional] |
 | **externalSystemUrl** | **String** |  | [optional] |
-| **twitterId** | [**ExternalContactsUnresolvedContactChangedTopicTwitterId**](ExternalContactsUnresolvedContactChangedTopicTwitterId.html) |  | [optional] |
-| **lineId** | [**ExternalContactsUnresolvedContactChangedTopicLineId**](ExternalContactsUnresolvedContactChangedTopicLineId.html) |  | [optional] |
-| **whatsAppId** | [**ExternalContactsUnresolvedContactChangedTopicWhatsAppId**](ExternalContactsUnresolvedContactChangedTopicWhatsAppId.html) |  | [optional] |
-| **facebookId** | [**ExternalContactsUnresolvedContactChangedTopicFacebookId**](ExternalContactsUnresolvedContactChangedTopicFacebookId.html) |  | [optional] |
-| **instagramId** | [**ExternalContactsUnresolvedContactChangedTopicInstagramId**](ExternalContactsUnresolvedContactChangedTopicInstagramId.html) |  | [optional] |
-| **externalIds** | [**[ExternalContactsUnresolvedContactChangedTopicExternalId]**](ExternalContactsUnresolvedContactChangedTopicExternalId.html) |  | [optional] |
+| **twitterId** | [**ExternalContactsUnresolvedContactChangedTopicTwitterId**](ExternalContactsUnresolvedContactChangedTopicTwitterId) |  | [optional] |
+| **lineId** | [**ExternalContactsUnresolvedContactChangedTopicLineId**](ExternalContactsUnresolvedContactChangedTopicLineId) |  | [optional] |
+| **whatsAppId** | [**ExternalContactsUnresolvedContactChangedTopicWhatsAppId**](ExternalContactsUnresolvedContactChangedTopicWhatsAppId) |  | [optional] |
+| **facebookId** | [**ExternalContactsUnresolvedContactChangedTopicFacebookId**](ExternalContactsUnresolvedContactChangedTopicFacebookId) |  | [optional] |
+| **instagramId** | [**ExternalContactsUnresolvedContactChangedTopicInstagramId**](ExternalContactsUnresolvedContactChangedTopicInstagramId) |  | [optional] |
+| **externalIds** | [**[ExternalContactsUnresolvedContactChangedTopicExternalId]**](ExternalContactsUnresolvedContactChangedTopicExternalId) |  | [optional] |
 | **canonicalContactId** | **String** |  | [optional] |
-| **schema** | [**ExternalContactsUnresolvedContactChangedTopicDataSchema**](ExternalContactsUnresolvedContactChangedTopicDataSchema.html) |  | [optional] |
-| **customFields** | [**[String:JSON]**](JSON.html) |  | [optional] |
+| **schema** | [**ExternalContactsUnresolvedContactChangedTopicDataSchema**](ExternalContactsUnresolvedContactChangedTopicDataSchema) |  | [optional] |
+| **customFields** | [**[String:JSON]**](JSON) |  | [optional] |
 | **mergeSet** | **[String]** |  | [optional] |
 | **mergedFrom** | **[String]** |  | [optional] |
 | **mergedTo** | **String** |  | [optional] |
-| **mergeOperation** | [**ExternalContactsUnresolvedContactChangedTopicMergeOperation**](ExternalContactsUnresolvedContactChangedTopicMergeOperation.html) |  | [optional] |
-| **createDate** | [**Date**](Date.html) |  | [optional] |
-| **modifyDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **mergeOperation** | [**ExternalContactsUnresolvedContactChangedTopicMergeOperation**](ExternalContactsUnresolvedContactChangedTopicMergeOperation) |  | [optional] |
+| **createDate** | [**Date**](Date) |  | [optional] |
+| **modifyDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

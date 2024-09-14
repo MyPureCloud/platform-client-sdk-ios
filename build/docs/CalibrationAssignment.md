@@ -1,16 +1,16 @@
----
-title: CalibrationAssignment
----
+# CalibrationAssignment
+
 ## CalibrationAssignment
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **calibrator** | [**User**](User.html) |  | [optional] |
-| **evaluators** | [**[User]**](User.html) |  | [optional] |
-| **evaluationForm** | [**EvaluationForm**](EvaluationForm.html) |  | [optional] |
-| **expertEvaluator** | [**User**](User.html) |  | [optional] |
-{: class="table table-striped"}
+| **calibrator** | [**User**](User) |  | [optional] |
+| **evaluators** | [**[User]**](User) |  | [optional] |
+| **evaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
+| **expertEvaluator** | [**User**](User) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

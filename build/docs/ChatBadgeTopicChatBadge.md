@@ -1,15 +1,15 @@
----
-title: ChatBadgeTopicChatBadge
----
+# ChatBadgeTopicChatBadge
+
 ## ChatBadgeTopicChatBadge
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entity** | [**ChatBadgeTopicBadgeEntity**](ChatBadgeTopicBadgeEntity.html) |  | [optional] |
+| **entity** | [**ChatBadgeTopicBadgeEntity**](ChatBadgeTopicBadgeEntity) |  | [optional] |
 | **unreadCount** | **Int** |  | [optional] |
-| **lastUnreadNotificationDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **lastUnreadNotificationDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

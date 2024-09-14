@@ -1,13 +1,12 @@
----
-title: MessagingCampaignDivisionViewEntityListing
----
+# MessagingCampaignDivisionViewEntityListing
+
 ## MessagingCampaignDivisionViewEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[MessagingCampaignDivisionView]**](MessagingCampaignDivisionView.html) |  | [optional] |
+| **entities** | [**[MessagingCampaignDivisionView]**](MessagingCampaignDivisionView) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: MessagingCampaignDivisionViewEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyGeolocation
----
+# JourneyGeolocation
+
 ## JourneyGeolocation
 
 ## Properties
@@ -17,6 +16,7 @@ title: JourneyGeolocation
 | **regionName** | **String** | Geolocation&#39;s region name. | [optional] |
 | **source** | **String** | The source that was used to determine the geolocation information. | [optional] |
 | **timezone** | **String** | Geolocation&#39;s timezone. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: FlowHealthErrorInfo
----
+# FlowHealthErrorInfo
+
 ## FlowHealthErrorInfo
 
 ## Properties
@@ -10,7 +9,8 @@ title: FlowHealthErrorInfo
 | **message** | **String** |  | [optional] |
 | **code** | **String** |  | [optional] |
 | **messageWithParams** | **String** | Error message with params included. | [optional] |
-| **messageParams** | [**[String:JSON]**](JSON.html) | Map of variables and params for the error message. | [optional] |
-{: class="table table-striped"}
+| **messageParams** | [**[String:JSON]**](JSON) | Map of variables and params for the error message. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

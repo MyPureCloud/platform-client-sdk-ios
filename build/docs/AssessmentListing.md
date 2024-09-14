@@ -1,16 +1,16 @@
----
-title: AssessmentListing
----
+# AssessmentListing
+
 ## AssessmentListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BenefitAssessment]**](BenefitAssessment.html) |  | [optional] |
+| **entities** | [**[BenefitAssessment]**](BenefitAssessment) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

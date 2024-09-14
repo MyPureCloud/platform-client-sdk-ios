@@ -1,6 +1,5 @@
----
-title: SelectorEventTrigger
----
+# SelectorEventTrigger
+
 ## SelectorEventTrigger
 Details about a selector event trigger
 
@@ -10,6 +9,7 @@ Details about a selector event trigger
 |------------ | ------------- | ------------- | -------------|
 | **selector** | **String** | Element that triggers event. | |
 | **eventName** | **String** | Name of event triggered when element matching selector is interacted with. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: V2MobiusRulesTopicAlertNotificationRecipient
----
+# V2MobiusRulesTopicAlertNotificationRecipient
+
 ## V2MobiusRulesTopicAlertNotificationRecipient
 
 ## Properties
@@ -10,6 +9,7 @@ title: V2MobiusRulesTopicAlertNotificationRecipient
 | **userId** | **String** |  | [optional] |
 | **displayName** | **String** |  | [optional] |
 | **contactAddress** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,13 +1,12 @@
----
-title: LogicalInterfaceEntityListing
----
+# LogicalInterfaceEntityListing
+
 ## LogicalInterfaceEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DomainLogicalInterface]**](DomainLogicalInterface.html) |  | [optional] |
+| **entities** | [**[DomainLogicalInterface]**](DomainLogicalInterface) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: LogicalInterfaceEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

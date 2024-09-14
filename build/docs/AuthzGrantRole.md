@@ -1,6 +1,5 @@
----
-title: AuthzGrantRole
----
+# AuthzGrantRole
+
 ## AuthzGrantRole
 
 ## Properties
@@ -10,9 +9,10 @@ title: AuthzGrantRole
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-| **policies** | [**[AuthzGrantPolicy]**](AuthzGrantPolicy.html) |  | [optional] |
+| **policies** | [**[AuthzGrantPolicy]**](AuthzGrantPolicy) |  | [optional] |
 | **_default** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

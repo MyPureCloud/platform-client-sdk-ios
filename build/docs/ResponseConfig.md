@@ -1,6 +1,5 @@
----
-title: ResponseConfig
----
+# ResponseConfig
+
 ## ResponseConfig
 Defines response components of the Action Request.
 
@@ -12,6 +11,7 @@ Defines response components of the Action Request.
 | **translationMapDefaults** | **[String:String]** | Map &#39;attribute name&#39; and &#39;default value&#39; pairs used as fallback values if JSON path extraction fails for specified key. | [optional] |
 | **successTemplate** | **String** | Velocity template to build response to return from Action. | [optional] |
 | **successTemplateUri** | **String** | URI to retrieve success template. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

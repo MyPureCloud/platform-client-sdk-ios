@@ -1,6 +1,5 @@
----
-title: BatchDownloadRequest
----
+# BatchDownloadRequest
+
 ## BatchDownloadRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: BatchDownloadRequest
 |------------ | ------------- | ------------- | -------------|
 | **conversationId** | **String** | Conversation id requested | [optional] |
 | **recordingId** | **String** | Recording id requested, optional.  Leave null for all recordings on the conversation | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: LexV2Slot
----
+# LexV2Slot
+
 ## LexV2Slot
 
 ## Properties
@@ -12,6 +11,7 @@ title: LexV2Slot
 | **slotId** | **String** | The slot id | |
 | **type** | **String** | The slot type | |
 | **slotTypeId** | **String** | The slot type id | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

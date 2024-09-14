@@ -1,6 +1,5 @@
----
-title: CampaignBusinessCategoryMetrics
----
+# CampaignBusinessCategoryMetrics
+
 ## CampaignBusinessCategoryMetrics
 
 ## Properties
@@ -10,6 +9,7 @@ title: CampaignBusinessCategoryMetrics
 | **successCount** | **Int** | Number of calls categorized as business success | [optional] |
 | **neutralCount** | **Int** | Number of calls categorized as business neutral | [optional] |
 | **failureCount** | **Int** | Number of calls categorized as business failure | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

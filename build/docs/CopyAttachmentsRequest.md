@@ -1,14 +1,14 @@
----
-title: CopyAttachmentsRequest
----
+# CopyAttachmentsRequest
+
 ## CopyAttachmentsRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **sourceMessage** | [**DomainEntityRef**](DomainEntityRef.html) | A reference to the email message within the current conversation that owns the attachments to be copied | |
-| **attachments** | [**[Attachment]**](Attachment.html) | A list of attachments that will be copied from the source message to the current draft | |
-{: class="table table-striped"}
+| **sourceMessage** | [**DomainEntityRef**](DomainEntityRef) | A reference to the email message within the current conversation that owns the attachments to be copied | |
+| **attachments** | [**[Attachment]**](Attachment) | A list of attachments that will be copied from the source message to the current draft | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

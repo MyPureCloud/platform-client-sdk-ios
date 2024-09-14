@@ -1,6 +1,5 @@
----
-title: WebDeploymentsAuthorizationResponse
----
+# WebDeploymentsAuthorizationResponse
+
 ## WebDeploymentsAuthorizationResponse
 
 ## Properties
@@ -9,6 +8,7 @@ title: WebDeploymentsAuthorizationResponse
 |------------ | ------------- | ------------- | -------------|
 | **refreshToken** | **String** | Refresh token used to issue a new JWT. | [optional] |
 | **jwt** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

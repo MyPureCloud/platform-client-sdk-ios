@@ -1,6 +1,5 @@
----
-title: SendAgentlessOutboundMessageResponse
----
+# SendAgentlessOutboundMessageResponse
+
 ## SendAgentlessOutboundMessageResponse
 
 ## Properties
@@ -13,12 +12,13 @@ title: SendAgentlessOutboundMessageResponse
 | **toAddress** | **String** | The recipient of the message. | [optional] |
 | **messengerType** | **String** | Type of messenger. | [optional] |
 | **textBody** | **String** | The body of the text message. | [optional] |
-| **messagingTemplate** | [**MessagingTemplateRequest**](MessagingTemplateRequest.html) | The messaging template sent | [optional] |
+| **messagingTemplate** | [**MessagingTemplateRequest**](MessagingTemplateRequest) | The messaging template sent | [optional] |
 | **useExistingActiveConversation** | **Bool** | Use an existing active conversation to send the agentless outbound message. Set this parameter to &#39;true&#39; to use active conversation. Default value: false | [optional] |
-| **message** | [**MessageData**](MessageData.html) | Sent agentless outbound message in normalized format | [optional] |
-| **timestamp** | [**Date**](Date.html) | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **message** | [**MessageData**](MessageData) | Sent agentless outbound message in normalized format | [optional] |
+| **timestamp** | [**Date**](Date) | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-| **user** | [**AddressableEntityRef**](AddressableEntityRef.html) | Details of the user created the job | [optional] |
-{: class="table table-striped"}
+| **user** | [**AddressableEntityRef**](AddressableEntityRef) | Details of the user created the job | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

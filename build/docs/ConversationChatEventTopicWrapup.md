@@ -1,6 +1,5 @@
----
-title: ConversationChatEventTopicWrapup
----
+# ConversationChatEventTopicWrapup
+
 ## ConversationChatEventTopicWrapup
 
 ## Properties
@@ -11,7 +10,8 @@ title: ConversationChatEventTopicWrapup
 | **notes** | **String** | Text entered by the agent to describe the call or disposition. | [optional] |
 | **tags** | **[String]** | List of tags selected by the agent to describe the call or disposition. | [optional] |
 | **durationSeconds** | **Int** | The length of time in seconds that the agent spent doing after call work., Note, the format of utc-millisec should be ignored, our code generator needs it to generate a Long for us internally | [optional] |
-| **endTime** | [**Date**](Date.html) | The timestamp when the wrapup was finished. | [optional] |
-{: class="table table-striped"}
+| **endTime** | [**Date**](Date) | The timestamp when the wrapup was finished. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

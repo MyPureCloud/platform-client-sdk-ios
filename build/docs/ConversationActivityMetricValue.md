@@ -1,6 +1,5 @@
----
-title: ConversationActivityMetricValue
----
+# ConversationActivityMetricValue
+
 ## ConversationActivityMetricValue
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationActivityMetricValue
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** | metric | [optional] |
 | **count** | **Int** | metric count | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

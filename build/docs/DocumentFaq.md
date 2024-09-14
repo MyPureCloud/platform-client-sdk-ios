@@ -1,6 +1,5 @@
----
-title: DocumentFaq
----
+# DocumentFaq
+
 ## DocumentFaq
 
 ## Properties
@@ -10,6 +9,7 @@ title: DocumentFaq
 | **question** | **String** | The question for this FAQ | |
 | **answer** | **String** | The answer for this FAQ | |
 | **alternatives** | **[String]** | List of Alternative questions related to the answer which helps in improving the likelihood of a match to user query | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ExecutionDataRequest
----
+# ExecutionDataRequest
+
 ## ExecutionDataRequest
 Used to retrieve a set of executionData history by the respective ids
 
@@ -9,6 +8,7 @@ Used to retrieve a set of executionData history by the respective ids
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ids** | **[String]** | A list of ids to retrieve | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

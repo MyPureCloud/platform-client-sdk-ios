@@ -1,6 +1,5 @@
----
-title: SmsProvisioningStatus
----
+# SmsProvisioningStatus
+
 ## SmsProvisioningStatus
 
 ## Properties
@@ -9,8 +8,9 @@ title: SmsProvisioningStatus
 |------------ | ------------- | ------------- | -------------|
 | **action** | **String** | Provisioning action | [optional] |
 | **state** | **String** | Provisioning state | [optional] |
-| **error** | [**ErrorBody**](ErrorBody.html) | Any error associated with a Failed state | [optional] |
+| **error** | [**ErrorBody**](ErrorBody) | Any error associated with a Failed state | [optional] |
 | **version** | **Int64** | The phone number version associated with the provisioning action | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

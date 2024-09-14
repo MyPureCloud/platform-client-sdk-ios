@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicModifiedBy
----
+# QueueConversationEventTopicModifiedBy
+
 ## QueueConversationEventTopicModifiedBy
 Fields identifying the entity that updated the command.
 
@@ -10,6 +9,7 @@ Fields identifying the entity that updated the command.
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The id of the user if the updater is an internal user. | [optional] |
 | **selfUri** | **String** | The URI for the user if the updater is an internal user. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

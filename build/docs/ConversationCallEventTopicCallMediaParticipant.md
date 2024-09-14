@@ -1,6 +1,5 @@
----
-title: ConversationCallEventTopicCallMediaParticipant
----
+# ConversationCallEventTopicCallMediaParticipant
+
 ## ConversationCallEventTopicCallMediaParticipant
 
 ## Properties
@@ -10,10 +9,10 @@ title: ConversationCallEventTopicCallMediaParticipant
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
-| **startTime** | [**Date**](Date.html) |  | [optional] |
-| **connectedTime** | [**Date**](Date.html) |  | [optional] |
-| **endTime** | [**Date**](Date.html) |  | [optional] |
-| **startHoldTime** | [**Date**](Date.html) |  | [optional] |
+| **startTime** | [**Date**](Date) |  | [optional] |
+| **connectedTime** | [**Date**](Date) |  | [optional] |
+| **endTime** | [**Date**](Date) |  | [optional] |
+| **startHoldTime** | [**Date**](Date) |  | [optional] |
 | **purpose** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **initialState** | **String** |  | [optional] |
@@ -22,45 +21,46 @@ title: ConversationCallEventTopicCallMediaParticipant
 | **held** | **Bool** |  | [optional] |
 | **wrapupRequired** | **Bool** |  | [optional] |
 | **wrapupPrompt** | **String** |  | [optional] |
-| **user** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
-| **queue** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
-| **team** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
+| **user** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
+| **queue** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
+| **team** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
 | **attributes** | **[String:String]** |  | [optional] |
-| **errorInfo** | [**ConversationCallEventTopicErrorBody**](ConversationCallEventTopicErrorBody.html) |  | [optional] |
-| **script** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
+| **errorInfo** | [**ConversationCallEventTopicErrorBody**](ConversationCallEventTopicErrorBody) |  | [optional] |
+| **script** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
 | **wrapupTimeoutMs** | **Int** |  | [optional] |
 | **wrapupSkipped** | **Bool** |  | [optional] |
 | **alertingTimeoutMs** | **Int** |  | [optional] |
 | **provider** | **String** |  | [optional] |
-| **externalContact** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
-| **externalOrganization** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
-| **wrapup** | [**ConversationCallEventTopicWrapup**](ConversationCallEventTopicWrapup.html) |  | [optional] |
-| **conversationRoutingData** | [**ConversationCallEventTopicConversationRoutingData**](ConversationCallEventTopicConversationRoutingData.html) |  | [optional] |
+| **externalContact** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
+| **externalOrganization** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
+| **wrapup** | [**ConversationCallEventTopicWrapup**](ConversationCallEventTopicWrapup) |  | [optional] |
+| **conversationRoutingData** | [**ConversationCallEventTopicConversationRoutingData**](ConversationCallEventTopicConversationRoutingData) |  | [optional] |
 | **peer** | **String** |  | [optional] |
 | **screenRecordingState** | **String** |  | [optional] |
 | **flaggedReason** | **String** |  | [optional] |
-| **journeyContext** | [**ConversationCallEventTopicJourneyContext**](ConversationCallEventTopicJourneyContext.html) |  | [optional] |
-| **startAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **endAcwTime** | [**Date**](Date.html) |  | [optional] |
-| **resumeTime** | [**Date**](Date.html) |  | [optional] |
-| **parkTime** | [**Date**](Date.html) |  | [optional] |
+| **journeyContext** | [**ConversationCallEventTopicJourneyContext**](ConversationCallEventTopicJourneyContext) |  | [optional] |
+| **startAcwTime** | [**Date**](Date) |  | [optional] |
+| **endAcwTime** | [**Date**](Date) |  | [optional] |
+| **resumeTime** | [**Date**](Date) |  | [optional] |
+| **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
-| **queueMediaSettings** | [**ConversationCallEventTopicQueueMediaSettings**](ConversationCallEventTopicQueueMediaSettings.html) |  | [optional] |
+| **queueMediaSettings** | [**ConversationCallEventTopicQueueMediaSettings**](ConversationCallEventTopicQueueMediaSettings) |  | [optional] |
 | **muted** | **Bool** |  | [optional] |
 | **confined** | **Bool** |  | [optional] |
 | **recording** | **Bool** |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
-| **group** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference.html) |  | [optional] |
+| **group** | [**ConversationCallEventTopicUriReference**](ConversationCallEventTopicUriReference) |  | [optional] |
 | **ani** | **String** |  | [optional] |
 | **dnis** | **String** |  | [optional] |
 | **documentId** | **String** |  | [optional] |
 | **monitoredParticipantId** | **String** |  | [optional] |
 | **coachedParticipantId** | **String** |  | [optional] |
 | **bargedParticipantId** | **String** |  | [optional] |
-| **bargedTime** | [**Date**](Date.html) |  | [optional] |
+| **bargedTime** | [**Date**](Date) |  | [optional] |
 | **consultParticipantId** | **String** |  | [optional] |
-| **faxStatus** | [**ConversationCallEventTopicFaxStatus**](ConversationCallEventTopicFaxStatus.html) |  | [optional] |
-{: class="table table-striped"}
+| **faxStatus** | [**ConversationCallEventTopicFaxStatus**](ConversationCallEventTopicFaxStatus) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

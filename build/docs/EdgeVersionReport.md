@@ -1,14 +1,14 @@
----
-title: EdgeVersionReport
----
+# EdgeVersionReport
+
 ## EdgeVersionReport
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **oldestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation.html) |  | [optional] |
-| **newestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation.html) |  | [optional] |
-{: class="table table-striped"}
+| **oldestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation) |  | [optional] |
+| **newestVersion** | [**EdgeVersionInformation**](EdgeVersionInformation) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

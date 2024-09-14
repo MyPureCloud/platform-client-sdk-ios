@@ -1,6 +1,5 @@
----
-title: CategoryReference
----
+# CategoryReference
+
 ## CategoryReference
 
 ## Properties
@@ -9,8 +8,9 @@ title: CategoryReference
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the category. | |
 | **name** | **String** | Category name. | [optional] |
-| **parentCategory** | [**CategoryReference**](CategoryReference.html) | The reference to category to which this category belongs to. | [optional] |
+| **parentCategory** | [**CategoryReference**](CategoryReference) | The reference to category to which this category belongs to. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

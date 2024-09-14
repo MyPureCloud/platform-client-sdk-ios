@@ -1,6 +1,5 @@
----
-title: RequestCriteria
----
+# RequestCriteria
+
 ## RequestCriteria
 
 ## Properties
@@ -11,6 +10,7 @@ title: RequestCriteria
 | **values** | **[String]** | The criteria values. | |
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | [optional] |
 | **_operator** | **String** | The comparison operator. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ActionContractInput
----
+# ActionContractInput
+
 ## ActionContractInput
 Contract definition.
 
@@ -8,8 +7,9 @@ Contract definition.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **input** | [**PostInputContract**](PostInputContract.html) | Execution input contract | |
-| **output** | [**PostOutputContract**](PostOutputContract.html) | Execution output contract | |
-{: class="table table-striped"}
+| **input** | [**PostInputContract**](PostInputContract) | Execution input contract | |
+| **output** | [**PostOutputContract**](PostOutputContract) | Execution output contract | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

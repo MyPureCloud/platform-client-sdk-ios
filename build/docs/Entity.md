@@ -1,6 +1,5 @@
----
-title: Entity
----
+# Entity
+
 ## Entity
 
 ## Properties
@@ -8,6 +7,7 @@ title: Entity
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

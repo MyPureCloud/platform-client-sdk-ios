@@ -1,6 +1,5 @@
----
-title: Permissions
----
+# Permissions
+
 ## Permissions
 
 ## Properties
@@ -8,6 +7,7 @@ title: Permissions
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **ids** | **[String]** | List of permission ids. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

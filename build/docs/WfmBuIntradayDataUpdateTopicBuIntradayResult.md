@@ -1,20 +1,20 @@
----
-title: WfmBuIntradayDataUpdateTopicBuIntradayResult
----
+# WfmBuIntradayDataUpdateTopicBuIntradayResult
+
 ## WfmBuIntradayDataUpdateTopicBuIntradayResult
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **startDate** | [**Date**](Date.html) |  | [optional] |
-| **endDate** | [**Date**](Date.html) |  | [optional] |
+| **startDate** | [**Date**](Date) |  | [optional] |
+| **endDate** | [**Date**](Date) |  | [optional] |
 | **intervalLengthMinutes** | **Int** |  | [optional] |
-| **intradayDataGroupings** | [**[WfmBuIntradayDataUpdateTopicBuIntradayDataGroup]**](WfmBuIntradayDataUpdateTopicBuIntradayDataGroup.html) |  | [optional] |
+| **intradayDataGroupings** | [**[WfmBuIntradayDataUpdateTopicBuIntradayDataGroup]**](WfmBuIntradayDataUpdateTopicBuIntradayDataGroup) |  | [optional] |
 | **categories** | **[String]** |  | [optional] |
 | **noDataReason** | **String** |  | [optional] |
-| **schedule** | [**WfmBuIntradayDataUpdateTopicBuScheduleReference**](WfmBuIntradayDataUpdateTopicBuScheduleReference.html) |  | [optional] |
-| **shortTermForecast** | [**WfmBuIntradayDataUpdateTopicBuShortTermForecastReference**](WfmBuIntradayDataUpdateTopicBuShortTermForecastReference.html) |  | [optional] |
-{: class="table table-striped"}
+| **schedule** | [**WfmBuIntradayDataUpdateTopicBuScheduleReference**](WfmBuIntradayDataUpdateTopicBuScheduleReference) |  | [optional] |
+| **shortTermForecast** | [**WfmBuIntradayDataUpdateTopicBuShortTermForecastReference**](WfmBuIntradayDataUpdateTopicBuShortTermForecastReference) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

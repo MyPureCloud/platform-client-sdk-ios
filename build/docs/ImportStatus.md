@@ -1,6 +1,5 @@
----
-title: ImportStatus
----
+# ImportStatus
+
 ## ImportStatus
 
 ## Properties
@@ -14,6 +13,7 @@ title: ImportStatus
 | **failureReason** | **String** | if the import has failed, the reason for the failure | [optional] |
 | **targetContactListIds** | **[String]** | The contact list Ids for target contact lists. | [optional] |
 | **listNamePrefix** | **String** | The prefix for the contact list name | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

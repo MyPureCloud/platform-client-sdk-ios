@@ -1,6 +1,5 @@
----
-title: WorkitemStatus
----
+# WorkitemStatus
+
 ## WorkitemStatus
 
 ## Properties
@@ -10,13 +9,14 @@ title: WorkitemStatus
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **category** | **String** | The Category of the Status. | [optional] |
-| **destinationStatuses** | [**[WorkitemStatusReference]**](WorkitemStatusReference.html) | The Statuses the Status can transition to. | [optional] |
+| **destinationStatuses** | [**[WorkitemStatusReference]**](WorkitemStatusReference) | The Statuses the Status can transition to. | [optional] |
 | **_description** | **String** | The description of the Status. | [optional] |
-| **defaultDestinationStatus** | [**WorkitemStatusReference**](WorkitemStatusReference.html) | Default destination status to which this Status will transition to if auto status transition enabled. | [optional] |
+| **defaultDestinationStatus** | [**WorkitemStatusReference**](WorkitemStatusReference) | Default destination status to which this Status will transition to if auto status transition enabled. | [optional] |
 | **statusTransitionDelaySeconds** | **Int** | Delay in seconds for auto status transition | [optional] |
 | **statusTransitionTime** | **String** | Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS | [optional] |
-| **worktype** | [**WorktypeReference**](WorktypeReference.html) | The Worktype containing the Status. | [optional] |
+| **worktype** | [**WorktypeReference**](WorktypeReference) | The Worktype containing the Status. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

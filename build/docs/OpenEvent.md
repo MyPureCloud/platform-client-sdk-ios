@@ -1,6 +1,5 @@
----
-title: OpenEvent
----
+# OpenEvent
+
 ## OpenEvent
 Message event element.
 
@@ -9,6 +8,7 @@ Message event element.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventType** | **String** | Type of this event element | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

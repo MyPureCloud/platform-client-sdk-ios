@@ -1,6 +1,5 @@
----
-title: WfmHistoricalAdherenceBulkUserDayMetrics
----
+# WfmHistoricalAdherenceBulkUserDayMetrics
+
 ## WfmHistoricalAdherenceBulkUserDayMetrics
 
 ## Properties
@@ -18,6 +17,7 @@ title: WfmHistoricalAdherenceBulkUserDayMetrics
 | **actualLengthSeconds** | **Int** | Total duration in seconds for all actually worked activities | [optional] |
 | **adherencePercentage** | **Double** | Total adherence percentage for this user, in the scale of 0 - 100 | [optional] |
 | **conformancePercentage** | **Double** | Total conformance percentage for this user, in the scale of 0 - 100. Conformance percentage can be greater than 100 when the actual on queue time is greater than the scheduled on queue time for the same period. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

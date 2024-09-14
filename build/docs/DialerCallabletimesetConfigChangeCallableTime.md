@@ -1,15 +1,15 @@
----
-title: DialerCallabletimesetConfigChangeCallableTime
----
+# DialerCallabletimesetConfigChangeCallableTime
+
 ## DialerCallabletimesetConfigChangeCallableTime
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **timeSlots** | [**[DialerCallabletimesetConfigChangeTimeSlot]**](DialerCallabletimesetConfigChangeTimeSlot.html) | The time slots | [optional] |
+| **timeSlots** | [**[DialerCallabletimesetConfigChangeTimeSlot]**](DialerCallabletimesetConfigChangeTimeSlot) | The time slots | [optional] |
 | **timeZoneId** | **String** | The ISO ID for the timezone | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

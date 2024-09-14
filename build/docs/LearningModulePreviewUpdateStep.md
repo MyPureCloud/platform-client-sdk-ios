@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateStep
----
+# LearningModulePreviewUpdateStep
+
 ## LearningModulePreviewUpdateStep
 Learning module preview update assignment step
 
@@ -13,7 +12,8 @@ Learning module preview update assignment step
 | **completionStatus** | **String** | The completion status of the step | [optional] |
 | **completionPercentage** | **Float** | The completion percentage of the step | [optional] |
 | **percentageScore** | **Float** | Percentage Score | [optional] |
-| **structure** | [**[LearningModulePreviewUpdateScoStructure]**](LearningModulePreviewUpdateScoStructure.html) | The structure for any SCO associated with this step | [optional] |
-{: class="table table-striped"}
+| **structure** | [**[LearningModulePreviewUpdateScoStructure]**](LearningModulePreviewUpdateScoStructure) | The structure for any SCO associated with this step | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

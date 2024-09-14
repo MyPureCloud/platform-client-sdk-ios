@@ -1,6 +1,5 @@
----
-title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
----
+# WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
+
 ## WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 
 ## Properties
@@ -8,7 +7,7 @@ title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **user** | [**WfmTimeOffRequestUpdateTopicUserReference**](WfmTimeOffRequestUpdateTopicUserReference.html) |  | [optional] |
+| **user** | [**WfmTimeOffRequestUpdateTopicUserReference**](WfmTimeOffRequestUpdateTopicUserReference) |  | [optional] |
 | **isFullDayRequest** | **Bool** |  | [optional] |
 | **markedAsRead** | **Bool** |  | [optional] |
 | **activityCodeId** | **String** |  | [optional] |
@@ -25,6 +24,7 @@ title: WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate
 | **submittedBy** | **String** |  | [optional] |
 | **modifiedDate** | **String** |  | [optional] |
 | **modifiedBy** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

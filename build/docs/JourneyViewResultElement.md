@@ -1,6 +1,5 @@
----
-title: JourneyViewResultElement
----
+# JourneyViewResultElement
+
 ## JourneyViewResultElement
 An element within a journey view result
 
@@ -9,9 +8,10 @@ An element within a journey view result
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **metrics** | [**JourneyViewResultMetrics**](JourneyViewResultMetrics.html) | the metrics of the current element | [optional] |
-| **followedBy** | [**[JourneyViewResultLink]**](JourneyViewResultLink.html) | the list of links following the current element in the journey | [optional] |
+| **metrics** | [**JourneyViewResultMetrics**](JourneyViewResultMetrics) | the metrics of the current element | [optional] |
+| **followedBy** | [**[JourneyViewResultLink]**](JourneyViewResultLink) | the list of links following the current element in the journey | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: ReplacementTerm
----
+# ReplacementTerm
+
 ## ReplacementTerm
 
 ## Properties
@@ -10,6 +9,7 @@ title: ReplacementTerm
 | **type** | **String** |  | [optional] |
 | **existingValue** | **String** |  | [optional] |
 | **updatedValue** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: TextBotOutputPrompts
----
+# TextBotOutputPrompts
+
 ## TextBotOutputPrompts
 Prompt information related to a bot flow turn.
 
@@ -9,7 +8,8 @@ Prompt information related to a bot flow turn.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **outputLanguage** | **String** | The ISO code of the output language for this prompt item. | |
-| **textPrompts** | [**TextBotModeOutputPrompts**](TextBotModeOutputPrompts.html) | Text output prompts, if any. | [optional] |
-{: class="table table-striped"}
+| **textPrompts** | [**TextBotModeOutputPrompts**](TextBotModeOutputPrompts) | Text output prompts, if any. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

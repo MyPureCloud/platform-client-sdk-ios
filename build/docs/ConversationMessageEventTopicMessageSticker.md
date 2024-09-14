@@ -1,6 +1,5 @@
----
-title: ConversationMessageEventTopicMessageSticker
----
+# ConversationMessageEventTopicMessageSticker
+
 ## ConversationMessageEventTopicMessageSticker
 
 ## Properties
@@ -9,6 +8,7 @@ title: ConversationMessageEventTopicMessageSticker
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** | The location of the sticker, useful for retrieving it | [optional] |
 | **_id** | **String** | The unique id of the the sticker object. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

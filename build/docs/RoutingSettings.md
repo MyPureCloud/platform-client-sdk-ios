@@ -1,6 +1,5 @@
----
-title: RoutingSettings
----
+# RoutingSettings
+
 ## RoutingSettings
 
 ## Properties
@@ -8,6 +7,7 @@ title: RoutingSettings
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **resetAgentScoreOnPresenceChange** | **Bool** | Reset agent score when agent presence changes from off-queue to on-queue | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

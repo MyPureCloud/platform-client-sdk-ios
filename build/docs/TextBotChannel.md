@@ -1,6 +1,5 @@
----
-title: TextBotChannel
----
+# TextBotChannel
+
 ## TextBotChannel
 Channel information relevant to a bot flow.
 
@@ -11,7 +10,8 @@ Channel information relevant to a bot flow.
 | **name** | **String** | The name of the channel. | |
 | **inputModes** | **[String]** | The input modes for the channel. | |
 | **outputModes** | **[String]** | The output modes for the channel. | |
-| **userAgent** | [**TextBotUserAgent**](TextBotUserAgent.html) | Information about the end user agent calling the bot flow. | |
-{: class="table table-striped"}
+| **userAgent** | [**TextBotUserAgent**](TextBotUserAgent) | Information about the end user agent calling the bot flow. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

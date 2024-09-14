@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationMktCampaign
----
+# JourneyWebEventsNotificationMktCampaign
+
 ## JourneyWebEventsNotificationMktCampaign
 
 ## Properties
@@ -14,6 +13,7 @@ title: JourneyWebEventsNotificationMktCampaign
 | **term** | **String** |  | [optional] |
 | **clickId** | **String** |  | [optional] |
 | **network** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

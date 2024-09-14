@@ -1,6 +1,5 @@
----
-title: CustomProvider
----
+# CustomProvider
+
 ## CustomProvider
 
 ## Properties
@@ -23,6 +22,7 @@ title: CustomProvider
 | **ssoBinding** | **String** |  | [optional] |
 | **signAuthnRequests** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

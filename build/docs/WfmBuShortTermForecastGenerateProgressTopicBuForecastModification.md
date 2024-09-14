@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
----
+# WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
+
 ## WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
 
 ## Properties
@@ -13,13 +12,14 @@ title: WfmBuShortTermForecastGenerateProgressTopicBuForecastModification
 | **metric** | **String** |  | [optional] |
 | **legacyMetric** | **String** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-| **values** | [**[WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue.html) |  | [optional] |
-| **secondaryValues** | [**[WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue.html) |  | [optional] |
+| **values** | [**[WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue) |  | [optional] |
+| **secondaryValues** | [**[WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastGenerateProgressTopicModificationIntervalOffsetValue) |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **granularity** | **String** |  | [optional] |
 | **secondaryGranularity** | **String** |  | [optional] |
 | **displayGranularity** | **String** |  | [optional] |
 | **planningGroupIds** | **[String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

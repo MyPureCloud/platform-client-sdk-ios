@@ -1,14 +1,14 @@
----
-title: QueueConversationVideoEventTopicScoredAgent
----
+# QueueConversationVideoEventTopicScoredAgent
+
 ## QueueConversationVideoEventTopicScoredAgent
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agent** | [**QueueConversationVideoEventTopicUriReference**](QueueConversationVideoEventTopicUriReference.html) | A UriReference for a resource | [optional] |
+| **agent** | [**QueueConversationVideoEventTopicUriReference**](QueueConversationVideoEventTopicUriReference) | A UriReference for a resource | [optional] |
 | **score** | **Int** | Agent&#39;s score for the current conversation, from 0 - 100, higher being better | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

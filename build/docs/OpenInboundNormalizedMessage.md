@@ -1,6 +1,5 @@
----
-title: OpenInboundNormalizedMessage
----
+# OpenInboundNormalizedMessage
+
 ## OpenInboundNormalizedMessage
 Open Messaging rich media message structure
 
@@ -8,10 +7,11 @@ Open Messaging rich media message structure
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **channel** | [**OpenInboundMessageMessagingChannel**](OpenInboundMessageMessagingChannel.html) | Channel-specific information that describes the message and the message channel/provider. | |
+| **channel** | [**OpenInboundMessageMessagingChannel**](OpenInboundMessageMessagingChannel) | Channel-specific information that describes the message and the message channel/provider. | |
 | **text** | **String** | Message text. | [optional] |
-| **content** | [**[OpenInboundMessageContent]**](OpenInboundMessageContent.html) | List of content elements. | [optional] |
+| **content** | [**[OpenInboundMessageContent]**](OpenInboundMessageContent) | List of content elements. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message to capture non-channel specific data. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: JourneyAppEventsNotificationSdkLibrary
----
+# JourneyAppEventsNotificationSdkLibrary
+
 ## JourneyAppEventsNotificationSdkLibrary
 
 ## Properties
@@ -9,6 +8,7 @@ title: JourneyAppEventsNotificationSdkLibrary
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** |  | [optional] |
 | **version** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

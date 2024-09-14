@@ -1,6 +1,5 @@
----
-title: EmergencyLocation
----
+# EmergencyLocation
+
 ## EmergencyLocation
 
 ## Properties
@@ -9,10 +8,11 @@ title: EmergencyLocation
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **address** | [**LocationAddress**](LocationAddress.html) | Emergency address | |
+| **address** | [**LocationAddress**](LocationAddress) | Emergency address | |
 | **did** | **String** | Phone number in E164 format | |
 | **source** | **String** | source | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

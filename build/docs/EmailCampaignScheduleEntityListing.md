@@ -1,13 +1,12 @@
----
-title: EmailCampaignScheduleEntityListing
----
+# EmailCampaignScheduleEntityListing
+
 ## EmailCampaignScheduleEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[EmailCampaignSchedule]**](EmailCampaignSchedule.html) |  | [optional] |
+| **entities** | [**[EmailCampaignSchedule]**](EmailCampaignSchedule) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: EmailCampaignScheduleEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

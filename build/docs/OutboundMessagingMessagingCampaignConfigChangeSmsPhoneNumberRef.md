@@ -1,6 +1,5 @@
----
-title: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
----
+# OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
+
 ## OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef
 A reference for an SmsPhoneNumber
 
@@ -9,6 +8,7 @@ A reference for an SmsPhoneNumber
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **phoneNumber** | **String** | The unique phone number | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: DialerContactlistfilterConfigChangeRange
----
+# DialerContactlistfilterConfigChangeRange
+
 ## DialerContactlistfilterConfigChangeRange
 FilterRange is one of the attributes of a FilterPredicate
 
@@ -13,7 +12,8 @@ FilterRange is one of the attributes of a FilterPredicate
 | **minInclusive** | **Bool** | Whether or not to include the minimum in the range | [optional] |
 | **maxInclusive** | **Bool** | Whether or not to include the maximum in the range | [optional] |
 | **inSet** | **[String]** | Elements that apply to the IN operator | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

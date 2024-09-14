@@ -1,6 +1,5 @@
----
-title: WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody
----
+# WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody
+
 ## WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody
 
 ## Properties
@@ -8,8 +7,9 @@ title: WebDeploymentsDeploymentTopicWebMessagingDeploymentChangeEventBody
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **configuration** | [**WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody**](WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody.html) |  | [optional] |
+| **configuration** | [**WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody**](WebDeploymentsDeploymentTopicWebMessagingConfigChangeEventBody) |  | [optional] |
 | **status** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

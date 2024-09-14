@@ -9665,6 +9665,24 @@ public class ConversationEmailEventTopicScoredAgent: Codable {
 
 
 
+/** Detected language of this message. */
+
+public class ConversationEnrichmentLanguage: Codable {
+
+
+
+    /** The ISO 639-3 detected language code of this message. */
+    public var language: String?
+
+    public init(language: String?) {
+        self.language = language
+    }
+
+
+}
+
+
+
 
 public class ConversationEventTopicCallback: Codable {
 
@@ -10635,6 +10653,7 @@ public class ConversationMessageEventTopicErrorDetails: Codable {
 public class ConversationMessageMetadataContent: Codable {
 
     public enum ContentType: String, Codable { 
+        case reactions = "Reactions"
         case attachment = "Attachment"
         case location = "Location"
         case quickReply = "QuickReply"
@@ -11044,6 +11063,23 @@ public class ConversationSocialExpressionEventTopicQueueMediaSettings: Codable {
         self.autoAnswerAlertToneSeconds = autoAnswerAlertToneSeconds
         self.manualAnswerAlertToneSeconds = manualAnswerAlertToneSeconds
         self.enableAutoAnswer = enableAutoAnswer
+    }
+
+
+}
+
+
+
+
+public class ConversationUtilizationLabelUpdate: Codable {
+
+
+
+    /** The utilization label associated with the conversation. */
+    public var utilizationLabelId: String?
+
+    public init(utilizationLabelId: String?) {
+        self.utilizationLabelId = utilizationLabelId
     }
 
 
@@ -18514,6 +18550,123 @@ public class GoogleDialogflowCustomSettings: Codable {
 
 
 
+public class Grammar: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    public var _description: String?
+    /** List of languages configured for this grammar */
+    public var languages: [GrammarLanguage]?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, _description: String?, languages: [GrammarLanguage]?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self._description = _description
+        self.languages = languages
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case _description = "description"
+        case languages
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class GrammarLanguageUpdate: Codable {
+
+
+
+
+
+    /** Additional information about the associated voice file */
+    public var voiceFileMetadata: GrammarLanguageFileMetadata?
+    /** Additional information about the associated dtmf file */
+    public var dtmfFileMetadata: GrammarLanguageFileMetadata?
+
+    public init(voiceFileMetadata: GrammarLanguageFileMetadata?, dtmfFileMetadata: GrammarLanguageFileMetadata?) {
+        self.voiceFileMetadata = voiceFileMetadata
+        self.dtmfFileMetadata = dtmfFileMetadata
+    }
+
+
+}
+
+
+
+
+public class GrammarListing: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [Grammar]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var firstUri: String?
+    public var lastUri: String?
+    public var selfUri: String?
+    public var nextUri: String?
+    public var previousUri: String?
+    public var pageCount: Int?
+
+    public init(entities: [Grammar]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.firstUri = firstUri
+        self.lastUri = lastUri
+        self.selfUri = selfUri
+        self.nextUri = nextUri
+        self.previousUri = previousUri
+        self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
 public class Greeting: Codable {
 
 
@@ -20685,22 +20838,6 @@ public class IntegrationStatusInfo: Codable {
 
 
 
-public class Intent: Codable {
-
-
-
-    public var name: String?
-
-    public init(name: String?) {
-        self.name = name
-    }
-
-
-}
-
-
-
-
 public class IntegrationTypeEntityListing: Codable {
 
 
@@ -20745,6 +20882,22 @@ public class IntegrationTypeEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class Intent: Codable {
+
+
+
+    public var name: String?
+
+    public init(name: String?) {
+        self.name = name
     }
 
 
@@ -31356,43 +31509,6 @@ public class QueueConversationSocialExpressionEventTopicMessageMedia: Codable {
 
 
 
-public class QueueMediaSettings: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The queue media settings for call interactions. */
-    public var call: MediaSettings?
-    /** The queue media settings for callback interactions. */
-    public var callback: CallbackMediaSettings?
-    /** The queue media settings for chat interactions. */
-    public var chat: MediaSettings?
-    /** The queue media settings for email interactions. */
-    public var email: MediaSettings?
-    /** The queue media settings for message interactions. */
-    public var message: MediaSettings?
-
-    public init(call: MediaSettings?, callback: CallbackMediaSettings?, chat: MediaSettings?, email: MediaSettings?, message: MediaSettings?) {
-        self.call = call
-        self.callback = callback
-        self.chat = chat
-        self.email = email
-        self.message = message
-    }
-
-
-}
-
-
-
-
 public class QueueConversationSocialExpressionEventTopicMessageMetadataEvent: Codable {
 
 
@@ -32524,6 +32640,43 @@ public class QueueConversationVideoEventTopicVoicemail: Codable {
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
         case uploadStatus
+    }
+
+
+}
+
+
+
+
+public class QueueMediaSettings: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The queue media settings for call interactions. */
+    public var call: MediaSettings?
+    /** The queue media settings for callback interactions. */
+    public var callback: CallbackMediaSettings?
+    /** The queue media settings for chat interactions. */
+    public var chat: MediaSettings?
+    /** The queue media settings for email interactions. */
+    public var email: MediaSettings?
+    /** The queue media settings for message interactions. */
+    public var message: MediaSettings?
+
+    public init(call: MediaSettings?, callback: CallbackMediaSettings?, chat: MediaSettings?, email: MediaSettings?, message: MediaSettings?) {
+        self.call = call
+        self.callback = callback
+        self.chat = chat
+        self.email = email
+        self.message = message
     }
 
 
@@ -37429,104 +37582,6 @@ public class TimeOffLimitRange: Codable {
 
 
 
-public class TimeOffPlanBusinessUnitAssociation: Codable {
-
-
-
-
-
-    /** Management units to which this time-off plan applies. This must not be set if staffingGroups is populated */
-    public var managementUnits: [ManagementUnitReference]?
-    /** Staffing groups to which this time-off plan applies. This must not be set if managementUnits is populated */
-    public var staffingGroups: [StaffingGroupReference]?
-
-    public init(managementUnits: [ManagementUnitReference]?, staffingGroups: [StaffingGroupReference]?) {
-        self.managementUnits = managementUnits
-        self.staffingGroups = staffingGroups
-    }
-
-
-}
-
-
-
-
-public class TimeOffRequestLookup: Codable {
-
-
-
-
-
-    /** The ID of the time off request */
-    public var timeOffRequestId: String?
-    /** The ID of the user to whom the time off request belongs */
-    public var userId: String?
-
-    public init(timeOffRequestId: String?, userId: String?) {
-        self.timeOffRequestId = timeOffRequestId
-        self.userId = userId
-    }
-
-
-}
-
-
-
-
-public class TimeOffRequestSettings: Codable {
-
-
-
-
-
-
-
-    /** Whether to enforce a submission range for agent time off requests */
-    public var submissionRangeEnforced: Bool?
-    /** The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past */
-    public var submissionEarliestDaysFromNow: Int?
-    /** The latest number of days from now for which an agent can submit a time off request */
-    public var submissionLatestDaysFromNow: Int?
-
-    public init(submissionRangeEnforced: Bool?, submissionEarliestDaysFromNow: Int?, submissionLatestDaysFromNow: Int?) {
-        self.submissionRangeEnforced = submissionRangeEnforced
-        self.submissionEarliestDaysFromNow = submissionEarliestDaysFromNow
-        self.submissionLatestDaysFromNow = submissionLatestDaysFromNow
-    }
-
-
-}
-
-
-
-
-public class TokenInfoClonedUser: Codable {
-
-
-
-
-
-    /** User id of the original native user */
-    public var _id: String?
-    /** Organization of the original native user */
-    public var organization: Entity?
-
-    public init(_id: String?, organization: Entity?) {
-        self._id = _id
-        self.organization = organization
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case organization
-    }
-
-
-}
-
-
-
-
 public class Topic: Codable {
 
 
@@ -37624,6 +37679,104 @@ public class Topic: Codable {
         case publishedBy
         case datePublished
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class TimeOffPlanBusinessUnitAssociation: Codable {
+
+
+
+
+
+    /** Management units to which this time-off plan applies. This must not be set if staffingGroups is populated */
+    public var managementUnits: [ManagementUnitReference]?
+    /** Staffing groups to which this time-off plan applies. This must not be set if managementUnits is populated */
+    public var staffingGroups: [StaffingGroupReference]?
+
+    public init(managementUnits: [ManagementUnitReference]?, staffingGroups: [StaffingGroupReference]?) {
+        self.managementUnits = managementUnits
+        self.staffingGroups = staffingGroups
+    }
+
+
+}
+
+
+
+
+public class TimeOffRequestLookup: Codable {
+
+
+
+
+
+    /** The ID of the time off request */
+    public var timeOffRequestId: String?
+    /** The ID of the user to whom the time off request belongs */
+    public var userId: String?
+
+    public init(timeOffRequestId: String?, userId: String?) {
+        self.timeOffRequestId = timeOffRequestId
+        self.userId = userId
+    }
+
+
+}
+
+
+
+
+public class TimeOffRequestSettings: Codable {
+
+
+
+
+
+
+
+    /** Whether to enforce a submission range for agent time off requests */
+    public var submissionRangeEnforced: Bool?
+    /** The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past */
+    public var submissionEarliestDaysFromNow: Int?
+    /** The latest number of days from now for which an agent can submit a time off request */
+    public var submissionLatestDaysFromNow: Int?
+
+    public init(submissionRangeEnforced: Bool?, submissionEarliestDaysFromNow: Int?, submissionLatestDaysFromNow: Int?) {
+        self.submissionRangeEnforced = submissionRangeEnforced
+        self.submissionEarliestDaysFromNow = submissionEarliestDaysFromNow
+        self.submissionLatestDaysFromNow = submissionLatestDaysFromNow
+    }
+
+
+}
+
+
+
+
+public class TokenInfoClonedUser: Codable {
+
+
+
+
+
+    /** User id of the original native user */
+    public var _id: String?
+    /** Organization of the original native user */
+    public var organization: Entity?
+
+    public init(_id: String?, organization: Entity?) {
+        self._id = _id
+        self.organization = organization
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case organization
     }
 
 

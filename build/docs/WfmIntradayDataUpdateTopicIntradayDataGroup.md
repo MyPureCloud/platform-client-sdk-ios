@@ -1,6 +1,5 @@
----
-title: WfmIntradayDataUpdateTopicIntradayDataGroup
----
+# WfmIntradayDataUpdateTopicIntradayDataGroup
+
 ## WfmIntradayDataUpdateTopicIntradayDataGroup
 
 ## Properties
@@ -8,12 +7,13 @@ title: WfmIntradayDataUpdateTopicIntradayDataGroup
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mediaType** | **String** |  | [optional] |
-| **forecastDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayForecastData]**](WfmIntradayDataUpdateTopicIntradayForecastData.html) |  | [optional] |
-| **scheduleDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayScheduleData]**](WfmIntradayDataUpdateTopicIntradayScheduleData.html) |  | [optional] |
-| **historicalAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalAgentData]**](WfmIntradayDataUpdateTopicIntradayHistoricalAgentData.html) |  | [optional] |
-| **historicalQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalQueueData]**](WfmIntradayDataUpdateTopicIntradayHistoricalQueueData.html) |  | [optional] |
-| **performancePredictionAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData]**](WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData.html) |  | [optional] |
-| **performancePredictionQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]**](WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData.html) |  | [optional] |
-{: class="table table-striped"}
+| **forecastDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayForecastData]**](WfmIntradayDataUpdateTopicIntradayForecastData) |  | [optional] |
+| **scheduleDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayScheduleData]**](WfmIntradayDataUpdateTopicIntradayScheduleData) |  | [optional] |
+| **historicalAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalAgentData]**](WfmIntradayDataUpdateTopicIntradayHistoricalAgentData) |  | [optional] |
+| **historicalQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalQueueData]**](WfmIntradayDataUpdateTopicIntradayHistoricalQueueData) |  | [optional] |
+| **performancePredictionAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData]**](WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData) |  | [optional] |
+| **performancePredictionQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]**](WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

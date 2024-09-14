@@ -1,6 +1,5 @@
----
-title: TrustedCertificates
----
+# TrustedCertificates
+
 ## TrustedCertificates
 Information about trusted certificates
 
@@ -8,8 +7,9 @@ Information about trusted certificates
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TrustedCertificateInfo]**](TrustedCertificateInfo.html) | The list of trusted certificates | [optional] |
+| **entities** | [**[TrustedCertificateInfo]**](TrustedCertificateInfo) | The list of trusted certificates | [optional] |
 | **total** | **Int** | The total number of trusted certificates | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

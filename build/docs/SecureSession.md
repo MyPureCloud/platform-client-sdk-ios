@@ -1,6 +1,5 @@
----
-title: SecureSession
----
+# SecureSession
+
 ## SecureSession
 
 ## Properties
@@ -8,12 +7,13 @@ title: SecureSession
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **flow** | [**DomainEntityRef**](DomainEntityRef.html) | The flow to execute securely | |
+| **flow** | [**DomainEntityRef**](DomainEntityRef) | The flow to execute securely | |
 | **userData** | **String** | Customer-provided data | [optional] |
 | **state** | **String** | The current state of a secure session | |
 | **sourceParticipantId** | **String** | Unique identifier for the participant initiating the secure session. | [optional] |
 | **disconnect** | **Bool** | If true, disconnect the agent after creating the session | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

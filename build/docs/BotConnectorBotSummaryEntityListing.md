@@ -1,13 +1,12 @@
----
-title: BotConnectorBotSummaryEntityListing
----
+# BotConnectorBotSummaryEntityListing
+
 ## BotConnectorBotSummaryEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BotSummary]**](BotSummary.html) |  | [optional] |
+| **entities** | [**[BotSummary]**](BotSummary) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: BotConnectorBotSummaryEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

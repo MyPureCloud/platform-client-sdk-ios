@@ -1,6 +1,5 @@
----
-title: DialerSequenceScheduleConfigChangeRecurrencePattern
----
+# DialerSequenceScheduleConfigChangeRecurrencePattern
+
 ## DialerSequenceScheduleConfigChangeRecurrencePattern
 the schedule pattern
 
@@ -11,7 +10,8 @@ the schedule pattern
 | **type** | **String** |  | [optional] |
 | **interval** | **Int** | the amount of time in between occurrences | [optional] |
 | **daysOfWeek** | **[String]** | the day(s) of the week the occurrence happens | [optional] |
-| **additionalProperties** | [**[String:JSON]**](JSON.html) |  | [optional] |
-{: class="table table-striped"}
+| **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

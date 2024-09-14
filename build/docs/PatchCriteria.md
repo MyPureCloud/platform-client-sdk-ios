@@ -1,6 +1,5 @@
----
-title: PatchCriteria
----
+# PatchCriteria
+
 ## PatchCriteria
 
 ## Properties
@@ -11,6 +10,7 @@ title: PatchCriteria
 | **values** | **[String]** | The criteria values. | [optional] |
 | **shouldIgnoreCase** | **Bool** | Should criteria be case insensitive. | [optional] |
 | **_operator** | **String** | The comparison operator. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

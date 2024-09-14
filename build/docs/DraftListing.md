@@ -1,16 +1,16 @@
----
-title: DraftListing
----
+# DraftListing
+
 ## DraftListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[Draft]**](Draft.html) |  | [optional] |
+| **entities** | [**[Draft]**](Draft) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

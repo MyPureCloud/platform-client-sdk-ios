@@ -1,6 +1,5 @@
----
-title: UserPresence
----
+# UserPresence
+
 ## UserPresence
 
 ## Properties
@@ -12,10 +11,11 @@ title: UserPresence
 | **source** | **String** | Deprecated - The sourceID field should be used as a replacement. | [optional] |
 | **sourceId** | **String** | Represents the ID of a registered source | [optional] |
 | **primary** | **Bool** | A boolean used to tell whether or not to set this presence source as the primary on a PATCH | [optional] |
-| **presenceDefinition** | [**PresenceDefinition**](PresenceDefinition.html) |  | [optional] |
+| **presenceDefinition** | [**PresenceDefinition**](PresenceDefinition) |  | [optional] |
 | **message** | **String** |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modifiedDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

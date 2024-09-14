@@ -1,6 +1,5 @@
----
-title: MessageInfo
----
+# MessageInfo
+
 ## MessageInfo
 
 ## Properties
@@ -11,6 +10,7 @@ title: MessageInfo
 | **message** | **String** | Description of the message. | [optional] |
 | **messageWithParams** | **String** | Message with template fields for variable replacement. | [optional] |
 | **messageParams** | **[String:String]** | Map with fields for variable replacement. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

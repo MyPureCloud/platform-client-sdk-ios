@@ -1,6 +1,5 @@
----
-title: ContactColumnConditionSettings
----
+# ContactColumnConditionSettings
+
 ## ContactColumnConditionSettings
 
 ## Properties
@@ -11,6 +10,7 @@ title: ContactColumnConditionSettings
 | **_operator** | **String** | The operator to use when comparing values. | |
 | **value** | **String** | The value to compare against the contact&#39;s data. | |
 | **valueType** | **String** | The data type the value should be treated as. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

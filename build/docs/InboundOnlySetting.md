@@ -1,6 +1,5 @@
----
-title: InboundOnlySetting
----
+# InboundOnlySetting
+
 ## InboundOnlySetting
 
 ## Properties
@@ -8,6 +7,7 @@ title: InboundOnlySetting
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **inbound** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

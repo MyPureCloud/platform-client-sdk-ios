@@ -1,13 +1,12 @@
----
-title: CachedMediaItemEntityListing
----
+# CachedMediaItemEntityListing
+
 ## CachedMediaItemEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CachedMediaItem]**](CachedMediaItem.html) |  | [optional] |
+| **entities** | [**[CachedMediaItem]**](CachedMediaItem) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CachedMediaItemEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

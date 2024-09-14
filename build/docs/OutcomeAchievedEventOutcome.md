@@ -1,6 +1,5 @@
----
-title: OutcomeAchievedEventOutcome
----
+# OutcomeAchievedEventOutcome
+
 ## OutcomeAchievedEventOutcome
 
 ## Properties
@@ -11,6 +10,7 @@ title: OutcomeAchievedEventOutcome
 | **selfUri** | **String** |  | [optional] |
 | **displayName** | **String** | The display name of the outcome. | |
 | **version** | **Int** | The version of the outcome. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: QueryRequestPredicate
----
+# QueryRequestPredicate
+
 ## QueryRequestPredicate
 
 ## Properties
@@ -9,6 +8,7 @@ title: QueryRequestPredicate
 |------------ | ------------- | ------------- | -------------|
 | **dimension** | **String** | The dimension to be filtered | |
 | **value** | **String** | The value to filter by | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

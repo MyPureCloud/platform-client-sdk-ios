@@ -1,6 +1,5 @@
----
-title: DraftTopicRequest
----
+# DraftTopicRequest
+
 ## DraftTopicRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: DraftTopicRequest
 | **name** | **String** | Name/Label for a topic. | |
 | **phrases** | **[String]** | The phrases that are extracted for a topic. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

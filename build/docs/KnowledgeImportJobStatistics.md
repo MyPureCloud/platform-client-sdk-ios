@@ -1,6 +1,5 @@
----
-title: KnowledgeImportJobStatistics
----
+# KnowledgeImportJobStatistics
+
 ## KnowledgeImportJobStatistics
 
 ## Properties
@@ -24,6 +23,7 @@ title: KnowledgeImportJobStatistics
 | **countLabelImportSuccess** | **Int** | Number of imported labels. | [optional] |
 | **countLabelImportFailure** | **Int** | Number of labels failed to import. | [optional] |
 | **migrationDetected** | **Bool** | Shows whether the import treated as migration or not. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

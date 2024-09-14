@@ -1,6 +1,5 @@
----
-title: ColumnStatus
----
+# ColumnStatus
+
 ## ColumnStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: ColumnStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **contactable** | **Bool** | Indicates whether or not an individual contact method column is contactable. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

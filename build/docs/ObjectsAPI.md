@@ -1,26 +1,22 @@
----
-title: ObjectsAPI
----
-## ObjectsAPI
+# ObjectsAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteAuthorizationDivision**](ObjectsAPI.html#deleteAuthorizationDivision) | Delete a division. |
-| [**getAuthorizationDivision**](ObjectsAPI.html#getAuthorizationDivision) | Returns an authorization division. |
-| [**getAuthorizationDivisions**](ObjectsAPI.html#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
-| [**getAuthorizationDivisionsHome**](ObjectsAPI.html#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
-| [**getAuthorizationDivisionsLimit**](ObjectsAPI.html#getAuthorizationDivisionsLimit) | Returns the maximum allowed number of divisions. |
-| [**postAuthorizationDivisionObject**](ObjectsAPI.html#postAuthorizationDivisionObject) | Assign a list of objects to a division |
-| [**postAuthorizationDivisionRestore**](ObjectsAPI.html#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
-| [**postAuthorizationDivisions**](ObjectsAPI.html#postAuthorizationDivisions) | Create a division. |
-| [**putAuthorizationDivision**](ObjectsAPI.html#putAuthorizationDivision) | Update a division. |
+| [**deleteAuthorizationDivision**](ObjectsAPI#deleteAuthorizationDivision) | Delete a division. |
+| [**getAuthorizationDivision**](ObjectsAPI#getAuthorizationDivision) | Returns an authorization division. |
+| [**getAuthorizationDivisions**](ObjectsAPI#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
+| [**getAuthorizationDivisionsHome**](ObjectsAPI#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
+| [**getAuthorizationDivisionsLimit**](ObjectsAPI#getAuthorizationDivisionsLimit) | Returns the maximum allowed number of divisions. |
+| [**postAuthorizationDivisionObject**](ObjectsAPI#postAuthorizationDivisionObject) | Assign a list of objects to a division |
+| [**postAuthorizationDivisionRestore**](ObjectsAPI#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
+| [**postAuthorizationDivisions**](ObjectsAPI#postAuthorizationDivisions) | Create a division. |
+| [**putAuthorizationDivision**](ObjectsAPI#putAuthorizationDivision) | Update a division. |
 {: class="table-striped"}
 
-<a name="deleteAuthorizationDivision"></a>
 
-# **deleteAuthorizationDivision**
+## deleteAuthorizationDivision
 
 
 
@@ -64,20 +60,18 @@ ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
 | **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getAuthorizationDivision"></a>
 
-# **getAuthorizationDivision**
-
+## getAuthorizationDivision
 
 
-> [AuthzDivision](AuthzDivision.html) getAuthorizationDivision(divisionId, objectCount)
+
+> [AuthzDivision](AuthzDivision) getAuthorizationDivision(divisionId, objectCount)
 
 Returns an authorization division.
 
@@ -117,20 +111,18 @@ ObjectsAPI.getAuthorizationDivision(divisionId: divisionId, objectCount: objectC
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
 | **objectCount** | **Bool**| Get count of objects in this division, grouped by type | [optional]<br />**Values**: _true ("true"), _false ("false") |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AuthzDivision**](AuthzDivision.html)
-
-<a name="getAuthorizationDivisions"></a>
-
-# **getAuthorizationDivisions**
+[**AuthzDivision**](AuthzDivision)
 
 
+## getAuthorizationDivisions
 
-> [AuthzDivisionEntityListing](AuthzDivisionEntityListing.html) getAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, _id, name)
+
+
+> [AuthzDivisionEntityListing](AuthzDivisionEntityListing) getAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, _id, name)
 
 Retrieve a list of all divisions defined for the organization
 
@@ -180,26 +172,24 @@ ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber,
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **objectCount** | **Bool**| Include the count of objects contained in the division | [optional] |
-| **_id** | [**[String]**](String.html)| Optionally request specific divisions by their IDs | [optional] |
+| **_id** | [**[String]**](String)| Optionally request specific divisions by their IDs | [optional] |
 | **name** | **String**| Search term to filter by division name | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing.html)
-
-<a name="getAuthorizationDivisionsHome"></a>
-
-# **getAuthorizationDivisionsHome**
+[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing)
 
 
+## getAuthorizationDivisionsHome
 
-> [AuthzDivision](AuthzDivision.html) getAuthorizationDivisionsHome()
+
+
+> [AuthzDivision](AuthzDivision) getAuthorizationDivisionsHome()
 
 Retrieve the home division for the organization.
 
@@ -237,14 +227,12 @@ ObjectsAPI.getAuthorizationDivisionsHome() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**AuthzDivision**](AuthzDivision.html)
+[**AuthzDivision**](AuthzDivision)
 
-<a name="getAuthorizationDivisionsLimit"></a>
 
-# **getAuthorizationDivisionsLimit**
+## getAuthorizationDivisionsLimit
 
 
 
@@ -284,14 +272,12 @@ ObjectsAPI.getAuthorizationDivisionsLimit() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 **Int**
 
-<a name="postAuthorizationDivisionObject"></a>
 
-# **postAuthorizationDivisionObject**
+## postAuthorizationDivisionObject
 
 
 
@@ -337,21 +323,19 @@ ObjectsAPI.postAuthorizationDivisionObject(divisionId: divisionId, objectType: o
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
 | **objectType** | **String**| The type of the objects. Must be one of the valid object types |<br />**Values**: queue ("QUEUE"), campaign ("CAMPAIGN"), contactlist ("CONTACTLIST"), dnclist ("DNCLIST"), emailcampaign ("EMAILCAMPAIGN"), messagingcampaign ("MESSAGINGCAMPAIGN"), managementunit ("MANAGEMENTUNIT"), businessunit ("BUSINESSUNIT"), flow ("FLOW"), flowmilestone ("FLOWMILESTONE"), flowoutcome ("FLOWOUTCOME"), user ("USER"), callroute ("CALLROUTE"), emergencygroups ("EMERGENCYGROUPS"), routingschedules ("ROUTINGSCHEDULES"), routingschedulegroups ("ROUTINGSCHEDULEGROUPS"), datatables ("DATATABLES"), team ("TEAM"), workbin ("WORKBIN"), worktype ("WORKTYPE"), extensionpool ("EXTENSIONPOOL"), skillgroup ("SKILLGROUP"), script ("SCRIPT") |
-| **body** | [**[String]**](String.html)| Object Id List | |
-{: class="table-striped"}
+| **body** | [**[String]**](String)| Object Id List | |
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="postAuthorizationDivisionRestore"></a>
 
-# **postAuthorizationDivisionRestore**
-
+## postAuthorizationDivisionRestore
 
 
-> [AuthzDivision](AuthzDivision.html) postAuthorizationDivisionRestore(divisionId, body)
+
+> [AuthzDivision](AuthzDivision) postAuthorizationDivisionRestore(divisionId, body)
 
 Recreate a previously deleted division.
 
@@ -391,21 +375,19 @@ ObjectsAPI.postAuthorizationDivisionRestore(divisionId: divisionId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **body** | [**AuthzDivision**](AuthzDivision.html)| Recreated division data | [optional] |
-{: class="table-striped"}
+| **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data | [optional] |
 
 
 ### Return type
 
-[**AuthzDivision**](AuthzDivision.html)
-
-<a name="postAuthorizationDivisions"></a>
-
-# **postAuthorizationDivisions**
+[**AuthzDivision**](AuthzDivision)
 
 
+## postAuthorizationDivisions
 
-> [AuthzDivision](AuthzDivision.html) postAuthorizationDivisions(body)
+
+
+> [AuthzDivision](AuthzDivision) postAuthorizationDivisions(body)
 
 Create a division.
 
@@ -444,21 +426,19 @@ ObjectsAPI.postAuthorizationDivisions(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**AuthzDivision**](AuthzDivision.html)| Division | |
-{: class="table-striped"}
+| **body** | [**AuthzDivision**](AuthzDivision)| Division | |
 
 
 ### Return type
 
-[**AuthzDivision**](AuthzDivision.html)
-
-<a name="putAuthorizationDivision"></a>
-
-# **putAuthorizationDivision**
+[**AuthzDivision**](AuthzDivision)
 
 
+## putAuthorizationDivision
 
-> [AuthzDivision](AuthzDivision.html) putAuthorizationDivision(divisionId, body)
+
+
+> [AuthzDivision](AuthzDivision) putAuthorizationDivision(divisionId, body)
 
 Update a division.
 
@@ -498,11 +478,12 @@ ObjectsAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **body** | [**AuthzDivision**](AuthzDivision.html)| Updated division data | |
-{: class="table-striped"}
+| **body** | [**AuthzDivision**](AuthzDivision)| Updated division data | |
 
 
 ### Return type
 
-[**AuthzDivision**](AuthzDivision.html)
+[**AuthzDivision**](AuthzDivision)
 
+
+_PureCloudPlatformClientV2@151.1.0_

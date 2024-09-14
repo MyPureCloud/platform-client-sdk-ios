@@ -1,6 +1,5 @@
----
-title: TrunkErrorInfoDetails
----
+# TrunkErrorInfoDetails
+
 ## TrunkErrorInfoDetails
 
 ## Properties
@@ -10,6 +9,7 @@ title: TrunkErrorInfoDetails
 | **code** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **hostname** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

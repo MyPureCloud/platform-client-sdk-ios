@@ -1,6 +1,5 @@
----
-title: NotificationsSettings
----
+# NotificationsSettings
+
 ## NotificationsSettings
 Notification settings that handles messenger notifications
 
@@ -9,6 +8,7 @@ Notification settings that handles messenger notifications
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | The toggle to enable or disable notifications | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

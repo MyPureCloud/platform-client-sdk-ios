@@ -1,16 +1,16 @@
----
-title: V2MobiusRulesTopicCondition
----
+# V2MobiusRulesTopicCondition
+
 ## V2MobiusRulesTopicCondition
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | [**UUID**](UUID.html) |  | [optional] |
-| **conditions** | [**[V2MobiusRulesTopicCondition]**](V2MobiusRulesTopicCondition.html) |  | [optional] |
-| **predicates** | [**[V2MobiusRulesTopicConditionRulePredicate]**](V2MobiusRulesTopicConditionRulePredicate.html) |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
+| **conditions** | [**[V2MobiusRulesTopicCondition]**](V2MobiusRulesTopicCondition) |  | [optional] |
+| **predicates** | [**[V2MobiusRulesTopicConditionRulePredicate]**](V2MobiusRulesTopicConditionRulePredicate) |  | [optional] |
 | **type** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

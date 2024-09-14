@@ -1,6 +1,5 @@
----
-title: SmsAddress
----
+# SmsAddress
+
 ## SmsAddress
 
 ## Properties
@@ -16,6 +15,7 @@ title: SmsAddress
 | **countryCode** | **String** | The ISO country code of this address | [optional] |
 | **validated** | **Bool** | In some countries, addresses are validated to comply with local regulation. In those countries, if the address you provide does not pass validation, it will not be accepted as an Address. This value will be true if the Address has been validated, or false for countries that don&#39;t require validation or if the Address is non-compliant. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

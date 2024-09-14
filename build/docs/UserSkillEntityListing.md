@@ -1,13 +1,12 @@
----
-title: UserSkillEntityListing
----
+# UserSkillEntityListing
+
 ## UserSkillEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserRoutingSkill]**](UserRoutingSkill.html) |  | [optional] |
+| **entities** | [**[UserRoutingSkill]**](UserRoutingSkill) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: UserSkillEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: PhoneNumberStatus
----
+# PhoneNumberStatus
+
 ## PhoneNumberStatus
 
 ## Properties
@@ -8,6 +7,7 @@ title: PhoneNumberStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **callable** | **Bool** | Indicates whether or not a phone number is callable. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

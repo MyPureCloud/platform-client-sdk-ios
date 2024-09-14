@@ -1,6 +1,5 @@
----
-title: AuditQueryExecutionResultsResponse
----
+# AuditQueryExecutionResultsResponse
+
 ## AuditQueryExecutionResultsResponse
 
 ## Properties
@@ -10,7 +9,8 @@ title: AuditQueryExecutionResultsResponse
 | **_id** | **String** | Id of the audit query execution request. | [optional] |
 | **pageSize** | **Int** | Number of results in a page. | [optional] |
 | **cursor** | **String** | Optional cursor to indicate where to resume the results. | [optional] |
-| **entities** | [**[AuditLogMessage]**](AuditLogMessage.html) | List of audit messages. | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[AuditLogMessage]**](AuditLogMessage) | List of audit messages. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

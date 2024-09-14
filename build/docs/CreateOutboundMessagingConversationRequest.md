@@ -1,6 +1,5 @@
----
-title: CreateOutboundMessagingConversationRequest
----
+# CreateOutboundMessagingConversationRequest
+
 ## CreateOutboundMessagingConversationRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: CreateOutboundMessagingConversationRequest
 | **useExistingConversation** | **Bool** | An override to use an existing conversation.  If set to true, an existing conversation will be used if there is one within the conversation window.  If set to false, create request fails if there is a conversation within the conversation window. | [optional] |
 | **externalContactId** | **String** | The external contact with which the message will be associated. | [optional] |
 | **useUserFromAddress** | **Bool** | An override to attempt to use the user&#39;s configured direct routing address as the fromAddress.  If set to true, users configured address with &#39;directrouting&#39; integration will be used as fromAddress.  If set to false or not set, the queueId will be used for determining fromAddress. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

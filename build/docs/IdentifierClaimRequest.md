@@ -1,6 +1,5 @@
----
-title: IdentifierClaimRequest
----
+# IdentifierClaimRequest
+
 ## IdentifierClaimRequest
 
 ## Properties
@@ -8,7 +7,8 @@ title: IdentifierClaimRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **operation** | **String** | The operation to perform claim/release | |
-| **identifier** | [**ContactIdentifier**](ContactIdentifier.html) | The identifier that should be claimed/released from a contact | |
-{: class="table table-striped"}
+| **identifier** | [**ContactIdentifier**](ContactIdentifier) | The identifier that should be claimed/released from a contact | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

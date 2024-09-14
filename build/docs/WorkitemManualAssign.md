@@ -1,6 +1,5 @@
----
-title: WorkitemManualAssign
----
+# WorkitemManualAssign
+
 ## WorkitemManualAssign
 
 ## Properties
@@ -8,6 +7,7 @@ title: WorkitemManualAssign
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for this user. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

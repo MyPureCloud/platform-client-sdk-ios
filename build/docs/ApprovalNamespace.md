@@ -1,6 +1,5 @@
----
-title: ApprovalNamespace
----
+# ApprovalNamespace
+
 ## ApprovalNamespace
 
 ## Properties
@@ -10,6 +9,7 @@ title: ApprovalNamespace
 | **namespace** | **String** | The namespace of the associated approvers. | [optional] |
 | **status** | **String** | The current namespace approval status. | [optional] |
 | **type** | **String** | The type of namespace approval. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

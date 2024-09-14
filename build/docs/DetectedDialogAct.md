@@ -1,6 +1,5 @@
----
-title: DetectedDialogAct
----
+# DetectedDialogAct
+
 ## DetectedDialogAct
 
 ## Properties
@@ -9,6 +8,7 @@ title: DetectedDialogAct
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the detected dialog act. | [optional] |
 | **probability** | **Double** | The probability of the detected dialog act. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

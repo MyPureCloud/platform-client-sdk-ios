@@ -1,16 +1,16 @@
----
-title: MinerTopicsListing
----
+# MinerTopicsListing
+
 ## MinerTopicsListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[MinerTopic]**](MinerTopic.html) |  | [optional] |
+| **entities** | [**[MinerTopic]**](MinerTopic) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

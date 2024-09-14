@@ -1,6 +1,5 @@
----
-title: PropertyChange
----
+# PropertyChange
+
 ## PropertyChange
 
 ## Properties
@@ -10,6 +9,7 @@ title: PropertyChange
 | **property** | **String** | The property that was changed | [optional] |
 | **oldValues** | **[String]** | Previous values for the property. | [optional] |
 | **newValues** | **[String]** | New values for the property. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

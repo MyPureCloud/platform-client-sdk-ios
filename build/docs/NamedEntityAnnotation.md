@@ -1,6 +1,5 @@
----
-title: NamedEntityAnnotation
----
+# NamedEntityAnnotation
+
 ## NamedEntityAnnotation
 
 ## Properties
@@ -8,6 +7,7 @@ title: NamedEntityAnnotation
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the annotated named entity. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

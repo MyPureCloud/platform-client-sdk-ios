@@ -1,13 +1,13 @@
----
-title: SetWrapperRoutePathRequest
----
+# SetWrapperRoutePathRequest
+
 ## SetWrapperRoutePathRequest
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[RoutePathRequest]**](RoutePathRequest.html) |  | [optional] |
-{: class="table table-striped"}
+| **values** | [**[RoutePathRequest]**](RoutePathRequest) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

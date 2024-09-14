@@ -1,6 +1,5 @@
----
-title: FlowPathsFlowFilter
----
+# FlowPathsFlowFilter
+
 ## FlowPathsFlowFilter
 
 ## Properties
@@ -8,6 +7,7 @@ title: FlowPathsFlowFilter
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The identifier of the flow. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

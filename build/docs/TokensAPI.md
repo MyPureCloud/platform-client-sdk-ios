@@ -1,23 +1,19 @@
----
-title: TokensAPI
----
-## TokensAPI
+# TokensAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteToken**](TokensAPI.html#deleteToken) | Delete all auth tokens for the specified user. |
-| [**deleteTokensMe**](TokensAPI.html#deleteTokensMe) | Delete auth token used to make the request. |
-| [**getTokensMe**](TokensAPI.html#getTokensMe) | Fetch information about the current token |
-| [**getTokensTimeout**](TokensAPI.html#getTokensTimeout) | Get the current Idle Token Timeout Value |
-| [**headTokensMe**](TokensAPI.html#headTokensMe) | Verify user token |
-| [**putTokensTimeout**](TokensAPI.html#putTokensTimeout) | Update or Enable/Disable the Idle Token Timeout |
+| [**deleteToken**](TokensAPI#deleteToken) | Delete all auth tokens for the specified user. |
+| [**deleteTokensMe**](TokensAPI#deleteTokensMe) | Delete auth token used to make the request. |
+| [**getTokensMe**](TokensAPI#getTokensMe) | Fetch information about the current token |
+| [**getTokensTimeout**](TokensAPI#getTokensTimeout) | Get the current Idle Token Timeout Value |
+| [**headTokensMe**](TokensAPI#headTokensMe) | Verify user token |
+| [**putTokensTimeout**](TokensAPI#putTokensTimeout) | Update or Enable/Disable the Idle Token Timeout |
 {: class="table-striped"}
 
-<a name="deleteToken"></a>
 
-# **deleteToken**
+## deleteToken
 
 
 
@@ -59,16 +55,14 @@ TokensAPI.deleteToken(userId: userId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| User ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteTokensMe"></a>
 
-# **deleteTokensMe**
+## deleteTokensMe
 
 
 
@@ -107,18 +101,16 @@ TokensAPI.deleteTokensMe() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getTokensMe"></a>
 
-# **getTokensMe**
-
+## getTokensMe
 
 
-> [TokenInfo](TokenInfo.html) getTokensMe(preserveIdleTTL)
+
+> [TokenInfo](TokenInfo) getTokensMe(preserveIdleTTL)
 
 Fetch information about the current token
 
@@ -156,20 +148,18 @@ TokensAPI.getTokensMe(preserveIdleTTL: preserveIdleTTL) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **preserveIdleTTL** | **Bool**| preserveIdleTTL indicates whether the idle token timeout should be reset or preserved. If preserveIdleTTL is true, then TTL value is not reset. If unset or false, the value is reset. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**TokenInfo**](TokenInfo.html)
-
-<a name="getTokensTimeout"></a>
-
-# **getTokensTimeout**
+[**TokenInfo**](TokenInfo)
 
 
+## getTokensTimeout
 
-> [IdleTokenTimeout](IdleTokenTimeout.html) getTokensTimeout()
+
+
+> [IdleTokenTimeout](IdleTokenTimeout) getTokensTimeout()
 
 Get the current Idle Token Timeout Value
 
@@ -206,14 +196,12 @@ TokensAPI.getTokensTimeout() { (response, error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
-[**IdleTokenTimeout**](IdleTokenTimeout.html)
+[**IdleTokenTimeout**](IdleTokenTimeout)
 
-<a name="headTokensMe"></a>
 
-# **headTokensMe**
+## headTokensMe
 
 
 
@@ -252,18 +240,16 @@ TokensAPI.headTokensMe() { (error) in
 This endpoint does not require any parameters.
 
 
-
 ### Return type
 
 `nil` (empty response body)
 
-<a name="putTokensTimeout"></a>
 
-# **putTokensTimeout**
-
+## putTokensTimeout
 
 
-> [IdleTokenTimeout](IdleTokenTimeout.html) putTokensTimeout(body)
+
+> [IdleTokenTimeout](IdleTokenTimeout) putTokensTimeout(body)
 
 Update or Enable/Disable the Idle Token Timeout
 
@@ -301,11 +287,12 @@ TokensAPI.putTokensTimeout(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**IdleTokenTimeout**](IdleTokenTimeout.html)|  | [optional] |
-{: class="table-striped"}
+| **body** | [**IdleTokenTimeout**](IdleTokenTimeout)|  | [optional] |
 
 
 ### Return type
 
-[**IdleTokenTimeout**](IdleTokenTimeout.html)
+[**IdleTokenTimeout**](IdleTokenTimeout)
 
+
+_PureCloudPlatformClientV2@151.1.0_

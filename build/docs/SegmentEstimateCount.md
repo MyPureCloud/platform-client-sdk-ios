@@ -1,6 +1,5 @@
----
-title: SegmentEstimateCount
----
+# SegmentEstimateCount
+
 ## SegmentEstimateCount
 
 ## Properties
@@ -9,6 +8,7 @@ title: SegmentEstimateCount
 |------------ | ------------- | ------------- | -------------|
 | **segmentId** | **String** | ID of Segment. | [optional] |
 | **count** | **Int** | Estimate count per segment. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

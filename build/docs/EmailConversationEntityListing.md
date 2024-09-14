@@ -1,13 +1,12 @@
----
-title: EmailConversationEntityListing
----
+# EmailConversationEntityListing
+
 ## EmailConversationEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[EmailConversation]**](EmailConversation.html) |  | [optional] |
+| **entities** | [**[EmailConversation]**](EmailConversation) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: EmailConversationEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

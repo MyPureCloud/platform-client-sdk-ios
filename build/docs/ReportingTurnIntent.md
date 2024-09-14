@@ -1,6 +1,5 @@
----
-title: ReportingTurnIntent
----
+# ReportingTurnIntent
+
 ## ReportingTurnIntent
 
 ## Properties
@@ -9,7 +8,8 @@ title: ReportingTurnIntent
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the intent detected during this reporting turn. | [optional] |
 | **confidence** | **Double** | The confidence score of the intent detected during this reporting turn. | [optional] |
-| **slots** | [**[ReportingTurnIntentSlot]**](ReportingTurnIntentSlot.html) | The slots detected during this reporting turn. | [optional] |
-{: class="table table-striped"}
+| **slots** | [**[ReportingTurnIntentSlot]**](ReportingTurnIntentSlot) | The slots detected during this reporting turn. | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

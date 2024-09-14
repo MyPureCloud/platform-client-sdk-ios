@@ -1,6 +1,5 @@
----
-title: FooterTemplate
----
+# FooterTemplate
+
 ## FooterTemplate
 The Footer template identifies the Footer type and its footerUsage
 
@@ -10,6 +9,7 @@ The Footer template identifies the Footer type and its footerUsage
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Specifies the type represented by Footer. | [optional] |
 | **applicableResources** | **[String]** | Specifies the canned response template where the footer can be used. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

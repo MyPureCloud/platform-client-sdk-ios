@@ -1,17 +1,17 @@
----
-title: GuestCategoryResponseListing
----
+# GuestCategoryResponseListing
+
 ## GuestCategoryResponseListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[GuestResponseCategory]**](GuestResponseCategory.html) |  | [optional] |
+| **entities** | [**[GuestResponseCategory]**](GuestResponseCategory) |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **sessionId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

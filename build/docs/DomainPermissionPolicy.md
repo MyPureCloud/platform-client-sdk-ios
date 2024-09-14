@@ -1,6 +1,5 @@
----
-title: DomainPermissionPolicy
----
+# DomainPermissionPolicy
+
 ## DomainPermissionPolicy
 
 ## Properties
@@ -14,7 +13,8 @@ title: DomainPermissionPolicy
 | **actionSet** | **[String]** |  | [optional] |
 | **namedResources** | **[String]** |  | [optional] |
 | **allowConditions** | **Bool** |  | [optional] |
-| **resourceConditionNode** | [**DomainResourceConditionNode**](DomainResourceConditionNode.html) |  | [optional] |
-{: class="table table-striped"}
+| **resourceConditionNode** | [**DomainResourceConditionNode**](DomainResourceConditionNode) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

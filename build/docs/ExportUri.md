@@ -1,6 +1,5 @@
----
-title: ExportUri
----
+# ExportUri
+
 ## ExportUri
 
 ## Properties
@@ -8,7 +7,8 @@ title: ExportUri
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **uri** | **String** |  | [optional] |
-| **exportTimestamp** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **exportTimestamp** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

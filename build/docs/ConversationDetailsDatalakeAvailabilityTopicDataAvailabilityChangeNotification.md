@@ -1,13 +1,13 @@
----
-title: ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
----
+# ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
+
 ## ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **dataAvailabilityDate** | [**Date**](Date.html) | Date and time before which data is guaranteed to be available in the datalake | [optional] |
-{: class="table table-striped"}
+| **dataAvailabilityDate** | [**Date**](Date) | Date and time before which data is guaranteed to be available in the datalake | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

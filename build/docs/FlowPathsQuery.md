@@ -1,6 +1,5 @@
----
-title: FlowPathsQuery
----
+# FlowPathsQuery
+
 ## FlowPathsQuery
 
 ## Properties
@@ -8,7 +7,8 @@ title: FlowPathsQuery
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **category** | **String** | Category (use case) of the paths within a given domain. | |
-| **flows** | [**[FlowPathsFlowFilter]**](FlowPathsFlowFilter.html) | List of flows to query the paths result. | |
-{: class="table table-striped"}
+| **flows** | [**[FlowPathsFlowFilter]**](FlowPathsFlowFilter) | List of flows to query the paths result. | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

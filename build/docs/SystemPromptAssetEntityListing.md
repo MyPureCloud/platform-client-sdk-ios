@@ -1,13 +1,12 @@
----
-title: SystemPromptAssetEntityListing
----
+# SystemPromptAssetEntityListing
+
 ## SystemPromptAssetEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SystemPromptAsset]**](SystemPromptAsset.html) |  | [optional] |
+| **entities** | [**[SystemPromptAsset]**](SystemPromptAsset) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: SystemPromptAssetEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

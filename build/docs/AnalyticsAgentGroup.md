@@ -1,6 +1,5 @@
----
-title: AnalyticsAgentGroup
----
+# AnalyticsAgentGroup
+
 ## AnalyticsAgentGroup
 
 ## Properties
@@ -9,6 +8,7 @@ title: AnalyticsAgentGroup
 |------------ | ------------- | ------------- | -------------|
 | **agentGroupId** | **String** | Conditional group routing agent group identifier | [optional] |
 | **agentGroupType** | **String** | Conditional group routing agent group type | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: OpenContentAttachment
----
+# OpenContentAttachment
+
 ## OpenContentAttachment
 Attachment object.
 
@@ -15,6 +14,7 @@ Attachment object.
 | **text** | **String** | Text associated with attachment such as an image caption. | [optional] |
 | **sha256** | **String** | Secure hash of the attachment content. | [optional] |
 | **filename** | **String** | Suggested file name for attachment. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

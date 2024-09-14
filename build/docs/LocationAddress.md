@@ -1,6 +1,5 @@
----
-title: LocationAddress
----
+# LocationAddress
+
 ## LocationAddress
 
 ## Properties
@@ -14,6 +13,7 @@ title: LocationAddress
 | **street1** | **String** |  | [optional] |
 | **street2** | **String** |  | [optional] |
 | **zipcode** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

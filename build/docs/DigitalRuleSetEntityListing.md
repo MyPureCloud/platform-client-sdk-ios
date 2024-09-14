@@ -1,13 +1,12 @@
----
-title: DigitalRuleSetEntityListing
----
+# DigitalRuleSetEntityListing
+
 ## DigitalRuleSetEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[DigitalRuleSet]**](DigitalRuleSet.html) |  | [optional] |
+| **entities** | [**[DigitalRuleSet]**](DigitalRuleSet) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: DigitalRuleSetEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

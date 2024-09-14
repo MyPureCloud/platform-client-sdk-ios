@@ -1,6 +1,5 @@
----
-title: EvaluationQualityV2TopicUser
----
+# EvaluationQualityV2TopicUser
+
 ## EvaluationQualityV2TopicUser
 
 ## Properties
@@ -9,6 +8,7 @@ title: EvaluationQualityV2TopicUser
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **displayName** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

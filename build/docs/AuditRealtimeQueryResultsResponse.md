@@ -1,17 +1,17 @@
----
-title: AuditRealtimeQueryResultsResponse
----
+# AuditRealtimeQueryResultsResponse
+
 ## AuditRealtimeQueryResultsResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[AuditLogMessage]**](AuditLogMessage.html) |  | [optional] |
+| **entities** | [**[AuditLogMessage]**](AuditLogMessage) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

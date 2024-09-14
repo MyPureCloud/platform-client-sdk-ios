@@ -1,6 +1,5 @@
----
-title: Transcripts
----
+# Transcripts
+
 ## Transcripts
 
 ## Properties
@@ -10,6 +9,7 @@ title: Transcripts
 | **exactMatch** | **[String]** | List of transcript contents which needs to satisfy exact match criteria | [optional] |
 | **contains** | **[String]** | List of transcript contents which needs to satisfy contains criteria | [optional] |
 | **doesNotContain** | **[String]** | List of transcript contents which needs to satisfy does not contain criteria | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

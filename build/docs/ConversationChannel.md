@@ -1,6 +1,5 @@
----
-title: ConversationChannel
----
+# ConversationChannel
+
 ## ConversationChannel
 
 ## Properties
@@ -10,6 +9,7 @@ title: ConversationChannel
 | **type** | **String** | The type or category of this channel. | |
 | **messageType** | **String** | Message type for messaging conversations. | [optional] |
 | **platform** | **String** | The source provider for the conversation (e.g. Edge, PureCloud Messaging, PureCloud Email). | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

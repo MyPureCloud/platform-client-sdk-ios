@@ -1,6 +1,5 @@
----
-title: FacetTerm
----
+# FacetTerm
+
 ## FacetTerm
 
 ## Properties
@@ -12,7 +11,8 @@ title: FacetTerm
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **count** | **Int64** |  | [optional] |
-| **time** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **time** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

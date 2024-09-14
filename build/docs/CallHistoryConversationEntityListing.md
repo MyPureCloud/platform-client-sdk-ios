@@ -1,13 +1,12 @@
----
-title: CallHistoryConversationEntityListing
----
+# CallHistoryConversationEntityListing
+
 ## CallHistoryConversationEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[CallHistoryConversation]**](CallHistoryConversation.html) |  | [optional] |
+| **entities** | [**[CallHistoryConversation]**](CallHistoryConversation) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: CallHistoryConversationEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

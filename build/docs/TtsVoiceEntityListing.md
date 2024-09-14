@@ -1,13 +1,12 @@
----
-title: TtsVoiceEntityListing
----
+# TtsVoiceEntityListing
+
 ## TtsVoiceEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TtsVoiceEntity]**](TtsVoiceEntity.html) |  | [optional] |
+| **entities** | [**[TtsVoiceEntity]**](TtsVoiceEntity) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: TtsVoiceEntityListing
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

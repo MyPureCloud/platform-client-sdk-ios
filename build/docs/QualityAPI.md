@@ -1,76 +1,72 @@
----
-title: QualityAPI
----
-## QualityAPI
+# QualityAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteQualityCalibration**](QualityAPI.html#deleteQualityCalibration) | Delete a calibration by id. |
-| [**deleteQualityConversationEvaluation**](QualityAPI.html#deleteQualityConversationEvaluation) | Delete an evaluation |
-| [**deleteQualityForm**](QualityAPI.html#deleteQualityForm) | Delete an evaluation form. |
-| [**deleteQualityFormsEvaluation**](QualityAPI.html#deleteQualityFormsEvaluation) | Delete an evaluation form. |
-| [**deleteQualityFormsSurvey**](QualityAPI.html#deleteQualityFormsSurvey) | Delete a survey form. |
-| [**getQualityAgentsActivity**](QualityAPI.html#getQualityAgentsActivity) | Gets a list of Agent Activities |
-| [**getQualityCalibration**](QualityAPI.html#getQualityCalibration) | Get a calibration by id.  Requires either calibrator id or conversation id |
-| [**getQualityCalibrations**](QualityAPI.html#getQualityCalibrations) | Get the list of calibrations |
-| [**getQualityConversationEvaluation**](QualityAPI.html#getQualityConversationEvaluation) | Get an evaluation |
-| [**getQualityConversationSurveys**](QualityAPI.html#getQualityConversationSurveys) | Get the surveys for a conversation |
-| [**getQualityConversationsAuditsQueryTransactionId**](QualityAPI.html#getQualityConversationsAuditsQueryTransactionId) | Get status of audit query execution |
-| [**getQualityConversationsAuditsQueryTransactionIdResults**](QualityAPI.html#getQualityConversationsAuditsQueryTransactionIdResults) | Get results of audit query |
-| [**getQualityEvaluationsQuery**](QualityAPI.html#getQualityEvaluationsQuery) | Queries Evaluations and returns a paged list |
-| [**getQualityEvaluatorsActivity**](QualityAPI.html#getQualityEvaluatorsActivity) | Get an evaluator activity |
-| [**getQualityForm**](QualityAPI.html#getQualityForm) | Get an evaluation form |
-| [**getQualityFormVersions**](QualityAPI.html#getQualityFormVersions) | Gets all the revisions for a specific evaluation. |
-| [**getQualityForms**](QualityAPI.html#getQualityForms) | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
-| [**getQualityFormsEvaluation**](QualityAPI.html#getQualityFormsEvaluation) | Get an evaluation form |
-| [**getQualityFormsEvaluationVersions**](QualityAPI.html#getQualityFormsEvaluationVersions) | Gets all the revisions for a specific evaluation. |
-| [**getQualityFormsEvaluations**](QualityAPI.html#getQualityFormsEvaluations) | Get the list of evaluation forms |
-| [**getQualityFormsEvaluationsBulkContexts**](QualityAPI.html#getQualityFormsEvaluationsBulkContexts) | Retrieve a list of the latest published evaluation form versions by context ids |
-| [**getQualityFormsSurvey**](QualityAPI.html#getQualityFormsSurvey) | Get a survey form |
-| [**getQualityFormsSurveyVersions**](QualityAPI.html#getQualityFormsSurveyVersions) | Gets all the revisions for a specific survey. |
-| [**getQualityFormsSurveys**](QualityAPI.html#getQualityFormsSurveys) | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
-| [**getQualityFormsSurveysBulk**](QualityAPI.html#getQualityFormsSurveysBulk) | Retrieve a list of survey forms by their ids |
-| [**getQualityFormsSurveysBulkContexts**](QualityAPI.html#getQualityFormsSurveysBulkContexts) | Retrieve a list of the latest form versions by context ids |
-| [**getQualityPublishedform**](QualityAPI.html#getQualityPublishedform) | Get the published evaluation forms. |
-| [**getQualityPublishedforms**](QualityAPI.html#getQualityPublishedforms) | Get the published evaluation forms. |
-| [**getQualityPublishedformsEvaluation**](QualityAPI.html#getQualityPublishedformsEvaluation) | Get the most recent published version of an evaluation form. |
-| [**getQualityPublishedformsEvaluations**](QualityAPI.html#getQualityPublishedformsEvaluations) | Get the published evaluation forms. |
-| [**getQualityPublishedformsSurvey**](QualityAPI.html#getQualityPublishedformsSurvey) | Get the most recent published version of a survey form. |
-| [**getQualityPublishedformsSurveys**](QualityAPI.html#getQualityPublishedformsSurveys) | Get the published survey forms. |
-| [**getQualitySurvey**](QualityAPI.html#getQualitySurvey) | Get a survey for a conversation |
-| [**getQualitySurveysScorable**](QualityAPI.html#getQualitySurveysScorable) | Get a survey as an end-customer, for the purposes of scoring it. |
-| [**patchQualityFormsSurvey**](QualityAPI.html#patchQualityFormsSurvey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
-| [**postAnalyticsEvaluationsAggregatesQuery**](QualityAPI.html#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
-| [**postAnalyticsSurveysAggregatesQuery**](QualityAPI.html#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
-| [**postQualityCalibrations**](QualityAPI.html#postQualityCalibrations) | Create a calibration |
-| [**postQualityConversationEvaluations**](QualityAPI.html#postQualityConversationEvaluations) | Create an evaluation |
-| [**postQualityConversationsAuditsQuery**](QualityAPI.html#postQualityConversationsAuditsQuery) | Create audit query execution |
-| [**postQualityEvaluationsAggregatesQueryMe**](QualityAPI.html#postQualityEvaluationsAggregatesQueryMe) | Query for evaluation aggregates for the current user |
-| [**postQualityEvaluationsScoring**](QualityAPI.html#postQualityEvaluationsScoring) | Score evaluation |
-| [**postQualityForms**](QualityAPI.html#postQualityForms) | Create an evaluation form. |
-| [**postQualityFormsEvaluations**](QualityAPI.html#postQualityFormsEvaluations) | Create an evaluation form. |
-| [**postQualityFormsSurveys**](QualityAPI.html#postQualityFormsSurveys) | Create a survey form. |
-| [**postQualityPublishedforms**](QualityAPI.html#postQualityPublishedforms) | Publish an evaluation form. |
-| [**postQualityPublishedformsEvaluations**](QualityAPI.html#postQualityPublishedformsEvaluations) | Publish an evaluation form. |
-| [**postQualityPublishedformsSurveys**](QualityAPI.html#postQualityPublishedformsSurveys) | Publish a survey form. |
-| [**postQualitySurveysScoring**](QualityAPI.html#postQualitySurveysScoring) | Score survey |
-| [**putQualityCalibration**](QualityAPI.html#putQualityCalibration) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
-| [**putQualityConversationEvaluation**](QualityAPI.html#putQualityConversationEvaluation) | Update an evaluation |
-| [**putQualityForm**](QualityAPI.html#putQualityForm) | Update an evaluation form. |
-| [**putQualityFormsEvaluation**](QualityAPI.html#putQualityFormsEvaluation) | Update an evaluation form. |
-| [**putQualityFormsSurvey**](QualityAPI.html#putQualityFormsSurvey) | Update a survey form. |
-| [**putQualitySurveysScorable**](QualityAPI.html#putQualitySurveysScorable) | Update a survey as an end-customer, for the purposes of scoring it. |
+| [**deleteQualityCalibration**](QualityAPI#deleteQualityCalibration) | Delete a calibration by id. |
+| [**deleteQualityConversationEvaluation**](QualityAPI#deleteQualityConversationEvaluation) | Delete an evaluation |
+| [**deleteQualityForm**](QualityAPI#deleteQualityForm) | Delete an evaluation form. |
+| [**deleteQualityFormsEvaluation**](QualityAPI#deleteQualityFormsEvaluation) | Delete an evaluation form. |
+| [**deleteQualityFormsSurvey**](QualityAPI#deleteQualityFormsSurvey) | Delete a survey form. |
+| [**getQualityAgentsActivity**](QualityAPI#getQualityAgentsActivity) | Gets a list of Agent Activities |
+| [**getQualityCalibration**](QualityAPI#getQualityCalibration) | Get a calibration by id.  Requires either calibrator id or conversation id |
+| [**getQualityCalibrations**](QualityAPI#getQualityCalibrations) | Get the list of calibrations |
+| [**getQualityConversationEvaluation**](QualityAPI#getQualityConversationEvaluation) | Get an evaluation |
+| [**getQualityConversationSurveys**](QualityAPI#getQualityConversationSurveys) | Get the surveys for a conversation |
+| [**getQualityConversationsAuditsQueryTransactionId**](QualityAPI#getQualityConversationsAuditsQueryTransactionId) | Get status of audit query execution |
+| [**getQualityConversationsAuditsQueryTransactionIdResults**](QualityAPI#getQualityConversationsAuditsQueryTransactionIdResults) | Get results of audit query |
+| [**getQualityEvaluationsQuery**](QualityAPI#getQualityEvaluationsQuery) | Queries Evaluations and returns a paged list |
+| [**getQualityEvaluatorsActivity**](QualityAPI#getQualityEvaluatorsActivity) | Get an evaluator activity |
+| [**getQualityForm**](QualityAPI#getQualityForm) | Get an evaluation form |
+| [**getQualityFormVersions**](QualityAPI#getQualityFormVersions) | Gets all the revisions for a specific evaluation. |
+| [**getQualityForms**](QualityAPI#getQualityForms) | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
+| [**getQualityFormsEvaluation**](QualityAPI#getQualityFormsEvaluation) | Get an evaluation form |
+| [**getQualityFormsEvaluationVersions**](QualityAPI#getQualityFormsEvaluationVersions) | Gets all the revisions for a specific evaluation. |
+| [**getQualityFormsEvaluations**](QualityAPI#getQualityFormsEvaluations) | Get the list of evaluation forms |
+| [**getQualityFormsEvaluationsBulkContexts**](QualityAPI#getQualityFormsEvaluationsBulkContexts) | Retrieve a list of the latest published evaluation form versions by context ids |
+| [**getQualityFormsSurvey**](QualityAPI#getQualityFormsSurvey) | Get a survey form |
+| [**getQualityFormsSurveyVersions**](QualityAPI#getQualityFormsSurveyVersions) | Gets all the revisions for a specific survey. |
+| [**getQualityFormsSurveys**](QualityAPI#getQualityFormsSurveys) | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
+| [**getQualityFormsSurveysBulk**](QualityAPI#getQualityFormsSurveysBulk) | Retrieve a list of survey forms by their ids |
+| [**getQualityFormsSurveysBulkContexts**](QualityAPI#getQualityFormsSurveysBulkContexts) | Retrieve a list of the latest form versions by context ids |
+| [**getQualityPublishedform**](QualityAPI#getQualityPublishedform) | Get the published evaluation forms. |
+| [**getQualityPublishedforms**](QualityAPI#getQualityPublishedforms) | Get the published evaluation forms. |
+| [**getQualityPublishedformsEvaluation**](QualityAPI#getQualityPublishedformsEvaluation) | Get the most recent published version of an evaluation form. |
+| [**getQualityPublishedformsEvaluations**](QualityAPI#getQualityPublishedformsEvaluations) | Get the published evaluation forms. |
+| [**getQualityPublishedformsSurvey**](QualityAPI#getQualityPublishedformsSurvey) | Get the most recent published version of a survey form. |
+| [**getQualityPublishedformsSurveys**](QualityAPI#getQualityPublishedformsSurveys) | Get the published survey forms. |
+| [**getQualitySurvey**](QualityAPI#getQualitySurvey) | Get a survey for a conversation |
+| [**getQualitySurveysScorable**](QualityAPI#getQualitySurveysScorable) | Get a survey as an end-customer, for the purposes of scoring it. |
+| [**patchQualityFormsSurvey**](QualityAPI#patchQualityFormsSurvey) | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
+| [**postAnalyticsEvaluationsAggregatesQuery**](QualityAPI#postAnalyticsEvaluationsAggregatesQuery) | Query for evaluation aggregates |
+| [**postAnalyticsSurveysAggregatesQuery**](QualityAPI#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
+| [**postQualityCalibrations**](QualityAPI#postQualityCalibrations) | Create a calibration |
+| [**postQualityConversationEvaluations**](QualityAPI#postQualityConversationEvaluations) | Create an evaluation |
+| [**postQualityConversationsAuditsQuery**](QualityAPI#postQualityConversationsAuditsQuery) | Create audit query execution |
+| [**postQualityEvaluationsAggregatesQueryMe**](QualityAPI#postQualityEvaluationsAggregatesQueryMe) | Query for evaluation aggregates for the current user |
+| [**postQualityEvaluationsScoring**](QualityAPI#postQualityEvaluationsScoring) | Score evaluation |
+| [**postQualityForms**](QualityAPI#postQualityForms) | Create an evaluation form. |
+| [**postQualityFormsEvaluations**](QualityAPI#postQualityFormsEvaluations) | Create an evaluation form. |
+| [**postQualityFormsSurveys**](QualityAPI#postQualityFormsSurveys) | Create a survey form. |
+| [**postQualityPublishedforms**](QualityAPI#postQualityPublishedforms) | Publish an evaluation form. |
+| [**postQualityPublishedformsEvaluations**](QualityAPI#postQualityPublishedformsEvaluations) | Publish an evaluation form. |
+| [**postQualityPublishedformsSurveys**](QualityAPI#postQualityPublishedformsSurveys) | Publish a survey form. |
+| [**postQualitySurveysScoring**](QualityAPI#postQualitySurveysScoring) | Score survey |
+| [**putQualityCalibration**](QualityAPI#putQualityCalibration) | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
+| [**putQualityConversationEvaluation**](QualityAPI#putQualityConversationEvaluation) | Update an evaluation |
+| [**putQualityForm**](QualityAPI#putQualityForm) | Update an evaluation form. |
+| [**putQualityFormsEvaluation**](QualityAPI#putQualityFormsEvaluation) | Update an evaluation form. |
+| [**putQualityFormsSurvey**](QualityAPI#putQualityFormsSurvey) | Update a survey form. |
+| [**putQualitySurveysScorable**](QualityAPI#putQualitySurveysScorable) | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table-striped"}
 
-<a name="deleteQualityCalibration"></a>
 
-# **deleteQualityCalibration**
-
+## deleteQualityCalibration
 
 
-> [Calibration](Calibration.html) deleteQualityCalibration(calibrationId, calibratorId)
+
+> [Calibration](Calibration) deleteQualityCalibration(calibrationId, calibratorId)
 
 Delete a calibration by id.
 
@@ -111,20 +107,18 @@ QualityAPI.deleteQualityCalibration(calibrationId: calibrationId, calibratorId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **calibrationId** | **String**| Calibration ID | |
 | **calibratorId** | **String**| calibratorId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Calibration**](Calibration.html)
-
-<a name="deleteQualityConversationEvaluation"></a>
-
-# **deleteQualityConversationEvaluation**
+[**Calibration**](Calibration)
 
 
+## deleteQualityConversationEvaluation
 
-> [EvaluationResponse](EvaluationResponse.html) deleteQualityConversationEvaluation(conversationId, evaluationId, expand)
+
+
+> [EvaluationResponse](EvaluationResponse) deleteQualityConversationEvaluation(conversationId, evaluationId, expand)
 
 Delete an evaluation
 
@@ -167,16 +161,14 @@ QualityAPI.deleteQualityConversationEvaluation(conversationId: conversationId, e
 | **conversationId** | **String**| conversationId | |
 | **evaluationId** | **String**| evaluationId | |
 | **expand** | **String**| evaluatorId, evaluationForm | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationResponse**](EvaluationResponse.html)
+[**EvaluationResponse**](EvaluationResponse)
 
-<a name="deleteQualityForm"></a>
 
-# **deleteQualityForm**
+## deleteQualityForm
 
 
 
@@ -218,16 +210,14 @@ QualityAPI.deleteQualityForm(formId: formId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteQualityFormsEvaluation"></a>
 
-# **deleteQualityFormsEvaluation**
+## deleteQualityFormsEvaluation
 
 
 
@@ -269,16 +259,14 @@ QualityAPI.deleteQualityFormsEvaluation(formId: formId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="deleteQualityFormsSurvey"></a>
 
-# **deleteQualityFormsSurvey**
+## deleteQualityFormsSurvey
 
 
 
@@ -320,20 +308,18 @@ QualityAPI.deleteQualityFormsSurvey(formId: formId) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
 `nil` (empty response body)
 
-<a name="getQualityAgentsActivity"></a>
 
-# **getQualityAgentsActivity**
-
+## getQualityAgentsActivity
 
 
-> [AgentActivityEntityListing](AgentActivityEntityListing.html) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId)
+
+> [AgentActivityEntityListing](AgentActivityEntityListing) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId)
 
 Gets a list of Agent Activities
 
@@ -389,31 +375,29 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **startTime** | **Date**| Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **endTime** | **Date**| End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **agentUserId** | [**[String]**](String.html)| user id of agent requested | [optional] |
+| **agentUserId** | [**[String]**](String)| user id of agent requested | [optional] |
 | **evaluatorUserId** | **String**| user id of the evaluator | [optional] |
 | **name** | **String**| name | [optional] |
 | **group** | **String**| group id | [optional] |
 | **agentTeamId** | **String**| team id of agents requested | [optional] |
 | **formContextId** | **String**| shared id between form versions | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**AgentActivityEntityListing**](AgentActivityEntityListing.html)
-
-<a name="getQualityCalibration"></a>
-
-# **getQualityCalibration**
+[**AgentActivityEntityListing**](AgentActivityEntityListing)
 
 
+## getQualityCalibration
 
-> [Calibration](Calibration.html) getQualityCalibration(calibrationId, calibratorId, conversationId)
+
+
+> [Calibration](Calibration) getQualityCalibration(calibrationId, calibratorId, conversationId)
 
 Get a calibration by id.  Requires either calibrator id or conversation id
 
@@ -456,20 +440,18 @@ QualityAPI.getQualityCalibration(calibrationId: calibrationId, calibratorId: cal
 | **calibrationId** | **String**| Calibration ID | |
 | **calibratorId** | **String**| calibratorId | [optional] |
 | **conversationId** | **String**| conversationId | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Calibration**](Calibration.html)
-
-<a name="getQualityCalibrations"></a>
-
-# **getQualityCalibrations**
+[**Calibration**](Calibration)
 
 
+## getQualityCalibrations
 
-> [CalibrationEntityListing](CalibrationEntityListing.html) getQualityCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime)
+
+
+> [CalibrationEntityListing](CalibrationEntityListing) getQualityCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime)
 
 Get the list of calibrations
 
@@ -522,26 +504,24 @@ QualityAPI.getQualityCalibrations(calibratorId: calibratorId, pageSize: pageSize
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversation id | [optional] |
 | **startTime** | **Date**| Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **endTime** | **Date**| end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**CalibrationEntityListing**](CalibrationEntityListing.html)
-
-<a name="getQualityConversationEvaluation"></a>
-
-# **getQualityConversationEvaluation**
+[**CalibrationEntityListing**](CalibrationEntityListing)
 
 
+## getQualityConversationEvaluation
 
-> [EvaluationResponse](EvaluationResponse.html) getQualityConversationEvaluation(conversationId, evaluationId, expand)
+
+
+> [EvaluationResponse](EvaluationResponse) getQualityConversationEvaluation(conversationId, evaluationId, expand)
 
 Get an evaluation
 
@@ -586,20 +566,18 @@ QualityAPI.getQualityConversationEvaluation(conversationId: conversationId, eval
 | **conversationId** | **String**| conversationId | |
 | **evaluationId** | **String**| evaluationId | |
 | **expand** | **String**| agent, assignee, evaluator, evaluationForm | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationResponse**](EvaluationResponse.html)
-
-<a name="getQualityConversationSurveys"></a>
-
-# **getQualityConversationSurveys**
+[**EvaluationResponse**](EvaluationResponse)
 
 
+## getQualityConversationSurveys
 
-> [[Survey]](Survey.html) getQualityConversationSurveys(conversationId)
+
+
+> [[Survey]](Survey) getQualityConversationSurveys(conversationId)
 
 Get the surveys for a conversation
 
@@ -638,20 +616,18 @@ QualityAPI.getQualityConversationSurveys(conversationId: conversationId) { (resp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[Survey]**](Survey.html)
-
-<a name="getQualityConversationsAuditsQueryTransactionId"></a>
-
-# **getQualityConversationsAuditsQueryTransactionId**
+[**[Survey]**](Survey)
 
 
+## getQualityConversationsAuditsQueryTransactionId
 
-> [QualityAuditQueryExecutionStatusResponse](QualityAuditQueryExecutionStatusResponse.html) getQualityConversationsAuditsQueryTransactionId(transactionId)
+
+
+> [QualityAuditQueryExecutionStatusResponse](QualityAuditQueryExecutionStatusResponse) getQualityConversationsAuditsQueryTransactionId(transactionId)
 
 Get status of audit query execution
 
@@ -690,20 +666,18 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionId(transactionId: transa
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **transactionId** | **String**| Transaction ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
-
-<a name="getQualityConversationsAuditsQueryTransactionIdResults"></a>
-
-# **getQualityConversationsAuditsQueryTransactionIdResults**
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse)
 
 
+## getQualityConversationsAuditsQueryTransactionIdResults
 
-> [QualityAuditQueryExecutionResultsResponse](QualityAuditQueryExecutionResultsResponse.html) getQualityConversationsAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand)
+
+
+> [QualityAuditQueryExecutionResultsResponse](QualityAuditQueryExecutionResultsResponse) getQualityConversationsAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand)
 
 Get results of audit query
 
@@ -747,21 +721,19 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 | **transactionId** | **String**| Transaction ID | |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page) | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
-| **expand** | [**[String]**](String.html)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
-{: class="table-striped"}
+| **expand** | [**[String]**](String)| Which fields, if any, to expand | [optional]<br />**Values**: user ("user") |
 
 
 ### Return type
 
-[**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse.html)
-
-<a name="getQualityEvaluationsQuery"></a>
-
-# **getQualityEvaluationsQuery**
+[**QualityAuditQueryExecutionResultsResponse**](QualityAuditQueryExecutionResultsResponse)
 
 
+## getQualityEvaluationsQuery
 
-> [EvaluationEntityListing](EvaluationEntityListing.html) getQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
+
+
+> [EvaluationEntityListing](EvaluationEntityListing) getQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
 
 Queries Evaluations and returns a paged list
 
@@ -821,7 +793,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String)| variable name requested by expand list | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **conversationId** | **String**| conversationId specified | [optional] |
 | **agentUserId** | **String**| user id of the agent | [optional] |
@@ -832,26 +804,24 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **startTime** | **String**| start time of the evaluation query | [optional] |
 | **endTime** | **String**| end time of the evaluation query | [optional] |
 | **formContextId** | **String**| shared id between form versions | [optional] |
-| **evaluationState** | [**[String]**](String.html)|  | [optional] |
+| **evaluationState** | [**[String]**](String)|  | [optional] |
 | **isReleased** | **Bool**| the evaluation has been released | [optional] |
 | **agentHasRead** | **Bool**| agent has the evaluation | [optional] |
 | **expandAnswerTotalScores** | **Bool**| get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. | [optional] |
 | **maximum** | **Int**| the maximum number of results to return | [optional] |
 | **sortOrder** | **String**| NOTE: Does not work when conversationId is supplied. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationEntityListing**](EvaluationEntityListing.html)
-
-<a name="getQualityEvaluatorsActivity"></a>
-
-# **getQualityEvaluatorsActivity**
+[**EvaluationEntityListing**](EvaluationEntityListing)
 
 
+## getQualityEvaluatorsActivity
 
-> [EvaluatorActivityEntityListing](EvaluatorActivityEntityListing.html) getQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group, agentTeamId)
+
+
+> [EvaluatorActivityEntityListing](EvaluatorActivityEntityListing) getQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group, agentTeamId)
 
 Get an evaluator activity
 
@@ -903,29 +873,27 @@ QualityAPI.getQualityEvaluatorsActivity(pageSize: pageSize, pageNumber: pageNumb
 | **pageSize** | **Int**| The total page size requested | [optional] |
 | **pageNumber** | **Int**| The page number requested | [optional] |
 | **sortBy** | **String**| variable name requested to sort by | [optional] |
-| **expand** | [**[String]**](String.html)| variable name requested by expand list | [optional] |
+| **expand** | [**[String]**](String)| variable name requested by expand list | [optional] |
 | **nextPage** | **String**| next page token | [optional] |
 | **previousPage** | **String**| Previous page token | [optional] |
 | **startTime** | **Date**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **endTime** | **Date**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **name** | **String**| Evaluator name | [optional] |
-| **permission** | [**[String]**](String.html)| permission strings | [optional] |
+| **permission** | [**[String]**](String)| permission strings | [optional] |
 | **group** | **String**| group id | [optional] |
 | **agentTeamId** | **String**| team id of agents to be considered | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html)
-
-<a name="getQualityForm"></a>
-
-# **getQualityForm**
+[**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing)
 
 
+## getQualityForm
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityForm(formId)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) getQualityForm(formId)
 
 Get an evaluation form
 
@@ -964,20 +932,18 @@ QualityAPI.getQualityForm(formId: formId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="getQualityFormVersions"></a>
-
-# **getQualityFormVersions**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## getQualityFormVersions
 
-> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityFormVersions(formId, pageSize, pageNumber)
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityFormVersions(formId, pageSize, pageNumber)
 
 Gets all the revisions for a specific evaluation.
 
@@ -1020,20 +986,18 @@ QualityAPI.getQualityFormVersions(formId: formId, pageSize: pageSize, pageNumber
 | **formId** | **String**| Form ID | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
-
-<a name="getQualityForms"></a>
-
-# **getQualityForms**
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityForms
 
-> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
 Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form.
 
@@ -1086,20 +1050,18 @@ QualityAPI.getQualityForms(pageSize: pageSize, pageNumber: pageNumber, sortBy: s
 | **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
-
-<a name="getQualityFormsEvaluation"></a>
-
-# **getQualityFormsEvaluation**
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityFormsEvaluation
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityFormsEvaluation(formId)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) getQualityFormsEvaluation(formId)
 
 Get an evaluation form
 
@@ -1138,20 +1100,18 @@ QualityAPI.getQualityFormsEvaluation(formId: formId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="getQualityFormsEvaluationVersions"></a>
-
-# **getQualityFormsEvaluationVersions**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## getQualityFormsEvaluationVersions
 
-> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder)
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityFormsEvaluationVersions(formId, pageSize, pageNumber, sortOrder)
 
 Gets all the revisions for a specific evaluation.
 
@@ -1196,20 +1156,18 @@ QualityAPI.getQualityFormsEvaluationVersions(formId: formId, pageSize: pageSize,
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| Sort order | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
-
-<a name="getQualityFormsEvaluations"></a>
-
-# **getQualityFormsEvaluations**
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityFormsEvaluations
 
-> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
 Get the list of evaluation forms
 
@@ -1264,20 +1222,18 @@ QualityAPI.getQualityFormsEvaluations(pageSize: pageSize, pageNumber: pageNumber
 | **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
-
-<a name="getQualityFormsEvaluationsBulkContexts"></a>
-
-# **getQualityFormsEvaluationsBulkContexts**
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityFormsEvaluationsBulkContexts
 
-> [[EvaluationFormResponse]](EvaluationFormResponse.html) getQualityFormsEvaluationsBulkContexts(contextId)
+
+
+> [[EvaluationFormResponse]](EvaluationFormResponse) getQualityFormsEvaluationsBulkContexts(contextId)
 
 Retrieve a list of the latest published evaluation form versions by context ids
 
@@ -1315,21 +1271,19 @@ QualityAPI.getQualityFormsEvaluationsBulkContexts(contextId: contextId) { (respo
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contextId** | [**[String]**](String.html)| A comma-delimited list of valid evaluation form context ids | |
-{: class="table-striped"}
+| **contextId** | [**[String]**](String)| A comma-delimited list of valid evaluation form context ids | |
 
 
 ### Return type
 
-[**[EvaluationFormResponse]**](EvaluationFormResponse.html)
-
-<a name="getQualityFormsSurvey"></a>
-
-# **getQualityFormsSurvey**
+[**[EvaluationFormResponse]**](EvaluationFormResponse)
 
 
+## getQualityFormsSurvey
 
-> [SurveyForm](SurveyForm.html) getQualityFormsSurvey(formId)
+
+
+> [SurveyForm](SurveyForm) getQualityFormsSurvey(formId)
 
 Get a survey form
 
@@ -1368,20 +1322,18 @@ QualityAPI.getQualityFormsSurvey(formId: formId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
-
-<a name="getQualityFormsSurveyVersions"></a>
-
-# **getQualityFormsSurveyVersions**
+[**SurveyForm**](SurveyForm)
 
 
+## getQualityFormsSurveyVersions
 
-> [SurveyFormEntityListing](SurveyFormEntityListing.html) getQualityFormsSurveyVersions(formId, pageSize, pageNumber)
+
+
+> [SurveyFormEntityListing](SurveyFormEntityListing) getQualityFormsSurveyVersions(formId, pageSize, pageNumber)
 
 Gets all the revisions for a specific survey.
 
@@ -1424,20 +1376,18 @@ QualityAPI.getQualityFormsSurveyVersions(formId: formId, pageSize: pageSize, pag
 | **formId** | **String**| Form ID | |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
-
-<a name="getQualityFormsSurveys"></a>
-
-# **getQualityFormsSurveys**
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
 
+## getQualityFormsSurveys
 
-> [SurveyFormEntityListing](SurveyFormEntityListing.html) getQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
+
+
+> [SurveyFormEntityListing](SurveyFormEntityListing) getQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name, sortOrder)
 
 Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form.
 
@@ -1490,20 +1440,18 @@ QualityAPI.getQualityFormsSurveys(pageSize: pageSize, pageNumber: pageNumber, so
 | **expand** | **String**| If 'expand=publishHistory', then each unpublished evaluation form includes a listing of its published versions | [optional]<br />**Values**: publishhistory ("publishHistory") |
 | **name** | **String**| Name | [optional] |
 | **sortOrder** | **String**| Order to sort results, either asc or desc | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
-
-<a name="getQualityFormsSurveysBulk"></a>
-
-# **getQualityFormsSurveysBulk**
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
 
+## getQualityFormsSurveysBulk
 
-> [SurveyFormEntityListing](SurveyFormEntityListing.html) getQualityFormsSurveysBulk(_id)
+
+
+> [SurveyFormEntityListing](SurveyFormEntityListing) getQualityFormsSurveysBulk(_id)
 
 Retrieve a list of survey forms by their ids
 
@@ -1541,21 +1489,19 @@ QualityAPI.getQualityFormsSurveysBulk(_id: _id) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **_id** | [**[String]**](String.html)| A comma-delimited list of valid survey form ids | |
-{: class="table-striped"}
+| **_id** | [**[String]**](String)| A comma-delimited list of valid survey form ids | |
 
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
-
-<a name="getQualityFormsSurveysBulkContexts"></a>
-
-# **getQualityFormsSurveysBulkContexts**
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
 
+## getQualityFormsSurveysBulkContexts
 
-> [[SurveyForm]](SurveyForm.html) getQualityFormsSurveysBulkContexts(contextId, published)
+
+
+> [[SurveyForm]](SurveyForm) getQualityFormsSurveysBulkContexts(contextId, published)
 
 Retrieve a list of the latest form versions by context ids
 
@@ -1594,22 +1540,20 @@ QualityAPI.getQualityFormsSurveysBulkContexts(contextId: contextId, published: p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contextId** | [**[String]**](String.html)| A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. | |
+| **contextId** | [**[String]**](String)| A comma-delimited list of valid survey form context ids. The maximum number of ids allowed in this list is 100. | |
 | **published** | **Bool**| If true, the latest published version will be included. If false, only the unpublished version will be included. | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**[SurveyForm]**](SurveyForm.html)
-
-<a name="getQualityPublishedform"></a>
-
-# **getQualityPublishedform**
+[**[SurveyForm]**](SurveyForm)
 
 
+## getQualityPublishedform
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityPublishedform(formId)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) getQualityPublishedform(formId)
 
 Get the published evaluation forms.
 
@@ -1648,20 +1592,18 @@ QualityAPI.getQualityPublishedform(formId: formId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="getQualityPublishedforms"></a>
-
-# **getQualityPublishedforms**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## getQualityPublishedforms
 
-> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext)
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityPublishedforms(pageSize, pageNumber, name, onlyLatestPerContext)
 
 Get the published evaluation forms.
 
@@ -1706,20 +1648,18 @@ QualityAPI.getQualityPublishedforms(pageSize: pageSize, pageNumber: pageNumber, 
 | **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **onlyLatestPerContext** | **Bool**| onlyLatestPerContext | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
-
-<a name="getQualityPublishedformsEvaluation"></a>
-
-# **getQualityPublishedformsEvaluation**
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityPublishedformsEvaluation
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) getQualityPublishedformsEvaluation(formId)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) getQualityPublishedformsEvaluation(formId)
 
 Get the most recent published version of an evaluation form.
 
@@ -1758,20 +1698,18 @@ QualityAPI.getQualityPublishedformsEvaluation(formId: formId) { (response, error
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="getQualityPublishedformsEvaluations"></a>
-
-# **getQualityPublishedformsEvaluations**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## getQualityPublishedformsEvaluations
 
-> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing.html) getQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext)
+
+
+> [EvaluationFormResponseEntityListing](EvaluationFormResponseEntityListing) getQualityPublishedformsEvaluations(pageSize, pageNumber, name, onlyLatestPerContext)
 
 Get the published evaluation forms.
 
@@ -1816,20 +1754,18 @@ QualityAPI.getQualityPublishedformsEvaluations(pageSize: pageSize, pageNumber: p
 | **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **onlyLatestPerContext** | **Bool**| onlyLatestPerContext | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing.html)
-
-<a name="getQualityPublishedformsSurvey"></a>
-
-# **getQualityPublishedformsSurvey**
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## getQualityPublishedformsSurvey
 
-> [SurveyForm](SurveyForm.html) getQualityPublishedformsSurvey(formId)
+
+
+> [SurveyForm](SurveyForm) getQualityPublishedformsSurvey(formId)
 
 Get the most recent published version of a survey form.
 
@@ -1868,20 +1804,18 @@ QualityAPI.getQualityPublishedformsSurvey(formId: formId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
-
-<a name="getQualityPublishedformsSurveys"></a>
-
-# **getQualityPublishedformsSurveys**
+[**SurveyForm**](SurveyForm)
 
 
+## getQualityPublishedformsSurveys
 
-> [SurveyFormEntityListing](SurveyFormEntityListing.html) getQualityPublishedformsSurveys(pageSize, pageNumber, name, onlyLatestEnabledPerContext)
+
+
+> [SurveyFormEntityListing](SurveyFormEntityListing) getQualityPublishedformsSurveys(pageSize, pageNumber, name, onlyLatestEnabledPerContext)
 
 Get the published survey forms.
 
@@ -1926,20 +1860,18 @@ QualityAPI.getQualityPublishedformsSurveys(pageSize: pageSize, pageNumber: pageN
 | **pageNumber** | **Int**| Page number | [optional] |
 | **name** | **String**| Name | [optional] |
 | **onlyLatestEnabledPerContext** | **Bool**| onlyLatestEnabledPerContext | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
-
-<a name="getQualitySurvey"></a>
-
-# **getQualitySurvey**
+[**SurveyFormEntityListing**](SurveyFormEntityListing)
 
 
+## getQualitySurvey
 
-> [Survey](Survey.html) getQualitySurvey(surveyId)
+
+
+> [Survey](Survey) getQualitySurvey(surveyId)
 
 Get a survey for a conversation
 
@@ -1978,20 +1910,18 @@ QualityAPI.getQualitySurvey(surveyId: surveyId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **surveyId** | **String**| surveyId | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Survey**](Survey.html)
-
-<a name="getQualitySurveysScorable"></a>
-
-# **getQualitySurveysScorable**
+[**Survey**](Survey)
 
 
+## getQualitySurveysScorable
 
-> [ScorableSurvey](ScorableSurvey.html) getQualitySurveysScorable(customerSurveyUrl)
+
+
+> [ScorableSurvey](ScorableSurvey) getQualitySurveysScorable(customerSurveyUrl)
 
 Get a survey as an end-customer, for the purposes of scoring it.
 
@@ -2029,20 +1959,18 @@ QualityAPI.getQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl) { (re
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customerSurveyUrl** | **String**| customerSurveyUrl | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**ScorableSurvey**](ScorableSurvey.html)
-
-<a name="patchQualityFormsSurvey"></a>
-
-# **patchQualityFormsSurvey**
+[**ScorableSurvey**](ScorableSurvey)
 
 
+## patchQualityFormsSurvey
 
-> [SurveyForm](SurveyForm.html) patchQualityFormsSurvey(formId, body)
+
+
+> [SurveyForm](SurveyForm) patchQualityFormsSurvey(formId, body)
 
 Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
 
@@ -2082,21 +2010,19 @@ QualityAPI.patchQualityFormsSurvey(formId: formId, body: body) { (response, erro
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **body** | [**SurveyForm**](SurveyForm.html)| Survey form | |
-{: class="table-striped"}
+| **body** | [**SurveyForm**](SurveyForm)| Survey form | |
 
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
-
-<a name="postAnalyticsEvaluationsAggregatesQuery"></a>
-
-# **postAnalyticsEvaluationsAggregatesQuery**
+[**SurveyForm**](SurveyForm)
 
 
+## postAnalyticsEvaluationsAggregatesQuery
 
-> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse.html) postAnalyticsEvaluationsAggregatesQuery(body)
+
+
+> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse) postAnalyticsEvaluationsAggregatesQuery(body)
 
 Query for evaluation aggregates
 
@@ -2134,21 +2060,19 @@ QualityAPI.postAnalyticsEvaluationsAggregatesQuery(body: body) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery.html)| query | |
-{: class="table-striped"}
+| **body** | [**EvaluationAggregationQuery**](EvaluationAggregationQuery)| query | |
 
 
 ### Return type
 
-[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
-
-<a name="postAnalyticsSurveysAggregatesQuery"></a>
-
-# **postAnalyticsSurveysAggregatesQuery**
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse)
 
 
+## postAnalyticsSurveysAggregatesQuery
 
-> [SurveyAggregateQueryResponse](SurveyAggregateQueryResponse.html) postAnalyticsSurveysAggregatesQuery(body)
+
+
+> [SurveyAggregateQueryResponse](SurveyAggregateQueryResponse) postAnalyticsSurveysAggregatesQuery(body)
 
 Query for survey aggregates
 
@@ -2186,21 +2110,19 @@ QualityAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error) i
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery.html)| query | |
-{: class="table-striped"}
+| **body** | [**SurveyAggregationQuery**](SurveyAggregationQuery)| query | |
 
 
 ### Return type
 
-[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse.html)
-
-<a name="postQualityCalibrations"></a>
-
-# **postQualityCalibrations**
+[**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse)
 
 
+## postQualityCalibrations
 
-> [Calibration](Calibration.html) postQualityCalibrations(body, expand)
+
+
+> [Calibration](Calibration) postQualityCalibrations(body, expand)
 
 Create a calibration
 
@@ -2239,22 +2161,20 @@ QualityAPI.postQualityCalibrations(body: body, expand: expand) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**CalibrationCreate**](CalibrationCreate.html)| calibration | |
+| **body** | [**CalibrationCreate**](CalibrationCreate)| calibration | |
 | **expand** | **String**| calibratorId | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Calibration**](Calibration.html)
-
-<a name="postQualityConversationEvaluations"></a>
-
-# **postQualityConversationEvaluations**
+[**Calibration**](Calibration)
 
 
+## postQualityConversationEvaluations
 
-> [Evaluation](Evaluation.html) postQualityConversationEvaluations(conversationId, body, expand)
+
+
+> [Evaluation](Evaluation) postQualityConversationEvaluations(conversationId, body, expand)
 
 Create an evaluation
 
@@ -2295,22 +2215,20 @@ QualityAPI.postQualityConversationEvaluations(conversationId: conversationId, bo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
-| **body** | [**EvaluationCreateBody**](EvaluationCreateBody.html)| evaluation | |
+| **body** | [**EvaluationCreateBody**](EvaluationCreateBody)| evaluation | |
 | **expand** | **String**| evaluatorId | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**Evaluation**](Evaluation.html)
-
-<a name="postQualityConversationsAuditsQuery"></a>
-
-# **postQualityConversationsAuditsQuery**
+[**Evaluation**](Evaluation)
 
 
+## postQualityConversationsAuditsQuery
 
-> [QualityAuditQueryExecutionStatusResponse](QualityAuditQueryExecutionStatusResponse.html) postQualityConversationsAuditsQuery(body)
+
+
+> [QualityAuditQueryExecutionStatusResponse](QualityAuditQueryExecutionStatusResponse) postQualityConversationsAuditsQuery(body)
 
 Create audit query execution
 
@@ -2348,21 +2266,19 @@ QualityAPI.postQualityConversationsAuditsQuery(body: body) { (response, error) i
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**QMAuditQueryRequest**](QMAuditQueryRequest.html)| query | |
-{: class="table-striped"}
+| **body** | [**QMAuditQueryRequest**](QMAuditQueryRequest)| query | |
 
 
 ### Return type
 
-[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse.html)
-
-<a name="postQualityEvaluationsAggregatesQueryMe"></a>
-
-# **postQualityEvaluationsAggregatesQueryMe**
+[**QualityAuditQueryExecutionStatusResponse**](QualityAuditQueryExecutionStatusResponse)
 
 
+## postQualityEvaluationsAggregatesQueryMe
 
-> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse.html) postQualityEvaluationsAggregatesQueryMe(body)
+
+
+> [EvaluationAggregateQueryResponse](EvaluationAggregateQueryResponse) postQualityEvaluationsAggregatesQueryMe(body)
 
 Query for evaluation aggregates for the current user
 
@@ -2399,21 +2315,19 @@ QualityAPI.postQualityEvaluationsAggregatesQueryMe(body: body) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EvaluationAggregationQueryMe**](EvaluationAggregationQueryMe.html)| query | |
-{: class="table-striped"}
+| **body** | [**EvaluationAggregationQueryMe**](EvaluationAggregationQueryMe)| query | |
 
 
 ### Return type
 
-[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse.html)
-
-<a name="postQualityEvaluationsScoring"></a>
-
-# **postQualityEvaluationsScoring**
+[**EvaluationAggregateQueryResponse**](EvaluationAggregateQueryResponse)
 
 
+## postQualityEvaluationsScoring
 
-> [EvaluationScoringSet](EvaluationScoringSet.html) postQualityEvaluationsScoring(body)
+
+
+> [EvaluationScoringSet](EvaluationScoringSet) postQualityEvaluationsScoring(body)
 
 Score evaluation
 
@@ -2450,21 +2364,19 @@ QualityAPI.postQualityEvaluationsScoring(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet.html)| evaluationAndScoringSet | |
-{: class="table-striped"}
+| **body** | [**EvaluationFormAndScoringSet**](EvaluationFormAndScoringSet)| evaluationAndScoringSet | |
 
 
 ### Return type
 
-[**EvaluationScoringSet**](EvaluationScoringSet.html)
-
-<a name="postQualityForms"></a>
-
-# **postQualityForms**
+[**EvaluationScoringSet**](EvaluationScoringSet)
 
 
+## postQualityForms
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityForms(body)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) postQualityForms(body)
 
 Create an evaluation form.
 
@@ -2502,21 +2414,19 @@ QualityAPI.postQualityForms(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | |
-{: class="table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form | |
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="postQualityFormsEvaluations"></a>
-
-# **postQualityFormsEvaluations**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## postQualityFormsEvaluations
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityFormsEvaluations(body)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) postQualityFormsEvaluations(body)
 
 Create an evaluation form.
 
@@ -2554,21 +2464,19 @@ QualityAPI.postQualityFormsEvaluations(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | |
-{: class="table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form | |
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="postQualityFormsSurveys"></a>
-
-# **postQualityFormsSurveys**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## postQualityFormsSurveys
 
-> [SurveyForm](SurveyForm.html) postQualityFormsSurveys(body)
+
+
+> [SurveyForm](SurveyForm) postQualityFormsSurveys(body)
 
 Create a survey form.
 
@@ -2606,21 +2514,19 @@ QualityAPI.postQualityFormsSurveys(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SurveyForm**](SurveyForm.html)| Survey form | |
-{: class="table-striped"}
+| **body** | [**SurveyForm**](SurveyForm)| Survey form | |
 
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
-
-<a name="postQualityPublishedforms"></a>
-
-# **postQualityPublishedforms**
+[**SurveyForm**](SurveyForm)
 
 
+## postQualityPublishedforms
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityPublishedforms(body)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) postQualityPublishedforms(body)
 
 Publish an evaluation form.
 
@@ -2658,21 +2564,19 @@ QualityAPI.postQualityPublishedforms(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish | |
-{: class="table-striped"}
+| **body** | [**PublishForm**](PublishForm)| Publish request containing id of form to publish | |
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="postQualityPublishedformsEvaluations"></a>
-
-# **postQualityPublishedformsEvaluations**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## postQualityPublishedformsEvaluations
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) postQualityPublishedformsEvaluations(body)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) postQualityPublishedformsEvaluations(body)
 
 Publish an evaluation form.
 
@@ -2710,21 +2614,19 @@ QualityAPI.postQualityPublishedformsEvaluations(body: body) { (response, error) 
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish | |
-{: class="table-striped"}
+| **body** | [**PublishForm**](PublishForm)| Publish request containing id of form to publish | |
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="postQualityPublishedformsSurveys"></a>
-
-# **postQualityPublishedformsSurveys**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## postQualityPublishedformsSurveys
 
-> [SurveyForm](SurveyForm.html) postQualityPublishedformsSurveys(body)
+
+
+> [SurveyForm](SurveyForm) postQualityPublishedformsSurveys(body)
 
 Publish a survey form.
 
@@ -2762,21 +2664,19 @@ QualityAPI.postQualityPublishedformsSurveys(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**PublishForm**](PublishForm.html)| Survey form | |
-{: class="table-striped"}
+| **body** | [**PublishForm**](PublishForm)| Survey form | |
 
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
-
-<a name="postQualitySurveysScoring"></a>
-
-# **postQualitySurveysScoring**
+[**SurveyForm**](SurveyForm)
 
 
+## postQualitySurveysScoring
 
-> [SurveyScoringSet](SurveyScoringSet.html) postQualitySurveysScoring(body)
+
+
+> [SurveyScoringSet](SurveyScoringSet) postQualitySurveysScoring(body)
 
 Score survey
 
@@ -2813,21 +2713,19 @@ QualityAPI.postQualitySurveysScoring(body: body) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**SurveyFormAndScoringSet**](SurveyFormAndScoringSet.html)| surveyAndScoringSet | |
-{: class="table-striped"}
+| **body** | [**SurveyFormAndScoringSet**](SurveyFormAndScoringSet)| surveyAndScoringSet | |
 
 
 ### Return type
 
-[**SurveyScoringSet**](SurveyScoringSet.html)
-
-<a name="putQualityCalibration"></a>
-
-# **putQualityCalibration**
+[**SurveyScoringSet**](SurveyScoringSet)
 
 
+## putQualityCalibration
 
-> [Calibration](Calibration.html) putQualityCalibration(calibrationId, body)
+
+
+> [Calibration](Calibration) putQualityCalibration(calibrationId, body)
 
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
 
@@ -2867,21 +2765,19 @@ QualityAPI.putQualityCalibration(calibrationId: calibrationId, body: body) { (re
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **calibrationId** | **String**| Calibration ID | |
-| **body** | [**Calibration**](Calibration.html)| Calibration | |
-{: class="table-striped"}
+| **body** | [**Calibration**](Calibration)| Calibration | |
 
 
 ### Return type
 
-[**Calibration**](Calibration.html)
-
-<a name="putQualityConversationEvaluation"></a>
-
-# **putQualityConversationEvaluation**
+[**Calibration**](Calibration)
 
 
+## putQualityConversationEvaluation
 
-> [EvaluationResponse](EvaluationResponse.html) putQualityConversationEvaluation(conversationId, evaluationId, body, expand)
+
+
+> [EvaluationResponse](EvaluationResponse) putQualityConversationEvaluation(conversationId, evaluationId, body, expand)
 
 Update an evaluation
 
@@ -2928,22 +2824,20 @@ QualityAPI.putQualityConversationEvaluation(conversationId: conversationId, eval
 | ------------- | ------------- | ------------- | ------------- |
 | **conversationId** | **String**| conversationId | |
 | **evaluationId** | **String**| evaluationId | |
-| **body** | [**Evaluation**](Evaluation.html)| evaluation | |
+| **body** | [**Evaluation**](Evaluation)| evaluation | |
 | **expand** | **String**| evaluatorId, evaluationForm, assignee, evaluator | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**EvaluationResponse**](EvaluationResponse.html)
-
-<a name="putQualityForm"></a>
-
-# **putQualityForm**
+[**EvaluationResponse**](EvaluationResponse)
 
 
+## putQualityForm
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) putQualityForm(formId, body)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) putQualityForm(formId, body)
 
 Update an evaluation form.
 
@@ -2983,21 +2877,19 @@ QualityAPI.putQualityForm(formId: formId, body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | |
-{: class="table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form | |
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="putQualityFormsEvaluation"></a>
-
-# **putQualityFormsEvaluation**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## putQualityFormsEvaluation
 
-> [EvaluationFormResponse](EvaluationFormResponse.html) putQualityFormsEvaluation(formId, body)
+
+
+> [EvaluationFormResponse](EvaluationFormResponse) putQualityFormsEvaluation(formId, body)
 
 Update an evaluation form.
 
@@ -3037,21 +2929,19 @@ QualityAPI.putQualityFormsEvaluation(formId: formId, body: body) { (response, er
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form | |
-{: class="table-striped"}
+| **body** | [**EvaluationForm**](EvaluationForm)| Evaluation form | |
 
 
 ### Return type
 
-[**EvaluationFormResponse**](EvaluationFormResponse.html)
-
-<a name="putQualityFormsSurvey"></a>
-
-# **putQualityFormsSurvey**
+[**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## putQualityFormsSurvey
 
-> [SurveyForm](SurveyForm.html) putQualityFormsSurvey(formId, body)
+
+
+> [SurveyForm](SurveyForm) putQualityFormsSurvey(formId, body)
 
 Update a survey form.
 
@@ -3091,21 +2981,19 @@ QualityAPI.putQualityFormsSurvey(formId: formId, body: body) { (response, error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **formId** | **String**| Form ID | |
-| **body** | [**SurveyForm**](SurveyForm.html)| Survey form | |
-{: class="table-striped"}
+| **body** | [**SurveyForm**](SurveyForm)| Survey form | |
 
 
 ### Return type
 
-[**SurveyForm**](SurveyForm.html)
-
-<a name="putQualitySurveysScorable"></a>
-
-# **putQualitySurveysScorable**
+[**SurveyForm**](SurveyForm)
 
 
+## putQualitySurveysScorable
 
-> [ScorableSurvey](ScorableSurvey.html) putQualitySurveysScorable(customerSurveyUrl, body)
+
+
+> [ScorableSurvey](ScorableSurvey) putQualitySurveysScorable(customerSurveyUrl, body)
 
 Update a survey as an end-customer, for the purposes of scoring it.
 
@@ -3144,11 +3032,12 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **customerSurveyUrl** | **String**| customerSurveyUrl | |
-| **body** | [**ScorableSurvey**](ScorableSurvey.html)| survey | |
-{: class="table-striped"}
+| **body** | [**ScorableSurvey**](ScorableSurvey)| survey | |
 
 
 ### Return type
 
-[**ScorableSurvey**](ScorableSurvey.html)
+[**ScorableSurvey**](ScorableSurvey)
 
+
+_PureCloudPlatformClientV2@151.1.0_

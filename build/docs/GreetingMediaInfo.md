@@ -1,6 +1,5 @@
----
-title: GreetingMediaInfo
----
+# GreetingMediaInfo
+
 ## GreetingMediaInfo
 
 ## Properties
@@ -10,6 +9,7 @@ title: GreetingMediaInfo
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **mediaFileUri** | **String** |  | [optional] |
 | **mediaImageUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

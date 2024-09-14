@@ -1,6 +1,5 @@
----
-title: EventDefinition
----
+# EventDefinition
+
 ## EventDefinition
 
 ## Properties
@@ -10,6 +9,7 @@ title: EventDefinition
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of the object. | [optional] |
 | **_description** | **String** | description | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

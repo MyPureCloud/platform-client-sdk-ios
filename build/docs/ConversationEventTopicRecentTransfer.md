@@ -1,6 +1,5 @@
----
-title: ConversationEventTopicRecentTransfer
----
+# ConversationEventTopicRecentTransfer
+
 ## ConversationEventTopicRecentTransfer
 
 ## Properties
@@ -9,11 +8,12 @@ title: ConversationEventTopicRecentTransfer
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The id of the command. | [optional] |
 | **state** | **String** |  | [optional] |
-| **dateIssued** | [**Date**](Date.html) | The date/time that this command was issued. | [optional] |
-| **initiator** | [**ConversationEventTopicInitiator**](ConversationEventTopicInitiator.html) |  | [optional] |
-| **modifiedBy** | [**ConversationEventTopicModifiedBy**](ConversationEventTopicModifiedBy.html) |  | [optional] |
-| **destination** | [**ConversationEventTopicDestination**](ConversationEventTopicDestination.html) |  | [optional] |
+| **dateIssued** | [**Date**](Date) | The date/time that this command was issued. | [optional] |
+| **initiator** | [**ConversationEventTopicInitiator**](ConversationEventTopicInitiator) |  | [optional] |
+| **modifiedBy** | [**ConversationEventTopicModifiedBy**](ConversationEventTopicModifiedBy) |  | [optional] |
+| **destination** | [**ConversationEventTopicDestination**](ConversationEventTopicDestination) |  | [optional] |
 | **transferType** | **String** | The type of transfer to perform. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

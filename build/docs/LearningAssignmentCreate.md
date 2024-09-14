@@ -1,6 +1,5 @@
----
-title: LearningAssignmentCreate
----
+# LearningAssignmentCreate
+
 ## LearningAssignmentCreate
 
 ## Properties
@@ -9,8 +8,9 @@ title: LearningAssignmentCreate
 |------------ | ------------- | ------------- | -------------|
 | **moduleId** | **String** | The Learning module Id associated with this assignment | |
 | **userId** | **String** | The User for whom the assignment is assigned | |
-| **recommendedCompletionDate** | [**Date**](Date.html) | The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **recommendedCompletionDate** | [**Date**](Date) | The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **lengthInMinutes** | **Int** | The length in minutes of assignment | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

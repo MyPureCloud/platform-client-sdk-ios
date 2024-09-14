@@ -1,6 +1,5 @@
----
-title: CoretypeListing
----
+# CoretypeListing
+
 ## CoretypeListing
 
 ## Properties
@@ -8,8 +7,9 @@ title: CoretypeListing
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[Coretype]**](Coretype.html) |  | [optional] |
+| **entities** | [**[Coretype]**](Coretype) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CreateBenefitAssessmentJobRequest
----
+# CreateBenefitAssessmentJobRequest
+
 ## CreateBenefitAssessmentJobRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: CreateBenefitAssessmentJobRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **divisionIds** | **[String]** | The list of division ids for routing queues that are to be assessed for Predictive Routing benefit. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

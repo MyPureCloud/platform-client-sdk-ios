@@ -1,6 +1,5 @@
----
-title: PublishScriptRequestData
----
+# PublishScriptRequestData
+
 ## PublishScriptRequestData
 
 ## Properties
@@ -9,6 +8,7 @@ title: PublishScriptRequestData
 |------------ | ------------- | ------------- | -------------|
 | **scriptId** | **String** | The id of the script to publish | |
 | **versionId** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

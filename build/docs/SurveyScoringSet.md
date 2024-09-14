@@ -1,6 +1,5 @@
----
-title: SurveyScoringSet
----
+# SurveyScoringSet
+
 ## SurveyScoringSet
 
 ## Properties
@@ -9,7 +8,8 @@ title: SurveyScoringSet
 |------------ | ------------- | ------------- | -------------|
 | **totalScore** | **Float** |  | [optional] |
 | **npsScore** | **Int** |  | [optional] |
-| **questionGroupScores** | [**[SurveyQuestionGroupScore]**](SurveyQuestionGroupScore.html) |  | [optional] |
-{: class="table table-striped"}
+| **questionGroupScores** | [**[SurveyQuestionGroupScore]**](SurveyQuestionGroupScore) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

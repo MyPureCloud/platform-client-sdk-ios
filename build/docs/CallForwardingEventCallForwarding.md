@@ -1,17 +1,17 @@
----
-title: CallForwardingEventCallForwarding
----
+# CallForwardingEventCallForwarding
+
 ## CallForwardingEventCallForwarding
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**CallForwardingEventUser**](CallForwardingEventUser.html) |  | [optional] |
+| **user** | [**CallForwardingEventUser**](CallForwardingEventUser) |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
-| **calls** | [**[CallForwardingEventCall]**](CallForwardingEventCall.html) |  | [optional] |
+| **calls** | [**[CallForwardingEventCall]**](CallForwardingEventCall) |  | [optional] |
 | **voicemail** | **String** |  | [optional] |
-| **modifiedDate** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **modifiedDate** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

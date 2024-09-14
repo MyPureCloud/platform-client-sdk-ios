@@ -1,15 +1,15 @@
----
-title: QueueConversationCallbackEventTopicJourneyContext
----
+# QueueConversationCallbackEventTopicJourneyContext
+
 ## QueueConversationCallbackEventTopicJourneyContext
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **customer** | [**QueueConversationCallbackEventTopicJourneyCustomer**](QueueConversationCallbackEventTopicJourneyCustomer.html) |  | [optional] |
-| **customerSession** | [**QueueConversationCallbackEventTopicJourneyCustomerSession**](QueueConversationCallbackEventTopicJourneyCustomerSession.html) |  | [optional] |
-| **triggeringAction** | [**QueueConversationCallbackEventTopicJourneyAction**](QueueConversationCallbackEventTopicJourneyAction.html) |  | [optional] |
-{: class="table table-striped"}
+| **customer** | [**QueueConversationCallbackEventTopicJourneyCustomer**](QueueConversationCallbackEventTopicJourneyCustomer) |  | [optional] |
+| **customerSession** | [**QueueConversationCallbackEventTopicJourneyCustomerSession**](QueueConversationCallbackEventTopicJourneyCustomerSession) |  | [optional] |
+| **triggeringAction** | [**QueueConversationCallbackEventTopicJourneyAction**](QueueConversationCallbackEventTopicJourneyAction) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: CreateSecureSession
----
+# CreateSecureSession
+
 ## CreateSecureSession
 
 ## Properties
@@ -11,6 +10,7 @@ title: CreateSecureSession
 | **flowId** | **String** | the flow id to execute in the secure session | |
 | **userData** | **String** | user data for the secure session | |
 | **disconnect** | **Bool** | if true, disconnect the agent after creating the session | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

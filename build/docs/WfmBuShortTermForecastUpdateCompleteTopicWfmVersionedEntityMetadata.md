@@ -1,6 +1,5 @@
----
-title: WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata
----
+# WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata
+
 ## WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata
 
 ## Properties
@@ -8,8 +7,9 @@ title: WfmBuShortTermForecastUpdateCompleteTopicWfmVersionedEntityMetadata
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **version** | **Int** |  | [optional] |
-| **modifiedBy** | [**WfmBuShortTermForecastUpdateCompleteTopicUserReference**](WfmBuShortTermForecastUpdateCompleteTopicUserReference.html) |  | [optional] |
-| **dateModified** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **modifiedBy** | [**WfmBuShortTermForecastUpdateCompleteTopicUserReference**](WfmBuShortTermForecastUpdateCompleteTopicUserReference) |  | [optional] |
+| **dateModified** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

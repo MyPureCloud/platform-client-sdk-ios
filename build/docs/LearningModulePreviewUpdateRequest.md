@@ -1,6 +1,5 @@
----
-title: LearningModulePreviewUpdateRequest
----
+# LearningModulePreviewUpdateRequest
+
 ## LearningModulePreviewUpdateRequest
 Learning module preview update request
 
@@ -9,10 +8,11 @@ Learning module preview update request
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **state** | **String** | The assignment State | [optional] |
-| **currentStep** | [**LearningModulePreviewUpdateRequestCurrentStep**](LearningModulePreviewUpdateRequestCurrentStep.html) | The assignment current step | [optional] |
-| **steps** | [**[LearningModulePreviewUpdateStep]**](LearningModulePreviewUpdateStep.html) | The assignment Steps | [optional] |
-| **assessment** | [**LearningAssessment**](LearningAssessment.html) | The assessment for learning module | [optional] |
-| **assessmentForm** | [**AssessmentForm**](AssessmentForm.html) | The assessment form for learning module | [optional] |
-{: class="table table-striped"}
+| **currentStep** | [**LearningModulePreviewUpdateRequestCurrentStep**](LearningModulePreviewUpdateRequestCurrentStep) | The assignment current step | [optional] |
+| **steps** | [**[LearningModulePreviewUpdateStep]**](LearningModulePreviewUpdateStep) | The assignment Steps | [optional] |
+| **assessment** | [**LearningAssessment**](LearningAssessment) | The assessment for learning module | [optional] |
+| **assessmentForm** | [**AssessmentForm**](AssessmentForm) | The assessment form for learning module | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

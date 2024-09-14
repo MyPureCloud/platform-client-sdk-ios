@@ -1,6 +1,5 @@
----
-title: FacebookScopedId
----
+# FacebookScopedId
+
 ## FacebookScopedId
 Scoped ID for a Facebook user interacting with a page or app
 
@@ -9,6 +8,7 @@ Scoped ID for a Facebook user interacting with a page or app
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **scopedId** | **String** | The unique page/app-specific scopedId for the user | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

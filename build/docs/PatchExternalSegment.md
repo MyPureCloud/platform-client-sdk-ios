@@ -1,6 +1,5 @@
----
-title: PatchExternalSegment
----
+# PatchExternalSegment
+
 ## PatchExternalSegment
 
 ## Properties
@@ -8,6 +7,7 @@ title: PatchExternalSegment
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name for the external segment in the system where it originates from. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

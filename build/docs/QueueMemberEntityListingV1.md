@@ -1,13 +1,12 @@
----
-title: QueueMemberEntityListingV1
----
+# QueueMemberEntityListingV1
+
 ## QueueMemberEntityListingV1
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[QueueMember]**](QueueMember.html) |  | [optional] |
+| **entities** | [**[QueueMember]**](QueueMember) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -17,6 +16,7 @@ title: QueueMemberEntityListingV1
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

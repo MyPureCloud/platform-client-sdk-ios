@@ -1,6 +1,5 @@
----
-title: FlowActivityQueryMetric
----
+# FlowActivityQueryMetric
+
 ## FlowActivityQueryMetric
 
 ## Properties
@@ -9,6 +8,7 @@ title: FlowActivityQueryMetric
 |------------ | ------------- | ------------- | -------------|
 | **metric** | **String** | The requested metric | |
 | **details** | **Bool** | Flag for including observation details for this metric in the response | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

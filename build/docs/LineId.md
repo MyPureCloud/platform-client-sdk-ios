@@ -1,6 +1,5 @@
----
-title: LineId
----
+# LineId
+
 ## LineId
 User information for a Line account
 
@@ -8,8 +7,9 @@ User information for a Line account
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ids** | [**[LineUserId]**](LineUserId.html) | The set of Line userIds that this person has. Each userId is specific to the Line channel that the user interacts with. | [optional] |
+| **ids** | [**[LineUserId]**](LineUserId) | The set of Line userIds that this person has. Each userId is specific to the Line channel that the user interacts with. | [optional] |
 | **displayName** | **String** | The displayName of this person&#39;s account in Line | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

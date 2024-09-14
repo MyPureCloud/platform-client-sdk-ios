@@ -1,6 +1,5 @@
----
-title: RestErrorDetail
----
+# RestErrorDetail
+
 ## RestErrorDetail
 
 ## Properties
@@ -9,6 +8,7 @@ title: RestErrorDetail
 |------------ | ------------- | ------------- | -------------|
 | **error** | **String** | name of the error | |
 | **details** | **String** | additional information regarding the error | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

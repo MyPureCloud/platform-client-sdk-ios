@@ -1,6 +1,5 @@
----
-title: NetworkConnectivity
----
+# NetworkConnectivity
+
 ## NetworkConnectivity
 
 ## Properties
@@ -11,6 +10,7 @@ title: NetworkConnectivity
 | **bluetoothEnabled** | **Bool** | Whether Bluetooth is enabled. | |
 | **cellularEnabled** | **Bool** | Whether Cellular is enabled. | |
 | **wifiEnabled** | **Bool** | Whether Wi-Fi is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

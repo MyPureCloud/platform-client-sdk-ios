@@ -1,6 +1,5 @@
----
-title: ReportingDataExportTopicDataExportNotification
----
+# ReportingDataExportTopicDataExportNotification
+
 ## ReportingDataExportTopicDataExportNotification
 
 ## Properties
@@ -16,14 +15,15 @@ title: ReportingDataExportTopicDataExportNotification
 | **viewType** | **String** |  | [optional] |
 | **exportErrorMessagesType** | **String** |  | [optional] |
 | **read** | **Bool** |  | [optional] |
-| **createdDateTime** | [**Date**](Date.html) |  | [optional] |
-| **modifiedDateTime** | [**Date**](Date.html) |  | [optional] |
+| **createdDateTime** | [**Date**](Date) |  | [optional] |
+| **modifiedDateTime** | [**Date**](Date) |  | [optional] |
 | **percentageComplete** | **Double** |  | [optional] |
 | **emailStatuses** | **[String:String]** |  | [optional] |
 | **emailErrorDescription** | **String** |  | [optional] |
 | **scheduleExpression** | **String** |  | [optional] |
 | **scheduleStaticLinkUrl** | **String** |  | [optional] |
 | **exportAllowedToRerun** | **Bool** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

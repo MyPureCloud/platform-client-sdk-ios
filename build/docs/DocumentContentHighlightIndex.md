@@ -1,6 +1,5 @@
----
-title: DocumentContentHighlightIndex
----
+# DocumentContentHighlightIndex
+
 ## DocumentContentHighlightIndex
 
 ## Properties
@@ -9,6 +8,7 @@ title: DocumentContentHighlightIndex
 |------------ | ------------- | ------------- | -------------|
 | **startIndex** | **Int** | Highlight text start index. | [optional] |
 | **endIndex** | **Int** | Highlight text end index. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

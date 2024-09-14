@@ -1,6 +1,5 @@
----
-title: Outcome
----
+# Outcome
+
 ## Outcome
 
 ## Properties
@@ -13,12 +12,13 @@ title: Outcome
 | **version** | **Int** | The version of the outcome. | |
 | **_description** | **String** | A description of the outcome. | [optional] |
 | **isPositive** | **Bool** | Whether or not the outcome is positive. | |
-| **context** | [**Context**](Context.html) | The context of the outcome. | |
-| **journey** | [**Journey**](Journey.html) | The pattern of rules defining the filter of the outcome. | |
-| **associatedValueField** | [**AssociatedValueField**](AssociatedValueField.html) | The field from the event indicating the associated value. | [optional] |
+| **context** | [**Context**](Context) | The context of the outcome. | |
+| **journey** | [**Journey**](Journey) | The pattern of rules defining the filter of the outcome. | |
+| **associatedValueField** | [**AssociatedValueField**](AssociatedValueField) | The field from the event indicating the associated value. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-| **createdDate** | [**Date**](Date.html) | Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-| **modifiedDate** | [**Date**](Date.html) | Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
-{: class="table table-striped"}
+| **createdDate** | [**Date**](Date) | Timestamp indicating when the outcome was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
+| **modifiedDate** | [**Date**](Date) | Timestamp indicating when the outcome was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

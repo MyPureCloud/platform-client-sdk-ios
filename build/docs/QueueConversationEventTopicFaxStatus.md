@@ -1,6 +1,5 @@
----
-title: QueueConversationEventTopicFaxStatus
----
+# QueueConversationEventTopicFaxStatus
+
 ## QueueConversationEventTopicFaxStatus
 Extra information on fax transmission.
 
@@ -16,6 +15,7 @@ Extra information on fax transmission.
 | **baudRate** | **Int** | Current signaling rate of transmission, baud rate. | [optional] |
 | **pageErrors** | **Int** | Number of page errors. | [optional] |
 | **lineErrors** | **Int** | Number of line errors. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

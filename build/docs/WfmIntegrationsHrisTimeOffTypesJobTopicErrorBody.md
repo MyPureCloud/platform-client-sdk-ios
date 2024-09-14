@@ -1,6 +1,5 @@
----
-title: WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody
----
+# WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody
+
 ## WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody
 
 ## Properties
@@ -11,6 +10,7 @@ title: WfmIntegrationsHrisTimeOffTypesJobTopicErrorBody
 | **code** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

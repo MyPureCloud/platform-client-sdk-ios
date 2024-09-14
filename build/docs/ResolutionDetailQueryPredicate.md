@@ -1,6 +1,5 @@
----
-title: ResolutionDetailQueryPredicate
----
+# ResolutionDetailQueryPredicate
+
 ## ResolutionDetailQueryPredicate
 
 ## Properties
@@ -11,7 +10,8 @@ title: ResolutionDetailQueryPredicate
 | **metric** | **String** | Left hand side for metric predicates | [optional] |
 | **_operator** | **String** | Optional operator, default is matches | [optional] |
 | **value** | **String** | Right hand side for metric predicates | [optional] |
-| **range** | [**NumericRange**](NumericRange.html) | Right hand side for metric predicates | [optional] |
-{: class="table table-striped"}
+| **range** | [**NumericRange**](NumericRange) | Right hand side for metric predicates | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

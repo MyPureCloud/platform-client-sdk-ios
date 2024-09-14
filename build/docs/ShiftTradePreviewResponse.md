@@ -1,13 +1,13 @@
----
-title: ShiftTradePreviewResponse
----
+# ShiftTradePreviewResponse
+
 ## ShiftTradePreviewResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **activities** | [**[ShiftTradeActivityPreviewResponse]**](ShiftTradeActivityPreviewResponse.html) | List of activities that will make up the new shift if this shift trade is approved | [optional] |
-{: class="table table-striped"}
+| **activities** | [**[ShiftTradeActivityPreviewResponse]**](ShiftTradeActivityPreviewResponse) | List of activities that will make up the new shift if this shift trade is approved | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

@@ -1,6 +1,5 @@
----
-title: RoomParticipant
----
+# RoomParticipant
+
 ## RoomParticipant
 
 ## Properties
@@ -8,6 +7,7 @@ title: RoomParticipant
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **participantJid** | **String** | participantJid | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

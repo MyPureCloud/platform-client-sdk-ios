@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentFeedbackUpdateRequest
----
+# KnowledgeDocumentFeedbackUpdateRequest
+
 ## KnowledgeDocumentFeedbackUpdateRequest
 
 ## Properties
@@ -11,6 +10,7 @@ title: KnowledgeDocumentFeedbackUpdateRequest
 | **reason** | **String** | Feedback reason | [optional] |
 | **comment** | **String** | Feedback comment | [optional] |
 | **state** | **String** | Feedback state | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

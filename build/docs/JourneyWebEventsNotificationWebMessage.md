@@ -1,6 +1,5 @@
----
-title: JourneyWebEventsNotificationWebMessage
----
+# JourneyWebEventsNotificationWebMessage
+
 ## JourneyWebEventsNotificationWebMessage
 
 ## Properties
@@ -15,14 +14,15 @@ title: JourneyWebEventsNotificationWebMessage
 | **ipOrganization** | **String** |  | [optional] |
 | **searchQuery** | **String** |  | [optional] |
 | **authenticated** | **Bool** |  | [optional] |
-| **browser** | [**JourneyWebEventsNotificationBrowser**](JourneyWebEventsNotificationBrowser.html) |  | [optional] |
-| **device** | [**JourneyWebEventsNotificationDevice**](JourneyWebEventsNotificationDevice.html) |  | [optional] |
-| **geolocation** | [**JourneyWebEventsNotificationGeoLocation**](JourneyWebEventsNotificationGeoLocation.html) |  | [optional] |
-| **mktCampaign** | [**JourneyWebEventsNotificationMktCampaign**](JourneyWebEventsNotificationMktCampaign.html) |  | [optional] |
-| **page** | [**JourneyWebEventsNotificationPage**](JourneyWebEventsNotificationPage.html) |  | [optional] |
-| **referrer** | [**JourneyWebEventsNotificationReferrer**](JourneyWebEventsNotificationReferrer.html) |  | [optional] |
-| **attributes** | [**[String:JourneyWebEventsNotificationCustomEventAttribute]**](JourneyWebEventsNotificationCustomEventAttribute.html) |  | [optional] |
-| **traits** | [**[String:JourneyWebEventsNotificationCustomEventAttribute]**](JourneyWebEventsNotificationCustomEventAttribute.html) |  | [optional] |
-{: class="table table-striped"}
+| **browser** | [**JourneyWebEventsNotificationBrowser**](JourneyWebEventsNotificationBrowser) |  | [optional] |
+| **device** | [**JourneyWebEventsNotificationDevice**](JourneyWebEventsNotificationDevice) |  | [optional] |
+| **geolocation** | [**JourneyWebEventsNotificationGeoLocation**](JourneyWebEventsNotificationGeoLocation) |  | [optional] |
+| **mktCampaign** | [**JourneyWebEventsNotificationMktCampaign**](JourneyWebEventsNotificationMktCampaign) |  | [optional] |
+| **page** | [**JourneyWebEventsNotificationPage**](JourneyWebEventsNotificationPage) |  | [optional] |
+| **referrer** | [**JourneyWebEventsNotificationReferrer**](JourneyWebEventsNotificationReferrer) |  | [optional] |
+| **attributes** | [**[String:JourneyWebEventsNotificationCustomEventAttribute]**](JourneyWebEventsNotificationCustomEventAttribute) |  | [optional] |
+| **traits** | [**[String:JourneyWebEventsNotificationCustomEventAttribute]**](JourneyWebEventsNotificationCustomEventAttribute) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

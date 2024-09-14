@@ -1,6 +1,5 @@
----
-title: KnowledgeDocumentBulkRequest
----
+# KnowledgeDocumentBulkRequest
+
 ## KnowledgeDocumentBulkRequest
 
 ## Properties
@@ -9,10 +8,11 @@ title: KnowledgeDocumentBulkRequest
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Document type according to assigned template | |
 | **externalUrl** | **String** | External Url to the document | [optional] |
-| **faq** | [**DocumentFaq**](DocumentFaq.html) | Faq document details | [optional] |
-| **categories** | [**[DocumentCategoryInput]**](DocumentCategoryInput.html) | Document categories | [optional] |
-| **article** | [**DocumentArticle**](DocumentArticle.html) | Article details | [optional] |
+| **faq** | [**DocumentFaq**](DocumentFaq) | Faq document details | [optional] |
+| **categories** | [**[DocumentCategoryInput]**](DocumentCategoryInput) | Document categories | [optional] |
+| **article** | [**DocumentArticle**](DocumentArticle) | Article details | [optional] |
 | **_id** | **String** | Identifier of document for update. Omit for create new Document. | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

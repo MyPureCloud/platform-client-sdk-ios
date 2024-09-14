@@ -1,6 +1,5 @@
----
-title: OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes
----
+# OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes
+
 ## OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes
 
 ## Properties
@@ -11,6 +10,7 @@ title: OutboundMessagingCampaignPostContactSmsEventTopicSMSAttributes
 | **contactPhoneNumberColumnName** | **String** |  | [optional] |
 | **configuredSenderPhoneNumber** | **String** |  | [optional] |
 | **senderPhoneNumber** | **String** |  | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

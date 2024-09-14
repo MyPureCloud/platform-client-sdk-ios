@@ -1,6 +1,5 @@
----
-title: EvaluationFormResponse
----
+# EvaluationFormResponse
+
 ## EvaluationFormResponse
 
 ## Properties
@@ -9,13 +8,14 @@ title: EvaluationFormResponse
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The evaluation form name | |
-| **modifiedDate** | [**Date**](Date.html) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **modifiedDate** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **published** | **Bool** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **questionGroups** | [**[EvaluationQuestionGroup]**](EvaluationQuestionGroup.html) | A list of question groups | [optional] |
+| **questionGroups** | [**[EvaluationQuestionGroup]**](EvaluationQuestionGroup) | A list of question groups | [optional] |
 | **weightMode** | **String** | Mode for evaluation form weight | [optional] |
-| **publishedVersions** | [**DomainEntityListingEvaluationForm**](DomainEntityListingEvaluationForm.html) | A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable). | [optional] |
+| **publishedVersions** | [**DomainEntityListingEvaluationForm**](DomainEntityListingEvaluationForm) | A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable). | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

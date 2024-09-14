@@ -1,6 +1,5 @@
----
-title: TrunkInstanceTopicTrunkConnectedStatus
----
+# TrunkInstanceTopicTrunkConnectedStatus
+
 ## TrunkInstanceTopicTrunkConnectedStatus
 
 ## Properties
@@ -8,7 +7,8 @@ title: TrunkInstanceTopicTrunkConnectedStatus
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **connected** | **Bool** |  | [optional] |
-| **connectedStateTime** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **connectedStateTime** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

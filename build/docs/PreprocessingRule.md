@@ -1,6 +1,5 @@
----
-title: PreprocessingRule
----
+# PreprocessingRule
+
 ## PreprocessingRule
 
 ## Properties
@@ -11,6 +10,7 @@ title: PreprocessingRule
 | **replaceWith** | **String** | The string to be substituted for each match. | [optional] |
 | **global** | **Bool** | Replaces all matching substrings in every line. | [optional] |
 | **ignoreCase** | **Bool** | Enables case-insensitive matching | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

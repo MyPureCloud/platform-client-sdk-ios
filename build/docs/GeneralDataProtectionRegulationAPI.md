@@ -1,25 +1,21 @@
----
-title: GeneralDataProtectionRegulationAPI
----
-## GeneralDataProtectionRegulationAPI
+# GeneralDataProtectionRegulationAPI
 
 All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**getGdprRequest**](GeneralDataProtectionRegulationAPI.html#getGdprRequest) | Get an existing GDPR request |
-| [**getGdprRequests**](GeneralDataProtectionRegulationAPI.html#getGdprRequests) | Get all GDPR requests |
-| [**getGdprSubjects**](GeneralDataProtectionRegulationAPI.html#getGdprSubjects) | Get GDPR subjects |
-| [**postGdprRequests**](GeneralDataProtectionRegulationAPI.html#postGdprRequests) | Submit a new GDPR request |
+| [**getGdprRequest**](GeneralDataProtectionRegulationAPI#getGdprRequest) | Get an existing GDPR request |
+| [**getGdprRequests**](GeneralDataProtectionRegulationAPI#getGdprRequests) | Get all GDPR requests |
+| [**getGdprSubjects**](GeneralDataProtectionRegulationAPI#getGdprSubjects) | Get GDPR subjects |
+| [**postGdprRequests**](GeneralDataProtectionRegulationAPI#postGdprRequests) | Submit a new GDPR request |
 {: class="table-striped"}
 
-<a name="getGdprRequest"></a>
 
-# **getGdprRequest**
-
+## getGdprRequest
 
 
-> [GDPRRequest](GDPRRequest.html) getGdprRequest(requestId)
+
+> [GDPRRequest](GDPRRequest) getGdprRequest(requestId)
 
 Get an existing GDPR request
 
@@ -58,20 +54,18 @@ GeneralDataProtectionRegulationAPI.getGdprRequest(requestId: requestId) { (respo
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **requestId** | **String**| Request id | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GDPRRequest**](GDPRRequest.html)
-
-<a name="getGdprRequests"></a>
-
-# **getGdprRequests**
+[**GDPRRequest**](GDPRRequest)
 
 
+## getGdprRequests
 
-> [GDPRRequestEntityListing](GDPRRequestEntityListing.html) getGdprRequests(pageSize, pageNumber)
+
+
+> [GDPRRequestEntityListing](GDPRRequestEntityListing) getGdprRequests(pageSize, pageNumber)
 
 Get all GDPR requests
 
@@ -112,20 +106,18 @@ GeneralDataProtectionRegulationAPI.getGdprRequests(pageSize: pageSize, pageNumbe
 | ------------- | ------------- | ------------- | ------------- |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GDPRRequestEntityListing**](GDPRRequestEntityListing.html)
-
-<a name="getGdprSubjects"></a>
-
-# **getGdprSubjects**
+[**GDPRRequestEntityListing**](GDPRRequestEntityListing)
 
 
+## getGdprSubjects
 
-> [GDPRSubjectEntityListing](GDPRSubjectEntityListing.html) getGdprSubjects(searchType, searchValue)
+
+
+> [GDPRSubjectEntityListing](GDPRSubjectEntityListing) getGdprSubjects(searchType, searchValue)
 
 Get GDPR subjects
 
@@ -166,20 +158,18 @@ GeneralDataProtectionRegulationAPI.getGdprSubjects(searchType: searchType, searc
 | ------------- | ------------- | ------------- | ------------- |
 | **searchType** | **String**| Search Type |<br />**Values**: name ("NAME"), address ("ADDRESS"), phone ("PHONE"), email ("EMAIL"), twitter ("TWITTER") |
 | **searchValue** | **String**| Search Value | |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GDPRSubjectEntityListing**](GDPRSubjectEntityListing.html)
-
-<a name="postGdprRequests"></a>
-
-# **postGdprRequests**
+[**GDPRSubjectEntityListing**](GDPRSubjectEntityListing)
 
 
+## postGdprRequests
 
-> [GDPRRequest](GDPRRequest.html) postGdprRequests(body, deleteConfirmed)
+
+
+> [GDPRRequest](GDPRRequest) postGdprRequests(body, deleteConfirmed)
 
 Submit a new GDPR request
 
@@ -218,12 +208,13 @@ GeneralDataProtectionRegulationAPI.postGdprRequests(body: body, deleteConfirmed:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**GDPRRequest**](GDPRRequest.html)| GDPR request | |
+| **body** | [**GDPRRequest**](GDPRRequest)| GDPR request | |
 | **deleteConfirmed** | **Bool**| Confirm delete | [optional] |
-{: class="table-striped"}
 
 
 ### Return type
 
-[**GDPRRequest**](GDPRRequest.html)
+[**GDPRRequest**](GDPRRequest)
 
+
+_PureCloudPlatformClientV2@151.1.0_

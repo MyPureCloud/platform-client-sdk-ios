@@ -1,6 +1,5 @@
----
-title: FaxConfig
----
+# FaxConfig
+
 ## FaxConfig
 
 ## Properties
@@ -9,6 +8,7 @@ title: FaxConfig
 |------------ | ------------- | ------------- | -------------|
 | **sendEmailNotifications** | **Bool** | Whether to enable email notifications for this organization | |
 | **disableEmailPii** | **Bool** | Whether to disable PII for email notifications | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

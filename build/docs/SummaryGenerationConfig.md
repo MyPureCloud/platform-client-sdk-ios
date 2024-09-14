@@ -1,6 +1,5 @@
----
-title: SummaryGenerationConfig
----
+# SummaryGenerationConfig
+
 ## SummaryGenerationConfig
 
 ## Properties
@@ -8,6 +7,7 @@ title: SummaryGenerationConfig
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enabled** | **Bool** | Copilot generated summary is enabled. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

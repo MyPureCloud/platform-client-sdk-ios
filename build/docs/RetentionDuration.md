@@ -1,14 +1,14 @@
----
-title: RetentionDuration
----
+# RetentionDuration
+
 ## RetentionDuration
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **archiveRetention** | [**ArchiveRetention**](ArchiveRetention.html) |  | [optional] |
-| **deleteRetention** | [**DeleteRetention**](DeleteRetention.html) |  | [optional] |
-{: class="table table-striped"}
+| **archiveRetention** | [**ArchiveRetention**](ArchiveRetention) |  | [optional] |
+| **deleteRetention** | [**DeleteRetention**](DeleteRetention) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

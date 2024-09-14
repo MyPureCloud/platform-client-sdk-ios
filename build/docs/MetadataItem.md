@@ -1,6 +1,5 @@
----
-title: MetadataItem
----
+# MetadataItem
+
 ## MetadataItem
 
 ## Properties
@@ -9,6 +8,7 @@ title: MetadataItem
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** | The text contents of the metadata | [optional] |
 | **attributes** | **[String:String]** | The custom attributes for the metadata | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

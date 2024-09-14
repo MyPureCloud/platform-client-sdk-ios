@@ -1,6 +1,5 @@
----
-title: CampaignLinesUtilization
----
+# CampaignLinesUtilization
+
 ## CampaignLinesUtilization
 
 ## Properties
@@ -9,6 +8,7 @@ title: CampaignLinesUtilization
 |------------ | ------------- | ------------- | -------------|
 | **assignedOutboundLines** | **Int** | Number of outbound lines assigned to the campaign | [optional] |
 | **totalAvailableOutboundLines** | **Int** | Total number of available outbound lines in Campaign&#39;s Edge Group or Site | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

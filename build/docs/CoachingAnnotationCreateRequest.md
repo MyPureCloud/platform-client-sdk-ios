@@ -1,6 +1,5 @@
----
-title: CoachingAnnotationCreateRequest
----
+# CoachingAnnotationCreateRequest
+
 ## CoachingAnnotationCreateRequest
 
 ## Properties
@@ -9,6 +8,7 @@ title: CoachingAnnotationCreateRequest
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** | The text of the annotation. | |
 | **accessType** | **String** | Determines the permissions required to view this item. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

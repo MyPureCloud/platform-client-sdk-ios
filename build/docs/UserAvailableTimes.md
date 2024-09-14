@@ -1,14 +1,14 @@
----
-title: UserAvailableTimes
----
+# UserAvailableTimes
+
 ## UserAvailableTimes
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **user** | [**UserReference**](UserReference.html) | User reference | [optional] |
-| **availableTimes** | [**[AvailableTime]**](AvailableTime.html) | Periods of availability to schedule coaching appointment for an user | [optional] |
-{: class="table table-striped"}
+| **user** | [**UserReference**](UserReference) | User reference | [optional] |
+| **availableTimes** | [**[AvailableTime]**](AvailableTime) | Periods of availability to schedule coaching appointment for an user | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

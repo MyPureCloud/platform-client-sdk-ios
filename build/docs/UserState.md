@@ -1,6 +1,5 @@
----
-title: UserState
----
+# UserState
+
 ## UserState
 
 ## Properties
@@ -10,7 +9,8 @@ title: UserState
 | **state** | **String** | User&#39;s current state. | [optional] |
 | **version** | **Int** | Version of this user. | [optional] |
 | **stateChangeReason** | **String** | Reason for a change in the user&#39;s state. | [optional] |
-| **stateChangeDate** | [**Date**](Date.html) | Date that the state was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-{: class="table table-striped"}
+| **stateChangeDate** | [**Date**](Date) | Date that the state was last changed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

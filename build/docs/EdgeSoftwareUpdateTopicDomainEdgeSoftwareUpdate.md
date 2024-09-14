@@ -1,6 +1,5 @@
----
-title: EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
----
+# EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
+
 ## EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
 
 ## Properties
@@ -9,9 +8,10 @@ title: EdgeSoftwareUpdateTopicDomainEdgeSoftwareUpdate
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **downloadStartTime** | [**Date**](Date.html) |  | [optional] |
-| **executeStartTime** | [**Date**](Date.html) |  | [optional] |
-| **executeStopTime** | [**Date**](Date.html) |  | [optional] |
-{: class="table table-striped"}
+| **downloadStartTime** | [**Date**](Date) |  | [optional] |
+| **executeStartTime** | [**Date**](Date) |  | [optional] |
+| **executeStopTime** | [**Date**](Date) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

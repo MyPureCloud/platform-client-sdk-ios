@@ -1,6 +1,5 @@
----
-title: BatchDownloadJobResult
----
+# BatchDownloadJobResult
+
 ## BatchDownloadJobResult
 
 ## Properties
@@ -15,6 +14,7 @@ title: BatchDownloadJobResult
 | **contentType** | **String** | Content type of this result | [optional] |
 | **errorMsg** | **String** | An error message, in case of failed processing will indicate the cause of the failure | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

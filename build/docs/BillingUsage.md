@@ -1,6 +1,5 @@
----
-title: BillingUsage
----
+# BillingUsage
+
 ## BillingUsage
 
 ## Properties
@@ -9,7 +8,8 @@ title: BillingUsage
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Identifies the billable usage. | |
 | **totalUsage** | **String** | The total amount of usage, expressed as a decimal number in string format. | |
-| **resources** | [**[BillingUsageResource]**](BillingUsageResource.html) | The resources for which usage was observed (e.g. license users, devices). | |
-{: class="table table-striped"}
+| **resources** | [**[BillingUsageResource]**](BillingUsageResource) | The resources for which usage was observed (e.g. license users, devices). | |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

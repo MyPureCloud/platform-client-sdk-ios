@@ -1,6 +1,5 @@
----
-title: CategoryCreateRequest
----
+# CategoryCreateRequest
+
 ## CategoryCreateRequest
 
 ## Properties
@@ -13,6 +12,7 @@ title: CategoryCreateRequest
 | **_description** | **String** | The description for the category. | [optional] |
 | **externalId** | **String** | The external id associated with the category. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

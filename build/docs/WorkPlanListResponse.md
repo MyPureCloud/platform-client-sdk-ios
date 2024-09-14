@@ -1,13 +1,13 @@
----
-title: WorkPlanListResponse
----
+# WorkPlanListResponse
+
 ## WorkPlanListResponse
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WorkPlanListItemResponse]**](WorkPlanListItemResponse.html) |  | [optional] |
-{: class="table table-striped"}
+| **entities** | [**[WorkPlanListItemResponse]**](WorkPlanListItemResponse) |  | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

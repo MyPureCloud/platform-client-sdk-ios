@@ -1,6 +1,5 @@
----
-title: AnalyticsQueryAggregation
----
+# AnalyticsQueryAggregation
+
 ## AnalyticsQueryAggregation
 
 ## Properties
@@ -11,7 +10,8 @@ title: AnalyticsQueryAggregation
 | **dimension** | **String** | For use with termFrequency aggregations | [optional] |
 | **metric** | **String** | For use with numericRange aggregations | [optional] |
 | **size** | **Int** | For use with termFrequency aggregations | [optional] |
-| **ranges** | [**[AggregationRange]**](AggregationRange.html) | For use with numericRange aggregations | [optional] |
-{: class="table table-striped"}
+| **ranges** | [**[AggregationRange]**](AggregationRange) | For use with numericRange aggregations | [optional] |
 
 
+
+_PureCloudPlatformClientV2@151.1.0_

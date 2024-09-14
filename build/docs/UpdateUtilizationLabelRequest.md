@@ -1,6 +1,5 @@
----
-title: UpdateUtilizationLabelRequest
----
+# UpdateUtilizationLabelRequest
+
 ## UpdateUtilizationLabelRequest
 
 ## Properties
@@ -8,6 +7,7 @@ title: UpdateUtilizationLabelRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The utilization label name. | |
-{: class="table table-striped"}
 
 
+
+_PureCloudPlatformClientV2@151.1.0_
