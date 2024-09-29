@@ -2484,6 +2484,7 @@ open class RoutingAPI {
         case whatsapp = "whatsapp"
         case _open = "open"
         case instagram = "instagram"
+        case apple = "apple"
     }
     
     
@@ -3182,6 +3183,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
   "conditionalGroupRouting" : "{}",
+  "cannedResponseLibraries" : "{}",
   "enableAudioMonitoring" : true,
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
@@ -3958,6 +3960,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -3992,6 +3995,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4260,6 +4264,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4294,6 +4299,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4714,6 +4720,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4748,6 +4755,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -5016,6 +5024,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -5050,6 +5059,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -5417,6 +5427,7 @@ open class RoutingAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -5561,6 +5572,7 @@ open class RoutingAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -5814,6 +5826,7 @@ open class RoutingAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -5958,6 +5971,7 @@ open class RoutingAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -6189,6 +6203,7 @@ open class RoutingAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -6333,6 +6348,7 @@ open class RoutingAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -6559,6 +6575,7 @@ open class RoutingAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -6703,6 +6720,7 @@ open class RoutingAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -8919,6 +8937,7 @@ open class RoutingAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -9063,6 +9082,7 @@ open class RoutingAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -10159,6 +10179,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10193,6 +10214,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10461,6 +10483,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10495,6 +10518,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10886,6 +10910,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10920,6 +10945,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -11188,6 +11214,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -11222,6 +11249,7 @@ open class RoutingAPI {
         "visibility" : "public",
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
+        "includeOwners" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -11660,6 +11688,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
   "conditionalGroupRouting" : "{}",
+  "cannedResponseLibraries" : "{}",
   "enableAudioMonitoring" : true,
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
@@ -11872,6 +11901,7 @@ open class RoutingAPI {
   "entities" : [ {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -12016,6 +12046,7 @@ open class RoutingAPI {
   }, {
     "peerId" : "peerId",
     "conditionalGroupRouting" : "{}",
+    "cannedResponseLibraries" : "{}",
     "enableAudioMonitoring" : true,
     "mediaSettings" : "{}",
     "enableManualAssignment" : true,
@@ -13766,6 +13797,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
   "conditionalGroupRouting" : "{}",
+  "cannedResponseLibraries" : "{}",
   "enableAudioMonitoring" : true,
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,
@@ -14922,6 +14954,7 @@ open class RoutingAPI {
      - examples: [{contentType=application/json, example={
   "peerId" : "peerId",
   "conditionalGroupRouting" : "{}",
+  "cannedResponseLibraries" : "{}",
   "enableAudioMonitoring" : true,
   "mediaSettings" : "{}",
   "enableManualAssignment" : true,

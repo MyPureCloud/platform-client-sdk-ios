@@ -15,4 +15,4 @@ A version summary for a botConnector bot.
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

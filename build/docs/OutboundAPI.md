@@ -46,6 +46,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOutboundCampaignInteractions**](OutboundAPI#getOutboundCampaignInteractions) | Get dialer campaign interactions. |
 | [**getOutboundCampaignLinedistribution**](OutboundAPI#getOutboundCampaignLinedistribution) | Get line distribution information for campaigns using same Edge Group or Site as given campaign |
 | [**getOutboundCampaignProgress**](OutboundAPI#getOutboundCampaignProgress) | Get campaign progress |
+| [**getOutboundCampaignSkillcombinations**](OutboundAPI#getOutboundCampaignSkillcombinations) | Get the remaining and total contact count for each skill combination in a skills campaign |
 | [**getOutboundCampaignStats**](OutboundAPI#getOutboundCampaignStats) | Get statistics about a Dialer Campaign |
 | [**getOutboundCampaignrule**](OutboundAPI#getOutboundCampaignrule) | Get Campaign Rule |
 | [**getOutboundCampaignrules**](OutboundAPI#getOutboundCampaignrules) | Query Campaign Rule list |
@@ -2311,6 +2312,60 @@ OutboundAPI.getOutboundCampaignProgress(campaignId: campaignId) { (response, err
 ### Return type
 
 [**CampaignProgress**](CampaignProgress)
+
+
+## getOutboundCampaignSkillcombinations
+
+
+
+> [PagedSkillCombinationListing](PagedSkillCombinationListing) getOutboundCampaignSkillcombinations(campaignId, pageNumber, pageSize)
+
+Get the remaining and total contact count for each skill combination in a skills campaign
+
+
+
+Wraps GET /api/v2/outbound/campaigns/{campaignId}/skillcombinations  
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+
+// Code example
+OutboundAPI.getOutboundCampaignSkillcombinations(campaignId: campaignId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("OutboundAPI.getOutboundCampaignSkillcombinations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+
+
+### Return type
+
+[**PagedSkillCombinationListing**](PagedSkillCombinationListing)
 
 
 ## getOutboundCampaignStats
@@ -8665,4 +8720,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

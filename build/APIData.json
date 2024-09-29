@@ -25998,6 +25998,30 @@
     "return": "CampaignProgress",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet campaignId: String = \"\" // Campaign ID\n\n// Get campaign progress\nGetOutboundCampaignProgressRequest.getOutboundCampaignProgress(campaignId: campaignId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundCampaignProgressRequest.getOutboundCampaignProgress was successful\")\n        dump(response)\n    }\n}"
   },
+  "getoutboundcampaignskillcombinations": {
+    "operationId": "getoutboundcampaignskillcombinations",
+    "functionName": "getOutboundCampaignSkillcombinations",
+    "signature": "getOutboundCampaignSkillcombinations(campaignId, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "campaignId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "PagedSkillCombinationListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet campaignId: String = \"\" // Campaign ID\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\n\n// Get the remaining and total contact count for each skill combination in a skills campaign\nGetOutboundCampaignSkillcombinationsRequest.getOutboundCampaignSkillcombinations(campaignId: campaignId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundCampaignSkillcombinationsRequest.getOutboundCampaignSkillcombinations was successful\")\n        dump(response)\n    }\n}"
+  },
   "getoutboundcampaignstats": {
     "operationId": "getoutboundcampaignstats",
     "functionName": "getOutboundCampaignStats",
@@ -37926,6 +37950,12 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge ID\n\n// Cancels any in-progress update for this edge.\nDeleteTelephonyProvidersEdgeSoftwareupdateRequest.deleteTelephonyProvidersEdgeSoftwareupdate(edgeId: edgeId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTelephonyProvidersEdgeSoftwareupdateRequest.deleteTelephonyProvidersEdgeSoftwareupdate was successful\")\n    }\n}"
   },
+  "deletetelephonyprovidersedgesalertablepresences": {
+    "operationId": "deletetelephonyprovidersedgesalertablepresences",
+    "functionName": "deleteTelephonyProvidersEdgesAlertablepresences",
+    "signature": "deleteTelephonyProvidersEdgesAlertablepresences()",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Deletes alertable presences overrides.\nDeleteTelephonyProvidersEdgesAlertablepresencesRequest.deleteTelephonyProvidersEdgesAlertablepresences() { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTelephonyProvidersEdgesAlertablepresencesRequest.deleteTelephonyProvidersEdgesAlertablepresences was successful\")\n    }\n}"
+  },
   "deletetelephonyprovidersedgescertificateauthority": {
     "operationId": "deletetelephonyprovidersedgescertificateauthority",
     "functionName": "deleteTelephonyProvidersEdgesCertificateauthority",
@@ -38366,6 +38396,20 @@
     ],
     "return": "EdgeEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet name: String = \"\" // Name\nlet siteId: String = \"\" // Filter by site.id\nlet edgeGroupId: String = \"\" // Filter by edgeGroup.id\nlet sortBy: String = \"\" // Sort by\nlet managed: Bool = true // Filter by managed\nlet showCloudMedia: Bool = true // True to show the cloud media devices in the result.\n\n// Get the list of edges.\nGetTelephonyProvidersEdgesRequest.getTelephonyProvidersEdges(pageSize: pageSize, pageNumber: pageNumber, name: name, siteId: siteId, edgeGroupId: edgeGroupId, sortBy: sortBy, managed: managed, showCloudMedia: showCloudMedia) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesRequest.getTelephonyProvidersEdges was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettelephonyprovidersedgesalertablepresences": {
+    "operationId": "gettelephonyprovidersedgesalertablepresences",
+    "functionName": "getTelephonyProvidersEdgesAlertablepresences",
+    "signature": "getTelephonyProvidersEdgesAlertablepresences(type)",
+    "parameters": [
+      {
+        "name": "type",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "AlertablePresences",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet type: GetTelephonyProvidersEdgesAlertablepresencesRequest.ModelType_getTelephonyProvidersEdgesAlertablepresences = GetTelephonyProvidersEdgesAlertablepresencesRequest.ModelType_getTelephonyProvidersEdgesAlertablepresences.enummember // \n\n// Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.\nGetTelephonyProvidersEdgesAlertablepresencesRequest.getTelephonyProvidersEdgesAlertablepresences(type: type) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesAlertablepresencesRequest.getTelephonyProvidersEdgesAlertablepresences was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonyprovidersedgescertificateauthorities": {
     "operationId": "gettelephonyprovidersedgescertificateauthorities",
@@ -40029,6 +40073,19 @@
     ],
     "return": "DomainLogicalInterface",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet edgeId: String = \"\" // Edge ID\nlet interfaceId: String = \"\" // Interface ID\nlet body: DomainLogicalInterface = new DomainLogicalInterface(...) // Logical interface\n\n// Update an edge logical interface.\nPutTelephonyProvidersEdgeLogicalinterfaceRequest.putTelephonyProvidersEdgeLogicalinterface(edgeId: edgeId, interfaceId: interfaceId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutTelephonyProvidersEdgeLogicalinterfaceRequest.putTelephonyProvidersEdgeLogicalinterface was successful\")\n        dump(response)\n    }\n}"
+  },
+  "puttelephonyprovidersedgesalertablepresences": {
+    "operationId": "puttelephonyprovidersedgesalertablepresences",
+    "functionName": "putTelephonyProvidersEdgesAlertablepresences",
+    "signature": "putTelephonyProvidersEdgesAlertablepresences(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "AlertablePresences",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: AlertablePresences = new AlertablePresences(...) // Alertable Presences Overrides\n\n// Creates or updates alertable presences overrides.\nPutTelephonyProvidersEdgesAlertablepresencesRequest.putTelephonyProvidersEdgesAlertablepresences(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PutTelephonyProvidersEdgesAlertablepresencesRequest.putTelephonyProvidersEdgesAlertablepresences was successful\")\n    }\n}"
   },
   "puttelephonyprovidersedgescertificateauthority": {
     "operationId": "puttelephonyprovidersedgescertificateauthority",
@@ -42488,7 +42545,7 @@
       }
     ],
     "return": "ExpandableWebDeploymentEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected.\n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // The specified entity attributes will be filled. Comma separated values expected. \n\n// Get deployments\nGetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments(expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWebdeploymentsDeploymentsRequest.getWebdeploymentsDeployments was successful\")\n        dump(response)\n    }\n}"
   },
   "postwebdeploymentsconfigurationversionsdraftpublish": {
     "operationId": "postwebdeploymentsconfigurationversionsdraftpublish",

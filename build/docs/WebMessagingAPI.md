@@ -59,4 +59,4 @@ WebMessagingAPI.getWebmessagingMessages(pageSize: pageSize, pageNumber: pageNumb
 [**WebMessagingMessageEntityList**](WebMessagingMessageEntityList)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

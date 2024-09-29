@@ -177,6 +177,7 @@ docs/AlertRequest.md
 docs/AlertRuleProperties.md
 docs/AlertSummary.md
 docs/AlertSummaryEntity.md
+docs/AlertablePresences.md
 docs/AlertingAPI.json
 docs/AlertingAPI.md
 docs/AlertingUnreadStatus.md
@@ -622,6 +623,7 @@ docs/CampaignRuleCondition.md
 docs/CampaignRuleConditionGroup.md
 docs/CampaignRuleEntities.md
 docs/CampaignRuleEntityListing.md
+docs/CampaignRuleExecutionSettings.md
 docs/CampaignRuleParameters.md
 docs/CampaignSchedule.md
 docs/CampaignSequence.md
@@ -704,6 +706,10 @@ docs/CobrowseMediaParticipant.md
 docs/CobrowseSettings.md
 docs/CobrowseWebMessagingSession.md
 docs/Cobrowsesession.md
+docs/CollaborateChatAdhocMessageEventTopicCollaborateChatEntity.md
+docs/CollaborateChatAdhocMessageEventTopicCollaborateChatMessage.md
+docs/CollaborateChatGroupMessageEventTopicCollaborateChatEntity.md
+docs/CollaborateChatGroupMessageEventTopicCollaborateChatMessage.md
 docs/Column.md
 docs/ColumnDataTypeSpecification.md
 docs/ColumnStatus.md
@@ -1110,6 +1116,7 @@ docs/CopilotFallbackAction.md
 docs/CopilotNluDomain.md
 docs/CopilotNluDomainVersion.md
 docs/CopilotRule.md
+docs/CopilotTranscriptionConfig.md
 docs/CopyAttachmentsRequest.md
 docs/CopyBuForecastRequest.md
 docs/CopyVoicemailMessage.md
@@ -1957,6 +1964,7 @@ docs/GrammarLanguage.md
 docs/GrammarLanguageFileMetadata.md
 docs/GrammarLanguageUpdate.md
 docs/GrammarListing.md
+docs/GraphApiSettings.md
 docs/Greeting.md
 docs/GreetingAudioFile.md
 docs/GreetingListing.md
@@ -2099,6 +2107,8 @@ docs/InteractionStatsAlert.md
 docs/InteractionStatsAlertContainer.md
 docs/InteractionStatsRule.md
 docs/InteractionStatsRuleContainer.md
+docs/InternalMessage.md
+docs/InternalMessageDetails.md
 docs/IntradayPerformancePredictionData.md
 docs/IntradayPlanningGroupRequest.md
 docs/InvalidAssignment.md
@@ -2825,6 +2835,20 @@ docs/OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes.md
 docs/OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent.md
 docs/OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaignPreContactSMSEvent.md
 docs/OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes.md
+docs/OutboundMessagingEmailCampaignConfigChangeContactSort.md
+docs/OutboundMessagingEmailCampaignConfigChangeEmailConfig.md
+docs/OutboundMessagingEmailCampaignConfigChangeErrorDetail.md
+docs/OutboundMessagingEmailCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingEmailCampaignConfigChangeMessagingCampaign.md
+docs/OutboundMessagingEmailCampaignConfigChangeObject.md
+docs/OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress.md
+docs/OutboundMessagingEmailCampaignConfigChangeResponseRef.md
+docs/OutboundMessagingEmailCampaignConfigChangeSmsConfig.md
+docs/OutboundMessagingEmailCampaignConfigChangeSmsPhoneNumberRef.md
+docs/OutboundMessagingEmailCampaignConfigChangeUriReference.md
+docs/OutboundMessagingEmailCampaignProgressEventCampaignProgress.md
+docs/OutboundMessagingEmailCampaignProgressEventObject.md
+docs/OutboundMessagingEmailCampaignProgressEventUriReference.md
 docs/OutboundMessagingMessagingCampaignConfigChangeContactSort.md
 docs/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.md
 docs/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.md
@@ -2867,6 +2891,7 @@ docs/OverallBestPointsItem.md
 docs/PINConfiguration.md
 docs/Page.md
 docs/PagedNamespaceListing.md
+docs/PagedSkillCombinationListing.md
 docs/PagelessDomainEntityListingEvaluationVersion.md
 docs/PagelessEntityListing.md
 docs/PagingSpec.md
@@ -3657,6 +3682,7 @@ docs/Site.md
 docs/SiteConnection.md
 docs/SiteConnections.md
 docs/SiteEntityListing.md
+docs/SkillCombinationInfo.md
 docs/SkillEntityListing.md
 docs/SkillGroup.md
 docs/SkillGroupCondition.md
@@ -4222,6 +4248,9 @@ docs/V2FlowExecutionDataFlowidTopicInvokingContext.md
 docs/V2FlowExecutionDataFlowidTopicJourneyActionMap.md
 docs/V2FlowExecutionDataFlowidTopicProcessAutomation.md
 docs/V2FlowExecutionDataFlowidTopicQuality.md
+docs/V2FlowExecutionDataFlowidTopicWorkitem.md
+docs/V2IntegrationPresenceEventOrganizationPresence.md
+docs/V2IntegrationPresenceEventPresenceActivityEvent.md
 docs/V2MobiusAlertsTopicAddressableEntityRef.md
 docs/V2MobiusAlertsTopicAlert.md
 docs/V2MobiusAlertsTopicAlertNotification.md
@@ -4899,6 +4928,7 @@ docs/deleteTeamMembers-example.txt
 docs/deleteTelephonyProvidersEdge-example.txt
 docs/deleteTelephonyProvidersEdgeLogicalinterface-example.txt
 docs/deleteTelephonyProvidersEdgeSoftwareupdate-example.txt
+docs/deleteTelephonyProvidersEdgesAlertablepresences-example.txt
 docs/deleteTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/deleteTelephonyProvidersEdgesDidpool-example.txt
 docs/deleteTelephonyProvidersEdgesEdgegroup-example.txt
@@ -5571,6 +5601,7 @@ docs/getOutboundCampaignDiagnostics-example.txt
 docs/getOutboundCampaignInteractions-example.txt
 docs/getOutboundCampaignLinedistribution-example.txt
 docs/getOutboundCampaignProgress-example.txt
+docs/getOutboundCampaignSkillcombinations-example.txt
 docs/getOutboundCampaignStats-example.txt
 docs/getOutboundCampaignrule-example.txt
 docs/getOutboundCampaignrules-example.txt
@@ -5854,6 +5885,7 @@ docs/getTelephonyProvidersEdgeSoftwareupdate-example.txt
 docs/getTelephonyProvidersEdgeSoftwareversions-example.txt
 docs/getTelephonyProvidersEdgeTrunks-example.txt
 docs/getTelephonyProvidersEdges-example.txt
+docs/getTelephonyProvidersEdgesAlertablepresences-example.txt
 docs/getTelephonyProvidersEdgesCertificateauthorities-example.txt
 docs/getTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/getTelephonyProvidersEdgesDid-example.txt
@@ -7112,6 +7144,7 @@ docs/putSpeechandtextanalyticsTopic-example.txt
 docs/putTaskmanagementWorkitemsSchema-example.txt
 docs/putTelephonyProvidersEdge-example.txt
 docs/putTelephonyProvidersEdgeLogicalinterface-example.txt
+docs/putTelephonyProvidersEdgesAlertablepresences-example.txt
 docs/putTelephonyProvidersEdgesCertificateauthority-example.txt
 docs/putTelephonyProvidersEdgesDidpool-example.txt
 docs/putTelephonyProvidersEdgesEdgegroup-example.txt
@@ -7406,6 +7439,7 @@ src/Models/AlertRequest.swift
 src/Models/AlertRuleProperties.swift
 src/Models/AlertSummary.swift
 src/Models/AlertSummaryEntity.swift
+src/Models/AlertablePresences.swift
 src/Models/AlertingUnreadStatus.swift
 src/Models/AllTimePoints.swift
 src/Models/Alteration.swift
@@ -7839,6 +7873,7 @@ src/Models/CampaignRuleCondition.swift
 src/Models/CampaignRuleConditionGroup.swift
 src/Models/CampaignRuleEntities.swift
 src/Models/CampaignRuleEntityListing.swift
+src/Models/CampaignRuleExecutionSettings.swift
 src/Models/CampaignRuleParameters.swift
 src/Models/CampaignSchedule.swift
 src/Models/CampaignSequence.swift
@@ -7915,6 +7950,10 @@ src/Models/CobrowseMediaParticipant.swift
 src/Models/CobrowseSettings.swift
 src/Models/CobrowseWebMessagingSession.swift
 src/Models/Cobrowsesession.swift
+src/Models/CollaborateChatAdhocMessageEventTopicCollaborateChatEntity.swift
+src/Models/CollaborateChatAdhocMessageEventTopicCollaborateChatMessage.swift
+src/Models/CollaborateChatGroupMessageEventTopicCollaborateChatEntity.swift
+src/Models/CollaborateChatGroupMessageEventTopicCollaborateChatMessage.swift
 src/Models/Column.swift
 src/Models/ColumnDataTypeSpecification.swift
 src/Models/ColumnStatus.swift
@@ -8317,6 +8356,7 @@ src/Models/CopilotFallbackAction.swift
 src/Models/CopilotNluDomain.swift
 src/Models/CopilotNluDomainVersion.swift
 src/Models/CopilotRule.swift
+src/Models/CopilotTranscriptionConfig.swift
 src/Models/CopyAttachmentsRequest.swift
 src/Models/CopyBuForecastRequest.swift
 src/Models/CopyVoicemailMessage.swift
@@ -9142,6 +9182,7 @@ src/Models/GrammarLanguage.swift
 src/Models/GrammarLanguageFileMetadata.swift
 src/Models/GrammarLanguageUpdate.swift
 src/Models/GrammarListing.swift
+src/Models/GraphApiSettings.swift
 src/Models/Greeting.swift
 src/Models/GreetingAudioFile.swift
 src/Models/GreetingListing.swift
@@ -9274,6 +9315,8 @@ src/Models/InteractionStatsAlert.swift
 src/Models/InteractionStatsAlertContainer.swift
 src/Models/InteractionStatsRule.swift
 src/Models/InteractionStatsRuleContainer.swift
+src/Models/InternalMessage.swift
+src/Models/InternalMessageDetails.swift
 src/Models/IntradayPerformancePredictionData.swift
 src/Models/IntradayPlanningGroupRequest.swift
 src/Models/InvalidAssignment.swift
@@ -9969,6 +10012,20 @@ src/Models/OutboundMessagingCampaignPreContactEmailEventTopicEmailAttributes.swi
 src/Models/OutboundMessagingCampaignPreContactEmailEventTopicOutboundMessagingCampaignPreContactEmailEvent.swift
 src/Models/OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCampaignPreContactSMSEvent.swift
 src/Models/OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeContactSort.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeEmailConfig.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeErrorDetail.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeFromEmailAddress.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeMessagingCampaign.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeObject.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeResponseRef.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeSmsConfig.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeSmsPhoneNumberRef.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeUriReference.swift
+src/Models/OutboundMessagingEmailCampaignProgressEventCampaignProgress.swift
+src/Models/OutboundMessagingEmailCampaignProgressEventObject.swift
+src/Models/OutboundMessagingEmailCampaignProgressEventUriReference.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeContactSort.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.swift
@@ -10011,6 +10068,7 @@ src/Models/OverallBestPointsItem.swift
 src/Models/PINConfiguration.swift
 src/Models/Page.swift
 src/Models/PagedNamespaceListing.swift
+src/Models/PagedSkillCombinationListing.swift
 src/Models/PagelessDomainEntityListingEvaluationVersion.swift
 src/Models/PagelessEntityListing.swift
 src/Models/PagingSpec.swift
@@ -10777,6 +10835,7 @@ src/Models/Site.swift
 src/Models/SiteConnection.swift
 src/Models/SiteConnections.swift
 src/Models/SiteEntityListing.swift
+src/Models/SkillCombinationInfo.swift
 src/Models/SkillEntityListing.swift
 src/Models/SkillGroup.swift
 src/Models/SkillGroupCondition.swift
@@ -11314,6 +11373,9 @@ src/Models/V2FlowExecutionDataFlowidTopicInvokingContext.swift
 src/Models/V2FlowExecutionDataFlowidTopicJourneyActionMap.swift
 src/Models/V2FlowExecutionDataFlowidTopicProcessAutomation.swift
 src/Models/V2FlowExecutionDataFlowidTopicQuality.swift
+src/Models/V2FlowExecutionDataFlowidTopicWorkitem.swift
+src/Models/V2IntegrationPresenceEventOrganizationPresence.swift
+src/Models/V2IntegrationPresenceEventPresenceActivityEvent.swift
 src/Models/V2MobiusAlertsTopicAddressableEntityRef.swift
 src/Models/V2MobiusAlertsTopicAlert.swift
 src/Models/V2MobiusAlertsTopicAlertNotification.swift

@@ -12,4 +12,4 @@ External Identifiers of user. The external identifier must be unique within the 
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

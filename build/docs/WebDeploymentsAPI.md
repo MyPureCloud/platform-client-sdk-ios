@@ -609,7 +609,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected. 
 
 // Code example
 WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, error) in
@@ -627,7 +627,7 @@ WebDeploymentsAPI.getWebdeploymentsDeployments(expand: expand) { (response, erro
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: configuration ("Configuration"), supportedContent ("SupportedContent") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: configuration ("Configuration"), supportedContent ("SupportedContent") |
 
 
 ### Return type
@@ -988,4 +988,4 @@ WebDeploymentsAPI.putWebdeploymentsDeployment(deploymentId: deploymentId, deploy
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

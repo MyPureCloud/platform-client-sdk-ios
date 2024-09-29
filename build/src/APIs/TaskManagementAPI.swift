@@ -720,6 +720,8 @@ open class TaskManagementAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
     "preferredAgents" : [ {

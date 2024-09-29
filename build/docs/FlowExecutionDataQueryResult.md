@@ -14,6 +14,7 @@ This is the metadata of an executionData entry for a flow.
 | **flowId** | **String** | The id of the flow that was executed. | [optional] |
 | **flowVersion** | **String** | The version of the flow that was executed. | [optional] |
 | **conversationId** | **String** | The id of the conversation that executed this flow. | [optional] |
+| **workitemId** | **String** | The id of the workitem that executed this flow. | [optional] |
 | **flowType** | **String** | The type of flow. | [optional] |
 | **flowErrorReason** | **String** | If the flow errored out this is the reason. | [optional] |
 | **flowWarningReason** | **String** | If the flow had a warning, this is the reason. | [optional] |
@@ -22,4 +23,4 @@ This is the metadata of an executionData entry for a flow.
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

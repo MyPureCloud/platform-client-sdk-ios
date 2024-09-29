@@ -152,6 +152,43 @@ open class TelephonyProvidersEdgeAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    /**
+     Deletes alertable presences overrides.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTelephonyProvidersEdgesAlertablepresences(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTelephonyProvidersEdgesAlertablepresencesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Deletes alertable presences overrides.
+     - DELETE /api/v2/telephony/providers/edges/alertablepresences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTelephonyProvidersEdgesAlertablepresencesWithRequestBuilder() -> RequestBuilder<Void> {        
+        let path = "/api/v2/telephony/providers/edges/alertablepresences"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -2730,6 +2767,66 @@ open class TelephonyProvidersEdgeAPI {
         ])
 
         let requestBuilder: RequestBuilder<EdgeEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    public enum ModelType_getTelephonyProvidersEdgesAlertablepresences: String { 
+        case defaults = "defaults"
+        case overrides = "overrides"
+    }
+    
+    
+    /**
+     Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+     
+     - parameter type: (query)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesAlertablepresences(type: ModelType_getTelephonyProvidersEdgesAlertablepresences? = nil, completion: @escaping ((_ data: AlertablePresences?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesAlertablepresencesWithRequestBuilder(type: type)
+        requestBuilder.execute { (response: Response<AlertablePresences>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list alertable presences. The 'type' query parameter can be used to If there are any overrides, this is the list of overrides; if there are no overrides, it is the default list.
+     - GET /api/v2/telephony/providers/edges/alertablepresences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "alertablePresences" : [ "Available", "Available" ]
+}, statusCode=200}]
+     
+     - parameter type: (query)  (optional)
+
+     - returns: RequestBuilder<AlertablePresences> 
+     */
+    open class func getTelephonyProvidersEdgesAlertablepresencesWithRequestBuilder(type: ModelType_getTelephonyProvidersEdgesAlertablepresences? = nil) -> RequestBuilder<AlertablePresences> {        
+        let path = "/api/v2/telephony/providers/edges/alertablepresences"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "type": type?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<AlertablePresences>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -17350,6 +17447,48 @@ open class TelephonyProvidersEdgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DomainLogicalInterface>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Creates or updates alertable presences overrides.
+     
+     - parameter body: (body) Alertable Presences Overrides 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putTelephonyProvidersEdgesAlertablepresences(body: AlertablePresences, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = putTelephonyProvidersEdgesAlertablepresencesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates or updates alertable presences overrides.
+     - PUT /api/v2/telephony/providers/edges/alertablepresences
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body) Alertable Presences Overrides 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func putTelephonyProvidersEdgesAlertablepresencesWithRequestBuilder(body: AlertablePresences) -> RequestBuilder<Void> {        
+        let path = "/api/v2/telephony/providers/edges/alertablepresences"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

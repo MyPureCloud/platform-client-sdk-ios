@@ -2915,51 +2915,6 @@ public class BuForecastTimeSeriesResult: Codable {
 
 
 
-public class Card: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** Text to show in the title. */
-    public var title: String?
-    /** Text to show in the description. */
-    public var _description: String?
-    /** URL of an image. */
-    public var url: String?
-    /** The default action to be taken. */
-    public var defaultAction: CardAction?
-    /** List of possible action objects. */
-    public var actions: [CardAction]?
-
-    public init(title: String?, _description: String?, url: String?, defaultAction: CardAction?, actions: [CardAction]?) {
-        self.title = title
-        self._description = _description
-        self.url = url
-        self.defaultAction = defaultAction
-        self.actions = actions
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case title
-        case _description = "description"
-        case url
-        case defaultAction
-        case actions
-    }
-
-
-}
-
-
-
-
 public class BuGetCurrentAgentScheduleRequest: Codable {
 
 
@@ -4550,6 +4505,51 @@ public class CampaignSkillStatistics: Codable {
     public init(skillCombinations: Int?, eligibleSkilledAgents: Int?) {
         self.skillCombinations = skillCombinations
         self.eligibleSkilledAgents = eligibleSkilledAgents
+    }
+
+
+}
+
+
+
+
+public class Card: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** Text to show in the title. */
+    public var title: String?
+    /** Text to show in the description. */
+    public var _description: String?
+    /** URL of an image. */
+    public var url: String?
+    /** The default action to be taken. */
+    public var defaultAction: CardAction?
+    /** List of possible action objects. */
+    public var actions: [CardAction]?
+
+    public init(title: String?, _description: String?, url: String?, defaultAction: CardAction?, actions: [CardAction]?) {
+        self.title = title
+        self._description = _description
+        self.url = url
+        self.defaultAction = defaultAction
+        self.actions = actions
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case title
+        case _description = "description"
+        case url
+        case defaultAction
+        case actions
     }
 
 
@@ -8515,6 +8515,7 @@ public class ConversationMessagingChannel: Codable {
         case whatsapp = "Whatsapp"
         case webMessaging = "WebMessaging"
         case _open = "Open"
+        case apple = "Apple"
         case sms = "Sms"
     }
 
@@ -9516,6 +9517,8 @@ public class CreateQueueRequest: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     /** The queue name */
@@ -9566,6 +9569,8 @@ public class CreateQueueRequest: Codable {
     public var onHoldPrompt: DomainEntityRef?
     /** Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered. */
     public var autoAnswerOnly: Bool?
+    /** Canned response library IDs and mode with which they are associated with the queue */
+    public var cannedResponseLibraries: CannedResponseLibraries?
     /** Indicates whether voice transcription is enabled for this queue. */
     public var enableTranscription: Bool?
     /** Indicates whether audio monitoring is enabled for this queue. */
@@ -9594,7 +9599,7 @@ public class CreateQueueRequest: Codable {
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, sourceQueueId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, division: WritableDivision?, _description: String?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, memberCount: Int?, userMemberCount: Int?, joinedMemberCount: Int?, mediaSettings: QueueMediaSettings?, routingRules: [RoutingRule]?, conditionalGroupRouting: ConditionalGroupRouting?, bullseye: Bullseye?, scoringMethod: ScoringMethod?, acwSettings: AcwSettings?, skillEvaluationMethod: SkillEvaluationMethod?, memberGroups: [MemberGroup]?, queueFlow: DomainEntityRef?, emailInQueueFlow: DomainEntityRef?, messageInQueueFlow: DomainEntityRef?, whisperPrompt: DomainEntityRef?, onHoldPrompt: DomainEntityRef?, autoAnswerOnly: Bool?, cannedResponseLibraries: CannedResponseLibraries?, enableTranscription: Bool?, enableAudioMonitoring: Bool?, enableManualAssignment: Bool?, agentOwnedRouting: AgentOwnedRouting?, directRouting: DirectRouting?, callingPartyName: String?, callingPartyNumber: String?, defaultScripts: [String:Script]?, outboundMessagingAddresses: QueueMessagingAddresses?, outboundEmailAddress: QueueEmailAddress?, peerId: String?, suppressInQueueCallRecording: Bool?, sourceQueueId: String?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.division = division
@@ -9620,6 +9625,7 @@ public class CreateQueueRequest: Codable {
         self.whisperPrompt = whisperPrompt
         self.onHoldPrompt = onHoldPrompt
         self.autoAnswerOnly = autoAnswerOnly
+        self.cannedResponseLibraries = cannedResponseLibraries
         self.enableTranscription = enableTranscription
         self.enableAudioMonitoring = enableAudioMonitoring
         self.enableManualAssignment = enableManualAssignment
@@ -9662,6 +9668,7 @@ public class CreateQueueRequest: Codable {
         case whisperPrompt
         case onHoldPrompt
         case autoAnswerOnly
+        case cannedResponseLibraries
         case enableTranscription
         case enableAudioMonitoring
         case enableManualAssignment
@@ -9783,6 +9790,7 @@ public class CriteriaItem: Codable {
         case flowStartDateTime = "FlowStartDateTime"
         case flowEndDateTime = "FlowEndDateTime"
         case conversationId = "ConversationId"
+        case workitemId = "WorkitemId"
         case flowType = "FlowType"
         case flowId = "FlowId"
         case flowErrorReason = "FlowErrorReason"
@@ -9881,38 +9889,6 @@ public class CrossPlatformCallMediaPolicy: Codable {
 
 
 
-public class CrossPlatformMediaPolicies: Codable {
-
-
-
-
-
-
-
-
-
-    /** Conditions and actions for calls */
-    public var callPolicy: CrossPlatformCallMediaPolicy?
-    /** Conditions and actions for chats */
-    public var chatPolicy: CrossPlatformChatMediaPolicy?
-    /** Conditions and actions for emails */
-    public var emailPolicy: CrossPlatformEmailMediaPolicy?
-    /** Conditions and actions for messages */
-    public var messagePolicy: CrossPlatformMessageMediaPolicy?
-
-    public init(callPolicy: CrossPlatformCallMediaPolicy?, chatPolicy: CrossPlatformChatMediaPolicy?, emailPolicy: CrossPlatformEmailMediaPolicy?, messagePolicy: CrossPlatformMessageMediaPolicy?) {
-        self.callPolicy = callPolicy
-        self.chatPolicy = chatPolicy
-        self.emailPolicy = emailPolicy
-        self.messagePolicy = messagePolicy
-    }
-
-
-}
-
-
-
-
 public class CrossPlatformPolicy: Codable {
 
 
@@ -9987,6 +9963,38 @@ public class CrossPlatformPolicy: Codable {
         case actions
         case policyErrors
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class CrossPlatformMediaPolicies: Codable {
+
+
+
+
+
+
+
+
+
+    /** Conditions and actions for calls */
+    public var callPolicy: CrossPlatformCallMediaPolicy?
+    /** Conditions and actions for chats */
+    public var chatPolicy: CrossPlatformChatMediaPolicy?
+    /** Conditions and actions for emails */
+    public var emailPolicy: CrossPlatformEmailMediaPolicy?
+    /** Conditions and actions for messages */
+    public var messagePolicy: CrossPlatformMessageMediaPolicy?
+
+    public init(callPolicy: CrossPlatformCallMediaPolicy?, chatPolicy: CrossPlatformChatMediaPolicy?, emailPolicy: CrossPlatformEmailMediaPolicy?, messagePolicy: CrossPlatformMessageMediaPolicy?) {
+        self.callPolicy = callPolicy
+        self.chatPolicy = chatPolicy
+        self.emailPolicy = emailPolicy
+        self.messagePolicy = messagePolicy
     }
 
 
@@ -12094,19 +12102,19 @@ public class DomainEdgeSoftwareVersionDto: Codable {
     /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var publishDate: Date?
     public var edgeUri: String?
-    public var current: Bool?
     public var latestRelease: Bool?
+    public var current: Bool?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, current: Bool?, latestRelease: Bool?, selfUri: String?) {
+    public init(_id: String?, name: String?, edgeVersion: String?, publishDate: Date?, edgeUri: String?, latestRelease: Bool?, current: Bool?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.edgeVersion = edgeVersion
         self.publishDate = publishDate
         self.edgeUri = edgeUri
-        self.current = current
         self.latestRelease = latestRelease
+        self.current = current
         self.selfUri = selfUri
     }
 
@@ -12116,8 +12124,8 @@ public class DomainEdgeSoftwareVersionDto: Codable {
         case edgeVersion
         case publishDate
         case edgeUri
-        case current
         case latestRelease
+        case current
         case selfUri
     }
 
@@ -14643,6 +14651,28 @@ public class ExternalContactsContactChangedTopicTwitterId: Codable {
 
 
 
+public class Facet: Codable {
+
+
+
+
+
+    /** The name of the field on which to facet. */
+    public var name: String?
+    /** The type of the facet, DATE or STRING. */
+    public var type: String?
+
+    public init(name: String?, type: String?) {
+        self.name = name
+        self.type = type
+    }
+
+
+}
+
+
+
+
 public class ExternalContactsContactNoteChangedTopicDivision: Codable {
 
 
@@ -14676,26 +14706,6 @@ public class ExternalContactsEntity: Codable {
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
-    }
-
-
-}
-
-
-
-
-public class ExternalId: Codable {
-
-
-
-
-
-    public var externalSource: ExternalSource?
-    public var value: String?
-
-    public init(externalSource: ExternalSource?, value: String?) {
-        self.externalSource = externalSource
-        self.value = value
     }
 
 
@@ -14915,6 +14925,26 @@ public class ExternalDataSource: Codable {
 
 
 
+public class ExternalId: Codable {
+
+
+
+
+
+    public var externalSource: ExternalSource?
+    public var value: String?
+
+    public init(externalSource: ExternalSource?, value: String?) {
+        self.externalSource = externalSource
+        self.value = value
+    }
+
+
+}
+
+
+
+
 public class ExternalMetricDataWriteRequest: Codable {
 
 
@@ -15029,28 +15059,6 @@ public class FacebookScopedId: Codable {
 
     public init(scopedId: String?) {
         self.scopedId = scopedId
-    }
-
-
-}
-
-
-
-
-public class Facet: Codable {
-
-
-
-
-
-    /** The name of the field on which to facet. */
-    public var name: String?
-    /** The type of the facet, DATE or STRING. */
-    public var type: String?
-
-    public init(name: String?, type: String?) {
-        self.name = name
-        self.type = type
     }
 
 
@@ -15662,6 +15670,7 @@ public class FlowActivityEntityData: Codable {
         case cobrowse = "cobrowse"
         case email = "email"
         case message = "message"
+        case internalmessage = "internalmessage"
         case screenshare = "screenshare"
         case unknown = "unknown"
         case video = "video"
@@ -16060,6 +16069,7 @@ public class FlowEndDetailEventTopicFlowEndEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -16530,6 +16540,10 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
 
 
 
+    public enum FlowSubType: String, Codable { 
+        case virtualAgent = "VIRTUAL_AGENT"
+    }
+
     public enum FlowType: String, Codable { 
         case bot = "bot"
         case commonmodule = "commonmodule"
@@ -16804,6 +16818,8 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
     public var flowName: String?
     /** Type of flow out that occurred when emitting tFlowOut. */
     public var flowOutType: String?
+    /** Represents the subtype of the flow. For example a Digital Bot Flow that has been upgraded with Virtual Agent capabilities. */
+    public var flowSubType: FlowSubType?
     /** The type of this flow */
     public var flowType: FlowType?
     /** The version of this flow */
@@ -16913,7 +16929,7 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
     /** Scored agents */
     public var scoredAgents: [FlowMetricsTopicFlowScoredAgent]?
 
-    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, endingLanguage: String?, entryReason: String?, entryType: EntryType?, errorCode: String?, exitReason: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowId: String?, flowInType: String?, flowMilestoneIds: [String]?, flowName: String?, flowOutType: String?, flowType: FlowType?, flowVersion: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, recognitionFailureReason: String?, remote: String?, removedSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, startingLanguage: String?, stationId: String?, teamId: String?, transferTargetAddress: String?, transferTargetName: String?, transferType: String?, usedRouting: UsedRouting?, userId: String?, videoPresent: Bool?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [FlowMetricsTopicFlowProposedAgent]?, outcomes: [FlowMetricsTopicFlowOutcome]?, scoredAgents: [FlowMetricsTopicFlowScoredAgent]?) {
+    public init(metric: Metric?, metricDate: Date?, value: Int?, recordId: String?, activeRouting: ActiveRouting?, activeSkillIds: [String]?, addressFrom: String?, addressTo: String?, agentAssistantId: String?, agentBullseyeRing: Int?, agentOwned: Bool?, ani: String?, assignerId: String?, authenticated: Bool?, conversationId: String?, conversationInitiator: ConversationInitiator?, convertedFrom: String?, convertedTo: String?, customerParticipation: Bool?, deliveryStatus: DeliveryStatus?, destinationAddresses: [String]?, direction: Direction?, disconnectType: DisconnectType?, divisionIds: [String]?, dnis: String?, edgeId: String?, eligibleAgentCounts: [Int]?, endingLanguage: String?, entryReason: String?, entryType: EntryType?, errorCode: String?, exitReason: String?, extendedDeliveryStatus: String?, externalContactId: String?, externalMediaCount: Int?, externalOrganizationId: String?, externalTag: String?, firstQueue: Bool?, flaggedReason: FlaggedReason?, flowId: String?, flowInType: String?, flowMilestoneIds: [String]?, flowName: String?, flowOutType: String?, flowSubType: FlowSubType?, flowType: FlowType?, flowVersion: String?, groupId: String?, interactionType: String?, journeyActionId: String?, journeyActionMapId: String?, journeyActionMapVersion: Int?, journeyCustomerId: String?, journeyCustomerIdType: String?, journeyCustomerSessionId: String?, journeyCustomerSessionIdType: String?, knowledgeBaseId: String?, mediaCount: Int?, mediaType: MediaType?, messageType: String?, originatingDirection: OriginatingDirection?, outboundCampaignId: String?, outboundContactId: String?, outboundContactListId: String?, participantName: String?, peerId: String?, provider: String?, purpose: Purpose?, queueId: String?, recognitionFailureReason: String?, remote: String?, removedSkillIds: [String]?, requestedLanguageId: String?, requestedRoutingSkillIds: [String]?, requestedRoutings: [RequestedRoutings]?, roomId: String?, routingPriority: Int?, routingRing: Int?, routingRule: String?, routingRuleType: RoutingRuleType?, selectedAgentId: String?, selectedAgentRank: Int?, selfServed: Bool?, sessionDnis: String?, sessionId: String?, startingLanguage: String?, stationId: String?, teamId: String?, transferTargetAddress: String?, transferTargetName: String?, transferType: String?, usedRouting: UsedRouting?, userId: String?, videoPresent: Bool?, waitingInteractionCounts: [Int]?, wrapUpCode: String?, proposedAgents: [FlowMetricsTopicFlowProposedAgent]?, outcomes: [FlowMetricsTopicFlowOutcome]?, scoredAgents: [FlowMetricsTopicFlowScoredAgent]?) {
         self.metric = metric
         self.metricDate = metricDate
         self.value = value
@@ -16958,6 +16974,7 @@ public class FlowMetricsTopicFlowMetricRecord: Codable {
         self.flowMilestoneIds = flowMilestoneIds
         self.flowName = flowName
         self.flowOutType = flowOutType
+        self.flowSubType = flowSubType
         self.flowType = flowType
         self.flowVersion = flowVersion
         self.groupId = groupId
@@ -18854,6 +18871,140 @@ public class InteractionStatsRuleContainer: Codable {
 
 
 
+public class InternalMessage: Codable {
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case connected = "connected"
+        case disconnected = "disconnected"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case connected = "connected"
+        case disconnected = "disconnected"
+    }
+
+
+
+
+
+    public enum DisconnectType: String, Codable { 
+        case client = "client"
+        case system = "system"
+        case peer = "peer"
+        case transfer = "transfer"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The connection state of this communication. */
+    public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
+    /** A globally unique identifier for this communication. */
+    public var _id: String?
+    /** The time line of the participant's internal message, divided into activity segments. */
+    public var segments: [Segment]?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
+    public var disconnectType: DisconnectType?
+    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var disconnectedTime: Date?
+    /** The source provider for the message. */
+    public var provider: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
+    public var peerId: String?
+    /** The user ID for the participant on receiving side of the internal message conversation. */
+    public var targetUserId: String?
+    /** The user ID for the participant on sending side of the internal message conversation. */
+    public var sourceUserId: String?
+    /** Address for the participant on receiving side of the internal message communication. */
+    public var toAddress: Address?
+    /** Address for the participant on the sending side of the internal message communication. */
+    public var fromAddress: Address?
+    /** The messages sent on this communication channel. */
+    public var messages: [InternalMessageDetails]?
+
+    public init(state: State?, initialState: InitialState?, _id: String?, segments: [Segment]?, disconnectType: DisconnectType?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, targetUserId: String?, sourceUserId: String?, toAddress: Address?, fromAddress: Address?, messages: [InternalMessageDetails]?) {
+        self.state = state
+        self.initialState = initialState
+        self._id = _id
+        self.segments = segments
+        self.disconnectType = disconnectType
+        self.connectedTime = connectedTime
+        self.disconnectedTime = disconnectedTime
+        self.provider = provider
+        self.peerId = peerId
+        self.targetUserId = targetUserId
+        self.sourceUserId = sourceUserId
+        self.toAddress = toAddress
+        self.fromAddress = fromAddress
+        self.messages = messages
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case state
+        case initialState
+        case _id = "id"
+        case segments
+        case disconnectType
+        case connectedTime
+        case disconnectedTime
+        case provider
+        case peerId
+        case targetUserId
+        case sourceUserId
+        case toAddress
+        case fromAddress
+        case messages
+    }
+
+
+}
+
+
+
+
+public class InternalMessageDetails: Codable {
+
+
+
+
+
+    /** UUID identifying the internal message media. */
+    public var messageId: String?
+    /** The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var messageTime: Date?
+
+    public init(messageId: String?, messageTime: Date?) {
+        self.messageId = messageId
+        self.messageTime = messageTime
+    }
+
+
+}
+
+
+
+
 public class IpAddressRange: Codable {
 
 
@@ -19745,37 +19896,6 @@ public class JourneyWebActionEventsNotificationReferrer: Codable {
 
 
 
-public class JsonCursorSearchResponse: Codable {
-
-
-
-
-
-
-
-
-
-    /** Resource types the search was performed against */
-    public var types: [String]?
-    /** Search results */
-    public var results: JSON?
-    public var aggregations: JSON?
-    /** The page cursor */
-    public var cursor: String?
-
-    public init(types: [String]?, results: JSON?, aggregations: JSON?, cursor: String?) {
-        self.types = types
-        self.results = results
-        self.aggregations = aggregations
-        self.cursor = cursor
-    }
-
-
-}
-
-
-
-
 public class JourneyWebEventsNotificationBrowser: Codable {
 
 
@@ -20106,6 +20226,37 @@ public class JourneyWebEventsNotificationWebMessage: Codable {
         self.referrer = referrer
         self.attributes = attributes
         self.traits = traits
+    }
+
+
+}
+
+
+
+
+public class JsonCursorSearchResponse: Codable {
+
+
+
+
+
+
+
+
+
+    /** Resource types the search was performed against */
+    public var types: [String]?
+    /** Search results */
+    public var results: JSON?
+    public var aggregations: JSON?
+    /** The page cursor */
+    public var cursor: String?
+
+    public init(types: [String]?, results: JSON?, aggregations: JSON?, cursor: String?) {
+        self.types = types
+        self.results = results
+        self.aggregations = aggregations
+        self.cursor = cursor
     }
 
 
@@ -24397,6 +24548,7 @@ public class Objective: Codable {
         case cobrowse = "cobrowse"
         case email = "email"
         case message = "message"
+        case internalmessage = "internalmessage"
         case screenshare = "screenshare"
         case unknown = "unknown"
         case video = "video"
@@ -25265,6 +25417,161 @@ public class OutboundMessagingCampaignPreContactSmsEventTopicSMSAttributes: Coda
 
 
 
+/** An outbound-messaging messaging campaign email Config */
+
+public class OutboundMessagingEmailCampaignConfigChangeEmailConfig: Codable {
+
+
+
+
+
+
+
+
+
+    /** The Contact List column specifying the email to send to the contact. */
+    public var emailColumns: [String]?
+    /** A reference for a Response */
+    public var contentTemplate: OutboundMessagingEmailCampaignConfigChangeResponseRef?
+    public var fromAddress: OutboundMessagingEmailCampaignConfigChangeFromEmailAddress?
+    public var replyToAddress: OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress?
+
+    public init(emailColumns: [String]?, contentTemplate: OutboundMessagingEmailCampaignConfigChangeResponseRef?, fromAddress: OutboundMessagingEmailCampaignConfigChangeFromEmailAddress?, replyToAddress: OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress?) {
+        self.emailColumns = emailColumns
+        self.contentTemplate = contentTemplate
+        self.fromAddress = fromAddress
+        self.replyToAddress = replyToAddress
+    }
+
+
+}
+
+
+
+
+public class OutboundMessagingEmailCampaignConfigChangeMessagingCampaign: Codable {
+
+    public enum CampaignStatus: String, Codable { 
+        case on = "on"
+        case off = "off"
+        case complete = "complete"
+        case stopping = "stopping"
+        case invalid = "invalid"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var campaignStatus: CampaignStatus?
+    public var callableTimeSet: OutboundMessagingEmailCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
+    public var contactList: OutboundMessagingEmailCampaignConfigChangeUriReference?
+    /** The dnc lists to check before sending a message for this messaging campaign. */
+    public var dncLists: [OutboundMessagingEmailCampaignConfigChangeUriReference]?
+    /** The contact list filters to check before sending a message for this messaging campaign. */
+    public var contactListFilters: [OutboundMessagingEmailCampaignConfigChangeUriReference]?
+    /** Whether this messaging campaign is always running. */
+    public var alwaysRunning: Bool?
+    /** The order in which to sort contacts for dialing, based on up to four columns. */
+    public var contactSorts: [OutboundMessagingEmailCampaignConfigChangeContactSort]?
+    /** How many messages this messaging campaign will send per minute. */
+    public var messagesPerMinute: Int?
+    public var ruleSets: [OutboundMessagingEmailCampaignConfigChangeUriReference]?
+    public var smsConfig: OutboundMessagingEmailCampaignConfigChangeSmsConfig?
+    public var emailConfig: OutboundMessagingEmailCampaignConfigChangeEmailConfig?
+    /** A list of current error conditions associated with this messaging campaign */
+    public var errors: [OutboundMessagingEmailCampaignConfigChangeErrorDetail]?
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The UI-visible name of the object */
+    public var name: String?
+    /** Creation time of the entity */
+    public var dateCreated: Date?
+    /** Last modified time of the entity */
+    public var dateModified: Date?
+    /** Required for updates, must match the version number of the most recent update */
+    public var version: Int?
+    /** A UriReference for a resource */
+    public var division: OutboundMessagingEmailCampaignConfigChangeUriReference?
+
+    public init(campaignStatus: CampaignStatus?, callableTimeSet: OutboundMessagingEmailCampaignConfigChangeUriReference?, contactList: OutboundMessagingEmailCampaignConfigChangeUriReference?, dncLists: [OutboundMessagingEmailCampaignConfigChangeUriReference]?, contactListFilters: [OutboundMessagingEmailCampaignConfigChangeUriReference]?, alwaysRunning: Bool?, contactSorts: [OutboundMessagingEmailCampaignConfigChangeContactSort]?, messagesPerMinute: Int?, ruleSets: [OutboundMessagingEmailCampaignConfigChangeUriReference]?, smsConfig: OutboundMessagingEmailCampaignConfigChangeSmsConfig?, emailConfig: OutboundMessagingEmailCampaignConfigChangeEmailConfig?, errors: [OutboundMessagingEmailCampaignConfigChangeErrorDetail]?, _id: String?, name: String?, dateCreated: Date?, dateModified: Date?, version: Int?, division: OutboundMessagingEmailCampaignConfigChangeUriReference?) {
+        self.campaignStatus = campaignStatus
+        self.callableTimeSet = callableTimeSet
+        self.contactList = contactList
+        self.dncLists = dncLists
+        self.contactListFilters = contactListFilters
+        self.alwaysRunning = alwaysRunning
+        self.contactSorts = contactSorts
+        self.messagesPerMinute = messagesPerMinute
+        self.ruleSets = ruleSets
+        self.smsConfig = smsConfig
+        self.emailConfig = emailConfig
+        self.errors = errors
+        self._id = _id
+        self.name = name
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.version = version
+        self.division = division
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case campaignStatus
+        case callableTimeSet
+        case contactList
+        case dncLists
+        case contactListFilters
+        case alwaysRunning
+        case contactSorts
+        case messagesPerMinute
+        case ruleSets
+        case smsConfig
+        case emailConfig
+        case errors
+        case _id = "id"
+        case name
+        case dateCreated
+        case dateModified
+        case version
+        case division
+    }
+
+
+}
+
+
+
 
 public class PagingSpec: Codable {
 
@@ -25399,6 +25706,8 @@ public class ParticipantBasic: Codable {
 
 
 
+
+
     /** A globally unique identifier for this conversation. */
     public var _id: String?
     /** The timestamp when this participant joined the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
@@ -25481,10 +25790,11 @@ public class ParticipantBasic: Codable {
     public var startAcwTime: Date?
     /** The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
     public var endAcwTime: Date?
+    public var internalMessages: [InternalMessage]?
     /** If this participant barged in a participant's call, then this will be the id of the targeted participant. */
     public var bargedParticipantId: String?
 
-    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, mediaRoles: [String]?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, bargedParticipantId: String?) {
+    public init(_id: String?, startTime: Date?, endTime: Date?, connectedTime: Date?, name: String?, userUri: String?, userId: String?, externalContactId: String?, externalOrganizationId: String?, queueId: String?, groupId: String?, teamId: String?, queueName: String?, purpose: String?, participantType: String?, consultParticipantId: String?, address: String?, ani: String?, aniName: String?, dnis: String?, locale: String?, wrapupRequired: Bool?, wrapupPrompt: WrapupPrompt?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, wrapup: Wrapup?, mediaRoles: [String]?, conversationRoutingData: ConversationRoutingData?, alertingTimeoutMs: Int?, monitoredParticipantId: String?, coachedParticipantId: String?, attributes: [String:String]?, calls: [CallBasic]?, callbacks: [CallbackBasic]?, chats: [ConversationChat]?, cobrowsesessions: [Cobrowsesession]?, emails: [Email]?, messages: [Message]?, screenshares: [Screenshare]?, socialExpressions: [SocialExpression]?, videos: [Video]?, evaluations: [Evaluation]?, screenRecordingState: ScreenRecordingState?, flaggedReason: FlaggedReason?, startAcwTime: Date?, endAcwTime: Date?, internalMessages: [InternalMessage]?, bargedParticipantId: String?) {
         self._id = _id
         self.startTime = startTime
         self.endTime = endTime
@@ -25531,6 +25841,7 @@ public class ParticipantBasic: Codable {
         self.flaggedReason = flaggedReason
         self.startAcwTime = startAcwTime
         self.endAcwTime = endAcwTime
+        self.internalMessages = internalMessages
         self.bargedParticipantId = bargedParticipantId
     }
 
@@ -25581,6 +25892,7 @@ public class ParticipantBasic: Codable {
         case flaggedReason
         case startAcwTime
         case endAcwTime
+        case internalMessages
         case bargedParticipantId
     }
 
@@ -27072,6 +27384,7 @@ public class QueryCriteria: Codable {
         case flowStartDateTime = "FlowStartDateTime"
         case flowEndDateTime = "FlowEndDateTime"
         case conversationId = "ConversationId"
+        case workitemId = "WorkitemId"
         case flowType = "FlowType"
         case flowId = "FlowId"
         case flowErrorReason = "FlowErrorReason"
@@ -38679,170 +38992,6 @@ public class UserStaffingGroupListing: Codable {
 
 
 
-public class Video: Codable {
-
-    public enum State: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-    public enum InitialState: String, Codable { 
-        case alerting = "alerting"
-        case dialing = "dialing"
-        case contacting = "contacting"
-        case offering = "offering"
-        case connected = "connected"
-        case disconnected = "disconnected"
-        case terminated = "terminated"
-        case _none = "none"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum DisconnectType: String, Codable { 
-        case endpoint = "endpoint"
-        case client = "client"
-        case system = "system"
-        case timeout = "timeout"
-        case transfer = "transfer"
-        case transferConference = "transfer.conference"
-        case transferConsult = "transfer.consult"
-        case transferForward = "transfer.forward"
-        case transferNoanswer = "transfer.noanswer"
-        case transferNotavailable = "transfer.notavailable"
-        case transportFailure = "transport.failure"
-        case error = "error"
-        case peer = "peer"
-        case other = "other"
-        case spam = "spam"
-        case uncallable = "uncallable"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The connection state of this communication. */
-    public var state: State?
-    /** The initial connection state of this communication. */
-    public var initialState: InitialState?
-    /** A globally unique identifier for this communication. */
-    public var _id: String?
-    /** The room id context (xmpp jid) for the conference session. */
-    public var context: String?
-    /** Indicates whether this participant has muted their outgoing audio. */
-    public var audioMuted: Bool?
-    /** Indicates whether this participant has muted/paused their outgoing video. */
-    public var videoMuted: Bool?
-    /** Indicates whether this participant is sharing their screen to the session. */
-    public var sharingScreen: Bool?
-    /** The number of peer participants from the perspective of the participant in the conference. */
-    public var peerCount: Int?
-    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
-    public var disconnectType: DisconnectType?
-    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var startAlertingTime: Date?
-    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var connectedTime: Date?
-    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var disconnectedTime: Date?
-    /** The source provider for the video. */
-    public var provider: String?
-    /** The id of the peer communication corresponding to a matching leg for this communication. */
-    public var peerId: String?
-    /** List of media stream ids */
-    public var msids: [String]?
-    /** Address and name data for a call endpoint. */
-    public var _self: Address?
-    /** Call wrap up or disposition data. */
-    public var wrapup: Wrapup?
-    /** After-call work for the communication. */
-    public var afterCallWork: AfterCallWork?
-    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
-    public var afterCallWorkRequired: Bool?
-
-    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
-        self.state = state
-        self.initialState = initialState
-        self._id = _id
-        self.context = context
-        self.audioMuted = audioMuted
-        self.videoMuted = videoMuted
-        self.sharingScreen = sharingScreen
-        self.peerCount = peerCount
-        self.disconnectType = disconnectType
-        self.startAlertingTime = startAlertingTime
-        self.connectedTime = connectedTime
-        self.disconnectedTime = disconnectedTime
-        self.provider = provider
-        self.peerId = peerId
-        self.msids = msids
-        self._self = _self
-        self.wrapup = wrapup
-        self.afterCallWork = afterCallWork
-        self.afterCallWorkRequired = afterCallWorkRequired
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case state
-        case initialState
-        case _id = "id"
-        case context
-        case audioMuted
-        case videoMuted
-        case sharingScreen
-        case peerCount
-        case disconnectType
-        case startAlertingTime
-        case connectedTime
-        case disconnectedTime
-        case provider
-        case peerId
-        case msids
-        case _self = "self"
-        case wrapup
-        case afterCallWork
-        case afterCallWorkRequired
-    }
-
-
-}
-
-
-
-
 public class UserState: Codable {
 
     public enum State: String, Codable { 
@@ -39477,6 +39626,170 @@ public class Verifier: Codable {
 
 
 
+public class Video: Codable {
+
+    public enum State: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+    public enum InitialState: String, Codable { 
+        case alerting = "alerting"
+        case dialing = "dialing"
+        case contacting = "contacting"
+        case offering = "offering"
+        case connected = "connected"
+        case disconnected = "disconnected"
+        case terminated = "terminated"
+        case _none = "none"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum DisconnectType: String, Codable { 
+        case endpoint = "endpoint"
+        case client = "client"
+        case system = "system"
+        case timeout = "timeout"
+        case transfer = "transfer"
+        case transferConference = "transfer.conference"
+        case transferConsult = "transfer.consult"
+        case transferForward = "transfer.forward"
+        case transferNoanswer = "transfer.noanswer"
+        case transferNotavailable = "transfer.notavailable"
+        case transportFailure = "transport.failure"
+        case error = "error"
+        case peer = "peer"
+        case other = "other"
+        case spam = "spam"
+        case uncallable = "uncallable"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The connection state of this communication. */
+    public var state: State?
+    /** The initial connection state of this communication. */
+    public var initialState: InitialState?
+    /** A globally unique identifier for this communication. */
+    public var _id: String?
+    /** The room id context (xmpp jid) for the conference session. */
+    public var context: String?
+    /** Indicates whether this participant has muted their outgoing audio. */
+    public var audioMuted: Bool?
+    /** Indicates whether this participant has muted/paused their outgoing video. */
+    public var videoMuted: Bool?
+    /** Indicates whether this participant is sharing their screen to the session. */
+    public var sharingScreen: Bool?
+    /** The number of peer participants from the perspective of the participant in the conference. */
+    public var peerCount: Int?
+    /** System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. */
+    public var disconnectType: DisconnectType?
+    /** The timestamp the communication has when it is first put into an alerting state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var startAlertingTime: Date?
+    /** The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var connectedTime: Date?
+    /** The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var disconnectedTime: Date?
+    /** The source provider for the video. */
+    public var provider: String?
+    /** The id of the peer communication corresponding to a matching leg for this communication. */
+    public var peerId: String?
+    /** List of media stream ids */
+    public var msids: [String]?
+    /** Address and name data for a call endpoint. */
+    public var _self: Address?
+    /** Call wrap up or disposition data. */
+    public var wrapup: Wrapup?
+    /** After-call work for the communication. */
+    public var afterCallWork: AfterCallWork?
+    /** Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. */
+    public var afterCallWorkRequired: Bool?
+
+    public init(state: State?, initialState: InitialState?, _id: String?, context: String?, audioMuted: Bool?, videoMuted: Bool?, sharingScreen: Bool?, peerCount: Int?, disconnectType: DisconnectType?, startAlertingTime: Date?, connectedTime: Date?, disconnectedTime: Date?, provider: String?, peerId: String?, msids: [String]?, _self: Address?, wrapup: Wrapup?, afterCallWork: AfterCallWork?, afterCallWorkRequired: Bool?) {
+        self.state = state
+        self.initialState = initialState
+        self._id = _id
+        self.context = context
+        self.audioMuted = audioMuted
+        self.videoMuted = videoMuted
+        self.sharingScreen = sharingScreen
+        self.peerCount = peerCount
+        self.disconnectType = disconnectType
+        self.startAlertingTime = startAlertingTime
+        self.connectedTime = connectedTime
+        self.disconnectedTime = disconnectedTime
+        self.provider = provider
+        self.peerId = peerId
+        self.msids = msids
+        self._self = _self
+        self.wrapup = wrapup
+        self.afterCallWork = afterCallWork
+        self.afterCallWorkRequired = afterCallWorkRequired
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case state
+        case initialState
+        case _id = "id"
+        case context
+        case audioMuted
+        case videoMuted
+        case sharingScreen
+        case peerCount
+        case disconnectType
+        case startAlertingTime
+        case connectedTime
+        case disconnectedTime
+        case provider
+        case peerId
+        case msids
+        case _self = "self"
+        case wrapup
+        case afterCallWork
+        case afterCallWorkRequired
+    }
+
+
+}
+
+
+
+
 public class VideoConferenceUpdateTopicParticipantInfo: Codable {
 
 
@@ -39662,6 +39975,7 @@ public class VoicemailStartDetailEventTopicVoicemailStartEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -42047,16 +42361,22 @@ public class WorkitemPagedEntityListing: Codable {
 
 
 
-    public var entities: [Workitem]?
-    /** The total page size requested */
-    public var pageSize: Int?
-    /** The page number requested */
-    public var pageNumber: Int?
 
-    public init(entities: [Workitem]?, pageSize: Int?, pageNumber: Int?) {
+
+
+
+    public var entities: [Workitem]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var pageCount: Int?
+
+    public init(entities: [Workitem]?, pageSize: Int?, pageNumber: Int?, total: Int64?, pageCount: Int?) {
         self.entities = entities
         self.pageSize = pageSize
         self.pageNumber = pageNumber
+        self.total = total
+        self.pageCount = pageCount
     }
 
 

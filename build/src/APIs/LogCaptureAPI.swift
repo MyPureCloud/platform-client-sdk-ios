@@ -148,6 +148,7 @@ open class LogCaptureAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id"
@@ -408,6 +409,7 @@ open class LogCaptureAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id"

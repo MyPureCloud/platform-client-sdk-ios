@@ -50,6 +50,7 @@ public class AcdStartDetailEventTopicAcdStartEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -749,6 +750,7 @@ public class AcwDetailEventTopicAfterCallWorkEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -1781,6 +1783,34 @@ public class AlertSummary: Codable {
         self.conversation = conversation
         self.metricType = metricType
         self.entitiesAreTeamMembers = entitiesAreTeamMembers
+    }
+
+
+}
+
+
+
+
+public class AlertablePresences: Codable {
+
+    public enum AlertablePresences: String, Codable { 
+        case available = "Available"
+        case away = "Away"
+        case busy = "Busy"
+        case offline = "Offline"
+        case idle = "Idle"
+        case onQueue = "OnQueue"
+        case meal = "Meal"
+        case training = "Training"
+        case meeting = "Meeting"
+        case _break = "Break"
+    }
+
+    /** The list of alertable system presences. */
+    public var alertablePresences: [AlertablePresences]?
+
+    public init(alertablePresences: [AlertablePresences]?) {
+        self.alertablePresences = alertablePresences
     }
 
 
@@ -3368,6 +3398,7 @@ public class AttributeDetailEventTopicCommunication: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
     public var _id: String?
@@ -5473,6 +5504,34 @@ public class CoachingSlotsRequest: Codable {
 
 
 
+public class CollaborateChatAdhocMessageEventTopicCollaborateChatEntity: Codable {
+
+
+
+
+
+    public enum EntityType: String, Codable { 
+        case group = "Group"
+        case user = "User"
+        case adhoc = "Adhoc"
+    }
+
+    public var entityJid: String?
+    public var entityId: String?
+    public var entityType: EntityType?
+
+    public init(entityJid: String?, entityId: String?, entityType: EntityType?) {
+        self.entityJid = entityJid
+        self.entityId = entityId
+        self.entityType = entityType
+    }
+
+
+}
+
+
+
+
 public class CommandStatusEntityListing: Codable {
 
 
@@ -5715,129 +5774,6 @@ public class ConfusionIntentDetails: Codable {
         case name
         case utteranceCount
         case utterances
-        case selfUri
-    }
-
-
-}
-
-
-
-
-public class DID: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case active = "active"
-        case inactive = "inactive"
-        case deleted = "deleted"
-    }
-
-
-
-
-
-
-
-
-
-
-
-    public enum OwnerType: String, Codable { 
-        case user = "USER"
-        case phone = "PHONE"
-        case ivrConfig = "IVR_CONFIG"
-        case group = "GROUP"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of the entity. */
-    public var name: String?
-    /** The division to which this entity belongs. */
-    public var division: Division?
-    /** The resource's description. */
-    public var _description: String?
-    /** The current version of the resource. */
-    public var version: Int?
-    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The ID of the user that last modified the resource. */
-    public var modifiedBy: String?
-    /** The ID of the user that created the resource. */
-    public var createdBy: String?
-    /** Indicates if the resource is active, inactive, or deleted. */
-    public var state: State?
-    /** The application that last modified the resource. */
-    public var modifiedByApp: String?
-    /** The application that created the resource. */
-    public var createdByApp: String?
-    public var phoneNumber: String?
-    public var didPool: DomainEntityRef?
-    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
-    public var owner: DomainEntityRef?
-    public var ownerType: OwnerType?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.division = division
-        self._description = _description
-        self.version = version
-        self.dateCreated = dateCreated
-        self.dateModified = dateModified
-        self.modifiedBy = modifiedBy
-        self.createdBy = createdBy
-        self.state = state
-        self.modifiedByApp = modifiedByApp
-        self.createdByApp = createdByApp
-        self.phoneNumber = phoneNumber
-        self.didPool = didPool
-        self.owner = owner
-        self.ownerType = ownerType
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case division
-        case _description = "description"
-        case version
-        case dateCreated
-        case dateModified
-        case modifiedBy
-        case createdBy
-        case state
-        case modifiedByApp
-        case createdByApp
-        case phoneNumber
-        case didPool
-        case owner
-        case ownerType
         case selfUri
     }
 
@@ -10024,6 +9960,7 @@ public class ConversationThreadingWindowSetting: Codable {
         case webmessaging = "webmessaging"
         case instagram = "instagram"
         case _open = "open"
+        case apple = "apple"
     }
 
 
@@ -10393,6 +10330,7 @@ public class CreateObjective: Codable {
         case cobrowse = "cobrowse"
         case email = "email"
         case message = "message"
+        case internalmessage = "internalmessage"
         case screenshare = "screenshare"
         case unknown = "unknown"
         case video = "video"
@@ -11136,6 +11074,129 @@ public class CustomEventAttributeList: Codable {
 
 
 
+public class DID: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case active = "active"
+        case inactive = "inactive"
+        case deleted = "deleted"
+    }
+
+
+
+
+
+
+
+
+
+
+
+    public enum OwnerType: String, Codable { 
+        case user = "USER"
+        case phone = "PHONE"
+        case ivrConfig = "IVR_CONFIG"
+        case group = "GROUP"
+    }
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of the entity. */
+    public var name: String?
+    /** The division to which this entity belongs. */
+    public var division: Division?
+    /** The resource's description. */
+    public var _description: String?
+    /** The current version of the resource. */
+    public var version: Int?
+    /** The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The ID of the user that last modified the resource. */
+    public var modifiedBy: String?
+    /** The ID of the user that created the resource. */
+    public var createdBy: String?
+    /** Indicates if the resource is active, inactive, or deleted. */
+    public var state: State?
+    /** The application that last modified the resource. */
+    public var modifiedByApp: String?
+    /** The application that created the resource. */
+    public var createdByApp: String?
+    public var phoneNumber: String?
+    public var didPool: DomainEntityRef?
+    /** A Uri reference to the owner of this DID, which is either a User or an IVR */
+    public var owner: DomainEntityRef?
+    public var ownerType: OwnerType?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, division: Division?, _description: String?, version: Int?, dateCreated: Date?, dateModified: Date?, modifiedBy: String?, createdBy: String?, state: State?, modifiedByApp: String?, createdByApp: String?, phoneNumber: String?, didPool: DomainEntityRef?, owner: DomainEntityRef?, ownerType: OwnerType?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.division = division
+        self._description = _description
+        self.version = version
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.modifiedBy = modifiedBy
+        self.createdBy = createdBy
+        self.state = state
+        self.modifiedByApp = modifiedByApp
+        self.createdByApp = createdByApp
+        self.phoneNumber = phoneNumber
+        self.didPool = didPool
+        self.owner = owner
+        self.ownerType = ownerType
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case division
+        case _description = "description"
+        case version
+        case dateCreated
+        case dateModified
+        case modifiedBy
+        case createdBy
+        case state
+        case modifiedByApp
+        case createdByApp
+        case phoneNumber
+        case didPool
+        case owner
+        case ownerType
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class DIDPool: Codable {
 
 
@@ -11867,104 +11928,6 @@ public class DialerCampaignConfigChangeRestErrorDetail: Codable {
 
 
 
-public class DialerContact: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** The identifier of the contact list containing this contact. */
-    public var contactListId: String?
-    /** An ordered map of the contact's columns and corresponding values. */
-    public var data: [String:String]?
-    /** A map of call records for the contact phone columns. */
-    public var callRecords: [String:CallRecord]?
-    /** A map of SMS records for the contact phone columns. */
-    public var latestSmsEvaluations: [String:MessageEvaluation]?
-    /** A map of email records for the contact email columns. */
-    public var latestEmailEvaluations: [String:MessageEvaluation]?
-    /** Indicates whether or not the contact can be called. */
-    public var callable: Bool?
-    /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
-    public var phoneNumberStatus: [String:PhoneNumberStatus]?
-    /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
-    public var contactableStatus: [String:ContactableStatus]?
-    /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
-    public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
-    /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
-    public var configurationOverrides: ConfigurationOverrides?
-    /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.contactListId = contactListId
-        self.data = data
-        self.callRecords = callRecords
-        self.latestSmsEvaluations = latestSmsEvaluations
-        self.latestEmailEvaluations = latestEmailEvaluations
-        self.callable = callable
-        self.phoneNumberStatus = phoneNumberStatus
-        self.contactableStatus = contactableStatus
-        self.contactColumnTimeZones = contactColumnTimeZones
-        self.configurationOverrides = configurationOverrides
-        self.dateCreated = dateCreated
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case contactListId
-        case data
-        case callRecords
-        case latestSmsEvaluations
-        case latestEmailEvaluations
-        case callable
-        case phoneNumberStatus
-        case contactableStatus
-        case contactColumnTimeZones
-        case configurationOverrides
-        case dateCreated
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class DialerCampaignRuleConfigChangeCampaignRule: Codable {
 
 
@@ -12183,6 +12146,104 @@ public class DialerCampaignScheduleConfigChangeCampaignSchedule: Codable {
         case dateCreated
         case dateModified
         case version
+    }
+
+
+}
+
+
+
+
+public class DialerContact: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The identifier of the contact list containing this contact. */
+    public var contactListId: String?
+    /** An ordered map of the contact's columns and corresponding values. */
+    public var data: [String:String]?
+    /** A map of call records for the contact phone columns. */
+    public var callRecords: [String:CallRecord]?
+    /** A map of SMS records for the contact phone columns. */
+    public var latestSmsEvaluations: [String:MessageEvaluation]?
+    /** A map of email records for the contact email columns. */
+    public var latestEmailEvaluations: [String:MessageEvaluation]?
+    /** Indicates whether or not the contact can be called. */
+    public var callable: Bool?
+    /** A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not. */
+    public var phoneNumberStatus: [String:PhoneNumberStatus]?
+    /** A map of media types (Voice, SMS and Email) to ContactableStatus, which indicates if the contact can be contacted using the specified media type. */
+    public var contactableStatus: [String:ContactableStatus]?
+    /** Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip */
+    public var contactColumnTimeZones: [String:ContactColumnTimeZone]?
+    /** the priority property within ConfigurationOverides indicates whether or not the contact to be placed in front of the queue or at the end of the queue */
+    public var configurationOverrides: ConfigurationOverrides?
+    /** Timestamp for when the contact was added. Contacts added prior to 2023 September 1 may be missing this value. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, contactListId: String?, data: [String:String]?, callRecords: [String:CallRecord]?, latestSmsEvaluations: [String:MessageEvaluation]?, latestEmailEvaluations: [String:MessageEvaluation]?, callable: Bool?, phoneNumberStatus: [String:PhoneNumberStatus]?, contactableStatus: [String:ContactableStatus]?, contactColumnTimeZones: [String:ContactColumnTimeZone]?, configurationOverrides: ConfigurationOverrides?, dateCreated: Date?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.contactListId = contactListId
+        self.data = data
+        self.callRecords = callRecords
+        self.latestSmsEvaluations = latestSmsEvaluations
+        self.latestEmailEvaluations = latestEmailEvaluations
+        self.callable = callable
+        self.phoneNumberStatus = phoneNumberStatus
+        self.contactableStatus = contactableStatus
+        self.contactColumnTimeZones = contactColumnTimeZones
+        self.configurationOverrides = configurationOverrides
+        self.dateCreated = dateCreated
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case contactListId
+        case data
+        case callRecords
+        case latestSmsEvaluations
+        case latestEmailEvaluations
+        case callable
+        case phoneNumberStatus
+        case contactableStatus
+        case contactColumnTimeZones
+        case configurationOverrides
+        case dateCreated
+        case selfUri
     }
 
 
@@ -16602,6 +16663,7 @@ public class FacebookPermission: Codable {
         case facebookPrivate = "FacebookPrivate"
         case facebookPublic = "FacebookPublic"
         case instagramPrivate = "InstagramPrivate"
+        case instagramPublic = "InstagramPublic"
         case whatsAppPrivate = "WhatsAppPrivate"
     }
 
@@ -17256,6 +17318,7 @@ public class FlowOutcomeDetailEventTopicFlowOutcomeEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -17952,6 +18015,39 @@ public class GetFlowExecutionDataJobResult: Codable {
         case entities
         case jobState
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class GraphApiSettings: Codable {
+
+
+
+    public enum Status: String, Codable { 
+        case active = "Active"
+        case error = "Error"
+        case inactive = "Inactive"
+        case integrationDeleted = "IntegrationDeleted"
+        case unknown = "Unknown"
+    }
+
+
+
+    /** The Graph API server integration to use for emails. */
+    public var integration: DomainEntityRef?
+    /** Graph API Server Status */
+    public var status: Status?
+    /** Additional Graph API Server error information */
+    public var errorInfo: EmailErrorInfo?
+
+    public init(integration: DomainEntityRef?, status: Status?, errorInfo: EmailErrorInfo?) {
+        self.integration = integration
+        self.status = status
+        self.errorInfo = errorInfo
     }
 
 
@@ -23158,6 +23254,11 @@ public class MessageDetails: Codable {
 
 
 
+    public enum SocialVisibility: String, Codable { 
+        case _private = "private"
+        case _public = "public"
+    }
+
 
 
     /** UUID identifying the message media. */
@@ -23176,10 +23277,12 @@ public class MessageDetails: Codable {
     public var stickers: [MessageSticker]?
     /** Information that describes the content of the message, if any */
     public var messageMetadata: ConversationMessageMetadata?
+    /** For social media messages, the visibility of the message in the originating social platform */
+    public var socialVisibility: SocialVisibility?
     /** Provider specific error information for a communication. */
     public var errorInfo: ErrorBody?
 
-    public init(messageId: String?, messageURI: String?, messageStatus: MessageStatus?, messageSegmentCount: Int?, messageTime: Date?, media: [MessageMedia]?, stickers: [MessageSticker]?, messageMetadata: ConversationMessageMetadata?, errorInfo: ErrorBody?) {
+    public init(messageId: String?, messageURI: String?, messageStatus: MessageStatus?, messageSegmentCount: Int?, messageTime: Date?, media: [MessageMedia]?, stickers: [MessageSticker]?, messageMetadata: ConversationMessageMetadata?, socialVisibility: SocialVisibility?, errorInfo: ErrorBody?) {
         self.messageId = messageId
         self.messageURI = messageURI
         self.messageStatus = messageStatus
@@ -23188,6 +23291,7 @@ public class MessageDetails: Codable {
         self.media = media
         self.stickers = stickers
         self.messageMetadata = messageMetadata
+        self.socialVisibility = socialVisibility
         self.errorInfo = errorInfo
     }
 
@@ -24842,6 +24946,7 @@ public class OutboundDetailEventTopicOutboundInitEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -25101,6 +25206,129 @@ public class OutboundMessagingCampaignPreContactSmsEventTopicOutboundMessagingCa
         self.outboundContactListId = outboundContactListId
         self.outboundContactId = outboundContactId
         self.isCampaignAlwaysRunning = isCampaignAlwaysRunning
+    }
+
+
+}
+
+
+
+
+public class OutboundMessagingEmailCampaignConfigChangeErrorDetail: Codable {
+
+
+
+
+
+    /** The name of the error code. */
+    public var error: String?
+    /** The additional information regarding the error message. */
+    public var details: String?
+
+    public init(error: String?, details: String?) {
+        self.error = error
+        self.details = details
+    }
+
+
+}
+
+
+
+/** An outbound-messaging messaging campaign email address */
+
+public class OutboundMessagingEmailCampaignConfigChangeFromEmailAddress: Codable {
+
+
+
+
+
+
+
+    /** The friendly name of the email address. */
+    public var friendlyName: String?
+    /** The local part of the email address. */
+    public var localPart: String?
+    /** A UriReference for a resource */
+    public var domain: OutboundMessagingEmailCampaignConfigChangeUriReference?
+
+    public init(friendlyName: String?, localPart: String?, domain: OutboundMessagingEmailCampaignConfigChangeUriReference?) {
+        self.friendlyName = friendlyName
+        self.localPart = localPart
+        self.domain = domain
+    }
+
+
+}
+
+
+
+/** An outbound-messaging messaging campaign email address */
+
+public class OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress: Codable {
+
+
+
+
+
+    /** A UriReference for a resource */
+    public var domain: OutboundMessagingEmailCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
+    public var route: OutboundMessagingEmailCampaignConfigChangeUriReference?
+
+    public init(domain: OutboundMessagingEmailCampaignConfigChangeUriReference?, route: OutboundMessagingEmailCampaignConfigChangeUriReference?) {
+        self.domain = domain
+        self.route = route
+    }
+
+
+}
+
+
+
+/** A reference for a Response */
+
+public class OutboundMessagingEmailCampaignConfigChangeResponseRef: Codable {
+
+
+
+    /** The unique response id */
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+    }
+
+
+}
+
+
+
+/** A UriReference for a resource */
+
+public class OutboundMessagingEmailCampaignProgressEventUriReference: Codable {
+
+
+
+
+
+    /** The ID of the resource */
+    public var _id: String?
+    /** The name of the resource */
+    public var name: String?
+
+    public init(_id: String?, name: String?) {
+        self._id = _id
+        self.name = name
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
     }
 
 
@@ -27540,58 +27768,6 @@ public class QueueConversationEventTopicInitiator: Codable {
 
 
 
-
-public class QueueEntityListing: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var entities: [Queue]?
-    public var pageSize: Int?
-    public var pageNumber: Int?
-    public var total: Int64?
-    public var firstUri: String?
-    public var lastUri: String?
-    public var selfUri: String?
-    public var nextUri: String?
-    public var previousUri: String?
-    public var pageCount: Int?
-
-    public init(entities: [Queue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
-        self.entities = entities
-        self.pageSize = pageSize
-        self.pageNumber = pageNumber
-        self.total = total
-        self.firstUri = firstUri
-        self.lastUri = lastUri
-        self.selfUri = selfUri
-        self.nextUri = nextUri
-        self.previousUri = previousUri
-        self.pageCount = pageCount
-    }
-
-
-}
-
-
-
 /** A subset of the Journey System's customer data at a point-in-time (for external linkage and internal usage/context) */
 
 public class QueueConversationMessageEventTopicJourneyCustomer: Codable {
@@ -28755,6 +28931,58 @@ public class QueueConversationVideoEventTopicWrapup: Codable {
 
 
 
+public class QueueEntityListing: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [Queue]?
+    public var pageSize: Int?
+    public var pageNumber: Int?
+    public var total: Int64?
+    public var firstUri: String?
+    public var lastUri: String?
+    public var selfUri: String?
+    public var nextUri: String?
+    public var previousUri: String?
+    public var pageCount: Int?
+
+    public init(entities: [Queue]?, pageSize: Int?, pageNumber: Int?, total: Int64?, firstUri: String?, lastUri: String?, selfUri: String?, nextUri: String?, previousUri: String?, pageCount: Int?) {
+        self.entities = entities
+        self.pageSize = pageSize
+        self.pageNumber = pageNumber
+        self.total = total
+        self.firstUri = firstUri
+        self.lastUri = lastUri
+        self.selfUri = selfUri
+        self.nextUri = nextUri
+        self.previousUri = previousUri
+        self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
 public class QueueMemberEntityListing: Codable {
 
 
@@ -29191,7 +29419,7 @@ public class RecordingSettings: Codable {
     public var regionalRecordingStorageEnabled: Bool?
     /** The duration in minutes for which the generated URL for recording playback remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes. */
     public var recordingPlaybackUrlTtl: Int?
-    /** TThe duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes. */
+    /** The duration in minutes for which the generated URL for recording batch download remains valid.The default duration is set to 60 minutes, with a minimum allowable duration of 2 minutes and a maximum of 60 minutes. */
     public var recordingBatchDownloadUrlTtl: Int?
 
     public init(maxSimultaneousStreams: Int?, maxConfigurableScreenRecordingStreams: Int?, regionalRecordingStorageEnabled: Bool?, recordingPlaybackUrlTtl: Int?, recordingBatchDownloadUrlTtl: Int?) {
@@ -29380,6 +29608,7 @@ public class ReplacementTerm: Codable {
         case phone = "PHONE"
         case email = "EMAIL"
         case twitter = "TWITTER"
+        case facebook = "FACEBOOK"
     }
 
 
@@ -35534,6 +35763,29 @@ public class V2FlowExecutionDataFlowidTopicQuality: Codable {
 
 
 
+/** This contains information about the workitem that invoked this flow execution. */
+
+public class V2FlowExecutionDataFlowidTopicWorkitem: Codable {
+
+
+
+
+
+    /** The identifier of the workitem that invoked this flow. */
+    public var workitemId: String?
+    /** The name of the process workitem that invoked this flow. */
+    public var workitemName: String?
+
+    public init(workitemId: String?, workitemName: String?) {
+        self.workitemId = workitemId
+        self.workitemName = workitemName
+    }
+
+
+}
+
+
+
 
 public class V2MobiusAlertsTopicAlertNotificationRecipient: Codable {
 
@@ -35928,6 +36180,7 @@ public class VoicemailEndDetailEventTopicVoicemailEndEvent: Codable {
         case video = "VIDEO"
         case screenshare = "SCREENSHARE"
         case message = "MESSAGE"
+        case internalmessage = "INTERNALMESSAGE"
     }
 
 
@@ -37206,33 +37459,6 @@ public class WfmBuShortTermForecastUpdateCompleteTopicBuShortTermForecastNotific
 
 
 
-public class WfmBusinessUnitReference: Codable {
-
-
-
-
-
-    /** The ID of the business unit */
-    public var _id: String?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, selfUri: String?) {
-        self._id = _id
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult: Codable {
 
 
@@ -37301,6 +37527,33 @@ public class WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpd
 
     public init(entities: [WfmBulkShiftTradeStateUpdateNotificationTopicBulkShiftTradeStateUpdateResult]?) {
         self.entities = entities
+    }
+
+
+}
+
+
+
+
+public class WfmBusinessUnitReference: Codable {
+
+
+
+
+
+    /** The ID of the business unit */
+    public var _id: String?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, selfUri: String?) {
+        self._id = _id
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case selfUri
     }
 
 
@@ -37738,26 +37991,6 @@ public class WfmUserScheduleAdherenceUpdatedTeamTopicUriReference: Codable {
 
 
 
-public class WfmUserScheduleAdherenceUpdatedTopicUserReference: Codable {
-
-
-
-    public var _id: String?
-
-    public init(_id: String?) {
-        self._id = _id
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-    }
-
-
-}
-
-
-
-
 public class WfmVersionedEntityMetadata: Codable {
 
 
@@ -37787,6 +38020,26 @@ public class WfmVersionedEntityMetadata: Codable {
         self.dateModified = dateModified
         self.createdBy = createdBy
         self.dateCreated = dateCreated
+    }
+
+
+}
+
+
+
+
+public class WfmUserScheduleAdherenceUpdatedTopicUserReference: Codable {
+
+
+
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
     }
 
 

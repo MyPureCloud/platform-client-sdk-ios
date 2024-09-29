@@ -1,137 +1,260 @@
-Platform API version: 8432
+Platform API version: 8470
 
 
 
 
-# Major Changes (0 changes)
+# Major Changes (1 change)
+
+**POST /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs** (1 change)
+
+* Response 409 was removed
 
 
-# Minor Changes (44 changes)
+# Minor Changes (64 changes)
 
-**/api/v2/conversations/{conversationId}/utilizationlabel** (2 changes)
-
-* Path was added
-* Operation PATCH was added
-
-**/api/v2/integrations/speech/audioconnector/{integrationId}** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/integrations/speech/audioconnector** (2 changes)
+**/api/v2/outbound/campaigns/{campaignId}/skillcombinations** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**/api/v2/architect/grammars/{grammarId}/languages/{languageCode}** (4 changes)
+**GET /api/v2/journey/views/{viewId}** (1 change)
+
+* Response 409 was added
+
+**DELETE /api/v2/journey/views/{viewId}** (1 change)
+
+* Response 409 was added
+
+**GET /api/v2/journey/views/{viewId}/versions/{versionId}** (1 change)
+
+* Response 409 was added
+
+**POST /api/v2/journey/views/{viewId}/versions** (1 change)
+
+* Response 409 was added
+
+**GET /api/v2/journey/views** (1 change)
+
+* Response 409 was added
+
+**POST /api/v2/journey/views** (1 change)
+
+* Response 409 was added
+
+**/api/v2/telephony/providers/edges/alertablepresences** (4 changes)
 
 * Path was added
 * Operation GET was added
+* Operation PUT was added
 * Operation DELETE was added
-* Operation PATCH was added
 
-**/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice** (3 changes)
+**POST /api/v2/learning/assignments** (1 change)
 
-* Path was added
-* Operation POST was added
-* Operation DELETE was added
+* Response 202 was added
 
-**/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf** (3 changes)
+**PATCH /api/v2/learning/assignments/{assignmentId}/reschedule** (1 change)
 
-* Path was added
-* Operation POST was added
-* Operation DELETE was added
+* Response 202 was added
 
-**/api/v2/architect/grammars/{grammarId}/languages** (2 changes)
+**POST /api/v2/learning/assignments/{assignmentId}/reassign** (1 change)
 
-* Path was added
-* Operation POST was added
+* Response 202 was added
 
-**/api/v2/architect/grammars/{grammarId}** (4 changes)
+**Group** (1 change)
 
-* Path was added
-* Operation GET was added
-* Operation DELETE was added
-* Operation PATCH was added
+* Optional property includeOwners was added
 
-**/api/v2/architect/grammars** (3 changes)
+**ConversationActivityEntityData** (1 change)
 
-* Path was added
-* Operation GET was added
-* Operation POST was added
+* Enum value internalmessage was added to property mediaType
 
-**ConversationAggregateQueryPredicate** (1 change)
+**AnalyticsSession** (1 change)
 
-* Enum value originatingSocialMediaPublic was added to property dimension
+* Enum value internalmessage was added to property mediaType
 
-**ConversationAggregationQuery** (1 change)
+**FlowActivityEntityData** (1 change)
 
-* Enum value originatingSocialMediaPublic was added to property groupBy
+* Enum value internalmessage was added to property mediaType
 
-**ConversationMessageMetadataContent** (1 change)
+**ViewFilter** (2 changes)
 
-* Enum value Reactions was added to property contentType
+* Enum value internalmessage was added to property mediaTypes
+* Optional property transcriptDurationMilliseconds was added
 
-**ConversationUtilizationLabelUpdate** (1 change)
+**Widget** (1 change)
+
+* Enum value internalmessage was added to property mediaTypes
+
+**CopilotTranscriptionConfig** (1 change)
 
 * Model was added
 
-**ConversationContentReaction** (1 change)
+**Queue** (1 change)
+
+* Optional property cannedResponseLibraries was added
+
+**ConversationChannel** (1 change)
+
+* Enum value InternalMessage was added to property type
+
+**InternalMessage** (1 change)
 
 * Model was added
 
-**ConversationEnrichment** (1 change)
+**InternalMessageDetails** (1 change)
 
 * Model was added
 
-**ConversationEnrichmentLanguage** (1 change)
+**MessageDetails** (1 change)
+
+* Optional property socialVisibility was added
+
+**Participant** (1 change)
+
+* Optional property internalMessages was added
+
+**ConversationContentReaction** (3 changes)
+
+* Enum value Share was added to property reactionType
+* Enum value Comment was added to property reactionType
+* Enum value View was added to property reactionType
+
+**ConversationMessagingChannel** (1 change)
+
+* Enum value Apple was added to property platform
+
+**ConversationMessagingToRecipient** (1 change)
+
+* Enum value Topic was added to property idType
+
+**MessageData** (1 change)
+
+* Enum value apple was added to property messengerType
+
+**MessagingIntegration** (1 change)
+
+* Enum value apple was added to property messengerType
+
+**ConversationThreadingWindowSetting** (1 change)
+
+* Enum value apple was added to property messengerType
+
+**FacebookPermission** (1 change)
+
+* Enum value InstagramPublic was added to property type
+
+**ParticipantBasic** (1 change)
+
+* Optional property internalMessages was added
+
+**PagedSkillCombinationListing** (1 change)
 
 * Model was added
 
-**ConversationEnrichmentSentimentV2** (1 change)
+**SkillCombinationInfo** (1 change)
 
 * Model was added
 
-**ConversationMessageContent** (1 change)
-
-* Enum value Reactions was added to property contentType
-
-**AudioConnectorIntegration** (1 change)
+**CampaignRuleExecutionSettings** (1 change)
 
 * Model was added
 
-**AudioConnectorIntegrationEntityListing** (1 change)
+**GroupUpdate** (1 change)
+
+* Optional property includeOwners was added
+
+**GroupCreate** (1 change)
+
+* Optional property includeOwners was added
+
+**QueryCriteria** (1 change)
+
+* Enum value WorkitemId was added to property criteriaKey
+
+**CriteriaItem** (1 change)
+
+* Enum value WorkitemId was added to property key
+
+**FlowExecutionDataQueryResult** (1 change)
+
+* Optional property workitemId was added
+
+**DefaultObjective** (1 change)
+
+* Enum value internalmessage was added to property mediaTypes
+
+**Objective** (1 change)
+
+* Enum value internalmessage was added to property mediaTypes
+
+**CreateObjective** (1 change)
+
+* Enum value internalmessage was added to property mediaTypes
+
+**QualityEvaluationScoreItem** (1 change)
+
+* Enum value internalmessage was added to property mediaTypes
+
+**ReplacementTerm** (1 change)
+
+* Enum value FACEBOOK was added to property type
+
+**LogCaptureUserConfiguration** (1 change)
+
+* Optional property dateStarted was added
+
+**TrustGroup** (1 change)
+
+* Optional property includeOwners was added
+
+**QueueRequest** (1 change)
+
+* Optional property cannedResponseLibraries was added
+
+**UserQueue** (1 change)
+
+* Optional property cannedResponseLibraries was added
+
+**CreateQueueRequest** (1 change)
+
+* Optional property cannedResponseLibraries was added
+
+**GraphApiSettings** (1 change)
 
 * Model was added
 
-**RecordingSettings** (2 changes)
+**Intent** (1 change)
 
-* Optional property recordingPlaybackUrlTtl was added
-* Optional property recordingBatchDownloadUrlTtl was added
+* Optional property description was added
 
-**GrammarLanguageFileMetadata** (1 change)
+**Recipient** (1 change)
 
-* Model was added
+* Enum value apple was added to property messengerType
 
-**GrammarFileUploadRequest** (1 change)
-
-* Model was added
-
-**GrammarLanguage** (1 change)
+**AlertablePresences** (1 change)
 
 * Model was added
 
-**GrammarLanguageUpdate** (1 change)
+**ValidationServiceRequest** (1 change)
 
-* Model was added
+* Optional property fileName was added
 
-**Grammar** (1 change)
+**WorkitemPagedEntityListing** (2 changes)
 
-* Model was added
-
-**GrammarListing** (1 change)
-
-* Model was added
+* Optional property total was added
+* Optional property pageCount was added
 
 
-# Point Changes (0 changes)
+# Point Changes (3 changes)
+
+**GET /api/v2/webdeployments/deployments** (1 change)
+
+* Description was changed for parameter expand
+
+**POST /api/v2/learning/assignments** (1 change)
+
+* Response 200 was changed from successful operation to Assignment created
+
+**PATCH /api/v2/learning/assignments/{assignmentId}/reschedule** (1 change)
+
+* Response 200 was changed from successful operation to Assignment rescheduled
