@@ -2386,4 +2386,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

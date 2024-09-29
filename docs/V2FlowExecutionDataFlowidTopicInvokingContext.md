@@ -11,7 +11,8 @@ This contains contextual information about an invoking entity.
 | **journeyActionMap** | [**V2FlowExecutionDataFlowidTopicJourneyActionMap**](V2FlowExecutionDataFlowidTopicJourneyActionMap) |  | [optional] |
 | **processAutomation** | [**V2FlowExecutionDataFlowidTopicProcessAutomation**](V2FlowExecutionDataFlowidTopicProcessAutomation) |  | [optional] |
 | **quality** | [**V2FlowExecutionDataFlowidTopicQuality**](V2FlowExecutionDataFlowidTopicQuality) |  | [optional] |
+| **workitem** | [**V2FlowExecutionDataFlowidTopicWorkitem**](V2FlowExecutionDataFlowidTopicWorkitem) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

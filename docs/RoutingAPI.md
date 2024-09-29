@@ -2247,7 +2247,7 @@ RoutingAPI.getRoutingMessageRecipients(messengerType: messengerType, name: name,
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram") |
+| **messengerType** | **String**| Messenger Type | [optional]<br />**Values**: sms ("sms"), facebook ("facebook"), twitter ("twitter"), whatsapp ("whatsapp"), _open ("open"), instagram ("instagram"), apple ("apple") |
 | **name** | **String**| Recipient Name | [optional] |
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
@@ -7668,4 +7668,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

@@ -167,9 +167,8 @@ Get the current Idle Token Timeout Value
 
 Wraps GET /api/v2/tokens/timeout  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* directory:organization:admin
 
 ### Example
 
@@ -295,4 +294,4 @@ TokensAPI.putTokensTimeout(body: body) { (response, error) in
 [**IdleTokenTimeout**](IdleTokenTimeout)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

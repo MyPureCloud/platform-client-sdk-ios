@@ -15,4 +15,4 @@ Effective Configuration for an ClientApp. This is comprised of the integration s
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

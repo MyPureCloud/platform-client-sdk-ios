@@ -13,4 +13,4 @@ Used to copy a VoicemailMessage to either a User or a Group
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

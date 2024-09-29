@@ -16,4 +16,4 @@ Settings for launching an instance of a bot flow.
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

@@ -19,4 +19,4 @@ A chart within the context of the elements of the the journey view
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

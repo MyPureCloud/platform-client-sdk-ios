@@ -202,7 +202,8 @@
 | **screenMonitorUserIds** | **[String]** | The list of Screen Monitor User Ids | [optional] |
 | **dashboardType** | **String** | The type of dashboard being filtered | [optional] |
 | **dashboardAccessFilter** | **String** | The type of dashboard access being filtered | [optional] |
+| **transcriptDurationMilliseconds** | [**[NumericRange]**](NumericRange) | The transcript durations in milliseconds used to filter the view | [optional] |
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

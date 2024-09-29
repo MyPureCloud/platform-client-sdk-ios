@@ -747,4 +747,4 @@ GroupsAPI.putGroup(groupId: groupId, body: body) { (response, error) in
 [**Group**](Group)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

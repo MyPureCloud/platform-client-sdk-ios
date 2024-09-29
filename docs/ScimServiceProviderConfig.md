@@ -20,4 +20,4 @@ Defines a SCIM service provider&#39;s configuration.
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

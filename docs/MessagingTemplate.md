@@ -11,4 +11,4 @@ The messaging template identifies a structured message templates supported by a 
 
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_

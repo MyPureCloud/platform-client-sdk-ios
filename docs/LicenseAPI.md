@@ -466,4 +466,4 @@ LicenseAPI.postLicenseUsers(body: body) { (response, error) in
 [**[String:JSON]**](JSON)
 
 
-_PureCloudPlatformClientV2@151.1.0_
+_PureCloudPlatformClientV2@152.0.0_
