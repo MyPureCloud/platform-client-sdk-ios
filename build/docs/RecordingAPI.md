@@ -1607,10 +1607,8 @@ Get the Recording Settings for the Organization
 
 Wraps GET /api/v2/recording/settings  
 
-Requires ANY permissions: 
+Requires NO permissions: 
 
-* recording:screenRecording:view
-* recording:settings:editScreenRecordings
 
 ### Example
 
@@ -3112,6 +3110,8 @@ Wraps PUT /api/v2/recording/settings
 Requires ANY permissions: 
 
 * recording:settings:editScreenRecordings
+* recording:settings:editRegionalStorage
+* recording:settings:editUrlExpiration
 
 ### Example
 
@@ -3199,4 +3199,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

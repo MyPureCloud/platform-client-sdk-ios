@@ -142,6 +142,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences**](WorkforceManagementAPI#patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences) | Overrides the assigned work plan for the specified agents |
 | [**patchWorkforcemanagementManagementunit**](WorkforceManagementAPI#patchWorkforcemanagementManagementunit) | Update the requested management unit |
 | [**patchWorkforcemanagementManagementunitAgents**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitAgents) | Update agent configurations |
+| [**patchWorkforcemanagementManagementunitAgentsWorkplansBulk**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitAgentsWorkplansBulk) | Updates agent work plan configuration |
 | [**patchWorkforcemanagementManagementunitTimeofflimit**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeofflimit) | Updates a time off limit object. |
 | [**patchWorkforcemanagementManagementunitTimeoffplan**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeoffplan) | Updates a time off plan |
 | [**patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](WorkforceManagementAPI#patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | Set integration status for a time off request. |
@@ -203,6 +204,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
 | [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
 | [**postWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementAPI#postWorkforcemanagementIntegrationsHriTimeofftypesJobs) | Get list of time off types configured in integration |
+| [**postWorkforcemanagementManagementunitAgentsWorkplansQuery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitAgentsWorkplansQuery) | Get agents work plans configuration |
 | [**postWorkforcemanagementManagementunitAgentschedulesSearch**](WorkforceManagementAPI#postWorkforcemanagementManagementunitAgentschedulesSearch) | Query published schedules for given given time range for set of users |
 | [**postWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementAPI#postWorkforcemanagementManagementunitHistoricaladherencequery) | Request a historical adherence report |
 | [**postWorkforcemanagementManagementunitMove**](WorkforceManagementAPI#postWorkforcemanagementManagementunitMove) | Move the requested management unit to a new business unit |
@@ -7768,6 +7770,58 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgents(managementUn
 `nil` (empty response body)
 
 
+## patchWorkforcemanagementManagementunitAgentsWorkplansBulk
+
+
+
+> [UpdateMuAgentWorkPlansBatchResponse](UpdateMuAgentWorkPlansBatchResponse) patchWorkforcemanagementManagementunitAgentsWorkplansBulk(managementUnitId, body)
+
+Updates agent work plan configuration
+
+
+
+Wraps PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk  
+
+Requires ANY permissions: 
+
+* wfm:workPlan:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let body: UpdateMuAgentWorkPlansBatchRequest = new UpdateMuAgentWorkPlansBatchRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgentsWorkplansBulk(managementUnitId: managementUnitId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.patchWorkforcemanagementManagementunitAgentsWorkplansBulk was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **body** | [**UpdateMuAgentWorkPlansBatchRequest**](UpdateMuAgentWorkPlansBatchRequest)| body | [optional] |
+
+
+### Return type
+
+[**UpdateMuAgentWorkPlansBatchResponse**](UpdateMuAgentWorkPlansBatchResponse)
+
+
 ## patchWorkforcemanagementManagementunitTimeofflimit
 
 
@@ -11022,6 +11076,60 @@ WorkforceManagementAPI.postWorkforcemanagementIntegrationsHriTimeofftypesJobs(hr
 [**HrisTimeOffTypesResponse**](HrisTimeOffTypesResponse)
 
 
+## postWorkforcemanagementManagementunitAgentsWorkplansQuery
+
+
+
+> [AgentsWorkPlansResponse](AgentsWorkPlansResponse) postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId, forceDownloadService, body)
+
+Get agents work plans configuration
+
+
+
+Wraps POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query  
+
+Requires ANY permissions: 
+
+* wfm:workPlan:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
+let body: GetAgentsWorkPlansRequest = new GetAgentsWorkPlansRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementManagementunitAgentsWorkplansQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
+| **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
+| **body** | [**GetAgentsWorkPlansRequest**](GetAgentsWorkPlansRequest)| body | [optional] |
+
+
+### Return type
+
+[**AgentsWorkPlansResponse**](AgentsWorkPlansResponse)
+
+
 ## postWorkforcemanagementManagementunitAgentschedulesSearch
 
 
@@ -12995,4 +13103,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

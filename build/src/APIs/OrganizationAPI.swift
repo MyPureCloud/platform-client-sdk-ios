@@ -583,6 +583,7 @@ open class OrganizationAPI {
      - examples: [{contentType=application/json, example={
   "url" : "url",
   "namespaces" : [ {
+    "name" : "name",
     "friendlyName" : "friendlyName",
     "limits" : [ {
       "trackable" : true,
@@ -600,6 +601,7 @@ open class OrganizationAPI {
       "configurable" : true
     } ]
   }, {
+    "name" : "name",
     "friendlyName" : "friendlyName",
     "limits" : [ {
       "trackable" : true,
@@ -664,6 +666,7 @@ open class OrganizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "namespaces" : [ {
+    "name" : "name",
     "friendlyName" : "friendlyName",
     "limits" : [ {
       "resource" : "resource",
@@ -677,6 +680,7 @@ open class OrganizationAPI {
       "key" : "key"
     } ]
   }, {
+    "name" : "name",
     "friendlyName" : "friendlyName",
     "limits" : [ {
       "resource" : "resource",

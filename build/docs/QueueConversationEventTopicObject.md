@@ -10,4 +10,4 @@ The number of peer participants from the perspective of the participant in the c
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

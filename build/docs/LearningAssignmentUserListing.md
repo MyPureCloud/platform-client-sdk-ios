@@ -21,4 +21,4 @@ List of users matching the learning module rule
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

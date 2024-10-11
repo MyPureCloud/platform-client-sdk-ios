@@ -5539,6 +5539,7 @@ open class IntegrationsAPI {
   "pbxPermission" : "pbxPermission",
   "userPermissions" : [ "userPermissions", "userPermissions" ],
   "oauthScopes" : [ "oauthScopes", "oauthScopes" ],
+  "includeBadge" : true,
   "i10n" : {
     "key" : {
       "name" : "name"
@@ -5634,6 +5635,7 @@ open class IntegrationsAPI {
     "pbxPermission" : "pbxPermission",
     "userPermissions" : [ "userPermissions", "userPermissions" ],
     "oauthScopes" : [ "oauthScopes", "oauthScopes" ],
+    "includeBadge" : true,
     "i10n" : {
       "key" : {
         "name" : "name"
@@ -5656,6 +5658,7 @@ open class IntegrationsAPI {
     "pbxPermission" : "pbxPermission",
     "userPermissions" : [ "userPermissions", "userPermissions" ],
     "oauthScopes" : [ "oauthScopes", "oauthScopes" ],
+    "includeBadge" : true,
     "i10n" : {
       "key" : {
         "name" : "name"

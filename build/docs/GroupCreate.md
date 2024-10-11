@@ -20,9 +20,10 @@
 | **visibility** | **String** | Who can view this group | |
 | **rolesEnabled** | **Bool** | Allow roles to be assigned to this group | [optional] |
 | **includeOwners** | **Bool** | Allow owners to be included as members of the group | [optional] |
+| **callsEnabled** | **Bool** | Allow calls to be placed to this group. | [optional] |
 | **ownerIds** | **[String]** | Owners of the group | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

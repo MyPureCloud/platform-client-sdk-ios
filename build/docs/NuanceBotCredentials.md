@@ -14,4 +14,4 @@ Model for a Nuance bot credentials
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

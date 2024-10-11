@@ -689,6 +689,7 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -698,6 +699,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -707,6 +709,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -719,6 +722,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -728,6 +732,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -743,6 +748,7 @@ open class LanguageUnderstandingAPI {
   }, {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -752,6 +758,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -761,6 +768,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -773,6 +781,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -782,6 +791,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -983,6 +993,7 @@ open class LanguageUnderstandingAPI {
     "intents" : [ {
       "utterances" : [ {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -992,6 +1003,7 @@ open class LanguageUnderstandingAPI {
         } ]
       }, {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1001,6 +1013,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "description" : "description",
       "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
@@ -1013,6 +1026,7 @@ open class LanguageUnderstandingAPI {
         "key" : {
           "utterances" : [ {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1022,6 +1036,7 @@ open class LanguageUnderstandingAPI {
             } ]
           }, {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1037,6 +1052,7 @@ open class LanguageUnderstandingAPI {
     }, {
       "utterances" : [ {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1046,6 +1062,7 @@ open class LanguageUnderstandingAPI {
         } ]
       }, {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1055,6 +1072,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "description" : "description",
       "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
@@ -1067,6 +1085,7 @@ open class LanguageUnderstandingAPI {
         "key" : {
           "utterances" : [ {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1076,6 +1095,7 @@ open class LanguageUnderstandingAPI {
             } ]
           }, {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1121,6 +1141,7 @@ open class LanguageUnderstandingAPI {
     "intents" : [ {
       "utterances" : [ {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1130,6 +1151,7 @@ open class LanguageUnderstandingAPI {
         } ]
       }, {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1139,6 +1161,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "description" : "description",
       "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
@@ -1151,6 +1174,7 @@ open class LanguageUnderstandingAPI {
         "key" : {
           "utterances" : [ {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1160,6 +1184,7 @@ open class LanguageUnderstandingAPI {
             } ]
           }, {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1175,6 +1200,7 @@ open class LanguageUnderstandingAPI {
     }, {
       "utterances" : [ {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1184,6 +1210,7 @@ open class LanguageUnderstandingAPI {
         } ]
       }, {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -1193,6 +1220,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "description" : "description",
       "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
@@ -1205,6 +1233,7 @@ open class LanguageUnderstandingAPI {
         "key" : {
           "utterances" : [ {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -1214,6 +1243,7 @@ open class LanguageUnderstandingAPI {
             } ]
           }, {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -2659,6 +2689,7 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2668,6 +2699,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2677,6 +2709,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -2689,6 +2722,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -2698,6 +2732,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -2713,6 +2748,7 @@ open class LanguageUnderstandingAPI {
   }, {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2722,6 +2758,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -2731,6 +2768,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -2743,6 +2781,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -2752,6 +2791,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -2859,6 +2899,7 @@ open class LanguageUnderstandingAPI {
     "intents" : [ {
       "utterances" : [ {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2868,6 +2909,7 @@ open class LanguageUnderstandingAPI {
         } ]
       }, {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2877,6 +2919,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "description" : "description",
       "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
@@ -2889,6 +2932,7 @@ open class LanguageUnderstandingAPI {
         "key" : {
           "utterances" : [ {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -2898,6 +2942,7 @@ open class LanguageUnderstandingAPI {
             } ]
           }, {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -2913,6 +2958,7 @@ open class LanguageUnderstandingAPI {
     }, {
       "utterances" : [ {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2922,6 +2968,7 @@ open class LanguageUnderstandingAPI {
         } ]
       }, {
         "id" : "id",
+        "source" : "Generated",
         "segments" : [ {
           "text" : "text",
           "entity" : "{}"
@@ -2931,6 +2978,7 @@ open class LanguageUnderstandingAPI {
         } ]
       } ],
       "name" : "name",
+      "description" : "description",
       "id" : "id",
       "entityTypeBindings" : [ {
         "entityType" : "entityType",
@@ -2943,6 +2991,7 @@ open class LanguageUnderstandingAPI {
         "key" : {
           "utterances" : [ {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -2952,6 +3001,7 @@ open class LanguageUnderstandingAPI {
             } ]
           }, {
             "id" : "id",
+            "source" : "Generated",
             "segments" : [ {
               "text" : "text",
               "entity" : "{}"
@@ -3061,6 +3111,7 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3070,6 +3121,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3079,6 +3131,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -3091,6 +3144,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3100,6 +3154,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3115,6 +3170,7 @@ open class LanguageUnderstandingAPI {
   }, {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3124,6 +3180,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3133,6 +3190,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -3145,6 +3203,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3154,6 +3213,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3574,6 +3634,7 @@ open class LanguageUnderstandingAPI {
   "intents" : [ {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3583,6 +3644,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3592,6 +3654,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -3604,6 +3667,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3613,6 +3677,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3628,6 +3693,7 @@ open class LanguageUnderstandingAPI {
   }, {
     "utterances" : [ {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3637,6 +3703,7 @@ open class LanguageUnderstandingAPI {
       } ]
     }, {
       "id" : "id",
+      "source" : "Generated",
       "segments" : [ {
         "text" : "text",
         "entity" : "{}"
@@ -3646,6 +3713,7 @@ open class LanguageUnderstandingAPI {
       } ]
     } ],
     "name" : "name",
+    "description" : "description",
     "id" : "id",
     "entityTypeBindings" : [ {
       "entityType" : "entityType",
@@ -3658,6 +3726,7 @@ open class LanguageUnderstandingAPI {
       "key" : {
         "utterances" : [ {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"
@@ -3667,6 +3736,7 @@ open class LanguageUnderstandingAPI {
           } ]
         }, {
           "id" : "id",
+          "source" : "Generated",
           "segments" : [ {
             "text" : "text",
             "entity" : "{}"

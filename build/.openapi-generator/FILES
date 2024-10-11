@@ -158,10 +158,12 @@ docs/AgentWorkPlanBiddingPreferenceResponse.md
 docs/AgentWorkPlanBids.md
 docs/AgentWorkPlanListResponse.md
 docs/AgentWorkPlanShift.md
+docs/AgentWorkPlans.md
 docs/AgentlessEmailSendRequestDto.md
 docs/AgentlessEmailSendResponseDto.md
 docs/AgentsBidAssignedWorkPlanOverrideRequest.md
 docs/AgentsIntegrationsListing.md
+docs/AgentsWorkPlansResponse.md
 docs/AggregateMetricData.md
 docs/AggregateViewData.md
 docs/AggregationRange.md
@@ -868,6 +870,7 @@ docs/ConversationCallEventTopicJourneyActionMap.md
 docs/ConversationCallEventTopicJourneyContext.md
 docs/ConversationCallEventTopicJourneyCustomer.md
 docs/ConversationCallEventTopicJourneyCustomerSession.md
+docs/ConversationCallEventTopicLimit.md
 docs/ConversationCallEventTopicQueueMediaSettings.md
 docs/ConversationCallEventTopicScoredAgent.md
 docs/ConversationCallEventTopicUriReference.md
@@ -883,6 +886,7 @@ docs/ConversationCallbackEventTopicJourneyActionMap.md
 docs/ConversationCallbackEventTopicJourneyContext.md
 docs/ConversationCallbackEventTopicJourneyCustomer.md
 docs/ConversationCallbackEventTopicJourneyCustomerSession.md
+docs/ConversationCallbackEventTopicLimit.md
 docs/ConversationCallbackEventTopicPhoneNumberColumn.md
 docs/ConversationCallbackEventTopicQueueMediaSettings.md
 docs/ConversationCallbackEventTopicScoredAgent.md
@@ -904,6 +908,7 @@ docs/ConversationChatEventTopicJourneyActionMap.md
 docs/ConversationChatEventTopicJourneyContext.md
 docs/ConversationChatEventTopicJourneyCustomer.md
 docs/ConversationChatEventTopicJourneyCustomerSession.md
+docs/ConversationChatEventTopicLimit.md
 docs/ConversationChatEventTopicQueueMediaSettings.md
 docs/ConversationChatEventTopicScoredAgent.md
 docs/ConversationChatEventTopicUriReference.md
@@ -919,6 +924,7 @@ docs/ConversationCobrowseEventTopicJourneyActionMap.md
 docs/ConversationCobrowseEventTopicJourneyContext.md
 docs/ConversationCobrowseEventTopicJourneyCustomer.md
 docs/ConversationCobrowseEventTopicJourneyCustomerSession.md
+docs/ConversationCobrowseEventTopicLimit.md
 docs/ConversationCobrowseEventTopicQueueMediaSettings.md
 docs/ConversationCobrowseEventTopicScoredAgent.md
 docs/ConversationCobrowseEventTopicUriReference.md
@@ -953,6 +959,7 @@ docs/ConversationEmailEventTopicJourneyActionMap.md
 docs/ConversationEmailEventTopicJourneyContext.md
 docs/ConversationEmailEventTopicJourneyCustomer.md
 docs/ConversationEmailEventTopicJourneyCustomerSession.md
+docs/ConversationEmailEventTopicLimit.md
 docs/ConversationEmailEventTopicQueueMediaSettings.md
 docs/ConversationEmailEventTopicScoredAgent.md
 docs/ConversationEmailEventTopicUriReference.md
@@ -981,6 +988,8 @@ docs/ConversationEventTopicEmail.md
 docs/ConversationEventTopicErrorDetails.md
 docs/ConversationEventTopicFaxStatus.md
 docs/ConversationEventTopicInitiator.md
+docs/ConversationEventTopicInternalMessage.md
+docs/ConversationEventTopicInternalMessageDetails.md
 docs/ConversationEventTopicJourneyAction.md
 docs/ConversationEventTopicJourneyActionMap.md
 docs/ConversationEventTopicJourneyContext.md
@@ -1020,6 +1029,7 @@ docs/ConversationMessageEventTopicJourneyActionMap.md
 docs/ConversationMessageEventTopicJourneyContext.md
 docs/ConversationMessageEventTopicJourneyCustomer.md
 docs/ConversationMessageEventTopicJourneyCustomerSession.md
+docs/ConversationMessageEventTopicLimit.md
 docs/ConversationMessageEventTopicMessageConversation.md
 docs/ConversationMessageEventTopicMessageDetails.md
 docs/ConversationMessageEventTopicMessageMedia.md
@@ -1066,6 +1076,7 @@ docs/ConversationScreenShareEventTopicJourneyActionMap.md
 docs/ConversationScreenShareEventTopicJourneyContext.md
 docs/ConversationScreenShareEventTopicJourneyCustomer.md
 docs/ConversationScreenShareEventTopicJourneyCustomerSession.md
+docs/ConversationScreenShareEventTopicLimit.md
 docs/ConversationScreenShareEventTopicQueueMediaSettings.md
 docs/ConversationScreenShareEventTopicScoredAgent.md
 docs/ConversationScreenShareEventTopicScreenShareConversation.md
@@ -1081,6 +1092,7 @@ docs/ConversationSocialExpressionEventTopicJourneyActionMap.md
 docs/ConversationSocialExpressionEventTopicJourneyContext.md
 docs/ConversationSocialExpressionEventTopicJourneyCustomer.md
 docs/ConversationSocialExpressionEventTopicJourneyCustomerSession.md
+docs/ConversationSocialExpressionEventTopicLimit.md
 docs/ConversationSocialExpressionEventTopicQueueMediaSettings.md
 docs/ConversationSocialExpressionEventTopicScoredAgent.md
 docs/ConversationSocialExpressionEventTopicSocialConversation.md
@@ -1101,6 +1113,7 @@ docs/ConversationVideoEventTopicJourneyActionMap.md
 docs/ConversationVideoEventTopicJourneyContext.md
 docs/ConversationVideoEventTopicJourneyCustomer.md
 docs/ConversationVideoEventTopicJourneyCustomerSession.md
+docs/ConversationVideoEventTopicLimit.md
 docs/ConversationVideoEventTopicQueueMediaSettings.md
 docs/ConversationVideoEventTopicScoredAgent.md
 docs/ConversationVideoEventTopicUriReference.md
@@ -1390,6 +1403,7 @@ docs/DisconnectReason.md
 docs/Disposition.md
 docs/DispositionParameters.md
 docs/Division.md
+docs/DivisionEntityRef.md
 docs/DivisionReference.md
 docs/DivsPermittedEntityListing.md
 docs/DncList.md
@@ -1736,6 +1750,7 @@ docs/ExternalContactsRelationshipChangedTopicRelationship.md
 docs/ExternalContactsRelationshipChangedTopicTicker.md
 docs/ExternalContactsRelationshipChangedTopicTwitterId.md
 docs/ExternalContactsRelationshipChangedTopicUser.md
+docs/ExternalContactsSettings.md
 docs/ExternalContactsUnresolvedContactChangedTopicContact.md
 docs/ExternalContactsUnresolvedContactChangedTopicContactAddress.md
 docs/ExternalContactsUnresolvedContactChangedTopicDataSchema.md
@@ -1947,6 +1962,7 @@ docs/GeolocationAPI.json
 docs/GeolocationAPI.md
 docs/GeolocationEventGeolocation.md
 docs/GeolocationSettings.md
+docs/GetAgentsWorkPlansRequest.md
 docs/GetAlertQuery.md
 docs/GetCelebrationListing.md
 docs/GetFlowExecutionDataJobResult.md
@@ -2033,6 +2049,7 @@ docs/IdentityProviderAPI.json
 docs/IdentityProviderAPI.md
 docs/IdentityProviderEntityListing.md
 docs/IdentityResolutionConfig.md
+docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
@@ -2684,6 +2701,7 @@ docs/MoveAgentsResponse.md
 docs/MoveManagementUnitRequest.md
 docs/MoveManagementUnitResponse.md
 docs/MuAgentQueueTimeRequest.md
+docs/MuAgentsWorkPlansResult.md
 docs/MuRescheduleResultWrapper.md
 docs/MutableUserPresence.md
 docs/MuteSnoozeFields.md
@@ -2895,6 +2913,7 @@ docs/PagedSkillCombinationListing.md
 docs/PagelessDomainEntityListingEvaluationVersion.md
 docs/PagelessEntityListing.md
 docs/PagingSpec.md
+docs/ParkingStateRequest.md
 docs/ParsedCertificate.md
 docs/Participant.md
 docs/ParticipantAttributes.md
@@ -3098,6 +3117,7 @@ docs/QueueConversationCallEventTopicJourneyActionMap.md
 docs/QueueConversationCallEventTopicJourneyContext.md
 docs/QueueConversationCallEventTopicJourneyCustomer.md
 docs/QueueConversationCallEventTopicJourneyCustomerSession.md
+docs/QueueConversationCallEventTopicLimit.md
 docs/QueueConversationCallEventTopicQueueMediaSettings.md
 docs/QueueConversationCallEventTopicScoredAgent.md
 docs/QueueConversationCallEventTopicUriReference.md
@@ -3113,6 +3133,7 @@ docs/QueueConversationCallbackEventTopicJourneyActionMap.md
 docs/QueueConversationCallbackEventTopicJourneyContext.md
 docs/QueueConversationCallbackEventTopicJourneyCustomer.md
 docs/QueueConversationCallbackEventTopicJourneyCustomerSession.md
+docs/QueueConversationCallbackEventTopicLimit.md
 docs/QueueConversationCallbackEventTopicPhoneNumberColumn.md
 docs/QueueConversationCallbackEventTopicQueueMediaSettings.md
 docs/QueueConversationCallbackEventTopicScoredAgent.md
@@ -3129,6 +3150,7 @@ docs/QueueConversationChatEventTopicJourneyActionMap.md
 docs/QueueConversationChatEventTopicJourneyContext.md
 docs/QueueConversationChatEventTopicJourneyCustomer.md
 docs/QueueConversationChatEventTopicJourneyCustomerSession.md
+docs/QueueConversationChatEventTopicLimit.md
 docs/QueueConversationChatEventTopicQueueMediaSettings.md
 docs/QueueConversationChatEventTopicScoredAgent.md
 docs/QueueConversationChatEventTopicUriReference.md
@@ -3143,6 +3165,7 @@ docs/QueueConversationCobrowseEventTopicJourneyActionMap.md
 docs/QueueConversationCobrowseEventTopicJourneyContext.md
 docs/QueueConversationCobrowseEventTopicJourneyCustomer.md
 docs/QueueConversationCobrowseEventTopicJourneyCustomerSession.md
+docs/QueueConversationCobrowseEventTopicLimit.md
 docs/QueueConversationCobrowseEventTopicQueueMediaSettings.md
 docs/QueueConversationCobrowseEventTopicScoredAgent.md
 docs/QueueConversationCobrowseEventTopicUriReference.md
@@ -3158,6 +3181,7 @@ docs/QueueConversationEmailEventTopicJourneyActionMap.md
 docs/QueueConversationEmailEventTopicJourneyContext.md
 docs/QueueConversationEmailEventTopicJourneyCustomer.md
 docs/QueueConversationEmailEventTopicJourneyCustomerSession.md
+docs/QueueConversationEmailEventTopicLimit.md
 docs/QueueConversationEmailEventTopicQueueMediaSettings.md
 docs/QueueConversationEmailEventTopicScoredAgent.md
 docs/QueueConversationEmailEventTopicUriReference.md
@@ -3178,6 +3202,8 @@ docs/QueueConversationEventTopicEmail.md
 docs/QueueConversationEventTopicErrorDetails.md
 docs/QueueConversationEventTopicFaxStatus.md
 docs/QueueConversationEventTopicInitiator.md
+docs/QueueConversationEventTopicInternalMessage.md
+docs/QueueConversationEventTopicInternalMessageDetails.md
 docs/QueueConversationEventTopicJourneyAction.md
 docs/QueueConversationEventTopicJourneyActionMap.md
 docs/QueueConversationEventTopicJourneyContext.md
@@ -3213,6 +3239,7 @@ docs/QueueConversationMessageEventTopicJourneyActionMap.md
 docs/QueueConversationMessageEventTopicJourneyContext.md
 docs/QueueConversationMessageEventTopicJourneyCustomer.md
 docs/QueueConversationMessageEventTopicJourneyCustomerSession.md
+docs/QueueConversationMessageEventTopicLimit.md
 docs/QueueConversationMessageEventTopicMessageConversation.md
 docs/QueueConversationMessageEventTopicMessageDetails.md
 docs/QueueConversationMessageEventTopicMessageMedia.md
@@ -3233,6 +3260,7 @@ docs/QueueConversationScreenShareEventTopicJourneyActionMap.md
 docs/QueueConversationScreenShareEventTopicJourneyContext.md
 docs/QueueConversationScreenShareEventTopicJourneyCustomer.md
 docs/QueueConversationScreenShareEventTopicJourneyCustomerSession.md
+docs/QueueConversationScreenShareEventTopicLimit.md
 docs/QueueConversationScreenShareEventTopicQueueMediaSettings.md
 docs/QueueConversationScreenShareEventTopicScoredAgent.md
 docs/QueueConversationScreenShareEventTopicScreenShareConversation.md
@@ -3255,6 +3283,8 @@ docs/QueueConversationSocialExpressionEventTopicEmail.md
 docs/QueueConversationSocialExpressionEventTopicErrorDetails.md
 docs/QueueConversationSocialExpressionEventTopicFaxStatus.md
 docs/QueueConversationSocialExpressionEventTopicInitiator.md
+docs/QueueConversationSocialExpressionEventTopicInternalMessage.md
+docs/QueueConversationSocialExpressionEventTopicInternalMessageDetails.md
 docs/QueueConversationSocialExpressionEventTopicJourneyAction.md
 docs/QueueConversationSocialExpressionEventTopicJourneyActionMap.md
 docs/QueueConversationSocialExpressionEventTopicJourneyContext.md
@@ -3297,6 +3327,8 @@ docs/QueueConversationVideoEventTopicEmail.md
 docs/QueueConversationVideoEventTopicErrorDetails.md
 docs/QueueConversationVideoEventTopicFaxStatus.md
 docs/QueueConversationVideoEventTopicInitiator.md
+docs/QueueConversationVideoEventTopicInternalMessage.md
+docs/QueueConversationVideoEventTopicInternalMessageDetails.md
 docs/QueueConversationVideoEventTopicJourneyAction.md
 docs/QueueConversationVideoEventTopicJourneyActionMap.md
 docs/QueueConversationVideoEventTopicJourneyContext.md
@@ -3708,6 +3740,7 @@ docs/SmsPhoneNumberRef.md
 docs/SmsProvisioningStatus.md
 docs/SocialExpression.md
 docs/SocialHandle.md
+docs/SocialKeyword.md
 docs/SortItem.md
 docs/Source.md
 docs/SourceConfiguration.md
@@ -4067,6 +4100,10 @@ docs/UpdateContactColumnActionSettings.md
 docs/UpdateDraftInput.md
 docs/UpdateManagementUnitRequest.md
 docs/UpdateMuAgentRequest.md
+docs/UpdateMuAgentWorkPlanFailureResponse.md
+docs/UpdateMuAgentWorkPlanRequest.md
+docs/UpdateMuAgentWorkPlansBatchRequest.md
+docs/UpdateMuAgentWorkPlansBatchResponse.md
 docs/UpdateMuAgentsRequest.md
 docs/UpdateNotificationResponse.md
 docs/UpdateNotificationsRequest.md
@@ -4152,6 +4189,7 @@ docs/UserLicenses.md
 docs/UserLicensesEntityListing.md
 docs/UserListScheduleRequestBody.md
 docs/UserMe.md
+docs/UserNextActivityReminder.md
 docs/UserObservationDataContainer.md
 docs/UserObservationQuery.md
 docs/UserObservationQueryClause.md
@@ -4269,6 +4307,8 @@ docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
+docs/V2WebMessagingUndeliveredMessageTopicMessage.md
+docs/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.md
 docs/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.md
 docs/V2WemEngagementCelebrationUpdatesTopicSourceEntity.md
 docs/V2WemEngagementCelebrationUpdatesTopicUserId.md
@@ -4603,6 +4643,8 @@ docs/WorkPlanConstraintMessage.md
 docs/WorkPlanListItemResponse.md
 docs/WorkPlanListResponse.md
 docs/WorkPlanOverride.md
+docs/WorkPlanOverrideListWrapperWorkPlanOverrideRequest.md
+docs/WorkPlanOverrideRequest.md
 docs/WorkPlanPatternRequest.md
 docs/WorkPlanPatternResponse.md
 docs/WorkPlanReference.md
@@ -4636,6 +4678,16 @@ docs/WorkitemCreate.md
 docs/WorkitemFilter.md
 docs/WorkitemFlowReference.md
 docs/WorkitemManualAssign.md
+docs/WorkitemOnAttributeChangeCondition.md
+docs/WorkitemOnAttributeChangeConditionUpdate.md
+docs/WorkitemOnAttributeChangeRule.md
+docs/WorkitemOnAttributeChangeRuleCreate.md
+docs/WorkitemOnAttributeChangeRuleListing.md
+docs/WorkitemOnAttributeChangeRuleUpdate.md
+docs/WorkitemOnCreateRule.md
+docs/WorkitemOnCreateRuleCreate.md
+docs/WorkitemOnCreateRuleListing.md
+docs/WorkitemOnCreateRuleUpdate.md
 docs/WorkitemPagedEntityListing.md
 docs/WorkitemQueryJobCreate.md
 docs/WorkitemQueryJobError.md
@@ -4644,6 +4696,7 @@ docs/WorkitemQueryJobResponse.md
 docs/WorkitemQueryJobSort.md
 docs/WorkitemQueueReference.md
 docs/WorkitemReference.md
+docs/WorkitemRuleAction.md
 docs/WorkitemRuleSettings.md
 docs/WorkitemSchema.md
 docs/WorkitemScoredAgent.md
@@ -4922,6 +4975,8 @@ docs/deleteTaskmanagementWorkbin-example.txt
 docs/deleteTaskmanagementWorkitem-example.txt
 docs/deleteTaskmanagementWorkitemsSchema-example.txt
 docs/deleteTaskmanagementWorktype-example.txt
+docs/deleteTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
+docs/deleteTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/deleteTaskmanagementWorktypeStatus-example.txt
 docs/deleteTeam-example.txt
 docs/deleteTeamMembers-example.txt
@@ -5452,8 +5507,11 @@ docs/getJourneySessionEvents-example.txt
 docs/getJourneySessionOutcomescores-example.txt
 docs/getJourneyView-example.txt
 docs/getJourneyViewVersion-example.txt
+docs/getJourneyViewVersionChart-example.txt
+docs/getJourneyViewVersionChartVersion-example.txt
 docs/getJourneyViewVersionJob-example.txt
 docs/getJourneyViewVersionJobResults-example.txt
+docs/getJourneyViewVersionJobResultsChart-example.txt
 docs/getJourneyViewVersionJobsLatest-example.txt
 docs/getJourneyViews-example.txt
 docs/getJourneyViewsJobs-example.txt
@@ -5863,6 +5921,10 @@ docs/getTaskmanagementWorkitemsSchemaVersion-example.txt
 docs/getTaskmanagementWorkitemsSchemaVersions-example.txt
 docs/getTaskmanagementWorkitemsSchemas-example.txt
 docs/getTaskmanagementWorktype-example.txt
+docs/getTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
+docs/getTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
+docs/getTaskmanagementWorktypeFlowsOncreateRule-example.txt
+docs/getTaskmanagementWorktypeFlowsOncreateRules-example.txt
 docs/getTaskmanagementWorktypeStatus-example.txt
 docs/getTaskmanagementWorktypeStatuses-example.txt
 docs/getTeam-example.txt
@@ -6181,6 +6243,7 @@ docs/patchConversationsEmailMessagesDraft-example.txt
 docs/patchConversationsEmailParticipant-example.txt
 docs/patchConversationsEmailParticipantAttributes-example.txt
 docs/patchConversationsEmailParticipantCommunication-example.txt
+docs/patchConversationsEmailParticipantParkingstate-example.txt
 docs/patchConversationsMessage-example.txt
 docs/patchConversationsMessageParticipant-example.txt
 docs/patchConversationsMessageParticipantAttributes-example.txt
@@ -6208,6 +6271,7 @@ docs/patchJourneyActiontarget-example.txt
 docs/patchJourneyActiontemplate-example.txt
 docs/patchJourneyOutcome-example.txt
 docs/patchJourneySegment-example.txt
+docs/patchJourneyViewVersionJob-example.txt
 docs/patchKnowledgeGuestSessionDocumentsSearchSearchId-example.txt
 docs/patchKnowledgeKnowledgebase-example.txt
 docs/patchKnowledgeKnowledgebaseCategory-example.txt
@@ -6265,6 +6329,8 @@ docs/patchTaskmanagementWorkitemAssignment-example.txt
 docs/patchTaskmanagementWorkitemUserWrapups-example.txt
 docs/patchTaskmanagementWorkitemUsersMeWrapups-example.txt
 docs/patchTaskmanagementWorktype-example.txt
+docs/patchTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
+docs/patchTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/patchTaskmanagementWorktypeStatus-example.txt
 docs/patchTeam-example.txt
 docs/patchTelephonyProvidersEdgesSiteSiteconnections-example.txt
@@ -6309,6 +6375,7 @@ docs/patchWorkforcemanagementBusinessunitWorkplanbidGroup-example.txt
 docs/patchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences-example.txt
 docs/patchWorkforcemanagementManagementunit-example.txt
 docs/patchWorkforcemanagementManagementunitAgents-example.txt
+docs/patchWorkforcemanagementManagementunitAgentsWorkplansBulk-example.txt
 docs/patchWorkforcemanagementManagementunitTimeofflimit-example.txt
 docs/patchWorkforcemanagementManagementunitTimeoffplan-example.txt
 docs/patchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus-example.txt
@@ -6807,6 +6874,8 @@ docs/postTaskmanagementWorkitemTerminate-example.txt
 docs/postTaskmanagementWorkitems-example.txt
 docs/postTaskmanagementWorkitemsQueryJobs-example.txt
 docs/postTaskmanagementWorkitemsSchemas-example.txt
+docs/postTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
+docs/postTaskmanagementWorktypeFlowsOncreateRules-example.txt
 docs/postTaskmanagementWorktypeStatuses-example.txt
 docs/postTaskmanagementWorktypes-example.txt
 docs/postTaskmanagementWorktypesQuery-example.txt
@@ -6926,6 +6995,7 @@ docs/postWorkforcemanagementCalendarUrlIcs-example.txt
 docs/postWorkforcemanagementHistoricaldataDeletejob-example.txt
 docs/postWorkforcemanagementHistoricaldataValidate-example.txt
 docs/postWorkforcemanagementIntegrationsHriTimeofftypesJobs-example.txt
+docs/postWorkforcemanagementManagementunitAgentsWorkplansQuery-example.txt
 docs/postWorkforcemanagementManagementunitAgentschedulesSearch-example.txt
 docs/postWorkforcemanagementManagementunitHistoricaladherencequery-example.txt
 docs/postWorkforcemanagementManagementunitMove-example.txt
@@ -7049,6 +7119,7 @@ docs/putIntegrationsCredential-example.txt
 docs/putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings-example.txt
 docs/putIntegrationsSpeechTtsSettings-example.txt
 docs/putIntegrationsUnifiedcommunicationThirdpartypresences-example.txt
+docs/putJourneyViewVersion-example.txt
 docs/putLanguageunderstandingDomainVersion-example.txt
 docs/putLearningModule-example.txt
 docs/putLearningModulePreview-example.txt
@@ -7420,10 +7491,12 @@ src/Models/AgentWorkPlanBiddingPreferenceResponse.swift
 src/Models/AgentWorkPlanBids.swift
 src/Models/AgentWorkPlanListResponse.swift
 src/Models/AgentWorkPlanShift.swift
+src/Models/AgentWorkPlans.swift
 src/Models/AgentlessEmailSendRequestDto.swift
 src/Models/AgentlessEmailSendResponseDto.swift
 src/Models/AgentsBidAssignedWorkPlanOverrideRequest.swift
 src/Models/AgentsIntegrationsListing.swift
+src/Models/AgentsWorkPlansResponse.swift
 src/Models/AggregateMetricData.swift
 src/Models/AggregateViewData.swift
 src/Models/AggregationRange.swift
@@ -8110,6 +8183,7 @@ src/Models/ConversationCallEventTopicJourneyActionMap.swift
 src/Models/ConversationCallEventTopicJourneyContext.swift
 src/Models/ConversationCallEventTopicJourneyCustomer.swift
 src/Models/ConversationCallEventTopicJourneyCustomerSession.swift
+src/Models/ConversationCallEventTopicLimit.swift
 src/Models/ConversationCallEventTopicQueueMediaSettings.swift
 src/Models/ConversationCallEventTopicScoredAgent.swift
 src/Models/ConversationCallEventTopicUriReference.swift
@@ -8125,6 +8199,7 @@ src/Models/ConversationCallbackEventTopicJourneyActionMap.swift
 src/Models/ConversationCallbackEventTopicJourneyContext.swift
 src/Models/ConversationCallbackEventTopicJourneyCustomer.swift
 src/Models/ConversationCallbackEventTopicJourneyCustomerSession.swift
+src/Models/ConversationCallbackEventTopicLimit.swift
 src/Models/ConversationCallbackEventTopicPhoneNumberColumn.swift
 src/Models/ConversationCallbackEventTopicQueueMediaSettings.swift
 src/Models/ConversationCallbackEventTopicScoredAgent.swift
@@ -8146,6 +8221,7 @@ src/Models/ConversationChatEventTopicJourneyActionMap.swift
 src/Models/ConversationChatEventTopicJourneyContext.swift
 src/Models/ConversationChatEventTopicJourneyCustomer.swift
 src/Models/ConversationChatEventTopicJourneyCustomerSession.swift
+src/Models/ConversationChatEventTopicLimit.swift
 src/Models/ConversationChatEventTopicQueueMediaSettings.swift
 src/Models/ConversationChatEventTopicScoredAgent.swift
 src/Models/ConversationChatEventTopicUriReference.swift
@@ -8161,6 +8237,7 @@ src/Models/ConversationCobrowseEventTopicJourneyActionMap.swift
 src/Models/ConversationCobrowseEventTopicJourneyContext.swift
 src/Models/ConversationCobrowseEventTopicJourneyCustomer.swift
 src/Models/ConversationCobrowseEventTopicJourneyCustomerSession.swift
+src/Models/ConversationCobrowseEventTopicLimit.swift
 src/Models/ConversationCobrowseEventTopicQueueMediaSettings.swift
 src/Models/ConversationCobrowseEventTopicScoredAgent.swift
 src/Models/ConversationCobrowseEventTopicUriReference.swift
@@ -8195,6 +8272,7 @@ src/Models/ConversationEmailEventTopicJourneyActionMap.swift
 src/Models/ConversationEmailEventTopicJourneyContext.swift
 src/Models/ConversationEmailEventTopicJourneyCustomer.swift
 src/Models/ConversationEmailEventTopicJourneyCustomerSession.swift
+src/Models/ConversationEmailEventTopicLimit.swift
 src/Models/ConversationEmailEventTopicQueueMediaSettings.swift
 src/Models/ConversationEmailEventTopicScoredAgent.swift
 src/Models/ConversationEmailEventTopicUriReference.swift
@@ -8223,6 +8301,8 @@ src/Models/ConversationEventTopicEmail.swift
 src/Models/ConversationEventTopicErrorDetails.swift
 src/Models/ConversationEventTopicFaxStatus.swift
 src/Models/ConversationEventTopicInitiator.swift
+src/Models/ConversationEventTopicInternalMessage.swift
+src/Models/ConversationEventTopicInternalMessageDetails.swift
 src/Models/ConversationEventTopicJourneyAction.swift
 src/Models/ConversationEventTopicJourneyActionMap.swift
 src/Models/ConversationEventTopicJourneyContext.swift
@@ -8262,6 +8342,7 @@ src/Models/ConversationMessageEventTopicJourneyActionMap.swift
 src/Models/ConversationMessageEventTopicJourneyContext.swift
 src/Models/ConversationMessageEventTopicJourneyCustomer.swift
 src/Models/ConversationMessageEventTopicJourneyCustomerSession.swift
+src/Models/ConversationMessageEventTopicLimit.swift
 src/Models/ConversationMessageEventTopicMessageConversation.swift
 src/Models/ConversationMessageEventTopicMessageDetails.swift
 src/Models/ConversationMessageEventTopicMessageMedia.swift
@@ -8308,6 +8389,7 @@ src/Models/ConversationScreenShareEventTopicJourneyActionMap.swift
 src/Models/ConversationScreenShareEventTopicJourneyContext.swift
 src/Models/ConversationScreenShareEventTopicJourneyCustomer.swift
 src/Models/ConversationScreenShareEventTopicJourneyCustomerSession.swift
+src/Models/ConversationScreenShareEventTopicLimit.swift
 src/Models/ConversationScreenShareEventTopicQueueMediaSettings.swift
 src/Models/ConversationScreenShareEventTopicScoredAgent.swift
 src/Models/ConversationScreenShareEventTopicScreenShareConversation.swift
@@ -8323,6 +8405,7 @@ src/Models/ConversationSocialExpressionEventTopicJourneyActionMap.swift
 src/Models/ConversationSocialExpressionEventTopicJourneyContext.swift
 src/Models/ConversationSocialExpressionEventTopicJourneyCustomer.swift
 src/Models/ConversationSocialExpressionEventTopicJourneyCustomerSession.swift
+src/Models/ConversationSocialExpressionEventTopicLimit.swift
 src/Models/ConversationSocialExpressionEventTopicQueueMediaSettings.swift
 src/Models/ConversationSocialExpressionEventTopicScoredAgent.swift
 src/Models/ConversationSocialExpressionEventTopicSocialConversation.swift
@@ -8343,6 +8426,7 @@ src/Models/ConversationVideoEventTopicJourneyActionMap.swift
 src/Models/ConversationVideoEventTopicJourneyContext.swift
 src/Models/ConversationVideoEventTopicJourneyCustomer.swift
 src/Models/ConversationVideoEventTopicJourneyCustomerSession.swift
+src/Models/ConversationVideoEventTopicLimit.swift
 src/Models/ConversationVideoEventTopicQueueMediaSettings.swift
 src/Models/ConversationVideoEventTopicScoredAgent.swift
 src/Models/ConversationVideoEventTopicUriReference.swift
@@ -8628,6 +8712,7 @@ src/Models/DisconnectReason.swift
 src/Models/Disposition.swift
 src/Models/DispositionParameters.swift
 src/Models/Division.swift
+src/Models/DivisionEntityRef.swift
 src/Models/DivisionReference.swift
 src/Models/DivsPermittedEntityListing.swift
 src/Models/DncList.swift
@@ -8964,6 +9049,7 @@ src/Models/ExternalContactsRelationshipChangedTopicRelationship.swift
 src/Models/ExternalContactsRelationshipChangedTopicTicker.swift
 src/Models/ExternalContactsRelationshipChangedTopicTwitterId.swift
 src/Models/ExternalContactsRelationshipChangedTopicUser.swift
+src/Models/ExternalContactsSettings.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContact.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicContactAddress.swift
 src/Models/ExternalContactsUnresolvedContactChangedTopicDataSchema.swift
@@ -9165,6 +9251,7 @@ src/Models/GenesysBotConnector.swift
 src/Models/Geolocation.swift
 src/Models/GeolocationEventGeolocation.swift
 src/Models/GeolocationSettings.swift
+src/Models/GetAgentsWorkPlansRequest.swift
 src/Models/GetAlertQuery.swift
 src/Models/GetCelebrationListing.swift
 src/Models/GetFlowExecutionDataJobResult.swift
@@ -9245,6 +9332,7 @@ src/Models/IdentityNow.swift
 src/Models/IdentityProvider.swift
 src/Models/IdentityProviderEntityListing.swift
 src/Models/IdentityResolutionConfig.swift
+src/Models/IdentityResolutionQueueConfig.swift
 src/Models/IdleEventTrigger.swift
 src/Models/IdleTokenTimeout.swift
 src/Models/IgnoredActivityCategories.swift
@@ -9875,6 +9963,7 @@ src/Models/MoveAgentsResponse.swift
 src/Models/MoveManagementUnitRequest.swift
 src/Models/MoveManagementUnitResponse.swift
 src/Models/MuAgentQueueTimeRequest.swift
+src/Models/MuAgentsWorkPlansResult.swift
 src/Models/MuRescheduleResultWrapper.swift
 src/Models/MutableUserPresence.swift
 src/Models/MuteSnoozeFields.swift
@@ -10072,6 +10161,7 @@ src/Models/PagedSkillCombinationListing.swift
 src/Models/PagelessDomainEntityListingEvaluationVersion.swift
 src/Models/PagelessEntityListing.swift
 src/Models/PagingSpec.swift
+src/Models/ParkingStateRequest.swift
 src/Models/ParsedCertificate.swift
 src/Models/Participant.swift
 src/Models/ParticipantAttributes.swift
@@ -10269,6 +10359,7 @@ src/Models/QueueConversationCallEventTopicJourneyActionMap.swift
 src/Models/QueueConversationCallEventTopicJourneyContext.swift
 src/Models/QueueConversationCallEventTopicJourneyCustomer.swift
 src/Models/QueueConversationCallEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationCallEventTopicLimit.swift
 src/Models/QueueConversationCallEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationCallEventTopicScoredAgent.swift
 src/Models/QueueConversationCallEventTopicUriReference.swift
@@ -10284,6 +10375,7 @@ src/Models/QueueConversationCallbackEventTopicJourneyActionMap.swift
 src/Models/QueueConversationCallbackEventTopicJourneyContext.swift
 src/Models/QueueConversationCallbackEventTopicJourneyCustomer.swift
 src/Models/QueueConversationCallbackEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationCallbackEventTopicLimit.swift
 src/Models/QueueConversationCallbackEventTopicPhoneNumberColumn.swift
 src/Models/QueueConversationCallbackEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationCallbackEventTopicScoredAgent.swift
@@ -10300,6 +10392,7 @@ src/Models/QueueConversationChatEventTopicJourneyActionMap.swift
 src/Models/QueueConversationChatEventTopicJourneyContext.swift
 src/Models/QueueConversationChatEventTopicJourneyCustomer.swift
 src/Models/QueueConversationChatEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationChatEventTopicLimit.swift
 src/Models/QueueConversationChatEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationChatEventTopicScoredAgent.swift
 src/Models/QueueConversationChatEventTopicUriReference.swift
@@ -10314,6 +10407,7 @@ src/Models/QueueConversationCobrowseEventTopicJourneyActionMap.swift
 src/Models/QueueConversationCobrowseEventTopicJourneyContext.swift
 src/Models/QueueConversationCobrowseEventTopicJourneyCustomer.swift
 src/Models/QueueConversationCobrowseEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationCobrowseEventTopicLimit.swift
 src/Models/QueueConversationCobrowseEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationCobrowseEventTopicScoredAgent.swift
 src/Models/QueueConversationCobrowseEventTopicUriReference.swift
@@ -10329,6 +10423,7 @@ src/Models/QueueConversationEmailEventTopicJourneyActionMap.swift
 src/Models/QueueConversationEmailEventTopicJourneyContext.swift
 src/Models/QueueConversationEmailEventTopicJourneyCustomer.swift
 src/Models/QueueConversationEmailEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationEmailEventTopicLimit.swift
 src/Models/QueueConversationEmailEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationEmailEventTopicScoredAgent.swift
 src/Models/QueueConversationEmailEventTopicUriReference.swift
@@ -10349,6 +10444,8 @@ src/Models/QueueConversationEventTopicEmail.swift
 src/Models/QueueConversationEventTopicErrorDetails.swift
 src/Models/QueueConversationEventTopicFaxStatus.swift
 src/Models/QueueConversationEventTopicInitiator.swift
+src/Models/QueueConversationEventTopicInternalMessage.swift
+src/Models/QueueConversationEventTopicInternalMessageDetails.swift
 src/Models/QueueConversationEventTopicJourneyAction.swift
 src/Models/QueueConversationEventTopicJourneyActionMap.swift
 src/Models/QueueConversationEventTopicJourneyContext.swift
@@ -10384,6 +10481,7 @@ src/Models/QueueConversationMessageEventTopicJourneyActionMap.swift
 src/Models/QueueConversationMessageEventTopicJourneyContext.swift
 src/Models/QueueConversationMessageEventTopicJourneyCustomer.swift
 src/Models/QueueConversationMessageEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationMessageEventTopicLimit.swift
 src/Models/QueueConversationMessageEventTopicMessageConversation.swift
 src/Models/QueueConversationMessageEventTopicMessageDetails.swift
 src/Models/QueueConversationMessageEventTopicMessageMedia.swift
@@ -10404,6 +10502,7 @@ src/Models/QueueConversationScreenShareEventTopicJourneyActionMap.swift
 src/Models/QueueConversationScreenShareEventTopicJourneyContext.swift
 src/Models/QueueConversationScreenShareEventTopicJourneyCustomer.swift
 src/Models/QueueConversationScreenShareEventTopicJourneyCustomerSession.swift
+src/Models/QueueConversationScreenShareEventTopicLimit.swift
 src/Models/QueueConversationScreenShareEventTopicQueueMediaSettings.swift
 src/Models/QueueConversationScreenShareEventTopicScoredAgent.swift
 src/Models/QueueConversationScreenShareEventTopicScreenShareConversation.swift
@@ -10426,6 +10525,8 @@ src/Models/QueueConversationSocialExpressionEventTopicEmail.swift
 src/Models/QueueConversationSocialExpressionEventTopicErrorDetails.swift
 src/Models/QueueConversationSocialExpressionEventTopicFaxStatus.swift
 src/Models/QueueConversationSocialExpressionEventTopicInitiator.swift
+src/Models/QueueConversationSocialExpressionEventTopicInternalMessage.swift
+src/Models/QueueConversationSocialExpressionEventTopicInternalMessageDetails.swift
 src/Models/QueueConversationSocialExpressionEventTopicJourneyAction.swift
 src/Models/QueueConversationSocialExpressionEventTopicJourneyActionMap.swift
 src/Models/QueueConversationSocialExpressionEventTopicJourneyContext.swift
@@ -10468,6 +10569,8 @@ src/Models/QueueConversationVideoEventTopicEmail.swift
 src/Models/QueueConversationVideoEventTopicErrorDetails.swift
 src/Models/QueueConversationVideoEventTopicFaxStatus.swift
 src/Models/QueueConversationVideoEventTopicInitiator.swift
+src/Models/QueueConversationVideoEventTopicInternalMessage.swift
+src/Models/QueueConversationVideoEventTopicInternalMessageDetails.swift
 src/Models/QueueConversationVideoEventTopicJourneyAction.swift
 src/Models/QueueConversationVideoEventTopicJourneyActionMap.swift
 src/Models/QueueConversationVideoEventTopicJourneyContext.swift
@@ -10861,6 +10964,7 @@ src/Models/SmsPhoneNumberRef.swift
 src/Models/SmsProvisioningStatus.swift
 src/Models/SocialExpression.swift
 src/Models/SocialHandle.swift
+src/Models/SocialKeyword.swift
 src/Models/SortItem.swift
 src/Models/Source.swift
 src/Models/SourceConfiguration.swift
@@ -11202,6 +11306,10 @@ src/Models/UpdateContactColumnActionSettings.swift
 src/Models/UpdateDraftInput.swift
 src/Models/UpdateManagementUnitRequest.swift
 src/Models/UpdateMuAgentRequest.swift
+src/Models/UpdateMuAgentWorkPlanFailureResponse.swift
+src/Models/UpdateMuAgentWorkPlanRequest.swift
+src/Models/UpdateMuAgentWorkPlansBatchRequest.swift
+src/Models/UpdateMuAgentWorkPlansBatchResponse.swift
 src/Models/UpdateMuAgentsRequest.swift
 src/Models/UpdateNotificationResponse.swift
 src/Models/UpdateNotificationsRequest.swift
@@ -11283,6 +11391,7 @@ src/Models/UserLicenses.swift
 src/Models/UserLicensesEntityListing.swift
 src/Models/UserListScheduleRequestBody.swift
 src/Models/UserMe.swift
+src/Models/UserNextActivityReminder.swift
 src/Models/UserObservationDataContainer.swift
 src/Models/UserObservationQuery.swift
 src/Models/UserObservationQueryClause.swift
@@ -11394,6 +11503,8 @@ src/Models/V2MobiusRulesTopicCondition.swift
 src/Models/V2MobiusRulesTopicConditionRulePredicate.swift
 src/Models/V2MobiusRulesTopicEntityProperties.swift
 src/Models/V2MobiusRulesTopicRule.swift
+src/Models/V2WebMessagingUndeliveredMessageTopicMessage.swift
+src/Models/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicSourceEntity.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicUserId.swift
@@ -11717,6 +11828,8 @@ src/Models/WorkPlanConstraintMessage.swift
 src/Models/WorkPlanListItemResponse.swift
 src/Models/WorkPlanListResponse.swift
 src/Models/WorkPlanOverride.swift
+src/Models/WorkPlanOverrideListWrapperWorkPlanOverrideRequest.swift
+src/Models/WorkPlanOverrideRequest.swift
 src/Models/WorkPlanPatternRequest.swift
 src/Models/WorkPlanPatternResponse.swift
 src/Models/WorkPlanReference.swift
@@ -11748,6 +11861,16 @@ src/Models/WorkitemCreate.swift
 src/Models/WorkitemFilter.swift
 src/Models/WorkitemFlowReference.swift
 src/Models/WorkitemManualAssign.swift
+src/Models/WorkitemOnAttributeChangeCondition.swift
+src/Models/WorkitemOnAttributeChangeConditionUpdate.swift
+src/Models/WorkitemOnAttributeChangeRule.swift
+src/Models/WorkitemOnAttributeChangeRuleCreate.swift
+src/Models/WorkitemOnAttributeChangeRuleListing.swift
+src/Models/WorkitemOnAttributeChangeRuleUpdate.swift
+src/Models/WorkitemOnCreateRule.swift
+src/Models/WorkitemOnCreateRuleCreate.swift
+src/Models/WorkitemOnCreateRuleListing.swift
+src/Models/WorkitemOnCreateRuleUpdate.swift
 src/Models/WorkitemPagedEntityListing.swift
 src/Models/WorkitemQueryJobCreate.swift
 src/Models/WorkitemQueryJobError.swift
@@ -11756,6 +11879,7 @@ src/Models/WorkitemQueryJobResponse.swift
 src/Models/WorkitemQueryJobSort.swift
 src/Models/WorkitemQueueReference.swift
 src/Models/WorkitemReference.swift
+src/Models/WorkitemRuleAction.swift
 src/Models/WorkitemRuleSettings.swift
 src/Models/WorkitemSchema.swift
 src/Models/WorkitemScoredAgent.swift

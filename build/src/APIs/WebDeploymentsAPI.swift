@@ -423,7 +423,9 @@ open class WebDeploymentsAPI {
     "createdUser" : "{}",
     "status" : "Pending"
   } ],
-  "selfUri" : "https://openapi-generator.tech"
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
 }, statusCode=200}]
      
      - parameter configurationId: (path) The configuration version ID 
@@ -544,7 +546,7 @@ open class WebDeploymentsAPI {
     /**
      View configuration drafts
      
-     - parameter showOnlyPublished: (query) Get only configuration drafts with published versions (optional)
+     - parameter showOnlyPublished: (query) Filter by published status. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getWebdeploymentsConfigurations(showOnlyPublished: Bool? = nil, completion: @escaping ((_ data: WebDeploymentConfigurationVersionEntityListing?,_ error: Error?) -> Void)) {
@@ -656,10 +658,12 @@ open class WebDeploymentsAPI {
     "createdUser" : "{}",
     "status" : "Pending"
   } ],
-  "selfUri" : "https://openapi-generator.tech"
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
 }, statusCode=200}]
      
-     - parameter showOnlyPublished: (query) Get only configuration drafts with published versions (optional)
+     - parameter showOnlyPublished: (query) Filter by published status. (optional)
 
      - returns: RequestBuilder<WebDeploymentConfigurationVersionEntityListing> 
      */
@@ -964,7 +968,9 @@ open class WebDeploymentsAPI {
     "flow" : "{}",
     "status" : "Pending"
   } ],
-  "selfUri" : "https://openapi-generator.tech"
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
 }, statusCode=200}]
      
      - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected.  (optional)

@@ -3768,6 +3768,7 @@ open class RoutingAPI {
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
+        case externalcontactssettings = "externalContactsSettings"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -3961,6 +3962,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -3996,6 +3998,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4265,6 +4268,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4300,6 +4304,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4534,6 +4539,7 @@ open class RoutingAPI {
         case authorizationUnusedroles = "authorization.unusedRoles"
         case team = "team"
         case workplanbidranks = "workPlanBidRanks"
+        case externalcontactssettings = "externalContactsSettings"
         case profileskills = "profileSkills"
         case certifications = "certifications"
         case locations = "locations"
@@ -4721,6 +4727,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -4756,6 +4763,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -5025,6 +5033,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -5060,6 +5069,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10180,6 +10190,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10215,6 +10226,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10484,6 +10496,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10519,6 +10532,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10911,6 +10925,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -10946,6 +10961,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -11215,6 +11231,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],
@@ -11250,6 +11267,7 @@ open class RoutingAPI {
         "memberCount" : 5,
         "selfUri" : "https://openapi-generator.tech",
         "includeOwners" : true,
+        "callsEnabled" : true,
         "description" : "description",
         "dateModified" : "2000-01-23T04:56:07.000+00:00",
         "owners" : [ null, null ],

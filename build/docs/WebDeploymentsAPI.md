@@ -403,7 +403,7 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let showOnlyPublished: Bool = true // Get only configuration drafts with published versions
+let showOnlyPublished: Bool = true // Filter by published status.
 
 // Code example
 WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPublished) { (response, error) in
@@ -421,7 +421,7 @@ WebDeploymentsAPI.getWebdeploymentsConfigurations(showOnlyPublished: showOnlyPub
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **showOnlyPublished** | **Bool**| Get only configuration drafts with published versions | [optional] |
+| **showOnlyPublished** | **Bool**| Filter by published status. | [optional] |
 
 
 ### Return type
@@ -988,4 +988,4 @@ WebDeploymentsAPI.putWebdeploymentsDeployment(deploymentId: deploymentId, deploy
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

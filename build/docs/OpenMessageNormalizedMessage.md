@@ -13,7 +13,8 @@ Open Messaging rich media message structure
 | **text** | **String** | Message text. | [optional] |
 | **content** | [**[OpenMessageContent]**](OpenMessageContent) | List of content elements. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message. | [optional] |
+| **conversationId** | **String** | The conversationId context for the message | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

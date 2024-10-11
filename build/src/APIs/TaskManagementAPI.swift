@@ -195,6 +195,110 @@ open class TaskManagementAPI {
     
     
     /**
+     Delete a rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId: String, ruleId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTaskmanagementWorktypeFlowsOnattributechangeRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a rule
+     - DELETE /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTaskmanagementWorktypeFlowsOnattributechangeRuleWithRequestBuilder(worktypeId: String, ruleId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete a rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTaskmanagementWorktypeFlowsOncreateRule(worktypeId: String, ruleId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTaskmanagementWorktypeFlowsOncreateRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a rule
+     - DELETE /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTaskmanagementWorktypeFlowsOncreateRuleWithRequestBuilder(worktypeId: String, ruleId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Delete a status
      
      - parameter worktypeId: (path) Worktype id 
@@ -1265,6 +1369,313 @@ open class TaskManagementAPI {
     
     
     /**
+     Get an attribute change rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId: String, ruleId: String, completion: @escaping ((_ data: WorkitemOnAttributeChangeRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeFlowsOnattributechangeRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<WorkitemOnAttributeChangeRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an attribute change rule
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+
+     - returns: RequestBuilder<WorkitemOnAttributeChangeRule> 
+     */
+    open class func getTaskmanagementWorktypeFlowsOnattributechangeRuleWithRequestBuilder(worktypeId: String, ruleId: String) -> RequestBuilder<WorkitemOnAttributeChangeRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemOnAttributeChangeRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get all attribute-change rules for a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: WorkitemOnAttributeChangeRuleListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeFlowsOnattributechangeRulesWithRequestBuilder(worktypeId: worktypeId, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<WorkitemOnAttributeChangeRuleListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all attribute-change rules for a worktype
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "condition" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "action" : "{}",
+    "worktype" : "{}",
+    "id" : "id",
+    "type" : "OnCreate"
+  }, {
+    "condition" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "action" : "{}",
+    "worktype" : "{}",
+    "id" : "id",
+    "type" : "OnCreate"
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<WorkitemOnAttributeChangeRuleListing> 
+     */
+    open class func getTaskmanagementWorktypeFlowsOnattributechangeRulesWithRequestBuilder(worktypeId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<WorkitemOnAttributeChangeRuleListing> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<WorkitemOnAttributeChangeRuleListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get an on-create rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeFlowsOncreateRule(worktypeId: String, ruleId: String, completion: @escaping ((_ data: WorkitemOnCreateRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeFlowsOncreateRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<WorkitemOnCreateRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an on-create rule
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+
+     - returns: RequestBuilder<WorkitemOnCreateRule> 
+     */
+    open class func getTaskmanagementWorktypeFlowsOncreateRuleWithRequestBuilder(worktypeId: String, ruleId: String) -> RequestBuilder<WorkitemOnCreateRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemOnCreateRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get all on-create rules for a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeFlowsOncreateRules(worktypeId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: WorkitemOnCreateRuleListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeFlowsOncreateRulesWithRequestBuilder(worktypeId: worktypeId, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<WorkitemOnCreateRuleListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all on-create rules for a worktype
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "action" : "{}",
+    "worktype" : "{}",
+    "id" : "id",
+    "type" : "OnCreate"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "action" : "{}",
+    "worktype" : "{}",
+    "id" : "id",
+    "type" : "OnCreate"
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<WorkitemOnCreateRuleListing> 
+     */
+    open class func getTaskmanagementWorktypeFlowsOncreateRulesWithRequestBuilder(worktypeId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<WorkitemOnCreateRuleListing> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<WorkitemOnCreateRuleListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Get a status
      
      - parameter worktypeId: (path) Worktype id 
@@ -1916,6 +2327,149 @@ open class TaskManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Worktype>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update the attributes of a rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter body: (body) Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId: String, ruleId: String, body: WorkitemOnAttributeChangeRuleUpdate, completion: @escaping ((_ data: WorkitemOnAttributeChangeRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTaskmanagementWorktypeFlowsOnattributechangeRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<WorkitemOnAttributeChangeRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the attributes of a rule
+     - PATCH /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter body: (body) Rule 
+
+     - returns: RequestBuilder<WorkitemOnAttributeChangeRule> 
+     */
+    open class func patchTaskmanagementWorktypeFlowsOnattributechangeRuleWithRequestBuilder(worktypeId: String, ruleId: String, body: WorkitemOnAttributeChangeRuleUpdate) -> RequestBuilder<WorkitemOnAttributeChangeRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemOnAttributeChangeRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update the attributes of a rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter body: (body) Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTaskmanagementWorktypeFlowsOncreateRule(worktypeId: String, ruleId: String, body: WorkitemOnCreateRuleUpdate, completion: @escaping ((_ data: WorkitemOnCreateRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTaskmanagementWorktypeFlowsOncreateRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<WorkitemOnCreateRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the attributes of a rule
+     - PATCH /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter body: (body) Rule 
+
+     - returns: RequestBuilder<WorkitemOnCreateRule> 
+     */
+    open class func patchTaskmanagementWorktypeFlowsOncreateRuleWithRequestBuilder(worktypeId: String, ruleId: String, body: WorkitemOnCreateRuleUpdate) -> RequestBuilder<WorkitemOnCreateRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemOnCreateRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -2691,6 +3245,135 @@ open class TaskManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add an attribute-change rule to a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter body: (body) Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId: String, body: WorkitemOnAttributeChangeRuleCreate, completion: @escaping ((_ data: WorkitemOnAttributeChangeRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTaskmanagementWorktypeFlowsOnattributechangeRulesWithRequestBuilder(worktypeId: worktypeId, body: body)
+        requestBuilder.execute { (response: Response<WorkitemOnAttributeChangeRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add an attribute-change rule to a worktype
+     - POST /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter body: (body) Rule 
+
+     - returns: RequestBuilder<WorkitemOnAttributeChangeRule> 
+     */
+    open class func postTaskmanagementWorktypeFlowsOnattributechangeRulesWithRequestBuilder(worktypeId: String, body: WorkitemOnAttributeChangeRuleCreate) -> RequestBuilder<WorkitemOnAttributeChangeRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemOnAttributeChangeRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add an on-create rule to a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter body: (body) Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTaskmanagementWorktypeFlowsOncreateRules(worktypeId: String, body: WorkitemOnCreateRuleCreate, completion: @escaping ((_ data: WorkitemOnCreateRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTaskmanagementWorktypeFlowsOncreateRulesWithRequestBuilder(worktypeId: worktypeId, body: body)
+        requestBuilder.execute { (response: Response<WorkitemOnCreateRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add an on-create rule to a worktype
+     - POST /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter body: (body) Rule 
+
+     - returns: RequestBuilder<WorkitemOnCreateRule> 
+     */
+    open class func postTaskmanagementWorktypeFlowsOncreateRulesWithRequestBuilder(worktypeId: String, body: WorkitemOnCreateRuleCreate) -> RequestBuilder<WorkitemOnCreateRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemOnCreateRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

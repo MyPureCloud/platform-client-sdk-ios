@@ -16,7 +16,8 @@
 | **contextId** | **String** |  | [optional] |
 | **details** | [**[ConversationChatEventTopicDetail]**](ConversationChatEventTopicDetail) |  | [optional] |
 | **errors** | [**[ConversationChatEventTopicErrorBody]**](ConversationChatEventTopicErrorBody) |  | [optional] |
+| **limit** | [**ConversationChatEventTopicLimit**](ConversationChatEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

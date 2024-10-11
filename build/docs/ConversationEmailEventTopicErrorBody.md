@@ -16,7 +16,8 @@
 | **contextId** | **String** |  | [optional] |
 | **details** | [**[ConversationEmailEventTopicDetail]**](ConversationEmailEventTopicDetail) |  | [optional] |
 | **errors** | [**[ConversationEmailEventTopicErrorBody]**](ConversationEmailEventTopicErrorBody) |  | [optional] |
+| **limit** | [**ConversationEmailEventTopicLimit**](ConversationEmailEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

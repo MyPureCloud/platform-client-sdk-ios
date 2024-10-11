@@ -18,4 +18,4 @@ Extra information on fax transmission.
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

@@ -12,4 +12,4 @@ This contains information about the workitem that invoked this flow execution.
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

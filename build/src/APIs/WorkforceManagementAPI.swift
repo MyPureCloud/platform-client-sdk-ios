@@ -11760,6 +11760,73 @@ open class WorkforceManagementAPI {
     
     
     
+    /**
+     Updates agent work plan configuration
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchWorkforcemanagementManagementunitAgentsWorkplansBulk(managementUnitId: String, body: UpdateMuAgentWorkPlansBatchRequest? = nil, completion: @escaping ((_ data: UpdateMuAgentWorkPlansBatchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchWorkforcemanagementManagementunitAgentsWorkplansBulkWithRequestBuilder(managementUnitId: managementUnitId, body: body)
+        requestBuilder.execute { (response: Response<UpdateMuAgentWorkPlansBatchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates agent work plan configuration
+     - PATCH /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failures" : [ {
+    "failure" : "AgentNotInManagementUnit",
+    "user" : "{}",
+    "notFoundWorkPlanId" : "notFoundWorkPlanId"
+  }, {
+    "failure" : "AgentNotInManagementUnit",
+    "user" : "{}",
+    "notFoundWorkPlanId" : "notFoundWorkPlanId"
+  } ]
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<UpdateMuAgentWorkPlansBatchResponse> 
+     */
+    open class func patchWorkforcemanagementManagementunitAgentsWorkplansBulkWithRequestBuilder(managementUnitId: String, body: UpdateMuAgentWorkPlansBatchRequest? = nil) -> RequestBuilder<UpdateMuAgentWorkPlansBatchResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UpdateMuAgentWorkPlansBatchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     /**
@@ -16553,6 +16620,73 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<HrisTimeOffTypesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get agents work plans configuration
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementManagementunitAgentsWorkplansQuery(managementUnitId: String, forceDownloadService: Bool? = nil, body: GetAgentsWorkPlansRequest? = nil, completion: @escaping ((_ data: AgentsWorkPlansResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementManagementunitAgentsWorkplansQueryWithRequestBuilder(managementUnitId: managementUnitId, forceDownloadService: forceDownloadService, body: body)
+        requestBuilder.execute { (response: Response<AgentsWorkPlansResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get agents work plans configuration
+     - POST /api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "result" : "{}",
+  "downloadUrl" : "downloadUrl"
+}, statusCode=200}]
+     
+     - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
+     - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<AgentsWorkPlansResponse> 
+     */
+    open class func postWorkforcemanagementManagementunitAgentsWorkplansQueryWithRequestBuilder(managementUnitId: String, forceDownloadService: Bool? = nil, body: GetAgentsWorkPlansRequest? = nil) -> RequestBuilder<AgentsWorkPlansResponse> {        
+        var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query"
+        let managementUnitIdPreEscape = "\(managementUnitId)"
+        let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{managementUnitId}", with: managementUnitIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "forceDownloadService": forceDownloadService
+        ])
+
+        let requestBuilder: RequestBuilder<AgentsWorkPlansResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
