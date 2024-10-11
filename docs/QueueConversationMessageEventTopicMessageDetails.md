@@ -14,7 +14,8 @@
 | **stickers** | [**[QueueConversationMessageEventTopicMessageSticker]**](QueueConversationMessageEventTopicMessageSticker) |  | [optional] |
 | **errorInfo** | [**QueueConversationMessageEventTopicErrorDetails**](QueueConversationMessageEventTopicErrorDetails) |  | [optional] |
 | **messageMetadata** | [**QueueConversationMessageEventTopicMessageMetadata**](QueueConversationMessageEventTopicMessageMetadata) |  | [optional] |
+| **socialVisibility** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

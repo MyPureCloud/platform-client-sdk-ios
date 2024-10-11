@@ -160,4 +160,4 @@ EventsAPI.postEventsUsersRoutingstatus(body: body) { (response, error) in
 [**BatchEventResponse**](BatchEventResponse)
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

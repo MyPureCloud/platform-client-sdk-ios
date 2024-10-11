@@ -17,10 +17,11 @@ UC Integration UI configuration data
 | **i10n** | [**[String:UCI10n]**](UCI10n) | i10n | |
 | **polledPresence** | **Bool** | polledPresence | |
 | **pollIntervalSec** | **Int** | pollIntervalSec | [optional] |
+| **includeBadge** | **Bool** | includeBadge | [optional] |
 | **userPermissions** | **[String]** | userPermissions | |
 | **oauthScopes** | **[String]** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

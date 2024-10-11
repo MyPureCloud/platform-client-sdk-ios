@@ -126,6 +126,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsEmailParticipant**](ConversationsAPI#patchConversationsEmailParticipant) | Update conversation participant |
 | [**patchConversationsEmailParticipantAttributes**](ConversationsAPI#patchConversationsEmailParticipantAttributes) | Update the attributes on a conversation participant. |
 | [**patchConversationsEmailParticipantCommunication**](ConversationsAPI#patchConversationsEmailParticipantCommunication) | Update conversation participant&#39;s communication by disconnecting it. |
+| [**patchConversationsEmailParticipantParkingstate**](ConversationsAPI#patchConversationsEmailParticipantParkingstate) | Update conversation by setting its parking state |
 | [**patchConversationsMessage**](ConversationsAPI#patchConversationsMessage) | Update a conversation by disconnecting all of the participants |
 | [**patchConversationsMessageParticipant**](ConversationsAPI#patchConversationsMessageParticipant) | Update conversation participant |
 | [**patchConversationsMessageParticipantAttributes**](ConversationsAPI#patchConversationsMessageParticipantAttributes) | Update the attributes on a conversation participant. |
@@ -6559,6 +6560,59 @@ ConversationsAPI.patchConversationsEmailParticipantCommunication(conversationId:
 [**JSON**](JSON)
 
 
+## patchConversationsEmailParticipantParkingstate
+
+
+
+> Void patchConversationsEmailParticipantParkingstate(conversationId, participantId, body)
+
+Update conversation by setting its parking state
+
+
+
+Wraps PATCH /api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate  
+
+Requires ANY permissions: 
+
+* conversation:email:park
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // conversationId
+let participantId: String = "" // participantId
+let body: ParkingStateRequest = new ParkingStateRequest(...) // Parking update request
+
+// Code example
+ConversationsAPI.patchConversationsEmailParticipantParkingstate(conversationId: conversationId, participantId: participantId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.patchConversationsEmailParticipantParkingstate was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| conversationId | |
+| **participantId** | **String**| participantId | |
+| **body** | [**ParkingStateRequest**](ParkingStateRequest)| Parking update request | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## patchConversationsMessage
 
 
@@ -10243,7 +10297,7 @@ ConversationsAPI.postConversationsMessageInboundOpenEvent(integrationId: integra
 
 
 
-> [OpenMessageNormalizedMessage](OpenMessageNormalizedMessage) postConversationsMessageInboundOpenMessage(integrationId, body)
+> [OpenMessageNormalizedMessage](OpenMessageNormalizedMessage) postConversationsMessageInboundOpenMessage(integrationId, body, prefetchConversationId)
 
 Send inbound Open Message
 
@@ -10267,9 +10321,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // integrationId
 let body: OpenInboundNormalizedMessage = new OpenInboundNormalizedMessage(...) // NormalizedMessage
+let prefetchConversationId: Bool = true // Indicates whether or not to prefetch conversationId
 
 // Code example
-ConversationsAPI.postConversationsMessageInboundOpenMessage(integrationId: integrationId, body: body) { (response, error) in
+ConversationsAPI.postConversationsMessageInboundOpenMessage(integrationId: integrationId, body: body, prefetchConversationId: prefetchConversationId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -10286,6 +10341,7 @@ ConversationsAPI.postConversationsMessageInboundOpenMessage(integrationId: integ
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| integrationId | |
 | **body** | [**OpenInboundNormalizedMessage**](OpenInboundNormalizedMessage)| NormalizedMessage | |
+| **prefetchConversationId** | **Bool**| Indicates whether or not to prefetch conversationId | [optional] |
 
 
 ### Return type
@@ -12230,4 +12286,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

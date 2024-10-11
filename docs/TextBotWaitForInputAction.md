@@ -11,4 +11,4 @@ Settings for a next-action of waiting for additional user input and sending the 
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

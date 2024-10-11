@@ -11,4 +11,4 @@ The settings for automatic time zone mapping
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

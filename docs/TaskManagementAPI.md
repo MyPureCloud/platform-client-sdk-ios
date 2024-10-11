@@ -8,6 +8,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteTaskmanagementWorkitem**](TaskManagementAPI#deleteTaskmanagementWorkitem) | Delete a workitem |
 | [**deleteTaskmanagementWorkitemsSchema**](TaskManagementAPI#deleteTaskmanagementWorkitemsSchema) | Delete a schema |
 | [**deleteTaskmanagementWorktype**](TaskManagementAPI#deleteTaskmanagementWorktype) | Delete a worktype |
+| [**deleteTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsOnattributechangeRule) | Delete a rule |
+| [**deleteTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsOncreateRule) | Delete a rule |
 | [**deleteTaskmanagementWorktypeStatus**](TaskManagementAPI#deleteTaskmanagementWorktypeStatus) | Delete a status |
 | [**getTaskmanagementWorkbin**](TaskManagementAPI#getTaskmanagementWorkbin) | Get a workbin |
 | [**getTaskmanagementWorkitem**](TaskManagementAPI#getTaskmanagementWorkitem) | Get a workitem |
@@ -20,6 +22,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTaskmanagementWorkitemsSchemaVersions**](TaskManagementAPI#getTaskmanagementWorkitemsSchemaVersions) | Get all versions of a schema |
 | [**getTaskmanagementWorkitemsSchemas**](TaskManagementAPI#getTaskmanagementWorkitemsSchemas) | Get a list of schemas. |
 | [**getTaskmanagementWorktype**](TaskManagementAPI#getTaskmanagementWorktype) | Get a worktype |
+| [**getTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOnattributechangeRule) | Get an attribute change rule |
+| [**getTaskmanagementWorktypeFlowsOnattributechangeRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOnattributechangeRules) | Get all attribute-change rules for a worktype |
+| [**getTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOncreateRule) | Get an on-create rule |
+| [**getTaskmanagementWorktypeFlowsOncreateRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOncreateRules) | Get all on-create rules for a worktype |
 | [**getTaskmanagementWorktypeStatus**](TaskManagementAPI#getTaskmanagementWorktypeStatus) | Get a status |
 | [**getTaskmanagementWorktypeStatuses**](TaskManagementAPI#getTaskmanagementWorktypeStatuses) | Get list of statuses for this worktype. |
 | [**patchTaskmanagementWorkbin**](TaskManagementAPI#patchTaskmanagementWorkbin) | Update the attributes of a workbin |
@@ -28,6 +34,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchTaskmanagementWorkitemUserWrapups**](TaskManagementAPI#patchTaskmanagementWorkitemUserWrapups) | Add/Remove a wrapup code for a given user in a workitem. |
 | [**patchTaskmanagementWorkitemUsersMeWrapups**](TaskManagementAPI#patchTaskmanagementWorkitemUsersMeWrapups) | Add/Remove a wrapup code for the current user in a workitem. |
 | [**patchTaskmanagementWorktype**](TaskManagementAPI#patchTaskmanagementWorktype) | Update the attributes of a worktype |
+| [**patchTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsOnattributechangeRule) | Update the attributes of a rule |
+| [**patchTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsOncreateRule) | Update the attributes of a rule |
 | [**patchTaskmanagementWorktypeStatus**](TaskManagementAPI#patchTaskmanagementWorktypeStatus) | Update the attributes of a status |
 | [**postTaskmanagementWorkbins**](TaskManagementAPI#postTaskmanagementWorkbins) | Create a workbin |
 | [**postTaskmanagementWorkbinsQuery**](TaskManagementAPI#postTaskmanagementWorkbinsQuery) | Query for workbins |
@@ -37,6 +45,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTaskmanagementWorkitems**](TaskManagementAPI#postTaskmanagementWorkitems) | Create a workitem |
 | [**postTaskmanagementWorkitemsQueryJobs**](TaskManagementAPI#postTaskmanagementWorkitemsQueryJobs) | Create a workitem query job |
 | [**postTaskmanagementWorkitemsSchemas**](TaskManagementAPI#postTaskmanagementWorkitemsSchemas) | Create a schema |
+| [**postTaskmanagementWorktypeFlowsOnattributechangeRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsOnattributechangeRules) | Add an attribute-change rule to a worktype |
+| [**postTaskmanagementWorktypeFlowsOncreateRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsOncreateRules) | Add an on-create rule to a worktype |
 | [**postTaskmanagementWorktypeStatuses**](TaskManagementAPI#postTaskmanagementWorktypeStatuses) | Add a status to a worktype |
 | [**postTaskmanagementWorktypes**](TaskManagementAPI#postTaskmanagementWorktypes) | Create a worktype |
 | [**postTaskmanagementWorktypesQuery**](TaskManagementAPI#postTaskmanagementWorktypesQuery) | Query for worktypes |
@@ -233,6 +243,108 @@ TaskManagementAPI.deleteTaskmanagementWorktype(worktypeId: worktypeId) { (error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **worktypeId** | **String**| Worktype id | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteTaskmanagementWorktypeFlowsOnattributechangeRule
+
+
+
+> Void deleteTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId, ruleId)
+
+Delete a rule
+
+
+
+Wraps DELETE /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+
+// Code example
+TaskManagementAPI.deleteTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId: worktypeId, ruleId: ruleId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TaskManagementAPI.deleteTaskmanagementWorktypeFlowsOnattributechangeRule was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteTaskmanagementWorktypeFlowsOncreateRule
+
+
+
+> Void deleteTaskmanagementWorktypeFlowsOncreateRule(worktypeId, ruleId)
+
+Delete a rule
+
+
+
+Wraps DELETE /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+
+// Code example
+TaskManagementAPI.deleteTaskmanagementWorktypeFlowsOncreateRule(worktypeId: worktypeId, ruleId: ruleId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TaskManagementAPI.deleteTaskmanagementWorktypeFlowsOncreateRule was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
 
 
 ### Return type
@@ -861,6 +973,218 @@ TaskManagementAPI.getTaskmanagementWorktype(worktypeId: worktypeId, expands: exp
 [**Worktype**](Worktype)
 
 
+## getTaskmanagementWorktypeFlowsOnattributechangeRule
+
+
+
+> [WorkitemOnAttributeChangeRule](WorkitemOnAttributeChangeRule) getTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId, ruleId)
+
+Get an attribute change rule
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId: worktypeId, ruleId: ruleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeFlowsOnattributechangeRule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+
+
+### Return type
+
+[**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule)
+
+
+## getTaskmanagementWorktypeFlowsOnattributechangeRules
+
+
+
+> [WorkitemOnAttributeChangeRuleListing](WorkitemOnAttributeChangeRuleListing) getTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId, after, pageSize)
+
+Get all attribute-change rules for a worktype
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId: worktypeId, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeFlowsOnattributechangeRules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**WorkitemOnAttributeChangeRuleListing**](WorkitemOnAttributeChangeRuleListing)
+
+
+## getTaskmanagementWorktypeFlowsOncreateRule
+
+
+
+> [WorkitemOnCreateRule](WorkitemOnCreateRule) getTaskmanagementWorktypeFlowsOncreateRule(worktypeId, ruleId)
+
+Get an on-create rule
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeFlowsOncreateRule(worktypeId: worktypeId, ruleId: ruleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeFlowsOncreateRule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+
+
+### Return type
+
+[**WorkitemOnCreateRule**](WorkitemOnCreateRule)
+
+
+## getTaskmanagementWorktypeFlowsOncreateRules
+
+
+
+> [WorkitemOnCreateRuleListing](WorkitemOnCreateRuleListing) getTaskmanagementWorktypeFlowsOncreateRules(worktypeId, after, pageSize)
+
+Get all on-create rules for a worktype
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeFlowsOncreateRules(worktypeId: worktypeId, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeFlowsOncreateRules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**WorkitemOnCreateRuleListing**](WorkitemOnCreateRuleListing)
+
+
 ## getTaskmanagementWorktypeStatus
 
 
@@ -1276,6 +1600,114 @@ TaskManagementAPI.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body
 ### Return type
 
 [**Worktype**](Worktype)
+
+
+## patchTaskmanagementWorktypeFlowsOnattributechangeRule
+
+
+
+> [WorkitemOnAttributeChangeRule](WorkitemOnAttributeChangeRule) patchTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId, ruleId, body)
+
+Update the attributes of a rule
+
+
+
+Wraps PATCH /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+let body: WorkitemOnAttributeChangeRuleUpdate = new WorkitemOnAttributeChangeRuleUpdate(...) // Rule
+
+// Code example
+TaskManagementAPI.patchTaskmanagementWorktypeFlowsOnattributechangeRule(worktypeId: worktypeId, ruleId: ruleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.patchTaskmanagementWorktypeFlowsOnattributechangeRule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+| **body** | [**WorkitemOnAttributeChangeRuleUpdate**](WorkitemOnAttributeChangeRuleUpdate)| Rule | |
+
+
+### Return type
+
+[**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule)
+
+
+## patchTaskmanagementWorktypeFlowsOncreateRule
+
+
+
+> [WorkitemOnCreateRule](WorkitemOnCreateRule) patchTaskmanagementWorktypeFlowsOncreateRule(worktypeId, ruleId, body)
+
+Update the attributes of a rule
+
+
+
+Wraps PATCH /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+let body: WorkitemOnCreateRuleUpdate = new WorkitemOnCreateRuleUpdate(...) // Rule
+
+// Code example
+TaskManagementAPI.patchTaskmanagementWorktypeFlowsOncreateRule(worktypeId: worktypeId, ruleId: ruleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.patchTaskmanagementWorktypeFlowsOncreateRule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+| **body** | [**WorkitemOnCreateRuleUpdate**](WorkitemOnCreateRuleUpdate)| Rule | |
+
+
+### Return type
+
+[**WorkitemOnCreateRule**](WorkitemOnCreateRule)
 
 
 ## patchTaskmanagementWorktypeStatus
@@ -1734,6 +2166,110 @@ TaskManagementAPI.postTaskmanagementWorkitemsSchemas(body: body) { (response, er
 [**DataSchema**](DataSchema)
 
 
+## postTaskmanagementWorktypeFlowsOnattributechangeRules
+
+
+
+> [WorkitemOnAttributeChangeRule](WorkitemOnAttributeChangeRule) postTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId, body)
+
+Add an attribute-change rule to a worktype
+
+
+
+Wraps POST /api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnAttributeChange:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let body: WorkitemOnAttributeChangeRuleCreate = new WorkitemOnAttributeChangeRuleCreate(...) // Rule
+
+// Code example
+TaskManagementAPI.postTaskmanagementWorktypeFlowsOnattributechangeRules(worktypeId: worktypeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.postTaskmanagementWorktypeFlowsOnattributechangeRules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **body** | [**WorkitemOnAttributeChangeRuleCreate**](WorkitemOnAttributeChangeRuleCreate)| Rule | |
+
+
+### Return type
+
+[**WorkitemOnAttributeChangeRule**](WorkitemOnAttributeChangeRule)
+
+
+## postTaskmanagementWorktypeFlowsOncreateRules
+
+
+
+> [WorkitemOnCreateRule](WorkitemOnCreateRule) postTaskmanagementWorktypeFlowsOncreateRules(worktypeId, body)
+
+Add an on-create rule to a worktype
+
+
+
+Wraps POST /api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleOnCreate:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let body: WorkitemOnCreateRuleCreate = new WorkitemOnCreateRuleCreate(...) // Rule
+
+// Code example
+TaskManagementAPI.postTaskmanagementWorktypeFlowsOncreateRules(worktypeId: worktypeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.postTaskmanagementWorktypeFlowsOncreateRules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **body** | [**WorkitemOnCreateRuleCreate**](WorkitemOnCreateRuleCreate)| Rule | |
+
+
+### Return type
+
+[**WorkitemOnCreateRule**](WorkitemOnCreateRule)
+
+
 ## postTaskmanagementWorktypeStatuses
 
 
@@ -1938,4 +2474,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

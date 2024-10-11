@@ -14,7 +14,8 @@
 | **errorInfo** | [**ConversationEventTopicErrorDetails**](ConversationEventTopicErrorDetails) | Detailed information about an error response. | [optional] |
 | **stickers** | [**[ConversationEventTopicMessageSticker]**](ConversationEventTopicMessageSticker) | A list of stickers included in the message | [optional] |
 | **messageMetadata** | [**ConversationEventTopicMessageMetadata**](ConversationEventTopicMessageMetadata) |  | [optional] |
+| **socialVisibility** | **String** | For social media messages, the visibility of the message in the originating social platform | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

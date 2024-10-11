@@ -6,10 +6,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **total** | **Int64** |  | [optional] |
 | **entities** | [**[WebDeploymentConfigurationVersion]**](WebDeploymentConfigurationVersion) |  | [optional] |
+| **nextUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
+| **previousUri** | **String** |  | [optional] |
+| **total** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

@@ -203,7 +203,19 @@
 | **dashboardType** | **String** | The type of dashboard being filtered | [optional] |
 | **dashboardAccessFilter** | **String** | The type of dashboard access being filtered | [optional] |
 | **transcriptDurationMilliseconds** | [**[NumericRange]**](NumericRange) | The transcript durations in milliseconds used to filter the view | [optional] |
+| **socialCountries** | **[String]** | List of countries for social filtering | [optional] |
+| **socialLanguages** | **[String]** | List of languages for social filtering | [optional] |
+| **socialChannels** | **[String]** | List of channels for social filtering | [optional] |
+| **socialSentimentCategory** | **[String]** | The sentiment of the social post | [optional] |
+| **socialTopicIds** | **[String]** | The list of topicIds for social filtering | [optional] |
+| **socialIngestionRuleIds** | **[String]** | The list of ingestion ruleIds for social filtering | [optional] |
+| **socialConversationCreated** | **Bool** | Filter to indicate if the post has created a conversation | [optional] |
+| **socialContentType** | **[String]** | The list of content Type for social filtering | [optional] |
+| **socialKeywords** | [**[SocialKeyword]**](SocialKeyword) | The list of keywords for social filtering | [optional] |
+| **socialPostEscalated** | **Bool** | Filter to indicate if the post is escalated | [optional] |
+| **socialClassifications** | **[String]** | Indicates if a social message was public or private | [optional] |
+| **filterUsersByManagerIds** | **[String]** | The manager ids used to fetch associated users for the view | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

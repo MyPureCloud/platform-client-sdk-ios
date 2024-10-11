@@ -14,7 +14,8 @@
 | **errorInfo** | [**QueueConversationVideoEventTopicErrorDetails**](QueueConversationVideoEventTopicErrorDetails) | Detailed information about an error response. | [optional] |
 | **stickers** | [**[QueueConversationVideoEventTopicMessageSticker]**](QueueConversationVideoEventTopicMessageSticker) | A list of stickers included in the message | [optional] |
 | **messageMetadata** | [**QueueConversationVideoEventTopicMessageMetadata**](QueueConversationVideoEventTopicMessageMetadata) |  | [optional] |
+| **socialVisibility** | **String** | For social media messages, the visibility of the message in the originating social platform | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_

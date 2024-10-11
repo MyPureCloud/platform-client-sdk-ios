@@ -14,8 +14,9 @@ Information about the recipient the message is sent to.
 | **firstName** | **String** | First name of the recipient. | [optional] |
 | **lastName** | **String** | Last name of the recipient. | [optional] |
 | **email** | **String** | E-mail address of the recipient. | [optional] |
+| **externalContactId** | **String** | The identifier of the external contact. | [optional] |
 | **additionalIds** | [**[ConversationRecipientAdditionalIdentifier]**](ConversationRecipientAdditionalIdentifier) | List of recipient additional identifiers | [optional] |
 
 
 
-_PureCloudPlatformClientV2@152.0.0_
+_PureCloudPlatformClientV2@153.0.0_
