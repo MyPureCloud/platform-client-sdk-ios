@@ -915,7 +915,7 @@ AuthorizationAPI.getAuthorizationRoleSubjectgrants(roleId: roleId, pageSize: pag
 
 
 
-> [UserEntityListing](UserEntityListing) getAuthorizationRoleUsers(roleId, pageSize, pageNumber)
+> [UserReferenceEntityListing](UserReferenceEntityListing) getAuthorizationRoleUsers(roleId, pageSize, pageNumber)
 
 Get a list of the users in a specified role.
 
@@ -963,7 +963,7 @@ AuthorizationAPI.getAuthorizationRoleUsers(roleId: roleId, pageSize: pageSize, p
 
 ### Return type
 
-[**UserEntityListing**](UserEntityListing)
+[**UserReferenceEntityListing**](UserReferenceEntityListing)
 
 
 ## getAuthorizationRoles
@@ -2386,4 +2386,4 @@ AuthorizationAPI.putUserRoles(subjectId: subjectId, body: body) { (response, err
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_

@@ -14,4 +14,4 @@ information determining the order in which the contacts will be dialed
 
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_

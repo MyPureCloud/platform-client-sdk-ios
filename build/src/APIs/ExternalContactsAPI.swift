@@ -169,6 +169,51 @@ open class ExternalContactsAPI {
     
     
     /**
+     Delete settings for CSV import
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteExternalcontactsImportCsvSetting(settingsId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteExternalcontactsImportCsvSettingWithRequestBuilder(settingsId: settingsId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete settings for CSV import
+     - DELETE /api/v2/externalcontacts/import/csv/settings/{settingsId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter settingsId: (path) Settings id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteExternalcontactsImportCsvSettingWithRequestBuilder(settingsId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/externalcontacts/import/csv/settings/{settingsId}"
+        let settingsIdPreEscape = "\(settingsId)"
+        let settingsIdPostEscape = settingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{settingsId}", with: settingsIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete an external organization
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -2082,6 +2127,274 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataSchemaListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get settings for CSV import
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportCsvSetting(settingsId: String, completion: @escaping ((_ data: CsvSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportCsvSettingWithRequestBuilder(settingsId: settingsId)
+        requestBuilder.execute { (response: Response<CsvSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get settings for CSV import
+     - GET /api/v2/externalcontacts/import/csv/settings/{settingsId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "externalSettingsId" : "externalSettingsId",
+  "mappings" : [ {
+    "sourceField" : "sourceField",
+    "targetField" : "targetField"
+  }, {
+    "sourceField" : "sourceField",
+    "targetField" : "targetField"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter settingsId: (path) Settings id 
+
+     - returns: RequestBuilder<CsvSettings> 
+     */
+    open class func getExternalcontactsImportCsvSettingWithRequestBuilder(settingsId: String) -> RequestBuilder<CsvSettings> {        
+        var path = "/api/v2/externalcontacts/import/csv/settings/{settingsId}"
+        let settingsIdPreEscape = "\(settingsId)"
+        let settingsIdPostEscape = settingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{settingsId}", with: settingsIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Retrieve all settings for organization filtered by externalSettingsId if provided
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter externalSettingsId: (query) External Settings Id to filter the list. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportCsvSettings(after: String? = nil, pageSize: String? = nil, externalSettingsId: String? = nil, completion: @escaping ((_ data: Listing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportCsvSettingsWithRequestBuilder(after: after, pageSize: pageSize, externalSettingsId: externalSettingsId)
+        requestBuilder.execute { (response: Response<Listing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve all settings for organization filtered by externalSettingsId if provided
+     - GET /api/v2/externalcontacts/import/csv/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "externalSettingsId" : "externalSettingsId",
+    "mappings" : [ {
+      "sourceField" : "sourceField",
+      "targetField" : "targetField"
+    }, {
+      "sourceField" : "sourceField",
+      "targetField" : "targetField"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "externalSettingsId" : "externalSettingsId",
+    "mappings" : [ {
+      "sourceField" : "sourceField",
+      "targetField" : "targetField"
+    }, {
+      "sourceField" : "sourceField",
+      "targetField" : "targetField"
+    } ],
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter externalSettingsId: (query) External Settings Id to filter the list. (optional)
+
+     - returns: RequestBuilder<Listing> 
+     */
+    open class func getExternalcontactsImportCsvSettingsWithRequestBuilder(after: String? = nil, pageSize: String? = nil, externalSettingsId: String? = nil) -> RequestBuilder<Listing> {        
+        let path = "/api/v2/externalcontacts/import/csv/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize, 
+            "externalSettingsId": externalSettingsId
+        ])
+
+        let requestBuilder: RequestBuilder<Listing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get details for CSV upload
+     
+     - parameter uploadId: (path) Upload id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportCsvUploadDetails(uploadId: String, completion: @escaping ((_ data: CsvUploadDetailsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportCsvUploadDetailsWithRequestBuilder(uploadId: uploadId)
+        requestBuilder.execute { (response: Response<CsvUploadDetailsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details for CSV upload
+     - GET /api/v2/externalcontacts/import/csv/uploads/{uploadId}/details
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "fileName" : "fileName",
+  "validationResult" : "{}",
+  "uploadId" : "uploadId"
+}, statusCode=200}]
+     
+     - parameter uploadId: (path) Upload id 
+
+     - returns: RequestBuilder<CsvUploadDetailsResponse> 
+     */
+    open class func getExternalcontactsImportCsvUploadDetailsWithRequestBuilder(uploadId: String) -> RequestBuilder<CsvUploadDetailsResponse> {        
+        var path = "/api/v2/externalcontacts/import/csv/uploads/{uploadId}/details"
+        let uploadIdPreEscape = "\(uploadId)"
+        let uploadIdPostEscape = uploadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{uploadId}", with: uploadIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvUploadDetailsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get preview for CSV upload
+     
+     - parameter uploadId: (path) Upload id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportCsvUploadPreview(uploadId: String, completion: @escaping ((_ data: CsvUploadPreviewResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportCsvUploadPreviewWithRequestBuilder(uploadId: uploadId)
+        requestBuilder.execute { (response: Response<CsvUploadPreviewResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get preview for CSV upload
+     - GET /api/v2/externalcontacts/import/csv/uploads/{uploadId}/preview
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : [ "headers", "headers" ],
+  "entries" : [ [ "entries", "entries" ], [ "entries", "entries" ] ],
+  "uploadId" : "uploadId"
+}, statusCode=200}]
+     
+     - parameter uploadId: (path) Upload id 
+
+     - returns: RequestBuilder<CsvUploadPreviewResponse> 
+     */
+    open class func getExternalcontactsImportCsvUploadPreviewWithRequestBuilder(uploadId: String) -> RequestBuilder<CsvUploadPreviewResponse> {        
+        var path = "/api/v2/externalcontacts/import/csv/uploads/{uploadId}/preview"
+        let uploadIdPreEscape = "\(uploadId)"
+        let uploadIdPostEscape = uploadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{uploadId}", with: uploadIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvUploadPreviewResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -10774,6 +11087,179 @@ open class ExternalContactsAPI {
     
     
     /**
+     Create CSV import job
+     
+     - parameter body: (body) ImportRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsImportCsvJobs(body: CsvJobRequest, completion: @escaping ((_ data: CsvJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsImportCsvJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CsvJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create CSV import job
+     - POST /api/v2/externalcontacts/import/csv/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "job" : "{}"
+}, statusCode=202}]
+     
+     - parameter body: (body) ImportRequest 
+
+     - returns: RequestBuilder<CsvJobResponse> 
+     */
+    open class func postExternalcontactsImportCsvJobsWithRequestBuilder(body: CsvJobRequest) -> RequestBuilder<CsvJobResponse> {        
+        let path = "/api/v2/externalcontacts/import/csv/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create settings for CSV import
+     
+     - parameter body: (body) Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsImportCsvSettings(body: CsvSettings, completion: @escaping ((_ data: CsvSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsImportCsvSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CsvSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create settings for CSV import
+     - POST /api/v2/externalcontacts/import/csv/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "externalSettingsId" : "externalSettingsId",
+  "mappings" : [ {
+    "sourceField" : "sourceField",
+    "targetField" : "targetField"
+  }, {
+    "sourceField" : "sourceField",
+    "targetField" : "targetField"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=201}]
+     
+     - parameter body: (body) Settings 
+
+     - returns: RequestBuilder<CsvSettings> 
+     */
+    open class func postExternalcontactsImportCsvSettingsWithRequestBuilder(body: CsvSettings) -> RequestBuilder<CsvSettings> {        
+        let path = "/api/v2/externalcontacts/import/csv/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get url for CSV upload
+     
+     - parameter body: (body) UploadRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsImportCsvUploads(body: CsvUploadRequest, completion: @escaping ((_ data: CsvUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsImportCsvUploadsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<CsvUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get url for CSV upload
+     - POST /api/v2/externalcontacts/import/csv/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "uploadId" : "uploadId",
+  "uploadUrl" : "uploadUrl",
+  "uploadHeaders" : [ {
+    "name" : "name",
+    "value" : "value"
+  }, {
+    "name" : "name",
+    "value" : "value"
+  } ]
+}, statusCode=201}]
+     
+     - parameter body: (body) UploadRequest 
+
+     - returns: RequestBuilder<CsvUploadResponse> 
+     */
+    open class func postExternalcontactsImportCsvUploadsWithRequestBuilder(body: CsvUploadRequest) -> RequestBuilder<CsvUploadResponse> {        
+        let path = "/api/v2/externalcontacts/import/csv/uploads"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Merge two contacts into a new contact record
      
      - parameter body: (body) MergeRequest 
@@ -11756,6 +12242,74 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update settings for CSV import
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter body: (body) Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsImportCsvSetting(settingsId: String, body: CsvSettings, completion: @escaping ((_ data: CsvSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsImportCsvSettingWithRequestBuilder(settingsId: settingsId, body: body)
+        requestBuilder.execute { (response: Response<CsvSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update settings for CSV import
+     - PUT /api/v2/externalcontacts/import/csv/settings/{settingsId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "externalSettingsId" : "externalSettingsId",
+  "mappings" : [ {
+    "sourceField" : "sourceField",
+    "targetField" : "targetField"
+  }, {
+    "sourceField" : "sourceField",
+    "targetField" : "targetField"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter body: (body) Settings 
+
+     - returns: RequestBuilder<CsvSettings> 
+     */
+    open class func putExternalcontactsImportCsvSettingWithRequestBuilder(settingsId: String, body: CsvSettings) -> RequestBuilder<CsvSettings> {        
+        var path = "/api/v2/externalcontacts/import/csv/settings/{settingsId}"
+        let settingsIdPreEscape = "\(settingsId)"
+        let settingsIdPostEscape = settingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{settingsId}", with: settingsIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CsvSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

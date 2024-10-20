@@ -1,348 +1,417 @@
-Platform API version: 8525
+Platform API version: 8554
 
 
 
 
-# Major Changes (5 changes)
+# Major Changes (7 changes)
 
-**POST /api/v2/conversations/messages/{integrationId}/inbound/open/message** (1 change)
+**GET /api/v2/authorization/roles/{roleId}/users** (1 change)
 
-* Parameter prefetchConversationId was added
+* Response 200 type was changed from UserEntityListing to UserReferenceEntityListing
 
-**GET /api/v2/users/{userId}/station** (1 change)
+**GET /api/v2/contentmanagement/shared/{sharedId}** (2 changes)
 
-* Response 424 was removed
+* Parameter redirect was removed
+* Response 307 was removed
 
-**PUT /api/v2/users/{userId}/station/associatedstation/{stationId}** (1 change)
+**POST /api/v2/conversations/{conversationId}/suggestions/feedback** (1 change)
 
-* Response 424 was removed
+* Has been deprecated
 
-**ConversationDivisionMembership** (1 change)
+**ReplacementTerm** (1 change)
 
-* Property entities was changed from DomainEntityRef[] to DivisionEntityRef[]
+* Enum value FACEBOOK was removed from property type
 
-**CampaignRuleExecutionSettings** (1 change)
+**DocumentBodyBlockWithHighlight** (2 changes)
 
-* Required property frequency was added
+* Property list was changed from DocumentBodyList to DocumentBodyListWithHighlight
+* Property table was changed from DocumentBodyTable to DocumentBodyTableWithHighlight
 
 
-# Minor Changes (105 changes)
+# Minor Changes (123 changes)
 
-**/api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate** (2 changes)
-
-* Path was added
-* Operation PATCH was added
-
-**/api/v2/journey/views/{viewId}/versions/{versionId}** (1 change)
-
-* Operation put was added. Summary: Update a Journey View by ID and version
-
-**/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}/versions/{chartVersion}** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}** (1 change)
-
-* Operation patch was added. Summary: Update the job for a journey view version. Only the status can be changed and only to Cancelled
-
-**/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}/results/charts/{chartId}** (2 changes)
-
-* Path was added
-* Operation GET was added
-
-**POST /api/v2/knowledge/documentuploads** (1 change)
-
-* Response 409 was added
-
-**/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query** (2 changes)
+**/api/v2/externalcontacts/import/csv/jobs** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk** (2 changes)
+**/api/v2/externalcontacts/import/csv/settings/{settingsId}** (4 changes)
 
 * Path was added
-* Operation PATCH was added
+* Operation GET was added
+* Operation PUT was added
+* Operation DELETE was added
 
-**/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules/{ruleId}** (4 changes)
+**/api/v2/externalcontacts/import/csv/settings** (3 changes)
+
+* Path was added
+* Operation GET was added
+* Operation POST was added
+
+**/api/v2/externalcontacts/import/csv/uploads/{uploadId}/details** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/import/csv/uploads/{uploadId}/preview** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/import/csv/uploads** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/journey/views/encodings/validate** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/journey/views/eventdefinitions/{eventDefinitionId}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/journey/views/eventdefinitions** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/knowledge/integrations/{integrationId}/options** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}** (4 changes)
+
+* Path was added
+* Operation GET was added
+* Operation PUT was added
+* Operation DELETE was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}** (4 changes)
+
+* Path was added
+* Operation GET was added
+* Operation PUT was added
+* Operation DELETE was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}** (4 changes)
 
 * Path was added
 * Operation GET was added
 * Operation DELETE was added
 * Operation PATCH was added
 
-**/api/v2/taskmanagement/worktypes/{worktypeId}/flows/onattributechange/rules** (3 changes)
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/orgauthorization/trustees/care** (3 changes)
 
 * Path was added
 * Operation GET was added
 * Operation POST was added
 
-**/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules/{ruleId}** (4 changes)
-
-* Path was added
-* Operation GET was added
-* Operation DELETE was added
-* Operation PATCH was added
-
-**/api/v2/taskmanagement/worktypes/{worktypeId}/flows/oncreate/rules** (3 changes)
-
-* Path was added
-* Operation GET was added
-* Operation POST was added
-
-**ExternalContactsSettings** (1 change)
+**UserReferenceEntityListing** (1 change)
 
 * Model was added
 
-**Group** (1 change)
+**ContactIdentifier** (1 change)
 
-* Optional property callsEnabled was added
+* Enum value SocialInstagram was added to property type
 
-**ConversationDetailQueryPredicate** (1 change)
-
-* Enum value originatingSocialMediaPublic was added to property dimension
-
-**SocialKeyword** (1 change)
+**CsvJobResponse** (1 change)
 
 * Model was added
 
-**ViewFilter** (12 changes)
-
-* Optional property socialCountries was added
-* Optional property socialLanguages was added
-* Optional property socialChannels was added
-* Optional property socialSentimentCategory was added
-* Optional property socialTopicIds was added
-* Optional property socialIngestionRuleIds was added
-* Optional property socialConversationCreated was added
-* Optional property socialContentType was added
-* Optional property socialKeywords was added
-* Optional property socialPostEscalated was added
-* Optional property socialClassifications was added
-* Optional property filterUsersByManagerIds was added
-
-**ReportingExportJobResponse** (1 change)
-
-* Enum value BAD_REQUEST_SCHEDULED_RUN was added to property exportErrorMessagesType
-
-**IdentityResolutionQueueConfig** (1 change)
+**CsvJobRequest** (1 change)
 
 * Model was added
 
-**DivisionEntityRef** (1 change)
+**CsvMappingEntry** (1 change)
 
 * Model was added
 
-**Participant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**ParkingStateRequest** (1 change)
+**CsvSettings** (1 change)
 
 * Model was added
 
-**ConversationEnrichmentSentimentV2** (1 change)
-
-* Enum value Unknown was added to property tag
-
-**ConversationMessagingFromRecipient** (1 change)
-
-* Optional property externalContactId was added
-
-**ConversationMessagingToRecipient** (1 change)
-
-* Optional property externalContactId was added
-
-**OpenMessageNormalizedMessage** (1 change)
-
-* Optional property conversationId was added
-
-**ParticipantBasic** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**CampaignRule** (3 changes)
-
-* Optional property campaignRuleProcessing was added
-* Optional property conditionGroups was added
-* Optional property executionSettings was added
-
-**CampaignRuleExecutionSettings** (1 change)
-
-* Optional property timeZoneId was added
-
-**CampaignStats** (3 changes)
-
-* Optional property rightPartyContactsCount was added
-* Optional property validAttempts was added
-* Optional property businessCategoryMetrics was added
-
-**GroupUpdate** (1 change)
-
-* Optional property callsEnabled was added
-
-**GroupCreate** (1 change)
-
-* Optional property callsEnabled was added
-
-**JourneyView** (1 change)
-
-* Optional property charts was added
-
-**JourneyViewJob** (1 change)
-
-* Enum value Cancelled was added to property status
-
-**IntentDefinition** (1 change)
-
-* Optional property description was added
-
-**NluUtterance** (1 change)
-
-* Optional property source was added
-
-**NamespaceDocs** (1 change)
-
-* Optional property name was added
-
-**FreeTrialNamespace** (1 change)
-
-* Optional property name was added
-
-**MessagingRecipient** (1 change)
-
-* Optional property externalContactId was added
-
-**IpAddressRange** (2 changes)
-
-* Enum value byot-stt was added to property service
-* Enum value bot-connector was added to property service
-
-**TrustGroup** (1 change)
-
-* Optional property callsEnabled was added
-
-**Annotation** (1 change)
-
-* Enum value Pause was added to property reason
-
-**InfrastructureascodeJob** (3 changes)
-
-* Enum value InternalError was added to property status
-* Enum value RollbackFailed was added to property status
-* Enum value RollbackComplete was added to property status
-
-**UnifiedCommunicationsIntegration** (1 change)
-
-* Optional property includeBadge was added
-
-**WebDeploymentConfigurationVersionEntityListing** (2 changes)
-
-* Optional property nextUri was added
-* Optional property previousUri was added
-
-**ExpandableWebDeploymentEntityListing** (2 changes)
-
-* Optional property nextUri was added
-* Optional property previousUri was added
-
-**AgentWorkPlans** (1 change)
+**Listing** (1 change)
 
 * Model was added
 
-**AgentsWorkPlansResponse** (1 change)
+**CsvUploadDetailsResponse** (1 change)
 
 * Model was added
 
-**MuAgentsWorkPlansResult** (1 change)
+**ValidationError** (1 change)
 
 * Model was added
 
-**GetAgentsWorkPlansRequest** (1 change)
+**ValidationResult** (1 change)
 
 * Model was added
 
-**UpdateMuAgentWorkPlanFailureResponse** (1 change)
+**CsvUploadPreviewResponse** (1 change)
 
 * Model was added
 
-**UpdateMuAgentWorkPlansBatchResponse** (1 change)
+**CsvUploadResponse** (1 change)
 
 * Model was added
 
-**UpdateMuAgentWorkPlanRequest** (1 change)
+**Header** (1 change)
 
 * Model was added
 
-**UpdateMuAgentWorkPlansBatchRequest** (1 change)
+**CsvUploadRequest** (1 change)
 
 * Model was added
 
-**WorkPlanOverrideListWrapperWorkPlanOverrideRequest** (1 change)
+**Campaign** (1 change)
+
+* Optional property skillColumns was added
+
+**CampaignRuleAction** (2 changes)
+
+* Enum value setCampaignMessagesPerMinute was added to property actionType
+* Enum value changeCampaignTemplate was added to property actionType
+
+**CampaignRuleParameters** (3 changes)
+
+* Optional property messagesPerMinute was added
+* Optional property smsContentTemplate was added
+* Optional property emailContentTemplate was added
+
+**CampaignRuleWarning** (1 change)
 
 * Model was added
 
-**WorkPlanOverrideRequest** (1 change)
+**CampaignRuleWarningParameters** (1 change)
 
 * Model was added
 
-**UserNextActivityReminder** (1 change)
+**Label** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeCondition** (1 change)
+**JourneyEventDefinition** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeRule** (1 change)
+**JourneyEventDefinitionListing** (1 change)
 
 * Model was added
 
-**WorkitemRuleAction** (1 change)
+**KnowledgeIntegrationFilter** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeConditionUpdate** (1 change)
+**KnowledgeIntegrationFilterValue** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeRuleUpdate** (1 change)
+**KnowledgeIntegrationOptionsResponse** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeRuleCreate** (1 change)
+**KnowledgeIntegrationReference** (1 change)
 
 * Model was added
 
-**WorkitemOnAttributeChangeRuleListing** (1 change)
+**SourceBaseResponse** (1 change)
 
 * Model was added
 
-**WorkitemOnCreateRule** (1 change)
+**SourceLastSync** (1 change)
 
 * Model was added
 
-**WorkitemOnCreateRuleUpdate** (1 change)
+**SalesforceSettings** (1 change)
 
 * Model was added
 
-**WorkitemOnCreateRuleCreate** (1 change)
+**SalesforceSourceResponse** (1 change)
 
 * Model was added
 
-**WorkitemOnCreateRuleListing** (1 change)
+**SalesforceSourceRequest** (1 change)
+
+* Model was added
+
+**SourceSyncResponse** (1 change)
+
+* Model was added
+
+**KnowledgeSyncJobReport** (1 change)
+
+* Model was added
+
+**KnowledgeSyncJobResponse** (1 change)
+
+* Model was added
+
+**KnowledgeSyncJobStatistics** (1 change)
+
+* Model was added
+
+**ServiceNowSettings** (1 change)
+
+* Model was added
+
+**ServiceNowSourceResponse** (1 change)
+
+* Model was added
+
+**ServiceNowSourceRequest** (1 change)
+
+* Model was added
+
+**DocumentBodyListBlockWithHighlight** (1 change)
+
+* Model was added
+
+**DocumentBodyListWithHighlight** (1 change)
+
+* Model was added
+
+**DocumentBodyTableCellBlockWithHighlight** (1 change)
+
+* Model was added
+
+**DocumentBodyTableRowBlockWithHighlight** (1 change)
+
+* Model was added
+
+**DocumentBodyTableWithHighlight** (1 change)
+
+* Model was added
+
+**DocumentListContentBlockWithHighlight** (1 change)
+
+* Model was added
+
+**DocumentTableContentBlockWithHighlight** (1 change)
+
+* Model was added
+
+**SyncStatusRequest** (1 change)
+
+* Model was added
+
+**KnowledgeSyncJobRequest** (1 change)
+
+* Model was added
+
+**OperationListing** (1 change)
+
+* Model was added
+
+**OperationResponse** (1 change)
+
+* Model was added
+
+**OperationCreatorUserResponse** (1 change)
+
+* Model was added
+
+**TrusteeReferenceList** (1 change)
+
+* Model was added
+
+**Survey** (3 changes)
+
+* Optional property surveyType was added
+* Optional property missingRequiredAnswer was added
+* Optional property flow was added
+
+**Button** (1 change)
+
+* Model was added
+
+**MessageFooter** (1 change)
+
+* Model was added
+
+**MessageHeader** (1 change)
+
+* Model was added
+
+**RoutePathResponse** (1 change)
+
+* Enum value Workitem was added to property mediaType
+
+**BuIntradayDataGroup** (1 change)
+
+* Enum value Workitem was added to property mediaType
+
+**RoutePathRequest** (1 change)
+
+* Enum value Workitem was added to property mediaType
+
+**WorkitemQueryJobCreate** (3 changes)
+
+* Optional property queryFilters was added
+* Optional property dateIntervalStart was added
+* Optional property dateIntervalEnd was added
+
+**WorkitemQueryJobQueryFilters** (1 change)
+
+* Model was added
+
+**WorkitemQueryJobQueryFiltersCriteria** (1 change)
+
+* Model was added
+
+**WorkitemQueryJobQueryFiltersPredicate** (1 change)
 
 * Model was added
 
 
-# Point Changes (1 change)
+# Point Changes (2 changes)
 
-**GET /api/v2/webdeployments/configurations** (1 change)
+**POST /api/v2/conversations/{conversationId}/suggestions/feedback** (1 change)
 
-* Description was changed for parameter showOnlyPublished
+* Description was changed
+
+**GET /api/v2/flows/{flowId}/versions/{versionId}/configuration** (1 change)
+
+* Summary was changed

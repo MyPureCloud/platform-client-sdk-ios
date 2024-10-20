@@ -474,7 +474,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -603,7 +603,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -880,7 +880,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -962,7 +962,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -7170,7 +7170,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -7299,7 +7299,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -7576,7 +7576,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -7658,7 +7658,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -14210,7 +14210,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -14339,7 +14339,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -14616,7 +14616,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -14698,7 +14698,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -20906,7 +20906,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -21035,7 +21035,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -21312,7 +21312,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -21394,7 +21394,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -27693,7 +27693,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -27822,7 +27822,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -28099,7 +28099,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -28181,7 +28181,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -34389,7 +34389,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -34518,7 +34518,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -34795,7 +34795,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -34877,7 +34877,7 @@ open class UserRecordingsAPI {
             "code" : "code",
             "entityName" : "entityName",
             "limit" : {
-              "namespace" : "agent.assistant",
+              "namespace" : "audit",
               "value" : 7,
               "key" : "key"
             },
@@ -41299,7 +41299,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -41428,7 +41428,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -41705,7 +41705,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -41787,7 +41787,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -47995,7 +47995,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -48124,7 +48124,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -48401,7 +48401,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },
@@ -48483,7 +48483,7 @@ open class UserRecordingsAPI {
           "code" : "code",
           "entityName" : "entityName",
           "limit" : {
-            "namespace" : "agent.assistant",
+            "namespace" : "audit",
             "value" : 7,
             "key" : "key"
           },

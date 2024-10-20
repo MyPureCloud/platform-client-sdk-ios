@@ -814,6 +814,162 @@ open class KnowledgeAPI {
     
     
     
+    /**
+     Delete Salesforce Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId: String, sourceId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseSourcesSalesforceSourceIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete Salesforce Knowledge integration source
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseSourcesSalesforceSourceIdWithRequestBuilder(knowledgeBaseId: String, sourceId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete ServiceNow Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId: String, sourceId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseSourcesServicenowSourceIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete ServiceNow Knowledge integration source
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseSourcesServicenowSourceIdWithRequestBuilder(knowledgeBaseId: String, sourceId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Delete synchronization job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter syncJobId: (path) Synchronization job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: String, syncJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteKnowledgeKnowledgebaseSynchronizeJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete synchronization job
+     - DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter syncJobId: (path) Synchronization job ID 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteKnowledgeKnowledgebaseSynchronizeJobWithRequestBuilder(knowledgeBaseId: String, syncJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let syncJobIdPreEscape = "\(syncJobId)"
+        let syncJobIdPostEscape = syncJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{syncJobId}", with: syncJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     
     
     
@@ -1290,6 +1446,81 @@ open class KnowledgeAPI {
         ])
 
         let requestBuilder: RequestBuilder<KnowledgeGuestDocumentResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get sync options available for a knowledge-connect integration
+     
+     - parameter integrationId: (path) Integration ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeIntegrationOptions(integrationId: String, completion: @escaping ((_ data: KnowledgeIntegrationOptionsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeIntegrationOptionsWithRequestBuilder(integrationId: integrationId)
+        requestBuilder.execute { (response: Response<KnowledgeIntegrationOptionsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get sync options available for a knowledge-connect integration
+     - GET /api/v2/knowledge/integrations/{integrationId}/options
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "filters" : [ {
+    "values" : [ {
+      "value" : "value",
+      "key" : "key"
+    }, {
+      "value" : "value",
+      "key" : "key"
+    } ],
+    "name" : "categories",
+    "type" : "SingleSelect"
+  }, {
+    "values" : [ {
+      "value" : "value",
+      "key" : "key"
+    }, {
+      "value" : "value",
+      "key" : "key"
+    } ],
+    "name" : "categories",
+    "type" : "SingleSelect"
+  } ]
+}, statusCode=200}]
+     
+     - parameter integrationId: (path) Integration ID 
+
+     - returns: RequestBuilder<KnowledgeIntegrationOptionsResponse> 
+     */
+    open class func getKnowledgeIntegrationOptionsWithRequestBuilder(integrationId: String) -> RequestBuilder<KnowledgeIntegrationOptionsResponse> {        
+        var path = "/api/v2/knowledge/integrations/{integrationId}/options"
+        let integrationIdPreEscape = "\(integrationId)"
+        let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{integrationId}", with: integrationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeIntegrationOptionsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -4495,6 +4726,514 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    public enum ModelType_getKnowledgeKnowledgebaseOperations: String { 
+        case export = "Export"
+        case _import = "Import"
+        case parse = "Parse"
+        case sync = "Sync"
+    }
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get operations
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter userId: (query) If specified, retrieves operations associated with user ids, comma separated values expected. (optional)
+     - parameter type: (query) If specified, retrieves operations with specified operation type, comma separated values expected. (optional)
+     - parameter status: (query) If specified, retrieves operations with specified operation status, comma separated values expected. (optional)
+     - parameter interval: (query) Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)
+     - parameter sourceId: (query) If specified, retrieves operations associated with source ids, comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseOperations(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, userId: [String]? = nil, type: [String]? = nil, status: [String]? = nil, interval: String? = nil, sourceId: [String]? = nil, completion: @escaping ((_ data: OperationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseOperationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, userId: userId, type: type, status: status, interval: interval, sourceId: sourceId)
+        requestBuilder.execute { (response: Response<OperationListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get operations
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "source" : "{}",
+    "type" : "Import",
+    "status" : "status"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "source" : "{}",
+    "type" : "Import",
+    "status" : "status"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter userId: (query) If specified, retrieves operations associated with user ids, comma separated values expected. (optional)
+     - parameter type: (query) If specified, retrieves operations with specified operation type, comma separated values expected. (optional)
+     - parameter status: (query) If specified, retrieves operations with specified operation status, comma separated values expected. (optional)
+     - parameter interval: (query) Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ (optional)
+     - parameter sourceId: (query) If specified, retrieves operations associated with source ids, comma separated values expected. (optional)
+
+     - returns: RequestBuilder<OperationListing> 
+     */
+    open class func getKnowledgeKnowledgebaseOperationsWithRequestBuilder(knowledgeBaseId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, userId: [String]? = nil, type: [String]? = nil, status: [String]? = nil, interval: String? = nil, sourceId: [String]? = nil) -> RequestBuilder<OperationListing> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize, 
+            "userId": userId, 
+            "type": type, 
+            "status": status, 
+            "interval": interval, 
+            "sourceId": sourceId
+        ])
+
+        let requestBuilder: RequestBuilder<OperationListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get ids of operation creator users and oauth clients
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseOperationsUsersQuery(knowledgeBaseId: String, completion: @escaping ((_ data: OperationCreatorUserResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseOperationsUsersQueryWithRequestBuilder(knowledgeBaseId: knowledgeBaseId)
+        requestBuilder.execute { (response: Response<OperationCreatorUserResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get ids of operation creator users and oauth clients
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "type" : "User"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+
+     - returns: RequestBuilder<OperationCreatorUserResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseOperationsUsersQueryWithRequestBuilder(knowledgeBaseId: String) -> RequestBuilder<OperationCreatorUserResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OperationCreatorUserResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    public enum ModelType_getKnowledgeKnowledgebaseSources: String { 
+        case salesforce = "Salesforce"
+        case serviceNow = "ServiceNow"
+    }
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseSources: String { 
+        case lastsync = "lastsync"
+    }
+    
+    
+    
+    /**
+     Get Knowledge integration sources
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter type: (query) If specified, retrieves integration sources with specified integration type. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter ids: (query) If specified, retrieves integration sources with specified IDs. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseSources(knowledgeBaseId: String, type: ModelType_getKnowledgeKnowledgebaseSources? = nil, expand: [String]? = nil, ids: [String]? = nil, completion: @escaping ((_ data: [SourceBaseResponse]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseSourcesWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, type: type, expand: expand, ids: ids)
+        requestBuilder.execute { (response: Response<[SourceBaseResponse]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Knowledge integration sources
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Salesforce",
+  "schedulePeriod" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter type: (query) If specified, retrieves integration sources with specified integration type. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter ids: (query) If specified, retrieves integration sources with specified IDs. (optional)
+
+     - returns: RequestBuilder<[SourceBaseResponse]> 
+     */
+    open class func getKnowledgeKnowledgebaseSourcesWithRequestBuilder(knowledgeBaseId: String, type: ModelType_getKnowledgeKnowledgebaseSources? = nil, expand: [String]? = nil, ids: [String]? = nil) -> RequestBuilder<[SourceBaseResponse]> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "type": type?.rawValue, 
+            "expand": expand, 
+            "ids": ids
+        ])
+
+        let requestBuilder: RequestBuilder<[SourceBaseResponse]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseSourcesSalesforceSourceId: String { 
+        case lastsync = "lastsync"
+    }
+    
+    /**
+     Get Salesforce Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId: String, sourceId: String, expand: [String]? = nil, completion: @escaping ((_ data: SalesforceSourceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseSourcesSalesforceSourceIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, expand: expand)
+        requestBuilder.execute { (response: Response<SalesforceSourceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Salesforce Knowledge integration source
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Salesforce",
+  "schedulePeriod" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+
+     - returns: RequestBuilder<SalesforceSourceResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseSourcesSalesforceSourceIdWithRequestBuilder(knowledgeBaseId: String, sourceId: String, expand: [String]? = nil) -> RequestBuilder<SalesforceSourceResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<SalesforceSourceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseSourcesServicenowSourceId: String { 
+        case lastsync = "lastsync"
+    }
+    
+    /**
+     Get ServiceNow Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId: String, sourceId: String, expand: [String]? = nil, completion: @escaping ((_ data: ServiceNowSourceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseSourcesServicenowSourceIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, expand: expand)
+        requestBuilder.execute { (response: Response<ServiceNowSourceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get ServiceNow Knowledge integration source
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Salesforce",
+  "schedulePeriod" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
+
+     - returns: RequestBuilder<ServiceNowSourceResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseSourcesServicenowSourceIdWithRequestBuilder(knowledgeBaseId: String, sourceId: String, expand: [String]? = nil) -> RequestBuilder<ServiceNowSourceResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<ServiceNowSourceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get synchronization job report
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter syncJobId: (path) Synchronization job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: String, syncJobId: String, completion: @escaping ((_ data: KnowledgeSyncJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseSynchronizeJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId)
+        requestBuilder.execute { (response: Response<KnowledgeSyncJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get synchronization job report
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "{}",
+  "status" : "Created",
+  "failedEntitiesURL" : "failedEntitiesURL"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter syncJobId: (path) Synchronization job ID 
+
+     - returns: RequestBuilder<KnowledgeSyncJobResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseSynchronizeJobWithRequestBuilder(knowledgeBaseId: String, syncJobId: String) -> RequestBuilder<KnowledgeSyncJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let syncJobIdPreEscape = "\(syncJobId)"
+        let syncJobIdPostEscape = syncJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{syncJobId}", with: syncJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSyncJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
     public enum App_getKnowledgeKnowledgebaseUnansweredGroup: String { 
         case supportCenter = "SupportCenter"
         case messengerKnowledgeApp = "MessengerKnowledgeApp"
@@ -6445,6 +7184,83 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeImport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update synchronization job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter syncJobId: (path) Synchronization job ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: String, syncJobId: String, body: SyncStatusRequest, completion: @escaping ((_ data: KnowledgeSyncJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchKnowledgeKnowledgebaseSynchronizeJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSyncJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update synchronization job
+     - PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "{}",
+  "status" : "Created",
+  "failedEntitiesURL" : "failedEntitiesURL"
+}, statusCode=202}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter syncJobId: (path) Synchronization job ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeSyncJobResponse> 
+     */
+    open class func patchKnowledgeKnowledgebaseSynchronizeJobWithRequestBuilder(knowledgeBaseId: String, syncJobId: String, body: SyncStatusRequest) -> RequestBuilder<KnowledgeSyncJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let syncJobIdPreEscape = "\(syncJobId)"
+        let syncJobIdPostEscape = syncJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{syncJobId}", with: syncJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSyncJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }
@@ -9249,6 +10065,350 @@ open class KnowledgeAPI {
 
     
     
+    
+    
+    /**
+     Create Salesforce Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseSourcesSalesforce(knowledgeBaseId: String, body: SalesforceSourceRequest, completion: @escaping ((_ data: KnowledgeSyncJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseSourcesSalesforceWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSyncJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create Salesforce Knowledge integration source
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "{}",
+  "status" : "Created",
+  "failedEntitiesURL" : "failedEntitiesURL"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeSyncJobResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseSourcesSalesforceWithRequestBuilder(knowledgeBaseId: String, body: SalesforceSourceRequest) -> RequestBuilder<KnowledgeSyncJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSyncJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Start sync on Salesforce Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId: String, sourceId: String, completion: @escaping ((_ data: SourceSyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId)
+        requestBuilder.execute { (response: Response<SourceSyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start sync on Salesforce Knowledge integration source
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Success",
+  "source" : "{}",
+  "error" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+
+     - returns: RequestBuilder<SourceSyncResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSyncWithRequestBuilder(knowledgeBaseId: String, sourceId: String) -> RequestBuilder<SourceSyncResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SourceSyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create ServiceNow Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseSourcesServicenow(knowledgeBaseId: String, body: ServiceNowSourceRequest, completion: @escaping ((_ data: KnowledgeSyncJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseSourcesServicenowWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSyncJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create ServiceNow Knowledge integration source
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "{}",
+  "status" : "Created",
+  "failedEntitiesURL" : "failedEntitiesURL"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeSyncJobResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseSourcesServicenowWithRequestBuilder(knowledgeBaseId: String, body: ServiceNowSourceRequest) -> RequestBuilder<KnowledgeSyncJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSyncJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Start synchronization on ServiceNow Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId: String, sourceId: String, completion: @escaping ((_ data: SourceSyncResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId)
+        requestBuilder.execute { (response: Response<SourceSyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Start synchronization on ServiceNow Knowledge integration source
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "knowledgeBase" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "state" : "Success",
+  "source" : "{}",
+  "error" : "{}"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+
+     - returns: RequestBuilder<SourceSyncResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseSourcesServicenowSourceIdSyncWithRequestBuilder(knowledgeBaseId: String, sourceId: String) -> RequestBuilder<SourceSyncResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SourceSyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create synchronization job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseSynchronizeJobs(knowledgeBaseId: String, body: KnowledgeSyncJobRequest, completion: @escaping ((_ data: KnowledgeSyncJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseSynchronizeJobsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeSyncJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create synchronization job
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "knowledgeBase" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "uploadKey" : "uploadKey",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "report" : "{}",
+  "downloadURL" : "downloadURL",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "source" : "{}",
+  "status" : "Created",
+  "failedEntitiesURL" : "failedEntitiesURL"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeSyncJobResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseSynchronizeJobsWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeSyncJobRequest) -> RequestBuilder<KnowledgeSyncJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeSyncJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Create new knowledge base
      
@@ -9307,6 +10467,156 @@ open class KnowledgeAPI {
         let requestBuilder: RequestBuilder<KnowledgeBase>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update Salesforce Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId: String, sourceId: String, body: SalesforceSourceRequest, completion: @escaping ((_ data: SalesforceSourceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putKnowledgeKnowledgebaseSourcesSalesforceSourceIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, body: body)
+        requestBuilder.execute { (response: Response<SalesforceSourceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Salesforce Knowledge integration source
+     - PUT /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Salesforce",
+  "schedulePeriod" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<SalesforceSourceResponse> 
+     */
+    open class func putKnowledgeKnowledgebaseSourcesSalesforceSourceIdWithRequestBuilder(knowledgeBaseId: String, sourceId: String, body: SalesforceSourceRequest) -> RequestBuilder<SalesforceSourceResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SalesforceSourceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Update ServiceNow Knowledge integration source
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId: String, sourceId: String, body: ServiceNowSourceRequest, completion: @escaping ((_ data: ServiceNowSourceResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putKnowledgeKnowledgebaseSourcesServicenowSourceIdWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, body: body)
+        requestBuilder.execute { (response: Response<ServiceNowSourceResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update ServiceNow Knowledge integration source
+     - PUT /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "settings" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "lastSync" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "integration" : "{}",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "type" : "Salesforce",
+  "schedulePeriod" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter sourceId: (path) Source ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<ServiceNowSourceResponse> 
+     */
+    open class func putKnowledgeKnowledgebaseSourcesServicenowSourceIdWithRequestBuilder(knowledgeBaseId: String, sourceId: String, body: ServiceNowSourceRequest) -> RequestBuilder<ServiceNowSourceResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let sourceIdPreEscape = "\(sourceId)"
+        let sourceIdPostEscape = sourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{sourceId}", with: sourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ServiceNowSourceResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }
 
 }

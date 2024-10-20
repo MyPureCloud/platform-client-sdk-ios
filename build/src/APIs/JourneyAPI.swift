@@ -3422,6 +3422,129 @@ open class JourneyAPI {
 
     
     
+    /**
+     Get an Event Definition
+     
+     - parameter eventDefinitionId: (path) Event Definition ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsEventdefinition(eventDefinitionId: String, completion: @escaping ((_ data: JourneyEventDefinition?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsEventdefinitionWithRequestBuilder(eventDefinitionId: eventDefinitionId)
+        requestBuilder.execute { (response: Response<JourneyEventDefinition>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an Event Definition
+     - GET /api/v2/journey/views/eventdefinitions/{eventDefinitionId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "jsonSchema" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "description" : "description",
+  "id" : "id",
+  "source" : "Native"
+}, statusCode=200}]
+     
+     - parameter eventDefinitionId: (path) Event Definition ID 
+
+     - returns: RequestBuilder<JourneyEventDefinition> 
+     */
+    open class func getJourneyViewsEventdefinitionWithRequestBuilder(eventDefinitionId: String) -> RequestBuilder<JourneyEventDefinition> {        
+        var path = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}"
+        let eventDefinitionIdPreEscape = "\(eventDefinitionId)"
+        let eventDefinitionIdPostEscape = eventDefinitionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{eventDefinitionId}", with: eventDefinitionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyEventDefinition>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a list of Event Definitions
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsEventdefinitions(completion: @escaping ((_ data: JourneyEventDefinitionListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsEventdefinitionsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<JourneyEventDefinitionListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a list of Event Definitions
+     - GET /api/v2/journey/views/eventdefinitions
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "entities" : [ {
+    "jsonSchema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "source" : "Native"
+  }, {
+    "jsonSchema" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "description" : "description",
+    "id" : "id",
+    "source" : "Native"
+  } ],
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<JourneyEventDefinitionListing> 
+     */
+    open class func getJourneyViewsEventdefinitionsWithRequestBuilder() -> RequestBuilder<JourneyEventDefinitionListing> {        
+        let path = "/api/v2/journey/views/eventdefinitions"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JourneyEventDefinitionListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -5429,6 +5552,59 @@ open class JourneyAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<JourneyView>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Validate whether an encoding exist for a label/value combination.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postJourneyViewsEncodingsValidate(body: [Label]? = nil, completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postJourneyViewsEncodingsValidateWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Validate whether an encoding exist for a label/value combination.
+     - POST /api/v2/journey/views/encodings/validate
+     - True indicates a valid encoding
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ "{}", "{}" ]
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<EntityListing> 
+     */
+    open class func postJourneyViewsEncodingsValidateWithRequestBuilder(body: [Label]? = nil) -> RequestBuilder<EntityListing> {        
+        let path = "/api/v2/journey/views/encodings/validate"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

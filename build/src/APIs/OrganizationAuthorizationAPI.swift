@@ -7418,6 +7418,59 @@ open class OrganizationAuthorizationAPI {
     }
 
     /**
+     Get Customer Care organization ids.
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getOrgauthorizationTrusteesCare(completion: @escaping ((_ data: TrusteeReferenceList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getOrgauthorizationTrusteesCareWithRequestBuilder()
+        requestBuilder.execute { (response: Response<TrusteeReferenceList>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Customer Care organization ids.
+     - GET /api/v2/orgauthorization/trustees/care
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+
+     - returns: RequestBuilder<TrusteeReferenceList> 
+     */
+    open class func getOrgauthorizationTrusteesCareWithRequestBuilder() -> RequestBuilder<TrusteeReferenceList> {        
+        let path = "/api/v2/orgauthorization/trustees/care"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TrusteeReferenceList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
      Get organization authorization trust with Customer Care, if one exists.
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -15631,6 +15684,107 @@ open class OrganizationAuthorizationAPI {
         ])
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+     
+     - parameter assignDefaultRole: (query) Assign Admin role to default pairing with Customer Care (optional)
+     - parameter autoExpire: (query) Automatically expire pairing after 30 days (optional)
+     - parameter assignFullAccess: (query) Grant Customer Care full access to the organization (optional)
+     - parameter allowTrustedUserAccess: (query) Make Customer Care a Trusted User (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postOrgauthorizationTrusteesCare(assignDefaultRole: Bool? = nil, autoExpire: Bool? = nil, assignFullAccess: Bool? = nil, allowTrustedUserAccess: Bool? = nil, completion: @escaping ((_ data: TrustEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = postOrgauthorizationTrusteesCareWithRequestBuilder(assignDefaultRole: assignDefaultRole, autoExpire: autoExpire, assignFullAccess: assignFullAccess, allowTrustedUserAccess: allowTrustedUserAccess)
+        requestBuilder.execute { (response: Response<TrustEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+     - POST /api/v2/orgauthorization/trustees/care
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "hasFullAccess" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isTrustedUser" : true,
+    "createdBy" : "{}",
+    "dateExpired" : "2000-01-23T04:56:07.000+00:00",
+    "organization" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "enabled" : true,
+    "usesDefaultRole" : true
+  }, {
+    "hasFullAccess" : true,
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "isTrustedUser" : true,
+    "createdBy" : "{}",
+    "dateExpired" : "2000-01-23T04:56:07.000+00:00",
+    "organization" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "enabled" : true,
+    "usesDefaultRole" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter assignDefaultRole: (query) Assign Admin role to default pairing with Customer Care (optional)
+     - parameter autoExpire: (query) Automatically expire pairing after 30 days (optional)
+     - parameter assignFullAccess: (query) Grant Customer Care full access to the organization (optional)
+     - parameter allowTrustedUserAccess: (query) Make Customer Care a Trusted User (optional)
+
+     - returns: RequestBuilder<TrustEntityListing> 
+     */
+    open class func postOrgauthorizationTrusteesCareWithRequestBuilder(assignDefaultRole: Bool? = nil, autoExpire: Bool? = nil, assignFullAccess: Bool? = nil, allowTrustedUserAccess: Bool? = nil) -> RequestBuilder<TrustEntityListing> {        
+        let path = "/api/v2/orgauthorization/trustees/care"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "assignDefaultRole": assignDefaultRole, 
+            "autoExpire": autoExpire, 
+            "assignFullAccess": assignFullAccess, 
+            "allowTrustedUserAccess": allowTrustedUserAccess
+        ])
+
+        let requestBuilder: RequestBuilder<TrustEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

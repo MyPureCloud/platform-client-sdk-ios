@@ -10457,7 +10457,7 @@ open class ArchitectAPI {
     
     
     /**
-     Create flow version configuration
+     Get flow version configuration
      
      - parameter flowId: (path) Flow ID 
      - parameter versionId: (path) Version ID 
@@ -10483,7 +10483,7 @@ open class ArchitectAPI {
     }
 
     /**
-     Create flow version configuration
+     Get flow version configuration
      - GET /api/v2/flows/{flowId}/versions/{versionId}/configuration
      - OAuth:
        - type: oauth2

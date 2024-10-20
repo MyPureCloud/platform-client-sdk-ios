@@ -560,6 +560,7 @@ docs/BusinessUnitListing.md
 docs/BusinessUnitReference.md
 docs/BusinessUnitResponse.md
 docs/BusinessUnitSettingsResponse.md
+docs/Button.md
 docs/ButtonComponent.md
 docs/ButtonResponse.md
 docs/CachedMediaItem.md
@@ -627,6 +628,8 @@ docs/CampaignRuleEntities.md
 docs/CampaignRuleEntityListing.md
 docs/CampaignRuleExecutionSettings.md
 docs/CampaignRuleParameters.md
+docs/CampaignRuleWarning.md
+docs/CampaignRuleWarningParameters.md
 docs/CampaignSchedule.md
 docs/CampaignSequence.md
 docs/CampaignSequenceEntityListing.md
@@ -1099,6 +1102,14 @@ docs/ConversationSocialExpressionEventTopicSocialConversation.md
 docs/ConversationSocialExpressionEventTopicSocialMediaParticipant.md
 docs/ConversationSocialExpressionEventTopicUriReference.md
 docs/ConversationSocialExpressionEventTopicWrapup.md
+docs/ConversationSummaryTopicVirtualAgentsConversationHeadline.md
+docs/ConversationSummaryTopicVirtualAgentsConversationReason.md
+docs/ConversationSummaryTopicVirtualAgentsConversationResolution.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummary.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.md
+docs/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.md
+docs/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.md
+docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
 docs/ConversationTagsUpdate.md
 docs/ConversationThreadingWindow.md
 docs/ConversationThreadingWindowSetting.md
@@ -1213,6 +1224,14 @@ docs/CrossPlatformPolicy.md
 docs/CrossPlatformPolicyActions.md
 docs/CrossPlatformPolicyCreate.md
 docs/CrossPlatformPolicyUpdate.md
+docs/CsvJobRequest.md
+docs/CsvJobResponse.md
+docs/CsvMappingEntry.md
+docs/CsvSettings.md
+docs/CsvUploadDetailsResponse.md
+docs/CsvUploadPreviewResponse.md
+docs/CsvUploadRequest.md
+docs/CsvUploadResponse.md
 docs/CtaButtonStyleProperties.md
 docs/CurrentUserScheduleRequestBody.md
 docs/CurrentUserTimeOffIntegrationStatusRequest.md
@@ -1431,7 +1450,9 @@ docs/DocumentBodyImageProperties.md
 docs/DocumentBodyList.md
 docs/DocumentBodyListBlock.md
 docs/DocumentBodyListBlockProperties.md
+docs/DocumentBodyListBlockWithHighlight.md
 docs/DocumentBodyListItemProperties.md
+docs/DocumentBodyListWithHighlight.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyParagraphWithHighlight.md
@@ -1440,9 +1461,12 @@ docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
 docs/DocumentBodyTableCellBlock.md
 docs/DocumentBodyTableCellBlockProperties.md
+docs/DocumentBodyTableCellBlockWithHighlight.md
 docs/DocumentBodyTableProperties.md
 docs/DocumentBodyTableRowBlock.md
 docs/DocumentBodyTableRowBlockProperties.md
+docs/DocumentBodyTableRowBlockWithHighlight.md
+docs/DocumentBodyTableWithHighlight.md
 docs/DocumentBodyVideo.md
 docs/DocumentBodyVideoProperties.md
 docs/DocumentBodyWithHighlight.md
@@ -1454,6 +1478,7 @@ docs/DocumentElementLength.md
 docs/DocumentEntityListing.md
 docs/DocumentFaq.md
 docs/DocumentListContentBlock.md
+docs/DocumentListContentBlockWithHighlight.md
 docs/DocumentListing.md
 docs/DocumentQuery.md
 docs/DocumentQueryClause.md
@@ -1461,6 +1486,7 @@ docs/DocumentQueryInterval.md
 docs/DocumentQueryPredicate.md
 docs/DocumentReference.md
 docs/DocumentTableContentBlock.md
+docs/DocumentTableContentBlockWithHighlight.md
 docs/DocumentText.md
 docs/DocumentTextProperties.md
 docs/DocumentThumbnail.md
@@ -2012,6 +2038,7 @@ docs/GuestMemberInfo.md
 docs/GuestResponseCategory.md
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
+docs/Header.md
 docs/HealthInfo.md
 docs/HelpLink.md
 docs/HelpSettings.md
@@ -2170,6 +2197,8 @@ docs/JourneyCampaign.md
 docs/JourneyContext.md
 docs/JourneyCustomer.md
 docs/JourneyCustomerSession.md
+docs/JourneyEventDefinition.md
+docs/JourneyEventDefinitionListing.md
 docs/JourneyEventsSettings.md
 docs/JourneyGeolocation.md
 docs/JourneyOutcomeEventsNotificationActionMap.md
@@ -2385,6 +2414,10 @@ docs/KnowledgeImportJobRequest.md
 docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
+docs/KnowledgeIntegrationFilter.md
+docs/KnowledgeIntegrationFilterValue.md
+docs/KnowledgeIntegrationOptionsResponse.md
+docs/KnowledgeIntegrationReference.md
 docs/KnowledgeOperationSource.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
@@ -2392,8 +2425,13 @@ docs/KnowledgeSearchDocumentV1.md
 docs/KnowledgeSearchRequest.md
 docs/KnowledgeSearchResponse.md
 docs/KnowledgeSuggestionConfig.md
+docs/KnowledgeSyncJobReport.md
+docs/KnowledgeSyncJobRequest.md
+docs/KnowledgeSyncJobResponse.md
+docs/KnowledgeSyncJobStatistics.md
 docs/KnowledgeTraining.md
 docs/KpiResult.md
+docs/Label.md
 docs/LabelCreateRequest.md
 docs/LabelListing.md
 docs/LabelResponse.md
@@ -2543,6 +2581,7 @@ docs/ListWrapperString.md
 docs/ListedDictionaryFeedback.md
 docs/ListedProgram.md
 docs/ListedTopic.md
+docs/Listing.md
 docs/LocalDateRange.md
 docs/LocalEncryptionConfiguration.md
 docs/LocalEncryptionKeyRequest.md
@@ -2618,6 +2657,8 @@ docs/MessageConversationEntityListing.md
 docs/MessageData.md
 docs/MessageDetails.md
 docs/MessageEvaluation.md
+docs/MessageFooter.md
+docs/MessageHeader.md
 docs/MessageInfo.md
 docs/MessageMedia.md
 docs/MessageMediaAttachment.md
@@ -2811,6 +2852,9 @@ docs/OpenReceiptNormalizedMessage.md
 docs/Operand.md
 docs/OperandPosition.md
 docs/Operation.md
+docs/OperationCreatorUserResponse.md
+docs/OperationListing.md
+docs/OperationResponse.md
 docs/OperationalEventNotificationTopicEventEntity.md
 docs/OperationalEventNotificationTopicOperationalEventNotification.md
 docs/OperationalEventsAPI.json
@@ -3547,6 +3591,9 @@ docs/SCIMAPI.md
 docs/SIPSearchPublicRequest.md
 docs/SMSAvailablePhoneNumberEntityListing.md
 docs/Salesforce.md
+docs/SalesforceSettings.md
+docs/SalesforceSourceRequest.md
+docs/SalesforceSourceResponse.md
 docs/Schedule.md
 docs/ScheduleActivity.md
 docs/ScheduleDivisionViewEntityListing.md
@@ -3663,6 +3710,9 @@ docs/ServiceGoalTemplateImpactOverride.md
 docs/ServiceGoalTemplateList.md
 docs/ServiceGoalTemplateReference.md
 docs/ServiceLevel.md
+docs/ServiceNowSettings.md
+docs/ServiceNowSourceRequest.md
+docs/ServiceNowSourceResponse.md
 docs/Session.md
 docs/SessionEndDetails.md
 docs/SessionLastEvent.md
@@ -3743,10 +3793,13 @@ docs/SocialHandle.md
 docs/SocialKeyword.md
 docs/SortItem.md
 docs/Source.md
+docs/SourceBaseResponse.md
 docs/SourceConfiguration.md
 docs/SourceEntity.md
 docs/SourceEntityListing.md
+docs/SourceLastSync.md
 docs/SourcePlanningGroupRequest.md
+docs/SourceSyncResponse.md
 docs/SpeechTextAnalyticsAPI.json
 docs/SpeechTextAnalyticsAPI.md
 docs/SpeechTextAnalyticsSettingsRequest.md
@@ -3850,6 +3903,7 @@ docs/SurveyQuestionGroup.md
 docs/SurveyQuestionGroupScore.md
 docs/SurveyQuestionScore.md
 docs/SurveyScoringSet.md
+docs/SyncStatusRequest.md
 docs/SystemMessageObject.md
 docs/SystemMessageSystemMessage.md
 docs/SystemPresence.md
@@ -4055,6 +4109,7 @@ docs/Trustee.md
 docs/TrusteeAuditQueryRequest.md
 docs/TrusteeAuthorization.md
 docs/TrusteeBillingOverview.md
+docs/TrusteeReferenceList.md
 docs/Trustor.md
 docs/TrustorAuditQueryRequest.md
 docs/TrustorEntityListing.md
@@ -4211,6 +4266,7 @@ docs/UserRecordingEntityListing.md
 docs/UserRecordingsAPI.json
 docs/UserRecordingsAPI.md
 docs/UserReference.md
+docs/UserReferenceEntityListing.md
 docs/UserReferenceWithName.md
 docs/UserRoutingLanguage.md
 docs/UserRoutingLanguagePost.md
@@ -4317,7 +4373,9 @@ docs/ValidateAddressResponse.md
 docs/ValidateAssignUsers.md
 docs/ValidateWorkPlanMessages.md
 docs/ValidateWorkPlanResponse.md
+docs/ValidationError.md
 docs/ValidationLimits.md
+docs/ValidationResult.md
 docs/ValidationServiceRequest.md
 docs/ValueWrapperActivityPlanServiceGoalImpactOverrides.md
 docs/ValueWrapperDate.md
@@ -4587,6 +4645,7 @@ docs/WfmUserScheduleAdherenceUpdatedMuTopicQueueReference.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicUriReference.md
+docs/WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicUserReference.md
 docs/WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference.md
@@ -4594,6 +4653,7 @@ docs/WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicUriReference.md
+docs/WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicUserReference.md
 docs/WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate.md
 docs/WfmUserScheduleAdherenceUpdatedTopicActivityCodeReference.md
@@ -4601,6 +4661,7 @@ docs/WfmUserScheduleAdherenceUpdatedTopicQueueReference.md
 docs/WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation.md
 docs/WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference.md
 docs/WfmUserScheduleAdherenceUpdatedTopicUriReference.md
+docs/WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder.md
 docs/WfmUserScheduleAdherenceUpdatedTopicUserReference.md
 docs/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.md
 docs/WfmVersionedEntityMetadata.md
@@ -4692,6 +4753,9 @@ docs/WorkitemPagedEntityListing.md
 docs/WorkitemQueryJobCreate.md
 docs/WorkitemQueryJobError.md
 docs/WorkitemQueryJobFilter.md
+docs/WorkitemQueryJobQueryFilters.md
+docs/WorkitemQueryJobQueryFiltersCriteria.md
+docs/WorkitemQueryJobQueryFiltersPredicate.md
 docs/WorkitemQueryJobResponse.md
 docs/WorkitemQueryJobSort.md
 docs/WorkitemQueueReference.md
@@ -4818,6 +4882,7 @@ docs/deleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/deleteExternalcontactsContact-example.txt
 docs/deleteExternalcontactsContactNote-example.txt
 docs/deleteExternalcontactsContactsSchema-example.txt
+docs/deleteExternalcontactsImportCsvSetting-example.txt
 docs/deleteExternalcontactsOrganization-example.txt
 docs/deleteExternalcontactsOrganizationNote-example.txt
 docs/deleteExternalcontactsOrganizationTrustor-example.txt
@@ -4865,6 +4930,9 @@ docs/deleteKnowledgeKnowledgebaseLabel-example.txt
 docs/deleteKnowledgeKnowledgebaseLanguageCategory-example.txt
 docs/deleteKnowledgeKnowledgebaseLanguageDocument-example.txt
 docs/deleteKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
+docs/deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
+docs/deleteKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
+docs/deleteKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/deleteLanguage-example.txt
 docs/deleteLanguageunderstandingDomain-example.txt
 docs/deleteLanguageunderstandingDomainFeedbackFeedbackId-example.txt
@@ -5292,6 +5360,10 @@ docs/getExternalcontactsContactsSchema-example.txt
 docs/getExternalcontactsContactsSchemaVersion-example.txt
 docs/getExternalcontactsContactsSchemaVersions-example.txt
 docs/getExternalcontactsContactsSchemas-example.txt
+docs/getExternalcontactsImportCsvSetting-example.txt
+docs/getExternalcontactsImportCsvSettings-example.txt
+docs/getExternalcontactsImportCsvUploadDetails-example.txt
+docs/getExternalcontactsImportCsvUploadPreview-example.txt
 docs/getExternalcontactsOrganization-example.txt
 docs/getExternalcontactsOrganizationContacts-example.txt
 docs/getExternalcontactsOrganizationNote-example.txt
@@ -5514,10 +5586,13 @@ docs/getJourneyViewVersionJobResults-example.txt
 docs/getJourneyViewVersionJobResultsChart-example.txt
 docs/getJourneyViewVersionJobsLatest-example.txt
 docs/getJourneyViews-example.txt
+docs/getJourneyViewsEventdefinition-example.txt
+docs/getJourneyViewsEventdefinitions-example.txt
 docs/getJourneyViewsJobs-example.txt
 docs/getKnowledgeGuestSessionCategories-example.txt
 docs/getKnowledgeGuestSessionDocument-example.txt
 docs/getKnowledgeGuestSessionDocuments-example.txt
+docs/getKnowledgeIntegrationOptions-example.txt
 docs/getKnowledgeKnowledgebase-example.txt
 docs/getKnowledgeKnowledgebaseCategories-example.txt
 docs/getKnowledgeKnowledgebaseCategory-example.txt
@@ -5542,6 +5617,12 @@ docs/getKnowledgeKnowledgebaseLanguageDocuments-example.txt
 docs/getKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
 docs/getKnowledgeKnowledgebaseLanguageTraining-example.txt
 docs/getKnowledgeKnowledgebaseLanguageTrainings-example.txt
+docs/getKnowledgeKnowledgebaseOperations-example.txt
+docs/getKnowledgeKnowledgebaseOperationsUsersQuery-example.txt
+docs/getKnowledgeKnowledgebaseSources-example.txt
+docs/getKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
+docs/getKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
+docs/getKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/getKnowledgeKnowledgebaseUnansweredGroup-example.txt
 docs/getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
 docs/getKnowledgeKnowledgebaseUnansweredGroups-example.txt
@@ -5635,6 +5716,7 @@ docs/getOrgauthorizationTrusteeUser-example.txt
 docs/getOrgauthorizationTrusteeUserRoles-example.txt
 docs/getOrgauthorizationTrusteeUsers-example.txt
 docs/getOrgauthorizationTrustees-example.txt
+docs/getOrgauthorizationTrusteesCare-example.txt
 docs/getOrgauthorizationTrusteesDefault-example.txt
 docs/getOrgauthorizationTrustor-example.txt
 docs/getOrgauthorizationTrustorCloneduser-example.txt
@@ -6285,6 +6367,7 @@ docs/patchKnowledgeKnowledgebaseLanguageCategory-example.txt
 docs/patchKnowledgeKnowledgebaseLanguageDocument-example.txt
 docs/patchKnowledgeKnowledgebaseLanguageDocuments-example.txt
 docs/patchKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
+docs/patchKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
 docs/patchLanguageunderstandingDomain-example.txt
 docs/patchLanguageunderstandingMinerDraft-example.txt
@@ -6607,6 +6690,9 @@ docs/postExternalcontactsContactPromotion-example.txt
 docs/postExternalcontactsContacts-example.txt
 docs/postExternalcontactsContactsSchemas-example.txt
 docs/postExternalcontactsIdentifierlookup-example.txt
+docs/postExternalcontactsImportCsvJobs-example.txt
+docs/postExternalcontactsImportCsvSettings-example.txt
+docs/postExternalcontactsImportCsvUploads-example.txt
 docs/postExternalcontactsMergeContacts-example.txt
 docs/postExternalcontactsOrganizationNotes-example.txt
 docs/postExternalcontactsOrganizations-example.txt
@@ -6675,6 +6761,7 @@ docs/postJourneySegments-example.txt
 docs/postJourneyViewVersionJobs-example.txt
 docs/postJourneyViewVersions-example.txt
 docs/postJourneyViews-example.txt
+docs/postJourneyViewsEncodingsValidate-example.txt
 docs/postKnowledgeDocumentuploads-example.txt
 docs/postKnowledgeDocumentuploads-example.txt
 docs/postKnowledgeGuestSessionDocumentCopies-example.txt
@@ -6707,6 +6794,11 @@ docs/postKnowledgeKnowledgebaseLanguageTrainingPromote-example.txt
 docs/postKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/postKnowledgeKnowledgebaseSearch-example.txt
 docs/postKnowledgeKnowledgebaseSearch-example.txt
+docs/postKnowledgeKnowledgebaseSourcesSalesforce-example.txt
+docs/postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync-example.txt
+docs/postKnowledgeKnowledgebaseSourcesServicenow-example.txt
+docs/postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync-example.txt
+docs/postKnowledgeKnowledgebaseSynchronizeJobs-example.txt
 docs/postKnowledgeKnowledgebases-example.txt
 docs/postLanguages-example.txt
 docs/postLanguageunderstandingDomainFeedback-example.txt
@@ -6753,6 +6845,7 @@ docs/postOrgauthorizationTrusteeGroups-example.txt
 docs/postOrgauthorizationTrusteeUsers-example.txt
 docs/postOrgauthorizationTrustees-example.txt
 docs/postOrgauthorizationTrusteesAudits-example.txt
+docs/postOrgauthorizationTrusteesCare-example.txt
 docs/postOrgauthorizationTrusteesDefault-example.txt
 docs/postOrgauthorizationTrustorAudits-example.txt
 docs/postOutboundAttemptlimits-example.txt
@@ -7080,6 +7173,7 @@ docs/putExternalcontactsContact-example.txt
 docs/putExternalcontactsContactNote-example.txt
 docs/putExternalcontactsContactsSchema-example.txt
 docs/putExternalcontactsConversation-example.txt
+docs/putExternalcontactsImportCsvSetting-example.txt
 docs/putExternalcontactsOrganization-example.txt
 docs/putExternalcontactsOrganizationNote-example.txt
 docs/putExternalcontactsOrganizationTrustorTrustorId-example.txt
@@ -7120,6 +7214,8 @@ docs/putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings-example.tx
 docs/putIntegrationsSpeechTtsSettings-example.txt
 docs/putIntegrationsUnifiedcommunicationThirdpartypresences-example.txt
 docs/putJourneyViewVersion-example.txt
+docs/putKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
+docs/putKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
 docs/putLanguageunderstandingDomainVersion-example.txt
 docs/putLearningModule-example.txt
 docs/putLearningModulePreview-example.txt
@@ -7881,6 +7977,7 @@ src/Models/BusinessUnitListing.swift
 src/Models/BusinessUnitReference.swift
 src/Models/BusinessUnitResponse.swift
 src/Models/BusinessUnitSettingsResponse.swift
+src/Models/Button.swift
 src/Models/ButtonComponent.swift
 src/Models/ButtonResponse.swift
 src/Models/CachedMediaItem.swift
@@ -7948,6 +8045,8 @@ src/Models/CampaignRuleEntities.swift
 src/Models/CampaignRuleEntityListing.swift
 src/Models/CampaignRuleExecutionSettings.swift
 src/Models/CampaignRuleParameters.swift
+src/Models/CampaignRuleWarning.swift
+src/Models/CampaignRuleWarningParameters.swift
 src/Models/CampaignSchedule.swift
 src/Models/CampaignSequence.swift
 src/Models/CampaignSequenceEntityListing.swift
@@ -8412,6 +8511,14 @@ src/Models/ConversationSocialExpressionEventTopicSocialConversation.swift
 src/Models/ConversationSocialExpressionEventTopicSocialMediaParticipant.swift
 src/Models/ConversationSocialExpressionEventTopicUriReference.swift
 src/Models/ConversationSocialExpressionEventTopicWrapup.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationHeadline.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationReason.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationResolution.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationSummary.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.swift
+src/Models/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.swift
+src/Models/ConversationSummaryTopicVirtualAgentsTriggerSource.swift
 src/Models/ConversationTagsUpdate.swift
 src/Models/ConversationThreadingWindow.swift
 src/Models/ConversationThreadingWindowSetting.swift
@@ -8524,6 +8631,14 @@ src/Models/CrossPlatformPolicy.swift
 src/Models/CrossPlatformPolicyActions.swift
 src/Models/CrossPlatformPolicyCreate.swift
 src/Models/CrossPlatformPolicyUpdate.swift
+src/Models/CsvJobRequest.swift
+src/Models/CsvJobResponse.swift
+src/Models/CsvMappingEntry.swift
+src/Models/CsvSettings.swift
+src/Models/CsvUploadDetailsResponse.swift
+src/Models/CsvUploadPreviewResponse.swift
+src/Models/CsvUploadRequest.swift
+src/Models/CsvUploadResponse.swift
 src/Models/CtaButtonStyleProperties.swift
 src/Models/CurrentUserScheduleRequestBody.swift
 src/Models/CurrentUserTimeOffIntegrationStatusRequest.swift
@@ -8740,7 +8855,9 @@ src/Models/DocumentBodyImageProperties.swift
 src/Models/DocumentBodyList.swift
 src/Models/DocumentBodyListBlock.swift
 src/Models/DocumentBodyListBlockProperties.swift
+src/Models/DocumentBodyListBlockWithHighlight.swift
 src/Models/DocumentBodyListItemProperties.swift
+src/Models/DocumentBodyListWithHighlight.swift
 src/Models/DocumentBodyParagraph.swift
 src/Models/DocumentBodyParagraphProperties.swift
 src/Models/DocumentBodyParagraphWithHighlight.swift
@@ -8749,9 +8866,12 @@ src/Models/DocumentBodyTableCaptionBlock.swift
 src/Models/DocumentBodyTableCaptionItem.swift
 src/Models/DocumentBodyTableCellBlock.swift
 src/Models/DocumentBodyTableCellBlockProperties.swift
+src/Models/DocumentBodyTableCellBlockWithHighlight.swift
 src/Models/DocumentBodyTableProperties.swift
 src/Models/DocumentBodyTableRowBlock.swift
 src/Models/DocumentBodyTableRowBlockProperties.swift
+src/Models/DocumentBodyTableRowBlockWithHighlight.swift
+src/Models/DocumentBodyTableWithHighlight.swift
 src/Models/DocumentBodyVideo.swift
 src/Models/DocumentBodyVideoProperties.swift
 src/Models/DocumentBodyWithHighlight.swift
@@ -8763,6 +8883,7 @@ src/Models/DocumentElementLength.swift
 src/Models/DocumentEntityListing.swift
 src/Models/DocumentFaq.swift
 src/Models/DocumentListContentBlock.swift
+src/Models/DocumentListContentBlockWithHighlight.swift
 src/Models/DocumentListing.swift
 src/Models/DocumentQuery.swift
 src/Models/DocumentQueryClause.swift
@@ -8770,6 +8891,7 @@ src/Models/DocumentQueryInterval.swift
 src/Models/DocumentQueryPredicate.swift
 src/Models/DocumentReference.swift
 src/Models/DocumentTableContentBlock.swift
+src/Models/DocumentTableContentBlockWithHighlight.swift
 src/Models/DocumentText.swift
 src/Models/DocumentTextProperties.swift
 src/Models/DocumentThumbnail.swift
@@ -9297,6 +9419,7 @@ src/Models/GuestMemberInfo.swift
 src/Models/GuestResponseCategory.swift
 src/Models/HeadcountForecast.swift
 src/Models/HeadcountInterval.swift
+src/Models/Header.swift
 src/Models/HealthInfo.swift
 src/Models/HelpLink.swift
 src/Models/HelpSettings.swift
@@ -9447,6 +9570,8 @@ src/Models/JourneyCampaign.swift
 src/Models/JourneyContext.swift
 src/Models/JourneyCustomer.swift
 src/Models/JourneyCustomerSession.swift
+src/Models/JourneyEventDefinition.swift
+src/Models/JourneyEventDefinitionListing.swift
 src/Models/JourneyEventsSettings.swift
 src/Models/JourneyGeolocation.swift
 src/Models/JourneyOutcomeEventsNotificationActionMap.swift
@@ -9660,6 +9785,10 @@ src/Models/KnowledgeImportJobRequest.swift
 src/Models/KnowledgeImportJobResponse.swift
 src/Models/KnowledgeImportJobSettings.swift
 src/Models/KnowledgeImportJobStatistics.swift
+src/Models/KnowledgeIntegrationFilter.swift
+src/Models/KnowledgeIntegrationFilterValue.swift
+src/Models/KnowledgeIntegrationOptionsResponse.swift
+src/Models/KnowledgeIntegrationReference.swift
 src/Models/KnowledgeOperationSource.swift
 src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocumentResponse.swift
@@ -9667,8 +9796,13 @@ src/Models/KnowledgeSearchDocumentV1.swift
 src/Models/KnowledgeSearchRequest.swift
 src/Models/KnowledgeSearchResponse.swift
 src/Models/KnowledgeSuggestionConfig.swift
+src/Models/KnowledgeSyncJobReport.swift
+src/Models/KnowledgeSyncJobRequest.swift
+src/Models/KnowledgeSyncJobResponse.swift
+src/Models/KnowledgeSyncJobStatistics.swift
 src/Models/KnowledgeTraining.swift
 src/Models/KpiResult.swift
+src/Models/Label.swift
 src/Models/LabelCreateRequest.swift
 src/Models/LabelListing.swift
 src/Models/LabelResponse.swift
@@ -9810,6 +9944,7 @@ src/Models/ListWrapperString.swift
 src/Models/ListedDictionaryFeedback.swift
 src/Models/ListedProgram.swift
 src/Models/ListedTopic.swift
+src/Models/Listing.swift
 src/Models/LocalDateRange.swift
 src/Models/LocalEncryptionConfiguration.swift
 src/Models/LocalEncryptionKeyRequest.swift
@@ -9881,6 +10016,8 @@ src/Models/MessageConversationEntityListing.swift
 src/Models/MessageData.swift
 src/Models/MessageDetails.swift
 src/Models/MessageEvaluation.swift
+src/Models/MessageFooter.swift
+src/Models/MessageHeader.swift
 src/Models/MessageInfo.swift
 src/Models/MessageMedia.swift
 src/Models/MessageMediaAttachment.swift
@@ -10067,6 +10204,9 @@ src/Models/OpenReceiptNormalizedMessage.swift
 src/Models/Operand.swift
 src/Models/OperandPosition.swift
 src/Models/Operation.swift
+src/Models/OperationCreatorUserResponse.swift
+src/Models/OperationListing.swift
+src/Models/OperationResponse.swift
 src/Models/OperationalEventNotificationTopicEventEntity.swift
 src/Models/OperationalEventNotificationTopicOperationalEventNotification.swift
 src/Models/OperatorPosition.swift
@@ -10779,6 +10919,9 @@ src/Models/RuleSetEntityListing.swift
 src/Models/SIPSearchPublicRequest.swift
 src/Models/SMSAvailablePhoneNumberEntityListing.swift
 src/Models/Salesforce.swift
+src/Models/SalesforceSettings.swift
+src/Models/SalesforceSourceRequest.swift
+src/Models/SalesforceSourceResponse.swift
 src/Models/Schedule.swift
 src/Models/ScheduleActivity.swift
 src/Models/ScheduleDivisionViewEntityListing.swift
@@ -10889,6 +11032,9 @@ src/Models/ServiceGoalTemplateImpactOverride.swift
 src/Models/ServiceGoalTemplateList.swift
 src/Models/ServiceGoalTemplateReference.swift
 src/Models/ServiceLevel.swift
+src/Models/ServiceNowSettings.swift
+src/Models/ServiceNowSourceRequest.swift
+src/Models/ServiceNowSourceResponse.swift
 src/Models/Session.swift
 src/Models/SessionEndDetails.swift
 src/Models/SessionLastEvent.swift
@@ -10967,10 +11113,13 @@ src/Models/SocialHandle.swift
 src/Models/SocialKeyword.swift
 src/Models/SortItem.swift
 src/Models/Source.swift
+src/Models/SourceBaseResponse.swift
 src/Models/SourceConfiguration.swift
 src/Models/SourceEntity.swift
 src/Models/SourceEntityListing.swift
+src/Models/SourceLastSync.swift
 src/Models/SourcePlanningGroupRequest.swift
+src/Models/SourceSyncResponse.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
 src/Models/SpeechTextAnalyticsSettingsResponse.swift
 src/Models/SplittingInformation.swift
@@ -11068,6 +11217,7 @@ src/Models/SurveyQuestionGroup.swift
 src/Models/SurveyQuestionGroupScore.swift
 src/Models/SurveyQuestionScore.swift
 src/Models/SurveyScoringSet.swift
+src/Models/SyncStatusRequest.swift
 src/Models/SystemMessageObject.swift
 src/Models/SystemMessageSystemMessage.swift
 src/Models/SystemPresence.swift
@@ -11261,6 +11411,7 @@ src/Models/Trustee.swift
 src/Models/TrusteeAuditQueryRequest.swift
 src/Models/TrusteeAuthorization.swift
 src/Models/TrusteeBillingOverview.swift
+src/Models/TrusteeReferenceList.swift
 src/Models/Trustor.swift
 src/Models/TrustorAuditQueryRequest.swift
 src/Models/TrustorEntityListing.swift
@@ -11411,6 +11562,7 @@ src/Models/UserQueueEntityListing.swift
 src/Models/UserRecording.swift
 src/Models/UserRecordingEntityListing.swift
 src/Models/UserReference.swift
+src/Models/UserReferenceEntityListing.swift
 src/Models/UserReferenceWithName.swift
 src/Models/UserRoutingLanguage.swift
 src/Models/UserRoutingLanguagePost.swift
@@ -11513,7 +11665,9 @@ src/Models/ValidateAddressResponse.swift
 src/Models/ValidateAssignUsers.swift
 src/Models/ValidateWorkPlanMessages.swift
 src/Models/ValidateWorkPlanResponse.swift
+src/Models/ValidationError.swift
 src/Models/ValidationLimits.swift
+src/Models/ValidationResult.swift
 src/Models/ValidationServiceRequest.swift
 src/Models/ValueWrapperActivityPlanServiceGoalImpactOverrides.swift
 src/Models/ValueWrapperDate.swift
@@ -11774,6 +11928,7 @@ src/Models/WfmUserScheduleAdherenceUpdatedMuTopicQueueReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedMuTopicRealTimeAdherenceExplanation.swift
 src/Models/WfmUserScheduleAdherenceUpdatedMuTopicSecondaryPresenceReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedMuTopicUriReference.swift
+src/Models/WfmUserScheduleAdherenceUpdatedMuTopicUserNextActivityReminder.swift
 src/Models/WfmUserScheduleAdherenceUpdatedMuTopicUserReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedMuTopicUserScheduleAdherenceUpdate.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference.swift
@@ -11781,6 +11936,7 @@ src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicUriReference.swift
+src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicUserReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTopicActivityCodeReference.swift
@@ -11788,6 +11944,7 @@ src/Models/WfmUserScheduleAdherenceUpdatedTopicQueueReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTopicUriReference.swift
+src/Models/WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTopicUserReference.swift
 src/Models/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.swift
 src/Models/WfmVersionedEntityMetadata.swift
@@ -11875,6 +12032,9 @@ src/Models/WorkitemPagedEntityListing.swift
 src/Models/WorkitemQueryJobCreate.swift
 src/Models/WorkitemQueryJobError.swift
 src/Models/WorkitemQueryJobFilter.swift
+src/Models/WorkitemQueryJobQueryFilters.swift
+src/Models/WorkitemQueryJobQueryFiltersCriteria.swift
+src/Models/WorkitemQueryJobQueryFiltersPredicate.swift
 src/Models/WorkitemQueryJobResponse.swift
 src/Models/WorkitemQueryJobSort.swift
 src/Models/WorkitemQueueReference.swift

@@ -24,7 +24,9 @@
 | **activeQueues** | [**[WfmUserScheduleAdherenceUpdatedTopicQueueReference]**](WfmUserScheduleAdherenceUpdatedTopicQueueReference) |  | [optional] |
 | **activeQueuesModifiedTime** | [**Date**](Date) |  | [optional] |
 | **removedFromManagementUnit** | **Bool** |  | [optional] |
+| **suppressOnTimeReminder** | **Bool** |  | [optional] |
+| **nextActivityReminders** | [**[WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder]**](WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_

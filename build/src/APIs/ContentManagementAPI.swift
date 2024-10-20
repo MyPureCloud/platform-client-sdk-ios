@@ -1670,8 +1670,6 @@ open class ContentManagementAPI {
     
     
     
-    
-    
     public enum Disposition_getContentmanagementSharedSharedId: String { 
         case attachment = "attachment"
         case inline = "inline"
@@ -1691,14 +1689,13 @@ open class ContentManagementAPI {
      Get shared documents. Securely download a shared document.
      
      - parameter sharedId: (path) Shared ID 
-     - parameter redirect: (query) Turn on or off redirect (optional)
      - parameter disposition: (query) Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional)
      - parameter contentType: (query) The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)
      - parameter expand: (query) Expand some document fields (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getContentmanagementSharedSharedId(sharedId: String, redirect: Bool? = nil, disposition: Disposition_getContentmanagementSharedSharedId? = nil, contentType: String? = nil, expand: Expand_getContentmanagementSharedSharedId? = nil, completion: @escaping ((_ data: SharedResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getContentmanagementSharedSharedIdWithRequestBuilder(sharedId: sharedId, redirect: redirect, disposition: disposition, contentType: contentType, expand: expand)
+    open class func getContentmanagementSharedSharedId(sharedId: String, disposition: Disposition_getContentmanagementSharedSharedId? = nil, contentType: String? = nil, expand: Expand_getContentmanagementSharedSharedId? = nil, completion: @escaping ((_ data: SharedResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getContentmanagementSharedSharedIdWithRequestBuilder(sharedId: sharedId, disposition: disposition, contentType: contentType, expand: expand)
         requestBuilder.execute { (response: Response<SharedResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -2209,14 +2206,13 @@ open class ContentManagementAPI {
 }, statusCode=200}]
      
      - parameter sharedId: (path) Shared ID 
-     - parameter redirect: (query) Turn on or off redirect (optional)
      - parameter disposition: (query) Request how the share content will be downloaded: attached as a file or inline. Default is attachment. (optional)
      - parameter contentType: (query) The requested format for the specified document. If supported, the document will be returned in that format. Example contentType&#x3D;audio/wav (optional)
      - parameter expand: (query) Expand some document fields (optional)
 
      - returns: RequestBuilder<SharedResponse> 
      */
-    open class func getContentmanagementSharedSharedIdWithRequestBuilder(sharedId: String, redirect: Bool? = nil, disposition: Disposition_getContentmanagementSharedSharedId? = nil, contentType: String? = nil, expand: Expand_getContentmanagementSharedSharedId? = nil) -> RequestBuilder<SharedResponse> {        
+    open class func getContentmanagementSharedSharedIdWithRequestBuilder(sharedId: String, disposition: Disposition_getContentmanagementSharedSharedId? = nil, contentType: String? = nil, expand: Expand_getContentmanagementSharedSharedId? = nil) -> RequestBuilder<SharedResponse> {        
         var path = "/api/v2/contentmanagement/shared/{sharedId}"
         let sharedIdPreEscape = "\(sharedId)"
         let sharedIdPostEscape = sharedIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2226,7 +2222,6 @@ open class ContentManagementAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "redirect": redirect, 
             "disposition": disposition?.rawValue, 
             "contentType": contentType, 
             "expand": expand?.rawValue

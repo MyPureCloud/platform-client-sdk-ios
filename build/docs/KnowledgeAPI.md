@@ -14,9 +14,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI#deleteKnowledgeKnowledgebaseLanguageCategory) | Delete category |
 | [**deleteKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI#deleteKnowledgeKnowledgebaseLanguageDocument) | Delete document |
 | [**deleteKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI#deleteKnowledgeKnowledgebaseLanguageDocumentsImport) | Delete import operation |
+| [**deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Delete Salesforce Knowledge integration source |
+| [**deleteKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSourcesServicenowSourceId) | Delete ServiceNow Knowledge integration source |
+| [**deleteKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#deleteKnowledgeKnowledgebaseSynchronizeJob) | Delete synchronization job |
 | [**getKnowledgeGuestSessionCategories**](KnowledgeAPI#getKnowledgeGuestSessionCategories) | Get categories |
 | [**getKnowledgeGuestSessionDocument**](KnowledgeAPI#getKnowledgeGuestSessionDocument) | Get a knowledge document by ID. |
 | [**getKnowledgeGuestSessionDocuments**](KnowledgeAPI#getKnowledgeGuestSessionDocuments) | Get documents. |
+| [**getKnowledgeIntegrationOptions**](KnowledgeAPI#getKnowledgeIntegrationOptions) | Get sync options available for a knowledge-connect integration |
 | [**getKnowledgeKnowledgebase**](KnowledgeAPI#getKnowledgeKnowledgebase) | Get knowledge base |
 | [**getKnowledgeKnowledgebaseCategories**](KnowledgeAPI#getKnowledgeKnowledgebaseCategories) | Get categories |
 | [**getKnowledgeKnowledgebaseCategory**](KnowledgeAPI#getKnowledgeKnowledgebaseCategory) | Get category |
@@ -41,6 +45,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageDocumentsImport) | Get import operation report |
 | [**getKnowledgeKnowledgebaseLanguageTraining**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageTraining) | Get training detail |
 | [**getKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageTrainings) | Get all trainings information for a knowledgebase |
+| [**getKnowledgeKnowledgebaseOperations**](KnowledgeAPI#getKnowledgeKnowledgebaseOperations) | Get operations |
+| [**getKnowledgeKnowledgebaseOperationsUsersQuery**](KnowledgeAPI#getKnowledgeKnowledgebaseOperationsUsersQuery) | Get ids of operation creator users and oauth clients |
+| [**getKnowledgeKnowledgebaseSources**](KnowledgeAPI#getKnowledgeKnowledgebaseSources) | Get Knowledge integration sources |
+| [**getKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#getKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Get Salesforce Knowledge integration source |
+| [**getKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#getKnowledgeKnowledgebaseSourcesServicenowSourceId) | Get ServiceNow Knowledge integration source |
+| [**getKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#getKnowledgeKnowledgebaseSynchronizeJob) | Get synchronization job report |
 | [**getKnowledgeKnowledgebaseUnansweredGroup**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroup) | Get knowledge base unanswered group for a particular groupId |
 | [**getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Get knowledge base unanswered phrase group for a particular phraseGroupId |
 | [**getKnowledgeKnowledgebaseUnansweredGroups**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroups) | Get knowledge base unanswered groups |
@@ -58,6 +68,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI#patchKnowledgeKnowledgebaseLanguageDocument) | Update document |
 | [**patchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI#patchKnowledgeKnowledgebaseLanguageDocuments) | Update documents collection |
 | [**patchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI#patchKnowledgeKnowledgebaseLanguageDocumentsImport) | Start import operation |
+| [**patchKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#patchKnowledgeKnowledgebaseSynchronizeJob) | Update synchronization job |
 | [**patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI#patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Update a Knowledge base unanswered phrase group |
 | [**postKnowledgeDocumentuploads**](KnowledgeAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postKnowledgeGuestSessionDocumentCopies**](KnowledgeAPI#postKnowledgeGuestSessionDocumentCopies) | Indicate that the document was copied by the user. |
@@ -89,7 +100,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageTrainingPromote) | Promote trained documents from draft state to active. |
 | [**postKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageTrainings) | Trigger training |
 | [**postKnowledgeKnowledgebaseSearch**](KnowledgeAPI#postKnowledgeKnowledgebaseSearch) | Search Documents |
+| [**postKnowledgeKnowledgebaseSourcesSalesforce**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesSalesforce) | Create Salesforce Knowledge integration source |
+| [**postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync) | Start sync on Salesforce Knowledge integration source |
+| [**postKnowledgeKnowledgebaseSourcesServicenow**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesServicenow) | Create ServiceNow Knowledge integration source |
+| [**postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync) | Start synchronization on ServiceNow Knowledge integration source |
+| [**postKnowledgeKnowledgebaseSynchronizeJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseSynchronizeJobs) | Create synchronization job |
 | [**postKnowledgeKnowledgebases**](KnowledgeAPI#postKnowledgeKnowledgebases) | Create new knowledge base |
+| [**putKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Update Salesforce Knowledge integration source |
+| [**putKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesServicenowSourceId) | Update ServiceNow Knowledge integration source |
 {: class="table-striped"}
 
 
@@ -615,6 +633,159 @@ KnowledgeAPI.deleteKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId
 `nil` (empty response body)
 
 
+## deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId
+
+
+
+> Void deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId, sourceId)
+
+Delete Salesforce Knowledge integration source
+
+
+
+Wraps DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeKnowledgebaseSourcesSalesforceSourceId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteKnowledgeKnowledgebaseSourcesServicenowSourceId
+
+
+
+> Void deleteKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId, sourceId)
+
+Delete ServiceNow Knowledge integration source
+
+
+
+Wraps DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeKnowledgebaseSourcesServicenowSourceId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteKnowledgeKnowledgebaseSynchronizeJob
+
+
+
+> Void deleteKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId, syncJobId)
+
+Delete synchronization job
+
+
+
+Wraps DELETE /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}  
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let syncJobId: String = "" // Synchronization job ID
+
+// Code example
+KnowledgeAPI.deleteKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.deleteKnowledgeKnowledgebaseSynchronizeJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **syncJobId** | **String**| Synchronization job ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## getKnowledgeGuestSessionCategories
 
 
@@ -784,6 +955,56 @@ KnowledgeAPI.getKnowledgeGuestSessionDocuments(sessionId: sessionId, categoryId:
 ### Return type
 
 [**KnowledgeGuestDocumentResponseListing**](KnowledgeGuestDocumentResponseListing)
+
+
+## getKnowledgeIntegrationOptions
+
+
+
+> [KnowledgeIntegrationOptionsResponse](KnowledgeIntegrationOptionsResponse) getKnowledgeIntegrationOptions(integrationId)
+
+Get sync options available for a knowledge-connect integration
+
+
+
+Wraps GET /api/v2/knowledge/integrations/{integrationId}/options  
+
+Requires ALL permissions: 
+
+* knowledge:integrationOptions:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+KnowledgeAPI.getKnowledgeIntegrationOptions(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeIntegrationOptions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+
+
+### Return type
+
+[**KnowledgeIntegrationOptionsResponse**](KnowledgeIntegrationOptionsResponse)
 
 
 ## getKnowledgeKnowledgebase
@@ -2188,6 +2409,338 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowled
 [**TrainingListing**](TrainingListing)
 
 
+## getKnowledgeKnowledgebaseOperations
+
+
+
+> [OperationListing](OperationListing) getKnowledgeKnowledgebaseOperations(knowledgeBaseId, before, after, pageSize, userId, type, status, interval, sourceId)
+
+Get operations
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations  
+
+Requires ALL permissions: 
+
+* knowledge:importExportOperationsList:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let userId: [String] = [""] // If specified, retrieves operations associated with user ids, comma separated values expected.
+let type: [String] = [""] // If specified, retrieves operations with specified operation type, comma separated values expected.
+let status: [String] = [""] // If specified, retrieves operations with specified operation status, comma separated values expected.
+let interval: String = "" // Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ
+let sourceId: [String] = [""] // If specified, retrieves operations associated with source ids, comma separated values expected.
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseOperations(knowledgeBaseId: knowledgeBaseId, before: before, after: after, pageSize: pageSize, userId: userId, type: type, status: status, interval: interval, sourceId: sourceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseOperations was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **userId** | [**[String]**](String)| If specified, retrieves operations associated with user ids, comma separated values expected. | [optional] |
+| **type** | [**[String]**](String)| If specified, retrieves operations with specified operation type, comma separated values expected. | [optional]<br />**Values**: export ("Export"), _import ("Import"), parse ("Parse"), sync ("Sync") |
+| **status** | [**[String]**](String)| If specified, retrieves operations with specified operation status, comma separated values expected. | [optional] |
+| **interval** | **String**| Retrieves the operations modified in specified date and time range. If the after and before cursor parameters are within this interval, it would return valid data, otherwise it throws an error.The dates in the interval are represented in ISO-8601 format: YYYY-MM-DDThh:mm:ssZ/YYYY-MM-DDThh:mm:ssZ | [optional] |
+| **sourceId** | [**[String]**](String)| If specified, retrieves operations associated with source ids, comma separated values expected. | [optional] |
+
+
+### Return type
+
+[**OperationListing**](OperationListing)
+
+
+## getKnowledgeKnowledgebaseOperationsUsersQuery
+
+
+
+> [OperationCreatorUserResponse](OperationCreatorUserResponse) getKnowledgeKnowledgebaseOperationsUsersQuery(knowledgeBaseId)
+
+Get ids of operation creator users and oauth clients
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query  
+
+Requires ALL permissions: 
+
+* knowledge:importExportOperationsList:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseOperationsUsersQuery(knowledgeBaseId: knowledgeBaseId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseOperationsUsersQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+
+
+### Return type
+
+[**OperationCreatorUserResponse**](OperationCreatorUserResponse)
+
+
+## getKnowledgeKnowledgebaseSources
+
+
+
+> [[SourceBaseResponse]](SourceBaseResponse) getKnowledgeKnowledgebaseSources(knowledgeBaseId, type, expand, ids)
+
+Get Knowledge integration sources
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let type: KnowledgeAPI.ModelType_getKnowledgeKnowledgebaseSources = KnowledgeAPI.ModelType_getKnowledgeKnowledgebaseSources.enummember // If specified, retrieves integration sources with specified integration type.
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
+let ids: [String] = [""] // If specified, retrieves integration sources with specified IDs.
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseSources(knowledgeBaseId: knowledgeBaseId, type: type, expand: expand, ids: ids) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseSources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **type** | **String**| If specified, retrieves integration sources with specified integration type. | [optional]<br />**Values**: salesforce ("Salesforce"), serviceNow ("ServiceNow") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: lastsync ("lastsync") |
+| **ids** | [**[String]**](String)| If specified, retrieves integration sources with specified IDs. | [optional] |
+
+
+### Return type
+
+[**[SourceBaseResponse]**](SourceBaseResponse)
+
+
+## getKnowledgeKnowledgebaseSourcesSalesforceSourceId
+
+
+
+> [SalesforceSourceResponse](SalesforceSourceResponse) getKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId, sourceId, expand)
+
+Get Salesforce Knowledge integration source
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseSourcesSalesforceSourceId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: lastsync ("lastsync") |
+
+
+### Return type
+
+[**SalesforceSourceResponse**](SalesforceSourceResponse)
+
+
+## getKnowledgeKnowledgebaseSourcesServicenowSourceId
+
+
+
+> [ServiceNowSourceResponse](ServiceNowSourceResponse) getKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId, sourceId, expand)
+
+Get ServiceNow Knowledge integration source
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseSourcesServicenowSourceId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: lastsync ("lastsync") |
+
+
+### Return type
+
+[**ServiceNowSourceResponse**](ServiceNowSourceResponse)
+
+
+## getKnowledgeKnowledgebaseSynchronizeJob
+
+
+
+> [KnowledgeSyncJobResponse](KnowledgeSyncJobResponse) getKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId, syncJobId)
+
+Get synchronization job report
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}  
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let syncJobId: String = "" // Synchronization job ID
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseSynchronizeJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **syncJobId** | **String**| Synchronization job ID | |
+
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
 ## getKnowledgeKnowledgebaseUnansweredGroup
 
 
@@ -3134,6 +3687,60 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId:
 ### Return type
 
 [**KnowledgeImport**](KnowledgeImport)
+
+
+## patchKnowledgeKnowledgebaseSynchronizeJob
+
+
+
+> [KnowledgeSyncJobResponse](KnowledgeSyncJobResponse) patchKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId, syncJobId, body)
+
+Update synchronization job
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}  
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let syncJobId: String = "" // Synchronization job ID
+let body: SyncStatusRequest = new SyncStatusRequest(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseSynchronizeJob(knowledgeBaseId: knowledgeBaseId, syncJobId: syncJobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseSynchronizeJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **syncJobId** | **String**| Synchronization job ID | |
+| **body** | [**SyncStatusRequest**](SyncStatusRequest)|  | |
+
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
 
 
 ## patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup
@@ -4767,6 +5374,266 @@ KnowledgeAPI.postKnowledgeKnowledgebaseSearch(knowledgeBaseId: knowledgeBaseId, 
 [**KnowledgeSearchResponse**](KnowledgeSearchResponse)
 
 
+## postKnowledgeKnowledgebaseSourcesSalesforce
+
+
+
+> [KnowledgeSyncJobResponse](KnowledgeSyncJobResponse) postKnowledgeKnowledgebaseSourcesSalesforce(knowledgeBaseId, body)
+
+Create Salesforce Knowledge integration source
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: SalesforceSourceRequest = new SalesforceSourceRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforce(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforce was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**SalesforceSourceRequest**](SalesforceSourceRequest)|  | |
+
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
+## postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync
+
+
+
+> [SourceSyncResponse](SourceSyncResponse) postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId, sourceId)
+
+Start sync on Salesforce Knowledge integration source
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+
+
+### Return type
+
+[**SourceSyncResponse**](SourceSyncResponse)
+
+
+## postKnowledgeKnowledgebaseSourcesServicenow
+
+
+
+> [KnowledgeSyncJobResponse](KnowledgeSyncJobResponse) postKnowledgeKnowledgebaseSourcesServicenow(knowledgeBaseId, body)
+
+Create ServiceNow Knowledge integration source
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: ServiceNowSourceRequest = new ServiceNowSourceRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenow(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenow was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**ServiceNowSourceRequest**](ServiceNowSourceRequest)|  | |
+
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
+## postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync
+
+
+
+> [SourceSyncResponse](SourceSyncResponse) postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId, sourceId)
+
+Start synchronization on ServiceNow Knowledge integration source
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+
+
+### Return type
+
+[**SourceSyncResponse**](SourceSyncResponse)
+
+
+## postKnowledgeKnowledgebaseSynchronizeJobs
+
+
+
+> [KnowledgeSyncJobResponse](KnowledgeSyncJobResponse) postKnowledgeKnowledgebaseSynchronizeJobs(knowledgeBaseId, body)
+
+Create synchronization job
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs  
+
+Requires ALL permissions: 
+
+* knowledge:syncJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeSyncJobRequest = new KnowledgeSyncJobRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseSynchronizeJobs(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseSynchronizeJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeSyncJobRequest**](KnowledgeSyncJobRequest)|  | |
+
+
+### Return type
+
+[**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
 ## postKnowledgeKnowledgebases
 
 
@@ -4817,4 +5684,112 @@ KnowledgeAPI.postKnowledgeKnowledgebases(body: body) { (response, error) in
 [**KnowledgeBase**](KnowledgeBase)
 
 
-_PureCloudPlatformClientV2@153.0.0_
+## putKnowledgeKnowledgebaseSourcesSalesforceSourceId
+
+
+
+> [SalesforceSourceResponse](SalesforceSourceResponse) putKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId, sourceId, body)
+
+Update Salesforce Knowledge integration source
+
+
+
+Wraps PUT /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+let body: SalesforceSourceRequest = new SalesforceSourceRequest(...) // 
+
+// Code example
+KnowledgeAPI.putKnowledgeKnowledgebaseSourcesSalesforceSourceId(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.putKnowledgeKnowledgebaseSourcesSalesforceSourceId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+| **body** | [**SalesforceSourceRequest**](SalesforceSourceRequest)|  | |
+
+
+### Return type
+
+[**SalesforceSourceResponse**](SalesforceSourceResponse)
+
+
+## putKnowledgeKnowledgebaseSourcesServicenowSourceId
+
+
+
+> [ServiceNowSourceResponse](ServiceNowSourceResponse) putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId, sourceId, body)
+
+Update ServiceNow Knowledge integration source
+
+
+
+Wraps PUT /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}  
+
+Requires ALL permissions: 
+
+* knowledge:integrationSource:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let sourceId: String = "" // Source ID
+let body: ServiceNowSourceRequest = new ServiceNowSourceRequest(...) // 
+
+// Code example
+KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **sourceId** | **String**| Source ID | |
+| **body** | [**ServiceNowSourceRequest**](ServiceNowSourceRequest)|  | |
+
+
+### Return type
+
+[**ServiceNowSourceResponse**](ServiceNowSourceResponse)
+
+
+_PureCloudPlatformClientV2@154.0.0_

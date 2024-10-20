@@ -15991,15 +15991,13 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "surveyType" : "Web",
   "agent" : {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   },
-  "surveyForm" : "{}",
-  "surveyErrorDetails" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "answers" : {
     "npsScore" : 6,
     "questionGroupScores" : [ {
@@ -16059,6 +16057,11 @@ open class QualityAPI {
     } ],
     "totalScore" : 0.8008282
   },
+  "missingRequiredAnswer" : true,
+  "completedDate" : "2000-01-23T04:56:07.000+00:00",
+  "surveyForm" : "{}",
+  "surveyErrorDetails" : "{}",
+  "name" : "name",
   "agentTeam" : "{}",
   "id" : "id",
   "conversation" : {
@@ -16069,7 +16072,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
-  "completedDate" : "2000-01-23T04:56:07.000+00:00",
+  "flow" : "{}",
   "status" : "Pending"
 }, statusCode=200}]
      
@@ -29144,15 +29147,13 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "surveyType" : "Web",
   "agent" : {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   },
-  "surveyForm" : "{}",
-  "surveyErrorDetails" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "name" : "name",
   "answers" : {
     "npsScore" : 6,
     "questionGroupScores" : [ {
@@ -29212,6 +29213,11 @@ open class QualityAPI {
     } ],
     "totalScore" : 0.8008282
   },
+  "missingRequiredAnswer" : true,
+  "completedDate" : "2000-01-23T04:56:07.000+00:00",
+  "surveyForm" : "{}",
+  "surveyErrorDetails" : "{}",
+  "name" : "name",
   "agentTeam" : "{}",
   "id" : "id",
   "conversation" : {
@@ -29222,7 +29228,7 @@ open class QualityAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   },
-  "completedDate" : "2000-01-23T04:56:07.000+00:00",
+  "flow" : "{}",
   "status" : "Pending"
 }, statusCode=200}]
      

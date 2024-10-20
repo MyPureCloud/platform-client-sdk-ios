@@ -8147,6 +8147,8 @@ ConversationsAPI.postConversationSuggestionEngagement(conversationId: conversati
 
 Suggestion feedback.
 
+Google Agent Assist offering within Genesys will no longer be supported
+
 
 
 Wraps POST /api/v2/conversations/{conversationId}/suggestions/feedback  
@@ -12286,4 +12288,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_
