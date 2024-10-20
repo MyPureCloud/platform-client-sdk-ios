@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **blocks** | [**[DocumentTableContentBlock]**](DocumentTableContentBlock) | The list of content blocks for the table. | |
 | **properties** | [**DocumentBodyTableCellBlockProperties**](DocumentBodyTableCellBlockProperties) | The properties for the table cell. | [optional] |
+| **blocks** | [**[DocumentTableContentBlock]**](DocumentTableContentBlock) | The list of content blocks for the table. | |
 
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_

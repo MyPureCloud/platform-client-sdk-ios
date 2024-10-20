@@ -719,7 +719,7 @@ ContentManagementAPI.getContentmanagementShare(shareId: shareId, expand: expand)
 
 
 
-> [SharedResponse](SharedResponse) getContentmanagementSharedSharedId(sharedId, redirect, disposition, contentType, expand)
+> [SharedResponse](SharedResponse) getContentmanagementSharedSharedId(sharedId, disposition, contentType, expand)
 
 Get shared documents. Securely download a shared document.
 
@@ -741,13 +741,12 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let sharedId: String = "" // Shared ID
-let redirect: Bool = true // Turn on or off redirect
 let disposition: ContentManagementAPI.Disposition_getContentmanagementSharedSharedId = ContentManagementAPI.Disposition_getContentmanagementSharedSharedId.enummember // Request how the share content will be downloaded: attached as a file or inline. Default is attachment.
 let contentType: String = "" // The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav
 let expand: ContentManagementAPI.Expand_getContentmanagementSharedSharedId = ContentManagementAPI.Expand_getContentmanagementSharedSharedId.enummember // Expand some document fields
 
 // Code example
-ContentManagementAPI.getContentmanagementSharedSharedId(sharedId: sharedId, redirect: redirect, disposition: disposition, contentType: contentType, expand: expand) { (response, error) in
+ContentManagementAPI.getContentmanagementSharedSharedId(sharedId: sharedId, disposition: disposition, contentType: contentType, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -763,7 +762,6 @@ ContentManagementAPI.getContentmanagementSharedSharedId(sharedId: sharedId, redi
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **sharedId** | **String**| Shared ID | |
-| **redirect** | **Bool**| Turn on or off redirect | [optional] |
 | **disposition** | **String**| Request how the share content will be downloaded: attached as a file or inline. Default is attachment. | [optional]<br />**Values**: attachment ("attachment"), inline ("inline"), _none ("none") |
 | **contentType** | **String**| The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav | [optional] |
 | **expand** | **String**| Expand some document fields | [optional]<br />**Values**: documentAcl ("document.acl") |
@@ -1936,4 +1934,4 @@ ContentManagementAPI.putContentmanagementWorkspaceTagvalue(workspaceId: workspac
 [**TagValue**](TagValue)
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_

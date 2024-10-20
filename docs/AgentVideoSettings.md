@@ -14,4 +14,4 @@ The settings for Agent Video
 
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_

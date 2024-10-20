@@ -38,6 +38,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyViewVersionJobResultsChart**](JourneyAPI#getJourneyViewVersionJobResultsChart) | Get the chart result associated with a journey view job. |
 | [**getJourneyViewVersionJobsLatest**](JourneyAPI#getJourneyViewVersionJobsLatest) | Get the latest job of a journey view version. |
 | [**getJourneyViews**](JourneyAPI#getJourneyViews) | Get a list of Journey Views |
+| [**getJourneyViewsEventdefinition**](JourneyAPI#getJourneyViewsEventdefinition) | Get an Event Definition |
+| [**getJourneyViewsEventdefinitions**](JourneyAPI#getJourneyViewsEventdefinitions) | Get a list of Event Definitions |
 | [**getJourneyViewsJobs**](JourneyAPI#getJourneyViewsJobs) | Get the jobs for an organization. |
 | [**patchJourneyActionmap**](JourneyAPI#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Update a single action target. |
@@ -59,6 +61,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyViewVersionJobs**](JourneyAPI#postJourneyViewVersionJobs) | Submit a job request for a journey view version. |
 | [**postJourneyViewVersions**](JourneyAPI#postJourneyViewVersions) | Update a Journey View by ID |
 | [**postJourneyViews**](JourneyAPI#postJourneyViews) | Create a new Journey View |
+| [**postJourneyViewsEncodingsValidate**](JourneyAPI#postJourneyViewsEncodingsValidate) | Validate whether an encoding exist for a label/value combination. |
 | [**putJourneyViewVersion**](JourneyAPI#putJourneyViewVersion) | Update a Journey View by ID and version |
 {: class="table-striped"}
 
@@ -1877,6 +1880,102 @@ JourneyAPI.getJourneyViews(pageNumber: pageNumber, pageSize: pageSize, nameOrCre
 [**JourneyViewListing**](JourneyViewListing)
 
 
+## getJourneyViewsEventdefinition
+
+
+
+> [JourneyEventDefinition](JourneyEventDefinition) getJourneyViewsEventdefinition(eventDefinitionId)
+
+Get an Event Definition
+
+
+
+Wraps GET /api/v2/journey/views/eventdefinitions/{eventDefinitionId}  
+
+Requires ALL permissions: 
+
+* journey:eventDefinition:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let eventDefinitionId: String = "" // Event Definition ID
+
+// Code example
+JourneyAPI.getJourneyViewsEventdefinition(eventDefinitionId: eventDefinitionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsEventdefinition was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventDefinitionId** | **String**| Event Definition ID | |
+
+
+### Return type
+
+[**JourneyEventDefinition**](JourneyEventDefinition)
+
+
+## getJourneyViewsEventdefinitions
+
+
+
+> [JourneyEventDefinitionListing](JourneyEventDefinitionListing) getJourneyViewsEventdefinitions()
+
+Get a list of Event Definitions
+
+
+
+Wraps GET /api/v2/journey/views/eventdefinitions  
+
+Requires ALL permissions: 
+
+* journey:eventDefinition:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyViewsEventdefinitions() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsEventdefinitions was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**JourneyEventDefinitionListing**](JourneyEventDefinitionListing)
+
+
 ## getJourneyViewsJobs
 
 
@@ -2961,6 +3060,58 @@ JourneyAPI.postJourneyViews(body: body) { (response, error) in
 [**JourneyView**](JourneyView)
 
 
+## postJourneyViewsEncodingsValidate
+
+
+
+> [EntityListing](EntityListing) postJourneyViewsEncodingsValidate(body)
+
+Validate whether an encoding exist for a label/value combination.
+
+True indicates a valid encoding
+
+
+
+Wraps POST /api/v2/journey/views/encodings/validate  
+
+Requires ALL permissions: 
+
+* journey:viewsEncodings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: [Label] = [new Label(...)] // 
+
+// Code example
+JourneyAPI.postJourneyViewsEncodingsValidate(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyViewsEncodingsValidate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**[Label]**](Label)|  | [optional] |
+
+
+### Return type
+
+[**EntityListing**](EntityListing)
+
+
 ## putJourneyViewVersion
 
 
@@ -3017,4 +3168,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@153.0.0_
+_PureCloudPlatformClientV2@154.0.0_
