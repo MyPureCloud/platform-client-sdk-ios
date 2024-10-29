@@ -6205,46 +6205,7 @@ open class UsersAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
     "enableTranscription" : true,
-    "outboundEmailAddress" : {
-      "route" : {
-        "signature" : "{}",
-        "replyEmailAddress" : "{}",
-        "selfUri" : "https://openapi-generator.tech",
-        "pattern" : "pattern",
-        "language" : "{}",
-        "autoBcc" : [ {
-          "name" : "name",
-          "email" : "email"
-        }, {
-          "name" : "name",
-          "email" : "email"
-        } ],
-        "priority" : 7,
-        "fromEmail" : "fromEmail",
-        "skills" : [ {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        }, {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        } ],
-        "allowMultipleActions" : true,
-        "name" : "name",
-        "fromName" : "fromName",
-        "id" : "id",
-        "historyInclusion" : "Include",
-        "queue" : "{}",
-        "flow" : "{}",
-        "spamFlow" : "{}"
-      },
-      "domain" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }
-    },
+    "outboundEmailAddress" : "{}",
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
@@ -6350,46 +6311,7 @@ open class UsersAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
     "enableTranscription" : true,
-    "outboundEmailAddress" : {
-      "route" : {
-        "signature" : "{}",
-        "replyEmailAddress" : "{}",
-        "selfUri" : "https://openapi-generator.tech",
-        "pattern" : "pattern",
-        "language" : "{}",
-        "autoBcc" : [ {
-          "name" : "name",
-          "email" : "email"
-        }, {
-          "name" : "name",
-          "email" : "email"
-        } ],
-        "priority" : 7,
-        "fromEmail" : "fromEmail",
-        "skills" : [ {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        }, {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        } ],
-        "allowMultipleActions" : true,
-        "name" : "name",
-        "fromName" : "fromName",
-        "id" : "id",
-        "historyInclusion" : "Include",
-        "queue" : "{}",
-        "flow" : "{}",
-        "spamFlow" : "{}"
-      },
-      "domain" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }
-    },
+    "outboundEmailAddress" : "{}",
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
@@ -8383,6 +8305,110 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<UserEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get chats for a user
+     
+     - parameter excludeClosed: (query) Whether or not to exclude closed chats (optional)
+     - parameter includePresence: (query) Whether or not to include user presence (optional)
+     - parameter after: (query) The key to start after (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersChatsMe(excludeClosed: Bool? = nil, includePresence: Bool? = nil, after: String? = nil, completion: @escaping ((_ data: ChatItemCursorListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersChatsMeWithRequestBuilder(excludeClosed: excludeClosed, includePresence: includePresence, after: after)
+        requestBuilder.execute { (response: Response<ChatItemCursorListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get chats for a user
+     - GET /api/v2/users/chats/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "dateLastMessage" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "favorite" : "{}",
+    "user" : "{}",
+    "open" : true,
+    "room" : "{}",
+    "chatType" : "adhoc"
+  }, {
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "dateLastMessage" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "dateClosed" : "2000-01-23T04:56:07.000+00:00",
+    "favorite" : "{}",
+    "user" : "{}",
+    "open" : true,
+    "room" : "{}",
+    "chatType" : "adhoc"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter excludeClosed: (query) Whether or not to exclude closed chats (optional)
+     - parameter includePresence: (query) Whether or not to include user presence (optional)
+     - parameter after: (query) The key to start after (optional)
+
+     - returns: RequestBuilder<ChatItemCursorListing> 
+     */
+    open class func getUsersChatsMeWithRequestBuilder(excludeClosed: Bool? = nil, includePresence: Bool? = nil, after: String? = nil) -> RequestBuilder<ChatItemCursorListing> {        
+        let path = "/api/v2/users/chats/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "excludeClosed": excludeClosed, 
+            "includePresence": includePresence, 
+            "after": after
+        ])
+
+        let requestBuilder: RequestBuilder<ChatItemCursorListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -11500,7 +11526,7 @@ open class UsersAPI {
   "title" : "title",
   "orgAuthorization" : [ {
     "default" : true,
-    "userCount" : 9,
+    "userCount" : 7,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -11902,46 +11928,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -12345,46 +12332,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -12803,46 +12751,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -13246,46 +13155,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -13315,7 +13185,7 @@ open class UsersAPI {
     "base" : true
   }, {
     "default" : true,
-    "userCount" : 9,
+    "userCount" : 7,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -13717,46 +13587,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -14160,46 +13991,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -14618,46 +14410,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -15061,46 +14814,7 @@ open class UsersAPI {
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
             "enableTranscription" : true,
-            "outboundEmailAddress" : {
-              "route" : {
-                "signature" : "{}",
-                "replyEmailAddress" : "{}",
-                "selfUri" : "https://openapi-generator.tech",
-                "pattern" : "pattern",
-                "language" : "{}",
-                "autoBcc" : [ {
-                  "name" : "name",
-                  "email" : "email"
-                }, {
-                  "name" : "name",
-                  "email" : "email"
-                } ],
-                "priority" : 7,
-                "fromEmail" : "fromEmail",
-                "skills" : [ {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                }, {
-                  "selfUri" : "https://openapi-generator.tech",
-                  "name" : "name",
-                  "id" : "id"
-                } ],
-                "allowMultipleActions" : true,
-                "name" : "name",
-                "fromName" : "fromName",
-                "id" : "id",
-                "historyInclusion" : "Include",
-                "queue" : "{}",
-                "flow" : "{}",
-                "spamFlow" : "{}"
-              },
-              "domain" : {
-                "selfUri" : "https://openapi-generator.tech",
-                "name" : "name",
-                "id" : "id"
-              }
-            },
+            "outboundEmailAddress" : "{}",
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
@@ -18001,46 +17715,7 @@ open class UsersAPI {
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",
   "enableTranscription" : true,
-  "outboundEmailAddress" : {
-    "route" : {
-      "signature" : "{}",
-      "replyEmailAddress" : "{}",
-      "selfUri" : "https://openapi-generator.tech",
-      "pattern" : "pattern",
-      "language" : "{}",
-      "autoBcc" : [ {
-        "name" : "name",
-        "email" : "email"
-      }, {
-        "name" : "name",
-        "email" : "email"
-      } ],
-      "priority" : 7,
-      "fromEmail" : "fromEmail",
-      "skills" : [ {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }, {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      } ],
-      "allowMultipleActions" : true,
-      "name" : "name",
-      "fromName" : "fromName",
-      "id" : "id",
-      "historyInclusion" : "Include",
-      "queue" : "{}",
-      "flow" : "{}",
-      "spamFlow" : "{}"
-    },
-    "domain" : {
-      "selfUri" : "https://openapi-generator.tech",
-      "name" : "name",
-      "id" : "id"
-    }
-  },
+  "outboundEmailAddress" : "{}",
   "bullseye" : "{}",
   "outboundMessagingAddresses" : "{}",
   "createdBy" : "createdBy",
@@ -18214,46 +17889,7 @@ open class UsersAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
     "enableTranscription" : true,
-    "outboundEmailAddress" : {
-      "route" : {
-        "signature" : "{}",
-        "replyEmailAddress" : "{}",
-        "selfUri" : "https://openapi-generator.tech",
-        "pattern" : "pattern",
-        "language" : "{}",
-        "autoBcc" : [ {
-          "name" : "name",
-          "email" : "email"
-        }, {
-          "name" : "name",
-          "email" : "email"
-        } ],
-        "priority" : 7,
-        "fromEmail" : "fromEmail",
-        "skills" : [ {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        }, {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        } ],
-        "allowMultipleActions" : true,
-        "name" : "name",
-        "fromName" : "fromName",
-        "id" : "id",
-        "historyInclusion" : "Include",
-        "queue" : "{}",
-        "flow" : "{}",
-        "spamFlow" : "{}"
-      },
-      "domain" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }
-    },
+    "outboundEmailAddress" : "{}",
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
@@ -18359,46 +17995,7 @@ open class UsersAPI {
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
     "enableTranscription" : true,
-    "outboundEmailAddress" : {
-      "route" : {
-        "signature" : "{}",
-        "replyEmailAddress" : "{}",
-        "selfUri" : "https://openapi-generator.tech",
-        "pattern" : "pattern",
-        "language" : "{}",
-        "autoBcc" : [ {
-          "name" : "name",
-          "email" : "email"
-        }, {
-          "name" : "name",
-          "email" : "email"
-        } ],
-        "priority" : 7,
-        "fromEmail" : "fromEmail",
-        "skills" : [ {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        }, {
-          "selfUri" : "https://openapi-generator.tech",
-          "name" : "name",
-          "id" : "id"
-        } ],
-        "allowMultipleActions" : true,
-        "name" : "name",
-        "fromName" : "fromName",
-        "id" : "id",
-        "historyInclusion" : "Include",
-        "queue" : "{}",
-        "flow" : "{}",
-        "spamFlow" : "{}"
-      },
-      "domain" : {
-        "selfUri" : "https://openapi-generator.tech",
-        "name" : "name",
-        "id" : "id"
-      }
-    },
+    "outboundEmailAddress" : "{}",
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",

@@ -49,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUserTrustors**](UsersAPI#getUserTrustors) | List the organizations that have authorized/trusted the user. |
 | [**getUserVerifiers**](UsersAPI#getUserVerifiers) | Get a list of verifiers |
 | [**getUsers**](UsersAPI#getUsers) | Get the list of available users. |
+| [**getUsersChatsMe**](UsersAPI#getUsersChatsMe) | Get chats for a user |
 | [**getUsersDevelopmentActivities**](UsersAPI#getUsersDevelopmentActivities) | Get list of Development Activities |
 | [**getUsersDevelopmentActivitiesMe**](UsersAPI#getUsersDevelopmentActivitiesMe) | Get list of Development Activities for current user |
 | [**getUsersDevelopmentActivity**](UsersAPI#getUsersDevelopmentActivity) | Get a Development Activity |
@@ -2429,6 +2430,61 @@ UsersAPI.getUsers(pageSize: pageSize, pageNumber: pageNumber, _id: _id, jabberId
 ### Return type
 
 [**UserEntityListing**](UserEntityListing)
+
+
+## getUsersChatsMe
+
+
+
+> [ChatItemCursorListing](ChatItemCursorListing) getUsersChatsMe(excludeClosed, includePresence, after)
+
+Get chats for a user
+
+
+
+Wraps GET /api/v2/users/chats/me  
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* user:chats:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let excludeClosed: Bool = true // Whether or not to exclude closed chats
+let includePresence: Bool = true // Whether or not to include user presence
+let after: String = "" // The key to start after
+
+// Code example
+UsersAPI.getUsersChatsMe(excludeClosed: excludeClosed, includePresence: includePresence, after: after) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UsersAPI.getUsersChatsMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **excludeClosed** | **Bool**| Whether or not to exclude closed chats | [optional] |
+| **includePresence** | **Bool**| Whether or not to include user presence | [optional] |
+| **after** | **String**| The key to start after | [optional] |
+
+
+### Return type
+
+[**ChatItemCursorListing**](ChatItemCursorListing)
 
 
 ## getUsersDevelopmentActivities
@@ -4932,4 +4988,4 @@ UsersAPI.putUserVerifier(userId: userId, verifierId: verifierId, body: body) { (
 [**Verifier**](Verifier)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

@@ -1285,6 +1285,7 @@ open class TaskManagementAPI {
   "defaultDueDurationSeconds" : 1,
   "defaultPriority" : 5,
   "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "defaultWorkbin" : "{}",
@@ -1338,7 +1339,8 @@ open class TaskManagementAPI {
   "defaultDurationSeconds" : 0,
   "modifiedBy" : "{}",
   "id" : "id",
-  "assignmentEnabled" : true
+  "assignmentEnabled" : true,
+  "flow" : "{}"
 }, statusCode=200}]
      
      - parameter worktypeId: (path) Worktype id 
@@ -2255,6 +2257,7 @@ open class TaskManagementAPI {
   "defaultDueDurationSeconds" : 1,
   "defaultPriority" : 5,
   "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "defaultWorkbin" : "{}",
@@ -2308,7 +2311,8 @@ open class TaskManagementAPI {
   "defaultDurationSeconds" : 0,
   "modifiedBy" : "{}",
   "id" : "id",
-  "assignmentEnabled" : true
+  "assignmentEnabled" : true,
+  "flow" : "{}"
 }, statusCode=200}]
      
      - parameter worktypeId: (path) Worktype id 
@@ -3499,6 +3503,7 @@ open class TaskManagementAPI {
   "defaultDueDurationSeconds" : 1,
   "defaultPriority" : 5,
   "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "defaultWorkbin" : "{}",
@@ -3552,7 +3557,8 @@ open class TaskManagementAPI {
   "defaultDurationSeconds" : 0,
   "modifiedBy" : "{}",
   "id" : "id",
-  "assignmentEnabled" : true
+  "assignmentEnabled" : true,
+  "flow" : "{}"
 }, statusCode=200}]
      
      - parameter body: (body) Worktype 
@@ -3617,6 +3623,7 @@ open class TaskManagementAPI {
     "defaultDueDurationSeconds" : 1,
     "defaultPriority" : 5,
     "defaultTtlSeconds" : 5,
+    "ruleSettings" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "defaultWorkbin" : "{}",
@@ -3670,7 +3677,8 @@ open class TaskManagementAPI {
     "defaultDurationSeconds" : 0,
     "modifiedBy" : "{}",
     "id" : "id",
-    "assignmentEnabled" : true
+    "assignmentEnabled" : true,
+    "flow" : "{}"
   }, {
     "schema" : "{}",
     "serviceLevelTarget" : 2,
@@ -3684,6 +3692,7 @@ open class TaskManagementAPI {
     "defaultDueDurationSeconds" : 1,
     "defaultPriority" : 5,
     "defaultTtlSeconds" : 5,
+    "ruleSettings" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "defaultWorkbin" : "{}",
@@ -3737,7 +3746,8 @@ open class TaskManagementAPI {
     "defaultDurationSeconds" : 0,
     "modifiedBy" : "{}",
     "id" : "id",
-    "assignmentEnabled" : true
+    "assignmentEnabled" : true,
+    "flow" : "{}"
   } ],
   "selfUri" : "selfUri",
   "count" : 7,

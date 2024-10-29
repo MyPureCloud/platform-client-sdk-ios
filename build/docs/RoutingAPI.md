@@ -7668,4 +7668,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

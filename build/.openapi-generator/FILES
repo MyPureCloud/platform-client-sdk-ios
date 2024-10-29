@@ -284,6 +284,7 @@ docs/ArrayNode.md
 docs/Article.md
 docs/ArticleContent.md
 docs/ArticleContentBody.md
+docs/ArticlesFilter.md
 docs/AssessmentForm.md
 docs/AssessmentFormQuestion.md
 docs/AssessmentFormQuestionGroup.md
@@ -642,8 +643,10 @@ docs/CardAction.md
 docs/CarrierServicesAPI.json
 docs/CarrierServicesAPI.md
 docs/CategoriesEntityListing.md
+docs/CategoriesFilter.md
 docs/Category.md
 docs/CategoryCreateRequest.md
+docs/CategoryEntity.md
 docs/CategoryEntityListing.md
 docs/CategoryListing.md
 docs/CategoryReference.md
@@ -669,6 +672,9 @@ docs/ChatBadgeTopicBadgeEntity.md
 docs/ChatBadgeTopicChatBadge.md
 docs/ChatConversation.md
 docs/ChatConversationEntityListing.md
+docs/ChatFavorite.md
+docs/ChatItem.md
+docs/ChatItemCursorListing.md
 docs/ChatMediaParticipant.md
 docs/ChatMediaPolicy.md
 docs/ChatMediaPolicyConditions.md
@@ -676,10 +682,12 @@ docs/ChatMessage.md
 docs/ChatMessageEntityListing.md
 docs/ChatMessageResponse.md
 docs/ChatMessageUser.md
+docs/ChatPresence.md
 docs/ChatReaction.md
 docs/ChatReactionUpdate.md
 docs/ChatSendMessageResponse.md
 docs/ChatSettings.md
+docs/ChatUserRef.md
 docs/Check.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
@@ -811,6 +819,8 @@ docs/ContentButtonResponse.md
 docs/ContentCard.md
 docs/ContentCardAction.md
 docs/ContentCarousel.md
+docs/ContentFileRequest.md
+docs/ContentFileResponse.md
 docs/ContentFilterItem.md
 docs/ContentGeneric.md
 docs/ContentList.md
@@ -1442,7 +1452,6 @@ docs/DoNotSendActionSettings.md
 docs/Document.md
 docs/DocumentArticle.md
 docs/DocumentAttribute.md
-docs/DocumentBody.md
 docs/DocumentBodyBlock.md
 docs/DocumentBodyBlockWithHighlight.md
 docs/DocumentBodyImage.md
@@ -1456,6 +1465,8 @@ docs/DocumentBodyListWithHighlight.md
 docs/DocumentBodyParagraph.md
 docs/DocumentBodyParagraphProperties.md
 docs/DocumentBodyParagraphWithHighlight.md
+docs/DocumentBodyRequest.md
+docs/DocumentBodyResponse.md
 docs/DocumentBodyTable.md
 docs/DocumentBodyTableCaptionBlock.md
 docs/DocumentBodyTableCaptionItem.md
@@ -1492,10 +1503,11 @@ docs/DocumentTextProperties.md
 docs/DocumentThumbnail.md
 docs/DocumentUpdate.md
 docs/DocumentUpload.md
-docs/DocumentVariation.md
 docs/DocumentVariationAnswer.md
 docs/DocumentVariationContext.md
-docs/DocumentVariationListing.md
+docs/DocumentVariationRequest.md
+docs/DocumentVariationResponse.md
+docs/DocumentVariationResponseListing.md
 docs/DocumentationResult.md
 docs/DocumentationSearchCriteria.md
 docs/DocumentationSearchRequest.md
@@ -1606,6 +1618,7 @@ docs/EmailInitialConfiguration.md
 docs/EmailMediaParticipant.md
 docs/EmailMediaPolicy.md
 docs/EmailMediaPolicyConditions.md
+docs/EmailMediaSettings.md
 docs/EmailMessage.md
 docs/EmailMessagePreview.md
 docs/EmailMessagePreviewListing.md
@@ -2080,6 +2093,7 @@ docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
 docs/IgnoredActivityCategories.md
+docs/Image.md
 docs/ImapSettings.md
 docs/ImportError.md
 docs/ImportForecastResponse.md
@@ -2351,6 +2365,8 @@ docs/KnowledgeDocument.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRequest.md
 docs/KnowledgeDocumentCopy.md
+docs/KnowledgeDocumentCreateRequest.md
+docs/KnowledgeDocumentDescriptor.md
 docs/KnowledgeDocumentFeedback.md
 docs/KnowledgeDocumentFeedbackResponse.md
 docs/KnowledgeDocumentFeedbackResponseListing.md
@@ -2433,11 +2449,13 @@ docs/KnowledgeTraining.md
 docs/KpiResult.md
 docs/Label.md
 docs/LabelCreateRequest.md
+docs/LabelEntity.md
 docs/LabelListing.md
 docs/LabelResponse.md
 docs/LabelUpdateRequest.md
 docs/LabelUtilizationRequest.md
 docs/LabelUtilizationResponse.md
+docs/LabelsFilter.md
 docs/Language.md
 docs/LanguageEntityListing.md
 docs/LanguageOverride.md
@@ -2754,6 +2772,7 @@ docs/NamedEntityTypeBinding.md
 docs/NamedEntityTypeDefinition.md
 docs/NamedEntityTypeItem.md
 docs/NamedEntityTypeMechanism.md
+docs/NamedEntityTypeMechanismExample.md
 docs/NamespaceDocs.md
 docs/NetworkConnectivity.md
 docs/NextOccurrenceDetails.md
@@ -3445,6 +3464,7 @@ docs/RecordingAnnotationFlow.md
 docs/RecordingAnnotationQueue.md
 docs/RecordingArchiveRestoreTopicMediaResult.md
 docs/RecordingArchiveRestoreTopicRecording.md
+docs/RecordingAttachment.md
 docs/RecordingButtonComponent.md
 docs/RecordingContentActions.md
 docs/RecordingContentStory.md
@@ -3459,9 +3479,14 @@ docs/RecordingJobFailedRecording.md
 docs/RecordingJobsQuery.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
+docs/RecordingNotificationTemplate.md
 docs/RecordingRetention.md
 docs/RecordingRetentionCursorEntityListing.md
 docs/RecordingSettings.md
+docs/RecordingTemplateBody.md
+docs/RecordingTemplateButton.md
+docs/RecordingTemplateFooter.md
+docs/RecordingTemplateHeader.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
 docs/RecordingTranscodeCompleteTopicRecording.md
 docs/RecordingUploadReport.md
@@ -3917,6 +3942,13 @@ docs/TagValueEntityListing.md
 docs/TargetPerformanceProfile.md
 docs/TaskManagementAPI.json
 docs/TaskManagementAPI.md
+docs/TaskManagementAggregateDataContainer.md
+docs/TaskManagementAggregateQueryClause.md
+docs/TaskManagementAggregateQueryFilter.md
+docs/TaskManagementAggregateQueryPredicate.md
+docs/TaskManagementAggregateQueryResponse.md
+docs/TaskManagementAggregationQuery.md
+docs/TaskManagementAggregationView.md
 docs/TaskManagementErrorDetails.md
 docs/Team.md
 docs/TeamActivityData.md
@@ -4234,7 +4266,6 @@ docs/UserExternalIdentifier.md
 docs/UserGreetingEventGreeting.md
 docs/UserGreetingEventGreetingAudioFile.md
 docs/UserGreetingEventGreetingOwner.md
-docs/UserImage.md
 docs/UserInsightsTrend.md
 docs/UserInsightsTrendMetricItem.md
 docs/UserInsightsTrendTotalItem.md
@@ -4440,6 +4471,7 @@ docs/WebDeploymentConfigurationVersion.md
 docs/WebDeploymentConfigurationVersionEntityListing.md
 docs/WebDeploymentConfigurationVersionEntityRef.md
 docs/WebDeploymentConfigurationVersionResponse.md
+docs/WebDeploymentFlowEntityRef.md
 docs/WebDeploymentHeadlessMode.md
 docs/WebDeploymentsAPI.json
 docs/WebDeploymentsAPI.md
@@ -6131,6 +6163,7 @@ docs/getUserrecordingsSummary-example.txt
 docs/getUsers-example.txt
 docs/getUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/getUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
+docs/getUsersChatsMe-example.txt
 docs/getUsersDevelopmentActivities-example.txt
 docs/getUsersDevelopmentActivitiesMe-example.txt
 docs/getUsersDevelopmentActivity-example.txt
@@ -6153,6 +6186,8 @@ docs/getVoicemailPolicy-example.txt
 docs/getVoicemailQueueMessages-example.txt
 docs/getVoicemailSearch-example.txt
 docs/getVoicemailSearch-example.txt
+docs/getVoicemailUserMailbox-example.txt
+docs/getVoicemailUserMessages-example.txt
 docs/getVoicemailUserpolicy-example.txt
 docs/getWebchatDeployment-example.txt
 docs/getWebchatDeployments-example.txt
@@ -6513,6 +6548,7 @@ docs/postAnalyticsRoutingActivityQuery-example.txt
 docs/postAnalyticsRoutingActivityQuery-example.txt
 docs/postAnalyticsSurveysAggregatesQuery-example.txt
 docs/postAnalyticsSurveysAggregatesQuery-example.txt
+docs/postAnalyticsTaskmanagementAggregatesQuery-example.txt
 docs/postAnalyticsTeamsActivityQuery-example.txt
 docs/postAnalyticsTeamsActivityQuery-example.txt
 docs/postAnalyticsTranscriptsAggregatesQuery-example.txt
@@ -6853,6 +6889,8 @@ docs/postOutboundCallabletimesets-example.txt
 docs/postOutboundCallanalysisresponsesets-example.txt
 docs/postOutboundCampaignAgentownedmappingpreview-example.txt
 docs/postOutboundCampaignCallbackSchedule-example.txt
+docs/postOutboundCampaignStart-example.txt
+docs/postOutboundCampaignStop-example.txt
 docs/postOutboundCampaignrules-example.txt
 docs/postOutboundCampaigns-example.txt
 docs/postOutboundCampaignsProgress-example.txt
@@ -6879,6 +6917,8 @@ docs/postOutboundDnclists-example.txt
 docs/postOutboundFilespecificationtemplates-example.txt
 docs/postOutboundImporttemplates-example.txt
 docs/postOutboundImporttemplatesBulkAdd-example.txt
+docs/postOutboundMessagingcampaignStart-example.txt
+docs/postOutboundMessagingcampaignStop-example.txt
 docs/postOutboundMessagingcampaigns-example.txt
 docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
@@ -7707,6 +7747,7 @@ src/Models/ArrayNode.swift
 src/Models/Article.swift
 src/Models/ArticleContent.swift
 src/Models/ArticleContentBody.swift
+src/Models/ArticlesFilter.swift
 src/Models/AssessmentForm.swift
 src/Models/AssessmentFormQuestion.swift
 src/Models/AssessmentFormQuestionGroup.swift
@@ -8057,8 +8098,10 @@ src/Models/CannedResponseLibraries.swift
 src/Models/Card.swift
 src/Models/CardAction.swift
 src/Models/CategoriesEntityListing.swift
+src/Models/CategoriesFilter.swift
 src/Models/Category.swift
 src/Models/CategoryCreateRequest.swift
+src/Models/CategoryEntity.swift
 src/Models/CategoryEntityListing.swift
 src/Models/CategoryListing.swift
 src/Models/CategoryReference.swift
@@ -8082,6 +8125,9 @@ src/Models/ChatBadgeTopicBadgeEntity.swift
 src/Models/ChatBadgeTopicChatBadge.swift
 src/Models/ChatConversation.swift
 src/Models/ChatConversationEntityListing.swift
+src/Models/ChatFavorite.swift
+src/Models/ChatItem.swift
+src/Models/ChatItemCursorListing.swift
 src/Models/ChatMediaParticipant.swift
 src/Models/ChatMediaPolicy.swift
 src/Models/ChatMediaPolicyConditions.swift
@@ -8089,10 +8135,12 @@ src/Models/ChatMessage.swift
 src/Models/ChatMessageEntityListing.swift
 src/Models/ChatMessageResponse.swift
 src/Models/ChatMessageUser.swift
+src/Models/ChatPresence.swift
 src/Models/ChatReaction.swift
 src/Models/ChatReactionUpdate.swift
 src/Models/ChatSendMessageResponse.swift
 src/Models/ChatSettings.swift
+src/Models/ChatUserRef.swift
 src/Models/Check.swift
 src/Models/ClientApp.swift
 src/Models/ClientAppConfigurationInfo.swift
@@ -8222,6 +8270,8 @@ src/Models/ContentButtonResponse.swift
 src/Models/ContentCard.swift
 src/Models/ContentCardAction.swift
 src/Models/ContentCarousel.swift
+src/Models/ContentFileRequest.swift
+src/Models/ContentFileResponse.swift
 src/Models/ContentFilterItem.swift
 src/Models/ContentGeneric.swift
 src/Models/ContentList.swift
@@ -8847,7 +8897,6 @@ src/Models/DoNotSendActionSettings.swift
 src/Models/Document.swift
 src/Models/DocumentArticle.swift
 src/Models/DocumentAttribute.swift
-src/Models/DocumentBody.swift
 src/Models/DocumentBodyBlock.swift
 src/Models/DocumentBodyBlockWithHighlight.swift
 src/Models/DocumentBodyImage.swift
@@ -8861,6 +8910,8 @@ src/Models/DocumentBodyListWithHighlight.swift
 src/Models/DocumentBodyParagraph.swift
 src/Models/DocumentBodyParagraphProperties.swift
 src/Models/DocumentBodyParagraphWithHighlight.swift
+src/Models/DocumentBodyRequest.swift
+src/Models/DocumentBodyResponse.swift
 src/Models/DocumentBodyTable.swift
 src/Models/DocumentBodyTableCaptionBlock.swift
 src/Models/DocumentBodyTableCaptionItem.swift
@@ -8897,10 +8948,11 @@ src/Models/DocumentTextProperties.swift
 src/Models/DocumentThumbnail.swift
 src/Models/DocumentUpdate.swift
 src/Models/DocumentUpload.swift
-src/Models/DocumentVariation.swift
 src/Models/DocumentVariationAnswer.swift
 src/Models/DocumentVariationContext.swift
-src/Models/DocumentVariationListing.swift
+src/Models/DocumentVariationRequest.swift
+src/Models/DocumentVariationResponse.swift
+src/Models/DocumentVariationResponseListing.swift
 src/Models/DocumentationResult.swift
 src/Models/DocumentationSearchCriteria.swift
 src/Models/DocumentationSearchRequest.swift
@@ -9009,6 +9061,7 @@ src/Models/EmailInitialConfiguration.swift
 src/Models/EmailMediaParticipant.swift
 src/Models/EmailMediaPolicy.swift
 src/Models/EmailMediaPolicyConditions.swift
+src/Models/EmailMediaSettings.swift
 src/Models/EmailMessage.swift
 src/Models/EmailMessagePreview.swift
 src/Models/EmailMessagePreviewListing.swift
@@ -9459,6 +9512,7 @@ src/Models/IdentityResolutionQueueConfig.swift
 src/Models/IdleEventTrigger.swift
 src/Models/IdleTokenTimeout.swift
 src/Models/IgnoredActivityCategories.swift
+src/Models/Image.swift
 src/Models/ImapSettings.swift
 src/Models/ImportError.swift
 src/Models/ImportForecastResponse.swift
@@ -9722,6 +9776,8 @@ src/Models/KnowledgeDocument.swift
 src/Models/KnowledgeDocumentAlternative.swift
 src/Models/KnowledgeDocumentBulkRequest.swift
 src/Models/KnowledgeDocumentCopy.swift
+src/Models/KnowledgeDocumentCreateRequest.swift
+src/Models/KnowledgeDocumentDescriptor.swift
 src/Models/KnowledgeDocumentFeedback.swift
 src/Models/KnowledgeDocumentFeedbackResponse.swift
 src/Models/KnowledgeDocumentFeedbackResponseListing.swift
@@ -9804,11 +9860,13 @@ src/Models/KnowledgeTraining.swift
 src/Models/KpiResult.swift
 src/Models/Label.swift
 src/Models/LabelCreateRequest.swift
+src/Models/LabelEntity.swift
 src/Models/LabelListing.swift
 src/Models/LabelResponse.swift
 src/Models/LabelUpdateRequest.swift
 src/Models/LabelUtilizationRequest.swift
 src/Models/LabelUtilizationResponse.swift
+src/Models/LabelsFilter.swift
 src/Models/Language.swift
 src/Models/LanguageEntityListing.swift
 src/Models/LanguageOverride.swift
@@ -10112,6 +10170,7 @@ src/Models/NamedEntityTypeBinding.swift
 src/Models/NamedEntityTypeDefinition.swift
 src/Models/NamedEntityTypeItem.swift
 src/Models/NamedEntityTypeMechanism.swift
+src/Models/NamedEntityTypeMechanismExample.swift
 src/Models/NamespaceDocs.swift
 src/Models/NetworkConnectivity.swift
 src/Models/NextOccurrenceDetails.swift
@@ -10780,6 +10839,7 @@ src/Models/RecordingAnnotationFlow.swift
 src/Models/RecordingAnnotationQueue.swift
 src/Models/RecordingArchiveRestoreTopicMediaResult.swift
 src/Models/RecordingArchiveRestoreTopicRecording.swift
+src/Models/RecordingAttachment.swift
 src/Models/RecordingButtonComponent.swift
 src/Models/RecordingContentActions.swift
 src/Models/RecordingContentStory.swift
@@ -10794,9 +10854,14 @@ src/Models/RecordingJobFailedRecording.swift
 src/Models/RecordingJobsQuery.swift
 src/Models/RecordingMessagingMessage.swift
 src/Models/RecordingMetadata.swift
+src/Models/RecordingNotificationTemplate.swift
 src/Models/RecordingRetention.swift
 src/Models/RecordingRetentionCursorEntityListing.swift
 src/Models/RecordingSettings.swift
+src/Models/RecordingTemplateBody.swift
+src/Models/RecordingTemplateButton.swift
+src/Models/RecordingTemplateFooter.swift
+src/Models/RecordingTemplateHeader.swift
 src/Models/RecordingTranscodeCompleteTopicMediaResult.swift
 src/Models/RecordingTranscodeCompleteTopicRecording.swift
 src/Models/RecordingUploadReport.swift
@@ -11229,6 +11294,13 @@ src/Models/TagQueryRequest.swift
 src/Models/TagValue.swift
 src/Models/TagValueEntityListing.swift
 src/Models/TargetPerformanceProfile.swift
+src/Models/TaskManagementAggregateDataContainer.swift
+src/Models/TaskManagementAggregateQueryClause.swift
+src/Models/TaskManagementAggregateQueryFilter.swift
+src/Models/TaskManagementAggregateQueryPredicate.swift
+src/Models/TaskManagementAggregateQueryResponse.swift
+src/Models/TaskManagementAggregationQuery.swift
+src/Models/TaskManagementAggregationView.swift
 src/Models/TaskManagementErrorDetails.swift
 src/Models/Team.swift
 src/Models/TeamActivityData.swift
@@ -11532,7 +11604,6 @@ src/Models/UserExternalIdentifier.swift
 src/Models/UserGreetingEventGreeting.swift
 src/Models/UserGreetingEventGreetingAudioFile.swift
 src/Models/UserGreetingEventGreetingOwner.swift
-src/Models/UserImage.swift
 src/Models/UserInsightsTrend.swift
 src/Models/UserInsightsTrendMetricItem.swift
 src/Models/UserInsightsTrendTotalItem.swift
@@ -11727,6 +11798,7 @@ src/Models/WebDeploymentConfigurationVersion.swift
 src/Models/WebDeploymentConfigurationVersionEntityListing.swift
 src/Models/WebDeploymentConfigurationVersionEntityRef.swift
 src/Models/WebDeploymentConfigurationVersionResponse.swift
+src/Models/WebDeploymentFlowEntityRef.swift
 src/Models/WebDeploymentHeadlessMode.swift
 src/Models/WebDeploymentsAuthorizationResponse.swift
 src/Models/WebDeploymentsConfigTopicWebMessagingConfigChangeEventBody.swift

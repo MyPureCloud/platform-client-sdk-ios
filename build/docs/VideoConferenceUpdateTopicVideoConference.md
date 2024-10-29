@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conversationId** | **String** |  | [optional] |
+| **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **conferenceId** | **String** |  | [optional] |
 | **participantInfo** | [**VideoConferenceUpdateTopicParticipantInfo**](VideoConferenceUpdateTopicParticipantInfo) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

@@ -5651,6 +5651,8 @@ open class AnalyticsAPI {
     }
     
     
+    
+    
     /**
      Get dashboards summary for users in a org
      
@@ -5659,10 +5661,11 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
      - parameter state: (query) Only list users of this state (optional)
+     - parameter deletedOnly: (query) Only list deleted dashboards that are still recoverable (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsReportingDashboardsUsers(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil, completion: @escaping ((_ data: DashboardUserListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingDashboardsUsersWithRequestBuilder(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state)
+    open class func getAnalyticsReportingDashboardsUsers(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil, deletedOnly: Bool? = nil, completion: @escaping ((_ data: DashboardUserListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingDashboardsUsersWithRequestBuilder(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state, deletedOnly: deletedOnly)
         requestBuilder.execute { (response: Response<DashboardUserListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -5717,10 +5720,11 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
      - parameter state: (query) Only list users of this state (optional)
+     - parameter deletedOnly: (query) Only list deleted dashboards that are still recoverable (optional)
 
      - returns: RequestBuilder<DashboardUserListing> 
      */
-    open class func getAnalyticsReportingDashboardsUsersWithRequestBuilder(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil) -> RequestBuilder<DashboardUserListing> {        
+    open class func getAnalyticsReportingDashboardsUsersWithRequestBuilder(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil, deletedOnly: Bool? = nil) -> RequestBuilder<DashboardUserListing> {        
         let path = "/api/v2/analytics/reporting/dashboards/users"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -5731,7 +5735,8 @@ open class AnalyticsAPI {
             "pageNumber": pageNumber?.encodeToJSON(), 
             "pageSize": pageSize?.encodeToJSON(), 
             "id": _id, 
-            "state": state?.rawValue
+            "state": state?.rawValue, 
+            "deletedOnly": deletedOnly
         ])
 
         let requestBuilder: RequestBuilder<DashboardUserListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -6030,6 +6035,7 @@ open class AnalyticsAPI {
         case _private = "Private"
         case shared = "Shared"
         case favorites = "Favorites"
+        case deleted = "Deleted"
     }
     
     
@@ -6171,6 +6177,7 @@ open class AnalyticsAPI {
     } ],
     "publicDashboard" : true,
     "dashboardsSharedWith" : "{}",
+    "dateDeleted" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -6261,6 +6268,7 @@ open class AnalyticsAPI {
     } ],
     "publicDashboard" : true,
     "dashboardsSharedWith" : "{}",
+    "dateDeleted" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -6320,6 +6328,8 @@ open class AnalyticsAPI {
     
     
     
+    
+    
     /**
      Get list of dashboards for an user
      
@@ -6329,11 +6339,12 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter publicOnly: (query) If true, retrieve only public dashboards (optional)
      - parameter favoriteOnly: (query) If true, retrieve only favorite dashboards (optional)
+     - parameter deletedOnly: (query) If true, retrieve only deleted dashboards that are still recoverable (optional)
      - parameter name: (query) retrieve dashboards that match with given name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsReportingSettingsUserDashboards(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, name: String? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly, name: name)
+    open class func getAnalyticsReportingSettingsUserDashboards(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, deletedOnly: Bool? = nil, name: String? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly, deletedOnly: deletedOnly, name: name)
         requestBuilder.execute { (response: Response<DashboardConfigurationListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6443,6 +6454,7 @@ open class AnalyticsAPI {
     } ],
     "publicDashboard" : true,
     "dashboardsSharedWith" : "{}",
+    "dateDeleted" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -6533,6 +6545,7 @@ open class AnalyticsAPI {
     } ],
     "publicDashboard" : true,
     "dashboardsSharedWith" : "{}",
+    "dateDeleted" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -6555,11 +6568,12 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter publicOnly: (query) If true, retrieve only public dashboards (optional)
      - parameter favoriteOnly: (query) If true, retrieve only favorite dashboards (optional)
+     - parameter deletedOnly: (query) If true, retrieve only deleted dashboards that are still recoverable (optional)
      - parameter name: (query) retrieve dashboards that match with given name (optional)
 
      - returns: RequestBuilder<DashboardConfigurationListing> 
      */
-    open class func getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, name: String? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
+    open class func getAnalyticsReportingSettingsUserDashboardsWithRequestBuilder(userId: String, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, publicOnly: Bool? = nil, favoriteOnly: Bool? = nil, deletedOnly: Bool? = nil, name: String? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
         var path = "/api/v2/analytics/reporting/settings/users/{userId}/dashboards"
         let userIdPreEscape = "\(userId)"
         let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6574,6 +6588,7 @@ open class AnalyticsAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "publicOnly": publicOnly, 
             "favoriteOnly": favoriteOnly, 
+            "deletedOnly": deletedOnly, 
             "name": name
         ])
 
@@ -15615,7 +15630,7 @@ open class AnalyticsAPI {
     
     
     /**
-     Bulk delete dashboards owned by other user(s)
+     Bulk soft delete dashboards owned by other user(s)
      
      - parameter body: (body) List of userIds 
      - parameter completion: completion handler to receive the data and the error objects
@@ -15632,7 +15647,7 @@ open class AnalyticsAPI {
     }
 
     /**
-     Bulk delete dashboards owned by other user(s)
+     Bulk soft delete dashboards owned by other user(s)
      - POST /api/v2/analytics/reporting/dashboards/users/bulk/remove
      - OAuth:
        - type: oauth2
@@ -15750,7 +15765,7 @@ open class AnalyticsAPI {
     
     
     /**
-     Bulk remove dashboard configurations
+     Bulk soft delete dashboard configurations
      
      - parameter body: (body)  
      - parameter completion: completion handler to receive the data and the error objects
@@ -15767,7 +15782,7 @@ open class AnalyticsAPI {
     }
 
     /**
-     Bulk remove dashboard configurations
+     Bulk soft delete dashboard configurations
      - POST /api/v2/analytics/reporting/settings/dashboards/bulk/remove
      - OAuth:
        - type: oauth2
@@ -15908,6 +15923,7 @@ open class AnalyticsAPI {
     } ],
     "publicDashboard" : true,
     "dashboardsSharedWith" : "{}",
+    "dateDeleted" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -15998,6 +16014,7 @@ open class AnalyticsAPI {
     } ],
     "publicDashboard" : true,
     "dashboardsSharedWith" : "{}",
+    "dateDeleted" : "2000-01-23T04:56:07.000+00:00",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "createdBy" : "{}",
     "restricted" : true,
@@ -16519,6 +16536,364 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<SurveyAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Query for task management aggregates
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsTaskmanagementAggregatesQuery(body: TaskManagementAggregationQuery, completion: @escaping ((_ data: TaskManagementAggregateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsTaskmanagementAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<TaskManagementAggregateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query for task management aggregates
+     - POST /api/v2/analytics/taskmanagement/aggregates/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "results" : [ {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
+    }
+  }, {
+    "data" : [ {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    }, {
+      "interval" : "interval",
+      "metrics" : [ {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      }, {
+        "metric" : "metric",
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "qualifier" : "qualifier"
+      } ],
+      "views" : [ {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      }, {
+        "stats" : {
+          "max" : 0.8008281904610115,
+          "count" : 1,
+          "sum" : 2.3021358869347655,
+          "p95" : 7,
+          "countNegative" : 5,
+          "numerator" : 3.616076749251911,
+          "denominator" : 2.027123023002322,
+          "target" : 4.145608029883936,
+          "p99" : 1,
+          "current" : 7.061401241503109,
+          "min" : 6.027456183070403,
+          "countPositive" : 5,
+          "ratio" : 9.301444243932576
+        },
+        "name" : "name"
+      } ]
+    } ],
+    "group" : {
+      "key" : "group"
+    }
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<TaskManagementAggregateQueryResponse> 
+     */
+    open class func postAnalyticsTaskmanagementAggregatesQueryWithRequestBuilder(body: TaskManagementAggregationQuery) -> RequestBuilder<TaskManagementAggregateQueryResponse> {        
+        let path = "/api/v2/analytics/taskmanagement/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<TaskManagementAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

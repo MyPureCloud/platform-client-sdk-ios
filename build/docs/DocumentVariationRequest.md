@@ -1,6 +1,6 @@
-# DocumentVariation
+# DocumentVariationRequest
 
-## DocumentVariation
+## DocumentVariationRequest
 
 ## Properties
 
@@ -14,9 +14,9 @@
 | **document** | [**KnowledgeDocumentReference**](KnowledgeDocumentReference) | The reference to document to which the variation is associated. | [optional] |
 | **priority** | **Int** | The priority of the variation. | [optional] |
 | **name** | **String** | The name of the variation. | [optional] |
-| **body** | [**DocumentBody**](DocumentBody) | The content for the variation. | [optional] |
+| **body** | [**DocumentBodyRequest**](DocumentBodyRequest) | The content for the variation. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

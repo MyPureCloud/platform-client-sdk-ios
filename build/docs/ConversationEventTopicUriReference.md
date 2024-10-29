@@ -12,4 +12,4 @@ A UriReference for a resource
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

@@ -26,9 +26,9 @@
 | **externalUrl** | **String** | The URL to external document. | [optional] |
 | **source** | [**AddressableEntityRef**](AddressableEntityRef) | The reference to source associated with the document. | [optional] |
 | **readonly** | **Bool** | Whether the document is read-only. | [optional] |
-| **variations** | [**[DocumentVariation]**](DocumentVariation) | Variations of the document. | [optional] |
+| **variations** | [**[DocumentVariationResponse]**](DocumentVariationResponse) | Variations of the document. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

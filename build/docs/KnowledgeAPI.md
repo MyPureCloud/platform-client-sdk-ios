@@ -1365,7 +1365,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId
 
 
 
-> [DocumentVariation](DocumentVariation) getKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState)
+> [DocumentVariationResponse](DocumentVariationResponse) getKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState)
 
 Get a variation for a document.
 
@@ -1414,14 +1414,14 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: doc
 
 ### Return type
 
-[**DocumentVariation**](DocumentVariation)
+[**DocumentVariationResponse**](DocumentVariationResponse)
 
 
 ## getKnowledgeKnowledgebaseDocumentVariations
 
 
 
-> [DocumentVariationListing](DocumentVariationListing) getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState)
+> [DocumentVariationResponseListing](DocumentVariationResponseListing) getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState)
 
 Get variations for a document.
 
@@ -1474,7 +1474,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: knowle
 
 ### Return type
 
-[**DocumentVariationListing**](DocumentVariationListing)
+[**DocumentVariationResponseListing**](DocumentVariationResponseListing)
 
 
 ## getKnowledgeKnowledgebaseDocumentVersion
@@ -3253,7 +3253,7 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBase
 
 
 
-> [DocumentVariation](DocumentVariation) patchKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, body)
+> [DocumentVariationResponse](DocumentVariationResponse) patchKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, body)
 
 Update a variation for a document.
 
@@ -3276,7 +3276,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let documentVariationId: String = "" // Globally unique identifier for a document variation.
 let documentId: String = "" // Globally unique identifier for a document.
 let knowledgeBaseId: String = "" // Globally unique identifier for a knowledge base.
-let body: DocumentVariation = new DocumentVariation(...) // 
+let body: DocumentVariationRequest = new DocumentVariationRequest(...) // 
 
 // Code example
 KnowledgeAPI.patchKnowledgeKnowledgebaseDocumentVariation(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
@@ -3297,12 +3297,12 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseDocumentVariation(documentVariationId: d
 | **documentVariationId** | **String**| Globally unique identifier for a document variation. | |
 | **documentId** | **String**| Globally unique identifier for a document. | |
 | **knowledgeBaseId** | **String**| Globally unique identifier for a knowledge base. | |
-| **body** | [**DocumentVariation**](DocumentVariation)|  | |
+| **body** | [**DocumentVariationRequest**](DocumentVariationRequest)|  | |
 
 
 ### Return type
 
-[**DocumentVariation**](DocumentVariation)
+[**DocumentVariationResponse**](DocumentVariationResponse)
 
 
 ## patchKnowledgeKnowledgebaseDocumentsSearchSearchId
@@ -4424,7 +4424,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentFeedback(knowledgeBaseId: knowled
 
 
 
-> [DocumentVariation](DocumentVariation) postKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, body)
+> [DocumentVariationResponse](DocumentVariationResponse) postKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, body)
 
 Create a variation for a document.
 
@@ -4447,7 +4447,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Globally unique identifier for the knowledge base.
 let documentId: String = "" // Globally unique identifier for the document.
-let body: DocumentVariation = new DocumentVariation(...) // 
+let body: DocumentVariationRequest = new DocumentVariationRequest(...) // 
 
 // Code example
 KnowledgeAPI.postKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: knowledgeBaseId, documentId: documentId, body: body) { (response, error) in
@@ -4467,12 +4467,12 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: knowl
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Globally unique identifier for the knowledge base. | |
 | **documentId** | **String**| Globally unique identifier for the document. | |
-| **body** | [**DocumentVariation**](DocumentVariation)|  | |
+| **body** | [**DocumentVariationRequest**](DocumentVariationRequest)|  | |
 
 
 ### Return type
 
-[**DocumentVariation**](DocumentVariation)
+[**DocumentVariationResponse**](DocumentVariationResponse)
 
 
 ## postKnowledgeKnowledgebaseDocumentVersions
@@ -4607,7 +4607,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
-let body: KnowledgeDocumentReq = new KnowledgeDocumentReq(...) // 
+let body: KnowledgeDocumentCreateRequest = new KnowledgeDocumentCreateRequest(...) // 
 
 // Code example
 KnowledgeAPI.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
@@ -4626,7 +4626,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocuments(knowledgeBaseId: knowledgeBaseI
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
-| **body** | [**KnowledgeDocumentReq**](KnowledgeDocumentReq)|  | |
+| **body** | [**KnowledgeDocumentCreateRequest**](KnowledgeDocumentCreateRequest)|  | |
 
 
 ### Return type
@@ -5792,4 +5792,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

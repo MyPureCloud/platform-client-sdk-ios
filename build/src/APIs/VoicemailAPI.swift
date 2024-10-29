@@ -1290,6 +1290,206 @@ open class VoicemailAPI {
     
     
     /**
+     Get a user's mailbox information
+     
+     - parameter userId: (path) userId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getVoicemailUserMailbox(userId: String, completion: @escaping ((_ data: VoicemailMailboxInfo?,_ error: Error?) -> Void)) {
+        let requestBuilder = getVoicemailUserMailboxWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<VoicemailMailboxInfo>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a user's mailbox information
+     - GET /api/v2/voicemail/users/{userId}/mailbox
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "newestReadDate" : "2000-01-23T04:56:07.000+00:00",
+  "createdDate" : "2000-01-23T04:56:07.000+00:00",
+  "oldestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
+  "usageSizeBytes" : 0,
+  "deletedCount" : 5,
+  "newestUnreadDate" : "2000-01-23T04:56:07.000+00:00",
+  "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+  "unreadCount" : 1,
+  "totalCount" : 6,
+  "oldestReadDate" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+     
+     - parameter userId: (path) userId 
+
+     - returns: RequestBuilder<VoicemailMailboxInfo> 
+     */
+    open class func getVoicemailUserMailboxWithRequestBuilder(userId: String) -> RequestBuilder<VoicemailMailboxInfo> {        
+        var path = "/api/v2/voicemail/users/{userId}/mailbox"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<VoicemailMailboxInfo>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List voicemail messages
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getVoicemailUserMessages(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil, completion: @escaping ((_ data: VoicemailMessageEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getVoicemailUserMessagesWithRequestBuilder(userId: userId, pageSize: pageSize, pageNumber: pageNumber)
+        requestBuilder.execute { (response: Response<VoicemailMessageEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List voicemail messages
+     - GET /api/v2/voicemail/users/{userId}/messages
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 5,
+  "pageCount" : 2,
+  "pageNumber" : 5,
+  "entities" : [ {
+    "callerAddress" : "callerAddress",
+    "note" : "note",
+    "audioRecordingSizeBytes" : 6,
+    "copiedTo" : [ {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "group" : "{}"
+    }, {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "group" : "{}"
+    } ],
+    "read" : true,
+    "transcription" : "transcription",
+    "selfUri" : "https://openapi-generator.tech",
+    "callerUser" : "{}",
+    "deleteRetentionPolicy" : "{}",
+    "callerName" : "callerName",
+    "copiedFrom" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "deleted" : true,
+    "deletedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "audioRecordingDurationSeconds" : 0,
+    "user" : "{}",
+    "conversation" : "{}",
+    "queue" : "{}",
+    "group" : "{}"
+  }, {
+    "callerAddress" : "callerAddress",
+    "note" : "note",
+    "audioRecordingSizeBytes" : 6,
+    "copiedTo" : [ {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "group" : "{}"
+    }, {
+      "date" : "2000-01-23T04:56:07.000+00:00",
+      "user" : "{}",
+      "group" : "{}"
+    } ],
+    "read" : true,
+    "transcription" : "transcription",
+    "selfUri" : "https://openapi-generator.tech",
+    "callerUser" : "{}",
+    "deleteRetentionPolicy" : "{}",
+    "callerName" : "callerName",
+    "copiedFrom" : "{}",
+    "createdDate" : "2000-01-23T04:56:07.000+00:00",
+    "deleted" : true,
+    "deletedDate" : "2000-01-23T04:56:07.000+00:00",
+    "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "audioRecordingDurationSeconds" : 0,
+    "user" : "{}",
+    "conversation" : "{}",
+    "queue" : "{}",
+    "group" : "{}"
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 1,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter pageSize: (query) Page size (optional)
+     - parameter pageNumber: (query) Page number (optional)
+
+     - returns: RequestBuilder<VoicemailMessageEntityListing> 
+     */
+    open class func getVoicemailUserMessagesWithRequestBuilder(userId: String, pageSize: Int? = nil, pageNumber: Int? = nil) -> RequestBuilder<VoicemailMessageEntityListing> {        
+        var path = "/api/v2/voicemail/users/{userId}/messages"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<VoicemailMessageEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get a user's voicemail policy
      
      - parameter userId: (path) User ID 

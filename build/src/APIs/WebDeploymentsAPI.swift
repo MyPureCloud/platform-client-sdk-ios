@@ -688,6 +688,7 @@ open class WebDeploymentsAPI {
     
     public enum Expand_getWebdeploymentsDeployment: String { 
         case supportedcontent = "supportedContent"
+        case flowdetails = "flowDetails"
     }
     
     /**

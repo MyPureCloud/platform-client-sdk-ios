@@ -12,7 +12,7 @@ Descriptor for a type of Integration.
 | **_description** | **String** | Description of the integration type. | [optional] |
 | **provider** | **String** | PureCloud provider of the integration type. | [optional] |
 | **category** | **String** | Category describing the integration type. | [optional] |
-| **images** | [**[UserImage]**](UserImage) | Collection of logos. | [optional] |
+| **images** | [**[Image]**](Image) | Collection of logos. | [optional] |
 | **configPropertiesSchemaUri** | **String** | URI of the schema describing the key-value properties needed to configure an integration of this type. | [optional] |
 | **configAdvancedSchemaUri** | **String** | URI of the schema describing the advanced JSON document needed to configure an integration of this type. | [optional] |
 | **helpUri** | **String** | URI of a page with more information about the integration type | [optional] |
@@ -34,4 +34,4 @@ Descriptor for a type of Integration.
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

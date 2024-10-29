@@ -13,4 +13,4 @@ Defines a link between an External Identifier and Authority pair to a Entity Typ
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

@@ -473,7 +473,7 @@ WebDeploymentsAPI.getWebdeploymentsDeployment(deploymentId: deploymentId, expand
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **deploymentId** | **String**| The deployment ID | |
-| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: supportedcontent ("supportedContent") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected.  | [optional]<br />**Values**: supportedcontent ("supportedContent"), flowdetails ("flowDetails") |
 
 
 ### Return type
@@ -988,4 +988,4 @@ WebDeploymentsAPI.putWebdeploymentsDeployment(deploymentId: deploymentId, deploy
 [**WebDeployment**](WebDeployment)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

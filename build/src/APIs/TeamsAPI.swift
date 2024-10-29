@@ -109,14 +109,21 @@ open class TeamsAPI {
 
     
     
+    
+    public enum Expand_getTeam: String { 
+        case entitiesDivision = "entities.division"
+    }
+    
+    
     /**
      Get team
      
      - parameter teamId: (path) Team ID 
+     - parameter expand: (query) Expand the division name (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTeam(teamId: String, completion: @escaping ((_ data: Team?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTeamWithRequestBuilder(teamId: teamId)
+    open class func getTeam(teamId: String, expand: Expand_getTeam? = nil, completion: @escaping ((_ data: Team?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTeamWithRequestBuilder(teamId: teamId, expand: expand)
         requestBuilder.execute { (response: Response<Team>?, error) -> Void in
             do {
                 if let e = error {
@@ -151,10 +158,11 @@ open class TeamsAPI {
 }, statusCode=200}]
      
      - parameter teamId: (path) Team ID 
+     - parameter expand: (query) Expand the division name (optional)
 
      - returns: RequestBuilder<Team> 
      */
-    open class func getTeamWithRequestBuilder(teamId: String) -> RequestBuilder<Team> {        
+    open class func getTeamWithRequestBuilder(teamId: String, expand: Expand_getTeam? = nil) -> RequestBuilder<Team> {        
         var path = "/api/v2/teams/{teamId}"
         let teamIdPreEscape = "\(teamId)"
         let teamIdPostEscape = teamIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -162,7 +170,10 @@ open class TeamsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand?.rawValue
+        ])
 
         let requestBuilder: RequestBuilder<Team>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

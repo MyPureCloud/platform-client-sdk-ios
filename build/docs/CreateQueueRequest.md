@@ -41,7 +41,7 @@
 | **callingPartyNumber** | **String** | The phone number to use for caller identification for outbound calls from this queue. | [optional] |
 | **defaultScripts** | [**[String:Script]**](Script) | The default script Ids for the communication types. | [optional] |
 | **outboundMessagingAddresses** | [**QueueMessagingAddresses**](QueueMessagingAddresses) | The messaging addresses for the queue. | [optional] |
-| **outboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress) |  | [optional] |
+| **outboundEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress) | The default email address to use for outbound email from this queue. | [optional] |
 | **peerId** | **String** | The ID of an associated external queue. | [optional] |
 | **suppressInQueueCallRecording** | **Bool** | Indicates whether recording in-queue calls is suppressed for this queue. | [optional] |
 | **sourceQueueId** | **String** | The id of an existing queue to copy the settings (does not include GPR settings) from when creating a new queue. | [optional] |
@@ -49,4 +49,4 @@
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_
