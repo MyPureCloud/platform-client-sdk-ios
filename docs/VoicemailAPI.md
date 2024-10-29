@@ -19,6 +19,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getVoicemailPolicy**](VoicemailAPI#getVoicemailPolicy) | Get a policy |
 | [**getVoicemailQueueMessages**](VoicemailAPI#getVoicemailQueueMessages) | List voicemail messages |
 | [**getVoicemailSearch**](VoicemailAPI#getVoicemailSearch) | Search voicemails using the q64 value returned from a previous search |
+| [**getVoicemailUserMailbox**](VoicemailAPI#getVoicemailUserMailbox) | Get a user&#39;s mailbox information |
+| [**getVoicemailUserMessages**](VoicemailAPI#getVoicemailUserMessages) | List voicemail messages |
 | [**getVoicemailUserpolicy**](VoicemailAPI#getVoicemailUserpolicy) | Get a user&#39;s voicemail policy |
 | [**patchVoicemailGroupPolicy**](VoicemailAPI#patchVoicemailGroupPolicy) | Update a group&#39;s voicemail policy |
 | [**patchVoicemailMePolicy**](VoicemailAPI#patchVoicemailMePolicy) | Update the current user&#39;s voicemail policy |
@@ -769,6 +771,110 @@ VoicemailAPI.getVoicemailSearch(q64: q64, expand: expand) { (response, error) in
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
+## getVoicemailUserMailbox
+
+
+
+> [VoicemailMailboxInfo](VoicemailMailboxInfo) getVoicemailUserMailbox(userId)
+
+Get a user&#39;s mailbox information
+
+
+
+Wraps GET /api/v2/voicemail/users/{userId}/mailbox  
+
+Requires ANY permissions: 
+
+* voicemail:mailbox:viewOther
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+
+// Code example
+VoicemailAPI.getVoicemailUserMailbox(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("VoicemailAPI.getVoicemailUserMailbox was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| userId | |
+
+
+### Return type
+
+[**VoicemailMailboxInfo**](VoicemailMailboxInfo)
+
+
+## getVoicemailUserMessages
+
+
+
+> [VoicemailMessageEntityListing](VoicemailMessageEntityListing) getVoicemailUserMessages(userId, pageSize, pageNumber)
+
+List voicemail messages
+
+
+
+Wraps GET /api/v2/voicemail/users/{userId}/messages  
+
+Requires ANY permissions: 
+
+* voicemail:voicemail:viewOther
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+
+// Code example
+VoicemailAPI.getVoicemailUserMessages(userId: userId, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("VoicemailAPI.getVoicemailUserMessages was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+
+
+### Return type
+
+[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing)
+
+
 ## getVoicemailUserpolicy
 
 
@@ -1277,4 +1383,4 @@ VoicemailAPI.putVoicemailUserpolicy(userId: userId, body: body) { (response, err
 [**VoicemailUserPolicy**](VoicemailUserPolicy)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

@@ -121,7 +121,7 @@ TeamsAPI.deleteTeamMembers(teamId: teamId, _id: _id) { (error) in
 
 
 
-> [Team](Team) getTeam(teamId)
+> [Team](Team) getTeam(teamId, expand)
 
 Get team
 
@@ -142,9 +142,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let teamId: String = "" // Team ID
+let expand: TeamsAPI.Expand_getTeam = TeamsAPI.Expand_getTeam.enummember // Expand the division name
 
 // Code example
-TeamsAPI.getTeam(teamId: teamId) { (response, error) in
+TeamsAPI.getTeam(teamId: teamId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -160,6 +161,7 @@ TeamsAPI.getTeam(teamId: teamId) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **teamId** | **String**| Team ID | |
+| **expand** | **String**| Expand the division name | [optional]<br />**Values**: entitiesDivision ("entities.division") |
 
 
 ### Return type
@@ -541,4 +543,4 @@ TeamsAPI.postTeamsSearch(body: body) { (response, error) in
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

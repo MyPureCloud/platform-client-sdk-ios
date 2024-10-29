@@ -6,15 +6,15 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **userId** | **String** |  | [optional] |
+| **userId** | [**UUID**](UUID) |  | [optional] |
 | **eventType** | **String** |  | [optional] |
 | **source** | **String** |  | [optional] |
 | **modifiedDate** | [**Date**](Date) |  | [optional] |
 | **presenceDefinition** | [**V2IntegrationPresenceEventOrganizationPresence**](V2IntegrationPresenceEventOrganizationPresence) |  | [optional] |
 | **message** | **String** |  | [optional] |
-| **currentDisplaySourceId** | **String** |  | [optional] |
-| **previousDisplaySourceId** | **String** |  | [optional] |
+| **currentDisplaySourceId** | [**UUID**](UUID) |  | [optional] |
+| **previousDisplaySourceId** | [**UUID**](UUID) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

@@ -10,8 +10,8 @@
 | **name** | **String** |  | [optional] |
 | **displayName** | **String** |  | [optional] |
 | **username** | **String** |  | [optional] |
-| **images** | [**[UserImage]**](UserImage) |  | [optional] |
+| **images** | [**[Image]**](Image) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

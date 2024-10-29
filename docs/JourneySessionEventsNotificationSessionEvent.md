@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **createdDate** | [**Date**](Date) |  | [optional] |
 | **endedDate** | [**Date**](Date) |  | [optional] |
@@ -50,4 +50,4 @@
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

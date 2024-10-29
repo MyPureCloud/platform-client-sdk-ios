@@ -114,6 +114,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundCallanalysisresponsesets**](OutboundAPI#postOutboundCallanalysisresponsesets) | Create a dialer call analysis response set. |
 | [**postOutboundCampaignAgentownedmappingpreview**](OutboundAPI#postOutboundCampaignAgentownedmappingpreview) | Initiate request for a preview of how agents will be mapped to this campaign&#39;s contact list. |
 | [**postOutboundCampaignCallbackSchedule**](OutboundAPI#postOutboundCampaignCallbackSchedule) | Schedule a Callback for a Dialer Campaign (Deprecated) |
+| [**postOutboundCampaignStart**](OutboundAPI#postOutboundCampaignStart) | Start the campaign |
+| [**postOutboundCampaignStop**](OutboundAPI#postOutboundCampaignStop) | Stop the campaign |
 | [**postOutboundCampaignrules**](OutboundAPI#postOutboundCampaignrules) | Create Campaign Rule |
 | [**postOutboundCampaigns**](OutboundAPI#postOutboundCampaigns) | Create a campaign. |
 | [**postOutboundCampaignsProgress**](OutboundAPI#postOutboundCampaignsProgress) | Get progress for a list of campaigns |
@@ -140,6 +142,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postOutboundFilespecificationtemplates**](OutboundAPI#postOutboundFilespecificationtemplates) | Create File Specification Template |
 | [**postOutboundImporttemplates**](OutboundAPI#postOutboundImporttemplates) | Create Import Template |
 | [**postOutboundImporttemplatesBulkAdd**](OutboundAPI#postOutboundImporttemplatesBulkAdd) | Add multiple import templates |
+| [**postOutboundMessagingcampaignStart**](OutboundAPI#postOutboundMessagingcampaignStart) | Start the campaign |
+| [**postOutboundMessagingcampaignStop**](OutboundAPI#postOutboundMessagingcampaignStop) | Stop the campaign |
 | [**postOutboundMessagingcampaigns**](OutboundAPI#postOutboundMessagingcampaigns) | Create a Messaging Campaign |
 | [**postOutboundMessagingcampaignsProgress**](OutboundAPI#postOutboundMessagingcampaignsProgress) | Get progress for a list of messaging campaigns |
 | [**postOutboundRulesets**](OutboundAPI#postOutboundRulesets) | Create a Rule Set. |
@@ -6040,6 +6044,104 @@ OutboundAPI.postOutboundCampaignCallbackSchedule(campaignId: campaignId, body: b
 [**ContactCallbackRequest**](ContactCallbackRequest)
 
 
+## postOutboundCampaignStart
+
+
+
+> Void postOutboundCampaignStart(campaignId)
+
+Start the campaign
+
+
+
+Wraps POST /api/v2/outbound/campaigns/{campaignId}/start  
+
+Requires ANY permissions: 
+
+* outbound:campaign:start
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+
+// Code example
+OutboundAPI.postOutboundCampaignStart(campaignId: campaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.postOutboundCampaignStart was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postOutboundCampaignStop
+
+
+
+> Void postOutboundCampaignStop(campaignId)
+
+Stop the campaign
+
+
+
+Wraps POST /api/v2/outbound/campaigns/{campaignId}/stop  
+
+Requires ANY permissions: 
+
+* outbound:campaign:stop
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let campaignId: String = "" // Campaign ID
+
+// Code example
+OutboundAPI.postOutboundCampaignStop(campaignId: campaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.postOutboundCampaignStop was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **campaignId** | **String**| Campaign ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## postOutboundCampaignrules
 
 
@@ -7368,6 +7470,110 @@ OutboundAPI.postOutboundImporttemplatesBulkAdd(body: body) { (response, error) i
 ### Return type
 
 [**ImportTemplateEntityListing**](ImportTemplateEntityListing)
+
+
+## postOutboundMessagingcampaignStart
+
+
+
+> Void postOutboundMessagingcampaignStart(messagingCampaignId)
+
+Start the campaign
+
+Documented permissions are applicable based on campaign type.
+
+
+
+Wraps POST /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/start  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:start
+* outbound:emailCampaign:start
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.postOutboundMessagingcampaignStart(messagingCampaignId: messagingCampaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.postOutboundMessagingcampaignStart was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postOutboundMessagingcampaignStop
+
+
+
+> Void postOutboundMessagingcampaignStop(messagingCampaignId)
+
+Stop the campaign
+
+Documented permissions are applicable based on campaign type.
+
+
+
+Wraps POST /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/stop  
+
+Requires ANY permissions: 
+
+* outbound:messagingCampaign:stop
+* outbound:emailCampaign:stop
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let messagingCampaignId: String = "" // The Messaging Campaign ID
+
+// Code example
+OutboundAPI.postOutboundMessagingcampaignStop(messagingCampaignId: messagingCampaignId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("OutboundAPI.postOutboundMessagingcampaignStop was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **messagingCampaignId** | **String**| The Messaging Campaign ID | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## postOutboundMessagingcampaigns
@@ -8720,4 +8926,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

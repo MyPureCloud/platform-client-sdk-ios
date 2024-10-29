@@ -12,4 +12,4 @@ The routing language assigned to a user.
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

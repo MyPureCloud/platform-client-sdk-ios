@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
-| **_id** | **String** |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **dateSessionStart** | **String** |  | [optional] |
 | **dateSessionEnd** | **String** |  | [optional] |
@@ -15,4 +15,4 @@
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

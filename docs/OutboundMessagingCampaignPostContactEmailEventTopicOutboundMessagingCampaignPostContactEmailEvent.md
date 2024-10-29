@@ -7,17 +7,17 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventTime** | **Int** |  | [optional] |
-| **conversationId** | **String** |  | [optional] |
+| **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **outboundCampaignType** | **String** |  | [optional] |
 | **emailAttributes** | [**OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes**](OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes) |  | [optional] |
 | **wrapupCode** | **String** |  | [optional] |
-| **outboundCampaignId** | **String** |  | [optional] |
-| **divisionId** | **String** |  | [optional] |
-| **contentTemplateId** | **String** |  | [optional] |
-| **outboundContactListId** | **String** |  | [optional] |
+| **outboundCampaignId** | [**UUID**](UUID) |  | [optional] |
+| **divisionId** | [**UUID**](UUID) |  | [optional] |
+| **contentTemplateId** | [**UUID**](UUID) |  | [optional] |
+| **outboundContactListId** | [**UUID**](UUID) |  | [optional] |
 | **outboundContactId** | **String** |  | [optional] |
 | **isCampaignAlwaysRunning** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

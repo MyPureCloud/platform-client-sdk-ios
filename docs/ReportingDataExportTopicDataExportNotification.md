@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_id** | **String** |  | [optional] |
-| **runId** | **String** |  | [optional] |
+| **_id** | [**UUID**](UUID) |  | [optional] |
+| **runId** | [**UUID**](UUID) |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **exportFormat** | **String** |  | [optional] |
@@ -26,4 +26,4 @@
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

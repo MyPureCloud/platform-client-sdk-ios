@@ -44,12 +44,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsKnowledgeAggregatesQuery**](AnalyticsAPI#postAnalyticsKnowledgeAggregatesQuery) | Query for knowledge aggregates |
 | [**postAnalyticsQueuesObservationsQuery**](AnalyticsAPI#postAnalyticsQueuesObservationsQuery) | Query for queue observations |
 | [**postAnalyticsRatelimitsAggregatesQuery**](AnalyticsAPI#postAnalyticsRatelimitsAggregatesQuery) | Query for limits rate limit aggregates. Data populated when limits reach 90% of the maximum. Not a source of truth for limits hit but a best effort estimate. |
-| [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk delete dashboards owned by other user(s) |
+| [**postAnalyticsReportingDashboardsUsersBulkRemove**](AnalyticsAPI#postAnalyticsReportingDashboardsUsersBulkRemove) | Bulk soft delete dashboards owned by other user(s) |
 | [**postAnalyticsReportingExports**](AnalyticsAPI#postAnalyticsReportingExports) | Generate a view export request |
-| [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk remove dashboard configurations |
+| [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk soft delete dashboard configurations |
 | [**postAnalyticsReportingSettingsDashboardsQuery**](AnalyticsAPI#postAnalyticsReportingSettingsDashboardsQuery) | Query dashboard configurations |
 | [**postAnalyticsRoutingActivityQuery**](AnalyticsAPI#postAnalyticsRoutingActivityQuery) | Query for user activity observations |
 | [**postAnalyticsSurveysAggregatesQuery**](AnalyticsAPI#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
+| [**postAnalyticsTaskmanagementAggregatesQuery**](AnalyticsAPI#postAnalyticsTaskmanagementAggregatesQuery) | Query for task management aggregates |
 | [**postAnalyticsTeamsActivityQuery**](AnalyticsAPI#postAnalyticsTeamsActivityQuery) | Query for team activity observations |
 | [**postAnalyticsTranscriptsAggregatesQuery**](AnalyticsAPI#postAnalyticsTranscriptsAggregatesQuery) | Query for transcript aggregates |
 | [**postAnalyticsUsersActivityQuery**](AnalyticsAPI#postAnalyticsUsersActivityQuery) | Query for user activity observations |
@@ -708,7 +709,7 @@ AnalyticsAPI.getAnalyticsReportingDashboardsUser(userId: userId) { (response, er
 
 
 
-> [DashboardUserListing](DashboardUserListing) getAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, _id, state)
+> [DashboardUserListing](DashboardUserListing) getAnalyticsReportingDashboardsUsers(sortBy, pageNumber, pageSize, _id, state, deletedOnly)
 
 Get dashboards summary for users in a org
 
@@ -733,9 +734,10 @@ let pageNumber: Int = 0 //
 let pageSize: Int = 0 // 
 let _id: [String] = [""] // A list of user IDs to fetch by bulk
 let state: AnalyticsAPI.State_getAnalyticsReportingDashboardsUsers = AnalyticsAPI.State_getAnalyticsReportingDashboardsUsers.enummember // Only list users of this state
+let deletedOnly: Bool = true // Only list deleted dashboards that are still recoverable
 
 // Code example
-AnalyticsAPI.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state) { (response, error) in
+AnalyticsAPI.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state, deletedOnly: deletedOnly) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -755,6 +757,7 @@ AnalyticsAPI.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pa
 | **pageSize** | **Int**|  | [optional] |
 | **_id** | [**[String]**](String)| A list of user IDs to fetch by bulk | [optional] |
 | **state** | **String**| Only list users of this state | [optional]<br />**Values**: active ("active"), inactive ("inactive") |
+| **deletedOnly** | **Bool**| Only list deleted dashboards that are still recoverable | [optional] |
 
 
 ### Return type
@@ -952,7 +955,7 @@ AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dashboardType** | **String**| List dashboard of given type |<br />**Values**: all ("All"), _public ("Public"), _private ("Private"), shared ("Shared"), favorites ("Favorites") |
+| **dashboardType** | **String**| List dashboard of given type |<br />**Values**: all ("All"), _public ("Public"), _private ("Private"), shared ("Shared"), favorites ("Favorites"), deleted ("Deleted") |
 | **dashboardAccessFilter** | **String**| Filter dashboard based on the owner of dashboard |<br />**Values**: ownedByMe ("OwnedByMe"), ownedByAnyone ("OwnedByAnyone"), notOwnedByMe ("NotOwnedByMe") |
 | **name** | **String**| name of the dashboard | [optional] |
 | **sortBy** | **String**|  | [optional] |
@@ -969,7 +972,7 @@ AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboa
 
 
 
-> [DashboardConfigurationListing](DashboardConfigurationListing) getAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, name)
+> [DashboardConfigurationListing](DashboardConfigurationListing) getAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, deletedOnly, name)
 
 Get list of dashboards for an user
 
@@ -995,10 +998,11 @@ let pageNumber: Int = 0 //
 let pageSize: Int = 0 // 
 let publicOnly: Bool = true // If true, retrieve only public dashboards
 let favoriteOnly: Bool = true // If true, retrieve only favorite dashboards
+let deletedOnly: Bool = true // If true, retrieve only deleted dashboards that are still recoverable
 let name: String = "" // retrieve dashboards that match with given name
 
 // Code example
-AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly, name: name) { (response, error) in
+AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, publicOnly: publicOnly, favoriteOnly: favoriteOnly, deletedOnly: deletedOnly, name: name) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1019,6 +1023,7 @@ AnalyticsAPI.getAnalyticsReportingSettingsUserDashboards(userId: userId, sortBy:
 | **pageSize** | **Int**|  | [optional] |
 | **publicOnly** | **Bool**| If true, retrieve only public dashboards | [optional] |
 | **favoriteOnly** | **Bool**| If true, retrieve only favorite dashboards | [optional] |
+| **deletedOnly** | **Bool**| If true, retrieve only deleted dashboards that are still recoverable | [optional] |
 | **name** | **String**| retrieve dashboards that match with given name | [optional] |
 
 
@@ -2148,7 +2153,7 @@ AnalyticsAPI.postAnalyticsRatelimitsAggregatesQuery(body: body) { (response, err
 
 > Void postAnalyticsReportingDashboardsUsersBulkRemove(body)
 
-Bulk delete dashboards owned by other user(s)
+Bulk soft delete dashboards owned by other user(s)
 
 
 
@@ -2250,7 +2255,7 @@ AnalyticsAPI.postAnalyticsReportingExports(body: body) { (response, error) in
 
 > Void postAnalyticsReportingSettingsDashboardsBulkRemove(body)
 
-Bulk remove dashboard configurations
+Bulk soft delete dashboard configurations
 
 
 
@@ -2445,6 +2450,56 @@ AnalyticsAPI.postAnalyticsSurveysAggregatesQuery(body: body) { (response, error)
 ### Return type
 
 [**SurveyAggregateQueryResponse**](SurveyAggregateQueryResponse)
+
+
+## postAnalyticsTaskmanagementAggregatesQuery
+
+
+
+> [TaskManagementAggregateQueryResponse](TaskManagementAggregateQueryResponse) postAnalyticsTaskmanagementAggregatesQuery(body)
+
+Query for task management aggregates
+
+
+
+Wraps POST /api/v2/analytics/taskmanagement/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:taskManagementAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TaskManagementAggregationQuery = new TaskManagementAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsTaskmanagementAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsTaskmanagementAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TaskManagementAggregationQuery**](TaskManagementAggregationQuery)| query | |
+
+
+### Return type
+
+[**TaskManagementAggregateQueryResponse**](TaskManagementAggregateQueryResponse)
 
 
 ## postAnalyticsTeamsActivityQuery
@@ -2855,4 +2910,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

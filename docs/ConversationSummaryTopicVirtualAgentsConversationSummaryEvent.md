@@ -6,13 +6,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conversationId** | **String** |  | [optional] |
+| **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **participants** | [**[ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
 | **communicationIds** | **[String]** |  | [optional] |
 | **createdDate** | [**Date**](Date) |  | [optional] |
 | **messageType** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
-| **summaryId** | **String** |  | [optional] |
+| **summaryId** | [**UUID**](UUID) |  | [optional] |
 | **language** | **String** |  | [optional] |
 | **summary** | [**ConversationSummaryTopicVirtualAgentsConversationSummary**](ConversationSummaryTopicVirtualAgentsConversationSummary) |  | [optional] |
 | **headline** | [**ConversationSummaryTopicVirtualAgentsConversationHeadline**](ConversationSummaryTopicVirtualAgentsConversationHeadline) |  | [optional] |
@@ -24,4 +24,4 @@
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_

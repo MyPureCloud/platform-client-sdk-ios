@@ -18,7 +18,7 @@
 | **title** | **String** |  | [optional] |
 | **username** | **String** |  | [optional] |
 | **manager** | [**User**](User) |  | [optional] |
-| **images** | [**[UserImage]**](UserImage) |  | [optional] |
+| **images** | [**[Image]**](Image) |  | [optional] |
 | **version** | **Int** | Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. | |
 | **certifications** | **[String]** |  | [optional] |
 | **biography** | [**Biography**](Biography) |  | [optional] |
@@ -63,4 +63,4 @@
 
 
 
-_PureCloudPlatformClientV2@154.0.0_
+_PureCloudPlatformClientV2@155.0.0_
