@@ -1472,8 +1472,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
@@ -1896,8 +1896,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2100,8 +2100,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2353,8 +2353,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 2
 }, statusCode=200}]
      
@@ -2733,8 +2733,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -2937,8 +2937,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<CertificateAuthorityEntityListing> 
@@ -3274,8 +3274,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -3383,8 +3383,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter type: (query) The type of numbers to return. 
@@ -3522,8 +3522,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -3945,8 +3945,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4311,8 +4311,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4411,8 +4411,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4544,8 +4544,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4850,8 +4850,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -5035,8 +5035,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -5429,8 +5429,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -5680,8 +5680,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6520,8 +6520,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6628,8 +6628,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -7728,8 +7728,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -8340,8 +8340,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -9919,8 +9919,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -12406,8 +12406,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -12440,6 +12440,2226 @@ open class TelephonyProvidersEdgeAPI {
         ])
 
         let requestBuilder: RequestBuilder<SiteEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Search sites using the q64 value returned from a previous search
+     
+     - parameter q64: (query) q64 
+     - parameter expand: (query) expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTelephonyProvidersEdgesSitesSearch(q64: String, expand: [String]? = nil, completion: @escaping ((_ data: SitesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesSitesSearchWithRequestBuilder(q64: q64, expand: expand)
+        requestBuilder.execute { (response: Response<SitesSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search sites using the q64 value returned from a previous search
+     - GET /api/v2/telephony/providers/edges/sites/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "previousPage" : "previousPage",
+  "nextPage" : "nextPage",
+  "pageSize" : 1,
+  "currentPage" : "currentPage",
+  "results" : [ {
+    "primarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "secondaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "callerName" : "callerName",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "primaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "managed" : true,
+    "modifiedBy" : "modifiedBy",
+    "cloudProxyForceTurn" : true,
+    "id" : "id",
+    "state" : "active",
+    "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
+    "coreSite" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "mediaRegionsUseLatencyBased" : true,
+    "ntpSettings" : "{}",
+    "createdBy" : "createdBy",
+    "secondarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "location" : "{}",
+    "mediaModel" : "Premises",
+    "callerId" : "callerId",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "edgeAutoUpdateConfig" : "{}"
+  }, {
+    "primarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "secondaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "callerName" : "callerName",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "primaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "managed" : true,
+    "modifiedBy" : "modifiedBy",
+    "cloudProxyForceTurn" : true,
+    "id" : "id",
+    "state" : "active",
+    "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
+    "coreSite" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "mediaRegionsUseLatencyBased" : true,
+    "ntpSettings" : "{}",
+    "createdBy" : "createdBy",
+    "secondarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "location" : "{}",
+    "mediaModel" : "Premises",
+    "callerId" : "callerId",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "edgeAutoUpdateConfig" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter q64: (query) q64 
+     - parameter expand: (query) expand (optional)
+
+     - returns: RequestBuilder<SitesSearchResponse> 
+     */
+    open class func getTelephonyProvidersEdgesSitesSearchWithRequestBuilder(q64: String, expand: [String]? = nil) -> RequestBuilder<SitesSearchResponse> {        
+        let path = "/api/v2/telephony/providers/edges/sites/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "q64": q64, 
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<SitesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -12498,8 +14718,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -12927,8 +15147,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -13050,8 +15270,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -13383,8 +15603,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 2
 }, statusCode=200}]
      
@@ -17007,6 +19227,2218 @@ open class TelephonyProvidersEdgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Site>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Search sites
+     
+     - parameter body: (body) Search request options 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTelephonyProvidersEdgesSitesSearch(body: SiteSearchRequest, completion: @escaping ((_ data: SitesSearchResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTelephonyProvidersEdgesSitesSearchWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<SitesSearchResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Search sites
+     - POST /api/v2/telephony/providers/edges/sites/search
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 0,
+  "pageCount" : 6,
+  "types" : [ "types", "types" ],
+  "pageNumber" : 5,
+  "previousPage" : "previousPage",
+  "nextPage" : "nextPage",
+  "pageSize" : 1,
+  "currentPage" : "currentPage",
+  "results" : [ {
+    "primarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "secondaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "callerName" : "callerName",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "primaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "managed" : true,
+    "modifiedBy" : "modifiedBy",
+    "cloudProxyForceTurn" : true,
+    "id" : "id",
+    "state" : "active",
+    "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
+    "coreSite" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "mediaRegionsUseLatencyBased" : true,
+    "ntpSettings" : "{}",
+    "createdBy" : "createdBy",
+    "secondarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "location" : "{}",
+    "mediaModel" : "Premises",
+    "callerId" : "callerId",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "edgeAutoUpdateConfig" : "{}"
+  }, {
+    "primarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "countryCode" : "countryCode",
+      "display" : "display",
+      "integration" : "microsoftteams",
+      "mediaType" : "PHONE",
+      "type" : "PRIMARY"
+    } ],
+    "secondaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "description" : "description",
+    "createdByApp" : "createdByApp",
+    "callerName" : "callerName",
+    "division" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "primaryEdges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "managed" : true,
+    "modifiedBy" : "modifiedBy",
+    "cloudProxyForceTurn" : true,
+    "id" : "id",
+    "state" : "active",
+    "mediaRegions" : [ "mediaRegions", "mediaRegions" ],
+    "coreSite" : true,
+    "selfUri" : "https://openapi-generator.tech",
+    "edges" : [ {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    }, {
+      "certType" : "PureCloud",
+      "softwareStatus" : "{}",
+      "fullSoftwareVersion" : "fullSoftwareVersion",
+      "onlineStatus" : "ONLINE",
+      "description" : "description",
+      "callDrainingState" : "NONE",
+      "createdByApp" : "createdByApp",
+      "edgeGroup" : {
+        "selfUri" : "https://openapi-generator.tech",
+        "description" : "description",
+        "dateModified" : "2000-01-23T04:56:07.000+00:00",
+        "createdByApp" : "createdByApp",
+        "version" : 6,
+        "division" : "{}",
+        "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+        "hybrid" : true,
+        "createdBy" : "createdBy",
+        "managed" : true,
+        "name" : "name",
+        "modifiedByApp" : "modifiedByApp",
+        "modifiedBy" : "modifiedBy",
+        "edgeTrunkBaseAssignment" : "{}",
+        "id" : "id",
+        "state" : "active",
+        "phoneTrunkBases" : [ {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        }, {
+          "inboundSite" : "{}",
+          "selfUri" : "https://openapi-generator.tech",
+          "description" : "description",
+          "dateModified" : "2000-01-23T04:56:07.000+00:00",
+          "createdByApp" : "createdByApp",
+          "trunkType" : "EXTERNAL",
+          "version" : 1,
+          "division" : "{}",
+          "site" : "{}",
+          "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+          "createdBy" : "createdBy",
+          "managed" : true,
+          "name" : "name",
+          "modifiedByApp" : "modifiedByApp",
+          "modifiedBy" : "modifiedBy",
+          "trunkMetabase" : "{}",
+          "id" : "id",
+          "state" : "active",
+          "properties" : {
+            "key" : "{}"
+          }
+        } ]
+      },
+      "division" : "{}",
+      "patch" : "patch",
+      "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+      "apiVersion" : "apiVersion",
+      "managed" : true,
+      "conversationCount" : 5,
+      "fingerprint" : "fingerprint",
+      "modifiedBy" : "modifiedBy",
+      "model" : "model",
+      "id" : "id",
+      "state" : "active",
+      "make" : "make",
+      "stagedVersion" : "stagedVersion",
+      "interfaces" : [ {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      }, {
+        "macAddress" : "macAddress",
+        "endpoints" : [ {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        }, {
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id"
+        } ],
+        "ifName" : "ifName",
+        "ipAddress" : "ipAddress",
+        "name" : "name",
+        "type" : "type",
+        "lineTypes" : [ "TIE", "TIE" ],
+        "addressFamilyId" : "addressFamilyId"
+      } ],
+      "edgeDeploymentType" : "HARDWARE",
+      "serialNumber" : "serialNumber",
+      "softwareVersionConfiguration" : "softwareVersionConfiguration",
+      "physicalEdge" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "offlineConfigCalled" : true,
+      "dateModified" : "2000-01-23T04:56:07.000+00:00",
+      "osName" : "osName",
+      "version" : 0,
+      "currentVersion" : "currentVersion",
+      "proxy" : "proxy",
+      "site" : "{}",
+      "softwareVersionPlatform" : "softwareVersionPlatform",
+      "fingerprintHint" : "fingerprintHint",
+      "createdBy" : "createdBy",
+      "softwareVersionTimestamp" : "softwareVersionTimestamp",
+      "pairingId" : "pairingId",
+      "name" : "name",
+      "modifiedByApp" : "modifiedByApp",
+      "softwareVersion" : "softwareVersion",
+      "statusCode" : "NEW"
+    } ],
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "version" : 0,
+    "mediaRegionsUseLatencyBased" : true,
+    "ntpSettings" : "{}",
+    "createdBy" : "createdBy",
+    "secondarySites" : [ {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    }, {
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "id" : "id"
+    } ],
+    "name" : "name",
+    "modifiedByApp" : "modifiedByApp",
+    "location" : "{}",
+    "mediaModel" : "Premises",
+    "callerId" : "callerId",
+    "siteConnections" : [ {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    }, {
+      "coreSite" : true,
+      "managed" : true,
+      "selfUri" : "https://openapi-generator.tech",
+      "edgeList" : [ {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      }, {
+        "interfaceIpAddress" : "interfaceIpAddress",
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id",
+        "interfaceName" : "interfaceName",
+        "edgeConnectionList" : [ {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        }, {
+          "interfaceIpAddress" : "interfaceIpAddress",
+          "site" : {
+            "selfUri" : "https://openapi-generator.tech",
+            "id" : "id"
+          },
+          "connectionErrors" : [ "connectionErrors", "connectionErrors" ],
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "id" : "id",
+          "interfaceName" : "interfaceName"
+        } ]
+      } ],
+      "name" : "name",
+      "secondaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ],
+      "mediaModel" : "Premises",
+      "id" : "id",
+      "type" : "Direct",
+      "enabled" : true,
+      "primaryCoreSites" : [ {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      }, {
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "id" : "id"
+      } ]
+    } ],
+    "edgeAutoUpdateConfig" : "{}"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) Search request options 
+
+     - returns: RequestBuilder<SitesSearchResponse> 
+     */
+    open class func postTelephonyProvidersEdgesSitesSearchWithRequestBuilder(body: SiteSearchRequest) -> RequestBuilder<SitesSearchResponse> {        
+        let path = "/api/v2/telephony/providers/edges/sites/search"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SitesSearchResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

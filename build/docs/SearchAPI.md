@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLocationsSearch**](SearchAPI#getLocationsSearch) | Search locations using the q64 value returned from a previous search |
 | [**getSearch**](SearchAPI#getSearch) | Search using the q64 value returned from a previous search. |
 | [**getSearchSuggest**](SearchAPI#getSearchSuggest) | Suggest resources using the q64 value returned from a previous suggest query. |
+| [**getTelephonyProvidersEdgesSitesSearch**](SearchAPI#getTelephonyProvidersEdgesSitesSearch) | Search sites using the q64 value returned from a previous search |
 | [**getUsersSearch**](SearchAPI#getUsersSearch) | Search users using the q64 value returned from a previous search |
 | [**getVoicemailSearch**](SearchAPI#getVoicemailSearch) | Search voicemails using the q64 value returned from a previous search |
 | [**postAnalyticsConversationsTranscriptsQuery**](SearchAPI#postAnalyticsConversationsTranscriptsQuery) | Search resources. |
@@ -23,6 +24,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postSearchSuggest**](SearchAPI#postSearchSuggest) | Suggest resources. |
 | [**postSpeechandtextanalyticsTranscriptsSearch**](SearchAPI#postSpeechandtextanalyticsTranscriptsSearch) | Search resources. |
 | [**postTeamsSearch**](SearchAPI#postTeamsSearch) | Search resources. |
+| [**postTelephonyProvidersEdgesSitesSearch**](SearchAPI#postTelephonyProvidersEdgesSitesSearch) | Search sites |
 | [**postUsersSearch**](SearchAPI#postUsersSearch) | Search users |
 | [**postUsersSearchTeamsAssign**](SearchAPI#postUsersSearchTeamsAssign) | Search users assigned to teams |
 | [**postVoicemailSearch**](SearchAPI#postVoicemailSearch) | Search voicemails |
@@ -335,6 +337,59 @@ SearchAPI.getSearchSuggest(q64: q64, expand: expand, profile: profile) { (respon
 ### Return type
 
 [**JsonNodeSearchResponse**](JsonNodeSearchResponse)
+
+
+## getTelephonyProvidersEdgesSitesSearch
+
+
+
+> [SitesSearchResponse](SitesSearchResponse) getTelephonyProvidersEdgesSitesSearch(q64, expand)
+
+Search sites using the q64 value returned from a previous search
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/sites/search  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let q64: String = "" // q64
+let expand: [String] = [""] // expand
+
+// Code example
+SearchAPI.getTelephonyProvidersEdgesSitesSearch(q64: q64, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.getTelephonyProvidersEdgesSitesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **q64** | **String**| q64 | |
+| **expand** | [**[String]**](String)| expand | [optional] |
+
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
 
 
 ## getUsersSearch
@@ -995,6 +1050,57 @@ SearchAPI.postTeamsSearch(body: body) { (response, error) in
 [**TeamsSearchResponse**](TeamsSearchResponse)
 
 
+## postTelephonyProvidersEdgesSitesSearch
+
+
+
+> [SitesSearchResponse](SitesSearchResponse) postTelephonyProvidersEdgesSitesSearch(body)
+
+Search sites
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/sites/search  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SiteSearchRequest = new SiteSearchRequest(...) // Search request options
+
+// Code example
+SearchAPI.postTelephonyProvidersEdgesSitesSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SearchAPI.postTelephonyProvidersEdgesSitesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SiteSearchRequest**](SiteSearchRequest)| Search request options | |
+
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
+
+
 ## postUsersSearch
 
 
@@ -1144,4 +1250,4 @@ SearchAPI.postVoicemailSearch(body: body) { (response, error) in
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

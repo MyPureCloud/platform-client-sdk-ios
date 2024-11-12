@@ -2258,6 +2258,12 @@ open class KnowledgeAPI {
     }
     
     
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseDocumentVariation: String { 
+        case contenturl = "contentUrl"
+    }
+    
     /**
      Get a variation for a document.
      
@@ -2265,10 +2271,11 @@ open class KnowledgeAPI {
      - parameter documentId: (path) Globally unique identifier for a document. 
      - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
      - parameter documentState: (query) The state of the document. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: String, documentId: String, knowledgeBaseId: String, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariation? = nil, completion: @escaping ((_ data: DocumentVariationResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, documentState: documentState)
+    open class func getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: String, documentId: String, knowledgeBaseId: String, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariation? = nil, expand: [String]? = nil, completion: @escaping ((_ data: DocumentVariationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, documentState: documentState, expand: expand)
         requestBuilder.execute { (response: Response<DocumentVariationResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -2326,10 +2333,11 @@ open class KnowledgeAPI {
      - parameter documentId: (path) Globally unique identifier for a document. 
      - parameter knowledgeBaseId: (path) Globally unique identifier for a knowledge base. 
      - parameter documentState: (query) The state of the document. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
 
      - returns: RequestBuilder<DocumentVariationResponse> 
      */
-    open class func getKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: String, documentId: String, knowledgeBaseId: String, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariation? = nil) -> RequestBuilder<DocumentVariationResponse> {        
+    open class func getKnowledgeKnowledgebaseDocumentVariationWithRequestBuilder(documentVariationId: String, documentId: String, knowledgeBaseId: String, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariation? = nil, expand: [String]? = nil) -> RequestBuilder<DocumentVariationResponse> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}"
         let documentVariationIdPreEscape = "\(documentVariationId)"
         let documentVariationIdPostEscape = documentVariationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2345,7 +2353,8 @@ open class KnowledgeAPI {
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "documentState": documentState?.rawValue
+            "documentState": documentState?.rawValue, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<DocumentVariationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -2370,6 +2379,12 @@ open class KnowledgeAPI {
     }
     
     
+    
+    
+    public enum Expand_getKnowledgeKnowledgebaseDocumentVariations: String { 
+        case contenturl = "contentUrl"
+    }
+    
     /**
      Get variations for a document.
      
@@ -2379,10 +2394,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter documentState: (query) The state of the document. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariations? = nil, completion: @escaping ((_ data: DocumentVariationResponseListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, documentState: documentState)
+    open class func getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariations? = nil, expand: [String]? = nil, completion: @escaping ((_ data: DocumentVariationResponseListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, documentState: documentState, expand: expand)
         requestBuilder.execute { (response: Response<DocumentVariationResponseListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2476,10 +2492,11 @@ open class KnowledgeAPI {
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
      - parameter documentState: (query) The state of the document. (optional)
+     - parameter expand: (query) The specified entity attributes will be filled. Comma separated values expected. (optional)
 
      - returns: RequestBuilder<DocumentVariationResponseListing> 
      */
-    open class func getKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariations? = nil) -> RequestBuilder<DocumentVariationResponseListing> {        
+    open class func getKnowledgeKnowledgebaseDocumentVariationsWithRequestBuilder(knowledgeBaseId: String, documentId: String, before: String? = nil, after: String? = nil, pageSize: String? = nil, documentState: DocumentState_getKnowledgeKnowledgebaseDocumentVariations? = nil, expand: [String]? = nil) -> RequestBuilder<DocumentVariationResponseListing> {        
         var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations"
         let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
         let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2495,7 +2512,8 @@ open class KnowledgeAPI {
             "before": before, 
             "after": after, 
             "pageSize": pageSize, 
-            "documentState": documentState?.rawValue
+            "documentState": documentState?.rawValue, 
+            "expand": expand
         ])
 
         let requestBuilder: RequestBuilder<DocumentVariationResponseListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

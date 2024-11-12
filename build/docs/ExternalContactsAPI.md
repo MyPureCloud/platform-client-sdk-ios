@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteExternalcontactsContact**](ExternalContactsAPI#deleteExternalcontactsContact) | Delete an external contact |
 | [**deleteExternalcontactsContactNote**](ExternalContactsAPI#deleteExternalcontactsContactNote) | Delete a note for an external contact |
 | [**deleteExternalcontactsContactsSchema**](ExternalContactsAPI#deleteExternalcontactsContactsSchema) | Delete a schema |
+| [**deleteExternalcontactsExternalsource**](ExternalContactsAPI#deleteExternalcontactsExternalsource) | Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. |
 | [**deleteExternalcontactsImportCsvSetting**](ExternalContactsAPI#deleteExternalcontactsImportCsvSetting) | Delete settings for CSV import |
 | [**deleteExternalcontactsOrganization**](ExternalContactsAPI#deleteExternalcontactsOrganization) | Delete an external organization |
 | [**deleteExternalcontactsOrganizationNote**](ExternalContactsAPI#deleteExternalcontactsOrganizationNote) | Delete a note for an external organization |
@@ -23,6 +24,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactsSchemaVersion**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersion) | Get a specific version of a schema |
 | [**getExternalcontactsContactsSchemaVersions**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersions) | Get all versions of an external contact&#39;s schema |
 | [**getExternalcontactsContactsSchemas**](ExternalContactsAPI#getExternalcontactsContactsSchemas) | Get a list of schemas. |
+| [**getExternalcontactsExternalsource**](ExternalContactsAPI#getExternalcontactsExternalsource) | Fetch an External Source |
+| [**getExternalcontactsExternalsources**](ExternalContactsAPI#getExternalcontactsExternalsources) | Fetch a list of External Sources |
 | [**getExternalcontactsImportCsvSetting**](ExternalContactsAPI#getExternalcontactsImportCsvSetting) | Get settings for CSV import |
 | [**getExternalcontactsImportCsvSettings**](ExternalContactsAPI#getExternalcontactsImportCsvSettings) | Retrieve all settings for organization filtered by externalSettingsId if provided |
 | [**getExternalcontactsImportCsvUploadDetails**](ExternalContactsAPI#getExternalcontactsImportCsvUploadDetails) | Get details for CSV upload |
@@ -65,6 +68,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsContactPromotion**](ExternalContactsAPI#postExternalcontactsContactPromotion) | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI#postExternalcontactsContacts) | Create an external contact |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI#postExternalcontactsContactsSchemas) | Create a schema |
+| [**postExternalcontactsExternalsources**](ExternalContactsAPI#postExternalcontactsExternalsources) | Create an External Source |
 | [**postExternalcontactsIdentifierlookup**](ExternalContactsAPI#postExternalcontactsIdentifierlookup) | Fetch a contact using an identifier type and value. |
 | [**postExternalcontactsImportCsvJobs**](ExternalContactsAPI#postExternalcontactsImportCsvJobs) | Create CSV import job |
 | [**postExternalcontactsImportCsvSettings**](ExternalContactsAPI#postExternalcontactsImportCsvSettings) | Create settings for CSV import |
@@ -78,6 +82,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putExternalcontactsContactNote**](ExternalContactsAPI#putExternalcontactsContactNote) | Update a note for an external contact |
 | [**putExternalcontactsContactsSchema**](ExternalContactsAPI#putExternalcontactsContactsSchema) | Update a schema |
 | [**putExternalcontactsConversation**](ExternalContactsAPI#putExternalcontactsConversation) | Associate/disassociate an external contact with a conversation |
+| [**putExternalcontactsExternalsource**](ExternalContactsAPI#putExternalcontactsExternalsource) | Update an External Source |
 | [**putExternalcontactsImportCsvSetting**](ExternalContactsAPI#putExternalcontactsImportCsvSetting) | Update settings for CSV import |
 | [**putExternalcontactsOrganization**](ExternalContactsAPI#putExternalcontactsOrganization) | Update an external organization |
 | [**putExternalcontactsOrganizationNote**](ExternalContactsAPI#putExternalcontactsOrganizationNote) | Update a note for an external organization |
@@ -238,6 +243,56 @@ ExternalContactsAPI.deleteExternalcontactsContactsSchema(schemaId: schemaId) { (
 ### Return type
 
 `nil` (empty response body)
+
+
+## deleteExternalcontactsExternalsource
+
+
+
+> [JSON](JSON) deleteExternalcontactsExternalsource(externalSourceId)
+
+Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+
+
+
+Wraps DELETE /api/v2/externalcontacts/externalsources/{externalSourceId}  
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalSourceId: String = "" // External Source ID
+
+// Code example
+ExternalContactsAPI.deleteExternalcontactsExternalsource(externalSourceId: externalSourceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.deleteExternalcontactsExternalsource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalSourceId** | **String**| External Source ID | |
+
+
+### Return type
+
+[**JSON**](JSON)
 
 
 ## deleteExternalcontactsImportCsvSetting
@@ -538,7 +593,7 @@ ExternalContactsAPI.getExternalcontactsContact(contactId: contactId, expand: exp
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactId** | **String**| ExternalContact ID | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
 
 
 ### Return type
@@ -699,7 +754,7 @@ ExternalContactsAPI.getExternalcontactsContactNote(contactId: contactId, noteId:
 | ------------- | ------------- | ------------- | ------------- |
 | **contactId** | **String**| ExternalContact Id | |
 | **noteId** | **String**| Note Id | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division") |
 
 
 ### Return type
@@ -758,7 +813,7 @@ ExternalContactsAPI.getExternalcontactsContactNotes(contactId: contactId, pageSi
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **sortOrder** | **String**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \"createDate:asc\", \"createDate:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division") |
 
 
 ### Return type
@@ -791,7 +846,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let contactId: String = "" // ExternalContact ID
-let expand: [String] = [""] // which fields, if any, to expand (externalOrganization,externalDataSources,identifiers)
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
 ExternalContactsAPI.getExternalcontactsContactUnresolved(contactId: contactId, expand: expand) { (response, error) in
@@ -810,7 +865,7 @@ ExternalContactsAPI.getExternalcontactsContactUnresolved(contactId: contactId, e
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **contactId** | **String**| ExternalContact ID | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), division ("division") |
 
 
 ### Return type
@@ -869,7 +924,7 @@ ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: 
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
 | **sortOrder** | **String**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
 
 
 ### Return type
@@ -1073,6 +1128,116 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
+
+
+## getExternalcontactsExternalsource
+
+
+
+> [ExternalSource](ExternalSource) getExternalcontactsExternalsource(externalSourceId)
+
+Fetch an External Source
+
+
+
+Wraps GET /api/v2/externalcontacts/externalsources/{externalSourceId}  
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:view
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalSourceId: String = "" // External Source ID
+
+// Code example
+ExternalContactsAPI.getExternalcontactsExternalsource(externalSourceId: externalSourceId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsExternalsource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalSourceId** | **String**| External Source ID | |
+
+
+### Return type
+
+[**ExternalSource**](ExternalSource)
+
+
+## getExternalcontactsExternalsources
+
+
+
+> [CursorExternalSourceListing](CursorExternalSourceListing) getExternalcontactsExternalsources(cursor, limit, name, active)
+
+Fetch a list of External Sources
+
+
+
+Wraps GET /api/v2/externalcontacts/externalsources  
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:view
+* externalContacts:contact:view
+* externalContacts:externalOrganization:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+let limit: Int = 0 // The number of ExternalSources per page; must be between 10 and 200, default is 100
+let name: String = "" // Filter by external source name. Filtering is prefix filtering and not an exact match
+let active: Bool = true // Filter by active status of external source
+
+// Code example
+ExternalContactsAPI.getExternalcontactsExternalsources(cursor: cursor, limit: limit, name: name, active: active) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsExternalsources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+| **limit** | **Int**| The number of ExternalSources per page; must be between 10 and 200, default is 100 | [optional] |
+| **name** | **String**| Filter by external source name. Filtering is prefix filtering and not an exact match | [optional] |
+| **active** | **Bool**| Filter by active status of external source | [optional] |
+
+
+### Return type
+
+[**CursorExternalSourceListing**](CursorExternalSourceListing)
 
 
 ## getExternalcontactsImportCsvSetting
@@ -1305,7 +1470,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let externalOrganizationId: String = "" // External Organization ID
-let expand: [String] = [""] // which fields, if any, to expand (externalDataSources)
+let expand: [String] = [""] // which fields, if any, to expand
 let includeTrustors: Bool = true // (true or false) whether or not to include trustor information embedded in the externalOrganization
 
 // Code example
@@ -1325,7 +1490,7 @@ ExternalContactsAPI.getExternalcontactsOrganization(externalOrganizationId: exte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization ID | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand (externalDataSources) | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
 
 
@@ -1387,7 +1552,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationContacts(externalOrganization
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
 | **sortOrder** | **String**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
 
 
 ### Return type
@@ -1442,7 +1607,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationNote(externalOrganizationId: 
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization Id | |
 | **noteId** | **String**| Note Id | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division") |
 
 
 ### Return type
@@ -1501,7 +1666,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationNotes(externalOrganizationId:
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **sortOrder** | **String**| The Note field to sort by. Any of: [createDate]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"createDate:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: author ("author"), externaldatasources ("externalDataSources"), division ("division") |
 
 
 ### Return type
@@ -1559,7 +1724,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationRelationships(externalOrganiz
 | **externalOrganizationId** | **String**| External Organization ID | |
 | **pageSize** | **Int**| Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
 | **pageNumber** | **Int**| Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division") |
 | **sortOrder** | **String**| The Relationship field to sort by. Any of: [createDate, relationship]. Direction: [asc, desc]. e.g. \"createDate:asc\", \"relationship:desc\" | [optional] |
 
 
@@ -1622,7 +1787,7 @@ ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNum
 | **q** | **String**| Search query | [optional] |
 | **trustorId** | [**[String]**](String)| Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested | [optional] |
 | **sortOrder** | **String**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
 
 
@@ -1874,7 +2039,7 @@ ExternalContactsAPI.getExternalcontactsRelationship(relationshipId: relationship
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **relationshipId** | **String**| Relationship Id | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division") |
 
 
 ### Return type
@@ -1926,7 +2091,7 @@ ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookup
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **lookupVal** | **String**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) | |
-| **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: contactsExternalorganization ("contacts.externalOrganization"), externaldatasources ("externalDataSources") |
+| **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: contactsExternalorganization ("contacts.externalOrganization"), externaldatasources ("externalDataSources"), division ("division") |
 
 
 ### Return type
@@ -3260,6 +3425,56 @@ ExternalContactsAPI.postExternalcontactsContactsSchemas(body: body) { (response,
 [**DataSchema**](DataSchema)
 
 
+## postExternalcontactsExternalsources
+
+
+
+> [ExternalSource](ExternalSource) postExternalcontactsExternalsources(body)
+
+Create an External Source
+
+
+
+Wraps POST /api/v2/externalcontacts/externalsources  
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ExternalSource = new ExternalSource(...) // External Source
+
+// Code example
+ExternalContactsAPI.postExternalcontactsExternalsources(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsExternalsources was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ExternalSource**](ExternalSource)| External Source | |
+
+
+### Return type
+
+[**ExternalSource**](ExternalSource)
+
+
 ## postExternalcontactsIdentifierlookup
 
 
@@ -3307,7 +3522,7 @@ ExternalContactsAPI.postExternalcontactsIdentifierlookup(identifier: identifier,
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **identifier** | [**ContactIdentifier**](ContactIdentifier)|  | |
-| **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), identifiers ("identifiers"), externalsources ("externalSources") |
+| **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
 
 
 ### Return type
@@ -3936,6 +4151,58 @@ ExternalContactsAPI.putExternalcontactsConversation(conversationId: conversation
 `nil` (empty response body)
 
 
+## putExternalcontactsExternalsource
+
+
+
+> [ExternalSource](ExternalSource) putExternalcontactsExternalsource(externalSourceId, body)
+
+Update an External Source
+
+
+
+Wraps PUT /api/v2/externalcontacts/externalsources/{externalSourceId}  
+
+Requires ANY permissions: 
+
+* externalContacts:externalSource:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let externalSourceId: String = "" // External Source ID
+let body: ExternalSource = new ExternalSource(...) // External Source
+
+// Code example
+ExternalContactsAPI.putExternalcontactsExternalsource(externalSourceId: externalSourceId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsExternalsource was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalSourceId** | **String**| External Source ID | |
+| **body** | [**ExternalSource**](ExternalSource)| External Source | |
+
+
+### Return type
+
+[**ExternalSource**](ExternalSource)
+
+
 ## putExternalcontactsImportCsvSetting
 
 
@@ -4253,4 +4520,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

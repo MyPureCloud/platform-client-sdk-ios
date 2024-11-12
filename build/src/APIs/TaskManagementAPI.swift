@@ -1315,6 +1315,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   }, {
     "defaultDestinationStatus" : "{}",
@@ -1334,6 +1335,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "defaultDurationSeconds" : 0,
@@ -1726,6 +1728,7 @@ open class TaskManagementAPI {
   "id" : "id",
   "category" : "Open",
   "statusTransitionDelaySeconds" : 0,
+  "autoTerminateWorkitem" : true,
   "statusTransitionTime" : "statusTransitionTime"
 }, statusCode=200}]
      
@@ -1804,6 +1807,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   }, {
     "defaultDestinationStatus" : "{}",
@@ -1823,6 +1827,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "selfUri" : "https://openapi-generator.tech"
@@ -2287,6 +2292,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   }, {
     "defaultDestinationStatus" : "{}",
@@ -2306,6 +2312,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "defaultDurationSeconds" : 0,
@@ -2534,6 +2541,7 @@ open class TaskManagementAPI {
   "id" : "id",
   "category" : "Open",
   "statusTransitionDelaySeconds" : 0,
+  "autoTerminateWorkitem" : true,
   "statusTransitionTime" : "statusTransitionTime"
 }, statusCode=200}]
      
@@ -3435,6 +3443,7 @@ open class TaskManagementAPI {
   "id" : "id",
   "category" : "Open",
   "statusTransitionDelaySeconds" : 0,
+  "autoTerminateWorkitem" : true,
   "statusTransitionTime" : "statusTransitionTime"
 }, statusCode=200}]
      
@@ -3533,6 +3542,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   }, {
     "defaultDestinationStatus" : "{}",
@@ -3552,6 +3562,7 @@ open class TaskManagementAPI {
     "id" : "id",
     "category" : "Open",
     "statusTransitionDelaySeconds" : 0,
+    "autoTerminateWorkitem" : true,
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "defaultDurationSeconds" : 0,
@@ -3653,6 +3664,7 @@ open class TaskManagementAPI {
       "id" : "id",
       "category" : "Open",
       "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
       "statusTransitionTime" : "statusTransitionTime"
     }, {
       "defaultDestinationStatus" : "{}",
@@ -3672,6 +3684,7 @@ open class TaskManagementAPI {
       "id" : "id",
       "category" : "Open",
       "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
       "statusTransitionTime" : "statusTransitionTime"
     } ],
     "defaultDurationSeconds" : 0,
@@ -3722,6 +3735,7 @@ open class TaskManagementAPI {
       "id" : "id",
       "category" : "Open",
       "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
       "statusTransitionTime" : "statusTransitionTime"
     }, {
       "defaultDestinationStatus" : "{}",
@@ -3741,6 +3755,7 @@ open class TaskManagementAPI {
       "id" : "id",
       "category" : "Open",
       "statusTransitionDelaySeconds" : 0,
+      "autoTerminateWorkitem" : true,
       "statusTransitionTime" : "statusTransitionTime"
     } ],
     "defaultDurationSeconds" : 0,

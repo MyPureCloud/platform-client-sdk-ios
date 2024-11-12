@@ -169,6 +169,58 @@ open class ExternalContactsAPI {
     
     
     /**
+     Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+     
+     - parameter externalSourceId: (path) External Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteExternalcontactsExternalsource(externalSourceId: String, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteExternalcontactsExternalsourceWithRequestBuilder(externalSourceId: externalSourceId)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable.
+     - DELETE /api/v2/externalcontacts/externalsources/{externalSourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter externalSourceId: (path) External Source ID 
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func deleteExternalcontactsExternalsourceWithRequestBuilder(externalSourceId: String) -> RequestBuilder<JSON> {        
+        var path = "/api/v2/externalcontacts/externalsources/{externalSourceId}"
+        let externalSourceIdPreEscape = "\(externalSourceId)"
+        let externalSourceIdPostEscape = externalSourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalSourceId}", with: externalSourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete settings for CSV import
      
      - parameter settingsId: (path) Settings id 
@@ -428,6 +480,7 @@ open class ExternalContactsAPI {
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
         case externalsources = "externalSources"
+        case division = "division"
     }
     
     /**
@@ -518,6 +571,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -776,6 +852,7 @@ open class ExternalContactsAPI {
     "userAgentString" : "userAgentString",
     "eventCount" : 6,
     "type" : "type",
+    "lastScreen" : "lastScreen",
     "lastConnectedQueue" : "{}",
     "sdkLibrary" : "{}",
     "browser" : "{}",
@@ -852,6 +929,7 @@ open class ExternalContactsAPI {
     "userAgentString" : "userAgentString",
     "eventCount" : 6,
     "type" : "type",
+    "lastScreen" : "lastScreen",
     "lastConnectedQueue" : "{}",
     "sdkLibrary" : "{}",
     "browser" : "{}",
@@ -959,6 +1037,7 @@ open class ExternalContactsAPI {
     public enum Expand_getExternalcontactsContactNote: String { 
         case author = "author"
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     /**
@@ -1051,6 +1130,7 @@ open class ExternalContactsAPI {
     public enum Expand_getExternalcontactsContactNotes: String { 
         case author = "author"
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     /**
@@ -1128,8 +1208,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -1170,13 +1250,14 @@ open class ExternalContactsAPI {
         case externalorganization = "externalOrganization"
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
+        case division = "division"
     }
     
     /**
      Fetch an unresolved external contact
      
      - parameter contactId: (path) ExternalContact ID 
-     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getExternalcontactsContactUnresolved(contactId: String, expand: [String]? = nil, completion: @escaping ((_ data: ExternalContact?,_ error: Error?) -> Void)) {
@@ -1260,6 +1341,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -1388,7 +1492,7 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter contactId: (path) ExternalContact ID 
-     - parameter expand: (query) which fields, if any, to expand (externalOrganization,externalDataSources,identifiers) (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<ExternalContact> 
      */
@@ -1425,6 +1529,7 @@ open class ExternalContactsAPI {
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
         case externalsources = "externalSources"
+        case division = "division"
     }
     
     /**
@@ -1522,6 +1627,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -1704,6 +1832,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -2134,6 +2285,157 @@ open class ExternalContactsAPI {
     
     
     /**
+     Fetch an External Source
+     
+     - parameter externalSourceId: (path) External Source ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsExternalsource(externalSourceId: String, completion: @escaping ((_ data: ExternalSource?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsExternalsourceWithRequestBuilder(externalSourceId: externalSourceId)
+        requestBuilder.execute { (response: Response<ExternalSource>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Fetch an External Source
+     - GET /api/v2/externalcontacts/externalsources/{externalSourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "linkConfiguration" : {
+    "uriTemplate" : "uriTemplate"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "active" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter externalSourceId: (path) External Source ID 
+
+     - returns: RequestBuilder<ExternalSource> 
+     */
+    open class func getExternalcontactsExternalsourceWithRequestBuilder(externalSourceId: String) -> RequestBuilder<ExternalSource> {        
+        var path = "/api/v2/externalcontacts/externalsources/{externalSourceId}"
+        let externalSourceIdPreEscape = "\(externalSourceId)"
+        let externalSourceIdPostEscape = externalSourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalSourceId}", with: externalSourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalSource>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Fetch a list of External Sources
+     
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+     - parameter limit: (query) The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)
+     - parameter name: (query) Filter by external source name. Filtering is prefix filtering and not an exact match (optional)
+     - parameter active: (query) Filter by active status of external source (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsExternalsources(cursor: String? = nil, limit: Int? = nil, name: String? = nil, active: Bool? = nil, completion: @escaping ((_ data: CursorExternalSourceListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsExternalsourcesWithRequestBuilder(cursor: cursor, limit: limit, name: name, active: active)
+        requestBuilder.execute { (response: Response<CursorExternalSourceListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Fetch a list of External Sources
+     - GET /api/v2/externalcontacts/externalsources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
+  "entities" : [ {
+    "linkConfiguration" : {
+      "uriTemplate" : "uriTemplate"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "active" : true,
+    "id" : "id"
+  }, {
+    "linkConfiguration" : {
+      "uriTemplate" : "uriTemplate"
+    },
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "active" : true,
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter cursor: (query) Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional)
+     - parameter limit: (query) The number of ExternalSources per page; must be between 10 and 200, default is 100 (optional)
+     - parameter name: (query) Filter by external source name. Filtering is prefix filtering and not an exact match (optional)
+     - parameter active: (query) Filter by active status of external source (optional)
+
+     - returns: RequestBuilder<CursorExternalSourceListing> 
+     */
+    open class func getExternalcontactsExternalsourcesWithRequestBuilder(cursor: String? = nil, limit: Int? = nil, name: String? = nil, active: Bool? = nil) -> RequestBuilder<CursorExternalSourceListing> {        
+        let path = "/api/v2/externalcontacts/externalsources"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "cursor": cursor, 
+            "limit": limit?.encodeToJSON(), 
+            "name": name, 
+            "active": active
+        ])
+
+        let requestBuilder: RequestBuilder<CursorExternalSourceListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Get settings for CSV import
      
      - parameter settingsId: (path) Settings id 
@@ -2405,6 +2707,7 @@ open class ExternalContactsAPI {
     
     public enum Expand_getExternalcontactsOrganization: String { 
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     
@@ -2413,7 +2716,7 @@ open class ExternalContactsAPI {
      Fetch an external organization
      
      - parameter externalOrganizationId: (path) External Organization ID 
-     - parameter expand: (query) which fields, if any, to expand (externalDataSources) (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter includeTrustors: (query) (true or false) whether or not to include trustor information embedded in the externalOrganization (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -2518,7 +2821,7 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter externalOrganizationId: (path) External Organization ID 
-     - parameter expand: (query) which fields, if any, to expand (externalDataSources) (optional)
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter includeTrustors: (query) (true or false) whether or not to include trustor information embedded in the externalOrganization (optional)
 
      - returns: RequestBuilder<ExternalOrganization> 
@@ -2559,6 +2862,7 @@ open class ExternalContactsAPI {
         case externaldatasources = "externalDataSources"
         case identifiers = "identifiers"
         case externalsources = "externalSources"
+        case division = "division"
     }
     
     /**
@@ -2657,6 +2961,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -2839,6 +3166,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -3014,6 +3364,7 @@ open class ExternalContactsAPI {
     public enum Expand_getExternalcontactsOrganizationNote: String { 
         case author = "author"
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     /**
@@ -3106,6 +3457,7 @@ open class ExternalContactsAPI {
     public enum Expand_getExternalcontactsOrganizationNotes: String { 
         case author = "author"
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     /**
@@ -3183,8 +3535,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -3227,6 +3579,7 @@ open class ExternalContactsAPI {
     
     public enum Expand_getExternalcontactsOrganizationRelationships: String { 
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     
@@ -3300,8 +3653,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -3348,6 +3701,7 @@ open class ExternalContactsAPI {
     
     public enum Expand_getExternalcontactsOrganizations: String { 
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     
@@ -3545,8 +3899,8 @@ open class ExternalContactsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech",
   "partialResults" : true
 }, statusCode=200}]
      
@@ -3852,6 +4206,7 @@ open class ExternalContactsAPI {
     
     public enum Expand_getExternalcontactsRelationship: String { 
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     /**
@@ -3930,6 +4285,7 @@ open class ExternalContactsAPI {
     public enum Expand_getExternalcontactsReversewhitepageslookup: String { 
         case contactsExternalorganization = "contacts.externalOrganization"
         case externaldatasources = "externalDataSources"
+        case division = "division"
     }
     
     /**
@@ -4170,6 +4526,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -4352,6 +4731,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -4595,6 +4997,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -4777,6 +5202,29 @@ open class ExternalContactsAPI {
       } ]
     },
     "selfUri" : "https://openapi-generator.tech",
+    "externalIds" : [ {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    }, {
+      "value" : "value",
+      "externalSource" : {
+        "linkConfiguration" : {
+          "uriTemplate" : "uriTemplate"
+        },
+        "selfUri" : "https://openapi-generator.tech",
+        "name" : "name",
+        "active" : true,
+        "id" : "id"
+      }
+    } ],
     "lineId" : {
       "displayName" : "displayName",
       "ids" : [ {
@@ -5502,6 +5950,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -5706,6 +6177,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -5959,6 +6453,29 @@ open class ExternalContactsAPI {
           } ]
         },
         "selfUri" : "https://openapi-generator.tech",
+        "externalIds" : [ {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        }, {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        } ],
         "lineId" : {
           "displayName" : "displayName",
           "ids" : [ {
@@ -6144,6 +6661,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -6343,6 +6883,29 @@ open class ExternalContactsAPI {
           } ]
         },
         "selfUri" : "https://openapi-generator.tech",
+        "externalIds" : [ {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        }, {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        } ],
         "lineId" : {
           "displayName" : "displayName",
           "ids" : [ {
@@ -6528,6 +7091,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -6884,6 +7470,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -7088,6 +7697,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -7341,6 +7973,29 @@ open class ExternalContactsAPI {
           } ]
         },
         "selfUri" : "https://openapi-generator.tech",
+        "externalIds" : [ {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        }, {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        } ],
         "lineId" : {
           "displayName" : "displayName",
           "ids" : [ {
@@ -7526,6 +8181,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -7725,6 +8403,29 @@ open class ExternalContactsAPI {
           } ]
         },
         "selfUri" : "https://openapi-generator.tech",
+        "externalIds" : [ {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        }, {
+          "value" : "value",
+          "externalSource" : {
+            "linkConfiguration" : {
+              "uriTemplate" : "uriTemplate"
+            },
+            "selfUri" : "https://openapi-generator.tech",
+            "name" : "name",
+            "active" : true,
+            "id" : "id"
+          }
+        } ],
         "lineId" : {
           "displayName" : "displayName",
           "ids" : [ {
@@ -7910,6 +8611,29 @@ open class ExternalContactsAPI {
         } ]
       },
       "selfUri" : "https://openapi-generator.tech",
+      "externalIds" : [ {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      }, {
+        "value" : "value",
+        "externalSource" : {
+          "linkConfiguration" : {
+            "uriTemplate" : "uriTemplate"
+          },
+          "selfUri" : "https://openapi-generator.tech",
+          "name" : "name",
+          "active" : true,
+          "id" : "id"
+        }
+      } ],
       "lineId" : {
         "displayName" : "displayName",
         "ids" : [ {
@@ -10400,6 +11124,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -10635,6 +11382,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -10840,12 +11610,71 @@ open class ExternalContactsAPI {
 
     
     
+    /**
+     Create an External Source
+     
+     - parameter body: (body) External Source 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsExternalsources(body: ExternalSource, completion: @escaping ((_ data: ExternalSource?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsExternalsourcesWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ExternalSource>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create an External Source
+     - POST /api/v2/externalcontacts/externalsources
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "linkConfiguration" : {
+    "uriTemplate" : "uriTemplate"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "active" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) External Source 
+
+     - returns: RequestBuilder<ExternalSource> 
+     */
+    open class func postExternalcontactsExternalsourcesWithRequestBuilder(body: ExternalSource) -> RequestBuilder<ExternalSource> {        
+        let path = "/api/v2/externalcontacts/externalsources"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalSource>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     public enum Expand_postExternalcontactsIdentifierlookup: String { 
         case externalorganization = "externalOrganization"
         case identifiers = "identifiers"
         case externalsources = "externalSources"
+        case division = "division"
     }
     
     /**
@@ -10937,6 +11766,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -11347,6 +12199,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -11902,6 +12777,29 @@ open class ExternalContactsAPI {
     } ]
   },
   "selfUri" : "https://openapi-generator.tech",
+  "externalIds" : [ {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  }, {
+    "value" : "value",
+    "externalSource" : {
+      "linkConfiguration" : {
+        "uriTemplate" : "uriTemplate"
+      },
+      "selfUri" : "https://openapi-generator.tech",
+      "name" : "name",
+      "active" : true,
+      "id" : "id"
+    }
+  } ],
   "lineId" : {
     "displayName" : "displayName",
     "ids" : [ {
@@ -12242,6 +13140,71 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update an External Source
+     
+     - parameter externalSourceId: (path) External Source ID 
+     - parameter body: (body) External Source 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsExternalsource(externalSourceId: String, body: ExternalSource, completion: @escaping ((_ data: ExternalSource?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsExternalsourceWithRequestBuilder(externalSourceId: externalSourceId, body: body)
+        requestBuilder.execute { (response: Response<ExternalSource>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update an External Source
+     - PUT /api/v2/externalcontacts/externalsources/{externalSourceId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "linkConfiguration" : {
+    "uriTemplate" : "uriTemplate"
+  },
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "active" : true,
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter externalSourceId: (path) External Source ID 
+     - parameter body: (body) External Source 
+
+     - returns: RequestBuilder<ExternalSource> 
+     */
+    open class func putExternalcontactsExternalsourceWithRequestBuilder(externalSourceId: String, body: ExternalSource) -> RequestBuilder<ExternalSource> {        
+        var path = "/api/v2/externalcontacts/externalsources/{externalSourceId}"
+        let externalSourceIdPreEscape = "\(externalSourceId)"
+        let externalSourceIdPostEscape = externalSourceIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalSourceId}", with: externalSourceIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ExternalSource>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

@@ -12,7 +12,8 @@
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
+| **divisions** | [**[QueueConversationCobrowseEventTopicConversationDivisionMembership]**](QueueConversationCobrowseEventTopicConversationDivisionMembership) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

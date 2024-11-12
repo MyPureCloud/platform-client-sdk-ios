@@ -458,8 +458,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -653,15 +653,18 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Retrieve schema for a Draft based on filename.
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of schema file to be retrieved for this draft. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActionDraftSchema(actionId: String, fileName: String, completion: @escaping ((_ data: JsonSchemaDocument?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionDraftSchemaWithRequestBuilder(actionId: actionId, fileName: fileName)
+    open class func getIntegrationsActionDraftSchema(actionId: String, fileName: String, flatten: Bool? = nil, completion: @escaping ((_ data: JsonSchemaDocument?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionDraftSchemaWithRequestBuilder(actionId: actionId, fileName: fileName, flatten: flatten)
         requestBuilder.execute { (response: Response<JsonSchemaDocument>?, error) -> Void in
             do {
                 if let e = error {
@@ -699,10 +702,11 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of schema file to be retrieved for this draft. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
 
      - returns: RequestBuilder<JsonSchemaDocument> 
      */
-    open class func getIntegrationsActionDraftSchemaWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<JsonSchemaDocument> {        
+    open class func getIntegrationsActionDraftSchemaWithRequestBuilder(actionId: String, fileName: String, flatten: Bool? = nil) -> RequestBuilder<JsonSchemaDocument> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/schemas/{fileName}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -713,7 +717,10 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "flatten": flatten
+        ])
 
         let requestBuilder: RequestBuilder<JsonSchemaDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -818,7 +825,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "audit",
+      "namespace" : "agent.assistant",
       "value" : 7,
       "key" : "key"
     },
@@ -846,7 +853,7 @@ open class IntegrationsAPI {
     "code" : "code",
     "entityName" : "entityName",
     "limit" : {
-      "namespace" : "audit",
+      "namespace" : "agent.assistant",
       "value" : 7,
       "key" : "key"
     },
@@ -895,15 +902,18 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Retrieve schema for an action based on filename.
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of schema file to be retrieved for this action. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActionSchema(actionId: String, fileName: String, completion: @escaping ((_ data: JsonSchemaDocument?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionSchemaWithRequestBuilder(actionId: actionId, fileName: fileName)
+    open class func getIntegrationsActionSchema(actionId: String, fileName: String, flatten: Bool? = nil, completion: @escaping ((_ data: JsonSchemaDocument?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionSchemaWithRequestBuilder(actionId: actionId, fileName: fileName, flatten: flatten)
         requestBuilder.execute { (response: Response<JsonSchemaDocument>?, error) -> Void in
             do {
                 if let e = error {
@@ -941,10 +951,11 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter fileName: (path) Name of schema file to be retrieved for this action. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
 
      - returns: RequestBuilder<JsonSchemaDocument> 
      */
-    open class func getIntegrationsActionSchemaWithRequestBuilder(actionId: String, fileName: String) -> RequestBuilder<JsonSchemaDocument> {        
+    open class func getIntegrationsActionSchemaWithRequestBuilder(actionId: String, fileName: String, flatten: Bool? = nil) -> RequestBuilder<JsonSchemaDocument> {        
         var path = "/api/v2/integrations/actions/{actionId}/schemas/{fileName}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -955,7 +966,10 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "flatten": flatten
+        ])
 
         let requestBuilder: RequestBuilder<JsonSchemaDocument>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -1127,8 +1141,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -1336,8 +1350,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter status: (query) Indicates the validity of the certificate in question. (optional)
@@ -1523,8 +1537,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -1742,8 +1756,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this bot group 
@@ -1981,8 +1995,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter integrationId: (path) The integration ID for this group of bots 
@@ -2090,8 +2104,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -2220,8 +2234,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -2372,8 +2386,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2447,8 +2461,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<CredentialTypeListing> 
@@ -2517,8 +2531,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2738,8 +2752,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -2895,8 +2909,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3137,8 +3151,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter botId: (path) The bot ID 
@@ -3227,8 +3241,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3478,8 +3492,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter botId: (path) The Bot ID 
@@ -3572,8 +3586,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4224,8 +4238,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
@@ -4539,8 +4553,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter nuanceIntegrationId: (path) The integration ID for this group of bots 
@@ -4681,8 +4695,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -4924,8 +4938,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter engineId: (path) The engine ID 
@@ -5056,8 +5070,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -5463,8 +5477,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -5676,8 +5690,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -5786,8 +5800,8 @@ open class IntegrationsAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -6252,15 +6266,18 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postIntegrationsActionDraftTest(actionId: String, body: [String:JSON], completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
-        let requestBuilder = postIntegrationsActionDraftTestWithRequestBuilder(actionId: actionId, body: body)
+    open class func postIntegrationsActionDraftTest(actionId: String, body: [String:JSON], flatten: Bool? = nil, completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsActionDraftTestWithRequestBuilder(actionId: actionId, body: body, flatten: flatten)
         requestBuilder.execute { (response: Response<TestExecutionResult>?, error) -> Void in
             do {
                 if let e = error {
@@ -6304,10 +6321,11 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
 
      - returns: RequestBuilder<TestExecutionResult> 
      */
-    open class func postIntegrationsActionDraftTestWithRequestBuilder(actionId: String, body: [String:JSON]) -> RequestBuilder<TestExecutionResult> {        
+    open class func postIntegrationsActionDraftTestWithRequestBuilder(actionId: String, body: [String:JSON], flatten: Bool? = nil) -> RequestBuilder<TestExecutionResult> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft/test"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6315,7 +6333,10 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "flatten": flatten
+        ])
 
         let requestBuilder: RequestBuilder<TestExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -6326,15 +6347,18 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postIntegrationsActionExecute(actionId: String, body: [String:JSON], completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
-        let requestBuilder = postIntegrationsActionExecuteWithRequestBuilder(actionId: actionId, body: body)
+    open class func postIntegrationsActionExecute(actionId: String, body: [String:JSON], flatten: Bool? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsActionExecuteWithRequestBuilder(actionId: actionId, body: body, flatten: flatten)
         requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
             do {
                 if let e = error {
@@ -6360,10 +6384,11 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
 
      - returns: RequestBuilder<JSON> 
      */
-    open class func postIntegrationsActionExecuteWithRequestBuilder(actionId: String, body: [String:JSON]) -> RequestBuilder<JSON> {        
+    open class func postIntegrationsActionExecuteWithRequestBuilder(actionId: String, body: [String:JSON], flatten: Bool? = nil) -> RequestBuilder<JSON> {        
         var path = "/api/v2/integrations/actions/{actionId}/execute"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6371,7 +6396,10 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "flatten": flatten
+        ])
 
         let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -6382,15 +6410,18 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postIntegrationsActionTest(actionId: String, body: [String:JSON], completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
-        let requestBuilder = postIntegrationsActionTestWithRequestBuilder(actionId: actionId, body: body)
+    open class func postIntegrationsActionTest(actionId: String, body: [String:JSON], flatten: Bool? = nil, completion: @escaping ((_ data: TestExecutionResult?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsActionTestWithRequestBuilder(actionId: actionId, body: body, flatten: flatten)
         requestBuilder.execute { (response: Response<TestExecutionResult>?, error) -> Void in
             do {
                 if let e = error {
@@ -6434,10 +6465,11 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter body: (body) Map of parameters used for variable substitution. 
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
 
      - returns: RequestBuilder<TestExecutionResult> 
      */
-    open class func postIntegrationsActionTestWithRequestBuilder(actionId: String, body: [String:JSON]) -> RequestBuilder<TestExecutionResult> {        
+    open class func postIntegrationsActionTestWithRequestBuilder(actionId: String, body: [String:JSON], flatten: Bool? = nil) -> RequestBuilder<TestExecutionResult> {        
         var path = "/api/v2/integrations/actions/{actionId}/test"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -6445,7 +6477,10 @@ open class IntegrationsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "flatten": flatten
+        ])
 
         let requestBuilder: RequestBuilder<TestExecutionResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

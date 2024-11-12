@@ -1365,7 +1365,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentFeedbackFeedbackId(knowledgeBaseId
 
 
 
-> [DocumentVariationResponse](DocumentVariationResponse) getKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState)
+> [DocumentVariationResponse](DocumentVariationResponse) getKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState, expand)
 
 Get a variation for a document.
 
@@ -1389,9 +1389,10 @@ let documentVariationId: String = "" // Globally unique identifier for a documen
 let documentId: String = "" // Globally unique identifier for a document.
 let knowledgeBaseId: String = "" // Globally unique identifier for a knowledge base.
 let documentState: KnowledgeAPI.DocumentState_getKnowledgeKnowledgebaseDocumentVariation = KnowledgeAPI.DocumentState_getKnowledgeKnowledgebaseDocumentVariation.enummember // The state of the document.
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, documentState: documentState) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: documentVariationId, documentId: documentId, knowledgeBaseId: knowledgeBaseId, documentState: documentState, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1410,6 +1411,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: doc
 | **documentId** | **String**| Globally unique identifier for a document. | |
 | **knowledgeBaseId** | **String**| Globally unique identifier for a knowledge base. | |
 | **documentState** | **String**| The state of the document. | [optional]<br />**Values**: draft ("Draft"), published ("Published") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: contenturl ("contentUrl") |
 
 
 ### Return type
@@ -1421,7 +1423,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariation(documentVariationId: doc
 
 
 
-> [DocumentVariationResponseListing](DocumentVariationResponseListing) getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState)
+> [DocumentVariationResponseListing](DocumentVariationResponseListing) getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId, documentId, before, after, pageSize, documentState, expand)
 
 Get variations for a document.
 
@@ -1447,9 +1449,10 @@ let before: String = "" // The cursor that points to the start of the set of ent
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 200.
 let documentState: KnowledgeAPI.DocumentState_getKnowledgeKnowledgebaseDocumentVariations = KnowledgeAPI.DocumentState_getKnowledgeKnowledgebaseDocumentVariations.enummember // The state of the document.
+let expand: [String] = [""] // The specified entity attributes will be filled. Comma separated values expected.
 
 // Code example
-KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, documentState: documentState) { (response, error) in
+KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: knowledgeBaseId, documentId: documentId, before: before, after: after, pageSize: pageSize, documentState: documentState, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1470,6 +1473,7 @@ KnowledgeAPI.getKnowledgeKnowledgebaseDocumentVariations(knowledgeBaseId: knowle
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
 | **documentState** | **String**| The state of the document. | [optional]<br />**Values**: draft ("Draft"), published ("Published") |
+| **expand** | [**[String]**](String)| The specified entity attributes will be filled. Comma separated values expected. | [optional]<br />**Values**: contenturl ("contentUrl") |
 
 
 ### Return type
@@ -5792,4 +5796,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

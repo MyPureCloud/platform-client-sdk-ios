@@ -298,7 +298,7 @@ open class UsersAPI {
     
     
     /**
-     Remove routing language from user
+     Remove a routing language from a user
      
      - parameter userId: (path) User ID 
      - parameter languageId: (path) languageId 
@@ -316,7 +316,7 @@ open class UsersAPI {
     }
 
     /**
-     Remove routing language from user
+     Remove a routing language from a user
      - DELETE /api/v2/users/{userId}/routinglanguages/{languageId}
      - OAuth:
        - type: oauth2
@@ -350,7 +350,7 @@ open class UsersAPI {
     
     
     /**
-     Remove routing skill from user
+     Remove a routing skill from a user
      
      - parameter userId: (path) User ID 
      - parameter skillId: (path) skillId 
@@ -368,7 +368,7 @@ open class UsersAPI {
     }
 
     /**
-     Remove routing skill from user
+     Remove a routing skill from a user
      - DELETE /api/v2/users/{userId}/routingskills/{skillId}
      - OAuth:
        - type: oauth2
@@ -892,8 +892,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter permission: (query) The permission string, including the object to access, e.g. routing:queue:view 
@@ -989,8 +989,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter subjectId: (path) Subject ID (user or group) 
@@ -1497,8 +1497,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -5375,8 +5375,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6323,8 +6323,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6488,7 +6488,7 @@ open class UsersAPI {
     
     
     /**
-     List routing language for user
+     List routing languages assigned to a user
      
      - parameter userId: (path) User ID 
      - parameter pageSize: (query) Page size (optional)
@@ -6515,7 +6515,7 @@ open class UsersAPI {
     }
 
     /**
-     List routing language for user
+     List routing languages assigned to a user
      - GET /api/v2/users/{userId}/routinglanguages
      - OAuth:
        - type: oauth2
@@ -6543,8 +6543,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -6588,7 +6588,7 @@ open class UsersAPI {
     
     
     /**
-     List routing skills for user
+     List routing skills assigned to a user
      
      - parameter userId: (path) User ID 
      - parameter pageSize: (query) Page size (optional)
@@ -6615,7 +6615,7 @@ open class UsersAPI {
     }
 
     /**
-     List routing skills for user
+     List routing skills assigned to a user
      - GET /api/v2/users/{userId}/routingskills
      - OAuth:
        - type: oauth2
@@ -6643,8 +6643,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -7482,8 +7482,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -8272,8 +8272,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -8576,8 +8576,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (query) Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional)
@@ -8781,8 +8781,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter moduleId: (query) Specifies the ID of the learning module. (optional)
@@ -18007,8 +18007,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 5,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18042,7 +18042,7 @@ open class UsersAPI {
     
     
     /**
-     Update routing language proficiency or state.
+     Update an assigned routing language's proficiency
      
      - parameter userId: (path) User ID 
      - parameter languageId: (path) languageId 
@@ -18068,7 +18068,7 @@ open class UsersAPI {
     }
 
     /**
-     Update routing language proficiency or state.
+     Update an assigned routing language's proficiency
      - PATCH /api/v2/users/{userId}/routinglanguages/{languageId}
      - OAuth:
        - type: oauth2
@@ -18111,7 +18111,7 @@ open class UsersAPI {
     
     
     /**
-     Add bulk routing language to user. Max limit 50 languages
+     Assign multiple routing languages to a user. Max 50 routing languages in request body
      
      - parameter userId: (path) User ID 
      - parameter body: (body) Language 
@@ -18136,7 +18136,7 @@ open class UsersAPI {
     }
 
     /**
-     Add bulk routing language to user. Max limit 50 languages
+     Assign multiple routing languages to a user. Max 50 routing languages in request body
      - PATCH /api/v2/users/{userId}/routinglanguages/bulk
      - OAuth:
        - type: oauth2
@@ -18164,8 +18164,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18193,7 +18193,7 @@ open class UsersAPI {
     
     
     /**
-     Bulk add routing skills to user
+     Assign multiple routing skills to a user
      
      - parameter userId: (path) User ID 
      - parameter body: (body) Skill 
@@ -18218,7 +18218,7 @@ open class UsersAPI {
     }
 
     /**
-     Bulk add routing skills to user
+     Assign multiple routing skills to a user
      - PATCH /api/v2/users/{userId}/routingskills/bulk
      - OAuth:
        - type: oauth2
@@ -18246,8 +18246,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18897,8 +18897,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter body: (body) Users 
@@ -20341,7 +20341,7 @@ open class UsersAPI {
     
     
     /**
-     Add routing language to user
+     Assign a routing language to a user
      
      - parameter userId: (path) User ID 
      - parameter body: (body) Language 
@@ -20366,7 +20366,7 @@ open class UsersAPI {
     }
 
     /**
-     Add routing language to user
+     Assign a routing language to a user
      - POST /api/v2/users/{userId}/routinglanguages
      - OAuth:
        - type: oauth2
@@ -20405,7 +20405,7 @@ open class UsersAPI {
     
     
     /**
-     Add routing skill to user
+     Assign a routing skill to a user
      
      - parameter userId: (path) User ID 
      - parameter body: (body) Skill 
@@ -20430,7 +20430,7 @@ open class UsersAPI {
     }
 
     /**
-     Add routing skill to user
+     Assign a routing skill to a user
      - POST /api/v2/users/{userId}/routingskills
      - OAuth:
        - type: oauth2
@@ -23354,7 +23354,7 @@ open class UsersAPI {
     
     
     /**
-     Update routing skill proficiency or state.
+     Update an assigned routing skill's proficiency
      
      - parameter userId: (path) User ID 
      - parameter skillId: (path) skillId 
@@ -23380,7 +23380,7 @@ open class UsersAPI {
     }
 
     /**
-     Update routing skill proficiency or state.
+     Update an assigned routing skill's proficiency
      - PUT /api/v2/users/{userId}/routingskills/{skillId}
      - OAuth:
        - type: oauth2
@@ -23423,7 +23423,7 @@ open class UsersAPI {
     
     
     /**
-     Replace all routing skills assigned to a user
+     Assign multiple routing skills to a user, replacing any current assignments
      
      - parameter userId: (path) User ID 
      - parameter body: (body) Skill 
@@ -23448,7 +23448,7 @@ open class UsersAPI {
     }
 
     /**
-     Replace all routing skills assigned to a user
+     Assign multiple routing skills to a user, replacing any current assignments
      - PUT /api/v2/users/{userId}/routingskills/bulk
      - OAuth:
        - type: oauth2
@@ -23476,8 +23476,8 @@ open class UsersAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "nextUri" : "https://openapi-generator.tech",
-  "previousUri" : "https://openapi-generator.tech"
+  "previousUri" : "https://openapi-generator.tech",
+  "nextUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 

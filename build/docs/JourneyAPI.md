@@ -10,6 +10,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteJourneyOutcomesPredictor**](JourneyAPI#deleteJourneyOutcomesPredictor) | Delete an outcome predictor. |
 | [**deleteJourneySegment**](JourneyAPI#deleteJourneySegment) | Delete a segment. |
 | [**deleteJourneyView**](JourneyAPI#deleteJourneyView) | Delete a Journey View by ID |
+| [**deleteJourneyViewSchedules**](JourneyAPI#deleteJourneyViewSchedules) | Delete the Schedule of a JourneyView |
 | [**getExternalcontactsContactJourneySessions**](JourneyAPI#getExternalcontactsContactJourneySessions) | Retrieve all sessions for a given external contact. |
 | [**getJourneyActionmap**](JourneyAPI#getJourneyActionmap) | Retrieve a single action map. |
 | [**getJourneyActionmaps**](JourneyAPI#getJourneyActionmaps) | Retrieve all action maps. |
@@ -30,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneySessionEvents**](JourneyAPI#getJourneySessionEvents) | Retrieve all events for a given session. |
 | [**getJourneySessionOutcomescores**](JourneyAPI#getJourneySessionOutcomescores) | Retrieve latest outcome score associated with a session for all outcomes. |
 | [**getJourneyView**](JourneyAPI#getJourneyView) | Get a Journey View by ID |
+| [**getJourneyViewSchedules**](JourneyAPI#getJourneyViewSchedules) | Get the Schedule for a JourneyView |
 | [**getJourneyViewVersion**](JourneyAPI#getJourneyViewVersion) | Get a Journey View by ID and version |
 | [**getJourneyViewVersionChart**](JourneyAPI#getJourneyViewVersionChart) | Get a Chart by ID |
 | [**getJourneyViewVersionChartVersion**](JourneyAPI#getJourneyViewVersionChartVersion) | Get a Chart by ID and version |
@@ -41,6 +43,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyViewsEventdefinition**](JourneyAPI#getJourneyViewsEventdefinition) | Get an Event Definition |
 | [**getJourneyViewsEventdefinitions**](JourneyAPI#getJourneyViewsEventdefinitions) | Get a list of Event Definitions |
 | [**getJourneyViewsJobs**](JourneyAPI#getJourneyViewsJobs) | Get the jobs for an organization. |
+| [**getJourneyViewsSchedules**](JourneyAPI#getJourneyViewsSchedules) | Get the journey schedules for an organization. |
 | [**patchJourneyActionmap**](JourneyAPI#patchJourneyActionmap) | Update single action map. |
 | [**patchJourneyActiontarget**](JourneyAPI#patchJourneyActiontarget) | Update a single action target. |
 | [**patchJourneyActiontemplate**](JourneyAPI#patchJourneyActiontemplate) | Update a single action template. |
@@ -58,10 +61,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postJourneyOutcomes**](JourneyAPI#postJourneyOutcomes) | Create an outcome. |
 | [**postJourneyOutcomesPredictors**](JourneyAPI#postJourneyOutcomesPredictors) | Create an outcome predictor. |
 | [**postJourneySegments**](JourneyAPI#postJourneySegments) | Create a segment. |
+| [**postJourneyViewSchedules**](JourneyAPI#postJourneyViewSchedules) | Add a new Schedule to a JourneyView |
 | [**postJourneyViewVersionJobs**](JourneyAPI#postJourneyViewVersionJobs) | Submit a job request for a journey view version. |
 | [**postJourneyViewVersions**](JourneyAPI#postJourneyViewVersions) | Update a Journey View by ID |
 | [**postJourneyViews**](JourneyAPI#postJourneyViews) | Create a new Journey View |
 | [**postJourneyViewsEncodingsValidate**](JourneyAPI#postJourneyViewsEncodingsValidate) | Validate whether an encoding exist for a label/value combination. |
+| [**putJourneyViewSchedules**](JourneyAPI#putJourneyViewSchedules) | Update the Schedule for a JourneyView |
 | [**putJourneyViewVersion**](JourneyAPI#putJourneyViewVersion) | Update a Journey View by ID and version |
 {: class="table-striped"}
 
@@ -362,6 +367,58 @@ JourneyAPI.deleteJourneyView(viewId: viewId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+
+## deleteJourneyViewSchedules
+
+
+
+> [JourneyViewSchedule](JourneyViewSchedule) deleteJourneyViewSchedules(viewId)
+
+Delete the Schedule of a JourneyView
+
+used for long descriptions
+
+
+
+Wraps DELETE /api/v2/journey/views/{viewId}/schedules  
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+
+// Code example
+JourneyAPI.deleteJourneyViewSchedules(viewId: viewId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.deleteJourneyViewSchedules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
 
 
 ## getExternalcontactsContactJourneySessions
@@ -1436,6 +1493,58 @@ JourneyAPI.getJourneyView(viewId: viewId) { (response, error) in
 [**JourneyView**](JourneyView)
 
 
+## getJourneyViewSchedules
+
+
+
+> [JourneyViewSchedule](JourneyViewSchedule) getJourneyViewSchedules(viewId)
+
+Get the Schedule for a JourneyView
+
+used for long descriptions
+
+
+
+Wraps GET /api/v2/journey/views/{viewId}/schedules  
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+
+// Code example
+JourneyAPI.getJourneyViewSchedules(viewId: viewId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewSchedules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
+
+
 ## getJourneyViewVersion
 
 
@@ -2030,6 +2139,58 @@ JourneyAPI.getJourneyViewsJobs(pageNumber: pageNumber, pageSize: pageSize, inter
 ### Return type
 
 [**JourneyViewJobListing**](JourneyViewJobListing)
+
+
+## getJourneyViewsSchedules
+
+
+
+> [JourneyViewScheduleListing](JourneyViewScheduleListing) getJourneyViewsSchedules(pageNumber, pageSize)
+
+Get the journey schedules for an organization.
+
+
+
+Wraps GET /api/v2/journey/views/schedules  
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // The number of the page to return
+let pageSize: Int = 0 // Max number of entities to return
+
+// Code example
+JourneyAPI.getJourneyViewsSchedules(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsSchedules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| The number of the page to return | [optional] |
+| **pageSize** | **Int**| Max number of entities to return | [optional] |
+
+
+### Return type
+
+[**JourneyViewScheduleListing**](JourneyViewScheduleListing)
 
 
 ## patchJourneyActionmap
@@ -2902,6 +3063,58 @@ JourneyAPI.postJourneySegments(body: body) { (response, error) in
 [**JourneySegment**](JourneySegment)
 
 
+## postJourneyViewSchedules
+
+
+
+> [JourneyViewSchedule](JourneyViewSchedule) postJourneyViewSchedules(viewId, body)
+
+Add a new Schedule to a JourneyView
+
+
+
+Wraps POST /api/v2/journey/views/{viewId}/schedules  
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+let body: JourneyViewSchedule = new JourneyViewSchedule(...) // journeyViewSchedule
+
+// Code example
+JourneyAPI.postJourneyViewSchedules(viewId: viewId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.postJourneyViewSchedules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+| **body** | [**JourneyViewSchedule**](JourneyViewSchedule)| journeyViewSchedule | |
+
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
+
+
 ## postJourneyViewVersionJobs
 
 
@@ -3112,6 +3325,60 @@ JourneyAPI.postJourneyViewsEncodingsValidate(body: body) { (response, error) in
 [**EntityListing**](EntityListing)
 
 
+## putJourneyViewSchedules
+
+
+
+> [JourneyViewSchedule](JourneyViewSchedule) putJourneyViewSchedules(viewId, body)
+
+Update the Schedule for a JourneyView
+
+used for long descriptions
+
+
+
+Wraps PUT /api/v2/journey/views/{viewId}/schedules  
+
+Requires ALL permissions: 
+
+* journey:viewsSchedule:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let viewId: String = "" // Journey View Id
+let body: JourneyViewSchedule = new JourneyViewSchedule(...) // journeyViewSchedule
+
+// Code example
+JourneyAPI.putJourneyViewSchedules(viewId: viewId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.putJourneyViewSchedules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **viewId** | **String**| Journey View Id | |
+| **body** | [**JourneyViewSchedule**](JourneyViewSchedule)| journeyViewSchedule | |
+
+
+### Return type
+
+[**JourneyViewSchedule**](JourneyViewSchedule)
+
+
 ## putJourneyViewVersion
 
 
@@ -3168,4 +3435,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_
