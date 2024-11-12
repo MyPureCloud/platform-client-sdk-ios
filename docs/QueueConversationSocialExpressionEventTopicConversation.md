@@ -9,13 +9,14 @@
 | **_id** | **String** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
 | **participants** | [**[QueueConversationSocialExpressionEventTopicParticipant]**](QueueConversationSocialExpressionEventTopicParticipant) |  | [optional] |
-| **recentTransfers** | [**[QueueConversationSocialExpressionEventTopicRecentTransfer]**](QueueConversationSocialExpressionEventTopicRecentTransfer) |  | [optional] |
+| **recentTransfers** | [**[QueueConversationSocialExpressionEventTopicTransferResponse]**](QueueConversationSocialExpressionEventTopicTransferResponse) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **externalTag** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
+| **divisions** | [**[QueueConversationSocialExpressionEventTopicConversationDivisionMembership]**](QueueConversationSocialExpressionEventTopicConversationDivisionMembership) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

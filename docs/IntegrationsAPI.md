@@ -570,7 +570,7 @@ IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, i
 
 
 
-> [JsonSchemaDocument](JsonSchemaDocument) getIntegrationsActionDraftSchema(actionId, fileName)
+> [JsonSchemaDocument](JsonSchemaDocument) getIntegrationsActionDraftSchema(actionId, fileName, flatten)
 
 Retrieve schema for a Draft based on filename.
 
@@ -593,9 +593,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let fileName: String = "" // Name of schema file to be retrieved for this draft.
+let flatten: Bool = true // Indicates the response should be reformatted, based on Architect's flattening format.
 
 // Code example
-IntegrationsAPI.getIntegrationsActionDraftSchema(actionId: actionId, fileName: fileName) { (response, error) in
+IntegrationsAPI.getIntegrationsActionDraftSchema(actionId: actionId, fileName: fileName, flatten: flatten) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -612,6 +613,7 @@ IntegrationsAPI.getIntegrationsActionDraftSchema(actionId: actionId, fileName: f
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **fileName** | **String**| Name of schema file to be retrieved for this draft. | |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional] |
 
 
 ### Return type
@@ -726,7 +728,7 @@ IntegrationsAPI.getIntegrationsActionDraftValidation(actionId: actionId) { (resp
 
 
 
-> [JsonSchemaDocument](JsonSchemaDocument) getIntegrationsActionSchema(actionId, fileName)
+> [JsonSchemaDocument](JsonSchemaDocument) getIntegrationsActionSchema(actionId, fileName, flatten)
 
 Retrieve schema for an action based on filename.
 
@@ -749,9 +751,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let fileName: String = "" // Name of schema file to be retrieved for this action.
+let flatten: Bool = true // Indicates the response should be reformatted, based on Architect's flattening format.
 
 // Code example
-IntegrationsAPI.getIntegrationsActionSchema(actionId: actionId, fileName: fileName) { (response, error) in
+IntegrationsAPI.getIntegrationsActionSchema(actionId: actionId, fileName: fileName, flatten: flatten) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -768,6 +771,7 @@ IntegrationsAPI.getIntegrationsActionSchema(actionId: actionId, fileName: fileNa
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **fileName** | **String**| Name of schema file to be retrieved for this action. | |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional] |
 
 
 ### Return type
@@ -3601,7 +3605,7 @@ IntegrationsAPI.postIntegrationsActionDraftPublish(actionId: actionId, body: bod
 
 
 
-> [TestExecutionResult](TestExecutionResult) postIntegrationsActionDraftTest(actionId, body)
+> [TestExecutionResult](TestExecutionResult) postIntegrationsActionDraftTest(actionId, body, flatten)
 
 Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
 
@@ -3623,9 +3627,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
+let flatten: Bool = true // Indicates the response should be reformatted, based on Architect's flattening format.
 
 // Code example
-IntegrationsAPI.postIntegrationsActionDraftTest(actionId: actionId, body: body) { (response, error) in
+IntegrationsAPI.postIntegrationsActionDraftTest(actionId: actionId, body: body, flatten: flatten) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3642,6 +3647,7 @@ IntegrationsAPI.postIntegrationsActionDraftTest(actionId: actionId, body: body) 
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **body** | [**[String:JSON]**](JSON)| Map of parameters used for variable substitution. | |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional] |
 
 
 ### Return type
@@ -3653,7 +3659,7 @@ IntegrationsAPI.postIntegrationsActionDraftTest(actionId: actionId, body: body) 
 
 
 
-> [JSON](JSON) postIntegrationsActionExecute(actionId, body)
+> [JSON](JSON) postIntegrationsActionExecute(actionId, body, flatten)
 
 Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
 
@@ -3676,9 +3682,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
+let flatten: Bool = true // Indicates the response should be reformatted, based on Architect's flattening format.
 
 // Code example
-IntegrationsAPI.postIntegrationsActionExecute(actionId: actionId, body: body) { (response, error) in
+IntegrationsAPI.postIntegrationsActionExecute(actionId: actionId, body: body, flatten: flatten) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3695,6 +3702,7 @@ IntegrationsAPI.postIntegrationsActionExecute(actionId: actionId, body: body) { 
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **body** | [**[String:JSON]**](JSON)| Map of parameters used for variable substitution. | |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional] |
 
 
 ### Return type
@@ -3706,7 +3714,7 @@ IntegrationsAPI.postIntegrationsActionExecute(actionId: actionId, body: body) { 
 
 
 
-> [TestExecutionResult](TestExecutionResult) postIntegrationsActionTest(actionId, body)
+> [TestExecutionResult](TestExecutionResult) postIntegrationsActionTest(actionId, body, flatten)
 
 Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
 
@@ -3729,9 +3737,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let body: [String:JSON] = new JSON(...) // Map of parameters used for variable substitution.
+let flatten: Bool = true // Indicates the response should be reformatted, based on Architect's flattening format.
 
 // Code example
-IntegrationsAPI.postIntegrationsActionTest(actionId: actionId, body: body) { (response, error) in
+IntegrationsAPI.postIntegrationsActionTest(actionId: actionId, body: body, flatten: flatten) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3748,6 +3757,7 @@ IntegrationsAPI.postIntegrationsActionTest(actionId: actionId, body: body) { (re
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **body** | [**[String:JSON]**](JSON)| Map of parameters used for variable substitution. | |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional] |
 
 
 ### Return type
@@ -4378,4 +4388,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

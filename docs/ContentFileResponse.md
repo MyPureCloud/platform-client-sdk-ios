@@ -10,7 +10,8 @@
 | **type** | **String** | The file format | |
 | **checksum** | **String** | The checksum of the file | |
 | **size** | **Int64** | The size of the file in bytes | |
+| **contentUrl** | **String** | Public download url for content. Needs to be expanded | |
 
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

@@ -990,4 +990,4 @@ WebChatAPI.putWebchatSettings(body: body) { (response, error) in
 [**WebChatSettings**](WebChatSettings)
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

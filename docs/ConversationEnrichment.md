@@ -12,4 +12,4 @@ Metadata enrichments provided by the platform.
 
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_

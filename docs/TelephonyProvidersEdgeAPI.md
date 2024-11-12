@@ -75,6 +75,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTelephonyProvidersEdgesSiteOutboundroutes**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesSiteOutboundroutes) | Get outbound routes |
 | [**getTelephonyProvidersEdgesSiteSiteconnections**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesSiteSiteconnections) | Get site connections for a site. |
 | [**getTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesSites) | Get the list of Sites. |
+| [**getTelephonyProvidersEdgesSitesSearch**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesSitesSearch) | Search sites using the q64 value returned from a previous search |
 | [**getTelephonyProvidersEdgesTimezones**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTimezones) | Get a list of Edge-compatible time zones |
 | [**getTelephonyProvidersEdgesTrunk**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunk) | Get a Trunk by ID |
 | [**getTelephonyProvidersEdgesTrunkMetrics**](TelephonyProvidersEdgeAPI#getTelephonyProvidersEdgesTrunkMetrics) | Get the trunk metrics. |
@@ -109,6 +110,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTelephonyProvidersEdgesPhonesReboot**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesPhonesReboot) | Reboot Multiple Phones |
 | [**postTelephonyProvidersEdgesSiteOutboundroutes**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesSiteOutboundroutes) | Create outbound route |
 | [**postTelephonyProvidersEdgesSites**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesSites) | Create a Site. |
+| [**postTelephonyProvidersEdgesSitesSearch**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesSitesSearch) | Search sites |
 | [**postTelephonyProvidersEdgesTrunkbasesettings**](TelephonyProvidersEdgeAPI#postTelephonyProvidersEdgesTrunkbasesettings) | Create a Trunk Base Settings object |
 | [**putTelephonyProvidersEdge**](TelephonyProvidersEdgeAPI#putTelephonyProvidersEdge) | Update a edge. |
 | [**putTelephonyProvidersEdgeLogicalinterface**](TelephonyProvidersEdgeAPI#putTelephonyProvidersEdgeLogicalinterface) | Update an edge logical interface. |
@@ -3873,6 +3875,59 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSites(pageSize: pageSize, pa
 [**SiteEntityListing**](SiteEntityListing)
 
 
+## getTelephonyProvidersEdgesSitesSearch
+
+
+
+> [SitesSearchResponse](SitesSearchResponse) getTelephonyProvidersEdgesSitesSearch(q64, expand)
+
+Search sites using the q64 value returned from a previous search
+
+
+
+Wraps GET /api/v2/telephony/providers/edges/sites/search  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let q64: String = "" // q64
+let expand: [String] = [""] // expand
+
+// Code example
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSitesSearch(q64: q64, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesSitesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **q64** | **String**| q64 | |
+| **expand** | [**[String]**](String)| expand | [optional] |
+
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
+
+
 ## getTelephonyProvidersEdgesTimezones
 
 
@@ -5638,6 +5693,57 @@ TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesSites(body: body) { (respon
 [**Site**](Site)
 
 
+## postTelephonyProvidersEdgesSitesSearch
+
+
+
+> [SitesSearchResponse](SitesSearchResponse) postTelephonyProvidersEdgesSitesSearch(body)
+
+Search sites
+
+
+
+Wraps POST /api/v2/telephony/providers/edges/sites/search  
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
+* telephony:sites:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SiteSearchRequest = new SiteSearchRequest(...) // Search request options
+
+// Code example
+TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesSitesSearch(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TelephonyProvidersEdgeAPI.postTelephonyProvidersEdgesSitesSearch was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SiteSearchRequest**](SiteSearchRequest)| Search request options | |
+
+
+### Return type
+
+[**SitesSearchResponse**](SitesSearchResponse)
+
+
 ## postTelephonyProvidersEdgesTrunkbasesettings
 
 
@@ -6471,4 +6577,4 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSe
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatformClientV2@155.0.0_
+_PureCloudPlatformClientV2@156.0.0_
