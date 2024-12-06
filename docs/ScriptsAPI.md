@@ -234,7 +234,7 @@ ScriptsAPI.getScripts(pageSize: pageSize, pageNumber: pageNumber, expand: expand
 | **name** | **String**| Name filter | [optional] |
 | **feature** | **String**| Feature filter | [optional] |
 | **flowId** | **String**| Secure flow id filter | [optional] |
-| **sortBy** | **String**| SortBy | [optional]<br />**Values**: modifieddate ("modifiedDate"), createddate ("createdDate") |
+| **sortBy** | **String**| SortBy | [optional]<br />**Values**: modifieddate ("modifiedDate"), createddate ("createdDate"), name ("name") |
 | **sortOrder** | **String**| SortOrder | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 | **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
@@ -302,7 +302,7 @@ ScriptsAPI.getScriptsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, e
 | **name** | **String**| Name filter | [optional] |
 | **feature** | **String**| Feature filter | [optional] |
 | **flowId** | **String**| Secure flow id filter | [optional] |
-| **sortBy** | **String**| SortBy | [optional]<br />**Values**: modifieddate ("modifiedDate"), createddate ("createdDate") |
+| **sortBy** | **String**| SortBy | [optional]<br />**Values**: modifieddate ("modifiedDate"), createddate ("createdDate"), name ("name") |
 | **sortOrder** | **String**| SortOrder | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **scriptDataVersion** | **String**| Advanced usage - controls the data version of the script | [optional] |
 | **divisionIds** | **String**| Filters scripts to requested divisionIds | [optional] |
@@ -813,4 +813,4 @@ ScriptsAPI.postScriptsPublished(scriptDataVersion: scriptDataVersion, body: body
 [**Script**](Script)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

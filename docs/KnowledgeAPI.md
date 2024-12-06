@@ -961,7 +961,7 @@ KnowledgeAPI.getKnowledgeGuestSessionDocuments(sessionId: sessionId, categoryId:
 
 
 
-> [KnowledgeIntegrationOptionsResponse](KnowledgeIntegrationOptionsResponse) getKnowledgeIntegrationOptions(integrationId)
+> [KnowledgeIntegrationOptionsResponse](KnowledgeIntegrationOptionsResponse) getKnowledgeIntegrationOptions(integrationId, knowledgeBaseIds)
 
 Get sync options available for a knowledge-connect integration
 
@@ -982,9 +982,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let integrationId: String = "" // Integration ID
+let knowledgeBaseIds: [String] = [""] // Narrowing down filtering option results by knowledge base.
 
 // Code example
-KnowledgeAPI.getKnowledgeIntegrationOptions(integrationId: integrationId) { (response, error) in
+KnowledgeAPI.getKnowledgeIntegrationOptions(integrationId: integrationId, knowledgeBaseIds: knowledgeBaseIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1000,6 +1001,7 @@ KnowledgeAPI.getKnowledgeIntegrationOptions(integrationId: integrationId) { (res
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **integrationId** | **String**| Integration ID | |
+| **knowledgeBaseIds** | [**[String]**](String)| Narrowing down filtering option results by knowledge base. | [optional] |
 
 
 ### Return type
@@ -5796,4 +5798,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

@@ -30,6 +30,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationSecureattributes**](ConversationsAPI#getConversationSecureattributes) | Get the secure attributes on a conversation. |
 | [**getConversationSuggestion**](ConversationsAPI#getConversationSuggestion) | Get Suggestion. |
 | [**getConversationSuggestions**](ConversationsAPI#getConversationSuggestions) | Get all suggestions for a conversation. |
+| [**getConversationSummaries**](ConversationsAPI#getConversationSummaries) | Get the summaries of the conversation. |
 | [**getConversations**](ConversationsAPI#getConversations) | Get active conversations for the logged in user |
 | [**getConversationsCall**](ConversationsAPI#getConversationsCall) | Get call conversation |
 | [**getConversationsCallParticipantCommunicationWrapup**](ConversationsAPI#getConversationsCallParticipantCommunicationWrapup) | Get the wrap-up for this conversation communication.  |
@@ -1555,6 +1556,56 @@ ConversationsAPI.getConversationSuggestions(conversationId: conversationId, befo
 ### Return type
 
 [**SuggestionListing**](SuggestionListing)
+
+
+## getConversationSummaries
+
+
+
+> [ConversationSummariesGetResponse](ConversationSummariesGetResponse) getConversationSummaries(conversationId)
+
+Get the summaries of the conversation.
+
+
+
+Wraps GET /api/v2/conversations/{conversationId}/summaries  
+
+Requires ALL permissions: 
+
+* conversation:summary:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // Conversation ID
+
+// Code example
+ConversationsAPI.getConversationSummaries(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationSummaries was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| Conversation ID | |
+
+
+### Return type
+
+[**ConversationSummariesGetResponse**](ConversationSummariesGetResponse)
 
 
 ## getConversations
@@ -12288,4 +12339,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

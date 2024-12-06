@@ -895,13 +895,13 @@ RoutingAPI.deleteRoutingSmsAddress(addressId: addressId) { (error) in
 
 
 
-> Void deleteRoutingSmsPhonenumber(addressId)
+> Void deleteRoutingSmsPhonenumber(phoneNumberId)
 
 Delete a phone number provisioned for SMS.
 
 
 
-Wraps DELETE /api/v2/routing/sms/phonenumbers/{addressId}  
+Wraps DELETE /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
 
 Requires ALL permissions: 
 
@@ -915,10 +915,10 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let addressId: String = "" // Address ID
+let phoneNumberId: String = "" // phone number
 
 // Code example
-RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
+RoutingAPI.deleteRoutingSmsPhonenumber(phoneNumberId: phoneNumberId) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -932,7 +932,7 @@ RoutingAPI.deleteRoutingSmsPhonenumber(addressId: addressId) { (error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **addressId** | **String**| Address ID | |
+| **phoneNumberId** | **String**| phone number | |
 
 
 ### Return type
@@ -2783,7 +2783,7 @@ RoutingAPI.getRoutingQueueEstimatedwaittime(queueId: queueId, conversationId: co
 
 
 
-> [EstimatedWaitTimePredictions](EstimatedWaitTimePredictions) getRoutingQueueMediatypeEstimatedwaittime(queueId, mediaType)
+> [EstimatedWaitTimePredictions](EstimatedWaitTimePredictions) getRoutingQueueMediatypeEstimatedwaittime(queueId, mediaType, labelId)
 
 Get Estimated Wait Time
 
@@ -2804,10 +2804,11 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let queueId: String = "" // queueId
-let mediaType: String = "" // mediaType
+let mediaType: RoutingAPI.MediaType_getRoutingQueueMediatypeEstimatedwaittime = RoutingAPI.MediaType_getRoutingQueueMediatypeEstimatedwaittime.enummember // mediaType
+let labelId: String = "" // Unique id that represents the interaction label used with media type for EWT calculation
 
 // Code example
-RoutingAPI.getRoutingQueueMediatypeEstimatedwaittime(queueId: queueId, mediaType: mediaType) { (response, error) in
+RoutingAPI.getRoutingQueueMediatypeEstimatedwaittime(queueId: queueId, mediaType: mediaType, labelId: labelId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2823,7 +2824,8 @@ RoutingAPI.getRoutingQueueMediatypeEstimatedwaittime(queueId: queueId, mediaType
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **queueId** | **String**| queueId | |
-| **mediaType** | **String**| mediaType | |
+| **mediaType** | **String**| mediaType |<br />**Values**: all ("all"), call ("call"), chat ("chat"), callback ("callback"), email ("email"), videocomm ("videoComm"), message ("message") |
+| **labelId** | **String**| Unique id that represents the interaction label used with media type for EWT calculation | [optional] |
 
 
 ### Return type
@@ -3898,13 +3900,13 @@ RoutingAPI.getRoutingSmsAvailablephonenumbers(countryCode: countryCode, phoneNum
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber) getRoutingSmsPhonenumber(addressId, expand)
+> [SmsPhoneNumber](SmsPhoneNumber) getRoutingSmsPhonenumber(phoneNumberId, expand)
 
 Get a phone number provisioned for SMS.
 
 
 
-Wraps GET /api/v2/routing/sms/phonenumbers/{addressId}  
+Wraps GET /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
 
 Requires ALL permissions: 
 
@@ -3918,11 +3920,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let addressId: String = "" // Address ID
+let phoneNumberId: String = "" // phone number
 let expand: RoutingAPI.Expand_getRoutingSmsPhonenumber = RoutingAPI.Expand_getRoutingSmsPhonenumber.enummember // Expand response with additional information
 
 // Code example
-RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId, expand: expand) { (response, error) in
+RoutingAPI.getRoutingSmsPhonenumber(phoneNumberId: phoneNumberId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -3937,7 +3939,7 @@ RoutingAPI.getRoutingSmsPhonenumber(addressId: addressId, expand: expand) { (res
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **addressId** | **String**| Address ID | |
+| **phoneNumberId** | **String**| phone number | |
 | **expand** | **String**| Expand response with additional information | [optional]<br />**Values**: compliance ("compliance"), supportedcontent ("supportedContent") |
 
 
@@ -7256,13 +7258,13 @@ RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
 
 
 
-> [SmsPhoneNumber](SmsPhoneNumber) putRoutingSmsPhonenumber(addressId, body)
+> [SmsPhoneNumber](SmsPhoneNumber) putRoutingSmsPhonenumber(phoneNumberId, body)
 
 Update a phone number provisioned for SMS.
 
 
 
-Wraps PUT /api/v2/routing/sms/phonenumbers/{addressId}  
+Wraps PUT /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
 
 Requires ALL permissions: 
 
@@ -7276,11 +7278,11 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let addressId: String = "" // Address ID
+let phoneNumberId: String = "" // phone number
 let body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber
 
 // Code example
-RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (response, error) in
+RoutingAPI.putRoutingSmsPhonenumber(phoneNumberId: phoneNumberId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -7295,7 +7297,7 @@ RoutingAPI.putRoutingSmsPhonenumber(addressId: addressId, body: body) { (respons
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **addressId** | **String**| Address ID | |
+| **phoneNumberId** | **String**| phone number | |
 | **body** | [**SmsPhoneNumber**](SmsPhoneNumber)| SmsPhoneNumber | |
 
 
@@ -7668,4 +7670,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

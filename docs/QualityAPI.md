@@ -319,7 +319,7 @@ QualityAPI.deleteQualityFormsSurvey(formId: formId) { (error) in
 
 
 
-> [AgentActivityEntityListing](AgentActivityEntityListing) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId)
+> [AgentActivityEntityListing](AgentActivityEntityListing) getQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId, userState)
 
 Gets a list of Agent Activities
 
@@ -355,9 +355,10 @@ let name: String = "" // name
 let group: String = "" // group id
 let agentTeamId: String = "" // team id of agents requested
 let formContextId: String = "" // shared id between form versions
+let userState: QualityAPI.UserState_getQualityAgentsActivity = QualityAPI.UserState_getQualityAgentsActivity.enummember // 'Legacy' fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  'Any' fetches users of 'active', 'inactive' and 'deleted' states.
 
 // Code example
-QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, agentTeamId: agentTeamId, formContextId: formContextId) { (response, error) in
+QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, agentTeamId: agentTeamId, formContextId: formContextId, userState: userState) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -386,6 +387,7 @@ QualityAPI.getQualityAgentsActivity(pageSize: pageSize, pageNumber: pageNumber, 
 | **group** | **String**| group id | [optional] |
 | **agentTeamId** | **String**| team id of agents requested | [optional] |
 | **formContextId** | **String**| shared id between form versions | [optional] |
+| **userState** | **String**| 'Legacy' fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  'Any' fetches users of 'active', 'inactive' and 'deleted' states. | [optional]<br />**Values**: any ("Any"), legacy ("Legacy") |
 
 
 ### Return type
@@ -733,7 +735,7 @@ QualityAPI.getQualityConversationsAuditsQueryTransactionIdResults(transactionId:
 
 
 
-> [EvaluationEntityListing](EvaluationEntityListing) getQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder)
+> [EvaluationEntityListing](EvaluationEntityListing) getQualityEvaluationsQuery(pageSize, pageNumber, expand, previousPage, conversationId, agentUserId, agentTeamId, evaluatorUserId, assigneeUserId, queueId, startTime, endTime, formContextId, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder, includeDeletedUsers)
 
 Queries Evaluations and returns a paged list
 
@@ -774,9 +776,10 @@ let agentHasRead: Bool = true // agent has the evaluation
 let expandAnswerTotalScores: Bool = true // get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request.
 let maximum: Int = 0 // the maximum number of results to return
 let sortOrder: String = "" // NOTE: Does not work when conversationId is supplied.
+let includeDeletedUsers: Bool = true // Allow returning an agent or evaluator user with a 'delete' status. Defaults to false.
 
 // Code example
-QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder) { (response, error) in
+QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder, includeDeletedUsers: includeDeletedUsers) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -810,6 +813,7 @@ QualityAPI.getQualityEvaluationsQuery(pageSize: pageSize, pageNumber: pageNumber
 | **expandAnswerTotalScores** | **Bool**| get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. | [optional] |
 | **maximum** | **Int**| the maximum number of results to return | [optional] |
 | **sortOrder** | **String**| NOTE: Does not work when conversationId is supplied. | [optional] |
+| **includeDeletedUsers** | **Bool**| Allow returning an agent or evaluator user with a 'delete' status. Defaults to false. | [optional] |
 
 
 ### Return type
@@ -3040,4 +3044,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

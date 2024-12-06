@@ -11,7 +11,8 @@
 | **domainAllowlist** | **[String]** | The list of domains that will be allowed to embed Genesys Cloud applications. | [optional] |
 | **ipAddressAllowlist** | **[String]** | The list of IP addresses that will be allowed to authenticate with Genesys Cloud. | [optional] |
 | **passwordRequirements** | [**PasswordRequirements**](PasswordRequirements) | The password requirements for the organization. | [optional] |
+| **inactivityTimeoutExclusions** | **[String]** | The list of exempt apis from inactivity timeout. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

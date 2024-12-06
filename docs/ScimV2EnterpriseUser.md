@@ -11,7 +11,8 @@ Defines a SCIM enterprise user.
 | **department** | **String** | The department that the user belongs to. | [optional] |
 | **manager** | [**Manager**](Manager) | The user&#39;s manager. | [optional] |
 | **employeeNumber** | **String** | The user&#39;s employee number. | [optional] |
+| **dateHire** | **String** | The user&#39;s hire date. Format in JSON will be YYYY-MM-DD. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_
