@@ -122,4 +122,157 @@ open class OperationalEventsAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Get aggregates for operational events in a timeframe.
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsageEventsAggregatesQuery(body: EventAggregatesQueryRequest? = nil, completion: @escaping ((_ data: EventAggregatesResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsageEventsAggregatesQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EventAggregatesResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get aggregates for operational events in a timeframe.
+     - POST /api/v2/usage/events/aggregates/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "eventDefinitionAggregates" : [ {
+    "eventDefinition" : "{}",
+    "eventCount" : 0
+  }, {
+    "eventDefinition" : "{}",
+    "eventCount" : 0
+  } ],
+  "interval" : "interval"
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<EventAggregatesResponse> 
+     */
+    open class func postUsageEventsAggregatesQueryWithRequestBuilder(body: EventAggregatesQueryRequest? = nil) -> RequestBuilder<EventAggregatesResponse> {        
+        let path = "/api/v2/usage/events/aggregates/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EventAggregatesResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Query operational events in a timeframe.
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postUsageEventsQuery(before: String? = nil, after: String? = nil, pageSize: String? = nil, body: EventQueryRequest? = nil, completion: @escaping ((_ data: EventQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postUsageEventsQueryWithRequestBuilder(before: before, after: after, pageSize: pageSize, body: body)
+        requestBuilder.execute { (response: Response<EventQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Query operational events in a timeframe.
+     - POST /api/v2/usage/events/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "entityVersion" : "entityVersion",
+    "eventDefinition" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "entityName" : "entityName",
+    "errorCode" : "errorCode",
+    "entityId" : "entityId",
+    "parentEntityId" : "parentEntityId",
+    "previousValue" : "previousValue",
+    "currentValue" : "currentValue",
+    "conversation" : "{}"
+  }, {
+    "entityVersion" : "entityVersion",
+    "eventDefinition" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "entityName" : "entityName",
+    "errorCode" : "errorCode",
+    "entityId" : "entityId",
+    "parentEntityId" : "parentEntityId",
+    "previousValue" : "previousValue",
+    "currentValue" : "currentValue",
+    "conversation" : "{}"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter before: (query) The cursor that points to the start of the set of entities that has been returned. (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 200. (optional)
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<EventQueryResponse> 
+     */
+    open class func postUsageEventsQueryWithRequestBuilder(before: String? = nil, after: String? = nil, pageSize: String? = nil, body: EventQueryRequest? = nil) -> RequestBuilder<EventQueryResponse> {        
+        let path = "/api/v2/usage/events/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "before": before, 
+            "after": after, 
+            "pageSize": pageSize
+        ])
+
+        let requestBuilder: RequestBuilder<EventQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
 }

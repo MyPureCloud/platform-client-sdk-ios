@@ -8,8 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **dateImportEnded** | [**Date**](Date) | The last day of the data you are importing. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **uploadKey** | **String** | S3 key for the uploaded file | |
-| **fileName** | **String** | Name of the uploaded file | [optional] |
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

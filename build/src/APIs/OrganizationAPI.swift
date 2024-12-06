@@ -172,6 +172,7 @@ open class OrganizationAPI {
      - examples: [{contentType=application/json, example={
   "multifactorAuthenticationRequired" : true,
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
+  "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
   "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
   "passwordRequirements" : "{}",
   "domainAllowlistEnabled" : true
@@ -1220,6 +1221,7 @@ open class OrganizationAPI {
      - examples: [{contentType=application/json, example={
   "multifactorAuthenticationRequired" : true,
   "ipAddressAllowlist" : [ "ipAddressAllowlist", "ipAddressAllowlist" ],
+  "inactivityTimeoutExclusions" : [ "inactivityTimeoutExclusions", "inactivityTimeoutExclusions" ],
   "domainAllowlist" : [ "domainAllowlist", "domainAllowlist" ],
   "passwordRequirements" : "{}",
   "domainAllowlistEnabled" : true

@@ -16,4 +16,4 @@ Error information that the Public API will receive in a response body. This allo
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

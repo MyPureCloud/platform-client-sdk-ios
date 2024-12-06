@@ -6,7 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **user** | [**UserReferenceWithName**](UserReferenceWithName) | The user the dispute should be assigned to | [optional] |
+| **type** | **String** | The assignee type. Valid values: Original, Individual, None | [optional] |
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

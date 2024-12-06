@@ -486,4 +486,4 @@ ObjectsAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { (respo
 [**AuthzDivision**](AuthzDivision)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

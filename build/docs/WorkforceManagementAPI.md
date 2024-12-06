@@ -5912,7 +5912,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let evaluateMatches: Bool = true // Whether to evaluate the matches for violations
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
@@ -5933,7 +5933,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitWeekShifttrades(manag
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **evaluateMatches** | **Bool**| Whether to evaluate the matches for violations | [optional] |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 
@@ -8069,7 +8069,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let tradeId: String = "" // The ID of the shift trade to update
 let body: PatchShiftTradeRequest = new PatchShiftTradeRequest(...) // body
 
@@ -8090,7 +8090,7 @@ WorkforceManagementAPI.patchWorkforcemanagementManagementunitWeekShifttrade(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
 | **body** | [**PatchShiftTradeRequest**](PatchShiftTradeRequest)| body | |
 
@@ -11959,7 +11959,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let tradeId: String = "" // The ID of the shift trade to update
 let body: MatchShiftTradeRequest = new MatchShiftTradeRequest(...) // body
 
@@ -11980,7 +11980,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradeMatch(
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **tradeId** | **String**| The ID of the shift trade to update | |
 | **body** | [**MatchShiftTradeRequest**](MatchShiftTradeRequest)| body | |
 
@@ -12015,7 +12015,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: AddShiftTradeRequest = new AddShiftTradeRequest(...) // body
 
 // Code example
@@ -12035,7 +12035,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttrades(mana
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**AddShiftTradeRequest**](AddShiftTradeRequest)| body | |
 
 
@@ -12069,7 +12069,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: SearchShiftTradesRequest = new SearchShiftTradesRequest(...) // body
 let forceDownloadService: Bool = true // Force the result of this operation to be sent via download service. For testing/app development purposes
 
@@ -12090,7 +12090,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesSearc
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**SearchShiftTradesRequest**](SearchShiftTradesRequest)| body | |
 | **forceDownloadService** | **Bool**| Force the result of this operation to be sent via download service. For testing/app development purposes | [optional] |
 
@@ -12128,7 +12128,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
-let weekDateId: Date = new Date(...) // The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let weekDateId: Date = new Date(...) // The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
 let body: BulkShiftTradeStateUpdateRequest = new BulkShiftTradeStateUpdateRequest(...) // body
 let forceAsync: Bool = true // Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes
 
@@ -12149,7 +12149,7 @@ WorkforceManagementAPI.postWorkforcemanagementManagementunitWeekShifttradesState
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
-| **weekDateId** | **Date**| The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **weekDateId** | **Date**| The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
 | **body** | [**BulkShiftTradeStateUpdateRequest**](BulkShiftTradeStateUpdateRequest)| body | |
 | **forceAsync** | **Bool**| Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes | [optional] |
 
@@ -13103,4 +13103,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

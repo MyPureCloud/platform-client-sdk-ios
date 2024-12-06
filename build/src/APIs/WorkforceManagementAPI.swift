@@ -3234,8 +3234,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter businessUnitId: (path) The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. 
@@ -8304,7 +8304,7 @@ open class WorkforceManagementAPI {
      Gets all the shift trades for a given week
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -8345,7 +8345,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter evaluateMatches: (query) Whether to evaluate the matches for violations (optional)
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
@@ -9315,8 +9315,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Deprecated, paging is not supported (optional)
@@ -9413,8 +9413,8 @@ open class WorkforceManagementAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter divisionId: (query) The divisionIds to filter by. If omitted, will return all divisions (optional)
@@ -12160,7 +12160,7 @@ open class WorkforceManagementAPI {
      Updates a shift trade. This route can only be called by the initiating agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter tradeId: (path) The ID of the shift trade to update 
      - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
@@ -12211,7 +12211,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter tradeId: (path) The ID of the shift trade to update 
      - parameter body: (body) body 
 
@@ -17932,7 +17932,7 @@ open class WorkforceManagementAPI {
      Matches a shift trade. This route can only be called by the receiving agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter tradeId: (path) The ID of the shift trade to update 
      - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
@@ -17988,7 +17988,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter tradeId: (path) The ID of the shift trade to update 
      - parameter body: (body) body 
 
@@ -18025,7 +18025,7 @@ open class WorkforceManagementAPI {
      Adds a shift trade
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter completion: completion handler to receive the data and the error objects
      */
@@ -18075,7 +18075,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
 
      - returns: RequestBuilder<ShiftTradeResponse> 
@@ -18110,7 +18110,7 @@ open class WorkforceManagementAPI {
      Searches for potential shift trade matches for the current agent
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -18153,7 +18153,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter forceDownloadService: (query) Force the result of this operation to be sent via download service. For testing/app development purposes (optional)
 
@@ -18192,7 +18192,7 @@ open class WorkforceManagementAPI {
      Updates the state of a batch of shift trades
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
      - parameter completion: completion handler to receive the data and the error objects
@@ -18229,7 +18229,7 @@ open class WorkforceManagementAPI {
 }, statusCode=200}]
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
-     - parameter weekDateId: (path) The start date of the week schedule in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter weekDateId: (path) The start week date of the initiating shift in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
      - parameter body: (body) body 
      - parameter forceAsync: (query) Force the result of this operation to be sent asynchronously via notification.  For testing/app development purposes (optional)
 

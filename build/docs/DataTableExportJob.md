@@ -20,4 +20,4 @@ State information for an export job of rows from a datatable
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

@@ -1472,8 +1472,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
@@ -1896,8 +1896,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2100,8 +2100,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeId: (path) Edge ID 
@@ -2353,8 +2353,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 2
 }, statusCode=200}]
      
@@ -2733,8 +2733,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -2937,8 +2937,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
 
      - returns: RequestBuilder<CertificateAuthorityEntityListing> 
@@ -3274,8 +3274,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -3383,8 +3383,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter type: (query) The type of numbers to return. 
@@ -3522,8 +3522,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -3945,8 +3945,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4311,8 +4311,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4411,8 +4411,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4544,8 +4544,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -4850,8 +4850,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -5035,8 +5035,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -5429,8 +5429,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -5680,8 +5680,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6520,8 +6520,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -6628,8 +6628,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -7728,8 +7728,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -8340,8 +8340,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter edgeIds: (query) Comma separated list of Edge Id&#39;s 
@@ -9919,8 +9919,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -12406,8 +12406,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -14718,8 +14718,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 6,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -15147,8 +15147,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -15270,8 +15270,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 5
 }, statusCode=200}]
      
@@ -15603,8 +15603,8 @@ open class TelephonyProvidersEdgeAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
   "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech",
   "totalNumberOfEntities" : 2
 }, statusCode=200}]
      

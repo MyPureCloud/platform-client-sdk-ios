@@ -15,4 +15,4 @@ Information on how a communication should be routed to an agent.
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

@@ -973,6 +973,7 @@ docs/ConversationDetailQueryPredicate.md
 docs/ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification.md
 docs/ConversationDisconnectSettings.md
 docs/ConversationDivisionMembership.md
+docs/ConversationEditedSummary.md
 docs/ConversationEmailEventTopicAttachment.md
 docs/ConversationEmailEventTopicConversationDivisionMembership.md
 docs/ConversationEmailEventTopicConversationRoutingData.md
@@ -1122,6 +1123,7 @@ docs/ConversationScreenShareEventTopicScreenShareMediaParticipant.md
 docs/ConversationScreenShareEventTopicUriReference.md
 docs/ConversationScreenShareEventTopicWrapup.md
 docs/ConversationSecureAttributes.md
+docs/ConversationSessionSummary.md
 docs/ConversationSocialExpressionEventTopicConversationDivisionMembership.md
 docs/ConversationSocialExpressionEventTopicConversationRoutingData.md
 docs/ConversationSocialExpressionEventTopicDetail.md
@@ -1140,6 +1142,11 @@ docs/ConversationSocialExpressionEventTopicSocialConversation.md
 docs/ConversationSocialExpressionEventTopicSocialMediaParticipant.md
 docs/ConversationSocialExpressionEventTopicUriReference.md
 docs/ConversationSocialExpressionEventTopicWrapup.md
+docs/ConversationSummariesGetResponse.md
+docs/ConversationSummary.md
+docs/ConversationSummaryFollowup.md
+docs/ConversationSummaryReason.md
+docs/ConversationSummaryResolution.md
 docs/ConversationSummaryTopicVirtualAgentsConversationHeadline.md
 docs/ConversationSummaryTopicVirtualAgentsConversationReason.md
 docs/ConversationSummaryTopicVirtualAgentsConversationResolution.md
@@ -1148,6 +1155,7 @@ docs/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.md
 docs/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.md
 docs/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.md
 docs/ConversationSummaryTopicVirtualAgentsTriggerSource.md
+docs/ConversationSummaryWrapupCode.md
 docs/ConversationTagsUpdate.md
 docs/ConversationThreadingWindow.md
 docs/ConversationThreadingWindowSetting.md
@@ -1466,6 +1474,7 @@ docs/DispositionParameters.md
 docs/Division.md
 docs/DivisionEntityRef.md
 docs/DivisionReference.md
+docs/DivisionedDomainEntityRef.md
 docs/DivsPermittedEntityListing.md
 docs/DncList.md
 docs/DncListCreate.md
@@ -1746,13 +1755,18 @@ docs/EvaluatorActivity.md
 docs/EvaluatorActivityEntityListing.md
 docs/Event.md
 docs/EventAction.md
+docs/EventAggregatesQueryRequest.md
+docs/EventAggregatesResponse.md
 docs/EventCondition.md
 docs/EventDefinition.md
+docs/EventDefinitionAggregates.md
 docs/EventDefinitionListing.md
 docs/EventError.md
 docs/EventListing.md
 docs/EventLog.md
 docs/EventMessage.md
+docs/EventQueryRequest.md
+docs/EventQueryResponse.md
 docs/EventSession.md
 docs/EventSetting.md
 docs/EventsAPI.json
@@ -2304,6 +2318,7 @@ docs/JourneyViewChartMetricResultValue.md
 docs/JourneyViewChartResult.md
 docs/JourneyViewElement.md
 docs/JourneyViewElementAttributes.md
+docs/JourneyViewElementDisplayAttributes.md
 docs/JourneyViewElementFilter.md
 docs/JourneyViewElementFilterNumberPredicate.md
 docs/JourneyViewElementFilterPredicate.md
@@ -2904,6 +2919,7 @@ docs/OpenMessageEvent.md
 docs/OpenMessageNormalizedMessage.md
 docs/OpenMessagingChannel.md
 docs/OpenMessagingFromRecipient.md
+docs/OpenMessagingIdentityResolutionConfig.md
 docs/OpenMessagingToRecipient.md
 docs/OpenNormalizedMessage.md
 docs/OpenReceiptNormalizedMessage.md
@@ -2913,6 +2929,7 @@ docs/Operation.md
 docs/OperationCreatorUserResponse.md
 docs/OperationListing.md
 docs/OperationResponse.md
+docs/OperationalEvent.md
 docs/OperationalEventNotificationTopicEventEntity.md
 docs/OperationalEventNotificationTopicOperationalEventNotification.md
 docs/OperationalEventsAPI.json
@@ -3970,6 +3987,7 @@ docs/SupportCenterGlobalStyle.md
 docs/SupportCenterHeroStyle.md
 docs/SupportCenterImage.md
 docs/SupportCenterImageSource.md
+docs/SupportCenterLabelFilter.md
 docs/SupportCenterModuleSetting.md
 docs/SupportCenterScreen.md
 docs/SupportCenterSettings.md
@@ -4871,6 +4889,7 @@ docs/WorkitemRuleSettings.md
 docs/WorkitemSchema.md
 docs/WorkitemScoredAgent.md
 docs/WorkitemScoredAgentRequest.md
+docs/WorkitemScriptReference.md
 docs/WorkitemStatus.md
 docs/WorkitemStatusCreate.md
 docs/WorkitemStatusFilter.md
@@ -5373,6 +5392,7 @@ docs/getConversationRecordings-example.txt
 docs/getConversationSecureattributes-example.txt
 docs/getConversationSuggestion-example.txt
 docs/getConversationSuggestions-example.txt
+docs/getConversationSummaries-example.txt
 docs/getConversations-example.txt
 docs/getConversationsCall-example.txt
 docs/getConversationsCallParticipantCommunicationWrapup-example.txt
@@ -7135,6 +7155,8 @@ docs/postUploadsLearningCoverart-example.txt
 docs/postUploadsPublicassetsImages-example.txt
 docs/postUploadsRecordings-example.txt
 docs/postUploadsWorkforcemanagementHistoricaldataCsv-example.txt
+docs/postUsageEventsAggregatesQuery-example.txt
+docs/postUsageEventsQuery-example.txt
 docs/postUsageQuery-example.txt
 docs/postUsageSimplesearch-example.txt
 docs/postUserExternalid-example.txt
@@ -8511,6 +8533,7 @@ src/Models/ConversationDetailQueryPredicate.swift
 src/Models/ConversationDetailsDatalakeAvailabilityTopicDataAvailabilityChangeNotification.swift
 src/Models/ConversationDisconnectSettings.swift
 src/Models/ConversationDivisionMembership.swift
+src/Models/ConversationEditedSummary.swift
 src/Models/ConversationEmailEventTopicAttachment.swift
 src/Models/ConversationEmailEventTopicConversationDivisionMembership.swift
 src/Models/ConversationEmailEventTopicConversationRoutingData.swift
@@ -8660,6 +8683,7 @@ src/Models/ConversationScreenShareEventTopicScreenShareMediaParticipant.swift
 src/Models/ConversationScreenShareEventTopicUriReference.swift
 src/Models/ConversationScreenShareEventTopicWrapup.swift
 src/Models/ConversationSecureAttributes.swift
+src/Models/ConversationSessionSummary.swift
 src/Models/ConversationSocialExpressionEventTopicConversationDivisionMembership.swift
 src/Models/ConversationSocialExpressionEventTopicConversationRoutingData.swift
 src/Models/ConversationSocialExpressionEventTopicDetail.swift
@@ -8678,6 +8702,11 @@ src/Models/ConversationSocialExpressionEventTopicSocialConversation.swift
 src/Models/ConversationSocialExpressionEventTopicSocialMediaParticipant.swift
 src/Models/ConversationSocialExpressionEventTopicUriReference.swift
 src/Models/ConversationSocialExpressionEventTopicWrapup.swift
+src/Models/ConversationSummariesGetResponse.swift
+src/Models/ConversationSummary.swift
+src/Models/ConversationSummaryFollowup.swift
+src/Models/ConversationSummaryReason.swift
+src/Models/ConversationSummaryResolution.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationHeadline.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationReason.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationResolution.swift
@@ -8686,6 +8715,7 @@ src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryEvent.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant.swift
 src/Models/ConversationSummaryTopicVirtualAgentsConversationWrapUpCode.swift
 src/Models/ConversationSummaryTopicVirtualAgentsTriggerSource.swift
+src/Models/ConversationSummaryWrapupCode.swift
 src/Models/ConversationTagsUpdate.swift
 src/Models/ConversationThreadingWindow.swift
 src/Models/ConversationThreadingWindowSetting.swift
@@ -9000,6 +9030,7 @@ src/Models/DispositionParameters.swift
 src/Models/Division.swift
 src/Models/DivisionEntityRef.swift
 src/Models/DivisionReference.swift
+src/Models/DivisionedDomainEntityRef.swift
 src/Models/DivsPermittedEntityListing.swift
 src/Models/DncList.swift
 src/Models/DncListCreate.swift
@@ -9274,13 +9305,18 @@ src/Models/EvaluatorActivity.swift
 src/Models/EvaluatorActivityEntityListing.swift
 src/Models/Event.swift
 src/Models/EventAction.swift
+src/Models/EventAggregatesQueryRequest.swift
+src/Models/EventAggregatesResponse.swift
 src/Models/EventCondition.swift
 src/Models/EventDefinition.swift
+src/Models/EventDefinitionAggregates.swift
 src/Models/EventDefinitionListing.swift
 src/Models/EventError.swift
 src/Models/EventListing.swift
 src/Models/EventLog.swift
 src/Models/EventMessage.swift
+src/Models/EventQueryRequest.swift
+src/Models/EventQueryResponse.swift
 src/Models/EventSession.swift
 src/Models/EventSetting.swift
 src/Models/ExecuteRecordingJobsQuery.swift
@@ -9806,6 +9842,7 @@ src/Models/JourneyViewChartMetricResultValue.swift
 src/Models/JourneyViewChartResult.swift
 src/Models/JourneyViewElement.swift
 src/Models/JourneyViewElementAttributes.swift
+src/Models/JourneyViewElementDisplayAttributes.swift
 src/Models/JourneyViewElementFilter.swift
 src/Models/JourneyViewElementFilterNumberPredicate.swift
 src/Models/JourneyViewElementFilterPredicate.swift
@@ -10385,6 +10422,7 @@ src/Models/OpenMessageEvent.swift
 src/Models/OpenMessageNormalizedMessage.swift
 src/Models/OpenMessagingChannel.swift
 src/Models/OpenMessagingFromRecipient.swift
+src/Models/OpenMessagingIdentityResolutionConfig.swift
 src/Models/OpenMessagingToRecipient.swift
 src/Models/OpenNormalizedMessage.swift
 src/Models/OpenReceiptNormalizedMessage.swift
@@ -10394,6 +10432,7 @@ src/Models/Operation.swift
 src/Models/OperationCreatorUserResponse.swift
 src/Models/OperationListing.swift
 src/Models/OperationResponse.swift
+src/Models/OperationalEvent.swift
 src/Models/OperationalEventNotificationTopicEventEntity.swift
 src/Models/OperationalEventNotificationTopicOperationalEventNotification.swift
 src/Models/OperatorPosition.swift
@@ -11413,6 +11452,7 @@ src/Models/SupportCenterGlobalStyle.swift
 src/Models/SupportCenterHeroStyle.swift
 src/Models/SupportCenterImage.swift
 src/Models/SupportCenterImageSource.swift
+src/Models/SupportCenterLabelFilter.swift
 src/Models/SupportCenterModuleSetting.swift
 src/Models/SupportCenterScreen.swift
 src/Models/SupportCenterSettings.swift
@@ -12279,6 +12319,7 @@ src/Models/WorkitemRuleSettings.swift
 src/Models/WorkitemSchema.swift
 src/Models/WorkitemScoredAgent.swift
 src/Models/WorkitemScoredAgentRequest.swift
+src/Models/WorkitemScriptReference.swift
 src/Models/WorkitemStatus.swift
 src/Models/WorkitemStatusCreate.swift
 src/Models/WorkitemStatusFilter.swift

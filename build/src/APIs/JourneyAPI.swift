@@ -402,6 +402,7 @@ open class JourneyAPI {
     "eventCount" : 6,
     "type" : "type",
     "lastScreen" : "lastScreen",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
     "lastConnectedQueue" : "{}",
     "sdkLibrary" : "{}",
     "browser" : "{}",
@@ -479,6 +480,7 @@ open class JourneyAPI {
     "eventCount" : 6,
     "type" : "type",
     "lastScreen" : "lastScreen",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
     "lastConnectedQueue" : "{}",
     "sdkLibrary" : "{}",
     "browser" : "{}",
@@ -887,8 +889,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1191,8 +1193,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1376,8 +1378,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1668,8 +1670,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -1973,8 +1975,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter sortBy: (query) Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)
@@ -2052,6 +2054,7 @@ open class JourneyAPI {
   "eventCount" : 6,
   "type" : "type",
   "lastScreen" : "lastScreen",
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
   "lastConnectedQueue" : "{}",
   "sdkLibrary" : "{}",
   "browser" : "{}",
@@ -2430,7 +2433,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   }, {
     "filter" : "{}",
     "followedBy" : [ {
@@ -2448,7 +2452,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   } ],
   "name" : "name",
   "modifiedBy" : "{}",
@@ -2648,7 +2653,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   }, {
     "filter" : "{}",
     "followedBy" : [ {
@@ -2666,7 +2672,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   } ],
   "name" : "name",
   "modifiedBy" : "{}",
@@ -3381,7 +3388,8 @@ open class JourneyAPI {
       } ],
       "name" : "name",
       "attributes" : "{}",
-      "id" : "id"
+      "id" : "id",
+      "displayAttributes" : "{}"
     }, {
       "filter" : "{}",
       "followedBy" : [ {
@@ -3399,7 +3407,8 @@ open class JourneyAPI {
       } ],
       "name" : "name",
       "attributes" : "{}",
-      "id" : "id"
+      "id" : "id",
+      "displayAttributes" : "{}"
     } ],
     "name" : "name",
     "modifiedBy" : "{}",
@@ -3483,7 +3492,8 @@ open class JourneyAPI {
       } ],
       "name" : "name",
       "attributes" : "{}",
-      "id" : "id"
+      "id" : "id",
+      "displayAttributes" : "{}"
     }, {
       "filter" : "{}",
       "followedBy" : [ {
@@ -3501,7 +3511,8 @@ open class JourneyAPI {
       } ],
       "name" : "name",
       "attributes" : "{}",
-      "id" : "id"
+      "id" : "id",
+      "displayAttributes" : "{}"
     } ],
     "name" : "name",
     "modifiedBy" : "{}",
@@ -3512,8 +3523,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) Page number (optional)
@@ -3730,8 +3741,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -3815,8 +3826,8 @@ open class JourneyAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageNumber: (query) The number of the page to return (optional)
@@ -5625,7 +5636,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   }, {
     "filter" : "{}",
     "followedBy" : [ {
@@ -5643,7 +5655,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   } ],
   "name" : "name",
   "modifiedBy" : "{}",
@@ -5781,7 +5794,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   }, {
     "filter" : "{}",
     "followedBy" : [ {
@@ -5799,7 +5813,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   } ],
   "name" : "name",
   "modifiedBy" : "{}",
@@ -6057,7 +6072,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   }, {
     "filter" : "{}",
     "followedBy" : [ {
@@ -6075,7 +6091,8 @@ open class JourneyAPI {
     } ],
     "name" : "name",
     "attributes" : "{}",
-    "id" : "id"
+    "id" : "id",
+    "displayAttributes" : "{}"
   } ],
   "name" : "name",
   "modifiedBy" : "{}",

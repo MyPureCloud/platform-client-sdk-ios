@@ -1529,6 +1529,7 @@ open class QualityAPI {
     "id" : "id"
   },
   "evaluationForm" : {
+    "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -3668,6 +3669,7 @@ open class QualityAPI {
       "id" : "id"
     },
     "evaluationForm" : {
+      "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -4755,6 +4757,13 @@ open class QualityAPI {
     
     
     
+    
+    public enum UserState_getQualityAgentsActivity: String { 
+        case any = "Any"
+        case legacy = "Legacy"
+    }
+    
+    
     /**
      Gets a list of Agent Activities
      
@@ -4772,10 +4781,11 @@ open class QualityAPI {
      - parameter group: (query) group id (optional)
      - parameter agentTeamId: (query) team id of agents requested (optional)
      - parameter formContextId: (query) shared id between form versions (optional)
+     - parameter userState: (query) &#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, agentTeamId: String? = nil, formContextId: String? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, agentTeamId: agentTeamId, formContextId: formContextId)
+    open class func getQualityAgentsActivity(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, agentTeamId: String? = nil, formContextId: String? = nil, userState: UserState_getQualityAgentsActivity? = nil, completion: @escaping ((_ data: AgentActivityEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityAgentsActivityWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, expand: expand, nextPage: nextPage, previousPage: previousPage, startTime: startTime, endTime: endTime, agentUserId: agentUserId, evaluatorUserId: evaluatorUserId, name: name, group: group, agentTeamId: agentTeamId, formContextId: formContextId, userState: userState)
         requestBuilder.execute { (response: Response<AgentActivityEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -7804,8 +7814,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 1,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -7822,10 +7832,11 @@ open class QualityAPI {
      - parameter group: (query) group id (optional)
      - parameter agentTeamId: (query) team id of agents requested (optional)
      - parameter formContextId: (query) shared id between form versions (optional)
+     - parameter userState: (query) &#39;Legacy&#39; fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  &#39;Any&#39; fetches users of &#39;active&#39;, &#39;inactive&#39; and &#39;deleted&#39; states. (optional)
 
      - returns: RequestBuilder<AgentActivityEntityListing> 
      */
-    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, agentTeamId: String? = nil, formContextId: String? = nil) -> RequestBuilder<AgentActivityEntityListing> {        
+    open class func getQualityAgentsActivityWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, expand: [String]? = nil, nextPage: String? = nil, previousPage: String? = nil, startTime: Date? = nil, endTime: Date? = nil, agentUserId: [String]? = nil, evaluatorUserId: String? = nil, name: String? = nil, group: String? = nil, agentTeamId: String? = nil, formContextId: String? = nil, userState: UserState_getQualityAgentsActivity? = nil) -> RequestBuilder<AgentActivityEntityListing> {        
         let path = "/api/v2/quality/agents/activity"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -7845,7 +7856,8 @@ open class QualityAPI {
             "name": name, 
             "group": group, 
             "agentTeamId": agentTeamId, 
-            "formContextId": formContextId
+            "formContextId": formContextId, 
+            "userState": userState?.rawValue
         ])
 
         let requestBuilder: RequestBuilder<AgentActivityEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -9375,6 +9387,7 @@ open class QualityAPI {
     "id" : "id"
   },
   "evaluationForm" : {
+    "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -11131,6 +11144,7 @@ open class QualityAPI {
       "id" : "id"
     },
     "evaluationForm" : {
+      "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -12796,6 +12810,7 @@ open class QualityAPI {
       "id" : "id"
     },
     "evaluationForm" : {
+      "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -12982,8 +12997,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter calibratorId: (query) user id of calibrator 
@@ -14956,6 +14971,7 @@ open class QualityAPI {
       "id" : "id"
     },
     "evaluationForm" : {
+      "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -16260,6 +16276,8 @@ open class QualityAPI {
     
     
     
+    
+    
     /**
      Queries Evaluations and returns a paged list
      
@@ -16282,10 +16300,11 @@ open class QualityAPI {
      - parameter expandAnswerTotalScores: (query) get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)
      - parameter maximum: (query) the maximum number of results to return (optional)
      - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
+     - parameter includeDeletedUsers: (query) Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, expand: [String]? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder)
+    open class func getQualityEvaluationsQuery(pageSize: Int? = nil, pageNumber: Int? = nil, expand: [String]? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, includeDeletedUsers: Bool? = nil, completion: @escaping ((_ data: EvaluationEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getQualityEvaluationsQueryWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, expand: expand, previousPage: previousPage, conversationId: conversationId, agentUserId: agentUserId, agentTeamId: agentTeamId, evaluatorUserId: evaluatorUserId, assigneeUserId: assigneeUserId, queueId: queueId, startTime: startTime, endTime: endTime, formContextId: formContextId, evaluationState: evaluationState, isReleased: isReleased, agentHasRead: agentHasRead, expandAnswerTotalScores: expandAnswerTotalScores, maximum: maximum, sortOrder: sortOrder, includeDeletedUsers: includeDeletedUsers)
         requestBuilder.execute { (response: Response<EvaluationEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -18209,6 +18228,7 @@ open class QualityAPI {
         "id" : "id"
       },
       "evaluationForm" : {
+        "evaluationSettings" : "{}",
         "publishedVersions" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
@@ -21000,6 +21020,7 @@ open class QualityAPI {
         "id" : "id"
       },
       "evaluationForm" : {
+        "evaluationSettings" : "{}",
         "publishedVersions" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
@@ -21900,8 +21921,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -21923,10 +21944,11 @@ open class QualityAPI {
      - parameter expandAnswerTotalScores: (query) get the total scores for evaluations. NOTE: The answers will only be populated if this parameter is set to true in the request. (optional)
      - parameter maximum: (query) the maximum number of results to return (optional)
      - parameter sortOrder: (query) NOTE: Does not work when conversationId is supplied. (optional)
+     - parameter includeDeletedUsers: (query) Allow returning an agent or evaluator user with a &#39;delete&#39; status. Defaults to false. (optional)
 
      - returns: RequestBuilder<EvaluationEntityListing> 
      */
-    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: [String]? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil) -> RequestBuilder<EvaluationEntityListing> {        
+    open class func getQualityEvaluationsQueryWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, expand: [String]? = nil, previousPage: String? = nil, conversationId: String? = nil, agentUserId: String? = nil, agentTeamId: String? = nil, evaluatorUserId: String? = nil, assigneeUserId: String? = nil, queueId: String? = nil, startTime: String? = nil, endTime: String? = nil, formContextId: String? = nil, evaluationState: [String]? = nil, isReleased: Bool? = nil, agentHasRead: Bool? = nil, expandAnswerTotalScores: Bool? = nil, maximum: Int? = nil, sortOrder: String? = nil, includeDeletedUsers: Bool? = nil) -> RequestBuilder<EvaluationEntityListing> {        
         let path = "/api/v2/quality/evaluations/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -21951,7 +21973,8 @@ open class QualityAPI {
             "agentHasRead": agentHasRead, 
             "expandAnswerTotalScores": expandAnswerTotalScores, 
             "maximum": maximum?.encodeToJSON(), 
-            "sortOrder": sortOrder
+            "sortOrder": sortOrder, 
+            "includeDeletedUsers": includeDeletedUsers
         ])
 
         let requestBuilder: RequestBuilder<EvaluationEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
@@ -22643,8 +22666,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 9,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -22721,6 +22744,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -22966,6 +22990,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -23148,6 +23173,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -23334,8 +23360,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -23425,6 +23451,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -23607,6 +23634,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -23793,8 +23821,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -23863,6 +23891,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -24111,6 +24140,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -24293,6 +24323,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -24479,8 +24510,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -24573,6 +24604,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -24755,6 +24787,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -24941,8 +24974,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -25011,6 +25044,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -25832,8 +25866,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter formId: (path) Form ID 
@@ -26273,8 +26307,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) The total page size requested (optional)
@@ -26697,8 +26731,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter _id: (query) A comma-delimited list of valid survey form ids 
@@ -26984,6 +27018,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -27232,6 +27267,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -27414,6 +27450,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -27600,8 +27637,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -27662,6 +27699,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -27910,6 +27948,7 @@ open class QualityAPI {
   "pageCount" : 5,
   "pageNumber" : 6,
   "entities" : [ {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -28092,6 +28131,7 @@ open class QualityAPI {
       "naEnabled" : true
     } ]
   }, {
+    "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
@@ -28278,8 +28318,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -28929,8 +28969,8 @@ open class QualityAPI {
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
   "pageSize" : 0,
-  "previousUri" : "https://openapi-generator.tech",
-  "nextUri" : "https://openapi-generator.tech"
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
      - parameter pageSize: (query) Page size (optional)
@@ -31675,6 +31715,7 @@ open class QualityAPI {
     "id" : "id"
   },
   "evaluationForm" : {
+    "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -33812,6 +33853,7 @@ open class QualityAPI {
       "id" : "id"
     },
     "evaluationForm" : {
+      "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -35347,6 +35389,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -35579,6 +35622,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -36034,6 +36078,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -36266,6 +36311,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -38315,6 +38361,7 @@ open class QualityAPI {
     "id" : "id"
   },
   "evaluationForm" : {
+    "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
@@ -40455,6 +40502,7 @@ open class QualityAPI {
       "id" : "id"
     },
     "evaluationForm" : {
+      "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
@@ -41416,6 +41464,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",
@@ -41655,6 +41704,7 @@ open class QualityAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
   "selfUri" : "https://openapi-generator.tech",

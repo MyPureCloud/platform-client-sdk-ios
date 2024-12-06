@@ -11,4 +11,4 @@ Used to return response query results
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

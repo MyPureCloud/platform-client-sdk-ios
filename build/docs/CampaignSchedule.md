@@ -13,9 +13,9 @@
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **intervals** | [**[ScheduleInterval]**](ScheduleInterval) | A list of intervals during which to run the associated Campaign. | |
 | **timeZone** | **String** | The time zone for this CampaignSchedule. For example, Africa/Abidjan. | |
-| **campaign** | [**DomainEntityRef**](DomainEntityRef) | The Campaign that this CampaignSchedule is for. | |
+| **campaign** | [**DivisionedDomainEntityRef**](DivisionedDomainEntityRef) | The Campaign that this CampaignSchedule is for. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_

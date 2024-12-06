@@ -1452,14 +1452,17 @@ open class KnowledgeAPI {
 
     
     
+    
+    
     /**
      Get sync options available for a knowledge-connect integration
      
      - parameter integrationId: (path) Integration ID 
+     - parameter knowledgeBaseIds: (query) Narrowing down filtering option results by knowledge base. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getKnowledgeIntegrationOptions(integrationId: String, completion: @escaping ((_ data: KnowledgeIntegrationOptionsResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getKnowledgeIntegrationOptionsWithRequestBuilder(integrationId: integrationId)
+    open class func getKnowledgeIntegrationOptions(integrationId: String, knowledgeBaseIds: [String]? = nil, completion: @escaping ((_ data: KnowledgeIntegrationOptionsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeIntegrationOptionsWithRequestBuilder(integrationId: integrationId, knowledgeBaseIds: knowledgeBaseIds)
         requestBuilder.execute { (response: Response<KnowledgeIntegrationOptionsResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -1492,6 +1495,7 @@ open class KnowledgeAPI {
       "key" : "key"
     } ],
     "name" : "categories",
+    "action" : "None",
     "type" : "SingleSelect"
   }, {
     "values" : [ {
@@ -1502,15 +1506,17 @@ open class KnowledgeAPI {
       "key" : "key"
     } ],
     "name" : "categories",
+    "action" : "None",
     "type" : "SingleSelect"
   } ]
 }, statusCode=200}]
      
      - parameter integrationId: (path) Integration ID 
+     - parameter knowledgeBaseIds: (query) Narrowing down filtering option results by knowledge base. (optional)
 
      - returns: RequestBuilder<KnowledgeIntegrationOptionsResponse> 
      */
-    open class func getKnowledgeIntegrationOptionsWithRequestBuilder(integrationId: String) -> RequestBuilder<KnowledgeIntegrationOptionsResponse> {        
+    open class func getKnowledgeIntegrationOptionsWithRequestBuilder(integrationId: String, knowledgeBaseIds: [String]? = nil) -> RequestBuilder<KnowledgeIntegrationOptionsResponse> {        
         var path = "/api/v2/knowledge/integrations/{integrationId}/options"
         let integrationIdPreEscape = "\(integrationId)"
         let integrationIdPostEscape = integrationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -1518,7 +1524,10 @@ open class KnowledgeAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "knowledgeBaseIds": knowledgeBaseIds
+        ])
 
         let requestBuilder: RequestBuilder<KnowledgeIntegrationOptionsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -7889,6 +7898,7 @@ open class KnowledgeAPI {
      - POST /api/v2/knowledge/guest/sessions
      - examples: [{contentType=application/json, example={
   "app" : "{}",
+  "journeySessionId" : "journeySessionId",
   "customerId" : "customerId",
   "pageUrl" : "pageUrl",
   "id" : "id",

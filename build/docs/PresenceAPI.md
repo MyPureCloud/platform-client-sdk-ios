@@ -1407,4 +1407,4 @@ PresenceAPI.putUsersPresencesBulk(body: body) { (response, error) in
 [**[UserPresence]**](UserPresence)
 
 
-_PureCloudPlatformClientV2@156.0.0_
+_PureCloudPlatformClientV2@157.0.0_
