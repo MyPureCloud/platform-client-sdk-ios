@@ -20,15 +20,15 @@
 | **customFields** | [**[String:JSON]**](JSON) | Custom fields defined in the schema referenced by the worktype of the workitem. | [optional] |
 | **queueId** | **String** | The ID of the Workitems queue. Must be a valid UUID. | [optional] |
 | **assigneeId** | **String** | The ID of the assignee of the Workitem. Must be a valid UUID. | [optional] |
-| **scoredAgents** | [**[WorkitemScoredAgentRequest]**](WorkitemScoredAgentRequest) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
 | **languageId** | **String** | The ID of language of the Workitem. Must be a valid UUID. | [optional] |
 | **externalContactId** | **String** | The ID of the external contact of the Workitem. Must be a valid UUID. | [optional] |
 | **externalTag** | **String** | The external tag of the Workitem. | [optional] |
 | **skillIds** | **[String]** | The skill IDs of the Workitem. Must be valid UUIDs. | [optional] |
-| **preferredAgentIds** | **[String]** | The preferred agent IDs of the Workitem. Must be valid UUIDs. | [optional] |
 | **wrapupCode** | **String** | The ID of the wrapup. Must be a valid UUID. | [optional] |
 | **utilizationLabelId** | **String** | The ID of utilization label of the Workitem. Must be a valid UUID. | [optional] |
+| **scoredAgents** | [**[WorkitemScoredAgentRequest]**](WorkitemScoredAgentRequest) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
+| **preferredAgentIds** | **[String]** | The preferred agent IDs of the Workitem. Must be valid UUIDs. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_

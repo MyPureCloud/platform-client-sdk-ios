@@ -11,4 +11,4 @@ Learning module publish request
 
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_

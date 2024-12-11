@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteExternalcontactsContactsSchema**](ExternalContactsAPI#deleteExternalcontactsContactsSchema) | Delete a schema |
 | [**deleteExternalcontactsExternalsource**](ExternalContactsAPI#deleteExternalcontactsExternalsource) | Delete an External Source. WARNING: Any records that reference this External Source will not be automatically cleaned up. Those records will still be editable, but their External IDs may not be fully viewable. |
 | [**deleteExternalcontactsImportCsvSetting**](ExternalContactsAPI#deleteExternalcontactsImportCsvSetting) | Delete settings for CSV import |
+| [**deleteExternalcontactsImportSetting**](ExternalContactsAPI#deleteExternalcontactsImportSetting) | Delete Settings |
 | [**deleteExternalcontactsOrganization**](ExternalContactsAPI#deleteExternalcontactsOrganization) | Delete an external organization |
 | [**deleteExternalcontactsOrganizationNote**](ExternalContactsAPI#deleteExternalcontactsOrganizationNote) | Delete a note for an external organization |
 | [**deleteExternalcontactsOrganizationTrustor**](ExternalContactsAPI#deleteExternalcontactsOrganizationTrustor) | Unlink the Trustor for this External Organization |
@@ -30,6 +31,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsImportCsvSettings**](ExternalContactsAPI#getExternalcontactsImportCsvSettings) | Retrieve all settings for organization filtered by externalSettingsId if provided |
 | [**getExternalcontactsImportCsvUploadDetails**](ExternalContactsAPI#getExternalcontactsImportCsvUploadDetails) | Get details for CSV upload |
 | [**getExternalcontactsImportCsvUploadPreview**](ExternalContactsAPI#getExternalcontactsImportCsvUploadPreview) | Get preview for CSV upload |
+| [**getExternalcontactsImportJob**](ExternalContactsAPI#getExternalcontactsImportJob) | Get job based on id |
+| [**getExternalcontactsImportJobs**](ExternalContactsAPI#getExternalcontactsImportJobs) | List jobs for organization |
+| [**getExternalcontactsImportSetting**](ExternalContactsAPI#getExternalcontactsImportSetting) | Get setting based on id |
+| [**getExternalcontactsImportSettings**](ExternalContactsAPI#getExternalcontactsImportSettings) | List settings for organization |
 | [**getExternalcontactsOrganization**](ExternalContactsAPI#getExternalcontactsOrganization) | Fetch an external organization |
 | [**getExternalcontactsOrganizationContacts**](ExternalContactsAPI#getExternalcontactsOrganizationContacts) | Search for external contacts in an external organization |
 | [**getExternalcontactsOrganizationNote**](ExternalContactsAPI#getExternalcontactsOrganizationNote) | Fetch a note for an external organization |
@@ -73,6 +78,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsImportCsvJobs**](ExternalContactsAPI#postExternalcontactsImportCsvJobs) | Create CSV import job |
 | [**postExternalcontactsImportCsvSettings**](ExternalContactsAPI#postExternalcontactsImportCsvSettings) | Create settings for CSV import |
 | [**postExternalcontactsImportCsvUploads**](ExternalContactsAPI#postExternalcontactsImportCsvUploads) | Get url for CSV upload |
+| [**postExternalcontactsImportJobs**](ExternalContactsAPI#postExternalcontactsImportJobs) | Create a new job |
+| [**postExternalcontactsImportSettings**](ExternalContactsAPI#postExternalcontactsImportSettings) | Create a new settings |
 | [**postExternalcontactsMergeContacts**](ExternalContactsAPI#postExternalcontactsMergeContacts) | Merge two contacts into a new contact record |
 | [**postExternalcontactsOrganizationNotes**](ExternalContactsAPI#postExternalcontactsOrganizationNotes) | Create a note for an external organization |
 | [**postExternalcontactsOrganizations**](ExternalContactsAPI#postExternalcontactsOrganizations) | Create an external organization |
@@ -84,6 +91,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putExternalcontactsConversation**](ExternalContactsAPI#putExternalcontactsConversation) | Associate/disassociate an external contact with a conversation |
 | [**putExternalcontactsExternalsource**](ExternalContactsAPI#putExternalcontactsExternalsource) | Update an External Source |
 | [**putExternalcontactsImportCsvSetting**](ExternalContactsAPI#putExternalcontactsImportCsvSetting) | Update settings for CSV import |
+| [**putExternalcontactsImportJob**](ExternalContactsAPI#putExternalcontactsImportJob) | Update Job&#39;s workflow status |
+| [**putExternalcontactsImportSetting**](ExternalContactsAPI#putExternalcontactsImportSetting) | Update settings |
 | [**putExternalcontactsOrganization**](ExternalContactsAPI#putExternalcontactsOrganization) | Update an external organization |
 | [**putExternalcontactsOrganizationNote**](ExternalContactsAPI#putExternalcontactsOrganizationNote) | Update a note for an external organization |
 | [**putExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsAPI#putExternalcontactsOrganizationTrustorTrustorId) | Links a Trustor with an External Organization |
@@ -327,6 +336,55 @@ ExternalContactsAPI.deleteExternalcontactsImportCsvSetting(settingsId: settingsI
         dump(error)
     } else {
         print("ExternalContactsAPI.deleteExternalcontactsImportCsvSetting was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **settingsId** | **String**| Settings id | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteExternalcontactsImportSetting
+
+
+
+> Void deleteExternalcontactsImportSetting(settingsId)
+
+Delete Settings
+
+
+
+Wraps DELETE /api/v2/externalcontacts/import/settings/{settingsId}  
+
+Requires ANY permissions: 
+
+* externalContacts:importSettings:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let settingsId: String = "" // Settings id
+
+// Code example
+ExternalContactsAPI.deleteExternalcontactsImportSetting(settingsId: settingsId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ExternalContactsAPI.deleteExternalcontactsImportSetting was successful")
     }
 }
 ```
@@ -605,7 +663,7 @@ ExternalContactsAPI.getExternalcontactsContact(contactId: contactId, expand: exp
 
 
 
-> [EntityListing](EntityListing) getExternalcontactsContactIdentifiers(contactId)
+> [ContactIdentifierListing](ContactIdentifierListing) getExternalcontactsContactIdentifiers(contactId)
 
 List the identifiers for a contact
 
@@ -648,7 +706,7 @@ ExternalContactsAPI.getExternalcontactsContactIdentifiers(contactId: contactId) 
 
 ### Return type
 
-[**EntityListing**](EntityListing)
+[**ContactIdentifierListing**](ContactIdentifierListing)
 
 
 ## getExternalcontactsContactJourneySessions
@@ -1442,6 +1500,218 @@ ExternalContactsAPI.getExternalcontactsImportCsvUploadPreview(uploadId: uploadId
 ### Return type
 
 [**CsvUploadPreviewResponse**](CsvUploadPreviewResponse)
+
+
+## getExternalcontactsImportJob
+
+
+
+> [ContactImportJobResponse](ContactImportJobResponse) getExternalcontactsImportJob(jobId)
+
+Get job based on id
+
+
+
+Wraps GET /api/v2/externalcontacts/import/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* externalContacts:importJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Job id
+
+// Code example
+ExternalContactsAPI.getExternalcontactsImportJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsImportJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Job id | |
+
+
+### Return type
+
+[**ContactImportJobResponse**](ContactImportJobResponse)
+
+
+## getExternalcontactsImportJobs
+
+
+
+> [ContactImportJobEntityListing](ContactImportJobEntityListing) getExternalcontactsImportJobs(after, pageSize, sortOrder, jobStatus)
+
+List jobs for organization
+
+
+
+Wraps GET /api/v2/externalcontacts/import/jobs  
+
+Requires ANY permissions: 
+
+* externalContacts:importJob:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 100.
+let sortOrder: ExternalContactsAPI.SortOrder_getExternalcontactsImportJobs = ExternalContactsAPI.SortOrder_getExternalcontactsImportJobs.enummember // Direction of sorting.
+let jobStatus: ExternalContactsAPI.JobStatus_getExternalcontactsImportJobs = ExternalContactsAPI.JobStatus_getExternalcontactsImportJobs.enummember // Search term to filter by jobStatus
+
+// Code example
+ExternalContactsAPI.getExternalcontactsImportJobs(after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsImportJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
+| **sortOrder** | **String**| Direction of sorting. | [optional]<br />**Values**: ascending ("Ascending"), descending ("Descending") |
+| **jobStatus** | **String**| Search term to filter by jobStatus | [optional]<br />**Values**: created ("Created"), running ("Running"), completed ("Completed"), failed ("Failed"), cancelled ("Cancelled") |
+
+
+### Return type
+
+[**ContactImportJobEntityListing**](ContactImportJobEntityListing)
+
+
+## getExternalcontactsImportSetting
+
+
+
+> [ContactImportSettings](ContactImportSettings) getExternalcontactsImportSetting(settingsId)
+
+Get setting based on id
+
+
+
+Wraps GET /api/v2/externalcontacts/import/settings/{settingsId}  
+
+Requires ANY permissions: 
+
+* externalContacts:importSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let settingsId: String = "" // Settings id
+
+// Code example
+ExternalContactsAPI.getExternalcontactsImportSetting(settingsId: settingsId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsImportSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **settingsId** | **String**| Settings id | |
+
+
+### Return type
+
+[**ContactImportSettings**](ContactImportSettings)
+
+
+## getExternalcontactsImportSettings
+
+
+
+> [ContactImportSettingsEntityListing](ContactImportSettingsEntityListing) getExternalcontactsImportSettings(after, pageSize, sortOrder, name)
+
+List settings for organization
+
+
+
+Wraps GET /api/v2/externalcontacts/import/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:importSettings:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 100.
+let sortOrder: ExternalContactsAPI.SortOrder_getExternalcontactsImportSettings = ExternalContactsAPI.SortOrder_getExternalcontactsImportSettings.enummember // Direction of sorting.
+let name: String = "" // Search term to filter by settings name
+
+// Code example
+ExternalContactsAPI.getExternalcontactsImportSettings(after: after, pageSize: pageSize, sortOrder: sortOrder, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsImportSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
+| **sortOrder** | **String**| Direction of sorting. | [optional]<br />**Values**: ascending ("Ascending"), descending ("Descending") |
+| **name** | **String**| Search term to filter by settings name | [optional] |
+
+
+### Return type
+
+[**ContactImportSettingsEntityListing**](ContactImportSettingsEntityListing)
 
 
 ## getExternalcontactsOrganization
@@ -3680,6 +3950,106 @@ ExternalContactsAPI.postExternalcontactsImportCsvUploads(body: body) { (response
 [**CsvUploadResponse**](CsvUploadResponse)
 
 
+## postExternalcontactsImportJobs
+
+
+
+> [ContactImportJobResponse](ContactImportJobResponse) postExternalcontactsImportJobs(body)
+
+Create a new job
+
+
+
+Wraps POST /api/v2/externalcontacts/import/jobs  
+
+Requires ANY permissions: 
+
+* externalContacts:importJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactImportJobRequest = new ContactImportJobRequest(...) // Job
+
+// Code example
+ExternalContactsAPI.postExternalcontactsImportJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsImportJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactImportJobRequest**](ContactImportJobRequest)| Job | |
+
+
+### Return type
+
+[**ContactImportJobResponse**](ContactImportJobResponse)
+
+
+## postExternalcontactsImportSettings
+
+
+
+> [ContactImportSettings](ContactImportSettings) postExternalcontactsImportSettings(body)
+
+Create a new settings
+
+
+
+Wraps POST /api/v2/externalcontacts/import/settings  
+
+Requires ANY permissions: 
+
+* externalContacts:importSettings:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactImportSettings = new ContactImportSettings(...) // Setting
+
+// Code example
+ExternalContactsAPI.postExternalcontactsImportSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsImportSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactImportSettings**](ContactImportSettings)| Setting | |
+
+
+### Return type
+
+[**ContactImportSettings**](ContactImportSettings)
+
+
 ## postExternalcontactsMergeContacts
 
 
@@ -4255,6 +4625,110 @@ ExternalContactsAPI.putExternalcontactsImportCsvSetting(settingsId: settingsId, 
 [**CsvSettings**](CsvSettings)
 
 
+## putExternalcontactsImportJob
+
+
+
+> [ContactImportJobStatusUpdateResponse](ContactImportJobStatusUpdateResponse) putExternalcontactsImportJob(jobId, body)
+
+Update Job&#39;s workflow status
+
+
+
+Wraps PUT /api/v2/externalcontacts/import/jobs/{jobId}  
+
+Requires ANY permissions: 
+
+* externalContacts:importJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Job id
+let body: ContactImportJobStatusUpdateRequest = new ContactImportJobStatusUpdateRequest(...) // Status of the Job's workflow
+
+// Code example
+ExternalContactsAPI.putExternalcontactsImportJob(jobId: jobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsImportJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Job id | |
+| **body** | [**ContactImportJobStatusUpdateRequest**](ContactImportJobStatusUpdateRequest)| Status of the Job's workflow | |
+
+
+### Return type
+
+[**ContactImportJobStatusUpdateResponse**](ContactImportJobStatusUpdateResponse)
+
+
+## putExternalcontactsImportSetting
+
+
+
+> [ContactImportSettings](ContactImportSettings) putExternalcontactsImportSetting(settingsId, body)
+
+Update settings
+
+
+
+Wraps PUT /api/v2/externalcontacts/import/settings/{settingsId}  
+
+Requires ANY permissions: 
+
+* externalContacts:importSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let settingsId: String = "" // Settings id
+let body: ContactImportSettings = new ContactImportSettings(...) // Setting
+
+// Code example
+ExternalContactsAPI.putExternalcontactsImportSetting(settingsId: settingsId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.putExternalcontactsImportSetting was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **settingsId** | **String**| Settings id | |
+| **body** | [**ContactImportSettings**](ContactImportSettings)| Setting | |
+
+
+### Return type
+
+[**ContactImportSettings**](ContactImportSettings)
+
+
 ## putExternalcontactsOrganization
 
 
@@ -4520,4 +4994,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_

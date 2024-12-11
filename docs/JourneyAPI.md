@@ -377,8 +377,6 @@ JourneyAPI.deleteJourneyView(viewId: viewId) { (error) in
 
 Delete the Schedule of a JourneyView
 
-used for long descriptions
-
 
 
 Wraps DELETE /api/v2/journey/views/{viewId}/schedules  
@@ -1501,8 +1499,6 @@ JourneyAPI.getJourneyView(viewId: viewId) { (response, error) in
 
 Get the Schedule for a JourneyView
 
-used for long descriptions
-
 
 
 Wraps GET /api/v2/journey/views/{viewId}/schedules  
@@ -1717,8 +1713,6 @@ JourneyAPI.getJourneyViewVersionChartVersion(viewId: viewId, journeyViewVersion:
 
 Get the job for a journey view version.
 
-used for long descriptions
-
 
 
 Wraps GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}  
@@ -1772,8 +1766,6 @@ JourneyAPI.getJourneyViewVersionJob(viewId: viewId, journeyVersionId: journeyVer
 > [JourneyViewResult](JourneyViewResult) getJourneyViewVersionJobResults(viewId, journeyViewVersion, jobId)
 
 Get the result of a job for a journey view version.
-
-used for long descriptions
 
 
 
@@ -1884,8 +1876,6 @@ JourneyAPI.getJourneyViewVersionJobResultsChart(viewId: viewId, journeyVersionId
 > [JourneyViewJob](JourneyViewJob) getJourneyViewVersionJobsLatest(viewId, journeyVersionId)
 
 Get the latest job of a journey view version.
-
-used for long descriptions
 
 
 
@@ -2460,8 +2450,6 @@ JourneyAPI.patchJourneySegment(segmentId: segmentId, body: body) { (response, er
 > [JourneyViewJob](JourneyViewJob) patchJourneyViewVersionJob(viewId, journeyVersionId, jobId, body)
 
 Update the job for a journey view version. Only the status can be changed and only to Cancelled
-
-used for long descriptions
 
 
 
@@ -3123,8 +3111,6 @@ JourneyAPI.postJourneyViewSchedules(viewId: viewId, body: body) { (response, err
 
 Submit a job request for a journey view version.
 
-used for long descriptions
-
 
 
 Wraps POST /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs  
@@ -3333,8 +3319,6 @@ JourneyAPI.postJourneyViewsEncodingsValidate(body: body) { (response, error) in
 
 Update the Schedule for a JourneyView
 
-used for long descriptions
-
 
 
 Wraps PUT /api/v2/journey/views/{viewId}/schedules  
@@ -3435,4 +3419,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_

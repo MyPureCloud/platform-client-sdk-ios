@@ -294,4 +294,4 @@ TokensAPI.putTokensTimeout(body: body) { (response, error) in
 [**IdleTokenTimeout**](IdleTokenTimeout)
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_
