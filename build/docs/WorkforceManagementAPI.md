@@ -5660,7 +5660,7 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequestTim
 
 
 
-> [TimeOffRequestList](TimeOffRequestList) getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId, recentlyReviewed)
+> [TimeOffRequestList](TimeOffRequestList) getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId)
 
 Get a list of time off requests for a given user
 
@@ -5682,10 +5682,9 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let managementUnitId: String = "" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.
 let userId: String = "" // The userId to whom the Time Off Request applies.
-let recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: managementUnitId, userId: userId, recentlyReviewed: recentlyReviewed) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: managementUnitId, userId: userId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5702,7 +5701,6 @@ WorkforceManagementAPI.getWorkforcemanagementManagementunitUserTimeoffrequests(m
 | ------------- | ------------- | ------------- | ------------- |
 | **managementUnitId** | **String**| The ID of the management unit, or 'mine' for the management unit of the logged-in user. | |
 | **userId** | **String**| The userId to whom the Time Off Request applies. | |
-| **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] |
 
 
 ### Return type
@@ -6619,7 +6617,7 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequestWaitlistpositions(tim
 
 
 
-> [TimeOffRequestList](TimeOffRequestList) getWorkforcemanagementTimeoffrequests(recentlyReviewed)
+> [TimeOffRequestList](TimeOffRequestList) getWorkforcemanagementTimeoffrequests()
 
 Get a list of time off requests for the current user
 
@@ -6640,10 +6638,9 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days
 
 // Code example
-WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: recentlyReviewed) { (response, error) in
+WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests() { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -6655,10 +6652,7 @@ WorkforceManagementAPI.getWorkforcemanagementTimeoffrequests(recentlyReviewed: r
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **recentlyReviewed** | **Bool**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] |
+This endpoint does not require any parameters.
 
 
 ### Return type
@@ -13103,4 +13097,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_

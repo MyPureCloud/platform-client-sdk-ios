@@ -8020,19 +8020,13 @@ open class RecordingAPI {
   "expectedResultCount" : 0,
   "results" : [ {
     "conversationId" : "conversationId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "resultUrl" : "resultUrl",
-    "id" : "id",
     "recordingId" : "recordingId",
     "contentType" : "contentType",
     "errorMsg" : "errorMsg"
   }, {
     "conversationId" : "conversationId",
-    "selfUri" : "https://openapi-generator.tech",
-    "name" : "name",
     "resultUrl" : "resultUrl",
-    "id" : "id",
     "recordingId" : "recordingId",
     "contentType" : "contentType",
     "errorMsg" : "errorMsg"

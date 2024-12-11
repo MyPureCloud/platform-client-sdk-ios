@@ -12276,6 +12276,87 @@
     "return": "SchemaQuantityLimits",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get quantitative limits on schemas\nGetDataextensionsLimitsRequest.getDataextensionsLimits() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDataextensionsLimitsRequest.getDataextensionsLimits was successful\")\n        dump(response)\n    }\n}"
   },
+  "deletedataprivacymaskingrule": {
+    "operationId": "deletedataprivacymaskingrule",
+    "functionName": "deleteDataprivacyMaskingrule",
+    "signature": "deleteDataprivacyMaskingrule(ruleId)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // ruleId\n\n// Delete a masking rule.\nDeleteDataprivacyMaskingruleRequest.deleteDataprivacyMaskingrule(ruleId: ruleId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteDataprivacyMaskingruleRequest.deleteDataprivacyMaskingrule was successful\")\n    }\n}"
+  },
+  "getdataprivacymaskingrule": {
+    "operationId": "getdataprivacymaskingrule",
+    "functionName": "getDataprivacyMaskingrule",
+    "signature": "getDataprivacyMaskingrule(ruleId)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "MaskingRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // ruleId\n\n// Fetch details about a masking rule.\nGetDataprivacyMaskingruleRequest.getDataprivacyMaskingrule(ruleId: ruleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDataprivacyMaskingruleRequest.getDataprivacyMaskingrule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getdataprivacymaskingrules": {
+    "operationId": "getdataprivacymaskingrules",
+    "functionName": "getDataprivacyMaskingrules",
+    "signature": "getDataprivacyMaskingrules()",
+    "return": "MaskingRuleListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieve the list of masking rules.\nGetDataprivacyMaskingrulesRequest.getDataprivacyMaskingrules() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetDataprivacyMaskingrulesRequest.getDataprivacyMaskingrules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchdataprivacymaskingrule": {
+    "operationId": "patchdataprivacymaskingrule",
+    "functionName": "patchDataprivacyMaskingrule",
+    "signature": "patchDataprivacyMaskingrule(ruleId, body)",
+    "parameters": [
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "MaskingRule",
+        "required": "false"
+      }
+    ],
+    "return": "MaskingRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet ruleId: String = \"\" // ruleId\nlet body: MaskingRule = new MaskingRule(...) // \n\n// Update information about a masking rule.\nPatchDataprivacyMaskingruleRequest.patchDataprivacyMaskingrule(ruleId: ruleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchDataprivacyMaskingruleRequest.patchDataprivacyMaskingrule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postdataprivacymaskingrules": {
+    "operationId": "postdataprivacymaskingrules",
+    "functionName": "postDataprivacyMaskingrules",
+    "signature": "postDataprivacyMaskingrules(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "MaskingRule",
+        "required": "true"
+      }
+    ],
+    "return": "MaskingRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: MaskingRule = new MaskingRule(...) // Details for creating masking rule resource\n\n// Create a new masking rule resource.\nPostDataprivacyMaskingrulesRequest.postDataprivacyMaskingrules(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostDataprivacyMaskingrulesRequest.postDataprivacyMaskingrules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postdataprivacymaskingrulesvalidate": {
+    "operationId": "postdataprivacymaskingrulesvalidate",
+    "functionName": "postDataprivacyMaskingrulesValidate",
+    "signature": "postDataprivacyMaskingrulesValidate(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "MaskingRuleValidateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "MaskingRuleValidateResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: MaskingRuleValidateRequest = new MaskingRuleValidateRequest(...) // Text to be masked\n\n// Validate masking before creating.\nPostDataprivacyMaskingrulesValidateRequest.postDataprivacyMaskingrulesValidate(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostDataprivacyMaskingrulesValidateRequest.postDataprivacyMaskingrulesValidate was successful\")\n        dump(response)\n    }\n}"
+  },
   "getdownload": {
     "operationId": "getdownload",
     "functionName": "getDownload",
@@ -12519,6 +12600,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet settingsId: String = \"\" // Settings id\n\n// Delete settings for CSV import\nDeleteExternalcontactsImportCsvSettingRequest.deleteExternalcontactsImportCsvSetting(settingsId: settingsId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteExternalcontactsImportCsvSettingRequest.deleteExternalcontactsImportCsvSetting was successful\")\n    }\n}"
   },
+  "deleteexternalcontactsimportsetting": {
+    "operationId": "deleteexternalcontactsimportsetting",
+    "functionName": "deleteExternalcontactsImportSetting",
+    "signature": "deleteExternalcontactsImportSetting(settingsId)",
+    "parameters": [
+      {
+        "name": "settingsId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet settingsId: String = \"\" // Settings id\n\n// Delete Settings\nDeleteExternalcontactsImportSettingRequest.deleteExternalcontactsImportSetting(settingsId: settingsId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteExternalcontactsImportSettingRequest.deleteExternalcontactsImportSetting was successful\")\n    }\n}"
+  },
   "deleteexternalcontactsorganization": {
     "operationId": "deleteexternalcontactsorganization",
     "functionName": "deleteExternalcontactsOrganization",
@@ -12609,7 +12703,7 @@
         "required": "true"
       }
     ],
-    "return": "EntityListing",
+    "return": "ContactIdentifierListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet contactId: String = \"\" // ExternalContact ID\n\n// List the identifiers for a contact\nGetExternalcontactsContactIdentifiersRequest.getExternalcontactsContactIdentifiers(contactId: contactId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactIdentifiersRequest.getExternalcontactsContactIdentifiers was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactscontactjourneysessions": {
@@ -12914,6 +13008,92 @@
     ],
     "return": "CsvUploadPreviewResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet uploadId: String = \"\" // Upload id\n\n// Get preview for CSV upload\nGetExternalcontactsImportCsvUploadPreviewRequest.getExternalcontactsImportCsvUploadPreview(uploadId: uploadId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportCsvUploadPreviewRequest.getExternalcontactsImportCsvUploadPreview was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsimportjob": {
+    "operationId": "getexternalcontactsimportjob",
+    "functionName": "getExternalcontactsImportJob",
+    "signature": "getExternalcontactsImportJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContactImportJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // Job id\n\n// Get job based on id\nGetExternalcontactsImportJobRequest.getExternalcontactsImportJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportJobRequest.getExternalcontactsImportJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsimportjobs": {
+    "operationId": "getexternalcontactsimportjobs",
+    "functionName": "getExternalcontactsImportJobs",
+    "signature": "getExternalcontactsImportJobs(after, pageSize, sortOrder, jobStatus)",
+    "parameters": [
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "jobStatus",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ContactImportJobEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet sortOrder: GetExternalcontactsImportJobsRequest.SortOrder_getExternalcontactsImportJobs = GetExternalcontactsImportJobsRequest.SortOrder_getExternalcontactsImportJobs.enummember // Direction of sorting.\nlet jobStatus: GetExternalcontactsImportJobsRequest.JobStatus_getExternalcontactsImportJobs = GetExternalcontactsImportJobsRequest.JobStatus_getExternalcontactsImportJobs.enummember // Search term to filter by jobStatus\n\n// List jobs for organization\nGetExternalcontactsImportJobsRequest.getExternalcontactsImportJobs(after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportJobsRequest.getExternalcontactsImportJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsimportsetting": {
+    "operationId": "getexternalcontactsimportsetting",
+    "functionName": "getExternalcontactsImportSetting",
+    "signature": "getExternalcontactsImportSetting(settingsId)",
+    "parameters": [
+      {
+        "name": "settingsId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContactImportSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet settingsId: String = \"\" // Settings id\n\n// Get setting based on id\nGetExternalcontactsImportSettingRequest.getExternalcontactsImportSetting(settingsId: settingsId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportSettingRequest.getExternalcontactsImportSetting was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactsimportsettings": {
+    "operationId": "getexternalcontactsimportsettings",
+    "functionName": "getExternalcontactsImportSettings",
+    "signature": "getExternalcontactsImportSettings(after, pageSize, sortOrder, name)",
+    "parameters": [
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "ContactImportSettingsEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet sortOrder: GetExternalcontactsImportSettingsRequest.SortOrder_getExternalcontactsImportSettings = GetExternalcontactsImportSettingsRequest.SortOrder_getExternalcontactsImportSettings.enummember // Direction of sorting.\nlet name: String = \"\" // Search term to filter by settings name\n\n// List settings for organization\nGetExternalcontactsImportSettingsRequest.getExternalcontactsImportSettings(after: after, pageSize: pageSize, sortOrder: sortOrder, name: name) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportSettingsRequest.getExternalcontactsImportSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsorganization": {
     "operationId": "getexternalcontactsorganization",
@@ -13675,6 +13855,34 @@
     "return": "CsvUploadResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: CsvUploadRequest = new CsvUploadRequest(...) // UploadRequest\n\n// Get url for CSV upload\nPostExternalcontactsImportCsvUploadsRequest.postExternalcontactsImportCsvUploads(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsImportCsvUploadsRequest.postExternalcontactsImportCsvUploads was successful\")\n        dump(response)\n    }\n}"
   },
+  "postexternalcontactsimportjobs": {
+    "operationId": "postexternalcontactsimportjobs",
+    "functionName": "postExternalcontactsImportJobs",
+    "signature": "postExternalcontactsImportJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ContactImportJobRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ContactImportJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactImportJobRequest = new ContactImportJobRequest(...) // Job\n\n// Create a new job\nPostExternalcontactsImportJobsRequest.postExternalcontactsImportJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsImportJobsRequest.postExternalcontactsImportJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactsimportsettings": {
+    "operationId": "postexternalcontactsimportsettings",
+    "functionName": "postExternalcontactsImportSettings",
+    "signature": "postExternalcontactsImportSettings(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ContactImportSettings",
+        "required": "true"
+      }
+    ],
+    "return": "ContactImportSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactImportSettings = new ContactImportSettings(...) // Setting\n\n// Create a new settings\nPostExternalcontactsImportSettingsRequest.postExternalcontactsImportSettings(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsImportSettingsRequest.postExternalcontactsImportSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "postexternalcontactsmergecontacts": {
     "operationId": "postexternalcontactsmergecontacts",
     "functionName": "postExternalcontactsMergeContacts",
@@ -13867,6 +14075,44 @@
     ],
     "return": "CsvSettings",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet settingsId: String = \"\" // Settings id\nlet body: CsvSettings = new CsvSettings(...) // Settings\n\n// Update settings for CSV import\nPutExternalcontactsImportCsvSettingRequest.putExternalcontactsImportCsvSetting(settingsId: settingsId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutExternalcontactsImportCsvSettingRequest.putExternalcontactsImportCsvSetting was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putexternalcontactsimportjob": {
+    "operationId": "putexternalcontactsimportjob",
+    "functionName": "putExternalcontactsImportJob",
+    "signature": "putExternalcontactsImportJob(jobId, body)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ContactImportJobStatusUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "ContactImportJobStatusUpdateResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // Job id\nlet body: ContactImportJobStatusUpdateRequest = new ContactImportJobStatusUpdateRequest(...) // Status of the Job's workflow\n\n// Update Job's workflow status\nPutExternalcontactsImportJobRequest.putExternalcontactsImportJob(jobId: jobId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutExternalcontactsImportJobRequest.putExternalcontactsImportJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putexternalcontactsimportsetting": {
+    "operationId": "putexternalcontactsimportsetting",
+    "functionName": "putExternalcontactsImportSetting",
+    "signature": "putExternalcontactsImportSetting(settingsId, body)",
+    "parameters": [
+      {
+        "name": "settingsId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ContactImportSettings",
+        "required": "true"
+      }
+    ],
+    "return": "ContactImportSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet settingsId: String = \"\" // Settings id\nlet body: ContactImportSettings = new ContactImportSettings(...) // Setting\n\n// Update settings\nPutExternalcontactsImportSettingRequest.putExternalcontactsImportSetting(settingsId: settingsId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutExternalcontactsImportSettingRequest.putExternalcontactsImportSetting was successful\")\n        dump(response)\n    }\n}"
   },
   "putexternalcontactsorganization": {
     "operationId": "putexternalcontactsorganization",
@@ -45999,7 +46245,7 @@
   "getworkforcemanagementmanagementunitusertimeoffrequests": {
     "operationId": "getworkforcemanagementmanagementunitusertimeoffrequests",
     "functionName": "getWorkforcemanagementManagementunitUserTimeoffrequests",
-    "signature": "getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId, recentlyReviewed)",
+    "signature": "getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId, userId)",
     "parameters": [
       {
         "name": "managementUnitId",
@@ -46010,15 +46256,10 @@
         "name": "userId",
         "type": "String",
         "required": "true"
-      },
-      {
-        "name": "recentlyReviewed",
-        "type": "Bool",
-        "required": "false"
       }
     ],
     "return": "TimeOffRequestList",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet userId: String = \"\" // The userId to whom the Time Off Request applies.\nlet recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days\n\n// Get a list of time off requests for a given user\nGetWorkforcemanagementManagementunitUserTimeoffrequestsRequest.getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: managementUnitId, userId: userId, recentlyReviewed: recentlyReviewed) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementManagementunitUserTimeoffrequestsRequest.getWorkforcemanagementManagementunitUserTimeoffrequests was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet managementUnitId: String = \"\" // The ID of the management unit, or 'mine' for the management unit of the logged-in user.\nlet userId: String = \"\" // The userId to whom the Time Off Request applies.\n\n// Get a list of time off requests for a given user\nGetWorkforcemanagementManagementunitUserTimeoffrequestsRequest.getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: managementUnitId, userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementManagementunitUserTimeoffrequestsRequest.getWorkforcemanagementManagementunitUserTimeoffrequests was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementmanagementunitusers": {
     "operationId": "getworkforcemanagementmanagementunitusers",
@@ -46352,16 +46593,9 @@
   "getworkforcemanagementtimeoffrequests": {
     "operationId": "getworkforcemanagementtimeoffrequests",
     "functionName": "getWorkforcemanagementTimeoffrequests",
-    "signature": "getWorkforcemanagementTimeoffrequests(recentlyReviewed)",
-    "parameters": [
-      {
-        "name": "recentlyReviewed",
-        "type": "Bool",
-        "required": "false"
-      }
-    ],
+    "signature": "getWorkforcemanagementTimeoffrequests()",
     "return": "TimeOffRequestList",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet recentlyReviewed: Bool = true // Limit results to requests that have been reviewed within the preceding 30 days\n\n// Get a list of time off requests for the current user\nGetWorkforcemanagementTimeoffrequestsRequest.getWorkforcemanagementTimeoffrequests(recentlyReviewed: recentlyReviewed) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementTimeoffrequestsRequest.getWorkforcemanagementTimeoffrequests was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of time off requests for the current user\nGetWorkforcemanagementTimeoffrequestsRequest.getWorkforcemanagementTimeoffrequests() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementTimeoffrequestsRequest.getWorkforcemanagementTimeoffrequests was successful\")\n        dump(response)\n    }\n}"
   },
   "getworkforcemanagementuserworkplanbidranks": {
     "operationId": "getworkforcemanagementuserworkplanbidranks",

@@ -9,7 +9,8 @@
 | **channel** | **String** | Filter source by channel. | [optional] |
 | **language** | **String** | Filter source by language. | [optional] |
 | **categories** | **[String]** | Filter source by categories. | [optional] |
+| **baseUrl** | **String** | The base URL to resources. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@157.0.0_
+_PureCloudPlatformClientV2@158.0.0_

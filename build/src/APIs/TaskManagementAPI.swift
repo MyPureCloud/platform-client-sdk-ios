@@ -1239,6 +1239,7 @@ open class TaskManagementAPI {
         case defaultlanguage = "defaultLanguage"
         case schema = "schema"
         case flow = "flow"
+        case defaultscript = "defaultScript"
     }
     
     /**

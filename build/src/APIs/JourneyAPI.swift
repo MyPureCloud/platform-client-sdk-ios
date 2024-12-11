@@ -317,7 +317,6 @@ open class JourneyAPI {
     /**
      Delete the Schedule of a JourneyView
      - DELETE /api/v2/journey/views/{viewId}/schedules
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2509,7 +2508,6 @@ open class JourneyAPI {
     /**
      Get the Schedule for a JourneyView
      - GET /api/v2/journey/views/{viewId}/schedules
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -2933,7 +2931,6 @@ open class JourneyAPI {
     /**
      Get the job for a journey view version.
      - GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3008,7 +3005,6 @@ open class JourneyAPI {
     /**
      Get the result of a job for a journey view version.
      - GET /api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -3222,7 +3218,6 @@ open class JourneyAPI {
     /**
      Get the latest job of a journey view version.
      - GET /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -4297,7 +4292,6 @@ open class JourneyAPI {
     /**
      Update the job for a journey view version. Only the status can be changed and only to Cancelled
      - PATCH /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5486,7 +5480,6 @@ open class JourneyAPI {
     /**
      Submit a job request for a journey view version.
      - POST /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
@@ -5923,7 +5916,6 @@ open class JourneyAPI {
     /**
      Update the Schedule for a JourneyView
      - PUT /api/v2/journey/views/{viewId}/schedules
-     - used for long descriptions
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth

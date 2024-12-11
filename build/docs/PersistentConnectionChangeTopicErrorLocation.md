@@ -1,0 +1,15 @@
+# PersistentConnectionChangeTopicErrorLocation
+
+## PersistentConnectionChangeTopicErrorLocation
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **function** | **String** |  | [optional] |
+| **fileID** | **String** |  | [optional] |
+| **line** | **Int** |  | [optional] |
+
+
+
+_PureCloudPlatformClientV2@158.0.0_

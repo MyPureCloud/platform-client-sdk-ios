@@ -787,6 +787,16 @@ docs/ContactColumnTimeZone.md
 docs/ContactColumnToDataActionFieldMapping.md
 docs/ContactDetailEventTopicContactUpdateEvent.md
 docs/ContactIdentifier.md
+docs/ContactIdentifierListing.md
+docs/ContactImportField.md
+docs/ContactImportJobEntityListing.md
+docs/ContactImportJobMetadata.md
+docs/ContactImportJobRequest.md
+docs/ContactImportJobResponse.md
+docs/ContactImportJobStatusUpdateRequest.md
+docs/ContactImportJobStatusUpdateResponse.md
+docs/ContactImportSettings.md
+docs/ContactImportSettingsEntityListing.md
 docs/ContactList.md
 docs/ContactListDivisionView.md
 docs/ContactListDivisionViewListing.md
@@ -959,6 +969,8 @@ docs/ConversationContentButtonResponse.md
 docs/ConversationContentCard.md
 docs/ConversationContentCardAction.md
 docs/ConversationContentCarousel.md
+docs/ConversationContentDatePicker.md
+docs/ConversationContentDatePickerAvailableTime.md
 docs/ConversationContentLocation.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentQuickReply.md
@@ -1318,6 +1330,8 @@ docs/DataActionContactColumnFieldMapping.md
 docs/DataAvailabilityResponse.md
 docs/DataExtensionsAPI.json
 docs/DataExtensionsAPI.md
+docs/DataPrivacyAPI.json
+docs/DataPrivacyAPI.md
 docs/DataSchema.md
 docs/DataSchemaListing.md
 docs/DataTable.md
@@ -2484,6 +2498,7 @@ docs/KnowledgeImportJobRequest.md
 docs/KnowledgeImportJobResponse.md
 docs/KnowledgeImportJobSettings.md
 docs/KnowledgeImportJobStatistics.md
+docs/KnowledgeIntegrationDefaultSettings.md
 docs/KnowledgeIntegrationFilter.md
 docs/KnowledgeIntegrationFilterValue.md
 docs/KnowledgeIntegrationOptionsResponse.md
@@ -2697,6 +2712,10 @@ docs/Manager.md
 docs/MarkContactAddressUncontactableActionSettings.md
 docs/MarkContactUncontactableActionSettings.md
 docs/Markdown.md
+docs/MaskingRule.md
+docs/MaskingRuleListing.md
+docs/MaskingRuleValidateRequest.md
+docs/MaskingRuleValidateResponse.md
 docs/MatchCriteria.md
 docs/MatchCriteriaTestResult.md
 docs/MatchShiftTradeRequest.md
@@ -3091,6 +3110,10 @@ docs/PerformanceProfile.md
 docs/PermissionCollectionEntityListing.md
 docs/PermissionDetails.md
 docs/Permissions.md
+docs/PersistentConnectionChangeTopicErrorInfo.md
+docs/PersistentConnectionChangeTopicErrorInfoDetails.md
+docs/PersistentConnectionChangeTopicErrorLocation.md
+docs/PersistentConnectionChangeTopicPersistentConnectionChangeEvent.md
 docs/Phone.md
 docs/PhoneBase.md
 docs/PhoneBaseEntityListing.md
@@ -5002,6 +5025,7 @@ docs/deleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/deleteConversationsMessagingSetting-example.txt
 docs/deleteConversationsMessagingSettingsDefault-example.txt
 docs/deleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
+docs/deleteDataprivacyMaskingrule-example.txt
 docs/deleteDiagnosticsLogcaptureBrowserUser-example.txt
 docs/deleteEmployeeengagementCelebration-example.txt
 docs/deleteEmployeeperformanceExternalmetricsDefinition-example.txt
@@ -5010,6 +5034,7 @@ docs/deleteExternalcontactsContactNote-example.txt
 docs/deleteExternalcontactsContactsSchema-example.txt
 docs/deleteExternalcontactsExternalsource-example.txt
 docs/deleteExternalcontactsImportCsvSetting-example.txt
+docs/deleteExternalcontactsImportSetting-example.txt
 docs/deleteExternalcontactsOrganization-example.txt
 docs/deleteExternalcontactsOrganizationNote-example.txt
 docs/deleteExternalcontactsOrganizationTrustor-example.txt
@@ -5464,6 +5489,8 @@ docs/getConversationsVideoParticipantCommunicationWrapup-example.txt
 docs/getDataextensionsCoretype-example.txt
 docs/getDataextensionsCoretypes-example.txt
 docs/getDataextensionsLimits-example.txt
+docs/getDataprivacyMaskingrule-example.txt
+docs/getDataprivacyMaskingrules-example.txt
 docs/getDate-example.txt
 docs/getDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
 docs/getDiagnosticsLogcaptureBrowserUser-example.txt
@@ -5495,6 +5522,10 @@ docs/getExternalcontactsImportCsvSetting-example.txt
 docs/getExternalcontactsImportCsvSettings-example.txt
 docs/getExternalcontactsImportCsvUploadDetails-example.txt
 docs/getExternalcontactsImportCsvUploadPreview-example.txt
+docs/getExternalcontactsImportJob-example.txt
+docs/getExternalcontactsImportJobs-example.txt
+docs/getExternalcontactsImportSetting-example.txt
+docs/getExternalcontactsImportSettings-example.txt
 docs/getExternalcontactsOrganization-example.txt
 docs/getExternalcontactsOrganizationContacts-example.txt
 docs/getExternalcontactsOrganizationNote-example.txt
@@ -6476,6 +6507,7 @@ docs/patchConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
 docs/patchConversationsMessagingSetting-example.txt
 docs/patchConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/patchConversationsSettings-example.txt
+docs/patchDataprivacyMaskingrule-example.txt
 docs/patchEmailsSettings-example.txt
 docs/patchEmailsSettings-example.txt
 docs/patchEmployeeengagementCelebration-example.txt
@@ -6796,6 +6828,8 @@ docs/postConversationsParticipantsAttributesSearch-example.txt
 docs/postConversationsScreenshareParticipantCommunicationWrapup-example.txt
 docs/postConversationsSocialParticipantCommunicationWrapup-example.txt
 docs/postConversationsVideoParticipantCommunicationWrapup-example.txt
+docs/postDataprivacyMaskingrules-example.txt
+docs/postDataprivacyMaskingrulesValidate-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
 docs/postDiagnosticsLogcaptureBrowserUser-example.txt
@@ -6833,6 +6867,8 @@ docs/postExternalcontactsIdentifierlookup-example.txt
 docs/postExternalcontactsImportCsvJobs-example.txt
 docs/postExternalcontactsImportCsvSettings-example.txt
 docs/postExternalcontactsImportCsvUploads-example.txt
+docs/postExternalcontactsImportJobs-example.txt
+docs/postExternalcontactsImportSettings-example.txt
 docs/postExternalcontactsMergeContacts-example.txt
 docs/postExternalcontactsOrganizationNotes-example.txt
 docs/postExternalcontactsOrganizations-example.txt
@@ -7324,6 +7360,8 @@ docs/putExternalcontactsContactsSchema-example.txt
 docs/putExternalcontactsConversation-example.txt
 docs/putExternalcontactsExternalsource-example.txt
 docs/putExternalcontactsImportCsvSetting-example.txt
+docs/putExternalcontactsImportJob-example.txt
+docs/putExternalcontactsImportSetting-example.txt
 docs/putExternalcontactsOrganization-example.txt
 docs/putExternalcontactsOrganizationNote-example.txt
 docs/putExternalcontactsOrganizationTrustorTrustorId-example.txt
@@ -7523,6 +7561,7 @@ src/APIs/CoachingAPI.swift
 src/APIs/ContentManagementAPI.swift
 src/APIs/ConversationsAPI.swift
 src/APIs/DataExtensionsAPI.swift
+src/APIs/DataPrivacyAPI.swift
 src/APIs/DownloadsAPI.swift
 src/APIs/EmailsAPI.swift
 src/APIs/EmployeeEngagementAPI.swift
@@ -8349,6 +8388,16 @@ src/Models/ContactColumnTimeZone.swift
 src/Models/ContactColumnToDataActionFieldMapping.swift
 src/Models/ContactDetailEventTopicContactUpdateEvent.swift
 src/Models/ContactIdentifier.swift
+src/Models/ContactIdentifierListing.swift
+src/Models/ContactImportField.swift
+src/Models/ContactImportJobEntityListing.swift
+src/Models/ContactImportJobMetadata.swift
+src/Models/ContactImportJobRequest.swift
+src/Models/ContactImportJobResponse.swift
+src/Models/ContactImportJobStatusUpdateRequest.swift
+src/Models/ContactImportJobStatusUpdateResponse.swift
+src/Models/ContactImportSettings.swift
+src/Models/ContactImportSettingsEntityListing.swift
 src/Models/ContactList.swift
 src/Models/ContactListDivisionView.swift
 src/Models/ContactListDivisionViewListing.swift
@@ -8519,6 +8568,8 @@ src/Models/ConversationContentButtonResponse.swift
 src/Models/ConversationContentCard.swift
 src/Models/ConversationContentCardAction.swift
 src/Models/ConversationContentCarousel.swift
+src/Models/ConversationContentDatePicker.swift
+src/Models/ConversationContentDatePickerAvailableTime.swift
 src/Models/ConversationContentLocation.swift
 src/Models/ConversationContentNotificationTemplate.swift
 src/Models/ConversationContentQuickReply.swift
@@ -10006,6 +10057,7 @@ src/Models/KnowledgeImportJobRequest.swift
 src/Models/KnowledgeImportJobResponse.swift
 src/Models/KnowledgeImportJobSettings.swift
 src/Models/KnowledgeImportJobStatistics.swift
+src/Models/KnowledgeIntegrationDefaultSettings.swift
 src/Models/KnowledgeIntegrationFilter.swift
 src/Models/KnowledgeIntegrationFilterValue.swift
 src/Models/KnowledgeIntegrationOptionsResponse.swift
@@ -10207,6 +10259,10 @@ src/Models/Manager.swift
 src/Models/MarkContactAddressUncontactableActionSettings.swift
 src/Models/MarkContactUncontactableActionSettings.swift
 src/Models/Markdown.swift
+src/Models/MaskingRule.swift
+src/Models/MaskingRuleListing.swift
+src/Models/MaskingRuleValidateRequest.swift
+src/Models/MaskingRuleValidateResponse.swift
 src/Models/MatchCriteria.swift
 src/Models/MatchCriteriaTestResult.swift
 src/Models/MatchShiftTradeRequest.swift
@@ -10586,6 +10642,10 @@ src/Models/PerformanceProfile.swift
 src/Models/PermissionCollectionEntityListing.swift
 src/Models/PermissionDetails.swift
 src/Models/Permissions.swift
+src/Models/PersistentConnectionChangeTopicErrorInfo.swift
+src/Models/PersistentConnectionChangeTopicErrorInfoDetails.swift
+src/Models/PersistentConnectionChangeTopicErrorLocation.swift
+src/Models/PersistentConnectionChangeTopicPersistentConnectionChangeEvent.swift
 src/Models/Phone.swift
 src/Models/PhoneBase.swift
 src/Models/PhoneBaseEntityListing.swift

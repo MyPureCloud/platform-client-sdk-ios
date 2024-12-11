@@ -7931,18 +7931,15 @@ open class WorkforceManagementAPI {
     
     
     
-    
-    
     /**
      Get a list of time off requests for a given user
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: String, userId: String, recentlyReviewed: Bool? = nil, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementManagementunitUserTimeoffrequestsWithRequestBuilder(managementUnitId: managementUnitId, userId: userId, recentlyReviewed: recentlyReviewed)
+    open class func getWorkforcemanagementManagementunitUserTimeoffrequests(managementUnitId: String, userId: String, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementManagementunitUserTimeoffrequestsWithRequestBuilder(managementUnitId: managementUnitId, userId: userId)
         requestBuilder.execute { (response: Response<TimeOffRequestList>?, error) -> Void in
             do {
                 if let e = error {
@@ -8022,11 +8019,10 @@ open class WorkforceManagementAPI {
      
      - parameter managementUnitId: (path) The ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. 
      - parameter userId: (path) The userId to whom the Time Off Request applies. 
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
 
      - returns: RequestBuilder<TimeOffRequestList> 
      */
-    open class func getWorkforcemanagementManagementunitUserTimeoffrequestsWithRequestBuilder(managementUnitId: String, userId: String, recentlyReviewed: Bool? = nil) -> RequestBuilder<TimeOffRequestList> {        
+    open class func getWorkforcemanagementManagementunitUserTimeoffrequestsWithRequestBuilder(managementUnitId: String, userId: String) -> RequestBuilder<TimeOffRequestList> {        
         var path = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests"
         let managementUnitIdPreEscape = "\(managementUnitId)"
         let managementUnitIdPostEscape = managementUnitIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -8037,10 +8033,7 @@ open class WorkforceManagementAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "recentlyReviewed": recentlyReviewed
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
@@ -9926,16 +9919,13 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
-    
-    
     /**
      Get a list of time off requests for the current user
      
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getWorkforcemanagementTimeoffrequests(recentlyReviewed: Bool? = nil, completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
-        let requestBuilder = getWorkforcemanagementTimeoffrequestsWithRequestBuilder(recentlyReviewed: recentlyReviewed)
+    open class func getWorkforcemanagementTimeoffrequests(completion: @escaping ((_ data: TimeOffRequestList?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementTimeoffrequestsWithRequestBuilder()
         requestBuilder.execute { (response: Response<TimeOffRequestList>?, error) -> Void in
             do {
                 if let e = error {
@@ -10012,20 +10002,15 @@ open class WorkforceManagementAPI {
     "status" : "PENDING"
   } ]
 }, statusCode=200}]
-     
-     - parameter recentlyReviewed: (query) Limit results to requests that have been reviewed within the preceding 30 days (optional)
 
      - returns: RequestBuilder<TimeOffRequestList> 
      */
-    open class func getWorkforcemanagementTimeoffrequestsWithRequestBuilder(recentlyReviewed: Bool? = nil) -> RequestBuilder<TimeOffRequestList> {        
+    open class func getWorkforcemanagementTimeoffrequestsWithRequestBuilder() -> RequestBuilder<TimeOffRequestList> {        
         let path = "/api/v2/workforcemanagement/timeoffrequests"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        var requestUrl = URLComponents(string: URLString)
-        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
-            "recentlyReviewed": recentlyReviewed
-        ])
+        let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<TimeOffRequestList>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 

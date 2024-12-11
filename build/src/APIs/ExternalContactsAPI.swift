@@ -266,6 +266,51 @@ open class ExternalContactsAPI {
     
     
     /**
+     Delete Settings
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteExternalcontactsImportSetting(settingsId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteExternalcontactsImportSettingWithRequestBuilder(settingsId: settingsId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete Settings
+     - DELETE /api/v2/externalcontacts/import/settings/{settingsId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter settingsId: (path) Settings id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteExternalcontactsImportSettingWithRequestBuilder(settingsId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/externalcontacts/import/settings/{settingsId}"
+        let settingsIdPreEscape = "\(settingsId)"
+        let settingsIdPostEscape = settingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{settingsId}", with: settingsIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete an external organization
      
      - parameter externalOrganizationId: (path) External Organization ID 
@@ -752,9 +797,9 @@ open class ExternalContactsAPI {
      - parameter contactId: (path) ExternalContact ID 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsContactIdentifiers(contactId: String, completion: @escaping ((_ data: EntityListing?,_ error: Error?) -> Void)) {
+    open class func getExternalcontactsContactIdentifiers(contactId: String, completion: @escaping ((_ data: ContactIdentifierListing?,_ error: Error?) -> Void)) {
         let requestBuilder = getExternalcontactsContactIdentifiersWithRequestBuilder(contactId: contactId)
-        requestBuilder.execute { (response: Response<EntityListing>?, error) -> Void in
+        requestBuilder.execute { (response: Response<ContactIdentifierListing>?, error) -> Void in
             do {
                 if let e = error {
                     completion(nil, e)
@@ -777,14 +822,26 @@ open class ExternalContactsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "entities" : [ "{}", "{}" ]
+  "entities" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "type" : "SocialLine",
+    "value" : "value"
+  } ]
 }, statusCode=200}]
      
      - parameter contactId: (path) ExternalContact ID 
 
-     - returns: RequestBuilder<EntityListing> 
+     - returns: RequestBuilder<ContactIdentifierListing> 
      */
-    open class func getExternalcontactsContactIdentifiersWithRequestBuilder(contactId: String) -> RequestBuilder<EntityListing> {        
+    open class func getExternalcontactsContactIdentifiersWithRequestBuilder(contactId: String) -> RequestBuilder<ContactIdentifierListing> {        
         var path = "/api/v2/externalcontacts/contacts/{contactId}/identifiers"
         let contactIdPreEscape = "\(contactId)"
         let contactIdPostEscape = contactIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -794,7 +851,7 @@ open class ExternalContactsAPI {
         
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<EntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ContactIdentifierListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -2699,6 +2756,377 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CsvUploadPreviewResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get job based on id
+     
+     - parameter jobId: (path) Job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportJob(jobId: String, completion: @escaping ((_ data: ContactImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<ContactImportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get job based on id
+     - GET /api/v2/externalcontacts/import/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "executionStep" : "Validating",
+  "settings" : "{}",
+  "metadata" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "statusDetails" : "statusDetails",
+  "id" : "id",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) Job id 
+
+     - returns: RequestBuilder<ContactImportJobResponse> 
+     */
+    open class func getExternalcontactsImportJobWithRequestBuilder(jobId: String) -> RequestBuilder<ContactImportJobResponse> {        
+        var path = "/api/v2/externalcontacts/import/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum SortOrder_getExternalcontactsImportJobs: String { 
+        case ascending = "Ascending"
+        case descending = "Descending"
+    }
+    
+    
+    
+    public enum JobStatus_getExternalcontactsImportJobs: String { 
+        case created = "Created"
+        case running = "Running"
+        case completed = "Completed"
+        case failed = "Failed"
+        case cancelled = "Cancelled"
+    }
+    
+    
+    /**
+     List jobs for organization
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter sortOrder: (query) Direction of sorting. (optional)
+     - parameter jobStatus: (query) Search term to filter by jobStatus (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportJobs(after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportJobs? = nil, jobStatus: JobStatus_getExternalcontactsImportJobs? = nil, completion: @escaping ((_ data: ContactImportJobEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportJobsWithRequestBuilder(after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus)
+        requestBuilder.execute { (response: Response<ContactImportJobEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List jobs for organization
+     - GET /api/v2/externalcontacts/import/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
+  "entities" : [ {
+    "executionStep" : "Validating",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "statusDetails" : "statusDetails",
+    "id" : "id",
+    "status" : "Created"
+  }, {
+    "executionStep" : "Validating",
+    "settings" : "{}",
+    "metadata" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "statusDetails" : "statusDetails",
+    "id" : "id",
+    "status" : "Created"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter sortOrder: (query) Direction of sorting. (optional)
+     - parameter jobStatus: (query) Search term to filter by jobStatus (optional)
+
+     - returns: RequestBuilder<ContactImportJobEntityListing> 
+     */
+    open class func getExternalcontactsImportJobsWithRequestBuilder(after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportJobs? = nil, jobStatus: JobStatus_getExternalcontactsImportJobs? = nil) -> RequestBuilder<ContactImportJobEntityListing> {        
+        let path = "/api/v2/externalcontacts/import/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize, 
+            "sortOrder": sortOrder?.rawValue, 
+            "jobStatus": jobStatus?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<ContactImportJobEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get setting based on id
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportSetting(settingsId: String, completion: @escaping ((_ data: ContactImportSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportSettingWithRequestBuilder(settingsId: settingsId)
+        requestBuilder.execute { (response: Response<ContactImportSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get setting based on id
+     - GET /api/v2/externalcontacts/import/settings/{settingsId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mergeContacts" : true,
+  "matchingCriteria" : [ "Email", "Email" ],
+  "importFields" : [ {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "externalSourceId" : "externalSourceId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter settingsId: (path) Settings id 
+
+     - returns: RequestBuilder<ContactImportSettings> 
+     */
+    open class func getExternalcontactsImportSettingWithRequestBuilder(settingsId: String) -> RequestBuilder<ContactImportSettings> {        
+        var path = "/api/v2/externalcontacts/import/settings/{settingsId}"
+        let settingsIdPreEscape = "\(settingsId)"
+        let settingsIdPostEscape = settingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{settingsId}", with: settingsIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactImportSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum SortOrder_getExternalcontactsImportSettings: String { 
+        case ascending = "Ascending"
+        case descending = "Descending"
+    }
+    
+    
+    
+    
+    /**
+     List settings for organization
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter sortOrder: (query) Direction of sorting. (optional)
+     - parameter name: (query) Search term to filter by settings name (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsImportSettings(after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportSettings? = nil, name: String? = nil, completion: @escaping ((_ data: ContactImportSettingsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportSettingsWithRequestBuilder(after: after, pageSize: pageSize, sortOrder: sortOrder, name: name)
+        requestBuilder.execute { (response: Response<ContactImportSettingsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List settings for organization
+     - GET /api/v2/externalcontacts/import/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "cursors" : "{}",
+  "entities" : [ {
+    "mergeContacts" : true,
+    "matchingCriteria" : [ "Email", "Email" ],
+    "importFields" : [ {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "externalSourceId" : "externalSourceId",
+    "id" : "id"
+  }, {
+    "mergeContacts" : true,
+    "matchingCriteria" : [ "Email", "Email" ],
+    "importFields" : [ {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    }, {
+      "name" : "name",
+      "included" : true
+    } ],
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "externalSourceId" : "externalSourceId",
+    "id" : "id"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
+     - parameter sortOrder: (query) Direction of sorting. (optional)
+     - parameter name: (query) Search term to filter by settings name (optional)
+
+     - returns: RequestBuilder<ContactImportSettingsEntityListing> 
+     */
+    open class func getExternalcontactsImportSettingsWithRequestBuilder(after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportSettings? = nil, name: String? = nil) -> RequestBuilder<ContactImportSettingsEntityListing> {        
+        let path = "/api/v2/externalcontacts/import/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize, 
+            "sortOrder": sortOrder?.rawValue, 
+            "name": name
+        ])
+
+        let requestBuilder: RequestBuilder<ContactImportSettingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -12114,6 +12542,139 @@ open class ExternalContactsAPI {
     
     
     /**
+     Create a new job
+     
+     - parameter body: (body) Job 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsImportJobs(body: ContactImportJobRequest, completion: @escaping ((_ data: ContactImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsImportJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ContactImportJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new job
+     - POST /api/v2/externalcontacts/import/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "executionStep" : "Validating",
+  "settings" : "{}",
+  "metadata" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "statusDetails" : "statusDetails",
+  "id" : "id",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter body: (body) Job 
+
+     - returns: RequestBuilder<ContactImportJobResponse> 
+     */
+    open class func postExternalcontactsImportJobsWithRequestBuilder(body: ContactImportJobRequest) -> RequestBuilder<ContactImportJobResponse> {        
+        let path = "/api/v2/externalcontacts/import/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a new settings
+     
+     - parameter body: (body) Setting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsImportSettings(body: ContactImportSettings, completion: @escaping ((_ data: ContactImportSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsImportSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ContactImportSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a new settings
+     - POST /api/v2/externalcontacts/import/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mergeContacts" : true,
+  "matchingCriteria" : [ "Email", "Email" ],
+  "importFields" : [ {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "externalSourceId" : "externalSourceId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter body: (body) Setting 
+
+     - returns: RequestBuilder<ContactImportSettings> 
+     */
+    open class func postExternalcontactsImportSettingsWithRequestBuilder(body: ContactImportSettings) -> RequestBuilder<ContactImportSettings> {        
+        let path = "/api/v2/externalcontacts/import/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactImportSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Merge two contacts into a new contact record
      
      - parameter body: (body) MergeRequest 
@@ -13275,6 +13836,147 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CsvSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update Job's workflow status
+     
+     - parameter jobId: (path) Job id 
+     - parameter body: (body) Status of the Job&#39;s workflow 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsImportJob(jobId: String, body: ContactImportJobStatusUpdateRequest, completion: @escaping ((_ data: ContactImportJobStatusUpdateResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsImportJobWithRequestBuilder(jobId: jobId, body: body)
+        requestBuilder.execute { (response: Response<ContactImportJobStatusUpdateResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update Job's workflow status
+     - PUT /api/v2/externalcontacts/import/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "jobId" : "jobId",
+  "status" : "Continue"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) Job id 
+     - parameter body: (body) Status of the Job&#39;s workflow 
+
+     - returns: RequestBuilder<ContactImportJobStatusUpdateResponse> 
+     */
+    open class func putExternalcontactsImportJobWithRequestBuilder(jobId: String, body: ContactImportJobStatusUpdateRequest) -> RequestBuilder<ContactImportJobStatusUpdateResponse> {        
+        var path = "/api/v2/externalcontacts/import/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactImportJobStatusUpdateResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update settings
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter body: (body) Setting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putExternalcontactsImportSetting(settingsId: String, body: ContactImportSettings, completion: @escaping ((_ data: ContactImportSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putExternalcontactsImportSettingWithRequestBuilder(settingsId: settingsId, body: body)
+        requestBuilder.execute { (response: Response<ContactImportSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update settings
+     - PUT /api/v2/externalcontacts/import/settings/{settingsId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mergeContacts" : true,
+  "matchingCriteria" : [ "Email", "Email" ],
+  "importFields" : [ {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  }, {
+    "name" : "name",
+    "included" : true
+  } ],
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "externalSourceId" : "externalSourceId",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter settingsId: (path) Settings id 
+     - parameter body: (body) Setting 
+
+     - returns: RequestBuilder<ContactImportSettings> 
+     */
+    open class func putExternalcontactsImportSettingWithRequestBuilder(settingsId: String, body: ContactImportSettings) -> RequestBuilder<ContactImportSettings> {        
+        var path = "/api/v2/externalcontacts/import/settings/{settingsId}"
+        let settingsIdPreEscape = "\(settingsId)"
+        let settingsIdPostEscape = settingsIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{settingsId}", with: settingsIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactImportSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

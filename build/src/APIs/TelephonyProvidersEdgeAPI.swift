@@ -14705,11 +14705,13 @@ open class TelephonyProvidersEdgeAPI {
   "pageNumber" : 1,
   "entities" : [ {
     "offset" : 0,
+    "canonicalId" : "canonicalId",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
   }, {
     "offset" : 0,
+    "canonicalId" : "canonicalId",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id"
