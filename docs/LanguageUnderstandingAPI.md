@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getLanguageunderstandingMinerTopicPhrase**](LanguageUnderstandingAPI#getLanguageunderstandingMinerTopicPhrase) | Retrieves utterances related to a phrase in a topic. |
 | [**getLanguageunderstandingMinerTopics**](LanguageUnderstandingAPI#getLanguageunderstandingMinerTopics) | Retrieve a list of mined topics. |
 | [**getLanguageunderstandingMiners**](LanguageUnderstandingAPI#getLanguageunderstandingMiners) | Retrieve the list of miners created. |
+| [**getLanguageunderstandingSettings**](LanguageUnderstandingAPI#getLanguageunderstandingSettings) | Get Organization Configuration |
 | [**patchLanguageunderstandingDomain**](LanguageUnderstandingAPI#patchLanguageunderstandingDomain) | Update an NLU Domain. |
 | [**patchLanguageunderstandingMinerDraft**](LanguageUnderstandingAPI#patchLanguageunderstandingMinerDraft) | Save information for the draft. Either topic draft or intent draft should be sent. |
 | [**postLanguageunderstandingDomainFeedback**](LanguageUnderstandingAPI#postLanguageunderstandingDomainFeedback) | Create feedback for the NLU Domain Version. |
@@ -1163,6 +1164,52 @@ LanguageUnderstandingAPI.getLanguageunderstandingMiners(minerType: minerType) { 
 [**MinerListing**](MinerListing)
 
 
+## getLanguageunderstandingSettings
+
+
+
+> [NluOrganization](NluOrganization) getLanguageunderstandingSettings()
+
+Get Organization Configuration
+
+
+
+Wraps GET /api/v2/languageunderstanding/settings  
+
+Requires ANY permissions: 
+
+* languageUnderstanding:settings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+LanguageUnderstandingAPI.getLanguageunderstandingSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("LanguageUnderstandingAPI.getLanguageunderstandingSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**NluOrganization**](NluOrganization)
+
+
 ## patchLanguageunderstandingDomain
 
 
@@ -1799,4 +1846,4 @@ LanguageUnderstandingAPI.putLanguageunderstandingDomainVersion(domainId: domainI
 [**NluDomainVersion**](NluDomainVersion)
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

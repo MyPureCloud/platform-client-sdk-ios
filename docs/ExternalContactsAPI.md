@@ -1760,7 +1760,7 @@ ExternalContactsAPI.getExternalcontactsOrganization(externalOrganizationId: exte
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **externalOrganizationId** | **String**| External Organization ID | |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division"), identifiers ("identifiers"), externalsources ("externalSources") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
 
 
@@ -2057,7 +2057,7 @@ ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNum
 | **q** | **String**| Search query | [optional] |
 | **trustorId** | [**[String]**](String)| Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested | [optional] |
 | **sortOrder** | **String**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\" | [optional] |
-| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division") |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division"), identifiers ("identifiers"), externalsources ("externalSources") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
 
 
@@ -3753,7 +3753,7 @@ ExternalContactsAPI.postExternalcontactsExternalsources(body: body) { (response,
 
 Fetch a contact using an identifier type and value.
 
-Phone number identifier values must be provided with the country code and a leading &#39;+&#39; symbol. Example: \&quot;+1 704 298 4733\&quot;
+NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading &#39;+&#39; symbol. Example: \&quot;+1 704 298 4733\&quot;
 
 
 
@@ -4994,4 +4994,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

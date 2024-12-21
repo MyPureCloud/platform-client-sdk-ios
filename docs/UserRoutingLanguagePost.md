@@ -14,4 +14,4 @@ Represents an organization language assigned to a user. When assigning to a user
 
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

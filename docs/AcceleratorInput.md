@@ -13,4 +13,4 @@ Identity of a CX infrastructure as code accelerator to be run and its inputs
 
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

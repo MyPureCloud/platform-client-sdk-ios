@@ -12,4 +12,4 @@ Model for a Nuance bot geography
 
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

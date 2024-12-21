@@ -11,4 +11,4 @@ Defines a request in the SCIM service provider&#39;s configuration.
 
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

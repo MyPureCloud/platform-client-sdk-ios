@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteTaskmanagementWorkitem**](TaskManagementAPI#deleteTaskmanagementWorkitem) | Delete a workitem |
 | [**deleteTaskmanagementWorkitemsSchema**](TaskManagementAPI#deleteTaskmanagementWorkitemsSchema) | Delete a schema |
 | [**deleteTaskmanagementWorktype**](TaskManagementAPI#deleteTaskmanagementWorktype) | Delete a worktype |
+| [**deleteTaskmanagementWorktypeFlowsDatebasedRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsDatebasedRule) | Delete a date based rule |
 | [**deleteTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsOnattributechangeRule) | Delete a rule |
 | [**deleteTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsOncreateRule) | Delete a rule |
 | [**deleteTaskmanagementWorktypeStatus**](TaskManagementAPI#deleteTaskmanagementWorktypeStatus) | Delete a status |
@@ -22,6 +23,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTaskmanagementWorkitemsSchemaVersions**](TaskManagementAPI#getTaskmanagementWorkitemsSchemaVersions) | Get all versions of a schema |
 | [**getTaskmanagementWorkitemsSchemas**](TaskManagementAPI#getTaskmanagementWorkitemsSchemas) | Get a list of schemas. |
 | [**getTaskmanagementWorktype**](TaskManagementAPI#getTaskmanagementWorktype) | Get a worktype |
+| [**getTaskmanagementWorktypeFlowsDatebasedRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsDatebasedRule) | Get a date based rule |
+| [**getTaskmanagementWorktypeFlowsDatebasedRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsDatebasedRules) | Get all date based rules for a worktype |
 | [**getTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOnattributechangeRule) | Get an attribute change rule |
 | [**getTaskmanagementWorktypeFlowsOnattributechangeRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOnattributechangeRules) | Get all attribute-change rules for a worktype |
 | [**getTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsOncreateRule) | Get an on-create rule |
@@ -34,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchTaskmanagementWorkitemUserWrapups**](TaskManagementAPI#patchTaskmanagementWorkitemUserWrapups) | Add/Remove a wrapup code for a given user in a workitem. |
 | [**patchTaskmanagementWorkitemUsersMeWrapups**](TaskManagementAPI#patchTaskmanagementWorkitemUsersMeWrapups) | Add/Remove a wrapup code for the current user in a workitem. |
 | [**patchTaskmanagementWorktype**](TaskManagementAPI#patchTaskmanagementWorktype) | Update the attributes of a worktype |
+| [**patchTaskmanagementWorktypeFlowsDatebasedRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsDatebasedRule) | Update the attributes of a date based rule |
 | [**patchTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsOnattributechangeRule) | Update the attributes of a rule |
 | [**patchTaskmanagementWorktypeFlowsOncreateRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsOncreateRule) | Update the attributes of a rule |
 | [**patchTaskmanagementWorktypeStatus**](TaskManagementAPI#patchTaskmanagementWorktypeStatus) | Update the attributes of a status |
@@ -45,6 +49,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTaskmanagementWorkitems**](TaskManagementAPI#postTaskmanagementWorkitems) | Create a workitem |
 | [**postTaskmanagementWorkitemsQueryJobs**](TaskManagementAPI#postTaskmanagementWorkitemsQueryJobs) | Create a workitem query job |
 | [**postTaskmanagementWorkitemsSchemas**](TaskManagementAPI#postTaskmanagementWorkitemsSchemas) | Create a schema |
+| [**postTaskmanagementWorktypeFlowsDatebasedRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsDatebasedRules) | Add a date based rule to a worktype |
 | [**postTaskmanagementWorktypeFlowsOnattributechangeRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsOnattributechangeRules) | Add an attribute-change rule to a worktype |
 | [**postTaskmanagementWorktypeFlowsOncreateRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsOncreateRules) | Add an on-create rule to a worktype |
 | [**postTaskmanagementWorktypeStatuses**](TaskManagementAPI#postTaskmanagementWorktypeStatuses) | Add a status to a worktype |
@@ -243,6 +248,57 @@ TaskManagementAPI.deleteTaskmanagementWorktype(worktypeId: worktypeId) { (error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **worktypeId** | **String**| Worktype id | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteTaskmanagementWorktypeFlowsDatebasedRule
+
+
+
+> Void deleteTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId)
+
+Delete a date based rule
+
+
+
+Wraps DELETE /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+
+// Code example
+TaskManagementAPI.deleteTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: worktypeId, ruleId: ruleId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TaskManagementAPI.deleteTaskmanagementWorktypeFlowsDatebasedRule was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
 
 
 ### Return type
@@ -973,6 +1029,112 @@ TaskManagementAPI.getTaskmanagementWorktype(worktypeId: worktypeId, expands: exp
 [**Worktype**](Worktype)
 
 
+## getTaskmanagementWorktypeFlowsDatebasedRule
+
+
+
+> [WorkitemDateBasedRule](WorkitemDateBasedRule) getTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId)
+
+Get a date based rule
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: worktypeId, ruleId: ruleId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeFlowsDatebasedRule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+
+
+### Return type
+
+[**WorkitemDateBasedRule**](WorkitemDateBasedRule)
+
+
+## getTaskmanagementWorktypeFlowsDatebasedRules
+
+
+
+> [WorkitemDateBasedRuleListing](WorkitemDateBasedRuleListing) getTaskmanagementWorktypeFlowsDatebasedRules(worktypeId, after, pageSize)
+
+Get all date based rules for a worktype
+
+
+
+Wraps GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorktypeFlowsDatebasedRules(worktypeId: worktypeId, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorktypeFlowsDatebasedRules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+
+
+### Return type
+
+[**WorkitemDateBasedRuleListing**](WorkitemDateBasedRuleListing)
+
+
 ## getTaskmanagementWorktypeFlowsOnattributechangeRule
 
 
@@ -1602,6 +1764,60 @@ TaskManagementAPI.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body
 [**Worktype**](Worktype)
 
 
+## patchTaskmanagementWorktypeFlowsDatebasedRule
+
+
+
+> [WorkitemDateBasedRule](WorkitemDateBasedRule) patchTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId, body)
+
+Update the attributes of a date based rule
+
+
+
+Wraps PATCH /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let ruleId: String = "" // ruleId
+let body: WorkitemDateBasedRuleUpdate = new WorkitemDateBasedRuleUpdate(...) // Rule
+
+// Code example
+TaskManagementAPI.patchTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: worktypeId, ruleId: ruleId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.patchTaskmanagementWorktypeFlowsDatebasedRule was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **ruleId** | **String**| ruleId | |
+| **body** | [**WorkitemDateBasedRuleUpdate**](WorkitemDateBasedRuleUpdate)| Rule | |
+
+
+### Return type
+
+[**WorkitemDateBasedRule**](WorkitemDateBasedRule)
+
+
 ## patchTaskmanagementWorktypeFlowsOnattributechangeRule
 
 
@@ -2166,6 +2382,58 @@ TaskManagementAPI.postTaskmanagementWorkitemsSchemas(body: body) { (response, er
 [**DataSchema**](DataSchema)
 
 
+## postTaskmanagementWorktypeFlowsDatebasedRules
+
+
+
+> [WorkitemDateBasedRule](WorkitemDateBasedRule) postTaskmanagementWorktypeFlowsDatebasedRules(worktypeId, body)
+
+Add a date based rule to a worktype
+
+
+
+Wraps POST /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules  
+
+Requires ANY permissions: 
+
+* workitems:flowRuleDateBased:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let worktypeId: String = "" // Worktype id
+let body: WorkitemDateBasedRuleCreate = new WorkitemDateBasedRuleCreate(...) // Rule
+
+// Code example
+TaskManagementAPI.postTaskmanagementWorktypeFlowsDatebasedRules(worktypeId: worktypeId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.postTaskmanagementWorktypeFlowsDatebasedRules was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **worktypeId** | **String**| Worktype id | |
+| **body** | [**WorkitemDateBasedRuleCreate**](WorkitemDateBasedRuleCreate)| Rule | |
+
+
+### Return type
+
+[**WorkitemDateBasedRule**](WorkitemDateBasedRule)
+
+
 ## postTaskmanagementWorktypeFlowsOnattributechangeRules
 
 
@@ -2474,4 +2742,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

@@ -12,4 +12,4 @@ This contains contextual information about an invoking entity.
 
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_
