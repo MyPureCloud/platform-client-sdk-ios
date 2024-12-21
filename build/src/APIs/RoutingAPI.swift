@@ -9642,7 +9642,7 @@ open class RoutingAPI {
     
     
     /**
-     Join or unjoin a set of users for a queue
+     Join or unjoin a set of up to 100 users for a queue
      
      - parameter queueId: (path) Queue ID 
      - parameter body: (body) Queue Members 
@@ -9667,7 +9667,7 @@ open class RoutingAPI {
     }
 
     /**
-     Join or unjoin a set of users for a queue
+     Join or unjoin a set of up to 100 users for a queue
      - PATCH /api/v2/routing/queues/{queueId}/members
      - OAuth:
        - type: oauth2

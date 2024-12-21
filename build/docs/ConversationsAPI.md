@@ -10728,7 +10728,7 @@ ConversationsAPI.postConversationsMessages(body: body) { (response, error) in
 
 
 
-> [SendAgentlessOutboundMessageResponse](SendAgentlessOutboundMessageResponse) postConversationsMessagesAgentless(body)
+> [SendAgentlessOutboundMessageResponse](SendAgentlessOutboundMessageResponse) postConversationsMessagesAgentless(body, useNormalizedMessage)
 
 Send an agentless outbound message
 
@@ -10751,9 +10751,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: SendAgentlessOutboundMessageRequest = new SendAgentlessOutboundMessageRequest(...) // Create agentless outbound messaging request
+let useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, messagingTemplate)
 
 // Code example
-ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, error) in
+ConversationsAPI.postConversationsMessagesAgentless(body: body, useNormalizedMessage: useNormalizedMessage) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -10769,6 +10770,7 @@ ConversationsAPI.postConversationsMessagesAgentless(body: body) { (response, err
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**SendAgentlessOutboundMessageRequest**](SendAgentlessOutboundMessageRequest)| Create agentless outbound messaging request | |
+| **useNormalizedMessage** | **Bool**| If true, response removes deprecated fields (textBody, messagingTemplate) | [optional] |
 
 
 ### Return type
@@ -12339,4 +12341,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

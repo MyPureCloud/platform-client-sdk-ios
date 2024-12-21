@@ -5162,6 +5162,7 @@ open class JourneyAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "dateStart" : "2000-01-23T04:56:07.000+00:00",
   "elements" : {
     "key" : {
       "flowOutcome" : "{}",
@@ -5183,6 +5184,7 @@ open class JourneyAPI {
       "parentId" : "parentId"
     }
   },
+  "dateEnd" : "2000-01-23T04:56:07.000+00:00",
   "category" : "All"
 }, statusCode=200}]
      

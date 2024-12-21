@@ -587,7 +587,8 @@ open class IdentityProviderAPI {
   "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
-  "id" : "id"
+  "id" : "id",
+  "providerName" : "providerName"
 }, statusCode=200}]
      
      - parameter providerId: (path) Provider ID 
@@ -1347,7 +1348,8 @@ open class IdentityProviderAPI {
   "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
-  "id" : "id"
+  "id" : "id",
+  "providerName" : "providerName"
 }, statusCode=200}]
      
      - parameter body: (body) Provider 
@@ -1417,7 +1419,8 @@ open class IdentityProviderAPI {
   "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
-  "id" : "id"
+  "id" : "id",
+  "providerName" : "providerName"
 }, statusCode=200}]
      
      - parameter providerId: (path) Provider ID 

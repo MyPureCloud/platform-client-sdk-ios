@@ -16212,7 +16212,7 @@ public class EmailCampaignSchedule: Codable {
     public var version: Int?
     /** A list of intervals during which to run the associated Campaign. */
     public var intervals: [ScheduleInterval]?
-    /** The time zone for this email campaign schedule. */
+    /** The time zone for this email campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones */
     public var timeZone: String?
     /** The Campaign that this email campaign schedule is for. */
     public var emailCampaign: DivisionedDomainEntityRef?
@@ -17644,6 +17644,53 @@ public class ExternalMetricDefinitionUpdateRequest: Codable {
         self.precision = precision
         self.defaultObjectiveType = defaultObjectiveType
         self.enabled = enabled
+    }
+
+
+}
+
+
+
+
+public class ExternalOrganizationIdentifier: Codable {
+
+
+
+    public enum ModelType: String, Codable { 
+        case externalId = "ExternalId"
+    }
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The type of this identifier */
+    public var type: ModelType?
+    /** The string value of the identifier. Will vary in syntax by type. */
+    public var value: String?
+    /** Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, type: ModelType?, value: String?, dateCreated: Date?, selfUri: String?) {
+        self._id = _id
+        self.type = type
+        self.value = value
+        self.dateCreated = dateCreated
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case type
+        case value
+        case dateCreated
+        case selfUri
     }
 
 
@@ -25138,78 +25185,6 @@ public class LexV2BotAlias: Codable {
 
 
 
-public class LexV2Slot: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    /** The slot name */
-    public var slotName: String?
-    /** The slot description */
-    public var _description: String?
-    /** The slot id */
-    public var slotId: String?
-    /** The slot type */
-    public var type: String?
-    /** The slot type id */
-    public var slotTypeId: String?
-
-    public init(slotName: String?, _description: String?, slotId: String?, type: String?, slotTypeId: String?) {
-        self.slotName = slotName
-        self._description = _description
-        self.slotId = slotId
-        self.type = type
-        self.slotTypeId = slotTypeId
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case slotName
-        case _description = "description"
-        case slotId
-        case type
-        case slotTypeId
-    }
-
-
-}
-
-
-
-
-public class LicenseAssignmentRequest: Codable {
-
-
-
-
-
-
-
-    /** The id of the license to assign/unassign. */
-    public var licenseId: String?
-    /** The ids of users to assign this license to. */
-    public var userIdsAdd: [String]?
-    /** The ids of users to unassign this license from. */
-    public var userIdsRemove: [String]?
-
-    public init(licenseId: String?, userIdsAdd: [String]?, userIdsRemove: [String]?) {
-        self.licenseId = licenseId
-        self.userIdsAdd = userIdsAdd
-        self.userIdsRemove = userIdsRemove
-    }
-
-
-}
-
-
-
-
 public class Limit: Codable {
 
 
@@ -25298,6 +25273,78 @@ public class Limit: Codable {
         self.key = key
         self.namespace = namespace
         self.value = value
+    }
+
+
+}
+
+
+
+
+public class LexV2Slot: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** The slot name */
+    public var slotName: String?
+    /** The slot description */
+    public var _description: String?
+    /** The slot id */
+    public var slotId: String?
+    /** The slot type */
+    public var type: String?
+    /** The slot type id */
+    public var slotTypeId: String?
+
+    public init(slotName: String?, _description: String?, slotId: String?, type: String?, slotTypeId: String?) {
+        self.slotName = slotName
+        self._description = _description
+        self.slotId = slotId
+        self.type = type
+        self.slotTypeId = slotTypeId
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case slotName
+        case _description = "description"
+        case slotId
+        case type
+        case slotTypeId
+    }
+
+
+}
+
+
+
+
+public class LicenseAssignmentRequest: Codable {
+
+
+
+
+
+
+
+    /** The id of the license to assign/unassign. */
+    public var licenseId: String?
+    /** The ids of users to assign this license to. */
+    public var userIdsAdd: [String]?
+    /** The ids of users to unassign this license from. */
+    public var userIdsRemove: [String]?
+
+    public init(licenseId: String?, userIdsAdd: [String]?, userIdsRemove: [String]?) {
+        self.licenseId = licenseId
+        self.userIdsAdd = userIdsAdd
+        self.userIdsRemove = userIdsRemove
     }
 
 
@@ -29105,6 +29152,130 @@ public class PatchUser: Codable {
 
 
 
+public class PerformancePredictionOutputs: Codable {
+
+
+
+
+
+
+
+    /** Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results */
+    public var calculationStartDate: Date?
+    /** Interval length of the response metrics */
+    public var calculationIntervalLengthMinutes: Int?
+    /** List of planning group level performance prediction results */
+    public var planningGroupResults: [PlanningGroupOutputs]?
+
+    public init(calculationStartDate: Date?, calculationIntervalLengthMinutes: Int?, planningGroupResults: [PlanningGroupOutputs]?) {
+        self.calculationStartDate = calculationStartDate
+        self.calculationIntervalLengthMinutes = calculationIntervalLengthMinutes
+        self.planningGroupResults = planningGroupResults
+    }
+
+
+}
+
+
+
+
+public class PerformancePredictionRecalculationResponse: Codable {
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case processing = "Processing"
+        case complete = "Complete"
+        case error = "Error"
+    }
+
+    /** The operationId for which to listen */
+    public var operationId: String?
+    /** The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete' */
+    public var downloadUrl: String?
+    /** Result will always come via downloadUrls; however the schema is included for documentation */
+    public var downloadResult: PerformancePredictionOutputs?
+    /** The state of the performance prediction */
+    public var state: State?
+
+    public init(operationId: String?, downloadUrl: String?, downloadResult: PerformancePredictionOutputs?, state: State?) {
+        self.operationId = operationId
+        self.downloadUrl = downloadUrl
+        self.downloadResult = downloadResult
+        self.state = state
+    }
+
+
+}
+
+
+
+
+public class PerformancePredictionResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public enum State: String, Codable { 
+        case processing = "Processing"
+        case complete = "Complete"
+        case error = "Error"
+    }
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
+    public var weekDate: Date?
+    /** The ID of the schedule this performance prediction is associated with */
+    public var scheduleId: String?
+    /** The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete' */
+    public var downloadUrl: String?
+    /** Result will always come via downloadUrls; however the schema is included for documentation */
+    public var downloadResult: PerformancePredictionOutputs?
+    /** The state of the performance prediction */
+    public var state: State?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, weekDate: Date?, scheduleId: String?, downloadUrl: String?, downloadResult: PerformancePredictionOutputs?, state: State?, selfUri: String?) {
+        self._id = _id
+        self.weekDate = weekDate
+        self.scheduleId = scheduleId
+        self.downloadUrl = downloadUrl
+        self.downloadResult = downloadResult
+        self.state = state
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case weekDate
+        case scheduleId
+        case downloadUrl
+        case downloadResult
+        case state
+        case selfUri
+    }
+
+
+}
+
+
+
+
 public class Phone: Codable {
 
 
@@ -29265,130 +29436,6 @@ public class Phone: Codable {
         case webRtcUser
         case primaryEdge
         case secondaryEdge
-        case selfUri
-    }
-
-
-}
-
-
-
-
-public class PerformancePredictionOutputs: Codable {
-
-
-
-
-
-
-
-    /** Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results */
-    public var calculationStartDate: Date?
-    /** Interval length of the response metrics */
-    public var calculationIntervalLengthMinutes: Int?
-    /** List of planning group level performance prediction results */
-    public var planningGroupResults: [PlanningGroupOutputs]?
-
-    public init(calculationStartDate: Date?, calculationIntervalLengthMinutes: Int?, planningGroupResults: [PlanningGroupOutputs]?) {
-        self.calculationStartDate = calculationStartDate
-        self.calculationIntervalLengthMinutes = calculationIntervalLengthMinutes
-        self.planningGroupResults = planningGroupResults
-    }
-
-
-}
-
-
-
-
-public class PerformancePredictionRecalculationResponse: Codable {
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case processing = "Processing"
-        case complete = "Complete"
-        case error = "Error"
-    }
-
-    /** The operationId for which to listen */
-    public var operationId: String?
-    /** The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete' */
-    public var downloadUrl: String?
-    /** Result will always come via downloadUrls; however the schema is included for documentation */
-    public var downloadResult: PerformancePredictionOutputs?
-    /** The state of the performance prediction */
-    public var state: State?
-
-    public init(operationId: String?, downloadUrl: String?, downloadResult: PerformancePredictionOutputs?, state: State?) {
-        self.operationId = operationId
-        self.downloadUrl = downloadUrl
-        self.downloadResult = downloadResult
-        self.state = state
-    }
-
-
-}
-
-
-
-
-public class PerformancePredictionResponse: Codable {
-
-
-
-
-
-
-
-
-
-
-
-    public enum State: String, Codable { 
-        case processing = "Processing"
-        case complete = "Complete"
-        case error = "Error"
-    }
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd */
-    public var weekDate: Date?
-    /** The ID of the schedule this performance prediction is associated with */
-    public var scheduleId: String?
-    /** The url to GET the results of the performance prediction. This field is populated only if query state is 'Complete' */
-    public var downloadUrl: String?
-    /** Result will always come via downloadUrls; however the schema is included for documentation */
-    public var downloadResult: PerformancePredictionOutputs?
-    /** The state of the performance prediction */
-    public var state: State?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, weekDate: Date?, scheduleId: String?, downloadUrl: String?, downloadResult: PerformancePredictionOutputs?, state: State?, selfUri: String?) {
-        self._id = _id
-        self.weekDate = weekDate
-        self.scheduleId = scheduleId
-        self.downloadUrl = downloadUrl
-        self.downloadResult = downloadResult
-        self.state = state
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case weekDate
-        case scheduleId
-        case downloadUrl
-        case downloadResult
-        case state
         case selfUri
     }
 
@@ -44010,29 +44057,6 @@ public class WfmBulkShiftTradeStateUpdateNotificationTopicWfmVersionedEntityMeta
 
 
 
-/** User information for a WhatsApp account */
-
-public class WhatsAppId: Codable {
-
-
-
-
-
-    /** The phone number associated with this WhatsApp account */
-    public var phoneNumber: PhoneNumber?
-    /** The displayName of this person's account in WhatsApp */
-    public var displayName: String?
-
-    public init(phoneNumber: PhoneNumber?, displayName: String?) {
-        self.phoneNumber = phoneNumber
-        self.displayName = displayName
-    }
-
-
-}
-
-
-
 
 public class WfmHistoricalAdherenceBulkUserDayMetrics: Codable {
 
@@ -44472,34 +44496,6 @@ public class WfmUserNotificationTopicManagementUnit: Codable {
 
 
 
-/** A WhatsApp messaging template definition as defined in the WhatsApp Business Manager */
-
-public class WhatsAppDefinition: Codable {
-
-
-
-
-
-
-
-    /** The messaging template name. */
-    public var name: String?
-    /** The messaging template namespace. */
-    public var namespace: String?
-    /** The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US' */
-    public var language: String?
-
-    public init(name: String?, namespace: String?, language: String?) {
-        self.name = name
-        self.namespace = namespace
-        self.language = language
-    }
-
-
-}
-
-
-
 
 public class WfmUserNotificationTopicTimeOffRequestNotification: Codable {
 
@@ -44740,6 +44736,84 @@ public class WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference: Cod
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+    }
+
+
+}
+
+
+
+
+public class WhatsAppConfig: Codable {
+
+
+
+
+
+
+
+    /** The contact list columns specifying the WhatsApp address(es) of the contact. */
+    public var whatsAppColumns: [String]?
+    /** The WhatsApp integration used to send message to the contact. */
+    public var whatsAppIntegration: AddressableEntityRef?
+    /** The content template used to formulate the WhatsApp message to send to the contact. */
+    public var contentTemplate: DomainEntityRef?
+
+    public init(whatsAppColumns: [String]?, whatsAppIntegration: AddressableEntityRef?, contentTemplate: DomainEntityRef?) {
+        self.whatsAppColumns = whatsAppColumns
+        self.whatsAppIntegration = whatsAppIntegration
+        self.contentTemplate = contentTemplate
+    }
+
+
+}
+
+
+
+/** A WhatsApp messaging template definition as defined in the WhatsApp Business Manager */
+
+public class WhatsAppDefinition: Codable {
+
+
+
+
+
+
+
+    /** The messaging template name. */
+    public var name: String?
+    /** The messaging template namespace. */
+    public var namespace: String?
+    /** The messaging template language configured for this template. This is a WhatsApp specific value. For example, 'en_US' */
+    public var language: String?
+
+    public init(name: String?, namespace: String?, language: String?) {
+        self.name = name
+        self.namespace = namespace
+        self.language = language
+    }
+
+
+}
+
+
+
+/** User information for a WhatsApp account */
+
+public class WhatsAppId: Codable {
+
+
+
+
+
+    /** The phone number associated with this WhatsApp account */
+    public var phoneNumber: PhoneNumber?
+    /** The displayName of this person's account in WhatsApp */
+    public var displayName: String?
+
+    public init(phoneNumber: PhoneNumber?, displayName: String?) {
+        self.phoneNumber = phoneNumber
+        self.displayName = displayName
     }
 
 
@@ -45336,6 +45410,32 @@ public class WorkitemCreate: Codable {
         case utilizationLabelId
         case scoredAgents
         case preferredAgentIds
+    }
+
+
+}
+
+
+
+
+public class WorkitemDateBasedCondition: Codable {
+
+    public enum Attribute: String, Codable { 
+        case datedue = "dateDue"
+        case dateexpires = "dateExpires"
+        case ttl = "ttl"
+    }
+
+
+
+    /** The name of the workitem date attribute. */
+    public var attribute: Attribute?
+    /** The time in minutes before or after the date attribute. */
+    public var relativeMinutesToInvocation: Int?
+
+    public init(attribute: Attribute?, relativeMinutesToInvocation: Int?) {
+        self.attribute = attribute
+        self.relativeMinutesToInvocation = relativeMinutesToInvocation
     }
 
 

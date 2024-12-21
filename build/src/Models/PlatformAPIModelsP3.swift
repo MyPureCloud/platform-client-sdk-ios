@@ -18479,7 +18479,17 @@ public class FlowPathsElement: Codable {
         case outcome = "Outcome"
         case recognitionFailure = "RecognitionFailure"
         case root = "Root"
+        case transferReturnToAgent = "TransferReturnToAgent"
         case transferToAcd = "TransferToAcd"
+        case transferToAcdVoicemail = "TransferToAcdVoicemail"
+        case transferToFlow = "TransferToFlow"
+        case transferToGroup = "TransferToGroup"
+        case transferToGroupVoicemail = "TransferToGroupVoicemail"
+        case transferToNumber = "TransferToNumber"
+        case transferToSecureFlow = "TransferToSecureFlow"
+        case transferToUnknown = "TransferToUnknown"
+        case transferToUser = "TransferToUser"
+        case transferToUserVoicemail = "TransferToUserVoicemail"
     }
 
 
@@ -24553,7 +24563,7 @@ public class MessagingCampaignSchedule: Codable {
     public var version: Int?
     /** A list of intervals during which to run the associated Campaign. */
     public var intervals: [ScheduleInterval]?
-    /** The time zone for this messaging campaign schedule. */
+    /** The time zone for this messaging campaign schedule. Defaults to UTC if empty or not provided. See here for a list of valid time zones https://www.iana.org/time-zones */
     public var timeZone: String?
     /** The Campaign that this messaging campaign schedule is for. */
     public var messagingCampaign: DivisionedDomainEntityRef?
@@ -34119,6 +34129,47 @@ public class SupportCenterCategory: Codable {
 
 
 
+public class SupportedLanguagesInfoDefinition: Codable {
+
+
+
+
+
+    public enum Status: String, Codable { 
+        case earlyPreview = "EARLY_PREVIEW"
+        case preview = "PREVIEW"
+        case ga = "GA"
+    }
+
+
+
+
+
+    /** The given supported Language */
+    public var language: String?
+    /** The boolean status of if intent classification is supported in this language */
+    public var intentClassification: Bool?
+    /** The language release status */
+    public var status: Status?
+    /** The supported entity types for this language */
+    public var supportedEntityTypes: [String]?
+    /** The configuration for the supported entity types */
+    public var supportedEntityTypeConfiguration: SupportedEntityTypeStatus?
+
+    public init(language: String?, intentClassification: Bool?, status: Status?, supportedEntityTypes: [String]?, supportedEntityTypeConfiguration: SupportedEntityTypeStatus?) {
+        self.language = language
+        self.intentClassification = intentClassification
+        self.status = status
+        self.supportedEntityTypes = supportedEntityTypes
+        self.supportedEntityTypeConfiguration = supportedEntityTypeConfiguration
+    }
+
+
+}
+
+
+
+
 public class Survey: Codable {
 
 
@@ -40764,101 +40815,6 @@ public class WorkPlanConstraintMessage: Codable {
 
 
 
-public class WorkPlanRotationAgentResponse: Codable {
-
-
-
-
-
-
-
-    /** The user associated with this work plan rotation */
-    public var user: UserReference?
-    /** The date range to which this agent is effective in the work plan rotation */
-    public var dateRange: DateRangeWithOptionalEnd?
-    /** Start position of the work plan in the pattern for this agent in the work plan rotation. Position value starts from 0 */
-    public var position: Int?
-
-    public init(user: UserReference?, dateRange: DateRangeWithOptionalEnd?, position: Int?) {
-        self.user = user
-        self.dateRange = dateRange
-        self.position = position
-    }
-
-
-}
-
-
-
-
-public class WorkPlanRotationResponse: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    public var name: String?
-    /** Whether the work plan rotation is enabled for scheduling */
-    public var enabled: Bool?
-    /** The date range to which this work plan rotation applies */
-    public var dateRange: DateRangeWithOptionalEnd?
-    /** Pattern with ordered list of work plans that rotate on a weekly basis */
-    public var pattern: WorkPlanPatternResponse?
-    /** Number of agents in this work plan rotation */
-    public var agentCount: Int?
-    /** Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list) */
-    public var agents: [WorkPlanRotationAgentResponse]?
-    /** Version metadata for this work plan rotation */
-    public var metadata: WfmVersionedEntityMetadata?
-    /** The URI for this object */
-    public var selfUri: String?
-
-    public init(_id: String?, name: String?, enabled: Bool?, dateRange: DateRangeWithOptionalEnd?, pattern: WorkPlanPatternResponse?, agentCount: Int?, agents: [WorkPlanRotationAgentResponse]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
-        self._id = _id
-        self.name = name
-        self.enabled = enabled
-        self.dateRange = dateRange
-        self.pattern = pattern
-        self.agentCount = agentCount
-        self.agents = agents
-        self.metadata = metadata
-        self.selfUri = selfUri
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case enabled
-        case dateRange
-        case pattern
-        case agentCount
-        case agents
-        case metadata
-        case selfUri
-    }
-
-
-}
-
-
-
-
 public class WorkPlanShift: Codable {
 
 
@@ -41019,6 +40975,101 @@ public class WorkPlanShift: Codable {
         case _id = "id"
         case delete
         case validationId
+    }
+
+
+}
+
+
+
+
+public class WorkPlanRotationAgentResponse: Codable {
+
+
+
+
+
+
+
+    /** The user associated with this work plan rotation */
+    public var user: UserReference?
+    /** The date range to which this agent is effective in the work plan rotation */
+    public var dateRange: DateRangeWithOptionalEnd?
+    /** Start position of the work plan in the pattern for this agent in the work plan rotation. Position value starts from 0 */
+    public var position: Int?
+
+    public init(user: UserReference?, dateRange: DateRangeWithOptionalEnd?, position: Int?) {
+        self.user = user
+        self.dateRange = dateRange
+        self.position = position
+    }
+
+
+}
+
+
+
+
+public class WorkPlanRotationResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** Whether the work plan rotation is enabled for scheduling */
+    public var enabled: Bool?
+    /** The date range to which this work plan rotation applies */
+    public var dateRange: DateRangeWithOptionalEnd?
+    /** Pattern with ordered list of work plans that rotate on a weekly basis */
+    public var pattern: WorkPlanPatternResponse?
+    /** Number of agents in this work plan rotation */
+    public var agentCount: Int?
+    /** Agents in this work plan rotation. Populate with expand=agents for GET WorkPlanRotationsList (defaults to empty list) */
+    public var agents: [WorkPlanRotationAgentResponse]?
+    /** Version metadata for this work plan rotation */
+    public var metadata: WfmVersionedEntityMetadata?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, enabled: Bool?, dateRange: DateRangeWithOptionalEnd?, pattern: WorkPlanPatternResponse?, agentCount: Int?, agents: [WorkPlanRotationAgentResponse]?, metadata: WfmVersionedEntityMetadata?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.enabled = enabled
+        self.dateRange = dateRange
+        self.pattern = pattern
+        self.agentCount = agentCount
+        self.agents = agents
+        self.metadata = metadata
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case enabled
+        case dateRange
+        case pattern
+        case agentCount
+        case agents
+        case metadata
+        case selfUri
     }
 
 
@@ -41313,6 +41364,98 @@ public class WorkdayValuesTrendItem: Codable {
     public init(dateWorkday: Date?, value: Double?) {
         self.dateWorkday = dateWorkday
         self.value = value
+    }
+
+
+}
+
+
+
+
+public class WorkitemDateBasedRule: Codable {
+
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case onCreate = "OnCreate"
+        case onAttributeChange = "OnAttributeChange"
+        case date = "Date"
+    }
+
+
+
+
+
+
+
+
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    public var name: String?
+    /** The type of the rule. */
+    public var type: ModelType?
+    /** The rules action. If the condition criteria is met this action will be executed. */
+    public var action: WorkitemRuleAction?
+    /** The Worktype containing the rule. */
+    public var worktype: WorktypeReference?
+    /** The rules condition. If the condition criteria is met the rules action will be executed. */
+    public var condition: WorkitemDateBasedCondition?
+    /** The URI for this object */
+    public var selfUri: String?
+
+    public init(_id: String?, name: String?, type: ModelType?, action: WorkitemRuleAction?, worktype: WorktypeReference?, condition: WorkitemDateBasedCondition?, selfUri: String?) {
+        self._id = _id
+        self.name = name
+        self.type = type
+        self.action = action
+        self.worktype = worktype
+        self.condition = condition
+        self.selfUri = selfUri
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case type
+        case action
+        case worktype
+        case condition
+        case selfUri
+    }
+
+
+}
+
+
+
+
+public class WorkitemDateBasedRuleListing: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    public var entities: [WorkitemDateBasedRule]?
+    public var nextUri: String?
+    public var selfUri: String?
+    public var previousUri: String?
+    public var after: String?
+
+    public init(entities: [WorkitemDateBasedRule]?, nextUri: String?, selfUri: String?, previousUri: String?, after: String?) {
+        self.entities = entities
+        self.nextUri = nextUri
+        self.selfUri = selfUri
+        self.previousUri = previousUri
+        self.after = after
     }
 
 

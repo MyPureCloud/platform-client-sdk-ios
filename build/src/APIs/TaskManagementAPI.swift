@@ -195,6 +195,58 @@ open class TaskManagementAPI {
     
     
     /**
+     Delete a date based rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: String, ruleId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTaskmanagementWorktypeFlowsDatebasedRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a date based rule
+     - DELETE /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTaskmanagementWorktypeFlowsDatebasedRuleWithRequestBuilder(worktypeId: String, ruleId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Delete a rule
      
      - parameter worktypeId: (path) Worktype id 
@@ -1374,6 +1426,161 @@ open class TaskManagementAPI {
     
     
     /**
+     Get a date based rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: String, ruleId: String, completion: @escaping ((_ data: WorkitemDateBasedRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeFlowsDatebasedRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId)
+        requestBuilder.execute { (response: Response<WorkitemDateBasedRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a date based rule
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+
+     - returns: RequestBuilder<WorkitemDateBasedRule> 
+     */
+    open class func getTaskmanagementWorktypeFlowsDatebasedRuleWithRequestBuilder(worktypeId: String, ruleId: String) -> RequestBuilder<WorkitemDateBasedRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemDateBasedRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get all date based rules for a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorktypeFlowsDatebasedRules(worktypeId: String, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: WorkitemDateBasedRuleListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorktypeFlowsDatebasedRulesWithRequestBuilder(worktypeId: worktypeId, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<WorkitemDateBasedRuleListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get all date based rules for a worktype
+     - GET /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "condition" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "action" : "{}",
+    "worktype" : "{}",
+    "id" : "id",
+    "type" : "OnCreate"
+  }, {
+    "condition" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "action" : "{}",
+    "worktype" : "{}",
+    "id" : "id",
+    "type" : "OnCreate"
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+
+     - returns: RequestBuilder<WorkitemDateBasedRuleListing> 
+     */
+    open class func getTaskmanagementWorktypeFlowsDatebasedRulesWithRequestBuilder(worktypeId: String, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<WorkitemDateBasedRuleListing> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<WorkitemDateBasedRuleListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Get an attribute change rule
      
      - parameter worktypeId: (path) Worktype id 
@@ -2350,6 +2557,78 @@ open class TaskManagementAPI {
     
     
     /**
+     Update the attributes of a date based rule
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter body: (body) Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: String, ruleId: String, body: WorkitemDateBasedRuleUpdate, completion: @escaping ((_ data: WorkitemDateBasedRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTaskmanagementWorktypeFlowsDatebasedRuleWithRequestBuilder(worktypeId: worktypeId, ruleId: ruleId, body: body)
+        requestBuilder.execute { (response: Response<WorkitemDateBasedRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the attributes of a date based rule
+     - PATCH /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter ruleId: (path) ruleId 
+     - parameter body: (body) Rule 
+
+     - returns: RequestBuilder<WorkitemDateBasedRule> 
+     */
+    open class func patchTaskmanagementWorktypeFlowsDatebasedRuleWithRequestBuilder(worktypeId: String, ruleId: String, body: WorkitemDateBasedRuleUpdate) -> RequestBuilder<WorkitemDateBasedRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let ruleIdPreEscape = "\(ruleId)"
+        let ruleIdPostEscape = ruleIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{ruleId}", with: ruleIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemDateBasedRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
      Update the attributes of a rule
      
      - parameter worktypeId: (path) Worktype id 
@@ -3258,6 +3537,71 @@ open class TaskManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DataSchema>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add a date based rule to a worktype
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter body: (body) Rule 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTaskmanagementWorktypeFlowsDatebasedRules(worktypeId: String, body: WorkitemDateBasedRuleCreate, completion: @escaping ((_ data: WorkitemDateBasedRule?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTaskmanagementWorktypeFlowsDatebasedRulesWithRequestBuilder(worktypeId: worktypeId, body: body)
+        requestBuilder.execute { (response: Response<WorkitemDateBasedRule>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add a date based rule to a worktype
+     - POST /api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "condition" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "name" : "name",
+  "action" : "{}",
+  "worktype" : "{}",
+  "id" : "id",
+  "type" : "OnCreate"
+}, statusCode=200}]
+     
+     - parameter worktypeId: (path) Worktype id 
+     - parameter body: (body) Rule 
+
+     - returns: RequestBuilder<WorkitemDateBasedRule> 
+     */
+    open class func postTaskmanagementWorktypeFlowsDatebasedRulesWithRequestBuilder(worktypeId: String, body: WorkitemDateBasedRuleCreate) -> RequestBuilder<WorkitemDateBasedRule> {        
+        var path = "/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules"
+        let worktypeIdPreEscape = "\(worktypeId)"
+        let worktypeIdPostEscape = worktypeIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{worktypeId}", with: worktypeIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WorkitemDateBasedRule>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

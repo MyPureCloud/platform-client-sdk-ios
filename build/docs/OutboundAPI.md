@@ -1285,6 +1285,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:delete
 * outbound:emailCampaign:delete
+* outbound:whatsAppCampaign:delete
 
 ### Example
 
@@ -1337,9 +1338,11 @@ Wraps DELETE /api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress
 Requires ANY permissions: 
 
 * outbound:messagingCampaign:edit
-* outbound:emailCampaign:edit
 * outbound:messagingCampaign:recycle
+* outbound:emailCampaign:edit
 * outbound:emailCampaign:recycle
+* outbound:whatsAppCampaign:edit
+* outbound:whatsAppCampaign:recycle
 
 ### Example
 
@@ -4506,6 +4509,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 
@@ -4557,6 +4561,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 
@@ -4608,6 +4613,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 
@@ -4659,6 +4665,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 
@@ -4702,7 +4709,7 @@ OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNu
 | **name** | **String**| Name | [optional] |
 | **contactListId** | **String**| Contact List ID | [optional] |
 | **divisionId** | [**[String]**](String)| Division ID(s) | [optional] |
-| **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS") |
+| **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS"), whatsapp ("WHATSAPP") |
 | **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
 | **_id** | [**[String]**](String)| A list of messaging campaign ids to bulk fetch | [optional] |
 
@@ -4820,7 +4827,7 @@ OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageN
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortOrder** | **String**| The direction to sort | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 | **name** | **String**| Name | [optional] |
-| **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS") |
+| **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS"), whatsapp ("WHATSAPP") |
 | **_id** | [**[String]**](String)| id | [optional] |
 | **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
 
@@ -7490,6 +7497,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:start
 * outbound:emailCampaign:start
+* outbound:whatsAppCampaign:start
 
 ### Example
 
@@ -7542,6 +7550,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:stop
 * outbound:emailCampaign:stop
+* outbound:whatsAppCampaign:stop
 
 ### Example
 
@@ -7592,6 +7601,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:add
 * outbound:emailCampaign:add
+* outbound:whatsAppCampaign:add
 
 ### Example
 
@@ -8527,6 +8537,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:edit
 * outbound:emailCampaign:edit
+* outbound:whatsAppCampaign:edit
 
 ### Example
 
@@ -8926,4 +8937,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@158.0.0_
+_PureCloudPlatformClientV2@159.0.0_

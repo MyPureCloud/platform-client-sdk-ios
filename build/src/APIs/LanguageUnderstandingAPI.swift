@@ -2277,6 +2277,68 @@ open class LanguageUnderstandingAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get Organization Configuration
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getLanguageunderstandingSettings(completion: @escaping ((_ data: NluOrganization?,_ error: Error?) -> Void)) {
+        let requestBuilder = getLanguageunderstandingSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<NluOrganization>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get Organization Configuration
+     - GET /api/v2/languageunderstanding/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "supportedLanguagesInfo" : [ {
+    "intentClassification" : true,
+    "supportedEntityTypeConfiguration" : "{}",
+    "language" : "language",
+    "supportedEntityTypes" : [ "supportedEntityTypes", "supportedEntityTypes" ],
+    "status" : "EARLY_PREVIEW"
+  }, {
+    "intentClassification" : true,
+    "supportedEntityTypeConfiguration" : "{}",
+    "language" : "language",
+    "supportedEntityTypes" : [ "supportedEntityTypes", "supportedEntityTypes" ],
+    "status" : "EARLY_PREVIEW"
+  } ],
+  "limits" : {
+    "key" : 0
+  }
+}, statusCode=200}]
+
+     - returns: RequestBuilder<NluOrganization> 
+     */
+    open class func getLanguageunderstandingSettingsWithRequestBuilder() -> RequestBuilder<NluOrganization> {        
+        let path = "/api/v2/languageunderstanding/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<NluOrganization>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     

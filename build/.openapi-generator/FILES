@@ -1660,7 +1660,6 @@ docs/EmailColumn.md
 docs/EmailCommunicationAnsweredEvent.md
 docs/EmailCommunicationDispositionAppliedEvent.md
 docs/EmailCommunicationEndedEvent.md
-docs/EmailCommunicationRepliedEvent.md
 docs/EmailCommunicationSentMessageEvent.md
 docs/EmailConfig.md
 docs/EmailConversation.md
@@ -1883,6 +1882,7 @@ docs/ExternalMetricDefinitionCreateRequest.md
 docs/ExternalMetricDefinitionListing.md
 docs/ExternalMetricDefinitionUpdateRequest.md
 docs/ExternalOrganization.md
+docs/ExternalOrganizationIdentifier.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
 docs/ExternalSegment.md
@@ -2867,6 +2867,7 @@ docs/NluFeedbackListing.md
 docs/NluFeedbackRequest.md
 docs/NluFeedbackResponse.md
 docs/NluInfo.md
+docs/NluOrganization.md
 docs/NluQualityReportSummary.md
 docs/NluQualityReportSummaryMetric.md
 docs/NluUtterance.md
@@ -4020,7 +4021,9 @@ docs/SupportedContentListing.md
 docs/SupportedContentReference.md
 docs/SupportedDialectsEntityListing.md
 docs/SupportedDialectsTranscriptionEngine.md
+docs/SupportedEntityTypeStatus.md
 docs/SupportedLanguage.md
+docs/SupportedLanguagesInfoDefinition.md
 docs/Survey.md
 docs/SurveyAggregateDataContainer.md
 docs/SurveyAggregateQueryClause.md
@@ -4814,6 +4817,7 @@ docs/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.md
 docs/WfmVersionedEntityMetadata.md
 docs/WhatsAppAvailablePhoneNumberDetails.md
 docs/WhatsAppAvailablePhoneNumberDetailsListing.md
+docs/WhatsAppConfig.md
 docs/WhatsAppDefinition.md
 docs/WhatsAppEmbeddedSignupIntegrationActivationRequest.md
 docs/WhatsAppEmbeddedSignupIntegrationRequest.md
@@ -4883,6 +4887,12 @@ docs/WorkforceManagementAPI.json
 docs/WorkforceManagementAPI.md
 docs/Workitem.md
 docs/WorkitemCreate.md
+docs/WorkitemDateBasedCondition.md
+docs/WorkitemDateBasedConditionUpdate.md
+docs/WorkitemDateBasedRule.md
+docs/WorkitemDateBasedRuleCreate.md
+docs/WorkitemDateBasedRuleListing.md
+docs/WorkitemDateBasedRuleUpdate.md
 docs/WorkitemFilter.md
 docs/WorkitemFlowReference.md
 docs/WorkitemManualAssign.md
@@ -5196,6 +5206,7 @@ docs/deleteTaskmanagementWorkbin-example.txt
 docs/deleteTaskmanagementWorkitem-example.txt
 docs/deleteTaskmanagementWorkitemsSchema-example.txt
 docs/deleteTaskmanagementWorktype-example.txt
+docs/deleteTaskmanagementWorktypeFlowsDatebasedRule-example.txt
 docs/deleteTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/deleteTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/deleteTaskmanagementWorktypeStatus-example.txt
@@ -5813,6 +5824,7 @@ docs/getLanguageunderstandingMinerTopic-example.txt
 docs/getLanguageunderstandingMinerTopicPhrase-example.txt
 docs/getLanguageunderstandingMinerTopics-example.txt
 docs/getLanguageunderstandingMiners-example.txt
+docs/getLanguageunderstandingSettings-example.txt
 docs/getLearningAssignment-example.txt
 docs/getLearningAssignmentStep-example.txt
 docs/getLearningAssignments-example.txt
@@ -6167,6 +6179,8 @@ docs/getTaskmanagementWorkitemsSchemaVersion-example.txt
 docs/getTaskmanagementWorkitemsSchemaVersions-example.txt
 docs/getTaskmanagementWorkitemsSchemas-example.txt
 docs/getTaskmanagementWorktype-example.txt
+docs/getTaskmanagementWorktypeFlowsDatebasedRule-example.txt
+docs/getTaskmanagementWorktypeFlowsDatebasedRules-example.txt
 docs/getTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/getTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
 docs/getTaskmanagementWorktypeFlowsOncreateRule-example.txt
@@ -6582,6 +6596,7 @@ docs/patchTaskmanagementWorkitemAssignment-example.txt
 docs/patchTaskmanagementWorkitemUserWrapups-example.txt
 docs/patchTaskmanagementWorkitemUsersMeWrapups-example.txt
 docs/patchTaskmanagementWorktype-example.txt
+docs/patchTaskmanagementWorktypeFlowsDatebasedRule-example.txt
 docs/patchTaskmanagementWorktypeFlowsOnattributechangeRule-example.txt
 docs/patchTaskmanagementWorktypeFlowsOncreateRule-example.txt
 docs/patchTaskmanagementWorktypeStatus-example.txt
@@ -7148,6 +7163,7 @@ docs/postTaskmanagementWorkitemTerminate-example.txt
 docs/postTaskmanagementWorkitems-example.txt
 docs/postTaskmanagementWorkitemsQueryJobs-example.txt
 docs/postTaskmanagementWorkitemsSchemas-example.txt
+docs/postTaskmanagementWorktypeFlowsDatebasedRules-example.txt
 docs/postTaskmanagementWorktypeFlowsOnattributechangeRules-example.txt
 docs/postTaskmanagementWorktypeFlowsOncreateRules-example.txt
 docs/postTaskmanagementWorktypeStatuses-example.txt
@@ -9251,7 +9267,6 @@ src/Models/EmailColumn.swift
 src/Models/EmailCommunicationAnsweredEvent.swift
 src/Models/EmailCommunicationDispositionAppliedEvent.swift
 src/Models/EmailCommunicationEndedEvent.swift
-src/Models/EmailCommunicationRepliedEvent.swift
 src/Models/EmailCommunicationSentMessageEvent.swift
 src/Models/EmailConfig.swift
 src/Models/EmailConversation.swift
@@ -9466,6 +9481,7 @@ src/Models/ExternalMetricDefinitionCreateRequest.swift
 src/Models/ExternalMetricDefinitionListing.swift
 src/Models/ExternalMetricDefinitionUpdateRequest.swift
 src/Models/ExternalOrganization.swift
+src/Models/ExternalOrganizationIdentifier.swift
 src/Models/ExternalOrganizationListing.swift
 src/Models/ExternalOrganizationTrustorLink.swift
 src/Models/ExternalSegment.swift
@@ -10413,6 +10429,7 @@ src/Models/NluFeedbackListing.swift
 src/Models/NluFeedbackRequest.swift
 src/Models/NluFeedbackResponse.swift
 src/Models/NluInfo.swift
+src/Models/NluOrganization.swift
 src/Models/NluQualityReportSummary.swift
 src/Models/NluQualityReportSummaryMetric.swift
 src/Models/NluUtterance.swift
@@ -11522,7 +11539,9 @@ src/Models/SupportedContentListing.swift
 src/Models/SupportedContentReference.swift
 src/Models/SupportedDialectsEntityListing.swift
 src/Models/SupportedDialectsTranscriptionEngine.swift
+src/Models/SupportedEntityTypeStatus.swift
 src/Models/SupportedLanguage.swift
+src/Models/SupportedLanguagesInfoDefinition.swift
 src/Models/Survey.swift
 src/Models/SurveyAggregateDataContainer.swift
 src/Models/SurveyAggregateQueryClause.swift
@@ -12285,6 +12304,7 @@ src/Models/WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate.swift
 src/Models/WfmVersionedEntityMetadata.swift
 src/Models/WhatsAppAvailablePhoneNumberDetails.swift
 src/Models/WhatsAppAvailablePhoneNumberDetailsListing.swift
+src/Models/WhatsAppConfig.swift
 src/Models/WhatsAppDefinition.swift
 src/Models/WhatsAppEmbeddedSignupIntegrationActivationRequest.swift
 src/Models/WhatsAppEmbeddedSignupIntegrationRequest.swift
@@ -12350,6 +12370,12 @@ src/Models/WorkdayValuesTrendItem.swift
 src/Models/WorkflowTargetSettings.swift
 src/Models/Workitem.swift
 src/Models/WorkitemCreate.swift
+src/Models/WorkitemDateBasedCondition.swift
+src/Models/WorkitemDateBasedConditionUpdate.swift
+src/Models/WorkitemDateBasedRule.swift
+src/Models/WorkitemDateBasedRuleCreate.swift
+src/Models/WorkitemDateBasedRuleListing.swift
+src/Models/WorkitemDateBasedRuleUpdate.swift
 src/Models/WorkitemFilter.swift
 src/Models/WorkitemFlowReference.swift
 src/Models/WorkitemManualAssign.swift

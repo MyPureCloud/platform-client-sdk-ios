@@ -11691,16 +11691,21 @@
   "postconversationsmessagesagentless": {
     "operationId": "postconversationsmessagesagentless",
     "functionName": "postConversationsMessagesAgentless",
-    "signature": "postConversationsMessagesAgentless(body)",
+    "signature": "postConversationsMessagesAgentless(body, useNormalizedMessage)",
     "parameters": [
       {
         "name": "body",
         "type": "SendAgentlessOutboundMessageRequest",
         "required": "true"
+      },
+      {
+        "name": "useNormalizedMessage",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "SendAgentlessOutboundMessageResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SendAgentlessOutboundMessageRequest = new SendAgentlessOutboundMessageRequest(...) // Create agentless outbound messaging request\n\n// Send an agentless outbound message\nPostConversationsMessagesAgentlessRequest.postConversationsMessagesAgentless(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagesAgentlessRequest.postConversationsMessagesAgentless was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SendAgentlessOutboundMessageRequest = new SendAgentlessOutboundMessageRequest(...) // Create agentless outbound messaging request\nlet useNormalizedMessage: Bool = true // If true, response removes deprecated fields (textBody, messagingTemplate)\n\n// Send an agentless outbound message\nPostConversationsMessagesAgentlessRequest.postConversationsMessagesAgentless(body: body, useNormalizedMessage: useNormalizedMessage) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagesAgentlessRequest.postConversationsMessagesAgentless was successful\")\n        dump(response)\n    }\n}"
   },
   "postconversationsmessagesinboundopen": {
     "operationId": "postconversationsmessagesinboundopen",
@@ -23214,6 +23219,13 @@
     ],
     "return": "MinerListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet minerType: String = \"\" // Type of miner, either intent or topic\n\n// Retrieve the list of miners created.\nGetLanguageunderstandingMinersRequest.getLanguageunderstandingMiners(minerType: minerType) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingMinersRequest.getLanguageunderstandingMiners was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getlanguageunderstandingsettings": {
+    "operationId": "getlanguageunderstandingsettings",
+    "functionName": "getLanguageunderstandingSettings",
+    "signature": "getLanguageunderstandingSettings()",
+    "return": "NluOrganization",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get Organization Configuration\nGetLanguageunderstandingSettingsRequest.getLanguageunderstandingSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetLanguageunderstandingSettingsRequest.getLanguageunderstandingSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "patchlanguageunderstandingdomain": {
     "operationId": "patchlanguageunderstandingdomain",
@@ -35332,7 +35344,7 @@
       }
     ],
     "return": "QueueMemberEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\nlet body: [QueueMember] = [new QueueMember(...)] // Queue Members\n\n// Join or unjoin a set of users for a queue\nPatchRoutingQueueMembersRequest.patchRoutingQueueMembers(queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchRoutingQueueMembersRequest.patchRoutingQueueMembers was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet queueId: String = \"\" // Queue ID\nlet body: [QueueMember] = [new QueueMember(...)] // Queue Members\n\n// Join or unjoin a set of up to 100 users for a queue\nPatchRoutingQueueMembersRequest.patchRoutingQueueMembers(queueId: queueId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchRoutingQueueMembersRequest.patchRoutingQueueMembers was successful\")\n        dump(response)\n    }\n}"
   },
   "patchroutingqueueuser": {
     "operationId": "patchroutingqueueuser",
@@ -38461,6 +38473,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\n\n// Delete a worktype\nDeleteTaskmanagementWorktypeRequest.deleteTaskmanagementWorktype(worktypeId: worktypeId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTaskmanagementWorktypeRequest.deleteTaskmanagementWorktype was successful\")\n    }\n}"
   },
+  "deletetaskmanagementworktypeflowsdatebasedrule": {
+    "operationId": "deletetaskmanagementworktypeflowsdatebasedrule",
+    "functionName": "deleteTaskmanagementWorktypeFlowsDatebasedRule",
+    "signature": "deleteTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet ruleId: String = \"\" // ruleId\n\n// Delete a date based rule\nDeleteTaskmanagementWorktypeFlowsDatebasedRuleRequest.deleteTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: worktypeId, ruleId: ruleId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTaskmanagementWorktypeFlowsDatebasedRuleRequest.deleteTaskmanagementWorktypeFlowsDatebasedRule was successful\")\n    }\n}"
+  },
   "deletetaskmanagementworktypeflowsonattributechangerule": {
     "operationId": "deletetaskmanagementworktypeflowsonattributechangerule",
     "functionName": "deleteTaskmanagementWorktypeFlowsOnattributechangeRule",
@@ -38722,6 +38752,49 @@
     "return": "Worktype",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet expands: [String] = [\"\"] // Which fields, if any, to expand.\n\n// Get a worktype\nGetTaskmanagementWorktypeRequest.getTaskmanagementWorktype(worktypeId: worktypeId, expands: expands) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeRequest.getTaskmanagementWorktype was successful\")\n        dump(response)\n    }\n}"
   },
+  "gettaskmanagementworktypeflowsdatebasedrule": {
+    "operationId": "gettaskmanagementworktypeflowsdatebasedrule",
+    "functionName": "getTaskmanagementWorktypeFlowsDatebasedRule",
+    "signature": "getTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "WorkitemDateBasedRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet ruleId: String = \"\" // ruleId\n\n// Get a date based rule\nGetTaskmanagementWorktypeFlowsDatebasedRuleRequest.getTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: worktypeId, ruleId: ruleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeFlowsDatebasedRuleRequest.getTaskmanagementWorktypeFlowsDatebasedRule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworktypeflowsdatebasedrules": {
+    "operationId": "gettaskmanagementworktypeflowsdatebasedrules",
+    "functionName": "getTaskmanagementWorktypeFlowsDatebasedRules",
+    "signature": "getTaskmanagementWorktypeFlowsDatebasedRules(worktypeId, after, pageSize)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "WorkitemDateBasedRuleListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\n\n// Get all date based rules for a worktype\nGetTaskmanagementWorktypeFlowsDatebasedRulesRequest.getTaskmanagementWorktypeFlowsDatebasedRules(worktypeId: worktypeId, after: after, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorktypeFlowsDatebasedRulesRequest.getTaskmanagementWorktypeFlowsDatebasedRules was successful\")\n        dump(response)\n    }\n}"
+  },
   "gettaskmanagementworktypeflowsonattributechangerule": {
     "operationId": "gettaskmanagementworktypeflowsonattributechangerule",
     "functionName": "getTaskmanagementWorktypeFlowsOnattributechangeRule",
@@ -38959,6 +39032,30 @@
     "return": "Worktype",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet body: WorktypeUpdate = new WorktypeUpdate(...) // Worktype\n\n// Update the attributes of a worktype\nPatchTaskmanagementWorktypeRequest.patchTaskmanagementWorktype(worktypeId: worktypeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorktypeRequest.patchTaskmanagementWorktype was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchtaskmanagementworktypeflowsdatebasedrule": {
+    "operationId": "patchtaskmanagementworktypeflowsdatebasedrule",
+    "functionName": "patchTaskmanagementWorktypeFlowsDatebasedRule",
+    "signature": "patchTaskmanagementWorktypeFlowsDatebasedRule(worktypeId, ruleId, body)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "ruleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WorkitemDateBasedRuleUpdate",
+        "required": "true"
+      }
+    ],
+    "return": "WorkitemDateBasedRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet ruleId: String = \"\" // ruleId\nlet body: WorkitemDateBasedRuleUpdate = new WorkitemDateBasedRuleUpdate(...) // Rule\n\n// Update the attributes of a date based rule\nPatchTaskmanagementWorktypeFlowsDatebasedRuleRequest.patchTaskmanagementWorktypeFlowsDatebasedRule(worktypeId: worktypeId, ruleId: ruleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorktypeFlowsDatebasedRuleRequest.patchTaskmanagementWorktypeFlowsDatebasedRule was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchtaskmanagementworktypeflowsonattributechangerule": {
     "operationId": "patchtaskmanagementworktypeflowsonattributechangerule",
     "functionName": "patchTaskmanagementWorktypeFlowsOnattributechangeRule",
@@ -39147,6 +39244,25 @@
     ],
     "return": "DataSchema",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DataSchema = new DataSchema(...) // Schema\n\n// Create a schema\nPostTaskmanagementWorkitemsSchemasRequest.postTaskmanagementWorkitemsSchemas(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorkitemsSchemasRequest.postTaskmanagementWorkitemsSchemas was successful\")\n        dump(response)\n    }\n}"
+  },
+  "posttaskmanagementworktypeflowsdatebasedrules": {
+    "operationId": "posttaskmanagementworktypeflowsdatebasedrules",
+    "functionName": "postTaskmanagementWorktypeFlowsDatebasedRules",
+    "signature": "postTaskmanagementWorktypeFlowsDatebasedRules(worktypeId, body)",
+    "parameters": [
+      {
+        "name": "worktypeId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "WorkitemDateBasedRuleCreate",
+        "required": "true"
+      }
+    ],
+    "return": "WorkitemDateBasedRule",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet worktypeId: String = \"\" // Worktype id\nlet body: WorkitemDateBasedRuleCreate = new WorkitemDateBasedRuleCreate(...) // Rule\n\n// Add a date based rule to a worktype\nPostTaskmanagementWorktypeFlowsDatebasedRulesRequest.postTaskmanagementWorktypeFlowsDatebasedRules(worktypeId: worktypeId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorktypeFlowsDatebasedRulesRequest.postTaskmanagementWorktypeFlowsDatebasedRules was successful\")\n        dump(response)\n    }\n}"
   },
   "posttaskmanagementworktypeflowsonattributechangerules": {
     "operationId": "posttaskmanagementworktypeflowsonattributechangerules",

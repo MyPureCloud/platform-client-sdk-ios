@@ -16346,6 +16346,53 @@ public class FaxDocumentEntityListing: Codable {
 
 
 
+public class FlowActivityResponse: Codable {
+
+
+
+    public enum EntityIdDimension: String, Codable { 
+        case activerouting = "activeRouting"
+        case addressfrom = "addressFrom"
+        case addressto = "addressTo"
+        case agentscore = "agentScore"
+        case ani = "ani"
+        case conversationid = "conversationId"
+        case convertedfrom = "convertedFrom"
+        case convertedto = "convertedTo"
+        case direction = "direction"
+        case dnis = "dnis"
+        case flowid = "flowId"
+        case flowtype = "flowType"
+        case mediatype = "mediaType"
+        case participantname = "participantName"
+        case queueid = "queueId"
+        case requestedlanguageid = "requestedLanguageId"
+        case requestedrouting = "requestedRouting"
+        case requestedroutingskillid = "requestedRoutingSkillId"
+        case routingpriority = "routingPriority"
+        case scoredagentid = "scoredAgentId"
+        case sessionid = "sessionId"
+        case teamid = "teamId"
+        case usedrouting = "usedRouting"
+        case userid = "userId"
+    }
+
+    /** Query results */
+    public var results: [FlowActivityData]?
+    /** Dimension that is used as an entityId */
+    public var entityIdDimension: EntityIdDimension?
+
+    public init(results: [FlowActivityData]?, entityIdDimension: EntityIdDimension?) {
+        self.results = results
+        self.entityIdDimension = entityIdDimension
+    }
+
+
+}
+
+
+
+
 public class FlowActivityQueryPredicate: Codable {
 
     public enum ModelType: String, Codable { 
@@ -16410,53 +16457,6 @@ public class FlowActivityQueryPredicate: Codable {
         case dimension
         case _operator = "operator"
         case value
-    }
-
-
-}
-
-
-
-
-public class FlowActivityResponse: Codable {
-
-
-
-    public enum EntityIdDimension: String, Codable { 
-        case activerouting = "activeRouting"
-        case addressfrom = "addressFrom"
-        case addressto = "addressTo"
-        case agentscore = "agentScore"
-        case ani = "ani"
-        case conversationid = "conversationId"
-        case convertedfrom = "convertedFrom"
-        case convertedto = "convertedTo"
-        case direction = "direction"
-        case dnis = "dnis"
-        case flowid = "flowId"
-        case flowtype = "flowType"
-        case mediatype = "mediaType"
-        case participantname = "participantName"
-        case queueid = "queueId"
-        case requestedlanguageid = "requestedLanguageId"
-        case requestedrouting = "requestedRouting"
-        case requestedroutingskillid = "requestedRoutingSkillId"
-        case routingpriority = "routingPriority"
-        case scoredagentid = "scoredAgentId"
-        case sessionid = "sessionId"
-        case teamid = "teamId"
-        case usedrouting = "usedRouting"
-        case userid = "userId"
-    }
-
-    /** Query results */
-    public var results: [FlowActivityData]?
-    /** Dimension that is used as an entityId */
-    public var entityIdDimension: EntityIdDimension?
-
-    public init(results: [FlowActivityData]?, entityIdDimension: EntityIdDimension?) {
-        self.results = results
-        self.entityIdDimension = entityIdDimension
     }
 
 
@@ -17133,13 +17133,23 @@ public class FlowPaths: Codable {
 
 
 
+
+
+
+
     /** Category (use case) of the paths within a given domain. */
     public var category: Category?
+    /** Start date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateStart: Date?
+    /** End date of the date range included in the flow paths data. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateEnd: Date?
     /** Unique element identifiers and their corresponding elements in the trie data structure representing the paths. */
     public var elements: [String:FlowPathsElement]?
 
-    public init(category: Category?, elements: [String:FlowPathsElement]?) {
+    public init(category: Category?, dateStart: Date?, dateEnd: Date?, elements: [String:FlowPathsElement]?) {
         self.category = category
+        self.dateStart = dateStart
+        self.dateEnd = dateEnd
         self.elements = elements
     }
 
@@ -19573,6 +19583,33 @@ public class JourneySessionEventsNotificationConversationUserDisposition: Codabl
 
 
 
+public class Label: Codable {
+
+
+
+
+
+
+
+    /** Name of the label */
+    public var name: String?
+    /** Value of the label */
+    public var value: String?
+    /** Whether the label is encoded or not */
+    public var encoded: Bool?
+
+    public init(name: String?, value: String?, encoded: Bool?) {
+        self.name = name
+        self.value = value
+        self.encoded = encoded
+    }
+
+
+}
+
+
+
+
 public class JourneySessionEventsNotificationGeoLocation: Codable {
 
 
@@ -20343,6 +20380,7 @@ public class KeyPerformanceIndicator: Codable {
         case retention = "Retention"
         case salesValue = "SalesValue"
         case handleTime = "HandleTime"
+        case nextContactAvoidance = "NextContactAvoidance"
     }
 
     public enum Source: String, Codable { 
@@ -21923,33 +21961,6 @@ public class KnowledgeSyncJobReport: Codable {
 
 
 
-public class Label: Codable {
-
-
-
-
-
-
-
-    /** Name of the label */
-    public var name: String?
-    /** Value of the label */
-    public var value: String?
-    /** Whether the label is encoded or not */
-    public var encoded: Bool?
-
-    public init(name: String?, value: String?, encoded: Bool?) {
-        self.name = name
-        self.value = value
-        self.encoded = encoded
-    }
-
-
-}
-
-
-
-
 public class LabelListing: Codable {
 
 
@@ -22199,190 +22210,6 @@ public class LearningAssignment: Codable {
 
 
 
-/** Learning module response */
-
-public class LearningModule: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum Source: String, Codable { 
-        case userCreated = "UserCreated"
-        case genesysBeyond = "GenesysBeyond"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum ModelType: String, Codable { 
-        case informational = "Informational"
-        case assessedContent = "AssessedContent"
-        case assessment = "Assessment"
-        case external = "External"
-        case native = "Native"
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public enum ArchivalMode: String, Codable { 
-        case graceful = "Graceful"
-        case immediate = "Immediate"
-    }
-
-    /** The globally unique identifier for the object. */
-    public var _id: String?
-    /** The name of learning module */
-    public var name: String?
-    /** If true, learning module is excluded when retrieving modules for manual assignment */
-    public var excludedFromCatalog: Bool?
-    /** The user who created learning module */
-    public var createdBy: UserReference?
-    /** The date/time learning module was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateCreated: Date?
-    /** The user who modified learning module */
-    public var modifiedBy: UserReference?
-    /** The date/time learning module was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
-    public var dateModified: Date?
-    /** The version of published learning module */
-    public var version: Int?
-    /** The external ID of the learning module */
-    public var externalId: String?
-    /** The source of the learning module */
-    public var source: Source?
-    /** The rule for learning module; read-only, and only populated when requested via expand param. */
-    public var rule: LearningModuleRule?
-    /** If true, learning module content should be viewed one by one in order */
-    public var enforceContentOrder: Bool?
-    /** Allows to view Assessment results in detail */
-    public var reviewAssessmentResults: ReviewAssessmentResults?
-    /** The URI for this object */
-    public var selfUri: String?
-    /** If true, learning module is archived */
-    public var isArchived: Bool?
-    /** If true, learning module is published */
-    public var isPublished: Bool?
-    /** The description of learning module */
-    public var _description: String?
-    /** The completion time of learning module in days */
-    public var completionTimeInDays: Int?
-    /** The type for the learning module */
-    public var type: ModelType?
-    /** The list of inform steps in a learning module */
-    public var informSteps: [LearningModuleInformStep]?
-    /** The assessment form for learning module */
-    public var assessmentForm: AssessmentForm?
-    /** The learning module summary data */
-    public var summaryData: LearningModuleSummary?
-    /** The learning module reassign summary data */
-    public var reassignSummaryData: LearningModuleReassignSummary?
-    /** The cover art for the learning module */
-    public var coverArt: LearningModuleCoverArtResponse?
-    /** The recommended time in minutes to complete the module */
-    public var lengthInMinutes: Int?
-    /** The mode of archival for learning module */
-    public var archivalMode: ArchivalMode?
-
-    public init(_id: String?, name: String?, excludedFromCatalog: Bool?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, enforceContentOrder: Bool?, reviewAssessmentResults: ReviewAssessmentResults?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, reassignSummaryData: LearningModuleReassignSummary?, coverArt: LearningModuleCoverArtResponse?, lengthInMinutes: Int?, archivalMode: ArchivalMode?) {
-        self._id = _id
-        self.name = name
-        self.excludedFromCatalog = excludedFromCatalog
-        self.createdBy = createdBy
-        self.dateCreated = dateCreated
-        self.modifiedBy = modifiedBy
-        self.dateModified = dateModified
-        self.version = version
-        self.externalId = externalId
-        self.source = source
-        self.rule = rule
-        self.enforceContentOrder = enforceContentOrder
-        self.reviewAssessmentResults = reviewAssessmentResults
-        self.selfUri = selfUri
-        self.isArchived = isArchived
-        self.isPublished = isPublished
-        self._description = _description
-        self.completionTimeInDays = completionTimeInDays
-        self.type = type
-        self.informSteps = informSteps
-        self.assessmentForm = assessmentForm
-        self.summaryData = summaryData
-        self.reassignSummaryData = reassignSummaryData
-        self.coverArt = coverArt
-        self.lengthInMinutes = lengthInMinutes
-        self.archivalMode = archivalMode
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-        case excludedFromCatalog
-        case createdBy
-        case dateCreated
-        case modifiedBy
-        case dateModified
-        case version
-        case externalId
-        case source
-        case rule
-        case enforceContentOrder
-        case reviewAssessmentResults
-        case selfUri
-        case isArchived
-        case isPublished
-        case _description = "description"
-        case completionTimeInDays
-        case type
-        case informSteps
-        case assessmentForm
-        case summaryData
-        case reassignSummaryData
-        case coverArt
-        case lengthInMinutes
-        case archivalMode
-    }
-
-
-}
-
-
-
 
 public class LearningAssignmentAggregateParam: Codable {
 
@@ -22598,6 +22425,190 @@ public class LearningAssignmentUserListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+/** Learning module response */
+
+public class LearningModule: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum Source: String, Codable { 
+        case userCreated = "UserCreated"
+        case genesysBeyond = "GenesysBeyond"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum ModelType: String, Codable { 
+        case informational = "Informational"
+        case assessedContent = "AssessedContent"
+        case assessment = "Assessment"
+        case external = "External"
+        case native = "Native"
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public enum ArchivalMode: String, Codable { 
+        case graceful = "Graceful"
+        case immediate = "Immediate"
+    }
+
+    /** The globally unique identifier for the object. */
+    public var _id: String?
+    /** The name of learning module */
+    public var name: String?
+    /** If true, learning module is excluded when retrieving modules for manual assignment */
+    public var excludedFromCatalog: Bool?
+    /** The user who created learning module */
+    public var createdBy: UserReference?
+    /** The date/time learning module was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateCreated: Date?
+    /** The user who modified learning module */
+    public var modifiedBy: UserReference?
+    /** The date/time learning module was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z */
+    public var dateModified: Date?
+    /** The version of published learning module */
+    public var version: Int?
+    /** The external ID of the learning module */
+    public var externalId: String?
+    /** The source of the learning module */
+    public var source: Source?
+    /** The rule for learning module; read-only, and only populated when requested via expand param. */
+    public var rule: LearningModuleRule?
+    /** If true, learning module content should be viewed one by one in order */
+    public var enforceContentOrder: Bool?
+    /** Allows to view Assessment results in detail */
+    public var reviewAssessmentResults: ReviewAssessmentResults?
+    /** The URI for this object */
+    public var selfUri: String?
+    /** If true, learning module is archived */
+    public var isArchived: Bool?
+    /** If true, learning module is published */
+    public var isPublished: Bool?
+    /** The description of learning module */
+    public var _description: String?
+    /** The completion time of learning module in days */
+    public var completionTimeInDays: Int?
+    /** The type for the learning module */
+    public var type: ModelType?
+    /** The list of inform steps in a learning module */
+    public var informSteps: [LearningModuleInformStep]?
+    /** The assessment form for learning module */
+    public var assessmentForm: AssessmentForm?
+    /** The learning module summary data */
+    public var summaryData: LearningModuleSummary?
+    /** The learning module reassign summary data */
+    public var reassignSummaryData: LearningModuleReassignSummary?
+    /** The cover art for the learning module */
+    public var coverArt: LearningModuleCoverArtResponse?
+    /** The recommended time in minutes to complete the module */
+    public var lengthInMinutes: Int?
+    /** The mode of archival for learning module */
+    public var archivalMode: ArchivalMode?
+
+    public init(_id: String?, name: String?, excludedFromCatalog: Bool?, createdBy: UserReference?, dateCreated: Date?, modifiedBy: UserReference?, dateModified: Date?, version: Int?, externalId: String?, source: Source?, rule: LearningModuleRule?, enforceContentOrder: Bool?, reviewAssessmentResults: ReviewAssessmentResults?, selfUri: String?, isArchived: Bool?, isPublished: Bool?, _description: String?, completionTimeInDays: Int?, type: ModelType?, informSteps: [LearningModuleInformStep]?, assessmentForm: AssessmentForm?, summaryData: LearningModuleSummary?, reassignSummaryData: LearningModuleReassignSummary?, coverArt: LearningModuleCoverArtResponse?, lengthInMinutes: Int?, archivalMode: ArchivalMode?) {
+        self._id = _id
+        self.name = name
+        self.excludedFromCatalog = excludedFromCatalog
+        self.createdBy = createdBy
+        self.dateCreated = dateCreated
+        self.modifiedBy = modifiedBy
+        self.dateModified = dateModified
+        self.version = version
+        self.externalId = externalId
+        self.source = source
+        self.rule = rule
+        self.enforceContentOrder = enforceContentOrder
+        self.reviewAssessmentResults = reviewAssessmentResults
+        self.selfUri = selfUri
+        self.isArchived = isArchived
+        self.isPublished = isPublished
+        self._description = _description
+        self.completionTimeInDays = completionTimeInDays
+        self.type = type
+        self.informSteps = informSteps
+        self.assessmentForm = assessmentForm
+        self.summaryData = summaryData
+        self.reassignSummaryData = reassignSummaryData
+        self.coverArt = coverArt
+        self.lengthInMinutes = lengthInMinutes
+        self.archivalMode = archivalMode
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+        case excludedFromCatalog
+        case createdBy
+        case dateCreated
+        case modifiedBy
+        case dateModified
+        case version
+        case externalId
+        case source
+        case rule
+        case enforceContentOrder
+        case reviewAssessmentResults
+        case selfUri
+        case isArchived
+        case isPublished
+        case _description = "description"
+        case completionTimeInDays
+        case type
+        case informSteps
+        case assessmentForm
+        case summaryData
+        case reassignSummaryData
+        case coverArt
+        case lengthInMinutes
+        case archivalMode
     }
 
 
@@ -26437,6 +26448,128 @@ public class OutboundMessagingMessagingCampaignConfigChangeContactSort: Codable 
 
 
 
+/** An outbound-messaging messaging campaign SMS Config */
+
+public class OutboundMessagingMessagingCampaignConfigChangeSmsConfig: Codable {
+
+
+
+
+
+
+
+
+
+    /** The Contact List column specifying the message to send to the contact. */
+    public var messageColumn: String?
+    /** The Contact List column specifying the phone number to send a message to. */
+    public var phoneColumn: String?
+    public var senderSmsPhoneNumber: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef?
+    public var contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?
+
+    public init(messageColumn: String?, phoneColumn: String?, senderSmsPhoneNumber: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef?, contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?) {
+        self.messageColumn = messageColumn
+        self.phoneColumn = phoneColumn
+        self.senderSmsPhoneNumber = senderSmsPhoneNumber
+        self.contentTemplate = contentTemplate
+    }
+
+
+}
+
+
+
+/** A reference for an SmsPhoneNumber */
+
+public class OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef: Codable {
+
+
+
+    /** The unique phone number */
+    public var phoneNumber: String?
+
+    public init(phoneNumber: String?) {
+        self.phoneNumber = phoneNumber
+    }
+
+
+}
+
+
+
+/** A UriReference for a resource */
+
+public class OutboundMessagingMessagingCampaignConfigChangeUriReference: Codable {
+
+
+
+
+
+    /** The ID of the resource */
+    public var _id: String?
+    /** The name of the resource */
+    public var name: String?
+
+    public init(_id: String?, name: String?) {
+        self._id = _id
+        self.name = name
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+    }
+
+
+}
+
+
+
+
+public class OutboundMessagingMessagingCampaignProgressEventCampaignProgress: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public var campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?
+    /** The number of contacts that have been called so far */
+    public var numberOfContactsCalled: Double?
+    /** The number of contacts that have been messaged so far */
+    public var numberOfContactsMessaged: Double?
+    /** The total number of contacts in the contact list */
+    public var totalNumberOfContacts: Double?
+    /** numberOfContactsContacted/totalNumberOfContacts*100 */
+    public var percentage: Int?
+    /** A map of skipped reasons and the number of contacts associated with each. */
+    public var numberOfContactsSkipped: [String:Int]?
+    public var additionalProperties: [String:JSON]?
+
+    public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, numberOfContactsSkipped: [String:Int]?, additionalProperties: [String:JSON]?) {
+        self.campaign = campaign
+        self.numberOfContactsCalled = numberOfContactsCalled
+        self.numberOfContactsMessaged = numberOfContactsMessaged
+        self.totalNumberOfContacts = totalNumberOfContacts
+        self.percentage = percentage
+        self.numberOfContactsSkipped = numberOfContactsSkipped
+        self.additionalProperties = additionalProperties
+    }
+
+
+}
+
+
+
 
 public class OutboundRoute: Codable {
 
@@ -26564,128 +26697,6 @@ public class OutboundRoute: Codable {
         case site
         case managed
         case selfUri
-    }
-
-
-}
-
-
-
-/** An outbound-messaging messaging campaign SMS Config */
-
-public class OutboundMessagingMessagingCampaignConfigChangeSmsConfig: Codable {
-
-
-
-
-
-
-
-
-
-    /** The Contact List column specifying the message to send to the contact. */
-    public var messageColumn: String?
-    /** The Contact List column specifying the phone number to send a message to. */
-    public var phoneColumn: String?
-    public var senderSmsPhoneNumber: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef?
-    public var contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?
-
-    public init(messageColumn: String?, phoneColumn: String?, senderSmsPhoneNumber: OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef?, contentTemplate: OutboundMessagingMessagingCampaignConfigChangeResponseRef?) {
-        self.messageColumn = messageColumn
-        self.phoneColumn = phoneColumn
-        self.senderSmsPhoneNumber = senderSmsPhoneNumber
-        self.contentTemplate = contentTemplate
-    }
-
-
-}
-
-
-
-/** A reference for an SmsPhoneNumber */
-
-public class OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef: Codable {
-
-
-
-    /** The unique phone number */
-    public var phoneNumber: String?
-
-    public init(phoneNumber: String?) {
-        self.phoneNumber = phoneNumber
-    }
-
-
-}
-
-
-
-/** A UriReference for a resource */
-
-public class OutboundMessagingMessagingCampaignConfigChangeUriReference: Codable {
-
-
-
-
-
-    /** The ID of the resource */
-    public var _id: String?
-    /** The name of the resource */
-    public var name: String?
-
-    public init(_id: String?, name: String?) {
-        self._id = _id
-        self.name = name
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
-        case name
-    }
-
-
-}
-
-
-
-
-public class OutboundMessagingMessagingCampaignProgressEventCampaignProgress: Codable {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public var campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?
-    /** The number of contacts that have been called so far */
-    public var numberOfContactsCalled: Double?
-    /** The number of contacts that have been messaged so far */
-    public var numberOfContactsMessaged: Double?
-    /** The total number of contacts in the contact list */
-    public var totalNumberOfContacts: Double?
-    /** numberOfContactsContacted/totalNumberOfContacts*100 */
-    public var percentage: Int?
-    /** A map of skipped reasons and the number of contacts associated with each. */
-    public var numberOfContactsSkipped: [String:Int]?
-    public var additionalProperties: [String:JSON]?
-
-    public init(campaign: OutboundMessagingMessagingCampaignProgressEventUriReference?, numberOfContactsCalled: Double?, numberOfContactsMessaged: Double?, totalNumberOfContacts: Double?, percentage: Int?, numberOfContactsSkipped: [String:Int]?, additionalProperties: [String:JSON]?) {
-        self.campaign = campaign
-        self.numberOfContactsCalled = numberOfContactsCalled
-        self.numberOfContactsMessaged = numberOfContactsMessaged
-        self.totalNumberOfContacts = totalNumberOfContacts
-        self.percentage = percentage
-        self.numberOfContactsSkipped = numberOfContactsSkipped
-        self.additionalProperties = additionalProperties
     }
 
 
@@ -37393,6 +37404,27 @@ public class SupportedDialectsTranscriptionEngine: Codable {
 
 
 
+public class SupportedEntityTypeStatus: Codable {
+
+    public enum ListSlotType: String, Codable { 
+        case all = "All"
+        case restricted = "Restricted"
+        case unrestricted = "Unrestricted"
+    }
+
+    /** The configuration status of restricted lists */
+    public var listSlotType: ListSlotType?
+
+    public init(listSlotType: ListSlotType?) {
+        self.listSlotType = listSlotType
+    }
+
+
+}
+
+
+
+
 public class SupportedLanguage: Codable {
 
 
@@ -43452,6 +43484,26 @@ public class WfmBuIntradayDataUpdateTopicBuIntradayNotification: Codable {
 
 
 
+public class WfmBuScheduleRunTopicUserReference: Codable {
+
+
+
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+    }
+
+
+}
+
+
+
+
 public class WfmBuScheduleRunTopicSchedulerMessageSeverityCount: Codable {
 
     public enum Severity: String, Codable { 
@@ -43469,26 +43521,6 @@ public class WfmBuScheduleRunTopicSchedulerMessageSeverityCount: Codable {
     public init(severity: Severity?, count: Int?) {
         self.severity = severity
         self.count = count
-    }
-
-
-}
-
-
-
-
-public class WfmBuScheduleRunTopicUserReference: Codable {
-
-
-
-    public var _id: String?
-
-    public init(_id: String?) {
-        self._id = _id
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
     }
 
 
@@ -44238,6 +44270,26 @@ public class WfmUserNotificationTopicAlternativeShiftNotification: Codable {
 
 
 
+public class WfmUserNotificationTopicUserReference: Codable {
+
+
+
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+    }
+
+
+}
+
+
+
+
 public class WfmUserNotificationTopicShiftTradeNotification: Codable {
 
 
@@ -44281,26 +44333,6 @@ public class WfmUserNotificationTopicShiftTradeNotification: Codable {
         self.initiatingShiftDate = initiatingShiftDate
         self.receivingUser = receivingUser
         self.receivingShiftDate = receivingShiftDate
-    }
-
-
-}
-
-
-
-
-public class WfmUserNotificationTopicUserReference: Codable {
-
-
-
-    public var _id: String?
-
-    public init(_id: String?) {
-        self._id = _id
-    }
-
-    public enum CodingKeys: String, CodingKey { 
-        case _id = "id"
     }
 
 
@@ -44706,9 +44738,11 @@ public class WorkPlanConfigurationViolationMessage: Codable {
         case maxDaysOffPerPlanningPeriodNotCorrect = "MaxDaysOffPerPlanningPeriodNotCorrect"
         case maxPaidTimeIsMoreThanShiftLength = "MaxPaidTimeIsMoreThanShiftLength"
         case maxPaidTimeNotDivisibleByGranularity = "MaxPaidTimeNotDivisibleByGranularity"
+        case maxPaidTimePerMonthlyPlanningPeriod = "MaxPaidTimePerMonthlyPlanningPeriod"
         case maxPaidTimePerPlanningPeriod = "MaxPaidTimePerPlanningPeriod"
         case maxShifts = "MaxShifts"
         case minPaidTimeNotDivisibleByGranularity = "MinPaidTimeNotDivisibleByGranularity"
+        case minPaidTimePerMonthlyPlanningPeriod = "MinPaidTimePerMonthlyPlanningPeriod"
         case minPaidTimePerPlanningPeriod = "MinPaidTimePerPlanningPeriod"
         case noShifts = "NoShifts"
         case paidTimeGreaterThanMaxWorkTime = "PaidTimeGreaterThanMaxWorkTime"
@@ -45122,6 +45156,50 @@ public class Workitem: Codable {
         case autoStatusTransitionDetail
         case scoredAgents
         case selfUri
+    }
+
+
+}
+
+
+
+
+public class WorkitemDateBasedRuleCreate: Codable {
+
+
+
+
+
+    /** The name of the rule. */
+    public var name: String?
+    /** The rules condition. If the condition criteria is met the rules action will be executed. */
+    public var condition: WorkitemDateBasedCondition?
+
+    public init(name: String?, condition: WorkitemDateBasedCondition?) {
+        self.name = name
+        self.condition = condition
+    }
+
+
+}
+
+
+
+
+public class WorkitemDateBasedRuleUpdate: Codable {
+
+
+
+
+
+    /** The name of the rule. */
+    public var name: String?
+    /** The rules condition. If the condition criteria is met the rules action will be executed. */
+    public var condition: WorkitemDateBasedConditionUpdate?
+
+    public init(name: String?, condition: WorkitemDateBasedConditionUpdate?) {
+        self.name = name
+        self.condition = condition
     }
 
 
