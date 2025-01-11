@@ -6,6 +6,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteTaskmanagementWorkbin**](TaskManagementAPI#deleteTaskmanagementWorkbin) | Delete a workbin |
 | [**deleteTaskmanagementWorkitem**](TaskManagementAPI#deleteTaskmanagementWorkitem) | Delete a workitem |
+| [**deleteTaskmanagementWorkitemsBulkAddJob**](TaskManagementAPI#deleteTaskmanagementWorkitemsBulkAddJob) | Delete a bulk add job |
+| [**deleteTaskmanagementWorkitemsBulkTerminateJob**](TaskManagementAPI#deleteTaskmanagementWorkitemsBulkTerminateJob) | Delete a Bulk job |
 | [**deleteTaskmanagementWorkitemsSchema**](TaskManagementAPI#deleteTaskmanagementWorkitemsSchema) | Delete a schema |
 | [**deleteTaskmanagementWorktype**](TaskManagementAPI#deleteTaskmanagementWorktype) | Delete a worktype |
 | [**deleteTaskmanagementWorktypeFlowsDatebasedRule**](TaskManagementAPI#deleteTaskmanagementWorktypeFlowsDatebasedRule) | Delete a date based rule |
@@ -16,6 +18,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTaskmanagementWorkitem**](TaskManagementAPI#getTaskmanagementWorkitem) | Get a workitem |
 | [**getTaskmanagementWorkitemUserWrapups**](TaskManagementAPI#getTaskmanagementWorkitemUserWrapups) | Get all wrapup codes added for the given user for a workitem. |
 | [**getTaskmanagementWorkitemWrapups**](TaskManagementAPI#getTaskmanagementWorkitemWrapups) | Get all wrapup codes added for all users for a workitem. |
+| [**getTaskmanagementWorkitemsBulkAddJob**](TaskManagementAPI#getTaskmanagementWorkitemsBulkAddJob) | Get the bulk add job associated with the job id. |
+| [**getTaskmanagementWorkitemsBulkAddJobResults**](TaskManagementAPI#getTaskmanagementWorkitemsBulkAddJobResults) | Get bulk add job results. |
+| [**getTaskmanagementWorkitemsBulkJobsUsersMe**](TaskManagementAPI#getTaskmanagementWorkitemsBulkJobsUsersMe) | Get bulk jobs created by the currently logged in user. |
+| [**getTaskmanagementWorkitemsBulkTerminateJob**](TaskManagementAPI#getTaskmanagementWorkitemsBulkTerminateJob) | Get the bulk job associated with the job id. |
+| [**getTaskmanagementWorkitemsBulkTerminateJobResults**](TaskManagementAPI#getTaskmanagementWorkitemsBulkTerminateJobResults) | Get bulk terminate job results. |
 | [**getTaskmanagementWorkitemsQueryJob**](TaskManagementAPI#getTaskmanagementWorkitemsQueryJob) | Get the workitem query job associated with the job id. |
 | [**getTaskmanagementWorkitemsQueryJobResults**](TaskManagementAPI#getTaskmanagementWorkitemsQueryJobResults) | Get results from for workitem query job  |
 | [**getTaskmanagementWorkitemsSchema**](TaskManagementAPI#getTaskmanagementWorkitemsSchema) | Get a schema |
@@ -36,6 +43,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchTaskmanagementWorkitemAssignment**](TaskManagementAPI#patchTaskmanagementWorkitemAssignment) | Attempts to manually assign a specified workitem to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
 | [**patchTaskmanagementWorkitemUserWrapups**](TaskManagementAPI#patchTaskmanagementWorkitemUserWrapups) | Add/Remove a wrapup code for a given user in a workitem. |
 | [**patchTaskmanagementWorkitemUsersMeWrapups**](TaskManagementAPI#patchTaskmanagementWorkitemUsersMeWrapups) | Add/Remove a wrapup code for the current user in a workitem. |
+| [**patchTaskmanagementWorkitemsBulkAddJob**](TaskManagementAPI#patchTaskmanagementWorkitemsBulkAddJob) | Update workitem bulk add job. |
+| [**patchTaskmanagementWorkitemsBulkTerminateJob**](TaskManagementAPI#patchTaskmanagementWorkitemsBulkTerminateJob) | Update workitem bulk terminate job. |
 | [**patchTaskmanagementWorktype**](TaskManagementAPI#patchTaskmanagementWorktype) | Update the attributes of a worktype |
 | [**patchTaskmanagementWorktypeFlowsDatebasedRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsDatebasedRule) | Update the attributes of a date based rule |
 | [**patchTaskmanagementWorktypeFlowsOnattributechangeRule**](TaskManagementAPI#patchTaskmanagementWorktypeFlowsOnattributechangeRule) | Update the attributes of a rule |
@@ -47,6 +56,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postTaskmanagementWorkitemDisconnect**](TaskManagementAPI#postTaskmanagementWorkitemDisconnect) | Disconnect the assignee of the workitem |
 | [**postTaskmanagementWorkitemTerminate**](TaskManagementAPI#postTaskmanagementWorkitemTerminate) | Terminate a workitem |
 | [**postTaskmanagementWorkitems**](TaskManagementAPI#postTaskmanagementWorkitems) | Create a workitem |
+| [**postTaskmanagementWorkitemsBulkAddJobs**](TaskManagementAPI#postTaskmanagementWorkitemsBulkAddJobs) | Create a workitem bulk add job. |
+| [**postTaskmanagementWorkitemsBulkTerminateJobs**](TaskManagementAPI#postTaskmanagementWorkitemsBulkTerminateJobs) | Create a workitem bulk terminate job. |
 | [**postTaskmanagementWorkitemsQueryJobs**](TaskManagementAPI#postTaskmanagementWorkitemsQueryJobs) | Create a workitem query job |
 | [**postTaskmanagementWorkitemsSchemas**](TaskManagementAPI#postTaskmanagementWorkitemsSchemas) | Create a schema |
 | [**postTaskmanagementWorktypeFlowsDatebasedRules**](TaskManagementAPI#postTaskmanagementWorktypeFlowsDatebasedRules) | Add a date based rule to a worktype |
@@ -150,6 +161,104 @@ TaskManagementAPI.deleteTaskmanagementWorkitem(workitemId: workitemId) { (error)
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **workitemId** | **String**| Workitem ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteTaskmanagementWorkitemsBulkAddJob
+
+
+
+> Void deleteTaskmanagementWorkitemsBulkAddJob(bulkJobId)
+
+Delete a bulk add job
+
+
+
+Wraps DELETE /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}  
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+
+// Code example
+TaskManagementAPI.deleteTaskmanagementWorkitemsBulkAddJob(bulkJobId: bulkJobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TaskManagementAPI.deleteTaskmanagementWorkitemsBulkAddJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteTaskmanagementWorkitemsBulkTerminateJob
+
+
+
+> Void deleteTaskmanagementWorkitemsBulkTerminateJob(bulkJobId)
+
+Delete a Bulk job
+
+
+
+Wraps DELETE /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}  
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+
+// Code example
+TaskManagementAPI.deleteTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: bulkJobId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("TaskManagementAPI.deleteTaskmanagementWorkitemsBulkTerminateJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
 
 
 ### Return type
@@ -677,6 +786,262 @@ TaskManagementAPI.getTaskmanagementWorkitemWrapups(workitemId: workitemId, expan
 ### Return type
 
 [**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing)
+
+
+## getTaskmanagementWorkitemsBulkAddJob
+
+
+
+> [BulkJob](BulkJob) getTaskmanagementWorkitemsBulkAddJob(bulkJobId)
+
+Get the bulk add job associated with the job id.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}  
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsBulkAddJob(bulkJobId: bulkJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsBulkAddJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## getTaskmanagementWorkitemsBulkAddJobResults
+
+
+
+> [BulkJobAddResponse](BulkJobAddResponse) getTaskmanagementWorkitemsBulkAddJobResults(bulkJobId)
+
+Get bulk add job results.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results  
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJobResults:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsBulkAddJobResults(bulkJobId: bulkJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsBulkAddJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+
+
+### Return type
+
+[**BulkJobAddResponse**](BulkJobAddResponse)
+
+
+## getTaskmanagementWorkitemsBulkJobsUsersMe
+
+
+
+> [BulkJobsListing](BulkJobsListing) getTaskmanagementWorkitemsBulkJobsUsersMe(after, pageSize, sortOrder, action)
+
+Get bulk jobs created by the currently logged in user.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/bulk/jobs/users/me  
+
+Requires ANY permissions: 
+
+* workitems:bulkJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.
+let sortOrder: TaskManagementAPI.SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe = TaskManagementAPI.SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe.enummember // Ascending or descending sort order
+let action: TaskManagementAPI.Action_getTaskmanagementWorkitemsBulkJobsUsersMe = TaskManagementAPI.Action_getTaskmanagementWorkitemsBulkJobsUsersMe.enummember // The bulk job action.
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsBulkJobsUsersMe(after: after, pageSize: pageSize, sortOrder: sortOrder, action: action) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsBulkJobsUsersMe was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **Int**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional] |
+| **sortOrder** | **String**| Ascending or descending sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
+| **action** | **String**| The bulk job action. | [optional]<br />**Values**: terminateWorkitems ("TerminateWorkitems"), addWorkitems ("AddWorkitems") |
+
+
+### Return type
+
+[**BulkJobsListing**](BulkJobsListing)
+
+
+## getTaskmanagementWorkitemsBulkTerminateJob
+
+
+
+> [BulkJob](BulkJob) getTaskmanagementWorkitemsBulkTerminateJob(bulkJobId)
+
+Get the bulk job associated with the job id.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}  
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: bulkJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsBulkTerminateJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## getTaskmanagementWorkitemsBulkTerminateJobResults
+
+
+
+> [BulkJobTerminateResultsResponse](BulkJobTerminateResultsResponse) getTaskmanagementWorkitemsBulkTerminateJobResults(bulkJobId)
+
+Get bulk terminate job results.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results  
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJobResults:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsBulkTerminateJobResults(bulkJobId: bulkJobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsBulkTerminateJobResults was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+
+
+### Return type
+
+[**BulkJobTerminateResultsResponse**](BulkJobTerminateResultsResponse)
 
 
 ## getTaskmanagementWorkitemsQueryJob
@@ -1712,6 +2077,110 @@ TaskManagementAPI.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitem
 [**WorkitemWrapup**](WorkitemWrapup)
 
 
+## patchTaskmanagementWorkitemsBulkAddJob
+
+
+
+> [BulkJob](BulkJob) patchTaskmanagementWorkitemsBulkAddJob(bulkJobId, body)
+
+Update workitem bulk add job.
+
+
+
+Wraps PATCH /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}  
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+let body: BulkJobUpdate = new BulkJobUpdate(...) // Bulk add job update request
+
+// Code example
+TaskManagementAPI.patchTaskmanagementWorkitemsBulkAddJob(bulkJobId: bulkJobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.patchTaskmanagementWorkitemsBulkAddJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+| **body** | [**BulkJobUpdate**](BulkJobUpdate)| Bulk add job update request | |
+
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## patchTaskmanagementWorkitemsBulkTerminateJob
+
+
+
+> [BulkJob](BulkJob) patchTaskmanagementWorkitemsBulkTerminateJob(bulkJobId, body)
+
+Update workitem bulk terminate job.
+
+
+
+Wraps PATCH /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}  
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let bulkJobId: String = "" // Bulk job id
+let body: BulkJobUpdate = new BulkJobUpdate(...) // Bulk job update request
+
+// Code example
+TaskManagementAPI.patchTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: bulkJobId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.patchTaskmanagementWorkitemsBulkTerminateJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **bulkJobId** | **String**| Bulk job id | |
+| **body** | [**BulkJobUpdate**](BulkJobUpdate)| Bulk job update request | |
+
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
 ## patchTaskmanagementWorktype
 
 
@@ -2282,6 +2751,106 @@ TaskManagementAPI.postTaskmanagementWorkitems(body: body) { (response, error) in
 [**Workitem**](Workitem)
 
 
+## postTaskmanagementWorkitemsBulkAddJobs
+
+
+
+> [BulkJob](BulkJob) postTaskmanagementWorkitemsBulkAddJobs(body)
+
+Create a workitem bulk add job.
+
+
+
+Wraps POST /api/v2/taskmanagement/workitems/bulk/add/jobs  
+
+Requires ANY permissions: 
+
+* workitems:bulkAddJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkJobAddRequest = new BulkJobAddRequest(...) // Bulk job definition.
+
+// Code example
+TaskManagementAPI.postTaskmanagementWorkitemsBulkAddJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.postTaskmanagementWorkitemsBulkAddJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkJobAddRequest**](BulkJobAddRequest)| Bulk job definition. | |
+
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
+## postTaskmanagementWorkitemsBulkTerminateJobs
+
+
+
+> [BulkJob](BulkJob) postTaskmanagementWorkitemsBulkTerminateJobs(body)
+
+Create a workitem bulk terminate job.
+
+
+
+Wraps POST /api/v2/taskmanagement/workitems/bulk/terminate/jobs  
+
+Requires ALL permissions: 
+
+* workitems:bulkTerminateJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: BulkJobTerminateRequest = new BulkJobTerminateRequest(...) // Bulk job definition.
+
+// Code example
+TaskManagementAPI.postTaskmanagementWorkitemsBulkTerminateJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.postTaskmanagementWorkitemsBulkTerminateJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**BulkJobTerminateRequest**](BulkJobTerminateRequest)| Bulk job definition. | |
+
+
+### Return type
+
+[**BulkJob**](BulkJob)
+
+
 ## postTaskmanagementWorkitemsQueryJobs
 
 
@@ -2742,4 +3311,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@159.0.0_
+_PureCloudPlatformClientV2@159.1.0_

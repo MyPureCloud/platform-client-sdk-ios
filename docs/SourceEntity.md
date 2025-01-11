@@ -8,8 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **type** | **String** | The type of the source entity | [optional] |
+| **contestCompleteData** | [**ContestCompleteData**](ContestCompleteData) | The contest data - Only supplied when celebration is of type ContestComplete | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@159.0.0_
+_PureCloudPlatformClientV2@159.1.0_

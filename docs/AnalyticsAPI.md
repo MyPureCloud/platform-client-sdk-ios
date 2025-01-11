@@ -48,6 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsReportingExports**](AnalyticsAPI#postAnalyticsReportingExports) | Generate a view export request |
 | [**postAnalyticsReportingSettingsDashboardsBulkRemove**](AnalyticsAPI#postAnalyticsReportingSettingsDashboardsBulkRemove) | Bulk soft delete dashboard configurations |
 | [**postAnalyticsReportingSettingsDashboardsQuery**](AnalyticsAPI#postAnalyticsReportingSettingsDashboardsQuery) | Query dashboard configurations |
+| [**postAnalyticsResolutionsAggregatesQuery**](AnalyticsAPI#postAnalyticsResolutionsAggregatesQuery) | Query for resolution aggregates |
 | [**postAnalyticsRoutingActivityQuery**](AnalyticsAPI#postAnalyticsRoutingActivityQuery) | Query for user activity observations |
 | [**postAnalyticsSurveysAggregatesQuery**](AnalyticsAPI#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
 | [**postAnalyticsTaskmanagementAggregatesQuery**](AnalyticsAPI#postAnalyticsTaskmanagementAggregatesQuery) | Query for task management aggregates |
@@ -2348,6 +2349,56 @@ AnalyticsAPI.postAnalyticsReportingSettingsDashboardsQuery(body: body) { (respon
 [**DashboardConfigurationListing**](DashboardConfigurationListing)
 
 
+## postAnalyticsResolutionsAggregatesQuery
+
+
+
+> [ResolutionAggregateQueryResponse](ResolutionAggregateQueryResponse) postAnalyticsResolutionsAggregatesQuery(body)
+
+Query for resolution aggregates
+
+
+
+Wraps POST /api/v2/analytics/resolutions/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:resolutionAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ResolutionAggregationQuery = new ResolutionAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsResolutionsAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsResolutionsAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ResolutionAggregationQuery**](ResolutionAggregationQuery)| query | |
+
+
+### Return type
+
+[**ResolutionAggregateQueryResponse**](ResolutionAggregateQueryResponse)
+
+
 ## postAnalyticsRoutingActivityQuery
 
 
@@ -2910,4 +2961,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@159.0.0_
+_PureCloudPlatformClientV2@159.1.0_
