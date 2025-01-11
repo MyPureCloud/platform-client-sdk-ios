@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getGamificationInsightsGroupsTrends**](GamificationAPI#getGamificationInsightsGroupsTrends) | Get insights overall trend for the current user |
 | [**getGamificationInsightsGroupsTrendsAll**](GamificationAPI#getGamificationInsightsGroupsTrendsAll) | Get insights overall trend |
 | [**getGamificationInsightsMembers**](GamificationAPI#getGamificationInsightsMembers) | Query users in a profile during a period of time |
+| [**getGamificationInsightsRankings**](GamificationAPI#getGamificationInsightsRankings) | Get insights rankings |
 | [**getGamificationInsightsTrends**](GamificationAPI#getGamificationInsightsTrends) | Get insights user trend for the current user |
 | [**getGamificationInsightsUserDetails**](GamificationAPI#getGamificationInsightsUserDetails) | Get insights details for the user |
 | [**getGamificationInsightsUserTrends**](GamificationAPI#getGamificationInsightsUserTrends) | Get insights user trend for the user |
@@ -527,6 +528,72 @@ GamificationAPI.getGamificationInsightsMembers(filterType: filterType, filterId:
 ### Return type
 
 [**InsightsAgents**](InsightsAgents)
+
+
+## getGamificationInsightsRankings
+
+
+
+> [InsightsRankings](InsightsRankings) getGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds)
+
+Get insights rankings
+
+
+
+Wraps GET /api/v2/gamification/insights/rankings  
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let filterType: GamificationAPI.FilterType_getGamificationInsightsRankings = GamificationAPI.FilterType_getGamificationInsightsRankings.enummember // Filter type for the query request.
+let filterId: String = "" // ID for the filter type.
+let granularity: GamificationAPI.Granularity_getGamificationInsightsRankings = GamificationAPI.Granularity_getGamificationInsightsRankings.enummember // Granularity
+let comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+let sortKey: GamificationAPI.SortKey_getGamificationInsightsRankings = GamificationAPI.SortKey_getGamificationInsightsRankings.enummember // Sort key
+let sortMetricId: String = "" // Sort Metric Id
+let sectionSize: Int = 0 // The number of top and bottom users to return before ties
+let userIds: String = "" // A list of up to 100 comma-separated user Ids
+
+// Code example
+GamificationAPI.getGamificationInsightsRankings(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("GamificationAPI.getGamificationInsightsRankings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **filterType** | **String**| Filter type for the query request. |<br />**Values**: performanceProfile ("PerformanceProfile"), division ("Division") |
+| **filterId** | **String**| ID for the filter type. | |
+| **granularity** | **String**| Granularity |<br />**Values**: weekly ("Weekly"), monthly ("Monthly") |
+| **comparativePeriodStartWorkday** | **Date**| The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **primaryPeriodStartWorkday** | **Date**| The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | |
+| **sortKey** | **String**| Sort key |<br />**Values**: percentofgoal ("percentOfGoal"), percentofgoalchange ("percentOfGoalChange"), overallpercentofgoal ("overallPercentOfGoal"), overallpercentofgoalchange ("overallPercentOfGoalChange"), value ("value"), valuechange ("valueChange") |
+| **sortMetricId** | **String**| Sort Metric Id | [optional] |
+| **sectionSize** | **Int**| The number of top and bottom users to return before ties | [optional] |
+| **userIds** | **String**| A list of up to 100 comma-separated user Ids | [optional] |
+
+
+### Return type
+
+[**InsightsRankings**](InsightsRankings)
 
 
 ## getGamificationInsightsTrends
@@ -3451,4 +3518,4 @@ GamificationAPI.putGamificationStatus(status: status) { (response, error) in
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatformClientV2@159.0.0_
+_PureCloudPlatformClientV2@159.1.0_

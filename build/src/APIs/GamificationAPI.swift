@@ -801,6 +801,194 @@ open class GamificationAPI {
     }
 
     
+    public enum FilterType_getGamificationInsightsRankings: String { 
+        case performanceProfile = "PerformanceProfile"
+        case division = "Division"
+    }
+    
+    
+    
+    
+    
+    public enum Granularity_getGamificationInsightsRankings: String { 
+        case weekly = "Weekly"
+        case monthly = "Monthly"
+    }
+    
+    
+    
+    
+    
+    
+    
+    public enum SortKey_getGamificationInsightsRankings: String { 
+        case percentofgoal = "percentOfGoal"
+        case percentofgoalchange = "percentOfGoalChange"
+        case overallpercentofgoal = "overallPercentOfGoal"
+        case overallpercentofgoalchange = "overallPercentOfGoalChange"
+        case value = "value"
+        case valuechange = "valueChange"
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /**
+     Get insights rankings
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter sortKey: (query) Sort key 
+     - parameter sortMetricId: (query) Sort Metric Id (optional)
+     - parameter sectionSize: (query) The number of top and bottom users to return before ties (optional)
+     - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getGamificationInsightsRankings(filterType: FilterType_getGamificationInsightsRankings, filterId: String, granularity: Granularity_getGamificationInsightsRankings, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, sortKey: SortKey_getGamificationInsightsRankings, sortMetricId: String? = nil, sectionSize: Int? = nil, userIds: String? = nil, completion: @escaping ((_ data: InsightsRankings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getGamificationInsightsRankingsWithRequestBuilder(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds)
+        requestBuilder.execute { (response: Response<InsightsRankings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get insights rankings
+     - GET /api/v2/gamification/insights/rankings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "division" : "{}",
+  "performanceProfile" : "{}",
+  "granularity" : "Daily",
+  "comparativePeriod" : "{}",
+  "leaders" : [ {
+    "overallData" : "{}",
+    "ranking" : 1,
+    "user" : "{}",
+    "metricData" : [ {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    }, {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    } ]
+  }, {
+    "overallData" : "{}",
+    "ranking" : 1,
+    "user" : "{}",
+    "metricData" : [ {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    }, {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    } ]
+  } ],
+  "primaryPeriod" : "{}",
+  "trailers" : [ {
+    "overallData" : "{}",
+    "ranking" : 1,
+    "user" : "{}",
+    "metricData" : [ {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    }, {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    } ]
+  }, {
+    "overallData" : "{}",
+    "ranking" : 1,
+    "user" : "{}",
+    "metricData" : [ {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    }, {
+      "percentOfGoalChange" : 0.8008281904610115,
+      "metric" : "{}",
+      "valueChange" : 6.027456183070403,
+      "comparativePeriod" : "{}",
+      "primaryPeriod" : "{}"
+    } ]
+  } ]
+}, statusCode=200}]
+     
+     - parameter filterType: (query) Filter type for the query request. 
+     - parameter filterId: (query) ID for the filter type. 
+     - parameter granularity: (query) Granularity 
+     - parameter comparativePeriodStartWorkday: (query) The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter primaryPeriodStartWorkday: (query) The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd 
+     - parameter sortKey: (query) Sort key 
+     - parameter sortMetricId: (query) Sort Metric Id (optional)
+     - parameter sectionSize: (query) The number of top and bottom users to return before ties (optional)
+     - parameter userIds: (query) A list of up to 100 comma-separated user Ids (optional)
+
+     - returns: RequestBuilder<InsightsRankings> 
+     */
+    open class func getGamificationInsightsRankingsWithRequestBuilder(filterType: FilterType_getGamificationInsightsRankings, filterId: String, granularity: Granularity_getGamificationInsightsRankings, comparativePeriodStartWorkday: Date, primaryPeriodStartWorkday: Date, sortKey: SortKey_getGamificationInsightsRankings, sortMetricId: String? = nil, sectionSize: Int? = nil, userIds: String? = nil) -> RequestBuilder<InsightsRankings> {        
+        let path = "/api/v2/gamification/insights/rankings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "filterType": filterType.rawValue, 
+            "filterId": filterId, 
+            "granularity": granularity.rawValue, 
+            "comparativePeriodStartWorkday": comparativePeriodStartWorkday.encodeToJSON(), 
+            "primaryPeriodStartWorkday": primaryPeriodStartWorkday.encodeToJSON(), 
+            "sortKey": sortKey.rawValue, 
+            "sortMetricId": sortMetricId, 
+            "sectionSize": sectionSize?.encodeToJSON(), 
+            "userIds": userIds
+        ])
+
+        let requestBuilder: RequestBuilder<InsightsRankings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
     public enum FilterType_getGamificationInsightsTrends: String { 
         case performanceProfile = "PerformanceProfile"
         case division = "Division"

@@ -103,6 +103,96 @@ open class TaskManagementAPI {
     
     
     /**
+     Delete a bulk add job
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTaskmanagementWorkitemsBulkAddJob(bulkJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTaskmanagementWorkitemsBulkAddJobWithRequestBuilder(bulkJobId: bulkJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a bulk add job
+     - DELETE /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter bulkJobId: (path) Bulk job id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTaskmanagementWorkitemsBulkAddJobWithRequestBuilder(bulkJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Delete a Bulk job
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteTaskmanagementWorkitemsBulkTerminateJobWithRequestBuilder(bulkJobId: bulkJobId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete a Bulk job
+     - DELETE /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter bulkJobId: (path) Bulk job id 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteTaskmanagementWorkitemsBulkTerminateJobWithRequestBuilder(bulkJobId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
      Delete a schema
      
      - parameter schemaId: (path) Schema ID 
@@ -779,6 +869,366 @@ open class TaskManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<WorkitemWrapupEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the bulk add job associated with the job id.
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsBulkAddJob(bulkJobId: String, completion: @escaping ((_ data: BulkJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsBulkAddJobWithRequestBuilder(bulkJobId: bulkJobId)
+        requestBuilder.execute { (response: Response<BulkJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the bulk add job associated with the job id.
+     - GET /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedCount" : 1,
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "successfulCount" : 6,
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "TerminateWorkitems",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Idle",
+  "totalCount" : 0
+}, statusCode=200}]
+     
+     - parameter bulkJobId: (path) Bulk job id 
+
+     - returns: RequestBuilder<BulkJob> 
+     */
+    open class func getTaskmanagementWorkitemsBulkAddJobWithRequestBuilder(bulkJobId: String) -> RequestBuilder<BulkJob> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get bulk add job results.
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsBulkAddJobResults(bulkJobId: String, completion: @escaping ((_ data: BulkJobAddResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsBulkAddJobResultsWithRequestBuilder(bulkJobId: bulkJobId)
+        requestBuilder.execute { (response: Response<BulkJobAddResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get bulk add job results.
+     - GET /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter bulkJobId: (path) Bulk job id 
+
+     - returns: RequestBuilder<BulkJobAddResponse> 
+     */
+    open class func getTaskmanagementWorkitemsBulkAddJobResultsWithRequestBuilder(bulkJobId: String) -> RequestBuilder<BulkJobAddResponse> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJobAddResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe: String { 
+        case ascending = "ascending"
+        case descending = "descending"
+    }
+    
+    
+    
+    public enum Action_getTaskmanagementWorkitemsBulkJobsUsersMe: String { 
+        case terminateWorkitems = "TerminateWorkitems"
+        case addWorkitems = "AddWorkitems"
+    }
+    
+    
+    /**
+     Get bulk jobs created by the currently logged in user.
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter action: (query) The bulk job action. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsBulkJobsUsersMe(after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe? = nil, action: Action_getTaskmanagementWorkitemsBulkJobsUsersMe? = nil, completion: @escaping ((_ data: BulkJobsListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsBulkJobsUsersMeWithRequestBuilder(after: after, pageSize: pageSize, sortOrder: sortOrder, action: action)
+        requestBuilder.execute { (response: Response<BulkJobsListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get bulk jobs created by the currently logged in user.
+     - GET /api/v2/taskmanagement/workitems/bulk/jobs/users/me
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "failedCount" : 1,
+    "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+    "successfulCount" : 6,
+    "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "action" : "TerminateWorkitems",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Idle",
+    "totalCount" : 0
+  }, {
+    "failedCount" : 1,
+    "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+    "successfulCount" : 6,
+    "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+    "selfUri" : "https://openapi-generator.tech",
+    "action" : "TerminateWorkitems",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "id" : "id",
+    "state" : "Idle",
+    "totalCount" : 0
+  } ],
+  "selfUri" : "selfUri",
+  "after" : "after",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
+     - parameter pageSize: (query) Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)
+     - parameter sortOrder: (query) Ascending or descending sort order (optional)
+     - parameter action: (query) The bulk job action. (optional)
+
+     - returns: RequestBuilder<BulkJobsListing> 
+     */
+    open class func getTaskmanagementWorkitemsBulkJobsUsersMeWithRequestBuilder(after: String? = nil, pageSize: Int? = nil, sortOrder: SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe? = nil, action: Action_getTaskmanagementWorkitemsBulkJobsUsersMe? = nil) -> RequestBuilder<BulkJobsListing> {        
+        let path = "/api/v2/taskmanagement/workitems/bulk/jobs/users/me"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON(), 
+            "sortOrder": sortOrder?.rawValue, 
+            "action": action?.rawValue
+        ])
+
+        let requestBuilder: RequestBuilder<BulkJobsListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get the bulk job associated with the job id.
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: String, completion: @escaping ((_ data: BulkJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsBulkTerminateJobWithRequestBuilder(bulkJobId: bulkJobId)
+        requestBuilder.execute { (response: Response<BulkJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the bulk job associated with the job id.
+     - GET /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedCount" : 1,
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "successfulCount" : 6,
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "TerminateWorkitems",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Idle",
+  "totalCount" : 0
+}, statusCode=200}]
+     
+     - parameter bulkJobId: (path) Bulk job id 
+
+     - returns: RequestBuilder<BulkJob> 
+     */
+    open class func getTaskmanagementWorkitemsBulkTerminateJobWithRequestBuilder(bulkJobId: String) -> RequestBuilder<BulkJob> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get bulk terminate job results.
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getTaskmanagementWorkitemsBulkTerminateJobResults(bulkJobId: String, completion: @escaping ((_ data: BulkJobTerminateResultsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTaskmanagementWorkitemsBulkTerminateJobResultsWithRequestBuilder(bulkJobId: bulkJobId)
+        requestBuilder.execute { (response: Response<BulkJobTerminateResultsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get bulk terminate job results.
+     - GET /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter bulkJobId: (path) Bulk job id 
+
+     - returns: RequestBuilder<BulkJobTerminateResultsResponse> 
+     */
+    open class func getTaskmanagementWorkitemsBulkTerminateJobResultsWithRequestBuilder(bulkJobId: String) -> RequestBuilder<BulkJobTerminateResultsResponse> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJobTerminateResultsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -2427,6 +2877,142 @@ open class TaskManagementAPI {
     
     
     /**
+     Update workitem bulk add job.
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter body: (body) Bulk add job update request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTaskmanagementWorkitemsBulkAddJob(bulkJobId: String, body: BulkJobUpdate, completion: @escaping ((_ data: BulkJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTaskmanagementWorkitemsBulkAddJobWithRequestBuilder(bulkJobId: bulkJobId, body: body)
+        requestBuilder.execute { (response: Response<BulkJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update workitem bulk add job.
+     - PATCH /api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedCount" : 1,
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "successfulCount" : 6,
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "TerminateWorkitems",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Idle",
+  "totalCount" : 0
+}, statusCode=200}]
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter body: (body) Bulk add job update request 
+
+     - returns: RequestBuilder<BulkJob> 
+     */
+    open class func patchTaskmanagementWorkitemsBulkAddJobWithRequestBuilder(bulkJobId: String, body: BulkJobUpdate) -> RequestBuilder<BulkJob> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update workitem bulk terminate job.
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter body: (body) Bulk job update request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: String, body: BulkJobUpdate, completion: @escaping ((_ data: BulkJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchTaskmanagementWorkitemsBulkTerminateJobWithRequestBuilder(bulkJobId: bulkJobId, body: body)
+        requestBuilder.execute { (response: Response<BulkJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update workitem bulk terminate job.
+     - PATCH /api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedCount" : 1,
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "successfulCount" : 6,
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "TerminateWorkitems",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Idle",
+  "totalCount" : 0
+}, statusCode=200}]
+     
+     - parameter bulkJobId: (path) Bulk job id 
+     - parameter body: (body) Bulk job update request 
+
+     - returns: RequestBuilder<BulkJob> 
+     */
+    open class func patchTaskmanagementWorkitemsBulkTerminateJobWithRequestBuilder(bulkJobId: String, body: BulkJobUpdate) -> RequestBuilder<BulkJob> {        
+        var path = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}"
+        let bulkJobIdPreEscape = "\(bulkJobId)"
+        let bulkJobIdPostEscape = bulkJobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{bulkJobId}", with: bulkJobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Update the attributes of a worktype
      
      - parameter worktypeId: (path) Worktype id 
@@ -3420,6 +4006,128 @@ open class TaskManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Workitem>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a workitem bulk add job.
+     
+     - parameter body: (body) Bulk job definition. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTaskmanagementWorkitemsBulkAddJobs(body: BulkJobAddRequest, completion: @escaping ((_ data: BulkJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTaskmanagementWorkitemsBulkAddJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a workitem bulk add job.
+     - POST /api/v2/taskmanagement/workitems/bulk/add/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedCount" : 1,
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "successfulCount" : 6,
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "TerminateWorkitems",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Idle",
+  "totalCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) Bulk job definition. 
+
+     - returns: RequestBuilder<BulkJob> 
+     */
+    open class func postTaskmanagementWorkitemsBulkAddJobsWithRequestBuilder(body: BulkJobAddRequest) -> RequestBuilder<BulkJob> {        
+        let path = "/api/v2/taskmanagement/workitems/bulk/add/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create a workitem bulk terminate job.
+     
+     - parameter body: (body) Bulk job definition. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postTaskmanagementWorkitemsBulkTerminateJobs(body: BulkJobTerminateRequest, completion: @escaping ((_ data: BulkJob?,_ error: Error?) -> Void)) {
+        let requestBuilder = postTaskmanagementWorkitemsBulkTerminateJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<BulkJob>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create a workitem bulk terminate job.
+     - POST /api/v2/taskmanagement/workitems/bulk/terminate/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "failedCount" : 1,
+  "dateStarted" : "2000-01-23T04:56:07.000+00:00",
+  "successfulCount" : 6,
+  "dateFinished" : "2000-01-23T04:56:07.000+00:00",
+  "selfUri" : "https://openapi-generator.tech",
+  "action" : "TerminateWorkitems",
+  "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "Idle",
+  "totalCount" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body) Bulk job definition. 
+
+     - returns: RequestBuilder<BulkJob> 
+     */
+    open class func postTaskmanagementWorkitemsBulkTerminateJobsWithRequestBuilder(body: BulkJobTerminateRequest) -> RequestBuilder<BulkJob> {        
+        let path = "/api/v2/taskmanagement/workitems/bulk/terminate/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

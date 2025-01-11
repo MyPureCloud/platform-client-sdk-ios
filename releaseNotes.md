@@ -1,133 +1,279 @@
-Platform API version: 8730
+Platform API version: 8752
 
 
 
 
-# Major Changes (3 changes)
-
-**POST /api/v2/externalcontacts/identifierlookup** (1 change)
-
-* Has been deprecated
-
-**POST /api/v2/conversations/messages/agentless** (1 change)
-
-* Parameter useNormalizedMessage was added
-
-**EmailCommunicationRepliedEvent** (1 change)
-
-* Model EmailCommunicationRepliedEvent was removed
+# Major Changes (0 changes)
 
 
-# Minor Changes (38 changes)
+# Minor Changes (84 changes)
 
-**/api/v2/languageunderstanding/settings** (2 changes)
+**/api/v2/analytics/resolutions/aggregates/query** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/gamification/insights/rankings** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules/{ruleId}** (4 changes)
+**/api/v2/taskmanagement/workitems/bulk/jobs/users/me** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}** (4 changes)
 
 * Path was added
 * Operation GET was added
 * Operation DELETE was added
 * Operation PATCH was added
 
-**/api/v2/taskmanagement/worktypes/{worktypeId}/flows/datebased/rules** (3 changes)
+**/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results** (2 changes)
 
 * Path was added
 * Operation GET was added
+
+**/api/v2/taskmanagement/workitems/bulk/add/jobs** (2 changes)
+
+* Path was added
 * Operation POST was added
 
-**CustomProvider** (1 change)
+**/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results** (2 changes)
 
-* Optional property providerName was added
+* Path was added
+* Operation GET was added
 
-**ExternalOrganizationIdentifier** (1 change)
+**/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}** (4 changes)
 
-* Model was added
+* Path was added
+* Operation GET was added
+* Operation DELETE was added
+* Operation PATCH was added
 
-**WhatsAppConfig** (1 change)
+**/api/v2/taskmanagement/workitems/bulk/terminate/jobs** (2 changes)
 
-* Model was added
+* Path was added
+* Operation POST was added
 
-**FlowPaths** (2 changes)
-
-* Optional property dateStart was added
-* Optional property dateEnd was added
-
-**FlowPathsElement** (10 changes)
-
-* Enum value TransferReturnToAgent was added to property type
-* Enum value TransferToAcdVoicemail was added to property type
-* Enum value TransferToFlow was added to property type
-* Enum value TransferToGroup was added to property type
-* Enum value TransferToGroupVoicemail was added to property type
-* Enum value TransferToNumber was added to property type
-* Enum value TransferToSecureFlow was added to property type
-* Enum value TransferToUnknown was added to property type
-* Enum value TransferToUser was added to property type
-* Enum value TransferToUserVoicemail was added to property type
-
-**Miner** (1 change)
-
-* Enum value de-ch was added to property language
-
-**NluOrganization** (1 change)
+**ResolutionAggregateDataContainer** (1 change)
 
 * Model was added
 
-**SupportedEntityTypeStatus** (1 change)
+**ResolutionAggregateQueryResponse** (1 change)
 
 * Model was added
 
-**SupportedLanguagesInfoDefinition** (1 change)
+**ResolutionAggregateQueryClause** (1 change)
 
 * Model was added
 
-**Check** (1 change)
-
-* Enum value NextContactAvoidanceRateValue was added to property type
-
-**KeyPerformanceIndicator** (1 change)
-
-* Enum value NextContactAvoidance was added to property kpiType
-
-**WorkitemDateBasedCondition** (1 change)
+**ResolutionAggregateQueryFilter** (1 change)
 
 * Model was added
 
-**WorkitemDateBasedRule** (1 change)
+**ResolutionAggregateQueryPredicate** (1 change)
 
 * Model was added
 
-**WorkPlanConfigurationViolationMessage** (2 changes)
-
-* Enum value MaxPaidTimePerMonthlyPlanningPeriod was added to property type
-* Enum value MinPaidTimePerMonthlyPlanningPeriod was added to property type
-
-**WorkitemDateBasedConditionUpdate** (1 change)
+**ResolutionAggregationQuery** (1 change)
 
 * Model was added
 
-**WorkitemDateBasedRuleUpdate** (1 change)
+**ResolutionAggregationView** (1 change)
 
 * Model was added
 
-**WorkitemDateBasedRuleCreate** (1 change)
+**ViewFilter** (3 changes)
+
+* Optional property video was added
+* Optional property linkedInteraction was added
+* Optional property recommendationSources was added
+
+**DataSchema** (1 change)
+
+* Enum value DECISION_TABLE was added to property appliesTo
+
+**Limit** (2 changes)
+
+* Enum value analytics.agents was added to property namespace
+* Enum value micro.frontend was added to property namespace
+
+**CommonCampaignDivisionView** (1 change)
+
+* Enum value whatsapp was added to property mediaType
+
+**CommonCampaign** (1 change)
+
+* Enum value whatsapp was added to property mediaType
+
+**WhatsAppColumn** (1 change)
 
 * Model was added
 
-**WorkitemDateBasedRuleListing** (1 change)
+**MessageEvaluation** (1 change)
+
+* Enum value WhatsApp was added to property messageType
+
+**DncListDivisionView** (1 change)
+
+* Enum value WhatsApp was added to property contactMethod
+
+**DncList** (1 change)
+
+* Enum value WhatsApp was added to property contactMethod
+
+**DncListCreate** (1 change)
+
+* Enum value WhatsApp was added to property contactMethod
+
+**LastAttemptOverallConditionSettings** (1 change)
+
+* Enum value WhatsApp was added to property mediaTypes
+
+**MarkContactUncontactableActionSettings** (1 change)
+
+* Enum value WhatsApp was added to property mediaTypes
+
+**InsightsRankings** (1 change)
 
 * Model was added
 
+**JourneyViewElementFilter** (1 change)
 
-# Point Changes (2 changes)
+* Optional property numberPredicates was added
 
-**POST /api/v2/externalcontacts/identifierlookup** (1 change)
+**ApprovalNamespace** (2 changes)
 
-* Description was changed
+* Enum value analytics.agents was added to property namespace
+* Enum value micro.frontend was added to property namespace
 
-**PATCH /api/v2/routing/queues/{queueId}/members** (1 change)
+**LimitChangeRequestDetails** (2 changes)
 
-* Summary was changed
+* Enum value analytics.agents was added to property namespace
+* Enum value micro.frontend was added to property namespace
+
+**StatusChange** (2 changes)
+
+* Enum value analytics.agents was added to property namespace
+* Enum value micro.frontend was added to property namespace
+
+**EventCoBrowse** (1 change)
+
+* Model was added
+
+**EventPresence** (1 change)
+
+* Model was added
+
+**EventTyping** (1 change)
+
+* Model was added
+
+**EventVideo** (1 change)
+
+* Model was added
+
+**MessageEvent** (1 change)
+
+* Model was added
+
+**TextBotPromptSegment** (1 change)
+
+* Enum value MessageEvent was added to property type
+
+**BulkJob** (1 change)
+
+* Model was added
+
+**BulkJobsListing** (1 change)
+
+* Model was added
+
+**BulkJobAddResponse** (1 change)
+
+* Model was added
+
+**BulkJobAddResult** (1 change)
+
+* Model was added
+
+**BulkJobAddWorkitemSummary** (1 change)
+
+* Model was added
+
+**BulkJobError** (1 change)
+
+* Model was added
+
+**BulkJobUpdate** (1 change)
+
+* Model was added
+
+**BulkJobAddRequest** (1 change)
+
+* Model was added
+
+**WorkitemCommonCreate** (1 change)
+
+* Model was added
+
+**BulkJobTerminateResult** (1 change)
+
+* Model was added
+
+**BulkJobTerminateResultEntity** (1 change)
+
+* Model was added
+
+**BulkJobTerminateResultsResponse** (1 change)
+
+* Model was added
+
+**BulkJobEntity** (1 change)
+
+* Model was added
+
+**BulkJobTerminateRequest** (1 change)
+
+* Model was added
+
+**Celebration** (1 change)
+
+* Enum value ContestComplete was added to property type
+
+**ContestCompleteData** (1 change)
+
+* Model was added
+
+**ContestCompleteDataScore** (1 change)
+
+* Model was added
+
+**ContestDataMetrics** (1 change)
+
+* Model was added
+
+**ContestDataPrizes** (1 change)
+
+* Model was added
+
+**ContestDataWinners** (1 change)
+
+* Model was added
+
+**ContestDataWinnersUsers** (1 change)
+
+* Model was added
+
+**SourceEntity** (5 changes)
+
+* Enum value Competition was added to property type
+* Enum value Race was added to property type
+* Enum value Raffle was added to property type
+* Enum value TeamGoal was added to property type
+* Optional property contestCompleteData was added
+
+
+# Point Changes (0 changes)

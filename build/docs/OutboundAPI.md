@@ -2628,6 +2628,7 @@ Requires ANY permissions:
 * outbound:campaign:view
 * outbound:messagingCampaign:view
 * outbound:emailCampaign:view
+* outbound:whatsAppCampaign:view
 
 ### Example
 
@@ -2666,7 +2667,7 @@ OutboundAPI.getOutboundCampaignsAll(pageSize: pageSize, pageNumber: pageNumber, 
 | **_id** | [**[String]**](String)| Campaign ID(s) | [optional] |
 | **name** | **String**| Campaign name(s) | [optional] |
 | **divisionId** | [**[String]**](String)| Division ID(s) | [optional] |
-| **mediaType** | [**[String]**](String)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice") |
+| **mediaType** | [**[String]**](String)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice"), whatsapp ("whatsapp") |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 
 
@@ -2692,6 +2693,7 @@ Requires ANY permissions:
 * outbound:campaign:search
 * outbound:messagingCampaign:search
 * outbound:emailCampaign:search
+* outbound:whatsAppCampaign:search
 
 ### Example
 
@@ -2730,7 +2732,7 @@ OutboundAPI.getOutboundCampaignsAllDivisionviews(pageSize: pageSize, pageNumber:
 | **_id** | [**[String]**](String)| Campaign ID(s) | [optional] |
 | **name** | **String**| Campaign name(s) | [optional] |
 | **divisionId** | [**[String]**](String)| Division ID(s) | [optional] |
-| **mediaType** | [**[String]**](String)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice") |
+| **mediaType** | [**[String]**](String)| Media type(s) | [optional]<br />**Values**: email ("email"), sms ("sms"), voice ("voice"), whatsapp ("whatsapp") |
 | **sortOrder** | **String**| Sort order | [optional]<br />**Values**: ascending ("ascending"), descending ("descending") |
 
 
@@ -8937,4 +8939,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@159.0.0_
+_PureCloudPlatformClientV2@159.1.0_

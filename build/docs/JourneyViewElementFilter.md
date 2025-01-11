@@ -9,7 +9,8 @@ A set of filters on an element within a journey view
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates and clauses. Valid values: And | |
 | **predicates** | [**[JourneyViewElementFilterPredicate]**](JourneyViewElementFilterPredicate) | predicates | [optional] |
+| **numberPredicates** | [**[JourneyViewElementFilterNumberPredicate]**](JourneyViewElementFilterNumberPredicate) | numberPredicates | [optional] |
 
 
 
-_PureCloudPlatformClientV2@159.0.0_
+_PureCloudPlatformClientV2@159.1.0_

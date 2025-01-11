@@ -1542,6 +1542,20 @@
     "return": "DashboardConfigurationListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: DashboardConfigurationQueryRequest = new DashboardConfigurationQueryRequest(...) // \n\n// Query dashboard configurations\nPostAnalyticsReportingSettingsDashboardsQueryRequest.postAnalyticsReportingSettingsDashboardsQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsReportingSettingsDashboardsQueryRequest.postAnalyticsReportingSettingsDashboardsQuery was successful\")\n        dump(response)\n    }\n}"
   },
+  "postanalyticsresolutionsaggregatesquery": {
+    "operationId": "postanalyticsresolutionsaggregatesquery",
+    "functionName": "postAnalyticsResolutionsAggregatesQuery",
+    "signature": "postAnalyticsResolutionsAggregatesQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ResolutionAggregationQuery",
+        "required": "true"
+      }
+    ],
+    "return": "ResolutionAggregateQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ResolutionAggregationQuery = new ResolutionAggregationQuery(...) // query\n\n// Query for resolution aggregates\nPostAnalyticsResolutionsAggregatesQueryRequest.postAnalyticsResolutionsAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsResolutionsAggregatesQueryRequest.postAnalyticsResolutionsAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "postanalyticsroutingactivityquery": {
     "operationId": "postanalyticsroutingactivityquery",
     "functionName": "postAnalyticsRoutingActivityQuery",
@@ -14586,6 +14600,60 @@
     ],
     "return": "InsightsAgents",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsMembersRequest.FilterType_getGamificationInsightsMembers = GetGamificationInsightsMembersRequest.FilterType_getGamificationInsightsMembers.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsMembersRequest.Granularity_getGamificationInsightsMembers = GetGamificationInsightsMembersRequest.Granularity_getGamificationInsightsMembers.enummember // Granularity\nlet startWorkday: Date = new Date(...) // The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\n\n// Query users in a profile during a period of time\nGetGamificationInsightsMembersRequest.getGamificationInsightsMembers(filterType: filterType, filterId: filterId, granularity: granularity, startWorkday: startWorkday) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsMembersRequest.getGamificationInsightsMembers was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getgamificationinsightsrankings": {
+    "operationId": "getgamificationinsightsrankings",
+    "functionName": "getGamificationInsightsRankings",
+    "signature": "getGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds)",
+    "parameters": [
+      {
+        "name": "filterType",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "filterId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "granularity",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "comparativePeriodStartWorkday",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "primaryPeriodStartWorkday",
+        "type": "Date",
+        "required": "true"
+      },
+      {
+        "name": "sortKey",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "sortMetricId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "sectionSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "userIds",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "InsightsRankings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet filterType: GetGamificationInsightsRankingsRequest.FilterType_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.FilterType_getGamificationInsightsRankings.enummember // Filter type for the query request.\nlet filterId: String = \"\" // ID for the filter type.\nlet granularity: GetGamificationInsightsRankingsRequest.Granularity_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.Granularity_getGamificationInsightsRankings.enummember // Granularity\nlet comparativePeriodStartWorkday: Date = new Date(...) // The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet primaryPeriodStartWorkday: Date = new Date(...) // The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd\nlet sortKey: GetGamificationInsightsRankingsRequest.SortKey_getGamificationInsightsRankings = GetGamificationInsightsRankingsRequest.SortKey_getGamificationInsightsRankings.enummember // Sort key\nlet sortMetricId: String = \"\" // Sort Metric Id\nlet sectionSize: Int = 0 // The number of top and bottom users to return before ties\nlet userIds: String = \"\" // A list of up to 100 comma-separated user Ids\n\n// Get insights rankings\nGetGamificationInsightsRankingsRequest.getGamificationInsightsRankings(filterType: filterType, filterId: filterId, granularity: granularity, comparativePeriodStartWorkday: comparativePeriodStartWorkday, primaryPeriodStartWorkday: primaryPeriodStartWorkday, sortKey: sortKey, sortMetricId: sortMetricId, sectionSize: sectionSize, userIds: userIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetGamificationInsightsRankingsRequest.getGamificationInsightsRankings was successful\")\n        dump(response)\n    }\n}"
   },
   "getgamificationinsightstrends": {
     "operationId": "getgamificationinsightstrends",
@@ -38447,6 +38515,32 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // Workitem ID\n\n// Delete a workitem\nDeleteTaskmanagementWorkitemRequest.deleteTaskmanagementWorkitem(workitemId: workitemId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTaskmanagementWorkitemRequest.deleteTaskmanagementWorkitem was successful\")\n    }\n}"
   },
+  "deletetaskmanagementworkitemsbulkaddjob": {
+    "operationId": "deletetaskmanagementworkitemsbulkaddjob",
+    "functionName": "deleteTaskmanagementWorkitemsBulkAddJob",
+    "signature": "deleteTaskmanagementWorkitemsBulkAddJob(bulkJobId)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\n\n// Delete a bulk add job\nDeleteTaskmanagementWorkitemsBulkAddJobRequest.deleteTaskmanagementWorkitemsBulkAddJob(bulkJobId: bulkJobId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTaskmanagementWorkitemsBulkAddJobRequest.deleteTaskmanagementWorkitemsBulkAddJob was successful\")\n    }\n}"
+  },
+  "deletetaskmanagementworkitemsbulkterminatejob": {
+    "operationId": "deletetaskmanagementworkitemsbulkterminatejob",
+    "functionName": "deleteTaskmanagementWorkitemsBulkTerminateJob",
+    "signature": "deleteTaskmanagementWorkitemsBulkTerminateJob(bulkJobId)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\n\n// Delete a Bulk job\nDeleteTaskmanagementWorkitemsBulkTerminateJobRequest.deleteTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: bulkJobId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteTaskmanagementWorkitemsBulkTerminateJobRequest.deleteTaskmanagementWorkitemsBulkTerminateJob was successful\")\n    }\n}"
+  },
   "deletetaskmanagementworkitemsschema": {
     "operationId": "deletetaskmanagementworkitemsschema",
     "functionName": "deleteTaskmanagementWorkitemsSchema",
@@ -38650,6 +38744,91 @@
     ],
     "return": "WorkitemWrapupEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet expands: GetTaskmanagementWorkitemWrapupsRequest.Expands_getTaskmanagementWorkitemWrapups = GetTaskmanagementWorkitemWrapupsRequest.Expands_getTaskmanagementWorkitemWrapups.enummember // Which fields, if any, to expand.\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50.\nlet sortOrder: GetTaskmanagementWorkitemWrapupsRequest.SortOrder_getTaskmanagementWorkitemWrapups = GetTaskmanagementWorkitemWrapupsRequest.SortOrder_getTaskmanagementWorkitemWrapups.enummember // Ascending or descending sort order\n\n// Get all wrapup codes added for all users for a workitem.\nGetTaskmanagementWorkitemWrapupsRequest.getTaskmanagementWorkitemWrapups(workitemId: workitemId, expands: expands, after: after, pageSize: pageSize, sortOrder: sortOrder) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemWrapupsRequest.getTaskmanagementWorkitemWrapups was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsbulkaddjob": {
+    "operationId": "gettaskmanagementworkitemsbulkaddjob",
+    "functionName": "getTaskmanagementWorkitemsBulkAddJob",
+    "signature": "getTaskmanagementWorkitemsBulkAddJob(bulkJobId)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\n\n// Get the bulk add job associated with the job id.\nGetTaskmanagementWorkitemsBulkAddJobRequest.getTaskmanagementWorkitemsBulkAddJob(bulkJobId: bulkJobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsBulkAddJobRequest.getTaskmanagementWorkitemsBulkAddJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsbulkaddjobresults": {
+    "operationId": "gettaskmanagementworkitemsbulkaddjobresults",
+    "functionName": "getTaskmanagementWorkitemsBulkAddJobResults",
+    "signature": "getTaskmanagementWorkitemsBulkAddJobResults(bulkJobId)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJobAddResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\n\n// Get bulk add job results.\nGetTaskmanagementWorkitemsBulkAddJobResultsRequest.getTaskmanagementWorkitemsBulkAddJobResults(bulkJobId: bulkJobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsBulkAddJobResultsRequest.getTaskmanagementWorkitemsBulkAddJobResults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsbulkjobsusersme": {
+    "operationId": "gettaskmanagementworkitemsbulkjobsusersme",
+    "functionName": "getTaskmanagementWorkitemsBulkJobsUsersMe",
+    "signature": "getTaskmanagementWorkitemsBulkJobsUsersMe(after, pageSize, sortOrder, action)",
+    "parameters": [
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "sortOrder",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "action",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "BulkJobsListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: Int = 0 // Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200.\nlet sortOrder: GetTaskmanagementWorkitemsBulkJobsUsersMeRequest.SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe = GetTaskmanagementWorkitemsBulkJobsUsersMeRequest.SortOrder_getTaskmanagementWorkitemsBulkJobsUsersMe.enummember // Ascending or descending sort order\nlet action: GetTaskmanagementWorkitemsBulkJobsUsersMeRequest.Action_getTaskmanagementWorkitemsBulkJobsUsersMe = GetTaskmanagementWorkitemsBulkJobsUsersMeRequest.Action_getTaskmanagementWorkitemsBulkJobsUsersMe.enummember // The bulk job action.\n\n// Get bulk jobs created by the currently logged in user.\nGetTaskmanagementWorkitemsBulkJobsUsersMeRequest.getTaskmanagementWorkitemsBulkJobsUsersMe(after: after, pageSize: pageSize, sortOrder: sortOrder, action: action) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsBulkJobsUsersMeRequest.getTaskmanagementWorkitemsBulkJobsUsersMe was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsbulkterminatejob": {
+    "operationId": "gettaskmanagementworkitemsbulkterminatejob",
+    "functionName": "getTaskmanagementWorkitemsBulkTerminateJob",
+    "signature": "getTaskmanagementWorkitemsBulkTerminateJob(bulkJobId)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\n\n// Get the bulk job associated with the job id.\nGetTaskmanagementWorkitemsBulkTerminateJobRequest.getTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: bulkJobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsBulkTerminateJobRequest.getTaskmanagementWorkitemsBulkTerminateJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "gettaskmanagementworkitemsbulkterminatejobresults": {
+    "operationId": "gettaskmanagementworkitemsbulkterminatejobresults",
+    "functionName": "getTaskmanagementWorkitemsBulkTerminateJobResults",
+    "signature": "getTaskmanagementWorkitemsBulkTerminateJobResults(bulkJobId)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJobTerminateResultsResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\n\n// Get bulk terminate job results.\nGetTaskmanagementWorkitemsBulkTerminateJobResultsRequest.getTaskmanagementWorkitemsBulkTerminateJobResults(bulkJobId: bulkJobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTaskmanagementWorkitemsBulkTerminateJobResultsRequest.getTaskmanagementWorkitemsBulkTerminateJobResults was successful\")\n        dump(response)\n    }\n}"
   },
   "gettaskmanagementworkitemsqueryjob": {
     "operationId": "gettaskmanagementworkitemsqueryjob",
@@ -39013,6 +39192,44 @@
     "return": "WorkitemWrapup",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet workitemId: String = \"\" // The ID of the Workitem.\nlet body: WorkitemWrapupUpdate = new WorkitemWrapupUpdate(...) // Request body to add/remove the wrapup code for workitem\n\n// Add/Remove a wrapup code for the current user in a workitem.\nPatchTaskmanagementWorkitemUsersMeWrapupsRequest.patchTaskmanagementWorkitemUsersMeWrapups(workitemId: workitemId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorkitemUsersMeWrapupsRequest.patchTaskmanagementWorkitemUsersMeWrapups was successful\")\n        dump(response)\n    }\n}"
   },
+  "patchtaskmanagementworkitemsbulkaddjob": {
+    "operationId": "patchtaskmanagementworkitemsbulkaddjob",
+    "functionName": "patchTaskmanagementWorkitemsBulkAddJob",
+    "signature": "patchTaskmanagementWorkitemsBulkAddJob(bulkJobId, body)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "BulkJobUpdate",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\nlet body: BulkJobUpdate = new BulkJobUpdate(...) // Bulk add job update request\n\n// Update workitem bulk add job.\nPatchTaskmanagementWorkitemsBulkAddJobRequest.patchTaskmanagementWorkitemsBulkAddJob(bulkJobId: bulkJobId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorkitemsBulkAddJobRequest.patchTaskmanagementWorkitemsBulkAddJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchtaskmanagementworkitemsbulkterminatejob": {
+    "operationId": "patchtaskmanagementworkitemsbulkterminatejob",
+    "functionName": "patchTaskmanagementWorkitemsBulkTerminateJob",
+    "signature": "patchTaskmanagementWorkitemsBulkTerminateJob(bulkJobId, body)",
+    "parameters": [
+      {
+        "name": "bulkJobId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "BulkJobUpdate",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet bulkJobId: String = \"\" // Bulk job id\nlet body: BulkJobUpdate = new BulkJobUpdate(...) // Bulk job update request\n\n// Update workitem bulk terminate job.\nPatchTaskmanagementWorkitemsBulkTerminateJobRequest.patchTaskmanagementWorkitemsBulkTerminateJob(bulkJobId: bulkJobId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchTaskmanagementWorkitemsBulkTerminateJobRequest.patchTaskmanagementWorkitemsBulkTerminateJob was successful\")\n        dump(response)\n    }\n}"
+  },
   "patchtaskmanagementworktype": {
     "operationId": "patchtaskmanagementworktype",
     "functionName": "patchTaskmanagementWorktype",
@@ -39216,6 +39433,34 @@
     ],
     "return": "Workitem",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: WorkitemCreate = new WorkitemCreate(...) // Workitem\n\n// Create a workitem\nPostTaskmanagementWorkitemsRequest.postTaskmanagementWorkitems(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorkitemsRequest.postTaskmanagementWorkitems was successful\")\n        dump(response)\n    }\n}"
+  },
+  "posttaskmanagementworkitemsbulkaddjobs": {
+    "operationId": "posttaskmanagementworkitemsbulkaddjobs",
+    "functionName": "postTaskmanagementWorkitemsBulkAddJobs",
+    "signature": "postTaskmanagementWorkitemsBulkAddJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkJobAddRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkJobAddRequest = new BulkJobAddRequest(...) // Bulk job definition.\n\n// Create a workitem bulk add job.\nPostTaskmanagementWorkitemsBulkAddJobsRequest.postTaskmanagementWorkitemsBulkAddJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorkitemsBulkAddJobsRequest.postTaskmanagementWorkitemsBulkAddJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "posttaskmanagementworkitemsbulkterminatejobs": {
+    "operationId": "posttaskmanagementworkitemsbulkterminatejobs",
+    "functionName": "postTaskmanagementWorkitemsBulkTerminateJobs",
+    "signature": "postTaskmanagementWorkitemsBulkTerminateJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "BulkJobTerminateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkJob",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: BulkJobTerminateRequest = new BulkJobTerminateRequest(...) // Bulk job definition.\n\n// Create a workitem bulk terminate job.\nPostTaskmanagementWorkitemsBulkTerminateJobsRequest.postTaskmanagementWorkitemsBulkTerminateJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostTaskmanagementWorkitemsBulkTerminateJobsRequest.postTaskmanagementWorkitemsBulkTerminateJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "posttaskmanagementworkitemsqueryjobs": {
     "operationId": "posttaskmanagementworkitemsqueryjobs",
