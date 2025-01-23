@@ -944,6 +944,7 @@ docs/ConversationCallbackEventTopicWrapup.md
 docs/ConversationCategoriesEntityListing.md
 docs/ConversationCategory.md
 docs/ConversationChannel.md
+docs/ConversationChannelLocation.md
 docs/ConversationChannelMetadata.md
 docs/ConversationChat.md
 docs/ConversationChatEventTopicChatConversation.md
@@ -2145,6 +2146,7 @@ docs/HistoricalAdherenceExceptionInfo.md
 docs/HistoricalAdherenceQueryResult.md
 docs/HistoricalImportDeleteJobResponse.md
 docs/HistoricalImportStatus.md
+docs/HistoricalImportStatusJobResponse.md
 docs/HistoricalImportStatusListing.md
 docs/HistoricalShrinkageActivityCategoryResponse.md
 docs/HistoricalShrinkageActivityCodeResponse.md
@@ -3243,6 +3245,7 @@ docs/PublishedSurveyFormReference.md
 docs/PunctualityEvent.md
 docs/PureCloud.md
 docs/PureEngage.md
+docs/PushIntegration.md
 docs/QMAuditQueryRequest.md
 docs/QualityAPI.json
 docs/QualityAPI.md
@@ -4556,6 +4559,7 @@ docs/ValidateWorkPlanResponse.md
 docs/ValidationError.md
 docs/ValidationLimits.md
 docs/ValidationResult.md
+docs/ValidationServiceAsyncResponse.md
 docs/ValidationServiceRequest.md
 docs/ValueWrapperActivityPlanServiceGoalImpactOverrides.md
 docs/ValueWrapperDate.md
@@ -6464,6 +6468,7 @@ docs/getWorkforcemanagementCalendarDataIcs-example.txt
 docs/getWorkforcemanagementCalendarUrlIcs-example.txt
 docs/getWorkforcemanagementHistoricaldataDeletejob-example.txt
 docs/getWorkforcemanagementHistoricaldataImportstatus-example.txt
+docs/getWorkforcemanagementHistoricaldataImportstatusJobId-example.txt
 docs/getWorkforcemanagementIntegrationsHris-example.txt
 docs/getWorkforcemanagementIntegrationsHrisTimeofftypesJob-example.txt
 docs/getWorkforcemanagementManagementunit-example.txt
@@ -8606,6 +8611,7 @@ src/Models/ConversationCallbackEventTopicWrapup.swift
 src/Models/ConversationCategoriesEntityListing.swift
 src/Models/ConversationCategory.swift
 src/Models/ConversationChannel.swift
+src/Models/ConversationChannelLocation.swift
 src/Models/ConversationChannelMetadata.swift
 src/Models/ConversationChat.swift
 src/Models/ConversationChatEventTopicChatConversation.swift
@@ -9777,6 +9783,7 @@ src/Models/HistoricalAdherenceExceptionInfo.swift
 src/Models/HistoricalAdherenceQueryResult.swift
 src/Models/HistoricalImportDeleteJobResponse.swift
 src/Models/HistoricalImportStatus.swift
+src/Models/HistoricalImportStatusJobResponse.swift
 src/Models/HistoricalImportStatusListing.swift
 src/Models/HistoricalShrinkageActivityCategoryResponse.swift
 src/Models/HistoricalShrinkageActivityCodeResponse.swift
@@ -10834,6 +10841,7 @@ src/Models/PublishedSurveyFormReference.swift
 src/Models/PunctualityEvent.swift
 src/Models/PureCloud.swift
 src/Models/PureEngage.swift
+src/Models/PushIntegration.swift
 src/Models/QMAuditQueryRequest.swift
 src/Models/QualityAuditLogMessage.swift
 src/Models/QualityAuditQueryExecutionResultsResponse.swift
@@ -12099,6 +12107,7 @@ src/Models/ValidateWorkPlanResponse.swift
 src/Models/ValidationError.swift
 src/Models/ValidationLimits.swift
 src/Models/ValidationResult.swift
+src/Models/ValidationServiceAsyncResponse.swift
 src/Models/ValidationServiceRequest.swift
 src/Models/ValueWrapperActivityPlanServiceGoalImpactOverrides.swift
 src/Models/ValueWrapperDate.swift

@@ -6037,7 +6037,6 @@ open class AnalyticsAPI {
         case _private = "Private"
         case shared = "Shared"
         case favorites = "Favorites"
-        case deleted = "Deleted"
     }
     
     
@@ -6052,6 +6051,13 @@ open class AnalyticsAPI {
     
     
     
+    public enum DashboardState_getAnalyticsReportingSettingsDashboardsQuery: String { 
+        case active = "Active"
+        case deleted = "Deleted"
+    }
+    
+    
+    
     
     
     
@@ -6063,13 +6069,14 @@ open class AnalyticsAPI {
      - parameter dashboardType: (query) List dashboard of given type 
      - parameter dashboardAccessFilter: (query) Filter dashboard based on the owner of dashboard 
      - parameter name: (query) name of the dashboard (optional)
+     - parameter dashboardState: (query) List dashboard of given state (optional)
      - parameter sortBy: (query)  (optional)
      - parameter pageNumber: (query)  (optional)
      - parameter pageSize: (query)  (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getAnalyticsReportingSettingsDashboardsQuery(dashboardType: DashboardType_getAnalyticsReportingSettingsDashboardsQuery, dashboardAccessFilter: DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery, name: String? = nil, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize)
+    open class func getAnalyticsReportingSettingsDashboardsQuery(dashboardType: DashboardType_getAnalyticsReportingSettingsDashboardsQuery, dashboardAccessFilter: DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery, name: String? = nil, dashboardState: DashboardState_getAnalyticsReportingSettingsDashboardsQuery? = nil, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: DashboardConfigurationListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, dashboardState: dashboardState, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize)
         requestBuilder.execute { (response: Response<DashboardConfigurationListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -6290,13 +6297,14 @@ open class AnalyticsAPI {
      - parameter dashboardType: (query) List dashboard of given type 
      - parameter dashboardAccessFilter: (query) Filter dashboard based on the owner of dashboard 
      - parameter name: (query) name of the dashboard (optional)
+     - parameter dashboardState: (query) List dashboard of given state (optional)
      - parameter sortBy: (query)  (optional)
      - parameter pageNumber: (query)  (optional)
      - parameter pageSize: (query)  (optional)
 
      - returns: RequestBuilder<DashboardConfigurationListing> 
      */
-    open class func getAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(dashboardType: DashboardType_getAnalyticsReportingSettingsDashboardsQuery, dashboardAccessFilter: DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery, name: String? = nil, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
+    open class func getAnalyticsReportingSettingsDashboardsQueryWithRequestBuilder(dashboardType: DashboardType_getAnalyticsReportingSettingsDashboardsQuery, dashboardAccessFilter: DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery, name: String? = nil, dashboardState: DashboardState_getAnalyticsReportingSettingsDashboardsQuery? = nil, sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil) -> RequestBuilder<DashboardConfigurationListing> {        
         let path = "/api/v2/analytics/reporting/settings/dashboards/query"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -6305,6 +6313,7 @@ open class AnalyticsAPI {
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "name": name, 
             "dashboardType": dashboardType.rawValue, 
+            "dashboardState": dashboardState?.rawValue, 
             "dashboardAccessFilter": dashboardAccessFilter.rawValue, 
             "sortBy": sortBy, 
             "pageNumber": pageNumber?.encodeToJSON(), 
@@ -8058,10 +8067,14 @@ open class AnalyticsAPI {
   "results" : [ {
     "data" : [ {
       "metric" : "oAlerting",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oAlerting",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -8131,10 +8144,14 @@ open class AnalyticsAPI {
   }, {
     "data" : [ {
       "metric" : "oAlerting",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oAlerting",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -8669,7 +8686,7 @@ open class AnalyticsAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "totalHits" : 5,
+  "totalHits" : 6,
   "conversations" : [ {
     "conversationStart" : "2000-01-23T04:56:07.000+00:00",
     "mediaStatsMinConversationMos" : 0.8008281904610115,
@@ -10565,34 +10582,34 @@ open class AnalyticsAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]
@@ -13317,10 +13334,14 @@ open class AnalyticsAPI {
   "results" : [ {
     "data" : [ {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -13394,10 +13415,14 @@ open class AnalyticsAPI {
   }, {
     "data" : [ {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -16449,11 +16474,17 @@ open class AnalyticsAPI {
   "entityIdDimension" : "organizationPresenceId",
   "results" : [ {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -16484,11 +16515,17 @@ open class AnalyticsAPI {
     }
   }, {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -17300,11 +17337,17 @@ open class AnalyticsAPI {
   "entityIdDimension" : "organizationPresenceId",
   "results" : [ {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -17335,11 +17378,17 @@ open class AnalyticsAPI {
     }
   }, {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -17794,10 +17843,14 @@ open class AnalyticsAPI {
   "results" : [ {
     "data" : [ {
       "metric" : "oActiveQueues",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oActiveQueues",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -17829,10 +17882,14 @@ open class AnalyticsAPI {
   }, {
     "data" : [ {
       "metric" : "oActiveQueues",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oActiveQueues",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -18380,34 +18437,34 @@ open class AnalyticsAPI {
   } ],
   "aggregations" : [ {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   }, {
     "metric" : "metric",
-    "count" : 0,
+    "count" : 2,
     "type" : "termFrequency",
     "dimension" : "dimension",
     "results" : [ {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     }, {
       "count" : 6,
-      "lt" : 5.962133916683182,
-      "gte" : 1.4658129805029452,
+      "lt" : 5.944895607614016,
+      "gte" : 6.878052220127876,
       "value" : "value"
     } ]
   } ]

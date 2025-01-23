@@ -63,7 +63,7 @@ open class GroupsAPI {
      Remove members
      
      - parameter groupId: (path) Group ID 
-     - parameter ids: (query) Comma separated list of userIds to remove 
+     - parameter ids: (query) Comma separated list of userIds to remove. A maximum of 50 members are allowed per request. 
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteGroupMembers(groupId: String, ids: String, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
@@ -92,7 +92,7 @@ open class GroupsAPI {
        - name: PureCloud OAuth
      
      - parameter groupId: (path) Group ID 
-     - parameter ids: (query) Comma separated list of userIds to remove 
+     - parameter ids: (query) Comma separated list of userIds to remove. A maximum of 50 members are allowed per request. 
 
      - returns: RequestBuilder<JSON> 
      */

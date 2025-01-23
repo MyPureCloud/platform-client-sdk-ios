@@ -10139,7 +10139,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -10268,7 +10268,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -16759,7 +16759,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -16888,7 +16888,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -23739,7 +23739,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -23868,7 +23868,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -30359,7 +30359,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {
@@ -30488,7 +30488,7 @@ open class RecordingAPI {
             "errors" : [ null, null ],
             "status" : 2
           },
-          "type" : "unknown",
+          "type" : "apple",
           "toAddress" : "{}",
           "queueMediaSettings" : "{}",
           "segments" : [ {

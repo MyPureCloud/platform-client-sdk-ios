@@ -53,10 +53,14 @@ open class FlowsAPI {
   "results" : [ {
     "data" : [ {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -130,10 +134,14 @@ open class FlowsAPI {
   }, {
     "data" : [ {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
       "metric" : "oFlow",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",

@@ -12352,11 +12352,17 @@ open class RoutingAPI {
   "entityIdDimension" : "organizationPresenceId",
   "results" : [ {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -12387,11 +12393,17 @@ open class RoutingAPI {
     }
   }, {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oActiveUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",

@@ -11,8 +11,8 @@
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
 | **contactsCount** | **Int64** |  | [optional] |
-| **lastUri** | **String** |  | [optional] |
 | **firstUri** | **String** |  | [optional] |
+| **lastUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

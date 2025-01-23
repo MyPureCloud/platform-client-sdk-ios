@@ -4762,7 +4762,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
@@ -4771,7 +4772,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     } ],
     "metadata" : "{}",
     "deletes" : "{}",
@@ -4843,7 +4845,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
@@ -4852,7 +4855,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     } ],
     "metadata" : "{}",
     "deletes" : "{}",
@@ -6712,6 +6716,63 @@ open class WorkforceManagementAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<HistoricalImportStatusListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Retrieves status of the historical data imports associated with job id
+     
+     - parameter jobId: (path) The job Id of the historical data import request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementHistoricaldataImportstatusJobId(jobId: String, completion: @escaping ((_ data: HistoricalImportStatusJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementHistoricaldataImportstatusJobIdWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<HistoricalImportStatusJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves status of the historical data imports associated with job id
+     - GET /api/v2/workforcemanagement/historicaldata/importstatus/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "importStatusResult" : "{}"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The job Id of the historical data import request 
+
+     - returns: RequestBuilder<HistoricalImportStatusJobResponse> 
+     */
+    open class func getWorkforcemanagementHistoricaldataImportstatusJobIdWithRequestBuilder(jobId: String) -> RequestBuilder<HistoricalImportStatusJobResponse> {        
+        var path = "/api/v2/workforcemanagement/historicaldata/importstatus/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HistoricalImportStatusJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -13439,7 +13500,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
@@ -13448,7 +13510,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     } ],
     "shifts" : [ {
       "schedule" : "{}",
@@ -13519,7 +13582,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     }, {
       "activityCodeId" : "activityCodeId",
       "timeOffRequestId" : "timeOffRequestId",
@@ -13528,7 +13592,8 @@ open class WorkforceManagementAPI {
       "businessUnitDate" : "2000-01-23",
       "paid" : true,
       "description" : "description",
-      "payableMinutes" : 1
+      "payableMinutes" : 1,
+      "delete" : true
     } ],
     "shifts" : [ {
       "schedule" : "{}",
@@ -16514,12 +16579,19 @@ open class WorkforceManagementAPI {
      - parameter body: (body) body (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postWorkforcemanagementHistoricaldataValidate(body: ValidationServiceRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+    open class func postWorkforcemanagementHistoricaldataValidate(body: ValidationServiceRequest? = nil, completion: @escaping ((_ data: ValidationServiceAsyncResponse?,_ error: Error?) -> Void)) {
         let requestBuilder = postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: body)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
+        requestBuilder.execute { (response: Response<ValidationServiceAsyncResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
                 completion(nil, error)
             }
         }
@@ -16531,19 +16603,23 @@ open class WorkforceManagementAPI {
      - OAuth:
        - type: oauth2
        - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
      
      - parameter body: (body) body (optional)
 
-     - returns: RequestBuilder<Void> 
+     - returns: RequestBuilder<ValidationServiceAsyncResponse> 
      */
-    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest? = nil) -> RequestBuilder<Void> {        
+    open class func postWorkforcemanagementHistoricaldataValidateWithRequestBuilder(body: ValidationServiceRequest? = nil) -> RequestBuilder<ValidationServiceAsyncResponse> {        
         let path = "/api/v2/workforcemanagement/historicaldata/validate"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
 
         let requestUrl = URLComponents(string: URLString)
 
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+        let requestBuilder: RequestBuilder<ValidationServiceAsyncResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

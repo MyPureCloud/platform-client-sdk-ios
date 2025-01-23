@@ -11,4 +11,4 @@ Used to retrieve executionData based upon certain criteria
 
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

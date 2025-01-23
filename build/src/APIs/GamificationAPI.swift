@@ -301,9 +301,9 @@ open class GamificationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "division" : "{}",
-  "total" : 2,
-  "pageCount" : 7,
-  "pageNumber" : 5,
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
   "performanceProfile" : "{}",
   "entities" : [ {
     "overallData" : "{}",
@@ -342,7 +342,7 @@ open class GamificationAPI {
   } ],
   "granularity" : "Daily",
   "comparativePeriod" : "{}",
-  "pageSize" : 5,
+  "pageSize" : 0,
   "primaryPeriod" : "{}"
 }, statusCode=200}]
      

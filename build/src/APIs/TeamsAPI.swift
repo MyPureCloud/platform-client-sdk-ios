@@ -480,11 +480,17 @@ open class TeamsAPI {
   "entityIdDimension" : "organizationPresenceId",
   "results" : [ {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",
@@ -515,11 +521,17 @@ open class TeamsAPI {
     }
   }, {
     "data" : [ {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     }, {
+      "secondaryQualifier" : "secondaryQualifier",
       "metric" : "oTeamOffQueueUsers",
-      "count" : 0
+      "qualifier" : "qualifier",
+      "count" : 0,
+      "entityIds" : [ "entityIds", "entityIds" ]
     } ],
     "entities" : [ {
       "queueId" : "queueId",

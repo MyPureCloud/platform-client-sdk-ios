@@ -2271,6 +2271,8 @@ This endpoint does not require any parameters.
 
 Get chat conversation
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps GET /api/v2/conversations/chats/{conversationId}  
@@ -2320,7 +2322,7 @@ ConversationsAPI.getConversationsChat(conversationId: conversationId) { (respons
 
 Get a web chat conversation message
 
-The current user must be involved with the conversation to get its messages.
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
 
 
 
@@ -2373,7 +2375,7 @@ ConversationsAPI.getConversationsChatMessage(conversationId: conversationId, mes
 
 Get the messages of a chat conversation.
 
-The current user must be involved with the conversation to get its messages.
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. The current user must be involved with the conversation to get its messages.
 
 
 
@@ -2432,6 +2434,8 @@ ConversationsAPI.getConversationsChatMessages(conversationId: conversationId, af
 
 Get the wrap-up for this conversation communication. 
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup  
@@ -2487,6 +2491,8 @@ ConversationsAPI.getConversationsChatParticipantCommunicationWrapup(conversation
 
 Get the wrap-up for this conversation participant. 
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup  
@@ -2540,6 +2546,8 @@ ConversationsAPI.getConversationsChatParticipantWrapup(conversationId: conversat
 
 Get list of wrapup codes for this conversation participant
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes  
@@ -2590,6 +2598,8 @@ ConversationsAPI.getConversationsChatParticipantWrapupcodes(conversationId: conv
 > [ChatConversationEntityListing](ChatConversationEntityListing) getConversationsChats()
 
 Get active chat conversations for the logged in user
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 
 
@@ -5917,6 +5927,8 @@ ConversationsAPI.patchConversationsCallbacks(body: body) { (response, error) in
 
 Update a conversation by disconnecting all of the participants
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps PATCH /api/v2/conversations/chats/{conversationId}  
@@ -5968,6 +5980,8 @@ ConversationsAPI.patchConversationsChat(conversationId: conversationId, body: bo
 > Void patchConversationsChatParticipant(conversationId, participantId, body)
 
 Update conversation participant
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 
 
@@ -6022,6 +6036,8 @@ ConversationsAPI.patchConversationsChatParticipant(conversationId: conversationI
 
 Update the attributes on a conversation participant.
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes  
@@ -6074,6 +6090,8 @@ ConversationsAPI.patchConversationsChatParticipantAttributes(conversationId: con
 > [JSON](JSON) patchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body)
 
 Update conversation participant&#39;s communication by disconnecting it.
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 
 
@@ -9193,6 +9211,8 @@ ConversationsAPI.postConversationsCalls(body: body) { (response, error) in
 
 Send a message on behalf of a communication in a chat conversation.
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages  
@@ -9246,6 +9266,8 @@ ConversationsAPI.postConversationsChatCommunicationMessages(conversationId: conv
 
 Send a typing-indicator on behalf of a communication in a chat conversation.
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing  
@@ -9296,6 +9318,8 @@ ConversationsAPI.postConversationsChatCommunicationTyping(conversationId: conver
 > Void postConversationsChatParticipantCommunicationWrapup(conversationId, participantId, communicationId, body)
 
 Apply wrap-up for this conversation communication
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 
 
@@ -9352,6 +9376,8 @@ ConversationsAPI.postConversationsChatParticipantCommunicationWrapup(conversatio
 
 Replace this participant with the specified user and/or address
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace  
@@ -9404,6 +9430,8 @@ ConversationsAPI.postConversationsChatParticipantReplace(conversationId: convers
 > [ChatConversation](ChatConversation) postConversationsChats(body)
 
 Create a web chat conversation
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
 
 
 
@@ -11724,6 +11752,8 @@ ConversationsAPI.putConversationsCallbackRecordingstate(conversationId: conversa
 
 Update a conversation by setting its recording state
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/.
+
 
 
 Wraps PUT /api/v2/conversations/chats/{conversationId}/recordingstate  
@@ -12341,4 +12371,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

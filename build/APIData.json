@@ -1067,7 +1067,7 @@
   "getanalyticsreportingsettingsdashboardsquery": {
     "operationId": "getanalyticsreportingsettingsdashboardsquery",
     "functionName": "getAnalyticsReportingSettingsDashboardsQuery",
-    "signature": "getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize)",
+    "signature": "getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, dashboardState, sortBy, pageNumber, pageSize)",
     "parameters": [
       {
         "name": "dashboardType",
@@ -1081,6 +1081,11 @@
       },
       {
         "name": "name",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "dashboardState",
         "type": "String",
         "required": "false"
       },
@@ -1101,7 +1106,7 @@
       }
     ],
     "return": "DashboardConfigurationListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dashboardType: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type\nlet dashboardAccessFilter: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard\nlet name: String = \"\" // name of the dashboard\nlet sortBy: String = \"\" // \nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \n\n// Get list of dashboard configurations\nGetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet dashboardType: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type\nlet dashboardAccessFilter: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard\nlet name: String = \"\" // name of the dashboard\nlet dashboardState: GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardState_getAnalyticsReportingSettingsDashboardsQuery = GetAnalyticsReportingSettingsDashboardsQueryRequest.DashboardState_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given state\nlet sortBy: String = \"\" // \nlet pageNumber: Int = 0 // \nlet pageSize: Int = 0 // \n\n// Get list of dashboard configurations\nGetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, dashboardState: dashboardState, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetAnalyticsReportingSettingsDashboardsQueryRequest.getAnalyticsReportingSettingsDashboardsQuery was successful\")\n        dump(response)\n    }\n}"
   },
   "getanalyticsreportingsettingsuserdashboards": {
     "operationId": "getanalyticsreportingsettingsuserdashboards",
@@ -16274,7 +16279,7 @@
       }
     ],
     "return": "JSON",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // Group ID\nlet ids: String = \"\" // Comma separated list of userIds to remove\n\n// Remove members\nDeleteGroupMembersRequest.deleteGroupMembers(groupId: groupId, ids: ids) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteGroupMembersRequest.deleteGroupMembers was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet groupId: String = \"\" // Group ID\nlet ids: String = \"\" // Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.\n\n// Remove members\nDeleteGroupMembersRequest.deleteGroupMembers(groupId: groupId, ids: ids) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"DeleteGroupMembersRequest.deleteGroupMembers was successful\")\n        dump(response)\n    }\n}"
   },
   "getfieldconfig": {
     "operationId": "getfieldconfig",
@@ -28600,7 +28605,7 @@
   "getoutboundmessagingcampaigns": {
     "operationId": "getoutboundmessagingcampaigns",
     "functionName": "getOutboundMessagingcampaigns",
-    "signature": "getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id)",
+    "signature": "getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id, contentTemplateId, campaignStatus)",
     "parameters": [
       {
         "name": "pageSize",
@@ -28651,10 +28656,20 @@
         "name": "_id",
         "type": "[String]",
         "required": "false"
+      },
+      {
+        "name": "contentTemplateId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "campaignStatus",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "MessagingCampaignEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns.enummember // The field to sort by\nlet sortOrder: GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet contactListId: String = \"\" // Contact List ID\nlet divisionId: [String] = [\"\"] // Division ID(s)\nlet type: GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns.enummember // Campaign Type\nlet senderSmsPhoneNumber: String = \"\" // Sender SMS Phone Number\nlet _id: [String] = [\"\"] // A list of messaging campaign ids to bulk fetch\n\n// Query a list of Messaging Campaigns\nGetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortBy: GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortBy_getOutboundMessagingcampaigns.enummember // The field to sort by\nlet sortOrder: GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.SortOrder_getOutboundMessagingcampaigns.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet contactListId: String = \"\" // Contact List ID\nlet divisionId: [String] = [\"\"] // Division ID(s)\nlet type: GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.ModelType_getOutboundMessagingcampaigns.enummember // Campaign Type\nlet senderSmsPhoneNumber: String = \"\" // Sender SMS Phone Number\nlet _id: [String] = [\"\"] // A list of messaging campaign ids to bulk fetch\nlet contentTemplateId: String = \"\" // Content template ID\nlet campaignStatus: GetOutboundMessagingcampaignsRequest.CampaignStatus_getOutboundMessagingcampaigns = GetOutboundMessagingcampaignsRequest.CampaignStatus_getOutboundMessagingcampaigns.enummember // Campaign Status\n\n// Query a list of Messaging Campaigns\nGetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundMessagingcampaignsRequest.getOutboundMessagingcampaigns was successful\")\n        dump(response)\n    }\n}"
   },
   "getoutboundmessagingcampaignsdivisionview": {
     "operationId": "getoutboundmessagingcampaignsdivisionview",
@@ -28673,7 +28688,7 @@
   "getoutboundmessagingcampaignsdivisionviews": {
     "operationId": "getoutboundmessagingcampaignsdivisionviews",
     "functionName": "getOutboundMessagingcampaignsDivisionviews",
-    "signature": "getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, _id, senderSmsPhoneNumber)",
+    "signature": "getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, _id, senderSmsPhoneNumber, contentTemplateId, campaignStatus)",
     "parameters": [
       {
         "name": "pageSize",
@@ -28709,10 +28724,20 @@
         "name": "senderSmsPhoneNumber",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "contentTemplateId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "campaignStatus",
+        "type": "String",
+        "required": "false"
       }
     ],
     "return": "MessagingCampaignDivisionViewEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetOutboundMessagingcampaignsDivisionviewsRequest.SortOrder_getOutboundMessagingcampaignsDivisionviews = GetOutboundMessagingcampaignsDivisionviewsRequest.SortOrder_getOutboundMessagingcampaignsDivisionviews.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet type: GetOutboundMessagingcampaignsDivisionviewsRequest.ModelType_getOutboundMessagingcampaignsDivisionviews = GetOutboundMessagingcampaignsDivisionviewsRequest.ModelType_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Type\nlet _id: [String] = [\"\"] // id\nlet senderSmsPhoneNumber: String = \"\" // Sender SMS Phone Number\n\n// Query a list of basic Messaging Campaign information objects\nGetOutboundMessagingcampaignsDivisionviewsRequest.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, type: type, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundMessagingcampaignsDivisionviewsRequest.getOutboundMessagingcampaignsDivisionviews was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size. The max that will be returned is 100.\nlet pageNumber: Int = 0 // Page number\nlet sortOrder: GetOutboundMessagingcampaignsDivisionviewsRequest.SortOrder_getOutboundMessagingcampaignsDivisionviews = GetOutboundMessagingcampaignsDivisionviewsRequest.SortOrder_getOutboundMessagingcampaignsDivisionviews.enummember // The direction to sort\nlet name: String = \"\" // Name\nlet type: GetOutboundMessagingcampaignsDivisionviewsRequest.ModelType_getOutboundMessagingcampaignsDivisionviews = GetOutboundMessagingcampaignsDivisionviewsRequest.ModelType_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Type\nlet _id: [String] = [\"\"] // id\nlet senderSmsPhoneNumber: String = \"\" // Sender SMS Phone Number\nlet contentTemplateId: String = \"\" // Content template ID\nlet campaignStatus: GetOutboundMessagingcampaignsDivisionviewsRequest.CampaignStatus_getOutboundMessagingcampaignsDivisionviews = GetOutboundMessagingcampaignsDivisionviewsRequest.CampaignStatus_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Status\n\n// Query a list of basic Messaging Campaign information objects\nGetOutboundMessagingcampaignsDivisionviewsRequest.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, type: type, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOutboundMessagingcampaignsDivisionviewsRequest.getOutboundMessagingcampaignsDivisionviews was successful\")\n        dump(response)\n    }\n}"
   },
   "getoutboundruleset": {
     "operationId": "getoutboundruleset",
@@ -46340,6 +46365,20 @@
     "return": "HistoricalImportStatusListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieves status of the historical data imports of the organization\nGetWorkforcemanagementHistoricaldataImportstatusRequest.getWorkforcemanagementHistoricaldataImportstatus() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementHistoricaldataImportstatusRequest.getWorkforcemanagementHistoricaldataImportstatus was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementhistoricaldataimportstatusjobid": {
+    "operationId": "getworkforcemanagementhistoricaldataimportstatusjobid",
+    "functionName": "getWorkforcemanagementHistoricaldataImportstatusJobId",
+    "signature": "getWorkforcemanagementHistoricaldataImportstatusJobId(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "HistoricalImportStatusJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The job Id of the historical data import request\n\n// Retrieves status of the historical data imports associated with job id\nGetWorkforcemanagementHistoricaldataImportstatusJobIdRequest.getWorkforcemanagementHistoricaldataImportstatusJobId(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementHistoricaldataImportstatusJobIdRequest.getWorkforcemanagementHistoricaldataImportstatusJobId was successful\")\n        dump(response)\n    }\n}"
+  },
   "getworkforcemanagementintegrationshris": {
     "operationId": "getworkforcemanagementintegrationshris",
     "functionName": "getWorkforcemanagementIntegrationsHris",
@@ -48707,7 +48746,8 @@
         "required": "false"
       }
     ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ValidationServiceRequest = new ValidationServiceRequest(...) // body\n\n// Trigger validation process for historical import\nPostWorkforcemanagementHistoricaldataValidateRequest.postWorkforcemanagementHistoricaldataValidate(body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostWorkforcemanagementHistoricaldataValidateRequest.postWorkforcemanagementHistoricaldataValidate was successful\")\n    }\n}"
+    "return": "ValidationServiceAsyncResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ValidationServiceRequest = new ValidationServiceRequest(...) // body\n\n// Trigger validation process for historical import\nPostWorkforcemanagementHistoricaldataValidateRequest.postWorkforcemanagementHistoricaldataValidate(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementHistoricaldataValidateRequest.postWorkforcemanagementHistoricaldataValidate was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementintegrationshritimeofftypesjobs": {
     "operationId": "postworkforcemanagementintegrationshritimeofftypesjobs",

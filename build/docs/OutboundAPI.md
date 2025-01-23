@@ -4655,7 +4655,7 @@ OutboundAPI.getOutboundMessagingcampaignProgress(messagingCampaignId: messagingC
 
 
 
-> [MessagingCampaignEntityListing](MessagingCampaignEntityListing) getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id)
+> [MessagingCampaignEntityListing](MessagingCampaignEntityListing) getOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, _id, contentTemplateId, campaignStatus)
 
 Query a list of Messaging Campaigns
 
@@ -4687,9 +4687,11 @@ let divisionId: [String] = [""] // Division ID(s)
 let type: OutboundAPI.ModelType_getOutboundMessagingcampaigns = OutboundAPI.ModelType_getOutboundMessagingcampaigns.enummember // Campaign Type
 let senderSmsPhoneNumber: String = "" // Sender SMS Phone Number
 let _id: [String] = [""] // A list of messaging campaign ids to bulk fetch
+let contentTemplateId: String = "" // Content template ID
+let campaignStatus: OutboundAPI.CampaignStatus_getOutboundMessagingcampaigns = OutboundAPI.CampaignStatus_getOutboundMessagingcampaigns.enummember // Campaign Status
 
 // Code example
-OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id) { (response, error) in
+OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, sortOrder: sortOrder, name: name, contactListId: contactListId, divisionId: divisionId, type: type, senderSmsPhoneNumber: senderSmsPhoneNumber, _id: _id, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4714,6 +4716,8 @@ OutboundAPI.getOutboundMessagingcampaigns(pageSize: pageSize, pageNumber: pageNu
 | **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS"), whatsapp ("WHATSAPP") |
 | **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
 | **_id** | [**[String]**](String)| A list of messaging campaign ids to bulk fetch | [optional] |
+| **contentTemplateId** | **String**| Content template ID | [optional] |
+| **campaignStatus** | **String**| Campaign Status | [optional]<br />**Values**: on ("on"), stopping ("stopping"), off ("off"), complete ("complete"), invalid ("invalid"), forcedOff ("forced_off"), forcedStopping ("forced_stopping") |
 
 
 ### Return type
@@ -4778,7 +4782,7 @@ OutboundAPI.getOutboundMessagingcampaignsDivisionview(messagingCampaignId: messa
 
 
 
-> [MessagingCampaignDivisionViewEntityListing](MessagingCampaignDivisionViewEntityListing) getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, _id, senderSmsPhoneNumber)
+> [MessagingCampaignDivisionViewEntityListing](MessagingCampaignDivisionViewEntityListing) getOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, _id, senderSmsPhoneNumber, contentTemplateId, campaignStatus)
 
 Query a list of basic Messaging Campaign information objects
 
@@ -4808,9 +4812,11 @@ let name: String = "" // Name
 let type: OutboundAPI.ModelType_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.ModelType_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Type
 let _id: [String] = [""] // id
 let senderSmsPhoneNumber: String = "" // Sender SMS Phone Number
+let contentTemplateId: String = "" // Content template ID
+let campaignStatus: OutboundAPI.CampaignStatus_getOutboundMessagingcampaignsDivisionviews = OutboundAPI.CampaignStatus_getOutboundMessagingcampaignsDivisionviews.enummember // Campaign Status
 
 // Code example
-OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, type: type, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber) { (response, error) in
+OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageNumber: pageNumber, sortOrder: sortOrder, name: name, type: type, _id: _id, senderSmsPhoneNumber: senderSmsPhoneNumber, contentTemplateId: contentTemplateId, campaignStatus: campaignStatus) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -4832,6 +4838,8 @@ OutboundAPI.getOutboundMessagingcampaignsDivisionviews(pageSize: pageSize, pageN
 | **type** | **String**| Campaign Type | [optional]<br />**Values**: email ("EMAIL"), sms ("SMS"), whatsapp ("WHATSAPP") |
 | **_id** | [**[String]**](String)| id | [optional] |
 | **senderSmsPhoneNumber** | **String**| Sender SMS Phone Number | [optional] |
+| **contentTemplateId** | **String**| Content template ID | [optional] |
+| **campaignStatus** | **String**| Campaign Status | [optional]<br />**Values**: on ("on"), stopping ("stopping"), off ("off"), complete ("complete"), invalid ("invalid"), forcedOff ("forced_off"), forcedStopping ("forced_stopping") |
 
 
 ### Return type
@@ -8939,4 +8947,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_
