@@ -87,6 +87,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#getWorkforcemanagementCalendarUrlIcs) | Get existing calendar link for the current user |
 | [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
 | [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
+| [**getWorkforcemanagementHistoricaldataImportstatusJobId**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatusJobId) | Retrieves status of the historical data imports associated with job id |
 | [**getWorkforcemanagementIntegrationsHris**](WorkforceManagementAPI#getWorkforcemanagementIntegrationsHris) | Get integrations |
 | [**getWorkforcemanagementIntegrationsHrisTimeofftypesJob**](WorkforceManagementAPI#getWorkforcemanagementIntegrationsHrisTimeofftypesJob) | Query the results of time off types job |
 | [**getWorkforcemanagementManagementunit**](WorkforceManagementAPI#getWorkforcemanagementManagementunit) | Get management unit |
@@ -4772,6 +4773,56 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**HistoricalImportStatusListing**](HistoricalImportStatusListing)
+
+
+## getWorkforcemanagementHistoricaldataImportstatusJobId
+
+
+
+> [HistoricalImportStatusJobResponse](HistoricalImportStatusJobResponse) getWorkforcemanagementHistoricaldataImportstatusJobId(jobId)
+
+Retrieves status of the historical data imports associated with job id
+
+
+
+Wraps GET /api/v2/workforcemanagement/historicaldata/importstatus/{jobId}  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The job Id of the historical data import request
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementHistoricaldataImportstatusJobId(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementHistoricaldataImportstatusJobId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The job Id of the historical data import request | |
+
+
+### Return type
+
+[**HistoricalImportStatusJobResponse**](HistoricalImportStatusJobResponse)
 
 
 ## getWorkforcemanagementIntegrationsHris
@@ -10975,7 +11026,7 @@ This endpoint does not require any parameters.
 
 
 
-> Void postWorkforcemanagementHistoricaldataValidate(body)
+> [ValidationServiceAsyncResponse](ValidationServiceAsyncResponse) postWorkforcemanagementHistoricaldataValidate(body)
 
 Trigger validation process for historical import
 
@@ -10998,11 +11049,12 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let body: ValidationServiceRequest = new ValidationServiceRequest(...) // body
 
 // Code example
-WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body) { (error) in
+WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body) { (response, error) in
     if let error = error {
         dump(error)
-    } else {
+    } else if let response = response {
         print("WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate was successful")
+        dump(response)
     }
 }
 ```
@@ -11017,7 +11069,7 @@ WorkforceManagementAPI.postWorkforcemanagementHistoricaldataValidate(body: body)
 
 ### Return type
 
-`nil` (empty response body)
+[**ValidationServiceAsyncResponse**](ValidationServiceAsyncResponse)
 
 
 ## postWorkforcemanagementIntegrationsHriTimeofftypesJobs
@@ -13097,4 +13149,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

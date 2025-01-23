@@ -26,4 +26,4 @@ Defines a period of time to perform a specific action.  Each schedule must be as
 
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

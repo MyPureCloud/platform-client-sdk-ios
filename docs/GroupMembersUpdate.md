@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **memberIds** | **[String]** | A list of the ids of the members to add. | |
+| **memberIds** | **[String]** | A list of the ids of the members to add. A maximum of 50 members are allowed per request. | |
 | **version** | **Int** | The current group version. | |
 
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

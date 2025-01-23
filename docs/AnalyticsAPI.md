@@ -913,7 +913,7 @@ This endpoint does not require any parameters.
 
 
 
-> [DashboardConfigurationListing](DashboardConfigurationListing) getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, sortBy, pageNumber, pageSize)
+> [DashboardConfigurationListing](DashboardConfigurationListing) getAnalyticsReportingSettingsDashboardsQuery(dashboardType, dashboardAccessFilter, name, dashboardState, sortBy, pageNumber, pageSize)
 
 Get list of dashboard configurations
 
@@ -936,12 +936,13 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let dashboardType: AnalyticsAPI.DashboardType_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardType_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given type
 let dashboardAccessFilter: AnalyticsAPI.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardAccessFilter_getAnalyticsReportingSettingsDashboardsQuery.enummember // Filter dashboard based on the owner of dashboard
 let name: String = "" // name of the dashboard
+let dashboardState: AnalyticsAPI.DashboardState_getAnalyticsReportingSettingsDashboardsQuery = AnalyticsAPI.DashboardState_getAnalyticsReportingSettingsDashboardsQuery.enummember // List dashboard of given state
 let sortBy: String = "" // 
 let pageNumber: Int = 0 // 
 let pageSize: Int = 0 // 
 
 // Code example
-AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboardType, dashboardAccessFilter: dashboardAccessFilter, name: name, dashboardState: dashboardState, sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -956,9 +957,10 @@ AnalyticsAPI.getAnalyticsReportingSettingsDashboardsQuery(dashboardType: dashboa
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **dashboardType** | **String**| List dashboard of given type |<br />**Values**: all ("All"), _public ("Public"), _private ("Private"), shared ("Shared"), favorites ("Favorites"), deleted ("Deleted") |
+| **dashboardType** | **String**| List dashboard of given type |<br />**Values**: all ("All"), _public ("Public"), _private ("Private"), shared ("Shared"), favorites ("Favorites") |
 | **dashboardAccessFilter** | **String**| Filter dashboard based on the owner of dashboard |<br />**Values**: ownedByMe ("OwnedByMe"), ownedByAnyone ("OwnedByAnyone"), notOwnedByMe ("NotOwnedByMe") |
 | **name** | **String**| name of the dashboard | [optional] |
+| **dashboardState** | **String**| List dashboard of given state | [optional]<br />**Values**: active ("Active"), deleted ("Deleted") |
 | **sortBy** | **String**|  | [optional] |
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**|  | [optional] |
@@ -2961,4 +2963,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

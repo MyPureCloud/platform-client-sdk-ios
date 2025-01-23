@@ -94,7 +94,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let groupId: String = "" // Group ID
-let ids: String = "" // Comma separated list of userIds to remove
+let ids: String = "" // Comma separated list of userIds to remove. A maximum of 50 members are allowed per request.
 
 // Code example
 GroupsAPI.deleteGroupMembers(groupId: groupId, ids: ids) { (response, error) in
@@ -113,7 +113,7 @@ GroupsAPI.deleteGroupMembers(groupId: groupId, ids: ids) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| Group ID | |
-| **ids** | **String**| Comma separated list of userIds to remove | |
+| **ids** | **String**| Comma separated list of userIds to remove. A maximum of 50 members are allowed per request. | |
 
 
 ### Return type
@@ -747,4 +747,4 @@ GroupsAPI.putGroup(groupId: groupId, body: body) { (response, error) in
 [**Group**](Group)
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_

@@ -1,279 +1,302 @@
-Platform API version: 8752
+Platform API version: 8789
 
 
 
 
-# Major Changes (0 changes)
+# Major Changes (24 changes)
+
+**GET /api/v2/analytics/reporting/settings/dashboards/query** (1 change)
+
+* Parameter dashboardState was added
+
+**GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/chats/{conversationId}/messages** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/chats** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/conversations/chats** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/chats/{conversationId}** (1 change)
+
+* Has been deprecated
+
+**PATCH /api/v2/conversations/chats/{conversationId}** (1 change)
+
+* Has been deprecated
+
+**PUT /api/v2/conversations/chats/{conversationId}/recordingstate** (1 change)
+
+* Has been deprecated
+
+**PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup** (1 change)
+
+* Has been deprecated
+
+**PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}** (1 change)
+
+* Has been deprecated
+
+**PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/outbound/messagingcampaigns/divisionviews** (2 changes)
+
+* Parameter contentTemplateId was added
+* Parameter campaignStatus was added
+
+**GET /api/v2/outbound/messagingcampaigns** (2 changes)
+
+* Parameter contentTemplateId was added
+* Parameter campaignStatus was added
+
+**POST /api/v2/workforcemanagement/historicaldata/validate** (1 change)
+
+* Response 202 type was changed from _undefined_ to ValidationServiceAsyncResponse
+
+**ViewFilter** (1 change)
+
+* Enum value Deleted was removed from property dashboardType
 
 
-# Minor Changes (84 changes)
+# Minor Changes (43 changes)
 
-**/api/v2/analytics/resolutions/aggregates/query** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/gamification/insights/rankings** (2 changes)
+**/api/v2/workforcemanagement/historicaldata/importstatus/{jobId}** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**/api/v2/taskmanagement/workitems/bulk/jobs/users/me** (2 changes)
+**ConversationActivityMetricValue** (2 changes)
 
-* Path was added
-* Operation GET was added
+* Optional property qualifier was added
+* Optional property entityIds was added
 
-**/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}** (4 changes)
+**FlowActivityMetricValue** (2 changes)
 
-* Path was added
-* Operation GET was added
-* Operation DELETE was added
-* Operation PATCH was added
+* Optional property qualifier was added
+* Optional property entityIds was added
 
-**/api/v2/taskmanagement/workitems/bulk/add/jobs/{bulkJobId}/results** (2 changes)
+**RoutingActivityMetricValue** (3 changes)
 
-* Path was added
-* Operation GET was added
+* Optional property qualifier was added
+* Optional property secondaryQualifier was added
+* Optional property entityIds was added
 
-**/api/v2/taskmanagement/workitems/bulk/add/jobs** (2 changes)
+**TeamActivityMetricValue** (3 changes)
 
-* Path was added
-* Operation POST was added
+* Optional property qualifier was added
+* Optional property secondaryQualifier was added
+* Optional property entityIds was added
 
-**/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}/results** (2 changes)
+**UserActivityMetricValue** (2 changes)
 
-* Path was added
-* Operation GET was added
+* Optional property qualifier was added
+* Optional property entityIds was added
 
-**/api/v2/taskmanagement/workitems/bulk/terminate/jobs/{bulkJobId}** (4 changes)
+**KnowledgeBaseWithDialectReference** (2 changes)
 
-* Path was added
-* Operation GET was added
-* Operation DELETE was added
-* Operation PATCH was added
+* Enum value ko-KR was added to property languageCode
+* Enum value hi-IN was added to property languageCode
 
-**/api/v2/taskmanagement/workitems/bulk/terminate/jobs** (2 changes)
+**Message** (1 change)
 
-* Path was added
-* Operation POST was added
+* Enum value apple was added to property type
 
-**ResolutionAggregateDataContainer** (1 change)
+**ConversationChannelLocation** (1 change)
 
 * Model was added
 
-**ResolutionAggregateQueryResponse** (1 change)
+**MessageMediaParticipant** (1 change)
+
+* Enum value apple was added to property type
+
+**CampaignSchedule** (1 change)
+
+* Optional property recurrences was added
+
+**SequenceSchedule** (1 change)
+
+* Optional property recurrences was added
+
+**EmailCampaignSchedule** (1 change)
+
+* Optional property recurrences was added
+
+**MessagingCampaignSchedule** (1 change)
+
+* Optional property recurrences was added
+
+**NamedEntityTypeMechanism** (1 change)
+
+* Enum value DynamicDateTime was added to property type
+
+**Button** (3 changes)
+
+* Optional property type was added
+* Optional property content was added
+* Optional property contentText was added
+
+**MessageFooter** (2 changes)
+
+* Optional property type was added
+* Optional property content was added
+
+**MessageHeader** (2 changes)
+
+* Optional property type was added
+* Optional property content was added
+
+**WhatsAppDefinition** (3 changes)
+
+* Optional property buttons was added
+* Optional property messageFooter was added
+* Optional property header was added
+
+**GeneralProgramJobRequest** (1 change)
+
+* Enum value hi-IN was added to property dialect
+
+**LocalizedLabels** (2 changes)
+
+* Enum value PushNotificationTitle was added to property key
+* Enum value PushNotificationBody was added to property key
+
+**PushIntegration** (1 change)
 
 * Model was added
 
-**ResolutionAggregateQueryClause** (1 change)
+**BuFullDayTimeOffMarker** (1 change)
+
+* Optional property delete was added
+
+**HistoricalImportStatusJobResponse** (1 change)
 
 * Model was added
 
-**ResolutionAggregateQueryFilter** (1 change)
+**ValidationServiceAsyncResponse** (1 change)
 
 * Model was added
-
-**ResolutionAggregateQueryPredicate** (1 change)
-
-* Model was added
-
-**ResolutionAggregationQuery** (1 change)
-
-* Model was added
-
-**ResolutionAggregationView** (1 change)
-
-* Model was added
-
-**ViewFilter** (3 changes)
-
-* Optional property video was added
-* Optional property linkedInteraction was added
-* Optional property recommendationSources was added
-
-**DataSchema** (1 change)
-
-* Enum value DECISION_TABLE was added to property appliesTo
-
-**Limit** (2 changes)
-
-* Enum value analytics.agents was added to property namespace
-* Enum value micro.frontend was added to property namespace
-
-**CommonCampaignDivisionView** (1 change)
-
-* Enum value whatsapp was added to property mediaType
-
-**CommonCampaign** (1 change)
-
-* Enum value whatsapp was added to property mediaType
-
-**WhatsAppColumn** (1 change)
-
-* Model was added
-
-**MessageEvaluation** (1 change)
-
-* Enum value WhatsApp was added to property messageType
-
-**DncListDivisionView** (1 change)
-
-* Enum value WhatsApp was added to property contactMethod
-
-**DncList** (1 change)
-
-* Enum value WhatsApp was added to property contactMethod
-
-**DncListCreate** (1 change)
-
-* Enum value WhatsApp was added to property contactMethod
-
-**LastAttemptOverallConditionSettings** (1 change)
-
-* Enum value WhatsApp was added to property mediaTypes
-
-**MarkContactUncontactableActionSettings** (1 change)
-
-* Enum value WhatsApp was added to property mediaTypes
-
-**InsightsRankings** (1 change)
-
-* Model was added
-
-**JourneyViewElementFilter** (1 change)
-
-* Optional property numberPredicates was added
-
-**ApprovalNamespace** (2 changes)
-
-* Enum value analytics.agents was added to property namespace
-* Enum value micro.frontend was added to property namespace
-
-**LimitChangeRequestDetails** (2 changes)
-
-* Enum value analytics.agents was added to property namespace
-* Enum value micro.frontend was added to property namespace
-
-**StatusChange** (2 changes)
-
-* Enum value analytics.agents was added to property namespace
-* Enum value micro.frontend was added to property namespace
-
-**EventCoBrowse** (1 change)
-
-* Model was added
-
-**EventPresence** (1 change)
-
-* Model was added
-
-**EventTyping** (1 change)
-
-* Model was added
-
-**EventVideo** (1 change)
-
-* Model was added
-
-**MessageEvent** (1 change)
-
-* Model was added
-
-**TextBotPromptSegment** (1 change)
-
-* Enum value MessageEvent was added to property type
 
 **BulkJob** (1 change)
 
-* Model was added
+* Enum value Terminated was added to property state
 
-**BulkJobsListing** (1 change)
+**LearningModuleRuleParts** (1 change)
 
-* Model was added
-
-**BulkJobAddResponse** (1 change)
-
-* Model was added
-
-**BulkJobAddResult** (1 change)
-
-* Model was added
-
-**BulkJobAddWorkitemSummary** (1 change)
-
-* Model was added
-
-**BulkJobError** (1 change)
-
-* Model was added
-
-**BulkJobUpdate** (1 change)
-
-* Model was added
-
-**BulkJobAddRequest** (1 change)
-
-* Model was added
-
-**WorkitemCommonCreate** (1 change)
-
-* Model was added
-
-**BulkJobTerminateResult** (1 change)
-
-* Model was added
-
-**BulkJobTerminateResultEntity** (1 change)
-
-* Model was added
-
-**BulkJobTerminateResultsResponse** (1 change)
-
-* Model was added
-
-**BulkJobEntity** (1 change)
-
-* Model was added
-
-**BulkJobTerminateRequest** (1 change)
-
-* Model was added
-
-**Celebration** (1 change)
-
-* Enum value ContestComplete was added to property type
-
-**ContestCompleteData** (1 change)
-
-* Model was added
-
-**ContestCompleteDataScore** (1 change)
-
-* Model was added
-
-**ContestDataMetrics** (1 change)
-
-* Model was added
-
-**ContestDataPrizes** (1 change)
-
-* Model was added
-
-**ContestDataWinners** (1 change)
-
-* Model was added
-
-**ContestDataWinnersUsers** (1 change)
-
-* Model was added
-
-**SourceEntity** (5 changes)
-
-* Enum value Competition was added to property type
-* Enum value Race was added to property type
-* Enum value Raffle was added to property type
-* Enum value TeamGoal was added to property type
-* Optional property contestCompleteData was added
+* Enum value User was added to property selector
 
 
-# Point Changes (0 changes)
+# Point Changes (19 changes)
+
+**GET /api/v2/conversations/chats/{conversationId}/messages/{messageId}** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/chats/{conversationId}/messages** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/chats** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/chats** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/chats/{conversationId}** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/chats/{conversationId}** (1 change)
+
+* Description was changed
+
+**PUT /api/v2/conversations/chats/{conversationId}/recordingstate** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}** (1 change)
+
+* Description was changed
+
+**PATCH /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}** (1 change)
+
+* Description was changed
+
+**GET /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Description was changed
+
+**POST /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup** (1 change)
+
+* Description was changed
+
+**DELETE /api/v2/groups/{groupId}/members** (1 change)
+
+* Description was changed for parameter ids
+
+**POST /api/v2/workforcemanagement/historicaldata/validate** (1 change)
+
+* Response 202 was changed from Accepted - Triggering  validation process. to Accepted - Triggering validation process.

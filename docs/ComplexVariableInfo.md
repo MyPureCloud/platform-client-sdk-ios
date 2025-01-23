@@ -12,4 +12,4 @@ Variable type information about a complex type from the bot&#39;s definition
 
 
 
-_PureCloudPlatformClientV2@159.1.0_
+_PureCloudPlatformClientV2@160.0.0_
