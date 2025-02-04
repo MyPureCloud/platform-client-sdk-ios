@@ -5,6 +5,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | Description |
 | ------------- | ------------- |
 | [**deleteAlertingAlert**](AlertingAPI#deleteAlertingAlert) | Delete an alert |
+| [**deleteAlertingAlertsAll**](AlertingAPI#deleteAlertingAlertsAll) | Delete all alerts for the user |
 | [**deleteAlertingInteractionstatsAlert**](AlertingAPI#deleteAlertingInteractionstatsAlert) | Delete an interaction stats alert |
 | [**deleteAlertingInteractionstatsRule**](AlertingAPI#deleteAlertingInteractionstatsRule) | Delete an interaction stats rule |
 | [**deleteAlertingRule**](AlertingAPI#deleteAlertingRule) | Delete a rule. |
@@ -17,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getAlertingInteractionstatsRules**](AlertingAPI#getAlertingInteractionstatsRules) | Get an interaction stats rule list |
 | [**getAlertingRule**](AlertingAPI#getAlertingRule) | Get a rule. |
 | [**patchAlertingAlert**](AlertingAPI#patchAlertingAlert) | Allows an entity to mute/snooze an alert or update the unread status of the alert. |
+| [**patchAlertingAlertsAll**](AlertingAPI#patchAlertingAlertsAll) | Updates all alerts |
 | [**patchAlertingAlertsBulk**](AlertingAPI#patchAlertingAlertsBulk) | Bulk alert updates |
 | [**patchAlertingRulesBulk**](AlertingAPI#patchAlertingRulesBulk) | Bulk update of notification lists |
 | [**postAlertingAlertsQuery**](AlertingAPI#postAlertingAlertsQuery) | Gets a paged list of alerts. The max page size is 50 |
@@ -78,6 +80,52 @@ AlertingAPI.deleteAlertingAlert(alertId: alertId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+
+## deleteAlertingAlertsAll
+
+
+
+> [JSON](JSON) deleteAlertingAlertsAll()
+
+Delete all alerts for the user
+
+
+
+Wraps DELETE /api/v2/alerting/alerts/all  
+
+Requires ALL permissions: 
+
+* alerting:alert:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+AlertingAPI.deleteAlertingAlertsAll() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AlertingAPI.deleteAlertingAlertsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**JSON**](JSON)
 
 
 ## deleteAlertingInteractionstatsAlert
@@ -691,6 +739,56 @@ AlertingAPI.patchAlertingAlert(alertId: alertId, body: body) { (response, error)
 [**CommonAlert**](CommonAlert)
 
 
+## patchAlertingAlertsAll
+
+
+
+> [JSON](JSON) patchAlertingAlertsAll(body)
+
+Updates all alerts
+
+
+
+Wraps PATCH /api/v2/alerting/alerts/all  
+
+Requires ALL permissions: 
+
+* alerting:alert:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: CommonAllAlertUpdateRequest = new CommonAllAlertUpdateRequest(...) // 
+
+// Code example
+AlertingAPI.patchAlertingAlertsAll(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AlertingAPI.patchAlertingAlertsAll was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**CommonAllAlertUpdateRequest**](CommonAllAlertUpdateRequest)|  | [optional] |
+
+
+### Return type
+
+[**JSON**](JSON)
+
+
 ## patchAlertingAlertsBulk
 
 
@@ -1261,4 +1359,4 @@ AlertingAPI.putAlertingRule(ruleId: ruleId, body: body) { (response, error) in
 [**CommonRule**](CommonRule)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

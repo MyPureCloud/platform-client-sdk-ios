@@ -22,8 +22,9 @@
 | **ssoBinding** | **String** |  | [optional] |
 | **signAuthnRequests** | **Bool** |  | [optional] |
 | **providerName** | **String** |  | [optional] |
+| **displayOnLogin** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

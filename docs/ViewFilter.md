@@ -221,7 +221,9 @@
 | **video** | **Bool** | Filter to indicate if the conversation has video | [optional] |
 | **linkedInteraction** | **Bool** | Filter to indicate if the conversation has linked interaction | [optional] |
 | **recommendationSources** | **[String]** | List of recommendation sources for filtering recommendation details pane | [optional] |
+| **evaluationRole** | **String** | Sets the role when viewing agent evaluations | [optional] |
+| **comparisonQueueIds** | **[String]** | The queue ids are used to for comparison to the primary queue filter in reporting | [optional] |
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | [**UUID**](UUID) |  | [optional] |
 | **type** | **String** |  | [optional] |
+| **contestCompleteData** | [**V2WemEngagementCelebrationUpdatesTopicContestCompleteData**](V2WemEngagementCelebrationUpdatesTopicContestCompleteData) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

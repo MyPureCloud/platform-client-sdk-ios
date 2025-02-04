@@ -16,4 +16,4 @@ Defines an authentication scheme in the SCIM service provider&#39;s configuratio
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

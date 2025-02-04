@@ -16,15 +16,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getSpeechandtextanalyticsConversationCategories**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationCategories) | Get the list of detected Speech and Text Analytics categories of conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturl**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationCommunicationTranscripturl) | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**getSpeechandtextanalyticsConversationCommunicationTranscripturls**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationCommunicationTranscripturls) | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
+| [**getSpeechandtextanalyticsConversationSummaries**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsConversationSummaries) | Get conversation summaries by conversation id. |
 | [**getSpeechandtextanalyticsDictionaryfeedback**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsDictionaryfeedback) | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
 | [**getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Get a Speech &amp; Text Analytics dictionary feedback by id |
 | [**getSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgram) | Get a Speech &amp; Text Analytics program by id |
 | [**getSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramMappings) | Get Speech &amp; Text Analytics program mappings to queues and flows by id |
+| [**getSpeechandtextanalyticsProgramSettingsInsights**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramSettingsInsights) | Get AI Insights settings of a program |
 | [**getSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramTranscriptionengines) | Get transcription engine settings of a program |
 | [**getSpeechandtextanalyticsPrograms**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsPrograms) | Get the list of Speech &amp; Text Analytics programs |
 | [**getSpeechandtextanalyticsProgramsGeneralJob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsGeneralJob) | Get a Speech &amp; Text Analytics general program job by id |
 | [**getSpeechandtextanalyticsProgramsMappings**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsMappings) | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**getSpeechandtextanalyticsProgramsPublishjob**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsPublishjob) | Get a Speech &amp; Text Analytics publish programs job by id |
+| [**getSpeechandtextanalyticsProgramsSettingsInsights**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsSettingsInsights) | Get the list of program AI Insights settings for the organization |
 | [**getSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | Get supported dialects for each transcription engine |
 | [**getSpeechandtextanalyticsProgramsUnpublished**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsProgramsUnpublished) | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**getSpeechandtextanalyticsSentimentDialects**](SpeechTextAnalyticsAPI#getSpeechandtextanalyticsSentimentDialects) | Get the list of Speech &amp; Text Analytics sentiment supported dialects |
@@ -50,6 +53,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | Update existing Speech &amp; Text Analytics dictionary feedback by id |
 | [**putSpeechandtextanalyticsProgram**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsProgram) | Update existing Speech &amp; Text Analytics program |
 | [**putSpeechandtextanalyticsProgramMappings**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsProgramMappings) | Set Speech &amp; Text Analytics program mappings to queues and flows |
+| [**putSpeechandtextanalyticsProgramSettingsInsights**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsProgramSettingsInsights) | Update AI Insights settings of a program |
 | [**putSpeechandtextanalyticsProgramTranscriptionengines**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsProgramTranscriptionengines) | Update transcription engine settings of a program |
 | [**putSpeechandtextanalyticsSettings**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsSettings) | Update Speech And Text Analytics Settings |
 | [**putSpeechandtextanalyticsTopic**](SpeechTextAnalyticsAPI#putSpeechandtextanalyticsTopic) | Update existing Speech &amp; Text Analytics topic |
@@ -670,6 +674,58 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationCommunicationTranscr
 [**TranscriptUrls**](TranscriptUrls)
 
 
+## getSpeechandtextanalyticsConversationSummaries
+
+
+
+> [SpeechTextAnalyticsConversationSummaryListing](SpeechTextAnalyticsConversationSummaryListing) getSpeechandtextanalyticsConversationSummaries(conversationId)
+
+Get conversation summaries by conversation id.
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/conversations/{conversationId}/summaries  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:aiSummary:view
+* recording:recording:view
+* recording:recording:viewSensitiveData
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let conversationId: String = "" // The conversation ID of the summaries
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationSummaries(conversationId: conversationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsConversationSummaries was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **conversationId** | **String**| The conversation ID of the summaries | |
+
+
+### Return type
+
+[**SpeechTextAnalyticsConversationSummaryListing**](SpeechTextAnalyticsConversationSummaryListing)
+
+
 ## getSpeechandtextanalyticsDictionaryfeedback
 
 
@@ -872,6 +928,57 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramMappings(programId: progr
 ### Return type
 
 [**ProgramMappings**](ProgramMappings)
+
+
+## getSpeechandtextanalyticsProgramSettingsInsights
+
+
+
+> [ProgramInsightsSettings](ProgramInsightsSettings) getSpeechandtextanalyticsProgramSettingsInsights(programId)
+
+Get AI Insights settings of a program
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/{programId}/settings/insights  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:insightsSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramSettingsInsights(programId: programId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramSettingsInsights was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+
+
+### Return type
+
+[**ProgramInsightsSettings**](ProgramInsightsSettings)
 
 
 ## getSpeechandtextanalyticsProgramTranscriptionengines
@@ -1131,6 +1238,61 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsPublishjob(jobId: jobId)
 ### Return type
 
 [**ProgramJob**](ProgramJob)
+
+
+## getSpeechandtextanalyticsProgramsSettingsInsights
+
+
+
+> [ProgramInsightsSettingsEntityListing](ProgramInsightsSettingsEntityListing) getSpeechandtextanalyticsProgramsSettingsInsights(pageSize, pageNumber, programIds)
+
+Get the list of program AI Insights settings for the organization
+
+
+
+Wraps GET /api/v2/speechandtextanalytics/programs/settings/insights  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+* speechAndTextAnalytics:insightsSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 100.
+let pageNumber: Int = 0 // The page number for the listing
+let programIds: [String] = [""] // Comma separated Program IDs to filter by. Maximum of 50 IDs allowed.
+
+// Code example
+SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsSettingsInsights(pageSize: pageSize, pageNumber: pageNumber, programIds: programIds) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.getSpeechandtextanalyticsProgramsSettingsInsights was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 100. | [optional] |
+| **pageNumber** | **Int**| The page number for the listing | [optional] |
+| **programIds** | [**[String]**](String)| Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. | [optional] |
+
+
+### Return type
+
+[**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing)
 
 
 ## getSpeechandtextanalyticsProgramsTranscriptionenginesDialects
@@ -2392,6 +2554,59 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramMappings(programId: progr
 [**ProgramMappings**](ProgramMappings)
 
 
+## putSpeechandtextanalyticsProgramSettingsInsights
+
+
+
+> [ProgramInsightsSettings](ProgramInsightsSettings) putSpeechandtextanalyticsProgramSettingsInsights(programId, body)
+
+Update AI Insights settings of a program
+
+
+
+Wraps PUT /api/v2/speechandtextanalytics/programs/{programId}/settings/insights  
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:edit
+* speechAndTextAnalytics:insightsSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let programId: String = "" // The id of the program
+let body: InsightsSettingsRequest = new InsightsSettingsRequest(...) // Program AI Insights setting
+
+// Code example
+SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramSettingsInsights(programId: programId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SpeechTextAnalyticsAPI.putSpeechandtextanalyticsProgramSettingsInsights was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **programId** | **String**| The id of the program | |
+| **body** | [**InsightsSettingsRequest**](InsightsSettingsRequest)| Program AI Insights setting | |
+
+
+### Return type
+
+[**ProgramInsightsSettings**](ProgramInsightsSettings)
+
+
 ## putSpeechandtextanalyticsProgramTranscriptionengines
 
 
@@ -2546,4 +2761,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

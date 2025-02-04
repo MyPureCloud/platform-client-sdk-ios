@@ -13,9 +13,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrations**](IntegrationsAPI#getIntegrations) | List integrations |
 | [**getIntegrationsAction**](IntegrationsAPI#getIntegrationsAction) | Retrieves a single Action matching id. |
 | [**getIntegrationsActionDraft**](IntegrationsAPI#getIntegrationsActionDraft) | Retrieve a Draft |
+| [**getIntegrationsActionDraftFunction**](IntegrationsAPI#getIntegrationsActionDraftFunction) | Get draft function settings for Action |
 | [**getIntegrationsActionDraftSchema**](IntegrationsAPI#getIntegrationsActionDraftSchema) | Retrieve schema for a Draft based on filename. |
 | [**getIntegrationsActionDraftTemplate**](IntegrationsAPI#getIntegrationsActionDraftTemplate) | Retrieve templates for a Draft based on filename. |
 | [**getIntegrationsActionDraftValidation**](IntegrationsAPI#getIntegrationsActionDraftValidation) | Validate current Draft configuration. |
+| [**getIntegrationsActionFunction**](IntegrationsAPI#getIntegrationsActionFunction) | Get published function settings for Action |
 | [**getIntegrationsActionSchema**](IntegrationsAPI#getIntegrationsActionSchema) | Retrieve schema for an action based on filename. |
 | [**getIntegrationsActionTemplate**](IntegrationsAPI#getIntegrationsActionTemplate) | Retrieve text of templates for an action based on filename. |
 | [**getIntegrationsActions**](IntegrationsAPI#getIntegrationsActions) | Retrieves all actions associated with filters passed in via query param. |
@@ -23,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getIntegrationsActionsCertificates**](IntegrationsAPI#getIntegrationsActionsCertificates) | Retrieves the available mTLS client certificates in use. This endpoint will return inconsistent results while a certificate rotation is in progress. |
 | [**getIntegrationsActionsCertificatesTruststore**](IntegrationsAPI#getIntegrationsActionsCertificatesTruststore) | Retrieves basic info about trusted root CA certificates |
 | [**getIntegrationsActionsDrafts**](IntegrationsAPI#getIntegrationsActionsDrafts) | Retrieves all action drafts associated with the filters passed in via query param. |
+| [**getIntegrationsActionsFunctionsRuntimes**](IntegrationsAPI#getIntegrationsActionsFunctionsRuntimes) | Get action function settings for Action |
 | [**getIntegrationsBotconnectorIntegrationIdBot**](IntegrationsAPI#getIntegrationsBotconnectorIntegrationIdBot) | Get a specific botConnector bot, plus versions, for this integration |
 | [**getIntegrationsBotconnectorIntegrationIdBotVersions**](IntegrationsAPI#getIntegrationsBotconnectorIntegrationIdBotVersions) | Get a list of bot versions for a bot |
 | [**getIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI#getIntegrationsBotconnectorIntegrationIdBots) | Get a list of botConnector bots for this integration |
@@ -68,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchIntegrationsActionDraft**](IntegrationsAPI#patchIntegrationsActionDraft) | Update an existing Draft |
 | [**postIntegrations**](IntegrationsAPI#postIntegrations) | Create an integration. |
 | [**postIntegrationsActionDraft**](IntegrationsAPI#postIntegrationsActionDraft) | Create a new Draft from existing Action |
+| [**postIntegrationsActionDraftFunctionUpload**](IntegrationsAPI#postIntegrationsActionDraftFunctionUpload) | Create upload presigned URL for draft function package file. |
 | [**postIntegrationsActionDraftPublish**](IntegrationsAPI#postIntegrationsActionDraftPublish) | Publish a Draft and make it the active Action configuration |
 | [**postIntegrationsActionDraftTest**](IntegrationsAPI#postIntegrationsActionDraftTest) | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. |
 | [**postIntegrationsActionExecute**](IntegrationsAPI#postIntegrationsActionExecute) | Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error. |
@@ -79,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](IntegrationsAPI#postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs) | Get a list of Nuance bots in the specified Integration asynchronously |
 | [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](IntegrationsAPI#postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate) | Try out a single credential for a Nuance bot to know if the secret is correct |
 | [**putIntegrationConfigCurrent**](IntegrationsAPI#putIntegrationConfigCurrent) | Update integration configuration. |
+| [**putIntegrationsActionDraftFunction**](IntegrationsAPI#putIntegrationsActionDraftFunction) | Update draft function settings. |
 | [**putIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI#putIntegrationsBotconnectorIntegrationIdBots) | Set a list of botConnector bots plus versions for this integration |
 | [**putIntegrationsCredential**](IntegrationsAPI#putIntegrationsCredential) | Update a set of credentials |
 | [**putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings**](IntegrationsAPI#putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings) | Update the Nuance bot list for the specific bots made available to Genesys Cloud in the specified Integration |
@@ -566,6 +571,56 @@ IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, i
 [**Action**](Action)
 
 
+## getIntegrationsActionDraftFunction
+
+
+
+> [FunctionConfig](FunctionConfig) getIntegrationsActionDraftFunction(actionId)
+
+Get draft function settings for Action
+
+
+
+Wraps GET /api/v2/integrations/actions/{actionId}/draft/function  
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+
+// Code example
+IntegrationsAPI.getIntegrationsActionDraftFunction(actionId: actionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsActionDraftFunction was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **actionId** | **String**| actionId | |
+
+
+### Return type
+
+[**FunctionConfig**](FunctionConfig)
+
+
 ## getIntegrationsActionDraftSchema
 
 
@@ -722,6 +777,56 @@ IntegrationsAPI.getIntegrationsActionDraftValidation(actionId: actionId) { (resp
 ### Return type
 
 [**DraftValidationResult**](DraftValidationResult)
+
+
+## getIntegrationsActionFunction
+
+
+
+> [FunctionConfig](FunctionConfig) getIntegrationsActionFunction(actionId)
+
+Get published function settings for Action
+
+
+
+Wraps GET /api/v2/integrations/actions/{actionId}/function  
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+
+// Code example
+IntegrationsAPI.getIntegrationsActionFunction(actionId: actionId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsActionFunction was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **actionId** | **String**| actionId | |
+
+
+### Return type
+
+[**FunctionConfig**](FunctionConfig)
 
 
 ## getIntegrationsActionSchema
@@ -1133,6 +1238,52 @@ IntegrationsAPI.getIntegrationsActionsDrafts(pageSize: pageSize, pageNumber: pag
 ### Return type
 
 [**ActionEntityListing**](ActionEntityListing)
+
+
+## getIntegrationsActionsFunctionsRuntimes
+
+
+
+> [[FunctionRuntime]](FunctionRuntime) getIntegrationsActionsFunctionsRuntimes()
+
+Get action function settings for Action
+
+
+
+Wraps GET /api/v2/integrations/actions/functions/runtimes  
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+IntegrationsAPI.getIntegrationsActionsFunctionsRuntimes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.getIntegrationsActionsFunctionsRuntimes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**[FunctionRuntime]**](FunctionRuntime)
 
 
 ## getIntegrationsBotconnectorIntegrationIdBot
@@ -3549,6 +3700,58 @@ IntegrationsAPI.postIntegrationsActionDraft(actionId: actionId) { (response, err
 [**Action**](Action)
 
 
+## postIntegrationsActionDraftFunctionUpload
+
+
+
+> [FunctionUploadResponse](FunctionUploadResponse) postIntegrationsActionDraftFunctionUpload(actionId, body)
+
+Create upload presigned URL for draft function package file.
+
+
+
+Wraps POST /api/v2/integrations/actions/{actionId}/draft/function/upload  
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+let body: FunctionUploadRequest = new FunctionUploadRequest(...) // Input used to request URL upload.
+
+// Code example
+IntegrationsAPI.postIntegrationsActionDraftFunctionUpload(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.postIntegrationsActionDraftFunctionUpload was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **actionId** | **String**| actionId | |
+| **body** | [**FunctionUploadRequest**](FunctionUploadRequest)| Input used to request URL upload. | |
+
+
+### Return type
+
+[**FunctionUploadResponse**](FunctionUploadResponse)
+
+
 ## postIntegrationsActionDraftPublish
 
 
@@ -4130,6 +4333,58 @@ IntegrationsAPI.putIntegrationConfigCurrent(integrationId: integrationId, body: 
 [**IntegrationConfiguration**](IntegrationConfiguration)
 
 
+## putIntegrationsActionDraftFunction
+
+
+
+> [FunctionConfig](FunctionConfig) putIntegrationsActionDraftFunction(actionId, body)
+
+Update draft function settings.
+
+
+
+Wraps PUT /api/v2/integrations/actions/{actionId}/draft/function  
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+let body: Function = new Function(...) // Input used to update function settings.
+
+// Code example
+IntegrationsAPI.putIntegrationsActionDraftFunction(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.putIntegrationsActionDraftFunction was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **actionId** | **String**| actionId | |
+| **body** | [**Function**](Function)| Input used to update function settings. | |
+
+
+### Return type
+
+[**FunctionConfig**](FunctionConfig)
+
+
 ## putIntegrationsBotconnectorIntegrationIdBots
 
 
@@ -4388,4 +4643,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

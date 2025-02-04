@@ -11,8 +11,8 @@ Model for a paged listing of Nuance bots
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
-| **firstUri** | **String** |  | [optional] |
 | **lastUri** | **String** |  | [optional] |
+| **firstUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **nextUri** | **String** |  | [optional] |
 | **previousUri** | **String** |  | [optional] |
@@ -20,4 +20,4 @@ Model for a paged listing of Nuance bots
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

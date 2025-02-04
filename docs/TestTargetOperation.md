@@ -14,4 +14,4 @@ Information about the Trigger test mode target validation step
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

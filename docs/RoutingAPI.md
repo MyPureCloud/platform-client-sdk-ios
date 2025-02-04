@@ -140,7 +140,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putRoutingQueue**](RoutingAPI#putRoutingQueue) | Update a queue |
 | [**putRoutingSettings**](RoutingAPI#putRoutingSettings) | Update an organization&#39;s routing settings |
 | [**putRoutingSettingsTranscription**](RoutingAPI#putRoutingSettingsTranscription) | Update Transcription Settings |
-| [**putRoutingSmsPhonenumber**](RoutingAPI#putRoutingSmsPhonenumber) | Update a phone number provisioned for SMS. |
 | [**putRoutingUserDirectroutingbackupSettings**](RoutingAPI#putRoutingUserDirectroutingbackupSettings) | Update the user&#39;s Direct Routing Backup settings. |
 | [**putRoutingUserUtilization**](RoutingAPI#putRoutingUserUtilization) | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
 | [**putRoutingUtilization**](RoutingAPI#putRoutingUtilization) | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
@@ -7252,58 +7251,6 @@ RoutingAPI.putRoutingSettingsTranscription(body: body) { (response, error) in
 [**TranscriptionSettings**](TranscriptionSettings)
 
 
-## putRoutingSmsPhonenumber
-
-
-
-> [SmsPhoneNumber](SmsPhoneNumber) putRoutingSmsPhonenumber(phoneNumberId, body)
-
-Update a phone number provisioned for SMS.
-
-
-
-Wraps PUT /api/v2/routing/sms/phonenumbers/{phoneNumberId}  
-
-Requires ALL permissions: 
-
-* sms:phoneNumber:edit
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let phoneNumberId: String = "" // phone number
-let body: SmsPhoneNumber = new SmsPhoneNumber(...) // SmsPhoneNumber
-
-// Code example
-RoutingAPI.putRoutingSmsPhonenumber(phoneNumberId: phoneNumberId, body: body) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("RoutingAPI.putRoutingSmsPhonenumber was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **phoneNumberId** | **String**| phone number | |
-| **body** | [**SmsPhoneNumber**](SmsPhoneNumber)| SmsPhoneNumber | |
-
-
-### Return type
-
-[**SmsPhoneNumber**](SmsPhoneNumber)
-
-
 ## putRoutingUserDirectroutingbackupSettings
 
 
@@ -7668,4 +7615,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_
