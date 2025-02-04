@@ -743,6 +743,7 @@ docs/CommandStatus.md
 docs/CommandStatusEntityListing.md
 docs/CommonAlert.md
 docs/CommonAlertBulkUpdateRequest.md
+docs/CommonAllAlertUpdateRequest.md
 docs/CommonCampaign.md
 docs/CommonCampaignDivisionView.md
 docs/CommonCampaignDivisionViewEntityListing.md
@@ -2053,6 +2054,12 @@ docs/FreeTrialLimitDocs.md
 docs/FreeTrialNamespace.md
 docs/FromEmailAddress.md
 docs/FullDayTimeOffMarker.md
+docs/Function.md
+docs/FunctionConfig.md
+docs/FunctionRuntime.md
+docs/FunctionUploadRequest.md
+docs/FunctionUploadResponse.md
+docs/FunctionZipConfig.md
 docs/GDPRJourneyCustomer.md
 docs/GDPRRequest.md
 docs/GDPRRequestEntityListing.md
@@ -2217,6 +2224,7 @@ docs/InsightsDetailsMetricPeriodPoints.md
 docs/InsightsDetailsOverallItem.md
 docs/InsightsDetailsOverallPeriodPoints.md
 docs/InsightsRankings.md
+docs/InsightsSettingsRequest.md
 docs/InsightsSummary.md
 docs/InsightsSummaryMetricItem.md
 docs/InsightsSummaryMetricPeriodPoints.md
@@ -3023,6 +3031,7 @@ docs/OutboundMessagingEmailCampaignConfigChangeContactSort.md
 docs/OutboundMessagingEmailCampaignConfigChangeEmailConfig.md
 docs/OutboundMessagingEmailCampaignConfigChangeErrorDetail.md
 docs/OutboundMessagingEmailCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingEmailCampaignConfigChangeIntegrationRef.md
 docs/OutboundMessagingEmailCampaignConfigChangeMessagingCampaign.md
 docs/OutboundMessagingEmailCampaignConfigChangeObject.md
 docs/OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress.md
@@ -3030,6 +3039,7 @@ docs/OutboundMessagingEmailCampaignConfigChangeResponseRef.md
 docs/OutboundMessagingEmailCampaignConfigChangeSmsConfig.md
 docs/OutboundMessagingEmailCampaignConfigChangeSmsPhoneNumberRef.md
 docs/OutboundMessagingEmailCampaignConfigChangeUriReference.md
+docs/OutboundMessagingEmailCampaignConfigChangeWhatsAppConfig.md
 docs/OutboundMessagingEmailCampaignProgressEventCampaignProgress.md
 docs/OutboundMessagingEmailCampaignProgressEventObject.md
 docs/OutboundMessagingEmailCampaignProgressEventUriReference.md
@@ -3037,6 +3047,7 @@ docs/OutboundMessagingMessagingCampaignConfigChangeContactSort.md
 docs/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.md
 docs/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.md
 docs/OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingMessagingCampaignConfigChangeIntegrationRef.md
 docs/OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign.md
 docs/OutboundMessagingMessagingCampaignConfigChangeObject.md
 docs/OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress.md
@@ -3044,6 +3055,7 @@ docs/OutboundMessagingMessagingCampaignConfigChangeResponseRef.md
 docs/OutboundMessagingMessagingCampaignConfigChangeSmsConfig.md
 docs/OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef.md
 docs/OutboundMessagingMessagingCampaignConfigChangeUriReference.md
+docs/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.md
 docs/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.md
 docs/OutboundMessagingMessagingCampaignProgressEventObject.md
 docs/OutboundMessagingMessagingCampaignProgressEventUriReference.md
@@ -3216,6 +3228,8 @@ docs/ProcessAutomationAPI.md
 docs/ProcessScheduleUpdateUploadRequest.md
 docs/ProfileWithDateRange.md
 docs/Program.md
+docs/ProgramInsightsSettings.md
+docs/ProgramInsightsSettingsEntityListing.md
 docs/ProgramJob.md
 docs/ProgramJobRequest.md
 docs/ProgramMappings.md
@@ -3976,6 +3990,8 @@ docs/SourcePlanningGroupRequest.md
 docs/SourceSyncResponse.md
 docs/SpeechTextAnalyticsAPI.json
 docs/SpeechTextAnalyticsAPI.md
+docs/SpeechTextAnalyticsConversationSummary.md
+docs/SpeechTextAnalyticsConversationSummaryListing.md
 docs/SpeechTextAnalyticsSettingsRequest.md
 docs/SpeechTextAnalyticsSettingsResponse.md
 docs/SplittingInformation.md
@@ -4548,6 +4564,12 @@ docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
 docs/V2WebMessagingUndeliveredMessageTopicMessage.md
 docs/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestMetrics.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestPrizes.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestWinners.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestWinnersScore.md
+docs/V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers.md
 docs/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.md
 docs/V2WemEngagementCelebrationUpdatesTopicSourceEntity.md
 docs/V2WemEngagementCelebrationUpdatesTopicUserId.md
@@ -5020,6 +5042,7 @@ docs/WritableDivision.md
 docs/WritableEntity.md
 docs/WritableStarrableDivision.md
 docs/deleteAlertingAlert-example.txt
+docs/deleteAlertingAlertsAll-example.txt
 docs/deleteAlertingInteractionstatsAlert-example.txt
 docs/deleteAlertingInteractionstatsRule-example.txt
 docs/deleteAlertingRule-example.txt
@@ -5268,6 +5291,7 @@ docs/deleteTelephonyProvidersEdgesTrunkbasesetting-example.txt
 docs/deleteToken-example.txt
 docs/deleteTokensMe-example.txt
 docs/deleteUser-example.txt
+docs/deleteUserExternalidAuthorityNameExternalKey-example.txt
 docs/deleteUserRoutinglanguage-example.txt
 docs/deleteUserRoutinglanguage-example.txt
 docs/deleteUserRoutingskill-example.txt
@@ -5722,9 +5746,11 @@ docs/getIntegrationConfigCurrent-example.txt
 docs/getIntegrations-example.txt
 docs/getIntegrationsAction-example.txt
 docs/getIntegrationsActionDraft-example.txt
+docs/getIntegrationsActionDraftFunction-example.txt
 docs/getIntegrationsActionDraftSchema-example.txt
 docs/getIntegrationsActionDraftTemplate-example.txt
 docs/getIntegrationsActionDraftValidation-example.txt
+docs/getIntegrationsActionFunction-example.txt
 docs/getIntegrationsActionSchema-example.txt
 docs/getIntegrationsActionTemplate-example.txt
 docs/getIntegrationsActions-example.txt
@@ -5732,6 +5758,7 @@ docs/getIntegrationsActionsCategories-example.txt
 docs/getIntegrationsActionsCertificates-example.txt
 docs/getIntegrationsActionsCertificatesTruststore-example.txt
 docs/getIntegrationsActionsDrafts-example.txt
+docs/getIntegrationsActionsFunctionsRuntimes-example.txt
 docs/getIntegrationsBotconnectorIntegrationIdBot-example.txt
 docs/getIntegrationsBotconnectorIntegrationIdBotVersions-example.txt
 docs/getIntegrationsBotconnectorIntegrationIdBots-example.txt
@@ -6186,15 +6213,18 @@ docs/getSpeechandtextanalyticsConversation-example.txt
 docs/getSpeechandtextanalyticsConversationCategories-example.txt
 docs/getSpeechandtextanalyticsConversationCommunicationTranscripturl-example.txt
 docs/getSpeechandtextanalyticsConversationCommunicationTranscripturls-example.txt
+docs/getSpeechandtextanalyticsConversationSummaries-example.txt
 docs/getSpeechandtextanalyticsDictionaryfeedback-example.txt
 docs/getSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/getSpeechandtextanalyticsProgram-example.txt
 docs/getSpeechandtextanalyticsProgramMappings-example.txt
+docs/getSpeechandtextanalyticsProgramSettingsInsights-example.txt
 docs/getSpeechandtextanalyticsProgramTranscriptionengines-example.txt
 docs/getSpeechandtextanalyticsPrograms-example.txt
 docs/getSpeechandtextanalyticsProgramsGeneralJob-example.txt
 docs/getSpeechandtextanalyticsProgramsMappings-example.txt
 docs/getSpeechandtextanalyticsProgramsPublishjob-example.txt
+docs/getSpeechandtextanalyticsProgramsSettingsInsights-example.txt
 docs/getSpeechandtextanalyticsProgramsTranscriptionenginesDialects-example.txt
 docs/getSpeechandtextanalyticsProgramsUnpublished-example.txt
 docs/getSpeechandtextanalyticsSentimentDialects-example.txt
@@ -6323,6 +6353,8 @@ docs/getUser-example.txt
 docs/getUserAdjacents-example.txt
 docs/getUserCallforwarding-example.txt
 docs/getUserDirectreports-example.txt
+docs/getUserExternalid-example.txt
+docs/getUserExternalidAuthorityName-example.txt
 docs/getUserFavorites-example.txt
 docs/getUserGeolocation-example.txt
 docs/getUserGeolocation-example.txt
@@ -6361,6 +6393,7 @@ docs/getUsersChatsMe-example.txt
 docs/getUsersDevelopmentActivities-example.txt
 docs/getUsersDevelopmentActivitiesMe-example.txt
 docs/getUsersDevelopmentActivity-example.txt
+docs/getUsersExternalidAuthorityNameExternalKey-example.txt
 docs/getUsersMe-example.txt
 docs/getUsersPresenceBulk-example.txt
 docs/getUsersPresencesPurecloudBulk-example.txt
@@ -6510,6 +6543,7 @@ docs/getWorkforcemanagementWorkplanbids-example.txt
 docs/headNotificationsChannel-example.txt
 docs/headTokensMe-example.txt
 docs/patchAlertingAlert-example.txt
+docs/patchAlertingAlertsAll-example.txt
 docs/patchAlertingAlertsBulk-example.txt
 docs/patchAlertingRulesBulk-example.txt
 docs/patchAnalyticsReportingSettings-example.txt
@@ -6979,6 +7013,8 @@ docs/postIdentityproviders-example.txt
 docs/postInfrastructureascodeJobs-example.txt
 docs/postIntegrations-example.txt
 docs/postIntegrationsActionDraft-example.txt
+docs/postIntegrationsActionDraftFunctionUpload-example.txt
+docs/postIntegrationsActionDraftFunctionUpload-example.txt
 docs/postIntegrationsActionDraftPublish-example.txt
 docs/postIntegrationsActionDraftTest-example.txt
 docs/postIntegrationsActionExecute-example.txt
@@ -7464,6 +7500,7 @@ docs/putIdentityprovidersPurecloud-example.txt
 docs/putIdentityprovidersPureengage-example.txt
 docs/putIdentityprovidersSalesforce-example.txt
 docs/putIntegrationConfigCurrent-example.txt
+docs/putIntegrationsActionDraftFunction-example.txt
 docs/putIntegrationsBotconnectorIntegrationIdBots-example.txt
 docs/putIntegrationsCredential-example.txt
 docs/putIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings-example.txt
@@ -7546,7 +7583,6 @@ docs/putRoutingMessageRecipient-example.txt
 docs/putRoutingQueue-example.txt
 docs/putRoutingSettings-example.txt
 docs/putRoutingSettingsTranscription-example.txt
-docs/putRoutingSmsPhonenumber-example.txt
 docs/putRoutingUserDirectroutingbackupSettings-example.txt
 docs/putRoutingUserDirectroutingbackupSettings-example.txt
 docs/putRoutingUserUtilization-example.txt
@@ -7562,6 +7598,7 @@ docs/putSpeechandtextanalyticsCategory-example.txt
 docs/putSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId-example.txt
 docs/putSpeechandtextanalyticsProgram-example.txt
 docs/putSpeechandtextanalyticsProgramMappings-example.txt
+docs/putSpeechandtextanalyticsProgramSettingsInsights-example.txt
 docs/putSpeechandtextanalyticsProgramTranscriptionengines-example.txt
 docs/putSpeechandtextanalyticsSettings-example.txt
 docs/putSpeechandtextanalyticsTopic-example.txt
@@ -8412,6 +8449,7 @@ src/Models/CommandStatus.swift
 src/Models/CommandStatusEntityListing.swift
 src/Models/CommonAlert.swift
 src/Models/CommonAlertBulkUpdateRequest.swift
+src/Models/CommonAllAlertUpdateRequest.swift
 src/Models/CommonCampaign.swift
 src/Models/CommonCampaignDivisionView.swift
 src/Models/CommonCampaignDivisionViewEntityListing.swift
@@ -9700,6 +9738,12 @@ src/Models/FreeTrialLimitDocs.swift
 src/Models/FreeTrialNamespace.swift
 src/Models/FromEmailAddress.swift
 src/Models/FullDayTimeOffMarker.swift
+src/Models/Function.swift
+src/Models/FunctionConfig.swift
+src/Models/FunctionRuntime.swift
+src/Models/FunctionUploadRequest.swift
+src/Models/FunctionUploadResponse.swift
+src/Models/FunctionZipConfig.swift
 src/Models/GDPRJourneyCustomer.swift
 src/Models/GDPRRequest.swift
 src/Models/GDPRRequestEntityListing.swift
@@ -9850,6 +9894,7 @@ src/Models/InsightsDetailsMetricPeriodPoints.swift
 src/Models/InsightsDetailsOverallItem.swift
 src/Models/InsightsDetailsOverallPeriodPoints.swift
 src/Models/InsightsRankings.swift
+src/Models/InsightsSettingsRequest.swift
 src/Models/InsightsSummary.swift
 src/Models/InsightsSummaryMetricItem.swift
 src/Models/InsightsSummaryMetricPeriodPoints.swift
@@ -10623,6 +10668,7 @@ src/Models/OutboundMessagingEmailCampaignConfigChangeContactSort.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeEmailConfig.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeErrorDetail.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeFromEmailAddress.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeIntegrationRef.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeMessagingCampaign.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeObject.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeReplyToEmailAddress.swift
@@ -10630,6 +10676,7 @@ src/Models/OutboundMessagingEmailCampaignConfigChangeResponseRef.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeSmsConfig.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeSmsPhoneNumberRef.swift
 src/Models/OutboundMessagingEmailCampaignConfigChangeUriReference.swift
+src/Models/OutboundMessagingEmailCampaignConfigChangeWhatsAppConfig.swift
 src/Models/OutboundMessagingEmailCampaignProgressEventCampaignProgress.swift
 src/Models/OutboundMessagingEmailCampaignProgressEventObject.swift
 src/Models/OutboundMessagingEmailCampaignProgressEventUriReference.swift
@@ -10637,6 +10684,7 @@ src/Models/OutboundMessagingMessagingCampaignConfigChangeContactSort.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeEmailConfig.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeErrorDetail.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeFromEmailAddress.swift
+src/Models/OutboundMessagingMessagingCampaignConfigChangeIntegrationRef.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeMessagingCampaign.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeObject.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeReplyToEmailAddress.swift
@@ -10644,6 +10692,7 @@ src/Models/OutboundMessagingMessagingCampaignConfigChangeResponseRef.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeSmsConfig.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeSmsPhoneNumberRef.swift
 src/Models/OutboundMessagingMessagingCampaignConfigChangeUriReference.swift
+src/Models/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.swift
 src/Models/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.swift
 src/Models/OutboundMessagingMessagingCampaignProgressEventObject.swift
 src/Models/OutboundMessagingMessagingCampaignProgressEventUriReference.swift
@@ -10812,6 +10861,8 @@ src/Models/PresenceSettings.swift
 src/Models/ProcessScheduleUpdateUploadRequest.swift
 src/Models/ProfileWithDateRange.swift
 src/Models/Program.swift
+src/Models/ProgramInsightsSettings.swift
+src/Models/ProgramInsightsSettingsEntityListing.swift
 src/Models/ProgramJob.swift
 src/Models/ProgramJobRequest.swift
 src/Models/ProgramMappings.swift
@@ -11550,6 +11601,8 @@ src/Models/SourceEntityListing.swift
 src/Models/SourceLastSync.swift
 src/Models/SourcePlanningGroupRequest.swift
 src/Models/SourceSyncResponse.swift
+src/Models/SpeechTextAnalyticsConversationSummary.swift
+src/Models/SpeechTextAnalyticsConversationSummaryListing.swift
 src/Models/SpeechTextAnalyticsSettingsRequest.swift
 src/Models/SpeechTextAnalyticsSettingsResponse.swift
 src/Models/SplittingInformation.swift
@@ -12096,6 +12149,12 @@ src/Models/V2MobiusRulesTopicEntityProperties.swift
 src/Models/V2MobiusRulesTopicRule.swift
 src/Models/V2WebMessagingUndeliveredMessageTopicMessage.swift
 src/Models/V2WebMessagingUndeliveredMessageTopicWebMessagingUndeliveredMessageEventBody.swift
+src/Models/V2WemEngagementCelebrationUpdatesTopicContestCompleteData.swift
+src/Models/V2WemEngagementCelebrationUpdatesTopicContestMetrics.swift
+src/Models/V2WemEngagementCelebrationUpdatesTopicContestPrizes.swift
+src/Models/V2WemEngagementCelebrationUpdatesTopicContestWinners.swift
+src/Models/V2WemEngagementCelebrationUpdatesTopicContestWinnersScore.swift
+src/Models/V2WemEngagementCelebrationUpdatesTopicContestWinnersUsers.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicEngagementCelebration.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicSourceEntity.swift
 src/Models/V2WemEngagementCelebrationUpdatesTopicUserId.swift

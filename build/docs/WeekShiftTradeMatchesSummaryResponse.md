@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **weekDate** | [**Date**](Date) | The schedule week date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional] |
-| **count** | **Int** | The number of trades in the Matched state with the initiating shift in the given week | [optional] |
+| **count** | **Int** | The number of trades in the &#39;Matched&#39; state with the initiating shift in the given week | [optional] |
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

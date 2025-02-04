@@ -815,6 +815,7 @@ open class ChatAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reactionsEnabled" : true,
   "messageRetentionPeriodDays" : 0
 }, statusCode=200}]
 
@@ -1364,6 +1365,7 @@ open class ChatAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reactionsEnabled" : true,
   "messageRetentionPeriodDays" : 0
 }, statusCode=200}]
      
@@ -1802,6 +1804,7 @@ open class ChatAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
+  "reactionsEnabled" : true,
   "messageRetentionPeriodDays" : 0
 }, statusCode=200}]
      

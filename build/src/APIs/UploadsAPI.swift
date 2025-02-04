@@ -12,6 +12,69 @@ import Foundation
 open class UploadsAPI {
     
     
+    
+    
+    /**
+     Create upload presigned URL for draft function package file.
+     
+     - parameter actionId: (path) actionId 
+     - parameter body: (body) Input used to request URL upload. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntegrationsActionDraftFunctionUpload(actionId: String, body: FunctionUploadRequest, completion: @escaping ((_ data: FunctionUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsActionDraftFunctionUploadWithRequestBuilder(actionId: actionId, body: body)
+        requestBuilder.execute { (response: Response<FunctionUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create upload presigned URL for draft function package file.
+     - POST /api/v2/integrations/actions/{actionId}/draft/function/upload
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "signedUrlTimeoutSeconds" : 0,
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter actionId: (path) actionId 
+     - parameter body: (body) Input used to request URL upload. 
+
+     - returns: RequestBuilder<FunctionUploadResponse> 
+     */
+    open class func postIntegrationsActionDraftFunctionUploadWithRequestBuilder(actionId: String, body: FunctionUploadRequest) -> RequestBuilder<FunctionUploadResponse> {        
+        var path = "/api/v2/integrations/actions/{actionId}/draft/function/upload"
+        let actionIdPreEscape = "\(actionId)"
+        let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FunctionUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Creates a presigned URL for uploading a knowledge import file with a set of documents
      

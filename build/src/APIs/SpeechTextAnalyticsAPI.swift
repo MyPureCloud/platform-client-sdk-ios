@@ -767,6 +767,75 @@ open class SpeechTextAnalyticsAPI {
 
     
     
+    /**
+     Get conversation summaries by conversation id.
+     
+     - parameter conversationId: (path) The conversation ID of the summaries 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsConversationSummaries(conversationId: String, completion: @escaping ((_ data: SpeechTextAnalyticsConversationSummaryListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsConversationSummariesWithRequestBuilder(conversationId: conversationId)
+        requestBuilder.execute { (response: Response<SpeechTextAnalyticsConversationSummaryListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get conversation summaries by conversation id.
+     - GET /api/v2/speechandtextanalytics/conversations/{conversationId}/summaries
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "summary" : "summary",
+    "agentId" : "agentId",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "generated" : true,
+    "summaryType" : "Conversation",
+    "language" : "language"
+  }, {
+    "summary" : "summary",
+    "agentId" : "agentId",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "generated" : true,
+    "summaryType" : "Conversation",
+    "language" : "language"
+  } ]
+}, statusCode=200}]
+     
+     - parameter conversationId: (path) The conversation ID of the summaries 
+
+     - returns: RequestBuilder<SpeechTextAnalyticsConversationSummaryListing> 
+     */
+    open class func getSpeechandtextanalyticsConversationSummariesWithRequestBuilder(conversationId: String) -> RequestBuilder<SpeechTextAnalyticsConversationSummaryListing> {        
+        var path = "/api/v2/speechandtextanalytics/conversations/{conversationId}/summaries"
+        let conversationIdPreEscape = "\(conversationId)"
+        let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{conversationId}", with: conversationIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<SpeechTextAnalyticsConversationSummaryListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -1086,6 +1155,62 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get AI Insights settings of a program
+     
+     - parameter programId: (path) The id of the program 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramSettingsInsights(programId: String, completion: @escaping ((_ data: ProgramInsightsSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramSettingsInsightsWithRequestBuilder(programId: programId)
+        requestBuilder.execute { (response: Response<ProgramInsightsSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get AI Insights settings of a program
+     - GET /api/v2/speechandtextanalytics/programs/{programId}/settings/insights
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "program" : "{}",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter programId: (path) The id of the program 
+
+     - returns: RequestBuilder<ProgramInsightsSettings> 
+     */
+    open class func getSpeechandtextanalyticsProgramSettingsInsightsWithRequestBuilder(programId: String) -> RequestBuilder<ProgramInsightsSettings> {        
+        var path = "/api/v2/speechandtextanalytics/programs/{programId}/settings/insights"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramInsightsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1509,6 +1634,86 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramJob>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     Get the list of program AI Insights settings for the organization
+     
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter programIds: (query) Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getSpeechandtextanalyticsProgramsSettingsInsights(pageSize: Int? = nil, pageNumber: Int? = nil, programIds: [String]? = nil, completion: @escaping ((_ data: ProgramInsightsSettingsEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getSpeechandtextanalyticsProgramsSettingsInsightsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, programIds: programIds)
+        requestBuilder.execute { (response: Response<ProgramInsightsSettingsEntityListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the list of program AI Insights settings for the organization
+     - GET /api/v2/speechandtextanalytics/programs/settings/insights
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "total" : 1,
+  "pageCount" : 5,
+  "pageNumber" : 6,
+  "entities" : [ {
+    "program" : "{}",
+    "enabled" : true
+  }, {
+    "program" : "{}",
+    "enabled" : true
+  } ],
+  "firstUri" : "https://openapi-generator.tech",
+  "lastUri" : "https://openapi-generator.tech",
+  "selfUri" : "https://openapi-generator.tech",
+  "pageSize" : 0,
+  "nextUri" : "https://openapi-generator.tech",
+  "previousUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 100. (optional)
+     - parameter pageNumber: (query) The page number for the listing (optional)
+     - parameter programIds: (query) Comma separated Program IDs to filter by. Maximum of 50 IDs allowed. (optional)
+
+     - returns: RequestBuilder<ProgramInsightsSettingsEntityListing> 
+     */
+    open class func getSpeechandtextanalyticsProgramsSettingsInsightsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, programIds: [String]? = nil) -> RequestBuilder<ProgramInsightsSettingsEntityListing> {        
+        let path = "/api/v2/speechandtextanalytics/programs/settings/insights"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "pageSize": pageSize?.encodeToJSON(), 
+            "pageNumber": pageNumber?.encodeToJSON(), 
+            "programIds": programIds
+        ])
+
+        let requestBuilder: RequestBuilder<ProgramInsightsSettingsEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3407,6 +3612,66 @@ open class SpeechTextAnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ProgramMappings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update AI Insights settings of a program
+     
+     - parameter programId: (path) The id of the program 
+     - parameter body: (body) Program AI Insights setting 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putSpeechandtextanalyticsProgramSettingsInsights(programId: String, body: InsightsSettingsRequest, completion: @escaping ((_ data: ProgramInsightsSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putSpeechandtextanalyticsProgramSettingsInsightsWithRequestBuilder(programId: programId, body: body)
+        requestBuilder.execute { (response: Response<ProgramInsightsSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update AI Insights settings of a program
+     - PUT /api/v2/speechandtextanalytics/programs/{programId}/settings/insights
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "program" : "{}",
+  "enabled" : true
+}, statusCode=200}]
+     
+     - parameter programId: (path) The id of the program 
+     - parameter body: (body) Program AI Insights setting 
+
+     - returns: RequestBuilder<ProgramInsightsSettings> 
+     */
+    open class func putSpeechandtextanalyticsProgramSettingsInsightsWithRequestBuilder(programId: String, body: InsightsSettingsRequest) -> RequestBuilder<ProgramInsightsSettings> {        
+        var path = "/api/v2/speechandtextanalytics/programs/{programId}/settings/insights"
+        let programIdPreEscape = "\(programId)"
+        let programIdPostEscape = programIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{programId}", with: programIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ProgramInsightsSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

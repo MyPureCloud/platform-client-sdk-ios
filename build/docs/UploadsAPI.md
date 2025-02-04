@@ -4,6 +4,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**postIntegrationsActionDraftFunctionUpload**](UploadsAPI#postIntegrationsActionDraftFunctionUpload) | Create upload presigned URL for draft function package file. |
 | [**postKnowledgeDocumentuploads**](UploadsAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**postLanguageunderstandingMinerUploads**](UploadsAPI#postLanguageunderstandingMinerUploads) | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
 | [**postUploadsLearningCoverart**](UploadsAPI#postUploadsLearningCoverart) | Generates pre-signed URL to upload cover art for learning modules |
@@ -11,6 +12,58 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postUploadsRecordings**](UploadsAPI#postUploadsRecordings) | Creates presigned url for uploading a recording file |
 | [**postUploadsWorkforcemanagementHistoricaldataCsv**](UploadsAPI#postUploadsWorkforcemanagementHistoricaldataCsv) | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
 {: class="table-striped"}
+
+
+## postIntegrationsActionDraftFunctionUpload
+
+
+
+> [FunctionUploadResponse](FunctionUploadResponse) postIntegrationsActionDraftFunctionUpload(actionId, body)
+
+Create upload presigned URL for draft function package file.
+
+
+
+Wraps POST /api/v2/integrations/actions/{actionId}/draft/function/upload  
+
+Requires ANY permissions: 
+
+* integrations:actionFunction:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let actionId: String = "" // actionId
+let body: FunctionUploadRequest = new FunctionUploadRequest(...) // Input used to request URL upload.
+
+// Code example
+UploadsAPI.postIntegrationsActionDraftFunctionUpload(actionId: actionId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UploadsAPI.postIntegrationsActionDraftFunctionUpload was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **actionId** | **String**| actionId | |
+| **body** | [**FunctionUploadRequest**](FunctionUploadRequest)| Input used to request URL upload. | |
+
+
+### Return type
+
+[**FunctionUploadResponse**](FunctionUploadResponse)
 
 
 ## postKnowledgeDocumentuploads
@@ -315,4 +368,4 @@ UploadsAPI.postUploadsWorkforcemanagementHistoricaldataCsv(body: body) { (respon
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

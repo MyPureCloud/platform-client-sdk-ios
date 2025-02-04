@@ -651,6 +651,79 @@ open class IntegrationsAPI {
 
     
     
+    /**
+     Get draft function settings for Action
+     
+     - parameter actionId: (path) actionId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsActionDraftFunction(actionId: String, completion: @escaping ((_ data: FunctionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionDraftFunctionWithRequestBuilder(actionId: actionId)
+        requestBuilder.execute { (response: Response<FunctionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get draft function settings for Action
+     - GET /api/v2/integrations/actions/{actionId}/draft/function
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "zip" : "{}",
+  "function" : "{}",
+  "uploadExceptionHistory" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "status" : "Pending"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "status" : "Pending"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter actionId: (path) actionId 
+
+     - returns: RequestBuilder<FunctionConfig> 
+     */
+    open class func getIntegrationsActionDraftFunctionWithRequestBuilder(actionId: String) -> RequestBuilder<FunctionConfig> {        
+        var path = "/api/v2/integrations/actions/{actionId}/draft/function"
+        let actionIdPreEscape = "\(actionId)"
+        let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FunctionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -894,6 +967,79 @@ open class IntegrationsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<DraftValidationResult>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get published function settings for Action
+     
+     - parameter actionId: (path) actionId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsActionFunction(actionId: String, completion: @escaping ((_ data: FunctionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionFunctionWithRequestBuilder(actionId: actionId)
+        requestBuilder.execute { (response: Response<FunctionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get published function settings for Action
+     - GET /api/v2/integrations/actions/{actionId}/function
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "zip" : "{}",
+  "function" : "{}",
+  "uploadExceptionHistory" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "status" : "Pending"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "status" : "Pending"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter actionId: (path) actionId 
+
+     - returns: RequestBuilder<FunctionConfig> 
+     */
+    open class func getIntegrationsActionFunctionWithRequestBuilder(actionId: String) -> RequestBuilder<FunctionConfig> {        
+        var path = "/api/v2/integrations/actions/{actionId}/function"
+        let actionIdPreEscape = "\(actionId)"
+        let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FunctionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1576,6 +1722,56 @@ open class IntegrationsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ActionEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get action function settings for Action
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getIntegrationsActionsFunctionsRuntimes(completion: @escaping ((_ data: [FunctionRuntime]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionsFunctionsRuntimesWithRequestBuilder()
+        requestBuilder.execute { (response: Response<[FunctionRuntime]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get action function settings for Action
+     - GET /api/v2/integrations/actions/functions/runtimes
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "name" : "name",
+  "description" : "description",
+  "dateEndOfLife" : "2000-01-23",
+  "status" : "Available"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<[FunctionRuntime]> 
+     */
+    open class func getIntegrationsActionsFunctionsRuntimesWithRequestBuilder() -> RequestBuilder<[FunctionRuntime]> {        
+        let path = "/api/v2/integrations/actions/functions/runtimes"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[FunctionRuntime]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -6200,6 +6396,69 @@ open class IntegrationsAPI {
     
     
     /**
+     Create upload presigned URL for draft function package file.
+     
+     - parameter actionId: (path) actionId 
+     - parameter body: (body) Input used to request URL upload. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntegrationsActionDraftFunctionUpload(actionId: String, body: FunctionUploadRequest, completion: @escaping ((_ data: FunctionUploadResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsActionDraftFunctionUploadWithRequestBuilder(actionId: actionId, body: body)
+        requestBuilder.execute { (response: Response<FunctionUploadResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create upload presigned URL for draft function package file.
+     - POST /api/v2/integrations/actions/{actionId}/draft/function/upload
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "signedUrlTimeoutSeconds" : 0,
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter actionId: (path) actionId 
+     - parameter body: (body) Input used to request URL upload. 
+
+     - returns: RequestBuilder<FunctionUploadResponse> 
+     */
+    open class func postIntegrationsActionDraftFunctionUploadWithRequestBuilder(actionId: String, body: FunctionUploadRequest) -> RequestBuilder<FunctionUploadResponse> {        
+        var path = "/api/v2/integrations/actions/{actionId}/draft/function/upload"
+        let actionIdPreEscape = "\(actionId)"
+        let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FunctionUploadResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Publish a Draft and make it the active Action configuration
      
      - parameter actionId: (path) actionId 
@@ -6940,6 +7199,83 @@ open class IntegrationsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<IntegrationConfiguration>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update draft function settings.
+     
+     - parameter actionId: (path) actionId 
+     - parameter body: (body) Input used to update function settings. 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putIntegrationsActionDraftFunction(actionId: String, body: Function, completion: @escaping ((_ data: FunctionConfig?,_ error: Error?) -> Void)) {
+        let requestBuilder = putIntegrationsActionDraftFunctionWithRequestBuilder(actionId: actionId, body: body)
+        requestBuilder.execute { (response: Response<FunctionConfig>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update draft function settings.
+     - PUT /api/v2/integrations/actions/{actionId}/draft/function
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "zip" : "{}",
+  "function" : "{}",
+  "uploadExceptionHistory" : [ {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "status" : "Pending"
+  }, {
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "requestId" : "requestId",
+    "name" : "name",
+    "errorMessage" : "errorMessage",
+    "id" : "id",
+    "status" : "Pending"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=200}]
+     
+     - parameter actionId: (path) actionId 
+     - parameter body: (body) Input used to update function settings. 
+
+     - returns: RequestBuilder<FunctionConfig> 
+     */
+    open class func putIntegrationsActionDraftFunctionWithRequestBuilder(actionId: String, body: Function) -> RequestBuilder<FunctionConfig> {        
+        var path = "/api/v2/integrations/actions/{actionId}/draft/function"
+        let actionIdPreEscape = "\(actionId)"
+        let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{actionId}", with: actionIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<FunctionConfig>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

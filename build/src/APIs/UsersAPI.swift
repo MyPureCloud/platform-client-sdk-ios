@@ -297,6 +297,65 @@ open class UsersAPI {
     
     
     
+    
+    
+    /**
+     Delete the external identifier for user.
+     
+     - parameter userId: (path) User ID 
+     - parameter authorityName: (path) Authority Name 
+     - parameter externalKey: (path) External Key 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteUserExternalidAuthorityNameExternalKey(userId: String, authorityName: String, externalKey: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteUserExternalidAuthorityNameExternalKeyWithRequestBuilder(userId: userId, authorityName: authorityName, externalKey: externalKey)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete the external identifier for user.
+     - DELETE /api/v2/users/{userId}/externalid/{authorityName}/{externalKey}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter userId: (path) User ID 
+     - parameter authorityName: (path) Authority Name 
+     - parameter externalKey: (path) External Key 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteUserExternalidAuthorityNameExternalKeyWithRequestBuilder(userId: String, authorityName: String, externalKey: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let authorityNamePreEscape = "\(authorityName)"
+        let authorityNamePostEscape = authorityNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{authorityName}", with: authorityNamePostEscape, options: .literal, range: nil)
+        let externalKeyPreEscape = "\(externalKey)"
+        let externalKeyPostEscape = externalKeyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalKey}", with: externalKeyPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
     /**
      Remove a routing language from a user
      
@@ -4712,6 +4771,128 @@ open class UsersAPI {
 
     
     
+    /**
+     Get the external identifiers for a user.
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserExternalid(userId: String, completion: @escaping ((_ data: [UserExternalIdentifier]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserExternalidWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<[UserExternalIdentifier]>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the external identifiers for a user.
+     - GET /api/v2/users/{userId}/externalid
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "externalKey" : "externalKey",
+  "authorityName" : "authorityName",
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<[UserExternalIdentifier]> 
+     */
+    open class func getUserExternalidWithRequestBuilder(userId: String) -> RequestBuilder<[UserExternalIdentifier]> {        
+        var path = "/api/v2/users/{userId}/externalid"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<[UserExternalIdentifier]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Get the external identifier of user for an authority.
+     
+     - parameter userId: (path) User ID 
+     - parameter authorityName: (path) Authority Name 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUserExternalidAuthorityName(userId: String, authorityName: String, completion: @escaping ((_ data: UserExternalIdentifier?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUserExternalidAuthorityNameWithRequestBuilder(userId: userId, authorityName: authorityName)
+        requestBuilder.execute { (response: Response<UserExternalIdentifier>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the external identifier of user for an authority.
+     - GET /api/v2/users/{userId}/externalid/{authorityName}
+     - Authority name and external key are case sensitive.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "externalKey" : "externalKey",
+  "authorityName" : "authorityName",
+  "selfUri" : "https://openapi-generator.tech"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter authorityName: (path) Authority Name 
+
+     - returns: RequestBuilder<UserExternalIdentifier> 
+     */
+    open class func getUserExternalidAuthorityNameWithRequestBuilder(userId: String, authorityName: String) -> RequestBuilder<UserExternalIdentifier> {        
+        var path = "/api/v2/users/{userId}/externalid/{authorityName}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let authorityNamePreEscape = "\(authorityName)"
+        let authorityNamePostEscape = authorityNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{authorityName}", with: authorityNamePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<UserExternalIdentifier>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -8520,9 +8701,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -8575,7 +8756,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -8725,9 +8906,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -8780,7 +8961,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -8914,6 +9095,393 @@ open class UsersAPI {
         ])
 
         let requestBuilder: RequestBuilder<DevelopmentActivity>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    public enum Expand_getUsersExternalidAuthorityNameExternalKey: String { 
+        case routingstatus = "routingStatus"
+        case presence = "presence"
+        case integrationpresence = "integrationPresence"
+        case conversationsummary = "conversationSummary"
+        case outofoffice = "outOfOffice"
+        case geolocation = "geolocation"
+        case station = "station"
+        case authorization = "authorization"
+        case lasttokenissued = "lasttokenissued"
+        case authorizationUnusedroles = "authorization.unusedRoles"
+        case team = "team"
+        case workplanbidranks = "workPlanBidRanks"
+        case externalcontactssettings = "externalContactsSettings"
+        case profileskills = "profileSkills"
+        case certifications = "certifications"
+        case locations = "locations"
+        case groups = "groups"
+        case skills = "skills"
+        case languages = "languages"
+        case languagepreference = "languagePreference"
+        case employerinfo = "employerInfo"
+        case biography = "biography"
+        case datelastlogin = "dateLastLogin"
+    }
+    
+    /**
+     Get the user associated with external identifier.
+     
+     - parameter authorityName: (path) Authority Name 
+     - parameter externalKey: (path) External Key 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getUsersExternalidAuthorityNameExternalKey(authorityName: String, externalKey: String, expand: [String]? = nil, completion: @escaping ((_ data: User?,_ error: Error?) -> Void)) {
+        let requestBuilder = getUsersExternalidAuthorityNameExternalKeyWithRequestBuilder(authorityName: authorityName, externalKey: externalKey, expand: expand)
+        requestBuilder.execute { (response: Response<User>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get the user associated with external identifier.
+     - GET /api/v2/users/externalid/{authorityName}/{externalKey}
+     - Authority name and external key are case sensitive.
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "workPlanBidRanks" : "{}",
+  "addresses" : [ {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  }, {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  } ],
+  "acdAutoAnswer" : true,
+  "routingStatus" : "{}",
+  "title" : "title",
+  "division" : "{}",
+  "authorization" : "{}",
+  "skills" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "skillUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "state" : "active",
+    "proficiency" : 7.061401241503109
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "skillUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "state" : "active",
+    "proficiency" : 7.061401241503109
+  } ],
+  "station" : "{}",
+  "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
+  "id" : "id",
+  "state" : "active",
+  "preferredName" : "preferredName",
+  "department" : "department",
+  "presence" : "{}",
+  "lastTokenIssued" : {
+    "dateIssued" : "2000-01-23T04:56:07.000+00:00"
+  },
+  "email" : "email",
+  "images" : [ {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  }, {
+    "imageUri" : "imageUri",
+    "resolution" : "resolution"
+  } ],
+  "employerInfo" : {
+    "employeeType" : "employeeType",
+    "dateHire" : "dateHire",
+    "employeeId" : "employeeId",
+    "officialName" : "officialName"
+  },
+  "languages" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "active",
+    "languageUri" : "https://openapi-generator.tech",
+    "proficiency" : 9.301444243932576
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "name" : "name",
+    "id" : "id",
+    "state" : "active",
+    "languageUri" : "https://openapi-generator.tech",
+    "proficiency" : 9.301444243932576
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "conversationSummary" : "{}",
+  "groups" : [ {
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "display" : "display",
+      "mediaType" : "PHONE",
+      "type" : "GROUPRING"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "display" : "display",
+      "mediaType" : "PHONE",
+      "type" : "GROUPRING"
+    } ],
+    "visibility" : "public",
+    "memberCount" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "includeOwners" : true,
+    "callsEnabled" : true,
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "owners" : [ null, null ],
+    "rolesEnabled" : true,
+    "type" : "official",
+    "version" : 2,
+    "rulesVisible" : true,
+    "name" : "name",
+    "id" : "id",
+    "state" : "active"
+  }, {
+    "images" : [ {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    }, {
+      "imageUri" : "imageUri",
+      "resolution" : "resolution"
+    } ],
+    "addresses" : [ {
+      "extension" : "extension",
+      "address" : "address",
+      "display" : "display",
+      "mediaType" : "PHONE",
+      "type" : "GROUPRING"
+    }, {
+      "extension" : "extension",
+      "address" : "address",
+      "display" : "display",
+      "mediaType" : "PHONE",
+      "type" : "GROUPRING"
+    } ],
+    "visibility" : "public",
+    "memberCount" : 5,
+    "selfUri" : "https://openapi-generator.tech",
+    "includeOwners" : true,
+    "callsEnabled" : true,
+    "description" : "description",
+    "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "owners" : [ null, null ],
+    "rolesEnabled" : true,
+    "type" : "official",
+    "version" : 2,
+    "rulesVisible" : true,
+    "name" : "name",
+    "id" : "id",
+    "state" : "active"
+  } ],
+  "primaryContactInfo" : [ {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  }, {
+    "extension" : "extension",
+    "address" : "address",
+    "countryCode" : "countryCode",
+    "display" : "display",
+    "integration" : "microsoftteams",
+    "mediaType" : "PHONE",
+    "type" : "PRIMARY"
+  } ],
+  "biography" : {
+    "education" : [ {
+      "notes" : "notes",
+      "school" : "school",
+      "dateStart" : "2000-01-23",
+      "dateEnd" : "2000-01-23",
+      "fieldOfStudy" : "fieldOfStudy"
+    }, {
+      "notes" : "notes",
+      "school" : "school",
+      "dateStart" : "2000-01-23",
+      "dateEnd" : "2000-01-23",
+      "fieldOfStudy" : "fieldOfStudy"
+    } ],
+    "hobbies" : [ "hobbies", "hobbies" ],
+    "biography" : "biography",
+    "interests" : [ "interests", "interests" ],
+    "spouse" : "spouse"
+  },
+  "team" : "{}",
+  "certifications" : [ "certifications", "certifications" ],
+  "version" : 6,
+  "outOfOffice" : "{}",
+  "languagePreference" : "languagePreference",
+  "profileSkills" : [ "profileSkills", "profileSkills" ],
+  "chat" : {
+    "jabberId" : "jabberId"
+  },
+  "name" : "name",
+  "integrationPresence" : "{}",
+  "locations" : [ {
+    "notes" : "notes",
+    "coordinates" : {
+      "key" : 1.4658129805029452
+    },
+    "locationDefinition" : {
+      "images" : "images",
+      "address" : {
+        "zipcode" : "zipcode",
+        "country" : "country",
+        "city" : "city",
+        "street1" : "street1",
+        "countryName" : "countryName",
+        "state" : "state",
+        "street2" : "street2"
+      },
+      "notes" : "notes",
+      "floorplanImage" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addressVerificationDetails" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "profileImage" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "emergencyNumber" : "{}",
+      "version" : 5,
+      "path" : [ "path", "path" ],
+      "addressStored" : true,
+      "name" : "name",
+      "id" : "id",
+      "contactUser" : "{}",
+      "state" : "active",
+      "addressVerified" : true
+    },
+    "id" : "id",
+    "floorplanId" : "floorplanId"
+  }, {
+    "notes" : "notes",
+    "coordinates" : {
+      "key" : 1.4658129805029452
+    },
+    "locationDefinition" : {
+      "images" : "images",
+      "address" : {
+        "zipcode" : "zipcode",
+        "country" : "country",
+        "city" : "city",
+        "street1" : "street1",
+        "countryName" : "countryName",
+        "state" : "state",
+        "street2" : "street2"
+      },
+      "notes" : "notes",
+      "floorplanImage" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "addressVerificationDetails" : "{}",
+      "selfUri" : "https://openapi-generator.tech",
+      "profileImage" : [ {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      }, {
+        "imageUri" : "imageUri",
+        "resolution" : "resolution"
+      } ],
+      "emergencyNumber" : "{}",
+      "version" : 5,
+      "path" : [ "path", "path" ],
+      "addressStored" : true,
+      "name" : "name",
+      "id" : "id",
+      "contactUser" : "{}",
+      "state" : "active",
+      "addressVerified" : true
+    },
+    "id" : "id",
+    "floorplanId" : "floorplanId"
+  } ],
+  "username" : "username",
+  "geolocation" : "{}"
+}, statusCode=200}]
+     
+     - parameter authorityName: (path) Authority Name 
+     - parameter externalKey: (path) External Key 
+     - parameter expand: (query) Which fields, if any, to expand (optional)
+
+     - returns: RequestBuilder<User> 
+     */
+    open class func getUsersExternalidAuthorityNameExternalKeyWithRequestBuilder(authorityName: String, externalKey: String, expand: [String]? = nil) -> RequestBuilder<User> {        
+        var path = "/api/v2/users/externalid/{authorityName}/{externalKey}"
+        let authorityNamePreEscape = "\(authorityName)"
+        let authorityNamePostEscape = authorityNamePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{authorityName}", with: authorityNamePostEscape, options: .literal, range: nil)
+        let externalKeyPreEscape = "\(externalKey)"
+        let externalKeyPostEscape = externalKeyPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{externalKey}", with: externalKeyPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
+
+        let requestBuilder: RequestBuilder<User>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }

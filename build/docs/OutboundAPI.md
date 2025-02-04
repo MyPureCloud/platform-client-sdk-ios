@@ -4743,6 +4743,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:search
 * outbound:emailCampaign:search
+* outbound:whatsAppCampaign:search
 
 ### Example
 
@@ -4796,6 +4797,7 @@ Requires ANY permissions:
 
 * outbound:messagingCampaign:search
 * outbound:emailCampaign:search
+* outbound:whatsAppCampaign:search
 
 ### Example
 
@@ -8947,4 +8949,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

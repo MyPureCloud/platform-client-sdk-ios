@@ -7873,4 +7873,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

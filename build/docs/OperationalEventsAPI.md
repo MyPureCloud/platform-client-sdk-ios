@@ -213,4 +213,4 @@ OperationalEventsAPI.postUsageEventsQuery(before: before, after: after, pageSize
 [**EventQueryResponse**](EventQueryResponse)
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

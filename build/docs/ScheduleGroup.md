@@ -27,4 +27,4 @@ A group of schedules that define the operating hours of an organization.
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

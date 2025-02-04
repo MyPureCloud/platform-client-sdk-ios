@@ -7,7 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **messageRetentionPeriodDays** | **Int** | Retention time for messages in days, expressed as int in the range [10,3650] | [optional] |
+| **reactionsEnabled** | **Bool** | Reactions enabled for org | [optional] |
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_

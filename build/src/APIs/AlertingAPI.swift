@@ -55,6 +55,50 @@ open class AlertingAPI {
         return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
     }
 
+    /**
+     Delete all alerts for the user
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteAlertingAlertsAll(completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteAlertingAlertsAllWithRequestBuilder()
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete all alerts for the user
+     - DELETE /api/v2/alerting/alerts/all
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func deleteAlertingAlertsAllWithRequestBuilder() -> RequestBuilder<JSON> {        
+        let path = "/api/v2/alerting/alerts/all"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
     
     
     /**
@@ -4411,6 +4455,55 @@ open class AlertingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<CommonAlert>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Updates all alerts
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchAlertingAlertsAll(body: CommonAllAlertUpdateRequest? = nil, completion: @escaping ((_ data: JSON?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchAlertingAlertsAllWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<JSON>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Updates all alerts
+     - PATCH /api/v2/alerting/alerts/all
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<JSON> 
+     */
+    open class func patchAlertingAlertsAllWithRequestBuilder(body: CommonAllAlertUpdateRequest? = nil) -> RequestBuilder<JSON> {        
+        let path = "/api/v2/alerting/alerts/all"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<JSON>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

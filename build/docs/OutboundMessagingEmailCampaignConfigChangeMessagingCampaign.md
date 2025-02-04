@@ -17,6 +17,7 @@
 | **ruleSets** | [**[OutboundMessagingEmailCampaignConfigChangeUriReference]**](OutboundMessagingEmailCampaignConfigChangeUriReference) |  | [optional] |
 | **smsConfig** | [**OutboundMessagingEmailCampaignConfigChangeSmsConfig**](OutboundMessagingEmailCampaignConfigChangeSmsConfig) |  | [optional] |
 | **emailConfig** | [**OutboundMessagingEmailCampaignConfigChangeEmailConfig**](OutboundMessagingEmailCampaignConfigChangeEmailConfig) |  | [optional] |
+| **whatsAppConfig** | [**OutboundMessagingEmailCampaignConfigChangeWhatsAppConfig**](OutboundMessagingEmailCampaignConfigChangeWhatsAppConfig) |  | [optional] |
 | **errors** | [**[OutboundMessagingEmailCampaignConfigChangeErrorDetail]**](OutboundMessagingEmailCampaignConfigChangeErrorDetail) | A list of current error conditions associated with this messaging campaign | [optional] |
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The UI-visible name of the object | [optional] |
@@ -27,4 +28,4 @@
 
 
 
-_PureCloudPlatformClientV2@160.0.0_
+_PureCloudPlatformClientV2@161.0.0_
