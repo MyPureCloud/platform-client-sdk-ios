@@ -319,12 +319,12 @@ open class SpeechTextAnalyticsAPI {
     /**
      Get the list of Speech and Text Analytics categories
      
-     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 50. (optional)
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 25. (optional)
      - parameter pageNumber: (query) The page number for the listing (optional)
      - parameter name: (query) The category name filter applied to the listing (optional)
      - parameter sortOrder: (query) The sort order for the listing (optional)
      - parameter sortBy: (query) The field to sort by for the listing (optional)
-     - parameter ids: (query) Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
+     - parameter ids: (query) Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getSpeechandtextanalyticsCategories(pageSize: Int? = nil, pageNumber: Int? = nil, name: String? = nil, sortOrder: SortOrder_getSpeechandtextanalyticsCategories? = nil, sortBy: SortBy_getSpeechandtextanalyticsCategories? = nil, ids: [String]? = nil, completion: @escaping ((_ data: CategoriesEntityListing?,_ error: Error?) -> Void)) {
@@ -386,12 +386,12 @@ open class SpeechTextAnalyticsAPI {
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
      
-     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 50. (optional)
+     - parameter pageSize: (query) The page size for the listing. The max that will be returned is 25. (optional)
      - parameter pageNumber: (query) The page number for the listing (optional)
      - parameter name: (query) The category name filter applied to the listing (optional)
      - parameter sortOrder: (query) The sort order for the listing (optional)
      - parameter sortBy: (query) The field to sort by for the listing (optional)
-     - parameter ids: (query) Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional)
+     - parameter ids: (query) Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. (optional)
 
      - returns: RequestBuilder<CategoriesEntityListing> 
      */

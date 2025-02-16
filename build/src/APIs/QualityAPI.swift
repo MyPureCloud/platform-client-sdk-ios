@@ -4558,6 +4558,7 @@ open class QualityAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
@@ -15860,6 +15861,7 @@ open class QualityAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
@@ -19117,6 +19119,7 @@ open class QualityAPI {
       "bullseye" : "{}",
       "outboundMessagingAddresses" : "{}",
       "createdBy" : "createdBy",
+      "lastAgentRoutingMode" : "Disabled",
       "directRouting" : "{}",
       "name" : "name",
       "agentOwnedRouting" : "{}"
@@ -21909,6 +21912,7 @@ open class QualityAPI {
       "bullseye" : "{}",
       "outboundMessagingAddresses" : "{}",
       "createdBy" : "createdBy",
+      "lastAgentRoutingMode" : "Disabled",
       "directRouting" : "{}",
       "name" : "name",
       "agentOwnedRouting" : "{}"
@@ -34742,6 +34746,7 @@ open class QualityAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"
@@ -41391,6 +41396,7 @@ open class QualityAPI {
     "bullseye" : "{}",
     "outboundMessagingAddresses" : "{}",
     "createdBy" : "createdBy",
+    "lastAgentRoutingMode" : "Disabled",
     "directRouting" : "{}",
     "name" : "name",
     "agentOwnedRouting" : "{}"

@@ -638,6 +638,7 @@ open class TaskManagementAPI {
   "externalContact" : "{}",
   "priority" : 0,
   "ttl" : 1,
+  "script" : "{}",
   "autoStatusTransitionDetail" : "{}",
   "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
   "alertTimeoutSeconds" : 5,
@@ -1374,6 +1375,7 @@ open class TaskManagementAPI {
     "externalContact" : "{}",
     "priority" : 0,
     "ttl" : 1,
+    "script" : "{}",
     "autoStatusTransitionDetail" : "{}",
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "alertTimeoutSeconds" : 5,
@@ -1431,6 +1433,7 @@ open class TaskManagementAPI {
     "externalContact" : "{}",
     "priority" : 0,
     "ttl" : 1,
+    "script" : "{}",
     "autoStatusTransitionDetail" : "{}",
     "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
     "alertTimeoutSeconds" : 5,
@@ -1777,6 +1780,18 @@ open class TaskManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schema" : "{}",
+  "defaultDueDurationSeconds" : 1,
+  "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
+  "description" : "description",
+  "defaultWorkbin" : "{}",
+  "division" : "{}",
+  "defaultStatus" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "defaultLanguage" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "flow" : "{}",
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -1785,20 +1800,12 @@ open class TaskManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
-  "defaultDueDurationSeconds" : 1,
   "defaultPriority" : 5,
-  "defaultTtlSeconds" : 5,
-  "ruleSettings" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "description" : "description",
-  "defaultWorkbin" : "{}",
   "defaultQueue" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "division" : "{}",
-  "defaultStatus" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "defaultLanguage" : "{}",
   "defaultExpirationSeconds" : 6,
+  "defaultScript" : "{}",
   "name" : "name",
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
@@ -1842,10 +1849,7 @@ open class TaskManagementAPI {
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "defaultDurationSeconds" : 0,
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "assignmentEnabled" : true,
-  "flow" : "{}"
+  "assignmentEnabled" : true
 }, statusCode=200}]
      
      - parameter worktypeId: (path) Worktype id 
@@ -2656,6 +2660,7 @@ open class TaskManagementAPI {
   "externalContact" : "{}",
   "priority" : 0,
   "ttl" : 1,
+  "script" : "{}",
   "autoStatusTransitionDetail" : "{}",
   "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
   "alertTimeoutSeconds" : 5,
@@ -3045,6 +3050,18 @@ open class TaskManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schema" : "{}",
+  "defaultDueDurationSeconds" : 1,
+  "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
+  "description" : "description",
+  "defaultWorkbin" : "{}",
+  "division" : "{}",
+  "defaultStatus" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "defaultLanguage" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "flow" : "{}",
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -3053,20 +3070,12 @@ open class TaskManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
-  "defaultDueDurationSeconds" : 1,
   "defaultPriority" : 5,
-  "defaultTtlSeconds" : 5,
-  "ruleSettings" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "description" : "description",
-  "defaultWorkbin" : "{}",
   "defaultQueue" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "division" : "{}",
-  "defaultStatus" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "defaultLanguage" : "{}",
   "defaultExpirationSeconds" : 6,
+  "defaultScript" : "{}",
   "name" : "name",
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
@@ -3110,10 +3119,7 @@ open class TaskManagementAPI {
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "defaultDurationSeconds" : 0,
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "assignmentEnabled" : true,
-  "flow" : "{}"
+  "assignmentEnabled" : true
 }, statusCode=200}]
      
      - parameter worktypeId: (path) Worktype id 
@@ -3646,6 +3652,7 @@ open class TaskManagementAPI {
   "externalContact" : "{}",
   "priority" : 0,
   "ttl" : 1,
+  "script" : "{}",
   "autoStatusTransitionDetail" : "{}",
   "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
   "alertTimeoutSeconds" : 5,
@@ -3756,6 +3763,7 @@ open class TaskManagementAPI {
   "externalContact" : "{}",
   "priority" : 0,
   "ttl" : 1,
+  "script" : "{}",
   "autoStatusTransitionDetail" : "{}",
   "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
   "alertTimeoutSeconds" : 5,
@@ -3869,6 +3877,7 @@ open class TaskManagementAPI {
   "externalContact" : "{}",
   "priority" : 0,
   "ttl" : 1,
+  "script" : "{}",
   "autoStatusTransitionDetail" : "{}",
   "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
   "alertTimeoutSeconds" : 5,
@@ -3980,6 +3989,7 @@ open class TaskManagementAPI {
   "externalContact" : "{}",
   "priority" : 0,
   "ttl" : 1,
+  "script" : "{}",
   "autoStatusTransitionDetail" : "{}",
   "dateStatusChanged" : "2000-01-23T04:56:07.000+00:00",
   "alertTimeoutSeconds" : 5,
@@ -4554,6 +4564,18 @@ open class TaskManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "schema" : "{}",
+  "defaultDueDurationSeconds" : 1,
+  "defaultTtlSeconds" : 5,
+  "ruleSettings" : "{}",
+  "description" : "description",
+  "defaultWorkbin" : "{}",
+  "division" : "{}",
+  "defaultStatus" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "defaultLanguage" : "{}",
+  "modifiedBy" : "{}",
+  "id" : "id",
+  "flow" : "{}",
   "serviceLevelTarget" : 2,
   "defaultSkills" : [ {
     "selfUri" : "https://openapi-generator.tech",
@@ -4562,20 +4584,12 @@ open class TaskManagementAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
   } ],
-  "defaultDueDurationSeconds" : 1,
   "defaultPriority" : 5,
-  "defaultTtlSeconds" : 5,
-  "ruleSettings" : "{}",
   "selfUri" : "https://openapi-generator.tech",
-  "description" : "description",
-  "defaultWorkbin" : "{}",
   "defaultQueue" : "{}",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
-  "division" : "{}",
-  "defaultStatus" : "{}",
-  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-  "defaultLanguage" : "{}",
   "defaultExpirationSeconds" : 6,
+  "defaultScript" : "{}",
   "name" : "name",
   "statuses" : [ {
     "defaultDestinationStatus" : "{}",
@@ -4619,10 +4633,7 @@ open class TaskManagementAPI {
     "statusTransitionTime" : "statusTransitionTime"
   } ],
   "defaultDurationSeconds" : 0,
-  "modifiedBy" : "{}",
-  "id" : "id",
-  "assignmentEnabled" : true,
-  "flow" : "{}"
+  "assignmentEnabled" : true
 }, statusCode=200}]
      
      - parameter body: (body) Worktype 
@@ -4676,6 +4687,18 @@ open class TaskManagementAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "schema" : "{}",
+    "defaultDueDurationSeconds" : 1,
+    "defaultTtlSeconds" : 5,
+    "ruleSettings" : "{}",
+    "description" : "description",
+    "defaultWorkbin" : "{}",
+    "division" : "{}",
+    "defaultStatus" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "defaultLanguage" : "{}",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "flow" : "{}",
     "serviceLevelTarget" : 2,
     "defaultSkills" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -4684,20 +4707,12 @@ open class TaskManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ],
-    "defaultDueDurationSeconds" : 1,
     "defaultPriority" : 5,
-    "defaultTtlSeconds" : 5,
-    "ruleSettings" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "description" : "description",
-    "defaultWorkbin" : "{}",
     "defaultQueue" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "division" : "{}",
-    "defaultStatus" : "{}",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "defaultLanguage" : "{}",
     "defaultExpirationSeconds" : 6,
+    "defaultScript" : "{}",
     "name" : "name",
     "statuses" : [ {
       "defaultDestinationStatus" : "{}",
@@ -4741,12 +4756,21 @@ open class TaskManagementAPI {
       "statusTransitionTime" : "statusTransitionTime"
     } ],
     "defaultDurationSeconds" : 0,
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "assignmentEnabled" : true,
-    "flow" : "{}"
+    "assignmentEnabled" : true
   }, {
     "schema" : "{}",
+    "defaultDueDurationSeconds" : 1,
+    "defaultTtlSeconds" : 5,
+    "ruleSettings" : "{}",
+    "description" : "description",
+    "defaultWorkbin" : "{}",
+    "division" : "{}",
+    "defaultStatus" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "defaultLanguage" : "{}",
+    "modifiedBy" : "{}",
+    "id" : "id",
+    "flow" : "{}",
     "serviceLevelTarget" : 2,
     "defaultSkills" : [ {
       "selfUri" : "https://openapi-generator.tech",
@@ -4755,20 +4779,12 @@ open class TaskManagementAPI {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
     } ],
-    "defaultDueDurationSeconds" : 1,
     "defaultPriority" : 5,
-    "defaultTtlSeconds" : 5,
-    "ruleSettings" : "{}",
     "selfUri" : "https://openapi-generator.tech",
-    "description" : "description",
-    "defaultWorkbin" : "{}",
     "defaultQueue" : "{}",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
-    "division" : "{}",
-    "defaultStatus" : "{}",
-    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
-    "defaultLanguage" : "{}",
     "defaultExpirationSeconds" : 6,
+    "defaultScript" : "{}",
     "name" : "name",
     "statuses" : [ {
       "defaultDestinationStatus" : "{}",
@@ -4812,10 +4828,7 @@ open class TaskManagementAPI {
       "statusTransitionTime" : "statusTransitionTime"
     } ],
     "defaultDurationSeconds" : 0,
-    "modifiedBy" : "{}",
-    "id" : "id",
-    "assignmentEnabled" : true,
-    "flow" : "{}"
+    "assignmentEnabled" : true
   } ],
   "selfUri" : "selfUri",
   "count" : 7,

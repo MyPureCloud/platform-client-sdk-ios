@@ -2360,7 +2360,7 @@ open class RecordingAPI {
   "recordingFileRole" : "CUSTOMER_EXPERIENCE",
   "endTime" : "endTime",
   "mediaSubject" : "mediaSubject"
-}, statusCode=202}]
+}, statusCode=200}]
      
      - parameter conversationId: (path) Conversation ID 
      - parameter recordingId: (path) Recording ID 
@@ -13450,6 +13450,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -16242,6 +16243,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -20070,6 +20072,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -22862,6 +22865,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -27050,6 +27054,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -29842,6 +29847,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -33670,6 +33676,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -36462,6 +36469,7 @@ open class RecordingAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -36939,56 +36947,6 @@ open class RecordingAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Policy>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
-
-        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
-    }
-
-    
-    
-    
-    
-    /**
-     Update a screen recording session
-     
-     - parameter recordingSessionId: (path) Screen recording session ID 
-     - parameter body: (body)  (optional)
-     - parameter completion: completion handler to receive the data and the error objects
-     */
-    open class func patchRecordingsScreensession(recordingSessionId: String, body: ScreenRecordingSessionRequest? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
-        let requestBuilder = patchRecordingsScreensessionWithRequestBuilder(recordingSessionId: recordingSessionId, body: body)
-        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
-            if error == nil {
-                completion((), error)
-            } else {
-                completion(nil, error)
-            }
-        }
-    }
-
-    /**
-     Update a screen recording session
-     - PATCH /api/v2/recordings/screensessions/{recordingSessionId}
-     - This API is deprecated and the functionality to stop screen recording will be no longer supported.
-     - OAuth:
-       - type: oauth2
-       - name: PureCloud OAuth
-     
-     - parameter recordingSessionId: (path) Screen recording session ID 
-     - parameter body: (body)  (optional)
-
-     - returns: RequestBuilder<Void> 
-     */
-    open class func patchRecordingsScreensessionWithRequestBuilder(recordingSessionId: String, body: ScreenRecordingSessionRequest? = nil) -> RequestBuilder<Void> {        
-        var path = "/api/v2/recordings/screensessions/{recordingSessionId}"
-        let recordingSessionIdPreEscape = "\(recordingSessionId)"
-        let recordingSessionIdPostEscape = recordingSessionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        path = path.replacingOccurrences(of: "{recordingSessionId}", with: recordingSessionIdPostEscape, options: .literal, range: nil)
-        let URLString = PureCloudPlatformClientV2API.basePath + path
-        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
-
-        let requestUrl = URLComponents(string: URLString)
-
-        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

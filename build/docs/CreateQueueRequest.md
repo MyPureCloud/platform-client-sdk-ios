@@ -21,7 +21,8 @@
 | **routingRules** | [**[RoutingRule]**](RoutingRule) | The routing rules for the queue, used for Preferred Agent Routing. | [optional] |
 | **conditionalGroupRouting** | [**ConditionalGroupRouting**](ConditionalGroupRouting) | The Conditional Group Routing settings for the queue. | [optional] |
 | **bullseye** | [**Bullseye**](Bullseye) | The bullseye settings for the queue. | [optional] |
-| **scoringMethod** | **String** | The Scoring Method for the queue | [optional] |
+| **scoringMethod** | **String** | The Scoring Method for the queue. | [optional] |
+| **lastAgentRoutingMode** | **String** | The Last Agent Routing Mode for the queue. | [optional] |
 | **acwSettings** | [**AcwSettings**](AcwSettings) | The ACW settings for the queue. | [optional] |
 | **skillEvaluationMethod** | **String** | The skill evaluation method to use when routing conversations. | [optional] |
 | **memberGroups** | [**[MemberGroup]**](MemberGroup) | The groups of agents associated with the queue, if any.  Queue membership will update to match group membership changes. | [optional] |
@@ -49,4 +50,4 @@
 
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

@@ -3809,6 +3809,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -6601,6 +6602,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -10429,6 +10431,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -13221,6 +13224,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -17393,6 +17397,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -20185,6 +20190,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -24013,6 +24019,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -26805,6 +26812,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -30724,6 +30732,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -33516,6 +33525,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -37344,6 +37354,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -40136,6 +40147,7 @@ open class UserRecordingsAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -44178,6 +44190,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -46970,6 +46983,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -50798,6 +50812,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -53590,6 +53605,7 @@ open class UserRecordingsAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"

@@ -2108,7 +2108,7 @@ open class ArchitectAPI {
   "buildId" : "buildId",
   "id" : "id",
   "user" : "{}",
-  "status" : "BUILDINITIALIZING"
+  "status" : "BUILDINCOMPLETE"
 }, statusCode=200}]
 
      - returns: RequestBuilder<DependencyStatus> 

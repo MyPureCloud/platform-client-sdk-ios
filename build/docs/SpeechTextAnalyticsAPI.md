@@ -377,12 +377,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 50.
+let pageSize: Int = 0 // The page size for the listing. The max that will be returned is 25.
 let pageNumber: Int = 0 // The page number for the listing
 let name: String = "" // The category name filter applied to the listing
 let sortOrder: SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsCategories = SpeechTextAnalyticsAPI.SortOrder_getSpeechandtextanalyticsCategories.enummember // The sort order for the listing
 let sortBy: SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsCategories = SpeechTextAnalyticsAPI.SortBy_getSpeechandtextanalyticsCategories.enummember // The field to sort by for the listing
-let ids: [String] = [""] // Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.
+let ids: [String] = [""] // Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed.
 
 // Code example
 SpeechTextAnalyticsAPI.getSpeechandtextanalyticsCategories(pageSize: pageSize, pageNumber: pageNumber, name: name, sortOrder: sortOrder, sortBy: sortBy, ids: ids) { (response, error) in
@@ -400,12 +400,12 @@ SpeechTextAnalyticsAPI.getSpeechandtextanalyticsCategories(pageSize: pageSize, p
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 50. | [optional] |
+| **pageSize** | **Int**| The page size for the listing. The max that will be returned is 25. | [optional] |
 | **pageNumber** | **Int**| The page number for the listing | [optional] |
 | **name** | **String**| The category name filter applied to the listing | [optional] |
 | **sortOrder** | **String**| The sort order for the listing | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
 | **sortBy** | **String**| The field to sort by for the listing | [optional]<br />**Values**: name ("name"), _description ("description") |
-| **ids** | [**[String]**](String)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional] |
+| **ids** | [**[String]**](String)| Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed. | [optional] |
 
 
 ### Return type
@@ -2761,4 +2761,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

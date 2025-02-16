@@ -1606,6 +1606,20 @@
     "return": "RoutingActivityResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: RoutingActivityQuery = new RoutingActivityQuery(...) // query\nlet pageSize: Int = 0 // The desired page size\nlet pageNumber: Int = 0 // The desired page number\n\n// Query for user activity observations\nPostAnalyticsRoutingActivityQueryRequest.postAnalyticsRoutingActivityQuery(body: body, pageSize: pageSize, pageNumber: pageNumber) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsRoutingActivityQueryRequest.postAnalyticsRoutingActivityQuery was successful\")\n        dump(response)\n    }\n}"
   },
+  "postanalyticssummariesaggregatesquery": {
+    "operationId": "postanalyticssummariesaggregatesquery",
+    "functionName": "postAnalyticsSummariesAggregatesQuery",
+    "signature": "postAnalyticsSummariesAggregatesQuery(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "SummaryAggregationQuery",
+        "required": "true"
+      }
+    ],
+    "return": "SummaryAggregateQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SummaryAggregationQuery = new SummaryAggregationQuery(...) // query\n\n// Query for summary aggregates\nPostAnalyticsSummariesAggregatesQueryRequest.postAnalyticsSummariesAggregatesQuery(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostAnalyticsSummariesAggregatesQueryRequest.postAnalyticsSummariesAggregatesQuery was successful\")\n        dump(response)\n    }\n}"
+  },
   "postanalyticssurveysaggregatesquery": {
     "operationId": "postanalyticssurveysaggregatesquery",
     "functionName": "postAnalyticsSurveysAggregatesQuery",
@@ -13057,22 +13071,32 @@
   "getexternalcontactsimportjob": {
     "operationId": "getexternalcontactsimportjob",
     "functionName": "getExternalcontactsImportJob",
-    "signature": "getExternalcontactsImportJob(jobId)",
+    "signature": "getExternalcontactsImportJob(jobId, expand)",
     "parameters": [
       {
         "name": "jobId",
         "type": "String",
         "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "ContactImportJobResponse",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // Job id\n\n// Get job based on id\nGetExternalcontactsImportJobRequest.getExternalcontactsImportJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportJobRequest.getExternalcontactsImportJob was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // Job id\nlet expand: [String] = [\"\"] // which fields, if any, to expand\n\n// Get job based on id\nGetExternalcontactsImportJobRequest.getExternalcontactsImportJob(jobId: jobId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportJobRequest.getExternalcontactsImportJob was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsimportjobs": {
     "operationId": "getexternalcontactsimportjobs",
     "functionName": "getExternalcontactsImportJobs",
-    "signature": "getExternalcontactsImportJobs(after, pageSize, sortOrder, jobStatus)",
+    "signature": "getExternalcontactsImportJobs(expand, after, pageSize, sortOrder, jobStatus)",
     "parameters": [
+      {
+        "name": "expand",
+        "type": "[String]",
+        "required": "false"
+      },
       {
         "name": "after",
         "type": "String",
@@ -13095,7 +13119,7 @@
       }
     ],
     "return": "ContactImportJobEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet sortOrder: GetExternalcontactsImportJobsRequest.SortOrder_getExternalcontactsImportJobs = GetExternalcontactsImportJobsRequest.SortOrder_getExternalcontactsImportJobs.enummember // Direction of sorting.\nlet jobStatus: GetExternalcontactsImportJobsRequest.JobStatus_getExternalcontactsImportJobs = GetExternalcontactsImportJobsRequest.JobStatus_getExternalcontactsImportJobs.enummember // Search term to filter by jobStatus\n\n// List jobs for organization\nGetExternalcontactsImportJobsRequest.getExternalcontactsImportJobs(after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportJobsRequest.getExternalcontactsImportJobs was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet expand: [String] = [\"\"] // which fields, if any, to expand\nlet after: String = \"\" // The cursor that points to the end of the set of entities that has been returned.\nlet pageSize: String = \"\" // Number of entities to return. Maximum of 100.\nlet sortOrder: GetExternalcontactsImportJobsRequest.SortOrder_getExternalcontactsImportJobs = GetExternalcontactsImportJobsRequest.SortOrder_getExternalcontactsImportJobs.enummember // Direction of sorting.\nlet jobStatus: GetExternalcontactsImportJobsRequest.JobStatus_getExternalcontactsImportJobs = GetExternalcontactsImportJobsRequest.JobStatus_getExternalcontactsImportJobs.enummember // Search term to filter by jobStatus\n\n// List jobs for organization\nGetExternalcontactsImportJobsRequest.getExternalcontactsImportJobs(expand: expand, after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsImportJobsRequest.getExternalcontactsImportJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "getexternalcontactsimportsetting": {
     "operationId": "getexternalcontactsimportsetting",
@@ -19737,6 +19761,13 @@
     ],
     "return": "JourneyViewListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet nameOrCreatedBy: String = \"\" // Journey View Name or Created By\nlet expand: GetJourneyViewsRequest.Expand_getJourneyViews = GetJourneyViewsRequest.Expand_getJourneyViews.enummember // Parameter to request additional data to return in Journey payload\nlet _id: String = \"\" // Parameter to request a list of Journey Views by id, separated by commas. Limit of 100 items.\n\n// Get a list of Journey Views\nGetJourneyViewsRequest.getJourneyViews(pageNumber: pageNumber, pageSize: pageSize, nameOrCreatedBy: nameOrCreatedBy, expand: expand, _id: _id) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewsRequest.getJourneyViews was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getjourneyviewsdatadetails": {
+    "operationId": "getjourneyviewsdatadetails",
+    "functionName": "getJourneyViewsDataDetails",
+    "signature": "getJourneyViewsDataDetails()",
+    "return": "DataRange",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get details about the data available for journey queries including oldest and newest event dates\nGetJourneyViewsDataDetailsRequest.getJourneyViewsDataDetails() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetJourneyViewsDataDetailsRequest.getJourneyViewsDataDetails was successful\")\n        dump(response)\n    }\n}"
   },
   "getjourneyviewseventdefinition": {
     "operationId": "getjourneyviewseventdefinition",
@@ -32877,24 +32908,6 @@
     "return": "Policy",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet policyId: String = \"\" // Policy ID\nlet body: PolicyUpdate = new PolicyUpdate(...) // Policy\n\n// Patch a media retention policy\nPatchRecordingMediaretentionpolicyRequest.patchRecordingMediaretentionpolicy(policyId: policyId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchRecordingMediaretentionpolicyRequest.patchRecordingMediaretentionpolicy was successful\")\n        dump(response)\n    }\n}"
   },
-  "patchrecordingsscreensession": {
-    "operationId": "patchrecordingsscreensession",
-    "functionName": "patchRecordingsScreensession",
-    "signature": "patchRecordingsScreensession(recordingSessionId, body)",
-    "parameters": [
-      {
-        "name": "recordingSessionId",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "body",
-        "type": "ScreenRecordingSessionRequest",
-        "required": "false"
-      }
-    ],
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet recordingSessionId: String = \"\" // Screen recording session ID\nlet body: ScreenRecordingSessionRequest = new ScreenRecordingSessionRequest(...) // \n\n// Update a screen recording session\nPatchRecordingsScreensessionRequest.patchRecordingsScreensession(recordingSessionId: recordingSessionId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PatchRecordingsScreensessionRequest.patchRecordingsScreensession was successful\")\n    }\n}"
-  },
   "postconversationrecordingannotations": {
     "operationId": "postconversationrecordingannotations",
     "functionName": "postConversationRecordingAnnotations",
@@ -37850,7 +37863,7 @@
       }
     ],
     "return": "CategoriesEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The page size for the listing. The max that will be returned is 50.\nlet pageNumber: Int = 0 // The page number for the listing\nlet name: String = \"\" // The category name filter applied to the listing\nlet sortOrder: GetSpeechandtextanalyticsCategoriesRequest.SortOrder_getSpeechandtextanalyticsCategories = GetSpeechandtextanalyticsCategoriesRequest.SortOrder_getSpeechandtextanalyticsCategories.enummember // The sort order for the listing\nlet sortBy: GetSpeechandtextanalyticsCategoriesRequest.SortBy_getSpeechandtextanalyticsCategories = GetSpeechandtextanalyticsCategoriesRequest.SortBy_getSpeechandtextanalyticsCategories.enummember // The field to sort by for the listing\nlet ids: [String] = [\"\"] // Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed.\n\n// Get the list of Speech and Text Analytics categories\nGetSpeechandtextanalyticsCategoriesRequest.getSpeechandtextanalyticsCategories(pageSize: pageSize, pageNumber: pageNumber, name: name, sortOrder: sortOrder, sortBy: sortBy, ids: ids) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsCategoriesRequest.getSpeechandtextanalyticsCategories was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // The page size for the listing. The max that will be returned is 25.\nlet pageNumber: Int = 0 // The page number for the listing\nlet name: String = \"\" // The category name filter applied to the listing\nlet sortOrder: GetSpeechandtextanalyticsCategoriesRequest.SortOrder_getSpeechandtextanalyticsCategories = GetSpeechandtextanalyticsCategoriesRequest.SortOrder_getSpeechandtextanalyticsCategories.enummember // The sort order for the listing\nlet sortBy: GetSpeechandtextanalyticsCategoriesRequest.SortBy_getSpeechandtextanalyticsCategories = GetSpeechandtextanalyticsCategoriesRequest.SortBy_getSpeechandtextanalyticsCategories.enummember // The field to sort by for the listing\nlet ids: [String] = [\"\"] // Comma separated Category IDs to filter by. Cannot be used with other filters. Maximum of 25 IDs allowed.\n\n// Get the list of Speech and Text Analytics categories\nGetSpeechandtextanalyticsCategoriesRequest.getSpeechandtextanalyticsCategories(pageSize: pageSize, pageNumber: pageNumber, name: name, sortOrder: sortOrder, sortBy: sortBy, ids: ids) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSpeechandtextanalyticsCategoriesRequest.getSpeechandtextanalyticsCategories was successful\")\n        dump(response)\n    }\n}"
   },
   "getspeechandtextanalyticscategory": {
     "operationId": "getspeechandtextanalyticscategory",
@@ -46577,6 +46590,27 @@
     "return": "CalendarUrlResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get existing calendar link for the current user\nGetWorkforcemanagementCalendarUrlIcsRequest.getWorkforcemanagementCalendarUrlIcs() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementCalendarUrlIcsRequest.getWorkforcemanagementCalendarUrlIcs was successful\")\n        dump(response)\n    }\n}"
   },
+  "getworkforcemanagementhistoricaldatabulkremovejob": {
+    "operationId": "getworkforcemanagementhistoricaldatabulkremovejob",
+    "functionName": "getWorkforcemanagementHistoricaldataBulkRemoveJob",
+    "signature": "getWorkforcemanagementHistoricaldataBulkRemoveJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "HistoricalImportDeleteFilesJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // The job ID of the historical data delete request\n\n// Retrieves delete job status for historical data imports associated with the job id\nGetWorkforcemanagementHistoricaldataBulkRemoveJobRequest.getWorkforcemanagementHistoricaldataBulkRemoveJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementHistoricaldataBulkRemoveJobRequest.getWorkforcemanagementHistoricaldataBulkRemoveJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getworkforcemanagementhistoricaldatabulkremovejobs": {
+    "operationId": "getworkforcemanagementhistoricaldatabulkremovejobs",
+    "functionName": "getWorkforcemanagementHistoricaldataBulkRemoveJobs",
+    "signature": "getWorkforcemanagementHistoricaldataBulkRemoveJobs()",
+    "return": "HistoricalImportOverallDeleteStatusResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Retrieves all delete job status for historical data\nGetWorkforcemanagementHistoricaldataBulkRemoveJobsRequest.getWorkforcemanagementHistoricaldataBulkRemoveJobs() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetWorkforcemanagementHistoricaldataBulkRemoveJobsRequest.getWorkforcemanagementHistoricaldataBulkRemoveJobs was successful\")\n        dump(response)\n    }\n}"
+  },
   "getworkforcemanagementhistoricaldatadeletejob": {
     "operationId": "getworkforcemanagementhistoricaldatadeletejob",
     "functionName": "getWorkforcemanagementHistoricaldataDeletejob",
@@ -48953,6 +48987,20 @@
     ],
     "return": "CalendarUrlResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet language: String = en-US // A language tag (which is sometimes referred to as a \\\"locale identifier\\\") to use to localize default activity code names in the ics-formatted calendar\n\n// Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned\nPostWorkforcemanagementCalendarUrlIcsRequest.postWorkforcemanagementCalendarUrlIcs(language: language) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementCalendarUrlIcsRequest.postWorkforcemanagementCalendarUrlIcs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postworkforcemanagementhistoricaldatabulkremovejobs": {
+    "operationId": "postworkforcemanagementhistoricaldatabulkremovejobs",
+    "functionName": "postWorkforcemanagementHistoricaldataBulkRemoveJobs",
+    "signature": "postWorkforcemanagementHistoricaldataBulkRemoveJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "HistoricalImportDeleteFilesJobRequest",
+        "required": "false"
+      }
+    ],
+    "return": "HistoricalImportDeleteFilesJobResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: HistoricalImportDeleteFilesJobRequest = new HistoricalImportDeleteFilesJobRequest(...) // body\n\n// Delete the list of the historical data import entries\nPostWorkforcemanagementHistoricaldataBulkRemoveJobsRequest.postWorkforcemanagementHistoricaldataBulkRemoveJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostWorkforcemanagementHistoricaldataBulkRemoveJobsRequest.postWorkforcemanagementHistoricaldataBulkRemoveJobs was successful\")\n        dump(response)\n    }\n}"
   },
   "postworkforcemanagementhistoricaldatadeletejob": {
     "operationId": "postworkforcemanagementhistoricaldatadeletejob",

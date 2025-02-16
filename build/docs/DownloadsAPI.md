@@ -65,4 +65,4 @@ DownloadsAPI.getDownload(downloadId: downloadId, contentDisposition: contentDisp
 [**UrlResponse**](UrlResponse)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

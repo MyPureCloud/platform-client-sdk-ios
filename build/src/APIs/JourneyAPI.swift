@@ -3549,6 +3549,54 @@ open class JourneyAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    /**
+     Get details about the data available for journey queries including oldest and newest event dates
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getJourneyViewsDataDetails(completion: @escaping ((_ data: DataRange?,_ error: Error?) -> Void)) {
+        let requestBuilder = getJourneyViewsDataDetailsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<DataRange>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get details about the data available for journey queries including oldest and newest event dates
+     - GET /api/v2/journey/views/data/details
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "dateMax" : "2000-01-23T04:56:07.000+00:00",
+  "dateMin" : "2000-01-23T04:56:07.000+00:00"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<DataRange> 
+     */
+    open class func getJourneyViewsDataDetailsWithRequestBuilder() -> RequestBuilder<DataRange> {        
+        let path = "/api/v2/journey/views/data/details"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<DataRange>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     
     
     /**

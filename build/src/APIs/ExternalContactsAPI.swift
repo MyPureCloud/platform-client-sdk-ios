@@ -827,13 +827,15 @@ open class ExternalContactsAPI {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "type" : "SocialLine",
-    "value" : "value"
+    "value" : "value",
+    "externalSource" : "{}"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id",
     "type" : "SocialLine",
-    "value" : "value"
+    "value" : "value",
+    "externalSource" : "{}"
   } ]
 }, statusCode=200}]
      
@@ -2762,14 +2764,21 @@ open class ExternalContactsAPI {
 
     
     
+    
+    
+    public enum Expand_getExternalcontactsImportJob: String { 
+        case division = "division"
+    }
+    
     /**
      Get job based on id
      
      - parameter jobId: (path) Job id 
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsImportJob(jobId: String, completion: @escaping ((_ data: ContactImportJobResponse?,_ error: Error?) -> Void)) {
-        let requestBuilder = getExternalcontactsImportJobWithRequestBuilder(jobId: jobId)
+    open class func getExternalcontactsImportJob(jobId: String, expand: [String]? = nil, completion: @escaping ((_ data: ContactImportJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportJobWithRequestBuilder(jobId: jobId, expand: expand)
         requestBuilder.execute { (response: Response<ContactImportJobResponse>?, error) -> Void in
             do {
                 if let e = error {
@@ -2804,10 +2813,11 @@ open class ExternalContactsAPI {
 }, statusCode=200}]
      
      - parameter jobId: (path) Job id 
+     - parameter expand: (query) which fields, if any, to expand (optional)
 
      - returns: RequestBuilder<ContactImportJobResponse> 
      */
-    open class func getExternalcontactsImportJobWithRequestBuilder(jobId: String) -> RequestBuilder<ContactImportJobResponse> {        
+    open class func getExternalcontactsImportJobWithRequestBuilder(jobId: String, expand: [String]? = nil) -> RequestBuilder<ContactImportJobResponse> {        
         var path = "/api/v2/externalcontacts/import/jobs/{jobId}"
         let jobIdPreEscape = "\(jobId)"
         let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -2815,13 +2825,22 @@ open class ExternalContactsAPI {
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
-        let requestUrl = URLComponents(string: URLString)
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand
+        ])
 
         let requestBuilder: RequestBuilder<ContactImportJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    public enum Expand_getExternalcontactsImportJobs: String { 
+        case division = "division"
+    }
+    
     
     
     
@@ -2846,14 +2865,15 @@ open class ExternalContactsAPI {
     /**
      List jobs for organization
      
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
      - parameter sortOrder: (query) Direction of sorting. (optional)
      - parameter jobStatus: (query) Search term to filter by jobStatus (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getExternalcontactsImportJobs(after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportJobs? = nil, jobStatus: JobStatus_getExternalcontactsImportJobs? = nil, completion: @escaping ((_ data: ContactImportJobEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getExternalcontactsImportJobsWithRequestBuilder(after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus)
+    open class func getExternalcontactsImportJobs(expand: [String]? = nil, after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportJobs? = nil, jobStatus: JobStatus_getExternalcontactsImportJobs? = nil, completion: @escaping ((_ data: ContactImportJobEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsImportJobsWithRequestBuilder(expand: expand, after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus)
         requestBuilder.execute { (response: Response<ContactImportJobEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -2902,6 +2922,7 @@ open class ExternalContactsAPI {
   "previousUri" : "previousUri"
 }, statusCode=200}]
      
+     - parameter expand: (query) which fields, if any, to expand (optional)
      - parameter after: (query) The cursor that points to the end of the set of entities that has been returned. (optional)
      - parameter pageSize: (query) Number of entities to return. Maximum of 100. (optional)
      - parameter sortOrder: (query) Direction of sorting. (optional)
@@ -2909,13 +2930,14 @@ open class ExternalContactsAPI {
 
      - returns: RequestBuilder<ContactImportJobEntityListing> 
      */
-    open class func getExternalcontactsImportJobsWithRequestBuilder(after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportJobs? = nil, jobStatus: JobStatus_getExternalcontactsImportJobs? = nil) -> RequestBuilder<ContactImportJobEntityListing> {        
+    open class func getExternalcontactsImportJobsWithRequestBuilder(expand: [String]? = nil, after: String? = nil, pageSize: String? = nil, sortOrder: SortOrder_getExternalcontactsImportJobs? = nil, jobStatus: JobStatus_getExternalcontactsImportJobs? = nil) -> RequestBuilder<ContactImportJobEntityListing> {        
         let path = "/api/v2/externalcontacts/import/jobs"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
         
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "expand": expand, 
             "after": after, 
             "pageSize": pageSize, 
             "sortOrder": sortOrder?.rawValue, 
@@ -6249,7 +6271,8 @@ open class ExternalContactsAPI {
   "selfUri" : "https://openapi-generator.tech",
   "id" : "id",
   "type" : "SocialLine",
-  "value" : "value"
+  "value" : "value",
+  "externalSource" : "{}"
 }, statusCode=200}]
      
      - parameter contactId: (path) ExternalContact ID 

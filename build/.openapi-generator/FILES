@@ -1083,6 +1083,7 @@ docs/ConversationEventTopicWorkflow.md
 docs/ConversationEventTopicWrapup.md
 docs/ConversationEventTyping.md
 docs/ConversationEventVideo.md
+docs/ConversationInsight.md
 docs/ConversationMessageContent.md
 docs/ConversationMessageEvent.md
 docs/ConversationMessageEventTopicConversationDivisionMembership.md
@@ -1353,6 +1354,7 @@ docs/DataExtensionsAPI.json
 docs/DataExtensionsAPI.md
 docs/DataPrivacyAPI.json
 docs/DataPrivacyAPI.md
+docs/DataRange.md
 docs/DataSchema.md
 docs/DataSchemaListing.md
 docs/DataTable.md
@@ -1361,6 +1363,8 @@ docs/DataTableImportEntityListing.md
 docs/DataTableImportJob.md
 docs/DataTableRowEntityListing.md
 docs/DataTablesDomainEntityListing.md
+docs/DatePicker.md
+docs/DatePickerAvailableDateTime.md
 docs/DateRange.md
 docs/DateRangeWithOptionalEnd.md
 docs/DefaultGreetingList.md
@@ -2151,7 +2155,13 @@ docs/HistoricalAdherenceActuals.md
 docs/HistoricalAdherenceDayMetrics.md
 docs/HistoricalAdherenceExceptionInfo.md
 docs/HistoricalAdherenceQueryResult.md
+docs/HistoricalDataDeleteEntity.md
+docs/HistoricalDataDisallowedDeleteEntity.md
+docs/HistoricalDataJobEntityStatus.md
+docs/HistoricalImportDeleteFilesJobRequest.md
+docs/HistoricalImportDeleteFilesJobResponse.md
 docs/HistoricalImportDeleteJobResponse.md
+docs/HistoricalImportOverallDeleteStatusResponse.md
 docs/HistoricalImportStatus.md
 docs/HistoricalImportStatusJobResponse.md
 docs/HistoricalImportStatusListing.md
@@ -3845,7 +3855,6 @@ docs/ScreenRecordingMetaData.md
 docs/ScreenRecordingMetaDataRequest.md
 docs/ScreenRecordingSession.md
 docs/ScreenRecordingSessionListing.md
-docs/ScreenRecordingSessionRequest.md
 docs/ScreenRecordingUserAuthenticatedInfo.md
 docs/Screenshare.md
 docs/Script.md
@@ -4051,6 +4060,13 @@ docs/SuggestionKnowledgeArticle.md
 docs/SuggestionKnowledgeSearch.md
 docs/SuggestionListing.md
 docs/SuggestionScript.md
+docs/SummaryAggregateDataContainer.md
+docs/SummaryAggregateQueryClause.md
+docs/SummaryAggregateQueryFilter.md
+docs/SummaryAggregateQueryPredicate.md
+docs/SummaryAggregateQueryResponse.md
+docs/SummaryAggregationQuery.md
+docs/SummaryAggregationView.md
 docs/SummaryGenerationConfig.md
 docs/SupportCenterCategory.md
 docs/SupportCenterCompactCategoryModuleTemplate.md
@@ -5828,6 +5844,7 @@ docs/getJourneyViewVersionJobResults-example.txt
 docs/getJourneyViewVersionJobResultsChart-example.txt
 docs/getJourneyViewVersionJobsLatest-example.txt
 docs/getJourneyViews-example.txt
+docs/getJourneyViewsDataDetails-example.txt
 docs/getJourneyViewsEventdefinition-example.txt
 docs/getJourneyViewsEventdefinitions-example.txt
 docs/getJourneyViewsJobs-example.txt
@@ -6499,6 +6516,8 @@ docs/getWorkforcemanagementBusinessunits-example.txt
 docs/getWorkforcemanagementBusinessunitsDivisionviews-example.txt
 docs/getWorkforcemanagementCalendarDataIcs-example.txt
 docs/getWorkforcemanagementCalendarUrlIcs-example.txt
+docs/getWorkforcemanagementHistoricaldataBulkRemoveJob-example.txt
+docs/getWorkforcemanagementHistoricaldataBulkRemoveJobs-example.txt
 docs/getWorkforcemanagementHistoricaldataDeletejob-example.txt
 docs/getWorkforcemanagementHistoricaldataImportstatus-example.txt
 docs/getWorkforcemanagementHistoricaldataImportstatusJobId-example.txt
@@ -6653,7 +6672,6 @@ docs/patchOutboundSettings-example.txt
 docs/patchQualityFormsSurvey-example.txt
 docs/patchRecordingCrossplatformMediaretentionpolicy-example.txt
 docs/patchRecordingMediaretentionpolicy-example.txt
-docs/patchRecordingsScreensession-example.txt
 docs/patchRoutingConversation-example.txt
 docs/patchRoutingEmailDomain-example.txt
 docs/patchRoutingEmailDomainValidate-example.txt
@@ -6780,6 +6798,7 @@ docs/postAnalyticsReportingSettingsDashboardsQuery-example.txt
 docs/postAnalyticsResolutionsAggregatesQuery-example.txt
 docs/postAnalyticsRoutingActivityQuery-example.txt
 docs/postAnalyticsRoutingActivityQuery-example.txt
+docs/postAnalyticsSummariesAggregatesQuery-example.txt
 docs/postAnalyticsSurveysAggregatesQuery-example.txt
 docs/postAnalyticsSurveysAggregatesQuery-example.txt
 docs/postAnalyticsTaskmanagementAggregatesQuery-example.txt
@@ -7374,6 +7393,7 @@ docs/postWorkforcemanagementBusinessunitWorkplanbidGroups-example.txt
 docs/postWorkforcemanagementBusinessunitWorkplanbids-example.txt
 docs/postWorkforcemanagementBusinessunits-example.txt
 docs/postWorkforcemanagementCalendarUrlIcs-example.txt
+docs/postWorkforcemanagementHistoricaldataBulkRemoveJobs-example.txt
 docs/postWorkforcemanagementHistoricaldataDeletejob-example.txt
 docs/postWorkforcemanagementHistoricaldataValidate-example.txt
 docs/postWorkforcemanagementIntegrationsHriTimeofftypesJobs-example.txt
@@ -8787,6 +8807,7 @@ src/Models/ConversationEventTopicWorkflow.swift
 src/Models/ConversationEventTopicWrapup.swift
 src/Models/ConversationEventTyping.swift
 src/Models/ConversationEventVideo.swift
+src/Models/ConversationInsight.swift
 src/Models/ConversationMessageContent.swift
 src/Models/ConversationMessageEvent.swift
 src/Models/ConversationMessageEventTopicConversationDivisionMembership.swift
@@ -9051,6 +9072,7 @@ src/Models/DataActionConditionPredicate.swift
 src/Models/DataActionConditionSettings.swift
 src/Models/DataActionContactColumnFieldMapping.swift
 src/Models/DataAvailabilityResponse.swift
+src/Models/DataRange.swift
 src/Models/DataSchema.swift
 src/Models/DataSchemaListing.swift
 src/Models/DataTable.swift
@@ -9059,6 +9081,8 @@ src/Models/DataTableImportEntityListing.swift
 src/Models/DataTableImportJob.swift
 src/Models/DataTableRowEntityListing.swift
 src/Models/DataTablesDomainEntityListing.swift
+src/Models/DatePicker.swift
+src/Models/DatePickerAvailableDateTime.swift
 src/Models/DateRange.swift
 src/Models/DateRangeWithOptionalEnd.swift
 src/Models/DefaultGreetingList.swift
@@ -9825,7 +9849,13 @@ src/Models/HistoricalAdherenceActuals.swift
 src/Models/HistoricalAdherenceDayMetrics.swift
 src/Models/HistoricalAdherenceExceptionInfo.swift
 src/Models/HistoricalAdherenceQueryResult.swift
+src/Models/HistoricalDataDeleteEntity.swift
+src/Models/HistoricalDataDisallowedDeleteEntity.swift
+src/Models/HistoricalDataJobEntityStatus.swift
+src/Models/HistoricalImportDeleteFilesJobRequest.swift
+src/Models/HistoricalImportDeleteFilesJobResponse.swift
 src/Models/HistoricalImportDeleteJobResponse.swift
+src/Models/HistoricalImportOverallDeleteStatusResponse.swift
 src/Models/HistoricalImportStatus.swift
 src/Models/HistoricalImportStatusJobResponse.swift
 src/Models/HistoricalImportStatusListing.swift
@@ -11464,7 +11494,6 @@ src/Models/ScreenRecordingMetaData.swift
 src/Models/ScreenRecordingMetaDataRequest.swift
 src/Models/ScreenRecordingSession.swift
 src/Models/ScreenRecordingSessionListing.swift
-src/Models/ScreenRecordingSessionRequest.swift
 src/Models/ScreenRecordingUserAuthenticatedInfo.swift
 src/Models/Screenshare.swift
 src/Models/Script.swift
@@ -11658,6 +11687,13 @@ src/Models/SuggestionKnowledgeArticle.swift
 src/Models/SuggestionKnowledgeSearch.swift
 src/Models/SuggestionListing.swift
 src/Models/SuggestionScript.swift
+src/Models/SummaryAggregateDataContainer.swift
+src/Models/SummaryAggregateQueryClause.swift
+src/Models/SummaryAggregateQueryFilter.swift
+src/Models/SummaryAggregateQueryPredicate.swift
+src/Models/SummaryAggregateQueryResponse.swift
+src/Models/SummaryAggregationQuery.swift
+src/Models/SummaryAggregationView.swift
 src/Models/SummaryGenerationConfig.swift
 src/Models/SupportCenterCategory.swift
 src/Models/SupportCenterCompactCategoryModuleTemplate.swift

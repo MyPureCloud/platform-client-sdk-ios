@@ -988,6 +988,7 @@ open class WorkforceManagementAPI {
   "adherenceExplanation" : "{}",
   "removedFromManagementUnit" : true,
   "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+  "suppressOnTimeReminder" : true,
   "businessUnit" : "{}",
   "impact" : "Positive",
   "selfUri" : "https://openapi-generator.tech",
@@ -1004,6 +1005,13 @@ open class WorkforceManagementAPI {
   "actualActivityCategory" : "OnQueueWork",
   "scheduledActivityCategory" : "OnQueueWork",
   "scheduledActivityCode" : "{}",
+  "nextActivityReminders" : [ {
+    "activityCategory" : "OnQueueWork",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  }, {
+    "activityCategory" : "OnQueueWork",
+    "startDate" : "2000-01-23T04:56:07.000+00:00"
+  } ],
   "activeQueues" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -6605,6 +6613,133 @@ open class WorkforceManagementAPI {
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
 
+    
+    
+    /**
+     Retrieves delete job status for historical data imports associated with the job id
+     
+     - parameter jobId: (path) The job ID of the historical data delete request 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementHistoricaldataBulkRemoveJob(jobId: String, completion: @escaping ((_ data: HistoricalImportDeleteFilesJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementHistoricaldataBulkRemoveJobWithRequestBuilder(jobId: jobId)
+        requestBuilder.execute { (response: Response<HistoricalImportDeleteFilesJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves delete job status for historical data imports associated with the job id
+     - GET /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "requestId" : "requestId",
+    "status" : "InProgress"
+  }, {
+    "requestId" : "requestId",
+    "status" : "InProgress"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "disallowedEntities" : [ {
+    "reason" : "InvalidRequest",
+    "requestId" : "requestId"
+  }, {
+    "reason" : "InvalidRequest",
+    "requestId" : "requestId"
+  } ],
+  "id" : "id",
+  "state" : "Processing"
+}, statusCode=200}]
+     
+     - parameter jobId: (path) The job ID of the historical data delete request 
+
+     - returns: RequestBuilder<HistoricalImportDeleteFilesJobResponse> 
+     */
+    open class func getWorkforcemanagementHistoricaldataBulkRemoveJobWithRequestBuilder(jobId: String) -> RequestBuilder<HistoricalImportDeleteFilesJobResponse> {        
+        var path = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}"
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HistoricalImportDeleteFilesJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Retrieves all delete job status for historical data
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getWorkforcemanagementHistoricaldataBulkRemoveJobs(completion: @escaping ((_ data: HistoricalImportOverallDeleteStatusResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<HistoricalImportOverallDeleteStatusResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieves all delete job status for historical data
+     - GET /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "state" : "Processing"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id",
+    "state" : "Processing"
+  } ],
+  "status" : "Processing"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<HistoricalImportOverallDeleteStatusResponse> 
+     */
+    open class func getWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder() -> RequestBuilder<HistoricalImportOverallDeleteStatusResponse> {        
+        let path = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HistoricalImportOverallDeleteStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
     /**
      Retrieves delete job status for historical data imports of the organization
      
@@ -6686,7 +6821,9 @@ open class WorkforceManagementAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "entities" : [ {
+    "fileName" : "fileName",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "fileSize" : 0,
     "requestId" : "requestId",
     "dateImportStarted" : "2000-01-23T04:56:07.000+00:00",
     "active" : true,
@@ -6696,7 +6833,9 @@ open class WorkforceManagementAPI {
     "type" : "Csv",
     "status" : "Initiated"
   }, {
+    "fileName" : "fileName",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "fileSize" : 0,
     "requestId" : "requestId",
     "dateImportStarted" : "2000-01-23T04:56:07.000+00:00",
     "active" : true,
@@ -6705,7 +6844,8 @@ open class WorkforceManagementAPI {
     "error" : "error",
     "type" : "Csv",
     "status" : "Initiated"
-  } ]
+  } ],
+  "downloadUrl" : "downloadUrl"
 }, statusCode=200}]
 
      - returns: RequestBuilder<HistoricalImportStatusListing> 
@@ -7093,6 +7233,7 @@ open class WorkforceManagementAPI {
     "adherenceExplanation" : "{}",
     "removedFromManagementUnit" : true,
     "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+    "suppressOnTimeReminder" : true,
     "businessUnit" : "{}",
     "impact" : "Positive",
     "selfUri" : "https://openapi-generator.tech",
@@ -7109,6 +7250,13 @@ open class WorkforceManagementAPI {
     "actualActivityCategory" : "OnQueueWork",
     "scheduledActivityCategory" : "OnQueueWork",
     "scheduledActivityCode" : "{}",
+    "nextActivityReminders" : [ {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "activeQueues" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -7122,6 +7270,7 @@ open class WorkforceManagementAPI {
     "adherenceExplanation" : "{}",
     "removedFromManagementUnit" : true,
     "organizationSecondaryPresenceId" : "organizationSecondaryPresenceId",
+    "suppressOnTimeReminder" : true,
     "businessUnit" : "{}",
     "impact" : "Positive",
     "selfUri" : "https://openapi-generator.tech",
@@ -7138,6 +7287,13 @@ open class WorkforceManagementAPI {
     "actualActivityCategory" : "OnQueueWork",
     "scheduledActivityCategory" : "OnQueueWork",
     "scheduledActivityCode" : "{}",
+    "nextActivityReminders" : [ {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    }, {
+      "activityCategory" : "OnQueueWork",
+      "startDate" : "2000-01-23T04:56:07.000+00:00"
+    } ],
     "activeQueues" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -16520,6 +16676,74 @@ open class WorkforceManagementAPI {
         ])
 
         let requestBuilder: RequestBuilder<CalendarUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Delete the list of the historical data import entries
+     
+     - parameter body: (body) body (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postWorkforcemanagementHistoricaldataBulkRemoveJobs(body: HistoricalImportDeleteFilesJobRequest? = nil, completion: @escaping ((_ data: HistoricalImportDeleteFilesJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<HistoricalImportDeleteFilesJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Delete the list of the historical data import entries
+     - POST /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "requestId" : "requestId",
+    "status" : "InProgress"
+  }, {
+    "requestId" : "requestId",
+    "status" : "InProgress"
+  } ],
+  "selfUri" : "https://openapi-generator.tech",
+  "disallowedEntities" : [ {
+    "reason" : "InvalidRequest",
+    "requestId" : "requestId"
+  }, {
+    "reason" : "InvalidRequest",
+    "requestId" : "requestId"
+  } ],
+  "id" : "id",
+  "state" : "Processing"
+}, statusCode=202}]
+     
+     - parameter body: (body) body (optional)
+
+     - returns: RequestBuilder<HistoricalImportDeleteFilesJobResponse> 
+     */
+    open class func postWorkforcemanagementHistoricaldataBulkRemoveJobsWithRequestBuilder(body: HistoricalImportDeleteFilesJobRequest? = nil) -> RequestBuilder<HistoricalImportDeleteFilesJobResponse> {        
+        let path = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<HistoricalImportDeleteFilesJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

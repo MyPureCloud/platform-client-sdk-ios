@@ -1489,6 +1489,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -1893,6 +1894,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -2312,6 +2314,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -2716,6 +2719,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -3207,6 +3211,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -3611,6 +3616,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -4030,6 +4036,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -4434,6 +4441,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -4854,6 +4862,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -5258,6 +5267,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -5677,6 +5687,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -6081,6 +6092,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -6506,6 +6518,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -6910,6 +6923,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -7329,6 +7343,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -7733,6 +7748,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -8161,6 +8177,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -8565,6 +8582,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -8984,6 +9002,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -9388,6 +9407,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -9813,6 +9833,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -10217,6 +10238,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -10636,6 +10658,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -11040,6 +11063,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -11767,6 +11791,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -12171,6 +12196,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -12590,6 +12616,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -12994,6 +13021,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -13426,6 +13454,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -13830,6 +13859,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -14249,6 +14279,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -14653,6 +14684,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -15690,6 +15722,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -16094,6 +16127,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -16513,6 +16547,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -16917,6 +16952,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -17728,6 +17764,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -18132,6 +18169,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -18551,6 +18589,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -18955,6 +18994,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -19375,6 +19415,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -19779,6 +19820,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -20198,6 +20240,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -20602,6 +20645,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -21027,6 +21071,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -21431,6 +21476,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -21850,6 +21896,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -22254,6 +22301,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -22682,6 +22730,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -23086,6 +23135,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -23505,6 +23555,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -23909,6 +23960,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -24334,6 +24386,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -24738,6 +24791,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -25157,6 +25211,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -25561,6 +25616,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -26052,6 +26108,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -26456,6 +26513,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -26875,6 +26933,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -27279,6 +27338,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -27766,6 +27826,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -28170,6 +28231,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -28589,6 +28651,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -28993,6 +29056,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -29425,6 +29489,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -29829,6 +29894,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -30248,6 +30314,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -30652,6 +30719,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -31442,6 +31510,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -31846,6 +31915,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -32265,6 +32335,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -32669,6 +32740,7 @@ open class AuthorizationAPI {
           "bullseye" : "{}",
           "outboundMessagingAddresses" : "{}",
           "createdBy" : "createdBy",
+          "lastAgentRoutingMode" : "Disabled",
           "directRouting" : "{}",
           "name" : "name",
           "agentOwnedRouting" : "{}"
@@ -33273,6 +33345,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -33677,6 +33750,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -34096,6 +34170,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -34500,6 +34575,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -34932,6 +35008,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -35336,6 +35413,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -35755,6 +35833,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"
@@ -36159,6 +36238,7 @@ open class AuthorizationAPI {
             "bullseye" : "{}",
             "outboundMessagingAddresses" : "{}",
             "createdBy" : "createdBy",
+            "lastAgentRoutingMode" : "Disabled",
             "directRouting" : "{}",
             "name" : "name",
             "agentOwnedRouting" : "{}"

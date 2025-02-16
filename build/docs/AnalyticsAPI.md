@@ -50,6 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postAnalyticsReportingSettingsDashboardsQuery**](AnalyticsAPI#postAnalyticsReportingSettingsDashboardsQuery) | Query dashboard configurations |
 | [**postAnalyticsResolutionsAggregatesQuery**](AnalyticsAPI#postAnalyticsResolutionsAggregatesQuery) | Query for resolution aggregates |
 | [**postAnalyticsRoutingActivityQuery**](AnalyticsAPI#postAnalyticsRoutingActivityQuery) | Query for user activity observations |
+| [**postAnalyticsSummariesAggregatesQuery**](AnalyticsAPI#postAnalyticsSummariesAggregatesQuery) | Query for summary aggregates |
 | [**postAnalyticsSurveysAggregatesQuery**](AnalyticsAPI#postAnalyticsSurveysAggregatesQuery) | Query for survey aggregates |
 | [**postAnalyticsTaskmanagementAggregatesQuery**](AnalyticsAPI#postAnalyticsTaskmanagementAggregatesQuery) | Query for task management aggregates |
 | [**postAnalyticsTeamsActivityQuery**](AnalyticsAPI#postAnalyticsTeamsActivityQuery) | Query for team activity observations |
@@ -2455,6 +2456,56 @@ AnalyticsAPI.postAnalyticsRoutingActivityQuery(body: body, pageSize: pageSize, p
 [**RoutingActivityResponse**](RoutingActivityResponse)
 
 
+## postAnalyticsSummariesAggregatesQuery
+
+
+
+> [SummaryAggregateQueryResponse](SummaryAggregateQueryResponse) postAnalyticsSummariesAggregatesQuery(body)
+
+Query for summary aggregates
+
+
+
+Wraps POST /api/v2/analytics/summaries/aggregates/query  
+
+Requires ANY permissions: 
+
+* analytics:summaryAggregate:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: SummaryAggregationQuery = new SummaryAggregationQuery(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsSummariesAggregatesQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsSummariesAggregatesQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**SummaryAggregationQuery**](SummaryAggregationQuery)| query | |
+
+
+### Return type
+
+[**SummaryAggregateQueryResponse**](SummaryAggregateQueryResponse)
+
+
 ## postAnalyticsSurveysAggregatesQuery
 
 
@@ -2963,4 +3014,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

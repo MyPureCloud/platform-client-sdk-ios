@@ -24,6 +24,7 @@
 | **externalContactId** | **String** | The ID of the external contact of the Workitem. Must be a valid UUID. | [optional] |
 | **externalTag** | **String** | The external tag of the Workitem. | [optional] |
 | **skillIds** | **[String]** | The skill IDs of the Workitem. Must be valid UUIDs. | [optional] |
+| **scriptId** | **String** | The ID of the Workitems script. Must be a valid UUID. | [optional] |
 | **wrapupCode** | **String** | The ID of the wrapup. Must be a valid UUID. | [optional] |
 | **utilizationLabelId** | **String** | The ID of utilization label of the Workitem. Must be a valid UUID. | [optional] |
 | **scoredAgents** | [**[WorkitemScoredAgentRequest]**](WorkitemScoredAgentRequest) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
@@ -31,4 +32,4 @@
 
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_
