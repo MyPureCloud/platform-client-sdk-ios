@@ -1,188 +1,282 @@
-Platform API version: 8835
+Platform API version: 8887
 
 
 
 
-# Major Changes (2 changes)
+# Major Changes (5 changes)
 
-**/api/v2/routing/sms/phonenumbers/{phoneNumberId}** (1 change)
+**/api/v2/recordings/screensessions/{recordingSessionId}** (1 change)
 
-* Operation PUT was removed
+* Path /api/v2/recordings/screensessions/{recordingSessionId} was removed
 
-**IdentityProviderEntityListing** (1 change)
+**GET /api/v2/externalcontacts/import/jobs/{jobId}** (1 change)
 
-* Property entities was changed from IdentityProvider[] to CustomProvider[]
+* Parameter expand was added
+
+**GET /api/v2/externalcontacts/import/jobs** (1 change)
+
+* Parameter expand was added
+
+**ScreenRecordingSessionRequest** (1 change)
+
+* Model ScreenRecordingSessionRequest was removed
+
+**WhatsAppColumn** (1 change)
+
+* Property contactableTimeColumn was removed
 
 
-# Minor Changes (60 changes)
+# Minor Changes (71 changes)
 
-**/api/v2/integrations/actions/{actionId}/draft/function** (3 changes)
-
-* Path was added
-* Operation GET was added
-* Operation PUT was added
-
-**/api/v2/integrations/actions/{actionId}/draft/function/upload** (2 changes)
+**/api/v2/analytics/summaries/aggregates/query** (2 changes)
 
 * Path was added
 * Operation POST was added
 
-**/api/v2/integrations/actions/{actionId}/function** (2 changes)
+**/api/v2/journey/views/data/details** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**/api/v2/integrations/actions/functions/runtimes** (2 changes)
+**GET /api/v2/conversations/{conversationId}/recordings/{recordingId}** (1 change)
+
+* Response 200 was added
+
+**/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**/api/v2/alerting/alerts/all** (3 changes)
-
-* Path was added
-* Operation DELETE was added
-* Operation PATCH was added
-
-**/api/v2/speechandtextanalytics/conversations/{conversationId}/summaries** (2 changes)
+**/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs** (3 changes)
 
 * Path was added
 * Operation GET was added
+* Operation POST was added
 
-**/api/v2/speechandtextanalytics/programs/{programId}/settings/insights** (3 changes)
+**SummaryAggregateDataContainer** (1 change)
 
-* Path was added
-* Operation GET was added
-* Operation PUT was added
+* Model was added
 
-**/api/v2/speechandtextanalytics/programs/settings/insights** (2 changes)
+**SummaryAggregateQueryResponse** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model was added
 
-**/api/v2/users/externalid/{authorityName}/{externalKey}** (2 changes)
+**SummaryAggregateQueryClause** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model was added
 
-**/api/v2/users/{userId}/externalid/{authorityName}** (2 changes)
+**SummaryAggregateQueryFilter** (1 change)
 
-* Path was added
-* Operation GET was added
+* Model was added
 
-**/api/v2/users/{userId}/externalid** (1 change)
+**SummaryAggregateQueryPredicate** (1 change)
 
-* Operation get was added. Summary: Get the external identifiers for a user.
+* Model was added
 
-**/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}** (2 changes)
+**SummaryAggregationQuery** (1 change)
 
-* Path was added
-* Operation DELETE was added
+* Model was added
 
-**CustomProvider** (1 change)
+**SummaryAggregationView** (1 change)
 
-* Optional property displayOnLogin was added
-
-**AnalyticsSession** (1 change)
-
-* Enum value DeliveryPushed was added to property deliveryStatus
+* Model was added
 
 **ViewFilter** (3 changes)
 
-* Enum value DeliveryPushed was added to property emailDeliveryStatusList
-* Optional property evaluationRole was added
-* Optional property comparisonQueueIds was added
+* Optional property dashboardState was added
+* Optional property viewMetrics was added
+* Optional property timelineCategories was added
 
-**ReportingExportJobResponse** (1 change)
+**Queue** (1 change)
 
-* Enum value AGENT_ASSIGNED_EVALUATION_ME_VIEW was added to property viewType
+* Optional property lastAgentRoutingMode was added
 
-**ReportingExportMetadataJobResponse** (1 change)
+**ContactIdentifier** (1 change)
 
-* Enum value AGENT_ASSIGNED_EVALUATION_ME_VIEW was added to property viewType
+* Optional property externalSource was added
 
-**ReportingExportJobRequest** (1 change)
+**ExternalOrganizationIdentifier** (1 change)
 
-* Enum value AGENT_ASSIGNED_EVALUATION_ME_VIEW was added to property viewType
+* Optional property externalSource was added
 
-**ChatSettings** (1 change)
+**CallMediaParticipant** (1 change)
 
-* Optional property reactionsEnabled was added
+* Optional property resumeTime was added
 
-**CampaignRule** (1 change)
+**CallbackMediaParticipant** (1 change)
 
-* Optional property warnings was added
+* Optional property resumeTime was added
 
-**CampaignRuleActionEntities** (2 changes)
+**ChatMediaParticipant** (1 change)
 
-* Optional property emailCampaigns was added
-* Optional property smsCampaigns was added
+* Optional property resumeTime was added
 
-**CampaignRuleEntities** (2 changes)
+**CobrowseMediaParticipant** (1 change)
 
-* Optional property emailCampaigns was added
-* Optional property smsCampaigns was added
+* Optional property resumeTime was added
 
-**CampaignRuleParameters** (2 changes)
+**EmailMediaParticipant** (1 change)
 
-* Optional property smsMessagesPerMinute was added
-* Optional property emailMessagesPerMinute was added
+* Optional property resumeTime was added
 
-**Function** (1 change)
+**MessageMediaParticipant** (1 change)
 
-* Model was added
+* Optional property resumeTime was added
 
-**FunctionConfig** (1 change)
+**DataRange** (1 change)
 
 * Model was added
 
-**FunctionZipConfig** (1 change)
+**IpAddressRange** (3 changes)
+
+* Enum value imap was added to property service
+* Enum value graphapi was added to property service
+* Enum value tts-connector was added to property service
+
+**Annotation** (1 change)
+
+* id is no longer readonly
+
+**DatePicker** (1 change)
 
 * Model was added
 
-**FunctionUploadResponse** (1 change)
+**DatePickerAvailableDateTime** (1 change)
 
 * Model was added
 
-**FunctionUploadRequest** (1 change)
+**RecordingMessagingMessage** (1 change)
+
+* Enum value DatePicker was added to property contentType
+
+**AlertRuleProperties** (1 change)
+
+* Enum value OperationalConsole was added to property type
+
+**CommonRulePredicate** (2 changes)
+
+* Optional property topic was added
+* Enum value nEvents was added to property metric
+
+**CommonRule** (1 change)
+
+* Enum value OperationalConsole was added to property type
+
+**QueueRequest** (1 change)
+
+* Optional property lastAgentRoutingMode was added
+
+**UserQueue** (1 change)
+
+* Optional property lastAgentRoutingMode was added
+
+**CreateQueueRequest** (1 change)
+
+* Optional property lastAgentRoutingMode was added
+
+**ConversationInsight** (1 change)
 
 * Model was added
 
-**FunctionRuntime** (1 change)
+**DependencyStatus** (1 change)
+
+* Enum value BUILDINCOMPLETE was added to property status
+
+**WebDeploymentConfigurationVersion** (1 change)
+
+* Optional property video was added
+
+**WebDeploymentConfigurationVersionResponse** (1 change)
+
+* Optional property video was added
+
+**BusinessUnitSettingsResponse** (1 change)
+
+* Optional property notifications was added
+
+**UpdateBusinessUnitSettingsRequest** (1 change)
+
+* Optional property notifications was added
+
+**CreateBusinessUnitSettingsRequest** (1 change)
+
+* Optional property notifications was added
+
+**UserNextActivityReminder** (2 changes)
+
+* Optional property activityCategory was added
+* Optional property startDate was added
+
+**UserScheduleAdherence** (2 changes)
+
+* Optional property nextActivityReminders was added
+* Optional property suppressOnTimeReminder was added
+
+**HistoricalDataDeleteEntity** (1 change)
 
 * Model was added
 
-**CommonAllAlertUpdateRequest** (1 change)
+**HistoricalDataDisallowedDeleteEntity** (1 change)
 
 * Model was added
 
-**SpeechTextAnalyticsConversationSummary** (1 change)
+**HistoricalImportDeleteFilesJobResponse** (1 change)
 
 * Model was added
 
-**SpeechTextAnalyticsConversationSummaryListing** (1 change)
+**HistoricalImportDeleteFilesJobRequest** (1 change)
 
 * Model was added
 
-**ProgramInsightsSettings** (1 change)
+**HistoricalDataJobEntityStatus** (1 change)
 
 * Model was added
 
-**InsightsSettingsRequest** (1 change)
+**HistoricalImportOverallDeleteStatusResponse** (1 change)
 
 * Model was added
 
-**ProgramInsightsSettingsEntityListing** (1 change)
+**HistoricalImportStatus** (2 changes)
 
-* Model was added
+* Optional property fileName was added
+* Optional property fileSize was added
 
-**ShiftTradeMatchViolation** (6 changes)
+**HistoricalImportStatusListing** (1 change)
 
-* Enum value InitiatingAgentMinimumTimeBetweenShifts was added to property type
-* Enum value InitiatingPlanningPeriodMaxPaidTime was added to property type
-* Enum value InitiatingPlanningPeriodMinPaidTime was added to property type
-* Enum value ReceivingAgentMinimumTimeBetweenShifts was added to property type
-* Enum value ReceivingPlanningPeriodMaxPaidTime was added to property type
-* Enum value ReceivingPlanningPeriodMinPaidTime was added to property type
+* Optional property downloadUrl was added
+
+**WorkitemCommonCreate** (1 change)
+
+* Optional property scriptId was added
+
+**Workitem** (1 change)
+
+* Optional property script was added
+
+**WorkitemCreate** (1 change)
+
+* Optional property scriptId was added
+
+**WorkitemUpdate** (1 change)
+
+* Optional property scriptId was added
+
+**Worktype** (1 change)
+
+* Optional property defaultScript was added
+
+**WorktypeUpdate** (1 change)
+
+* Optional property defaultScriptId was added
+
+**WorktypeCreate** (1 change)
+
+* Optional property defaultScriptId was added
 
 
-# Point Changes (0 changes)
+# Point Changes (2 changes)
+
+**GET /api/v2/speechandtextanalytics/categories** (2 changes)
+
+* Description was changed for parameter pageSize
+* Description was changed for parameter ids

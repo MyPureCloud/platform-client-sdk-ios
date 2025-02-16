@@ -1506,7 +1506,7 @@ ExternalContactsAPI.getExternalcontactsImportCsvUploadPreview(uploadId: uploadId
 
 
 
-> [ContactImportJobResponse](ContactImportJobResponse) getExternalcontactsImportJob(jobId)
+> [ContactImportJobResponse](ContactImportJobResponse) getExternalcontactsImportJob(jobId, expand)
 
 Get job based on id
 
@@ -1527,9 +1527,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let jobId: String = "" // Job id
+let expand: [String] = [""] // which fields, if any, to expand
 
 // Code example
-ExternalContactsAPI.getExternalcontactsImportJob(jobId: jobId) { (response, error) in
+ExternalContactsAPI.getExternalcontactsImportJob(jobId: jobId, expand: expand) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1545,6 +1546,7 @@ ExternalContactsAPI.getExternalcontactsImportJob(jobId: jobId) { (response, erro
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **jobId** | **String**| Job id | |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: division ("division") |
 
 
 ### Return type
@@ -1556,7 +1558,7 @@ ExternalContactsAPI.getExternalcontactsImportJob(jobId: jobId) { (response, erro
 
 
 
-> [ContactImportJobEntityListing](ContactImportJobEntityListing) getExternalcontactsImportJobs(after, pageSize, sortOrder, jobStatus)
+> [ContactImportJobEntityListing](ContactImportJobEntityListing) getExternalcontactsImportJobs(expand, after, pageSize, sortOrder, jobStatus)
 
 List jobs for organization
 
@@ -1576,13 +1578,14 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
+let expand: [String] = [""] // which fields, if any, to expand
 let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
 let pageSize: String = "" // Number of entities to return. Maximum of 100.
 let sortOrder: ExternalContactsAPI.SortOrder_getExternalcontactsImportJobs = ExternalContactsAPI.SortOrder_getExternalcontactsImportJobs.enummember // Direction of sorting.
 let jobStatus: ExternalContactsAPI.JobStatus_getExternalcontactsImportJobs = ExternalContactsAPI.JobStatus_getExternalcontactsImportJobs.enummember // Search term to filter by jobStatus
 
 // Code example
-ExternalContactsAPI.getExternalcontactsImportJobs(after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus) { (response, error) in
+ExternalContactsAPI.getExternalcontactsImportJobs(expand: expand, after: after, pageSize: pageSize, sortOrder: sortOrder, jobStatus: jobStatus) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1597,6 +1600,7 @@ ExternalContactsAPI.getExternalcontactsImportJobs(after: after, pageSize: pageSi
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: division ("division") |
 | **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
 | **pageSize** | **String**| Number of entities to return. Maximum of 100. | [optional] |
 | **sortOrder** | **String**| Direction of sorting. | [optional]<br />**Values**: ascending ("Ascending"), descending ("Descending") |
@@ -4994,4 +4998,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

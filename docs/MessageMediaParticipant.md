@@ -41,6 +41,7 @@
 | **startAcwTime** | [**Date**](Date) | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **endAcwTime** | [**Date**](Date) | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **parkTime** | [**Date**](Date) | The time when this participant&#39;s communication was last parked.  Does not reset on resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **resumeTime** | [**Date**](Date) | The time when this participant&#39;s communications will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **toAddress** | [**Address**](Address) | Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended. | [optional] |
 | **fromAddress** | [**Address**](Address) | Address for the participant on the sending side of the message conversation. If the address is a phone number, E.164 format is recommended. | [optional] |
 | **messages** | [**[MessageDetails]**](MessageDetails) | Message instance details on the communication. | [optional] |
@@ -53,4 +54,4 @@
 
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

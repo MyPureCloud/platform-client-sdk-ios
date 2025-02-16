@@ -14,4 +14,4 @@ the campaign/sequence entities that this action acts on
 
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

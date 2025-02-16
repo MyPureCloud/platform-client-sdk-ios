@@ -39,7 +39,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingsScreensessionsDetails**](RecordingAPI#getRecordingsScreensessionsDetails) | Retrieves an object containing the total number of concurrent active screen recordings |
 | [**patchRecordingCrossplatformMediaretentionpolicy**](RecordingAPI#patchRecordingCrossplatformMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingMediaretentionpolicy**](RecordingAPI#patchRecordingMediaretentionpolicy) | Patch a media retention policy |
-| [**patchRecordingsScreensession**](RecordingAPI#patchRecordingsScreensession) | Update a screen recording session |
 | [**postConversationRecordingAnnotations**](RecordingAPI#postConversationRecordingAnnotations) | Create annotation |
 | [**postRecordingBatchrequests**](RecordingAPI#postRecordingBatchrequests) | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
 | [**postRecordingCrossplatformMediaretentionpolicies**](RecordingAPI#postRecordingCrossplatformMediaretentionpolicies) | Create media retention policy |
@@ -1952,59 +1951,6 @@ RecordingAPI.patchRecordingMediaretentionpolicy(policyId: policyId, body: body) 
 [**Policy**](Policy)
 
 
-## patchRecordingsScreensession
-
-
-
-> Void patchRecordingsScreensession(recordingSessionId, body)
-
-Update a screen recording session
-
-This API is deprecated and the functionality to stop screen recording will be no longer supported.
-
-
-
-Wraps PATCH /api/v2/recordings/screensessions/{recordingSessionId}  
-
-Requires ANY permissions: 
-
-* recording:screenRecording:stop
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let recordingSessionId: String = "" // Screen recording session ID
-let body: ScreenRecordingSessionRequest = new ScreenRecordingSessionRequest(...) // 
-
-// Code example
-RecordingAPI.patchRecordingsScreensession(recordingSessionId: recordingSessionId, body: body) { (error) in
-    if let error = error {
-        dump(error)
-    } else {
-        print("RecordingAPI.patchRecordingsScreensession was successful")
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **recordingSessionId** | **String**| Screen recording session ID | |
-| **body** | [**ScreenRecordingSessionRequest**](ScreenRecordingSessionRequest)|  | [optional] |
-
-
-### Return type
-
-`nil` (empty response body)
-
-
 ## postConversationRecordingAnnotations
 
 
@@ -3199,4 +3145,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

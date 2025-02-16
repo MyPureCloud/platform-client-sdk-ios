@@ -40,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getJourneyViewVersionJobResultsChart**](JourneyAPI#getJourneyViewVersionJobResultsChart) | Get the chart result associated with a journey view job. |
 | [**getJourneyViewVersionJobsLatest**](JourneyAPI#getJourneyViewVersionJobsLatest) | Get the latest job of a journey view version. |
 | [**getJourneyViews**](JourneyAPI#getJourneyViews) | Get a list of Journey Views |
+| [**getJourneyViewsDataDetails**](JourneyAPI#getJourneyViewsDataDetails) | Get details about the data available for journey queries including oldest and newest event dates |
 | [**getJourneyViewsEventdefinition**](JourneyAPI#getJourneyViewsEventdefinition) | Get an Event Definition |
 | [**getJourneyViewsEventdefinitions**](JourneyAPI#getJourneyViewsEventdefinitions) | Get a list of Event Definitions |
 | [**getJourneyViewsJobs**](JourneyAPI#getJourneyViewsJobs) | Get the jobs for an organization. |
@@ -1979,6 +1980,52 @@ JourneyAPI.getJourneyViews(pageNumber: pageNumber, pageSize: pageSize, nameOrCre
 [**JourneyViewListing**](JourneyViewListing)
 
 
+## getJourneyViewsDataDetails
+
+
+
+> [DataRange](DataRange) getJourneyViewsDataDetails()
+
+Get details about the data available for journey queries including oldest and newest event dates
+
+
+
+Wraps GET /api/v2/journey/views/data/details  
+
+Requires ALL permissions: 
+
+* journey:dataDetails:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+JourneyAPI.getJourneyViewsDataDetails() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("JourneyAPI.getJourneyViewsDataDetails was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**DataRange**](DataRange)
+
+
 ## getJourneyViewsEventdefinition
 
 
@@ -3419,4 +3466,4 @@ JourneyAPI.putJourneyViewVersion(viewId: viewId, versionId: versionId, body: bod
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

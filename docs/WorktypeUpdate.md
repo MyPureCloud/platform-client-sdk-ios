@@ -23,7 +23,8 @@
 | **defaultLanguageId** | **String** | The ID of the default language for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 | **defaultSkillIds** | **[String]** | The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs | [optional] |
 | **defaultQueueId** | **String** | The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
+| **defaultScriptId** | **String** | The default script for Workitems created from the Worktype. Must be a valid UUID. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

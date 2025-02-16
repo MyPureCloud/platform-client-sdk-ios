@@ -12,4 +12,4 @@ A journey element attribute to group by within the chart
 
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_

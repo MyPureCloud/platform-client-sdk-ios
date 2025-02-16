@@ -85,6 +85,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getWorkforcemanagementBusinessunitsDivisionviews**](WorkforceManagementAPI#getWorkforcemanagementBusinessunitsDivisionviews) | Get business units across divisions |
 | [**getWorkforcemanagementCalendarDataIcs**](WorkforceManagementAPI#getWorkforcemanagementCalendarDataIcs) | Get ics formatted calendar based on shareable link |
 | [**getWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#getWorkforcemanagementCalendarUrlIcs) | Get existing calendar link for the current user |
+| [**getWorkforcemanagementHistoricaldataBulkRemoveJob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataBulkRemoveJob) | Retrieves delete job status for historical data imports associated with the job id |
+| [**getWorkforcemanagementHistoricaldataBulkRemoveJobs**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataBulkRemoveJobs) | Retrieves all delete job status for historical data |
 | [**getWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataDeletejob) | Retrieves delete job status for historical data imports of the organization |
 | [**getWorkforcemanagementHistoricaldataImportstatus**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatus) | Retrieves status of the historical data imports of the organization |
 | [**getWorkforcemanagementHistoricaldataImportstatusJobId**](WorkforceManagementAPI#getWorkforcemanagementHistoricaldataImportstatusJobId) | Retrieves status of the historical data imports associated with job id |
@@ -202,6 +204,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postWorkforcemanagementBusinessunitWorkplanbids**](WorkforceManagementAPI#postWorkforcemanagementBusinessunitWorkplanbids) | Create a new work plan bid |
 | [**postWorkforcemanagementBusinessunits**](WorkforceManagementAPI#postWorkforcemanagementBusinessunits) | Add a new business unit |
 | [**postWorkforcemanagementCalendarUrlIcs**](WorkforceManagementAPI#postWorkforcemanagementCalendarUrlIcs) | Create a newly generated calendar link for the current user; if the current user has previously generated one, the generated link will be returned |
+| [**postWorkforcemanagementHistoricaldataBulkRemoveJobs**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataBulkRemoveJobs) | Delete the list of the historical data import entries |
 | [**postWorkforcemanagementHistoricaldataDeletejob**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataDeletejob) | Delete the entries of the historical data imports in the organization |
 | [**postWorkforcemanagementHistoricaldataValidate**](WorkforceManagementAPI#postWorkforcemanagementHistoricaldataValidate) | Trigger validation process for historical import |
 | [**postWorkforcemanagementIntegrationsHriTimeofftypesJobs**](WorkforceManagementAPI#postWorkforcemanagementIntegrationsHriTimeofftypesJobs) | Get list of time off types configured in integration |
@@ -4681,6 +4684,102 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**CalendarUrlResponse**](CalendarUrlResponse)
+
+
+## getWorkforcemanagementHistoricaldataBulkRemoveJob
+
+
+
+> [HistoricalImportDeleteFilesJobResponse](HistoricalImportDeleteFilesJobResponse) getWorkforcemanagementHistoricaldataBulkRemoveJob(jobId)
+
+Retrieves delete job status for historical data imports associated with the job id
+
+
+
+Wraps GET /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // The job ID of the historical data delete request
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementHistoricaldataBulkRemoveJob(jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementHistoricaldataBulkRemoveJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| The job ID of the historical data delete request | |
+
+
+### Return type
+
+[**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse)
+
+
+## getWorkforcemanagementHistoricaldataBulkRemoveJobs
+
+
+
+> [HistoricalImportOverallDeleteStatusResponse](HistoricalImportOverallDeleteStatusResponse) getWorkforcemanagementHistoricaldataBulkRemoveJobs()
+
+Retrieves all delete job status for historical data
+
+
+
+Wraps GET /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+WorkforceManagementAPI.getWorkforcemanagementHistoricaldataBulkRemoveJobs() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.getWorkforcemanagementHistoricaldataBulkRemoveJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**HistoricalImportOverallDeleteStatusResponse**](HistoricalImportOverallDeleteStatusResponse)
 
 
 ## getWorkforcemanagementHistoricaldataDeletejob
@@ -10976,6 +11075,56 @@ WorkforceManagementAPI.postWorkforcemanagementCalendarUrlIcs(language: language)
 [**CalendarUrlResponse**](CalendarUrlResponse)
 
 
+## postWorkforcemanagementHistoricaldataBulkRemoveJobs
+
+
+
+> [HistoricalImportDeleteFilesJobResponse](HistoricalImportDeleteFilesJobResponse) postWorkforcemanagementHistoricaldataBulkRemoveJobs(body)
+
+Delete the list of the historical data import entries
+
+
+
+Wraps POST /api/v2/workforcemanagement/historicaldata/bulk/remove/jobs  
+
+Requires ALL permissions: 
+
+* wfm:historicalData:upload
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: HistoricalImportDeleteFilesJobRequest = new HistoricalImportDeleteFilesJobRequest(...) // body
+
+// Code example
+WorkforceManagementAPI.postWorkforcemanagementHistoricaldataBulkRemoveJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("WorkforceManagementAPI.postWorkforcemanagementHistoricaldataBulkRemoveJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**HistoricalImportDeleteFilesJobRequest**](HistoricalImportDeleteFilesJobRequest)| body | [optional] |
+
+
+### Return type
+
+[**HistoricalImportDeleteFilesJobResponse**](HistoricalImportDeleteFilesJobResponse)
+
+
 ## postWorkforcemanagementHistoricaldataDeletejob
 
 
@@ -13149,4 +13298,4 @@ WorkforceManagementAPI.putWorkforcemanagementManagementunitTimeofflimitValues(ma
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatformClientV2@161.0.0_
+_PureCloudPlatformClientV2@162.0.0_
