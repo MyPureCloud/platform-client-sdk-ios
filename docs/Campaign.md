@@ -42,10 +42,11 @@
 | **dynamicContactQueueingSettings** | [**DynamicContactQueueingSettings**](DynamicContactQueueingSettings) | Settings for dynamic queueing of contacts. | [optional] |
 | **skillColumns** | **[String]** | The skill columns on the ContactList that this Campaign should take into account when dialing | [optional] |
 | **maxCallsPerAgent** | **Int** | The maximum number of calls that can be placed per agent on this campaign | [optional] |
+| **maxCallsPerAgentDecimal** | **Double** | The maximum number of calls that can be placed per agent on this campaign with decimal precision | [optional] |
 | **callbackAutoAnswer** | **Bool** | The option manages the auto-answer callback calls | [optional] |
 | **dynamicLineBalancingSettings** | [**DynamicLineBalancingSettings**](DynamicLineBalancingSettings) | Dynamic line balancing settings | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

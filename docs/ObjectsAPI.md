@@ -41,7 +41,7 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let divisionId: String = "" // Division ID
-let force: Bool = true // Force delete this division as well as the grants and objects associated with it
+let force: Bool = true // DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible.
 
 // Code example
 ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (error) in
@@ -59,7 +59,7 @@ ObjectsAPI.deleteAuthorizationDivision(divisionId: divisionId, force: force) { (
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **force** | **Bool**| Force delete this division as well as the grants and objects associated with it | [optional] |
+| **force** | **Bool**| DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. | [optional] |
 
 
 ### Return type
@@ -375,7 +375,7 @@ ObjectsAPI.postAuthorizationDivisionRestore(divisionId: divisionId, body: body) 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **divisionId** | **String**| Division ID | |
-| **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data | [optional] |
+| **body** | [**AuthzDivision**](AuthzDivision)| Recreated division data | |
 
 
 ### Return type
@@ -486,4 +486,4 @@ ObjectsAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { (respo
 [**AuthzDivision**](AuthzDivision)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

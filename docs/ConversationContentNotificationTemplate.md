@@ -11,8 +11,9 @@ Template notification object.
 | **language** | **String** | Template language. | [optional] |
 | **header** | [**ConversationNotificationTemplateHeader**](ConversationNotificationTemplateHeader) | The template header. | [optional] |
 | **body** | [**ConversationNotificationTemplateBody**](ConversationNotificationTemplateBody) | The template body. | |
+| **buttons** | [**[ConversationNotificationTemplateButton]**](ConversationNotificationTemplateButton) | Template buttons | [optional] |
 | **footer** | [**ConversationNotificationTemplateFooter**](ConversationNotificationTemplateFooter) | The template footer. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

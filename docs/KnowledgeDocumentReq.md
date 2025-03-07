@@ -13,8 +13,9 @@
 | **categoryId** | **String** | The category associated with the document. | [optional] |
 | **labelIds** | **[String]** | The ids of labels associated with the document. | [optional] |
 | **externalId** | **String** | The external id associated with the document. | [optional] |
+| **externalUrl** | **String** | The URL to external document. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

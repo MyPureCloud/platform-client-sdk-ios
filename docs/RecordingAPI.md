@@ -35,7 +35,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getRecordingSettings**](RecordingAPI#getRecordingSettings) | Get the Recording Settings for the Organization |
 | [**getRecordingUploadsReport**](RecordingAPI#getRecordingUploadsReport) | Get the status of a recording upload status report |
 | [**getRecordingsRetentionQuery**](RecordingAPI#getRecordingsRetentionQuery) | Query for recording retention data |
-| [**getRecordingsScreensessions**](RecordingAPI#getRecordingsScreensessions) | Retrieves a paged listing of screen recording sessions |
 | [**getRecordingsScreensessionsDetails**](RecordingAPI#getRecordingsScreensessionsDetails) | Retrieves an object containing the total number of concurrent active screen recordings |
 | [**patchRecordingCrossplatformMediaretentionpolicy**](RecordingAPI#patchRecordingCrossplatformMediaretentionpolicy) | Patch a media retention policy |
 | [**patchRecordingMediaretentionpolicy**](RecordingAPI#patchRecordingMediaretentionpolicy) | Patch a media retention policy |
@@ -450,7 +449,7 @@ let chatFormatId: RecordingAPI.ChatFormatId_getConversationRecording = Recording
 let messageFormatId: RecordingAPI.MessageFormatId_getConversationRecording = RecordingAPI.MessageFormatId_getConversationRecording.enummember // The desired media format when downloading a message recording. Valid values:ZIP,NONE
 let download: RecordingAPI.Download_getConversationRecording = RecordingAPI.Download_getConversationRecording.enummember // requesting a download format of the recording. Valid values:true,false
 let fileName: String = "" // the name of the downloaded fileName
-let locale: String = "" // The locale for the requested file when downloading, as an ISO 639-1 code
+let locale: String = "" // The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code
 let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3
 
 // Code example
@@ -477,7 +476,7 @@ RecordingAPI.getConversationRecording(conversationId: conversationId, recordingI
 | **messageFormatId** | **String**| The desired media format when downloading a message recording. Valid values:ZIP,NONE | [optional]<br />**Values**: zip ("ZIP"), _none ("NONE") |
 | **download** | **Bool**| requesting a download format of the recording. Valid values:true,false | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **fileName** | **String**| the name of the downloaded fileName | [optional] |
-| **locale** | **String**| The locale for the requested file when downloading, as an ISO 639-1 code | [optional] |
+| **locale** | **String**| The locale for the requested file when downloading or for redacting sensitive information in requested files, as an ISO 639-1 code | [optional] |
 | **mediaFormats** | [**[String]**](String)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 | [optional] |
 
 
@@ -700,7 +699,7 @@ RecordingAPI.getConversationRecordingmetadataRecordingId(conversationId: convers
 
 
 
-> [[Recording]](Recording) getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats)
+> [[Recording]](Recording) getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale)
 
 Get all of a Conversation&#39;s Recordings.
 
@@ -725,9 +724,10 @@ let conversationId: String = "" // Conversation ID
 let maxWaitMs: Int = 0 // The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.
 let formatId: RecordingAPI.FormatId_getConversationRecordings = RecordingAPI.FormatId_getConversationRecordings.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.
 let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3.
+let locale: String = "" // The locale used for redacting sensitive information in requested files, as an ISO 639-1 code
 
 // Code example
-RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats) { (response, error) in
+RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -746,6 +746,7 @@ RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs
 | **maxWaitMs** | **Int**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] |
 | **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **mediaFormats** | [**[String]**](String)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional] |
+| **locale** | **String**| The locale used for redacting sensitive information in requested files, as an ISO 639-1 code | [optional] |
 
 
 ### Return type
@@ -1745,60 +1746,6 @@ RecordingAPI.getRecordingsRetentionQuery(retentionThresholdDays: retentionThresh
 ### Return type
 
 [**RecordingRetentionCursorEntityListing**](RecordingRetentionCursorEntityListing)
-
-
-## getRecordingsScreensessions
-
-
-
-> [ScreenRecordingSessionListing](ScreenRecordingSessionListing) getRecordingsScreensessions(pageSize, pageNumber)
-
-Retrieves a paged listing of screen recording sessions
-
-Coming soon: This API is deprecated and will be replaced by /api/v2/recordings/screensessions/details
-
-
-
-Wraps GET /api/v2/recordings/screensessions  
-
-Requires ANY permissions: 
-
-* recording:screenRecording:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let pageSize: Int = 0 // Page size
-let pageNumber: Int = 0 // Page number
-
-// Code example
-RecordingAPI.getRecordingsScreensessions(pageSize: pageSize, pageNumber: pageNumber) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("RecordingAPI.getRecordingsScreensessions was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pageSize** | **Int**| Page size | [optional] |
-| **pageNumber** | **Int**| Page number | [optional] |
-
-
-### Return type
-
-[**ScreenRecordingSessionListing**](ScreenRecordingSessionListing)
 
 
 ## getRecordingsScreensessionsDetails
@@ -3145,4 +3092,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

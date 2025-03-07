@@ -9,8 +9,10 @@
 | **mediaTypes** | **[String]** | The media types are used to filter the view | [optional] |
 | **queueIds** | **[String]** | The queue ids are used to filter the view | [optional] |
 | **skillIds** | **[String]** | The skill ids are used to filter the view | [optional] |
+| **assignedSkillIds** | **[String]** | The assigned user skill ids are used to filter the view | [optional] |
 | **skillGroups** | **[String]** | The skill groups used to filter the view | [optional] |
 | **languageIds** | **[String]** | The language ids are used to filter the view | [optional] |
+| **assignedLanguageIds** | **[String]** | The assigned user language ids are used to filter the view | [optional] |
 | **languageGroups** | **[String]** | The language groups used to filter the view | [optional] |
 | **directions** | **[String]** | The directions are used to filter the view | [optional] |
 | **originatingDirections** | **[String]** | The list of orginating directions used to filter the view | [optional] |
@@ -226,7 +228,9 @@
 | **comparisonQueueIds** | **[String]** | The queue ids are used to for comparison to the primary queue filter in reporting | [optional] |
 | **viewMetrics** | **[String]** | A list of metrics selected for the view | [optional] |
 | **timelineCategories** | **[String]** | A list of timeline categories | [optional] |
+| **acw** | **Bool** | Filter to indicate for acw state | [optional] |
+| **segmentTypes** | **[String]** | A list of filtered segment types | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

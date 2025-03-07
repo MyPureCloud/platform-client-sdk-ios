@@ -11,4 +11,4 @@ The schemas defining all of the expected requests/inputs.
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

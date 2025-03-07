@@ -11806,6 +11806,8 @@ ConversationsAPI.putConversationsChatRecordingstate(conversationId: conversation
 
 Update a conversation by setting its recording state
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-legacy-co-browse-and-screenshare/
+
 
 
 Wraps PUT /api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate  
@@ -12371,4 +12373,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

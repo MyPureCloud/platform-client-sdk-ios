@@ -16,9 +16,15 @@
 | **relyingPartyIdentifier** | **String** |  | [optional] |
 | **certificate** | **String** |  | [optional] |
 | **certificates** | **[String]** |  | [optional] |
+| **logoImageData** | **String** |  | [optional] |
+| **nameIdentifierFormat** | **String** |  | [optional] |
+| **ssoBinding** | **String** |  | [optional] |
+| **signAuthnRequests** | **Bool** |  | [optional] |
+| **providerName** | **String** |  | [optional] |
+| **displayOnLogin** | **Bool** |  | [optional] |
 | **autoProvisionUsers** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

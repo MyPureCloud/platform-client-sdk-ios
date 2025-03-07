@@ -935,7 +935,7 @@ ExternalContactsAPI.getExternalcontactsContactUnresolved(contactId: contactId, e
 
 
 
-> [ContactListing](ContactListing) getExternalcontactsContacts(pageSize, pageNumber, q, sortOrder, expand)
+> [ContactListing](ContactListing) getExternalcontactsContacts(pageSize, pageNumber, q, sortOrder, expand, divisionIds)
 
 Search for external contacts
 
@@ -961,9 +961,10 @@ let pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records;
 let q: String = "" // User supplied search keywords (no special syntax is currently supported)
 let sortOrder: String = "" // The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
+let divisionIds: [String] = [""] // which divisions to search, up to 50
 
 // Code example
-ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: pageNumber, q: q, sortOrder: sortOrder, expand: expand) { (response, error) in
+ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: pageNumber, q: q, sortOrder: sortOrder, expand: expand, divisionIds: divisionIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -983,6 +984,7 @@ ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: 
 | **q** | **String**| User supplied search keywords (no special syntax is currently supported) | [optional] |
 | **sortOrder** | **String**| The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \"firstName:asc\", \"title:desc\" | [optional] |
 | **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externalorganization ("externalOrganization"), externaldatasources ("externalDataSources"), identifiers ("identifiers"), externalsources ("externalSources"), division ("division") |
+| **divisionIds** | [**[String]**](String)| which divisions to search, up to 50 | [optional] |
 
 
 ### Return type
@@ -2011,7 +2013,7 @@ ExternalContactsAPI.getExternalcontactsOrganizationRelationships(externalOrganiz
 
 
 
-> [ExternalOrganizationListing](ExternalOrganizationListing) getExternalcontactsOrganizations(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors)
+> [ExternalOrganizationListing](ExternalOrganizationListing) getExternalcontactsOrganizations(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors, divisionIds)
 
 Search for external organizations
 
@@ -2039,9 +2041,10 @@ let trustorId: [String] = [""] // Search for external organizations by trustorId
 let sortOrder: String = "" // The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\"
 let expand: [String] = [""] // which fields, if any, to expand
 let includeTrustors: Bool = true // (true or false) whether or not to include trustor information embedded in the externalOrganization
+let divisionIds: [String] = [""] // which divisions to search, up to 50
 
 // Code example
-ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNumber: pageNumber, q: q, trustorId: trustorId, sortOrder: sortOrder, expand: expand, includeTrustors: includeTrustors) { (response, error) in
+ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNumber: pageNumber, q: q, trustorId: trustorId, sortOrder: sortOrder, expand: expand, includeTrustors: includeTrustors, divisionIds: divisionIds) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2063,6 +2066,7 @@ ExternalContactsAPI.getExternalcontactsOrganizations(pageSize: pageSize, pageNum
 | **sortOrder** | **String**| The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\" | [optional] |
 | **expand** | [**[String]**](String)| which fields, if any, to expand | [optional]<br />**Values**: externaldatasources ("externalDataSources"), division ("division"), identifiers ("identifiers"), externalsources ("externalSources") |
 | **includeTrustors** | **Bool**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional] |
+| **divisionIds** | [**[String]**](String)| which divisions to search, up to 50 | [optional] |
 
 
 ### Return type
@@ -2325,7 +2329,7 @@ ExternalContactsAPI.getExternalcontactsRelationship(relationshipId: relationship
 
 
 
-> [ReverseWhitepagesLookupResult](ReverseWhitepagesLookupResult) getExternalcontactsReversewhitepageslookup(lookupVal, expand)
+> [ReverseWhitepagesLookupResult](ReverseWhitepagesLookupResult) getExternalcontactsReversewhitepageslookup(lookupVal, expand, divisionId)
 
 Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned.
 
@@ -2347,9 +2351,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let lookupVal: String = "" // User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names)
 let expand: [String] = [""] // which field, if any, to expand
+let divisionId: String = "" // Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value
 
 // Code example
-ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookupVal, expand: expand) { (response, error) in
+ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookupVal, expand: expand, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2366,6 +2371,7 @@ ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookup
 | ------------- | ------------- | ------------- | ------------- |
 | **lookupVal** | **String**| User supplied value to lookup contacts/externalOrganizations (supports email addresses, e164 phone numbers, Twitter screen names) | |
 | **expand** | [**[String]**](String)| which field, if any, to expand | [optional]<br />**Values**: contactsExternalorganization ("contacts.externalOrganization"), externaldatasources ("externalDataSources"), division ("division") |
+| **divisionId** | **String**| Specifies which division to lookup contacts/externalOrganizations in, for the given lookup value | [optional] |
 
 
 ### Return type
@@ -2377,7 +2383,7 @@ ExternalContactsAPI.getExternalcontactsReversewhitepageslookup(lookupVal: lookup
 
 
 
-> [CursorContactListing](CursorContactListing) getExternalcontactsScanContacts(limit, cursor)
+> [CursorContactListing](CursorContactListing) getExternalcontactsScanContacts(limit, cursor, divisionId)
 
 Scan for external contacts using paging
 
@@ -2400,9 +2406,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let limit: Int = 0 // The number of contacts per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+let divisionId: String = "" // The division to scan over
 
 // Code example
-ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor) { (response, error) in
+ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2419,6 +2426,7 @@ ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **Int**| The number of contacts per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+| **divisionId** | **String**| The division to scan over | [optional] |
 
 
 ### Return type
@@ -2430,7 +2438,7 @@ ExternalContactsAPI.getExternalcontactsScanContacts(limit: limit, cursor: cursor
 
 
 
-> [CursorNoteListing](CursorNoteListing) getExternalcontactsScanNotes(limit, cursor)
+> [CursorNoteListing](CursorNoteListing) getExternalcontactsScanNotes(limit, cursor, divisionId)
 
 Scan for notes using paging
 
@@ -2453,9 +2461,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let limit: Int = 0 // The number of notes per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+let divisionId: String = "" // The division to scan over
 
 // Code example
-ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor) { (response, error) in
+ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2472,6 +2481,7 @@ ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor) {
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **Int**| The number of notes per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+| **divisionId** | **String**| The division to scan over | [optional] |
 
 
 ### Return type
@@ -2483,7 +2493,7 @@ ExternalContactsAPI.getExternalcontactsScanNotes(limit: limit, cursor: cursor) {
 
 
 
-> [CursorOrganizationListing](CursorOrganizationListing) getExternalcontactsScanOrganizations(limit, cursor)
+> [CursorOrganizationListing](CursorOrganizationListing) getExternalcontactsScanOrganizations(limit, cursor, divisionId)
 
 Scan for external organizations using paging
 
@@ -2506,9 +2516,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let limit: Int = 0 // The number of organizations per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+let divisionId: String = "" // The division to scan over
 
 // Code example
-ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: cursor) { (response, error) in
+ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2525,6 +2536,7 @@ ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: c
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **Int**| The number of organizations per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+| **divisionId** | **String**| The division to scan over | [optional] |
 
 
 ### Return type
@@ -2536,7 +2548,7 @@ ExternalContactsAPI.getExternalcontactsScanOrganizations(limit: limit, cursor: c
 
 
 
-> [CursorRelationshipListing](CursorRelationshipListing) getExternalcontactsScanRelationships(limit, cursor)
+> [CursorRelationshipListing](CursorRelationshipListing) getExternalcontactsScanRelationships(limit, cursor, divisionId)
 
 Scan for relationships
 
@@ -2559,9 +2571,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let limit: Int = 0 // The number of relationships per page; must be between 10 and 200, default is 100
 let cursor: String = "" // Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL
+let divisionId: String = "" // The division to scan over
 
 // Code example
-ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: cursor) { (response, error) in
+ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: cursor, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2578,6 +2591,7 @@ ExternalContactsAPI.getExternalcontactsScanRelationships(limit: limit, cursor: c
 | ------------- | ------------- | ------------- | ------------- |
 | **limit** | **Int**| The number of relationships per page; must be between 10 and 200, default is 100 | [optional] |
 | **cursor** | **String**| Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL | [optional] |
+| **divisionId** | **String**| The division to scan over | [optional] |
 
 
 ### Return type
@@ -4998,4 +5012,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_
