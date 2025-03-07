@@ -131,7 +131,7 @@ open class GeolocationAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -168,7 +168,7 @@ open class GeolocationAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -337,7 +337,7 @@ open class GeolocationAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -374,7 +374,7 @@ open class GeolocationAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",

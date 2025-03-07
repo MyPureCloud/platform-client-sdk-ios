@@ -21,10 +21,10 @@
 | **expiration** | [**Date**](Date) | When this shift trade offer will expire if not matched or approved. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **oneSided** | **Bool** | Whether this is a one-sided shift trade (e.g. the initiating user is not asking for a shift in return) | [optional] |
 | **acceptableIntervals** | **[String]** | Time frames when the initiating user is willing to accept trades. Empty means giving up the shift. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss | [optional] |
-| **reviewedBy** | [**UserReference**](UserReference) | The user who reviewed this shift trade | [optional] |
+| **reviewedBy** | [**UserReference**](UserReference) | The user who reviewed this shift trade. The id may be &#39;System&#39; if it was an automated process | [optional] |
 | **reviewedDate** | [**Date**](Date) | The timestamp when this shift trade was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version data for this trade | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

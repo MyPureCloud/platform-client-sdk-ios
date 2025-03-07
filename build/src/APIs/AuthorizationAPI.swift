@@ -18,7 +18,7 @@ open class AuthorizationAPI {
      Delete a division.
      
      - parameter divisionId: (path) Division ID 
-     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional)
+     - parameter force: (query) DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteAuthorizationDivision(divisionId: String, force: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -40,7 +40,7 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      
      - parameter divisionId: (path) Division ID 
-     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional)
+     - parameter force: (query) DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -1083,7 +1083,7 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "default" : true,
-  "userCount" : 7,
+  "userCount" : 1,
   "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
   "permissions" : [ "permissions", "permissions" ],
   "permissionPolicies" : [ {
@@ -1121,14 +1121,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -1160,14 +1160,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -1202,7 +1202,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -1238,7 +1238,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -1282,7 +1282,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -1294,7 +1294,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -1325,7 +1325,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -1339,7 +1339,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -1370,7 +1370,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -1398,12 +1398,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -1457,30 +1457,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -1526,14 +1526,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -1565,14 +1565,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -1607,7 +1607,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -1643,7 +1643,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -1687,7 +1687,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -1699,7 +1699,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -1730,7 +1730,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -1744,7 +1744,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -1775,7 +1775,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -1803,12 +1803,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -1862,30 +1862,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -1946,14 +1946,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -1985,14 +1985,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -2027,7 +2027,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -2063,7 +2063,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -2107,7 +2107,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -2119,7 +2119,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -2150,7 +2150,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -2164,7 +2164,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -2195,7 +2195,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -2223,12 +2223,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -2282,30 +2282,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -2351,14 +2351,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -2390,14 +2390,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -2432,7 +2432,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -2468,7 +2468,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -2512,7 +2512,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -2524,7 +2524,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -2555,7 +2555,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -2569,7 +2569,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -2600,7 +2600,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -2628,12 +2628,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -2687,30 +2687,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -2843,14 +2843,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -2882,14 +2882,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -2924,7 +2924,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -2960,7 +2960,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -3004,7 +3004,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3016,7 +3016,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -3047,7 +3047,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -3061,7 +3061,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -3092,7 +3092,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -3120,12 +3120,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -3179,30 +3179,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -3248,14 +3248,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -3287,14 +3287,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -3329,7 +3329,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -3365,7 +3365,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -3409,7 +3409,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3421,7 +3421,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -3452,7 +3452,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -3466,7 +3466,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -3497,7 +3497,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -3525,12 +3525,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -3584,30 +3584,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -3668,14 +3668,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -3707,14 +3707,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -3749,7 +3749,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -3785,7 +3785,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -3829,7 +3829,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3841,7 +3841,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -3872,7 +3872,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -3886,7 +3886,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -3917,7 +3917,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -3945,12 +3945,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -4004,30 +4004,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -4073,14 +4073,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4112,14 +4112,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -4154,7 +4154,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -4190,7 +4190,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -4234,7 +4234,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4246,7 +4246,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -4277,7 +4277,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -4291,7 +4291,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -4322,7 +4322,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -4350,12 +4350,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -4409,30 +4409,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -4494,14 +4494,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4533,14 +4533,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -4575,7 +4575,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -4611,7 +4611,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -4655,7 +4655,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4667,7 +4667,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -4698,7 +4698,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -4712,7 +4712,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -4743,7 +4743,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -4771,12 +4771,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -4830,30 +4830,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -4899,14 +4899,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4938,14 +4938,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -4980,7 +4980,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -5016,7 +5016,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -5060,7 +5060,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5072,7 +5072,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -5103,7 +5103,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -5117,7 +5117,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -5148,7 +5148,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -5176,12 +5176,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -5235,30 +5235,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -5319,14 +5319,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -5358,14 +5358,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -5400,7 +5400,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -5436,7 +5436,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -5480,7 +5480,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5492,7 +5492,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -5523,7 +5523,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -5537,7 +5537,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -5568,7 +5568,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -5596,12 +5596,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -5655,30 +5655,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -5724,14 +5724,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -5763,14 +5763,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -5805,7 +5805,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -5841,7 +5841,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -5885,7 +5885,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5897,7 +5897,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -5928,7 +5928,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -5942,7 +5942,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -5973,7 +5973,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -6001,12 +6001,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -6060,30 +6060,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -6112,7 +6112,7 @@ open class AuthorizationAPI {
   } ],
   "roleFromDefault" : {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -6150,14 +6150,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -6189,14 +6189,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -6231,7 +6231,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -6267,7 +6267,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -6311,7 +6311,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -6323,7 +6323,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -6354,7 +6354,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -6368,7 +6368,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -6399,7 +6399,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -6427,12 +6427,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -6486,30 +6486,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -6555,14 +6555,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -6594,14 +6594,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -6636,7 +6636,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -6672,7 +6672,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -6716,7 +6716,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -6728,7 +6728,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -6759,7 +6759,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -6773,7 +6773,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -6804,7 +6804,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -6832,12 +6832,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -6891,30 +6891,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -6975,14 +6975,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -7014,14 +7014,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -7056,7 +7056,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -7092,7 +7092,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -7136,7 +7136,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -7148,7 +7148,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -7179,7 +7179,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -7193,7 +7193,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -7224,7 +7224,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -7252,12 +7252,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -7311,30 +7311,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -7380,14 +7380,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -7419,14 +7419,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -7461,7 +7461,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -7497,7 +7497,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -7541,7 +7541,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -7553,7 +7553,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -7584,7 +7584,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -7598,7 +7598,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -7629,7 +7629,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -7657,12 +7657,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -7716,30 +7716,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -7809,14 +7809,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -7848,14 +7848,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -7890,7 +7890,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -7926,7 +7926,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -7970,7 +7970,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -7982,7 +7982,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -8013,7 +8013,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -8027,7 +8027,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -8058,7 +8058,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -8086,12 +8086,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -8145,30 +8145,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -8214,14 +8214,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -8253,14 +8253,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -8295,7 +8295,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -8331,7 +8331,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -8375,7 +8375,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -8387,7 +8387,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -8418,7 +8418,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -8432,7 +8432,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -8463,7 +8463,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -8491,12 +8491,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -8550,30 +8550,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -8634,14 +8634,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -8673,14 +8673,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -8715,7 +8715,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -8751,7 +8751,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -8795,7 +8795,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -8807,7 +8807,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -8838,7 +8838,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -8852,7 +8852,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -8883,7 +8883,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -8911,12 +8911,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -8970,30 +8970,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -9039,14 +9039,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9078,14 +9078,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -9120,7 +9120,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -9156,7 +9156,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -9200,7 +9200,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -9212,7 +9212,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -9243,7 +9243,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -9257,7 +9257,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -9288,7 +9288,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -9316,12 +9316,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -9375,30 +9375,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -9427,7 +9427,7 @@ open class AuthorizationAPI {
   } ],
   "userOrgRole" : {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -9465,14 +9465,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9504,14 +9504,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -9546,7 +9546,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -9582,7 +9582,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -9626,7 +9626,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -9638,7 +9638,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -9669,7 +9669,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -9683,7 +9683,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -9714,7 +9714,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -9742,12 +9742,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -9801,30 +9801,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -9870,14 +9870,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9909,14 +9909,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -9951,7 +9951,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -9987,7 +9987,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -10031,7 +10031,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10043,7 +10043,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -10074,7 +10074,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -10088,7 +10088,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -10119,7 +10119,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -10147,12 +10147,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -10206,30 +10206,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -10290,14 +10290,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10329,14 +10329,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -10371,7 +10371,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -10407,7 +10407,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -10451,7 +10451,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10463,7 +10463,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -10494,7 +10494,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -10508,7 +10508,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -10539,7 +10539,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -10567,12 +10567,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -10626,30 +10626,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -10695,14 +10695,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10734,14 +10734,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -10776,7 +10776,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -10812,7 +10812,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -10856,7 +10856,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10868,7 +10868,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -10899,7 +10899,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -10913,7 +10913,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -10944,7 +10944,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -10972,12 +10972,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -11031,30 +11031,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -11385,7 +11385,7 @@ open class AuthorizationAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -11423,14 +11423,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -11462,14 +11462,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -11504,7 +11504,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -11540,7 +11540,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -11584,7 +11584,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -11596,7 +11596,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -11627,7 +11627,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -11641,7 +11641,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -11672,7 +11672,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -11700,12 +11700,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -11759,30 +11759,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -11828,14 +11828,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -11867,14 +11867,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -11909,7 +11909,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -11945,7 +11945,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -11989,7 +11989,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -12001,7 +12001,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12032,7 +12032,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12046,7 +12046,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12077,7 +12077,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12105,12 +12105,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -12164,30 +12164,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -12248,14 +12248,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -12287,14 +12287,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -12329,7 +12329,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12365,7 +12365,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12409,7 +12409,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -12421,7 +12421,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12452,7 +12452,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12466,7 +12466,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12497,7 +12497,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12525,12 +12525,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -12584,30 +12584,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -12653,14 +12653,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -12692,14 +12692,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -12734,7 +12734,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12770,7 +12770,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12814,7 +12814,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -12826,7 +12826,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12857,7 +12857,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12871,7 +12871,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12902,7 +12902,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12930,12 +12930,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -12989,30 +12989,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -13048,7 +13048,7 @@ open class AuthorizationAPI {
     "base" : true
   }, {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -13086,14 +13086,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -13125,14 +13125,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -13167,7 +13167,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13203,7 +13203,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13247,7 +13247,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -13259,7 +13259,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13290,7 +13290,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13304,7 +13304,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13335,7 +13335,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13363,12 +13363,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -13422,30 +13422,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -13491,14 +13491,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -13530,14 +13530,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -13572,7 +13572,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13608,7 +13608,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13652,7 +13652,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -13664,7 +13664,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13695,7 +13695,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13709,7 +13709,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13740,7 +13740,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13768,12 +13768,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -13827,30 +13827,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -13911,14 +13911,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -13950,14 +13950,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -13992,7 +13992,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14028,7 +14028,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14072,7 +14072,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -14084,7 +14084,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14115,7 +14115,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14129,7 +14129,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14160,7 +14160,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14188,12 +14188,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -14247,30 +14247,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -14316,14 +14316,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -14355,14 +14355,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -14397,7 +14397,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14433,7 +14433,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14477,7 +14477,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -14489,7 +14489,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14520,7 +14520,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14534,7 +14534,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14565,7 +14565,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14593,12 +14593,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -14652,30 +14652,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -15316,7 +15316,7 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "default" : true,
-  "userCount" : 7,
+  "userCount" : 1,
   "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
   "permissions" : [ "permissions", "permissions" ],
   "permissionPolicies" : [ {
@@ -15354,14 +15354,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -15393,14 +15393,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -15435,7 +15435,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -15471,7 +15471,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -15515,7 +15515,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -15527,7 +15527,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -15558,7 +15558,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -15572,7 +15572,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -15603,7 +15603,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -15631,12 +15631,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -15690,30 +15690,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -15759,14 +15759,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -15798,14 +15798,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -15840,7 +15840,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -15876,7 +15876,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -15920,7 +15920,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -15932,7 +15932,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -15963,7 +15963,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -15977,7 +15977,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -16008,7 +16008,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -16036,12 +16036,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -16095,30 +16095,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -16179,14 +16179,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -16218,14 +16218,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -16260,7 +16260,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -16296,7 +16296,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -16340,7 +16340,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -16352,7 +16352,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -16383,7 +16383,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -16397,7 +16397,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -16428,7 +16428,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -16456,12 +16456,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -16515,30 +16515,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -16584,14 +16584,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -16623,14 +16623,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -16665,7 +16665,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -16701,7 +16701,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -16745,7 +16745,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -16757,7 +16757,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -16788,7 +16788,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -16802,7 +16802,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -16833,7 +16833,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -16861,12 +16861,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -16920,30 +16920,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -17148,10 +17148,10 @@ open class AuthorizationAPI {
      Recreate a previously deleted division.
      
      - parameter divisionId: (path) Division ID 
-     - parameter body: (body) Recreated division data (optional)
+     - parameter body: (body) Recreated division data 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAuthorizationDivisionRestore(divisionId: String, body: AuthzDivision? = nil, completion: @escaping ((_ data: AuthzDivision?,_ error: Error?) -> Void)) {
+    open class func postAuthorizationDivisionRestore(divisionId: String, body: AuthzDivision, completion: @escaping ((_ data: AuthzDivision?,_ error: Error?) -> Void)) {
         let requestBuilder = postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: divisionId, body: body)
         requestBuilder.execute { (response: Response<AuthzDivision>?, error) -> Void in
             do {
@@ -17187,11 +17187,11 @@ open class AuthorizationAPI {
 }, statusCode=200}]
      
      - parameter divisionId: (path) Division ID 
-     - parameter body: (body) Recreated division data (optional)
+     - parameter body: (body) Recreated division data 
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision? = nil) -> RequestBuilder<AuthzDivision> {        
+    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {        
         var path = "/api/v2/authorization/divisions/{divisionId}/restore"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -17396,14 +17396,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -17435,14 +17435,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -17477,7 +17477,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -17513,7 +17513,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -17557,7 +17557,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -17569,7 +17569,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -17600,7 +17600,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -17614,7 +17614,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -17645,7 +17645,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -17673,12 +17673,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -17732,30 +17732,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -17801,14 +17801,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -17840,14 +17840,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -17882,7 +17882,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -17918,7 +17918,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -17962,7 +17962,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -17974,7 +17974,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -18005,7 +18005,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -18019,7 +18019,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -18050,7 +18050,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -18078,12 +18078,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -18137,30 +18137,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -18221,14 +18221,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -18260,14 +18260,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -18302,7 +18302,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -18338,7 +18338,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -18382,7 +18382,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -18394,7 +18394,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -18425,7 +18425,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -18439,7 +18439,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -18470,7 +18470,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -18498,12 +18498,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -18557,30 +18557,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -18626,14 +18626,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -18665,14 +18665,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -18707,7 +18707,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -18743,7 +18743,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -18787,7 +18787,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -18799,7 +18799,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -18830,7 +18830,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -18844,7 +18844,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -18875,7 +18875,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -18903,12 +18903,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -18962,30 +18962,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -19047,14 +19047,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -19086,14 +19086,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -19128,7 +19128,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -19164,7 +19164,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -19208,7 +19208,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -19220,7 +19220,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -19251,7 +19251,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -19265,7 +19265,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -19296,7 +19296,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -19324,12 +19324,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -19383,30 +19383,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -19452,14 +19452,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -19491,14 +19491,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -19533,7 +19533,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -19569,7 +19569,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -19613,7 +19613,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -19625,7 +19625,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -19656,7 +19656,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -19670,7 +19670,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -19701,7 +19701,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -19729,12 +19729,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -19788,30 +19788,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -19872,14 +19872,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -19911,14 +19911,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -19953,7 +19953,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -19989,7 +19989,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -20033,7 +20033,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -20045,7 +20045,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -20076,7 +20076,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -20090,7 +20090,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -20121,7 +20121,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -20149,12 +20149,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -20208,30 +20208,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -20277,14 +20277,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -20316,14 +20316,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -20358,7 +20358,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -20394,7 +20394,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -20438,7 +20438,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -20450,7 +20450,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -20481,7 +20481,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -20495,7 +20495,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -20526,7 +20526,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -20554,12 +20554,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -20613,30 +20613,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -20665,7 +20665,7 @@ open class AuthorizationAPI {
   } ],
   "roleFromDefault" : {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -20703,14 +20703,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -20742,14 +20742,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -20784,7 +20784,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -20820,7 +20820,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -20864,7 +20864,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -20876,7 +20876,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -20907,7 +20907,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -20921,7 +20921,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -20952,7 +20952,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -20980,12 +20980,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -21039,30 +21039,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -21108,14 +21108,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -21147,14 +21147,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -21189,7 +21189,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -21225,7 +21225,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -21269,7 +21269,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -21281,7 +21281,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -21312,7 +21312,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -21326,7 +21326,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -21357,7 +21357,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -21385,12 +21385,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -21444,30 +21444,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -21528,14 +21528,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -21567,14 +21567,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -21609,7 +21609,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -21645,7 +21645,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -21689,7 +21689,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -21701,7 +21701,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -21732,7 +21732,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -21746,7 +21746,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -21777,7 +21777,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -21805,12 +21805,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -21864,30 +21864,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -21933,14 +21933,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -21972,14 +21972,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -22014,7 +22014,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -22050,7 +22050,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -22094,7 +22094,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -22106,7 +22106,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -22137,7 +22137,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -22151,7 +22151,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -22182,7 +22182,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -22210,12 +22210,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -22269,30 +22269,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -22362,14 +22362,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -22401,14 +22401,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -22443,7 +22443,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -22479,7 +22479,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -22523,7 +22523,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -22535,7 +22535,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -22566,7 +22566,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -22580,7 +22580,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -22611,7 +22611,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -22639,12 +22639,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -22698,30 +22698,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -22767,14 +22767,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -22806,14 +22806,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -22848,7 +22848,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -22884,7 +22884,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -22928,7 +22928,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -22940,7 +22940,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -22971,7 +22971,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -22985,7 +22985,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -23016,7 +23016,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -23044,12 +23044,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -23103,30 +23103,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -23187,14 +23187,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -23226,14 +23226,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -23268,7 +23268,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -23304,7 +23304,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -23348,7 +23348,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -23360,7 +23360,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -23391,7 +23391,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -23405,7 +23405,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -23436,7 +23436,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -23464,12 +23464,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -23523,30 +23523,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -23592,14 +23592,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -23631,14 +23631,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -23673,7 +23673,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -23709,7 +23709,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -23753,7 +23753,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -23765,7 +23765,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -23796,7 +23796,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -23810,7 +23810,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -23841,7 +23841,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -23869,12 +23869,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -23928,30 +23928,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -23980,7 +23980,7 @@ open class AuthorizationAPI {
   } ],
   "userOrgRole" : {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -24018,14 +24018,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -24057,14 +24057,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -24099,7 +24099,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -24135,7 +24135,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -24179,7 +24179,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -24191,7 +24191,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -24222,7 +24222,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -24236,7 +24236,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -24267,7 +24267,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -24295,12 +24295,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -24354,30 +24354,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -24423,14 +24423,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -24462,14 +24462,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -24504,7 +24504,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -24540,7 +24540,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -24584,7 +24584,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -24596,7 +24596,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -24627,7 +24627,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -24641,7 +24641,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -24672,7 +24672,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -24700,12 +24700,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -24759,30 +24759,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -24843,14 +24843,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -24882,14 +24882,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -24924,7 +24924,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -24960,7 +24960,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -25004,7 +25004,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -25016,7 +25016,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -25047,7 +25047,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -25061,7 +25061,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -25092,7 +25092,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -25120,12 +25120,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -25179,30 +25179,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -25248,14 +25248,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -25287,14 +25287,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -25329,7 +25329,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -25365,7 +25365,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -25409,7 +25409,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -25421,7 +25421,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -25452,7 +25452,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -25466,7 +25466,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -25497,7 +25497,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -25525,12 +25525,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -25584,30 +25584,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -25702,7 +25702,7 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "default" : true,
-  "userCount" : 7,
+  "userCount" : 1,
   "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
   "permissions" : [ "permissions", "permissions" ],
   "permissionPolicies" : [ {
@@ -25740,14 +25740,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -25779,14 +25779,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -25821,7 +25821,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -25857,7 +25857,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -25901,7 +25901,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -25913,7 +25913,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -25944,7 +25944,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -25958,7 +25958,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -25989,7 +25989,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -26017,12 +26017,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -26076,30 +26076,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -26145,14 +26145,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -26184,14 +26184,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -26226,7 +26226,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -26262,7 +26262,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -26306,7 +26306,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -26318,7 +26318,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -26349,7 +26349,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -26363,7 +26363,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -26394,7 +26394,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -26422,12 +26422,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -26481,30 +26481,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -26565,14 +26565,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -26604,14 +26604,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -26646,7 +26646,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -26682,7 +26682,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -26726,7 +26726,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -26738,7 +26738,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -26769,7 +26769,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -26783,7 +26783,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -26814,7 +26814,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -26842,12 +26842,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -26901,30 +26901,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -26970,14 +26970,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -27009,14 +27009,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -27051,7 +27051,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -27087,7 +27087,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -27131,7 +27131,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -27143,7 +27143,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -27174,7 +27174,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -27188,7 +27188,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -27219,7 +27219,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -27247,12 +27247,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -27306,30 +27306,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -27420,7 +27420,7 @@ open class AuthorizationAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -27458,14 +27458,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -27497,14 +27497,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -27539,7 +27539,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -27575,7 +27575,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -27619,7 +27619,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -27631,7 +27631,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -27662,7 +27662,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -27676,7 +27676,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -27707,7 +27707,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -27735,12 +27735,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -27794,30 +27794,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -27863,14 +27863,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -27902,14 +27902,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -27944,7 +27944,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -27980,7 +27980,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -28024,7 +28024,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -28036,7 +28036,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -28067,7 +28067,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -28081,7 +28081,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -28112,7 +28112,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -28140,12 +28140,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -28199,30 +28199,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -28283,14 +28283,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -28322,14 +28322,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -28364,7 +28364,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -28400,7 +28400,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -28444,7 +28444,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -28456,7 +28456,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -28487,7 +28487,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -28501,7 +28501,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -28532,7 +28532,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -28560,12 +28560,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -28619,30 +28619,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -28688,14 +28688,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -28727,14 +28727,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -28769,7 +28769,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -28805,7 +28805,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -28849,7 +28849,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -28861,7 +28861,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -28892,7 +28892,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -28906,7 +28906,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -28937,7 +28937,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -28965,12 +28965,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -29024,30 +29024,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -29083,7 +29083,7 @@ open class AuthorizationAPI {
     "base" : true
   }, {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -29121,14 +29121,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -29160,14 +29160,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -29202,7 +29202,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -29238,7 +29238,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -29282,7 +29282,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -29294,7 +29294,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -29325,7 +29325,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -29339,7 +29339,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -29370,7 +29370,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -29398,12 +29398,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -29457,30 +29457,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -29526,14 +29526,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -29565,14 +29565,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -29607,7 +29607,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -29643,7 +29643,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -29687,7 +29687,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -29699,7 +29699,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -29730,7 +29730,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -29744,7 +29744,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -29775,7 +29775,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -29803,12 +29803,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -29862,30 +29862,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -29946,14 +29946,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -29985,14 +29985,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -30027,7 +30027,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -30063,7 +30063,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -30107,7 +30107,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -30119,7 +30119,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -30150,7 +30150,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -30164,7 +30164,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -30195,7 +30195,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -30223,12 +30223,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -30282,30 +30282,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -30351,14 +30351,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -30390,14 +30390,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -30432,7 +30432,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -30468,7 +30468,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -30512,7 +30512,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -30524,7 +30524,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -30555,7 +30555,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -30569,7 +30569,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -30600,7 +30600,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -30628,12 +30628,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -30687,30 +30687,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -31104,7 +31104,7 @@ open class AuthorizationAPI {
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
   "default" : true,
-  "userCount" : 7,
+  "userCount" : 1,
   "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
   "permissions" : [ "permissions", "permissions" ],
   "permissionPolicies" : [ {
@@ -31142,14 +31142,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -31181,14 +31181,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -31223,7 +31223,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -31259,7 +31259,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -31303,7 +31303,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -31315,7 +31315,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -31346,7 +31346,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -31360,7 +31360,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -31391,7 +31391,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -31419,12 +31419,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -31478,30 +31478,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -31547,14 +31547,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -31586,14 +31586,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -31628,7 +31628,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -31664,7 +31664,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -31708,7 +31708,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -31720,7 +31720,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -31751,7 +31751,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -31765,7 +31765,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -31796,7 +31796,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -31824,12 +31824,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -31883,30 +31883,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -31967,14 +31967,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -32006,14 +32006,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -32048,7 +32048,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -32084,7 +32084,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -32128,7 +32128,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -32140,7 +32140,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -32171,7 +32171,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -32185,7 +32185,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -32216,7 +32216,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -32244,12 +32244,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -32303,30 +32303,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -32372,14 +32372,14 @@ open class AuthorizationAPI {
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "skillUri" : "https://openapi-generator.tech",
             "id" : "id",
             "state" : "active",
-            "proficiency" : 7.061401241503109
+            "proficiency" : 2.3021358869347655
           } ],
           "station" : "{}",
           "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -32411,14 +32411,14 @@ open class AuthorizationAPI {
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           }, {
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "state" : "active",
             "languageUri" : "https://openapi-generator.tech",
-            "proficiency" : 9.301444243932576
+            "proficiency" : 7.061401241503109
           } ],
           "selfUri" : "https://openapi-generator.tech",
           "conversationSummary" : "{}",
@@ -32453,7 +32453,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -32489,7 +32489,7 @@ open class AuthorizationAPI {
             "owners" : [ null, null ],
             "rolesEnabled" : true,
             "type" : "official",
-            "version" : 2,
+            "version" : 5,
             "rulesVisible" : true,
             "name" : "name",
             "id" : "id",
@@ -32533,7 +32533,7 @@ open class AuthorizationAPI {
           },
           "team" : "{}",
           "certifications" : [ "certifications", "certifications" ],
-          "version" : 6,
+          "version" : 0,
           "outOfOffice" : "{}",
           "languagePreference" : "languagePreference",
           "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -32545,7 +32545,7 @@ open class AuthorizationAPI {
           "locations" : [ {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -32576,7 +32576,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -32590,7 +32590,7 @@ open class AuthorizationAPI {
           }, {
             "notes" : "notes",
             "coordinates" : {
-              "key" : 1.4658129805029452
+              "key" : 6.027456183070403
             },
             "locationDefinition" : {
               "images" : "images",
@@ -32621,7 +32621,7 @@ open class AuthorizationAPI {
                 "resolution" : "resolution"
               } ],
               "emergencyNumber" : "{}",
-              "version" : 5,
+              "version" : 1,
               "path" : [ "path", "path" ],
               "addressStored" : true,
               "name" : "name",
@@ -32649,12 +32649,12 @@ open class AuthorizationAPI {
           "emailInQueueFlow" : "{}",
           "autoAnswerOnly" : true,
           "routingRules" : [ {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           }, {
-            "waitSeconds" : 5.637376656633329,
-            "threshold" : 5,
+            "waitSeconds" : 7.386281948385884,
+            "threshold" : 4,
             "operator" : "MEETS_THRESHOLD"
           } ],
           "skillEvaluationMethod" : "NONE",
@@ -32708,30 +32708,30 @@ open class AuthorizationAPI {
           "dateCreated" : "2000-01-23T04:56:07.000+00:00",
           "queueFlow" : "{}",
           "callingPartyNumber" : "callingPartyNumber",
-          "userMemberCount" : 6,
+          "userMemberCount" : 3,
           "modifiedBy" : "modifiedBy",
           "id" : "id",
           "memberGroups" : [ {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           }, {
             "division" : "{}",
-            "memberCount" : 2,
+            "memberCount" : 1,
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "id" : "id",
             "type" : "TEAM"
           } ],
           "scoringMethod" : "TimestampAndPriority",
-          "joinedMemberCount" : 1,
+          "joinedMemberCount" : 2,
           "messageInQueueFlow" : "{}",
           "callingPartyName" : "callingPartyName",
           "acwSettings" : "{}",
-          "memberCount" : 0,
+          "memberCount" : 9,
           "selfUri" : "https://openapi-generator.tech",
           "dateModified" : "2000-01-23T04:56:07.000+00:00",
           "whisperPrompt" : "{}",
@@ -32939,7 +32939,7 @@ open class AuthorizationAPI {
   "pageNumber" : 6,
   "entities" : [ {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -32977,14 +32977,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -33016,14 +33016,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -33058,7 +33058,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -33094,7 +33094,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -33138,7 +33138,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -33150,7 +33150,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -33181,7 +33181,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -33195,7 +33195,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -33226,7 +33226,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -33254,12 +33254,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -33313,30 +33313,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -33382,14 +33382,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -33421,14 +33421,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -33463,7 +33463,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -33499,7 +33499,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -33543,7 +33543,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -33555,7 +33555,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -33586,7 +33586,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -33600,7 +33600,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -33631,7 +33631,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -33659,12 +33659,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -33718,30 +33718,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -33802,14 +33802,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -33841,14 +33841,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -33883,7 +33883,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -33919,7 +33919,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -33963,7 +33963,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -33975,7 +33975,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -34006,7 +34006,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -34020,7 +34020,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -34051,7 +34051,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -34079,12 +34079,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -34138,30 +34138,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -34207,14 +34207,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -34246,14 +34246,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -34288,7 +34288,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -34324,7 +34324,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -34368,7 +34368,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -34380,7 +34380,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -34411,7 +34411,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -34425,7 +34425,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -34456,7 +34456,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -34484,12 +34484,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -34543,30 +34543,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -34602,7 +34602,7 @@ open class AuthorizationAPI {
     "base" : true
   }, {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -34640,14 +34640,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -34679,14 +34679,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -34721,7 +34721,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -34757,7 +34757,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -34801,7 +34801,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -34813,7 +34813,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -34844,7 +34844,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -34858,7 +34858,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -34889,7 +34889,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -34917,12 +34917,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -34976,30 +34976,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -35045,14 +35045,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -35084,14 +35084,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -35126,7 +35126,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -35162,7 +35162,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -35206,7 +35206,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -35218,7 +35218,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -35249,7 +35249,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -35263,7 +35263,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -35294,7 +35294,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -35322,12 +35322,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -35381,30 +35381,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -35465,14 +35465,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -35504,14 +35504,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -35546,7 +35546,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -35582,7 +35582,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -35626,7 +35626,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -35638,7 +35638,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -35669,7 +35669,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -35683,7 +35683,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -35714,7 +35714,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -35742,12 +35742,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -35801,30 +35801,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -35870,14 +35870,14 @@ open class AuthorizationAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -35909,14 +35909,14 @@ open class AuthorizationAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -35951,7 +35951,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -35987,7 +35987,7 @@ open class AuthorizationAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -36031,7 +36031,7 @@ open class AuthorizationAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -36043,7 +36043,7 @@ open class AuthorizationAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -36074,7 +36074,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -36088,7 +36088,7 @@ open class AuthorizationAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -36119,7 +36119,7 @@ open class AuthorizationAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -36147,12 +36147,12 @@ open class AuthorizationAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -36206,30 +36206,30 @@ open class AuthorizationAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",

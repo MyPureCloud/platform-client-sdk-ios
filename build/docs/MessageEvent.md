@@ -12,7 +12,8 @@ Message event element.  Examples include: system messages, typing indicators, co
 | **typing** | [**EventTyping**](EventTyping) | Typing event. | [optional] |
 | **presence** | [**EventPresence**](EventPresence) | Presence event. | [optional] |
 | **video** | [**EventVideo**](EventVideo) | Video event. | [optional] |
+| **reactions** | [**[ContentReaction]**](ContentReaction) | A list of reactions to a message. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

@@ -501,16 +501,19 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Retrieves a single Action matching id.
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter includeConfig: (query) Return config in response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsAction(actionId: String, expand: Expand_getIntegrationsAction? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: Action?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionWithRequestBuilder(actionId: actionId, expand: expand, includeConfig: includeConfig)
+    open class func getIntegrationsAction(actionId: String, expand: Expand_getIntegrationsAction? = nil, flatten: Bool? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: Action?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionWithRequestBuilder(actionId: actionId, expand: expand, flatten: flatten, includeConfig: includeConfig)
         requestBuilder.execute { (response: Response<Action>?, error) -> Void in
             do {
                 if let e = error {
@@ -547,11 +550,12 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter includeConfig: (query) Return config in response. (optional)
 
      - returns: RequestBuilder<Action> 
      */
-    open class func getIntegrationsActionWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsAction? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {        
+    open class func getIntegrationsActionWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsAction? = nil, flatten: Bool? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -562,6 +566,7 @@ open class IntegrationsAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue, 
+            "flatten": flatten, 
             "includeConfig": includeConfig
         ])
 
@@ -580,16 +585,19 @@ open class IntegrationsAPI {
     
     
     
+    
+    
     /**
      Retrieve a Draft
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter includeConfig: (query) Return config in response. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getIntegrationsActionDraft(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: Action?,_ error: Error?) -> Void)) {
-        let requestBuilder = getIntegrationsActionDraftWithRequestBuilder(actionId: actionId, expand: expand, includeConfig: includeConfig)
+    open class func getIntegrationsActionDraft(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, flatten: Bool? = nil, includeConfig: Bool? = nil, completion: @escaping ((_ data: Action?,_ error: Error?) -> Void)) {
+        let requestBuilder = getIntegrationsActionDraftWithRequestBuilder(actionId: actionId, expand: expand, flatten: flatten, includeConfig: includeConfig)
         requestBuilder.execute { (response: Response<Action>?, error) -> Void in
             do {
                 if let e = error {
@@ -626,11 +634,12 @@ open class IntegrationsAPI {
      
      - parameter actionId: (path) actionId 
      - parameter expand: (query) Indicates a field in the response which should be expanded. (optional)
+     - parameter flatten: (query) Indicates the response should be reformatted, based on Architect&#39;s flattening format. (optional)
      - parameter includeConfig: (query) Return config in response. (optional)
 
      - returns: RequestBuilder<Action> 
      */
-    open class func getIntegrationsActionDraftWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {        
+    open class func getIntegrationsActionDraftWithRequestBuilder(actionId: String, expand: Expand_getIntegrationsActionDraft? = nil, flatten: Bool? = nil, includeConfig: Bool? = nil) -> RequestBuilder<Action> {        
         var path = "/api/v2/integrations/actions/{actionId}/draft"
         let actionIdPreEscape = "\(actionId)"
         let actionIdPostEscape = actionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -641,6 +650,7 @@ open class IntegrationsAPI {
         var requestUrl = URLComponents(string: URLString)
         requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
             "expand": expand?.rawValue, 
+            "flatten": flatten, 
             "includeConfig": includeConfig
         ])
 

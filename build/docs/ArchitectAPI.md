@@ -80,6 +80,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getFlowsDatatablesDivisionviews**](ArchitectAPI#getFlowsDatatablesDivisionviews) | Retrieve a list of datatables for the org |
 | [**getFlowsDivisionviews**](ArchitectAPI#getFlowsDivisionviews) | Get a pageable list of basic flow information objects filterable by query parameters. |
 | [**getFlowsExecution**](ArchitectAPI#getFlowsExecution) | Get a flow execution&#39;s details. Flow execution details are available for several days after the flow is started. |
+| [**getFlowsExportJob**](ArchitectAPI#getFlowsExportJob) | Fetch Architect Export Job Status |
 | [**getFlowsInstance**](ArchitectAPI#getFlowsInstance) | Start a process (job) to prepare a download of a singular flow execution data instance by Id |
 | [**getFlowsInstancesJob**](ArchitectAPI#getFlowsInstancesJob) | Get the status and/or results of an asynchronous flow execution data retrieval job |
 | [**getFlowsInstancesQuerycapabilities**](ArchitectAPI#getFlowsInstancesQuerycapabilities) | Retrieve a list of capabilities that the org can use to query for execution data |
@@ -126,6 +127,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postFlowsDatatableRows**](ArchitectAPI#postFlowsDatatableRows) | Create a new row entry for the datatable. |
 | [**postFlowsDatatables**](ArchitectAPI#postFlowsDatatables) | Create a new datatable with the specified json-schema definition |
 | [**postFlowsExecutions**](ArchitectAPI#postFlowsExecutions) | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
+| [**postFlowsExportJobs**](ArchitectAPI#postFlowsExportJobs) | Register Architect Export Job |
 | [**postFlowsInstancesJobs**](ArchitectAPI#postFlowsInstancesJobs) | Start a process (job) that will prepare a list of execution data IDs for download. |
 | [**postFlowsInstancesQuery**](ArchitectAPI#postFlowsInstancesQuery) | Query the database of existing flow histories to look for particular flow criteria |
 | [**postFlowsJobs**](ArchitectAPI#postFlowsJobs) | Register Architect Job. Returns a URL where a file, such as an Architect flow YAML file, can be PUT which will then initiate the job. |
@@ -4422,6 +4424,58 @@ ArchitectAPI.getFlowsExecution(flowExecutionId: flowExecutionId) { (response, er
 [**FlowRuntimeExecution**](FlowRuntimeExecution)
 
 
+## getFlowsExportJob
+
+
+
+> [ArchitectExportJobStateResponse](ArchitectExportJobStateResponse) getFlowsExportJob(jobId, expand)
+
+Fetch Architect Export Job Status
+
+
+
+Wraps GET /api/v2/flows/export/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* architect:jobExport:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let jobId: String = "" // Job ID
+let expand: [String] = [""] // Which fields, if any, to expand.
+
+// Code example
+ArchitectAPI.getFlowsExportJob(jobId: jobId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.getFlowsExportJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **String**| Job ID | |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: messages ("messages") |
+
+
+### Return type
+
+[**ArchitectExportJobStateResponse**](ArchitectExportJobStateResponse)
+
+
 ## getFlowsInstance
 
 
@@ -6866,6 +6920,56 @@ ArchitectAPI.postFlowsExecutions(flowLaunchRequest: flowLaunchRequest) { (respon
 [**FlowExecutionLaunchResponse**](FlowExecutionLaunchResponse)
 
 
+## postFlowsExportJobs
+
+
+
+> [RegisterArchitectExportJobResponse](RegisterArchitectExportJobResponse) postFlowsExportJobs(body)
+
+Register Architect Export Job
+
+
+
+Wraps POST /api/v2/flows/export/jobs  
+
+Requires ALL permissions: 
+
+* architect:jobExport:create
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: RegisterArchitectExportJob = new RegisterArchitectExportJob(...) // 
+
+// Code example
+ArchitectAPI.postFlowsExportJobs(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ArchitectAPI.postFlowsExportJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**RegisterArchitectExportJob**](RegisterArchitectExportJob)|  | |
+
+
+### Return type
+
+[**RegisterArchitectExportJobResponse**](RegisterArchitectExportJobResponse)
+
+
 ## postFlowsInstancesJobs
 
 
@@ -7873,4 +7977,4 @@ ArchitectAPI.putFlowsOutcome(flowOutcomeId: flowOutcomeId, body: body) { (respon
 [**Operation**](Operation)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

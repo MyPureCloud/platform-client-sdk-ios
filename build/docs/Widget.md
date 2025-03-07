@@ -33,8 +33,9 @@
 | **showTimeInStatus** | **Bool** | Indicates the show time in status of a widget configuration. | [optional] |
 | **showOfflineAgents** | **Bool** | Indicates to show offline agent widget. | [optional] |
 | **selectedStatuses** | **[String]** | Indicates the selected statuses used to filter the agent widget in the dashboard. | [optional] |
+| **selectedSegmentTypes** | **[String]** | Indicates the selected segment types used to filter the agent activity in the dashboard. | [optional] |
 | **agentInteractionSortOrder** | **String** | The sort order of the interactions in the agent status widget. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

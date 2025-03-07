@@ -17,7 +17,9 @@ Create coaching appointment request
 | **documentIds** | **[String]** | IDs of documents associated with this coaching appointment. | [optional] |
 | **wfmSchedule** | [**WfmScheduleReference**](WfmScheduleReference) | The Workforce Management schedule the appointment is associated with. | [optional] |
 | **externalLinks** | **[String]** | The list of external links related to the appointment | [optional] |
+| **location** | **String** | The location of the appointment | [optional] |
+| **shareInsightsData** | **Bool** | Whether to share the insight data | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

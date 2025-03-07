@@ -47,6 +47,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageTrainings) | Get all trainings information for a knowledgebase |
 | [**getKnowledgeKnowledgebaseOperations**](KnowledgeAPI#getKnowledgeKnowledgebaseOperations) | Get operations |
 | [**getKnowledgeKnowledgebaseOperationsUsersQuery**](KnowledgeAPI#getKnowledgeKnowledgebaseOperationsUsersQuery) | Get ids of operation creator users and oauth clients |
+| [**getKnowledgeKnowledgebaseParseJob**](KnowledgeAPI#getKnowledgeKnowledgebaseParseJob) | Get parse job report |
 | [**getKnowledgeKnowledgebaseSources**](KnowledgeAPI#getKnowledgeKnowledgebaseSources) | Get Knowledge integration sources |
 | [**getKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#getKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Get Salesforce Knowledge integration source |
 | [**getKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#getKnowledgeKnowledgebaseSourcesServicenowSourceId) | Get ServiceNow Knowledge integration source |
@@ -54,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseUnansweredGroup**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroup) | Get knowledge base unanswered group for a particular groupId |
 | [**getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Get knowledge base unanswered phrase group for a particular phraseGroupId |
 | [**getKnowledgeKnowledgebaseUnansweredGroups**](KnowledgeAPI#getKnowledgeKnowledgebaseUnansweredGroups) | Get knowledge base unanswered groups |
+| [**getKnowledgeKnowledgebaseUploadsUrlsJob**](KnowledgeAPI#getKnowledgeKnowledgebaseUploadsUrlsJob) | Get content upload from URL job status |
 | [**getKnowledgeKnowledgebases**](KnowledgeAPI#getKnowledgeKnowledgebases) | Get knowledge bases |
 | [**patchKnowledgeGuestSessionDocumentsSearchSearchId**](KnowledgeAPI#patchKnowledgeGuestSessionDocumentsSearchSearchId) | Update search result. |
 | [**patchKnowledgeKnowledgebase**](KnowledgeAPI#patchKnowledgeKnowledgebase) | Update knowledge base |
@@ -68,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI#patchKnowledgeKnowledgebaseLanguageDocument) | Update document |
 | [**patchKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI#patchKnowledgeKnowledgebaseLanguageDocuments) | Update documents collection |
 | [**patchKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI#patchKnowledgeKnowledgebaseLanguageDocumentsImport) | Start import operation |
+| [**patchKnowledgeKnowledgebaseParseJob**](KnowledgeAPI#patchKnowledgeKnowledgebaseParseJob) | Send update to the parse operation |
 | [**patchKnowledgeKnowledgebaseSynchronizeJob**](KnowledgeAPI#patchKnowledgeKnowledgebaseSynchronizeJob) | Update synchronization job |
 | [**patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](KnowledgeAPI#patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | Update a Knowledge base unanswered phrase group |
 | [**postKnowledgeDocumentuploads**](KnowledgeAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
@@ -99,12 +102,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageDocumentsImports) | Create import operation |
 | [**postKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageTrainingPromote) | Promote trained documents from draft state to active. |
 | [**postKnowledgeKnowledgebaseLanguageTrainings**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageTrainings) | Trigger training |
+| [**postKnowledgeKnowledgebaseParseJobImport**](KnowledgeAPI#postKnowledgeKnowledgebaseParseJobImport) | Import the parsed articles |
+| [**postKnowledgeKnowledgebaseParseJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseParseJobs) | Create parse job |
 | [**postKnowledgeKnowledgebaseSearch**](KnowledgeAPI#postKnowledgeKnowledgebaseSearch) | Search Documents |
 | [**postKnowledgeKnowledgebaseSourcesSalesforce**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesSalesforce) | Create Salesforce Knowledge integration source |
 | [**postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync) | Start sync on Salesforce Knowledge integration source |
 | [**postKnowledgeKnowledgebaseSourcesServicenow**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesServicenow) | Create ServiceNow Knowledge integration source |
 | [**postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync**](KnowledgeAPI#postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync) | Start synchronization on ServiceNow Knowledge integration source |
 | [**postKnowledgeKnowledgebaseSynchronizeJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseSynchronizeJobs) | Create synchronization job |
+| [**postKnowledgeKnowledgebaseUploadsUrlsJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseUploadsUrlsJobs) | Create content upload from URL job |
 | [**postKnowledgeKnowledgebases**](KnowledgeAPI#postKnowledgeKnowledgebases) | Create new knowledge base |
 | [**putKnowledgeKnowledgebaseSourcesSalesforceSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesSalesforceSourceId) | Update Salesforce Knowledge integration source |
 | [**putKnowledgeKnowledgebaseSourcesServicenowSourceId**](KnowledgeAPI#putKnowledgeKnowledgebaseSourcesServicenowSourceId) | Update ServiceNow Knowledge integration source |
@@ -2531,6 +2537,60 @@ KnowledgeAPI.getKnowledgeKnowledgebaseOperationsUsersQuery(knowledgeBaseId: know
 [**OperationCreatorUserResponse**](OperationCreatorUserResponse)
 
 
+## getKnowledgeKnowledgebaseParseJob
+
+
+
+> [KnowledgeParseJobResponse](KnowledgeParseJobResponse) getKnowledgeKnowledgebaseParseJob(knowledgeBaseId, parseJobId, expand)
+
+Get parse job report
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}  
+
+Requires ALL permissions: 
+
+* knowledge:importJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let parseJobId: String = "" // Parse job ID
+let expand: [String] = [""] // If expand contains 'urls' downloadURL and failedEntitiesURL will be filled.
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseParseJob(knowledgeBaseId: knowledgeBaseId, parseJobId: parseJobId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseParseJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **parseJobId** | **String**| Parse job ID | |
+| **expand** | [**[String]**](String)| If expand contains 'urls' downloadURL and failedEntitiesURL will be filled. | [optional]<br />**Values**: urls ("urls") |
+
+
+### Return type
+
+[**KnowledgeParseJobResponse**](KnowledgeParseJobResponse)
+
+
 ## getKnowledgeKnowledgebaseSources
 
 
@@ -2919,6 +2979,58 @@ KnowledgeAPI.getKnowledgeKnowledgebaseUnansweredGroups(knowledgeBaseId: knowledg
 ### Return type
 
 [**UnansweredGroups**](UnansweredGroups)
+
+
+## getKnowledgeKnowledgebaseUploadsUrlsJob
+
+
+
+> [GetUploadSourceUrlJobStatusResponse](GetUploadSourceUrlJobStatusResponse) getKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId, jobId)
+
+Get content upload from URL job status
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let jobId: String = "" // Upload job ID
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId: knowledgeBaseId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseUploadsUrlsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **jobId** | **String**| Upload job ID | |
+
+
+### Return type
+
+[**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse)
 
 
 ## getKnowledgeKnowledgebases
@@ -3693,6 +3805,59 @@ KnowledgeAPI.patchKnowledgeKnowledgebaseLanguageDocumentsImport(knowledgeBaseId:
 ### Return type
 
 [**KnowledgeImport**](KnowledgeImport)
+
+
+## patchKnowledgeKnowledgebaseParseJob
+
+
+
+> Void patchKnowledgeKnowledgebaseParseJob(knowledgeBaseId, parseJobId, body)
+
+Send update to the parse operation
+
+
+
+Wraps PATCH /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}  
+
+Requires ALL permissions: 
+
+* knowledge:importJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let parseJobId: String = "" // Parse job ID
+let body: KnowledgeParseJobRequestPatch = new KnowledgeParseJobRequestPatch(...) // 
+
+// Code example
+KnowledgeAPI.patchKnowledgeKnowledgebaseParseJob(knowledgeBaseId: knowledgeBaseId, parseJobId: parseJobId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.patchKnowledgeKnowledgebaseParseJob was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **parseJobId** | **String**| Parse job ID | |
+| **body** | [**KnowledgeParseJobRequestPatch**](KnowledgeParseJobRequestPatch)|  | |
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## patchKnowledgeKnowledgebaseSynchronizeJob
@@ -5328,6 +5493,111 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageTrainings(knowledgeBaseId: knowle
 [**KnowledgeTraining**](KnowledgeTraining)
 
 
+## postKnowledgeKnowledgebaseParseJobImport
+
+
+
+> Void postKnowledgeKnowledgebaseParseJobImport(knowledgeBaseId, parseJobId, body)
+
+Import the parsed articles
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import  
+
+Requires ALL permissions: 
+
+* knowledge:importJob:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let parseJobId: String = "" // Parse job ID
+let body: KnowledgeParseJobRequestImport = new KnowledgeParseJobRequestImport(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseParseJobImport(knowledgeBaseId: knowledgeBaseId, parseJobId: parseJobId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseParseJobImport was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **parseJobId** | **String**| Parse job ID | |
+| **body** | [**KnowledgeParseJobRequestImport**](KnowledgeParseJobRequestImport)|  | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## postKnowledgeKnowledgebaseParseJobs
+
+
+
+> [KnowledgeParseJobResponse](KnowledgeParseJobResponse) postKnowledgeKnowledgebaseParseJobs(knowledgeBaseId, body)
+
+Create parse job
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs  
+
+Requires ALL permissions: 
+
+* knowledge:importJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeParseJobRequest = new KnowledgeParseJobRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseParseJobs(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseParseJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeParseJobRequest**](KnowledgeParseJobRequest)|  | |
+
+
+### Return type
+
+[**KnowledgeParseJobResponse**](KnowledgeParseJobResponse)
+
+
 ## postKnowledgeKnowledgebaseSearch
 
 
@@ -5436,7 +5706,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforce(knowledgeBaseId: knowle
 
 
 
-> [SourceSyncResponse](SourceSyncResponse) postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId, sourceId)
+> [SourceSyncResponse](SourceSyncResponse) postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId, sourceId, body)
 
 Start sync on Salesforce Knowledge integration source
 
@@ -5458,9 +5728,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
+let body: JSON = new JSON(...) // 
 
 // Code example
-KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId) { (response, error) in
+KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5477,6 +5748,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync(knowledgeBa
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **sourceId** | **String**| Source ID | |
+| **body** | **JSON**|  | [optional] |
 
 
 ### Return type
@@ -5540,7 +5812,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenow(knowledgeBaseId: knowle
 
 
 
-> [SourceSyncResponse](SourceSyncResponse) postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId, sourceId)
+> [SourceSyncResponse](SourceSyncResponse) postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId, sourceId, body)
 
 Start synchronization on ServiceNow Knowledge integration source
 
@@ -5562,9 +5834,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let knowledgeBaseId: String = "" // Knowledge base ID
 let sourceId: String = "" // Source ID
+let body: JSON = new JSON(...) // 
 
 // Code example
-KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId) { (response, error) in
+KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBaseId: knowledgeBaseId, sourceId: sourceId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -5581,6 +5854,7 @@ KnowledgeAPI.postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync(knowledgeBa
 | ------------- | ------------- | ------------- | ------------- |
 | **knowledgeBaseId** | **String**| Knowledge base ID | |
 | **sourceId** | **String**| Source ID | |
+| **body** | **JSON**|  | [optional] |
 
 
 ### Return type
@@ -5638,6 +5912,58 @@ KnowledgeAPI.postKnowledgeKnowledgebaseSynchronizeJobs(knowledgeBaseId: knowledg
 ### Return type
 
 [**KnowledgeSyncJobResponse**](KnowledgeSyncJobResponse)
+
+
+## postKnowledgeKnowledgebaseUploadsUrlsJobs
+
+
+
+> [CreateUploadSourceUrlJobResponse](CreateUploadSourceUrlJobResponse) postKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId, body)
+
+Create content upload from URL job
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs  
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: CreateUploadSourceUrlJobRequest = new CreateUploadSourceUrlJobRequest(...) // uploadRequest
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseUploadsUrlsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest)| uploadRequest | |
+
+
+### Return type
+
+[**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse)
 
 
 ## postKnowledgeKnowledgebases
@@ -5798,4 +6124,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

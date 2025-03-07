@@ -172,6 +172,7 @@ open class CoachingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "shareInsightsData" : true,
   "conversations" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -189,6 +190,7 @@ open class CoachingAPI {
   "name" : "name",
   "modifiedBy" : "{}",
   "externalLinks" : [ "externalLinks", "externalLinks" ],
+  "location" : "location",
   "id" : "id",
   "status" : "Scheduled"
 }, statusCode=200}]
@@ -576,6 +578,7 @@ open class CoachingAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "shareInsightsData" : true,
     "conversations" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -593,6 +596,7 @@ open class CoachingAPI {
     "name" : "name",
     "modifiedBy" : "{}",
     "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "location" : "location",
     "id" : "id",
     "status" : "Scheduled"
   }, {
@@ -614,6 +618,7 @@ open class CoachingAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "shareInsightsData" : true,
     "conversations" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -631,6 +636,7 @@ open class CoachingAPI {
     "name" : "name",
     "modifiedBy" : "{}",
     "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "location" : "location",
     "id" : "id",
     "status" : "Scheduled"
   } ],
@@ -792,6 +798,7 @@ open class CoachingAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "shareInsightsData" : true,
     "conversations" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -809,6 +816,7 @@ open class CoachingAPI {
     "name" : "name",
     "modifiedBy" : "{}",
     "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "location" : "location",
     "id" : "id",
     "status" : "Scheduled"
   }, {
@@ -830,6 +838,7 @@ open class CoachingAPI {
     "selfUri" : "https://openapi-generator.tech",
     "description" : "description",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
+    "shareInsightsData" : true,
     "conversations" : [ {
       "selfUri" : "https://openapi-generator.tech",
       "id" : "id"
@@ -847,6 +856,7 @@ open class CoachingAPI {
     "name" : "name",
     "modifiedBy" : "{}",
     "externalLinks" : [ "externalLinks", "externalLinks" ],
+    "location" : "location",
     "id" : "id",
     "status" : "Scheduled"
   } ],
@@ -1129,6 +1139,7 @@ open class CoachingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "shareInsightsData" : true,
   "conversations" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -1146,6 +1157,7 @@ open class CoachingAPI {
   "name" : "name",
   "modifiedBy" : "{}",
   "externalLinks" : [ "externalLinks", "externalLinks" ],
+  "location" : "location",
   "id" : "id",
   "status" : "Scheduled"
 }, statusCode=200}]
@@ -1558,6 +1570,7 @@ open class CoachingAPI {
   "selfUri" : "https://openapi-generator.tech",
   "description" : "description",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
+  "shareInsightsData" : true,
   "conversations" : [ {
     "selfUri" : "https://openapi-generator.tech",
     "id" : "id"
@@ -1575,6 +1588,7 @@ open class CoachingAPI {
   "name" : "name",
   "modifiedBy" : "{}",
   "externalLinks" : [ "externalLinks", "externalLinks" ],
+  "location" : "location",
   "id" : "id",
   "status" : "Scheduled"
 }, statusCode=201}]

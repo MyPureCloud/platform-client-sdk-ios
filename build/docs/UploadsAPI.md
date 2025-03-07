@@ -4,14 +4,68 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**getKnowledgeKnowledgebaseUploadsUrlsJob**](UploadsAPI#getKnowledgeKnowledgebaseUploadsUrlsJob) | Get content upload from URL job status |
 | [**postIntegrationsActionDraftFunctionUpload**](UploadsAPI#postIntegrationsActionDraftFunctionUpload) | Create upload presigned URL for draft function package file. |
 | [**postKnowledgeDocumentuploads**](UploadsAPI#postKnowledgeDocumentuploads) | Creates a presigned URL for uploading a knowledge import file with a set of documents |
+| [**postKnowledgeKnowledgebaseUploadsUrlsJobs**](UploadsAPI#postKnowledgeKnowledgebaseUploadsUrlsJobs) | Create content upload from URL job |
 | [**postLanguageunderstandingMinerUploads**](UploadsAPI#postLanguageunderstandingMinerUploads) | Creates a presigned URL for uploading a chat corpus which will be used for mining by intent miner |
 | [**postUploadsLearningCoverart**](UploadsAPI#postUploadsLearningCoverart) | Generates pre-signed URL to upload cover art for learning modules |
 | [**postUploadsPublicassetsImages**](UploadsAPI#postUploadsPublicassetsImages) | Creates presigned url for uploading a public asset image |
 | [**postUploadsRecordings**](UploadsAPI#postUploadsRecordings) | Creates presigned url for uploading a recording file |
 | [**postUploadsWorkforcemanagementHistoricaldataCsv**](UploadsAPI#postUploadsWorkforcemanagementHistoricaldataCsv) | Creates presigned url for uploading WFM historical data file. Requires data in csv format. |
 {: class="table-striped"}
+
+
+## getKnowledgeKnowledgebaseUploadsUrlsJob
+
+
+
+> [GetUploadSourceUrlJobStatusResponse](GetUploadSourceUrlJobStatusResponse) getKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId, jobId)
+
+Get content upload from URL job status
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}  
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let jobId: String = "" // Upload job ID
+
+// Code example
+UploadsAPI.getKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId: knowledgeBaseId, jobId: jobId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UploadsAPI.getKnowledgeKnowledgebaseUploadsUrlsJob was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **jobId** | **String**| Upload job ID | |
+
+
+### Return type
+
+[**GetUploadSourceUrlJobStatusResponse**](GetUploadSourceUrlJobStatusResponse)
 
 
 ## postIntegrationsActionDraftFunctionUpload
@@ -114,6 +168,58 @@ UploadsAPI.postKnowledgeDocumentuploads(body: body) { (response, error) in
 ### Return type
 
 [**UploadUrlResponse**](UploadUrlResponse)
+
+
+## postKnowledgeKnowledgebaseUploadsUrlsJobs
+
+
+
+> [CreateUploadSourceUrlJobResponse](CreateUploadSourceUrlJobResponse) postKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId, body)
+
+Create content upload from URL job
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs  
+
+Requires ALL permissions: 
+
+* knowledge:uploadSourceUrlJob:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: CreateUploadSourceUrlJobRequest = new CreateUploadSourceUrlJobRequest(...) // uploadRequest
+
+// Code example
+UploadsAPI.postKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("UploadsAPI.postKnowledgeKnowledgebaseUploadsUrlsJobs was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**CreateUploadSourceUrlJobRequest**](CreateUploadSourceUrlJobRequest)| uploadRequest | |
+
+
+### Return type
+
+[**CreateUploadSourceUrlJobResponse**](CreateUploadSourceUrlJobResponse)
 
 
 ## postLanguageunderstandingMinerUploads
@@ -368,4 +474,4 @@ UploadsAPI.postUploadsWorkforcemanagementHistoricaldataCsv(body: body) { (respon
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

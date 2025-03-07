@@ -1878,14 +1878,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "station" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -1917,14 +1917,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "conversationSummary" : "{}",
@@ -1959,7 +1959,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -1995,7 +1995,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -2039,7 +2039,7 @@ open class UsersAPI {
   },
   "team" : "{}",
   "certifications" : [ "certifications", "certifications" ],
-  "version" : 6,
+  "version" : 0,
   "outOfOffice" : "{}",
   "languagePreference" : "languagePreference",
   "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -2051,7 +2051,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -2082,7 +2082,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -2096,7 +2096,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -2127,7 +2127,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -2262,14 +2262,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -2301,14 +2301,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -2343,7 +2343,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -2379,7 +2379,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -2423,7 +2423,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -2435,7 +2435,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -2466,7 +2466,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -2480,7 +2480,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -2511,7 +2511,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -2555,14 +2555,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -2594,14 +2594,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -2636,7 +2636,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -2672,7 +2672,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -2716,7 +2716,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -2728,7 +2728,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -2759,7 +2759,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -2773,7 +2773,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -2804,7 +2804,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -2849,14 +2849,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -2888,14 +2888,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -2930,7 +2930,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -2966,7 +2966,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3010,7 +3010,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3022,7 +3022,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3053,7 +3053,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3067,7 +3067,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3098,7 +3098,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3142,14 +3142,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -3181,14 +3181,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -3223,7 +3223,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3259,7 +3259,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3303,7 +3303,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3315,7 +3315,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3346,7 +3346,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3360,7 +3360,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3391,7 +3391,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3436,14 +3436,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -3475,14 +3475,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -3517,7 +3517,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3553,7 +3553,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3597,7 +3597,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3609,7 +3609,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3640,7 +3640,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3654,7 +3654,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3685,7 +3685,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3729,14 +3729,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -3768,14 +3768,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -3810,7 +3810,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3846,7 +3846,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -3890,7 +3890,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -3902,7 +3902,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3933,7 +3933,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -3947,7 +3947,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -3978,7 +3978,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -4104,14 +4104,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4143,14 +4143,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -4185,7 +4185,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -4221,7 +4221,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -4265,7 +4265,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4277,7 +4277,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -4308,7 +4308,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -4322,7 +4322,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -4353,7 +4353,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -4481,14 +4481,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "station" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4520,14 +4520,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "conversationSummary" : "{}",
@@ -4562,7 +4562,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -4598,7 +4598,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -4642,7 +4642,7 @@ open class UsersAPI {
   },
   "team" : "{}",
   "certifications" : [ "certifications", "certifications" ],
-  "version" : 6,
+  "version" : 0,
   "outOfOffice" : "{}",
   "languagePreference" : "languagePreference",
   "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4654,7 +4654,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -4685,7 +4685,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -4699,7 +4699,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -4730,7 +4730,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -4995,14 +4995,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -5034,14 +5034,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -5076,7 +5076,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -5112,7 +5112,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -5156,7 +5156,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5168,7 +5168,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -5199,7 +5199,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -5213,7 +5213,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -5244,7 +5244,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -5288,14 +5288,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -5327,14 +5327,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -5369,7 +5369,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -5405,7 +5405,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -5449,7 +5449,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5461,7 +5461,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -5492,7 +5492,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -5506,7 +5506,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -5537,7 +5537,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -5659,7 +5659,7 @@ open class UsersAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -5696,7 +5696,7 @@ open class UsersAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -5803,14 +5803,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -5842,14 +5842,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -5884,7 +5884,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -5920,7 +5920,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -5964,7 +5964,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5976,7 +5976,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -6007,7 +6007,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -6021,7 +6021,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -6052,7 +6052,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -6298,12 +6298,12 @@ open class UsersAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -6362,14 +6362,14 @@ open class UsersAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -6405,12 +6405,12 @@ open class UsersAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -6469,14 +6469,14 @@ open class UsersAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -6713,14 +6713,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -6813,14 +6813,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -7314,14 +7314,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "station" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -7353,14 +7353,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "conversationSummary" : "{}",
@@ -7395,7 +7395,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -7431,7 +7431,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -7475,7 +7475,7 @@ open class UsersAPI {
   },
   "team" : "{}",
   "certifications" : [ "certifications", "certifications" ],
-  "version" : 6,
+  "version" : 0,
   "outOfOffice" : "{}",
   "languagePreference" : "languagePreference",
   "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -7487,7 +7487,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -7518,7 +7518,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -7532,7 +7532,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -7563,7 +7563,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -7894,14 +7894,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -7933,14 +7933,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -7975,7 +7975,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -8011,7 +8011,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -8055,7 +8055,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -8067,7 +8067,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -8098,7 +8098,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -8112,7 +8112,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -8143,7 +8143,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -8187,14 +8187,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -8226,14 +8226,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -8268,7 +8268,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -8304,7 +8304,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -8348,7 +8348,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -8360,7 +8360,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -8391,7 +8391,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -8405,7 +8405,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -8436,7 +8436,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -8703,9 +8703,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -8758,7 +8758,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -8908,9 +8908,9 @@ open class UsersAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "total" : 5,
+  "total" : 1,
   "pageCount" : 5,
-  "pageNumber" : 1,
+  "pageNumber" : 6,
   "entities" : [ {
     "dateDue" : "2000-01-23T04:56:07.000+00:00",
     "isPassed" : true,
@@ -8963,7 +8963,7 @@ open class UsersAPI {
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
   "selfUri" : "https://openapi-generator.tech",
-  "pageSize" : 6,
+  "pageSize" : 0,
   "nextUri" : "https://openapi-generator.tech",
   "previousUri" : "https://openapi-generator.tech"
 }, statusCode=200}]
@@ -9196,14 +9196,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "station" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9235,14 +9235,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "conversationSummary" : "{}",
@@ -9277,7 +9277,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -9313,7 +9313,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -9357,7 +9357,7 @@ open class UsersAPI {
   },
   "team" : "{}",
   "certifications" : [ "certifications", "certifications" ],
-  "version" : 6,
+  "version" : 0,
   "outOfOffice" : "{}",
   "languagePreference" : "languagePreference",
   "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -9369,7 +9369,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -9400,7 +9400,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -9414,7 +9414,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -9445,7 +9445,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -9609,14 +9609,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "adjacents" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9660,7 +9660,7 @@ open class UsersAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -9697,7 +9697,7 @@ open class UsersAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -9748,14 +9748,14 @@ open class UsersAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9787,14 +9787,14 @@ open class UsersAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -9829,7 +9829,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -9865,7 +9865,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -9909,7 +9909,7 @@ open class UsersAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -9921,7 +9921,7 @@ open class UsersAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -9952,7 +9952,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -9966,7 +9966,7 @@ open class UsersAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -9997,7 +9997,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10049,14 +10049,14 @@ open class UsersAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10088,14 +10088,14 @@ open class UsersAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -10130,7 +10130,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10166,7 +10166,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10210,7 +10210,7 @@ open class UsersAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10222,7 +10222,7 @@ open class UsersAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10253,7 +10253,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10267,7 +10267,7 @@ open class UsersAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10298,7 +10298,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10348,14 +10348,14 @@ open class UsersAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10387,14 +10387,14 @@ open class UsersAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -10429,7 +10429,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10465,7 +10465,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10509,7 +10509,7 @@ open class UsersAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10521,7 +10521,7 @@ open class UsersAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10552,7 +10552,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10566,7 +10566,7 @@ open class UsersAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10597,7 +10597,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10649,14 +10649,14 @@ open class UsersAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10688,14 +10688,14 @@ open class UsersAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -10730,7 +10730,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10766,7 +10766,7 @@ open class UsersAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10810,7 +10810,7 @@ open class UsersAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10822,7 +10822,7 @@ open class UsersAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10853,7 +10853,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10867,7 +10867,7 @@ open class UsersAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10898,7 +10898,7 @@ open class UsersAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10949,14 +10949,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10988,14 +10988,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -11030,7 +11030,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11066,7 +11066,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11110,7 +11110,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -11122,7 +11122,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -11153,7 +11153,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -11167,7 +11167,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -11198,7 +11198,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -11242,14 +11242,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -11281,14 +11281,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -11323,7 +11323,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11359,7 +11359,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11403,7 +11403,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -11415,7 +11415,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -11446,7 +11446,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -11460,7 +11460,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -11491,7 +11491,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -11537,14 +11537,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -11576,14 +11576,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -11618,7 +11618,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11654,7 +11654,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11698,7 +11698,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -11710,7 +11710,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -11741,7 +11741,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -11755,7 +11755,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -11786,7 +11786,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -11830,14 +11830,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -11869,14 +11869,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -11911,7 +11911,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11947,7 +11947,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -11991,7 +11991,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -12003,7 +12003,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -12034,7 +12034,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -12048,7 +12048,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -12079,7 +12079,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -12098,7 +12098,7 @@ open class UsersAPI {
   "title" : "title",
   "orgAuthorization" : [ {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -12136,14 +12136,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -12175,14 +12175,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -12217,7 +12217,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12253,7 +12253,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12297,7 +12297,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -12309,7 +12309,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12340,7 +12340,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12354,7 +12354,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12385,7 +12385,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12413,12 +12413,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -12472,30 +12472,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -12541,14 +12541,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -12580,14 +12580,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -12622,7 +12622,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12658,7 +12658,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -12702,7 +12702,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -12714,7 +12714,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12745,7 +12745,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12759,7 +12759,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -12790,7 +12790,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -12818,12 +12818,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -12877,30 +12877,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -12961,14 +12961,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -13000,14 +13000,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -13042,7 +13042,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13078,7 +13078,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13122,7 +13122,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -13134,7 +13134,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13165,7 +13165,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13179,7 +13179,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13210,7 +13210,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13238,12 +13238,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -13297,30 +13297,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -13366,14 +13366,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -13405,14 +13405,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -13447,7 +13447,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13483,7 +13483,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13527,7 +13527,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -13539,7 +13539,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13570,7 +13570,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13584,7 +13584,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -13615,7 +13615,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -13643,12 +13643,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -13702,30 +13702,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -13761,7 +13761,7 @@ open class UsersAPI {
     "base" : true
   }, {
     "default" : true,
-    "userCount" : 7,
+    "userCount" : 1,
     "unusedPermissions" : [ "unusedPermissions", "unusedPermissions" ],
     "permissions" : [ "permissions", "permissions" ],
     "permissionPolicies" : [ {
@@ -13799,14 +13799,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -13838,14 +13838,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -13880,7 +13880,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13916,7 +13916,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -13960,7 +13960,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -13972,7 +13972,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14003,7 +14003,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14017,7 +14017,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14048,7 +14048,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14076,12 +14076,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -14135,30 +14135,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -14204,14 +14204,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -14243,14 +14243,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -14285,7 +14285,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14321,7 +14321,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14365,7 +14365,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -14377,7 +14377,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14408,7 +14408,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14422,7 +14422,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14453,7 +14453,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14481,12 +14481,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -14540,30 +14540,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -14624,14 +14624,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -14663,14 +14663,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -14705,7 +14705,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14741,7 +14741,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -14785,7 +14785,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -14797,7 +14797,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14828,7 +14828,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14842,7 +14842,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -14873,7 +14873,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -14901,12 +14901,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -14960,30 +14960,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -15029,14 +15029,14 @@ open class UsersAPI {
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "skillUri" : "https://openapi-generator.tech",
               "id" : "id",
               "state" : "active",
-              "proficiency" : 7.061401241503109
+              "proficiency" : 2.3021358869347655
             } ],
             "station" : "{}",
             "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -15068,14 +15068,14 @@ open class UsersAPI {
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             }, {
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "state" : "active",
               "languageUri" : "https://openapi-generator.tech",
-              "proficiency" : 9.301444243932576
+              "proficiency" : 7.061401241503109
             } ],
             "selfUri" : "https://openapi-generator.tech",
             "conversationSummary" : "{}",
@@ -15110,7 +15110,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -15146,7 +15146,7 @@ open class UsersAPI {
               "owners" : [ null, null ],
               "rolesEnabled" : true,
               "type" : "official",
-              "version" : 2,
+              "version" : 5,
               "rulesVisible" : true,
               "name" : "name",
               "id" : "id",
@@ -15190,7 +15190,7 @@ open class UsersAPI {
             },
             "team" : "{}",
             "certifications" : [ "certifications", "certifications" ],
-            "version" : 6,
+            "version" : 0,
             "outOfOffice" : "{}",
             "languagePreference" : "languagePreference",
             "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -15202,7 +15202,7 @@ open class UsersAPI {
             "locations" : [ {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -15233,7 +15233,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -15247,7 +15247,7 @@ open class UsersAPI {
             }, {
               "notes" : "notes",
               "coordinates" : {
-                "key" : 1.4658129805029452
+                "key" : 6.027456183070403
               },
               "locationDefinition" : {
                 "images" : "images",
@@ -15278,7 +15278,7 @@ open class UsersAPI {
                   "resolution" : "resolution"
                 } ],
                 "emergencyNumber" : "{}",
-                "version" : 5,
+                "version" : 1,
                 "path" : [ "path", "path" ],
                 "addressStored" : true,
                 "name" : "name",
@@ -15306,12 +15306,12 @@ open class UsersAPI {
             "emailInQueueFlow" : "{}",
             "autoAnswerOnly" : true,
             "routingRules" : [ {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             }, {
-              "waitSeconds" : 5.637376656633329,
-              "threshold" : 5,
+              "waitSeconds" : 7.386281948385884,
+              "threshold" : 4,
               "operator" : "MEETS_THRESHOLD"
             } ],
             "skillEvaluationMethod" : "NONE",
@@ -15365,30 +15365,30 @@ open class UsersAPI {
             "dateCreated" : "2000-01-23T04:56:07.000+00:00",
             "queueFlow" : "{}",
             "callingPartyNumber" : "callingPartyNumber",
-            "userMemberCount" : 6,
+            "userMemberCount" : 3,
             "modifiedBy" : "modifiedBy",
             "id" : "id",
             "memberGroups" : [ {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             }, {
               "division" : "{}",
-              "memberCount" : 2,
+              "memberCount" : 1,
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "id" : "id",
               "type" : "TEAM"
             } ],
             "scoringMethod" : "TimestampAndPriority",
-            "joinedMemberCount" : 1,
+            "joinedMemberCount" : 2,
             "messageInQueueFlow" : "{}",
             "callingPartyName" : "callingPartyName",
             "acwSettings" : "{}",
-            "memberCount" : 0,
+            "memberCount" : 9,
             "selfUri" : "https://openapi-generator.tech",
             "dateModified" : "2000-01-23T04:56:07.000+00:00",
             "whisperPrompt" : "{}",
@@ -15453,14 +15453,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -15492,14 +15492,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -15534,7 +15534,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -15570,7 +15570,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -15614,7 +15614,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -15626,7 +15626,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -15657,7 +15657,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -15671,7 +15671,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -15702,7 +15702,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -15746,14 +15746,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -15785,14 +15785,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -15827,7 +15827,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -15863,7 +15863,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -15907,7 +15907,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -15919,7 +15919,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -15950,7 +15950,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -15964,7 +15964,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -15995,7 +15995,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -16064,14 +16064,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -16103,14 +16103,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -16145,7 +16145,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -16181,7 +16181,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -16225,7 +16225,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -16237,7 +16237,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -16268,7 +16268,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -16282,7 +16282,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -16313,7 +16313,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -16334,14 +16334,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "groups" : [ {
@@ -16375,7 +16375,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -16411,7 +16411,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -16503,7 +16503,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -16534,7 +16534,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -16548,7 +16548,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -16579,7 +16579,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -16699,14 +16699,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -16738,14 +16738,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -16780,7 +16780,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -16816,7 +16816,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -16860,7 +16860,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -16872,7 +16872,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -16903,7 +16903,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -16917,7 +16917,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -16948,7 +16948,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -16992,14 +16992,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -17031,14 +17031,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -17073,7 +17073,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -17109,7 +17109,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -17153,7 +17153,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -17165,7 +17165,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -17196,7 +17196,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -17210,7 +17210,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -17241,7 +17241,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -17346,14 +17346,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "station" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -17385,14 +17385,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "conversationSummary" : "{}",
@@ -17427,7 +17427,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -17463,7 +17463,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -17507,7 +17507,7 @@ open class UsersAPI {
   },
   "team" : "{}",
   "certifications" : [ "certifications", "certifications" ],
-  "version" : 6,
+  "version" : 0,
   "outOfOffice" : "{}",
   "languagePreference" : "languagePreference",
   "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -17519,7 +17519,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -17550,7 +17550,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -17564,7 +17564,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -17595,7 +17595,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -17720,14 +17720,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -17759,14 +17759,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -17801,7 +17801,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -17837,7 +17837,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -17881,7 +17881,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -17893,7 +17893,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -17924,7 +17924,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -17938,7 +17938,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -17969,7 +17969,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -18081,7 +18081,7 @@ open class UsersAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -18118,7 +18118,7 @@ open class UsersAPI {
       "resolution" : "resolution"
     } ],
     "emergencyNumber" : "{}",
-    "version" : 5,
+    "version" : 1,
     "path" : [ "path", "path" ],
     "addressStored" : true,
     "name" : "name",
@@ -18207,12 +18207,12 @@ open class UsersAPI {
   "onHoldPrompt" : "{}",
   "emailInQueueFlow" : "{}",
   "routingRules" : [ {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   }, {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   } ],
   "skillEvaluationMethod" : "NONE",
@@ -18271,14 +18271,14 @@ open class UsersAPI {
   "id" : "id",
   "memberGroups" : [ {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   }, {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
@@ -18382,12 +18382,12 @@ open class UsersAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -18446,14 +18446,14 @@ open class UsersAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -18489,12 +18489,12 @@ open class UsersAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -18553,14 +18553,14 @@ open class UsersAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -18662,7 +18662,7 @@ open class UsersAPI {
   "id" : "id",
   "state" : "active",
   "languageUri" : "https://openapi-generator.tech",
-  "proficiency" : 9.301444243932576
+  "proficiency" : 7.061401241503109
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -18734,14 +18734,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -18816,14 +18816,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -18919,14 +18919,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -18958,14 +18958,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -19000,7 +19000,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -19036,7 +19036,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -19080,7 +19080,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -19092,7 +19092,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -19123,7 +19123,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -19137,7 +19137,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -19168,7 +19168,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -19212,14 +19212,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -19251,14 +19251,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -19293,7 +19293,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -19329,7 +19329,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -19373,7 +19373,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -19385,7 +19385,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -19416,7 +19416,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -19430,7 +19430,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -19461,7 +19461,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -20968,7 +20968,7 @@ open class UsersAPI {
   "id" : "id",
   "state" : "active",
   "languageUri" : "https://openapi-generator.tech",
-  "proficiency" : 9.301444243932576
+  "proficiency" : 7.061401241503109
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -21032,7 +21032,7 @@ open class UsersAPI {
   "skillUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "active",
-  "proficiency" : 7.061401241503109
+  "proficiency" : 2.3021358869347655
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -21118,14 +21118,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "station" : "{}",
   "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -21157,14 +21157,14 @@ open class UsersAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "selfUri" : "https://openapi-generator.tech",
   "conversationSummary" : "{}",
@@ -21199,7 +21199,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -21235,7 +21235,7 @@ open class UsersAPI {
     "owners" : [ null, null ],
     "rolesEnabled" : true,
     "type" : "official",
-    "version" : 2,
+    "version" : 5,
     "rulesVisible" : true,
     "name" : "name",
     "id" : "id",
@@ -21279,7 +21279,7 @@ open class UsersAPI {
   },
   "team" : "{}",
   "certifications" : [ "certifications", "certifications" ],
-  "version" : 6,
+  "version" : 0,
   "outOfOffice" : "{}",
   "languagePreference" : "languagePreference",
   "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -21291,7 +21291,7 @@ open class UsersAPI {
   "locations" : [ {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -21322,7 +21322,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -21336,7 +21336,7 @@ open class UsersAPI {
   }, {
     "notes" : "notes",
     "coordinates" : {
-      "key" : 1.4658129805029452
+      "key" : 6.027456183070403
     },
     "locationDefinition" : {
       "images" : "images",
@@ -21367,7 +21367,7 @@ open class UsersAPI {
         "resolution" : "resolution"
       } ],
       "emergencyNumber" : "{}",
-      "version" : 5,
+      "version" : 1,
       "path" : [ "path", "path" ],
       "addressStored" : true,
       "name" : "name",
@@ -21611,14 +21611,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -21650,14 +21650,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -21692,7 +21692,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -21728,7 +21728,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -21772,7 +21772,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -21784,7 +21784,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -21815,7 +21815,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -21829,7 +21829,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -21860,7 +21860,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -21904,14 +21904,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -21943,14 +21943,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -21985,7 +21985,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -22021,7 +22021,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -22065,7 +22065,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -22077,7 +22077,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -22108,7 +22108,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -22122,7 +22122,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -22153,7 +22153,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -22257,14 +22257,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -22296,14 +22296,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -22338,7 +22338,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -22374,7 +22374,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -22418,7 +22418,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -22430,7 +22430,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -22461,7 +22461,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -22475,7 +22475,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -22506,7 +22506,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -22550,14 +22550,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -22589,14 +22589,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -22631,7 +22631,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -22667,7 +22667,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -22711,7 +22711,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -22723,7 +22723,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -22754,7 +22754,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -22768,7 +22768,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -22799,7 +22799,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -23113,14 +23113,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -23152,14 +23152,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -23194,7 +23194,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -23230,7 +23230,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -23274,7 +23274,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -23286,7 +23286,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -23317,7 +23317,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -23331,7 +23331,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -23362,7 +23362,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -23471,14 +23471,14 @@ open class UsersAPI {
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "skillUri" : "https://openapi-generator.tech",
       "id" : "id",
       "state" : "active",
-      "proficiency" : 7.061401241503109
+      "proficiency" : 2.3021358869347655
     } ],
     "station" : "{}",
     "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -23510,14 +23510,14 @@ open class UsersAPI {
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     }, {
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "state" : "active",
       "languageUri" : "https://openapi-generator.tech",
-      "proficiency" : 9.301444243932576
+      "proficiency" : 7.061401241503109
     } ],
     "selfUri" : "https://openapi-generator.tech",
     "conversationSummary" : "{}",
@@ -23552,7 +23552,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -23588,7 +23588,7 @@ open class UsersAPI {
       "owners" : [ null, null ],
       "rolesEnabled" : true,
       "type" : "official",
-      "version" : 2,
+      "version" : 5,
       "rulesVisible" : true,
       "name" : "name",
       "id" : "id",
@@ -23632,7 +23632,7 @@ open class UsersAPI {
     },
     "team" : "{}",
     "certifications" : [ "certifications", "certifications" ],
-    "version" : 6,
+    "version" : 0,
     "outOfOffice" : "{}",
     "languagePreference" : "languagePreference",
     "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -23644,7 +23644,7 @@ open class UsersAPI {
     "locations" : [ {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -23675,7 +23675,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -23689,7 +23689,7 @@ open class UsersAPI {
     }, {
       "notes" : "notes",
       "coordinates" : {
-        "key" : 1.4658129805029452
+        "key" : 6.027456183070403
       },
       "locationDefinition" : {
         "images" : "images",
@@ -23720,7 +23720,7 @@ open class UsersAPI {
           "resolution" : "resolution"
         } ],
         "emergencyNumber" : "{}",
-        "version" : 5,
+        "version" : 1,
         "path" : [ "path", "path" ],
         "addressStored" : true,
         "name" : "name",
@@ -23982,7 +23982,7 @@ open class UsersAPI {
   "skillUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "active",
-  "proficiency" : 7.061401241503109
+  "proficiency" : 2.3021358869347655
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -24054,14 +24054,14 @@ open class UsersAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",

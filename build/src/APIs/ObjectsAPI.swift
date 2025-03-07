@@ -18,7 +18,7 @@ open class ObjectsAPI {
      Delete a division.
      
      - parameter divisionId: (path) Division ID 
-     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional)
+     - parameter force: (query) DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func deleteAuthorizationDivision(divisionId: String, force: Bool? = nil, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
@@ -40,7 +40,7 @@ open class ObjectsAPI {
        - name: PureCloud OAuth
      
      - parameter divisionId: (path) Division ID 
-     - parameter force: (query) Force delete this division as well as the grants and objects associated with it (optional)
+     - parameter force: (query) DEPRECATED -  Force delete this division. Warning: This option may cause any remaining objects in this division to be inaccessible. (optional)
 
      - returns: RequestBuilder<Void> 
      */
@@ -444,10 +444,10 @@ open class ObjectsAPI {
      Recreate a previously deleted division.
      
      - parameter divisionId: (path) Division ID 
-     - parameter body: (body) Recreated division data (optional)
+     - parameter body: (body) Recreated division data 
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func postAuthorizationDivisionRestore(divisionId: String, body: AuthzDivision? = nil, completion: @escaping ((_ data: AuthzDivision?,_ error: Error?) -> Void)) {
+    open class func postAuthorizationDivisionRestore(divisionId: String, body: AuthzDivision, completion: @escaping ((_ data: AuthzDivision?,_ error: Error?) -> Void)) {
         let requestBuilder = postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: divisionId, body: body)
         requestBuilder.execute { (response: Response<AuthzDivision>?, error) -> Void in
             do {
@@ -483,11 +483,11 @@ open class ObjectsAPI {
 }, statusCode=200}]
      
      - parameter divisionId: (path) Division ID 
-     - parameter body: (body) Recreated division data (optional)
+     - parameter body: (body) Recreated division data 
 
      - returns: RequestBuilder<AuthzDivision> 
      */
-    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision? = nil) -> RequestBuilder<AuthzDivision> {        
+    open class func postAuthorizationDivisionRestoreWithRequestBuilder(divisionId: String, body: AuthzDivision) -> RequestBuilder<AuthzDivision> {        
         var path = "/api/v2/authorization/divisions/{divisionId}/restore"
         let divisionIdPreEscape = "\(divisionId)"
         let divisionIdPostEscape = divisionIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""

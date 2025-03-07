@@ -15,4 +15,4 @@ The metrics of an element or a link in journey
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

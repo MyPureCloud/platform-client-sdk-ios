@@ -5663,7 +5663,7 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
      - parameter state: (query) Only list users of this state (optional)
-     - parameter deletedOnly: (query) Only list deleted dashboards that are still recoverable (optional)
+     - parameter deletedOnly: (query) Only list users with deleted dashboards (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
     open class func getAnalyticsReportingDashboardsUsers(sortBy: String? = nil, pageNumber: Int? = nil, pageSize: Int? = nil, _id: [String]? = nil, state: State_getAnalyticsReportingDashboardsUsers? = nil, deletedOnly: Bool? = nil, completion: @escaping ((_ data: DashboardUserListing?,_ error: Error?) -> Void)) {
@@ -5722,7 +5722,7 @@ open class AnalyticsAPI {
      - parameter pageSize: (query)  (optional)
      - parameter _id: (query) A list of user IDs to fetch by bulk (optional)
      - parameter state: (query) Only list users of this state (optional)
-     - parameter deletedOnly: (query) Only list deleted dashboards that are still recoverable (optional)
+     - parameter deletedOnly: (query) Only list users with deleted dashboards (optional)
 
      - returns: RequestBuilder<DashboardUserListing> 
      */
@@ -6119,6 +6119,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6156,6 +6157,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6210,6 +6212,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6247,6 +6250,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6398,6 +6402,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6435,6 +6440,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6489,6 +6495,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -6526,6 +6533,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -15883,6 +15891,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -15920,6 +15929,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -15974,6 +15984,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,
@@ -16011,6 +16022,7 @@ open class AnalyticsAPI {
       "entityLimit" : 5,
       "selectedStatuses" : [ "Available", "Available" ],
       "showDuration" : true,
+      "selectedSegmentTypes" : [ "alert", "alert" ],
       "showOfflineAgents" : true,
       "periods" : [ "NONE", "NONE" ],
       "row" : 1,

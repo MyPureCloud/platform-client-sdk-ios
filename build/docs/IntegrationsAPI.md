@@ -465,7 +465,7 @@ IntegrationsAPI.getIntegrations(pageSize: pageSize, pageNumber: pageNumber, sort
 
 
 
-> [Action](Action) getIntegrationsAction(actionId, expand, includeConfig)
+> [Action](Action) getIntegrationsAction(actionId, expand, flatten, includeConfig)
 
 Retrieves a single Action matching id.
 
@@ -488,10 +488,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let expand: IntegrationsAPI.Expand_getIntegrationsAction = IntegrationsAPI.Expand_getIntegrationsAction.enummember // Indicates a field in the response which should be expanded.
+let flatten: IntegrationsAPI.Flatten_getIntegrationsAction = IntegrationsAPI.Flatten_getIntegrationsAction.enummember // Indicates the response should be reformatted, based on Architect's flattening format.
 let includeConfig: IntegrationsAPI.IncludeConfig_getIntegrationsAction = IntegrationsAPI.IncludeConfig_getIntegrationsAction.enummember // Return config in response.
 
 // Code example
-IntegrationsAPI.getIntegrationsAction(actionId: actionId, expand: expand, includeConfig: includeConfig) { (response, error) in
+IntegrationsAPI.getIntegrationsAction(actionId: actionId, expand: expand, flatten: flatten, includeConfig: includeConfig) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -508,6 +509,7 @@ IntegrationsAPI.getIntegrationsAction(actionId: actionId, expand: expand, includ
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **expand** | **String**| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: contract ("contract") |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **includeConfig** | **Bool**| Return config in response. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
@@ -520,7 +522,7 @@ IntegrationsAPI.getIntegrationsAction(actionId: actionId, expand: expand, includ
 
 
 
-> [Action](Action) getIntegrationsActionDraft(actionId, expand, includeConfig)
+> [Action](Action) getIntegrationsActionDraft(actionId, expand, flatten, includeConfig)
 
 Retrieve a Draft
 
@@ -543,10 +545,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let actionId: String = "" // actionId
 let expand: IntegrationsAPI.Expand_getIntegrationsActionDraft = IntegrationsAPI.Expand_getIntegrationsActionDraft.enummember // Indicates a field in the response which should be expanded.
+let flatten: IntegrationsAPI.Flatten_getIntegrationsActionDraft = IntegrationsAPI.Flatten_getIntegrationsActionDraft.enummember // Indicates the response should be reformatted, based on Architect's flattening format.
 let includeConfig: IntegrationsAPI.IncludeConfig_getIntegrationsActionDraft = IntegrationsAPI.IncludeConfig_getIntegrationsActionDraft.enummember // Return config in response.
 
 // Code example
-IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, includeConfig: includeConfig) { (response, error) in
+IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, flatten: flatten, includeConfig: includeConfig) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -563,6 +566,7 @@ IntegrationsAPI.getIntegrationsActionDraft(actionId: actionId, expand: expand, i
 | ------------- | ------------- | ------------- | ------------- |
 | **actionId** | **String**| actionId | |
 | **expand** | **String**| Indicates a field in the response which should be expanded. | [optional]<br />**Values**: contract ("contract") |
+| **flatten** | **Bool**| Indicates the response should be reformatted, based on Architect's flattening format. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 | **includeConfig** | **Bool**| Return config in response. | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
@@ -4643,4 +4647,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

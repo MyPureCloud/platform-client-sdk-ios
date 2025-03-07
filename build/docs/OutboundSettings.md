@@ -12,6 +12,7 @@
 | **dateModified** | [**Date**](Date) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **maxCallsPerAgent** | **Int** | The maximum number of calls that can be placed per agent on any campaign | [optional] |
+| **maxCallsPerAgentDecimal** | **Double** | The maximum number of calls that can be placed per agent on any campaign with decimal precision | [optional] |
 | **maxConfigurableCallsPerAgent** | **Int** | The maximum number of calls that can be configured to be placed per agent on any campaign | [optional] |
 | **maxLineUtilization** | **Double** | The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0] | [optional] |
 | **abandonSeconds** | **Double** | The number of seconds used to determine if a call is abandoned | [optional] |
@@ -22,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

@@ -225,6 +225,7 @@ open class OperationalEventsAPI {
      - examples: [{contentType=application/json, example={
   "entities" : [ {
     "entityVersion" : "entityVersion",
+    "entityToken" : "entityToken",
     "eventDefinition" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "entityName" : "entityName",
@@ -236,6 +237,7 @@ open class OperationalEventsAPI {
     "conversation" : "{}"
   }, {
     "entityVersion" : "entityVersion",
+    "entityToken" : "entityToken",
     "eventDefinition" : "{}",
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "entityName" : "entityName",

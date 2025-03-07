@@ -736,7 +736,7 @@ let pageNumber: Int = 0 //
 let pageSize: Int = 0 // 
 let _id: [String] = [""] // A list of user IDs to fetch by bulk
 let state: AnalyticsAPI.State_getAnalyticsReportingDashboardsUsers = AnalyticsAPI.State_getAnalyticsReportingDashboardsUsers.enummember // Only list users of this state
-let deletedOnly: Bool = true // Only list deleted dashboards that are still recoverable
+let deletedOnly: Bool = true // Only list users with deleted dashboards
 
 // Code example
 AnalyticsAPI.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pageNumber, pageSize: pageSize, _id: _id, state: state, deletedOnly: deletedOnly) { (response, error) in
@@ -759,7 +759,7 @@ AnalyticsAPI.getAnalyticsReportingDashboardsUsers(sortBy: sortBy, pageNumber: pa
 | **pageSize** | **Int**|  | [optional] |
 | **_id** | [**[String]**](String)| A list of user IDs to fetch by bulk | [optional] |
 | **state** | **String**| Only list users of this state | [optional]<br />**Values**: active ("active"), inactive ("inactive") |
-| **deletedOnly** | **Bool**| Only list deleted dashboards that are still recoverable | [optional] |
+| **deletedOnly** | **Bool**| Only list users with deleted dashboards | [optional] |
 
 
 ### Return type
@@ -3014,4 +3014,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

@@ -1219,6 +1219,108 @@ open class ChatAPI {
 
     
     
+    /**
+     Get a user's chat settings
+     
+     - parameter userId: (path) User ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getChatsUserSettings(userId: String, completion: @escaping ((_ data: ChatUserSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsUserSettingsWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<ChatUserSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a user's chat settings
+     - GET /api/v2/chats/users/{userId}/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mobile" : "{}"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+
+     - returns: RequestBuilder<ChatUserSettings> 
+     */
+    open class func getChatsUserSettingsWithRequestBuilder(userId: String) -> RequestBuilder<ChatUserSettings> {        
+        var path = "/api/v2/chats/users/{userId}/settings"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatUserSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get a user's chat settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getChatsUsersMeSettings(completion: @escaping ((_ data: ChatUserSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsUsersMeSettingsWithRequestBuilder()
+        requestBuilder.execute { (response: Response<ChatUserSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get a user's chat settings
+     - GET /api/v2/chats/users/me/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mobile" : "{}"
+}, statusCode=200}]
+
+     - returns: RequestBuilder<ChatUserSettings> 
+     */
+    open class func getChatsUsersMeSettingsWithRequestBuilder() -> RequestBuilder<ChatUserSettings> {        
+        let path = "/api/v2/chats/users/me/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatUserSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     /**
@@ -1447,6 +1549,117 @@ open class ChatAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ChatSendMessageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update a user's chat settings
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchChatsUserSettings(userId: String, body: ChatUserSettings, completion: @escaping ((_ data: ChatUserSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchChatsUserSettingsWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<ChatUserSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a user's chat settings
+     - PATCH /api/v2/chats/users/{userId}/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mobile" : "{}"
+}, statusCode=200}]
+     
+     - parameter userId: (path) User ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<ChatUserSettings> 
+     */
+    open class func patchChatsUserSettingsWithRequestBuilder(userId: String, body: ChatUserSettings) -> RequestBuilder<ChatUserSettings> {        
+        var path = "/api/v2/chats/users/{userId}/settings"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatUserSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Update a user's chat settings
+     
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchChatsUsersMeSettings(body: ChatUserSettings, completion: @escaping ((_ data: ChatUserSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchChatsUsersMeSettingsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ChatUserSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update a user's chat settings
+     - PATCH /api/v2/chats/users/me/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "mobile" : "{}"
+}, statusCode=200}]
+     
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<ChatUserSettings> 
+     */
+    open class func patchChatsUsersMeSettingsWithRequestBuilder(body: ChatUserSettings) -> RequestBuilder<ChatUserSettings> {        
+        let path = "/api/v2/chats/users/me/settings"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ChatUserSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

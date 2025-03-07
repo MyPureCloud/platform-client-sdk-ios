@@ -2940,7 +2940,8 @@ open class JourneyAPI {
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
   "id" : "id",
-  "status" : "Accepted"
+  "status" : "Accepted",
+  "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
      - parameter viewId: (path) Journey View Id 
@@ -3227,7 +3228,8 @@ open class JourneyAPI {
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
   "id" : "id",
-  "status" : "Accepted"
+  "status" : "Accepted",
+  "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
      - parameter viewId: (path) Journey View Id 
@@ -3771,14 +3773,16 @@ open class JourneyAPI {
     "selfUri" : "https://openapi-generator.tech",
     "journeyView" : "{}",
     "id" : "id",
-    "status" : "Accepted"
+    "status" : "Accepted",
+    "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
   }, {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "dateCompleted" : "2000-01-23T04:56:07.000+00:00",
     "selfUri" : "https://openapi-generator.tech",
     "journeyView" : "{}",
     "id" : "id",
-    "status" : "Accepted"
+    "status" : "Accepted",
+    "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -4349,7 +4353,8 @@ open class JourneyAPI {
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
   "id" : "id",
-  "status" : "Accepted"
+  "status" : "Accepted",
+  "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=200}]
      
      - parameter viewId: (path) Journey View Id 
@@ -5539,7 +5544,8 @@ open class JourneyAPI {
   "selfUri" : "https://openapi-generator.tech",
   "journeyView" : "{}",
   "id" : "id",
-  "status" : "Accepted"
+  "status" : "Accepted",
+  "dateCompletionEstimated" : "2000-01-23T04:56:07.000+00:00"
 }, statusCode=202}]
      
      - parameter viewId: (path) Journey View Id 

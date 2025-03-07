@@ -5763,7 +5763,7 @@ OutboundAPI.patchOutboundDnclistPhonenumbers(dncListId: dncListId, body: body) {
 
 
 
-> Void patchOutboundSettings(body)
+> Void patchOutboundSettings(body, useMaxCallsPerAgentDecimal)
 
 Update the outbound settings for this organization
 
@@ -5784,9 +5784,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: OutboundSettings = new OutboundSettings(...) // outboundSettings
+let useMaxCallsPerAgentDecimal: OutboundAPI.UseMaxCallsPerAgentDecimal_patchOutboundSettings = OutboundAPI.UseMaxCallsPerAgentDecimal_patchOutboundSettings.enummember // Use maxCallsPerAgent with decimal precision
 
 // Code example
-OutboundAPI.patchOutboundSettings(body: body) { (error) in
+OutboundAPI.patchOutboundSettings(body: body, useMaxCallsPerAgentDecimal: useMaxCallsPerAgentDecimal) { (error) in
     if let error = error {
         dump(error)
     } else {
@@ -5801,6 +5802,7 @@ OutboundAPI.patchOutboundSettings(body: body) { (error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**OutboundSettings**](OutboundSettings)| outboundSettings | |
+| **useMaxCallsPerAgentDecimal** | **Bool**| Use maxCallsPerAgent with decimal precision | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -6215,7 +6217,7 @@ OutboundAPI.postOutboundCampaignrules(body: body) { (response, error) in
 
 
 
-> [Campaign](Campaign) postOutboundCampaigns(body)
+> [Campaign](Campaign) postOutboundCampaigns(body, useMaxCallsPerAgentDecimal)
 
 Create a campaign.
 
@@ -6236,9 +6238,10 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let body: Campaign = new Campaign(...) // Campaign
+let useMaxCallsPerAgentDecimal: OutboundAPI.UseMaxCallsPerAgentDecimal_postOutboundCampaigns = OutboundAPI.UseMaxCallsPerAgentDecimal_postOutboundCampaigns.enummember // Use maxCallsPerAgent with decimal precision
 
 // Code example
-OutboundAPI.postOutboundCampaigns(body: body) { (response, error) in
+OutboundAPI.postOutboundCampaigns(body: body, useMaxCallsPerAgentDecimal: useMaxCallsPerAgentDecimal) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -6254,6 +6257,7 @@ OutboundAPI.postOutboundCampaigns(body: body) { (response, error) in
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **body** | [**Campaign**](Campaign)| Campaign | |
+| **useMaxCallsPerAgentDecimal** | **Bool**| Use maxCallsPerAgent with decimal precision | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -7960,7 +7964,7 @@ OutboundAPI.putOutboundCallanalysisresponseset(callAnalysisSetId: callAnalysisSe
 
 
 
-> [Campaign](Campaign) putOutboundCampaign(campaignId, body)
+> [Campaign](Campaign) putOutboundCampaign(campaignId, body, useMaxCallsPerAgentDecimal)
 
 Update a campaign.
 
@@ -7982,9 +7986,10 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let campaignId: String = "" // Campaign ID
 let body: Campaign = new Campaign(...) // Campaign
+let useMaxCallsPerAgentDecimal: OutboundAPI.UseMaxCallsPerAgentDecimal_putOutboundCampaign = OutboundAPI.UseMaxCallsPerAgentDecimal_putOutboundCampaign.enummember // Use maxCallsPerAgent with decimal precision
 
 // Code example
-OutboundAPI.putOutboundCampaign(campaignId: campaignId, body: body) { (response, error) in
+OutboundAPI.putOutboundCampaign(campaignId: campaignId, body: body, useMaxCallsPerAgentDecimal: useMaxCallsPerAgentDecimal) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -8001,6 +8006,7 @@ OutboundAPI.putOutboundCampaign(campaignId: campaignId, body: body) { (response,
 | ------------- | ------------- | ------------- | ------------- |
 | **campaignId** | **String**| Campaign ID | |
 | **body** | [**Campaign**](Campaign)| Campaign | |
+| **useMaxCallsPerAgentDecimal** | **Bool**| Use maxCallsPerAgent with decimal precision | [optional]<br />**Values**: _true ("true"), _false ("false") |
 
 
 ### Return type
@@ -8949,4 +8955,4 @@ OutboundAPI.putOutboundWrapupcodemappings(body: body) { (response, error) in
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

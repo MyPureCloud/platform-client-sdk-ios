@@ -8,7 +8,6 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **contentType** | **String** | Type of this content element. | |
-| **location** | [**ContentLocation**](ContentLocation) | Location content. | [optional] |
 | **attachment** | [**ContentAttachment**](ContentAttachment) | Attachment content. | [optional] |
 | **quickReply** | [**ContentQuickReply**](ContentQuickReply) | Quick reply content. | [optional] |
 | **buttonResponse** | [**ContentButtonResponse**](ContentButtonResponse) | Button response content. | [optional] |
@@ -23,7 +22,8 @@ Message content element. If contentType &#x3D; \&quot;Attachment\&quot; only one
 | **carousel** | [**ContentCarousel**](ContentCarousel) | Carousel content | [optional] |
 | **text** | [**ContentText**](ContentText) | Text content. | [optional] |
 | **quickReplyV2** | [**ContentQuickReplyV2**](ContentQuickReplyV2) | Quick reply V2 content. | [optional] |
+| **datePicker** | [**ContentDatePicker**](ContentDatePicker) | DatePicker content. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

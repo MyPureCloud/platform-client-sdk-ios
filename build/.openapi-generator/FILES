@@ -49,7 +49,6 @@ docs/ActionTemplate.md
 docs/ActionTemplateListing.md
 docs/Actions.md
 docs/Activation.md
-docs/ActiveAlertCount.md
 docs/ActivityCode.md
 docs/ActivityCodeContainer.md
 docs/ActivityCodeReference.md
@@ -252,6 +251,7 @@ docs/ArchitectDependencyTrackingBuildNotificationClient.md
 docs/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.md
 docs/ArchitectDependencyTrackingBuildNotificationHomeOrganization.md
 docs/ArchitectDependencyTrackingBuildNotificationUser.md
+docs/ArchitectExportJobStateResponse.md
 docs/ArchitectFlowFields.md
 docs/ArchitectFlowNotificationArchitectOperation.md
 docs/ArchitectFlowNotificationClient.md
@@ -268,6 +268,7 @@ docs/ArchitectFlowOutcomeNotificationErrorMessageParams.md
 docs/ArchitectFlowOutcomeNotificationFlowOutcomeNotification.md
 docs/ArchitectFlowOutcomeNotificationHomeOrganization.md
 docs/ArchitectFlowOutcomeNotificationUser.md
+docs/ArchitectFlowReference.md
 docs/ArchitectJobMessage.md
 docs/ArchitectJobStateResponse.md
 docs/ArchitectPromptNotificationArchitectOperation.md
@@ -519,13 +520,13 @@ docs/BulkCallbackPatchResponse.md
 docs/BulkContactsRequest.md
 docs/BulkContactsResponse.md
 docs/BulkDeleteResponse.md
+docs/BulkEntityErrorEntity.md
+docs/BulkEntityErrorExternalContact.md
+docs/BulkEntityErrorExternalOrganization.md
+docs/BulkEntityErrorNote.md
+docs/BulkEntityErrorRelationship.md
 docs/BulkError.md
 docs/BulkErrorDetail.md
-docs/BulkErrorEntity.md
-docs/BulkErrorExternalContact.md
-docs/BulkErrorExternalOrganization.md
-docs/BulkErrorNote.md
-docs/BulkErrorRelationship.md
 docs/BulkFetchContactsResponse.md
 docs/BulkFetchNotesResponse.md
 docs/BulkFetchOrganizationsResponse.md
@@ -551,15 +552,15 @@ docs/BulkOrganizationsResponse.md
 docs/BulkRelationshipsRequest.md
 docs/BulkRelationshipsResponse.md
 docs/BulkResponse.md
-docs/BulkResponseResultExternalContactEntity.md
-docs/BulkResponseResultExternalContactExternalContact.md
-docs/BulkResponseResultExternalOrganizationEntity.md
-docs/BulkResponseResultExternalOrganizationExternalOrganization.md
-docs/BulkResponseResultNoteEntity.md
-docs/BulkResponseResultNoteNote.md
-docs/BulkResponseResultRelationshipEntity.md
-docs/BulkResponseResultRelationshipRelationship.md
-docs/BulkResponseResultVoidEntity.md
+docs/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.md
+docs/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.md
+docs/BulkResponseResultExternalOrganizationEntityBulkEntityErrorEntity.md
+docs/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorExternalOrganization.md
+docs/BulkResponseResultNoteEntityBulkEntityErrorEntity.md
+docs/BulkResponseResultNoteNoteBulkEntityErrorNote.md
+docs/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.md
+docs/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.md
+docs/BulkResponseResultVoidEntityBulkEntityErrorEntity.md
 docs/BulkResult.md
 docs/BulkShiftTradeStateUpdateRequest.md
 docs/BulkUpdateShiftTradeStateRequestItem.md
@@ -701,6 +702,7 @@ docs/ChatReactionUpdate.md
 docs/ChatSendMessageResponse.md
 docs/ChatSettings.md
 docs/ChatUserRef.md
+docs/ChatUserSettings.md
 docs/Check.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
@@ -843,12 +845,13 @@ docs/ContentButtonResponse.md
 docs/ContentCard.md
 docs/ContentCardAction.md
 docs/ContentCarousel.md
+docs/ContentDatePicker.md
+docs/ContentDatePickerAvailableTime.md
 docs/ContentFileRequest.md
 docs/ContentFileResponse.md
 docs/ContentFilterItem.md
 docs/ContentGeneric.md
 docs/ContentList.md
-docs/ContentLocation.md
 docs/ContentManagementAPI.json
 docs/ContentManagementAPI.md
 docs/ContentManagementSingleDocumentTopicDocumentDataV2.md
@@ -1277,6 +1280,8 @@ docs/CreateTimeOffPlanBusinessUnitAssociation.md
 docs/CreateTimeOffPlanManagementUnitAssociation.md
 docs/CreateTimeOffPlanRequest.md
 docs/CreateTriggerRequest.md
+docs/CreateUploadSourceUrlJobRequest.md
+docs/CreateUploadSourceUrlJobResponse.md
 docs/CreateUser.md
 docs/CreateUtilizationLabelRequest.md
 docs/CreateWebChatConversationRequest.md
@@ -1532,6 +1537,7 @@ docs/DoNotSendActionSettings.md
 docs/Document.md
 docs/DocumentArticle.md
 docs/DocumentAttribute.md
+docs/DocumentBody.md
 docs/DocumentBodyBlock.md
 docs/DocumentBodyBlockWithHighlight.md
 docs/DocumentBodyImage.md
@@ -1823,6 +1829,7 @@ docs/ExpandableWebDeployment.md
 docs/ExpandableWebDeploymentEntityListing.md
 docs/ExpansionCriterium.md
 docs/ExpiredEdgeListing.md
+docs/ExportDetails.md
 docs/ExportScriptRequest.md
 docs/ExportScriptResponse.md
 docs/ExportUri.md
@@ -1960,6 +1967,7 @@ docs/FileUploadSettings.md
 docs/Filter.md
 docs/FilterPreviewResponse.md
 docs/FixedAvailability.md
+docs/FlattenedJsonSchemaDocument.md
 docs/Flow.md
 docs/FlowActivityData.md
 docs/FlowActivityEntityData.md
@@ -2107,6 +2115,7 @@ docs/GetMetricsResponse.md
 docs/GetProfilesResponse.md
 docs/GetRulesQuery.md
 docs/GetTemplatesResponse.md
+docs/GetUploadSourceUrlJobStatusResponse.md
 docs/GoogleDialogflowConfig.md
 docs/GoogleDialogflowCustomSettings.md
 docs/Grammar.md
@@ -2127,6 +2136,7 @@ docs/Group.md
 docs/GroupByAttribute.md
 docs/GroupContact.md
 docs/GroupCreate.md
+docs/GroupEmailPolicy.md
 docs/GroupEntityListing.md
 docs/GroupGreetingEventGreeting.md
 docs/GroupGreetingEventGreetingAudioFile.md
@@ -2266,10 +2276,6 @@ docs/IntegrationsAPI.md
 docs/Intent.md
 docs/IntentDefinition.md
 docs/IntentFeedback.md
-docs/InteractionStatsAlert.md
-docs/InteractionStatsAlertContainer.md
-docs/InteractionStatsRule.md
-docs/InteractionStatsRuleContainer.md
 docs/InternalMessage.md
 docs/InternalMessageDetails.md
 docs/IntradayPerformancePredictionData.md
@@ -2506,7 +2512,6 @@ docs/KnowledgeDocumentVersionListing.md
 docs/KnowledgeDocumentVersionReference.md
 docs/KnowledgeDocumentVersionVariation.md
 docs/KnowledgeDocumentVersionVariationListing.md
-docs/KnowledgeDocumentVersionVariationReference.md
 docs/KnowledgeDocumentView.md
 docs/KnowledgeDocumentsAnswerFilter.md
 docs/KnowledgeExportJobDocumentsFilter.md
@@ -2548,6 +2553,12 @@ docs/KnowledgeIntegrationFilterValue.md
 docs/KnowledgeIntegrationOptionsResponse.md
 docs/KnowledgeIntegrationReference.md
 docs/KnowledgeOperationSource.md
+docs/KnowledgeParseImportResult.md
+docs/KnowledgeParseJobRequest.md
+docs/KnowledgeParseJobRequestImport.md
+docs/KnowledgeParseJobRequestPatch.md
+docs/KnowledgeParseJobResponse.md
+docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
 docs/KnowledgeSearchDocumentV1.md
@@ -2558,6 +2569,7 @@ docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
 docs/KnowledgeSyncJobResponse.md
 docs/KnowledgeSyncJobStatistics.md
+docs/KnowledgeSyncRequest.md
 docs/KnowledgeTraining.md
 docs/KpiResult.md
 docs/Label.md
@@ -2802,6 +2814,7 @@ docs/MessageMediaData.md
 docs/MessageMediaParticipant.md
 docs/MessageMediaPolicy.md
 docs/MessageMediaPolicyConditions.md
+docs/MessageMediaSettings.md
 docs/MessageSticker.md
 docs/MessageStickerAttachment.md
 docs/MessageTypingEventRequest.md
@@ -2870,6 +2883,8 @@ docs/MinerTopicPhrase.md
 docs/MinerTopicsListing.md
 docs/MobileDevicesAPI.json
 docs/MobileDevicesAPI.md
+docs/MobileNotificationSettings.md
+docs/MobileSettings.md
 docs/ModifiableRuleProperties.md
 docs/MonthlyPlanningPeriodSettings.md
 docs/MoveAgentResponse.md
@@ -2920,6 +2935,7 @@ docs/NluUtteranceSegment.md
 docs/Note.md
 docs/NoteListing.md
 docs/NotificationTemplateBody.md
+docs/NotificationTemplateButton.md
 docs/NotificationTemplateFooter.md
 docs/NotificationTemplateHeader.md
 docs/NotificationTemplateParameter.md
@@ -3233,6 +3249,7 @@ docs/PresenceDetailQueryPredicate.md
 docs/PresenceEventOrganizationPresence.md
 docs/PresenceEventUserPresence.md
 docs/PresenceSettings.md
+docs/PresentedKnowledgeDocument.md
 docs/ProcessAutomationAPI.json
 docs/ProcessAutomationAPI.md
 docs/ProcessScheduleUpdateUploadRequest.md
@@ -3658,6 +3675,8 @@ docs/RecurrencePeriod.md
 docs/RecurrenceSettings.md
 docs/Referrer.md
 docs/RegionTimeZone.md
+docs/RegisterArchitectExportJob.md
+docs/RegisterArchitectExportJobResponse.md
 docs/RegisterArchitectJobResponse.md
 docs/Relationship.md
 docs/RelationshipListing.md
@@ -3780,6 +3799,7 @@ docs/RuleEngineConfig.md
 docs/RuleSet.md
 docs/RuleSetDiagnostic.md
 docs/RuleSetEntityListing.md
+docs/SAMLProvider.md
 docs/SCIMAPI.json
 docs/SCIMAPI.md
 docs/SIPSearchPublicRequest.md
@@ -3853,8 +3873,6 @@ docs/ScreenRecordingAPI.md
 docs/ScreenRecordingActiveSessions.md
 docs/ScreenRecordingMetaData.md
 docs/ScreenRecordingMetaDataRequest.md
-docs/ScreenRecordingSession.md
-docs/ScreenRecordingSessionListing.md
 docs/ScreenRecordingUserAuthenticatedInfo.md
 docs/Screenshare.md
 docs/Script.md
@@ -4355,8 +4373,6 @@ docs/UnifiedGeneralTopic.md
 docs/UnifiedGeneralTopicEntityListing.md
 docs/UnpublishedProgramsEntityListing.md
 docs/UnreadFields.md
-docs/UnreadMetric.md
-docs/UnreadStatus.md
 docs/UpdateActionInput.md
 docs/UpdateActivityCodeRequest.md
 docs/UpdateActivityPlanRequest.md
@@ -5059,8 +5075,6 @@ docs/WritableEntity.md
 docs/WritableStarrableDivision.md
 docs/deleteAlertingAlert-example.txt
 docs/deleteAlertingAlertsAll-example.txt
-docs/deleteAlertingInteractionstatsAlert-example.txt
-docs/deleteAlertingInteractionstatsRule-example.txt
 docs/deleteAlertingRule-example.txt
 docs/deleteAnalyticsConversationsDetailsJob-example.txt
 docs/deleteAnalyticsConversationsDetailsJob-example.txt
@@ -5347,12 +5361,6 @@ docs/deleteWorkforcemanagementManagementunitTimeoffplan-example.txt
 docs/deleteWorkforcemanagementManagementunitWorkplan-example.txt
 docs/deleteWorkforcemanagementManagementunitWorkplanrotation-example.txt
 docs/getAlertingAlert-example.txt
-docs/getAlertingAlertsActive-example.txt
-docs/getAlertingInteractionstatsAlert-example.txt
-docs/getAlertingInteractionstatsAlerts-example.txt
-docs/getAlertingInteractionstatsAlertsUnread-example.txt
-docs/getAlertingInteractionstatsRule-example.txt
-docs/getAlertingInteractionstatsRules-example.txt
 docs/getAlertingRule-example.txt
 docs/getAnalyticsBotflowDivisionsReportingturns-example.txt
 docs/getAnalyticsBotflowReportingturns-example.txt
@@ -5467,6 +5475,8 @@ docs/getChatsSettings-example.txt
 docs/getChatsThreadMessages-example.txt
 docs/getChatsUserMessage-example.txt
 docs/getChatsUserMessages-example.txt
+docs/getChatsUserSettings-example.txt
+docs/getChatsUsersMeSettings-example.txt
 docs/getCoachingAppointment-example.txt
 docs/getCoachingAppointmentAnnotation-example.txt
 docs/getCoachingAppointmentAnnotations-example.txt
@@ -5663,6 +5673,7 @@ docs/getFlowsDatatablesDivisionview-example.txt
 docs/getFlowsDatatablesDivisionviews-example.txt
 docs/getFlowsDivisionviews-example.txt
 docs/getFlowsExecution-example.txt
+docs/getFlowsExportJob-example.txt
 docs/getFlowsInstance-example.txt
 docs/getFlowsInstancesJob-example.txt
 docs/getFlowsInstancesQuerycapabilities-example.txt
@@ -5879,6 +5890,7 @@ docs/getKnowledgeKnowledgebaseLanguageTraining-example.txt
 docs/getKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/getKnowledgeKnowledgebaseOperations-example.txt
 docs/getKnowledgeKnowledgebaseOperationsUsersQuery-example.txt
+docs/getKnowledgeKnowledgebaseParseJob-example.txt
 docs/getKnowledgeKnowledgebaseSources-example.txt
 docs/getKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
 docs/getKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
@@ -5886,6 +5898,8 @@ docs/getKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/getKnowledgeKnowledgebaseUnansweredGroup-example.txt
 docs/getKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
 docs/getKnowledgeKnowledgebaseUnansweredGroups-example.txt
+docs/getKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
+docs/getKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
 docs/getKnowledgeKnowledgebases-example.txt
 docs/getLanguage-example.txt
 docs/getLanguages-example.txt
@@ -6117,7 +6131,6 @@ docs/getRecordingRecordingkeysRotationschedule-example.txt
 docs/getRecordingSettings-example.txt
 docs/getRecordingUploadsReport-example.txt
 docs/getRecordingsRetentionQuery-example.txt
-docs/getRecordingsScreensessions-example.txt
 docs/getRecordingsScreensessionsDetails-example.txt
 docs/getResponsemanagementLibraries-example.txt
 docs/getResponsemanagementLibrary-example.txt
@@ -6576,6 +6589,8 @@ docs/patchChatsRoom-example.txt
 docs/patchChatsRoomMessage-example.txt
 docs/patchChatsSettings-example.txt
 docs/patchChatsUserMessage-example.txt
+docs/patchChatsUserSettings-example.txt
+docs/patchChatsUsersMeSettings-example.txt
 docs/patchCoachingAppointment-example.txt
 docs/patchCoachingAppointmentAnnotation-example.txt
 docs/patchCoachingAppointmentStatus-example.txt
@@ -6651,6 +6666,7 @@ docs/patchKnowledgeKnowledgebaseLanguageCategory-example.txt
 docs/patchKnowledgeKnowledgebaseLanguageDocument-example.txt
 docs/patchKnowledgeKnowledgebaseLanguageDocuments-example.txt
 docs/patchKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
+docs/patchKnowledgeKnowledgebaseParseJob-example.txt
 docs/patchKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/patchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
 docs/patchLanguageunderstandingDomain-example.txt
@@ -6757,7 +6773,6 @@ docs/patchWorkforcemanagementUserWorkplanbidranks-example.txt
 docs/patchWorkforcemanagementUsersWorkplanbidranksBulk-example.txt
 docs/patchWorkforcemanagementWorkplanbidPreferences-example.txt
 docs/postAlertingAlertsQuery-example.txt
-docs/postAlertingInteractionstatsRules-example.txt
 docs/postAlertingRules-example.txt
 docs/postAlertingRulesBulkRemove-example.txt
 docs/postAlertingRulesQuery-example.txt
@@ -7007,6 +7022,7 @@ docs/postFlowsDatatableImportJobs-example.txt
 docs/postFlowsDatatableRows-example.txt
 docs/postFlowsDatatables-example.txt
 docs/postFlowsExecutions-example.txt
+docs/postFlowsExportJobs-example.txt
 docs/postFlowsInstancesJobs-example.txt
 docs/postFlowsInstancesQuery-example.txt
 docs/postFlowsJobs-example.txt
@@ -7089,6 +7105,8 @@ docs/postKnowledgeKnowledgebaseLanguageDocuments-example.txt
 docs/postKnowledgeKnowledgebaseLanguageDocumentsImports-example.txt
 docs/postKnowledgeKnowledgebaseLanguageTrainingPromote-example.txt
 docs/postKnowledgeKnowledgebaseLanguageTrainings-example.txt
+docs/postKnowledgeKnowledgebaseParseJobImport-example.txt
+docs/postKnowledgeKnowledgebaseParseJobs-example.txt
 docs/postKnowledgeKnowledgebaseSearch-example.txt
 docs/postKnowledgeKnowledgebaseSearch-example.txt
 docs/postKnowledgeKnowledgebaseSourcesSalesforce-example.txt
@@ -7096,6 +7114,8 @@ docs/postKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync-example.txt
 docs/postKnowledgeKnowledgebaseSourcesServicenow-example.txt
 docs/postKnowledgeKnowledgebaseSourcesServicenowSourceIdSync-example.txt
 docs/postKnowledgeKnowledgebaseSynchronizeJobs-example.txt
+docs/postKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
+docs/postKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
 docs/postKnowledgeKnowledgebases-example.txt
 docs/postLanguages-example.txt
 docs/postLanguageunderstandingDomainFeedback-example.txt
@@ -7433,8 +7453,6 @@ docs/postWorkforcemanagementTimeoffrequests-example.txt
 docs/postWorkforcemanagementTimeoffrequestsEstimate-example.txt
 docs/postWorkforcemanagementTimeoffrequestsIntegrationstatusQuery-example.txt
 docs/putAlertingAlert-example.txt
-docs/putAlertingInteractionstatsAlert-example.txt
-docs/putAlertingInteractionstatsRule-example.txt
 docs/putAlertingRule-example.txt
 docs/putAnalyticsDataretentionSettings-example.txt
 docs/putArchitectEmergencygroup-example.txt
@@ -7799,7 +7817,6 @@ src/Models/ActionTemplate.swift
 src/Models/ActionTemplateListing.swift
 src/Models/Actions.swift
 src/Models/Activation.swift
-src/Models/ActiveAlertCount.swift
 src/Models/ActivityCode.swift
 src/Models/ActivityCodeContainer.swift
 src/Models/ActivityCodeReference.swift
@@ -7990,6 +8007,7 @@ src/Models/ArchitectDependencyTrackingBuildNotificationClient.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationHomeOrganization.swift
 src/Models/ArchitectDependencyTrackingBuildNotificationUser.swift
+src/Models/ArchitectExportJobStateResponse.swift
 src/Models/ArchitectFlowFields.swift
 src/Models/ArchitectFlowNotificationArchitectOperation.swift
 src/Models/ArchitectFlowNotificationClient.swift
@@ -8006,6 +8024,7 @@ src/Models/ArchitectFlowOutcomeNotificationErrorMessageParams.swift
 src/Models/ArchitectFlowOutcomeNotificationFlowOutcomeNotification.swift
 src/Models/ArchitectFlowOutcomeNotificationHomeOrganization.swift
 src/Models/ArchitectFlowOutcomeNotificationUser.swift
+src/Models/ArchitectFlowReference.swift
 src/Models/ArchitectJobMessage.swift
 src/Models/ArchitectJobStateResponse.swift
 src/Models/ArchitectPromptNotificationArchitectOperation.swift
@@ -8251,13 +8270,13 @@ src/Models/BulkCallbackPatchResponse.swift
 src/Models/BulkContactsRequest.swift
 src/Models/BulkContactsResponse.swift
 src/Models/BulkDeleteResponse.swift
+src/Models/BulkEntityErrorEntity.swift
+src/Models/BulkEntityErrorExternalContact.swift
+src/Models/BulkEntityErrorExternalOrganization.swift
+src/Models/BulkEntityErrorNote.swift
+src/Models/BulkEntityErrorRelationship.swift
 src/Models/BulkError.swift
 src/Models/BulkErrorDetail.swift
-src/Models/BulkErrorEntity.swift
-src/Models/BulkErrorExternalContact.swift
-src/Models/BulkErrorExternalOrganization.swift
-src/Models/BulkErrorNote.swift
-src/Models/BulkErrorRelationship.swift
 src/Models/BulkFetchContactsResponse.swift
 src/Models/BulkFetchNotesResponse.swift
 src/Models/BulkFetchOrganizationsResponse.swift
@@ -8283,15 +8302,15 @@ src/Models/BulkOrganizationsResponse.swift
 src/Models/BulkRelationshipsRequest.swift
 src/Models/BulkRelationshipsResponse.swift
 src/Models/BulkResponse.swift
-src/Models/BulkResponseResultExternalContactEntity.swift
-src/Models/BulkResponseResultExternalContactExternalContact.swift
-src/Models/BulkResponseResultExternalOrganizationEntity.swift
-src/Models/BulkResponseResultExternalOrganizationExternalOrganization.swift
-src/Models/BulkResponseResultNoteEntity.swift
-src/Models/BulkResponseResultNoteNote.swift
-src/Models/BulkResponseResultRelationshipEntity.swift
-src/Models/BulkResponseResultRelationshipRelationship.swift
-src/Models/BulkResponseResultVoidEntity.swift
+src/Models/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.swift
+src/Models/BulkResponseResultExternalContactExternalContactBulkEntityErrorExternalContact.swift
+src/Models/BulkResponseResultExternalOrganizationEntityBulkEntityErrorEntity.swift
+src/Models/BulkResponseResultExternalOrganizationExternalOrganizationBulkEntityErrorExternalOrganization.swift
+src/Models/BulkResponseResultNoteEntityBulkEntityErrorEntity.swift
+src/Models/BulkResponseResultNoteNoteBulkEntityErrorNote.swift
+src/Models/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.swift
+src/Models/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.swift
+src/Models/BulkResponseResultVoidEntityBulkEntityErrorEntity.swift
 src/Models/BulkResult.swift
 src/Models/BulkShiftTradeStateUpdateRequest.swift
 src/Models/BulkUpdateShiftTradeStateRequestItem.swift
@@ -8429,6 +8448,7 @@ src/Models/ChatReactionUpdate.swift
 src/Models/ChatSendMessageResponse.swift
 src/Models/ChatSettings.swift
 src/Models/ChatUserRef.swift
+src/Models/ChatUserSettings.swift
 src/Models/Check.swift
 src/Models/ClientApp.swift
 src/Models/ClientAppConfigurationInfo.swift
@@ -8569,12 +8589,13 @@ src/Models/ContentButtonResponse.swift
 src/Models/ContentCard.swift
 src/Models/ContentCardAction.swift
 src/Models/ContentCarousel.swift
+src/Models/ContentDatePicker.swift
+src/Models/ContentDatePickerAvailableTime.swift
 src/Models/ContentFileRequest.swift
 src/Models/ContentFileResponse.swift
 src/Models/ContentFilterItem.swift
 src/Models/ContentGeneric.swift
 src/Models/ContentList.swift
-src/Models/ContentLocation.swift
 src/Models/ContentManagementSingleDocumentTopicDocumentDataV2.swift
 src/Models/ContentManagementSingleDocumentTopicLockData.swift
 src/Models/ContentManagementSingleDocumentTopicUserData.swift
@@ -8999,6 +9020,8 @@ src/Models/CreateTimeOffPlanBusinessUnitAssociation.swift
 src/Models/CreateTimeOffPlanManagementUnitAssociation.swift
 src/Models/CreateTimeOffPlanRequest.swift
 src/Models/CreateTriggerRequest.swift
+src/Models/CreateUploadSourceUrlJobRequest.swift
+src/Models/CreateUploadSourceUrlJobResponse.swift
 src/Models/CreateUser.swift
 src/Models/CreateUtilizationLabelRequest.swift
 src/Models/CreateWebChatConversationRequest.swift
@@ -9250,6 +9273,7 @@ src/Models/DoNotSendActionSettings.swift
 src/Models/Document.swift
 src/Models/DocumentArticle.swift
 src/Models/DocumentAttribute.swift
+src/Models/DocumentBody.swift
 src/Models/DocumentBodyBlock.swift
 src/Models/DocumentBodyBlockWithHighlight.swift
 src/Models/DocumentBodyImage.swift
@@ -9533,6 +9557,7 @@ src/Models/ExpandableWebDeployment.swift
 src/Models/ExpandableWebDeploymentEntityListing.swift
 src/Models/ExpansionCriterium.swift
 src/Models/ExpiredEdgeListing.swift
+src/Models/ExportDetails.swift
 src/Models/ExportScriptRequest.swift
 src/Models/ExportScriptResponse.swift
 src/Models/ExportUri.swift
@@ -9666,6 +9691,7 @@ src/Models/FileUploadSettings.swift
 src/Models/Filter.swift
 src/Models/FilterPreviewResponse.swift
 src/Models/FixedAvailability.swift
+src/Models/FlattenedJsonSchemaDocument.swift
 src/Models/Flow.swift
 src/Models/FlowActivityData.swift
 src/Models/FlowActivityEntityData.swift
@@ -9805,6 +9831,7 @@ src/Models/GetMetricsResponse.swift
 src/Models/GetProfilesResponse.swift
 src/Models/GetRulesQuery.swift
 src/Models/GetTemplatesResponse.swift
+src/Models/GetUploadSourceUrlJobStatusResponse.swift
 src/Models/GoogleDialogflowConfig.swift
 src/Models/GoogleDialogflowCustomSettings.swift
 src/Models/Grammar.swift
@@ -9823,6 +9850,7 @@ src/Models/Group.swift
 src/Models/GroupByAttribute.swift
 src/Models/GroupContact.swift
 src/Models/GroupCreate.swift
+src/Models/GroupEmailPolicy.swift
 src/Models/GroupEntityListing.swift
 src/Models/GroupGreetingEventGreeting.swift
 src/Models/GroupGreetingEventGreetingAudioFile.swift
@@ -9954,10 +9982,6 @@ src/Models/IntegrationTypeEntityListing.swift
 src/Models/Intent.swift
 src/Models/IntentDefinition.swift
 src/Models/IntentFeedback.swift
-src/Models/InteractionStatsAlert.swift
-src/Models/InteractionStatsAlertContainer.swift
-src/Models/InteractionStatsRule.swift
-src/Models/InteractionStatsRuleContainer.swift
 src/Models/InternalMessage.swift
 src/Models/InternalMessageDetails.swift
 src/Models/IntradayPerformancePredictionData.swift
@@ -10190,7 +10214,6 @@ src/Models/KnowledgeDocumentVersionListing.swift
 src/Models/KnowledgeDocumentVersionReference.swift
 src/Models/KnowledgeDocumentVersionVariation.swift
 src/Models/KnowledgeDocumentVersionVariationListing.swift
-src/Models/KnowledgeDocumentVersionVariationReference.swift
 src/Models/KnowledgeDocumentView.swift
 src/Models/KnowledgeDocumentsAnswerFilter.swift
 src/Models/KnowledgeExportJobDocumentsFilter.swift
@@ -10232,6 +10255,12 @@ src/Models/KnowledgeIntegrationFilterValue.swift
 src/Models/KnowledgeIntegrationOptionsResponse.swift
 src/Models/KnowledgeIntegrationReference.swift
 src/Models/KnowledgeOperationSource.swift
+src/Models/KnowledgeParseImportResult.swift
+src/Models/KnowledgeParseJobRequest.swift
+src/Models/KnowledgeParseJobRequestImport.swift
+src/Models/KnowledgeParseJobRequestPatch.swift
+src/Models/KnowledgeParseJobResponse.swift
+src/Models/KnowledgeParseRecord.swift
 src/Models/KnowledgeSearchClientApplication.swift
 src/Models/KnowledgeSearchDocumentResponse.swift
 src/Models/KnowledgeSearchDocumentV1.swift
@@ -10242,6 +10271,7 @@ src/Models/KnowledgeSyncJobReport.swift
 src/Models/KnowledgeSyncJobRequest.swift
 src/Models/KnowledgeSyncJobResponse.swift
 src/Models/KnowledgeSyncJobStatistics.swift
+src/Models/KnowledgeSyncRequest.swift
 src/Models/KnowledgeTraining.swift
 src/Models/KpiResult.swift
 src/Models/Label.swift
@@ -10474,6 +10504,7 @@ src/Models/MessageMediaData.swift
 src/Models/MessageMediaParticipant.swift
 src/Models/MessageMediaPolicy.swift
 src/Models/MessageMediaPolicyConditions.swift
+src/Models/MessageMediaSettings.swift
 src/Models/MessageSticker.swift
 src/Models/MessageStickerAttachment.swift
 src/Models/MessageTypingEventRequest.swift
@@ -10538,6 +10569,8 @@ src/Models/MinerListing.swift
 src/Models/MinerTopic.swift
 src/Models/MinerTopicPhrase.swift
 src/Models/MinerTopicsListing.swift
+src/Models/MobileNotificationSettings.swift
+src/Models/MobileSettings.swift
 src/Models/ModelRange.swift
 src/Models/ModelResponse.swift
 src/Models/ModelVoid.swift
@@ -10591,6 +10624,7 @@ src/Models/NluUtteranceSegment.swift
 src/Models/Note.swift
 src/Models/NoteListing.swift
 src/Models/NotificationTemplateBody.swift
+src/Models/NotificationTemplateButton.swift
 src/Models/NotificationTemplateFooter.swift
 src/Models/NotificationTemplateHeader.swift
 src/Models/NotificationTemplateParameter.swift
@@ -10888,6 +10922,7 @@ src/Models/PresenceDetailQueryPredicate.swift
 src/Models/PresenceEventOrganizationPresence.swift
 src/Models/PresenceEventUserPresence.swift
 src/Models/PresenceSettings.swift
+src/Models/PresentedKnowledgeDocument.swift
 src/Models/ProcessScheduleUpdateUploadRequest.swift
 src/Models/ProfileWithDateRange.swift
 src/Models/Program.swift
@@ -11306,6 +11341,8 @@ src/Models/RecurrencePeriod.swift
 src/Models/RecurrenceSettings.swift
 src/Models/Referrer.swift
 src/Models/RegionTimeZone.swift
+src/Models/RegisterArchitectExportJob.swift
+src/Models/RegisterArchitectExportJobResponse.swift
 src/Models/RegisterArchitectJobResponse.swift
 src/Models/Relationship.swift
 src/Models/RelationshipListing.swift
@@ -11423,6 +11460,7 @@ src/Models/RuleEngineConfig.swift
 src/Models/RuleSet.swift
 src/Models/RuleSetDiagnostic.swift
 src/Models/RuleSetEntityListing.swift
+src/Models/SAMLProvider.swift
 src/Models/SIPSearchPublicRequest.swift
 src/Models/SMSAvailablePhoneNumberEntityListing.swift
 src/Models/Salesforce.swift
@@ -11492,8 +11530,6 @@ src/Models/ScoredAgent.swift
 src/Models/ScreenRecordingActiveSessions.swift
 src/Models/ScreenRecordingMetaData.swift
 src/Models/ScreenRecordingMetaDataRequest.swift
-src/Models/ScreenRecordingSession.swift
-src/Models/ScreenRecordingSessionListing.swift
 src/Models/ScreenRecordingUserAuthenticatedInfo.swift
 src/Models/Screenshare.swift
 src/Models/Script.swift
@@ -11970,8 +12006,6 @@ src/Models/UnifiedGeneralTopic.swift
 src/Models/UnifiedGeneralTopicEntityListing.swift
 src/Models/UnpublishedProgramsEntityListing.swift
 src/Models/UnreadFields.swift
-src/Models/UnreadMetric.swift
-src/Models/UnreadStatus.swift
 src/Models/UpdateActionInput.swift
 src/Models/UpdateActivityCodeRequest.swift
 src/Models/UpdateActivityPlanRequest.swift

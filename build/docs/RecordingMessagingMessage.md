@@ -23,8 +23,10 @@
 | **buttonResponse** | [**ButtonResponse**](ButtonResponse) | Button Response selected by user for this message. | [optional] |
 | **story** | [**RecordingContentStory**](RecordingContentStory) | Ephemeral story content. | [optional] |
 | **cards** | [**[Card]**](Card) | List of cards offered for this message | [optional] |
+| **notificationTemplate** | [**RecordingNotificationTemplate**](RecordingNotificationTemplate) | Template notification content. | [optional] |
 | **contentType** | **String** | Indicates the content type for this message | [optional] |
+| **events** | [**[ConversationMessageEvent]**](ConversationMessageEvent) | List of event elements | [optional] |
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

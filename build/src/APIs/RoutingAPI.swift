@@ -3192,12 +3192,12 @@ open class RoutingAPI {
   "emailInQueueFlow" : "{}",
   "autoAnswerOnly" : true,
   "routingRules" : [ {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   }, {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   } ],
   "skillEvaluationMethod" : "NONE",
@@ -3251,30 +3251,30 @@ open class RoutingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
-  "userMemberCount" : 6,
+  "userMemberCount" : 3,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
   "memberGroups" : [ {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   }, {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   } ],
   "scoringMethod" : "TimestampAndPriority",
-  "joinedMemberCount" : 1,
+  "joinedMemberCount" : 2,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
   "acwSettings" : "{}",
-  "memberCount" : 0,
+  "memberCount" : 9,
   "selfUri" : "https://openapi-generator.tech",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",
@@ -3870,14 +3870,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -3909,14 +3909,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -3951,7 +3951,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -3987,7 +3987,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -4031,7 +4031,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4043,7 +4043,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -4074,7 +4074,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -4088,7 +4088,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -4119,7 +4119,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -4176,14 +4176,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4215,14 +4215,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -4257,7 +4257,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -4293,7 +4293,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -4337,7 +4337,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4349,7 +4349,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -4380,7 +4380,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -4394,7 +4394,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -4425,7 +4425,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -4635,14 +4635,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4674,14 +4674,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -4716,7 +4716,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -4752,7 +4752,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -4796,7 +4796,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -4808,7 +4808,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -4839,7 +4839,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -4853,7 +4853,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -4884,7 +4884,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -4941,14 +4941,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -4980,14 +4980,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -5022,7 +5022,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -5058,7 +5058,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -5102,7 +5102,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -5114,7 +5114,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -5145,7 +5145,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -5159,7 +5159,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -5190,7 +5190,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -5431,12 +5431,12 @@ open class RoutingAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -5490,30 +5490,30 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 6,
+    "userMemberCount" : 3,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 1,
+    "joinedMemberCount" : 2,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 9,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -5538,12 +5538,12 @@ open class RoutingAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -5597,30 +5597,30 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 6,
+    "userMemberCount" : 3,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 1,
+    "joinedMemberCount" : 2,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 9,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -5754,12 +5754,12 @@ open class RoutingAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -5813,30 +5813,30 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 6,
+    "userMemberCount" : 3,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 1,
+    "joinedMemberCount" : 2,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 9,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -5861,12 +5861,12 @@ open class RoutingAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -5920,30 +5920,30 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 6,
+    "userMemberCount" : 3,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 1,
+    "joinedMemberCount" : 2,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 9,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6055,12 +6055,12 @@ open class RoutingAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -6114,30 +6114,30 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 6,
+    "userMemberCount" : 3,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 1,
+    "joinedMemberCount" : 2,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 9,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6162,12 +6162,12 @@ open class RoutingAPI {
     "emailInQueueFlow" : "{}",
     "autoAnswerOnly" : true,
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -6221,30 +6221,30 @@ open class RoutingAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "queueFlow" : "{}",
     "callingPartyNumber" : "callingPartyNumber",
-    "userMemberCount" : 6,
+    "userMemberCount" : 3,
     "modifiedBy" : "modifiedBy",
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     } ],
     "scoringMethod" : "TimestampAndPriority",
-    "joinedMemberCount" : 1,
+    "joinedMemberCount" : 2,
     "messageInQueueFlow" : "{}",
     "callingPartyName" : "callingPartyName",
     "acwSettings" : "{}",
-    "memberCount" : 0,
+    "memberCount" : 9,
     "selfUri" : "https://openapi-generator.tech",
     "dateModified" : "2000-01-23T04:56:07.000+00:00",
     "whisperPrompt" : "{}",
@@ -6350,12 +6350,12 @@ open class RoutingAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -6414,14 +6414,14 @@ open class RoutingAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -6457,12 +6457,12 @@ open class RoutingAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -6521,14 +6521,14 @@ open class RoutingAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -8642,12 +8642,12 @@ open class RoutingAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -8706,14 +8706,14 @@ open class RoutingAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -8749,12 +8749,12 @@ open class RoutingAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -8813,14 +8813,14 @@ open class RoutingAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -8939,14 +8939,14 @@ open class RoutingAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -9039,14 +9039,14 @@ open class RoutingAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -9726,14 +9726,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -9765,14 +9765,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -9807,7 +9807,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -9843,7 +9843,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -9887,7 +9887,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -9899,7 +9899,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -9930,7 +9930,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -9944,7 +9944,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -9975,7 +9975,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10032,14 +10032,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10071,14 +10071,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -10113,7 +10113,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10149,7 +10149,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10193,7 +10193,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10205,7 +10205,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10236,7 +10236,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10250,7 +10250,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10281,7 +10281,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10461,14 +10461,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10500,14 +10500,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -10542,7 +10542,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10578,7 +10578,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10622,7 +10622,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10634,7 +10634,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10665,7 +10665,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10679,7 +10679,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10710,7 +10710,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10767,14 +10767,14 @@ open class RoutingAPI {
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "skillUri" : "https://openapi-generator.tech",
         "id" : "id",
         "state" : "active",
-        "proficiency" : 7.061401241503109
+        "proficiency" : 2.3021358869347655
       } ],
       "station" : "{}",
       "dateLastLogin" : "2000-01-23T04:56:07.000+00:00",
@@ -10806,14 +10806,14 @@ open class RoutingAPI {
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       }, {
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "id" : "id",
         "state" : "active",
         "languageUri" : "https://openapi-generator.tech",
-        "proficiency" : 9.301444243932576
+        "proficiency" : 7.061401241503109
       } ],
       "selfUri" : "https://openapi-generator.tech",
       "conversationSummary" : "{}",
@@ -10848,7 +10848,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10884,7 +10884,7 @@ open class RoutingAPI {
         "owners" : [ null, null ],
         "rolesEnabled" : true,
         "type" : "official",
-        "version" : 2,
+        "version" : 5,
         "rulesVisible" : true,
         "name" : "name",
         "id" : "id",
@@ -10928,7 +10928,7 @@ open class RoutingAPI {
       },
       "team" : "{}",
       "certifications" : [ "certifications", "certifications" ],
-      "version" : 6,
+      "version" : 0,
       "outOfOffice" : "{}",
       "languagePreference" : "languagePreference",
       "profileSkills" : [ "profileSkills", "profileSkills" ],
@@ -10940,7 +10940,7 @@ open class RoutingAPI {
       "locations" : [ {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -10971,7 +10971,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -10985,7 +10985,7 @@ open class RoutingAPI {
       }, {
         "notes" : "notes",
         "coordinates" : {
-          "key" : 1.4658129805029452
+          "key" : 6.027456183070403
         },
         "locationDefinition" : {
           "images" : "images",
@@ -11016,7 +11016,7 @@ open class RoutingAPI {
             "resolution" : "resolution"
           } ],
           "emergencyNumber" : "{}",
-          "version" : 5,
+          "version" : 1,
           "path" : [ "path", "path" ],
           "addressStored" : true,
           "name" : "name",
@@ -11325,12 +11325,12 @@ open class RoutingAPI {
   "onHoldPrompt" : "{}",
   "emailInQueueFlow" : "{}",
   "routingRules" : [ {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   }, {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   } ],
   "skillEvaluationMethod" : "NONE",
@@ -11389,14 +11389,14 @@ open class RoutingAPI {
   "id" : "id",
   "memberGroups" : [ {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   }, {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
@@ -11500,12 +11500,12 @@ open class RoutingAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -11564,14 +11564,14 @@ open class RoutingAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -11607,12 +11607,12 @@ open class RoutingAPI {
     "onHoldPrompt" : "{}",
     "emailInQueueFlow" : "{}",
     "routingRules" : [ {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     }, {
-      "waitSeconds" : 5.637376656633329,
-      "threshold" : 5,
+      "waitSeconds" : 7.386281948385884,
+      "threshold" : 4,
       "operator" : "MEETS_THRESHOLD"
     } ],
     "skillEvaluationMethod" : "NONE",
@@ -11671,14 +11671,14 @@ open class RoutingAPI {
     "id" : "id",
     "memberGroups" : [ {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
       "type" : "TEAM"
     }, {
       "division" : "{}",
-      "memberCount" : 2,
+      "memberCount" : 1,
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "id" : "id",
@@ -11780,7 +11780,7 @@ open class RoutingAPI {
   "id" : "id",
   "state" : "active",
   "languageUri" : "https://openapi-generator.tech",
-  "proficiency" : 9.301444243932576
+  "proficiency" : 7.061401241503109
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -11852,14 +11852,14 @@ open class RoutingAPI {
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "state" : "active",
     "languageUri" : "https://openapi-generator.tech",
-    "proficiency" : 9.301444243932576
+    "proficiency" : 7.061401241503109
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -11934,14 +11934,14 @@ open class RoutingAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",
@@ -13334,12 +13334,12 @@ open class RoutingAPI {
   "emailInQueueFlow" : "{}",
   "autoAnswerOnly" : true,
   "routingRules" : [ {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   }, {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   } ],
   "skillEvaluationMethod" : "NONE",
@@ -13393,30 +13393,30 @@ open class RoutingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
-  "userMemberCount" : 6,
+  "userMemberCount" : 3,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
   "memberGroups" : [ {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   }, {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   } ],
   "scoringMethod" : "TimestampAndPriority",
-  "joinedMemberCount" : 1,
+  "joinedMemberCount" : 2,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
   "acwSettings" : "{}",
-  "memberCount" : 0,
+  "memberCount" : 9,
   "selfUri" : "https://openapi-generator.tech",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",
@@ -14034,7 +14034,7 @@ open class RoutingAPI {
   "id" : "id",
   "state" : "active",
   "languageUri" : "https://openapi-generator.tech",
-  "proficiency" : 9.301444243932576
+  "proficiency" : 7.061401241503109
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -14098,7 +14098,7 @@ open class RoutingAPI {
   "skillUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "active",
-  "proficiency" : 7.061401241503109
+  "proficiency" : 2.3021358869347655
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -14454,12 +14454,12 @@ open class RoutingAPI {
   "emailInQueueFlow" : "{}",
   "autoAnswerOnly" : true,
   "routingRules" : [ {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   }, {
-    "waitSeconds" : 5.637376656633329,
-    "threshold" : 5,
+    "waitSeconds" : 7.386281948385884,
+    "threshold" : 4,
     "operator" : "MEETS_THRESHOLD"
   } ],
   "skillEvaluationMethod" : "NONE",
@@ -14513,30 +14513,30 @@ open class RoutingAPI {
   "dateCreated" : "2000-01-23T04:56:07.000+00:00",
   "queueFlow" : "{}",
   "callingPartyNumber" : "callingPartyNumber",
-  "userMemberCount" : 6,
+  "userMemberCount" : 3,
   "modifiedBy" : "modifiedBy",
   "id" : "id",
   "memberGroups" : [ {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   }, {
     "division" : "{}",
-    "memberCount" : 2,
+    "memberCount" : 1,
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "id" : "id",
     "type" : "TEAM"
   } ],
   "scoringMethod" : "TimestampAndPriority",
-  "joinedMemberCount" : 1,
+  "joinedMemberCount" : 2,
   "messageInQueueFlow" : "{}",
   "callingPartyName" : "callingPartyName",
   "acwSettings" : "{}",
-  "memberCount" : 0,
+  "memberCount" : 9,
   "selfUri" : "https://openapi-generator.tech",
   "dateModified" : "2000-01-23T04:56:07.000+00:00",
   "whisperPrompt" : "{}",
@@ -15053,7 +15053,7 @@ open class RoutingAPI {
   "skillUri" : "https://openapi-generator.tech",
   "id" : "id",
   "state" : "active",
-  "proficiency" : 7.061401241503109
+  "proficiency" : 2.3021358869347655
 }, statusCode=200}]
      
      - parameter userId: (path) User ID 
@@ -15125,14 +15125,14 @@ open class RoutingAPI {
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   }, {
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "skillUri" : "https://openapi-generator.tech",
     "id" : "id",
     "state" : "active",
-    "proficiency" : 7.061401241503109
+    "proficiency" : 2.3021358869347655
   } ],
   "firstUri" : "https://openapi-generator.tech",
   "lastUri" : "https://openapi-generator.tech",

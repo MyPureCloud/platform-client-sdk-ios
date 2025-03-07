@@ -650,7 +650,6 @@ open class IdentityProviderAPI {
     "selfUri" : "https://openapi-generator.tech",
     "certificate" : "certificate",
     "sloBinding" : "sloBinding",
-    "endpointCompression" : true,
     "relyingPartyIdentifier" : "relyingPartyIdentifier",
     "displayOnLogin" : true,
     "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
@@ -669,7 +668,6 @@ open class IdentityProviderAPI {
     "selfUri" : "https://openapi-generator.tech",
     "certificate" : "certificate",
     "sloBinding" : "sloBinding",
-    "endpointCompression" : true,
     "relyingPartyIdentifier" : "relyingPartyIdentifier",
     "displayOnLogin" : true,
     "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
@@ -735,17 +733,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<ADFS> 
@@ -792,17 +796,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<CustomerInteractionCenter> 
@@ -856,13 +866,17 @@ open class IdentityProviderAPI {
   "sloBinding" : "sloBinding",
   "endpointCompression" : true,
   "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
   "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
-  "id" : "id"
+  "id" : "id",
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<GenericSAML> 
@@ -909,17 +923,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<GSuite> 
@@ -966,17 +986,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<IdentityNow> 
@@ -1023,17 +1049,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<Okta> 
@@ -1080,17 +1112,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<OneLogin> 
@@ -1137,17 +1175,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<PingIdentity> 
@@ -1244,18 +1288,24 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "autoProvisionUsers" : true,
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<PureEngage> 
@@ -1302,17 +1352,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
 
      - returns: RequestBuilder<Salesforce> 
@@ -1727,17 +1783,23 @@ open class IdentityProviderAPI {
        - type: oauth2
        - name: PureCloud OAuth
      - examples: [{contentType=application/json, example={
-  "relyingPartyIdentifier" : "relyingPartyIdentifier",
   "issuerURI" : "issuerURI",
+  "logoImageData" : "logoImageData",
+  "selfUri" : "https://openapi-generator.tech",
+  "certificate" : "certificate",
+  "sloBinding" : "sloBinding",
+  "relyingPartyIdentifier" : "relyingPartyIdentifier",
+  "displayOnLogin" : true,
+  "nameIdentifierFormat" : "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
   "sloURI" : "sloURI",
   "certificates" : [ "certificates", "certificates" ],
-  "selfUri" : "https://openapi-generator.tech",
+  "ssoBinding" : "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
   "name" : "name",
-  "certificate" : "certificate",
+  "signAuthnRequests" : true,
   "disabled" : true,
   "ssoTargetURI" : "ssoTargetURI",
   "id" : "id",
-  "sloBinding" : "sloBinding"
+  "providerName" : "providerName"
 }, statusCode=200}]
      
      - parameter body: (body) Provider 

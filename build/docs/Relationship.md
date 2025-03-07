@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
+| **division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
 | **user** | [**User**](User) | The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note. | |
 | **externalOrganization** | [**ExternalOrganization**](ExternalOrganization) | The external organization this relationship is attached to | |
 | **relationship** | **String** | The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant | |
@@ -15,4 +16,4 @@
 
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

@@ -18,10 +18,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getChatsThreadMessages**](ChatAPI#getChatsThreadMessages) | Get history by thread |
 | [**getChatsUserMessage**](ChatAPI#getChatsUserMessage) | Get messages by id(s) from a 1on1 |
 | [**getChatsUserMessages**](ChatAPI#getChatsUserMessages) | Get 1on1 History between a user |
+| [**getChatsUserSettings**](ChatAPI#getChatsUserSettings) | Get a user&#39;s chat settings |
+| [**getChatsUsersMeSettings**](ChatAPI#getChatsUsersMeSettings) | Get a user&#39;s chat settings |
 | [**patchChatsRoom**](ChatAPI#patchChatsRoom) | Set properties for a room |
 | [**patchChatsRoomMessage**](ChatAPI#patchChatsRoomMessage) | Edit a message in a room |
 | [**patchChatsSettings**](ChatAPI#patchChatsSettings) | Patch Chat Settings. |
 | [**patchChatsUserMessage**](ChatAPI#patchChatsUserMessage) | Edit a message to a user |
+| [**patchChatsUserSettings**](ChatAPI#patchChatsUserSettings) | Update a user&#39;s chat settings |
+| [**patchChatsUsersMeSettings**](ChatAPI#patchChatsUsersMeSettings) | Update a user&#39;s chat settings |
 | [**postChatsRoomMessages**](ChatAPI#postChatsRoomMessages) | Send a message to a room |
 | [**postChatsRoomMessagesPins**](ChatAPI#postChatsRoomMessagesPins) | Add pinned messages for a room, up to a maximum of 5 pinned messages |
 | [**postChatsRoomParticipant**](ChatAPI#postChatsRoomParticipant) | Join a room |
@@ -769,6 +773,102 @@ ChatAPI.getChatsUserMessages(userId: userId, limit: limit, before: before, after
 [**ChatMessageResponse**](ChatMessageResponse)
 
 
+## getChatsUserSettings
+
+
+
+> [ChatUserSettings](ChatUserSettings) getChatsUserSettings(userId)
+
+Get a user&#39;s chat settings
+
+
+
+Wraps GET /api/v2/chats/users/{userId}/settings  
+
+Requires ANY permissions: 
+
+* chat:usersettings:view
+* chat:setting:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+
+// Code example
+ChatAPI.getChatsUserSettings(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ChatAPI.getChatsUserSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings)
+
+
+## getChatsUsersMeSettings
+
+
+
+> [ChatUserSettings](ChatUserSettings) getChatsUsersMeSettings()
+
+Get a user&#39;s chat settings
+
+
+
+Wraps GET /api/v2/chats/users/me/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ChatAPI.getChatsUsersMeSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ChatAPI.getChatsUsersMeSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings)
+
+
 ## patchChatsRoom
 
 
@@ -979,6 +1079,108 @@ ChatAPI.patchChatsUserMessage(userId: userId, messageId: messageId, body: body) 
 ### Return type
 
 [**ChatSendMessageResponse**](ChatSendMessageResponse)
+
+
+## patchChatsUserSettings
+
+
+
+> [ChatUserSettings](ChatUserSettings) patchChatsUserSettings(userId, body)
+
+Update a user&#39;s chat settings
+
+
+
+Wraps PATCH /api/v2/chats/users/{userId}/settings  
+
+Requires ANY permissions: 
+
+* chat:usersettings:edit
+* chat:setting:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // User ID
+let body: ChatUserSettings = new ChatUserSettings(...) // 
+
+// Code example
+ChatAPI.patchChatsUserSettings(userId: userId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ChatAPI.patchChatsUserSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| User ID | |
+| **body** | [**ChatUserSettings**](ChatUserSettings)|  | |
+
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings)
+
+
+## patchChatsUsersMeSettings
+
+
+
+> [ChatUserSettings](ChatUserSettings) patchChatsUsersMeSettings(body)
+
+Update a user&#39;s chat settings
+
+
+
+Wraps PATCH /api/v2/chats/users/me/settings  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ChatUserSettings = new ChatUserSettings(...) // 
+
+// Code example
+ChatAPI.patchChatsUsersMeSettings(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ChatAPI.patchChatsUsersMeSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ChatUserSettings**](ChatUserSettings)|  | |
+
+
+### Return type
+
+[**ChatUserSettings**](ChatUserSettings)
 
 
 ## postChatsRoomMessages
@@ -1344,4 +1546,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@162.0.0_
+_PureCloudPlatformClientV2@163.0.0_

@@ -15,6 +15,72 @@ open class UploadsAPI {
     
     
     /**
+     Get content upload from URL job status
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter jobId: (path) Upload job ID 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseUploadsUrlsJob(knowledgeBaseId: String, jobId: String, completion: @escaping ((_ data: GetUploadSourceUrlJobStatusResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseUploadsUrlsJobWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, jobId: jobId)
+        requestBuilder.execute { (response: Response<GetUploadSourceUrlJobStatusResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get content upload from URL job status
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "uploadKey" : "uploadKey",
+  "errorInformation" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "status" : "Created"
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter jobId: (path) Upload job ID 
+
+     - returns: RequestBuilder<GetUploadSourceUrlJobStatusResponse> 
+     */
+    open class func getKnowledgeKnowledgebaseUploadsUrlsJobWithRequestBuilder(knowledgeBaseId: String, jobId: String) -> RequestBuilder<GetUploadSourceUrlJobStatusResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let jobIdPreEscape = "\(jobId)"
+        let jobIdPostEscape = jobIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{jobId}", with: jobIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<GetUploadSourceUrlJobStatusResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Create upload presigned URL for draft function package file.
      
      - parameter actionId: (path) actionId 
@@ -125,6 +191,66 @@ open class UploadsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<UploadUrlResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Create content upload from URL job
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body) uploadRequest 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseUploadsUrlsJobs(knowledgeBaseId: String, body: CreateUploadSourceUrlJobRequest, completion: @escaping ((_ data: CreateUploadSourceUrlJobResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseUploadsUrlsJobsWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<CreateUploadSourceUrlJobResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create content upload from URL job
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id"
+}, statusCode=202}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body) uploadRequest 
+
+     - returns: RequestBuilder<CreateUploadSourceUrlJobResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseUploadsUrlsJobsWithRequestBuilder(knowledgeBaseId: String, body: CreateUploadSourceUrlJobRequest) -> RequestBuilder<CreateUploadSourceUrlJobResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<CreateUploadSourceUrlJobResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
