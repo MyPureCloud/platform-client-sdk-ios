@@ -16,8 +16,9 @@
 | **parentEntity** | [**UUID**](UUID) |  | [optional] |
 | **entityType** | **String** |  | [optional] |
 | **conversationId** | [**UUID**](UUID) |  | [optional] |
+| **entityToken** | **String** |  | [optional] |
 | **timestamp** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

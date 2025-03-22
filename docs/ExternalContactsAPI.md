@@ -21,6 +21,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactNotes**](ExternalContactsAPI#getExternalcontactsContactNotes) | List notes for an external contact |
 | [**getExternalcontactsContactUnresolved**](ExternalContactsAPI#getExternalcontactsContactUnresolved) | Fetch an unresolved external contact |
 | [**getExternalcontactsContacts**](ExternalContactsAPI#getExternalcontactsContacts) | Search for external contacts |
+| [**getExternalcontactsContactsExport**](ExternalContactsAPI#getExternalcontactsContactsExport) | Get export for exportId |
+| [**getExternalcontactsContactsExports**](ExternalContactsAPI#getExternalcontactsContactsExports) | List exports for organization |
 | [**getExternalcontactsContactsSchema**](ExternalContactsAPI#getExternalcontactsContactsSchema) | Get a schema |
 | [**getExternalcontactsContactsSchemaVersion**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersion) | Get a specific version of a schema |
 | [**getExternalcontactsContactsSchemaVersions**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersions) | Get all versions of an external contact&#39;s schema |
@@ -72,6 +74,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postExternalcontactsContactNotes**](ExternalContactsAPI#postExternalcontactsContactNotes) | Create a note for an external contact |
 | [**postExternalcontactsContactPromotion**](ExternalContactsAPI#postExternalcontactsContactPromotion) | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**postExternalcontactsContacts**](ExternalContactsAPI#postExternalcontactsContacts) | Create an external contact |
+| [**postExternalcontactsContactsExports**](ExternalContactsAPI#postExternalcontactsContactsExports) | Create bulk export |
 | [**postExternalcontactsContactsSchemas**](ExternalContactsAPI#postExternalcontactsContactsSchemas) | Create a schema |
 | [**postExternalcontactsExternalsources**](ExternalContactsAPI#postExternalcontactsExternalsources) | Create an External Source |
 | [**postExternalcontactsIdentifierlookup**](ExternalContactsAPI#postExternalcontactsIdentifierlookup) | Fetch a contact using an identifier type and value. |
@@ -990,6 +993,112 @@ ExternalContactsAPI.getExternalcontactsContacts(pageSize: pageSize, pageNumber: 
 ### Return type
 
 [**ContactListing**](ContactListing)
+
+
+## getExternalcontactsContactsExport
+
+
+
+> [ContactsExport](ContactsExport) getExternalcontactsContactsExport(exportId)
+
+Get export for exportId
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/exports/{exportId}  
+
+Requires ALL permissions: 
+
+* externalContacts:export:view
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let exportId: String = "" // Export id
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsExport(exportId: exportId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsExport was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **exportId** | **String**| Export id | |
+
+
+### Return type
+
+[**ContactsExport**](ContactsExport)
+
+
+## getExternalcontactsContactsExports
+
+
+
+> [ExportListing](ExportListing) getExternalcontactsContactsExports(divisionIds, after, pageSize)
+
+List exports for organization
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/exports  
+
+Requires ALL permissions: 
+
+* externalContacts:export:view
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let divisionIds: [String] = [""] // Division IDs of entities
+let after: String = "" // The cursor that points to the end of the set of entities
+let pageSize: Int = 0 // Number of entities to return
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsExports(divisionIds: divisionIds, after: after, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsExports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **divisionIds** | [**[String]**](String)| Division IDs of entities | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities | [optional] |
+| **pageSize** | **Int**| Number of entities to return | [optional] |
+
+
+### Return type
+
+[**ExportListing**](ExportListing)
 
 
 ## getExternalcontactsContactsSchema
@@ -3663,6 +3772,57 @@ ExternalContactsAPI.postExternalcontactsContacts(body: body) { (response, error)
 [**ExternalContact**](ExternalContact)
 
 
+## postExternalcontactsContactsExports
+
+
+
+> [ContactsExport](ContactsExport) postExternalcontactsContactsExports(body)
+
+Create bulk export
+
+
+
+Wraps POST /api/v2/externalcontacts/contacts/exports  
+
+Requires ALL permissions: 
+
+* externalContacts:export:add
+* externalContacts:contact:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: ContactsExport = new ContactsExport(...) // Export
+
+// Code example
+ExternalContactsAPI.postExternalcontactsContactsExports(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.postExternalcontactsContactsExports was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**ContactsExport**](ContactsExport)| Export | |
+
+
+### Return type
+
+[**ContactsExport**](ContactsExport)
+
+
 ## postExternalcontactsContactsSchemas
 
 
@@ -5012,4 +5172,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

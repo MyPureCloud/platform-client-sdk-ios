@@ -41,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getKnowledgeKnowledgebaseLanguageCategories**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageCategories) | Get categories |
 | [**getKnowledgeKnowledgebaseLanguageCategory**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageCategory) | Get category |
 | [**getKnowledgeKnowledgebaseLanguageDocument**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageDocument) | Get document |
+| [**getKnowledgeKnowledgebaseLanguageDocumentUpload**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageDocumentUpload) | Get document content upload status |
 | [**getKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageDocuments) | Get documents |
 | [**getKnowledgeKnowledgebaseLanguageDocumentsImport**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageDocumentsImport) | Get import operation report |
 | [**getKnowledgeKnowledgebaseLanguageTraining**](KnowledgeAPI#getKnowledgeKnowledgebaseLanguageTraining) | Get training detail |
@@ -90,14 +91,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postKnowledgeKnowledgebaseDocumentViews**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentViews) | Create view for a document. |
 | [**postKnowledgeKnowledgebaseDocuments**](KnowledgeAPI#postKnowledgeKnowledgebaseDocuments) | Create document. |
 | [**postKnowledgeKnowledgebaseDocumentsAnswers**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsAnswers) | Answer documents. |
+| [**postKnowledgeKnowledgebaseDocumentsBulkRemove**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsBulkRemove) | Bulk remove documents. |
+| [**postKnowledgeKnowledgebaseDocumentsBulkUpdate**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsBulkUpdate) | Bulk update documents. |
 | [**postKnowledgeKnowledgebaseDocumentsPresentations**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsPresentations) | Indicate that documents were presented to the user. |
 | [**postKnowledgeKnowledgebaseDocumentsQuery**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsQuery) | Query for knowledge documents. |
 | [**postKnowledgeKnowledgebaseDocumentsSearch**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsSearch) | Search the documents in a knowledge base. |
 | [**postKnowledgeKnowledgebaseDocumentsSearchSuggestions**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsSearchSuggestions) | Query the knowledge documents to provide suggestions for auto completion. |
+| [**postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd**](KnowledgeAPI#postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd) | Bulk add document versions. |
 | [**postKnowledgeKnowledgebaseExportJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseExportJobs) | Create export job |
 | [**postKnowledgeKnowledgebaseImportJobs**](KnowledgeAPI#postKnowledgeKnowledgebaseImportJobs) | Create import job |
 | [**postKnowledgeKnowledgebaseLabels**](KnowledgeAPI#postKnowledgeKnowledgebaseLabels) | Create new label |
 | [**postKnowledgeKnowledgebaseLanguageCategories**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageCategories) | Create new category |
+| [**postKnowledgeKnowledgebaseLanguageDocumentUploads**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageDocumentUploads) | Upload Article Content |
 | [**postKnowledgeKnowledgebaseLanguageDocuments**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageDocuments) | Create document |
 | [**postKnowledgeKnowledgebaseLanguageDocumentsImports**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageDocumentsImports) | Create import operation |
 | [**postKnowledgeKnowledgebaseLanguageTrainingPromote**](KnowledgeAPI#postKnowledgeKnowledgebaseLanguageTrainingPromote) | Promote trained documents from draft state to active. |
@@ -2179,6 +2184,62 @@ KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, k
 ### Return type
 
 [**KnowledgeDocument**](KnowledgeDocument)
+
+
+## getKnowledgeKnowledgebaseLanguageDocumentUpload
+
+
+
+> [KnowledgeDocumentContentUpload](KnowledgeDocumentContentUpload) getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId, knowledgeBaseId, languageCode, uploadId)
+
+Get document content upload status
+
+
+
+Wraps GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads/{uploadId}  
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let documentId: String = "" // Document ID
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload = KnowledgeAPI.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload.enummember // Language code, format: iso2-LOCALE
+let uploadId: String = "" // UploadId
+
+// Code example
+KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, uploadId: uploadId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.getKnowledgeKnowledgebaseLanguageDocumentUpload was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **documentId** | **String**| Document ID | |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP"), arAe ("ar-AE"), zhCn ("zh-CN"), zhTw ("zh-TW"), zhHk ("zh-HK"), koKr ("ko-KR"), plPl ("pl-PL"), hiIn ("hi-IN"), thTh ("th-TH"), huHu ("hu-HU"), viVn ("vi-VN"), ukUa ("uk-UA") |
+| **uploadId** | **String**| UploadId | |
+
+
+### Return type
+
+[**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload)
 
 
 ## getKnowledgeKnowledgebaseLanguageDocuments
@@ -4858,6 +4919,110 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId: knowled
 [**KnowledgeAnswerDocumentsResponse**](KnowledgeAnswerDocumentsResponse)
 
 
+## postKnowledgeKnowledgebaseDocumentsBulkRemove
+
+
+
+> [BulkResponse](BulkResponse) postKnowledgeKnowledgebaseDocumentsBulkRemove(knowledgeBaseId, body)
+
+Bulk remove documents.
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove  
+
+Requires ALL permissions: 
+
+* knowledge:document:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeDocumentBulkRemoveRequest = new KnowledgeDocumentBulkRemoveRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsBulkRemove(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsBulkRemove was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeDocumentBulkRemoveRequest**](KnowledgeDocumentBulkRemoveRequest)|  | |
+
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
+## postKnowledgeKnowledgebaseDocumentsBulkUpdate
+
+
+
+> [BulkResponse](BulkResponse) postKnowledgeKnowledgebaseDocumentsBulkUpdate(knowledgeBaseId, body)
+
+Bulk update documents.
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update  
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeDocumentBulkUpdateRequest = new KnowledgeDocumentBulkUpdateRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsBulkUpdate(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsBulkUpdate was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeDocumentBulkUpdateRequest**](KnowledgeDocumentBulkUpdateRequest)|  | |
+
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
 ## postKnowledgeKnowledgebaseDocumentsPresentations
 
 
@@ -5069,6 +5234,58 @@ KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsSearchSuggestions(knowledgeBaseI
 [**KnowledgeDocumentSuggestion**](KnowledgeDocumentSuggestion)
 
 
+## postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd
+
+
+
+> [BulkResponse](BulkResponse) postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd(knowledgeBaseId, body)
+
+Bulk add document versions.
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add  
+
+Requires ALL permissions: 
+
+* knowledge:documentVersion:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let knowledgeBaseId: String = "" // Knowledge base ID
+let body: KnowledgeDocumentBulkVersionAddRequest = new KnowledgeDocumentBulkVersionAddRequest(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **body** | [**KnowledgeDocumentBulkVersionAddRequest**](KnowledgeDocumentBulkVersionAddRequest)|  | |
+
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
 ## postKnowledgeKnowledgebaseExportJobs
 
 
@@ -5277,6 +5494,62 @@ KnowledgeAPI.postKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowl
 ### Return type
 
 [**KnowledgeExtendedCategory**](KnowledgeExtendedCategory)
+
+
+## postKnowledgeKnowledgebaseLanguageDocumentUploads
+
+
+
+> [KnowledgeDocumentContentUpload](KnowledgeDocumentContentUpload) postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId, knowledgeBaseId, languageCode, body)
+
+Upload Article Content
+
+
+
+Wraps POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads  
+
+Requires ALL permissions: 
+
+* knowledge:document:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let documentId: String = "" // Document ID
+let knowledgeBaseId: String = "" // Knowledge base ID
+let languageCode: KnowledgeAPI.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads = KnowledgeAPI.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads.enummember // Language code, format: iso2-LOCALE
+let body: KnowledgeDocumentContentUpload = new KnowledgeDocumentContentUpload(...) // 
+
+// Code example
+KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("KnowledgeAPI.postKnowledgeKnowledgebaseLanguageDocumentUploads was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **documentId** | **String**| Document ID | |
+| **knowledgeBaseId** | **String**| Knowledge base ID | |
+| **languageCode** | **String**| Language code, format: iso2-LOCALE |<br />**Values**: enUs ("en-US"), enUk ("en-UK"), enAu ("en-AU"), enCa ("en-CA"), enHk ("en-HK"), enIn ("en-IN"), enIe ("en-IE"), enNz ("en-NZ"), enPh ("en-PH"), enSg ("en-SG"), enZa ("en-ZA"), deDe ("de-DE"), deAt ("de-AT"), deCh ("de-CH"), esAr ("es-AR"), esCo ("es-CO"), esMx ("es-MX"), esUs ("es-US"), esEs ("es-ES"), frFr ("fr-FR"), frBe ("fr-BE"), frCa ("fr-CA"), frCh ("fr-CH"), ptBr ("pt-BR"), ptPt ("pt-PT"), nlNl ("nl-NL"), nlBe ("nl-BE"), itIt ("it-IT"), caEs ("ca-ES"), trTr ("tr-TR"), svSe ("sv-SE"), fiFi ("fi-FI"), nbNo ("nb-NO"), daDk ("da-DK"), jaJp ("ja-JP"), arAe ("ar-AE"), zhCn ("zh-CN"), zhTw ("zh-TW"), zhHk ("zh-HK"), koKr ("ko-KR"), plPl ("pl-PL"), hiIn ("hi-IN"), thTh ("th-TH"), huHu ("hu-HU"), viVn ("vi-VN"), ukUa ("uk-UA") |
+| **body** | [**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload)|  | |
+
+
+### Return type
+
+[**KnowledgeDocumentContentUpload**](KnowledgeDocumentContentUpload)
 
 
 ## postKnowledgeKnowledgebaseLanguageDocuments
@@ -6124,4 +6397,4 @@ KnowledgeAPI.putKnowledgeKnowledgebaseSourcesServicenowSourceId(knowledgeBaseId:
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

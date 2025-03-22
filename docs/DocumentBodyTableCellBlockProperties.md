@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **cellType** | **String** | The type of the table cell. | [optional] |
 | **width** | **Float** | The width of the table cell converted to em unit. | [optional] |
+| **widthWithUnit** | [**DocumentElementLength**](DocumentElementLength) | The width of the table cell in the specified unit. | [optional] |
 | **height** | **Float** | The height for the table cell. | [optional] |
 | **horizontalAlign** | **String** | The horizontal alignment for the table cell. | [optional] |
 | **verticalAlign** | **String** | The vertical alignment for the table cell. | [optional] |
@@ -21,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

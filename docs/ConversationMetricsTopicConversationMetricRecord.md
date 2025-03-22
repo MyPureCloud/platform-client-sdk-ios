@@ -43,7 +43,7 @@
 | **flaggedReason** | **String** | Reason for which participant flagged conversation | [optional] |
 | **flowInType** | **String** | Type of flow in that occurred when entering ACD. | [optional] |
 | **flowOutType** | **String** | Type of flow out that occurred when emitting tFlowOut. | [optional] |
-| **groupId** | **String** | Unique identifier for a PureCloud group | [optional] |
+| **groupId** | **String** | Unique identifier for a Genesys Cloud group | [optional] |
 | **interactionType** | **String** | The interaction type (enterprise or contactCenter) | [optional] |
 | **journeyActionId** | **String** | Identifier of the journey action. | [optional] |
 | **journeyActionMapId** | **String** | Identifier of the journey action map that triggered the action. | [optional] |
@@ -93,4 +93,4 @@
 
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

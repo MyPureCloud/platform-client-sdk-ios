@@ -13,9 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getOrganizationsLimitsDocs**](OrganizationAPI#getOrganizationsLimitsDocs) | Get limit documentation |
 | [**getOrganizationsLimitsDocsFreetrial**](OrganizationAPI#getOrganizationsLimitsDocsFreetrial) | Get free trial limit documentation |
 | [**getOrganizationsLimitsNamespace**](OrganizationAPI#getOrganizationsLimitsNamespace) | Get the effective limits in a namespace for an organization |
-| [**getOrganizationsLimitsNamespaceCounts**](OrganizationAPI#getOrganizationsLimitsNamespaceCounts) | Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
 | [**getOrganizationsLimitsNamespaceDefaults**](OrganizationAPI#getOrganizationsLimitsNamespaceDefaults) | Get the default limits in a namespace for an organization |
-| [**getOrganizationsLimitsNamespaceLimitCounts**](OrganizationAPI#getOrganizationsLimitsNamespaceLimitCounts) | Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking. |
 | [**getOrganizationsLimitsNamespaces**](OrganizationAPI#getOrganizationsLimitsNamespaces) | Get the available limit namespaces |
 | [**getOrganizationsMe**](OrganizationAPI#getOrganizationsMe) | Get organization. |
 | [**getOrganizationsWhitelist**](OrganizationAPI#getOrganizationsWhitelist) | This route is deprecated, please use /api/v2/organizations/authentication/settings instead |
@@ -467,64 +465,6 @@ OrganizationAPI.getOrganizationsLimitsNamespace(namespaceName: namespaceName) { 
 [**LimitsEntityListing**](LimitsEntityListing)
 
 
-## getOrganizationsLimitsNamespaceCounts
-
-
-
-> [LimitCountListing](LimitCountListing) getOrganizationsLimitsNamespaceCounts(namespaceName, cursor, entityId, userId)
-
-Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
-
-See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
-
-
-
-Wraps GET /api/v2/organizations/limits/namespaces/{namespaceName}/counts  
-
-Requires ANY permissions: 
-
-* limits:count:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let namespaceName: String = "" // The namespace to get
-let cursor: String = "" // Cursor provided when retrieving the last page
-let entityId: String = "" // entity id of the count
-let userId: String = "" // userid of the count
-
-// Code example
-OrganizationAPI.getOrganizationsLimitsNamespaceCounts(namespaceName: namespaceName, cursor: cursor, entityId: entityId, userId: userId) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("OrganizationAPI.getOrganizationsLimitsNamespaceCounts was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **namespaceName** | **String**| The namespace to get | |
-| **cursor** | **String**| Cursor provided when retrieving the last page | [optional] |
-| **entityId** | **String**| entity id of the count | [optional] |
-| **userId** | **String**| userid of the count | [optional] |
-
-
-### Return type
-
-[**LimitCountListing**](LimitCountListing)
-
-
 ## getOrganizationsLimitsNamespaceDefaults
 
 
@@ -572,66 +512,6 @@ OrganizationAPI.getOrganizationsLimitsNamespaceDefaults(namespaceName: namespace
 ### Return type
 
 [**LimitsEntityListing**](LimitsEntityListing)
-
-
-## getOrganizationsLimitsNamespaceLimitCounts
-
-
-
-> [LimitCountListing](LimitCountListing) getOrganizationsLimitsNamespaceLimitCounts(namespaceName, limitName, entityId, userId, cursor)
-
-Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.
-
-See https://developer.genesys.cloud/organization/organization/limits#available-limits for limits that are trackable (Operational Events Enabled).
-
-
-
-Wraps GET /api/v2/organizations/limits/namespaces/{namespaceName}/limits/{limitName}/counts  
-
-Requires ANY permissions: 
-
-* limits:count:view
-
-### Example
-
-```{"language":"swift"}
-import PureCloudPlatformClientV2
-
-PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
-PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
-
-let namespaceName: String = "" // The namespace to get
-let limitName: String = "" // The limit to get
-let entityId: String = "" // entity id of the count
-let userId: String = "" // userid of the count
-let cursor: String = "" // Cursor provided when retrieving the last page
-
-// Code example
-OrganizationAPI.getOrganizationsLimitsNamespaceLimitCounts(namespaceName: namespaceName, limitName: limitName, entityId: entityId, userId: userId, cursor: cursor) { (response, error) in
-    if let error = error {
-        dump(error)
-    } else if let response = response {
-        print("OrganizationAPI.getOrganizationsLimitsNamespaceLimitCounts was successful")
-        dump(response)
-    }
-}
-```
-
-### Parameters
-
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **namespaceName** | **String**| The namespace to get | |
-| **limitName** | **String**| The limit to get | |
-| **entityId** | **String**| entity id of the count | [optional] |
-| **userId** | **String**| userid of the count | [optional] |
-| **cursor** | **String**| Cursor provided when retrieving the last page | [optional] |
-
-
-### Return type
-
-[**LimitCountListing**](LimitCountListing)
 
 
 ## getOrganizationsLimitsNamespaces
@@ -1081,4 +961,4 @@ OrganizationAPI.putOrganizationsWhitelist(body: body) { (response, error) in
 [**OrgWhitelistSettings**](OrgWhitelistSettings)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

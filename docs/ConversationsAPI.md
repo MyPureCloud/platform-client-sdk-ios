@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI#deleteConversationsMessagingIntegrationsFacebookIntegrationId) | Delete a Facebook messaging integration |
 | [**deleteConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI#deleteConversationsMessagingIntegrationsInstagramIntegrationId) | Delete Instagram messaging integration |
 | [**deleteConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI#deleteConversationsMessagingIntegrationsOpenIntegrationId) | Delete an Open messaging integration |
+| [**deleteConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI#deleteConversationsMessagingIntegrationsTwitterIntegrationId) | Delete Twitter messaging integration |
 | [**deleteConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI#deleteConversationsMessagingIntegrationsWhatsappIntegrationId) | Delete a WhatsApp messaging integration |
 | [**deleteConversationsMessagingSetting**](ConversationsAPI#deleteConversationsMessagingSetting) | Delete a messaging setting |
 | [**deleteConversationsMessagingSettingsDefault**](ConversationsAPI#deleteConversationsMessagingSettingsDefault) | Delete the organization&#39;s default setting, a global default will be applied to integrations without settings |
@@ -79,6 +80,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagesCachedmediaCachedMediaItemId**](ConversationsAPI#getConversationsMessagesCachedmediaCachedMediaItemId) | Get a cached media item |
 | [**getConversationsMessagingFacebookApp**](ConversationsAPI#getConversationsMessagingFacebookApp) | Get Genesys Facebook App Id |
 | [**getConversationsMessagingFacebookPermissions**](ConversationsAPI#getConversationsMessagingFacebookPermissions) | Get a list of Facebook Permissions |
+| [**getConversationsMessagingIntegrationTwitterOauthSettings**](ConversationsAPI#getConversationsMessagingIntegrationTwitterOauthSettings) | Get twitter oauth settings to patch an integration |
 | [**getConversationsMessagingIntegrations**](ConversationsAPI#getConversationsMessagingIntegrations) | Get a list of Integrations |
 | [**getConversationsMessagingIntegrationsFacebook**](ConversationsAPI#getConversationsMessagingIntegrationsFacebook) | Get a list of Facebook Integrations |
 | [**getConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI#getConversationsMessagingIntegrationsFacebookIntegrationId) | Get a Facebook messaging integration |
@@ -86,6 +88,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI#getConversationsMessagingIntegrationsInstagramIntegrationId) | Get Instagram messaging integration |
 | [**getConversationsMessagingIntegrationsOpen**](ConversationsAPI#getConversationsMessagingIntegrationsOpen) | Get a list of Open messaging integrations |
 | [**getConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI#getConversationsMessagingIntegrationsOpenIntegrationId) | Get an Open messaging integration |
+| [**getConversationsMessagingIntegrationsTwitter**](ConversationsAPI#getConversationsMessagingIntegrationsTwitter) | Get a list of Twitter Integrations |
+| [**getConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI#getConversationsMessagingIntegrationsTwitterIntegrationId) | Get Twitter messaging integration |
+| [**getConversationsMessagingIntegrationsTwitterOauthSettings**](ConversationsAPI#getConversationsMessagingIntegrationsTwitterOauthSettings) | Get twitter oauth settings |
 | [**getConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI#getConversationsMessagingIntegrationsWhatsapp) | Get a list of WhatsApp Integrations |
 | [**getConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI#getConversationsMessagingIntegrationsWhatsappIntegrationId) | Get a WhatsApp messaging integration |
 | [**getConversationsMessagingSetting**](ConversationsAPI#getConversationsMessagingSetting) | Get a messaging setting |
@@ -135,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchConversationsMessagingIntegrationsFacebookIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsFacebookIntegrationId) | Update Facebook messaging integration |
 | [**patchConversationsMessagingIntegrationsInstagramIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsInstagramIntegrationId) | Update Instagram messaging integration |
 | [**patchConversationsMessagingIntegrationsOpenIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsOpenIntegrationId) | Update an Open messaging integration |
+| [**patchConversationsMessagingIntegrationsTwitterIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsTwitterIntegrationId) | Update a Twitter messaging integration |
 | [**patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId) | Activate a WhatsApp messaging integration created using the WhatsApp embedded signup flow |
 | [**patchConversationsMessagingIntegrationsWhatsappIntegrationId**](ConversationsAPI#patchConversationsMessagingIntegrationsWhatsappIntegrationId) | Update a WhatsApp messaging integration |
 | [**patchConversationsMessagingSetting**](ConversationsAPI#patchConversationsMessagingSetting) | Update a messaging setting |
@@ -210,6 +216,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postConversationsMessagingIntegrationsFacebook**](ConversationsAPI#postConversationsMessagingIntegrationsFacebook) | Create a Facebook Integration |
 | [**postConversationsMessagingIntegrationsInstagram**](ConversationsAPI#postConversationsMessagingIntegrationsInstagram) | Create Instagram Integration |
 | [**postConversationsMessagingIntegrationsOpen**](ConversationsAPI#postConversationsMessagingIntegrationsOpen) | Create an Open messaging integration |
+| [**postConversationsMessagingIntegrationsTwitter**](ConversationsAPI#postConversationsMessagingIntegrationsTwitter) | Create Twitter Integration |
 | [**postConversationsMessagingIntegrationsWhatsapp**](ConversationsAPI#postConversationsMessagingIntegrationsWhatsapp) | [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration |
 | [**postConversationsMessagingIntegrationsWhatsappEmbeddedsignup**](ConversationsAPI#postConversationsMessagingIntegrationsWhatsappEmbeddedsignup) | Create a WhatsApp Integration using the WhatsApp embedded signup flow |
 | [**postConversationsMessagingSettings**](ConversationsAPI#postConversationsMessagingSettings) | Create a messaging setting |
@@ -672,6 +679,55 @@ ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId(integ
         dump(error)
     } else {
         print("ConversationsAPI.deleteConversationsMessagingIntegrationsOpenIntegrationId was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteConversationsMessagingIntegrationsTwitterIntegrationId
+
+
+
+> Void deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId)
+
+Delete Twitter messaging integration
+
+
+
+Wraps DELETE /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+
+// Code example
+ConversationsAPI.deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ConversationsAPI.deleteConversationsMessagingIntegrationsTwitterIntegrationId was successful")
     }
 }
 ```
@@ -4060,6 +4116,56 @@ This endpoint does not require any parameters.
 [**FacebookPermissionEntityListing**](FacebookPermissionEntityListing)
 
 
+## getConversationsMessagingIntegrationTwitterOauthSettings
+
+
+
+> [TwitterOAuthSettings](TwitterOAuthSettings) getConversationsMessagingIntegrationTwitterOauthSettings(integrationId)
+
+Get twitter oauth settings to patch an integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings  
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration Id of an existing integration that needs to be patched with new oauth settings
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationTwitterOauthSettings(integrationId: integrationId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationTwitterOauthSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration Id of an existing integration that needs to be patched with new oauth settings | |
+
+
+### Return type
+
+[**TwitterOAuthSettings**](TwitterOAuthSettings)
+
+
 ## getConversationsMessagingIntegrations
 
 
@@ -4450,6 +4556,162 @@ ConversationsAPI.getConversationsMessagingIntegrationsOpenIntegrationId(integrat
 ### Return type
 
 [**OpenIntegration**](OpenIntegration)
+
+
+## getConversationsMessagingIntegrationsTwitter
+
+
+
+> [TwitterIntegrationEntityListing](TwitterIntegrationEntityListing) getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)
+
+Get a list of Twitter Integrations
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/twitter  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitter.enummember // Expand instructions for the return value.
+let supportedContentId: String = "" // Filter integrations returned based on the supported content ID
+let messagingSettingId: String = "" // Filter integrations returned based on the setting ID
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsTwitter was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+| **supportedContentId** | **String**| Filter integrations returned based on the supported content ID | [optional] |
+| **messagingSettingId** | **String**| Filter integrations returned based on the setting ID | [optional] |
+
+
+### Return type
+
+[**TwitterIntegrationEntityListing**](TwitterIntegrationEntityListing)
+
+
+## getConversationsMessagingIntegrationsTwitterIntegrationId
+
+
+
+> [TwitterIntegration](TwitterIntegration) getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand)
+
+Get Twitter messaging integration
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let expand: ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId = ConversationsAPI.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId.enummember // Expand instructions for the return value.
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsTwitterIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **expand** | **String**| Expand instructions for the return value. | [optional]<br />**Values**: supportedcontent ("supportedContent"), messagingsetting ("messagingSetting") |
+
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration)
+
+
+## getConversationsMessagingIntegrationsTwitterOauthSettings
+
+
+
+> [TwitterSignupOAuthSettings](TwitterSignupOAuthSettings) getConversationsMessagingIntegrationsTwitterOauthSettings()
+
+Get twitter oauth settings
+
+
+
+Wraps GET /api/v2/conversations/messaging/integrations/twitter/oauth/settings  
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ConversationsAPI.getConversationsMessagingIntegrationsTwitterOauthSettings() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.getConversationsMessagingIntegrationsTwitterOauthSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**TwitterSignupOAuthSettings**](TwitterSignupOAuthSettings)
 
 
 ## getConversationsMessagingIntegrationsWhatsapp
@@ -7051,6 +7313,58 @@ ConversationsAPI.patchConversationsMessagingIntegrationsOpenIntegrationId(integr
 ### Return type
 
 [**OpenIntegration**](OpenIntegration)
+
+
+## patchConversationsMessagingIntegrationsTwitterIntegrationId
+
+
+
+> [TwitterIntegration](TwitterIntegration) patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, body)
+
+Update a Twitter messaging integration
+
+
+
+Wraps PATCH /api/v2/conversations/messaging/integrations/twitter/{integrationId}  
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let integrationId: String = "" // Integration ID
+let body: TwitterIntegrationUpdateRequest = new TwitterIntegrationUpdateRequest(...) // TwitterIntegrationUpdateRequest
+
+// Code example
+ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.patchConversationsMessagingIntegrationsTwitterIntegrationId was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **integrationId** | **String**| Integration ID | |
+| **body** | [**TwitterIntegrationUpdateRequest**](TwitterIntegrationUpdateRequest)| TwitterIntegrationUpdateRequest | |
+
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration)
 
 
 ## patchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId
@@ -11010,6 +11324,56 @@ ConversationsAPI.postConversationsMessagingIntegrationsOpen(body: body) { (respo
 [**OpenIntegration**](OpenIntegration)
 
 
+## postConversationsMessagingIntegrationsTwitter
+
+
+
+> [TwitterIntegration](TwitterIntegration) postConversationsMessagingIntegrationsTwitter(body)
+
+Create Twitter Integration
+
+
+
+Wraps POST /api/v2/conversations/messaging/integrations/twitter  
+
+Requires ALL permissions: 
+
+* messaging:XIntegration:add
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest
+
+// Code example
+ConversationsAPI.postConversationsMessagingIntegrationsTwitter(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ConversationsAPI.postConversationsMessagingIntegrationsTwitter was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**TwitterIntegrationRequest**](TwitterIntegrationRequest)| TwitterIntegrationRequest | |
+
+
+### Return type
+
+[**TwitterIntegration**](TwitterIntegration)
+
+
 ## postConversationsMessagingIntegrationsWhatsapp
 
 
@@ -12373,4 +12737,4 @@ ConversationsAPI.putConversationsVideoRecordingstate(conversationId: conversatio
 **String**
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

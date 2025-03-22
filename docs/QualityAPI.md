@@ -57,6 +57,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**putQualityConversationEvaluation**](QualityAPI#putQualityConversationEvaluation) | Update an evaluation |
 | [**putQualityForm**](QualityAPI#putQualityForm) | Update an evaluation form. |
 | [**putQualityFormsEvaluation**](QualityAPI#putQualityFormsEvaluation) | Update an evaluation form. |
+| [**putQualityFormsEvaluationAiscoringSettings**](QualityAPI#putQualityFormsEvaluationAiscoringSettings) | Update the AI Scoring settings of an evaluation form. |
 | [**putQualityFormsSurvey**](QualityAPI#putQualityFormsSurvey) | Update a survey form. |
 | [**putQualitySurveysScorable**](QualityAPI#putQualitySurveysScorable) | Update a survey as an end-customer, for the purposes of scoring it. |
 {: class="table-striped"}
@@ -2941,6 +2942,58 @@ QualityAPI.putQualityFormsEvaluation(formId: formId, body: body) { (response, er
 [**EvaluationFormResponse**](EvaluationFormResponse)
 
 
+## putQualityFormsEvaluationAiscoringSettings
+
+
+
+> [AiScoringSettings](AiScoringSettings) putQualityFormsEvaluationAiscoringSettings(formId, body)
+
+Update the AI Scoring settings of an evaluation form.
+
+
+
+Wraps PUT /api/v2/quality/forms/evaluations/{formId}/aiscoring/settings  
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:aiScoringEdit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let formId: String = "" // Form ID
+let body: AiScoringSettings = new AiScoringSettings(...) // AI Scoring Settings
+
+// Code example
+QualityAPI.putQualityFormsEvaluationAiscoringSettings(formId: formId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("QualityAPI.putQualityFormsEvaluationAiscoringSettings was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **formId** | **String**| Form ID | |
+| **body** | [**AiScoringSettings**](AiScoringSettings)| AI Scoring Settings | |
+
+
+### Return type
+
+[**AiScoringSettings**](AiScoringSettings)
+
+
 ## putQualityFormsSurvey
 
 
@@ -3044,4 +3097,4 @@ QualityAPI.putQualitySurveysScorable(customerSurveyUrl: customerSurveyUrl, body:
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

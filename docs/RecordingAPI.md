@@ -699,7 +699,7 @@ RecordingAPI.getConversationRecordingmetadataRecordingId(conversationId: convers
 
 
 
-> [[Recording]](Recording) getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale)
+> [[Recording]](Recording) getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale, includePauseAnnotationsForScreenRecordings)
 
 Get all of a Conversation&#39;s Recordings.
 
@@ -725,9 +725,10 @@ let maxWaitMs: Int = 0 // The maximum number of milliseconds to wait for the rec
 let formatId: RecordingAPI.FormatId_getConversationRecordings = RecordingAPI.FormatId_getConversationRecordings.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.
 let mediaFormats: [String] = [""] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3.
 let locale: String = "" // The locale used for redacting sensitive information in requested files, as an ISO 639-1 code
+let includePauseAnnotationsForScreenRecordings: Bool = true // Include applicable Secure Pause annotations from all audio recordings to all screen recordings
 
 // Code example
-RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale) { (response, error) in
+RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale, includePauseAnnotationsForScreenRecordings: includePauseAnnotationsForScreenRecordings) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -747,6 +748,7 @@ RecordingAPI.getConversationRecordings(conversationId: conversationId, maxWaitMs
 | **formatId** | **String**| The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. | [optional]<br />**Values**: wav ("WAV"), webm ("WEBM"), wavUlaw ("WAV_ULAW"), oggVorbis ("OGG_VORBIS"), oggOpus ("OGG_OPUS"), mp3 ("MP3"), _none ("NONE") |
 | **mediaFormats** | [**[String]**](String)| All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. | [optional] |
 | **locale** | **String**| The locale used for redacting sensitive information in requested files, as an ISO 639-1 code | [optional] |
+| **includePauseAnnotationsForScreenRecordings** | **Bool**| Include applicable Secure Pause annotations from all audio recordings to all screen recordings | [optional] |
 
 
 ### Return type
@@ -3092,4 +3094,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_
