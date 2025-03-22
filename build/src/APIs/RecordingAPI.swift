@@ -2859,6 +2859,8 @@ open class RecordingAPI {
     
     
     
+    
+    
     /**
      Get all of a Conversation's Recordings.
      
@@ -2867,10 +2869,11 @@ open class RecordingAPI {
      - parameter formatId: (query) The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)
      - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)
      - parameter locale: (query) The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)
+     - parameter includePauseAnnotationsForScreenRecordings: (query) Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getConversationRecordings(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, mediaFormats: [String]? = nil, locale: String? = nil, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
-        let requestBuilder = getConversationRecordingsWithRequestBuilder(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale)
+    open class func getConversationRecordings(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, mediaFormats: [String]? = nil, locale: String? = nil, includePauseAnnotationsForScreenRecordings: Bool? = nil, completion: @escaping ((_ data: [Recording]?,_ error: Error?) -> Void)) {
+        let requestBuilder = getConversationRecordingsWithRequestBuilder(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale, includePauseAnnotationsForScreenRecordings: includePauseAnnotationsForScreenRecordings)
         requestBuilder.execute { (response: Response<[Recording]>?, error) -> Void in
             do {
                 if let e = error {
@@ -3870,10 +3873,11 @@ open class RecordingAPI {
      - parameter formatId: (query) The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)
      - parameter mediaFormats: (query) All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional)
      - parameter locale: (query) The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional)
+     - parameter includePauseAnnotationsForScreenRecordings: (query) Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional)
 
      - returns: RequestBuilder<[Recording]> 
      */
-    open class func getConversationRecordingsWithRequestBuilder(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, mediaFormats: [String]? = nil, locale: String? = nil) -> RequestBuilder<[Recording]> {        
+    open class func getConversationRecordingsWithRequestBuilder(conversationId: String, maxWaitMs: Int? = nil, formatId: FormatId_getConversationRecordings? = nil, mediaFormats: [String]? = nil, locale: String? = nil, includePauseAnnotationsForScreenRecordings: Bool? = nil) -> RequestBuilder<[Recording]> {        
         var path = "/api/v2/conversations/{conversationId}/recordings"
         let conversationIdPreEscape = "\(conversationId)"
         let conversationIdPostEscape = conversationIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
@@ -3886,7 +3890,8 @@ open class RecordingAPI {
             "maxWaitMs": maxWaitMs?.encodeToJSON(), 
             "formatId": formatId?.rawValue, 
             "mediaFormats": mediaFormats, 
-            "locale": locale
+            "locale": locale, 
+            "includePauseAnnotationsForScreenRecordings": includePauseAnnotationsForScreenRecordings
         ])
 
         let requestBuilder: RequestBuilder<[Recording]>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

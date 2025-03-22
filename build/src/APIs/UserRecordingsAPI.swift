@@ -1346,6 +1346,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -1355,6 +1356,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -1381,6 +1383,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -1390,6 +1393,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -2922,6 +2926,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -2943,6 +2948,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -2979,6 +2985,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -3010,6 +3017,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -3029,6 +3037,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -3065,6 +3074,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -3096,6 +3106,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -3410,6 +3421,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -4139,6 +4151,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -4148,6 +4161,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -4174,6 +4188,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -4183,6 +4198,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -5715,6 +5731,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -5736,6 +5753,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -5772,6 +5790,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -5803,6 +5822,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -5822,6 +5842,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -5858,6 +5879,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -5889,6 +5911,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -6203,6 +6226,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -7968,6 +7992,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -7977,6 +8002,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -8003,6 +8029,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -8012,6 +8039,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -9544,6 +9572,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -9565,6 +9594,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -9601,6 +9631,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -9632,6 +9663,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -9651,6 +9683,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -9687,6 +9720,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -9718,6 +9752,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -10032,6 +10067,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -10761,6 +10797,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -10770,6 +10807,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -10796,6 +10834,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -10805,6 +10844,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -12337,6 +12377,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -12358,6 +12399,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -12394,6 +12436,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -12425,6 +12468,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -12444,6 +12488,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -12480,6 +12525,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -12511,6 +12557,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -12825,6 +12872,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -14934,6 +14982,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -14943,6 +14992,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -14969,6 +15019,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -14978,6 +15029,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -16510,6 +16562,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -16531,6 +16584,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -16567,6 +16621,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -16598,6 +16653,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -16617,6 +16673,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -16653,6 +16710,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -16684,6 +16742,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -16998,6 +17057,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -17727,6 +17787,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -17736,6 +17797,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -17762,6 +17824,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -17771,6 +17834,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -19303,6 +19367,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -19324,6 +19389,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -19360,6 +19426,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -19391,6 +19458,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -19410,6 +19478,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -19446,6 +19515,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -19477,6 +19547,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -19791,6 +19862,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -21556,6 +21628,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -21565,6 +21638,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -21591,6 +21665,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -21600,6 +21675,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -23132,6 +23208,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23153,6 +23230,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -23189,6 +23267,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -23220,6 +23299,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -23239,6 +23319,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -23275,6 +23356,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -23306,6 +23388,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -23620,6 +23703,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -24349,6 +24433,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -24358,6 +24443,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -24384,6 +24470,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -24393,6 +24480,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -25925,6 +26013,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -25946,6 +26035,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -25982,6 +26072,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -26013,6 +26104,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -26032,6 +26124,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -26068,6 +26161,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -26099,6 +26193,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -26413,6 +26508,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -28269,6 +28365,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -28278,6 +28375,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -28304,6 +28402,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -28313,6 +28412,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -29845,6 +29945,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -29866,6 +29967,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -29902,6 +30004,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -29933,6 +30036,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -29952,6 +30056,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -29988,6 +30093,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -30019,6 +30125,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -30333,6 +30440,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -31062,6 +31170,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -31071,6 +31180,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -31097,6 +31207,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -31106,6 +31217,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -32638,6 +32750,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -32659,6 +32772,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -32695,6 +32809,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -32726,6 +32841,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -32745,6 +32861,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -32781,6 +32898,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -32812,6 +32930,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -33126,6 +33245,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -34891,6 +35011,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -34900,6 +35021,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -34926,6 +35048,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -34935,6 +35058,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -36467,6 +36591,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36488,6 +36613,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -36524,6 +36650,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -36555,6 +36682,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -36574,6 +36702,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -36610,6 +36739,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -36641,6 +36771,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -36955,6 +37086,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -37684,6 +37816,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -37693,6 +37826,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -37719,6 +37853,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               }, {
                 "answerId" : "answerId",
@@ -37728,6 +37863,7 @@ open class UserRecordingsAPI {
                 "systemMarkedNA" : true,
                 "comments" : "comments",
                 "markedNA" : true,
+                "aiAnswer" : "{}",
                 "assistedAnswerId" : "assistedAnswerId"
               } ],
               "questionGroupId" : "questionGroupId",
@@ -39260,6 +39396,7 @@ open class UserRecordingsAPI {
             "evaluationForm" : {
               "evaluationSettings" : "{}",
               "publishedVersions" : "{}",
+              "aiScoring" : "{}",
               "selfUri" : "https://openapi-generator.tech",
               "name" : "name",
               "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -39281,6 +39418,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -39317,6 +39455,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -39348,6 +39487,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -39367,6 +39507,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -39403,6 +39544,7 @@ open class UserRecordingsAPI {
                     "combiningOperation" : "AND",
                     "predicates" : [ "{}", "{}" ]
                   },
+                  "contextId" : "contextId",
                   "isCritical" : true,
                   "id" : "id",
                   "text" : "text",
@@ -39434,6 +39576,7 @@ open class UserRecordingsAPI {
                   } ]
                 } ],
                 "weight" : 1.2315135,
+                "contextId" : "contextId",
                 "id" : "id",
                 "defaultAnswersToNA" : true,
                 "type" : "type",
@@ -39748,6 +39891,7 @@ open class UserRecordingsAPI {
           "neverRelease" : true,
           "agentHasRead" : true,
           "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+          "aiScoring" : "{}",
           "name" : "name",
           "assigned" : true,
           "assignee" : {
@@ -41727,6 +41871,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -41736,6 +41881,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -41762,6 +41908,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -41771,6 +41918,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -43303,6 +43451,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -43324,6 +43473,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -43360,6 +43510,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -43391,6 +43542,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -43410,6 +43562,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -43446,6 +43599,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -43477,6 +43631,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -43791,6 +43946,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -44520,6 +44676,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -44529,6 +44686,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -44555,6 +44713,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -44564,6 +44723,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -46096,6 +46256,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -46117,6 +46278,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -46153,6 +46315,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -46184,6 +46347,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -46203,6 +46367,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -46239,6 +46404,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -46270,6 +46436,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -46584,6 +46751,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -48349,6 +48517,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -48358,6 +48527,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -48384,6 +48554,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -48393,6 +48564,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -49925,6 +50097,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -49946,6 +50119,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -49982,6 +50156,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -50013,6 +50188,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -50032,6 +50208,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -50068,6 +50245,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -50099,6 +50277,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -50413,6 +50592,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {
@@ -51142,6 +51322,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -51151,6 +51332,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -51177,6 +51359,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             }, {
               "answerId" : "answerId",
@@ -51186,6 +51369,7 @@ open class UserRecordingsAPI {
               "systemMarkedNA" : true,
               "comments" : "comments",
               "markedNA" : true,
+              "aiAnswer" : "{}",
               "assistedAnswerId" : "assistedAnswerId"
             } ],
             "questionGroupId" : "questionGroupId",
@@ -52718,6 +52902,7 @@ open class UserRecordingsAPI {
           "evaluationForm" : {
             "evaluationSettings" : "{}",
             "publishedVersions" : "{}",
+            "aiScoring" : "{}",
             "selfUri" : "https://openapi-generator.tech",
             "name" : "name",
             "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -52739,6 +52924,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -52775,6 +52961,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -52806,6 +52993,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -52825,6 +53013,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -52861,6 +53050,7 @@ open class UserRecordingsAPI {
                   "combiningOperation" : "AND",
                   "predicates" : [ "{}", "{}" ]
                 },
+                "contextId" : "contextId",
                 "isCritical" : true,
                 "id" : "id",
                 "text" : "text",
@@ -52892,6 +53082,7 @@ open class UserRecordingsAPI {
                 } ]
               } ],
               "weight" : 1.2315135,
+              "contextId" : "contextId",
               "id" : "id",
               "defaultAnswersToNA" : true,
               "type" : "type",
@@ -53206,6 +53397,7 @@ open class UserRecordingsAPI {
         "neverRelease" : true,
         "agentHasRead" : true,
         "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+        "aiScoring" : "{}",
         "name" : "name",
         "assigned" : true,
         "assignee" : {

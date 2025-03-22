@@ -57,4 +57,4 @@ ScreenRecordingAPI.postScreenrecordingToken(body: body) { (response, error) in
 [**SignedData**](SignedData)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

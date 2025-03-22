@@ -13,4 +13,4 @@ Model for a Nuance bot application
 
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

@@ -14,7 +14,8 @@
 | **assistedAnswerId** | **String** | AnswerId found with evaluation assistance conditions | [optional] |
 | **failedKillQuestion** | **Bool** | Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question | [optional] |
 | **comments** | **String** | Comments from the evaluator specific to this question | [optional] |
+| **aiAnswer** | [**AiAnswer**](AiAnswer) | Suggested AI answer | [optional] |
 
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

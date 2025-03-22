@@ -680,7 +680,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -1473,7 +1472,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -1764,7 +1762,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -1971,7 +1968,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -2092,6 +2088,154 @@ open class ExternalContactsAPI {
         ])
 
         let requestBuilder: RequestBuilder<ContactListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get export for exportId
+     
+     - parameter exportId: (path) Export id 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsExport(exportId: String, completion: @escaping ((_ data: ContactsExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsExportWithRequestBuilder(exportId: exportId)
+        requestBuilder.execute { (response: Response<ContactsExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get export for exportId
+     - GET /api/v2/externalcontacts/contacts/exports/{exportId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=200}]
+     
+     - parameter exportId: (path) Export id 
+
+     - returns: RequestBuilder<ContactsExport> 
+     */
+    open class func getExternalcontactsContactsExportWithRequestBuilder(exportId: String) -> RequestBuilder<ContactsExport> {        
+        var path = "/api/v2/externalcontacts/contacts/exports/{exportId}"
+        let exportIdPreEscape = "\(exportId)"
+        let exportIdPostEscape = exportIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{exportId}", with: exportIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactsExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    
+    /**
+     List exports for organization
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getExternalcontactsContactsExports(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil, completion: @escaping ((_ data: ExportListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getExternalcontactsContactsExportsWithRequestBuilder(divisionIds: divisionIds, after: after, pageSize: pageSize)
+        requestBuilder.execute { (response: Response<ExportListing>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     List exports for organization
+     - GET /api/v2/externalcontacts/contacts/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  }, {
+    "queryConditions" : "{}",
+    "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+    "createdBy" : "{}",
+    "selfUri" : "https://openapi-generator.tech",
+    "downloadUrl" : "downloadUrl",
+    "id" : "id",
+    "divisionIds" : [ "divisionIds", "divisionIds" ],
+    "status" : "RUNNING"
+  } ],
+  "selfUri" : "selfUri",
+  "nextUri" : "nextUri",
+  "previousUri" : "previousUri"
+}, statusCode=200}]
+     
+     - parameter divisionIds: (query) Division IDs of entities (optional)
+     - parameter after: (query) The cursor that points to the end of the set of entities (optional)
+     - parameter pageSize: (query) Number of entities to return (optional)
+
+     - returns: RequestBuilder<ExportListing> 
+     */
+    open class func getExternalcontactsContactsExportsWithRequestBuilder(divisionIds: [String]? = nil, after: String? = nil, pageSize: Int? = nil) -> RequestBuilder<ExportListing> {        
+        let path = "/api/v2/externalcontacts/contacts/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        var requestUrl = URLComponents(string: URLString)
+        requestUrl?.queryItems = APIHelper.mapValuesToQueryItems([
+            "divisionIds": divisionIds, 
+            "after": after, 
+            "pageSize": pageSize?.encodeToJSON()
+        ])
+
+        let requestBuilder: RequestBuilder<ExportListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -3248,7 +3392,6 @@ open class ExternalContactsAPI {
     "id" : "id",
     "screenName" : "screenName"
   },
-  "primaryContactId" : "primaryContactId",
   "tags" : [ "tags", "tags" ],
   "division" : "{}",
   "revenue" : 1,
@@ -3498,7 +3641,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -3705,7 +3847,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -4265,7 +4406,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -4340,7 +4480,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -4847,7 +4986,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -4922,7 +5060,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -5087,7 +5224,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -5294,7 +5430,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -5567,7 +5702,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -5774,7 +5908,6 @@ open class ExternalContactsAPI {
         "id" : "id",
         "screenName" : "screenName"
       },
-      "primaryContactId" : "primaryContactId",
       "tags" : [ "tags", "tags" ],
       "division" : "{}",
       "revenue" : 1,
@@ -6064,7 +6197,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -6139,7 +6271,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -7688,7 +7819,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -7948,7 +8078,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -8048,6 +8177,65 @@ open class ExternalContactsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ExternalContact>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Create bulk export
+     
+     - parameter body: (body) Export 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postExternalcontactsContactsExports(body: ContactsExport, completion: @escaping ((_ data: ContactsExport?,_ error: Error?) -> Void)) {
+        let requestBuilder = postExternalcontactsContactsExportsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<ContactsExport>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Create bulk export
+     - POST /api/v2/externalcontacts/contacts/exports
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "queryConditions" : "{}",
+  "dateCreated" : "2000-01-23T04:56:07.000+00:00",
+  "createdBy" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "downloadUrl" : "downloadUrl",
+  "id" : "id",
+  "divisionIds" : [ "divisionIds", "divisionIds" ],
+  "status" : "RUNNING"
+}, statusCode=201}]
+     
+     - parameter body: (body) Export 
+
+     - returns: RequestBuilder<ContactsExport> 
+     */
+    open class func postExternalcontactsContactsExportsWithRequestBuilder(body: ContactsExport) -> RequestBuilder<ContactsExport> {        
+        let path = "/api/v2/externalcontacts/contacts/exports"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<ContactsExport>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }
@@ -8334,7 +8522,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -8902,7 +9089,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -9144,7 +9330,6 @@ open class ExternalContactsAPI {
     "id" : "id",
     "screenName" : "screenName"
   },
-  "primaryContactId" : "primaryContactId",
   "tags" : [ "tags", "tags" ],
   "division" : "{}",
   "revenue" : 1,
@@ -9485,7 +9670,6 @@ open class ExternalContactsAPI {
       "id" : "id",
       "screenName" : "screenName"
     },
-    "primaryContactId" : "primaryContactId",
     "tags" : [ "tags", "tags" ],
     "division" : "{}",
     "revenue" : 1,
@@ -10132,7 +10316,6 @@ open class ExternalContactsAPI {
     "id" : "id",
     "screenName" : "screenName"
   },
-  "primaryContactId" : "primaryContactId",
   "tags" : [ "tags", "tags" ],
   "division" : "{}",
   "revenue" : 1,

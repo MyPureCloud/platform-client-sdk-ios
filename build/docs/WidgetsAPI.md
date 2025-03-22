@@ -20,6 +20,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a Widget deployment
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+
 
 
 Wraps DELETE /api/v2/widgets/deployments/{deploymentId}  
@@ -69,6 +71,8 @@ WidgetsAPI.deleteWidgetsDeployment(deploymentId: deploymentId) { (error) in
 > [WidgetDeployment](WidgetDeployment) getWidgetsDeployment(deploymentId)
 
 Get a Widget deployment
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -121,6 +125,8 @@ WidgetsAPI.getWidgetsDeployment(deploymentId: deploymentId) { (response, error) 
 
 List Widget deployments
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+
 
 
 Wraps GET /api/v2/widgets/deployments  
@@ -167,6 +173,8 @@ This endpoint does not require any parameters.
 > [WidgetDeployment](WidgetDeployment) postWidgetsDeployments(body)
 
 Create Widget deployment
+
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 
 
@@ -219,6 +227,8 @@ WidgetsAPI.postWidgetsDeployments(body: body) { (response, error) in
 
 Update a Widget deployment
 
+This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+
 
 
 Wraps PUT /api/v2/widgets/deployments/{deploymentId}  
@@ -264,4 +274,4 @@ WidgetsAPI.putWidgetsDeployment(deploymentId: deploymentId, body: body) { (respo
 [**WidgetDeployment**](WidgetDeployment)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

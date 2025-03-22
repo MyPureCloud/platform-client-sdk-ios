@@ -220,6 +220,58 @@ open class ChatAPI {
 
     
     
+    
+    
+    /**
+     Remove a pinned message from a 1on1
+     
+     - parameter userId: (path) userId 
+     - parameter pinnedMessageId: (path) pinnedMessageId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteChatsUserMessagesPin(userId: String, pinnedMessageId: String, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteChatsUserMessagesPinWithRequestBuilder(userId: userId, pinnedMessageId: pinnedMessageId)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Remove a pinned message from a 1on1
+     - DELETE /api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter userId: (path) userId 
+     - parameter pinnedMessageId: (path) pinnedMessageId 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteChatsUserMessagesPinWithRequestBuilder(userId: String, pinnedMessageId: String) -> RequestBuilder<Void> {        
+        var path = "/api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let pinnedMessageIdPreEscape = "\(pinnedMessageId)"
+        let pinnedMessageIdPostEscape = pinnedMessageIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{pinnedMessageId}", with: pinnedMessageIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    
+    
     /**
      Get a message
      
@@ -973,6 +1025,67 @@ open class ChatAPI {
         ])
 
         let requestBuilder: RequestBuilder<ChatMessageEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Get information for a 1on1
+     
+     - parameter userId: (path) userId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getChatsUser(userId: String, completion: @escaping ((_ data: OneOnOne?,_ error: Error?) -> Void)) {
+        let requestBuilder = getChatsUserWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<OneOnOne>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get information for a 1on1
+     - GET /api/v2/chats/users/{userId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "pinnedMessages" : [ {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  }, {
+    "selfUri" : "https://openapi-generator.tech",
+    "id" : "id"
+  } ]
+}, statusCode=200}]
+     
+     - parameter userId: (path) userId 
+
+     - returns: RequestBuilder<OneOnOne> 
+     */
+    open class func getChatsUserWithRequestBuilder(userId: String) -> RequestBuilder<OneOnOne> {        
+        var path = "/api/v2/chats/users/{userId}"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<OneOnOne>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -1931,6 +2044,55 @@ open class ChatAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<ChatSendMessageResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+     
+     - parameter userId: (path) userId 
+     - parameter body: (body) Pinned Message Ids 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postChatsUserMessagesPins(userId: String, body: PinnedMessageRequest, completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = postChatsUserMessagesPinsWithRequestBuilder(userId: userId, body: body)
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+     - POST /api/v2/chats/users/{userId}/messages/pins
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     
+     - parameter userId: (path) userId 
+     - parameter body: (body) Pinned Message Ids 
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func postChatsUserMessagesPinsWithRequestBuilder(userId: String, body: PinnedMessageRequest) -> RequestBuilder<Void> {        
+        var path = "/api/v2/chats/users/{userId}/messages/pins"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

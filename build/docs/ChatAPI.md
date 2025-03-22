@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteChatsRoomMessagesPin**](ChatAPI#deleteChatsRoomMessagesPin) | Remove a pinned message from a room |
 | [**deleteChatsRoomParticipant**](ChatAPI#deleteChatsRoomParticipant) | Remove a user from a room. |
 | [**deleteChatsUserMessage**](ChatAPI#deleteChatsUserMessage) | Delete a message to a user |
+| [**deleteChatsUserMessagesPin**](ChatAPI#deleteChatsUserMessagesPin) | Remove a pinned message from a 1on1 |
 | [**getChatsMessage**](ChatAPI#getChatsMessage) | Get a message |
 | [**getChatsRoom**](ChatAPI#getChatsRoom) | Get a room |
 | [**getChatsRoomMessage**](ChatAPI#getChatsRoomMessage) | Get messages by id(s) from a room |
@@ -16,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getChatsRoomParticipants**](ChatAPI#getChatsRoomParticipants) | Get room participants in a room |
 | [**getChatsSettings**](ChatAPI#getChatsSettings) | Get Chat Settings. |
 | [**getChatsThreadMessages**](ChatAPI#getChatsThreadMessages) | Get history by thread |
+| [**getChatsUser**](ChatAPI#getChatsUser) | Get information for a 1on1 |
 | [**getChatsUserMessage**](ChatAPI#getChatsUserMessage) | Get messages by id(s) from a 1on1 |
 | [**getChatsUserMessages**](ChatAPI#getChatsUserMessages) | Get 1on1 History between a user |
 | [**getChatsUserSettings**](ChatAPI#getChatsUserSettings) | Get a user&#39;s chat settings |
@@ -31,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postChatsRoomParticipant**](ChatAPI#postChatsRoomParticipant) | Join a room |
 | [**postChatsRooms**](ChatAPI#postChatsRooms) | Create an adhoc room |
 | [**postChatsUserMessages**](ChatAPI#postChatsUserMessages) | Send a message to a user |
+| [**postChatsUserMessagesPins**](ChatAPI#postChatsUserMessagesPins) | Add pinned messages for a 1on1, up to a maximum of 5 pinned messages |
 | [**putChatsMessageReactions**](ChatAPI#putChatsMessageReactions) | Update reactions to a message |
 | [**putChatsSettings**](ChatAPI#putChatsSettings) | Update Chat Settings. |
 {: class="table-striped"}
@@ -237,6 +240,58 @@ ChatAPI.deleteChatsUserMessage(userId: userId, messageId: messageId) { (error) i
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| userId | |
 | **messageId** | **String**| messageId | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
+## deleteChatsUserMessagesPin
+
+
+
+> Void deleteChatsUserMessagesPin(userId, pinnedMessageId)
+
+Remove a pinned message from a 1on1
+
+
+
+Wraps DELETE /api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}  
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:1on1:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+let pinnedMessageId: String = "" // pinnedMessageId
+
+// Code example
+ChatAPI.deleteChatsUserMessagesPin(userId: userId, pinnedMessageId: pinnedMessageId) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ChatAPI.deleteChatsUserMessagesPin was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| userId | |
+| **pinnedMessageId** | **String**| pinnedMessageId | |
 
 
 ### Return type
@@ -661,6 +716,57 @@ ChatAPI.getChatsThreadMessages(threadId: threadId, limit: limit, before: before,
 ### Return type
 
 [**ChatMessageEntityListing**](ChatMessageEntityListing)
+
+
+## getChatsUser
+
+
+
+> [OneOnOne](OneOnOne) getChatsUser(userId)
+
+Get information for a 1on1
+
+
+
+Wraps GET /api/v2/chats/users/{userId}  
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:1on1:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+
+// Code example
+ChatAPI.getChatsUser(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ChatAPI.getChatsUser was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| userId | |
+
+
+### Return type
+
+[**OneOnOne**](OneOnOne)
 
 
 ## getChatsUserMessage
@@ -1444,6 +1550,58 @@ ChatAPI.postChatsUserMessages(userId: userId, body: body) { (response, error) in
 [**ChatSendMessageResponse**](ChatSendMessageResponse)
 
 
+## postChatsUserMessagesPins
+
+
+
+> Void postChatsUserMessagesPins(userId, body)
+
+Add pinned messages for a 1on1, up to a maximum of 5 pinned messages
+
+
+
+Wraps POST /api/v2/chats/users/{userId}/messages/pins  
+
+Requires ANY permissions: 
+
+* chat:chat:access
+* chat:1on1:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+let body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids
+
+// Code example
+ChatAPI.postChatsUserMessagesPins(userId: userId, body: body) { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("ChatAPI.postChatsUserMessagesPins was successful")
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| userId | |
+| **body** | [**PinnedMessageRequest**](PinnedMessageRequest)| Pinned Message Ids | |
+
+
+### Return type
+
+`nil` (empty response body)
+
+
 ## putChatsMessageReactions
 
 
@@ -1546,4 +1704,4 @@ ChatAPI.putChatsSettings(body: body) { (response, error) in
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

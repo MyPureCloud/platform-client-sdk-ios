@@ -11,7 +11,7 @@
 | **mediaType** | **String** | The media type of the conversation. | [optional] |
 | **language** | **String** | The language of the conversation. | [optional] |
 | **predictedWrapupCodes** | [**[ConversationSummaryWrapupCode]**](ConversationSummaryWrapupCode) | The wrapup codes of the conversation summary. | [optional] |
-| **editedSummary** | [**ConversationEditedSummary**](ConversationEditedSummary) | The edited summary of the conversation. | [optional] |
+| **editedSummary** | [**ConversationEditedInput**](ConversationEditedInput) | The edited summary of the conversation. | [optional] |
 | **reason** | [**ConversationSummaryReason**](ConversationSummaryReason) | The reason of the conversation summary. | [optional] |
 | **followup** | [**ConversationSummaryFollowup**](ConversationSummaryFollowup) | The followup of the conversation summary. | [optional] |
 | **resolution** | [**ConversationSummaryResolution**](ConversationSummaryResolution) | The resolution of the conversation summary. | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

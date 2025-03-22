@@ -1531,6 +1531,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -1552,6 +1553,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -1588,6 +1590,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -1619,6 +1622,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -1638,6 +1642,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -1674,6 +1679,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -1705,6 +1711,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -2096,6 +2103,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -2105,6 +2113,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -2131,6 +2140,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -2140,6 +2150,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -3671,6 +3682,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
+      "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -3692,6 +3704,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -3728,6 +3741,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -3759,6 +3773,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -3778,6 +3793,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -3814,6 +3830,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -3845,6 +3862,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -4159,6 +4177,7 @@ open class QualityAPI {
   "neverRelease" : true,
   "agentHasRead" : true,
   "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+  "aiScoring" : "{}",
   "name" : "name",
   "assigned" : true,
   "assignee" : {
@@ -9390,6 +9409,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -9411,6 +9431,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -9447,6 +9468,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -9478,6 +9500,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -9497,6 +9520,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -9533,6 +9557,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -9564,6 +9589,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -11147,6 +11173,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
+      "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -11168,6 +11195,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -11204,6 +11232,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -11235,6 +11264,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -11254,6 +11284,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -11290,6 +11321,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -11321,6 +11353,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -12813,6 +12846,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
+      "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -12834,6 +12868,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -12870,6 +12905,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -12901,6 +12937,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -12920,6 +12957,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -12956,6 +12994,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -12987,6 +13026,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -13399,6 +13439,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -13408,6 +13449,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -13434,6 +13476,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -13443,6 +13486,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -14974,6 +15018,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
+      "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -14995,6 +15040,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -15031,6 +15077,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -15062,6 +15109,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -15081,6 +15129,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -15117,6 +15166,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -15148,6 +15198,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -15462,6 +15513,7 @@ open class QualityAPI {
   "neverRelease" : true,
   "agentHasRead" : true,
   "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+  "aiScoring" : "{}",
   "name" : "name",
   "assigned" : true,
   "assignee" : {
@@ -16656,6 +16708,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         }, {
           "answerId" : "answerId",
@@ -16665,6 +16718,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
@@ -16691,6 +16745,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         }, {
           "answerId" : "answerId",
@@ -16700,6 +16755,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
@@ -18232,6 +18288,7 @@ open class QualityAPI {
       "evaluationForm" : {
         "evaluationSettings" : "{}",
         "publishedVersions" : "{}",
+        "aiScoring" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -18253,6 +18310,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -18289,6 +18347,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -18320,6 +18379,7 @@ open class QualityAPI {
             } ]
           } ],
           "weight" : 1.2315135,
+          "contextId" : "contextId",
           "id" : "id",
           "defaultAnswersToNA" : true,
           "type" : "type",
@@ -18339,6 +18399,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -18375,6 +18436,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -18406,6 +18468,7 @@ open class QualityAPI {
             } ]
           } ],
           "weight" : 1.2315135,
+          "contextId" : "contextId",
           "id" : "id",
           "defaultAnswersToNA" : true,
           "type" : "type",
@@ -18720,6 +18783,7 @@ open class QualityAPI {
     "neverRelease" : true,
     "agentHasRead" : true,
     "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+    "aiScoring" : "{}",
     "name" : "name",
     "assigned" : true,
     "assignee" : {
@@ -19449,6 +19513,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         }, {
           "answerId" : "answerId",
@@ -19458,6 +19523,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
@@ -19484,6 +19550,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         }, {
           "answerId" : "answerId",
@@ -19493,6 +19560,7 @@ open class QualityAPI {
           "systemMarkedNA" : true,
           "comments" : "comments",
           "markedNA" : true,
+          "aiAnswer" : "{}",
           "assistedAnswerId" : "assistedAnswerId"
         } ],
         "questionGroupId" : "questionGroupId",
@@ -21025,6 +21093,7 @@ open class QualityAPI {
       "evaluationForm" : {
         "evaluationSettings" : "{}",
         "publishedVersions" : "{}",
+        "aiScoring" : "{}",
         "selfUri" : "https://openapi-generator.tech",
         "name" : "name",
         "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -21046,6 +21115,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -21082,6 +21152,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -21113,6 +21184,7 @@ open class QualityAPI {
             } ]
           } ],
           "weight" : 1.2315135,
+          "contextId" : "contextId",
           "id" : "id",
           "defaultAnswersToNA" : true,
           "type" : "type",
@@ -21132,6 +21204,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -21168,6 +21241,7 @@ open class QualityAPI {
               "combiningOperation" : "AND",
               "predicates" : [ "{}", "{}" ]
             },
+            "contextId" : "contextId",
             "isCritical" : true,
             "id" : "id",
             "text" : "text",
@@ -21199,6 +21273,7 @@ open class QualityAPI {
             } ]
           } ],
           "weight" : 1.2315135,
+          "contextId" : "contextId",
           "id" : "id",
           "defaultAnswersToNA" : true,
           "type" : "type",
@@ -21513,6 +21588,7 @@ open class QualityAPI {
     "neverRelease" : true,
     "agentHasRead" : true,
     "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+    "aiScoring" : "{}",
     "name" : "name",
     "assigned" : true,
     "assignee" : {
@@ -22751,6 +22827,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -22772,6 +22849,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -22808,6 +22886,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -22839,6 +22918,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -22858,6 +22938,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -22894,6 +22975,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -22925,6 +23007,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -22997,6 +23080,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23018,6 +23102,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23054,6 +23139,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23085,6 +23171,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23104,6 +23191,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23140,6 +23228,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23171,6 +23260,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23180,6 +23270,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23201,6 +23292,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23237,6 +23329,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23268,6 +23361,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23287,6 +23381,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23323,6 +23418,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23354,6 +23450,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23458,6 +23555,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23479,6 +23577,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23515,6 +23614,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23546,6 +23646,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23565,6 +23666,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23601,6 +23703,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23632,6 +23735,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23641,6 +23745,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23662,6 +23767,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23698,6 +23804,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23729,6 +23836,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23748,6 +23856,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23784,6 +23893,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -23815,6 +23925,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -23898,6 +24009,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -23919,6 +24031,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -23955,6 +24068,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -23986,6 +24100,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -24005,6 +24120,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -24041,6 +24157,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -24072,6 +24189,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -24147,6 +24265,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24168,6 +24287,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24204,6 +24324,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24235,6 +24356,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24254,6 +24376,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24290,6 +24413,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24321,6 +24445,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24330,6 +24455,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24351,6 +24477,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24387,6 +24514,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24418,6 +24546,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24437,6 +24566,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24473,6 +24603,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24504,6 +24635,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24611,6 +24743,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24632,6 +24765,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24668,6 +24802,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24699,6 +24834,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24718,6 +24854,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24754,6 +24891,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24785,6 +24923,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24794,6 +24933,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -24815,6 +24955,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24851,6 +24992,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24882,6 +25024,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -24901,6 +25044,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24937,6 +25081,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -24968,6 +25113,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -25051,6 +25197,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -25072,6 +25219,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -25108,6 +25256,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -25139,6 +25288,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -25158,6 +25308,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -25194,6 +25345,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -25225,6 +25377,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -27025,6 +27178,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27046,6 +27200,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27082,6 +27237,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27113,6 +27269,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -27132,6 +27289,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27168,6 +27326,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27199,6 +27358,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -27274,6 +27434,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27295,6 +27456,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27331,6 +27493,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27362,6 +27525,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -27381,6 +27545,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27417,6 +27582,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27448,6 +27614,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -27457,6 +27624,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27478,6 +27646,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27514,6 +27683,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27545,6 +27715,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -27564,6 +27735,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27600,6 +27772,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -27631,6 +27804,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -27706,6 +27880,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27727,6 +27902,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27763,6 +27939,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27794,6 +27971,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -27813,6 +27991,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27849,6 +28028,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -27880,6 +28060,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -27955,6 +28136,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -27976,6 +28158,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28012,6 +28195,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28043,6 +28227,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -28062,6 +28247,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28098,6 +28284,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28129,6 +28316,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -28138,6 +28326,7 @@ open class QualityAPI {
     "evaluationSettings" : "{}",
     "weightMode" : "SCALED",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -28159,6 +28348,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28195,6 +28385,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28226,6 +28417,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -28245,6 +28437,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28281,6 +28474,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -28312,6 +28506,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -31721,6 +31916,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -31742,6 +31938,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -31778,6 +31975,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -31809,6 +32007,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -31828,6 +32027,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -31864,6 +32064,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -31895,6 +32096,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -32283,6 +32485,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -32292,6 +32495,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -32318,6 +32522,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -32327,6 +32532,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -33859,6 +34065,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
+      "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -33880,6 +34087,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -33916,6 +34124,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -33947,6 +34156,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -33966,6 +34176,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -34002,6 +34213,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -34033,6 +34245,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -34347,6 +34560,7 @@ open class QualityAPI {
   "neverRelease" : true,
   "agentHasRead" : true,
   "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+  "aiScoring" : "{}",
   "name" : "name",
   "assigned" : true,
   "assignee" : {
@@ -35261,6 +35475,7 @@ open class QualityAPI {
       "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
+      "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
     }, {
       "answerId" : "answerId",
@@ -35270,6 +35485,7 @@ open class QualityAPI {
       "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
+      "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
@@ -35296,6 +35512,7 @@ open class QualityAPI {
       "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
+      "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
     }, {
       "answerId" : "answerId",
@@ -35305,6 +35522,7 @@ open class QualityAPI {
       "systemMarkedNA" : true,
       "comments" : "comments",
       "markedNA" : true,
+      "aiAnswer" : "{}",
       "assistedAnswerId" : "assistedAnswerId"
     } ],
     "questionGroupId" : "questionGroupId",
@@ -35397,6 +35615,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35418,6 +35637,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35454,6 +35674,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35485,6 +35706,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -35504,6 +35726,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35540,6 +35763,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35571,6 +35795,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -35630,6 +35855,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -35651,6 +35877,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35687,6 +35914,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35718,6 +35946,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -35737,6 +35966,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35773,6 +36003,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -35804,6 +36035,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -36086,6 +36318,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36107,6 +36340,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36143,6 +36377,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36174,6 +36409,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -36193,6 +36429,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36229,6 +36466,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36260,6 +36498,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -36319,6 +36558,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -36340,6 +36580,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36376,6 +36617,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36407,6 +36649,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -36426,6 +36669,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36462,6 +36706,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -36493,6 +36738,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -38368,6 +38614,7 @@ open class QualityAPI {
   "evaluationForm" : {
     "evaluationSettings" : "{}",
     "publishedVersions" : "{}",
+    "aiScoring" : "{}",
     "selfUri" : "https://openapi-generator.tech",
     "name" : "name",
     "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -38389,6 +38636,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -38425,6 +38673,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -38456,6 +38705,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -38475,6 +38725,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -38511,6 +38762,7 @@ open class QualityAPI {
           "combiningOperation" : "AND",
           "predicates" : [ "{}", "{}" ]
         },
+        "contextId" : "contextId",
         "isCritical" : true,
         "id" : "id",
         "text" : "text",
@@ -38542,6 +38794,7 @@ open class QualityAPI {
         } ]
       } ],
       "weight" : 1.2315135,
+      "contextId" : "contextId",
       "id" : "id",
       "defaultAnswersToNA" : true,
       "type" : "type",
@@ -38934,6 +39187,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -38943,6 +39197,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -38969,6 +39224,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       }, {
         "answerId" : "answerId",
@@ -38978,6 +39234,7 @@ open class QualityAPI {
         "systemMarkedNA" : true,
         "comments" : "comments",
         "markedNA" : true,
+        "aiAnswer" : "{}",
         "assistedAnswerId" : "assistedAnswerId"
       } ],
       "questionGroupId" : "questionGroupId",
@@ -40509,6 +40766,7 @@ open class QualityAPI {
     "evaluationForm" : {
       "evaluationSettings" : "{}",
       "publishedVersions" : "{}",
+      "aiScoring" : "{}",
       "selfUri" : "https://openapi-generator.tech",
       "name" : "name",
       "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -40530,6 +40788,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -40566,6 +40825,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -40597,6 +40857,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -40616,6 +40877,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -40652,6 +40914,7 @@ open class QualityAPI {
             "combiningOperation" : "AND",
             "predicates" : [ "{}", "{}" ]
           },
+          "contextId" : "contextId",
           "isCritical" : true,
           "id" : "id",
           "text" : "text",
@@ -40683,6 +40946,7 @@ open class QualityAPI {
           } ]
         } ],
         "weight" : 1.2315135,
+        "contextId" : "contextId",
         "id" : "id",
         "defaultAnswersToNA" : true,
         "type" : "type",
@@ -40997,6 +41261,7 @@ open class QualityAPI {
   "neverRelease" : true,
   "agentHasRead" : true,
   "conversationDate" : "2000-01-23T04:56:07.000+00:00",
+  "aiScoring" : "{}",
   "name" : "name",
   "assigned" : true,
   "assignee" : {
@@ -41473,6 +41738,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41494,6 +41760,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41530,6 +41797,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41561,6 +41829,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -41580,6 +41849,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41616,6 +41886,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41647,6 +41918,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -41713,6 +41985,7 @@ open class QualityAPI {
   "evaluationSettings" : "{}",
   "weightMode" : "SCALED",
   "publishedVersions" : "{}",
+  "aiScoring" : "{}",
   "selfUri" : "https://openapi-generator.tech",
   "name" : "name",
   "modifiedDate" : "2000-01-23T04:56:07.000+00:00",
@@ -41734,6 +42007,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41770,6 +42044,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41801,6 +42076,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -41820,6 +42096,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41856,6 +42133,7 @@ open class QualityAPI {
         "combiningOperation" : "AND",
         "predicates" : [ "{}", "{}" ]
       },
+      "contextId" : "contextId",
       "isCritical" : true,
       "id" : "id",
       "text" : "text",
@@ -41887,6 +42165,7 @@ open class QualityAPI {
       } ]
     } ],
     "weight" : 1.2315135,
+    "contextId" : "contextId",
     "id" : "id",
     "defaultAnswersToNA" : true,
     "type" : "type",
@@ -41910,6 +42189,93 @@ open class QualityAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EvaluationFormResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Update the AI Scoring settings of an evaluation form.
+     
+     - parameter formId: (path) Form ID 
+     - parameter body: (body) AI Scoring Settings 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func putQualityFormsEvaluationAiscoringSettings(formId: String, body: AiScoringSettings, completion: @escaping ((_ data: AiScoringSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = putQualityFormsEvaluationAiscoringSettingsWithRequestBuilder(formId: formId, body: body)
+        requestBuilder.execute { (response: Response<AiScoringSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Update the AI Scoring settings of an evaluation form.
+     - PUT /api/v2/quality/forms/evaluations/{formId}/aiscoring/settings
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "selfUri" : "https://openapi-generator.tech",
+  "id" : "id",
+  "questionGroupSettings" : [ {
+    "questionSettings" : [ {
+      "settings" : {
+        "enabled" : true
+      },
+      "questionContextId" : "questionContextId"
+    }, {
+      "settings" : {
+        "enabled" : true
+      },
+      "questionContextId" : "questionContextId"
+    } ],
+    "questionGroupContextId" : "questionGroupContextId"
+  }, {
+    "questionSettings" : [ {
+      "settings" : {
+        "enabled" : true
+      },
+      "questionContextId" : "questionContextId"
+    }, {
+      "settings" : {
+        "enabled" : true
+      },
+      "questionContextId" : "questionContextId"
+    } ],
+    "questionGroupContextId" : "questionGroupContextId"
+  } ]
+}, statusCode=200}]
+     
+     - parameter formId: (path) Form ID 
+     - parameter body: (body) AI Scoring Settings 
+
+     - returns: RequestBuilder<AiScoringSettings> 
+     */
+    open class func putQualityFormsEvaluationAiscoringSettingsWithRequestBuilder(formId: String, body: AiScoringSettings) -> RequestBuilder<AiScoringSettings> {        
+        var path = "/api/v2/quality/forms/evaluations/{formId}/aiscoring/settings"
+        let formIdPreEscape = "\(formId)"
+        let formIdPostEscape = formIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{formId}", with: formIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AiScoringSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PUT", url: requestUrl!, body: body)
     }

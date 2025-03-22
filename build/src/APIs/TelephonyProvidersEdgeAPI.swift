@@ -4237,6 +4237,8 @@ open class TelephonyProvidersEdgeAPI {
     
     
     
+    
+    
     /**
      Get a listing of extension pools
      
@@ -4244,10 +4246,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter number: (query) Deprecated, filtering by number not supported (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func getTelephonyProvidersEdgesExtensionpools(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, number: String? = nil, completion: @escaping ((_ data: ExtensionPoolEntityListing?,_ error: Error?) -> Void)) {
-        let requestBuilder = getTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number)
+    open class func getTelephonyProvidersEdgesExtensionpools(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, number: String? = nil, divisionId: [String]? = nil, completion: @escaping ((_ data: ExtensionPoolEntityListing?,_ error: Error?) -> Void)) {
+        let requestBuilder = getTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number, divisionId: divisionId)
         requestBuilder.execute { (response: Response<ExtensionPoolEntityListing>?, error) -> Void in
             do {
                 if let e = error {
@@ -4320,10 +4323,11 @@ open class TelephonyProvidersEdgeAPI {
      - parameter pageNumber: (query) Page number (optional)
      - parameter sortBy: (query) Sort by (optional)
      - parameter number: (query) Deprecated, filtering by number not supported (optional)
+     - parameter divisionId: (query) List of divisionIds on which to filter. (optional)
 
      - returns: RequestBuilder<ExtensionPoolEntityListing> 
      */
-    open class func getTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, number: String? = nil) -> RequestBuilder<ExtensionPoolEntityListing> {        
+    open class func getTelephonyProvidersEdgesExtensionpoolsWithRequestBuilder(pageSize: Int? = nil, pageNumber: Int? = nil, sortBy: String? = nil, number: String? = nil, divisionId: [String]? = nil) -> RequestBuilder<ExtensionPoolEntityListing> {        
         let path = "/api/v2/telephony/providers/edges/extensionpools"
         let URLString = PureCloudPlatformClientV2API.basePath + path
         let body: Data? = nil
@@ -4333,7 +4337,8 @@ open class TelephonyProvidersEdgeAPI {
             "pageSize": pageSize?.encodeToJSON(), 
             "pageNumber": pageNumber?.encodeToJSON(), 
             "sortBy": sortBy, 
-            "number": number
+            "number": number, 
+            "divisionId": divisionId
         ])
 
         let requestBuilder: RequestBuilder<ExtensionPoolEntityListing>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()

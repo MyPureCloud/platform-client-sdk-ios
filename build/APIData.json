@@ -6179,6 +6179,24 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\nlet messageId: String = \"\" // messageId\n\n// Delete a message to a user\nDeleteChatsUserMessageRequest.deleteChatsUserMessage(userId: userId, messageId: messageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsUserMessageRequest.deleteChatsUserMessage was successful\")\n    }\n}"
   },
+  "deletechatsusermessagespin": {
+    "operationId": "deletechatsusermessagespin",
+    "functionName": "deleteChatsUserMessagesPin",
+    "signature": "deleteChatsUserMessagesPin(userId, pinnedMessageId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pinnedMessageId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\nlet pinnedMessageId: String = \"\" // pinnedMessageId\n\n// Remove a pinned message from a 1on1\nDeleteChatsUserMessagesPinRequest.deleteChatsUserMessagesPin(userId: userId, pinnedMessageId: pinnedMessageId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteChatsUserMessagesPinRequest.deleteChatsUserMessagesPin was successful\")\n    }\n}"
+  },
   "getchatsmessage": {
     "operationId": "getchatsmessage",
     "functionName": "getChatsMessage",
@@ -6323,6 +6341,20 @@
     ],
     "return": "ChatMessageEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet threadId: String = \"\" // threadId\nlet limit: String = \"\" // The maximum number of messages to retrieve\nlet before: String = \"\" // The cutoff date for messages to retrieve\nlet after: String = \"\" // The beginning date for messages to retrieve\n\n// Get history by thread\nGetChatsThreadMessagesRequest.getChatsThreadMessages(threadId: threadId, limit: limit, before: before, after: after) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsThreadMessagesRequest.getChatsThreadMessages was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getchatsuser": {
+    "operationId": "getchatsuser",
+    "functionName": "getChatsUser",
+    "signature": "getChatsUser(userId)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "OneOnOne",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\n\n// Get information for a 1on1\nGetChatsUserRequest.getChatsUser(userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetChatsUserRequest.getChatsUser was successful\")\n        dump(response)\n    }\n}"
   },
   "getchatsusermessage": {
     "operationId": "getchatsusermessage",
@@ -6593,6 +6625,24 @@
     ],
     "return": "ChatSendMessageResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\nlet body: SendMessageBody = new SendMessageBody(...) // message body\n\n// Send a message to a user\nPostChatsUserMessagesRequest.postChatsUserMessages(userId: userId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostChatsUserMessagesRequest.postChatsUserMessages was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postchatsusermessagespins": {
+    "operationId": "postchatsusermessagespins",
+    "functionName": "postChatsUserMessagesPins",
+    "signature": "postChatsUserMessagesPins(userId, body)",
+    "parameters": [
+      {
+        "name": "userId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "PinnedMessageRequest",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet userId: String = \"\" // userId\nlet body: PinnedMessageRequest = new PinnedMessageRequest(...) // Pinned Message Ids\n\n// Add pinned messages for a 1on1, up to a maximum of 5 pinned messages\nPostChatsUserMessagesPinsRequest.postChatsUserMessagesPins(userId: userId, body: body) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"PostChatsUserMessagesPinsRequest.postChatsUserMessagesPins was successful\")\n    }\n}"
   },
   "putchatsmessagereactions": {
     "operationId": "putchatsmessagereactions",
@@ -7994,6 +8044,19 @@
     ],
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Delete an Open messaging integration\nDeleteConversationsMessagingIntegrationsOpenIntegrationIdRequest.deleteConversationsMessagingIntegrationsOpenIntegrationId(integrationId: integrationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationsMessagingIntegrationsOpenIntegrationIdRequest.deleteConversationsMessagingIntegrationsOpenIntegrationId was successful\")\n    }\n}"
   },
+  "deleteconversationsmessagingintegrationstwitterintegrationid": {
+    "operationId": "deleteconversationsmessagingintegrationstwitterintegrationid",
+    "functionName": "deleteConversationsMessagingIntegrationsTwitterIntegrationId",
+    "signature": "deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\n\n// Delete Twitter messaging integration\nDeleteConversationsMessagingIntegrationsTwitterIntegrationIdRequest.deleteConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteConversationsMessagingIntegrationsTwitterIntegrationIdRequest.deleteConversationsMessagingIntegrationsTwitterIntegrationId was successful\")\n    }\n}"
+  },
   "deleteconversationsmessagingintegrationswhatsappintegrationid": {
     "operationId": "deleteconversationsmessagingintegrationswhatsappintegrationid",
     "functionName": "deleteConversationsMessagingIntegrationsWhatsappIntegrationId",
@@ -9088,6 +9151,20 @@
     "return": "FacebookPermissionEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get a list of Facebook Permissions\nGetConversationsMessagingFacebookPermissionsRequest.getConversationsMessagingFacebookPermissions() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingFacebookPermissionsRequest.getConversationsMessagingFacebookPermissions was successful\")\n        dump(response)\n    }\n}"
   },
+  "getconversationsmessagingintegrationtwitteroauthsettings": {
+    "operationId": "getconversationsmessagingintegrationtwitteroauthsettings",
+    "functionName": "getConversationsMessagingIntegrationTwitterOauthSettings",
+    "signature": "getConversationsMessagingIntegrationTwitterOauthSettings(integrationId)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "TwitterOAuthSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration Id of an existing integration that needs to be patched with new oauth settings\n\n// Get twitter oauth settings to patch an integration\nGetConversationsMessagingIntegrationTwitterOauthSettingsRequest.getConversationsMessagingIntegrationTwitterOauthSettings(integrationId: integrationId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationTwitterOauthSettingsRequest.getConversationsMessagingIntegrationTwitterOauthSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "getconversationsmessagingintegrations": {
     "operationId": "getconversationsmessagingintegrations",
     "functionName": "getConversationsMessagingIntegrations",
@@ -9280,6 +9357,66 @@
     ],
     "return": "OpenIntegration",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet expand: GetConversationsMessagingIntegrationsOpenIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsOpenIntegrationId = GetConversationsMessagingIntegrationsOpenIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsOpenIntegrationId.enummember // Expand instructions for the return value.\n\n// Get an Open messaging integration\nGetConversationsMessagingIntegrationsOpenIntegrationIdRequest.getConversationsMessagingIntegrationsOpenIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsOpenIntegrationIdRequest.getConversationsMessagingIntegrationsOpenIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagingintegrationstwitter": {
+    "operationId": "getconversationsmessagingintegrationstwitter",
+    "functionName": "getConversationsMessagingIntegrationsTwitter",
+    "signature": "getConversationsMessagingIntegrationsTwitter(pageSize, pageNumber, expand, supportedContentId, messagingSettingId)",
+    "parameters": [
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "supportedContentId",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "messagingSettingId",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterIntegrationEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet expand: GetConversationsMessagingIntegrationsTwitterRequest.Expand_getConversationsMessagingIntegrationsTwitter = GetConversationsMessagingIntegrationsTwitterRequest.Expand_getConversationsMessagingIntegrationsTwitter.enummember // Expand instructions for the return value.\nlet supportedContentId: String = \"\" // Filter integrations returned based on the supported content ID\nlet messagingSettingId: String = \"\" // Filter integrations returned based on the setting ID\n\n// Get a list of Twitter Integrations\nGetConversationsMessagingIntegrationsTwitterRequest.getConversationsMessagingIntegrationsTwitter(pageSize: pageSize, pageNumber: pageNumber, expand: expand, supportedContentId: supportedContentId, messagingSettingId: messagingSettingId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsTwitterRequest.getConversationsMessagingIntegrationsTwitter was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagingintegrationstwitterintegrationid": {
+    "operationId": "getconversationsmessagingintegrationstwitterintegrationid",
+    "functionName": "getConversationsMessagingIntegrationsTwitterIntegrationId",
+    "signature": "getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, expand)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "expand",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet expand: GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId = GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.Expand_getConversationsMessagingIntegrationsTwitterIntegrationId.enummember // Expand instructions for the return value.\n\n// Get Twitter messaging integration\nGetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.getConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, expand: expand) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsTwitterIntegrationIdRequest.getConversationsMessagingIntegrationsTwitterIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getconversationsmessagingintegrationstwitteroauthsettings": {
+    "operationId": "getconversationsmessagingintegrationstwitteroauthsettings",
+    "functionName": "getConversationsMessagingIntegrationsTwitterOauthSettings",
+    "signature": "getConversationsMessagingIntegrationsTwitterOauthSettings()",
+    "return": "TwitterSignupOAuthSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\n\n// Get twitter oauth settings\nGetConversationsMessagingIntegrationsTwitterOauthSettingsRequest.getConversationsMessagingIntegrationsTwitterOauthSettings() { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationsMessagingIntegrationsTwitterOauthSettingsRequest.getConversationsMessagingIntegrationsTwitterOauthSettings was successful\")\n        dump(response)\n    }\n}"
   },
   "getconversationsmessagingintegrationswhatsapp": {
     "operationId": "getconversationsmessagingintegrationswhatsapp",
@@ -10344,6 +10481,25 @@
     ],
     "return": "OpenIntegration",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: OpenIntegrationUpdateRequest = new OpenIntegrationUpdateRequest(...) // OpenIntegrationUpdateRequest\n\n// Update an Open messaging integration\nPatchConversationsMessagingIntegrationsOpenIntegrationIdRequest.patchConversationsMessagingIntegrationsOpenIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingIntegrationsOpenIntegrationIdRequest.patchConversationsMessagingIntegrationsOpenIntegrationId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchconversationsmessagingintegrationstwitterintegrationid": {
+    "operationId": "patchconversationsmessagingintegrationstwitterintegrationid",
+    "functionName": "patchConversationsMessagingIntegrationsTwitterIntegrationId",
+    "signature": "patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId, body)",
+    "parameters": [
+      {
+        "name": "integrationId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "TwitterIntegrationUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "TwitterIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet integrationId: String = \"\" // Integration ID\nlet body: TwitterIntegrationUpdateRequest = new TwitterIntegrationUpdateRequest(...) // TwitterIntegrationUpdateRequest\n\n// Update a Twitter messaging integration\nPatchConversationsMessagingIntegrationsTwitterIntegrationIdRequest.patchConversationsMessagingIntegrationsTwitterIntegrationId(integrationId: integrationId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchConversationsMessagingIntegrationsTwitterIntegrationIdRequest.patchConversationsMessagingIntegrationsTwitterIntegrationId was successful\")\n        dump(response)\n    }\n}"
   },
   "patchconversationsmessagingintegrationswhatsappembeddedsignupintegrationid": {
     "operationId": "patchconversationsmessagingintegrationswhatsappembeddedsignupintegrationid",
@@ -11731,6 +11887,20 @@
     "return": "OpenIntegration",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: OpenIntegrationRequest = new OpenIntegrationRequest(...) // OpenIntegrationRequest\n\n// Create an Open messaging integration\nPostConversationsMessagingIntegrationsOpenRequest.postConversationsMessagingIntegrationsOpen(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagingIntegrationsOpenRequest.postConversationsMessagingIntegrationsOpen was successful\")\n        dump(response)\n    }\n}"
   },
+  "postconversationsmessagingintegrationstwitter": {
+    "operationId": "postconversationsmessagingintegrationstwitter",
+    "functionName": "postConversationsMessagingIntegrationsTwitter",
+    "signature": "postConversationsMessagingIntegrationsTwitter(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "TwitterIntegrationRequest",
+        "required": "true"
+      }
+    ],
+    "return": "TwitterIntegration",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TwitterIntegrationRequest = new TwitterIntegrationRequest(...) // TwitterIntegrationRequest\n\n// Create Twitter Integration\nPostConversationsMessagingIntegrationsTwitterRequest.postConversationsMessagingIntegrationsTwitter(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostConversationsMessagingIntegrationsTwitterRequest.postConversationsMessagingIntegrationsTwitter was successful\")\n        dump(response)\n    }\n}"
+  },
   "postconversationsmessagingintegrationswhatsapp": {
     "operationId": "postconversationsmessagingintegrationswhatsapp",
     "functionName": "postConversationsMessagingIntegrationsWhatsapp",
@@ -12824,6 +12994,44 @@
     "return": "ContactListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet pageNumber: Int = 0 // Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000)\nlet q: String = \"\" // User supplied search keywords (no special syntax is currently supported)\nlet sortOrder: String = \"\" // The External Contact field to sort by. Any of: [firstName, lastName, middleName, title]. Direction: [asc, desc]. e.g. \\\"firstName:asc\\\", \\\"title:desc\\\"\nlet expand: [String] = [\"\"] // which fields, if any, to expand\nlet divisionIds: [String] = [\"\"] // which divisions to search, up to 50\n\n// Search for external contacts\nGetExternalcontactsContactsRequest.getExternalcontactsContacts(pageSize: pageSize, pageNumber: pageNumber, q: q, sortOrder: sortOrder, expand: expand, divisionIds: divisionIds) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsRequest.getExternalcontactsContacts was successful\")\n        dump(response)\n    }\n}"
   },
+  "getexternalcontactscontactsexport": {
+    "operationId": "getexternalcontactscontactsexport",
+    "functionName": "getExternalcontactsContactsExport",
+    "signature": "getExternalcontactsContactsExport(exportId)",
+    "parameters": [
+      {
+        "name": "exportId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "ContactsExport",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet exportId: String = \"\" // Export id\n\n// Get export for exportId\nGetExternalcontactsContactsExportRequest.getExternalcontactsContactsExport(exportId: exportId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsExportRequest.getExternalcontactsContactsExport was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getexternalcontactscontactsexports": {
+    "operationId": "getexternalcontactscontactsexports",
+    "functionName": "getExternalcontactsContactsExports",
+    "signature": "getExternalcontactsContactsExports(divisionIds, after, pageSize)",
+    "parameters": [
+      {
+        "name": "divisionIds",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "after",
+        "type": "String",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "ExportListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet divisionIds: [String] = [\"\"] // Division IDs of entities\nlet after: String = \"\" // The cursor that points to the end of the set of entities\nlet pageSize: Int = 0 // Number of entities to return\n\n// List exports for organization\nGetExternalcontactsContactsExportsRequest.getExternalcontactsContactsExports(divisionIds: divisionIds, after: after, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetExternalcontactsContactsExportsRequest.getExternalcontactsContactsExports was successful\")\n        dump(response)\n    }\n}"
+  },
   "getexternalcontactscontactsschema": {
     "operationId": "getexternalcontactscontactsschema",
     "functionName": "getExternalcontactsContactsSchema",
@@ -13783,6 +13991,20 @@
     ],
     "return": "ExternalContact",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExternalContact = new ExternalContact(...) // ExternalContact\n\n// Create an external contact\nPostExternalcontactsContactsRequest.postExternalcontactsContacts(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsContactsRequest.postExternalcontactsContacts was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postexternalcontactscontactsexports": {
+    "operationId": "postexternalcontactscontactsexports",
+    "functionName": "postExternalcontactsContactsExports",
+    "signature": "postExternalcontactsContactsExports(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "ContactsExport",
+        "required": "true"
+      }
+    ],
+    "return": "ContactsExport",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ContactsExport = new ContactsExport(...) // Export\n\n// Create bulk export\nPostExternalcontactsContactsExportsRequest.postExternalcontactsContactsExports(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostExternalcontactsContactsExportsRequest.postExternalcontactsContactsExports was successful\")\n        dump(response)\n    }\n}"
   },
   "postexternalcontactscontactsschemas": {
     "operationId": "postexternalcontactscontactsschemas",
@@ -21273,6 +21495,35 @@
     "return": "KnowledgeDocument",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocument = GetKnowledgeKnowledgebaseLanguageDocumentRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocument.enummember // Language code, format: iso2-LOCALE\n\n// Get document\nGetKnowledgeKnowledgebaseLanguageDocumentRequest.getKnowledgeKnowledgebaseLanguageDocument(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageDocumentRequest.getKnowledgeKnowledgebaseLanguageDocument was successful\")\n        dump(response)\n    }\n}"
   },
+  "getknowledgeknowledgebaselanguagedocumentupload": {
+    "operationId": "getknowledgeknowledgebaselanguagedocumentupload",
+    "functionName": "getKnowledgeKnowledgebaseLanguageDocumentUpload",
+    "signature": "getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId, knowledgeBaseId, languageCode, uploadId)",
+    "parameters": [
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "uploadId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeDocumentContentUpload",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: GetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload = GetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload.enummember // Language code, format: iso2-LOCALE\nlet uploadId: String = \"\" // UploadId\n\n// Get document content upload status\nGetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, uploadId: uploadId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetKnowledgeKnowledgebaseLanguageDocumentUploadRequest.getKnowledgeKnowledgebaseLanguageDocumentUpload was successful\")\n        dump(response)\n    }\n}"
+  },
   "getknowledgeknowledgebaselanguagedocuments": {
     "operationId": "getknowledgeknowledgebaselanguagedocuments",
     "functionName": "getKnowledgeKnowledgebaseLanguageDocuments",
@@ -22551,6 +22802,44 @@
     "return": "KnowledgeAnswerDocumentsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentsAnswerFilter = new KnowledgeDocumentsAnswerFilter(...) // \n\n// Answer documents.\nPostKnowledgeKnowledgebaseDocumentsAnswersRequest.postKnowledgeKnowledgebaseDocumentsAnswers(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsAnswersRequest.postKnowledgeKnowledgebaseDocumentsAnswers was successful\")\n        dump(response)\n    }\n}"
   },
+  "postknowledgeknowledgebasedocumentsbulkremove": {
+    "operationId": "postknowledgeknowledgebasedocumentsbulkremove",
+    "functionName": "postKnowledgeKnowledgebaseDocumentsBulkRemove",
+    "signature": "postKnowledgeKnowledgebaseDocumentsBulkRemove(knowledgeBaseId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentBulkRemoveRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentBulkRemoveRequest = new KnowledgeDocumentBulkRemoveRequest(...) // \n\n// Bulk remove documents.\nPostKnowledgeKnowledgebaseDocumentsBulkRemoveRequest.postKnowledgeKnowledgebaseDocumentsBulkRemove(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsBulkRemoveRequest.postKnowledgeKnowledgebaseDocumentsBulkRemove was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgeknowledgebasedocumentsbulkupdate": {
+    "operationId": "postknowledgeknowledgebasedocumentsbulkupdate",
+    "functionName": "postKnowledgeKnowledgebaseDocumentsBulkUpdate",
+    "signature": "postKnowledgeKnowledgebaseDocumentsBulkUpdate(knowledgeBaseId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentBulkUpdateRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentBulkUpdateRequest = new KnowledgeDocumentBulkUpdateRequest(...) // \n\n// Bulk update documents.\nPostKnowledgeKnowledgebaseDocumentsBulkUpdateRequest.postKnowledgeKnowledgebaseDocumentsBulkUpdate(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsBulkUpdateRequest.postKnowledgeKnowledgebaseDocumentsBulkUpdate was successful\")\n        dump(response)\n    }\n}"
+  },
   "postknowledgeknowledgebasedocumentspresentations": {
     "operationId": "postknowledgeknowledgebasedocumentspresentations",
     "functionName": "postKnowledgeKnowledgebaseDocumentsPresentations",
@@ -22636,6 +22925,25 @@
     "return": "KnowledgeDocumentSuggestion",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // The ID of knowledge base containing the documents to query.\nlet body: KnowledgeDocumentSuggestionRequest = new KnowledgeDocumentSuggestionRequest(...) // \n\n// Query the knowledge documents to provide suggestions for auto completion.\nPostKnowledgeKnowledgebaseDocumentsSearchSuggestionsRequest.postKnowledgeKnowledgebaseDocumentsSearchSuggestions(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsSearchSuggestionsRequest.postKnowledgeKnowledgebaseDocumentsSearchSuggestions was successful\")\n        dump(response)\n    }\n}"
   },
+  "postknowledgeknowledgebasedocumentsversionsbulkadd": {
+    "operationId": "postknowledgeknowledgebasedocumentsversionsbulkadd",
+    "functionName": "postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd",
+    "signature": "postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd(knowledgeBaseId, body)",
+    "parameters": [
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentBulkVersionAddRequest",
+        "required": "true"
+      }
+    ],
+    "return": "BulkResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet body: KnowledgeDocumentBulkVersionAddRequest = new KnowledgeDocumentBulkVersionAddRequest(...) // \n\n// Bulk add document versions.\nPostKnowledgeKnowledgebaseDocumentsVersionsBulkAddRequest.postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd(knowledgeBaseId: knowledgeBaseId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseDocumentsVersionsBulkAddRequest.postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd was successful\")\n        dump(response)\n    }\n}"
+  },
   "postknowledgeknowledgebaseexportjobs": {
     "operationId": "postknowledgeknowledgebaseexportjobs",
     "functionName": "postKnowledgeKnowledgebaseExportJobs",
@@ -22716,6 +23024,35 @@
     ],
     "return": "KnowledgeExtendedCategory",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageCategoriesRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageCategories = PostKnowledgeKnowledgebaseLanguageCategoriesRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageCategories.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeCategoryRequest = new KnowledgeCategoryRequest(...) // \n\n// Create new category\nPostKnowledgeKnowledgebaseLanguageCategoriesRequest.postKnowledgeKnowledgebaseLanguageCategories(knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageCategoriesRequest.postKnowledgeKnowledgebaseLanguageCategories was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postknowledgeknowledgebaselanguagedocumentuploads": {
+    "operationId": "postknowledgeknowledgebaselanguagedocumentuploads",
+    "functionName": "postKnowledgeKnowledgebaseLanguageDocumentUploads",
+    "signature": "postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId, knowledgeBaseId, languageCode, body)",
+    "parameters": [
+      {
+        "name": "documentId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "knowledgeBaseId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "languageCode",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "KnowledgeDocumentContentUpload",
+        "required": "true"
+      }
+    ],
+    "return": "KnowledgeDocumentContentUpload",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet documentId: String = \"\" // Document ID\nlet knowledgeBaseId: String = \"\" // Knowledge base ID\nlet languageCode: PostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads = PostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads.enummember // Language code, format: iso2-LOCALE\nlet body: KnowledgeDocumentContentUpload = new KnowledgeDocumentContentUpload(...) // \n\n// Upload Article Content\nPostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostKnowledgeKnowledgebaseLanguageDocumentUploadsRequest.postKnowledgeKnowledgebaseLanguageDocumentUploads was successful\")\n        dump(response)\n    }\n}"
   },
   "postknowledgeknowledgebaselanguagedocuments": {
     "operationId": "postknowledgeknowledgebaselanguagedocuments",
@@ -25835,35 +26172,6 @@
     "return": "LimitsEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to fetch limits for\n\n// Get the effective limits in a namespace for an organization\nGetOrganizationsLimitsNamespaceRequest.getOrganizationsLimitsNamespace(namespaceName: namespaceName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceRequest.getOrganizationsLimitsNamespace was successful\")\n        dump(response)\n    }\n}"
   },
-  "getorganizationslimitsnamespacecounts": {
-    "operationId": "getorganizationslimitsnamespacecounts",
-    "functionName": "getOrganizationsLimitsNamespaceCounts",
-    "signature": "getOrganizationsLimitsNamespaceCounts(namespaceName, cursor, entityId, userId)",
-    "parameters": [
-      {
-        "name": "namespaceName",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "cursor",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "entityId",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "LimitCountListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to get\nlet cursor: String = \"\" // Cursor provided when retrieving the last page\nlet entityId: String = \"\" // entity id of the count\nlet userId: String = \"\" // userid of the count\n\n// Get estimated limit counts for a namespace. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.\nGetOrganizationsLimitsNamespaceCountsRequest.getOrganizationsLimitsNamespaceCounts(namespaceName: namespaceName, cursor: cursor, entityId: entityId, userId: userId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceCountsRequest.getOrganizationsLimitsNamespaceCounts was successful\")\n        dump(response)\n    }\n}"
-  },
   "getorganizationslimitsnamespacedefaults": {
     "operationId": "getorganizationslimitsnamespacedefaults",
     "functionName": "getOrganizationsLimitsNamespaceDefaults",
@@ -25877,40 +26185,6 @@
     ],
     "return": "LimitsEntityListing",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to fetch defaults limits for\n\n// Get the default limits in a namespace for an organization\nGetOrganizationsLimitsNamespaceDefaultsRequest.getOrganizationsLimitsNamespaceDefaults(namespaceName: namespaceName) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceDefaultsRequest.getOrganizationsLimitsNamespaceDefaults was successful\")\n        dump(response)\n    }\n}"
-  },
-  "getorganizationslimitsnamespacelimitcounts": {
-    "operationId": "getorganizationslimitsnamespacelimitcounts",
-    "functionName": "getOrganizationsLimitsNamespaceLimitCounts",
-    "signature": "getOrganizationsLimitsNamespaceLimitCounts(namespaceName, limitName, entityId, userId, cursor)",
-    "parameters": [
-      {
-        "name": "namespaceName",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "limitName",
-        "type": "String",
-        "required": "true"
-      },
-      {
-        "name": "entityId",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "userId",
-        "type": "String",
-        "required": "false"
-      },
-      {
-        "name": "cursor",
-        "type": "String",
-        "required": "false"
-      }
-    ],
-    "return": "LimitCountListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet namespaceName: String = \"\" // The namespace to get\nlet limitName: String = \"\" // The limit to get\nlet entityId: String = \"\" // entity id of the count\nlet userId: String = \"\" // userid of the count\nlet cursor: String = \"\" // Cursor provided when retrieving the last page\n\n// Get estimated limit counts for a namespace and limit name. This is not a source of truth for limit values but a record of estimates to facilitate limit threshold tracking.\nGetOrganizationsLimitsNamespaceLimitCountsRequest.getOrganizationsLimitsNamespaceLimitCounts(namespaceName: namespaceName, limitName: limitName, entityId: entityId, userId: userId, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetOrganizationsLimitsNamespaceLimitCountsRequest.getOrganizationsLimitsNamespaceLimitCounts was successful\")\n        dump(response)\n    }\n}"
   },
   "getorganizationslimitsnamespaces": {
     "operationId": "getorganizationslimitsnamespaces",
@@ -32168,6 +32442,25 @@
     "return": "EvaluationFormResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\nlet body: EvaluationForm = new EvaluationForm(...) // Evaluation form\n\n// Update an evaluation form.\nPutQualityFormsEvaluationRequest.putQualityFormsEvaluation(formId: formId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutQualityFormsEvaluationRequest.putQualityFormsEvaluation was successful\")\n        dump(response)\n    }\n}"
   },
+  "putqualityformsevaluationaiscoringsettings": {
+    "operationId": "putqualityformsevaluationaiscoringsettings",
+    "functionName": "putQualityFormsEvaluationAiscoringSettings",
+    "signature": "putQualityFormsEvaluationAiscoringSettings(formId, body)",
+    "parameters": [
+      {
+        "name": "formId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "AiScoringSettings",
+        "required": "true"
+      }
+    ],
+    "return": "AiScoringSettings",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet formId: String = \"\" // Form ID\nlet body: AiScoringSettings = new AiScoringSettings(...) // AI Scoring Settings\n\n// Update the AI Scoring settings of an evaluation form.\nPutQualityFormsEvaluationAiscoringSettingsRequest.putQualityFormsEvaluationAiscoringSettings(formId: formId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutQualityFormsEvaluationAiscoringSettingsRequest.putQualityFormsEvaluationAiscoringSettings was successful\")\n        dump(response)\n    }\n}"
+  },
   "putqualityformssurvey": {
     "operationId": "putqualityformssurvey",
     "functionName": "putQualityFormsSurvey",
@@ -32446,7 +32739,7 @@
   "getconversationrecordings": {
     "operationId": "getconversationrecordings",
     "functionName": "getConversationRecordings",
-    "signature": "getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale)",
+    "signature": "getConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale, includePauseAnnotationsForScreenRecordings)",
     "parameters": [
       {
         "name": "conversationId",
@@ -32472,10 +32765,15 @@
         "name": "locale",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "includePauseAnnotationsForScreenRecordings",
+        "type": "Bool",
+        "required": "false"
       }
     ],
     "return": "[Recording]",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet maxWaitMs: Int = 0 // The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.\nlet formatId: GetConversationRecordingsRequest.FormatId_getConversationRecordings = GetConversationRecordingsRequest.FormatId_getConversationRecordings.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.\nlet mediaFormats: [String] = [\"\"] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3.\nlet locale: String = \"\" // The locale used for redacting sensitive information in requested files, as an ISO 639-1 code\n\n// Get all of a Conversation's Recordings.\nGetConversationRecordingsRequest.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationRecordingsRequest.getConversationRecordings was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet conversationId: String = \"\" // Conversation ID\nlet maxWaitMs: Int = 0 // The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value.\nlet formatId: GetConversationRecordingsRequest.FormatId_getConversationRecordings = GetConversationRecordingsRequest.FormatId_getConversationRecordings.enummember // The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE.\nlet mediaFormats: [String] = [\"\"] // All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3.\nlet locale: String = \"\" // The locale used for redacting sensitive information in requested files, as an ISO 639-1 code\nlet includePauseAnnotationsForScreenRecordings: Bool = true // Include applicable Secure Pause annotations from all audio recordings to all screen recordings\n\n// Get all of a Conversation's Recordings.\nGetConversationRecordingsRequest.getConversationRecordings(conversationId: conversationId, maxWaitMs: maxWaitMs, formatId: formatId, mediaFormats: mediaFormats, locale: locale, includePauseAnnotationsForScreenRecordings: includePauseAnnotationsForScreenRecordings) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetConversationRecordingsRequest.getConversationRecordings was successful\")\n        dump(response)\n    }\n}"
   },
   "getorphanrecording": {
     "operationId": "getorphanrecording",
@@ -37846,6 +38144,699 @@
     "return": "ExecutionDataGlobalSettingsResponse",
     "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: ExecutionDataSettingsRequest = new ExecutionDataSettingsRequest(...) // New Execution Data Setting\n\n// Edit the execution history on off setting.\nPatchSettingsExecutiondataRequest.patchSettingsExecutiondata(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSettingsExecutiondataRequest.patchSettingsExecutiondata was successful\")\n        dump(response)\n    }\n}"
   },
+  "deletesocialmediaescalationrule": {
+    "operationId": "deletesocialmediaescalationrule",
+    "functionName": "deleteSocialmediaEscalationrule",
+    "signature": "deleteSocialmediaEscalationrule(escalationRuleId)",
+    "parameters": [
+      {
+        "name": "escalationRuleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet escalationRuleId: String = \"\" // escalationRuleId\n\n// Delete an escalation rule.\nDeleteSocialmediaEscalationruleRequest.deleteSocialmediaEscalationrule(escalationRuleId: escalationRuleId) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteSocialmediaEscalationruleRequest.deleteSocialmediaEscalationrule was successful\")\n    }\n}"
+  },
+  "deletesocialmediatopic": {
+    "operationId": "deletesocialmediatopic",
+    "functionName": "deleteSocialmediaTopic",
+    "signature": "deleteSocialmediaTopic(topicId, hardDelete)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "hardDelete",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet hardDelete: Bool = true // Determines whether a Social topic should be soft-deleted or hard-deleted (permanently removed). Set to false (soft-delete) by default.\n\n// Delete a social topic.\nDeleteSocialmediaTopicRequest.deleteSocialmediaTopic(topicId: topicId, hardDelete: hardDelete) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteSocialmediaTopicRequest.deleteSocialmediaTopic was successful\")\n    }\n}"
+  },
+  "deletesocialmediatopicdataingestionrulesfacebookfacebookingestionruleid": {
+    "operationId": "deletesocialmediatopicdataingestionrulesfacebookfacebookingestionruleid",
+    "functionName": "deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId",
+    "signature": "deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId, facebookIngestionRuleId, hardDelete)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "facebookIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "hardDelete",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet facebookIngestionRuleId: String = \"\" // facebookIngestionRuleId\nlet hardDelete: Bool = true // Determines whether a Facebook data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default.\n\n// Delete a Facebook data ingestion rule.\nDeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId: topicId, facebookIngestionRuleId: facebookIngestionRuleId, hardDelete: hardDelete) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.deleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId was successful\")\n    }\n}"
+  },
+  "deletesocialmediatopicdataingestionrulestwittertwitteringestionruleid": {
+    "operationId": "deletesocialmediatopicdataingestionrulestwittertwitteringestionruleid",
+    "functionName": "deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId",
+    "signature": "deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId, twitterIngestionRuleId, hardDelete)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "twitterIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "hardDelete",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet twitterIngestionRuleId: String = \"\" // twitterIngestionRuleId\nlet hardDelete: Bool = true // Determines whether a X (formally Twitter) data ingestion rule should be soft-deleted (have it's state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default.\n\n// Delete a X (formally Twitter) data ingestion rule.\nDeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId: topicId, twitterIngestionRuleId: twitterIngestionRuleId, hardDelete: hardDelete) { (error) in\n    if let error = error {\n        dump(error)\n    } else {\n        print(\"DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.deleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId was successful\")\n    }\n}"
+  },
+  "getsocialmediaanalyticsaggregatesjob": {
+    "operationId": "getsocialmediaanalyticsaggregatesjob",
+    "functionName": "getSocialmediaAnalyticsAggregatesJob",
+    "signature": "getSocialmediaAnalyticsAggregatesJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AsyncQueryStatus",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Get status for async query for social media aggregates\nGetSocialmediaAnalyticsAggregatesJobRequest.getSocialmediaAnalyticsAggregatesJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaAnalyticsAggregatesJobRequest.getSocialmediaAnalyticsAggregatesJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediaanalyticsaggregatesjobresults": {
+    "operationId": "getsocialmediaanalyticsaggregatesjobresults",
+    "functionName": "getSocialmediaAnalyticsAggregatesJobResults",
+    "signature": "getSocialmediaAnalyticsAggregatesJobResults(jobId, cursor)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "SocialMediaAsyncAggregateQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\nlet cursor: String = \"\" // Cursor token to retrieve next page\n\n// Fetch a page of results for an async social media query\nGetSocialmediaAnalyticsAggregatesJobResultsRequest.getSocialmediaAnalyticsAggregatesJobResults(jobId: jobId, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaAnalyticsAggregatesJobResultsRequest.getSocialmediaAnalyticsAggregatesJobResults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediaanalyticsmessagesjob": {
+    "operationId": "getsocialmediaanalyticsmessagesjob",
+    "functionName": "getSocialmediaAnalyticsMessagesJob",
+    "signature": "getSocialmediaAnalyticsMessagesJob(jobId)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "AsyncQueryStatus",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\n\n// Get status for async query for social media messages job\nGetSocialmediaAnalyticsMessagesJobRequest.getSocialmediaAnalyticsMessagesJob(jobId: jobId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaAnalyticsMessagesJobRequest.getSocialmediaAnalyticsMessagesJob was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediaanalyticsmessagesjobresults": {
+    "operationId": "getsocialmediaanalyticsmessagesjobresults",
+    "functionName": "getSocialmediaAnalyticsMessagesJobResults",
+    "signature": "getSocialmediaAnalyticsMessagesJobResults(jobId, cursor)",
+    "parameters": [
+      {
+        "name": "jobId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "cursor",
+        "type": "String",
+        "required": "false"
+      }
+    ],
+    "return": "SocialMediaAsyncDetailQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet jobId: String = \"\" // jobId\nlet cursor: String = \"\" // Cursor token to retrieve next page\n\n// Fetch a page of results for an async social media messages query\nGetSocialmediaAnalyticsMessagesJobResultsRequest.getSocialmediaAnalyticsMessagesJobResults(jobId: jobId, cursor: cursor) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaAnalyticsMessagesJobResultsRequest.getSocialmediaAnalyticsMessagesJobResults was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediaescalationrule": {
+    "operationId": "getsocialmediaescalationrule",
+    "functionName": "getSocialmediaEscalationrule",
+    "signature": "getSocialmediaEscalationrule(escalationRuleId)",
+    "parameters": [
+      {
+        "name": "escalationRuleId",
+        "type": "String",
+        "required": "true"
+      }
+    ],
+    "return": "EscalationRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet escalationRuleId: String = \"\" // escalationRuleId\n\n// Get a single escalation rule.\nGetSocialmediaEscalationruleRequest.getSocialmediaEscalationrule(escalationRuleId: escalationRuleId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaEscalationruleRequest.getSocialmediaEscalationrule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediaescalationrules": {
+    "operationId": "getsocialmediaescalationrules",
+    "functionName": "getSocialmediaEscalationrules",
+    "signature": "getSocialmediaEscalationrules(divisionId, pageNumber, pageSize)",
+    "parameters": [
+      {
+        "name": "divisionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      }
+    ],
+    "return": "SocialEscalationResponseEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet divisionId: String = \"\" // One division ID\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\n\n// Retrieve all escalation rules for a division.\nGetSocialmediaEscalationrulesRequest.getSocialmediaEscalationrules(divisionId: divisionId, pageNumber: pageNumber, pageSize: pageSize) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaEscalationrulesRequest.getSocialmediaEscalationrules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopic": {
+    "operationId": "getsocialmediatopic",
+    "functionName": "getSocialmediaTopic",
+    "signature": "getSocialmediaTopic(topicId, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "SocialTopicResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Get a single social topic.\nGetSocialmediaTopicRequest.getSocialmediaTopic(topicId: topicId, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicRequest.getSocialmediaTopic was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrules": {
+    "operationId": "getsocialmediatopicdataingestionrules",
+    "functionName": "getSocialmediaTopicDataingestionrules",
+    "signature": "getSocialmediaTopicDataingestionrules(topicId, pageNumber, pageSize, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "DataIngestionRuleResponseEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Retrieve all social topic data ingestion rules with pagination.\nGetSocialmediaTopicDataingestionrulesRequest.getSocialmediaTopicDataingestionrules(topicId: topicId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesRequest.getSocialmediaTopicDataingestionrules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrulesfacebookfacebookingestionruleid": {
+    "operationId": "getsocialmediatopicdataingestionrulesfacebookfacebookingestionruleid",
+    "functionName": "getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId",
+    "signature": "getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId, facebookIngestionRuleId, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "facebookIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "FacebookDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet facebookIngestionRuleId: String = \"\" // facebookIngestionRuleId\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Get a single Facebook data ingestion rule.\nGetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId: topicId, facebookIngestionRuleId: facebookIngestionRuleId, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrulesfacebookfacebookingestionruleidversion": {
+    "operationId": "getsocialmediatopicdataingestionrulesfacebookfacebookingestionruleidversion",
+    "functionName": "getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion",
+    "signature": "getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion(topicId, facebookIngestionRuleId, dataIngestionRuleVersion, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "facebookIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "dataIngestionRuleVersion",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "FacebookDataIngestionRuleVersionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet facebookIngestionRuleId: String = \"\" // facebookIngestionRuleId\nlet dataIngestionRuleVersion: String = \"\" // version\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted item in the result.\n\n// Get a single Facebook data ingestion rule version.\nGetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersionRequest.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion(topicId: topicId, facebookIngestionRuleId: facebookIngestionRuleId, dataIngestionRuleVersion: dataIngestionRuleVersion, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersionRequest.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrulesfacebookfacebookingestionruleidversions": {
+    "operationId": "getsocialmediatopicdataingestionrulesfacebookfacebookingestionruleidversions",
+    "functionName": "getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions",
+    "signature": "getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions(topicId, facebookIngestionRuleId, pageNumber, pageSize, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "facebookIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "FacebookDataIngestionRuleVersionResponseEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet facebookIngestionRuleId: String = \"\" // facebookIngestionRuleId\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Get the Facebook data ingestion rule versions.\nGetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersionsRequest.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions(topicId: topicId, facebookIngestionRuleId: facebookIngestionRuleId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersionsRequest.getSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrulestwittertwitteringestionruleid": {
+    "operationId": "getsocialmediatopicdataingestionrulestwittertwitteringestionruleid",
+    "functionName": "getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId",
+    "signature": "getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId, twitterIngestionRuleId, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "twitterIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet twitterIngestionRuleId: String = \"\" // twitterIngestionRuleId\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Get a single X (formally Twitter) data ingestion rule.\nGetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId: topicId, twitterIngestionRuleId: twitterIngestionRuleId, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrulestwittertwitteringestionruleidversion": {
+    "operationId": "getsocialmediatopicdataingestionrulestwittertwitteringestionruleidversion",
+    "functionName": "getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion",
+    "signature": "getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion(topicId, twitterIngestionRuleId, dataIngestionRuleVersion, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "twitterIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "dataIngestionRuleVersion",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterDataIngestionRuleVersionResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet twitterIngestionRuleId: String = \"\" // twitterIngestionRuleId\nlet dataIngestionRuleVersion: String = \"\" // version\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted item in the result.\n\n// Get a single X (formally Twitter) data ingestion rule version.\nGetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersionRequest.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion(topicId: topicId, twitterIngestionRuleId: twitterIngestionRuleId, dataIngestionRuleVersion: dataIngestionRuleVersion, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersionRequest.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopicdataingestionrulestwittertwitteringestionruleidversions": {
+    "operationId": "getsocialmediatopicdataingestionrulestwittertwitteringestionruleidversions",
+    "functionName": "getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions",
+    "signature": "getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions(topicId, twitterIngestionRuleId, pageNumber, pageSize, includeDeleted)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "twitterIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterDataIngestionRuleVersionResponseEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet twitterIngestionRuleId: String = \"\" // twitterIngestionRuleId\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Get the Open data ingestion rule versions.\nGetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersionsRequest.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions(topicId: topicId, twitterIngestionRuleId: twitterIngestionRuleId, pageNumber: pageNumber, pageSize: pageSize, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersionsRequest.getSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions was successful\")\n        dump(response)\n    }\n}"
+  },
+  "getsocialmediatopics": {
+    "operationId": "getsocialmediatopics",
+    "functionName": "getSocialmediaTopics",
+    "signature": "getSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted)",
+    "parameters": [
+      {
+        "name": "pageNumber",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "pageSize",
+        "type": "Int",
+        "required": "false"
+      },
+      {
+        "name": "divisionIds",
+        "type": "[String]",
+        "required": "false"
+      },
+      {
+        "name": "includeDeleted",
+        "type": "Bool",
+        "required": "false"
+      }
+    ],
+    "return": "SocialTopicResponseEntityListing",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageNumber: Int = 0 // Page number\nlet pageSize: Int = 0 // Page size\nlet divisionIds: [String] = [\"\"] // One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned.\nlet includeDeleted: Bool = true // Determines whether to include soft-deleted items in the result.\n\n// Retrieve all social topics.\nGetSocialmediaTopicsRequest.getSocialmediaTopics(pageNumber: pageNumber, pageSize: pageSize, divisionIds: divisionIds, includeDeleted: includeDeleted) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetSocialmediaTopicsRequest.getSocialmediaTopics was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchsocialmediatopic": {
+    "operationId": "patchsocialmediatopic",
+    "functionName": "patchSocialmediaTopic",
+    "signature": "patchSocialmediaTopic(topicId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "SocialTopicPatchRequest",
+        "required": "false"
+      }
+    ],
+    "return": "SocialTopicResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet body: SocialTopicPatchRequest = new SocialTopicPatchRequest(...) // \n\n// Update a social topic.\nPatchSocialmediaTopicRequest.patchSocialmediaTopic(topicId: topicId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSocialmediaTopicRequest.patchSocialmediaTopic was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchsocialmediatopicdataingestionrulesfacebookfacebookingestionruleid": {
+    "operationId": "patchsocialmediatopicdataingestionrulesfacebookfacebookingestionruleid",
+    "functionName": "patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId",
+    "signature": "patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId, facebookIngestionRuleId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "facebookIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DataIngestionRuleStatusPatchRequest",
+        "required": "false"
+      }
+    ],
+    "return": "FacebookDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet facebookIngestionRuleId: String = \"\" // facebookIngestionRuleId\nlet body: DataIngestionRuleStatusPatchRequest = new DataIngestionRuleStatusPatchRequest(...) // \n\n// Update the status of a Facebook data ingestion rule.\nPatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId: topicId, facebookIngestionRuleId: facebookIngestionRuleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.patchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "patchsocialmediatopicdataingestionrulestwittertwitteringestionruleid": {
+    "operationId": "patchsocialmediatopicdataingestionrulestwittertwitteringestionruleid",
+    "functionName": "patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId",
+    "signature": "patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId, twitterIngestionRuleId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "twitterIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "DataIngestionRuleStatusPatchRequest",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet twitterIngestionRuleId: String = \"\" // twitterIngestionRuleId\nlet body: DataIngestionRuleStatusPatchRequest = new DataIngestionRuleStatusPatchRequest(...) // \n\n// Update the status of a X (formally Twitter) data ingestion rule.\nPatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId: topicId, twitterIngestionRuleId: twitterIngestionRuleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.patchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediaanalyticsaggregatesjobs": {
+    "operationId": "postsocialmediaanalyticsaggregatesjobs",
+    "functionName": "postSocialmediaAnalyticsAggregatesJobs",
+    "signature": "postSocialmediaAnalyticsAggregatesJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "SocialMediaAsyncAggregationQuery",
+        "required": "true"
+      }
+    ],
+    "return": "AsyncQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SocialMediaAsyncAggregationQuery = new SocialMediaAsyncAggregationQuery(...) // query\n\n// Query for social media aggregates asynchronously\nPostSocialmediaAnalyticsAggregatesJobsRequest.postSocialmediaAnalyticsAggregatesJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaAnalyticsAggregatesJobsRequest.postSocialmediaAnalyticsAggregatesJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediaanalyticsmessagesjobs": {
+    "operationId": "postsocialmediaanalyticsmessagesjobs",
+    "functionName": "postSocialmediaAnalyticsMessagesJobs",
+    "signature": "postSocialmediaAnalyticsMessagesJobs(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "SocialMediaAsyncDetailQuery",
+        "required": "true"
+      }
+    ],
+    "return": "AsyncQueryResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SocialMediaAsyncDetailQuery = new SocialMediaAsyncDetailQuery(...) // query\n\n// Query for social media messages asynchronously\nPostSocialmediaAnalyticsMessagesJobsRequest.postSocialmediaAnalyticsMessagesJobs(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaAnalyticsMessagesJobsRequest.postSocialmediaAnalyticsMessagesJobs was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediaescalationrules": {
+    "operationId": "postsocialmediaescalationrules",
+    "functionName": "postSocialmediaEscalationrules",
+    "signature": "postSocialmediaEscalationrules(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "EscalationRuleRequest",
+        "required": "false"
+      }
+    ],
+    "return": "EscalationRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: EscalationRuleRequest = new EscalationRuleRequest(...) // \n\n// Create an escalation rule.\nPostSocialmediaEscalationrulesRequest.postSocialmediaEscalationrules(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaEscalationrulesRequest.postSocialmediaEscalationrules was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediaescalationsmessages": {
+    "operationId": "postsocialmediaescalationsmessages",
+    "functionName": "postSocialmediaEscalationsMessages",
+    "signature": "postSocialmediaEscalationsMessages(divisionId, body)",
+    "parameters": [
+      {
+        "name": "divisionId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "ManualEscalationRequest",
+        "required": "false"
+      }
+    ],
+    "return": "ManualEscalationResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet divisionId: String = \"\" // One division ID\nlet body: ManualEscalationRequest = new ManualEscalationRequest(...) // \n\n// Escalate message to a conversation manually\nPostSocialmediaEscalationsMessagesRequest.postSocialmediaEscalationsMessages(divisionId: divisionId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaEscalationsMessagesRequest.postSocialmediaEscalationsMessages was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediatopicdataingestionrulesfacebook": {
+    "operationId": "postsocialmediatopicdataingestionrulesfacebook",
+    "functionName": "postSocialmediaTopicDataingestionrulesFacebook",
+    "signature": "postSocialmediaTopicDataingestionrulesFacebook(topicId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "FacebookDataIngestionRuleRequest",
+        "required": "false"
+      }
+    ],
+    "return": "FacebookDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet body: FacebookDataIngestionRuleRequest = new FacebookDataIngestionRuleRequest(...) // \n\n// Create an Facebook data ingestion rule.\nPostSocialmediaTopicDataingestionrulesFacebookRequest.postSocialmediaTopicDataingestionrulesFacebook(topicId: topicId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaTopicDataingestionrulesFacebookRequest.postSocialmediaTopicDataingestionrulesFacebook was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediatopicdataingestionrulestwitter": {
+    "operationId": "postsocialmediatopicdataingestionrulestwitter",
+    "functionName": "postSocialmediaTopicDataingestionrulesTwitter",
+    "signature": "postSocialmediaTopicDataingestionrulesTwitter(topicId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "TwitterDataIngestionRuleRequest",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet body: TwitterDataIngestionRuleRequest = new TwitterDataIngestionRuleRequest(...) // \n\n// Create an twitter data ingestion rule.\nPostSocialmediaTopicDataingestionrulesTwitterRequest.postSocialmediaTopicDataingestionrulesTwitter(topicId: topicId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaTopicDataingestionrulesTwitterRequest.postSocialmediaTopicDataingestionrulesTwitter was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediatopics": {
+    "operationId": "postsocialmediatopics",
+    "functionName": "postSocialmediaTopics",
+    "signature": "postSocialmediaTopics(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "SocialTopicRequest",
+        "required": "false"
+      }
+    ],
+    "return": "SocialTopicResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: SocialTopicRequest = new SocialTopicRequest(...) // \n\n// Create a social topic.\nPostSocialmediaTopicsRequest.postSocialmediaTopics(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaTopicsRequest.postSocialmediaTopics was successful\")\n        dump(response)\n    }\n}"
+  },
+  "postsocialmediatwitterhistoricaltweets": {
+    "operationId": "postsocialmediatwitterhistoricaltweets",
+    "functionName": "postSocialmediaTwitterHistoricalTweets",
+    "signature": "postSocialmediaTwitterHistoricalTweets(body)",
+    "parameters": [
+      {
+        "name": "body",
+        "type": "TwitterDataHistoricalTweetRequest",
+        "required": "true"
+      }
+    ],
+    "return": "TwitterDataHistoricalTweetResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet body: TwitterDataHistoricalTweetRequest = new TwitterDataHistoricalTweetRequest(...) // TwitterDataHistoricalTweetRequest\n\n// Retrieves historical tweet count for search terms, optional countries list and the current limit and usage for the organization.\nPostSocialmediaTwitterHistoricalTweetsRequest.postSocialmediaTwitterHistoricalTweets(body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PostSocialmediaTwitterHistoricalTweetsRequest.postSocialmediaTwitterHistoricalTweets was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putsocialmediaescalationrule": {
+    "operationId": "putsocialmediaescalationrule",
+    "functionName": "putSocialmediaEscalationrule",
+    "signature": "putSocialmediaEscalationrule(escalationRuleId, body)",
+    "parameters": [
+      {
+        "name": "escalationRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "EscalationRuleRequest",
+        "required": "false"
+      }
+    ],
+    "return": "EscalationRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet escalationRuleId: String = \"\" // escalationRuleId\nlet body: EscalationRuleRequest = new EscalationRuleRequest(...) // \n\n// Update the escalation rule.\nPutSocialmediaEscalationruleRequest.putSocialmediaEscalationrule(escalationRuleId: escalationRuleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutSocialmediaEscalationruleRequest.putSocialmediaEscalationrule was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putsocialmediatopicdataingestionrulesfacebookfacebookingestionruleid": {
+    "operationId": "putsocialmediatopicdataingestionrulesfacebookfacebookingestionruleid",
+    "functionName": "putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId",
+    "signature": "putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId, facebookIngestionRuleId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "facebookIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "FacebookDataIngestionRuleRequest",
+        "required": "false"
+      }
+    ],
+    "return": "FacebookDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet facebookIngestionRuleId: String = \"\" // facebookIngestionRuleId\nlet body: FacebookDataIngestionRuleRequest = new FacebookDataIngestionRuleRequest(...) // \n\n// Update the Facebook data ingestion rule.\nPutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId(topicId: topicId, facebookIngestionRuleId: facebookIngestionRuleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdRequest.putSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId was successful\")\n        dump(response)\n    }\n}"
+  },
+  "putsocialmediatopicdataingestionrulestwittertwitteringestionruleid": {
+    "operationId": "putsocialmediatopicdataingestionrulestwittertwitteringestionruleid",
+    "functionName": "putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId",
+    "signature": "putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId, twitterIngestionRuleId, body)",
+    "parameters": [
+      {
+        "name": "topicId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "twitterIngestionRuleId",
+        "type": "String",
+        "required": "true"
+      },
+      {
+        "name": "body",
+        "type": "TwitterDataIngestionRuleRequest",
+        "required": "false"
+      }
+    ],
+    "return": "TwitterDataIngestionRuleResponse",
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet topicId: String = \"\" // topicId\nlet twitterIngestionRuleId: String = \"\" // twitterIngestionRuleId\nlet body: TwitterDataIngestionRuleRequest = new TwitterDataIngestionRuleRequest(...) // \n\n// Update the X (formally Twitter) data ingestion rule.\nPutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId(topicId: topicId, twitterIngestionRuleId: twitterIngestionRuleId, body: body) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdRequest.putSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId was successful\")\n        dump(response)\n    }\n}"
+  },
   "deletespeechandtextanalyticscategory": {
     "operationId": "deletespeechandtextanalyticscategory",
     "functionName": "deleteSpeechandtextanalyticsCategory",
@@ -40959,7 +41950,7 @@
   "gettelephonyprovidersedgesextensionpools": {
     "operationId": "gettelephonyprovidersedgesextensionpools",
     "functionName": "getTelephonyProvidersEdgesExtensionpools",
-    "signature": "getTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number)",
+    "signature": "getTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number, divisionId)",
     "parameters": [
       {
         "name": "pageSize",
@@ -40980,10 +41971,15 @@
         "name": "number",
         "type": "String",
         "required": "false"
+      },
+      {
+        "name": "divisionId",
+        "type": "[String]",
+        "required": "false"
       }
     ],
     "return": "ExtensionPoolEntityListing",
-    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: String = \"\" // Sort by\nlet number: String = \"\" // Deprecated, filtering by number not supported\n\n// Get a listing of extension pools\nGetTelephonyProvidersEdgesExtensionpoolsRequest.getTelephonyProvidersEdgesExtensionpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesExtensionpoolsRequest.getTelephonyProvidersEdgesExtensionpools was successful\")\n        dump(response)\n    }\n}"
+    "example": "import PureCloudPlatformClientV2\n\nPureCloudPlatformClientV2API.basePath = \"\" // expected format: \"https://api.[base path]\"\nPureCloudPlatformClientV2API.accessToken = \"your_access_token\"\n\nlet pageSize: Int = 0 // Page size\nlet pageNumber: Int = 0 // Page number\nlet sortBy: String = \"\" // Sort by\nlet number: String = \"\" // Deprecated, filtering by number not supported\nlet divisionId: [String] = [\"\"] // List of divisionIds on which to filter.\n\n// Get a listing of extension pools\nGetTelephonyProvidersEdgesExtensionpoolsRequest.getTelephonyProvidersEdgesExtensionpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number, divisionId: divisionId) { (response, error) in\n    if let error = error {\n        dump(error)\n    } else if let response = response {\n        print(\"GetTelephonyProvidersEdgesExtensionpoolsRequest.getTelephonyProvidersEdgesExtensionpools was successful\")\n        dump(response)\n    }\n}"
   },
   "gettelephonyprovidersedgesextensionpoolsdivisionviews": {
     "operationId": "gettelephonyprovidersedgesextensionpoolsdivisionviews",

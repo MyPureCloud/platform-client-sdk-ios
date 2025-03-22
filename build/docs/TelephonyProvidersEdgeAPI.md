@@ -2394,7 +2394,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpool(extensionPoolI
 
 
 
-> [ExtensionPoolEntityListing](ExtensionPoolEntityListing) getTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number)
+> [ExtensionPoolEntityListing](ExtensionPoolEntityListing) getTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number, divisionId)
 
 Get a listing of extension pools
 
@@ -2418,9 +2418,10 @@ let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let sortBy: String = "" // Sort by
 let number: String = "" // Deprecated, filtering by number not supported
+let divisionId: [String] = [""] // List of divisionIds on which to filter.
 
 // Code example
-TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number) { (response, error) in
+TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpools(pageSize: pageSize, pageNumber: pageNumber, sortBy: sortBy, number: number, divisionId: divisionId) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -2439,6 +2440,7 @@ TelephonyProvidersEdgeAPI.getTelephonyProvidersEdgesExtensionpools(pageSize: pag
 | **pageNumber** | **Int**| Page number | [optional] |
 | **sortBy** | **String**| Sort by | [optional] |
 | **number** | **String**| Deprecated, filtering by number not supported | [optional] |
+| **divisionId** | [**[String]**](String)| List of divisionIds on which to filter. | [optional] |
 
 
 ### Return type
@@ -6577,4 +6579,4 @@ TelephonyProvidersEdgeAPI.putTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSe
 [**TrunkBase**](TrunkBase)
 
 
-_PureCloudPlatformClientV2@163.0.0_
+_PureCloudPlatformClientV2@164.0.0_

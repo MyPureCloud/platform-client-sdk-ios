@@ -4090,6 +4090,142 @@ open class KnowledgeAPI {
     
     
     
+    
+    
+    public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload: String { 
+        case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
+        case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case frBe = "fr-BE"
+        case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
+        case jaJp = "ja-JP"
+        case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
+    }
+    
+    
+    
+    
+    /**
+     Get document content upload status
+     
+     - parameter documentId: (path) Document ID 
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter uploadId: (path) UploadId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getKnowledgeKnowledgebaseLanguageDocumentUpload(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload, uploadId: String, completion: @escaping ((_ data: KnowledgeDocumentContentUpload?,_ error: Error?) -> Void)) {
+        let requestBuilder = getKnowledgeKnowledgebaseLanguageDocumentUploadWithRequestBuilder(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, uploadId: uploadId)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentContentUpload>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get document content upload status
+     - GET /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads/{uploadId}
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "fileName" : "fileName",
+  "uploadKey" : "uploadKey",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "errorMessage" : "errorMessage",
+  "id" : "id",
+  "contentType" : "Body",
+  "url" : "url",
+  "status" : "ValidationFailed"
+}, statusCode=200}]
+     
+     - parameter documentId: (path) Document ID 
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter uploadId: (path) UploadId 
+
+     - returns: RequestBuilder<KnowledgeDocumentContentUpload> 
+     */
+    open class func getKnowledgeKnowledgebaseLanguageDocumentUploadWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_getKnowledgeKnowledgebaseLanguageDocumentUpload, uploadId: String) -> RequestBuilder<KnowledgeDocumentContentUpload> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads/{uploadId}"
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode.rawValue)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let uploadIdPreEscape = "\(uploadId)"
+        let uploadIdPostEscape = uploadIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{uploadId}", with: uploadIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentContentUpload>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
     public enum LanguageCode_getKnowledgeKnowledgebaseLanguageDocuments: String { 
         case enUs = "en-US"
         case enUk = "en-UK"
@@ -8810,6 +8946,140 @@ open class KnowledgeAPI {
     
     
     /**
+     Bulk remove documents.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsBulkRemove(knowledgeBaseId: String, body: KnowledgeDocumentBulkRemoveRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsBulkRemoveWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk remove documents.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsBulkRemoveWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentBulkRemoveRequest) -> RequestBuilder<BulkResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Bulk update documents.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsBulkUpdate(knowledgeBaseId: String, body: KnowledgeDocumentBulkUpdateRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsBulkUpdateWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk update documents.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsBulkUpdateWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentBulkUpdateRequest) -> RequestBuilder<BulkResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Indicate that documents were presented to the user.
      
      - parameter knowledgeBaseId: (path) Knowledge base ID. 
@@ -9311,6 +9581,73 @@ open class KnowledgeAPI {
     
     
     /**
+     Bulk add document versions.
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsVersionsBulkAdd(knowledgeBaseId: String, body: KnowledgeDocumentBulkVersionAddRequest, completion: @escaping ((_ data: BulkResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseDocumentsVersionsBulkAddWithRequestBuilder(knowledgeBaseId: knowledgeBaseId, body: body)
+        requestBuilder.execute { (response: Response<BulkResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Bulk add document versions.
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "errorIndexes" : [ 6, 6 ],
+  "results" : [ {
+    "error" : "{}",
+    "entity" : "{}"
+  }, {
+    "error" : "{}",
+    "entity" : "{}"
+  } ],
+  "errorCount" : 0
+}, statusCode=200}]
+     
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<BulkResponse> 
+     */
+    open class func postKnowledgeKnowledgebaseDocumentsVersionsBulkAddWithRequestBuilder(knowledgeBaseId: String, body: KnowledgeDocumentBulkVersionAddRequest) -> RequestBuilder<BulkResponse> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add"
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<BulkResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Create export job
      
      - parameter knowledgeBaseId: (path) Knowledge base ID 
@@ -9654,6 +9991,139 @@ open class KnowledgeAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<KnowledgeExtendedCategory>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    
+    public enum LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads: String { 
+        case enUs = "en-US"
+        case enUk = "en-UK"
+        case enAu = "en-AU"
+        case enCa = "en-CA"
+        case enHk = "en-HK"
+        case enIn = "en-IN"
+        case enIe = "en-IE"
+        case enNz = "en-NZ"
+        case enPh = "en-PH"
+        case enSg = "en-SG"
+        case enZa = "en-ZA"
+        case deDe = "de-DE"
+        case deAt = "de-AT"
+        case deCh = "de-CH"
+        case esAr = "es-AR"
+        case esCo = "es-CO"
+        case esMx = "es-MX"
+        case esUs = "es-US"
+        case esEs = "es-ES"
+        case frFr = "fr-FR"
+        case frBe = "fr-BE"
+        case frCa = "fr-CA"
+        case frCh = "fr-CH"
+        case ptBr = "pt-BR"
+        case ptPt = "pt-PT"
+        case nlNl = "nl-NL"
+        case nlBe = "nl-BE"
+        case itIt = "it-IT"
+        case caEs = "ca-ES"
+        case trTr = "tr-TR"
+        case svSe = "sv-SE"
+        case fiFi = "fi-FI"
+        case nbNo = "nb-NO"
+        case daDk = "da-DK"
+        case jaJp = "ja-JP"
+        case arAe = "ar-AE"
+        case zhCn = "zh-CN"
+        case zhTw = "zh-TW"
+        case zhHk = "zh-HK"
+        case koKr = "ko-KR"
+        case plPl = "pl-PL"
+        case hiIn = "hi-IN"
+        case thTh = "th-TH"
+        case huHu = "hu-HU"
+        case viVn = "vi-VN"
+        case ukUa = "uk-UA"
+    }
+    
+    
+    
+    
+    /**
+     Upload Article Content
+     
+     - parameter documentId: (path) Document ID 
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter body: (body)  
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postKnowledgeKnowledgebaseLanguageDocumentUploads(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads, body: KnowledgeDocumentContentUpload, completion: @escaping ((_ data: KnowledgeDocumentContentUpload?,_ error: Error?) -> Void)) {
+        let requestBuilder = postKnowledgeKnowledgebaseLanguageDocumentUploadsWithRequestBuilder(documentId: documentId, knowledgeBaseId: knowledgeBaseId, languageCode: languageCode, body: body)
+        requestBuilder.execute { (response: Response<KnowledgeDocumentContentUpload>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Upload Article Content
+     - POST /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "fileName" : "fileName",
+  "uploadKey" : "uploadKey",
+  "document" : "{}",
+  "selfUri" : "https://openapi-generator.tech",
+  "errorMessage" : "errorMessage",
+  "id" : "id",
+  "contentType" : "Body",
+  "url" : "url",
+  "status" : "ValidationFailed"
+}, statusCode=200}]
+     
+     - parameter documentId: (path) Document ID 
+     - parameter knowledgeBaseId: (path) Knowledge base ID 
+     - parameter languageCode: (path) Language code, format: iso2-LOCALE 
+     - parameter body: (body)  
+
+     - returns: RequestBuilder<KnowledgeDocumentContentUpload> 
+     */
+    open class func postKnowledgeKnowledgebaseLanguageDocumentUploadsWithRequestBuilder(documentId: String, knowledgeBaseId: String, languageCode: LanguageCode_postKnowledgeKnowledgebaseLanguageDocumentUploads, body: KnowledgeDocumentContentUpload) -> RequestBuilder<KnowledgeDocumentContentUpload> {        
+        var path = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/languages/{languageCode}/documents/{documentId}/uploads"
+        let documentIdPreEscape = "\(documentId)"
+        let documentIdPostEscape = documentIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{documentId}", with: documentIdPostEscape, options: .literal, range: nil)
+        let knowledgeBaseIdPreEscape = "\(knowledgeBaseId)"
+        let knowledgeBaseIdPostEscape = knowledgeBaseIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{knowledgeBaseId}", with: knowledgeBaseIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode.rawValue)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<KnowledgeDocumentContentUpload>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

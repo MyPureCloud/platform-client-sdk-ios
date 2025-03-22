@@ -151,6 +151,7 @@ open class LogCaptureAPI {
   "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
+  "captureMethod" : "OnDemand",
   "id" : "id"
 }, statusCode=200}]
      
@@ -412,6 +413,7 @@ open class LogCaptureAPI {
   "dateStarted" : "2000-01-23T04:56:07.000+00:00",
   "dateExpired" : "2000-01-23T04:56:07.000+00:00",
   "selfUri" : "https://openapi-generator.tech",
+  "captureMethod" : "OnDemand",
   "id" : "id"
 }, statusCode=200}]
      
