@@ -9,10 +9,10 @@
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
-| **policies** | [**[AuthzGrantPolicy]**](AuthzGrantPolicy) |  | [optional] |
+| **policies** | [**[AuthzGrantPolicy]**]([AuthzGrantPolicy]) |  | [optional] |
 | **_default** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

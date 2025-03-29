@@ -11,8 +11,8 @@
 | **user** | [**UserReference**](UserReference) | The targeted user for the query | [optional] |
 | **dayOfWeek** | **String** | Aggregated for same day comparison | [optional] |
 | **averagePoints** | **Double** | The total average points | [optional] |
-| **trend** | [**[WorkdayPointsTrendItem]**](WorkdayPointsTrendItem) | Daily points trends | [optional] |
+| **trend** | [**[WorkdayPointsTrendItem]**]([WorkdayPointsTrendItem]) | Daily points trends | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

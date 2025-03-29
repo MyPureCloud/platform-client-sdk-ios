@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **filterType** | **String** | Contact list filter type | [optional] |
-| **predicates** | [**[DialerContactlistfilterConfigChangeFilterPredicate]**](DialerContactlistfilterConfigChangeFilterPredicate) | The list of predicates in that clause | [optional] |
+| **predicates** | [**[DialerContactlistfilterConfigChangeFilterPredicate]**]([DialerContactlistfilterConfigChangeFilterPredicate]) | The list of predicates in that clause | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

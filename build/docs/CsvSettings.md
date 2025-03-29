@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **externalSettingsId** | **String** | Id of the external settings | [optional] |
-| **mappings** | [**[CsvMappingEntry]**](CsvMappingEntry) | Mappings for the transformation | |
+| **mappings** | [**[CsvMappingEntry]**]([CsvMappingEntry]) | Mappings for the transformation | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

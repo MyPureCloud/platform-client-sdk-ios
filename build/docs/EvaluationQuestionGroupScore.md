@@ -21,8 +21,8 @@
 | **maxTotalCriticalScoreUnweighted** | **Float** | Maximum possible unweighted score of only the critical questions in the group | [optional] |
 | **totalNonCriticalScoreUnweighted** | **Float** | Unweighted score of only the non critical questions in the group | [optional] |
 | **maxTotalNonCriticalScoreUnweighted** | **Float** | Maximum possible unweighted score of only the non critical questions in the group | [optional] |
-| **questionScores** | [**[EvaluationQuestionScore]**](EvaluationQuestionScore) |  | [optional] |
+| **questionScores** | [**[EvaluationQuestionScore]**]([EvaluationQuestionScore]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[BuTimeOffLimitRange]**](BuTimeOffLimitRange) |  | [optional] |
+| **values** | [**[BuTimeOffLimitRange]**]([BuTimeOffLimitRange]) |  | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the time-off limit | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

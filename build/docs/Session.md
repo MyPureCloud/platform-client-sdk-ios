@@ -13,8 +13,8 @@
 | **externalId** | **String** | Unique identifier in the external system where the events for the session originate from. | [optional] |
 | **externalUrl** | **String** | A URL that identifies an external system-of-record resource that may have more detailed information on the session. | [optional] |
 | **shortId** | **String** | Shortened numeric identifier of 4-6 digits. | [optional] |
-| **outcomeAchievements** | [**[OutcomeAchievement]**](OutcomeAchievement) | List of the outcome achievements by the customer in this session. | [optional] |
-| **segmentAssignments** | [**[SessionSegmentAssignment]**](SessionSegmentAssignment) | List of the segment assignments to the customer in this session. | [optional] |
+| **outcomeAchievements** | [**[OutcomeAchievement]**]([OutcomeAchievement]) | List of the outcome achievements by the customer in this session. | [optional] |
+| **segmentAssignments** | [**[SessionSegmentAssignment]**]([SessionSegmentAssignment]) | List of the segment assignments to the customer in this session. | [optional] |
 | **attributes** | [**[String:CustomEventAttribute]**](CustomEventAttribute) | Attributes projected from the session&#39;s event stream. | [optional] |
 | **attributeLists** | [**[String:CustomEventAttributeList]**](CustomEventAttributeList) | List-type attributes projected from the session&#39;s event stream. | [optional] |
 | **browser** | [**Browser**](Browser) | Customer&#39;s browser. | [optional] |
@@ -38,7 +38,7 @@
 | **lastConnectedQueue** | [**ConnectedQueue**](ConnectedQueue) | The last queue connected to this session. | [optional] |
 | **lastConnectedUser** | [**ConnectedUser**](ConnectedUser) | The last user connected to this session. | [optional] |
 | **lastUserDisposition** | [**ConversationUserDisposition**](ConversationUserDisposition) | The last user disposition connected to this session. | [optional] |
-| **conversationChannels** | [**[ConversationChannel]**](ConversationChannel) | Represents the channels used for this conversation. | [optional] |
+| **conversationChannels** | [**[ConversationChannel]**]([ConversationChannel]) | Represents the channels used for this conversation. | [optional] |
 | **originatingDirection** | **String** | The original direction of the conversation. | [optional] |
 | **conversationSubject** | **String** | The subject for the conversation, for example an email subject. | [optional] |
 | **lastUserDisconnectType** | **String** | Disconnect reason for the last user connected to the conversation. | [optional] |
@@ -56,4 +56,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

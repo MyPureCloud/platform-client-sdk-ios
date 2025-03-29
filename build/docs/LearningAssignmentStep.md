@@ -9,7 +9,7 @@ Learning assignment step
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The ID of the learning assignment step | [optional] |
 | **moduleStep** | [**LearningModuleInformStep**](LearningModuleInformStep) | The module step data for this step | [optional] |
-| **structure** | [**[LearningAssignmentStepScoStructure]**](LearningAssignmentStepScoStructure) | The structure for any SCO associated with this step | [optional] |
+| **structure** | [**[LearningAssignmentStepScoStructure]**]([LearningAssignmentStepScoStructure]) | The structure for any SCO associated with this step | [optional] |
 | **successStatus** | **String** | The success status of this step | [optional] |
 | **completionStatus** | **String** | The completion status of the assignment step | [optional] |
 | **completionPercentage** | **Float** | The completion percentage for this step | [optional] |
@@ -20,4 +20,4 @@ Learning assignment step
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[FlowObservationDataContainer]**](FlowObservationDataContainer) |  | [optional] |
+| **results** | [**[FlowObservationDataContainer]**]([FlowObservationDataContainer]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

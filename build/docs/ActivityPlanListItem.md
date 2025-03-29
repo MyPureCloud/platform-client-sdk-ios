@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The name of the activity plan | |
-| **managementUnits** | [**[ManagementUnitReference]**](ManagementUnitReference) | The management units to which this activity plan applies. Empty list or null means this activity plan applies to all management units in the business unit | [optional] |
+| **managementUnits** | [**[ManagementUnitReference]**]([ManagementUnitReference]) | The management units to which this activity plan applies. Empty list or null means this activity plan applies to all management units in the business unit | [optional] |
 | **_description** | **String** | The description of this activity plan | |
 | **activityCode** | [**ActivityCodeReference**](ActivityCodeReference) | The activity code to which this activity plan applies. Note: It is recommended to load and cache the entire list of activity codes rather than look up individual codes | |
 | **type** | **String** | The type of the activity plan | |
@@ -25,4 +25,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

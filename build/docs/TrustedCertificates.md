@@ -7,9 +7,9 @@ Information about trusted certificates
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TrustedCertificateInfo]**](TrustedCertificateInfo) | The list of trusted certificates | [optional] |
+| **entities** | [**[TrustedCertificateInfo]**]([TrustedCertificateInfo]) | The list of trusted certificates | [optional] |
 | **total** | **Int** | The total number of trusted certificates | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

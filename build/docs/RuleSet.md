@@ -13,9 +13,9 @@
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **contactList** | [**DomainEntityRef**](DomainEntityRef) | A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions. | [optional] |
 | **queue** | [**DomainEntityRef**](DomainEntityRef) | A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions. | [optional] |
-| **rules** | [**[DialerRule]**](DialerRule) | The list of rules. | |
+| **rules** | [**[DialerRule]**]([DialerRule]) | The list of rules. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -10,7 +10,7 @@
 | **name** | **String** | The name of dashboard configuration. | |
 | **rows** | **Int** | The count of rows for the specific dashboard configuration. | [optional] |
 | **columns** | **Int** | The count of columns for the specific dashboard. | [optional] |
-| **widgets** | [**[Widget]**](Widget) | List of widgets for dashboard configuration. | |
+| **widgets** | [**[Widget]**]([Widget]) | List of widgets for dashboard configuration. | |
 | **favorite** | **Bool** | The flag indicates if the dashboard is favorited by the user | [optional] |
 | **publicDashboard** | **Bool** | The flag to indicate if the dashboard is published by an user | [optional] |
 | **restricted** | **Bool** | The flag to indicate if the dashboard has any restricted data for that user | [optional] |
@@ -25,4 +25,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

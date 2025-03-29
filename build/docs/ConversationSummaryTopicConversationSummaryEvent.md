@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **queueId** | [**UUID**](UUID) |  | [optional] |
-| **participants** | [**[ConversationSummaryTopicConversationSummaryParticipant]**](ConversationSummaryTopicConversationSummaryParticipant) |  | [optional] |
+| **participants** | [**[ConversationSummaryTopicConversationSummaryParticipant]**]([ConversationSummaryTopicConversationSummaryParticipant]) |  | [optional] |
 | **communicationIds** | **[String]** |  | [optional] |
 | **createdDate** | [**Date**](Date) |  | [optional] |
 | **messageType** | **String** |  | [optional] |
@@ -19,7 +19,7 @@
 | **headline** | [**ConversationSummaryTopicConversationHeadline**](ConversationSummaryTopicConversationHeadline) |  | [optional] |
 | **reason** | [**ConversationSummaryTopicConversationReason**](ConversationSummaryTopicConversationReason) |  | [optional] |
 | **resolution** | [**ConversationSummaryTopicConversationResolution**](ConversationSummaryTopicConversationResolution) |  | [optional] |
-| **wrapUpCodes** | [**[ConversationSummaryTopicConversationWrapUpCode]**](ConversationSummaryTopicConversationWrapUpCode) |  | [optional] |
+| **wrapUpCodes** | [**[ConversationSummaryTopicConversationWrapUpCode]**]([ConversationSummaryTopicConversationWrapUpCode]) |  | [optional] |
 | **triggerSource** | [**ConversationSummaryTopicTriggerSource**](ConversationSummaryTopicTriggerSource) |  | [optional] |
 | **lastEditedBy** | [**ConversationSummaryTopicConversationSummaryParticipant**](ConversationSummaryTopicConversationSummaryParticipant) |  | [optional] |
 | **errorType** | **String** |  | [optional] |
@@ -27,4 +27,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -14,7 +14,7 @@ Details about the configuration version of a Web Deployment
 | **_description** | **String** | The description of the configuration | [optional] |
 | **languages** | **[String]** | A list of languages supported on the configuration required if the messenger is enabled | [optional] |
 | **defaultLanguage** | **String** | The default language to use for the configuration required if the messenger is enabled | [optional] |
-| **customI18nLabels** | [**[CustomI18nLabels]**](CustomI18nLabels) | The localization settings for homescreen app | [optional] |
+| **customI18nLabels** | [**[CustomI18nLabels]**]([CustomI18nLabels]) | The localization settings for homescreen app | [optional] |
 | **messenger** | [**MessengerSettings**](MessengerSettings) | The settings for messenger | [optional] |
 | **position** | [**PositionSettings**](PositionSettings) | The settings for position | [optional] |
 | **supportCenter** | [**SupportCenterSettings**](SupportCenterSettings) | The settings for knowledge portal (previously support center) | [optional] |
@@ -33,4 +33,4 @@ Details about the configuration version of a Web Deployment
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

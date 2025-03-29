@@ -84,13 +84,13 @@
 | **videoAddressSelf** | **String** | Direct Video address | [optional] |
 | **videoRoomId** | **String** | A unique identifier for a Genesys Cloud video room | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
-| **agentGroups** | [**[AnalyticsAgentGroup]**](AnalyticsAgentGroup) | Conditional group routing agent groups | [optional] |
-| **proposedAgents** | [**[AnalyticsProposedAgent]**](AnalyticsProposedAgent) | Proposed agents | [optional] |
-| **mediaEndpointStats** | [**[AnalyticsMediaEndpointStat]**](AnalyticsMediaEndpointStat) | MediaEndpointStats associated with this session | [optional] |
+| **agentGroups** | [**[AnalyticsAgentGroup]**]([AnalyticsAgentGroup]) | Conditional group routing agent groups | [optional] |
+| **proposedAgents** | [**[AnalyticsProposedAgent]**]([AnalyticsProposedAgent]) | Proposed agents | [optional] |
+| **mediaEndpointStats** | [**[AnalyticsMediaEndpointStat]**]([AnalyticsMediaEndpointStat]) | MediaEndpointStats associated with this session | [optional] |
 | **flow** | [**AnalyticsFlow**](AnalyticsFlow) | IVR flow execution associated with this session | [optional] |
-| **metrics** | [**[AnalyticsSessionMetric]**](AnalyticsSessionMetric) | List of metrics for this session | [optional] |
-| **segments** | [**[AnalyticsConversationSegment]**](AnalyticsConversationSegment) | List of segments for this session | [optional] |
+| **metrics** | [**[AnalyticsSessionMetric]**]([AnalyticsSessionMetric]) | List of metrics for this session | [optional] |
+| **segments** | [**[AnalyticsConversationSegment]**]([AnalyticsConversationSegment]) | List of segments for this session | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

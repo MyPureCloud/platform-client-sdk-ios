@@ -10,10 +10,10 @@
 | **endDate** | [**Date**](Date) |  | [optional] |
 | **intervalLengthMinutes** | **Int** |  | [optional] |
 | **numberOfIntervals** | **Int** |  | [optional] |
-| **metrics** | [**[WfmIntradayDataUpdateTopicIntradayMetric]**](WfmIntradayDataUpdateTopicIntradayMetric) |  | [optional] |
+| **metrics** | [**[WfmIntradayDataUpdateTopicIntradayMetric]**]([WfmIntradayDataUpdateTopicIntradayMetric]) |  | [optional] |
 | **queueIds** | **[String]** |  | [optional] |
-| **intradayDataGroupings** | [**[WfmIntradayDataUpdateTopicIntradayDataGroup]**](WfmIntradayDataUpdateTopicIntradayDataGroup) |  | [optional] |
+| **intradayDataGroupings** | [**[WfmIntradayDataUpdateTopicIntradayDataGroup]**]([WfmIntradayDataUpdateTopicIntradayDataGroup]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

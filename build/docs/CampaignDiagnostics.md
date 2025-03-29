@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **callableContacts** | [**CallableContactsDiagnostic**](CallableContactsDiagnostic) | Campaign properties that can impact which contacts are callable | [optional] |
 | **queueUtilizationDiagnostic** | [**QueueUtilizationDiagnostic**](QueueUtilizationDiagnostic) | Information regarding the campaign&#39;s queue | [optional] |
-| **ruleSetDiagnostics** | [**[RuleSetDiagnostic]**](RuleSetDiagnostic) | Information regarding the campaign&#39;s rule sets | [optional] |
+| **ruleSetDiagnostics** | [**[RuleSetDiagnostic]**]([RuleSetDiagnostic]) | Information regarding the campaign&#39;s rule sets | [optional] |
 | **outstandingInteractionsCount** | **Int** | Current number of outstanding interactions on the campaign | [optional] |
 | **scheduledInteractionsCount** | **Int** | Current number of scheduled interactions on the campaign | [optional] |
 | **timeZoneRescheduledCallsCount** | **Int** | Current number of time zone rescheduled calls on the campaign | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

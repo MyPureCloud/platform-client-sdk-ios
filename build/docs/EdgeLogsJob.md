@@ -18,9 +18,9 @@
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
-| **files** | [**[EdgeLogsJobFile]**](EdgeLogsJobFile) | The files available to upload from the Edge to the cloud. | [optional] |
+| **files** | [**[EdgeLogsJobFile]**]([EdgeLogsJobFile]) | The files available to upload from the Edge to the cloud. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **message** | [**WorkPlanConstraintConflictMessage**](WorkPlanConstraintConflictMessage) | Message for how to resolve a set of conflicted work plan constraints | [optional] |
-| **conflictedConstraintMessages** | [**[WorkPlanConstraintMessage]**](WorkPlanConstraintMessage) | Messages for the set of conflicted work plan constraints. Each element indicates the message of a work plan constraint that is conflicted in the set | [optional] |
+| **conflictedConstraintMessages** | [**[WorkPlanConstraintMessage]**]([WorkPlanConstraintMessage]) | Messages for the set of conflicted work plan constraints. Each element indicates the message of a work plan constraint that is conflicted in the set | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

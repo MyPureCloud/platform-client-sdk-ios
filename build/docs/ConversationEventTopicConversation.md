@@ -8,15 +8,15 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
-| **participants** | [**[ConversationEventTopicParticipant]**](ConversationEventTopicParticipant) |  | [optional] |
-| **recentTransfers** | [**[ConversationEventTopicTransferResponse]**](ConversationEventTopicTransferResponse) |  | [optional] |
+| **participants** | [**[ConversationEventTopicParticipant]**]([ConversationEventTopicParticipant]) |  | [optional] |
+| **recentTransfers** | [**[ConversationEventTopicTransferResponse]**]([ConversationEventTopicTransferResponse]) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **externalTag** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
-| **divisions** | [**[ConversationEventTopicConversationDivisionMembership]**](ConversationEventTopicConversationDivisionMembership) |  | [optional] |
+| **divisions** | [**[ConversationEventTopicConversationDivisionMembership]**]([ConversationEventTopicConversationDivisionMembership]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

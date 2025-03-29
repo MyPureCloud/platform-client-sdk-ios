@@ -12,7 +12,7 @@
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
 | **subject** | **String** | The subject for the initial email that started this conversation. | [optional] |
 | **messagesSent** | **Int** | The number of email messages sent by this participant. | [optional] |
-| **segments** | [**[Segment]**](Segment) | The time line of the participant&#39;s email, divided into activity segments. | [optional] |
+| **segments** | [**[Segment]**]([Segment]) | The time line of the participant&#39;s email, divided into activity segments. | [optional] |
 | **direction** | **String** | The direction of the email | [optional] |
 | **recordingId** | **String** | A globally unique identifier for the recording associated with this call. | [optional] |
 | **errorInfo** | [**ErrorBody**](ErrorBody) |  | [optional] |
@@ -26,7 +26,7 @@
 | **scriptId** | **String** | The UUID of the script to use. | [optional] |
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **messageId** | **String** | A globally unique identifier for the stored content of this communication. | [optional] |
-| **draftAttachments** | [**[Attachment]**](Attachment) | A list of uploaded attachments on the email draft. | [optional] |
+| **draftAttachments** | [**[Attachment]**]([Attachment]) | A list of uploaded attachments on the email draft. | [optional] |
 | **spam** | **Bool** | Indicates if the inbound email was marked as spam. | [optional] |
 | **wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
@@ -36,4 +36,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

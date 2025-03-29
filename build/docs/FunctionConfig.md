@@ -10,9 +10,9 @@ Current action function configuration and zip upload configuration.
 | **_id** | **String** | Action identifier. | [optional] |
 | **function** | [**Function**](Function) | Function configuration. | [optional] |
 | **zip** | [**FunctionZipConfig**](FunctionZipConfig) | Zip file configuration and state. | [optional] |
-| **uploadExceptionHistory** | [**[FunctionZipConfig]**](FunctionZipConfig) | History of failed zip upload file configuration including their state and error messages. Contains no more than last ten failures. | [optional] |
+| **uploadExceptionHistory** | [**[FunctionZipConfig]**]([FunctionZipConfig]) | History of failed zip upload file configuration including their state and error messages. Contains no more than last ten failures. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

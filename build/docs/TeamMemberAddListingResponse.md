@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserReference]**](UserReference) |  | [optional] |
-| **failures** | [**[TeamAddMemberFailure]**](TeamAddMemberFailure) | List of any user ids that were not added. | [optional] |
+| **entities** | [**[UserReference]**]([UserReference]) |  | [optional] |
+| **failures** | [**[TeamAddMemberFailure]**]([TeamAddMemberFailure]) | List of any user ids that were not added. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

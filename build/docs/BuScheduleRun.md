@@ -20,11 +20,11 @@
 | **schedulingCanceledBy** | [**UserReference**](UserReference) | The user who canceled the scheduling run, if applicable | [optional] |
 | **schedulingCompletedTime** | [**Date**](Date) | When the scheduling run was completed, if applicable. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **messageCount** | **Int** | The number of schedule generation messages for this schedule generation run | [optional] |
-| **messageSeverityCounts** | [**[SchedulerMessageSeverityCount]**](SchedulerMessageSeverityCount) | The list of schedule generation message counts by severity for this schedule generation run | [optional] |
+| **messageSeverityCounts** | [**[SchedulerMessageSeverityCount]**]([SchedulerMessageSeverityCount]) | The list of schedule generation message counts by severity for this schedule generation run | [optional] |
 | **reschedulingOptions** | [**ReschedulingOptionsRunResponse**](ReschedulingOptionsRunResponse) | Rescheduling options for this run.  Null unless intradayRescheduling is true | [optional] |
 | **reschedulingResultExpiration** | [**Date**](Date) | When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

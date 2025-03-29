@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **properties** | [**DocumentBodyListBlockProperties**](DocumentBodyListBlockProperties) | Properties for the UnorderedList or OrderedList. | [optional] |
-| **blocks** | [**[DocumentBodyListBlock]**](DocumentBodyListBlock) | The list of items for an OrderedList or an UnorderedList. | |
+| **blocks** | [**[DocumentBodyListBlock]**]([DocumentBodyListBlock]) | The list of items for an OrderedList or an UnorderedList. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

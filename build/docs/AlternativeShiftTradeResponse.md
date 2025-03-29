@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **shiftOfferJobId** | **String** | The job ID of the alternative shift offer listing, from which the trade was chosen | |
-| **existingShifts** | [**[AlternativeShiftAgentScheduledShift]**](AlternativeShiftAgentScheduledShift) | The existing shifts from the offer, may be empty | |
-| **offeredShifts** | [**[AlternativeShiftAgentScheduledShift]**](AlternativeShiftAgentScheduledShift) | The offered shifts from the offer, may be empty | |
+| **existingShifts** | [**[AlternativeShiftAgentScheduledShift]**]([AlternativeShiftAgentScheduledShift]) | The existing shifts from the offer, may be empty | |
+| **offeredShifts** | [**[AlternativeShiftAgentScheduledShift]**]([AlternativeShiftAgentScheduledShift]) | The offered shifts from the offer, may be empty | |
 | **schedule** | [**AlternativeShiftScheduleLookup**](AlternativeShiftScheduleLookup) | The existing schedule information associated with the trade | |
 | **managementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit of this alternative shift trade request | |
 | **user** | [**UserReference**](UserReference) | The user who submitted the trade request | |
@@ -26,4 +26,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

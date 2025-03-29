@@ -12,9 +12,9 @@
 | **timeZone** | **String** | the timezone the recurrence will use | [optional] |
 | **range** | [**DialerCampaignScheduleConfigChangeRecurrenceRange**](DialerCampaignScheduleConfigChangeRecurrenceRange) |  | [optional] |
 | **pattern** | [**DialerCampaignScheduleConfigChangeRecurrencePattern**](DialerCampaignScheduleConfigChangeRecurrencePattern) |  | [optional] |
-| **alterations** | [**[DialerCampaignScheduleConfigChangeAlteration]**](DialerCampaignScheduleConfigChangeAlteration) | modifications to the original recurrence schedule | [optional] |
+| **alterations** | [**[DialerCampaignScheduleConfigChangeAlteration]**]([DialerCampaignScheduleConfigChangeAlteration]) | modifications to the original recurrence schedule | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

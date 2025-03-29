@@ -7,7 +7,7 @@ Query result list
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ModelResponse]**](Response) |  | [optional] |
+| **entities** | [**[ModelResponse]**]([Response]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -20,4 +20,4 @@ Query result list
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -11,9 +11,9 @@
 | **totalScheduledDurationSeconds** | **Int** | Total duration in seconds for which agents in the management unit are scheduled | [optional] |
 | **totalLoggedInDurationSeconds** | **Int** | Total duration in seconds for which agents in the management unit are actually logged-in | [optional] |
 | **aggregatedShrinkage** | [**HistoricalShrinkageAggregateResponse**](HistoricalShrinkageAggregateResponse) | Aggregated shrinkage data for all the activity categories | [optional] |
-| **shrinkageForActivityCategories** | [**[HistoricalShrinkageActivityCategoryResponse]**](HistoricalShrinkageActivityCategoryResponse) | Shrinkage for activity categories | [optional] |
+| **shrinkageForActivityCategories** | [**[HistoricalShrinkageActivityCategoryResponse]**]([HistoricalShrinkageActivityCategoryResponse]) | Shrinkage for activity categories | [optional] |
 | **businessUnitIds** | **[String]** | List of all business units of all the agents in response | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

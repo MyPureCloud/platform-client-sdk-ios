@@ -13,11 +13,11 @@
 | **_description** | **String** | Room&#39;s description | [optional] |
 | **subject** | **String** | Room&#39;s subject | [optional] |
 | **participantLimit** | **Int** | Room&#39;s size limit | [optional] |
-| **owners** | [**[UserReference]**](UserReference) | Room&#39;s owners | [optional] |
-| **pinnedMessages** | [**[AddressableEntityRef]**](AddressableEntityRef) | Room&#39;s pinned messages | [optional] |
+| **owners** | [**[UserReference]**]([UserReference]) | Room&#39;s owners | [optional] |
+| **pinnedMessages** | [**[AddressableEntityRef]**]([AddressableEntityRef]) | Room&#39;s pinned messages | [optional] |
 | **jid** | **String** | The jid of the room | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

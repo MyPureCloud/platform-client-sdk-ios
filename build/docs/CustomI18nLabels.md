@@ -8,8 +8,8 @@ The localization settings for homescreen
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **language** | **String** | Language of localized labels in homescreen app (eg. en-us, de-de) | [optional] |
-| **localizedLabels** | [**[LocalizedLabels]**](LocalizedLabels) | Contains localized labels used in homescreen app | [optional] |
+| **localizedLabels** | [**[LocalizedLabels]**]([LocalizedLabels]) | Contains localized labels used in homescreen app | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

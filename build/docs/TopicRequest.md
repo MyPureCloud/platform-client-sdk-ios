@@ -13,8 +13,8 @@
 | **tags** | **[String]** | The topic tags | [optional] |
 | **dialect** | **String** | The topic dialect | |
 | **participants** | **String** | The topic participants, default value is All | [optional] |
-| **phrases** | [**[Phrase]**](Phrase) | The topic phrases | [optional] |
+| **phrases** | [**[Phrase]**]([Phrase]) | The topic phrases | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[UserScheduleAdherence]**](UserScheduleAdherence) |  | [optional] |
+| **entities** | [**[UserScheduleAdherence]**]([UserScheduleAdherence]) |  | [optional] |
 | **downloadUrl** | **String** | The downloadUrl if the response is too large to send directly via http response | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

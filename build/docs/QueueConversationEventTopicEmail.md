@@ -23,7 +23,7 @@
 | **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **messageId** | **String** | A globally unique identifier for the stored content of this communication. | [optional] |
 | **direction** | **String** | Whether an email is inbound or outbound. | [optional] |
-| **draftAttachments** | [**[QueueConversationEventTopicAttachment]**](QueueConversationEventTopicAttachment) | A list of uploaded attachments on the email draft. | [optional] |
+| **draftAttachments** | [**[QueueConversationEventTopicAttachment]**]([QueueConversationEventTopicAttachment]) | A list of uploaded attachments on the email draft. | [optional] |
 | **spam** | **Bool** | Indicates if the inbound email was marked as spam. | [optional] |
 | **wrapup** | [**QueueConversationEventTopicWrapup**](QueueConversationEventTopicWrapup) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**QueueConversationEventTopicAfterCallWork**](QueueConversationEventTopicAfterCallWork) | A communication&#39;s after-call work data. | [optional] |
@@ -34,4 +34,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

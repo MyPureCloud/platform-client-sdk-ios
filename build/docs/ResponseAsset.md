@@ -16,9 +16,9 @@
 | **createdBy** | [**DomainEntityRef**](DomainEntityRef) | User who created the response asset | [optional] |
 | **dateModified** | [**Date**](Date) | Last modified date of the response asset. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **modifiedBy** | [**DomainEntityRef**](DomainEntityRef) | User who last modified the response asset | [optional] |
-| **responses** | [**[DomainEntityRef]**](DomainEntityRef) | Canned responses actively using this asset | [optional] |
+| **responses** | [**[DomainEntityRef]**]([DomainEntityRef]) | Canned responses actively using this asset | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

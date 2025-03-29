@@ -27,10 +27,10 @@
 | **flowOutcomeStartTime** | **Int** |  | [optional] |
 | **flowOutcomeEndTime** | **Int** |  | [optional] |
 | **flowOutcomeValue** | **String** |  | [optional] |
-| **flowMilestones** | [**[FlowOutcomeDetailEventTopicFlowMilestone]**](FlowOutcomeDetailEventTopicFlowMilestone) |  | [optional] |
+| **flowMilestones** | [**[FlowOutcomeDetailEventTopicFlowMilestone]**]([FlowOutcomeDetailEventTopicFlowMilestone]) |  | [optional] |
 | **conversationExternalContactIds** | **[String]** |  | [optional] |
 | **conversationExternalOrganizationIds** | **[String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

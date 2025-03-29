@@ -11,4 +11,4 @@ Scoped ID for an Instagram user interacting with a page or app
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

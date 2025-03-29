@@ -10,9 +10,9 @@
 | **division** | [**Division**](Division) | The targeted division for the metrics | [optional] |
 | **user** | [**UserReference**](UserReference) | The targeted user for the metrics | [optional] |
 | **timezone** | **String** | The time zone used for aggregating metric values | [optional] |
-| **results** | [**[WorkdayValuesMetricItem]**](WorkdayValuesMetricItem) | The metric value averages | [optional] |
+| **results** | [**[WorkdayValuesMetricItem]**]([WorkdayValuesMetricItem]) | The metric value averages | [optional] |
 | **performanceProfile** | [**AddressableEntityRef**](AddressableEntityRef) | The targeted performance profile for the average points | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

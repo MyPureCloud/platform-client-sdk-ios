@@ -10,8 +10,8 @@
 | **code** | **String** |  | [optional] |
 | **userMessage** | **String** |  | [optional] |
 | **userParams** | **[String:String]** |  | [optional] |
-| **nestedErrorDetails** | [**[PersistentConnectionChangeTopicErrorInfoDetails]**](PersistentConnectionChangeTopicErrorInfoDetails) |  | [optional] |
+| **nestedErrorDetails** | [**[PersistentConnectionChangeTopicErrorInfoDetails]**]([PersistentConnectionChangeTopicErrorInfoDetails]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

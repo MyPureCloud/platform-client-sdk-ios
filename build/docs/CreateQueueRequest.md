@@ -18,7 +18,7 @@
 | **userMemberCount** | **Int** | The number of user members (i.e., non-group members) in the queue. | [optional] |
 | **joinedMemberCount** | **Int** | The number of joined members in the queue. | [optional] |
 | **mediaSettings** | [**QueueMediaSettings**](QueueMediaSettings) | The media settings for the queue. | [optional] |
-| **routingRules** | [**[RoutingRule]**](RoutingRule) | The routing rules for the queue, used for Preferred Agent Routing. | [optional] |
+| **routingRules** | [**[RoutingRule]**]([RoutingRule]) | The routing rules for the queue, used for Preferred Agent Routing. | [optional] |
 | **conditionalGroupRouting** | [**ConditionalGroupRouting**](ConditionalGroupRouting) | The Conditional Group Routing settings for the queue. | [optional] |
 | **bullseye** | [**Bullseye**](Bullseye) | The bullseye settings for the queue. | [optional] |
 | **scoringMethod** | **String** | The Scoring Method for the queue. | [optional] |
@@ -50,4 +50,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

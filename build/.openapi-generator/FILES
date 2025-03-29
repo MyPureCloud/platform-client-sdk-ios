@@ -143,6 +143,15 @@ docs/AgentPossibleWorkShiftsResponse.md
 docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
+docs/AgentStateAgentQueryClause.md
+docs/AgentStateAgentQueryPredicate.md
+docs/AgentStateCountsRequest.md
+docs/AgentStateQueryRequest.md
+docs/AgentStateSegmentTypeCount.md
+docs/AgentStateSessionFilter.md
+docs/AgentStateSessionQueryClause.md
+docs/AgentStateSessionQueryPredicate.md
+docs/AgentStateUserFilter.md
 docs/AgentTimeOffRequestPatch.md
 docs/AgentUIAPI.json
 docs/AgentUIAPI.md
@@ -203,6 +212,10 @@ docs/AmazonLexRequest.md
 docs/AnalyticsAPI.json
 docs/AnalyticsAPI.md
 docs/AnalyticsAgentGroup.md
+docs/AnalyticsAgentStateAgentResponse.md
+docs/AnalyticsAgentStateAgentSessionResult.md
+docs/AnalyticsAgentStateCountsResponse.md
+docs/AnalyticsAgentStateQueryResponse.md
 docs/AnalyticsConversation.md
 docs/AnalyticsConversationAsyncQueryResponse.md
 docs/AnalyticsConversationQueryResponse.md
@@ -857,6 +870,7 @@ docs/ContentFileResponse.md
 docs/ContentFilterItem.md
 docs/ContentGeneric.md
 docs/ContentList.md
+docs/ContentLocation.md
 docs/ContentManagementAPI.json
 docs/ContentManagementAPI.md
 docs/ContentManagementSingleDocumentTopicDocumentDataV2.md
@@ -1736,6 +1750,7 @@ docs/EmailRoutingEstablishedEvent.md
 docs/EmailRoutingTransferEvent.md
 docs/EmailSettings.md
 docs/EmailSetup.md
+docs/EmailThreadingSettings.md
 docs/EmailUserEstablishedEvent.md
 docs/EmailUserTransferEvent.md
 docs/EmailsAPI.json
@@ -1751,6 +1766,7 @@ docs/EmergencyLocation.md
 docs/EmpathyScore.md
 docs/EmployeeEngagementAPI.json
 docs/EmployeeEngagementAPI.md
+docs/EmployeePerformanceExternalMetricsDefinitionExternalMetricsDefinition.md
 docs/EmployerInfo.md
 docs/Empty.md
 docs/EncryptionKey.md
@@ -3123,6 +3139,22 @@ docs/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.md
 docs/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.md
 docs/OutboundMessagingMessagingCampaignProgressEventObject.md
 docs/OutboundMessagingMessagingCampaignProgressEventUriReference.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeContactSort.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeEmailConfig.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeErrorDetail.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeFromEmailAddress.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeIntegrationRef.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeObject.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeReplyToEmailAddress.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeResponseRef.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeSmsConfig.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeSmsPhoneNumberRef.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeUriReference.md
+docs/OutboundMessagingWhatsappCampaignConfigChangeWhatsAppConfig.md
+docs/OutboundMessagingWhatsappCampaignProgressEventCampaignProgress.md
+docs/OutboundMessagingWhatsappCampaignProgressEventObject.md
+docs/OutboundMessagingWhatsappCampaignProgressEventUriReference.md
 docs/OutboundOnlySetting.md
 docs/OutboundRoute.md
 docs/OutboundRouteBase.md
@@ -3316,6 +3348,7 @@ docs/Prompt.md
 docs/PromptAsset.md
 docs/PromptAssetCreate.md
 docs/PromptAssetEntityListing.md
+docs/PromptAssetUpload.md
 docs/PromptEntityListing.md
 docs/PropertyChange.md
 docs/PropertyIndexRequest.md
@@ -3676,6 +3709,7 @@ docs/RateLimitAggregationQuery.md
 docs/RateLimitAggregationView.md
 docs/Reaction.md
 docs/RealTimeAdherenceExplanation.md
+docs/Reason.md
 docs/RecallEntry.md
 docs/Recipient.md
 docs/RecipientAdditionalIdentifier.md
@@ -3685,6 +3719,7 @@ docs/RecipientRequest.md
 docs/Recognition.md
 docs/RecognitionBase.md
 docs/Record.md
+docs/RecordersState.md
 docs/Recording.md
 docs/RecordingAPI.json
 docs/RecordingAPI.md
@@ -4799,6 +4834,7 @@ docs/WebMessagingOfferFields.md
 docs/WebMessagingOfferProperties.md
 docs/WebMessagingQuickReply.md
 docs/WebMessagingRecipient.md
+docs/WebhookInvocationResponse.md
 docs/WeekSchedule.md
 docs/WeekScheduleGenerationResult.md
 docs/WeekScheduleListItemResponse.md
@@ -4916,6 +4952,9 @@ docs/WfmHistoricalAdherenceQueryForTeams.md
 docs/WfmHistoricalAdherenceQueryForUsers.md
 docs/WfmHistoricalAdherenceResponse.md
 docs/WfmHistoricalAdherenceResultWrapper.md
+docs/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDeleteEntity.md
+docs/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDisallowedDeleteEntity.md
+docs/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataPurgeRequestComplete.md
 docs/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.md
 docs/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.md
 docs/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.md
@@ -5216,6 +5255,9 @@ docs/deleteConversationsMessagingSettingsDefault-example.txt
 docs/deleteConversationsMessagingSupportedcontentSupportedContentId-example.txt
 docs/deleteDataprivacyMaskingrule-example.txt
 docs/deleteDiagnosticsLogcaptureBrowserUser-example.txt
+docs/deleteDivisionBasedPresenceDefinition-example.txt
+docs/deleteEmailsSettingsThreading-example.txt
+docs/deleteEmailsSettingsThreading-example.txt
 docs/deleteEmployeeengagementCelebration-example.txt
 docs/deleteEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/deleteExternalcontactsContact-example.txt
@@ -5331,7 +5373,6 @@ docs/deleteOutboundSchedulesEmailcampaign-example.txt
 docs/deleteOutboundSchedulesMessagingcampaign-example.txt
 docs/deleteOutboundSchedulesSequence-example.txt
 docs/deleteOutboundSequence-example.txt
-docs/deletePresenceDefinition0-example.txt
 docs/deletePresenceSource-example.txt
 docs/deletePresencedefinition-example.txt
 docs/deleteProcessautomationTrigger-example.txt
@@ -5454,6 +5495,7 @@ docs/deleteWorkforcemanagementManagementunitWorkplan-example.txt
 docs/deleteWorkforcemanagementManagementunitWorkplanrotation-example.txt
 docs/getAlertingAlert-example.txt
 docs/getAlertingRule-example.txt
+docs/getAnalyticsAgentStatus-example.txt
 docs/getAnalyticsBotflowDivisionsReportingturns-example.txt
 docs/getAnalyticsBotflowReportingturns-example.txt
 docs/getAnalyticsBotflowSessions-example.txt
@@ -5693,11 +5735,15 @@ docs/getDate-example.txt
 docs/getDiagnosticsLogcaptureBrowserEntriesDownloadJob-example.txt
 docs/getDiagnosticsLogcaptureBrowserUser-example.txt
 docs/getDiagnosticsLogcaptureBrowserUsers-example.txt
+docs/getDivisionBasedPresenceDefinition-example.txt
+docs/getDivisionBasedPresenceDefinitions-example.txt
 docs/getDocumentationGknSearch-example.txt
 docs/getDocumentationSearch-example.txt
 docs/getDownload-example.txt
 docs/getEmailsSettings-example.txt
 docs/getEmailsSettings-example.txt
+docs/getEmailsSettingsThreading-example.txt
+docs/getEmailsSettingsThreading-example.txt
 docs/getEmployeeengagementCelebrations-example.txt
 docs/getEmployeeengagementRecognition-example.txt
 docs/getEmployeeperformanceExternalmetricsDefinition-example.txt
@@ -6172,8 +6218,6 @@ docs/getOutboundSequence-example.txt
 docs/getOutboundSequences-example.txt
 docs/getOutboundSettings-example.txt
 docs/getOutboundWrapupcodemappings-example.txt
-docs/getPresenceDefinition0-example.txt
-docs/getPresenceDefinitions0-example.txt
 docs/getPresenceSettings-example.txt
 docs/getPresenceSource-example.txt
 docs/getPresenceSources-example.txt
@@ -6753,6 +6797,8 @@ docs/patchConversationsSettings-example.txt
 docs/patchDataprivacyMaskingrule-example.txt
 docs/patchEmailsSettings-example.txt
 docs/patchEmailsSettings-example.txt
+docs/patchEmailsSettingsThreading-example.txt
+docs/patchEmailsSettingsThreading-example.txt
 docs/patchEmployeeengagementCelebration-example.txt
 docs/patchEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/patchExternalcontactsContactIdentifiers-example.txt
@@ -6895,6 +6941,8 @@ docs/postAlertingRulesBulkRemove-example.txt
 docs/postAlertingRulesQuery-example.txt
 docs/postAnalyticsActionsAggregatesQuery-example.txt
 docs/postAnalyticsAgentcopilotsAggregatesQuery-example.txt
+docs/postAnalyticsAgentsStatusCounts-example.txt
+docs/postAnalyticsAgentsStatusQuery-example.txt
 docs/postAnalyticsBotsAggregatesQuery-example.txt
 docs/postAnalyticsConversationDetailsProperties-example.txt
 docs/postAnalyticsConversationDetailsProperties-example.txt
@@ -6955,11 +7003,13 @@ docs/postArchitectGrammarLanguages-example.txt
 docs/postArchitectGrammars-example.txt
 docs/postArchitectIvrs-example.txt
 docs/postArchitectPromptHistory-example.txt
+docs/postArchitectPromptResourceUploads-example.txt
 docs/postArchitectPromptResources-example.txt
 docs/postArchitectPrompts-example.txt
 docs/postArchitectSchedulegroups-example.txt
 docs/postArchitectSchedules-example.txt
 docs/postArchitectSystempromptHistory-example.txt
+docs/postArchitectSystempromptResourceUploads-example.txt
 docs/postArchitectSystempromptResources-example.txt
 docs/postAssistants-example.txt
 docs/postAuditsQuery-example.txt
@@ -7085,6 +7135,7 @@ docs/postDataprivacyMaskingrulesValidate-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesDownloadJobs-example.txt
 docs/postDiagnosticsLogcaptureBrowserEntriesQuery-example.txt
 docs/postDiagnosticsLogcaptureBrowserUser-example.txt
+docs/postDivisionBasedPresenceDefinitions-example.txt
 docs/postDocumentationGknSearch-example.txt
 docs/postDocumentationSearch-example.txt
 docs/postEmployeeengagementRecognitions-example.txt
@@ -7180,6 +7231,7 @@ docs/postIntegrationsCredentials-example.txt
 docs/postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs-example.txt
 docs/postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs-example.txt
 docs/postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate-example.txt
+docs/postIntegrationsWebhookEvents-example.txt
 docs/postJourneyActionmaps-example.txt
 docs/postJourneyActionmapsEstimatesJobs-example.txt
 docs/postJourneyActiontemplates-example.txt
@@ -7328,7 +7380,6 @@ docs/postOutboundMessagingcampaigns-example.txt
 docs/postOutboundMessagingcampaignsProgress-example.txt
 docs/postOutboundRulesets-example.txt
 docs/postOutboundSequences-example.txt
-docs/postPresenceDefinitions0-example.txt
 docs/postPresenceSources-example.txt
 docs/postPresencedefinitions-example.txt
 docs/postProcessautomationTriggerTest-example.txt
@@ -7628,6 +7679,7 @@ docs/putConversationsMessagingThreadingtimeline-example.txt
 docs/putConversationsScreenshareRecordingstate-example.txt
 docs/putConversationsSocialRecordingstate-example.txt
 docs/putConversationsVideoRecordingstate-example.txt
+docs/putDivisionBasedPresenceDefinition-example.txt
 docs/putExternalcontactsContact-example.txt
 docs/putExternalcontactsContactNote-example.txt
 docs/putExternalcontactsContactsSchema-example.txt
@@ -7723,7 +7775,6 @@ docs/putOutboundSchedulesMessagingcampaign-example.txt
 docs/putOutboundSchedulesSequence-example.txt
 docs/putOutboundSequence-example.txt
 docs/putOutboundWrapupcodemappings-example.txt
-docs/putPresenceDefinition0-example.txt
 docs/putPresenceSettings-example.txt
 docs/putPresenceSource-example.txt
 docs/putPresenceUserPrimarysource-example.txt
@@ -8044,6 +8095,15 @@ src/Models/AgentPossibleWorkShiftsResponse.swift
 src/Models/AgentQueryAdherenceExplanationsRequest.swift
 src/Models/AgentQueryAdherenceExplanationsResponse.swift
 src/Models/AgentQueueTimeRequest.swift
+src/Models/AgentStateAgentQueryClause.swift
+src/Models/AgentStateAgentQueryPredicate.swift
+src/Models/AgentStateCountsRequest.swift
+src/Models/AgentStateQueryRequest.swift
+src/Models/AgentStateSegmentTypeCount.swift
+src/Models/AgentStateSessionFilter.swift
+src/Models/AgentStateSessionQueryClause.swift
+src/Models/AgentStateSessionQueryPredicate.swift
+src/Models/AgentStateUserFilter.swift
 src/Models/AgentTimeOffRequestPatch.swift
 src/Models/AgentUpdateAlternativeShiftTradeRequest.swift
 src/Models/AgentVideoSettings.swift
@@ -8098,6 +8158,10 @@ src/Models/AlternativeShiftTradeResponse.swift
 src/Models/AlternativeShiftTradesViewResponseTemplate.swift
 src/Models/AmazonLexRequest.swift
 src/Models/AnalyticsAgentGroup.swift
+src/Models/AnalyticsAgentStateAgentResponse.swift
+src/Models/AnalyticsAgentStateAgentSessionResult.swift
+src/Models/AnalyticsAgentStateCountsResponse.swift
+src/Models/AnalyticsAgentStateQueryResponse.swift
 src/Models/AnalyticsConversation.swift
 src/Models/AnalyticsConversationAsyncQueryResponse.swift
 src/Models/AnalyticsConversationQueryResponse.swift
@@ -8738,6 +8802,7 @@ src/Models/ContentFileResponse.swift
 src/Models/ContentFilterItem.swift
 src/Models/ContentGeneric.swift
 src/Models/ContentList.swift
+src/Models/ContentLocation.swift
 src/Models/ContentManagementSingleDocumentTopicDocumentDataV2.swift
 src/Models/ContentManagementSingleDocumentTopicLockData.swift
 src/Models/ContentManagementSingleDocumentTopicUserData.swift
@@ -9607,6 +9672,7 @@ src/Models/EmailRoutingEstablishedEvent.swift
 src/Models/EmailRoutingTransferEvent.swift
 src/Models/EmailSettings.swift
 src/Models/EmailSetup.swift
+src/Models/EmailThreadingSettings.swift
 src/Models/EmailUserEstablishedEvent.swift
 src/Models/EmailUserTransferEvent.swift
 src/Models/EmailsSettings.swift
@@ -9618,6 +9684,7 @@ src/Models/EmergencyGroupDivisionViewEntityListing.swift
 src/Models/EmergencyGroupListing.swift
 src/Models/EmergencyLocation.swift
 src/Models/EmpathyScore.swift
+src/Models/EmployeePerformanceExternalMetricsDefinitionExternalMetricsDefinition.swift
 src/Models/EmployerInfo.swift
 src/Models/Empty.swift
 src/Models/EncryptionKey.swift
@@ -10935,6 +11002,22 @@ src/Models/OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig.swift
 src/Models/OutboundMessagingMessagingCampaignProgressEventCampaignProgress.swift
 src/Models/OutboundMessagingMessagingCampaignProgressEventObject.swift
 src/Models/OutboundMessagingMessagingCampaignProgressEventUriReference.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeContactSort.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeEmailConfig.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeErrorDetail.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeFromEmailAddress.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeIntegrationRef.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeMessagingCampaign.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeObject.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeReplyToEmailAddress.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeResponseRef.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeSmsConfig.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeSmsPhoneNumberRef.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeUriReference.swift
+src/Models/OutboundMessagingWhatsappCampaignConfigChangeWhatsAppConfig.swift
+src/Models/OutboundMessagingWhatsappCampaignProgressEventCampaignProgress.swift
+src/Models/OutboundMessagingWhatsappCampaignProgressEventObject.swift
+src/Models/OutboundMessagingWhatsappCampaignProgressEventUriReference.swift
 src/Models/OutboundOnlySetting.swift
 src/Models/OutboundRoute.swift
 src/Models/OutboundRouteBase.swift
@@ -11124,6 +11207,7 @@ src/Models/Prompt.swift
 src/Models/PromptAsset.swift
 src/Models/PromptAssetCreate.swift
 src/Models/PromptAssetEntityListing.swift
+src/Models/PromptAssetUpload.swift
 src/Models/PromptEntityListing.swift
 src/Models/PropertyChange.swift
 src/Models/PropertyIndexRequest.swift
@@ -11481,6 +11565,7 @@ src/Models/RateLimitAggregationQuery.swift
 src/Models/RateLimitAggregationView.swift
 src/Models/Reaction.swift
 src/Models/RealTimeAdherenceExplanation.swift
+src/Models/Reason.swift
 src/Models/RecallEntry.swift
 src/Models/Recipient.swift
 src/Models/RecipientAdditionalIdentifier.swift
@@ -11490,6 +11575,7 @@ src/Models/RecipientRequest.swift
 src/Models/Recognition.swift
 src/Models/RecognitionBase.swift
 src/Models/Record.swift
+src/Models/RecordersState.swift
 src/Models/Recording.swift
 src/Models/RecordingAnnotationFlow.swift
 src/Models/RecordingAnnotationQueue.swift
@@ -12548,6 +12634,7 @@ src/Models/WebMessagingOfferFields.swift
 src/Models/WebMessagingOfferProperties.swift
 src/Models/WebMessagingQuickReply.swift
 src/Models/WebMessagingRecipient.swift
+src/Models/WebhookInvocationResponse.swift
 src/Models/WeekSchedule.swift
 src/Models/WeekScheduleGenerationResult.swift
 src/Models/WeekScheduleListItemResponse.swift
@@ -12665,6 +12752,9 @@ src/Models/WfmHistoricalAdherenceQueryForTeams.swift
 src/Models/WfmHistoricalAdherenceQueryForUsers.swift
 src/Models/WfmHistoricalAdherenceResponse.swift
 src/Models/WfmHistoricalAdherenceResultWrapper.swift
+src/Models/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDeleteEntity.swift
+src/Models/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDisallowedDeleteEntity.swift
+src/Models/WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataPurgeRequestComplete.swift
 src/Models/WfmHistoricalDataUploadPurgeRequestStatusTopicHistoricalDataUploadPurgeRequestUpdate.swift
 src/Models/WfmHistoricalDataUploadRequestStatusTopicHistoricalDataUploadRequestUpdate.swift
 src/Models/WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification.swift

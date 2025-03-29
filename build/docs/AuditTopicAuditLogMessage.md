@@ -20,9 +20,9 @@
 | **action** | **String** |  | [optional] |
 | **entityType** | **String** |  | [optional] |
 | **entity** | [**AuditTopicDomainEntityRef**](AuditTopicDomainEntityRef) |  | [optional] |
-| **propertyChanges** | [**[AuditTopicPropertyChange]**](AuditTopicPropertyChange) |  | [optional] |
+| **propertyChanges** | [**[AuditTopicPropertyChange]**]([AuditTopicPropertyChange]) |  | [optional] |
 | **context** | **[String:String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

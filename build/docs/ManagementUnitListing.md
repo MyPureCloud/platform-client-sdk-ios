@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ManagementUnit]**](ManagementUnit) |  | [optional] |
+| **entities** | [**[ManagementUnit]**]([ManagementUnit]) |  | [optional] |
 | **pageSize** | **Int** | Deprecated, paging is not supported | [optional] |
 | **pageNumber** | **Int** | Deprecated, paging is not supported | [optional] |
 | **total** | **Int64** | Deprecated, paging is not supported | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

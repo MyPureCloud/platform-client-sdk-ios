@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **transcriptionEngines** | [**[ProgramTranscriptionEngine]**](ProgramTranscriptionEngine) | The transcription engine setting | |
+| **transcriptionEngines** | [**[ProgramTranscriptionEngine]**]([ProgramTranscriptionEngine]) | The transcription engine setting | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

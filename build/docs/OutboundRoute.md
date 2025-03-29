@@ -21,11 +21,11 @@
 | **classificationTypes** | **[String]** | The site associated to the outbound route. | |
 | **enabled** | **Bool** |  | [optional] |
 | **distribution** | **String** |  | [optional] |
-| **externalTrunkBases** | [**[DomainEntityRef]**](DomainEntityRef) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
+| **externalTrunkBases** | [**[DomainEntityRef]**]([DomainEntityRef]) | Trunk base settings of trunkType \&quot;EXTERNAL\&quot;.  This base must also be set on an edge logical interface for correct routing. | [optional] |
 | **site** | [**Site**](Site) | The site associated to the outbound route. | [optional] |
 | **managed** | **Bool** | Is this outbound route being managed remotely. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

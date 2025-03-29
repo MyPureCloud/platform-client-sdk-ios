@@ -13,8 +13,8 @@ Learning module preview get response assignment
 | **isPassed** | **Bool** | True if the assessment was passed | [optional] |
 | **assessmentCompletionPercentage** | **Float** | The assessment completion percentage of assignment | [optional] |
 | **completionPercentage** | **Float** | The overall completion percentage of assignment | [optional] |
-| **steps** | [**[LearningModulePreviewGetResponseStep]**](LearningModulePreviewGetResponseStep) | List of assignment steps | [optional] |
+| **steps** | [**[LearningModulePreviewGetResponseStep]**]([LearningModulePreviewGetResponseStep]) | List of assignment steps | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

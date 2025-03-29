@@ -14,9 +14,9 @@
 | **dateStarted** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateCompleted** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **status** | **String** |  | [optional] |
-| **failedObjects** | [**[FailedObject]**](FailedObject) |  | [optional] |
+| **failedObjects** | [**[FailedObject]**]([FailedObject]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

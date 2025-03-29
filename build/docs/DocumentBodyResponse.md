@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **blocks** | [**[DocumentBodyBlock]**](DocumentBodyBlock) | The list of building blocks for the document body. | |
+| **blocks** | [**[DocumentBodyBlock]**]([DocumentBodyBlock]) | The list of building blocks for the document body. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

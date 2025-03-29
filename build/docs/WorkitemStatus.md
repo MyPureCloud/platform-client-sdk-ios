@@ -9,7 +9,7 @@
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
 | **category** | **String** | The Category of the Status. | [optional] |
-| **destinationStatuses** | [**[WorkitemStatusReference]**](WorkitemStatusReference) | The Statuses the Status can transition to. | [optional] |
+| **destinationStatuses** | [**[WorkitemStatusReference]**]([WorkitemStatusReference]) | The Statuses the Status can transition to. | [optional] |
 | **_description** | **String** | The description of the Status. | [optional] |
 | **defaultDestinationStatus** | [**WorkitemStatusReference**](WorkitemStatusReference) | Default destination status to which this Status will transition to if auto status transition enabled. | [optional] |
 | **statusTransitionDelaySeconds** | **Int** | Delay in seconds for auto status transition | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

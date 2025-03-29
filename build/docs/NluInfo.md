@@ -8,10 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **domain** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **version** | [**NluDomainVersion**](NluDomainVersion) |  | [optional] |
-| **intents** | [**[Intent]**](Intent) |  | [optional] |
+| **intents** | [**[Intent]**]([Intent]) |  | [optional] |
 | **engineVersion** | **String** |  | [optional] |
 | **nluData** | [**NluDomainVersion**](NluDomainVersion) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

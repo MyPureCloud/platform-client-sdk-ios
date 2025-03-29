@@ -14,10 +14,10 @@
 | **naEnabled** | **Bool** |  | [optional] |
 | **weight** | **Float** |  | [optional] |
 | **manualWeight** | **Bool** |  | [optional] |
-| **questions** | [**[AssessmentFormQuestion]**](AssessmentFormQuestion) | The list of questions for this question group | |
+| **questions** | [**[AssessmentFormQuestion]**]([AssessmentFormQuestion]) | The list of questions for this question group | |
 | **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

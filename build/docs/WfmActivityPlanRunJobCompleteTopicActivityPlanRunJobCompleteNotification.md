@@ -10,9 +10,9 @@
 | **type** | **String** |  | [optional] |
 | **activityPlan** | [**WfmActivityPlanRunJobCompleteTopicActivityPlanReference**](WfmActivityPlanRunJobCompleteTopicActivityPlanReference) |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **exceptions** | [**[WfmActivityPlanRunJobCompleteTopicActivityPlanJobException]**](WfmActivityPlanRunJobCompleteTopicActivityPlanJobException) |  | [optional] |
+| **exceptions** | [**[WfmActivityPlanRunJobCompleteTopicActivityPlanJobException]**]([WfmActivityPlanRunJobCompleteTopicActivityPlanJobException]) |  | [optional] |
 | **error** | [**WfmActivityPlanRunJobCompleteTopicErrorBody**](WfmActivityPlanRunJobCompleteTopicErrorBody) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

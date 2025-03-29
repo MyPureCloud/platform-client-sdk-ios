@@ -16,7 +16,7 @@
 | **rampPeriodEndDate** | [**Date**](Date) | Date-time the ramp period ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **billingPeriodStartDate** | [**Date**](Date) | Date-time the billing period started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **billingPeriodEndDate** | [**Date**](Date) | Date-time the billing period ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **usages** | [**[SubscriptionOverviewUsage]**](SubscriptionOverviewUsage) | Usages for the specified period. | |
+| **usages** | [**[SubscriptionOverviewUsage]**]([SubscriptionOverviewUsage]) | Usages for the specified period. | |
 | **contractAmendmentDate** | [**Date**](Date) | Date-time the contract was last amended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **contractEffectiveDate** | [**Date**](Date) | Date-time the contract became effective. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **contractEndDate** | [**Date**](Date) | Date-time the contract ends. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -26,4 +26,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

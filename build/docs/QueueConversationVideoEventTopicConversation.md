@@ -8,15 +8,15 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
-| **participants** | [**[QueueConversationVideoEventTopicParticipant]**](QueueConversationVideoEventTopicParticipant) |  | [optional] |
-| **recentTransfers** | [**[QueueConversationVideoEventTopicTransferResponse]**](QueueConversationVideoEventTopicTransferResponse) |  | [optional] |
+| **participants** | [**[QueueConversationVideoEventTopicParticipant]**]([QueueConversationVideoEventTopicParticipant]) |  | [optional] |
+| **recentTransfers** | [**[QueueConversationVideoEventTopicTransferResponse]**]([QueueConversationVideoEventTopicTransferResponse]) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **externalTag** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
-| **divisions** | [**[QueueConversationVideoEventTopicConversationDivisionMembership]**](QueueConversationVideoEventTopicConversationDivisionMembership) |  | [optional] |
+| **divisions** | [**[QueueConversationVideoEventTopicConversationDivisionMembership]**]([QueueConversationVideoEventTopicConversationDivisionMembership]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

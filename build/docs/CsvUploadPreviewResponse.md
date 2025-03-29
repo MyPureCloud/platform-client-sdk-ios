@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **uploadId** | **String** | Id for the upload | |
 | **headers** | **[String]** | List of headers in the CSV | |
-| **entries** | [**[StringJSON]**](StringJSON) | List of entries in the CSV | |
+| **entries** | [**[[String]]**]([null]) | List of entries in the CSV | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

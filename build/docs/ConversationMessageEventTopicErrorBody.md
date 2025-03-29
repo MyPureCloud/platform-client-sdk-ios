@@ -14,10 +14,10 @@
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[ConversationMessageEventTopicDetail]**](ConversationMessageEventTopicDetail) |  | [optional] |
-| **errors** | [**[ConversationMessageEventTopicErrorBody]**](ConversationMessageEventTopicErrorBody) |  | [optional] |
+| **details** | [**[ConversationMessageEventTopicDetail]**]([ConversationMessageEventTopicDetail]) |  | [optional] |
+| **errors** | [**[ConversationMessageEventTopicErrorBody]**]([ConversationMessageEventTopicErrorBody]) |  | [optional] |
 | **limit** | [**ConversationMessageEventTopicLimit**](ConversationMessageEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

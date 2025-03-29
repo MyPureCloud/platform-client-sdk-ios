@@ -10,8 +10,8 @@ Used to query for responses
 | **queryPhrase** | **String** | Query phrase to search response text and name. If not set will match all. | [optional] |
 | **pageSize** | **Int** | The maximum number of hits to return. Default: 25, Maximum: 500. | [optional] |
 | **pageNumber** | **Int** | Page Number | [optional] |
-| **filters** | [**[ResponseFilter]**](ResponseFilter) | Filter the query results. | [optional] |
+| **filters** | [**[ResponseFilter]**]([ResponseFilter]) | Filter the query results. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

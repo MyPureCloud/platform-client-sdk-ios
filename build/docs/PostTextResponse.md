@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **botState** | **String** | The state of the bot after completion of the request | |
-| **replyMessages** | [**[PostTextMessage]**](PostTextMessage) | The list of messages to respond with, if any | [optional] |
+| **replyMessages** | [**[PostTextMessage]**]([PostTextMessage]) | The list of messages to respond with, if any | [optional] |
 | **intentName** | **String** | The name of the intent the bot is either processing or has processed, this will be blank if no intent could be detected. | [optional] |
 | **slots** | **[String:String]** | Data parameters detected and filled by the bot. | [optional] |
 | **botCorrelationId** | **String** | The optional ID specified in the request | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

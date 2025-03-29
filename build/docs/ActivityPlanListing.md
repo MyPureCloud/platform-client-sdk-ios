@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ActivityPlanListItem]**](ActivityPlanListItem) |  | [optional] |
+| **entities** | [**[ActivityPlanListItem]**]([ActivityPlanListItem]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

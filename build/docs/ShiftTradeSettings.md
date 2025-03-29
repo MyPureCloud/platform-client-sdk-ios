@@ -18,8 +18,8 @@
 | **requiresMatchingLanguages** | **Bool** | Whether to constrain shift trades to agents with matching languages | [optional] |
 | **requiresMatchingSkills** | **Bool** | Whether to constrain shift trades to agents with matching skills | [optional] |
 | **requiresMatchingPlanningGroups** | **Bool** | Whether to constrain shift trades to agents with matching planning groups | [optional] |
-| **activityCategoryRules** | [**[ShiftTradeActivityRule]**](ShiftTradeActivityRule) | Rules that specify what to do with activity categories that are part of a shift defined in a trade | [optional] |
+| **activityCategoryRules** | [**[ShiftTradeActivityRule]**]([ShiftTradeActivityRule]) | Rules that specify what to do with activity categories that are part of a shift defined in a trade | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

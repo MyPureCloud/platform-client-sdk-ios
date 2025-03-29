@@ -17,10 +17,10 @@
 | **lowestEvaluationScore** | **Float** |  | [optional] |
 | **highestCriticalScore** | **Float** |  | [optional] |
 | **lowestCriticalScore** | **Float** |  | [optional] |
-| **agentEvaluatorActivityList** | [**[AgentEvaluatorActivity]**](AgentEvaluatorActivity) |  | [optional] |
+| **agentEvaluatorActivityList** | [**[AgentEvaluatorActivity]**]([AgentEvaluatorActivity]) |  | [optional] |
 | **numEvaluationsWithoutViewPermission** | **Int** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

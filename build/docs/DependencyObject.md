@@ -13,10 +13,10 @@
 | **deleted** | **Bool** |  | [optional] |
 | **updated** | **Bool** |  | [optional] |
 | **stateUnknown** | **Bool** |  | [optional] |
-| **consumedResources** | [**[Dependency]**](Dependency) |  | [optional] |
-| **consumingResources** | [**[Dependency]**](Dependency) |  | [optional] |
+| **consumedResources** | [**[Dependency]**]([Dependency]) |  | [optional] |
+| **consumingResources** | [**[Dependency]**]([Dependency]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

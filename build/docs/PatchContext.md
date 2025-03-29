@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[PatchContextPattern]**](PatchContextPattern) | A list of one or more patterns to match. | [optional] |
+| **patterns** | [**[PatchContextPattern]**]([PatchContextPattern]) | A list of one or more patterns to match. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

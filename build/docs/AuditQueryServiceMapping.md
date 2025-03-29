@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **services** | [**[AuditQueryService]**](AuditQueryService) | List of Services | [optional] |
+| **services** | [**[AuditQueryService]**]([AuditQueryService]) | List of Services | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

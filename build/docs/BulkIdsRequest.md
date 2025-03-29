@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ExternalContactsEntity]**](ExternalContactsEntity) |  | [optional] |
+| **entities** | [**[ExternalContactsEntity]**]([ExternalContactsEntity]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -12,8 +12,8 @@
 | **metric** | **String** |  | [optional] |
 | **legacyMetric** | **String** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-| **values** | [**[WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
-| **secondaryValues** | [**[WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]**](WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue) |  | [optional] |
+| **values** | [**[WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]**]([WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]) |  | [optional] |
+| **secondaryValues** | [**[WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]**]([WfmBuShortTermForecastImportCompleteTopicModificationIntervalOffsetValue]) |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **granularity** | **String** |  | [optional] |
 | **secondaryGranularity** | **String** |  | [optional] |
@@ -22,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

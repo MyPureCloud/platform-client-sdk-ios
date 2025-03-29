@@ -16,11 +16,11 @@ Metadata for a CX infrastructure as code accelerator
 | **tags** | **[String]** | tags | [optional] |
 | **permissions** | **[String]** | Genesys Cloud permissions required to install the accelerator | [optional] |
 | **products** | **[String]** | Genesys Cloud products required to install the accelerator | [optional] |
-| **documentation** | [**[MetadataDocumentation]**](MetadataDocumentation) | additional documentation about the artifact | [optional] |
-| **presentation** | [**[MetadataPresentation]**](MetadataPresentation) | presentation of data fields to be gathered for the accelerator | [optional] |
+| **documentation** | [**[MetadataDocumentation]**]([MetadataDocumentation]) | additional documentation about the artifact | [optional] |
+| **presentation** | [**[MetadataPresentation]**]([MetadataPresentation]) | presentation of data fields to be gathered for the accelerator | [optional] |
 | **results** | [**MetadataResults**](MetadataResults) | resources created or modified as a result of running the accelerator | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

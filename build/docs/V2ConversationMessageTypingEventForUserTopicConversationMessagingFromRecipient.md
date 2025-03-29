@@ -13,8 +13,8 @@
 | **firstName** | **String** |  | [optional] |
 | **lastName** | **String** |  | [optional] |
 | **email** | **String** |  | [optional] |
-| **additionalIds** | [**[V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier]**](V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier) |  | [optional] |
+| **additionalIds** | [**[V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier]**]([V2ConversationMessageTypingEventForUserTopicConversationRecipientAdditionalIdentifier]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

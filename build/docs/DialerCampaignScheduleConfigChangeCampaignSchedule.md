@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **intervals** | [**[DialerCampaignScheduleConfigChangeScheduleInterval]**](DialerCampaignScheduleConfigChangeScheduleInterval) | a list of start and end times | [optional] |
-| **recurrences** | [**[DialerCampaignScheduleConfigChangeScheduleRecurrence]**](DialerCampaignScheduleConfigChangeScheduleRecurrence) | a list of recurrences for a schedule | [optional] |
+| **intervals** | [**[DialerCampaignScheduleConfigChangeScheduleInterval]**]([DialerCampaignScheduleConfigChangeScheduleInterval]) | a list of start and end times | [optional] |
+| **recurrences** | [**[DialerCampaignScheduleConfigChangeScheduleRecurrence]**]([DialerCampaignScheduleConfigChangeScheduleRecurrence]) | a list of recurrences for a schedule | [optional] |
 | **timeZone** | **String** | time zone identifier to be applied to the intervals; for example Africa/Abidjan | [optional] |
 | **campaign** | [**DialerCampaignScheduleConfigChangeUriReference**](DialerCampaignScheduleConfigChangeUriReference) |  | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -20238,6 +20238,71 @@ open class ArchitectAPI {
     
     
     /**
+     Creates a presigned URL for uploading a user prompt file
+     
+     - parameter promptId: (path) Prompt ID 
+     - parameter languageCode: (path) Language 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postArchitectPromptResourceUploads(promptId: String, languageCode: String, completion: @escaping ((_ data: PromptAssetUpload?,_ error: Error?) -> Void)) {
+        let requestBuilder = postArchitectPromptResourceUploadsWithRequestBuilder(promptId: promptId, languageCode: languageCode)
+        requestBuilder.execute { (response: Response<PromptAssetUpload>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a presigned URL for uploading a user prompt file
+     - POST /api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter promptId: (path) Prompt ID 
+     - parameter languageCode: (path) Language 
+
+     - returns: RequestBuilder<PromptAssetUpload> 
+     */
+    open class func postArchitectPromptResourceUploadsWithRequestBuilder(promptId: String, languageCode: String) -> RequestBuilder<PromptAssetUpload> {        
+        var path = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads"
+        let promptIdPreEscape = "\(promptId)"
+        let promptIdPostEscape = promptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{promptId}", with: promptIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PromptAssetUpload>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Create a new user prompt resource
      
      - parameter promptId: (path) Prompt ID 
@@ -20924,6 +20989,71 @@ open class ArchitectAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<Operation>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
+     Creates a presigned URL for uploading a system prompt file
+     
+     - parameter promptId: (path) Prompt ID 
+     - parameter languageCode: (path) Language 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postArchitectSystempromptResourceUploads(promptId: String, languageCode: String, completion: @escaping ((_ data: PromptAssetUpload?,_ error: Error?) -> Void)) {
+        let requestBuilder = postArchitectSystempromptResourceUploadsWithRequestBuilder(promptId: promptId, languageCode: languageCode)
+        requestBuilder.execute { (response: Response<PromptAssetUpload>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Creates a presigned URL for uploading a system prompt file
+     - POST /api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "headers" : {
+    "key" : "headers"
+  },
+  "url" : "url"
+}, statusCode=200}]
+     
+     - parameter promptId: (path) Prompt ID 
+     - parameter languageCode: (path) Language 
+
+     - returns: RequestBuilder<PromptAssetUpload> 
+     */
+    open class func postArchitectSystempromptResourceUploadsWithRequestBuilder(promptId: String, languageCode: String) -> RequestBuilder<PromptAssetUpload> {        
+        var path = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads"
+        let promptIdPreEscape = "\(promptId)"
+        let promptIdPostEscape = promptIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{promptId}", with: promptIdPostEscape, options: .literal, range: nil)
+        let languageCodePreEscape = "\(languageCode)"
+        let languageCodePostEscape = languageCodePreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{languageCode}", with: languageCodePostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<PromptAssetUpload>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

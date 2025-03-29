@@ -18,10 +18,10 @@
 | **user** | [**User**](User) | User that created this annotation (if any). | [optional] |
 | **_description** | **String** | Text of annotation. Maximum character limit is 500. | [optional] |
 | **reason** | **String** | Reason for a pause annotation. Valid values: Hold,SecurePause,FlowOrQueue,Pause | [optional] |
-| **annotations** | [**[Annotation]**](Annotation) | List of annotations | [optional] |
+| **annotations** | [**[Annotation]**]([Annotation]) | List of annotations | [optional] |
 | **realtimeLocation** | **Int64** | Offset of annotation (milliseconds) from start of the recording before removing the cumulative duration of all pauses before this annotation | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

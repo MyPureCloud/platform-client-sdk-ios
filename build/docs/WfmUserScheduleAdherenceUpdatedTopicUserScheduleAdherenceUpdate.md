@@ -21,12 +21,12 @@
 | **adherenceExplanation** | [**WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation**](WfmUserScheduleAdherenceUpdatedTopicRealTimeAdherenceExplanation) |  | [optional] |
 | **adherenceChangeTime** | [**Date**](Date) |  | [optional] |
 | **presenceUpdateTime** | [**Date**](Date) |  | [optional] |
-| **activeQueues** | [**[WfmUserScheduleAdherenceUpdatedTopicQueueReference]**](WfmUserScheduleAdherenceUpdatedTopicQueueReference) |  | [optional] |
+| **activeQueues** | [**[WfmUserScheduleAdherenceUpdatedTopicQueueReference]**]([WfmUserScheduleAdherenceUpdatedTopicQueueReference]) |  | [optional] |
 | **activeQueuesModifiedTime** | [**Date**](Date) |  | [optional] |
 | **removedFromManagementUnit** | **Bool** |  | [optional] |
 | **suppressOnTimeReminder** | **Bool** |  | [optional] |
-| **nextActivityReminders** | [**[WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder]**](WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder) |  | [optional] |
+| **nextActivityReminders** | [**[WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder]**]([WfmUserScheduleAdherenceUpdatedTopicUserNextActivityReminder]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

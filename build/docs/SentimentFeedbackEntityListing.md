@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[SentimentFeedback]**](SentimentFeedback) |  | [optional] |
+| **entities** | [**[SentimentFeedback]**]([SentimentFeedback]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

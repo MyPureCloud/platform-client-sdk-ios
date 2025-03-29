@@ -7,7 +7,7 @@ List of users matching the learning module rule
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[LearningAssignmentUser]**](LearningAssignmentUser) |  | [optional] |
+| **entities** | [**[LearningAssignmentUser]**]([LearningAssignmentUser]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** | The number of users matching search term | [optional] |
@@ -21,4 +21,4 @@ List of users matching the learning module rule
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

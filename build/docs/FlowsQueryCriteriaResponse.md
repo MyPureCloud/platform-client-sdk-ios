@@ -7,7 +7,7 @@ The response for QueryCapabilities which contains the allowed criteria, flow typ
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **criteria** | [**[QueryCriteria]**](QueryCriteria) | The is a list of allowed criteria to query on. | [optional] |
+| **criteria** | [**[QueryCriteria]**]([QueryCriteria]) | The is a list of allowed criteria to query on. | [optional] |
 | **flowTypes** | **[String]** | The is a list of flow types the organization has access to. | [optional] |
 | **actionTypes** | **[String]** | The is a list of action types the organization has access to. | [optional] |
 | **errorCodes** | **[String]** | The is a list of potential error codes the organization may encounter. | [optional] |
@@ -15,4 +15,4 @@ The response for QueryCapabilities which contains the allowed criteria, flow typ
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

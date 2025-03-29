@@ -50,6 +50,13 @@ open class WebMessagingAPI {
     "metadata" : {
       "key" : "metadata"
     },
+    "reasons" : [ {
+      "code" : "MessageExpired",
+      "message" : "message"
+    }, {
+      "code" : "MessageExpired",
+      "message" : "message"
+    } ],
     "originatingEntity" : "Human",
     "channel" : "{}",
     "id" : "id",
@@ -81,11 +88,19 @@ open class WebMessagingAPI {
       "eventType" : "CoBrowse",
       "presence" : "{}"
     } ],
+    "status" : "Sent",
     "direction" : "Inbound"
   }, {
     "metadata" : {
       "key" : "metadata"
     },
+    "reasons" : [ {
+      "code" : "MessageExpired",
+      "message" : "message"
+    }, {
+      "code" : "MessageExpired",
+      "message" : "message"
+    } ],
     "originatingEntity" : "Human",
     "channel" : "{}",
     "id" : "id",
@@ -117,6 +132,7 @@ open class WebMessagingAPI {
       "eventType" : "CoBrowse",
       "presence" : "{}"
     } ],
+    "status" : "Sent",
     "direction" : "Inbound"
   } ],
   "pageSize" : 0

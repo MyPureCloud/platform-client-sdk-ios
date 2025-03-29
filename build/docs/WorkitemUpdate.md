@@ -22,7 +22,7 @@
 | **customFields** | [**[String:JSON]**](JSON) | Custom fields defined in the schema referenced by the worktype of the workitem. If set to {}, the existing keys and values will be removed. | [optional] |
 | **queueId** | **String** | The ID of the Workitems queue. Must be a valid UUID. | [optional] |
 | **assigneeId** | **String** | The ID of the assignee of the Workitem. If supplied it must be a valid UUID. | [optional] |
-| **scoredAgents** | [**[WorkitemScoredAgentRequest]**](WorkitemScoredAgentRequest) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
+| **scoredAgents** | [**[WorkitemScoredAgentRequest]**]([WorkitemScoredAgentRequest]) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
 | **externalContactId** | **String** | The ID of the external contact of the Workitem. Must be a valid UUID. | [optional] |
 | **externalTag** | **String** | The external tag of the Workitem. | [optional] |
 | **skillIds** | **[String]** | The skill IDs of the Workitem. Must be valid UUIDs. | [optional] |
@@ -33,4 +33,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

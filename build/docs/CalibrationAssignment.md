@@ -7,10 +7,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **calibrator** | [**User**](User) |  | [optional] |
-| **evaluators** | [**[User]**](User) |  | [optional] |
+| **evaluators** | [**[User]**]([User]) |  | [optional] |
 | **evaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
 | **expertEvaluator** | [**User**](User) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

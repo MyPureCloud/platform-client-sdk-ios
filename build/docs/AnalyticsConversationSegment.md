@@ -29,9 +29,9 @@
 | **wrapUpCode** | **String** | Wrap up code | [optional] |
 | **wrapUpNote** | **String** | Note entered by an agent during after-call work | [optional] |
 | **wrapUpTags** | **[String]** | Tag(s) assigned during after-call work | [optional] |
-| **scoredAgents** | [**[AnalyticsScoredAgent]**](AnalyticsScoredAgent) | Scored agents | [optional] |
-| **properties** | [**[AnalyticsProperty]**](AnalyticsProperty) | Additional segment properties | [optional] |
+| **scoredAgents** | [**[AnalyticsScoredAgent]**]([AnalyticsScoredAgent]) | Scored agents | [optional] |
+| **properties** | [**[AnalyticsProperty]**]([AnalyticsProperty]) | Additional segment properties | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

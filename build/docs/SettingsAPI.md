@@ -4,15 +4,63 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
+| [**deleteEmailsSettingsThreading**](SettingsAPI#deleteEmailsSettingsThreading) | Reset email threading settings to default |
 | [**deleteUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#deleteUsersAgentuiAgentsAutoanswerAgentIdSettings) | Delete agent auto answer settings |
 | [**getEmailsSettings**](SettingsAPI#getEmailsSettings) | Get email Contact Center settings |
+| [**getEmailsSettingsThreading**](SettingsAPI#getEmailsSettingsThreading) | Get email threading settings |
 | [**getSettingsExecutiondata**](SettingsAPI#getSettingsExecutiondata) | Get the execution history enabled setting. |
 | [**getUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#getUsersAgentuiAgentsAutoanswerAgentIdSettings) | Get agent auto answer settings |
 | [**patchEmailsSettings**](SettingsAPI#patchEmailsSettings) | Patch email Contact Center settings |
+| [**patchEmailsSettingsThreading**](SettingsAPI#patchEmailsSettingsThreading) | Patch email threading settings |
 | [**patchSettingsExecutiondata**](SettingsAPI#patchSettingsExecutiondata) | Edit the execution history on off setting. |
 | [**patchUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#patchUsersAgentuiAgentsAutoanswerAgentIdSettings) | Update agent auto answer settings |
 | [**putUsersAgentuiAgentsAutoanswerAgentIdSettings**](SettingsAPI#putUsersAgentuiAgentsAutoanswerAgentIdSettings) | Set agent auto answer settings |
 {: class="table-striped"}
+
+
+## deleteEmailsSettingsThreading
+
+
+
+> Void deleteEmailsSettingsThreading()
+
+Reset email threading settings to default
+
+
+
+Wraps DELETE /api/v2/emails/settings/threading  
+
+Requires ANY permissions: 
+
+* conversation:emailThreadingSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SettingsAPI.deleteEmailsSettingsThreading() { (error) in
+    if let error = error {
+        dump(error)
+    } else {
+        print("SettingsAPI.deleteEmailsSettingsThreading was successful")
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+`nil` (empty response body)
 
 
 ## deleteUsersAgentuiAgentsAutoanswerAgentIdSettings
@@ -108,6 +156,52 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**EmailSettings**](EmailSettings)
+
+
+## getEmailsSettingsThreading
+
+
+
+> [EmailThreadingSettings](EmailThreadingSettings) getEmailsSettingsThreading()
+
+Get email threading settings
+
+
+
+Wraps GET /api/v2/emails/settings/threading  
+
+Requires ANY permissions: 
+
+* conversation:emailThreadingSettings:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+SettingsAPI.getEmailsSettingsThreading() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.getEmailsSettingsThreading was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**EmailThreadingSettings**](EmailThreadingSettings)
 
 
 ## getSettingsExecutiondata
@@ -256,6 +350,56 @@ SettingsAPI.patchEmailsSettings(body: body) { (response, error) in
 ### Return type
 
 [**EmailSettings**](EmailSettings)
+
+
+## patchEmailsSettingsThreading
+
+
+
+> [EmailThreadingSettings](EmailThreadingSettings) patchEmailsSettingsThreading(body)
+
+Patch email threading settings
+
+
+
+Wraps PATCH /api/v2/emails/settings/threading  
+
+Requires ANY permissions: 
+
+* conversation:emailThreadingSettings:edit
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: EmailThreadingSettings = new EmailThreadingSettings(...) // 
+
+// Code example
+SettingsAPI.patchEmailsSettingsThreading(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("SettingsAPI.patchEmailsSettingsThreading was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**EmailThreadingSettings**](EmailThreadingSettings)|  | [optional] |
+
+
+### Return type
+
+[**EmailThreadingSettings**](EmailThreadingSettings)
 
 
 ## patchSettingsExecutiondata
@@ -414,4 +558,4 @@ SettingsAPI.putUsersAgentuiAgentsAutoanswerAgentIdSettings(agentId: agentId, bod
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

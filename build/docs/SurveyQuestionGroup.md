@@ -10,9 +10,9 @@
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **naEnabled** | **Bool** |  | [optional] |
-| **questions** | [**[SurveyQuestion]**](SurveyQuestion) |  | [optional] |
+| **questions** | [**[SurveyQuestion]**]([SurveyQuestion]) |  | [optional] |
 | **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **separatorValid** | **Bool** | Separator valid in the upload | |
 | **fileEncodingValid** | **Bool** | File encoding valid for the upload | |
-| **errors** | [**[ValidationError]**](ValidationError) | List of errors for the upload | |
+| **errors** | [**[ValidationError]**]([ValidationError]) | List of errors for the upload | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

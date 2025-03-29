@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **attributes** | [**[FacetKeyAttribute]**](FacetKeyAttribute) |  | [optional] |
-| **facets** | [**[FacetEntry]**](FacetEntry) |  | [optional] |
+| **attributes** | [**[FacetKeyAttribute]**]([FacetKeyAttribute]) |  | [optional] |
+| **facets** | [**[FacetEntry]**]([FacetEntry]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

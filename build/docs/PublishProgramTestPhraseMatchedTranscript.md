@@ -11,8 +11,8 @@
 | **communicationId** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **mediaType** | **String** |  | [optional] |
-| **detectedPhrases** | [**[PublishProgramTestPhraseDetectedPhrase]**](PublishProgramTestPhraseDetectedPhrase) |  | [optional] |
+| **detectedPhrases** | [**[PublishProgramTestPhraseDetectedPhrase]**]([PublishProgramTestPhraseDetectedPhrase]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

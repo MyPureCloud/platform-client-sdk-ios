@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **userData** | [**[KeyValue]**](KeyValue) | Additional user data associated with the target in key/value format. | [optional] |
+| **userData** | [**[KeyValue]**]([KeyValue]) | Additional user data associated with the target in key/value format. | [optional] |
 | **supportedMediaTypes** | **[String]** | Supported media types of the target. | [optional] |
 | **state** | **String** | Indicates the state of the target. | [optional] |
 | **_description** | **String** | Description of the target. | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

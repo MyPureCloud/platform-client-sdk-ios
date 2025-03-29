@@ -7,11 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **program** | [**BaseProgramEntity**](BaseProgramEntity) |  | [optional] |
-| **queues** | [**[AddressableEntityRef]**](AddressableEntityRef) |  | [optional] |
-| **flows** | [**[AddressableEntityRef]**](AddressableEntityRef) |  | [optional] |
+| **queues** | [**[AddressableEntityRef]**]([AddressableEntityRef]) |  | [optional] |
+| **flows** | [**[AddressableEntityRef]**]([AddressableEntityRef]) |  | [optional] |
 | **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

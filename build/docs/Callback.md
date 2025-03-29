@@ -9,7 +9,7 @@
 | **state** | **String** | The connection state of this communication. | [optional] |
 | **initialState** | **String** | The initial connection state of this communication. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
-| **segments** | [**[Segment]**](Segment) | The time line of the participant&#39;s callback, divided into activity segments. | [optional] |
+| **segments** | [**[Segment]**]([Segment]) | The time line of the participant&#39;s callback, divided into activity segments. | [optional] |
 | **direction** | **String** | The direction of the call | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
 | **disconnectType** | **String** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
@@ -38,4 +38,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

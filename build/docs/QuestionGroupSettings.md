@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **questionGroupContextId** | **String** | The context id of the question group in the form. | [optional] |
-| **questionSettings** | [**[QuestionSettings]**](QuestionSettings) |  | [optional] |
+| **questionSettings** | [**[QuestionSettings]**]([QuestionSettings]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

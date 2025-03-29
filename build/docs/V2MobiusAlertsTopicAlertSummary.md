@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[V2MobiusAlertsTopicAlertSummaryEntity]**](V2MobiusAlertsTopicAlertSummaryEntity) |  | [optional] |
+| **entities** | [**[V2MobiusAlertsTopicAlertSummaryEntity]**]([V2MobiusAlertsTopicAlertSummaryEntity]) |  | [optional] |
 | **conversation** | [**V2MobiusAlertsTopicAddressableEntityRef**](V2MobiusAlertsTopicAddressableEntityRef) |  | [optional] |
 | **metricType** | **String** |  | [optional] |
 | **isTeamMemberRuleSummary** | **Bool** |  | [optional] |
@@ -14,4 +14,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

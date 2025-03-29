@@ -24,8 +24,8 @@
 | **teamId** | **String** | The team id the user is a member of | [optional] |
 | **requestedRoutings** | **[String]** | All routing types for requested/attempted routing methods | [optional] |
 | **usedRouting** | **String** | Complete routing method | [optional] |
-| **scoredAgents** | [**[AnalyticsScoredAgent]**](AnalyticsScoredAgent) |  | [optional] |
+| **scoredAgents** | [**[AnalyticsScoredAgent]**]([AnalyticsScoredAgent]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

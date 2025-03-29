@@ -12,11 +12,11 @@
 | **client** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **errorMessage** | **String** |  | [optional] |
 | **errorCode** | **String** |  | [optional] |
-| **errorDetails** | [**[Detail]**](Detail) |  | [optional] |
+| **errorDetails** | [**[Detail]**]([Detail]) |  | [optional] |
 | **errorMessageParams** | **[String:String]** |  | [optional] |
 | **actionName** | **String** | Action name | [optional] |
 | **actionStatus** | **String** | Action status | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

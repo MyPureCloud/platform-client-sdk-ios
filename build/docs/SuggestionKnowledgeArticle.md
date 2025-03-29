@@ -11,8 +11,8 @@
 | **document** | [**AddressableEntityRef**](AddressableEntityRef) | The article. | [optional] |
 | **version** | [**AddressableEntityRef**](AddressableEntityRef) | The version of the article. | [optional] |
 | **knowledgeAnswer** | [**SuggestionKnowledgeAnswer**](SuggestionKnowledgeAnswer) | The most relevant answer within the suggested article. | [optional] |
-| **variations** | [**[AddressableEntityRef]**](AddressableEntityRef) | The variations of the article. | [optional] |
+| **variations** | [**[AddressableEntityRef]**]([AddressableEntityRef]) | The variations of the article. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

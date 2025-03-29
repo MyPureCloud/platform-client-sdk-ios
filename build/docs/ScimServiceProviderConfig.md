@@ -15,9 +15,9 @@ Defines a SCIM service provider&#39;s configuration.
 | **sort** | [**ScimServiceProviderConfigSimpleFeature**](ScimServiceProviderConfigSimpleFeature) | The \&quot;sort\&quot; configuration options. | [optional] |
 | **bulk** | [**ScimServiceProviderConfigBulkFeature**](ScimServiceProviderConfigBulkFeature) | The \&quot;bulk\&quot; configuration options. | [optional] |
 | **changePassword** | [**ScimServiceProviderConfigSimpleFeature**](ScimServiceProviderConfigSimpleFeature) | The \&quot;changePassword\&quot; configuration options. | [optional] |
-| **authenticationSchemes** | [**[ScimServiceProviderConfigAuthenticationScheme]**](ScimServiceProviderConfigAuthenticationScheme) | The list of supported authentication schemes. | [optional] |
+| **authenticationSchemes** | [**[ScimServiceProviderConfigAuthenticationScheme]**]([ScimServiceProviderConfigAuthenticationScheme]) | The list of supported authentication schemes. | [optional] |
 | **meta** | [**ScimMetadata**](ScimMetadata) | The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

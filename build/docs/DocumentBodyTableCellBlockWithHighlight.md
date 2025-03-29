@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **properties** | [**DocumentBodyTableCellBlockProperties**](DocumentBodyTableCellBlockProperties) | The properties for the table cell. | [optional] |
-| **blocks** | [**[DocumentTableContentBlockWithHighlight]**](DocumentTableContentBlockWithHighlight) | The list of content blocks for the table. | |
+| **blocks** | [**[DocumentTableContentBlockWithHighlight]**]([DocumentTableContentBlockWithHighlight]) | The list of content blocks for the table. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

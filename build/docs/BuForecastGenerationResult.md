@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **planningGroupResults** | [**[BuForecastGenerationPlanningGroupResult]**](BuForecastGenerationPlanningGroupResult) | Generation results, broken down by planning group | [optional] |
+| **planningGroupResults** | [**[BuForecastGenerationPlanningGroupResult]**]([BuForecastGenerationPlanningGroupResult]) | Generation results, broken down by planning group | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

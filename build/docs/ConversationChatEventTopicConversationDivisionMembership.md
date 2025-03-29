@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **division** | [**ConversationChatEventTopicDomainEntityRef**](ConversationChatEventTopicDomainEntityRef) |  | [optional] |
-| **entities** | [**[ConversationChatEventTopicDivisionEntityRef]**](ConversationChatEventTopicDivisionEntityRef) |  | [optional] |
+| **entities** | [**[ConversationChatEventTopicDivisionEntityRef]**]([ConversationChatEventTopicDivisionEntityRef]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

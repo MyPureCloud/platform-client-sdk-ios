@@ -34,16 +34,16 @@
 | **assignmentState** | **String** | The assignment state of the workitem. | [optional] |
 | **dateAssignmentStateChanged** | [**Date**](Date) | The assignment state change date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **alertTimeoutSeconds** | **Int** | The duration in seconds before an alert will timeout. | [optional] |
-| **skills** | [**[RoutingSkillReference]**](RoutingSkillReference) | The skills of the Workitem. | [optional] |
-| **preferredAgents** | [**[UserReference]**](UserReference) | The preferred agents of the Workitem. | [optional] |
+| **skills** | [**[RoutingSkillReference]**]([RoutingSkillReference]) | The skills of the Workitem. | [optional] |
+| **preferredAgents** | [**[UserReference]**]([UserReference]) | The preferred agents of the Workitem. | [optional] |
 | **autoStatusTransition** | **Bool** | Set it to false to disable auto status transition. By default, it is enabled. | [optional] |
 | **schema** | [**WorkitemSchema**](WorkitemSchema) | The schema defining the custom fields of the Workitem. The schema is inherited from the Workitems Worktype at creation time. | [optional] |
 | **customFields** | [**[String:JSON]**](JSON) | Custom fields defined in the schema referenced by the Workitem. | [optional] |
 | **autoStatusTransitionDetail** | [**AutoStatusTransitionDetail**](AutoStatusTransitionDetail) | Auto status transition details of Workitem. | [optional] |
-| **scoredAgents** | [**[WorkitemScoredAgent]**](WorkitemScoredAgent) | A list of scored agents for the Workitem. | [optional] |
+| **scoredAgents** | [**[WorkitemScoredAgent]**]([WorkitemScoredAgent]) | A list of scored agents for the Workitem. | [optional] |
 | **script** | [**WorkitemScriptReference**](WorkitemScriptReference) | The script that will be executed for the Workitem. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

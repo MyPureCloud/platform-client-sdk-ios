@@ -6689,6 +6689,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -6746,6 +6747,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -13335,6 +13337,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -13392,6 +13395,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -20325,6 +20329,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -20382,6 +20387,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -26971,6 +26977,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -27028,6 +27035,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -33708,6 +33716,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -33765,6 +33774,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -40354,6 +40364,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -40411,6 +40422,7 @@ open class UserRecordingsAPI {
           "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
           "recordingId" : "recordingId",
           "agentAssistantId" : "agentAssistantId",
+          "recordersState" : "{}",
           "disconnectReasons" : [ {
             "code" : 1,
             "phrase" : "phrase",
@@ -47214,6 +47226,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -47271,6 +47284,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -53860,6 +53874,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",
@@ -53917,6 +53932,7 @@ open class UserRecordingsAPI {
         "startHoldTime" : "2000-01-23T04:56:07.000+00:00",
         "recordingId" : "recordingId",
         "agentAssistantId" : "agentAssistantId",
+        "recordersState" : "{}",
         "disconnectReasons" : [ {
           "code" : 1,
           "phrase" : "phrase",

@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | |
 | **name** | **String** |  | [optional] |
-| **secondaryPresences** | [**[SecondaryPresence]**](SecondaryPresence) | The secondary presences of this activity code. | [optional] |
+| **secondaryPresences** | [**[SecondaryPresence]**]([SecondaryPresence]) | The secondary presences of this activity code. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

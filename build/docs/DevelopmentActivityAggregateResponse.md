@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[DevelopmentActivityAggregateQueryResponseGroupedData]**](DevelopmentActivityAggregateQueryResponseGroupedData) | The results of the query | [optional] |
+| **results** | [**[DevelopmentActivityAggregateQueryResponseGroupedData]**]([DevelopmentActivityAggregateQueryResponseGroupedData]) | The results of the query | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

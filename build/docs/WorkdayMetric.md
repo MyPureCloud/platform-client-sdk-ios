@@ -11,9 +11,9 @@
 | **points** | **Int** | Gamification points earned for this metric | [optional] |
 | **maxPoints** | **Int** | The maximum Gamification points a user may earn for this metric | [optional] |
 | **value** | **Double** | Value of this metric | [optional] |
-| **punctualityEvents** | [**[PunctualityEvent]**](PunctualityEvent) | List of schedule activity events for punctuality metrics | [optional] |
-| **evaluationDetails** | [**[QualityEvaluationScoreItem]**](QualityEvaluationScoreItem) | List of evaluations for quality evaluation score metrics | [optional] |
+| **punctualityEvents** | [**[PunctualityEvent]**]([PunctualityEvent]) | List of schedule activity events for punctuality metrics | [optional] |
+| **evaluationDetails** | [**[QualityEvaluationScoreItem]**]([QualityEvaluationScoreItem]) | List of evaluations for quality evaluation score metrics | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

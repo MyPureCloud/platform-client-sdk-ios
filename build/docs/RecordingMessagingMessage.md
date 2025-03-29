@@ -17,16 +17,16 @@
 | **queue** | [**AddressableEntityRef**](AddressableEntityRef) | A globally unique identifier for the queue involved in this communication. | [optional] |
 | **workflow** | [**AddressableEntityRef**](AddressableEntityRef) | A globally unique identifier for the workflow involved in this communication. | [optional] |
 | **messageText** | **String** | The content of this message. | [optional] |
-| **messageMediaAttachments** | [**[MessageMediaAttachment]**](MessageMediaAttachment) | List of media objects attached  with this message. | [optional] |
-| **messageStickerAttachments** | [**[MessageStickerAttachment]**](MessageStickerAttachment) | List of message stickers attached with this message. | [optional] |
-| **quickReplies** | [**[QuickReply]**](QuickReply) | List of quick reply options offered with this message. | [optional] |
+| **messageMediaAttachments** | [**[MessageMediaAttachment]**]([MessageMediaAttachment]) | List of media objects attached  with this message. | [optional] |
+| **messageStickerAttachments** | [**[MessageStickerAttachment]**]([MessageStickerAttachment]) | List of message stickers attached with this message. | [optional] |
+| **quickReplies** | [**[QuickReply]**]([QuickReply]) | List of quick reply options offered with this message. | [optional] |
 | **buttonResponse** | [**ButtonResponse**](ButtonResponse) | Button Response selected by user for this message. | [optional] |
 | **story** | [**RecordingContentStory**](RecordingContentStory) | Ephemeral story content. | [optional] |
-| **cards** | [**[Card]**](Card) | List of cards offered for this message | [optional] |
+| **cards** | [**[Card]**]([Card]) | List of cards offered for this message | [optional] |
 | **notificationTemplate** | [**RecordingNotificationTemplate**](RecordingNotificationTemplate) | Template notification content. | [optional] |
 | **contentType** | **String** | Indicates the content type for this message | [optional] |
-| **events** | [**[ConversationMessageEvent]**](ConversationMessageEvent) | List of event elements | [optional] |
+| **events** | [**[ConversationMessageEvent]**]([ConversationMessageEvent]) | List of event elements | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

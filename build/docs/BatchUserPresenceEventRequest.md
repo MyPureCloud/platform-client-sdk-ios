@@ -7,8 +7,8 @@ A maximum of 100 events are allowed per request
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **userPresenceEvents** | [**[UserPresenceEvent]**](UserPresenceEvent) | UserPresence events for this batch | [optional] |
+| **userPresenceEvents** | [**[UserPresenceEvent]**]([UserPresenceEvent]) | UserPresence events for this batch | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

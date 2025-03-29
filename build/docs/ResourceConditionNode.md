@@ -9,9 +9,9 @@
 | **variableName** | **String** |  | [optional] |
 | **conjunction** | **String** |  | [optional] |
 | **_operator** | **String** |  | [optional] |
-| **operands** | [**[ResourceConditionValue]**](ResourceConditionValue) |  | [optional] |
-| **terms** | [**[ResourceConditionNode]**](ResourceConditionNode) |  | [optional] |
+| **operands** | [**[ResourceConditionValue]**]([ResourceConditionValue]) |  | [optional] |
+| **terms** | [**[ResourceConditionNode]**]([ResourceConditionNode]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

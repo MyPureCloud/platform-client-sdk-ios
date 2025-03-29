@@ -20,8 +20,8 @@
 | **transferTargetAddress** | **String** | The address of a flow transfer target, e.g. a phone number, an email address, or a queueId | [optional] |
 | **transferTargetName** | **String** | The name of a flow transfer target | [optional] |
 | **transferType** | **String** | The type of transfer for flows that ended with a transfer | [optional] |
-| **outcomes** | [**[AnalyticsFlowOutcome]**](AnalyticsFlowOutcome) | Flow outcomes | [optional] |
+| **outcomes** | [**[AnalyticsFlowOutcome]**]([AnalyticsFlowOutcome]) | Flow outcomes | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

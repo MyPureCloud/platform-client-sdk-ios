@@ -14,8 +14,8 @@
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **queryType** | **String** | The type of the query that initiates the search. | [optional] |
 | **sessionId** | **String** | Session ID of the search. | [optional] |
-| **results** | [**[KnowledgeDocumentGuestSearchResult]**](KnowledgeDocumentGuestSearchResult) | Documents that matched the search query. | [optional] |
+| **results** | [**[KnowledgeDocumentGuestSearchResult]**]([KnowledgeDocumentGuestSearchResult]) | Documents that matched the search query. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | ID of the intent for respective additional language | [optional] |
-| **utterances** | [**[NluUtterance]**](NluUtterance) | Utterances list for additional language | [optional] |
+| **utterances** | [**[NluUtterance]**]([NluUtterance]) | Utterances list for additional language | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

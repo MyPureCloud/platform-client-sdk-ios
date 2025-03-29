@@ -27,9 +27,9 @@
 | **scriptId** | **String** | The ID of the Workitems script. Must be a valid UUID. | [optional] |
 | **wrapupCode** | **String** | The ID of the wrapup. Must be a valid UUID. | [optional] |
 | **utilizationLabelId** | **String** | The ID of utilization label of the Workitem. Must be a valid UUID. | [optional] |
-| **scoredAgents** | [**[WorkitemScoredAgentRequest]**](WorkitemScoredAgentRequest) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
+| **scoredAgents** | [**[WorkitemScoredAgentRequest]**]([WorkitemScoredAgentRequest]) | A list of scored agents for the Workitem. A workitem can have a maximum of 20 scored agents. | [optional] |
 | **preferredAgentIds** | **[String]** | The preferred agent IDs of the Workitem. Must be valid UUIDs. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

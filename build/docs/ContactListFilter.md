@@ -14,10 +14,10 @@
 | **contactList** | [**DomainEntityRef**](DomainEntityRef) | The contact list the filter is based on. Required if sourceType is ContactList | [optional] |
 | **contactListTemplate** | [**DomainEntityRef**](DomainEntityRef) | The contact list template the filter is based on. Required if sourceType is ContactListTemplate | [optional] |
 | **sourceType** | **String** | The source type the filter is based on. | [optional] |
-| **clauses** | [**[ContactListFilterClause]**](ContactListFilterClause) | Groups of conditions to filter the contacts by. | [optional] |
+| **clauses** | [**[ContactListFilterClause]**]([ContactListFilterClause]) | Groups of conditions to filter the contacts by. | [optional] |
 | **filterType** | **String** | How to join clauses together. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

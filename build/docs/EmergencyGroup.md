@@ -20,9 +20,9 @@ A group of emergency call flows to use in an emergency.
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
 | **enabled** | **Bool** | True if an emergency is occurring and the associated emergency call flow(s) should be used.  False otherwise. | [optional] |
-| **emergencyCallFlows** | [**[EmergencyCallFlow]**](EmergencyCallFlow) | The emergency call flow(s) to use during an emergency. | [optional] |
+| **emergencyCallFlows** | [**[EmergencyCallFlow]**]([EmergencyCallFlow]) | The emergency call flow(s) to use during an emergency. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

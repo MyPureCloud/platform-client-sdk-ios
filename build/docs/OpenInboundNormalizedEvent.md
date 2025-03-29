@@ -8,8 +8,8 @@ Open Event Messaging rich media message structure
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **channel** | [**OpenInboundMessagingChannel**](OpenInboundMessagingChannel) | Channel-specific information that describes the message and the message channel/provider. | |
-| **events** | [**[OpenEvent]**](OpenEvent) | List of event elements. | |
+| **events** | [**[OpenEvent]**]([OpenEvent]) | List of event elements. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

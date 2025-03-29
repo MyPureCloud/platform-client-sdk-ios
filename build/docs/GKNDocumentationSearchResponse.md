@@ -14,8 +14,8 @@
 | **currentPage** | **String** | Q64 value for the current page of results | [optional] |
 | **nextPage** | **String** | Q64 value for the next page of results | [optional] |
 | **types** | **[String]** | Resource types the search was performed against | |
-| **results** | [**[GKNDocumentationResult]**](GKNDocumentationResult) | Search results | |
+| **results** | [**[GKNDocumentationResult]**]([GKNDocumentationResult]) | Search results | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

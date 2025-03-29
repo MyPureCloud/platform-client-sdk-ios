@@ -10,7 +10,7 @@
 | **status** | **String** | The status of the conversation summary. | [optional] |
 | **mediaType** | **String** | The media type of the conversation. | [optional] |
 | **language** | **String** | The language of the conversation. | [optional] |
-| **predictedWrapupCodes** | [**[ConversationSummaryWrapupCode]**](ConversationSummaryWrapupCode) | The wrapup codes of the conversation summary. | [optional] |
+| **predictedWrapupCodes** | [**[ConversationSummaryWrapupCode]**]([ConversationSummaryWrapupCode]) | The wrapup codes of the conversation summary. | [optional] |
 | **editedSummary** | [**ConversationEditedInput**](ConversationEditedInput) | The edited summary of the conversation. | [optional] |
 | **reason** | [**ConversationSummaryReason**](ConversationSummaryReason) | The reason of the conversation summary. | [optional] |
 | **followup** | [**ConversationSummaryFollowup**](ConversationSummaryFollowup) | The followup of the conversation summary. | [optional] |
@@ -18,8 +18,8 @@
 | **dateCreated** | [**Date**](Date) | The created date of the summary. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **_id** | **String** | The id of the summary. | [optional] |
 | **confidence** | **Float** | The AI confidence value. | [optional] |
-| **participants** | [**[AddressableEntityRef]**](AddressableEntityRef) | The list of participants. | [optional] |
+| **participants** | [**[AddressableEntityRef]**]([AddressableEntityRef]) | The list of participants. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

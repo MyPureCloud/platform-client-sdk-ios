@@ -18,12 +18,12 @@
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
-| **primarySites** | [**[DomainEntityRef]**](DomainEntityRef) |  | [optional] |
-| **secondarySites** | [**[DomainEntityRef]**](DomainEntityRef) |  | [optional] |
-| **primaryEdges** | [**[Edge]**](Edge) |  | [optional] |
-| **secondaryEdges** | [**[Edge]**](Edge) |  | [optional] |
-| **addresses** | [**[Contact]**](Contact) |  | [optional] |
-| **edges** | [**[Edge]**](Edge) |  | [optional] |
+| **primarySites** | [**[DomainEntityRef]**]([DomainEntityRef]) |  | [optional] |
+| **secondarySites** | [**[DomainEntityRef]**]([DomainEntityRef]) |  | [optional] |
+| **primaryEdges** | [**[Edge]**]([Edge]) |  | [optional] |
+| **secondaryEdges** | [**[Edge]**]([Edge]) |  | [optional] |
+| **addresses** | [**[Contact]**]([Contact]) |  | [optional] |
+| **edges** | [**[Edge]**]([Edge]) |  | [optional] |
 | **edgeAutoUpdateConfig** | [**EdgeAutoUpdateConfig**](EdgeAutoUpdateConfig) | Recurrance rule, time zone, and start/end settings for automatic edge updates for this site | [optional] |
 | **mediaRegionsUseLatencyBased** | **Bool** |  | [optional] |
 | **location** | [**LocationDefinition**](LocationDefinition) | Location | |
@@ -31,7 +31,7 @@
 | **ntpSettings** | [**NTPSettings**](NTPSettings) | Network Time Protocol settings for the site | [optional] |
 | **mediaModel** | **String** | Media model for the site | [optional] |
 | **coreSite** | **Bool** | Is this site a core site | [optional] |
-| **siteConnections** | [**[SiteConnection]**](SiteConnection) | The site connections | [optional] |
+| **siteConnections** | [**[SiteConnection]**]([SiteConnection]) | The site connections | [optional] |
 | **mediaRegions** | **[String]** | The ordered list of AWS regions through which media can stream. | [optional] |
 | **callerId** | **String** | The caller ID value for the site. | [optional] |
 | **callerName** | **String** | The caller name for the site. | [optional] |
@@ -40,4 +40,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

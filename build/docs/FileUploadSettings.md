@@ -8,8 +8,8 @@ File upload settings for messenger
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **enableAttachments** | **Bool** | whether or not attachments are enabled | [optional] |
-| **modes** | [**[FileUploadMode]**](FileUploadMode) | The list of supported file upload modes | [optional] |
+| **modes** | [**[FileUploadMode]**]([FileUploadMode]) | The list of supported file upload modes | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

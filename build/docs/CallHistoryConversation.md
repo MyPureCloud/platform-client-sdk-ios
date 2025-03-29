@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[CallHistoryParticipant]**](CallHistoryParticipant) | The list of participants involved in the conversation. | [optional] |
+| **participants** | [**[CallHistoryParticipant]**]([CallHistoryParticipant]) | The list of participants involved in the conversation. | [optional] |
 | **direction** | **String** | The direction of the call relating to the current user | [optional] |
 | **wentToVoicemail** | **Bool** | Did the call end in the current user&#39;s voicemail | [optional] |
 | **missedCall** | **Bool** | Did the user not answer this conversation | [optional] |
@@ -22,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

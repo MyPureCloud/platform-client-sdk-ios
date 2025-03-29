@@ -28,8 +28,8 @@
 | **teamId** | **String** | The team ID the user is a member of | [optional] |
 | **usedRouting** | **String** | Complete routing method | [optional] |
 | **userId** | **String** | Unique identifier for the user | [optional] |
-| **scoredAgents** | [**[ConversationActivityScoredAgent]**](ConversationActivityScoredAgent) | Scored agents | [optional] |
+| **scoredAgents** | [**[ConversationActivityScoredAgent]**]([ConversationActivityScoredAgent]) | Scored agents | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **rings** | [**[Ring]**](Ring) | The bullseye rings configured for this queue. | [optional] |
+| **rings** | [**[Ring]**]([Ring]) | The bullseye rings configured for this queue. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

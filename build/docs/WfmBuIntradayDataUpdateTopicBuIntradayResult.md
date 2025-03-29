@@ -9,7 +9,7 @@
 | **startDate** | [**Date**](Date) |  | [optional] |
 | **endDate** | [**Date**](Date) |  | [optional] |
 | **intervalLengthMinutes** | **Int** |  | [optional] |
-| **intradayDataGroupings** | [**[WfmBuIntradayDataUpdateTopicBuIntradayDataGroup]**](WfmBuIntradayDataUpdateTopicBuIntradayDataGroup) |  | [optional] |
+| **intradayDataGroupings** | [**[WfmBuIntradayDataUpdateTopicBuIntradayDataGroup]**]([WfmBuIntradayDataUpdateTopicBuIntradayDataGroup]) |  | [optional] |
 | **categories** | **[String]** |  | [optional] |
 | **noDataReason** | **String** |  | [optional] |
 | **schedule** | [**WfmBuIntradayDataUpdateTopicBuScheduleReference**](WfmBuIntradayDataUpdateTopicBuScheduleReference) |  | [optional] |
@@ -17,4 +17,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

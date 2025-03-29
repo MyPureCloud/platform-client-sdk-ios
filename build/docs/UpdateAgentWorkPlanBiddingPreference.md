@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **submitted** | **Bool** | Whether the preference is submitted | |
-| **agentWorkPlanBidPreferences** | [**[AgentWorkPlanBiddingPreferenceRequest]**](AgentWorkPlanBiddingPreferenceRequest) | The list of work plan bidding preferences | |
+| **agentWorkPlanBidPreferences** | [**[AgentWorkPlanBiddingPreferenceRequest]**]([AgentWorkPlanBiddingPreferenceRequest]) | The list of work plan bidding preferences | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

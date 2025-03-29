@@ -12,7 +12,7 @@
 | **client** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **errorMessage** | **String** |  | [optional] |
 | **errorCode** | **String** |  | [optional] |
-| **errorDetails** | [**[Detail]**](Detail) |  | [optional] |
+| **errorDetails** | [**[Detail]**]([Detail]) |  | [optional] |
 | **errorMessageParams** | **[String:String]** |  | [optional] |
 | **actionName** | **String** | Action name | [optional] |
 | **actionStatus** | **String** | Action status | [optional] |
@@ -24,9 +24,9 @@
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[HistoryEntry]**](HistoryEntry) |  | [optional] |
+| **entities** | [**[HistoryEntry]**]([HistoryEntry]) |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

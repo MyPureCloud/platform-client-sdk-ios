@@ -102,6 +102,88 @@ open class AnalyticsAPI {
 
     
     
+    /**
+     Get an agent and their active sessions by user ID
+     
+     - parameter userId: (path) userId 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getAnalyticsAgentStatus(userId: String, completion: @escaping ((_ data: AnalyticsAgentStateAgentResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = getAnalyticsAgentStatusWithRequestBuilder(userId: userId)
+        requestBuilder.execute { (response: Response<AnalyticsAgentStateAgentResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get an agent and their active sessions by user ID
+     - GET /api/v2/analytics/agents/{userId}/status
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "sessions" : [ {
+    "sessionStart" : "2000-01-23T04:56:07.000+00:00",
+    "conversationId" : "conversationId",
+    "routedQueueId" : "routedQueueId",
+    "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+    "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+    "mediaType" : "callback",
+    "sessionId" : "sessionId",
+    "originatingDirection" : "inbound",
+    "requestedLanguageId" : "requestedLanguageId",
+    "segmentType" : "alert"
+  }, {
+    "sessionStart" : "2000-01-23T04:56:07.000+00:00",
+    "conversationId" : "conversationId",
+    "routedQueueId" : "routedQueueId",
+    "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+    "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+    "mediaType" : "callback",
+    "sessionId" : "sessionId",
+    "originatingDirection" : "inbound",
+    "requestedLanguageId" : "requestedLanguageId",
+    "segmentType" : "alert"
+  } ],
+  "sessionCount" : 0,
+  "divisionId" : "divisionId",
+  "managerId" : "managerId",
+  "userName" : "userName",
+  "userId" : "userId"
+}, statusCode=200}]
+     
+     - parameter userId: (path) userId 
+
+     - returns: RequestBuilder<AnalyticsAgentStateAgentResponse> 
+     */
+    open class func getAnalyticsAgentStatusWithRequestBuilder(userId: String) -> RequestBuilder<AnalyticsAgentStateAgentResponse> {        
+        var path = "/api/v2/analytics/agents/{userId}/status"
+        let userIdPreEscape = "\(userId)"
+        let userIdPostEscape = userIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{userId}", with: userIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsAgentStateAgentResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    
+    
     
     
     
@@ -7621,6 +7703,174 @@ open class AnalyticsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<AgentCopilotAggregateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Count agents by segment type
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsAgentsStatusCounts(body: AgentStateCountsRequest, completion: @escaping ((_ data: AnalyticsAgentStateCountsResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsAgentsStatusCountsWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AnalyticsAgentStateCountsResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Count agents by segment type
+     - POST /api/v2/analytics/agents/status/counts
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "segmentCounts" : [ {
+    "count" : 0,
+    "segmentType" : "alert"
+  }, {
+    "count" : 0,
+    "segmentType" : "alert"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<AnalyticsAgentStateCountsResponse> 
+     */
+    open class func postAnalyticsAgentsStatusCountsWithRequestBuilder(body: AgentStateCountsRequest) -> RequestBuilder<AnalyticsAgentStateCountsResponse> {        
+        let path = "/api/v2/analytics/agents/status/counts"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsAgentStateCountsResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Retrieve the top 50 agents matching the query filters
+     
+     - parameter body: (body) query 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postAnalyticsAgentsStatusQuery(body: AgentStateQueryRequest, completion: @escaping ((_ data: AnalyticsAgentStateQueryResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postAnalyticsAgentsStatusQueryWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<AnalyticsAgentStateQueryResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Retrieve the top 50 agents matching the query filters
+     - POST /api/v2/analytics/agents/status/query
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "entities" : [ {
+    "sessions" : [ {
+      "sessionStart" : "2000-01-23T04:56:07.000+00:00",
+      "conversationId" : "conversationId",
+      "routedQueueId" : "routedQueueId",
+      "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "originatingDirection" : "inbound",
+      "requestedLanguageId" : "requestedLanguageId",
+      "segmentType" : "alert"
+    }, {
+      "sessionStart" : "2000-01-23T04:56:07.000+00:00",
+      "conversationId" : "conversationId",
+      "routedQueueId" : "routedQueueId",
+      "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "originatingDirection" : "inbound",
+      "requestedLanguageId" : "requestedLanguageId",
+      "segmentType" : "alert"
+    } ],
+    "sessionCount" : 0,
+    "divisionId" : "divisionId",
+    "managerId" : "managerId",
+    "userName" : "userName",
+    "userId" : "userId"
+  }, {
+    "sessions" : [ {
+      "sessionStart" : "2000-01-23T04:56:07.000+00:00",
+      "conversationId" : "conversationId",
+      "routedQueueId" : "routedQueueId",
+      "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "originatingDirection" : "inbound",
+      "requestedLanguageId" : "requestedLanguageId",
+      "segmentType" : "alert"
+    }, {
+      "sessionStart" : "2000-01-23T04:56:07.000+00:00",
+      "conversationId" : "conversationId",
+      "routedQueueId" : "routedQueueId",
+      "segmentStart" : "2000-01-23T04:56:07.000+00:00",
+      "requestedRoutingSkillIds" : [ "requestedRoutingSkillIds", "requestedRoutingSkillIds" ],
+      "mediaType" : "callback",
+      "sessionId" : "sessionId",
+      "originatingDirection" : "inbound",
+      "requestedLanguageId" : "requestedLanguageId",
+      "segmentType" : "alert"
+    } ],
+    "sessionCount" : 0,
+    "divisionId" : "divisionId",
+    "managerId" : "managerId",
+    "userName" : "userName",
+    "userId" : "userId"
+  } ]
+}, statusCode=200}]
+     
+     - parameter body: (body) query 
+
+     - returns: RequestBuilder<AnalyticsAgentStateQueryResponse> 
+     */
+    open class func postAnalyticsAgentsStatusQueryWithRequestBuilder(body: AgentStateQueryRequest) -> RequestBuilder<AnalyticsAgentStateQueryResponse> {        
+        let path = "/api/v2/analytics/agents/status/query"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<AnalyticsAgentStateQueryResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
     }

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_operator** | **String** | Specifies how the predicates will be applied together. | |
-| **predicates** | [**[DocumentQueryPredicate]**](DocumentQueryPredicate) | To apply multiple conditions. Limit of 10 predicates across all clauses. | |
+| **predicates** | [**[DocumentQueryPredicate]**]([DocumentQueryPredicate]) | To apply multiple conditions. Limit of 10 predicates across all clauses. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

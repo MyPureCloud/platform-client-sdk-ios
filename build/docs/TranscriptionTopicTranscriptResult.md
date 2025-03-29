@@ -9,7 +9,7 @@
 | **utteranceId** | **String** |  | [optional] |
 | **isFinal** | **Bool** |  | [optional] |
 | **channel** | **String** |  | [optional] |
-| **alternatives** | [**[TranscriptionTopicTranscriptAlternative]**](TranscriptionTopicTranscriptAlternative) |  | [optional] |
+| **alternatives** | [**[TranscriptionTopicTranscriptAlternative]**]([TranscriptionTopicTranscriptAlternative]) |  | [optional] |
 | **agentAssistantId** | **String** |  | [optional] |
 | **engineProvider** | **String** |  | [optional] |
 | **engineId** | **String** |  | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

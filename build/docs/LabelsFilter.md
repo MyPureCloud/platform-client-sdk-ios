@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[LabelEntity]**](LabelEntity) | A list of labels to filter by. Articles matching any of the specified labels can be accessed. | |
+| **entities** | [**[LabelEntity]**]([LabelEntity]) | A list of labels to filter by. Articles matching any of the specified labels can be accessed. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

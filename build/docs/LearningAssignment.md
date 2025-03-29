@@ -22,7 +22,7 @@ Learning module assignment with user information
 | **isLatest** | **Bool** | True if the assignment is based on latest module | [optional] |
 | **assessmentCompletionPercentage** | **Float** | The assessment completion percentage of assignment | [optional] |
 | **completionPercentage** | **Float** | The overall completion percentage of assignment | [optional] |
-| **steps** | [**[LearningAssignmentStep]**](LearningAssignmentStep) | List of assignment steps | [optional] |
+| **steps** | [**[LearningAssignmentStep]**]([LearningAssignmentStep]) | List of assignment steps | [optional] |
 | **nextStep** | [**LearningAssignmentStep**](LearningAssignmentStep) | The next assignment step | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **state** | **String** | The Learning Assignment state | [optional] |
@@ -35,4 +35,4 @@ Learning module assignment with user information
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

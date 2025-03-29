@@ -173,6 +173,7 @@ open class GeneralDataProtectionRegulationAPI {
         case email = "EMAIL"
         case twitter = "TWITTER"
         case facebook = "FACEBOOK"
+        case instagram = "INSTAGRAM"
     }
     
     

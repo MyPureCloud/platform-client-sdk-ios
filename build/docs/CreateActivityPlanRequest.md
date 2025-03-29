@@ -23,8 +23,8 @@
 | **optimizationObjective** | **String** | The optimization objective of this activity plan | |
 | **state** | **String** | The state of this activity plan | |
 | **countsAsPaidTime** | **Bool** | Whether the activity should count as paid time | |
-| **fixedAvailability** | [**[FixedAvailability]**](FixedAvailability) | Fixed availability configuration for the activity plan | [optional] |
+| **fixedAvailability** | [**[FixedAvailability]**]([FixedAvailability]) | Fixed availability configuration for the activity plan | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

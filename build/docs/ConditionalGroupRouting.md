@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **rules** | [**[ConditionalGroupRoutingRule]**](ConditionalGroupRoutingRule) | The set of rules to be executed for each conversation | [optional] |
+| **rules** | [**[ConditionalGroupRoutingRule]**]([ConditionalGroupRoutingRule]) | The set of rules to be executed for each conversation | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

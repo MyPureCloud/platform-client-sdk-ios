@@ -11,6 +11,43 @@ import Foundation
 
 open class EmailsAPI {
     /**
+     Reset email threading settings to default
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func deleteEmailsSettingsThreading(completion: @escaping ((_ data: Void?,_ error: Error?) -> Void)) {
+        let requestBuilder = deleteEmailsSettingsThreadingWithRequestBuilder()
+        requestBuilder.execute { (response: Response<Void>?, error) -> Void in
+            if error == nil {
+                completion((), error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Reset email threading settings to default
+     - DELETE /api/v2/emails/settings/threading
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+
+     - returns: RequestBuilder<Void> 
+     */
+    open class func deleteEmailsSettingsThreadingWithRequestBuilder() -> RequestBuilder<Void> {        
+        let path = "/api/v2/emails/settings/threading"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<Void>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "DELETE", url: requestUrl!, body: body)
+    }
+
+    /**
      Get email Contact Center settings
      
      - parameter completion: completion handler to receive the data and the error objects
@@ -53,6 +90,54 @@ open class EmailsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmailSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
+    }
+
+    /**
+     Get email threading settings
+     
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func getEmailsSettingsThreading(completion: @escaping ((_ data: EmailThreadingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = getEmailsSettingsThreadingWithRequestBuilder()
+        requestBuilder.execute { (response: Response<EmailThreadingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Get email threading settings
+     - GET /api/v2/emails/settings/threading
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "startNewConversationOnSubjectChange" : true,
+  "timeoutInMinutes" : 0
+}, statusCode=200}]
+
+     - returns: RequestBuilder<EmailThreadingSettings> 
+     */
+    open class func getEmailsSettingsThreadingWithRequestBuilder() -> RequestBuilder<EmailThreadingSettings> {        
+        let path = "/api/v2/emails/settings/threading"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body: Data? = nil
+        
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailThreadingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "GET", url: requestUrl!, body: body)
     }
@@ -105,6 +190,59 @@ open class EmailsAPI {
         let requestUrl = URLComponents(string: URLString)
 
         let requestBuilder: RequestBuilder<EmailSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
+    }
+
+    
+    
+    /**
+     Patch email threading settings
+     
+     - parameter body: (body)  (optional)
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func patchEmailsSettingsThreading(body: EmailThreadingSettings? = nil, completion: @escaping ((_ data: EmailThreadingSettings?,_ error: Error?) -> Void)) {
+        let requestBuilder = patchEmailsSettingsThreadingWithRequestBuilder(body: body)
+        requestBuilder.execute { (response: Response<EmailThreadingSettings>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Patch email threading settings
+     - PATCH /api/v2/emails/settings/threading
+     - OAuth:
+       - type: oauth2
+       - name: PureCloud OAuth
+     - examples: [{contentType=application/json, example={
+  "startNewConversationOnSubjectChange" : true,
+  "timeoutInMinutes" : 0
+}, statusCode=200}]
+     
+     - parameter body: (body)  (optional)
+
+     - returns: RequestBuilder<EmailThreadingSettings> 
+     */
+    open class func patchEmailsSettingsThreadingWithRequestBuilder(body: EmailThreadingSettings? = nil) -> RequestBuilder<EmailThreadingSettings> {        
+        let path = "/api/v2/emails/settings/threading"
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<EmailThreadingSettings>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
 
         return requestBuilder.init(method: "PATCH", url: requestUrl!, body: body)
     }

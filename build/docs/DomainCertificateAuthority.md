@@ -22,9 +22,9 @@ A certificate authority represents an organization that has issued a digital cer
 | **certificate** | **String** | The authorities signed X509 PEM encoded certificate. | |
 | **type** | **String** | The certificate authorities type.  Managed certificate authorities are generated and maintained by Interactive Intelligence.  These are read-only and not modifiable by clients.  Remote authorities are customer managed. | |
 | **services** | **[String]** | The service(s) that the authority can be used to authenticate. | |
-| **certificateDetails** | [**[CertificateDetails]**](CertificateDetails) | The details of the parsed certificate(s). | [optional] |
+| **certificateDetails** | [**[CertificateDetails]**]([CertificateDetails]) | The details of the parsed certificate(s). | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **secondaryPresences** | [**[WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference]**](WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference) |  | [optional] |
+| **secondaryPresences** | [**[WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference]**]([WfmUserScheduleAdherenceUpdatedTeamTopicSecondaryPresenceReference]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

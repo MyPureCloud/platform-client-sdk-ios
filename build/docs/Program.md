@@ -10,7 +10,7 @@
 | **name** | **String** |  | [optional] |
 | **_description** | **String** |  | [optional] |
 | **published** | **Bool** |  | [optional] |
-| **topics** | [**[BaseTopicEntitiy]**](BaseTopicEntitiy) |  | [optional] |
+| **topics** | [**[BaseTopicEntitiy]**]([BaseTopicEntitiy]) |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
 | **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

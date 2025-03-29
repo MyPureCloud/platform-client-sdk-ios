@@ -13,8 +13,8 @@ Learning module preview get SCO structure
 | **completionStatus** | **String** | The completion status of this SCO | [optional] |
 | **percentageScore** | **Float** | Percentage Score | [optional] |
 | **shareableContentObject** | [**LearningShareableContentObject**](LearningShareableContentObject) | The SCO (Shareable Content Object) data | [optional] |
-| **children** | [**[LearningModulePreviewGetScoStructure]**](LearningModulePreviewGetScoStructure) | Child items belonging to this SCO in the course manifest | [optional] |
+| **children** | [**[LearningModulePreviewGetScoStructure]**]([LearningModulePreviewGetScoStructure]) | Child items belonging to this SCO in the course manifest | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

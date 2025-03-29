@@ -12,10 +12,10 @@
 | **heartBeatTimeoutInMinutes** | **Double** |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
-| **notificationUsers** | [**[KlaxonHeartBeatRulesTopicNotificationUser]**](KlaxonHeartBeatRulesTopicNotificationUser) |  | [optional] |
+| **notificationUsers** | [**[KlaxonHeartBeatRulesTopicNotificationUser]**]([KlaxonHeartBeatRulesTopicNotificationUser]) |  | [optional] |
 | **alertTypes** | **[String]** |  | [optional] |
 | **ruleType** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

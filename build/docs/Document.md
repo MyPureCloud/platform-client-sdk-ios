@@ -26,9 +26,9 @@
 | **callerAddress** | **String** |  | [optional] |
 | **receiverAddress** | **String** |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
-| **tagValues** | [**[TagValue]**](TagValue) |  | [optional] |
-| **attributes** | [**[DocumentAttribute]**](DocumentAttribute) |  | [optional] |
-| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail) |  | [optional] |
+| **tagValues** | [**[TagValue]**]([TagValue]) |  | [optional] |
+| **attributes** | [**[DocumentAttribute]**]([DocumentAttribute]) |  | [optional] |
+| **thumbnails** | [**[DocumentThumbnail]**]([DocumentThumbnail]) |  | [optional] |
 | **uploadStatus** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **uploadDestinationUri** | **String** |  | [optional] |
 | **uploadMethod** | **String** |  | [optional] |
@@ -40,4 +40,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TimeOffBalanceResponse]**](TimeOffBalanceResponse) |  | [optional] |
+| **entities** | [**[TimeOffBalanceResponse]**]([TimeOffBalanceResponse]) |  | [optional] |
 | **status** | **String** | The status of the time off balance job | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

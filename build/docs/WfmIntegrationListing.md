@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WfmIntegrationResponse]**](WfmIntegrationResponse) |  | [optional] |
+| **entities** | [**[WfmIntegrationResponse]**]([WfmIntegrationResponse]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

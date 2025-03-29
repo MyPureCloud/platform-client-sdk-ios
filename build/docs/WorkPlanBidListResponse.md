@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WorkPlanBid]**](WorkPlanBid) |  | [optional] |
+| **entities** | [**[WorkPlanBid]**]([WorkPlanBid]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

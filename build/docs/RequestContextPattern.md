@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **criteria** | [**[RequestEntityTypeCriteria]**](RequestEntityTypeCriteria) | A list of one or more criteria to satisfy. | |
+| **criteria** | [**[RequestEntityTypeCriteria]**]([RequestEntityTypeCriteria]) | A list of one or more criteria to satisfy. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

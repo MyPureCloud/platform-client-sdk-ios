@@ -10,7 +10,7 @@
 | **conversationId** | **String** | The identifier of the conversation. | |
 | **senderType** | **String** | The identifier of the external participant of the given conversation. | |
 | **fromAddress** | [**EmailAddress**](EmailAddress) | The sender of the message. | |
-| **toAddresses** | [**[EmailAddress]**](EmailAddress) | The recipient of the message. We currently support one recipient only. | |
+| **toAddresses** | [**[EmailAddress]**]([EmailAddress]) | The recipient of the message. We currently support one recipient only. | |
 | **replyToAddress** | [**EmailAddress**](EmailAddress) | The address to use for reply. | [optional] |
 | **subject** | **String** | The subject of the message. | [optional] |
 | **dateCreated** | [**Date**](Date) | The message creation timestamp. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
@@ -18,4 +18,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

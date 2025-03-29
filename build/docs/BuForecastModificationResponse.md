@@ -12,8 +12,8 @@
 | **metric** | **String** | The metric to which this modification applies | |
 | **legacyMetric** | **String** | The legacy metric to which this modification applies if applicable | [optional] |
 | **value** | **Double** | The value of the modification | [optional] |
-| **values** | [**[WfmForecastModificationIntervalOffsetValue]**](WfmForecastModificationIntervalOffsetValue) | The list of modification values. Only applicable for grid-type modifications | |
-| **secondaryValues** | [**[WfmForecastModificationIntervalOffsetValue]**](WfmForecastModificationIntervalOffsetValue) | The list of modification secondary values. Only applicable for multi granularity modifications | [optional] |
+| **values** | [**[WfmForecastModificationIntervalOffsetValue]**]([WfmForecastModificationIntervalOffsetValue]) | The list of modification values. Only applicable for grid-type modifications | |
+| **secondaryValues** | [**[WfmForecastModificationIntervalOffsetValue]**]([WfmForecastModificationIntervalOffsetValue]) | The list of modification secondary values. Only applicable for multi granularity modifications | [optional] |
 | **displayGranularity** | **String** | The client side display granularity of the modification, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H | |
 | **granularity** | **String** | The actual granularity of the modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H | |
 | **secondaryGranularity** | **String** | The granularity of the &#39;secondaryValues&#39; modification as stored behind the scenes, expressed in the ISO-8601 duration format. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H | [optional] |
@@ -22,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

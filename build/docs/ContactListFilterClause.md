@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **filterType** | **String** | How to join predicates together. | [optional] |
-| **predicates** | [**[ContactListFilterPredicate]**](ContactListFilterPredicate) | Conditions to filter the contacts by. | [optional] |
+| **predicates** | [**[ContactListFilterPredicate]**]([ContactListFilterPredicate]) | Conditions to filter the contacts by. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

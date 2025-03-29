@@ -11,8 +11,8 @@ Model for a Nuance bot transfer node
 | **name** | **String** | The transfer node name | |
 | **type** | **String** | The transfer node type | |
 | **_description** | **String** | The transfer node description | [optional] |
-| **requestVariables** | [**[NuanceBotVariable]**](NuanceBotVariable) | List of variables associated with this transfer node | [optional] |
+| **requestVariables** | [**[NuanceBotVariable]**]([NuanceBotVariable]) | List of variables associated with this transfer node | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

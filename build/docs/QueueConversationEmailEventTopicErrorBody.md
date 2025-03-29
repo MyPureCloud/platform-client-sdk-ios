@@ -14,10 +14,10 @@
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[QueueConversationEmailEventTopicDetail]**](QueueConversationEmailEventTopicDetail) |  | [optional] |
-| **errors** | [**[QueueConversationEmailEventTopicErrorBody]**](QueueConversationEmailEventTopicErrorBody) |  | [optional] |
+| **details** | [**[QueueConversationEmailEventTopicDetail]**]([QueueConversationEmailEventTopicDetail]) |  | [optional] |
+| **errors** | [**[QueueConversationEmailEventTopicErrorBody]**]([QueueConversationEmailEventTopicErrorBody]) |  | [optional] |
 | **limit** | [**QueueConversationEmailEventTopicLimit**](QueueConversationEmailEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

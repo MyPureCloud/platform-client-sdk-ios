@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **title** | **String** | Text to show in the title. | [optional] |
 | **subtitle** | **String** | Text to show in the description. | [optional] |
-| **datePickerAvailableDateTimes** | [**[DatePickerAvailableDateTime]**](DatePickerAvailableDateTime) | An array of available times objects. | |
+| **datePickerAvailableDateTimes** | [**[DatePickerAvailableDateTime]**]([DatePickerAvailableDateTime]) | An array of available times objects. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

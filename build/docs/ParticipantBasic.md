@@ -39,23 +39,23 @@
 | **monitoredParticipantId** | **String** | If this participant is a monitor, then this will be the id of the participant that is being monitored. | [optional] |
 | **coachedParticipantId** | **String** | If this participant is a coach, then this will be the id of the participant that is being coached. | [optional] |
 | **attributes** | **[String:String]** | Additional participant attributes | [optional] |
-| **calls** | [**[CallBasic]**](CallBasic) |  | [optional] |
-| **callbacks** | [**[CallbackBasic]**](CallbackBasic) |  | [optional] |
-| **chats** | [**[ConversationChat]**](ConversationChat) |  | [optional] |
-| **cobrowsesessions** | [**[Cobrowsesession]**](Cobrowsesession) |  | [optional] |
-| **emails** | [**[Email]**](Email) |  | [optional] |
-| **messages** | [**[Message]**](Message) |  | [optional] |
-| **screenshares** | [**[Screenshare]**](Screenshare) |  | [optional] |
-| **socialExpressions** | [**[SocialExpression]**](SocialExpression) |  | [optional] |
-| **videos** | [**[Video]**](Video) |  | [optional] |
-| **evaluations** | [**[Evaluation]**](Evaluation) |  | [optional] |
+| **calls** | [**[CallBasic]**]([CallBasic]) |  | [optional] |
+| **callbacks** | [**[CallbackBasic]**]([CallbackBasic]) |  | [optional] |
+| **chats** | [**[ConversationChat]**]([ConversationChat]) |  | [optional] |
+| **cobrowsesessions** | [**[Cobrowsesession]**]([Cobrowsesession]) |  | [optional] |
+| **emails** | [**[Email]**]([Email]) |  | [optional] |
+| **messages** | [**[Message]**]([Message]) |  | [optional] |
+| **screenshares** | [**[Screenshare]**]([Screenshare]) |  | [optional] |
+| **socialExpressions** | [**[SocialExpression]**]([SocialExpression]) |  | [optional] |
+| **videos** | [**[Video]**]([Video]) |  | [optional] |
+| **evaluations** | [**[Evaluation]**]([Evaluation]) |  | [optional] |
 | **screenRecordingState** | **String** | The current screen recording state for this participant. | [optional] |
 | **flaggedReason** | **String** | The reason specifying why participant flagged the conversation. | [optional] |
 | **startAcwTime** | [**Date**](Date) | The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **endAcwTime** | [**Date**](Date) | The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **internalMessages** | [**[InternalMessage]**](InternalMessage) |  | [optional] |
+| **internalMessages** | [**[InternalMessage]**]([InternalMessage]) |  | [optional] |
 | **bargedParticipantId** | **String** | If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

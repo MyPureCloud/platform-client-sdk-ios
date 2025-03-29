@@ -16,8 +16,8 @@ Describes an operation being performed on an Architect object
 | **errorMessage** | **String** | The error message, if the action failed | [optional] |
 | **errorCode** | **String** | The error code, if the action failed | [optional] |
 | **errorMessageParams** | [**ArchitectPromptNotificationErrorMessageParams**](ArchitectPromptNotificationErrorMessageParams) |  | [optional] |
-| **errorDetails** | [**[ArchitectPromptNotificationErrorDetail]**](ArchitectPromptNotificationErrorDetail) | The error details, if the action failed | [optional] |
+| **errorDetails** | [**[ArchitectPromptNotificationErrorDetail]**]([ArchitectPromptNotificationErrorDetail]) | The error details, if the action failed | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

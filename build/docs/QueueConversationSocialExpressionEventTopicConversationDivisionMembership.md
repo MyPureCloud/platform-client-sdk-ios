@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **division** | [**QueueConversationSocialExpressionEventTopicDomainEntityRef**](QueueConversationSocialExpressionEventTopicDomainEntityRef) |  | [optional] |
-| **entities** | [**[QueueConversationSocialExpressionEventTopicDivisionEntityRef]**](QueueConversationSocialExpressionEventTopicDivisionEntityRef) |  | [optional] |
+| **entities** | [**[QueueConversationSocialExpressionEventTopicDivisionEntityRef]**]([QueueConversationSocialExpressionEventTopicDivisionEntityRef]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

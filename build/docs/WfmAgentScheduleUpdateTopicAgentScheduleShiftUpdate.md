@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
-| **shiftStartDates** | [**[Date]**](Date) |  | [optional] |
+| **shiftStartDates** | [**[Date]**]([Date]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

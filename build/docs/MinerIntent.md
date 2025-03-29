@@ -9,10 +9,10 @@
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | Intent name. | [optional] |
 | **miner** | [**Miner**](Miner) | The miner to which the intent belongs. | [optional] |
-| **utterances** | [**[Utterance]**](Utterance) | The utterances that are extracted for an Intent. | [optional] |
+| **utterances** | [**[Utterance]**]([Utterance]) | The utterances that are extracted for an Intent. | [optional] |
 | **analyticVolumePercent** | **Double** | Percentage of conversations belonging to the intent. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

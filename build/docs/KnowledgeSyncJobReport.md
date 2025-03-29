@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **errors** | [**[ErrorBody]**](ErrorBody) | List of errors occurred during processing sync. | [optional] |
+| **errors** | [**[ErrorBody]**]([ErrorBody]) | List of errors occurred during processing sync. | [optional] |
 | **statistics** | [**KnowledgeSyncJobStatistics**](KnowledgeSyncJobStatistics) | Statistics related to the sync job. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

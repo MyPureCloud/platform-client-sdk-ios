@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **businessUnit** | [**BusinessUnitReference**](BusinessUnitReference) | The business unit to which the bids belong | [optional] |
-| **agentWorkPlanBids** | [**[AgentWorkPlanBid]**](AgentWorkPlanBid) | Work plan bid summaries associated with this agent | |
+| **agentWorkPlanBids** | [**[AgentWorkPlanBid]**]([AgentWorkPlanBid]) | Work plan bid summaries associated with this agent | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

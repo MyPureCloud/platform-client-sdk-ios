@@ -8,9 +8,9 @@ Metadata information about a message.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Message type. | [optional] |
-| **events** | [**[ConversationMessageMetadataEvent]**](ConversationMessageMetadataEvent) | List of events metadata | [optional] |
-| **content** | [**[ConversationMessageMetadataContent]**](ConversationMessageMetadataContent) | List of message content | [optional] |
+| **events** | [**[ConversationMessageMetadataEvent]**]([ConversationMessageMetadataEvent]) | List of events metadata | [optional] |
+| **content** | [**[ConversationMessageMetadataContent]**]([ConversationMessageMetadataContent]) | List of message content | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

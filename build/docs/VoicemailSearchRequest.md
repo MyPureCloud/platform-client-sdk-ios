@@ -10,10 +10,10 @@
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
 | **pageSize** | **Int** | The number of results per page | [optional] |
 | **pageNumber** | **Int** | The page of resources you want to retrieve | [optional] |
-| **sort** | [**[SearchSort]**](SearchSort) | Multi-value sort order, list of multiple sort values | [optional] |
+| **sort** | [**[SearchSort]**]([SearchSort]) | Multi-value sort order, list of multiple sort values | [optional] |
 | **expand** | **[String]** | Provides more details about a specified resource | [optional] |
-| **query** | [**[VoicemailSearchCriteria]**](VoicemailSearchCriteria) |  | [optional] |
+| **query** | [**[VoicemailSearchCriteria]**]([VoicemailSearchCriteria]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

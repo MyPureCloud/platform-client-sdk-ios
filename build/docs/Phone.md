@@ -22,7 +22,7 @@
 | **phoneBaseSettings** | [**PhoneBaseSettings**](PhoneBaseSettings) | Phone Base Settings | |
 | **lineBaseSettings** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **phoneMetaBase** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
-| **lines** | [**[Line]**](Line) | Lines | |
+| **lines** | [**[Line]**]([Line]) | Lines | |
 | **status** | [**PhoneStatus**](PhoneStatus) | The status of the phone and lines from the primary Edge. | [optional] |
 | **secondaryStatus** | [**PhoneStatus**](PhoneStatus) | The status of the phone and lines from the secondary Edge. | [optional] |
 | **userAgentInfo** | [**UserAgentInfo**](UserAgentInfo) | User Agent Information for this phone. This includes model, firmware version, and manufacturer. | [optional] |
@@ -35,4 +35,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

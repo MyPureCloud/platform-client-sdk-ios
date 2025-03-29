@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **isActive** | **Bool** | If true, rule is active | |
-| **parts** | [**[LearningModuleRuleParts]**](LearningModuleRuleParts) | The parts of a learning module rule | |
+| **parts** | [**[LearningModuleRuleParts]**]([LearningModuleRuleParts]) | The parts of a learning module rule | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

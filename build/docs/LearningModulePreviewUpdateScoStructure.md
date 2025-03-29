@@ -12,8 +12,8 @@ Learning module preview update SCO structure
 | **successStatus** | **String** | The success status of this SCO | [optional] |
 | **completionStatus** | **String** | The completion status of this SCO | [optional] |
 | **percentageScore** | **Float** | Percentage Score | [optional] |
-| **children** | [**[LearningModulePreviewUpdateScoStructure]**](LearningModulePreviewUpdateScoStructure) | Child items belonging to this SCO in the course manifest | [optional] |
+| **children** | [**[LearningModulePreviewUpdateScoStructure]**]([LearningModulePreviewUpdateScoStructure]) | Child items belonging to this SCO in the course manifest | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

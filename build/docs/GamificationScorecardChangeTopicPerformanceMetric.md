@@ -9,9 +9,9 @@
 | **metric** | [**GamificationScorecardChangeTopicMetric**](GamificationScorecardChangeTopicMetric) |  | [optional] |
 | **points** | **Int** |  | [optional] |
 | **value** | **Double** |  | [optional] |
-| **punctualityEvents** | [**[GamificationScorecardChangeTopicPunctualityEvent]**](GamificationScorecardChangeTopicPunctualityEvent) |  | [optional] |
-| **evaluationDetails** | [**[GamificationScorecardChangeTopicEvaluationDetail]**](GamificationScorecardChangeTopicEvaluationDetail) |  | [optional] |
+| **punctualityEvents** | [**[GamificationScorecardChangeTopicPunctualityEvent]**]([GamificationScorecardChangeTopicPunctualityEvent]) |  | [optional] |
+| **evaluationDetails** | [**[GamificationScorecardChangeTopicEvaluationDetail]**]([GamificationScorecardChangeTopicEvaluationDetail]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -15,9 +15,9 @@
 | **country** | **String** |  | [optional] |
 | **region** | **String** |  | [optional] |
 | **city** | **String** |  | [optional] |
-| **locations** | [**[LocationDefinition]**](LocationDefinition) |  | [optional] |
+| **locations** | [**[LocationDefinition]**]([LocationDefinition]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

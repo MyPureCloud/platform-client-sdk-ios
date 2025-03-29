@@ -10,7 +10,7 @@ Learning module request
 | **name** | **String** | The name of learning module | |
 | **_description** | **String** | The description of learning module | [optional] |
 | **completionTimeInDays** | **Int** | The completion time of learning module in days | |
-| **informSteps** | [**[LearningModuleInformStepRequest]**](LearningModuleInformStepRequest) | The list of inform steps in a learning module | [optional] |
+| **informSteps** | [**[LearningModuleInformStepRequest]**]([LearningModuleInformStepRequest]) | The list of inform steps in a learning module | [optional] |
 | **type** | **String** | The type for the learning module. Informational, AssessedContent and Assessment are deprecated | [optional] |
 | **assessmentForm** | [**AssessmentForm**](AssessmentForm) | The assessment form for learning module | [optional] |
 | **coverArt** | [**LearningModuleCoverArtRequest**](LearningModuleCoverArtRequest) | The cover art for the learning module | [optional] |
@@ -22,4 +22,4 @@ Learning module request
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

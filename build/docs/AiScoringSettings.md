@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **questionGroupSettings** | [**[QuestionGroupSettings]**](QuestionGroupSettings) |  | [optional] |
+| **questionGroupSettings** | [**[QuestionGroupSettings]**]([QuestionGroupSettings]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

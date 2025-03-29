@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agentWorkPlanOverrides** | [**[AgentBidWorkPlanOverrideRequest]**](AgentBidWorkPlanOverrideRequest) | The list of agent work plan overrides | |
+| **agentWorkPlanOverrides** | [**[AgentBidWorkPlanOverrideRequest]**]([AgentBidWorkPlanOverrideRequest]) | The list of agent work plan overrides | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

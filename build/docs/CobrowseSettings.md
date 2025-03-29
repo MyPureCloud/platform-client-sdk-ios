@@ -14,8 +14,8 @@ Settings concerning cobrowse
 | **maskSelectors** | **[String]** | Mask patterns that will apply to pages being shared | [optional] |
 | **channels** | **[String]** | Cobrowse channels for web messenger | [optional] |
 | **readonlySelectors** | **[String]** | Readonly patterns that will apply to pages being shared | [optional] |
-| **pauseCriteria** | [**[PauseCriteria]**](PauseCriteria) | Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL | [optional] |
+| **pauseCriteria** | [**[PauseCriteria]**]([PauseCriteria]) | Pause criteria that will pause cobrowse if some of them are met in the user&#39;s URL | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

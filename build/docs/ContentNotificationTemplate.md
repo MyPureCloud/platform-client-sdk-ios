@@ -11,9 +11,9 @@ Template notification object.
 | **language** | **String** | Template language. | [optional] |
 | **header** | [**NotificationTemplateHeader**](NotificationTemplateHeader) | The template header. | [optional] |
 | **body** | [**NotificationTemplateBody**](NotificationTemplateBody) | The template body. | |
-| **buttons** | [**[NotificationTemplateButton]**](NotificationTemplateButton) | Template buttons | [optional] |
+| **buttons** | [**[NotificationTemplateButton]**]([NotificationTemplateButton]) | Template buttons | [optional] |
 | **footer** | [**NotificationTemplateFooter**](NotificationTemplateFooter) | The template footer. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

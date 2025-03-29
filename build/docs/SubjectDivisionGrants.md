@@ -8,10 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **divisions** | [**[Division]**](Division) |  | [optional] |
+| **divisions** | [**[Division]**]([Division]) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

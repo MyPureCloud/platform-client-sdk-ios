@@ -804,6 +804,7 @@ open class SpeechTextAnalyticsAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "generated" : true,
     "summaryType" : "Conversation",
+    "mediaType" : "Unknown",
     "language" : "language"
   }, {
     "summary" : "summary",
@@ -811,6 +812,7 @@ open class SpeechTextAnalyticsAPI {
     "dateCreated" : "2000-01-23T04:56:07.000+00:00",
     "generated" : true,
     "summaryType" : "Conversation",
+    "mediaType" : "Unknown",
     "language" : "language"
   } ]
 }, statusCode=200}]

@@ -9,8 +9,8 @@
 | **routingSkill** | **String** | The routing skill to be used in the skill condition query | |
 | **comparator** | **String** | Comparator that will be applied to the proficiency | |
 | **proficiency** | **Int** | The skill proficiency that will be used for the routing skill. Integer range 0-5 | |
-| **childConditions** | [**[SkillGroupCondition]**](SkillGroupCondition) | Nested conditions to be applied to this skill condition | [optional] |
+| **childConditions** | [**[SkillGroupCondition]**]([SkillGroupCondition]) | Nested conditions to be applied to this skill condition | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

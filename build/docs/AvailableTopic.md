@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **_description** | **String** |  | [optional] |
 | **_id** | **String** |  | [optional] |
-| **permissionDetails** | [**[PermissionDetails]**](PermissionDetails) | Full detailed permissions required to subscribe to the topic | [optional] |
+| **permissionDetails** | [**[PermissionDetails]**]([PermissionDetails]) | Full detailed permissions required to subscribe to the topic | [optional] |
 | **requiresPermissions** | **[String]** | Permissions required to subscribe to the topic | [optional] |
 | **requiresDivisionPermissions** | **Bool** | True if the subscribing user must belong to the same division as the topic object ID | [optional] |
 | **requiresAnyValidator** | **Bool** | If multiple permissions are required for this topic, such as both requiresCurrentUser and requiresDivisionPermissions, then true here indicates that meeting any one condition will satisfy the requirements; false indicates all conditions must be met. | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -88,9 +88,9 @@
 | **videoPresent** | **Bool** | Flag indicating if video is present | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **wrapUpCode** | **String** | Wrap up code | [optional] |
-| **proposedAgents** | [**[ConversationMetricsTopicConversationProposedAgent]**](ConversationMetricsTopicConversationProposedAgent) | Proposed agents | [optional] |
-| **scoredAgents** | [**[ConversationMetricsTopicConversationScoredAgent]**](ConversationMetricsTopicConversationScoredAgent) | Scored agents | [optional] |
+| **proposedAgents** | [**[ConversationMetricsTopicConversationProposedAgent]**]([ConversationMetricsTopicConversationProposedAgent]) | Proposed agents | [optional] |
+| **scoredAgents** | [**[ConversationMetricsTopicConversationScoredAgent]**]([ConversationMetricsTopicConversationScoredAgent]) | Scored agents | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

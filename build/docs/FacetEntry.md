@@ -13,8 +13,8 @@
 | **missing** | **Int64** |  | [optional] |
 | **termCount** | **Int** |  | [optional] |
 | **termType** | **String** |  | [optional] |
-| **terms** | [**[FacetTerm]**](FacetTerm) |  | [optional] |
+| **terms** | [**[FacetTerm]**]([FacetTerm]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

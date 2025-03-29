@@ -7,13 +7,13 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mediaType** | **String** |  | [optional] |
-| **forecastDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayForecastData]**](WfmIntradayDataUpdateTopicIntradayForecastData) |  | [optional] |
-| **scheduleDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayScheduleData]**](WfmIntradayDataUpdateTopicIntradayScheduleData) |  | [optional] |
-| **historicalAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalAgentData]**](WfmIntradayDataUpdateTopicIntradayHistoricalAgentData) |  | [optional] |
-| **historicalQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalQueueData]**](WfmIntradayDataUpdateTopicIntradayHistoricalQueueData) |  | [optional] |
-| **performancePredictionAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData]**](WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData) |  | [optional] |
-| **performancePredictionQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]**](WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData) |  | [optional] |
+| **forecastDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayForecastData]**]([WfmIntradayDataUpdateTopicIntradayForecastData]) |  | [optional] |
+| **scheduleDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayScheduleData]**]([WfmIntradayDataUpdateTopicIntradayScheduleData]) |  | [optional] |
+| **historicalAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalAgentData]**]([WfmIntradayDataUpdateTopicIntradayHistoricalAgentData]) |  | [optional] |
+| **historicalQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayHistoricalQueueData]**]([WfmIntradayDataUpdateTopicIntradayHistoricalQueueData]) |  | [optional] |
+| **performancePredictionAgentDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData]**]([WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData]) |  | [optional] |
+| **performancePredictionQueueDataPerInterval** | [**[WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]**]([WfmIntradayDataUpdateTopicIntradayPerformancePredictionQueueData]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

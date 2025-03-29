@@ -7143,6 +7143,62 @@ open class IntegrationsAPI {
     
     
     /**
+     Invoke Webhook
+     
+     - parameter tokenId: (path) The token of the webhook to be invoked 
+     - parameter body: (body) Webhook Invocation Payload 
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    open class func postIntegrationsWebhookEvents(tokenId: String, body: [String:JSON], completion: @escaping ((_ data: WebhookInvocationResponse?,_ error: Error?) -> Void)) {
+        let requestBuilder = postIntegrationsWebhookEventsWithRequestBuilder(tokenId: tokenId, body: body)
+        requestBuilder.execute { (response: Response<WebhookInvocationResponse>?, error) -> Void in
+            do {
+                if let e = error {
+                    completion(nil, e)
+                } else if let r = response {
+                    try requestBuilder.decode(r)
+                    completion(response?.body, error)
+                } else {
+                    completion(nil, error)
+                }
+            } catch {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Invoke Webhook
+     - POST /api/v2/integrations/webhooks/{tokenId}/events
+     - examples: [{contentType=application/json, example={
+  "invocationId" : "invocationId"
+}, statusCode=200}]
+     
+     - parameter tokenId: (path) The token of the webhook to be invoked 
+     - parameter body: (body) Webhook Invocation Payload 
+
+     - returns: RequestBuilder<WebhookInvocationResponse> 
+     */
+    open class func postIntegrationsWebhookEventsWithRequestBuilder(tokenId: String, body: [String:JSON]) -> RequestBuilder<WebhookInvocationResponse> {        
+        var path = "/api/v2/integrations/webhooks/{tokenId}/events"
+        let tokenIdPreEscape = "\(tokenId)"
+        let tokenIdPostEscape = tokenIdPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        path = path.replacingOccurrences(of: "{tokenId}", with: tokenIdPostEscape, options: .literal, range: nil)
+        let URLString = PureCloudPlatformClientV2API.basePath + path
+        let body = JSONEncodingHelper.encodingParameters(forEncodableObject: body)
+
+        let requestUrl = URLComponents(string: URLString)
+
+        let requestBuilder: RequestBuilder<WebhookInvocationResponse>.Type = PureCloudPlatformClientV2API.requestBuilderFactory.getBuilder()
+
+        return requestBuilder.init(method: "POST", url: requestUrl!, body: body)
+    }
+
+    
+    
+    
+    
+    /**
      Update integration configuration.
      
      - parameter integrationId: (path) Integration Id 

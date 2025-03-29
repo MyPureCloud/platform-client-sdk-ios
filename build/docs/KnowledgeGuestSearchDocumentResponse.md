@@ -9,7 +9,7 @@
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **title** | **String** | Document title, having a limit of 500 words. | [optional] |
 | **visible** | **Bool** | Indicates if the knowledge document should be included in search results. | [optional] |
-| **alternatives** | [**[KnowledgeDocumentAlternative]**](KnowledgeDocumentAlternative) | List of alternate phrases related to the title which improves search results. | [optional] |
+| **alternatives** | [**[KnowledgeDocumentAlternative]**]([KnowledgeDocumentAlternative]) | List of alternate phrases related to the title which improves search results. | [optional] |
 | **state** | **String** | State of the document. | [optional] |
 | **dateCreated** | [**Date**](Date) | Document creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateModified** | [**Date**](Date) | Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -21,10 +21,10 @@
 | **documentVersion** | [**AddressableEntityRef**](AddressableEntityRef) | The version of the document. | [optional] |
 | **sessionId** | **String** | ID of the guest session. | [optional] |
 | **category** | [**GuestCategoryReference**](GuestCategoryReference) | The reference to category associated with the document. | [optional] |
-| **variations** | [**[KnowledgeGuestDocumentVariationAnswer]**](KnowledgeGuestDocumentVariationAnswer) | Variations of the document. | [optional] |
+| **variations** | [**[KnowledgeGuestDocumentVariationAnswer]**]([KnowledgeGuestDocumentVariationAnswer]) | Variations of the document. | [optional] |
 | **answer** | **String** | The answer to the query. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

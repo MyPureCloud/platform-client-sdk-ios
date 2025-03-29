@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the attribute to filter. | |
 | **_operator** | **String** | Query filter logical operator to join criteria. | [optional] |
-| **criteria** | [**[WorkitemQueryJobQueryFiltersCriteria]**](WorkitemQueryJobQueryFiltersCriteria) | Query filter criteria. | |
+| **criteria** | [**[WorkitemQueryJobQueryFiltersCriteria]**]([WorkitemQueryJobQueryFiltersCriteria]) | Query filter criteria. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

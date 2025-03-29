@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **agentSchedules** | [**[BuAgentScheduleRescheduleResponse]**](BuAgentScheduleRescheduleResponse) | The list of agent schedules | [optional] |
+| **agentSchedules** | [**[BuAgentScheduleRescheduleResponse]**]([BuAgentScheduleRescheduleResponse]) | The list of agent schedules | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -18,11 +18,11 @@
 | **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **provider** | **String** | The source provider for the screen share. | [optional] |
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
-| **segments** | [**[Segment]**](Segment) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
+| **segments** | [**[Segment]**]([Segment]) | The time line of the participant&#39;s call, divided into activity segments. | [optional] |
 | **wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
 | **afterCallWorkRequired** | **Bool** | Indicates if after-call work is required for a communication. Only used when the ACW Setting is Agent Requested. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

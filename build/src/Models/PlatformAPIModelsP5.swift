@@ -1614,6 +1614,48 @@ public class AnalyticsAgentGroup: Codable {
 
 
 
+public class AnalyticsAgentStateAgentResponse: Codable {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /** User Id - only returned if division is covered by agentStateNames permission */
+    public var userId: String?
+    /** Division Id */
+    public var divisionId: String?
+    /** User name - only returned if division is covered by agentStateNames permission */
+    public var userName: String?
+    /** The user that this user reports to */
+    public var managerId: String?
+    /** The count of sessions */
+    public var sessionCount: Int?
+    /** List of sessions */
+    public var sessions: [AnalyticsAgentStateAgentSessionResult]?
+
+    public init(userId: String?, divisionId: String?, userName: String?, managerId: String?, sessionCount: Int?, sessions: [AnalyticsAgentStateAgentSessionResult]?) {
+        self.userId = userId
+        self.divisionId = divisionId
+        self.userName = userName
+        self.managerId = managerId
+        self.sessionCount = sessionCount
+        self.sessions = sessions
+    }
+
+
+}
+
+
+
+
 public class AnalyticsConversation: Codable {
 
 
@@ -4015,6 +4057,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case approve = "Approve"
         case reject = "Reject"
         case reverse = "Reverse"
+        case send = "Send"
         case hardDelete = "HardDelete"
         case softDelete = "SoftDelete"
         case submit = "Submit"
@@ -4224,6 +4267,7 @@ public class AuditTopicAuditLogMessage: Codable {
         case location = "Location"
         case conversation = "Conversation"
         case organizationSuspension = "OrganizationSuspension"
+        case operationalEvent = "OperationalEvent"
         case participant = "Participant"
         case contactSchema = "ContactSchema"
         case externalOrganizationSchema = "ExternalOrganizationSchema"
@@ -4241,8 +4285,6 @@ public class AuditTopicAuditLogMessage: Codable {
         case outboundDomain = "OutboundDomain"
         case inboundRoute = "InboundRoute"
         case organizationLimits = "OrganizationLimits"
-        case userSkill = "UserSkill"
-        case userLanguage = "UserLanguage"
         case composerPage = "ComposerPage"
         case composerPublishedScript = "ComposerPublishedScript"
         case composerScript = "ComposerScript"
@@ -5834,6 +5876,22 @@ public class BulkFetchNotesResponse: Codable {
 
 
 
+public class BulkIdsRequest: Codable {
+
+
+
+    public var entities: [ExternalContactsEntity]?
+
+    public init(entities: [ExternalContactsEntity]?) {
+        self.entities = entities
+    }
+
+
+}
+
+
+
+
 public class BulkFetchRelationshipsResponse: Codable {
 
 
@@ -5853,22 +5911,6 @@ public class BulkFetchRelationshipsResponse: Codable {
         self.results = results
         self.errorCount = errorCount
         self.errorIndexes = errorIndexes
-    }
-
-
-}
-
-
-
-
-public class BulkIdsRequest: Codable {
-
-
-
-    public var entities: [ExternalContactsEntity]?
-
-    public init(entities: [ExternalContactsEntity]?) {
-        self.entities = entities
     }
 
 
@@ -6592,6 +6634,8 @@ public class CallMediaParticipant: Codable {
 
 
 
+
+
     public enum FlaggedReason: String, Codable { 
         case general = "general"
     }
@@ -6698,6 +6742,8 @@ public class CallMediaParticipant: Codable {
     public var provider: String?
     /** If this participant represents an external contact, then this will be the reference for the external contact. */
     public var externalContact: DomainEntityRef?
+    /** If this participant represents an external contact, then this will be the initial division for the external contact. This value will not be updated if the external contact is reassigned. */
+    public var externalContactInitialDivisionId: String?
     /** If this participant represents an external org, then this will be the reference for the external org. */
     public var externalOrganization: DomainEntityRef?
     /** Wrapup for this participant, if it has been applied. */
@@ -6753,7 +6799,7 @@ public class CallMediaParticipant: Codable {
     /** Call resolution data for Dialer bulk make calls commands. */
     public var disposition: Disposition?
 
-    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, parkTime: Date?, resumeTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, consultParticipantId: String?, uuiData: String?, bargedTime: Date?, securePause: Bool?, disposition: Disposition?) {
+    public init(_id: String?, name: String?, address: String?, startTime: Date?, connectedTime: Date?, endTime: Date?, startHoldTime: Date?, purpose: String?, state: State?, direction: Direction?, disconnectType: DisconnectType?, held: Bool?, wrapupRequired: Bool?, wrapupPrompt: String?, mediaRoles: [String]?, user: DomainEntityRef?, queue: DomainEntityRef?, team: DomainEntityRef?, attributes: [String:String]?, errorInfo: ErrorInfo?, script: DomainEntityRef?, wrapupTimeoutMs: Int?, wrapupSkipped: Bool?, alertingTimeoutMs: Int?, provider: String?, externalContact: DomainEntityRef?, externalContactInitialDivisionId: String?, externalOrganization: DomainEntityRef?, wrapup: Wrapup?, peer: String?, flaggedReason: FlaggedReason?, journeyContext: JourneyContext?, conversationRoutingData: ConversationRoutingData?, startAcwTime: Date?, endAcwTime: Date?, parkTime: Date?, resumeTime: Date?, muted: Bool?, confined: Bool?, recording: Bool?, recordingState: RecordingState?, group: DomainEntityRef?, ani: String?, dnis: String?, documentId: String?, faxStatus: FaxStatus?, monitoredParticipantId: String?, coachedParticipantId: String?, bargedParticipantId: String?, consultParticipantId: String?, uuiData: String?, bargedTime: Date?, securePause: Bool?, disposition: Disposition?) {
         self._id = _id
         self.name = name
         self.address = address
@@ -6780,6 +6826,7 @@ public class CallMediaParticipant: Codable {
         self.alertingTimeoutMs = alertingTimeoutMs
         self.provider = provider
         self.externalContact = externalContact
+        self.externalContactInitialDivisionId = externalContactInitialDivisionId
         self.externalOrganization = externalOrganization
         self.wrapup = wrapup
         self.peer = peer
@@ -6836,6 +6883,7 @@ public class CallMediaParticipant: Codable {
         case alertingTimeoutMs
         case provider
         case externalContact
+        case externalContactInitialDivisionId
         case externalOrganization
         case wrapup
         case peer
@@ -7168,6 +7216,8 @@ public class CallbackConversation: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -7179,16 +7229,19 @@ public class CallbackConversation: Codable {
     public var recentTransfers: [TransferResponse]?
     /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
     public var utilizationLabelId: String?
+    /** Identifiers of divisions associated with this conversation. */
+    public var divisions: [ConversationDivisionMembership]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, participants: [CallbackMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, utilizationLabelId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, participants: [CallbackMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, utilizationLabelId: String?, divisions: [ConversationDivisionMembership]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.recentTransfers = recentTransfers
         self.utilizationLabelId = utilizationLabelId
+        self.divisions = divisions
         self.selfUri = selfUri
     }
 
@@ -7199,6 +7252,7 @@ public class CallbackConversation: Codable {
         case otherMediaUris
         case recentTransfers
         case utilizationLabelId
+        case divisions
         case selfUri
     }
 
@@ -7962,6 +8016,8 @@ public class CobrowseConversation: Codable {
 
 
 
+
+
     /** The globally unique identifier for the object. */
     public var _id: String?
     public var name: String?
@@ -7973,16 +8029,19 @@ public class CobrowseConversation: Codable {
     public var recentTransfers: [TransferResponse]?
     /** An optional label that categorizes the conversation.  Max-utilization settings can be configured at a per-label level */
     public var utilizationLabelId: String?
+    /** Identifiers of divisions associated with this conversation. */
+    public var divisions: [ConversationDivisionMembership]?
     /** The URI for this object */
     public var selfUri: String?
 
-    public init(_id: String?, name: String?, participants: [CobrowseMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, utilizationLabelId: String?, selfUri: String?) {
+    public init(_id: String?, name: String?, participants: [CobrowseMediaParticipant]?, otherMediaUris: [String]?, recentTransfers: [TransferResponse]?, utilizationLabelId: String?, divisions: [ConversationDivisionMembership]?, selfUri: String?) {
         self._id = _id
         self.name = name
         self.participants = participants
         self.otherMediaUris = otherMediaUris
         self.recentTransfers = recentTransfers
         self.utilizationLabelId = utilizationLabelId
+        self.divisions = divisions
         self.selfUri = selfUri
     }
 
@@ -7993,6 +8052,7 @@ public class CobrowseConversation: Codable {
         case otherMediaUris
         case recentTransfers
         case utilizationLabelId
+        case divisions
         case selfUri
     }
 
@@ -9122,6 +9182,44 @@ public class ContentCarousel: Codable {
 
     public init(cards: [ContentCard]?) {
         self.cards = cards
+    }
+
+
+}
+
+
+
+/** Location object. */
+
+public class ContentLocation: Codable {
+
+
+
+
+
+
+
+
+
+
+
+    /** URL of the Location. */
+    public var url: String?
+    /** Location postal address. */
+    public var address: String?
+    /** Location name. */
+    public var text: String?
+    /** Latitude of the location. */
+    public var latitude: Double?
+    /** Longitude of the location. */
+    public var longitude: Double?
+
+    public init(url: String?, address: String?, text: String?, latitude: Double?, longitude: Double?) {
+        self.url = url
+        self.address = address
+        self.text = text
+        self.latitude = latitude
+        self.longitude = longitude
     }
 
 
@@ -11442,23 +11540,29 @@ public class ConversationInsight: Codable {
 
 
 
+
+
     /** The type of insight */
     public var type: ModelType?
     /** The reason for contact, resolution for the interaction, or follow-up action item */
     public var title: String?
     /** Reasoning for the given insight */
     public var _description: String?
+    /** The outcome of a given resolution insight */
+    public var outcome: String?
 
-    public init(type: ModelType?, title: String?, _description: String?) {
+    public init(type: ModelType?, title: String?, _description: String?, outcome: String?) {
         self.type = type
         self.title = title
         self._description = _description
+        self.outcome = outcome
     }
 
     public enum CodingKeys: String, CodingKey { 
         case type
         case title
         case _description = "description"
+        case outcome
     }
 
 
@@ -15298,6 +15402,33 @@ public class DocumentBodyList: Codable {
 
 
 
+public class DocumentFaq: Codable {
+
+
+
+
+
+
+
+    /** The question for this FAQ */
+    public var question: String?
+    /** The answer for this FAQ */
+    public var answer: String?
+    /** List of Alternative questions related to the answer which helps in improving the likelihood of a match to user query */
+    public var alternatives: [String]?
+
+    public init(question: String?, answer: String?, alternatives: [String]?) {
+        self.question = question
+        self.answer = answer
+        self.alternatives = alternatives
+    }
+
+
+}
+
+
+
+
 public class DocumentBodyListBlockProperties: Codable {
 
     public enum UnorderedType: String, Codable { 
@@ -15692,33 +15823,6 @@ public class DocumentContentHighlightIndex: Codable {
     public init(startIndex: Int?, endIndex: Int?) {
         self.startIndex = startIndex
         self.endIndex = endIndex
-    }
-
-
-}
-
-
-
-
-public class DocumentFaq: Codable {
-
-
-
-
-
-
-
-    /** The question for this FAQ */
-    public var question: String?
-    /** The answer for this FAQ */
-    public var answer: String?
-    /** List of Alternative questions related to the answer which helps in improving the likelihood of a match to user query */
-    public var alternatives: [String]?
-
-    public init(question: String?, answer: String?, alternatives: [String]?) {
-        self.question = question
-        self.answer = answer
-        self.alternatives = alternatives
     }
 
 
@@ -29492,6 +29596,129 @@ public class OutboundMessagingMessagingCampaignConfigChangeWhatsAppConfig: Codab
 
 
 
+public class OutboundMessagingWhatsappCampaignConfigChangeErrorDetail: Codable {
+
+
+
+
+
+    /** The name of the error code. */
+    public var error: String?
+    /** The additional information regarding the error message. */
+    public var details: String?
+
+    public init(error: String?, details: String?) {
+        self.error = error
+        self.details = details
+    }
+
+
+}
+
+
+
+/** An outbound-messaging messaging campaign email address */
+
+public class OutboundMessagingWhatsappCampaignConfigChangeFromEmailAddress: Codable {
+
+
+
+
+
+
+
+    /** The friendly name of the email address. */
+    public var friendlyName: String?
+    /** The local part of the email address. */
+    public var localPart: String?
+    /** A UriReference for a resource */
+    public var domain: OutboundMessagingWhatsappCampaignConfigChangeUriReference?
+
+    public init(friendlyName: String?, localPart: String?, domain: OutboundMessagingWhatsappCampaignConfigChangeUriReference?) {
+        self.friendlyName = friendlyName
+        self.localPart = localPart
+        self.domain = domain
+    }
+
+
+}
+
+
+
+/** An outbound-messaging messaging campaign email address */
+
+public class OutboundMessagingWhatsappCampaignConfigChangeReplyToEmailAddress: Codable {
+
+
+
+
+
+    /** A UriReference for a resource */
+    public var domain: OutboundMessagingWhatsappCampaignConfigChangeUriReference?
+    /** A UriReference for a resource */
+    public var route: OutboundMessagingWhatsappCampaignConfigChangeUriReference?
+
+    public init(domain: OutboundMessagingWhatsappCampaignConfigChangeUriReference?, route: OutboundMessagingWhatsappCampaignConfigChangeUriReference?) {
+        self.domain = domain
+        self.route = route
+    }
+
+
+}
+
+
+
+/** A reference for a Response */
+
+public class OutboundMessagingWhatsappCampaignConfigChangeResponseRef: Codable {
+
+
+
+    /** The unique response id */
+    public var _id: String?
+
+    public init(_id: String?) {
+        self._id = _id
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+    }
+
+
+}
+
+
+
+/** A UriReference for a resource */
+
+public class OutboundMessagingWhatsappCampaignProgressEventUriReference: Codable {
+
+
+
+
+
+    /** The ID of the resource */
+    public var _id: String?
+    /** The name of the resource */
+    public var name: String?
+
+    public init(_id: String?, name: String?) {
+        self._id = _id
+        self.name = name
+    }
+
+    public enum CodingKeys: String, CodingKey { 
+        case _id = "id"
+        case name
+    }
+
+
+}
+
+
+
+
 public class OutboundRouteBaseEntityListing: Codable {
 
 
@@ -35459,6 +35686,42 @@ public class Reaction: Codable {
 
 
 
+/** Reasons for a failed message receipt. */
+
+public class Reason: Codable {
+
+    public enum Code: String, Codable { 
+        case messageExpired = "MessageExpired"
+        case rateLimited = "RateLimited"
+        case messageNotAllowed = "MessageNotAllowed"
+        case generalError = "GeneralError"
+        case unsupportedMessage = "UnsupportedMessage"
+        case unknownMessage = "UnknownMessage"
+        case invalidMessageStructure = "InvalidMessageStructure"
+        case invalidDestination = "InvalidDestination"
+        case serverError = "ServerError"
+        case mediaTypeNotAllowed = "MediaTypeNotAllowed"
+        case invalidMediaContentLength = "InvalidMediaContentLength"
+        case recipientOptedOut = "RecipientOptedOut"
+    }
+
+
+
+    /** The reason code for the failed message receipt. */
+    public var code: Code?
+    /** Description of the reason for the failed message receipt. */
+    public var message: String?
+
+    public init(code: Code?, message: String?) {
+        self.code = code
+        self.message = message
+    }
+
+
+}
+
+
+
 
 public class Recipient: Codable {
 
@@ -38975,6 +39238,7 @@ public class SocialHandle: Codable {
     public enum ModelType: String, Codable { 
         case twitter = "TWITTER"
         case facebook = "FACEBOOK"
+        case instagram = "INSTAGRAM"
     }
 
 
@@ -41722,34 +41986,6 @@ public class TrunkInstanceTopicTrunk: Codable {
 
 
 
-public class TrunkInstanceTopicTrunkMetricsOptions: Codable {
-
-
-
-
-
-
-
-
-
-    public var proxyAddress: String?
-    public var optionState: Bool?
-    public var optionStateTime: Date?
-    public var errorInfo: TrunkInstanceTopicTrunkErrorInfo?
-
-    public init(proxyAddress: String?, optionState: Bool?, optionStateTime: Date?, errorInfo: TrunkInstanceTopicTrunkErrorInfo?) {
-        self.proxyAddress = proxyAddress
-        self.optionState = optionState
-        self.optionStateTime = optionStateTime
-        self.errorInfo = errorInfo
-    }
-
-
-}
-
-
-
-
 public class TrunkMetabaseEntityListing: Codable {
 
 
@@ -41799,6 +42035,34 @@ public class TrunkMetabaseEntityListing: Codable {
         self.nextUri = nextUri
         self.previousUri = previousUri
         self.pageCount = pageCount
+    }
+
+
+}
+
+
+
+
+public class TrunkInstanceTopicTrunkMetricsOptions: Codable {
+
+
+
+
+
+
+
+
+
+    public var proxyAddress: String?
+    public var optionState: Bool?
+    public var optionStateTime: Date?
+    public var errorInfo: TrunkInstanceTopicTrunkErrorInfo?
+
+    public init(proxyAddress: String?, optionState: Bool?, optionStateTime: Date?, errorInfo: TrunkInstanceTopicTrunkErrorInfo?) {
+        self.proxyAddress = proxyAddress
+        self.optionState = optionState
+        self.optionStateTime = optionStateTime
+        self.errorInfo = errorInfo
     }
 
 
@@ -44978,6 +45242,17 @@ public class WebMessagingMessage: Codable {
 
 
 
+    public enum Status: String, Codable { 
+        case sent = "Sent"
+        case delivered = "Delivered"
+        case read = "Read"
+        case failed = "Failed"
+        case published = "Published"
+        case removed = "Removed"
+    }
+
+
+
 
 
     public enum Direction: String, Codable { 
@@ -45002,6 +45277,10 @@ public class WebMessagingMessage: Codable {
     public var text: String?
     /** List of content elements. */
     public var content: [WebMessagingContent]?
+    /** Message receipt status, only used with type Receipt. */
+    public var status: Status?
+    /** List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. */
+    public var reasons: [Reason]?
     /** List of event elements. */
     public var events: [WebMessagingEvent]?
     /** The direction of the message.  Direction is always from the perspective of the Genesys Cloud platform.  An Inbound message is one sent from a guest to the Genesys Cloud Platform.  An Outbound message is one sent from the Genesys Cloud Platform to a guest. */
@@ -45011,12 +45290,14 @@ public class WebMessagingMessage: Codable {
     /** Additional metadata about this message. */
     public var metadata: [String:String]?
 
-    public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, events: [WebMessagingEvent]?, direction: Direction?, originatingEntity: OriginatingEntity?, metadata: [String:String]?) {
+    public init(_id: String?, channel: WebMessagingChannel?, type: ModelType?, text: String?, content: [WebMessagingContent]?, status: Status?, reasons: [Reason]?, events: [WebMessagingEvent]?, direction: Direction?, originatingEntity: OriginatingEntity?, metadata: [String:String]?) {
         self._id = _id
         self.channel = channel
         self.type = type
         self.text = text
         self.content = content
+        self.status = status
+        self.reasons = reasons
         self.events = events
         self.direction = direction
         self.originatingEntity = originatingEntity
@@ -45029,10 +45310,29 @@ public class WebMessagingMessage: Codable {
         case type
         case text
         case content
+        case status
+        case reasons
         case events
         case direction
         case originatingEntity
         case metadata
+    }
+
+
+}
+
+
+
+
+public class WebhookInvocationResponse: Codable {
+
+
+
+    /** The id of the Webhook Invocation */
+    public var invocationId: String?
+
+    public init(invocationId: String?) {
+        self.invocationId = invocationId
     }
 
 
@@ -45897,6 +46197,30 @@ public class WfmHistoricalAdherenceResultWrapper: Codable {
 
 
 
+public class WfmHistoricalDataImportPurgeCompleteTopicHistoricalDataDeleteEntity: Codable {
+
+
+
+    public enum Status: String, Codable { 
+        case unknown = "Unknown"
+        case inProgress = "InProgress"
+        case success = "Success"
+    }
+
+    public var requestId: String?
+    public var status: Status?
+
+    public init(requestId: String?, status: Status?) {
+        self.requestId = requestId
+        self.status = status
+    }
+
+
+}
+
+
+
+
 public class WfmHistoricalShrinkageCalculationsCompleteTopicHistoricalShrinkageCalculationsCompleteNotification: Codable {
 
 
@@ -46079,33 +46403,6 @@ public class WfmIntradayDataUpdateTopicIntradayPerformancePredictionAgentData: C
 
     public init(interactingTimeSeconds: Double?) {
         self.interactingTimeSeconds = interactingTimeSeconds
-    }
-
-
-}
-
-
-
-
-public class WhatsAppConfig: Codable {
-
-
-
-
-
-
-
-    /** The contact list columns specifying the WhatsApp address(es) of the contact. */
-    public var whatsAppColumns: [String]?
-    /** The WhatsApp integration used to send message to the contact. */
-    public var whatsAppIntegration: AddressableEntityRef?
-    /** The content template used to formulate the WhatsApp message to send to the contact. */
-    public var contentTemplate: DomainEntityRef?
-
-    public init(whatsAppColumns: [String]?, whatsAppIntegration: AddressableEntityRef?, contentTemplate: DomainEntityRef?) {
-        self.whatsAppColumns = whatsAppColumns
-        self.whatsAppIntegration = whatsAppIntegration
-        self.contentTemplate = contentTemplate
     }
 
 
@@ -46468,6 +46765,33 @@ public class WfmUserScheduleAdherenceUpdatedTopicSecondaryPresenceReference: Cod
 
     public enum CodingKeys: String, CodingKey { 
         case _id = "id"
+    }
+
+
+}
+
+
+
+
+public class WhatsAppConfig: Codable {
+
+
+
+
+
+
+
+    /** The contact list columns specifying the WhatsApp address(es) of the contact. */
+    public var whatsAppColumns: [String]?
+    /** The WhatsApp integration used to send message to the contact. */
+    public var whatsAppIntegration: AddressableEntityRef?
+    /** The content template used to formulate the WhatsApp message to send to the contact. */
+    public var contentTemplate: DomainEntityRef?
+
+    public init(whatsAppColumns: [String]?, whatsAppIntegration: AddressableEntityRef?, contentTemplate: DomainEntityRef?) {
+        self.whatsAppColumns = whatsAppColumns
+        self.whatsAppIntegration = whatsAppIntegration
+        self.contentTemplate = contentTemplate
     }
 
 

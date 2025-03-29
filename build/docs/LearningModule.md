@@ -26,7 +26,7 @@ Learning module response
 | **_description** | **String** | The description of learning module | [optional] |
 | **completionTimeInDays** | **Int** | The completion time of learning module in days | |
 | **type** | **String** | The type for the learning module | [optional] |
-| **informSteps** | [**[LearningModuleInformStep]**](LearningModuleInformStep) | The list of inform steps in a learning module | [optional] |
+| **informSteps** | [**[LearningModuleInformStep]**]([LearningModuleInformStep]) | The list of inform steps in a learning module | [optional] |
 | **assessmentForm** | [**AssessmentForm**](AssessmentForm) | The assessment form for learning module | [optional] |
 | **summaryData** | [**LearningModuleSummary**](LearningModuleSummary) | The learning module summary data | [optional] |
 | **reassignSummaryData** | [**LearningModuleReassignSummary**](LearningModuleReassignSummary) | The learning module reassign summary data | [optional] |
@@ -36,4 +36,4 @@ Learning module response
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

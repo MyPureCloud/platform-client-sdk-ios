@@ -9,8 +9,8 @@
 | **user** | [**WfmAgentScheduleUpdateTopicUserReference**](WfmAgentScheduleUpdateTopicUserReference) |  | [optional] |
 | **startDate** | [**Date**](Date) |  | [optional] |
 | **endDate** | [**Date**](Date) |  | [optional] |
-| **updates** | [**[WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate]**](WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate) |  | [optional] |
+| **updates** | [**[WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate]**]([WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

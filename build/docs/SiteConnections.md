@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** |  | [optional] |
-| **siteConnections** | [**[SiteConnection]**](SiteConnection) | List of site connections | [optional] |
+| **siteConnections** | [**[SiteConnection]**]([SiteConnection]) | List of site connections | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

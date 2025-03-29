@@ -12,9 +12,9 @@
 | **timeZone** | **String** | the timezone the recurrence will use | [optional] |
 | **range** | [**DialerSequenceScheduleConfigChangeRecurrenceRange**](DialerSequenceScheduleConfigChangeRecurrenceRange) |  | [optional] |
 | **pattern** | [**DialerSequenceScheduleConfigChangeRecurrencePattern**](DialerSequenceScheduleConfigChangeRecurrencePattern) |  | [optional] |
-| **alterations** | [**[DialerSequenceScheduleConfigChangeAlteration]**](DialerSequenceScheduleConfigChangeAlteration) | modifications to the original recurrence schedule | [optional] |
+| **alterations** | [**[DialerSequenceScheduleConfigChangeAlteration]**]([DialerSequenceScheduleConfigChangeAlteration]) | modifications to the original recurrence schedule | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -9,11 +9,11 @@
 | **_id** | **String** |  | [optional] |
 | **contentLocationUri** | **String** |  | [optional] |
 | **imageUri** | **String** |  | [optional] |
-| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail) |  | [optional] |
+| **thumbnails** | [**[DocumentThumbnail]**]([DocumentThumbnail]) |  | [optional] |
 | **state** | **String** |  | [optional] |
 | **resultUri** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

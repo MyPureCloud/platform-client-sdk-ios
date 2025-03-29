@@ -7,8 +7,8 @@ The settings for automatic time zone mapping
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **callableWindows** | [**[DialerOutboundSettingsConfigChangeCallableWindow]**](DialerOutboundSettingsConfigChangeCallableWindow) | The time intervals to use for automatic time zone mapping | [optional] |
+| **callableWindows** | [**[DialerOutboundSettingsConfigChangeCallableWindow]**]([DialerOutboundSettingsConfigChangeCallableWindow]) | The time intervals to use for automatic time zone mapping | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

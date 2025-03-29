@@ -14,9 +14,9 @@
 | **dateCreated** | [**Date**](Date) | Category creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateModified** | [**Date**](Date) | Category last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **parent** | [**KnowledgeCategory**](KnowledgeCategory) | Category parent | [optional] |
-| **children** | [**[KnowledgeCategory]**](KnowledgeCategory) | Category children | [optional] |
+| **children** | [**[KnowledgeCategory]**]([KnowledgeCategory]) | Category children | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

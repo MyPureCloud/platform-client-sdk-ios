@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **contactList** | [**DialerContactlistfilterConfigChangeUriReference**](DialerContactlistfilterConfigChangeUriReference) |  | [optional] |
 | **contactListColumns** | **[String]** | The list of contact list columns | [optional] |
-| **clauses** | [**[DialerContactlistfilterConfigChangeFilterClause]**](DialerContactlistfilterConfigChangeFilterClause) |  | [optional] |
+| **clauses** | [**[DialerContactlistfilterConfigChangeFilterClause]**]([DialerContactlistfilterConfigChangeFilterClause]) |  | [optional] |
 | **filterType** | **String** | Contact list filter type | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

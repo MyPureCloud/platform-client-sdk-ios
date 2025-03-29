@@ -13,7 +13,7 @@
 | **faq** | [**DocumentFaq**](DocumentFaq) | FAQ document details | [optional] |
 | **dateCreated** | [**Date**](Date) | Document creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateModified** | [**Date**](Date) | Document last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **categories** | [**[KnowledgeCategory]**](KnowledgeCategory) | Document categories | [optional] |
+| **categories** | [**[KnowledgeCategory]**]([KnowledgeCategory]) | Document categories | [optional] |
 | **knowledgeBase** | [**KnowledgeBase**](KnowledgeBase) | Knowledge base which document does belong to | [optional] |
 | **externalUrl** | **String** | External URL to the document | [optional] |
 | **article** | [**DocumentArticle**](DocumentArticle) | Article | [optional] |
@@ -22,4 +22,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

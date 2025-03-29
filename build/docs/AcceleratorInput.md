@@ -9,8 +9,8 @@ Identity of a CX infrastructure as code accelerator to be run and its inputs
 |------------ | ------------- | ------------- | -------------|
 | **dryRun** | **Bool** | Set this true to test the job without making any changes. Defaults to false. | [optional] |
 | **acceleratorId** | **String** | Accelerator ID | |
-| **parameters** | [**[AcceleratorParameter]**](AcceleratorParameter) | Parameters required for this accelerator | [optional] |
+| **parameters** | [**[AcceleratorParameter]**]([AcceleratorParameter]) | Parameters required for this accelerator | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

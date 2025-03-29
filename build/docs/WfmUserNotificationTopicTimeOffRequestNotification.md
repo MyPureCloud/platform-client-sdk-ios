@@ -10,9 +10,9 @@
 | **user** | [**WfmUserNotificationTopicUserReference**](WfmUserNotificationTopicUserReference) |  | [optional] |
 | **isFullDayRequest** | **Bool** |  | [optional] |
 | **status** | **String** |  | [optional] |
-| **partialDayStartDateTimes** | [**[Date]**](Date) |  | [optional] |
+| **partialDayStartDateTimes** | [**[Date]**]([Date]) |  | [optional] |
 | **fullDayManagementUnitDates** | **[String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

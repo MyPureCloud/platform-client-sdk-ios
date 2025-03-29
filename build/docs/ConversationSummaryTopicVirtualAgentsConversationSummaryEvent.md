@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **queueId** | [**UUID**](UUID) |  | [optional] |
-| **participants** | [**[ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
+| **participants** | [**[ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]**]([ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant]) |  | [optional] |
 | **communicationIds** | **[String]** |  | [optional] |
 | **createdDate** | [**Date**](Date) |  | [optional] |
 | **messageType** | **String** |  | [optional] |
@@ -19,7 +19,7 @@
 | **headline** | [**ConversationSummaryTopicVirtualAgentsConversationHeadline**](ConversationSummaryTopicVirtualAgentsConversationHeadline) |  | [optional] |
 | **reason** | [**ConversationSummaryTopicVirtualAgentsConversationReason**](ConversationSummaryTopicVirtualAgentsConversationReason) |  | [optional] |
 | **resolution** | [**ConversationSummaryTopicVirtualAgentsConversationResolution**](ConversationSummaryTopicVirtualAgentsConversationResolution) |  | [optional] |
-| **wrapUpCodes** | [**[ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]**](ConversationSummaryTopicVirtualAgentsConversationWrapUpCode) |  | [optional] |
+| **wrapUpCodes** | [**[ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]**]([ConversationSummaryTopicVirtualAgentsConversationWrapUpCode]) |  | [optional] |
 | **triggerSource** | [**ConversationSummaryTopicVirtualAgentsTriggerSource**](ConversationSummaryTopicVirtualAgentsTriggerSource) |  | [optional] |
 | **lastEditedBy** | [**ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant**](ConversationSummaryTopicVirtualAgentsConversationSummaryParticipant) |  | [optional] |
 | **errorType** | **String** |  | [optional] |
@@ -27,4 +27,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -14,10 +14,10 @@
 | **member** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **sharedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
-| **succeeded** | [**[Share]**](Share) |  | [optional] |
-| **failed** | [**[Share]**](Share) |  | [optional] |
+| **succeeded** | [**[Share]**]([Share]) |  | [optional] |
+| **failed** | [**[Share]**]([Share]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_
