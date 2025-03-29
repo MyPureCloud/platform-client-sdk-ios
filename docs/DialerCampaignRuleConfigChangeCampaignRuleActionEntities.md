@@ -9,9 +9,9 @@ the campaign/sequence entities that this action acts on
 |------------ | ------------- | ------------- | -------------|
 | **useTriggeringEntity** | **Bool** | Whether this action should act on the entity that triggered it | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
-| **campaigns** | [**[DialerCampaignRuleConfigChangeUriReference]**](DialerCampaignRuleConfigChangeUriReference) | A list of campaignIds to act on | [optional] |
-| **sequences** | [**[DialerCampaignRuleConfigChangeUriReference]**](DialerCampaignRuleConfigChangeUriReference) | A list of sequenceIds to act on | [optional] |
+| **campaigns** | [**[DialerCampaignRuleConfigChangeUriReference]**]([DialerCampaignRuleConfigChangeUriReference]) | A list of campaignIds to act on | [optional] |
+| **sequences** | [**[DialerCampaignRuleConfigChangeUriReference]**]([DialerCampaignRuleConfigChangeUriReference]) | A list of sequenceIds to act on | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

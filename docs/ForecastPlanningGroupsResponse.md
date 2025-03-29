@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ForecastPlanningGroupResponse]**](ForecastPlanningGroupResponse) |  | [optional] |
+| **entities** | [**[ForecastPlanningGroupResponse]**]([ForecastPlanningGroupResponse]) |  | [optional] |
 | **businessUnitServiceGoalImpact** | [**WfmServiceGoalImpactSettings**](WfmServiceGoalImpactSettings) | A snapshot of a business unit’s service goal impact settings taken at forecast generation time. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

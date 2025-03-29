@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- |
 | [**deleteAnalyticsConversationsDetailsJob**](AnalyticsAPI#deleteAnalyticsConversationsDetailsJob) | Delete/cancel an async details job |
 | [**deleteAnalyticsUsersDetailsJob**](AnalyticsAPI#deleteAnalyticsUsersDetailsJob) | Delete/cancel an async request |
+| [**getAnalyticsAgentStatus**](AnalyticsAPI#getAnalyticsAgentStatus) | Get an agent and their active sessions by user ID |
 | [**getAnalyticsBotflowDivisionsReportingturns**](AnalyticsAPI#getAnalyticsBotflowDivisionsReportingturns) | Get Reporting Turns (division aware). |
 | [**getAnalyticsBotflowReportingturns**](AnalyticsAPI#getAnalyticsBotflowReportingturns) | Get Reporting Turns. |
 | [**getAnalyticsBotflowSessions**](AnalyticsAPI#getAnalyticsBotflowSessions) | Get Bot Flow Sessions. |
@@ -28,6 +29,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**patchAnalyticsReportingSettings**](AnalyticsAPI#patchAnalyticsReportingSettings) | Patch AnalyticsReportingSettings values for an organization |
 | [**postAnalyticsActionsAggregatesQuery**](AnalyticsAPI#postAnalyticsActionsAggregatesQuery) | Query for action aggregates |
 | [**postAnalyticsAgentcopilotsAggregatesQuery**](AnalyticsAPI#postAnalyticsAgentcopilotsAggregatesQuery) | Query for agent copilot aggregates |
+| [**postAnalyticsAgentsStatusCounts**](AnalyticsAPI#postAnalyticsAgentsStatusCounts) | Count agents by segment type |
+| [**postAnalyticsAgentsStatusQuery**](AnalyticsAPI#postAnalyticsAgentsStatusQuery) | Retrieve the top 50 agents matching the query filters |
 | [**postAnalyticsBotsAggregatesQuery**](AnalyticsAPI#postAnalyticsBotsAggregatesQuery) | Query for bot aggregates |
 | [**postAnalyticsConversationDetailsProperties**](AnalyticsAPI#postAnalyticsConversationDetailsProperties) | Index conversation properties |
 | [**postAnalyticsConversationsActivityQuery**](AnalyticsAPI#postAnalyticsConversationsActivityQuery) | Query for conversation activity observations |
@@ -161,6 +164,56 @@ AnalyticsAPI.deleteAnalyticsUsersDetailsJob(jobId: jobId) { (error) in
 ### Return type
 
 `nil` (empty response body)
+
+
+## getAnalyticsAgentStatus
+
+
+
+> [AnalyticsAgentStateAgentResponse](AnalyticsAgentStateAgentResponse) getAnalyticsAgentStatus(userId)
+
+Get an agent and their active sessions by user ID
+
+
+
+Wraps GET /api/v2/analytics/agents/{userId}/status  
+
+Requires ANY permissions: 
+
+* analytics:agentState:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let userId: String = "" // userId
+
+// Code example
+AnalyticsAPI.getAnalyticsAgentStatus(userId: userId) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.getAnalyticsAgentStatus was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| userId | |
+
+
+### Return type
+
+[**AnalyticsAgentStateAgentResponse**](AnalyticsAgentStateAgentResponse)
 
 
 ## getAnalyticsBotflowDivisionsReportingturns
@@ -1335,6 +1388,106 @@ AnalyticsAPI.postAnalyticsAgentcopilotsAggregatesQuery(body: body) { (response, 
 ### Return type
 
 [**AgentCopilotAggregateQueryResponse**](AgentCopilotAggregateQueryResponse)
+
+
+## postAnalyticsAgentsStatusCounts
+
+
+
+> [AnalyticsAgentStateCountsResponse](AnalyticsAgentStateCountsResponse) postAnalyticsAgentsStatusCounts(body)
+
+Count agents by segment type
+
+
+
+Wraps POST /api/v2/analytics/agents/status/counts  
+
+Requires ANY permissions: 
+
+* analytics:agentState:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentStateCountsRequest = new AgentStateCountsRequest(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsAgentsStatusCounts(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsAgentsStatusCounts was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentStateCountsRequest**](AgentStateCountsRequest)| query | |
+
+
+### Return type
+
+[**AnalyticsAgentStateCountsResponse**](AnalyticsAgentStateCountsResponse)
+
+
+## postAnalyticsAgentsStatusQuery
+
+
+
+> [AnalyticsAgentStateQueryResponse](AnalyticsAgentStateQueryResponse) postAnalyticsAgentsStatusQuery(body)
+
+Retrieve the top 50 agents matching the query filters
+
+
+
+Wraps POST /api/v2/analytics/agents/status/query  
+
+Requires ANY permissions: 
+
+* analytics:agentState:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let body: AgentStateQueryRequest = new AgentStateQueryRequest(...) // query
+
+// Code example
+AnalyticsAPI.postAnalyticsAgentsStatusQuery(body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("AnalyticsAPI.postAnalyticsAgentsStatusQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **body** | [**AgentStateQueryRequest**](AgentStateQueryRequest)| query | |
+
+
+### Return type
+
+[**AnalyticsAgentStateQueryResponse**](AnalyticsAgentStateQueryResponse)
 
 
 ## postAnalyticsBotsAggregatesQuery
@@ -3014,4 +3167,4 @@ AnalyticsAPI.putAnalyticsDataretentionSettings(body: body) { (response, error) i
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

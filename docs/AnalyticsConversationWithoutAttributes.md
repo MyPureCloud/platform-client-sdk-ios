@@ -19,11 +19,11 @@
 | **mediaStatsMinConversationRFactor** | **Double** | The lowest R-factor value among all of the audio streams belonging to this conversation | [optional] |
 | **originatingDirection** | **String** | The original direction of the conversation | [optional] |
 | **selfServed** | **Bool** | Indicates whether all flow sessions were self serviced | [optional] |
-| **evaluations** | [**[AnalyticsEvaluation]**](AnalyticsEvaluation) | Evaluations associated with this conversation | [optional] |
-| **surveys** | [**[AnalyticsSurvey]**](AnalyticsSurvey) | Surveys associated with this conversation | [optional] |
-| **resolutions** | [**[AnalyticsResolution]**](AnalyticsResolution) | Resolutions associated with this conversation | [optional] |
-| **participants** | [**[AnalyticsParticipantWithoutAttributes]**](AnalyticsParticipantWithoutAttributes) | Participants in the conversation | [optional] |
+| **evaluations** | [**[AnalyticsEvaluation]**]([AnalyticsEvaluation]) | Evaluations associated with this conversation | [optional] |
+| **surveys** | [**[AnalyticsSurvey]**]([AnalyticsSurvey]) | Surveys associated with this conversation | [optional] |
+| **resolutions** | [**[AnalyticsResolution]**]([AnalyticsResolution]) | Resolutions associated with this conversation | [optional] |
+| **participants** | [**[AnalyticsParticipantWithoutAttributes]**]([AnalyticsParticipantWithoutAttributes]) | Participants in the conversation | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **channel** | [**V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessagingChannel) |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **events** | [**[V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent]**](V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent) |  | [optional] |
+| **events** | [**[V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent]**]([V2ConversationMessageTypingEventForWorkflowTopicConversationMessageEvent]) |  | [optional] |
 | **direction** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

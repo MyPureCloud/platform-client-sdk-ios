@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **exceptionType** | **String** | The type of error | |
-| **occurrences** | [**[ActivityPlanOccurrenceReference]**](ActivityPlanOccurrenceReference) | The occurrences in which this error occurred | |
+| **occurrences** | [**[ActivityPlanOccurrenceReference]**]([ActivityPlanOccurrenceReference]) | The occurrences in which this error occurred | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **callableTimes** | [**[DialerCallabletimesetConfigChangeCallableTime]**](DialerCallabletimesetConfigChangeCallableTime) | The list of callable times | [optional] |
+| **callableTimes** | [**[DialerCallabletimesetConfigChangeCallableTime]**]([DialerCallabletimesetConfigChangeCallableTime]) | The list of callable times | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The UI-visible name of the object | [optional] |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

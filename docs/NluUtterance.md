@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | ID of the utterance. | [optional] |
 | **source** | **String** | The source of the utterance. | [optional] |
-| **segments** | [**[NluUtteranceSegment]**](NluUtteranceSegment) | The list of segments that that constitute this utterance for the given intent. | |
+| **segments** | [**[NluUtteranceSegment]**]([NluUtteranceSegment]) | The list of segments that that constitute this utterance for the given intent. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

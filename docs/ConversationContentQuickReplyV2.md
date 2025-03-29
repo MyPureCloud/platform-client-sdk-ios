@@ -8,8 +8,8 @@ Quick reply object V2.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **title** | **String** | Text to show as the title of the quick reply. | |
-| **actions** | [**[ConversationContentQuickReply]**](ConversationContentQuickReply) | An array of quick reply objects. | |
+| **actions** | [**[ConversationContentQuickReply]**]([ConversationContentQuickReply]) | An array of quick reply objects. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

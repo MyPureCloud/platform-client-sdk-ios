@@ -9,9 +9,9 @@ Open Messaging rich media message structure
 |------------ | ------------- | ------------- | -------------|
 | **channel** | [**OpenInboundMessageMessagingChannel**](OpenInboundMessageMessagingChannel) | Channel-specific information that describes the message and the message channel/provider. | |
 | **text** | **String** | Message text. | [optional] |
-| **content** | [**[OpenInboundMessageContent]**](OpenInboundMessageContent) | List of content elements. | [optional] |
+| **content** | [**[OpenInboundMessageContent]**]([OpenInboundMessageContent]) | List of content elements. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message to capture non-channel specific data. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

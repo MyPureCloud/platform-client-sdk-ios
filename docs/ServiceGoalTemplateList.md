@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ServiceGoalTemplate]**](ServiceGoalTemplate) |  | [optional] |
+| **entities** | [**[ServiceGoalTemplate]**]([ServiceGoalTemplate]) |  | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for the service goal templates | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

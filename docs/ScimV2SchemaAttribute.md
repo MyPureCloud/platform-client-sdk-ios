@@ -9,7 +9,7 @@ A complex type that defines service provider attributes or subattributes and the
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | The name of the attribute. | [optional] |
 | **type** | **String** | The data type of the attribute. | [optional] |
-| **subAttributes** | [**[ScimV2SchemaAttribute]**](ScimV2SchemaAttribute) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
+| **subAttributes** | [**[ScimV2SchemaAttribute]**]([ScimV2SchemaAttribute]) | The list of subattributes for an attribute of the type \&quot;complex\&quot;. Uses the same schema as \&quot;attributes\&quot;. | [optional] |
 | **multiValued** | **Bool** | Indicates whether an attribute contains multiple values. | [optional] |
 | **_description** | **String** | The description of the attribute. | [optional] |
 | **_required** | **Bool** | Indicates whether an attribute is required. | [optional] |
@@ -22,4 +22,4 @@ A complex type that defines service provider attributes or subattributes and the
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

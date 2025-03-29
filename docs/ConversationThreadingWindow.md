@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
-| **settings** | [**[ConversationThreadingWindowSetting]**](ConversationThreadingWindowSetting) | The conversation threading window timeout (Minutes) for each messaging type | |
+| **settings** | [**[ConversationThreadingWindowSetting]**]([ConversationThreadingWindowSetting]) | The conversation threading window timeout (Minutes) for each messaging type | |
 | **defaultTimeoutMinutes** | **Int64** | The default conversation threading window timeout (Minutes) | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -10,11 +10,11 @@
 | **pageNumber** | **Int** |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **facetNameRequests** | **[String]** |  | [optional] |
-| **sort** | [**[SortItem]**](SortItem) |  | [optional] |
-| **filters** | [**[ContentFilterItem]**](ContentFilterItem) |  | [optional] |
-| **attributeFilters** | [**[AttributeFilterItem]**](AttributeFilterItem) |  | [optional] |
+| **sort** | [**[SortItem]**]([SortItem]) |  | [optional] |
+| **filters** | [**[ContentFilterItem]**]([ContentFilterItem]) |  | [optional] |
+| **attributeFilters** | [**[AttributeFilterItem]**]([AttributeFilterItem]) |  | [optional] |
 | **includeShares** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

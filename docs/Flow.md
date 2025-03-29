@@ -25,7 +25,7 @@
 | **publishedBy** | [**User**](User) |  | [optional] |
 | **currentOperation** | [**Operation**](Operation) |  | [optional] |
 | **nluInfo** | [**NluInfo**](NluInfo) | Information about the natural language understanding configuration for the published version of the flow | [optional] |
-| **supportedLanguages** | [**[SupportedLanguage]**](SupportedLanguage) | List of supported languages for the published version of the flow. | [optional] |
+| **supportedLanguages** | [**[SupportedLanguage]**]([SupportedLanguage]) | List of supported languages for the published version of the flow. | [optional] |
 | **compatibleFlowTypes** | **[String]** | Compatible flow types designate which flow types are allowed to embed a flow’s configuration within their own flow configuration.  Currently the only flows that can be embedded are Common Module flows and the embedding flow can invoke them using the Call Common Module action. | [optional] |
 | **worktypeId** | **String** |  | [optional] |
 | **virtualAgentEnabled** | **Bool** |  | [optional] |
@@ -33,4 +33,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

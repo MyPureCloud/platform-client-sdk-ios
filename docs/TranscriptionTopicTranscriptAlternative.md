@@ -10,10 +10,10 @@
 | **offsetMs** | **Int** |  | [optional] |
 | **durationMs** | **Int** |  | [optional] |
 | **transcript** | **String** |  | [optional] |
-| **words** | [**[TranscriptionTopicTranscriptWord]**](TranscriptionTopicTranscriptWord) |  | [optional] |
+| **words** | [**[TranscriptionTopicTranscriptWord]**]([TranscriptionTopicTranscriptWord]) |  | [optional] |
 | **decoratedTranscript** | **String** |  | [optional] |
-| **decoratedWords** | [**[TranscriptionTopicTranscriptWord]**](TranscriptionTopicTranscriptWord) |  | [optional] |
+| **decoratedWords** | [**[TranscriptionTopicTranscriptWord]**]([TranscriptionTopicTranscriptWord]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

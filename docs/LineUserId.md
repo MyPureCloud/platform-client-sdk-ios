@@ -11,4 +11,4 @@ Channel-specific User ID for Line accounts
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

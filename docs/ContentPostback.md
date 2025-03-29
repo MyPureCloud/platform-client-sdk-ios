@@ -13,4 +13,4 @@ Postback response object representing the click of a rich media button (Deprecat
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

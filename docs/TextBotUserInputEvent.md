@@ -8,8 +8,8 @@ Settings for an input event to the bot flow indicating user input is available.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **mode** | **String** | The input mode. | |
-| **alternatives** | [**[TextBotUserInputAlternative]**](TextBotUserInputAlternative) | The input alternatives. | |
+| **alternatives** | [**[TextBotUserInputAlternative]**]([TextBotUserInputAlternative]) | The input alternatives. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

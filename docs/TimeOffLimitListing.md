@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[TimeOffLimit]**](TimeOffLimit) |  | [optional] |
+| **entities** | [**[TimeOffLimit]**]([TimeOffLimit]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

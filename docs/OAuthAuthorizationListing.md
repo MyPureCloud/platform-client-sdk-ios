@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **total** | **Int64** |  | [optional] |
-| **entities** | [**[OAuthAuthorization]**](OAuthAuthorization) |  | [optional] |
+| **entities** | [**[OAuthAuthorization]**]([OAuthAuthorization]) |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

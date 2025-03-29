@@ -24,10 +24,10 @@
 | **group** | [**Group**](Group) | The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue | [optional] |
 | **queue** | [**Queue**](Queue) | The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group | [optional] |
 | **copiedFrom** | [**VoicemailCopyRecord**](VoicemailCopyRecord) | Represents where this voicemail message was copied from | [optional] |
-| **copiedTo** | [**[VoicemailCopyRecord]**](VoicemailCopyRecord) | Represents where this voicemail has been copied to | [optional] |
+| **copiedTo** | [**[VoicemailCopyRecord]**]([VoicemailCopyRecord]) | Represents where this voicemail has been copied to | [optional] |
 | **deleteRetentionPolicy** | [**VoicemailRetentionPolicy**](VoicemailRetentionPolicy) | The retention policy for this voicemail when deleted is set to true | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

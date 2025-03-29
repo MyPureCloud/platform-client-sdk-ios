@@ -30,17 +30,17 @@
 | **wrapupId** | **String** |  | [optional] |
 | **modifiedBy** | **String** |  | [optional] |
 | **operation** | **String** |  | [optional] |
-| **changes** | [**[WorkitemsEventsNotificationDelta]**](WorkitemsEventsNotificationDelta) |  | [optional] |
+| **changes** | [**[WorkitemsEventsNotificationDelta]**]([WorkitemsEventsNotificationDelta]) |  | [optional] |
 | **assignmentState** | **String** |  | [optional] |
 | **assignmentId** | **String** |  | [optional] |
 | **alertTimeoutSeconds** | **Int** |  | [optional] |
 | **queueId** | **String** |  | [optional] |
 | **customFields** | [**[String:WorkitemsEventsNotificationCustomAttribute]**](WorkitemsEventsNotificationCustomAttribute) |  | [optional] |
 | **wrapup** | [**WorkitemsEventsNotificationWrapup**](WorkitemsEventsNotificationWrapup) |  | [optional] |
-| **sessions** | [**[WorkitemsEventsNotificationSession]**](WorkitemsEventsNotificationSession) |  | [optional] |
-| **skillIds** | [**[UUID]**](UUID) |  | [optional] |
+| **sessions** | [**[WorkitemsEventsNotificationSession]**]([WorkitemsEventsNotificationSession]) |  | [optional] |
+| **skillIds** | [**[UUID]**]([UUID]) |  | [optional] |
 | **scriptId** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -10,11 +10,11 @@
 | **name** | **String** |  | [optional] |
 | **entityType** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **sections** | [**[Section]**](Section) |  | [optional] |
+| **sections** | [**[Section]**]([Section]) |  | [optional] |
 | **version** | **String** |  | [optional] |
 | **schemaVersion** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

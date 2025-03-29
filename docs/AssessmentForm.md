@@ -12,8 +12,8 @@
 | **selfUri** | **String** | The URI for this object | [optional] |
 | **published** | **Bool** | If true, assessment form is published | [optional] |
 | **passPercent** | **Int** | The pass percent for the assessment form | |
-| **questionGroups** | [**[AssessmentFormQuestionGroup]**](AssessmentFormQuestionGroup) | A list of question groups | |
+| **questionGroups** | [**[AssessmentFormQuestionGroup]**]([AssessmentFormQuestionGroup]) | A list of question groups | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

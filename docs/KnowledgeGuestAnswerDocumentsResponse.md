@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[KnowledgeGuestAnswerDocumentResponse]**](KnowledgeGuestAnswerDocumentResponse) | The results with answers. | [optional] |
+| **results** | [**[KnowledgeGuestAnswerDocumentResponse]**]([KnowledgeGuestAnswerDocumentResponse]) | The results with answers. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

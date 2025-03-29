@@ -13,7 +13,7 @@
 | **total** | **Int** | The total number of documents matching the query. | [optional] |
 | **pageCount** | **Int** | Number of pages returned in the result calculated according to the pageSize and the total | [optional] |
 | **queryType** | **String** | The type of the query that initiates the search. | [optional] |
-| **results** | [**[KnowledgeDocumentSearchResult]**](KnowledgeDocumentSearchResult) | Documents matching the search query. | [optional] |
+| **results** | [**[KnowledgeDocumentSearchResult]**]([KnowledgeDocumentSearchResult]) | Documents matching the search query. | [optional] |
 | **application** | [**KnowledgeSearchClientApplication**](KnowledgeSearchClientApplication) | The client application details from which search happened. | [optional] |
 | **conversationContext** | [**KnowledgeConversationContextResponse**](KnowledgeConversationContextResponse) | Conversation context information if the search is initiated in the context of a conversation. | [optional] |
 | **confidenceThreshold** | **Float** | The confidence threshold for the search results. If applied, the returned results will have an equal or higher confidence than the threshold. | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

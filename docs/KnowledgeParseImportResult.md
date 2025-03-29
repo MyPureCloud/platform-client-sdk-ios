@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **success** | **Int** | Number of imported articles. | |
 | **failure** | **Int** | Number of articles failed to import. | |
-| **errors** | [**[ErrorBody]**](ErrorBody) | Error information about the failures. | [optional] |
+| **errors** | [**[ErrorBody]**]([ErrorBody]) | Error information about the failures. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

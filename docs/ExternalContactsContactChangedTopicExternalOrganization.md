@@ -19,7 +19,7 @@
 | **revenue** | **Int** |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
 | **websites** | **[String]** |  | [optional] |
-| **tickers** | [**[ExternalContactsContactChangedTopicTicker]**](ExternalContactsContactChangedTopicTicker) |  | [optional] |
+| **tickers** | [**[ExternalContactsContactChangedTopicTicker]**]([ExternalContactsContactChangedTopicTicker]) |  | [optional] |
 | **twitterId** | [**ExternalContactsContactChangedTopicTwitterId**](ExternalContactsContactChangedTopicTwitterId) |  | [optional] |
 | **externalSystemUrl** | **String** |  | [optional] |
 | **customFields** | [**[String:JSON]**](JSON) |  | [optional] |
@@ -28,4 +28,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

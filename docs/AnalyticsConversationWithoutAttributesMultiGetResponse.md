@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **conversations** | [**[AnalyticsConversationWithoutAttributes]**](AnalyticsConversationWithoutAttributes) |  | [optional] |
+| **conversations** | [**[AnalyticsConversationWithoutAttributes]**]([AnalyticsConversationWithoutAttributes]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

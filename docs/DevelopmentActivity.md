@@ -22,9 +22,9 @@ Development Activity object
 | **status** | **String** | The status of the activity | [optional] |
 | **dateDue** | [**Date**](Date) | Due date for completion of the activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **facilitator** | [**UserReference**](UserReference) | Facilitator of the activity | [optional] |
-| **attendees** | [**[UserReference]**](UserReference) | List of users attending the activity | [optional] |
+| **attendees** | [**[UserReference]**]([UserReference]) | List of users attending the activity | [optional] |
 | **isOverdue** | **Bool** | Indicates if the activity is overdue | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **calculationStartDate** | [**Date**](Date) | Date as an ISO-8601 string, corresponding to the beginning of the performance prediction results | |
-| **onQueueTimes** | [**[MuAgentQueueTimeRequest]**](MuAgentQueueTimeRequest) | List of agent on queue times by management unit | |
+| **onQueueTimes** | [**[MuAgentQueueTimeRequest]**]([MuAgentQueueTimeRequest]) | List of agent on queue times by management unit | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

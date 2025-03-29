@@ -7,9 +7,9 @@ External metric data write response
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **processedEntities** | [**[ExternalMetricDataProcessedItem]**](ExternalMetricDataProcessedItem) | The list of processed entities | [optional] |
-| **unprocessedEntities** | [**[ExternalMetricDataUnprocessedItem]**](ExternalMetricDataUnprocessedItem) | The list of unprocessed entities | [optional] |
+| **processedEntities** | [**[ExternalMetricDataProcessedItem]**]([ExternalMetricDataProcessedItem]) | The list of processed entities | [optional] |
+| **unprocessedEntities** | [**[ExternalMetricDataUnprocessedItem]**]([ExternalMetricDataUnprocessedItem]) | The list of unprocessed entities | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **name** | **String** | Name of the Service | [optional] |
-| **entities** | [**[AuditQueryEntity]**](AuditQueryEntity) | List of Entities | [optional] |
+| **entities** | [**[AuditQueryEntity]**]([AuditQueryEntity]) | List of Entities | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

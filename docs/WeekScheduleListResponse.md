@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WeekScheduleListItemResponse]**](WeekScheduleListItemResponse) |  | [optional] |
+| **entities** | [**[WeekScheduleListItemResponse]**]([WeekScheduleListItemResponse]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

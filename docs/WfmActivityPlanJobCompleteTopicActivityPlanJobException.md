@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **exceptionType** | **String** |  | [optional] |
-| **occurrences** | [**[WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference]**](WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference) |  | [optional] |
+| **occurrences** | [**[WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference]**]([WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

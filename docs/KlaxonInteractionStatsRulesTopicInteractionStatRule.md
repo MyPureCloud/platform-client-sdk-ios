@@ -18,9 +18,9 @@
 | **value** | **Double** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
-| **notificationUsers** | [**[KlaxonInteractionStatsRulesTopicNotificationUser]**](KlaxonInteractionStatsRulesTopicNotificationUser) |  | [optional] |
+| **notificationUsers** | [**[KlaxonInteractionStatsRulesTopicNotificationUser]**]([KlaxonInteractionStatsRulesTopicNotificationUser]) |  | [optional] |
 | **alertTypes** | **[String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

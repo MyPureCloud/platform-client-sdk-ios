@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **state** | **String** |  | [optional] |
-| **testTopicPhraseResults** | [**[PublishProgramTestTopicPhraseResults]**](PublishProgramTestTopicPhraseResults) |  | [optional] |
+| **testTopicPhraseResults** | [**[PublishProgramTestTopicPhraseResults]**]([PublishProgramTestTopicPhraseResults]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

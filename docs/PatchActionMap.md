@@ -11,11 +11,11 @@
 | **isActive** | **Bool** | Whether the action map is active. | [optional] |
 | **displayName** | **String** | Display name of the action map. | |
 | **triggerWithSegments** | **[String]** | Trigger action map if any segment in the list is assigned to a given customer. | |
-| **triggerWithEventConditions** | [**[EventCondition]**](EventCondition) | List of event conditions that must be satisfied to trigger the action map. | [optional] |
-| **triggerWithOutcomeProbabilityConditions** | [**[OutcomeProbabilityCondition]**](OutcomeProbabilityCondition) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
-| **triggerWithOutcomePercentileConditions** | [**[OutcomePercentileCondition]**](OutcomePercentileCondition) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
-| **triggerWithOutcomeQuantileConditions** | [**[OutcomeQuantileCondition]**](OutcomeQuantileCondition) | Quantile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
-| **pageUrlConditions** | [**[UrlCondition]**](UrlCondition) | URL conditions that a page must match for web actions to be displayable. | |
+| **triggerWithEventConditions** | [**[EventCondition]**]([EventCondition]) | List of event conditions that must be satisfied to trigger the action map. | [optional] |
+| **triggerWithOutcomeProbabilityConditions** | [**[OutcomeProbabilityCondition]**]([OutcomeProbabilityCondition]) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **triggerWithOutcomePercentileConditions** | [**[OutcomePercentileCondition]**]([OutcomePercentileCondition]) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **triggerWithOutcomeQuantileConditions** | [**[OutcomeQuantileCondition]**]([OutcomeQuantileCondition]) | Quantile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **pageUrlConditions** | [**[UrlCondition]**]([UrlCondition]) | URL conditions that a page must match for web actions to be displayable. | |
 | **activation** | [**Activation**](Activation) | Type of activation. | [optional] |
 | **weight** | **Int** | Weight of the action map with higher number denoting higher weight. | [optional] |
 | **action** | [**PatchAction**](PatchAction) | The action that will be executed if this action map is triggered. | [optional] |
@@ -29,4 +29,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

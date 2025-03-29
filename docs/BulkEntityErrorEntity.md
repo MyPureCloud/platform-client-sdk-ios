@@ -10,9 +10,9 @@
 | **message** | **String** | A short error message. | [optional] |
 | **status** | **Int** | The HTTP Status Code for the error. | [optional] |
 | **retryable** | **Bool** | Whether this particular error should be retried. | [optional] |
-| **details** | [**[BulkErrorDetail]**](BulkErrorDetail) | Additional error details for specific fields. | [optional] |
+| **details** | [**[BulkErrorDetail]**]([BulkErrorDetail]) | Additional error details for specific fields. | [optional] |
 | **entity** | [**Entity**](Entity) | The entity body specified in the Bulk request operation that caused this error. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

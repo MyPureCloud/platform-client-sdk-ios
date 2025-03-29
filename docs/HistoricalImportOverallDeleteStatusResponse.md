@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[HistoricalDataJobEntityStatus]**](HistoricalDataJobEntityStatus) | List of all the delete jobs | [optional] |
+| **entities** | [**[HistoricalDataJobEntityStatus]**]([HistoricalDataJobEntityStatus]) | List of all the delete jobs | [optional] |
 | **status** | **String** | Property denoting overall status of the service. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

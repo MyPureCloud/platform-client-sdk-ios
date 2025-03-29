@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ChatMessageResponse]**](ChatMessageResponse) |  | [optional] |
+| **entities** | [**[ChatMessageResponse]**]([ChatMessageResponse]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

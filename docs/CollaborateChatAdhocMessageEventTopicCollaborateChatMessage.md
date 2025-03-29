@@ -12,10 +12,10 @@
 | **body** | **String** |  | [optional] |
 | **from** | [**CollaborateChatAdhocMessageEventTopicCollaborateChatEntity**](CollaborateChatAdhocMessageEventTopicCollaborateChatEntity) |  | [optional] |
 | **to** | [**CollaborateChatAdhocMessageEventTopicCollaborateChatEntity**](CollaborateChatAdhocMessageEventTopicCollaborateChatEntity) |  | [optional] |
-| **mentions** | [**[CollaborateChatAdhocMessageEventTopicCollaborateChatEntity]**](CollaborateChatAdhocMessageEventTopicCollaborateChatEntity) |  | [optional] |
+| **mentions** | [**[CollaborateChatAdhocMessageEventTopicCollaborateChatEntity]**]([CollaborateChatAdhocMessageEventTopicCollaborateChatEntity]) |  | [optional] |
 | **notifyAll** | **Bool** |  | [optional] |
 | **reactions** | [**[String:[String]]**](StringJSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -46,7 +46,7 @@
 | **parkTime** | [**Date**](Date) |  | [optional] |
 | **mediaRoles** | **[String]** |  | [optional] |
 | **queueMediaSettings** | [**QueueConversationMessageEventTopicQueueMediaSettings**](QueueConversationMessageEventTopicQueueMediaSettings) |  | [optional] |
-| **messages** | [**[QueueConversationMessageEventTopicMessageDetails]**](QueueConversationMessageEventTopicMessageDetails) |  | [optional] |
+| **messages** | [**[QueueConversationMessageEventTopicMessageDetails]**]([QueueConversationMessageEventTopicMessageDetails]) |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **recipientCountry** | **String** |  | [optional] |
 | **recipientType** | **String** |  | [optional] |
@@ -55,4 +55,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

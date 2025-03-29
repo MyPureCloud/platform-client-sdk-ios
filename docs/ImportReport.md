@@ -6,11 +6,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **errors** | [**[ImportError]**](ImportError) |  | [optional] |
+| **errors** | [**[ImportError]**]([ImportError]) |  | [optional] |
 | **validated** | [**ResultCounters**](ResultCounters) |  | [optional] |
 | **imported** | [**ResultCounters**](ResultCounters) |  | [optional] |
 | **totalDocuments** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

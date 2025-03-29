@@ -21,7 +21,7 @@
 | **hasSplitByMedia** | **Bool** | Indicates if media type will be split in aggregate detail exports | [optional] |
 | **hasSummaryRow** | **Bool** | Indicates if summary row needs to be present in exports | [optional] |
 | **csvDelimiter** | **String** | The user supplied csv delimiter string value either of type &#39;comma&#39; or &#39;semicolon&#39; permitted for the export request | [optional] |
-| **selectedColumns** | [**[SelectedColumns]**](SelectedColumns) | The list of ordered selected columns from the export view by the user | [optional] |
+| **selectedColumns** | [**[SelectedColumns]**]([SelectedColumns]) | The list of ordered selected columns from the export view by the user | [optional] |
 | **hasCustomParticipantAttributes** | **Bool** | Indicates if custom participant attributes will be exported | [optional] |
 | **recipientEmails** | **[String]** | The list of email recipients for the exports | [optional] |
 | **includeDurationFormatInHeader** | **Bool** | Indicates whether to include selected duration format to the column headers | [optional] |
@@ -29,4 +29,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

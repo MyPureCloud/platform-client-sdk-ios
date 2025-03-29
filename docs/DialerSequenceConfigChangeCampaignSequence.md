@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **campaigns** | [**[DialerSequenceConfigChangeUriReference]**](DialerSequenceConfigChangeUriReference) | the ordered list of campaign identifiers | [optional] |
+| **campaigns** | [**[DialerSequenceConfigChangeUriReference]**]([DialerSequenceConfigChangeUriReference]) | the ordered list of campaign identifiers | [optional] |
 | **currentCampaign** | **Int** | the zero-based index of the current campaign in the campaigns list | [optional] |
 | **status** | **String** |  | [optional] |
 | **stopMessage** | **String** | if a sequence has unexpectedly stopped, this message provides the reason | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

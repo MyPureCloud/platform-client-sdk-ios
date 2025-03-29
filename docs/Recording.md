@@ -15,10 +15,10 @@
 | **media** | **String** | The media type of the recording. This could be audio, chat, messaging, email, or screen. | [optional] |
 | **mediaSubtype** | **String** | The media subtype of the recording. | [optional] |
 | **mediaSubject** | **String** | The media subject of the recording. | [optional] |
-| **annotations** | [**[Annotation]**](Annotation) | Annotations that belong to the recording. | [optional] |
-| **transcript** | [**[ChatMessage]**](ChatMessage) | Represents a chat transcript | [optional] |
-| **emailTranscript** | [**[RecordingEmailMessage]**](RecordingEmailMessage) | Represents an email transcript | [optional] |
-| **messagingTranscript** | [**[RecordingMessagingMessage]**](RecordingMessagingMessage) | Represents a messaging transcript | [optional] |
+| **annotations** | [**[Annotation]**]([Annotation]) | Annotations that belong to the recording. | [optional] |
+| **transcript** | [**[ChatMessage]**]([ChatMessage]) | Represents a chat transcript | [optional] |
+| **emailTranscript** | [**[RecordingEmailMessage]**]([RecordingEmailMessage]) | Represents an email transcript | [optional] |
+| **messagingTranscript** | [**[RecordingMessagingMessage]**]([RecordingMessagingMessage]) | Represents a messaging transcript | [optional] |
 | **fileState** | **String** | Represents the current file state for a recording. Examples: Uploading, Archived, etc | [optional] |
 | **restoreExpirationTime** | [**Date**](Date) | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **mediaUris** | [**[String:MediaResult]**](MediaResult) | The different mediaUris for the recording. Null when there is no playable media. | [optional] |
@@ -34,7 +34,7 @@
 | **maxAllowedRestorationsForOrg** | **Int** | How many archive restorations the organization is allowed to have. | [optional] |
 | **remainingRestorationsAllowedForOrg** | **Int** | The remaining archive restorations the organization has. | [optional] |
 | **sessionId** | **String** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
-| **users** | [**[User]**](User) | The users participating in the conversation | [optional] |
+| **users** | [**[User]**]([User]) | The users participating in the conversation | [optional] |
 | **recordingFileRole** | **String** | Role of the file recording. It can be either customer_experience or adhoc. | [optional] |
 | **recordingErrorStatus** | **String** | Status of a recording that cannot be returned because of an error | [optional] |
 | **originalRecordingStartTime** | [**Date**](Date) | The start time of the full recording, before any segment access restrictions are applied. Null when there is no playable media. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -43,4 +43,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

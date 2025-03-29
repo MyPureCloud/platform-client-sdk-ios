@@ -14,10 +14,10 @@
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[QueueConversationCobrowseEventTopicDetail]**](QueueConversationCobrowseEventTopicDetail) |  | [optional] |
-| **errors** | [**[QueueConversationCobrowseEventTopicErrorBody]**](QueueConversationCobrowseEventTopicErrorBody) |  | [optional] |
+| **details** | [**[QueueConversationCobrowseEventTopicDetail]**]([QueueConversationCobrowseEventTopicDetail]) |  | [optional] |
+| **errors** | [**[QueueConversationCobrowseEventTopicErrorBody]**]([QueueConversationCobrowseEventTopicErrorBody]) |  | [optional] |
 | **limit** | [**QueueConversationCobrowseEventTopicLimit**](QueueConversationCobrowseEventTopicLimit) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

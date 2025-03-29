@@ -10,8 +10,8 @@
 | **criteria** | [**ContactBulkSearchCriteria**](ContactBulkSearchCriteria) | Criteria to filter the contacts by. | [optional] |
 | **pageNumber** | **Int** | Page number. | |
 | **pageSize** | **Int** | Page size. The max that will be returned is 100. | |
-| **contactSorts** | [**[ContactSort]**](ContactSort) | The order in which to sort contacts. | [optional] |
+| **contactSorts** | [**[ContactSort]**]([ContactSort]) | The order in which to sort contacts. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

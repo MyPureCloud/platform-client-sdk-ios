@@ -21,10 +21,10 @@
 | **pageCount** | **Int64** |  | [optional] |
 | **callerAddress** | **String** |  | [optional] |
 | **receiverAddress** | **String** |  | [optional] |
-| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail) |  | [optional] |
+| **thumbnails** | [**[DocumentThumbnail]**]([DocumentThumbnail]) |  | [optional] |
 | **downloadSharingUri** | **String** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

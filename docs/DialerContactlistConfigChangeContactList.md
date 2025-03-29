@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **columnNames** | **[String]** | the contact column names | [optional] |
-| **phoneColumns** | [**[DialerContactlistConfigChangeContactPhoneNumberColumn]**](DialerContactlistConfigChangeContactPhoneNumberColumn) | the columns containing phone numbers | [optional] |
-| **emailColumns** | [**[DialerContactlistConfigChangeEmailColumn]**](DialerContactlistConfigChangeEmailColumn) | the columns containing email addresses | [optional] |
+| **phoneColumns** | [**[DialerContactlistConfigChangeContactPhoneNumberColumn]**]([DialerContactlistConfigChangeContactPhoneNumberColumn]) | the columns containing phone numbers | [optional] |
+| **emailColumns** | [**[DialerContactlistConfigChangeEmailColumn]**]([DialerContactlistConfigChangeEmailColumn]) | the columns containing email addresses | [optional] |
 | **importStatus** | [**DialerContactlistConfigChangeImportStatus**](DialerContactlistConfigChangeImportStatus) |  | [optional] |
 | **previewModeColumnName** | **String** | the name of the column that holds the indicators for contacts that are to be dialed in preview mode only | [optional] |
 | **previewModeAcceptedValues** | **[String]** | list of user-defined values indicating the contact is to be dialed in preview mode only | [optional] |
@@ -26,4 +26,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

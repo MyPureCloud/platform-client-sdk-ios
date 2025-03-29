@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **pinnedMessages** | [**[AddressableEntityRef]**](AddressableEntityRef) | Room&#39;s pinned messages | [optional] |
+| **pinnedMessages** | [**[AddressableEntityRef]**]([AddressableEntityRef]) | Room&#39;s pinned messages | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

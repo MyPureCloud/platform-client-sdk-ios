@@ -15,10 +15,10 @@
 | **createdBy** | [**UserReference**](UserReference) | The Id of the user who created the dictionary feedback | [optional] |
 | **dateModified** | [**Date**](Date) | The Timestamp when dictionary feedback modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **modifiedBy** | [**UserReference**](UserReference) | The Id of the user who modified the dictionary feedback | [optional] |
-| **examplePhrases** | [**[DictionaryFeedbackExamplePhrase]**](DictionaryFeedbackExamplePhrase) | A list of at least 3 and up to 20 unique phrases that are example usage of the term | |
+| **examplePhrases** | [**[DictionaryFeedbackExamplePhrase]**]([DictionaryFeedbackExamplePhrase]) | A list of at least 3 and up to 20 unique phrases that are example usage of the term | |
 | **soundsLike** | **[String]** | A list of up to 10 terms that give examples of how the term sounds | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

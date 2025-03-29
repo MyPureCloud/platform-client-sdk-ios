@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Message type | |
 | **text** | **String** | Message text. If type is structured, used as fallback for clients that do not support particular structured content | [optional] |
-| **content** | [**[ConversationMessageContent]**](ConversationMessageContent) | A list of content elements in message | [optional] |
+| **content** | [**[ConversationMessageContent]**]([ConversationMessageContent]) | A list of content elements in message | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

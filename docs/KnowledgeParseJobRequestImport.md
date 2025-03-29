@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **edits** | [**[KnowledgeParseRecord]**](KnowledgeParseRecord) | Override of the result of the parse. | [optional] |
+| **edits** | [**[KnowledgeParseRecord]**]([KnowledgeParseRecord]) | Override of the result of the parse. | [optional] |
 | **excludes** | **[String]** | Excluded results. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

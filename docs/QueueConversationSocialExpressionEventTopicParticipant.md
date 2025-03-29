@@ -36,18 +36,18 @@
 | **screenRecordingState** | **String** | The current screen recording state for this participant. | [optional] |
 | **flaggedReason** | **String** | If this participant has flagged the conversation, the reason code given. | [optional] |
 | **attributes** | **[String:String]** | Additional participant attributes | [optional] |
-| **calls** | [**[QueueConversationSocialExpressionEventTopicCall]**](QueueConversationSocialExpressionEventTopicCall) |  | [optional] |
-| **callbacks** | [**[QueueConversationSocialExpressionEventTopicCallback]**](QueueConversationSocialExpressionEventTopicCallback) |  | [optional] |
-| **chats** | [**[QueueConversationSocialExpressionEventTopicChat]**](QueueConversationSocialExpressionEventTopicChat) |  | [optional] |
-| **cobrowsesessions** | [**[QueueConversationSocialExpressionEventTopicCobrowse]**](QueueConversationSocialExpressionEventTopicCobrowse) |  | [optional] |
-| **emails** | [**[QueueConversationSocialExpressionEventTopicEmail]**](QueueConversationSocialExpressionEventTopicEmail) |  | [optional] |
-| **messages** | [**[QueueConversationSocialExpressionEventTopicMessage]**](QueueConversationSocialExpressionEventTopicMessage) |  | [optional] |
-| **internalMessages** | [**[QueueConversationSocialExpressionEventTopicInternalMessage]**](QueueConversationSocialExpressionEventTopicInternalMessage) |  | [optional] |
-| **screenshares** | [**[QueueConversationSocialExpressionEventTopicScreenshare]**](QueueConversationSocialExpressionEventTopicScreenshare) |  | [optional] |
-| **socialExpressions** | [**[QueueConversationSocialExpressionEventTopicSocialExpression]**](QueueConversationSocialExpressionEventTopicSocialExpression) |  | [optional] |
-| **videos** | [**[QueueConversationSocialExpressionEventTopicVideo]**](QueueConversationSocialExpressionEventTopicVideo) |  | [optional] |
+| **calls** | [**[QueueConversationSocialExpressionEventTopicCall]**]([QueueConversationSocialExpressionEventTopicCall]) |  | [optional] |
+| **callbacks** | [**[QueueConversationSocialExpressionEventTopicCallback]**]([QueueConversationSocialExpressionEventTopicCallback]) |  | [optional] |
+| **chats** | [**[QueueConversationSocialExpressionEventTopicChat]**]([QueueConversationSocialExpressionEventTopicChat]) |  | [optional] |
+| **cobrowsesessions** | [**[QueueConversationSocialExpressionEventTopicCobrowse]**]([QueueConversationSocialExpressionEventTopicCobrowse]) |  | [optional] |
+| **emails** | [**[QueueConversationSocialExpressionEventTopicEmail]**]([QueueConversationSocialExpressionEventTopicEmail]) |  | [optional] |
+| **messages** | [**[QueueConversationSocialExpressionEventTopicMessage]**]([QueueConversationSocialExpressionEventTopicMessage]) |  | [optional] |
+| **internalMessages** | [**[QueueConversationSocialExpressionEventTopicInternalMessage]**]([QueueConversationSocialExpressionEventTopicInternalMessage]) |  | [optional] |
+| **screenshares** | [**[QueueConversationSocialExpressionEventTopicScreenshare]**]([QueueConversationSocialExpressionEventTopicScreenshare]) |  | [optional] |
+| **socialExpressions** | [**[QueueConversationSocialExpressionEventTopicSocialExpression]**]([QueueConversationSocialExpressionEventTopicSocialExpression]) |  | [optional] |
+| **videos** | [**[QueueConversationSocialExpressionEventTopicVideo]**]([QueueConversationSocialExpressionEventTopicVideo]) |  | [optional] |
 | **workflow** | [**QueueConversationSocialExpressionEventTopicWorkflow**](QueueConversationSocialExpressionEventTopicWorkflow) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

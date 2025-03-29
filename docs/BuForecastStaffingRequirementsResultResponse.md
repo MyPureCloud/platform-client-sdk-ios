@@ -12,8 +12,8 @@
 | **weekCount** | **Int** | The number of weeks in this forecast | |
 | **intervalLengthMinutes** | **Int** | The period/interval in minutes for which to aggregate the data | |
 | **state** | **String** | The state of the staffing requirements generation | |
-| **results** | [**[BuForecastStaffingRequirementsResult]**](BuForecastStaffingRequirementsResult) | The forecast staffing requirement results, Will be populated when state &#x3D;&#x3D; &#39;Complete&#39; | [optional] |
+| **results** | [**[BuForecastStaffingRequirementsResult]**]([BuForecastStaffingRequirementsResult]) | The forecast staffing requirement results, Will be populated when state &#x3D;&#x3D; &#39;Complete&#39; | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

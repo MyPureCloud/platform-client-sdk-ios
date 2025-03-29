@@ -8,12 +8,12 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationScreenShareEventTopicScreenShareMediaParticipant]**](ConversationScreenShareEventTopicScreenShareMediaParticipant) |  | [optional] |
+| **participants** | [**[ConversationScreenShareEventTopicScreenShareMediaParticipant]**]([ConversationScreenShareEventTopicScreenShareMediaParticipant]) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-| **divisions** | [**[ConversationScreenShareEventTopicConversationDivisionMembership]**](ConversationScreenShareEventTopicConversationDivisionMembership) |  | [optional] |
+| **divisions** | [**[ConversationScreenShareEventTopicConversationDivisionMembership]**]([ConversationScreenShareEventTopicConversationDivisionMembership]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

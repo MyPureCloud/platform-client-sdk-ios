@@ -19,9 +19,9 @@
 | **features** | [**JSON**]() |  | [optional] |
 | **variables** | [**JSON**]() |  | [optional] |
 | **customActions** | [**JSON**]() |  | [optional] |
-| **pages** | [**[Page]**](Page) |  | [optional] |
+| **pages** | [**[Page]**]([Page]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

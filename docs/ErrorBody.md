@@ -14,10 +14,10 @@
 | **messageWithParams** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 | **contextId** | **String** |  | [optional] |
-| **details** | [**[Detail]**](Detail) |  | [optional] |
-| **errors** | [**[ErrorBody]**](ErrorBody) |  | [optional] |
+| **details** | [**[Detail]**]([Detail]) |  | [optional] |
+| **errors** | [**[ErrorBody]**]([ErrorBody]) |  | [optional] |
 | **limit** | [**Limit**](Limit) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

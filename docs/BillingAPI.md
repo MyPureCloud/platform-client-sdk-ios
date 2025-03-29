@@ -118,4 +118,4 @@ BillingAPI.getBillingTrusteebillingoverviewTrustorOrgId(trustorOrgId: trustorOrg
 [**TrusteeBillingOverview**](TrusteeBillingOverview)
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -9,9 +9,9 @@
 | **title** | **String** | Text to show in the title. | [optional] |
 | **_description** | **String** | Text to show in the description. | [optional] |
 | **url** | **String** | URL of an image. | [optional] |
-| **components** | [**[RecordingButtonComponent]**](RecordingButtonComponent) | List of button components offered with this message content. | [optional] |
+| **components** | [**[RecordingButtonComponent]**]([RecordingButtonComponent]) | List of button components offered with this message content. | [optional] |
 | **actions** | [**RecordingContentActions**](RecordingContentActions) | Actions to be taken. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

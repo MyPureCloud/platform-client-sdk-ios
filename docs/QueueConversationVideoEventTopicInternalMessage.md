@@ -18,8 +18,8 @@
 | **sourceUserId** | **String** | The user ID for the participant on sending side of the internal message conversation. | [optional] |
 | **toAddress** | [**QueueConversationVideoEventTopicAddress**](QueueConversationVideoEventTopicAddress) | Address and name data for a call endpoint. | [optional] |
 | **fromAddress** | [**QueueConversationVideoEventTopicAddress**](QueueConversationVideoEventTopicAddress) | Address and name data for a call endpoint. | [optional] |
-| **messages** | [**[QueueConversationVideoEventTopicInternalMessageDetails]**](QueueConversationVideoEventTopicInternalMessageDetails) | The messages sent on this communication channel. | [optional] |
+| **messages** | [**[QueueConversationVideoEventTopicInternalMessageDetails]**]([QueueConversationVideoEventTopicInternalMessageDetails]) | The messages sent on this communication channel. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

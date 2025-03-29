@@ -12,9 +12,9 @@
 | **comparativePeriod** | [**WorkdayPeriod**](WorkdayPeriod) | The comparative period work day date range | [optional] |
 | **primaryPeriod** | [**WorkdayPeriod**](WorkdayPeriod) | The primary period work day date range | [optional] |
 | **user** | [**UserReference**](UserReference) | The query user | [optional] |
-| **metricData** | [**[InsightsDetailsMetricItem]**](InsightsDetailsMetricItem) | The list of insights data for each metric of the user | [optional] |
+| **metricData** | [**[InsightsDetailsMetricItem]**]([InsightsDetailsMetricItem]) | The list of insights data for each metric of the user | [optional] |
 | **overallData** | [**InsightsDetailsOverallItem**](InsightsDetailsOverallItem) | Overall insights data of the user | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

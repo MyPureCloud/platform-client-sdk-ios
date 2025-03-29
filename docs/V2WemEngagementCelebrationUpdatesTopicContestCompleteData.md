@@ -8,10 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **dateEnd** | **String** |  | [optional] |
 | **anonymization** | **String** |  | [optional] |
-| **metrics** | [**[V2WemEngagementCelebrationUpdatesTopicContestMetrics]**](V2WemEngagementCelebrationUpdatesTopicContestMetrics) |  | [optional] |
-| **prizes** | [**[V2WemEngagementCelebrationUpdatesTopicContestPrizes]**](V2WemEngagementCelebrationUpdatesTopicContestPrizes) |  | [optional] |
-| **winners** | [**[V2WemEngagementCelebrationUpdatesTopicContestWinners]**](V2WemEngagementCelebrationUpdatesTopicContestWinners) |  | [optional] |
+| **metrics** | [**[V2WemEngagementCelebrationUpdatesTopicContestMetrics]**]([V2WemEngagementCelebrationUpdatesTopicContestMetrics]) |  | [optional] |
+| **prizes** | [**[V2WemEngagementCelebrationUpdatesTopicContestPrizes]**]([V2WemEngagementCelebrationUpdatesTopicContestPrizes]) |  | [optional] |
+| **winners** | [**[V2WemEngagementCelebrationUpdatesTopicContestWinners]**]([V2WemEngagementCelebrationUpdatesTopicContestWinners]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

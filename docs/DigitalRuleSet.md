@@ -12,9 +12,9 @@
 | **dateModified** | [**Date**](Date) | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
 | **contactList** | [**DomainEntityRef**](DomainEntityRef) | A ContactList to provide suggestions for contact columns on relevant conditions and actions. | [optional] |
-| **rules** | [**[DigitalRule]**](DigitalRule) | The list of rules. | |
+| **rules** | [**[DigitalRule]**]([DigitalRule]) | The list of rules. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -11,7 +11,7 @@
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **roomId** | **String** | The room id for the chat. | [optional] |
 | **recordingId** | **String** | A globally unique identifier for the recording associated with this chat. | [optional] |
-| **segments** | [**[Segment]**](Segment) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
+| **segments** | [**[Segment]**]([Segment]) | The time line of the participant&#39;s chat, divided into activity segments. | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
 | **direction** | **String** | The direction of the chat | [optional] |
 | **disconnectType** | **String** | System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects. | [optional] |
@@ -31,4 +31,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

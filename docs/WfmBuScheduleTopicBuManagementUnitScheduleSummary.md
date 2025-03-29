@@ -9,9 +9,9 @@
 | **managementUnit** | [**WfmBuScheduleTopicManagementUnit**](WfmBuScheduleTopicManagementUnit) |  | [optional] |
 | **startDate** | [**Date**](Date) |  | [optional] |
 | **endDate** | [**Date**](Date) |  | [optional] |
-| **agents** | [**[WfmBuScheduleTopicUserReference]**](WfmBuScheduleTopicUserReference) |  | [optional] |
+| **agents** | [**[WfmBuScheduleTopicUserReference]**]([WfmBuScheduleTopicUserReference]) |  | [optional] |
 | **agentCount** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

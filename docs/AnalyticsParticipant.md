@@ -15,9 +15,9 @@
 | **screenRecording** | **Bool** | Flag determining if a screen recording was started or not | [optional] |
 | **teamId** | **String** | The team ID the user is a member of | [optional] |
 | **userId** | **String** | Unique identifier for the user | [optional] |
-| **sessions** | [**[AnalyticsSession]**](AnalyticsSession) | List of sessions associated to this participant | [optional] |
+| **sessions** | [**[AnalyticsSession]**]([AnalyticsSession]) | List of sessions associated to this participant | [optional] |
 | **attributes** | **[String:String]** | List of attributes associated to this participant | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

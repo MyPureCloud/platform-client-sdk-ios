@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **criteria** | [**[PatchEntityTypeCriteria]**](PatchEntityTypeCriteria) | A list of one or more criteria to satisfy. | [optional] |
+| **criteria** | [**[PatchEntityTypeCriteria]**]([PatchEntityTypeCriteria]) | A list of one or more criteria to satisfy. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

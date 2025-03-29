@@ -6,11 +6,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **clauses** | [**[CommonRuleConditions]**](CommonRuleConditions) | The list of predicates groups to be evaluated | [optional] |
-| **predicates** | [**[CommonRulePredicate]**](CommonRulePredicate) | The list of rule metric predicates to be evaluated. | |
+| **clauses** | [**[CommonRuleConditions]**]([CommonRuleConditions]) | The list of predicates groups to be evaluated | [optional] |
+| **predicates** | [**[CommonRulePredicate]**]([CommonRulePredicate]) | The list of rule metric predicates to be evaluated. | |
 | **type** | **String** | the logic operator performed. | |
 | **_id** | **String** | The id. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

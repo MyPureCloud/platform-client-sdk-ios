@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **trade** | [**ShiftTradeResponse**](ShiftTradeResponse) | The associated shift trade | [optional] |
-| **violations** | [**[ShiftTradeMatchViolation]**](ShiftTradeMatchViolation) | Constraint violations which disallow this shift trade | [optional] |
-| **adminReviewViolations** | [**[ShiftTradeMatchViolation]**](ShiftTradeMatchViolation) | Constraint violations for this shift trade which require shift trade administrator review | [optional] |
+| **violations** | [**[ShiftTradeMatchViolation]**]([ShiftTradeMatchViolation]) | Constraint violations which disallow this shift trade | [optional] |
+| **adminReviewViolations** | [**[ShiftTradeMatchViolation]**]([ShiftTradeMatchViolation]) | Constraint violations for this shift trade which require shift trade administrator review | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

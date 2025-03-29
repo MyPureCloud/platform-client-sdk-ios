@@ -14,8 +14,8 @@
 | **customerId** | **String** |  | [optional] |
 | **customerIdType** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **outcomeAchievements** | [**[JourneySessionEventsNotificationOutcomeAchievement]**](JourneySessionEventsNotificationOutcomeAchievement) |  | [optional] |
-| **segmentAssignments** | [**[JourneySessionEventsNotificationSegmentAssignment]**](JourneySessionEventsNotificationSegmentAssignment) |  | [optional] |
+| **outcomeAchievements** | [**[JourneySessionEventsNotificationOutcomeAchievement]**]([JourneySessionEventsNotificationOutcomeAchievement]) |  | [optional] |
+| **segmentAssignments** | [**[JourneySessionEventsNotificationSegmentAssignment]**]([JourneySessionEventsNotificationSegmentAssignment]) |  | [optional] |
 | **awayDate** | [**Date**](Date) |  | [optional] |
 | **browser** | [**JourneySessionEventsNotificationBrowser**](JourneySessionEventsNotificationBrowser) |  | [optional] |
 | **device** | [**JourneySessionEventsNotificationDevice**](JourneySessionEventsNotificationDevice) |  | [optional] |
@@ -39,7 +39,7 @@
 | **lastUserDisposition** | [**JourneySessionEventsNotificationConversationUserDisposition**](JourneySessionEventsNotificationConversationUserDisposition) |  | [optional] |
 | **lastConnectedUser** | [**JourneySessionEventsNotificationUser**](JourneySessionEventsNotificationUser) |  | [optional] |
 | **lastConnectedQueue** | [**JourneySessionEventsNotificationConnectedQueue**](JourneySessionEventsNotificationConnectedQueue) |  | [optional] |
-| **conversationChannels** | [**[JourneySessionEventsNotificationConversationChannel]**](JourneySessionEventsNotificationConversationChannel) |  | [optional] |
+| **conversationChannels** | [**[JourneySessionEventsNotificationConversationChannel]**]([JourneySessionEventsNotificationConversationChannel]) |  | [optional] |
 | **lastUserDisconnectType** | **String** |  | [optional] |
 | **lastAcdOutcome** | **String** |  | [optional] |
 | **authenticated** | **Bool** |  | [optional] |
@@ -51,4 +51,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

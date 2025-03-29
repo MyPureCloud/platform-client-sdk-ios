@@ -7,7 +7,7 @@ Model for a paged listing of Nuance bots
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[NuanceBot]**](NuanceBot) |  | [optional] |
+| **entities** | [**[NuanceBot]**]([NuanceBot]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageNumber** | **Int** |  | [optional] |
 | **total** | **Int64** |  | [optional] |
@@ -20,4 +20,4 @@ Model for a paged listing of Nuance bots
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

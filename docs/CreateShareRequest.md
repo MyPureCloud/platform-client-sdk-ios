@@ -10,8 +10,8 @@
 | **sharedEntity** | [**SharedEntity**](SharedEntity) | The entity that will be shared | |
 | **memberType** | **String** |  | [optional] |
 | **member** | [**SharedEntity**](SharedEntity) | The member that will have access to this share. Only required if a list of members is not provided. | [optional] |
-| **members** | [**[CreateShareRequestMember]**](CreateShareRequestMember) |  | [optional] |
+| **members** | [**[CreateShareRequestMember]**]([CreateShareRequestMember]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

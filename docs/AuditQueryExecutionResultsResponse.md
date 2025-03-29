@@ -9,8 +9,8 @@
 | **_id** | **String** | Id of the audit query execution request. | [optional] |
 | **pageSize** | **Int** | Number of results in a page. | [optional] |
 | **cursor** | **String** | Optional cursor to indicate where to resume the results. | [optional] |
-| **entities** | [**[AuditLogMessage]**](AuditLogMessage) | List of audit messages. | [optional] |
+| **entities** | [**[AuditLogMessage]**]([AuditLogMessage]) | List of audit messages. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

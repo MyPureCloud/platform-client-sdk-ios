@@ -27,8 +27,8 @@
 | **enabled** | **Bool** | True if the Edge used by this trunk is in-service | [optional] |
 | **logicalInterface** | [**DomainEntityRef**](DomainEntityRef) | The Logical Interface on the Edge to which the trunk is assigned. | [optional] |
 | **connectedStatus** | [**TrunkConnectedStatus**](TrunkConnectedStatus) | The connected status of the trunk | [optional] |
-| **optionsStatus** | [**[TrunkMetricsOptions]**](TrunkMetricsOptions) | The trunk optionsStatus | [optional] |
-| **registersStatus** | [**[TrunkMetricsRegisters]**](TrunkMetricsRegisters) | The trunk registersStatus | [optional] |
+| **optionsStatus** | [**[TrunkMetricsOptions]**]([TrunkMetricsOptions]) | The trunk optionsStatus | [optional] |
+| **registersStatus** | [**[TrunkMetricsRegisters]**]([TrunkMetricsRegisters]) | The trunk registersStatus | [optional] |
 | **ipStatus** | [**TrunkMetricsNetworkTypeIp**](TrunkMetricsNetworkTypeIp) | The trunk ipStatus | [optional] |
 | **optionsEnabledStatus** | **String** | Returns Enabled when the trunk base supports the availability interval and it has a value greater than 0. | [optional] |
 | **registersEnabledStatus** | **String** | Returns Enabled when the trunk base supports the registration interval and it has a value greater than 0. | [optional] |
@@ -38,4 +38,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

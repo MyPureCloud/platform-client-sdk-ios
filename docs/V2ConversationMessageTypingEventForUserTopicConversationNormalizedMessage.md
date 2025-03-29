@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **channel** | [**V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel**](V2ConversationMessageTypingEventForUserTopicConversationMessagingChannel) |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **events** | [**[V2ConversationMessageTypingEventForUserTopicConversationMessageEvent]**](V2ConversationMessageTypingEventForUserTopicConversationMessageEvent) |  | [optional] |
+| **events** | [**[V2ConversationMessageTypingEventForUserTopicConversationMessageEvent]**]([V2ConversationMessageTypingEventForUserTopicConversationMessageEvent]) |  | [optional] |
 | **direction** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

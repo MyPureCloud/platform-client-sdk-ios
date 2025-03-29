@@ -21,7 +21,7 @@
 | **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **toAddress** | [**ConversationEventTopicAddress**](ConversationEventTopicAddress) | Address and name data for a call endpoint. | [optional] |
 | **fromAddress** | [**ConversationEventTopicAddress**](ConversationEventTopicAddress) | Address and name data for a call endpoint. | [optional] |
-| **messages** | [**[ConversationEventTopicMessageDetails]**](ConversationEventTopicMessageDetails) | The messages sent on this communication channel. | [optional] |
+| **messages** | [**[ConversationEventTopicMessageDetails]**]([ConversationEventTopicMessageDetails]) | The messages sent on this communication channel. | [optional] |
 | **messagesTranscriptUri** | **String** | the messages transcript file uri. | [optional] |
 | **type** | **String** | Indicates the type of message platform from which the message originated. | [optional] |
 | **recipientCountry** | **String** | Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format. | [optional] |
@@ -36,4 +36,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

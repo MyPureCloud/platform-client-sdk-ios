@@ -11,10 +11,10 @@ Open Messaging rich media message structure
 | **channel** | [**OpenMessagingChannel**](OpenMessagingChannel) | Channel-specific information that describes the message and the message channel/provider. | |
 | **type** | **String** | Message type. | |
 | **status** | **String** | Message receipt status. | |
-| **reasons** | [**[ConversationReason]**](ConversationReason) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
+| **reasons** | [**[ConversationReason]**]([ConversationReason]) | List of reasons for a message receipt that indicates the message has failed. Only used with Failed status. | [optional] |
 | **isFinalReceipt** | **Bool** | Indicates if this is the last message receipt for this message, or if another message receipt can be expected. | [optional] |
 | **direction** | **String** | The direction of the message. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

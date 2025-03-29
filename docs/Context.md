@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **patterns** | [**[ContextPattern]**](ContextPattern) | A list of one or more patterns to match. | |
+| **patterns** | [**[ContextPattern]**]([ContextPattern]) | A list of one or more patterns to match. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

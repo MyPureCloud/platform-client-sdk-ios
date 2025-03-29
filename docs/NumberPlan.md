@@ -21,7 +21,7 @@
 | **match** | **String** |  | [optional] |
 | **normalizedFormat** | **String** |  | [optional] |
 | **priority** | **Int** |  | [optional] |
-| **numbers** | [**[Number]**](Number) |  | [optional] |
+| **numbers** | [**[Number]**]([Number]) |  | [optional] |
 | **digitLength** | [**DigitLength**](DigitLength) |  | [optional] |
 | **classification** | **String** |  | [optional] |
 | **matchType** | **String** |  | [optional] |
@@ -29,4 +29,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

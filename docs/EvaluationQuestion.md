@@ -14,10 +14,10 @@
 | **naEnabled** | **Bool** |  | [optional] |
 | **commentsRequired** | **Bool** |  | [optional] |
 | **visibilityCondition** | [**VisibilityCondition**](VisibilityCondition) |  | [optional] |
-| **answerOptions** | [**[AnswerOption]**](AnswerOption) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
+| **answerOptions** | [**[AnswerOption]**]([AnswerOption]) | Options from which to choose an answer for this question. Only used by Multiple Choice type questions. | [optional] |
 | **isKill** | **Bool** |  | [optional] |
 | **isCritical** | **Bool** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

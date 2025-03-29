@@ -10,7 +10,7 @@
 | **initialState** | **String** | The initial connection state of this communication. | [optional] |
 | **_id** | **String** | A globally unique identifier for this communication. | [optional] |
 | **held** | **Bool** | True if this call is held and the person on this side hears silence. | [optional] |
-| **segments** | [**[Segment]**](Segment) | The time line of the participant&#39;s message, divided into activity segments. | [optional] |
+| **segments** | [**[Segment]**]([Segment]) | The time line of the participant&#39;s message, divided into activity segments. | [optional] |
 | **direction** | **String** | The direction of the message. | [optional] |
 | **recordingId** | **String** | A globally unique identifier for the recording associated with this message. | [optional] |
 | **errorInfo** | [**ErrorBody**](ErrorBody) |  | [optional] |
@@ -28,7 +28,7 @@
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **toAddress** | [**Address**](Address) | Address and name data for a call endpoint. | [optional] |
 | **fromAddress** | [**Address**](Address) | Address and name data for a call endpoint. | [optional] |
-| **messages** | [**[MessageDetails]**](MessageDetails) | The messages sent on this communication channel. | [optional] |
+| **messages** | [**[MessageDetails]**]([MessageDetails]) | The messages sent on this communication channel. | [optional] |
 | **journeyContext** | [**JourneyContext**](JourneyContext) | A subset of the Journey System&#39;s data relevant to a part of a conversation (for external linkage and internal usage/context). | [optional] |
 | **wrapup** | [**Wrapup**](Wrapup) | Call wrap up or disposition data. | [optional] |
 | **afterCallWork** | [**AfterCallWork**](AfterCallWork) | After-call work for the communication. | [optional] |
@@ -39,4 +39,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

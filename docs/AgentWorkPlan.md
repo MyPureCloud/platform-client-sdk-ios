@@ -14,9 +14,9 @@
 | **weeklyMinimumPaidMinutes** | **Int** | Minimum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | |
 | **weeklyMaximumPaidMinutes** | **Int** | Maximum weekly paid time in minutes for this work plan. Used if flexibleWeeklyPaidTime &#x3D;&#x3D; true | |
 | **optionalDays** | [**SetWrapperDayOfWeek**](SetWrapperDayOfWeek) | Optional days to schedule for this work plan | [optional] |
-| **shifts** | [**[AgentWorkPlanShift]**](AgentWorkPlanShift) | Shifts in this work plan | |
+| **shifts** | [**[AgentWorkPlanShift]**]([AgentWorkPlanShift]) | Shifts in this work plan | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -10,7 +10,7 @@
 | **userId** | [**UUID**](UUID) |  | [optional] |
 | **name** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
-| **notifications** | [**[V2MobiusRulesTopicAlertNotification]**](V2MobiusRulesTopicAlertNotification) |  | [optional] |
+| **notifications** | [**[V2MobiusRulesTopicAlertNotification]**]([V2MobiusRulesTopicAlertNotification]) |  | [optional] |
 | **conditions** | [**V2MobiusRulesTopicCondition**](V2MobiusRulesTopicCondition) |  | [optional] |
 | **enabled** | **Bool** |  | [optional] |
 | **inAlarm** | **Bool** |  | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

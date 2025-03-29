@@ -12,8 +12,8 @@
 | **weekCount** | **Int** |  | [optional] |
 | **intervalLengthMinutes** | **Int** |  | [optional] |
 | **referenceStartDate** | [**Date**](Date) |  | [optional] |
-| **results** | [**[WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults]**](WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults) |  | [optional] |
+| **results** | [**[WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults]**]([WfmBuShortTermForecastStaffingRequirementsGenerateCompleteTopicBuForecastShortTermStaffingRequirementsResults]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

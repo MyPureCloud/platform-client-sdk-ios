@@ -11,11 +11,11 @@
 | **_description** | **String** |  | [optional] |
 | **published** | **Bool** |  | [optional] |
 | **strictness** | **String** |  | [optional] |
-| **programs** | [**[BaseProgramEntity]**](BaseProgramEntity) |  | [optional] |
+| **programs** | [**[BaseProgramEntity]**]([BaseProgramEntity]) |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
 | **dialect** | **String** |  | [optional] |
 | **participants** | **String** |  | [optional] |
-| **phrases** | [**[Phrase]**](Phrase) |  | [optional] |
+| **phrases** | [**[Phrase]**]([Phrase]) |  | [optional] |
 | **modifiedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
 | **dateModified** | [**Date**](Date) | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **publishedBy** | [**AddressableEntityRef**](AddressableEntityRef) |  | [optional] |
@@ -24,4 +24,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

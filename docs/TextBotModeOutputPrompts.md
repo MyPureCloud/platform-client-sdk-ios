@@ -7,8 +7,8 @@ Prompt information related to a bot flow turn.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **segments** | [**[TextBotPromptSegment]**](TextBotPromptSegment) | The list of prompt segments. | |
+| **segments** | [**[TextBotPromptSegment]**]([TextBotPromptSegment]) | The list of prompt segments. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

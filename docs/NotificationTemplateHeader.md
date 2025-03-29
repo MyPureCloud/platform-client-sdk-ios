@@ -10,8 +10,8 @@ Template header object.
 | **type** | **String** | Template header type. | |
 | **text** | **String** | Header text. For WhatsApp, ignored. | [optional] |
 | **media** | [**ContentAttachment**](ContentAttachment) | Media template header image. | [optional] |
-| **parameters** | [**[NotificationTemplateParameter]**](NotificationTemplateParameter) | Template parameters for placeholders in template. | [optional] |
+| **parameters** | [**[NotificationTemplateParameter]**]([NotificationTemplateParameter]) | Template parameters for placeholders in template. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

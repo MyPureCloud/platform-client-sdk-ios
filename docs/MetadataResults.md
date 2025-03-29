@@ -7,8 +7,8 @@ List of resources created or modified as a result of running an accelerator
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[MetadataResultEntity]**](MetadataResultEntity) | list of resources | [optional] |
+| **entities** | [**[MetadataResultEntity]**]([MetadataResultEntity]) | list of resources | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

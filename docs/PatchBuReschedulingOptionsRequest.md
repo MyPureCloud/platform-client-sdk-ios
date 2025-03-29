@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **managementUnits** | [**[PatchBuReschedulingOptionsManagementUnitRequest]**](PatchBuReschedulingOptionsManagementUnitRequest) | Per-management unit rescheduling options to update | [optional] |
+| **managementUnits** | [**[PatchBuReschedulingOptionsManagementUnitRequest]**]([PatchBuReschedulingOptionsManagementUnitRequest]) | Per-management unit rescheduling options to update | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

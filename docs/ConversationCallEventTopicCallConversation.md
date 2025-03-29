@@ -8,15 +8,15 @@
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
 | **name** | **String** |  | [optional] |
-| **participants** | [**[ConversationCallEventTopicCallMediaParticipant]**](ConversationCallEventTopicCallMediaParticipant) |  | [optional] |
+| **participants** | [**[ConversationCallEventTopicCallMediaParticipant]**]([ConversationCallEventTopicCallMediaParticipant]) |  | [optional] |
 | **otherMediaUris** | **[String]** |  | [optional] |
 | **address** | **String** |  | [optional] |
 | **utilizationLabelId** | **String** |  | [optional] |
-| **divisions** | [**[ConversationCallEventTopicConversationDivisionMembership]**](ConversationCallEventTopicConversationDivisionMembership) |  | [optional] |
+| **divisions** | [**[ConversationCallEventTopicConversationDivisionMembership]**]([ConversationCallEventTopicConversationDivisionMembership]) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
 | **securePause** | **Bool** |  | [optional] |
 | **maxParticipants** | **Int** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **namespaces** | [**[FreeTrialNamespace]**](FreeTrialNamespace) |  | [optional] |
+| **namespaces** | [**[FreeTrialNamespace]**]([FreeTrialNamespace]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

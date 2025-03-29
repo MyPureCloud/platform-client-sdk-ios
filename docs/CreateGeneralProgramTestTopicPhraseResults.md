@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **processedTranscriptsCount** | **Int** |  | [optional] |
 | **matchedTranscriptsCount** | **Int** |  | [optional] |
-| **matchedTranscripts** | [**[CreateGeneralProgramTestPhraseMatchedTranscript]**](CreateGeneralProgramTestPhraseMatchedTranscript) |  | [optional] |
+| **matchedTranscripts** | [**[CreateGeneralProgramTestPhraseMatchedTranscript]**]([CreateGeneralProgramTestPhraseMatchedTranscript]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

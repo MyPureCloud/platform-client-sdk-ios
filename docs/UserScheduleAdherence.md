@@ -24,13 +24,13 @@
 | **adherenceExplanation** | [**RealTimeAdherenceExplanation**](RealTimeAdherenceExplanation) | Currently applicable explanation for the adherence state | [optional] |
 | **timeOfAdherenceChange** | [**Date**](Date) | Time when the user entered the current adherenceState in ISO-8601 format | [optional] |
 | **presenceUpdateTime** | [**Date**](Date) | Time when presence was last updated. Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **activeQueues** | [**[QueueReference]**](QueueReference) | The list of queues to which this user is joined | [optional] |
+| **activeQueues** | [**[QueueReference]**]([QueueReference]) | The list of queues to which this user is joined | [optional] |
 | **activeQueuesModifiedTime** | [**Date**](Date) | Time when the list of active queues for this user was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **removedFromManagementUnit** | **Bool** | For notification purposes. Used to indicate that a user was removed from the management unit | [optional] |
-| **nextActivityReminders** | [**[UserNextActivityReminder]**](UserNextActivityReminder) | A list of upcoming activities for which the user is scheduled | [optional] |
+| **nextActivityReminders** | [**[UserNextActivityReminder]**]([UserNextActivityReminder]) | A list of upcoming activities for which the user is scheduled | [optional] |
 | **suppressOnTimeReminder** | **Bool** | Indicates whether the on-time adherence notification should be suppressed for the user | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

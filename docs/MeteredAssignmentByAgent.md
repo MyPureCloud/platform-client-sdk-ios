@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **evaluationContextId** | **String** |  | [optional] |
-| **evaluators** | [**[User]**](User) |  | [optional] |
+| **evaluators** | [**[User]**]([User]) |  | [optional] |
 | **maxNumberEvaluations** | **Int** |  | [optional] |
 | **evaluationForm** | [**EvaluationForm**](EvaluationForm) |  | [optional] |
 | **timeInterval** | [**TimeInterval**](TimeInterval) |  | [optional] |
@@ -15,4 +15,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

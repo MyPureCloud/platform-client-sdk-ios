@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **values** | [**[SecondaryPresence]**](SecondaryPresence) |  | [optional] |
+| **values** | [**[SecondaryPresence]**]([SecondaryPresence]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

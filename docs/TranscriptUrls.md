@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **conversation** | [**AddressableEntityRef**](AddressableEntityRef) | The Conversation Reference | [optional] |
 | **communicationId** | **String** | The Communication ID | [optional] |
-| **urls** | [**[SegmentUrl]**](SegmentUrl) | List of Transcript URLs | [optional] |
+| **urls** | [**[SegmentUrl]**]([SegmentUrl]) | List of Transcript URLs | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

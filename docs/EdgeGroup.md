@@ -21,9 +21,9 @@
 | **managed** | **Bool** | Is this edge group being managed remotely. | [optional] |
 | **hybrid** | **Bool** | Is this edge group hybrid. | [optional] |
 | **edgeTrunkBaseAssignment** | [**TrunkBaseAssignment**](TrunkBaseAssignment) | A trunk base settings assignment of trunkType \&quot;EDGE\&quot; to use for edge-to-edge communication. | |
-| **phoneTrunkBases** | [**[TrunkBase]**](TrunkBase) | Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. | |
+| **phoneTrunkBases** | [**[TrunkBase]**]([TrunkBase]) | Trunk base settings of trunkType \&quot;PHONE\&quot; to inherit to edge logical interface for phone communication. | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

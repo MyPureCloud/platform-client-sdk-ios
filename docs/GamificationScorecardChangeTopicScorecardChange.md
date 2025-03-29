@@ -11,8 +11,8 @@
 | **teamId** | **String** |  | [optional] |
 | **performanceProfileId** | **String** |  | [optional] |
 | **userId** | **String** |  | [optional] |
-| **performanceMetrics** | [**[GamificationScorecardChangeTopicPerformanceMetric]**](GamificationScorecardChangeTopicPerformanceMetric) |  | [optional] |
+| **performanceMetrics** | [**[GamificationScorecardChangeTopicPerformanceMetric]**]([GamificationScorecardChangeTopicPerformanceMetric]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

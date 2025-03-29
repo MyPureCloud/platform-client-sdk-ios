@@ -9,8 +9,8 @@
 | **query** | **String** | Query to get autocomplete suggestions for the matching knowledge documents. | |
 | **pageSize** | **Int** | Page size of the returned results. | [optional] |
 | **sessionId** | **String** | Session ID of the guest suggestions. | [optional] |
-| **results** | [**[KnowledgeGuestDocumentSuggestionResult]**](KnowledgeGuestDocumentSuggestionResult) | Suggestions matching the query. | [optional] |
+| **results** | [**[KnowledgeGuestDocumentSuggestionResult]**]([KnowledgeGuestDocumentSuggestionResult]) | Suggestions matching the query. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

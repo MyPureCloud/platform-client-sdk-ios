@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BusinessUnitListItem]**](BusinessUnitListItem) |  | [optional] |
+| **entities** | [**[BusinessUnitListItem]**]([BusinessUnitListItem]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

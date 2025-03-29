@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WaitlistPosition]**](WaitlistPosition) |  | [optional] |
+| **entities** | [**[WaitlistPosition]**]([WaitlistPosition]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

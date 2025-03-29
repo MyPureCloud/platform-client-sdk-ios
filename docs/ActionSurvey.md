@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **questions** | [**[JourneySurveyQuestion]**](JourneySurveyQuestion) | Questions shown to the user. | |
+| **questions** | [**[JourneySurveyQuestion]**]([JourneySurveyQuestion]) | Questions shown to the user. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

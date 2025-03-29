@@ -13,9 +13,9 @@
 | **status** | **String** | The status of the Lex bot alias | |
 | **failureReason** | **String** | If the status is FAILED, Amazon Lex explains why it failed to build the bot | [optional] |
 | **language** | **String** | The target language of the Lex bot | [optional] |
-| **intents** | [**[LexIntent]**](LexIntent) | An array of Intents associated with this bot alias | [optional] |
+| **intents** | [**[LexIntent]**]([LexIntent]) | An array of Intents associated with this bot alias | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

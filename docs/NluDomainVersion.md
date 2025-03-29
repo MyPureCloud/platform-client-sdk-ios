@@ -17,11 +17,11 @@
 | **datePublished** | [**Date**](Date) | The date when the NLU domain version was published. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **trainingStatus** | **String** | The training status of the NLU domain version. | [optional] |
 | **evaluationStatus** | **String** | The evaluation status of the NLU domain version. | [optional] |
-| **intents** | [**[IntentDefinition]**](IntentDefinition) | The intents defined for this NLU domain version. | [optional] |
-| **entityTypes** | [**[NamedEntityTypeDefinition]**](NamedEntityTypeDefinition) | The entity types defined for this NLU domain version. | [optional] |
-| **entities** | [**[NamedEntityDefinition]**](NamedEntityDefinition) | The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings | [optional] |
+| **intents** | [**[IntentDefinition]**]([IntentDefinition]) | The intents defined for this NLU domain version. | [optional] |
+| **entityTypes** | [**[NamedEntityTypeDefinition]**]([NamedEntityTypeDefinition]) | The entity types defined for this NLU domain version. | [optional] |
+| **entities** | [**[NamedEntityDefinition]**]([NamedEntityDefinition]) | The entities defined for this NLU domain version.This field is mutually exclusive with entityTypeBindings | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

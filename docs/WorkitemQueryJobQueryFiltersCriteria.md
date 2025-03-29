@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_operator** | **String** | Query filter logical operator to join predicates. | [optional] |
-| **predicates** | [**[WorkitemQueryJobQueryFiltersPredicate]**](WorkitemQueryJobQueryFiltersPredicate) | Query filter predicates. Number of predicates within the query filter should be between 1 and 5. | |
+| **predicates** | [**[WorkitemQueryJobQueryFiltersPredicate]**]([WorkitemQueryJobQueryFiltersPredicate]) | Query filter predicates. Number of predicates within the query filter should be between 1 and 5. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

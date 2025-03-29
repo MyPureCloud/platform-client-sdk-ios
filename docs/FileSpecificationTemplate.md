@@ -18,10 +18,10 @@
 | **header** | **Bool** | If true indicates that delimited file has a header row, which can provide column names | [optional] |
 | **delimiter** | **String** | Kind of delimiter | [optional] |
 | **delimiterValue** | **String** | Delimiter character, used only when delimiter&#x3D;\&quot;Custom\&quot; | [optional] |
-| **columnInformation** | [**[Column]**](Column) | Columns specification | [optional] |
-| **preprocessingRules** | [**[PreprocessingRule]**](PreprocessingRule) | Preprocessing rules | [optional] |
+| **columnInformation** | [**[Column]**]([Column]) | Columns specification | [optional] |
+| **preprocessingRules** | [**[PreprocessingRule]**]([PreprocessingRule]) | Preprocessing rules | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

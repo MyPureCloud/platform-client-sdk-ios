@@ -10,8 +10,8 @@
 | **generationResultsDownloadUrl** | **String** | The download URL from which to fetch the generation results for the rescheduling run | [optional] |
 | **headcountForecast** | [**BuHeadcountForecast**](BuHeadcountForecast) | The headcount forecast.  Note the result will always be delivered via the headcountForecastDownloadUrl; however the schema is included for documentation | [optional] |
 | **headcountForecastDownloadUrl** | **String** | The download URL from which to fetch the headcount forecast for the rescheduling run | [optional] |
-| **agentSchedules** | [**[BuRescheduleAgentScheduleResult]**](BuRescheduleAgentScheduleResult) | List of download links for agent schedules produced by the rescheduling run | [optional] |
+| **agentSchedules** | [**[BuRescheduleAgentScheduleResult]**]([BuRescheduleAgentScheduleResult]) | List of download links for agent schedules produced by the rescheduling run | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

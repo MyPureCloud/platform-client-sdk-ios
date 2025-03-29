@@ -8,7 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **contactList** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference) |  | [optional] |
 | **queue** | [**DialerRulesetConfigChangeUriReference**](DialerRulesetConfigChangeUriReference) | A UriReference for a resource | [optional] |
-| **rules** | [**[DialerRulesetConfigChangeRule]**](DialerRulesetConfigChangeRule) |  | [optional] |
+| **rules** | [**[DialerRulesetConfigChangeRule]**]([DialerRulesetConfigChangeRule]) |  | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 | **_id** | **String** | The globally unique identifier for the object. | [optional] |
 | **name** | **String** | The UI-visible name of the object | [optional] |
@@ -18,4 +18,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

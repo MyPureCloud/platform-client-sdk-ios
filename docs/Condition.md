@@ -20,9 +20,9 @@
 | **contactIdField** | **String** | The input field from the data action that the contactId will be passed to for this condition. Valid for a dataActionCondition. | [optional] |
 | **callAnalysisResultField** | **String** | The input field from the data action that the callAnalysisResult will be passed to for this condition. Valid for a wrapup dataActionCondition. | [optional] |
 | **agentWrapupField** | **String** | The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition. | [optional] |
-| **contactColumnToDataActionFieldMappings** | [**[ContactColumnToDataActionFieldMapping]**](ContactColumnToDataActionFieldMapping) | A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. | [optional] |
-| **predicates** | [**[DataActionConditionPredicate]**](DataActionConditionPredicate) | A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. | [optional] |
+| **contactColumnToDataActionFieldMappings** | [**[ContactColumnToDataActionFieldMapping]**]([ContactColumnToDataActionFieldMapping]) | A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition. | [optional] |
+| **predicates** | [**[DataActionConditionPredicate]**]([DataActionConditionPredicate]) | A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -82,6 +82,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs**](IntegrationsAPI#postIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs) | Get a Nuance bot in the specified Integration asynchronously |
 | [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs**](IntegrationsAPI#postIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs) | Get a list of Nuance bots in the specified Integration asynchronously |
 | [**postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate**](IntegrationsAPI#postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate) | Try out a single credential for a Nuance bot to know if the secret is correct |
+| [**postIntegrationsWebhookEvents**](IntegrationsAPI#postIntegrationsWebhookEvents) | Invoke Webhook |
 | [**putIntegrationConfigCurrent**](IntegrationsAPI#putIntegrationConfigCurrent) | Update integration configuration. |
 | [**putIntegrationsActionDraftFunction**](IntegrationsAPI#putIntegrationsActionDraftFunction) | Update draft function settings. |
 | [**putIntegrationsBotconnectorIntegrationIdBots**](IntegrationsAPI#putIntegrationsBotconnectorIntegrationIdBots) | Set a list of botConnector bots plus versions for this integration |
@@ -4285,6 +4286,57 @@ IntegrationsAPI.postIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidat
 `nil` (empty response body)
 
 
+## postIntegrationsWebhookEvents
+
+
+
+> [WebhookInvocationResponse](WebhookInvocationResponse) postIntegrationsWebhookEvents(tokenId, body)
+
+Invoke Webhook
+
+
+
+Wraps POST /api/v2/integrations/webhooks/{tokenId}/events  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let tokenId: String = "" // The token of the webhook to be invoked
+let body: [String:JSON] = new JSON(...) // Webhook Invocation Payload
+
+// Code example
+IntegrationsAPI.postIntegrationsWebhookEvents(tokenId: tokenId, body: body) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("IntegrationsAPI.postIntegrationsWebhookEvents was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tokenId** | **String**| The token of the webhook to be invoked | |
+| **body** | [**[String:JSON]**](JSON)| Webhook Invocation Payload | |
+
+
+### Return type
+
+[**WebhookInvocationResponse**](WebhookInvocationResponse)
+
+
 ## putIntegrationConfigCurrent
 
 
@@ -4647,4 +4699,4 @@ IntegrationsAPI.putIntegrationsUnifiedcommunicationThirdpartypresences(ucIntegra
 **String**
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

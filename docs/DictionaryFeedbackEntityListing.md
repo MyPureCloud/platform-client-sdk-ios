@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ListedDictionaryFeedback]**](ListedDictionaryFeedback) |  | [optional] |
+| **entities** | [**[ListedDictionaryFeedback]**]([ListedDictionaryFeedback]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
 | **total** | **Int** |  | [optional] |
@@ -15,4 +15,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

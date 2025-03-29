@@ -22,10 +22,10 @@
 | **application** | **String** | Name of the application used to perform the audit&#39;s action | [optional] |
 | **initiatingAction** | [**InitiatingAction**](InitiatingAction) | Id and action of the audit initiating the transaction | [optional] |
 | **transactionInitiator** | **Bool** | Whether the current audit is the initiator of the transaction | [optional] |
-| **propertyChanges** | [**[PropertyChange]**](PropertyChange) | List of properties that were changed and changes made to those properties. | [optional] |
+| **propertyChanges** | [**[PropertyChange]**]([PropertyChange]) | List of properties that were changed and changes made to those properties. | [optional] |
 | **context** | **[String:String]** | Additional context for this message. | [optional] |
-| **entityChanges** | [**[EntityChange]**](EntityChange) | List of entities that were changed and changes made to those entities. | [optional] |
+| **entityChanges** | [**[EntityChange]**]([EntityChange]) | List of entities that were changed and changes made to those entities. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -13,8 +13,8 @@
 | **categories** | **[String]** | The categories to which this data corresponds | [optional] |
 | **shortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | Short term forecast reference | [optional] |
 | **schedule** | [**BuScheduleReference**](BuScheduleReference) | Schedule reference | [optional] |
-| **intradayDataGroupings** | [**[BuIntradayDataGroup]**](BuIntradayDataGroup) | Intraday data grouped by a single media type and set of planning group IDs | [optional] |
+| **intradayDataGroupings** | [**[BuIntradayDataGroup]**]([BuIntradayDataGroup]) | Intraday data grouped by a single media type and set of planning group IDs | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

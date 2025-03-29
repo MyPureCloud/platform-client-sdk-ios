@@ -7,8 +7,8 @@ Used to retrieve executionData based upon certain criteria
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **query** | [**[CriteriaGroup]**](CriteriaGroup) | A list of CriteriaGroups which will be AND&#39;d together to generate a result set. | |
+| **query** | [**[CriteriaGroup]**]([CriteriaGroup]) | A list of CriteriaGroups which will be AND&#39;d together to generate a result set. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

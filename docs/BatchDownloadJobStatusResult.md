@@ -12,9 +12,9 @@
 | **resultCount** | **Int** | Current number of results available, this includes both success and error results. | [optional] |
 | **errorCount** | **Int** | Current number of error results. | [optional] |
 | **status** | **String** | Current status of the job. A job is considered completed when all the submitted requests have been processed and fulfilled. | [optional] |
-| **results** | [**[BatchDownloadJobResult]**](BatchDownloadJobResult) | Current set of results for the job. | [optional] |
+| **results** | [**[BatchDownloadJobResult]**]([BatchDownloadJobResult]) | Current set of results for the job. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

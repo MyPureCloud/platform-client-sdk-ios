@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getConversationRecording**](RecordingAPI#getConversationRecording) | Gets a specific recording. |
 | [**getConversationRecordingAnnotation**](RecordingAPI#getConversationRecordingAnnotation) | Get annotation |
 | [**getConversationRecordingAnnotations**](RecordingAPI#getConversationRecordingAnnotations) | Get annotations for recording |
-| [**getConversationRecordingmetadata**](RecordingAPI#getConversationRecordingmetadata) | Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing. |
+| [**getConversationRecordingmetadata**](RecordingAPI#getConversationRecordingmetadata) | Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. |
 | [**getConversationRecordingmetadataRecordingId**](RecordingAPI#getConversationRecordingmetadataRecordingId) | Get metadata for a specific recording. Does not return playable media. |
 | [**getConversationRecordings**](RecordingAPI#getConversationRecordings) | Get all of a Conversation&#39;s Recordings. |
 | [**getOrphanrecording**](RecordingAPI#getOrphanrecording) | Gets a single orphan recording |
@@ -597,7 +597,7 @@ RecordingAPI.getConversationRecordingAnnotations(conversationId: conversationId,
 
 > [[RecordingMetadata]](RecordingMetadata) getConversationRecordingmetadata(conversationId)
 
-Get recording metadata for a conversation. Does not return playable media. Annotations won&#39;t be included in the response if either recording:recording:view or recording:annotation:view permission is missing.
+Get recording metadata for a conversation. Does not return playable media nor system annotations. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
 
 
 
@@ -3094,4 +3094,4 @@ RecordingAPI.putRecordingsDeletionprotection(protect: protect, body: body) { (er
 `nil` (empty response body)
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

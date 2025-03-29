@@ -11,9 +11,9 @@
 | **selfUri** | **String** |  | [optional] |
 | **jid** | **String** |  | [optional] |
 | **inactive** | **Bool** |  | [optional] |
-| **integrations** | [**[Contact]**](Contact) |  | [optional] |
+| **integrations** | [**[Contact]**]([Contact]) |  | [optional] |
 | **presence** | [**ChatPresence**](ChatPresence) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

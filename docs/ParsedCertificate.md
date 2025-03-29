@@ -7,8 +7,8 @@ Represents the parsed certificate information.
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **certificateDetails** | [**[CertificateDetails]**](CertificateDetails) | The details of the certificates that were parsed correctly. | [optional] |
+| **certificateDetails** | [**[CertificateDetails]**]([CertificateDetails]) | The details of the certificates that were parsed correctly. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

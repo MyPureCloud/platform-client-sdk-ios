@@ -15,7 +15,7 @@
 | **media** | **String** | The type of media that the recording is. At the moment that could be audio, chat, email, or message. | [optional] |
 | **mediaSubtype** | **String** | The recording media subtype. | [optional] |
 | **mediaSubject** | **String** | The recording media subject. | [optional] |
-| **annotations** | [**[Annotation]**](Annotation) | Annotations that belong to the recording. Populated when recording filestate is AVAILABLE. | [optional] |
+| **annotations** | [**[Annotation]**]([Annotation]) | Annotations that belong to the recording. Populated when recording filestate is AVAILABLE. | [optional] |
 | **fileState** | **String** | Represents the current file state for a recording. Examples: Uploading, Archived, etc | [optional] |
 | **restoreExpirationTime** | [**Date**](Date) | The amount of time a restored recording will remain restored before being archived again. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **archiveDate** | [**Date**](Date) | The date the recording will be archived. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -30,4 +30,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **comparativePeriod** | [**[UserTrendData]**](UserTrendData) | List of trend data in the comparative period | [optional] |
-| **primaryPeriod** | [**[UserTrendData]**](UserTrendData) | List of trend data in the primary period | [optional] |
+| **comparativePeriod** | [**[UserTrendData]**]([UserTrendData]) | List of trend data in the comparative period | [optional] |
+| **primaryPeriod** | [**[UserTrendData]**]([UserTrendData]) | List of trend data in the primary period | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

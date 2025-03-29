@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WebChatGuestMediaRequest]**](WebChatGuestMediaRequest) |  | [optional] |
+| **entities** | [**[WebChatGuestMediaRequest]**]([WebChatGuestMediaRequest]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

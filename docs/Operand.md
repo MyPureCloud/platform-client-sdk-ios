@@ -14,8 +14,8 @@
 | **voiceSecondsPosition** | [**OperandPosition**](OperandPosition) | Dictates when the operand must occur in a voice interaction | [optional] |
 | **digitalWordsPosition** | [**OperandPosition**](OperandPosition) | Dictates when the operand must occur in a digital interaction | [optional] |
 | **infixOperator** | [**InfixOperator**](InfixOperator) | Defines a logical operation that is applied on the current operand, against the following operand | [optional] |
-| **operands** | [**[Operand]**](Operand) | Contains a new level of operands | [optional] |
+| **operands** | [**[Operand]**]([Operand]) | Contains a new level of operands | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

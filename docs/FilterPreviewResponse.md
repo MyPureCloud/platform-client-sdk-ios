@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **filteredContacts** | **Int64** |  | [optional] |
 | **totalContacts** | **Int64** |  | [optional] |
-| **preview** | [**[DialerContact]**](DialerContact) |  | [optional] |
+| **preview** | [**[DialerContact]**]([DialerContact]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

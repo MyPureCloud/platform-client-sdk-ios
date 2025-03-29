@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **division** | [**QueueConversationEmailEventTopicDomainEntityRef**](QueueConversationEmailEventTopicDomainEntityRef) |  | [optional] |
-| **entities** | [**[QueueConversationEmailEventTopicDivisionEntityRef]**](QueueConversationEmailEventTopicDivisionEntityRef) |  | [optional] |
+| **entities** | [**[QueueConversationEmailEventTopicDivisionEntityRef]**]([QueueConversationEmailEventTopicDivisionEntityRef]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

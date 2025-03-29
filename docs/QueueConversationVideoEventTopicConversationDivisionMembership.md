@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **division** | [**QueueConversationVideoEventTopicDomainEntityRef**](QueueConversationVideoEventTopicDomainEntityRef) |  | [optional] |
-| **entities** | [**[QueueConversationVideoEventTopicDivisionEntityRef]**](QueueConversationVideoEventTopicDivisionEntityRef) |  | [optional] |
+| **entities** | [**[QueueConversationVideoEventTopicDivisionEntityRef]**]([QueueConversationVideoEventTopicDivisionEntityRef]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

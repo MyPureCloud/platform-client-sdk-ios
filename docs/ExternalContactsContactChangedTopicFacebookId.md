@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ids** | [**[ExternalContactsContactChangedTopicFacebookScopedId]**](ExternalContactsContactChangedTopicFacebookScopedId) |  | [optional] |
+| **ids** | [**[ExternalContactsContactChangedTopicFacebookScopedId]**]([ExternalContactsContactChangedTopicFacebookScopedId]) |  | [optional] |
 | **displayName** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

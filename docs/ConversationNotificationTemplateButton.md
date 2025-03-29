@@ -12,8 +12,8 @@ Template button object
 | **index** | **Int64** | index of the button in the list. | |
 | **phoneNumber** | **String** | Button phone number. | [optional] |
 | **url** | **String** | Button URL link. | [optional] |
-| **parameters** | [**[ConversationNotificationTemplateParameter]**](ConversationNotificationTemplateParameter) | Template parameters for placeholders in the button. | [optional] |
+| **parameters** | [**[ConversationNotificationTemplateParameter]**]([ConversationNotificationTemplateParameter]) | Template parameters for placeholders in the button. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

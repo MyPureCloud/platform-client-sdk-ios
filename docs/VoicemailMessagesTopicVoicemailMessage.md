@@ -19,10 +19,10 @@
 | **note** | **String** |  | [optional] |
 | **deleted** | **Bool** |  | [optional] |
 | **modifiedByUserId** | **String** |  | [optional] |
-| **copiedTo** | [**[VoicemailMessagesTopicVoicemailCopyRecord]**](VoicemailMessagesTopicVoicemailCopyRecord) |  | [optional] |
+| **copiedTo** | [**[VoicemailMessagesTopicVoicemailCopyRecord]**]([VoicemailMessagesTopicVoicemailCopyRecord]) |  | [optional] |
 | **copiedFrom** | [**VoicemailMessagesTopicVoicemailCopyRecord**](VoicemailMessagesTopicVoicemailCopyRecord) |  | [optional] |
 | **modifiedDateString** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

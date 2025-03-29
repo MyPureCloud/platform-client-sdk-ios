@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[PredictionResults]**](PredictionResults) | Returned upon a successful estimated wait time request. | |
+| **results** | [**[PredictionResults]**]([PredictionResults]) | Returned upon a successful estimated wait time request. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

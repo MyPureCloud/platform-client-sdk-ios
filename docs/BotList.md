@@ -7,8 +7,8 @@ A list of BotConnectorBots
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **chatBots** | [**[BotConnectorBot]**](BotConnectorBot) | A list of botConnector Bots. Max 50 | |
+| **chatBots** | [**[BotConnectorBot]**]([BotConnectorBot]) | A list of botConnector Bots. Max 50 | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

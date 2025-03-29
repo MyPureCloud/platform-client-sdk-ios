@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **user** | [**UserReference**](UserReference) | The requested user for the best points | [optional] |
-| **bestPoints** | [**[UserBestPointsItem]**](UserBestPointsItem) | List of best point for the requested user | [optional] |
+| **bestPoints** | [**[UserBestPointsItem]**]([UserBestPointsItem]) | List of best point for the requested user | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

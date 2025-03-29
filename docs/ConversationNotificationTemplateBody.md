@@ -8,8 +8,8 @@ Template body object.
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **text** | **String** | Body text. For WhatsApp, ignored. | [optional] |
-| **parameters** | [**[ConversationNotificationTemplateParameter]**](ConversationNotificationTemplateParameter) | Template parameters for placeholders in template. | |
+| **parameters** | [**[ConversationNotificationTemplateParameter]**]([ConversationNotificationTemplateParameter]) | Template parameters for placeholders in template. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

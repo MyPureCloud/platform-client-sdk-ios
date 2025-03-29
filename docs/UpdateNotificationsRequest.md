@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[WfmUserNotification]**](WfmUserNotification) | The notifications to update | |
+| **entities** | [**[WfmUserNotification]**]([WfmUserNotification]) | The notifications to update | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

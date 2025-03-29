@@ -27,7 +27,7 @@
 | **peerId** | **String** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **connectedTime** | [**Date**](Date) | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
-| **disconnectReasons** | [**[ConversationEventTopicDisconnectReason]**](ConversationEventTopicDisconnectReason) | List of reasons that this call was disconnected. This will be set once the call disconnects. | [optional] |
+| **disconnectReasons** | [**[ConversationEventTopicDisconnectReason]**]([ConversationEventTopicDisconnectReason]) | List of reasons that this call was disconnected. This will be set once the call disconnects. | [optional] |
 | **faxStatus** | [**ConversationEventTopicFaxStatus**](ConversationEventTopicFaxStatus) |  | [optional] |
 | **uuiData** | **String** | User to User Information (UUI) data managed by SIP session application. | [optional] |
 | **bargedTime** | [**Date**](Date) | The timestamp when this participant was connected to the barge conference in the provider clock. | [optional] |
@@ -39,4 +39,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

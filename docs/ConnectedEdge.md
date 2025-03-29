@@ -10,9 +10,9 @@
 | **name** | **String** |  | [optional] |
 | **interfaceName** | **String** | Edge interface name used for the connection | [optional] |
 | **interfaceIpAddress** | **String** | Edge interface IP address | [optional] |
-| **edgeConnectionList** | [**[EdgeConnectionInfo]**](EdgeConnectionInfo) |  | [optional] |
+| **edgeConnectionList** | [**[EdgeConnectionInfo]**]([EdgeConnectionInfo]) |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -18,7 +18,7 @@
 | **state** | **String** | Indicates if the resource is active, inactive, or deleted. | [optional] |
 | **modifiedByApp** | **String** | The application that last modified the resource. | [optional] |
 | **createdByApp** | **String** | The application that created the resource. | [optional] |
-| **interfaces** | [**[EdgeInterface]**](EdgeInterface) | The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead | [optional] |
+| **interfaces** | [**[EdgeInterface]**]([EdgeInterface]) | The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead | [optional] |
 | **make** | **String** |  | [optional] |
 | **model** | **String** |  | [optional] |
 | **apiVersion** | **String** |  | [optional] |
@@ -52,4 +52,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

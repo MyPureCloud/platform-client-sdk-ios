@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[ProgramMappings]**](ProgramMappings) |  | [optional] |
+| **entities** | [**[ProgramMappings]**]([ProgramMappings]) |  | [optional] |
 | **pageSize** | **Int** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **pageCount** | **Int** |  | [optional] |
@@ -14,4 +14,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

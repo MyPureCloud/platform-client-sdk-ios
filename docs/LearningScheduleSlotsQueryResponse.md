@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **suggestedSlots** | [**[LearningSlot]**](LearningSlot) | List of slots where Learning activity can be scheduled | [optional] |
-| **wfmScheduleActivities** | [**[LearningSlotWfmScheduleActivity]**](LearningSlotWfmScheduleActivity) | Detailed data for WFM scheduled activities | [optional] |
+| **suggestedSlots** | [**[LearningSlot]**]([LearningSlot]) | List of slots where Learning activity can be scheduled | [optional] |
+| **wfmScheduleActivities** | [**[LearningSlotWfmScheduleActivity]**]([LearningSlotWfmScheduleActivity]) | Detailed data for WFM scheduled activities | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

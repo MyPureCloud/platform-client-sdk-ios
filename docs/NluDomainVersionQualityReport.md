@@ -7,9 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **version** | [**NluDomainVersion**](NluDomainVersion) | The domain and version details of the quality report | |
-| **confusionMatrix** | [**[NluConfusionMatrixRow]**](NluConfusionMatrixRow) | The confusion matrix for the Domain Version | |
+| **confusionMatrix** | [**[NluConfusionMatrixRow]**]([NluConfusionMatrixRow]) | The confusion matrix for the Domain Version | |
 | **summary** | [**NluQualityReportSummary**](NluQualityReportSummary) | The quality report summary for the Domain Version | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

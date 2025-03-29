@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **group** | **[String:String]** |  | [optional] |
-| **data** | [**[StatEventQueueTopicIntervalMetrics]**](StatEventQueueTopicIntervalMetrics) |  | [optional] |
+| **data** | [**[StatEventQueueTopicIntervalMetrics]**]([StatEventQueueTopicIntervalMetrics]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

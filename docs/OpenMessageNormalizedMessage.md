@@ -11,10 +11,10 @@ Open Messaging rich media message structure
 | **channel** | [**OpenMessagingChannel**](OpenMessagingChannel) | Channel-specific information that describes the message and the message channel/provider. | |
 | **type** | **String** | Message type. | |
 | **text** | **String** | Message text. | [optional] |
-| **content** | [**[OpenMessageContent]**](OpenMessageContent) | List of content elements. | [optional] |
+| **content** | [**[OpenMessageContent]**]([OpenMessageContent]) | List of content elements. | [optional] |
 | **metadata** | **[String:String]** | Additional metadata about this message. | [optional] |
 | **conversationId** | **String** | The conversationId context for the message | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -8,8 +8,8 @@ Defines a SCIM PATCH request. See section 3.5.2 \&quot;Modifying with PATCH\&quo
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **schemas** | **[String]** | The list of schemas used in the PATCH request. | |
-| **operations** | [**[ScimV2PatchOperation]**](ScimV2PatchOperation) | The list of operations to perform for the PATCH request. | [optional] |
+| **operations** | [**[ScimV2PatchOperation]**]([ScimV2PatchOperation]) | The list of operations to perform for the PATCH request. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

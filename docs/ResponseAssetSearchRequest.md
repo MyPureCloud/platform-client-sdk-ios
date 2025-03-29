@@ -10,8 +10,8 @@
 | **pageNumber** | **Int** | The page of resources you want to retrieve | [optional] |
 | **sortOrder** | **String** | The sort order for results | [optional] |
 | **sortBy** | **String** | The field in the resource that you want to sort the results by | [optional] |
-| **query** | [**[ResponseAssetFilter]**](ResponseAssetFilter) | Filter the query results. | |
+| **query** | [**[ResponseAssetFilter]**]([ResponseAssetFilter]) | Filter the query results. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

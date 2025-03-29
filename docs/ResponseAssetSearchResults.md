@@ -10,8 +10,8 @@
 | **pageCount** | **Int** | The total number of pages | [optional] |
 | **pageSize** | **Int** | The current page size | [optional] |
 | **pageNumber** | **Int** | The current page number | [optional] |
-| **results** | [**[ResponseAsset]**](ResponseAsset) | Search results | [optional] |
+| **results** | [**[ResponseAsset]**]([ResponseAsset]) | Search results | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -13,9 +13,9 @@
 | **conversationPercent** | **Float** | Percentage of conversations where a topic has occurred. | [optional] |
 | **utteranceCount** | **Int** | Number of unique utterances where a topic has occurred. | [optional] |
 | **phraseCount** | **Int** | Number of unique phrases (sub-utterances) where a topic has occurred. | [optional] |
-| **phrases** | [**[TopicPhrase]**](TopicPhrase) | Phrases associated with a topic. | [optional] |
+| **phrases** | [**[TopicPhrase]**]([TopicPhrase]) | Phrases associated with a topic. | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **emoji** | **String** | The emoji string for the reaction | |
-| **users** | [**[AddressableEntityRef]**](AddressableEntityRef) | The users that reacted with an emoji | |
+| **users** | [**[AddressableEntityRef]**]([AddressableEntityRef]) | The users that reacted with an emoji | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

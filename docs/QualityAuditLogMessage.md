@@ -20,9 +20,9 @@
 | **action** | **String** | Action that took place. | [optional] |
 | **entity** | [**DomainEntityRef**](DomainEntityRef) | Entity that was impacted. | [optional] |
 | **entityType** | **String** | Type of the entity that was impacted. | [optional] |
-| **propertyChanges** | [**[PropertyChange]**](PropertyChange) | List of properties that were changed and changes made to those properties. | [optional] |
+| **propertyChanges** | [**[PropertyChange]**]([PropertyChange]) | List of properties that were changed and changes made to those properties. | [optional] |
 | **context** | **[String:String]** | Additional context for this message. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

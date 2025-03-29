@@ -14,9 +14,9 @@
 | **botVersion** | **String** | The version of the Lex V2 bot this alias points at | [optional] |
 | **status** | **String** | The status of the Lex V2 bot alias | [optional] |
 | **language** | **String** | The target language of the Lex V2 bot | [optional] |
-| **intents** | [**[LexV2Intent]**](LexV2Intent) | An array of Intents associated with this bot alias | [optional] |
+| **intents** | [**[LexV2Intent]**]([LexV2Intent]) | An array of Intents associated with this bot alias | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

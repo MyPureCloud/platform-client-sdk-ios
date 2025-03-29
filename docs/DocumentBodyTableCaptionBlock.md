@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **blocks** | [**[DocumentBodyTableCaptionItem]**](DocumentBodyTableCaptionItem) | The list of building blocks for the caption property. | |
+| **blocks** | [**[DocumentBodyTableCaptionItem]**]([DocumentBodyTableCaptionItem]) | The list of building blocks for the caption property. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

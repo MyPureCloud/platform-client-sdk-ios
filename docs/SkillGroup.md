@@ -14,9 +14,9 @@
 | **dateModified** | [**Date**](Date) | Last modified date/time of the skill group. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **dateCreated** | [**Date**](Date) | Created date/time of the skill group. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **status** | **String** | Group&#39;s filling status | [optional] |
-| **skillConditions** | [**[SkillGroupCondition]**](SkillGroupCondition) | Conditions for this group | |
+| **skillConditions** | [**[SkillGroupCondition]**]([SkillGroupCondition]) | Conditions for this group | |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

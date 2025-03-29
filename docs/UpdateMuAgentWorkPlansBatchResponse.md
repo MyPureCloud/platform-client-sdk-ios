@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **failures** | [**[UpdateMuAgentWorkPlanFailureResponse]**](UpdateMuAgentWorkPlanFailureResponse) | The work plan update failures | |
+| **failures** | [**[UpdateMuAgentWorkPlanFailureResponse]**]([UpdateMuAgentWorkPlanFailureResponse]) | The work plan update failures | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

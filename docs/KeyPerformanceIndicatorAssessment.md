@@ -8,8 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **kpi** | **String** | Name of the key performance indicator assessed. | [optional] |
 | **assessmentResult** | **String** | The overall result of the assessment for a key performance indicator. | [optional] |
-| **checks** | [**[Check]**](Check) | Set of checks executed as part of an assessment. | [optional] |
+| **checks** | [**[Check]**]([Check]) | Set of checks executed as part of an assessment. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

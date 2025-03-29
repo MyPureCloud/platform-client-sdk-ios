@@ -12,9 +12,9 @@
 | **communicationId** | **String** |  | [optional] |
 | **sessionStartTimeMs** | **Int** |  | [optional] |
 | **transcriptionStartTimeMs** | **Int** |  | [optional] |
-| **transcripts** | [**[TranscriptionTopicTranscriptResult]**](TranscriptionTopicTranscriptResult) |  | [optional] |
+| **transcripts** | [**[TranscriptionTopicTranscriptResult]**]([TranscriptionTopicTranscriptResult]) |  | [optional] |
 | **status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

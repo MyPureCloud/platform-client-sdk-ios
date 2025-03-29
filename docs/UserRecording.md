@@ -16,10 +16,10 @@
 | **conversation** | [**Conversation**](Conversation) |  | [optional] |
 | **contentLength** | **Int64** |  | [optional] |
 | **durationMilliseconds** | **Int64** |  | [optional] |
-| **thumbnails** | [**[DocumentThumbnail]**](DocumentThumbnail) |  | [optional] |
+| **thumbnails** | [**[DocumentThumbnail]**]([DocumentThumbnail]) |  | [optional] |
 | **read** | **Bool** |  | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

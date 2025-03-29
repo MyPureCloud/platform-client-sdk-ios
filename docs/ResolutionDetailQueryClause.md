@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** | Boolean operation to apply to the provided predicates | |
-| **predicates** | [**[ResolutionDetailQueryPredicate]**](ResolutionDetailQueryPredicate) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
+| **predicates** | [**[ResolutionDetailQueryPredicate]**]([ResolutionDetailQueryPredicate]) | Like a three-word sentence: (attribute-name) (operator) (target-value). | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

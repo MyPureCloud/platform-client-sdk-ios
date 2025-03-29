@@ -14,9 +14,9 @@
 | **shortTermForecast** | [**BuShortTermForecastReference**](BuShortTermForecastReference) | The forecast used for this schedule, if applicable | [optional] |
 | **generationResults** | [**ScheduleGenerationResultSummary**](ScheduleGenerationResultSummary) | Generation result summary for this schedule, if applicable | [optional] |
 | **metadata** | [**WfmVersionedEntityMetadata**](WfmVersionedEntityMetadata) | Version metadata for this schedule | [optional] |
-| **managementUnits** | [**[BuManagementUnitScheduleSummary]**](BuManagementUnitScheduleSummary) | High level per-management unit schedule metadata | [optional] |
+| **managementUnits** | [**[BuManagementUnitScheduleSummary]**]([BuManagementUnitScheduleSummary]) | High level per-management unit schedule metadata | [optional] |
 | **selfUri** | **String** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

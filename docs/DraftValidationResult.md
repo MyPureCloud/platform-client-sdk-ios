@@ -8,8 +8,8 @@ Validation results
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **valid** | **Bool** | Indicates if configuration is valid | [optional] |
-| **errors** | [**[ErrorBody]**](ErrorBody) | List of errors causing validation failure | [optional] |
+| **errors** | [**[ErrorBody]**]([ErrorBody]) | List of errors causing validation failure | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

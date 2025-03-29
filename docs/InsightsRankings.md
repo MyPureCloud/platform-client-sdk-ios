@@ -11,9 +11,9 @@
 | **granularity** | **String** | Granularity | [optional] |
 | **comparativePeriod** | [**WorkdayPeriod**](WorkdayPeriod) | The comparative period work day date range | [optional] |
 | **primaryPeriod** | [**WorkdayPeriod**](WorkdayPeriod) | The primary period work day date range | [optional] |
-| **leaders** | [**[InsightsSummaryUserItem]**](InsightsSummaryUserItem) | The leaders users | [optional] |
-| **trailers** | [**[InsightsSummaryUserItem]**](InsightsSummaryUserItem) | The trailing users | [optional] |
+| **leaders** | [**[InsightsSummaryUserItem]**]([InsightsSummaryUserItem]) | The leaders users | [optional] |
+| **trailers** | [**[InsightsSummaryUserItem]**]([InsightsSummaryUserItem]) | The trailing users | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

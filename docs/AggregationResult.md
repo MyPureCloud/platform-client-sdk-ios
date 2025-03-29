@@ -10,8 +10,8 @@
 | **dimension** | **String** | For termFrequency aggregations | [optional] |
 | **metric** | **String** | For numericRange aggregations | [optional] |
 | **count** | **Int64** |  | [optional] |
-| **results** | [**[AggregationResultEntry]**](AggregationResultEntry) |  | [optional] |
+| **results** | [**[AggregationResultEntry]**]([AggregationResultEntry]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

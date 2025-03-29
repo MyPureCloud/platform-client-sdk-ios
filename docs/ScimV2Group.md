@@ -11,9 +11,9 @@ Defines a SCIM group.
 | **schemas** | **[String]** | The list of supported schemas. | [optional] |
 | **displayName** | **String** | The display name of the group. | |
 | **externalId** | **String** | The external ID of the group. Set by the provisioning client. \&quot;caseExact\&quot; is set to \&quot;true\&quot;. \&quot;mutability\&quot; is set to \&quot;readWrite\&quot;. | [optional] |
-| **members** | [**[ScimV2MemberReference]**](ScimV2MemberReference) | The list of members in the group. | [optional] |
+| **members** | [**[ScimV2MemberReference]**]([ScimV2MemberReference]) | The list of members in the group. | [optional] |
 | **meta** | [**ScimMetadata**](ScimMetadata) | The metadata of the SCIM resource. Metadata is defined as immutable per SCIM RFC. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

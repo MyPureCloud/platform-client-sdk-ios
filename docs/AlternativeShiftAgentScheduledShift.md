@@ -10,8 +10,8 @@
 | **referenceKey** | **String** | A key generated for an offer to help facilitate alternative shift trading | |
 | **startDate** | [**Date**](Date) | The start date of this shift in ISO-8601 format | |
 | **lengthMinutes** | **Int** | The length of this shift in minutes | |
-| **activities** | [**[BuAgentScheduleActivity]**](BuAgentScheduleActivity) | A list of activities in this shift | |
+| **activities** | [**[BuAgentScheduleActivity]**]([BuAgentScheduleActivity]) | A list of activities in this shift | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

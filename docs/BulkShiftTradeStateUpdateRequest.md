@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **entities** | [**[BulkUpdateShiftTradeStateRequestItem]**](BulkUpdateShiftTradeStateRequestItem) | The shift trades to update | |
+| **entities** | [**[BulkUpdateShiftTradeStateRequestItem]**]([BulkUpdateShiftTradeStateRequestItem]) | The shift trades to update | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

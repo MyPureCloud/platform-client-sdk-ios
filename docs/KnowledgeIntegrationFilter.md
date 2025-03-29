@@ -9,8 +9,8 @@
 | **name** | **String** | Filter name, which is the name of a setting in a knowledge source. | [optional] |
 | **type** | **String** | Filter type. | [optional] |
 | **action** | **String** | Filter action. | [optional] |
-| **values** | [**[KnowledgeIntegrationFilterValue]**](KnowledgeIntegrationFilterValue) | Available options of the filter setting. | [optional] |
+| **values** | [**[KnowledgeIntegrationFilterValue]**]([KnowledgeIntegrationFilterValue]) | Available options of the filter setting. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

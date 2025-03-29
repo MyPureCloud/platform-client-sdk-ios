@@ -10,9 +10,9 @@
 | **language** | **String** | Template language. | [optional] |
 | **header** | [**RecordingTemplateHeader**](RecordingTemplateHeader) | The template header. | [optional] |
 | **body** | [**RecordingTemplateBody**](RecordingTemplateBody) | The template body. | [optional] |
-| **buttons** | [**[RecordingTemplateButton]**](RecordingTemplateButton) | Template buttons | [optional] |
+| **buttons** | [**[RecordingTemplateButton]**]([RecordingTemplateButton]) | Template buttons | [optional] |
 | **footer** | [**RecordingTemplateFooter**](RecordingTemplateFooter) | The template footer. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

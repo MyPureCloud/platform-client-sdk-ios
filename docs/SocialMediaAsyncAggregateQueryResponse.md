@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **results** | [**[SocialMediaAggregateDataContainer]**](SocialMediaAggregateDataContainer) |  | [optional] |
+| **results** | [**[SocialMediaAggregateDataContainer]**]([SocialMediaAggregateDataContainer]) |  | [optional] |
 | **cursor** | **String** | Cursor token to retrieve next page | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

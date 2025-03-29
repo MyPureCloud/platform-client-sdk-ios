@@ -30,7 +30,7 @@
 | **whatsAppId** | [**ExternalContactsContactChangedTopicWhatsAppId**](ExternalContactsContactChangedTopicWhatsAppId) |  | [optional] |
 | **facebookId** | [**ExternalContactsContactChangedTopicFacebookId**](ExternalContactsContactChangedTopicFacebookId) |  | [optional] |
 | **instagramId** | [**ExternalContactsContactChangedTopicInstagramId**](ExternalContactsContactChangedTopicInstagramId) |  | [optional] |
-| **externalIds** | [**[ExternalContactsContactChangedTopicExternalId]**](ExternalContactsContactChangedTopicExternalId) |  | [optional] |
+| **externalIds** | [**[ExternalContactsContactChangedTopicExternalId]**]([ExternalContactsContactChangedTopicExternalId]) |  | [optional] |
 | **canonicalContactId** | **String** |  | [optional] |
 | **schema** | [**ExternalContactsContactChangedTopicDataSchema**](ExternalContactsContactChangedTopicDataSchema) |  | [optional] |
 | **customFields** | [**[String:JSON]**](JSON) |  | [optional] |
@@ -43,4 +43,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

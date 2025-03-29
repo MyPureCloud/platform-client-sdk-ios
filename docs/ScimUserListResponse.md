@@ -11,8 +11,8 @@ Defines a response for a list of SCIM users.
 | **totalResults** | **Int64** | The total number of results. | [optional] |
 | **startIndex** | **Int64** | The 1-based index of the first result returned by this request. Add this to \&quot;itemsPerPage\&quot; when requesting the next page of results. | [optional] |
 | **itemsPerPage** | **Int64** | The number of resources returned per page. | [optional] |
-| **resources** | [**[ScimV2User]**](ScimV2User) | The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty. | [optional] |
+| **resources** | [**[ScimV2User]**]([ScimV2User]) | The list of requested resources. If \&quot;count\&quot; is 0, then the list will be empty. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

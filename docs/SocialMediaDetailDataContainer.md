@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **interval** | **String** |  | [optional] |
-| **messages** | [**[SocialMediaDetailMessageContainer]**](SocialMediaDetailMessageContainer) |  | [optional] |
+| **messages** | [**[SocialMediaDetailMessageContainer]**]([SocialMediaDetailMessageContainer]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

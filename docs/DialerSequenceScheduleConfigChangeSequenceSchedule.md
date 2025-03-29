@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **intervals** | [**[DialerSequenceScheduleConfigChangeScheduleInterval]**](DialerSequenceScheduleConfigChangeScheduleInterval) | a list of start and end times | [optional] |
-| **recurrences** | [**[DialerSequenceScheduleConfigChangeScheduleRecurrence]**](DialerSequenceScheduleConfigChangeScheduleRecurrence) | a list of recurrences for a schedule | [optional] |
+| **intervals** | [**[DialerSequenceScheduleConfigChangeScheduleInterval]**]([DialerSequenceScheduleConfigChangeScheduleInterval]) | a list of start and end times | [optional] |
+| **recurrences** | [**[DialerSequenceScheduleConfigChangeScheduleRecurrence]**]([DialerSequenceScheduleConfigChangeScheduleRecurrence]) | a list of recurrences for a schedule | [optional] |
 | **timeZone** | **String** | time zone identifier to be applied to the intervals; for example Africa/Abidjan | [optional] |
 | **sequence** | [**DialerSequenceScheduleConfigChangeUriReference**](DialerSequenceScheduleConfigChangeUriReference) |  | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **errors** | [**[EventError]**](EventError) | A list of validation or server errors that occurred for posted events. | [optional] |
+| **errors** | [**[EventError]**]([EventError]) | A list of validation or server errors that occurred for posted events. | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

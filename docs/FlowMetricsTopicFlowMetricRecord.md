@@ -102,10 +102,10 @@
 | **videoPresent** | **Bool** | Flag indicating if video is present | [optional] |
 | **waitingInteractionCounts** | **[Int]** | Number of waiting interactions for each predictive routing attempt | [optional] |
 | **wrapUpCode** | **String** | Wrap up code | [optional] |
-| **proposedAgents** | [**[FlowMetricsTopicFlowProposedAgent]**](FlowMetricsTopicFlowProposedAgent) | Proposed agents | [optional] |
-| **outcomes** | [**[FlowMetricsTopicFlowOutcome]**](FlowMetricsTopicFlowOutcome) | Flow outcomes | [optional] |
-| **scoredAgents** | [**[FlowMetricsTopicFlowScoredAgent]**](FlowMetricsTopicFlowScoredAgent) | Scored agents | [optional] |
+| **proposedAgents** | [**[FlowMetricsTopicFlowProposedAgent]**]([FlowMetricsTopicFlowProposedAgent]) | Proposed agents | [optional] |
+| **outcomes** | [**[FlowMetricsTopicFlowOutcome]**]([FlowMetricsTopicFlowOutcome]) | Flow outcomes | [optional] |
+| **scoredAgents** | [**[FlowMetricsTopicFlowScoredAgent]**]([FlowMetricsTopicFlowScoredAgent]) | Scored agents | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

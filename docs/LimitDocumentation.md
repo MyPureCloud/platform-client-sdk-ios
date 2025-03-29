@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **url** | **String** |  | [optional] |
-| **namespaces** | [**[NamespaceDocs]**](NamespaceDocs) |  | [optional] |
+| **namespaces** | [**[NamespaceDocs]**]([NamespaceDocs]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

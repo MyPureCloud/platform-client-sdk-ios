@@ -18,8 +18,8 @@
 | **exactPaidTimeMinutes** | **Int** | Exact paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; false | |
 | **minimumPaidTimeMinutes** | **Int** | Minimum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true | |
 | **maximumPaidTimeMinutes** | **Int** | Maximum paid time in minutes configured for the shift. Used if flexiblePaidTime &#x3D;&#x3D; true | |
-| **activities** | [**[AgentWorkPlanActivity]**](AgentWorkPlanActivity) | Activities configured for this shift | |
+| **activities** | [**[AgentWorkPlanActivity]**]([AgentWorkPlanActivity]) | Activities configured for this shift | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **parts** | [**[UserSearchRulePart]**](UserSearchRulePart) | The parts of this rule; the results of these are ANDed together. | |
+| **parts** | [**[UserSearchRulePart]**]([UserSearchRulePart]) | The parts of this rule; the results of these are ANDed together. | |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

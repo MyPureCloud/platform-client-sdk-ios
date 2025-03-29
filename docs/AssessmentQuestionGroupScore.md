@@ -21,8 +21,8 @@
 | **maxTotalCriticalScoreUnweighted** | **Float** | The maximum unweighted total score for the critical questions | [optional] |
 | **totalNonCriticalScoreUnweighted** | **Float** | The total unweighted score for the non-critical questions | [optional] |
 | **maxTotalNonCriticalScoreUnweighted** | **Float** | The maximum unweighted total score for the non-critical questions | [optional] |
-| **questionScores** | [**[AssessmentQuestionScore]**](AssessmentQuestionScore) | The individual question scores | [optional] |
+| **questionScores** | [**[AssessmentQuestionScore]**]([AssessmentQuestionScore]) | The individual question scores | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_

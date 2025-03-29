@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **ids** | [**[ExternalContactsUnresolvedContactChangedTopicInstagramScopedId]**](ExternalContactsUnresolvedContactChangedTopicInstagramScopedId) |  | [optional] |
+| **ids** | [**[ExternalContactsUnresolvedContactChangedTopicInstagramScopedId]**]([ExternalContactsUnresolvedContactChangedTopicInstagramScopedId]) |  | [optional] |
 | **displayName** | **String** |  | [optional] |
 | **handle** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.0.0_
+_PureCloudPlatformClientV2@164.1.0_
