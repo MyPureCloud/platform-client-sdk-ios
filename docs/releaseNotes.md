@@ -1,248 +1,415 @@
-Platform API version: 9064
+Platform API version: 9095
 
 
 
 
-# Major Changes (0 changes)
+# Major Changes (6 changes)
+
+**POST /api/v2/externalcontacts/merge/contacts** (1 change)
+
+* Has been deprecated
+
+**GET /api/v2/routing/email/outbound/domains** (2 changes)
+
+* Parameter pageSize was added
+* Parameter pageNumber was added
+
+**GET /api/v2/workforcemanagement/historicaldata/deletejob** (1 change)
+
+* Has been deprecated
+
+**POST /api/v2/workforcemanagement/historicaldata/deletejob** (1 change)
+
+* Has been deprecated
+
+**BuImportAgentScheduleUploadSchema** (1 change)
+
+* Property shifts was changed from BuAgentScheduleShift[] to BuAgentScheduleShiftRequest[]
 
 
-# Minor Changes (76 changes)
+# Minor Changes (117 changes)
 
-**/api/v2/analytics/agents/{userId}/status** (2 changes)
+**/api/v2/authorization/divisions/deleted** (2 changes)
 
 * Path was added
 * Operation GET was added
 
-**/api/v2/analytics/agents/status/counts** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/analytics/agents/status/query** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/emails/settings/threading** (4 changes)
+**/api/v2/authorization/divisions/query** (2 changes)
 
 * Path was added
 * Operation GET was added
+
+**/api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/contacts/schemas/coretypes** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/contacts/schemas/limits** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/organizations/schemas/coretypes** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/externalcontacts/organizations/schemas/limits** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/gamification/contests/uploads/prizeimages** (2 changes)
+
+* Path was added
+* Operation POST was added
+
+**/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers** (3 changes)
+
+* Path was added
 * Operation DELETE was added
 * Operation PATCH was added
 
-**/api/v2/integrations/webhooks/{tokenId}/events** (2 changes)
+**/api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}** (2 changes)
 
 * Path was added
-* Operation POST was added
+* Operation GET was added
 
-**/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads** (2 changes)
-
-* Path was added
-* Operation POST was added
-
-**/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads** (2 changes)
+**/api/v2/gamification/contests** (3 changes)
 
 * Path was added
+* Operation GET was added
 * Operation POST was added
 
-**AnalyticsAgentStateAgentResponse** (1 change)
+**/api/v2/gamification/contests/me** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/gamification/contests/{contestId}** (5 changes)
+
+* Path was added
+* Operation GET was added
+* Operation PUT was added
+* Operation DELETE was added
+* Operation PATCH was added
+
+**/api/v2/gamification/contests/{contestId}/agents/scores** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/gamification/contests/{contestId}/agents/scores/me** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/gamification/contests/{contestId}/agents/scores/trends/me** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/gamification/contests/{contestId}/agents/scores/trends** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName}** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/taskmanagement/workitems/schemas/coretypes** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**/api/v2/taskmanagement/workitems/schemas/limits** (2 changes)
+
+* Path was added
+* Operation GET was added
+
+**AuthzDivisionCursorListing** (1 change)
 
 * Model was added
 
-**AnalyticsAgentStateAgentSessionResult** (1 change)
+**DomainResourceConditionValue** (2 changes)
+
+* Optional property team was added
+* Enum value TEAM was added to property type
+
+**ResourceConditionValue** (1 change)
+
+* Enum value TEAM was added to property type
+
+**User** (1 change)
+
+* Optional property dateWelcomeSent was added
+
+**Limit** (1 change)
+
+* Enum value dsar was added to property namespace
+
+**ExternalContact** (1 change)
+
+* Optional property identifiers was added
+
+**OrgUser** (1 change)
+
+* Optional property dateWelcomeSent was added
+
+**ConversationMessageMetadataContent** (1 change)
+
+* Enum value InteractiveApplication was added to property contentType
+
+**ConversationContentInteractiveApplication** (1 change)
 
 * Model was added
 
-**AgentStateSegmentTypeCount** (1 change)
+**ConversationContentReceivedReplyMessage** (1 change)
 
 * Model was added
 
-**AnalyticsAgentStateCountsResponse** (1 change)
+**ConversationMessageContent** (1 change)
+
+* Enum value InteractiveApplication was added to property contentType
+
+**OpenMessagingIdentityResolutionConfig** (1 change)
+
+* Optional property externalSource was added
+
+**GamificationContestPrizeImageUploadUrlRequest** (1 change)
 
 * Model was added
 
-**AgentStateAgentQueryClause** (1 change)
+**DataTableImportJob** (1 change)
+
+* Optional property uploadHeaders was added
+
+**ContactListDivisionView** (1 change)
+
+* Optional property whatsAppColumns was added
+
+**DialerContact** (1 change)
+
+* Optional property latestWhatsAppEvaluations was added
+
+**ContactList** (1 change)
+
+* Optional property whatsAppColumns was added
+
+**ContactListTemplate** (1 change)
+
+* Optional property whatsAppColumns was added
+
+**WritableDialerContact** (1 change)
+
+* Optional property latestWhatsAppEvaluations was added
+
+**DncPatchWhatsAppNumbersRequest** (1 change)
 
 * Model was added
 
-**AgentStateAgentQueryPredicate** (1 change)
+**Condition** (2 changes)
+
+* Enum value timeAndDateCondition was added to property type
+* Enum value BETWEEN was added to property operator
+
+**TimeAndDateSubCondition** (1 change)
 
 * Model was added
 
-**AgentStateCountsRequest** (1 change)
+**TimeAndDateSubConditionRange** (1 change)
 
 * Model was added
 
-**AgentStateSessionFilter** (1 change)
+**MessagingCampaign** (1 change)
+
+* Optional property whatsAppConfig was added
+
+**PrizeImages** (1 change)
 
 * Model was added
 
-**AgentStateSessionQueryClause** (1 change)
+**ContestDisqualifiedAgents** (1 change)
 
 * Model was added
 
-**AgentStateSessionQueryPredicate** (1 change)
+**ContestMetrics** (1 change)
 
 * Model was added
 
-**AgentStateUserFilter** (1 change)
+**ContestPrizes** (1 change)
 
 * Model was added
 
-**AnalyticsAgentStateQueryResponse** (1 change)
+**ContestProfile** (1 change)
 
 * Model was added
 
-**AgentStateQueryRequest** (1 change)
+**ContestUserRank** (1 change)
 
 * Model was added
 
-**SummaryAggregateQueryPredicate** (7 changes)
-
-* Enum value copied was added to property dimension
-* Enum value editedField was added to property dimension
-* Enum value presented was added to property dimension
-* Enum value summaryRating was added to property dimension
-* Enum value triggerSourceOutcome was added to property dimension
-* Enum value wrapUpCodeRating was added to property dimension
-* Enum value wrapUpCodeSuggestionSelected was added to property dimension
-
-**SummaryAggregationQuery** (8 changes)
-
-* Enum value copied was added to property groupBy
-* Enum value editedField was added to property groupBy
-* Enum value presented was added to property groupBy
-* Enum value summaryRating was added to property groupBy
-* Enum value triggerSourceOutcome was added to property groupBy
-* Enum value wrapUpCodeRating was added to property groupBy
-* Enum value wrapUpCodeSuggestionSelected was added to property groupBy
-* Enum value nConversationSummaryEngagements was added to property metrics
-
-**SummaryAggregationView** (1 change)
-
-* Enum value nConversationSummaryEngagements was added to property target
-
-**Call** (1 change)
-
-* Optional property recordersState was added
-
-**RecordersState** (1 change)
+**ContestWinners** (1 change)
 
 * Model was added
 
-**CallConversation** (1 change)
-
-* Optional property divisions was added
-
-**CallMediaParticipant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**CallbackConversation** (1 change)
-
-* Optional property divisions was added
-
-**CallbackMediaParticipant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**ChatConversation** (1 change)
-
-* Optional property divisions was added
-
-**ChatMediaParticipant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**CobrowseConversation** (1 change)
-
-* Optional property divisions was added
-
-**CobrowseMediaParticipant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**EmailConversation** (1 change)
-
-* Optional property divisions was added
-
-**EmailMediaParticipant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**EmailThreadingSettings** (1 change)
+**ContestsResponse** (1 change)
 
 * Model was added
 
-**ConversationContentReaction** (1 change)
-
-* Enum value Rating was added to property reactionType
-
-**MessageConversation** (1 change)
-
-* Optional property divisions was added
-
-**MessageMediaParticipant** (1 change)
-
-* Optional property externalContactInitialDivisionId was added
-
-**CallBasic** (1 change)
-
-* Optional property recordersState was added
-
-**EventMessage** (1 change)
-
-* Enum value CAMPAIGN_BUILD_CONTACT_QUEUE_ERROR was added to property code
-
-**ReplacementTerm** (1 change)
-
-* Enum value INSTAGRAM was added to property type
-
-**SocialHandle** (1 change)
-
-* Enum value INSTAGRAM was added to property type
-
-**ContentLocation** (1 change)
+**ContestsCreateRequest** (1 change)
 
 * Model was added
 
-**ContentReaction** (1 change)
-
-* Enum value Rating was added to property reactionType
-
-**MessageContent** (2 changes)
-
-* Enum value Location was added to property contentType
-* Optional property location was added
-
-**Reason** (1 change)
+**ContestRequesingParticipantDailyInfo** (1 change)
 
 * Model was added
 
-**WebhookInvocationResponse** (1 change)
+**ContestScoreRanked** (1 change)
 
 * Model was added
 
-**ConversationInsight** (1 change)
-
-* Optional property outcome was added
-
-**SpeechTextAnalyticsConversationSummary** (1 change)
-
-* Optional property mediaType was added
-
-**PromptAssetUpload** (1 change)
+**ContestsEssentials** (1 change)
 
 * Model was added
 
-**WebMessagingMessage** (2 changes)
+**GetContestsEssentialsListing** (1 change)
 
-* Optional property status was added
-* Optional property reasons was added
+* Model was added
+
+**ContestWinnersRequest** (1 change)
+
+* Model was added
+
+**ContestsFinalizeRequest** (1 change)
+
+* Model was added
+
+**ContestMetricScoreRanked** (1 change)
+
+* Model was added
+
+**ContestScoresAgents** (1 change)
+
+* Model was added
+
+**ContestScoresAgentsPagedList** (1 change)
+
+* Model was added
+
+**ContestScoresAgentTrend** (1 change)
+
+* Model was added
+
+**ContestScoresAgentTrendList** (1 change)
+
+* Model was added
+
+**ContestMetricScore** (1 change)
+
+* Model was added
+
+**ContestScore** (1 change)
+
+* Model was added
+
+**ContestScoresGroupTrend** (1 change)
+
+* Model was added
+
+**ContestScoresGroupTrendList** (1 change)
+
+* Model was added
+
+**NamedEntityTypeMechanism** (1 change)
+
+* Optional property minLength was added
+
+**ApprovalNamespace** (1 change)
+
+* Enum value dsar was added to property namespace
+
+**LimitChangeRequestDetails** (1 change)
+
+* Enum value dsar was added to property namespace
+
+**StatusChange** (1 change)
+
+* Enum value dsar was added to property namespace
+
+**TrustUser** (1 change)
+
+* Optional property dateWelcomeSent was added
+
+**UserMe** (1 change)
+
+* Optional property dateWelcomeSent was added
+
+**SchedulerMessageTypeSeverity** (3 changes)
+
+* Enum value UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory was added to property type
+* Enum value UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory was added to property type
+* Enum value UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory was added to property type
+
+**WorkPlanConfigurationViolationMessage** (3 changes)
+
+* Enum value PlanningPeriodMaxWorkingWeekendsCannotBeMet was added to property type
+* Enum value ShiftMaxCountPerPlanningPeriodCannotBeMet was added to property type
+* Enum value ShiftMinCountPerPlanningPeriodCannotBeMet was added to property type
+
+**WorkPlanConstraintMessage** (3 changes)
+
+* Enum value PlanningPeriodMaximumWorkingWeekends was added to property type
+* Enum value ShiftMaximumCountPerPlanningPeriod was added to property type
+* Enum value ShiftMinimumCountPerPlanningPeriod was added to property type
+
+**PlanningPeriodShiftConstraints** (1 change)
+
+* Model was added
+
+**ScheduleGenerationMessage** (3 changes)
+
+* Enum value UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory was added to property type
+* Enum value UnableToSchedulePlanningPeriodShiftMaxCountFromAgentHistory was added to property type
+* Enum value UnableToSchedulePlanningPeriodShiftMinCountFromAgentHistory was added to property type
+
+**BuAgentScheduleShiftRequest** (1 change)
+
+* Model was added
 
 
-# Point Changes (1 change)
+# Point Changes (7 changes)
 
-**GET /api/v2/conversations/{conversationId}/recordingmetadata** (1 change)
+**POST /api/v2/externalcontacts/merge/contacts** (1 change)
 
+* Description was changed
+
+**GET /api/v2/routing/email/domains** (1 change)
+
+* Description was changed for parameter filter
+
+**GET /api/v2/routing/email/outbound/domains** (1 change)
+
+* Description was changed for parameter filter
+
+**GET /api/v2/workforcemanagement/historicaldata/deletejob** (2 changes)
+
+* Description was changed
+* Summary was changed
+
+**POST /api/v2/workforcemanagement/historicaldata/deletejob** (2 changes)
+
+* Description was changed
 * Summary was changed

@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **startTime** | **String** | The start time of this time slot | [optional] |
 | **stopTime** | **String** | The stop time of this time slot | [optional] |
-| **day** | **Int** | The day this time slot applies | [optional] |
+| **day** | **Int64** | The day this time slot applies | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

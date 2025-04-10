@@ -11,11 +11,11 @@
 | **managementUnit** | [**WfmUserNotificationTopicManagementUnit**](WfmUserNotificationTopicManagementUnit) |  | [optional] |
 | **businessUnit** | [**WfmUserNotificationTopicBusinessUnit**](WfmUserNotificationTopicBusinessUnit) |  | [optional] |
 | **startDate** | [**Date**](Date) |  | [optional] |
-| **lengthMinutes** | **Int** |  | [optional] |
+| **lengthMinutes** | **Int64** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **type** | **String** |  | [optional] |
 | **notes** | **String** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **intervalIndex** | **Int** |  | [optional] |
+| **intervalIndex** | **Int64** |  | [optional] |
 | **value** | **Double** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

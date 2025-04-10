@@ -10,12 +10,12 @@
 | **conversationId** | [**UUID**](UUID) |  | [optional] |
 | **conversationDate** | **String** |  | [optional] |
 | **formName** | **String** |  | [optional] |
-| **points** | **Int** |  | [optional] |
-| **maxPoints** | **Int** |  | [optional] |
-| **evaluationScore** | **Int** |  | [optional] |
+| **points** | **Int64** |  | [optional] |
+| **maxPoints** | **Int64** |  | [optional] |
+| **evaluationScore** | **Int64** |  | [optional] |
 | **evaluationScoreDouble** | **Double** |  | [optional] |
 | **mediaTypes** | **[String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

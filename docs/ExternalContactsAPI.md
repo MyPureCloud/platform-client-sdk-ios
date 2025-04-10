@@ -27,6 +27,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsContactsSchemaVersion**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersion) | Get a specific version of a schema |
 | [**getExternalcontactsContactsSchemaVersions**](ExternalContactsAPI#getExternalcontactsContactsSchemaVersions) | Get all versions of an external contact&#39;s schema |
 | [**getExternalcontactsContactsSchemas**](ExternalContactsAPI#getExternalcontactsContactsSchemas) | Get a list of schemas. |
+| [**getExternalcontactsContactsSchemasCoretype**](ExternalContactsAPI#getExternalcontactsContactsSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getExternalcontactsContactsSchemasCoretypes**](ExternalContactsAPI#getExternalcontactsContactsSchemasCoretypes) | Get the core types from which all schemas are built. |
+| [**getExternalcontactsContactsSchemasLimits**](ExternalContactsAPI#getExternalcontactsContactsSchemasLimits) | Get quantitative limits on schemas |
 | [**getExternalcontactsExternalsource**](ExternalContactsAPI#getExternalcontactsExternalsource) | Fetch an External Source |
 | [**getExternalcontactsExternalsources**](ExternalContactsAPI#getExternalcontactsExternalsources) | Fetch a list of External Sources |
 | [**getExternalcontactsImportCsvSetting**](ExternalContactsAPI#getExternalcontactsImportCsvSetting) | Get settings for CSV import |
@@ -47,6 +50,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getExternalcontactsOrganizationsSchemaVersion**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemaVersion) | Get a specific version of a schema |
 | [**getExternalcontactsOrganizationsSchemaVersions**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemaVersions) | Get all versions of an external organization&#39;s schema |
 | [**getExternalcontactsOrganizationsSchemas**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemas) | Get a list of schemas. |
+| [**getExternalcontactsOrganizationsSchemasCoretype**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getExternalcontactsOrganizationsSchemasCoretypes**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasCoretypes) | Get the core types from which all schemas are built. |
+| [**getExternalcontactsOrganizationsSchemasLimits**](ExternalContactsAPI#getExternalcontactsOrganizationsSchemasLimits) | Get quantitative limits on schemas |
 | [**getExternalcontactsRelationship**](ExternalContactsAPI#getExternalcontactsRelationship) | Fetch a relationship |
 | [**getExternalcontactsReversewhitepageslookup**](ExternalContactsAPI#getExternalcontactsReversewhitepageslookup) | Look up contacts and externalOrganizations based on an attribute. Maximum of 25 values returned. |
 | [**getExternalcontactsScanContacts**](ExternalContactsAPI#getExternalcontactsScanContacts) | Scan for external contacts using paging |
@@ -1299,6 +1305,148 @@ This endpoint does not require any parameters.
 [**DataSchemaListing**](DataSchemaListing)
 
 
+## getExternalcontactsContactsSchemasCoretype
+
+
+
+> [Coretype](Coretype) getExternalcontactsContactsSchemasCoretype(coreTypeName)
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coreTypeName: String = "" // Name of the core type
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchemasCoretype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coreTypeName** | **String**| Name of the core type | |
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getExternalcontactsContactsSchemasCoretypes
+
+
+
+> [Coretype](Coretype) getExternalcontactsContactsSchemasCoretypes()
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/coretypes  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchemasCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchemasCoretypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getExternalcontactsContactsSchemasLimits
+
+
+
+> [SchemaQuantityLimits](SchemaQuantityLimits) getExternalcontactsContactsSchemasLimits()
+
+Get quantitative limits on schemas
+
+
+
+Wraps GET /api/v2/externalcontacts/contacts/schemas/limits  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsContactsSchemasLimits() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsContactsSchemasLimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
+
+
 ## getExternalcontactsExternalsource
 
 
@@ -2379,6 +2527,148 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
+
+
+## getExternalcontactsOrganizationsSchemasCoretype
+
+
+
+> [Coretype](Coretype) getExternalcontactsOrganizationsSchemasCoretype(coreTypeName)
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coreTypeName: String = "" // Name of the core type
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchemasCoretype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coreTypeName** | **String**| Name of the core type | |
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getExternalcontactsOrganizationsSchemasCoretypes
+
+
+
+> [Coretype](Coretype) getExternalcontactsOrganizationsSchemasCoretypes()
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/coretypes  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchemasCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchemasCoretypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getExternalcontactsOrganizationsSchemasLimits
+
+
+
+> [SchemaQuantityLimits](SchemaQuantityLimits) getExternalcontactsOrganizationsSchemasLimits()
+
+Get quantitative limits on schemas
+
+
+
+Wraps GET /api/v2/externalcontacts/organizations/schemas/limits  
+
+Requires ANY permissions: 
+
+* externalContacts:customFields:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+ExternalContactsAPI.getExternalcontactsOrganizationsSchemasLimits() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ExternalContactsAPI.getExternalcontactsOrganizationsSchemasLimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
 ## getExternalcontactsRelationship
@@ -4236,7 +4526,7 @@ ExternalContactsAPI.postExternalcontactsImportSettings(body: body) { (response, 
 
 Merge two contacts into a new contact record
 
-Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details
+Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 
 
 
@@ -5172,4 +5462,4 @@ ExternalContactsAPI.putExternalcontactsRelationship(relationshipId: relationship
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

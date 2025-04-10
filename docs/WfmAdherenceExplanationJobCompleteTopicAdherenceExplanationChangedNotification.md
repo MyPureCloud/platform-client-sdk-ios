@@ -13,11 +13,11 @@
 | **type** | **String** |  | [optional] |
 | **status** | **String** |  | [optional] |
 | **startDate** | [**Date**](Date) |  | [optional] |
-| **lengthMinutes** | **Int** |  | [optional] |
+| **lengthMinutes** | **Int64** |  | [optional] |
 | **notes** | **String** |  | [optional] |
 | **reviewedBy** | [**WfmAdherenceExplanationJobCompleteTopicUserReference**](WfmAdherenceExplanationJobCompleteTopicUserReference) |  | [optional] |
 | **reviewedDate** | [**Date**](Date) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

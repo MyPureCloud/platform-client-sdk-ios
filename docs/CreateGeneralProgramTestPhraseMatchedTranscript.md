@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **timestamp** | **Int** |  | [optional] |
+| **timestamp** | **Int64** |  | [optional] |
 | **transcriptId** | **String** |  | [optional] |
 | **communicationId** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
@@ -15,4 +15,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

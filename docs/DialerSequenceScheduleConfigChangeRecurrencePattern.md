@@ -8,10 +8,10 @@ the schedule pattern
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **type** | **String** |  | [optional] |
-| **interval** | **Int** | the amount of time in between occurrences | [optional] |
+| **interval** | **Int64** | the amount of time in between occurrences | [optional] |
 | **daysOfWeek** | **[String]** | the day(s) of the week the occurrence happens | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

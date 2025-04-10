@@ -8,9 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **failed** | **Bool** |  | [optional] |
 | **runId** | **String** |  | [optional] |
-| **messageCount** | **Int** |  | [optional] |
+| **messageCount** | **Int64** |  | [optional] |
 | **messageSeverityCounts** | [**[WfmBuScheduleTopicSchedulerMessageSeverityCount]**]([WfmBuScheduleTopicSchedulerMessageSeverityCount]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

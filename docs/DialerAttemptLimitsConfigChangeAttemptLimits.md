@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **maxAttemptsPerContact** | **Int** |  | [optional] |
-| **maxAttemptsPerNumber** | **Int** |  | [optional] |
+| **maxAttemptsPerContact** | **Int64** |  | [optional] |
+| **maxAttemptsPerNumber** | **Int64** |  | [optional] |
 | **timeZoneId** | **String** | The timezone is necessary to define when \&quot;today\&quot; starts and ends | [optional] |
 | **resetPeriod** | **String** | After how long the number of attempts will be set back to 0 | [optional] |
 | **recallEntries** | [**[String:DialerAttemptLimitsConfigChangeRecallEntry]**](DialerAttemptLimitsConfigChangeRecallEntry) | Configuration for recall attempts | [optional] |
@@ -17,8 +17,8 @@
 | **name** | **String** | The UI-visible name of the object | [optional] |
 | **dateCreated** | [**Date**](Date) | Creation time of the entity | [optional] |
 | **dateModified** | [**Date**](Date) | Last modified time of the entity | [optional] |
-| **version** | **Int** | Required for updates, must match the version number of the most recent update | [optional] |
+| **version** | **Int64** | Required for updates, must match the version number of the most recent update | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

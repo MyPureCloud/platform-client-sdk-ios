@@ -7,8 +7,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**deleteAuthorizationDivision**](ObjectsAPI#deleteAuthorizationDivision) | Delete a division. |
 | [**getAuthorizationDivision**](ObjectsAPI#getAuthorizationDivision) | Returns an authorization division. |
 | [**getAuthorizationDivisions**](ObjectsAPI#getAuthorizationDivisions) | Retrieve a list of all divisions defined for the organization |
+| [**getAuthorizationDivisionsDeleted**](ObjectsAPI#getAuthorizationDivisionsDeleted) | Get a list of soft deleted divisions for the org |
 | [**getAuthorizationDivisionsHome**](ObjectsAPI#getAuthorizationDivisionsHome) | Retrieve the home division for the organization. |
 | [**getAuthorizationDivisionsLimit**](ObjectsAPI#getAuthorizationDivisionsLimit) | Returns the maximum allowed number of divisions. |
+| [**getAuthorizationDivisionsQuery**](ObjectsAPI#getAuthorizationDivisionsQuery) | Retrieve a list of all divisions defined for the organization with cursor |
 | [**postAuthorizationDivisionObject**](ObjectsAPI#postAuthorizationDivisionObject) | Assign a list of objects to a division |
 | [**postAuthorizationDivisionRestore**](ObjectsAPI#postAuthorizationDivisionRestore) | Recreate a previously deleted division. |
 | [**postAuthorizationDivisions**](ObjectsAPI#postAuthorizationDivisions) | Create a division. |
@@ -185,6 +187,58 @@ ObjectsAPI.getAuthorizationDivisions(pageSize: pageSize, pageNumber: pageNumber,
 [**AuthzDivisionEntityListing**](AuthzDivisionEntityListing)
 
 
+## getAuthorizationDivisionsDeleted
+
+
+
+> [AuthzDivisionEntityListing](AuthzDivisionEntityListing) getAuthorizationDivisionsDeleted(pageNumber, pageSize)
+
+Get a list of soft deleted divisions for the org
+
+
+
+Wraps GET /api/v2/authorization/divisions/deleted  
+
+Requires ANY permissions: 
+
+* authorization:divisionDeleted:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let pageNumber: Int = 0 // Page number
+let pageSize: Int = 0 // Page size
+
+// Code example
+ObjectsAPI.getAuthorizationDivisionsDeleted(pageNumber: pageNumber, pageSize: pageSize) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ObjectsAPI.getAuthorizationDivisionsDeleted was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+
+
+### Return type
+
+[**AuthzDivisionEntityListing**](AuthzDivisionEntityListing)
+
+
 ## getAuthorizationDivisionsHome
 
 
@@ -275,6 +329,65 @@ This endpoint does not require any parameters.
 ### Return type
 
 **Int**
+
+
+## getAuthorizationDivisionsQuery
+
+
+
+> [AuthzDivisionCursorListing](AuthzDivisionCursorListing) getAuthorizationDivisionsQuery(before, after, pageSize, _id, name)
+
+Retrieve a list of all divisions defined for the organization with cursor
+
+Use \&quot;after\&quot; and \&quot;before\&quot; param to fetch next/previous page}
+
+
+
+Wraps GET /api/v2/authorization/divisions/query  
+
+Requires NO permissions: 
+
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let before: String = "" // The cursor that points to the start of the set of entities that has been returned.
+let after: String = "" // The cursor that points to the end of the set of entities that has been returned.
+let pageSize: String = "" // Number of entities to return. Maximum of 200.
+let _id: [String] = [""] // Optionally request specific divisions by their IDs
+let name: String = "" // Optionally request specific divisions by division name
+
+// Code example
+ObjectsAPI.getAuthorizationDivisionsQuery(before: before, after: after, pageSize: pageSize, _id: _id, name: name) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("ObjectsAPI.getAuthorizationDivisionsQuery was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **before** | **String**| The cursor that points to the start of the set of entities that has been returned. | [optional] |
+| **after** | **String**| The cursor that points to the end of the set of entities that has been returned. | [optional] |
+| **pageSize** | **String**| Number of entities to return. Maximum of 200. | [optional] |
+| **_id** | [**[String]**](String)| Optionally request specific divisions by their IDs | [optional] |
+| **name** | **String**| Optionally request specific divisions by division name | [optional] |
+
+
+### Return type
+
+[**AuthzDivisionCursorListing**](AuthzDivisionCursorListing)
 
 
 ## postAuthorizationDivisionObject
@@ -486,4 +599,4 @@ ObjectsAPI.putAuthorizationDivision(divisionId: divisionId, body: body) { (respo
 [**AuthzDivision**](AuthzDivision)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

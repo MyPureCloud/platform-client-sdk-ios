@@ -1770,7 +1770,7 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let pageSize: Int = 0 // Page size
 let pageNumber: Int = 0 // Page number
 let excludeStatus: Bool = true // Exclude MX record data
-let filter: String = "" // Optional search filter
+let filter: String = "" // Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter.
 
 // Code example
 RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, excludeStatus: excludeStatus, filter: filter) { (response, error) in
@@ -1791,7 +1791,7 @@ RoutingAPI.getRoutingEmailDomains(pageSize: pageSize, pageNumber: pageNumber, ex
 | **pageSize** | **Int**| Page size | [optional] |
 | **pageNumber** | **Int**| Page number | [optional] |
 | **excludeStatus** | **Bool**| Exclude MX record data | [optional] |
-| **filter** | **String**| Optional search filter | [optional] |
+| **filter** | **String**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional] |
 
 
 ### Return type
@@ -1953,7 +1953,7 @@ RoutingAPI.getRoutingEmailOutboundDomainSearch(domainId: domainId) { (response, 
 
 
 
-> [OutboundDomainEntityListing](OutboundDomainEntityListing) getRoutingEmailOutboundDomains(filter)
+> [OutboundDomainEntityListing](OutboundDomainEntityListing) getRoutingEmailOutboundDomains(pageSize, pageNumber, filter)
 
 Get outbound domains
 
@@ -1973,10 +1973,12 @@ import PureCloudPlatformClientV2
 PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
-let filter: String = "" // Optional search filter
+let pageSize: Int = 0 // Page size
+let pageNumber: Int = 0 // Page number
+let filter: String = "" // Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter.
 
 // Code example
-RoutingAPI.getRoutingEmailOutboundDomains(filter: filter) { (response, error) in
+RoutingAPI.getRoutingEmailOutboundDomains(pageSize: pageSize, pageNumber: pageNumber, filter: filter) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
@@ -1991,7 +1993,9 @@ RoutingAPI.getRoutingEmailOutboundDomains(filter: filter) { (response, error) in
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **filter** | **String**| Optional search filter | [optional] |
+| **pageSize** | **Int**| Page size | [optional] |
+| **pageNumber** | **Int**| Page number | [optional] |
+| **filter** | **String**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional] |
 
 
 ### Return type
@@ -2893,7 +2897,7 @@ RoutingAPI.getRoutingQueueMembers(queueId: queueId, pageNumber: pageNumber, page
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
 | **name** | **String**| Filter by queue member name (contains-style search) | [optional] |
 | **profileSkills** | [**[String]**](String)| Filter by profile skill (contains-style search) | [optional] |
 | **skills** | [**[String]**](String)| Filter by skill (contains-style search) | [optional] |
@@ -2967,7 +2971,7 @@ RoutingAPI.getRoutingQueueUsers(queueId: queueId, pageNumber: pageNumber, pageSi
 | **pageNumber** | **Int**|  | [optional] |
 | **pageSize** | **Int**| Max value is 100 | [optional] |
 | **sortOrder** | **String**| Note: results are sorted by name. | [optional]<br />**Values**: asc ("asc"), desc ("desc") |
-| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin") |
+| **expand** | [**[String]**](String)| Which fields, if any, to expand. | [optional]<br />**Values**: routingstatus ("routingStatus"), presence ("presence"), integrationpresence ("integrationPresence"), conversationsummary ("conversationSummary"), outofoffice ("outOfOffice"), geolocation ("geolocation"), station ("station"), authorization ("authorization"), lasttokenissued ("lasttokenissued"), authorizationUnusedroles ("authorization.unusedRoles"), team ("team"), workplanbidranks ("workPlanBidRanks"), externalcontactssettings ("externalContactsSettings"), profileskills ("profileSkills"), certifications ("certifications"), locations ("locations"), groups ("groups"), skills ("skills"), languages ("languages"), languagepreference ("languagePreference"), employerinfo ("employerInfo"), biography ("biography"), datelastlogin ("dateLastLogin"), datewelcomesent ("dateWelcomeSent") |
 | **joined** | **Bool**| Filter by joined status | [optional] |
 | **name** | **String**| Filter by queue member name | [optional] |
 | **profileSkills** | [**[String]**](String)| Filter by profile skill | [optional] |
@@ -7615,4 +7619,4 @@ RoutingAPI.putUserRoutingskillsBulk(userId: userId, body: body) { (response, err
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

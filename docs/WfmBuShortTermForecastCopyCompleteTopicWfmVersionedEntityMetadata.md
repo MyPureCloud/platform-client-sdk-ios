@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **version** | **Int** |  | [optional] |
+| **version** | **Int64** |  | [optional] |
 | **modifiedBy** | [**WfmBuShortTermForecastCopyCompleteTopicUserReference**](WfmBuShortTermForecastCopyCompleteTopicUserReference) |  | [optional] |
 | **dateModified** | [**Date**](Date) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

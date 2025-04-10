@@ -6,11 +6,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **status** | **Int** |  | [optional] |
+| **status** | **Int64** |  | [optional] |
 | **code** | **String** |  | [optional] |
 | **message** | **String** |  | [optional] |
 | **messageParams** | **[String:String]** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

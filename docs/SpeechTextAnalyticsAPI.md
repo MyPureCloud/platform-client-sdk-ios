@@ -2761,4 +2761,4 @@ SpeechTextAnalyticsAPI.putSpeechandtextanalyticsTopic(topicId: topicId, body: bo
 [**Topic**](Topic)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

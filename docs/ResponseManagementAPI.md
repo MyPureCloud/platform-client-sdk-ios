@@ -956,4 +956,4 @@ ResponseManagementAPI.putResponsemanagementResponseasset(responseAssetId: respon
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

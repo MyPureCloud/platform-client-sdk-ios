@@ -13,9 +13,9 @@
 | **workspace** | [**ContentManagementSingleDocumentTopicWorkspaceData**](ContentManagementSingleDocumentTopicWorkspaceData) |  | [optional] |
 | **createdBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
 | **contentType** | **String** |  | [optional] |
-| **contentLength** | **Int** |  | [optional] |
+| **contentLength** | **Int64** |  | [optional] |
 | **filename** | **String** |  | [optional] |
-| **changeNumber** | **Int** |  | [optional] |
+| **changeNumber** | **Int64** |  | [optional] |
 | **dateUploaded** | [**Date**](Date) |  | [optional] |
 | **uploadedBy** | [**ContentManagementSingleDocumentTopicUserData**](ContentManagementSingleDocumentTopicUserData) |  | [optional] |
 | **lockInfo** | [**ContentManagementSingleDocumentTopicLockData**](ContentManagementSingleDocumentTopicLockData) |  | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

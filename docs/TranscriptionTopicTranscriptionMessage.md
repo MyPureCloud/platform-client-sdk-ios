@@ -10,11 +10,11 @@
 | **organizationId** | **String** |  | [optional] |
 | **conversationId** | **String** |  | [optional] |
 | **communicationId** | **String** |  | [optional] |
-| **sessionStartTimeMs** | **Int** |  | [optional] |
-| **transcriptionStartTimeMs** | **Int** |  | [optional] |
+| **sessionStartTimeMs** | **Int64** |  | [optional] |
+| **transcriptionStartTimeMs** | **Int64** |  | [optional] |
 | **transcripts** | [**[TranscriptionTopicTranscriptResult]**]([TranscriptionTopicTranscriptResult]) |  | [optional] |
 | **status** | [**TranscriptionTopicTranscriptionRequestStatus**](TranscriptionTopicTranscriptionRequestStatus) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

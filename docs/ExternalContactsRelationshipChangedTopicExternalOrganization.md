@@ -15,8 +15,8 @@
 | **address** | [**ExternalContactsRelationshipChangedTopicContactAddress**](ExternalContactsRelationshipChangedTopicContactAddress) |  | [optional] |
 | **phoneNumber** | [**ExternalContactsRelationshipChangedTopicPhoneNumber**](ExternalContactsRelationshipChangedTopicPhoneNumber) |  | [optional] |
 | **faxNumber** | [**ExternalContactsRelationshipChangedTopicPhoneNumber**](ExternalContactsRelationshipChangedTopicPhoneNumber) |  | [optional] |
-| **employeeCount** | **Int** |  | [optional] |
-| **revenue** | **Int** |  | [optional] |
+| **employeeCount** | **Int64** |  | [optional] |
+| **revenue** | **Int64** |  | [optional] |
 | **tags** | **[String]** |  | [optional] |
 | **websites** | **[String]** |  | [optional] |
 | **tickers** | [**[ExternalContactsRelationshipChangedTopicTicker]**]([ExternalContactsRelationshipChangedTopicTicker]) |  | [optional] |
@@ -28,4 +28,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

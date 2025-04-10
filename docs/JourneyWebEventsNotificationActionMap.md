@@ -9,8 +9,8 @@
 | **_id** | **String** |  | [optional] |
 | **selfUri** | **String** |  | [optional] |
 | **displayName** | **String** |  | [optional] |
-| **version** | **Int** |  | [optional] |
+| **version** | **Int64** |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

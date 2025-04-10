@@ -22,7 +22,7 @@
 | **externalCampaign** | **Bool** | True if the call for the callback uses external dialing. | [optional] |
 | **skipEnabled** | **Bool** | True if the ability to skip a callback should be enabled. | [optional] |
 | **provider** | **String** | The source provider of the callback. | [optional] |
-| **timeoutSeconds** | **Int** | The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled. | [optional] |
+| **timeoutSeconds** | **Int64** | The number of seconds before the system automatically places a call for a callback.  0 means the automatic placement is disabled. | [optional] |
 | **connectedTime** | [**Date**](Date) | The timestamp when this communication was connected in the cloud clock. | [optional] |
 | **disconnectedTime** | [**Date**](Date) | The timestamp when this communication disconnected from the conversation in the provider clock. | [optional] |
 | **callbackScheduledTime** | [**Date**](Date) | The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. | [optional] |
@@ -36,4 +36,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

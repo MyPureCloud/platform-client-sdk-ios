@@ -4,11 +4,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | Description |
 | ------------- | ------------- |
-| [**deleteDivisionBasedPresenceDefinition**](PresenceAPI#deleteDivisionBasedPresenceDefinition) | Delete a Presence Definition |
+| [**deletePresenceDefinition0**](PresenceAPI#deletePresenceDefinition0) | Delete a Presence Definition |
 | [**deletePresenceSource**](PresenceAPI#deletePresenceSource) | Delete a Presence Source |
 | [**deletePresencedefinition**](PresenceAPI#deletePresencedefinition) | Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead |
-| [**getDivisionBasedPresenceDefinition**](PresenceAPI#getDivisionBasedPresenceDefinition) | Get a Presence Definition |
-| [**getDivisionBasedPresenceDefinitions**](PresenceAPI#getDivisionBasedPresenceDefinitions) | Get a list of Presence Definitions |
+| [**getPresenceDefinition0**](PresenceAPI#getPresenceDefinition0) | Get a Presence Definition |
+| [**getPresenceDefinitions0**](PresenceAPI#getPresenceDefinitions0) | Get a list of Presence Definitions |
 | [**getPresenceSettings**](PresenceAPI#getPresenceSettings) | Get the presence settings |
 | [**getPresenceSource**](PresenceAPI#getPresenceSource) | Get a Presence Source |
 | [**getPresenceSources**](PresenceAPI#getPresenceSources) | Get a list of Presence Sources |
@@ -22,10 +22,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getUsersPresencesPurecloudBulk**](PresenceAPI#getUsersPresencesPurecloudBulk) | Get bulk user presences for a Genesys Cloud (PURECLOUD) presence source |
 | [**patchUserPresence**](PresenceAPI#patchUserPresence) | Patch a user&#39;s Presence |
 | [**patchUserPresencesPurecloud**](PresenceAPI#patchUserPresencesPurecloud) | Patch a Genesys Cloud user&#39;s presence |
-| [**postDivisionBasedPresenceDefinitions**](PresenceAPI#postDivisionBasedPresenceDefinitions) | Create a Presence Definition |
+| [**postPresenceDefinitions0**](PresenceAPI#postPresenceDefinitions0) | Create a Presence Definition |
 | [**postPresenceSources**](PresenceAPI#postPresenceSources) | Create a Presence Source |
 | [**postPresencedefinitions**](PresenceAPI#postPresencedefinitions) | Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead |
-| [**putDivisionBasedPresenceDefinition**](PresenceAPI#putDivisionBasedPresenceDefinition) | Update a Presence Definition |
+| [**putPresenceDefinition0**](PresenceAPI#putPresenceDefinition0) | Update a Presence Definition |
 | [**putPresenceSettings**](PresenceAPI#putPresenceSettings) | Update the presence settings |
 | [**putPresenceSource**](PresenceAPI#putPresenceSource) | Update a Presence Source |
 | [**putPresenceUserPrimarysource**](PresenceAPI#putPresenceUserPrimarysource) | Update a user&#39;s Primary Presence Source |
@@ -34,11 +34,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 {: class="table-striped"}
 
 
-## deleteDivisionBasedPresenceDefinition
+## deletePresenceDefinition0
 
 
 
-> Void deleteDivisionBasedPresenceDefinition(definitionId)
+> Void deletePresenceDefinition0(definitionId)
 
 Delete a Presence Definition
 
@@ -62,11 +62,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let definitionId: String = "" // Presence Definition ID
 
 // Code example
-PresenceAPI.deleteDivisionBasedPresenceDefinition(definitionId: definitionId) { (error) in
+PresenceAPI.deletePresenceDefinition0(definitionId: definitionId) { (error) in
     if let error = error {
         dump(error)
     } else {
-        print("PresenceAPI.deleteDivisionBasedPresenceDefinition was successful")
+        print("PresenceAPI.deletePresenceDefinition0 was successful")
     }
 }
 ```
@@ -183,11 +183,11 @@ PresenceAPI.deletePresencedefinition(presenceId: presenceId) { (error) in
 `nil` (empty response body)
 
 
-## getDivisionBasedPresenceDefinition
+## getPresenceDefinition0
 
 
 
-> [OrganizationPresenceDefinition](OrganizationPresenceDefinition) getDivisionBasedPresenceDefinition(definitionId, localeCode)
+> [OrganizationPresenceDefinition](OrganizationPresenceDefinition) getPresenceDefinition0(definitionId, localeCode)
 
 Get a Presence Definition
 
@@ -208,14 +208,14 @@ PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
 PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let definitionId: String = "" // Presence Definition ID
-let localeCode: PresenceAPI.LocaleCode_getDivisionBasedPresenceDefinition = PresenceAPI.LocaleCode_getDivisionBasedPresenceDefinition.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.
+let localeCode: PresenceAPI.LocaleCode_getPresenceDefinition0 = PresenceAPI.LocaleCode_getPresenceDefinition0.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.
 
 // Code example
-PresenceAPI.getDivisionBasedPresenceDefinition(definitionId: definitionId, localeCode: localeCode) { (response, error) in
+PresenceAPI.getPresenceDefinition0(definitionId: definitionId, localeCode: localeCode) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
-        print("PresenceAPI.getDivisionBasedPresenceDefinition was successful")
+        print("PresenceAPI.getPresenceDefinition0 was successful")
         dump(response)
     }
 }
@@ -235,11 +235,11 @@ PresenceAPI.getDivisionBasedPresenceDefinition(definitionId: definitionId, local
 [**OrganizationPresenceDefinition**](OrganizationPresenceDefinition)
 
 
-## getDivisionBasedPresenceDefinitions
+## getPresenceDefinitions0
 
 
 
-> [OrganizationPresenceDefinitionEntityListing](OrganizationPresenceDefinitionEntityListing) getDivisionBasedPresenceDefinitions(deactivated, divisionId, localeCode)
+> [OrganizationPresenceDefinitionEntityListing](OrganizationPresenceDefinitionEntityListing) getPresenceDefinitions0(deactivated, divisionId, localeCode)
 
 Get a list of Presence Definitions
 
@@ -261,14 +261,14 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 
 let deactivated: String = "" // Deactivated query can be TRUE or FALSE
 let divisionId: [String] = [""] // One or more division IDs. If nothing is provided, the definitions associated withthe list of divisions that the user has access to will be returned.
-let localeCode: PresenceAPI.LocaleCode_getDivisionBasedPresenceDefinitions = PresenceAPI.LocaleCode_getDivisionBasedPresenceDefinitions.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.
+let localeCode: PresenceAPI.LocaleCode_getPresenceDefinitions0 = PresenceAPI.LocaleCode_getPresenceDefinitions0.enummember // The locale code to fetch for the presence definition. Use ALL to fetch everything.
 
 // Code example
-PresenceAPI.getDivisionBasedPresenceDefinitions(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode) { (response, error) in
+PresenceAPI.getPresenceDefinitions0(deactivated: deactivated, divisionId: divisionId, localeCode: localeCode) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
-        print("PresenceAPI.getDivisionBasedPresenceDefinitions was successful")
+        print("PresenceAPI.getPresenceDefinitions0 was successful")
         dump(response)
     }
 }
@@ -949,11 +949,11 @@ PresenceAPI.patchUserPresencesPurecloud(userId: userId, body: body) { (response,
 [**UserPresence**](UserPresence)
 
 
-## postDivisionBasedPresenceDefinitions
+## postPresenceDefinitions0
 
 
 
-> [OrganizationPresenceDefinition](OrganizationPresenceDefinition) postDivisionBasedPresenceDefinitions(body)
+> [OrganizationPresenceDefinition](OrganizationPresenceDefinition) postPresenceDefinitions0(body)
 
 Create a Presence Definition
 
@@ -976,11 +976,11 @@ PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
 let body: OrganizationPresenceDefinition = new OrganizationPresenceDefinition(...) // The Presence Definition to create
 
 // Code example
-PresenceAPI.postDivisionBasedPresenceDefinitions(body: body) { (response, error) in
+PresenceAPI.postPresenceDefinitions0(body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
-        print("PresenceAPI.postDivisionBasedPresenceDefinitions was successful")
+        print("PresenceAPI.postPresenceDefinitions0 was successful")
         dump(response)
     }
 }
@@ -1099,11 +1099,11 @@ PresenceAPI.postPresencedefinitions(body: body) { (response, error) in
 [**OrganizationPresence**](OrganizationPresence)
 
 
-## putDivisionBasedPresenceDefinition
+## putPresenceDefinition0
 
 
 
-> [OrganizationPresenceDefinition](OrganizationPresenceDefinition) putDivisionBasedPresenceDefinition(definitionId, body)
+> [OrganizationPresenceDefinition](OrganizationPresenceDefinition) putPresenceDefinition0(definitionId, body)
 
 Update a Presence Definition
 
@@ -1127,11 +1127,11 @@ let definitionId: String = "" // Presence Definition ID
 let body: OrganizationPresenceDefinition = new OrganizationPresenceDefinition(...) // The updated Presence Definition
 
 // Code example
-PresenceAPI.putDivisionBasedPresenceDefinition(definitionId: definitionId, body: body) { (response, error) in
+PresenceAPI.putPresenceDefinition0(definitionId: definitionId, body: body) { (response, error) in
     if let error = error {
         dump(error)
     } else if let response = response {
-        print("PresenceAPI.putDivisionBasedPresenceDefinition was successful")
+        print("PresenceAPI.putPresenceDefinition0 was successful")
         dump(response)
     }
 }
@@ -1407,4 +1407,4 @@ PresenceAPI.putUsersPresencesBulk(body: body) { (response, error) in
 [**[UserPresence]**](UserPresence)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

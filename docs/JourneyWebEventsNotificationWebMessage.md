@@ -7,8 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **eventName** | **String** |  | [optional] |
-| **totalEventCount** | **Int** |  | [optional] |
-| **totalPageviewCount** | **Int** |  | [optional] |
+| **totalEventCount** | **Int64** |  | [optional] |
+| **totalPageviewCount** | **Int64** |  | [optional] |
 | **userAgentString** | **String** |  | [optional] |
 | **ipAddress** | **String** |  | [optional] |
 | **ipOrganization** | **String** |  | [optional] |
@@ -25,4 +25,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

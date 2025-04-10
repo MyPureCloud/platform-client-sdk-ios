@@ -7,11 +7,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **metric** | [**GamificationScorecardChangeTopicMetric**](GamificationScorecardChangeTopicMetric) |  | [optional] |
-| **points** | **Int** |  | [optional] |
+| **points** | **Int64** |  | [optional] |
 | **value** | **Double** |  | [optional] |
 | **punctualityEvents** | [**[GamificationScorecardChangeTopicPunctualityEvent]**]([GamificationScorecardChangeTopicPunctualityEvent]) |  | [optional] |
 | **evaluationDetails** | [**[GamificationScorecardChangeTopicEvaluationDetail]**]([GamificationScorecardChangeTopicEvaluationDetail]) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

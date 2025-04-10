@@ -29,6 +29,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**getTaskmanagementWorkitemsSchemaVersion**](TaskManagementAPI#getTaskmanagementWorkitemsSchemaVersion) | Get a specific version of a schema |
 | [**getTaskmanagementWorkitemsSchemaVersions**](TaskManagementAPI#getTaskmanagementWorkitemsSchemaVersions) | Get all versions of a schema |
 | [**getTaskmanagementWorkitemsSchemas**](TaskManagementAPI#getTaskmanagementWorkitemsSchemas) | Get a list of schemas. |
+| [**getTaskmanagementWorkitemsSchemasCoretype**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasCoretype) | Get the core types from which all schemas are built. |
+| [**getTaskmanagementWorkitemsSchemasCoretypes**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasCoretypes) | Get the core types from which all schemas are built. |
+| [**getTaskmanagementWorkitemsSchemasLimits**](TaskManagementAPI#getTaskmanagementWorkitemsSchemasLimits) | Get quantitative limits on schemas |
 | [**getTaskmanagementWorktype**](TaskManagementAPI#getTaskmanagementWorktype) | Get a worktype |
 | [**getTaskmanagementWorktypeFlowsDatebasedRule**](TaskManagementAPI#getTaskmanagementWorktypeFlowsDatebasedRule) | Get a date based rule |
 | [**getTaskmanagementWorktypeFlowsDatebasedRules**](TaskManagementAPI#getTaskmanagementWorktypeFlowsDatebasedRules) | Get all date based rules for a worktype |
@@ -1340,6 +1343,148 @@ This endpoint does not require any parameters.
 ### Return type
 
 [**DataSchemaListing**](DataSchemaListing)
+
+
+## getTaskmanagementWorkitemsSchemasCoretype
+
+
+
+> [Coretype](Coretype) getTaskmanagementWorkitemsSchemasCoretype(coreTypeName)
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/schemas/coretypes/{coreTypeName}  
+
+Requires ANY permissions: 
+
+* workitems:workitemSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+let coreTypeName: String = "" // Name of the core type
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsSchemasCoretype(coreTypeName: coreTypeName) { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsSchemasCoretype was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **coreTypeName** | **String**| Name of the core type | |
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getTaskmanagementWorkitemsSchemasCoretypes
+
+
+
+> [Coretype](Coretype) getTaskmanagementWorkitemsSchemasCoretypes()
+
+Get the core types from which all schemas are built.
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/schemas/coretypes  
+
+Requires ANY permissions: 
+
+* workitems:workitemSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsSchemasCoretypes() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsSchemasCoretypes was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**Coretype**](Coretype)
+
+
+## getTaskmanagementWorkitemsSchemasLimits
+
+
+
+> [SchemaQuantityLimits](SchemaQuantityLimits) getTaskmanagementWorkitemsSchemasLimits()
+
+Get quantitative limits on schemas
+
+
+
+Wraps GET /api/v2/taskmanagement/workitems/schemas/limits  
+
+Requires ANY permissions: 
+
+* workitems:workitemSchema:view
+
+### Example
+
+```{"language":"swift"}
+import PureCloudPlatformClientV2
+
+PureCloudPlatformClientV2API.basePath = "https://api.mypurecloud.com"
+PureCloudPlatformClientV2API.accessToken = "cwRto9ScT..."
+
+
+// Code example
+TaskManagementAPI.getTaskmanagementWorkitemsSchemasLimits() { (response, error) in
+    if let error = error {
+        dump(error)
+    } else if let response = response {
+        print("TaskManagementAPI.getTaskmanagementWorkitemsSchemasLimits was successful")
+        dump(response)
+    }
+}
+```
+
+### Parameters
+
+This endpoint does not require any parameters.
+
+
+### Return type
+
+[**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
 ## getTaskmanagementWorktype
@@ -3311,4 +3456,4 @@ TaskManagementAPI.putTaskmanagementWorkitemsSchema(schemaId: schemaId, body: bod
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

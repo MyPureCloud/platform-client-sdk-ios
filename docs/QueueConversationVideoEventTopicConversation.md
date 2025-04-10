@@ -7,7 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **_id** | **String** |  | [optional] |
-| **maxParticipants** | **Int** |  | [optional] |
+| **maxParticipants** | **Int64** |  | [optional] |
 | **participants** | [**[QueueConversationVideoEventTopicParticipant]**]([QueueConversationVideoEventTopicParticipant]) |  | [optional] |
 | **recentTransfers** | [**[QueueConversationVideoEventTopicTransferResponse]**]([QueueConversationVideoEventTopicTransferResponse]) |  | [optional] |
 | **recordingState** | **String** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_

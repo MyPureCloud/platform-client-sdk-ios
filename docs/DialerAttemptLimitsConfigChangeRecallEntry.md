@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **nbrAttempts** | **Int** | The number of recall attempts to make | [optional] |
-| **minutesBetweenAttempts** | **Int** | How long to wait between recall attempts | [optional] |
+| **nbrAttempts** | **Int64** | The number of recall attempts to make | [optional] |
+| **minutesBetweenAttempts** | **Int64** | How long to wait between recall attempts | [optional] |
 | **additionalProperties** | [**[String:JSON]**](JSON) |  | [optional] |
 
 
 
-_PureCloudPlatformClientV2@164.1.0_
+_PureCloudPlatformClientV2@165.0.0_
